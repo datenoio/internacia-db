@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Countries YAML schema (core subset)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["code", "name", "iso3code", "numeric_code"],
+  "properties": {
+    "code": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2
+    },
+    "name": {
+      "type": "string"
+    },
+    "iso3code": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "numeric_code": {
+      "type": "string",
+      "pattern": "^\\d{3}$"
+    },
+    "capital_city": {
+      "type": "object",
+      "required": ["name", "lat", "lng"],
+      "properties": {
+        "name": { "type": "string" },
+        "lat": { "type": "string" },
+        "lng": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "region": {
+      "type": "object",
+      "required": ["id", "value"],
+      "properties": {
+        "id": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "adminregion": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "incomeLevel": {
+      "type": "object",
+      "required": ["id", "value"],
+      "properties": {
+        "id": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "lendingType": {
+      "type": "object",
+      "required": ["id", "value"],
+      "properties": {
+        "id": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "wikidata_id": {
+      "type": "string",
+      "pattern": "^Q[1-9][0-9]*$"
+    },
+    "official_name": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "currencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "symbol": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "un_member": {
+      "type": "boolean"
+    },
+    "independent": {
+      "type": "boolean"
+    },
+    "subregion": {
+      "type": "string"
+    },
+    "continents": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "borders": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "landlocked": {
+      "type": "boolean"
+    },
+    "timezones": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^UTC[+-]\\d{2}:\\d{2}$"
+      }
+    },
+    "tld": {
+      "type": "string"
+    },
+    "calling_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^\\+[0-9]+$"
+      }
+    },
+    "flag_emoji": {
+      "type": "string"
+    },
+    "car_side": {
+      "type": "string",
+      "enum": ["left", "right"]
+    },
+    "start_of_week": {
+      "type": "string",
+      "enum": ["monday", "saturday", "sunday"]
+    },
+    "demonyms": {
+      "type": "object",
+      "properties": {
+        "female": { "type": "string" },
+        "male": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
+
+

@@ -1,0 +1,269 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Intblocks YAML schema (core subset)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "name", "blocktype", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "abbrRU": {
+      "type": "string"
+    },
+    "blocktype": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["formal", "informal", "de-facto"]
+    },
+    "listed": {
+      "type": "string",
+      "enum": ["yes", "no"]
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "type"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["website", "wikipedia", "wikidata"]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lang", "name"],
+        "properties": {
+          "lang": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "includes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type", "status"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["country", "organization"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["member", "observer", "associated", "associated_observer"]
+          },
+          "joined": {
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "left": {
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "founded": {
+      "type": "string",
+      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    },
+    "dissolved": {
+      "type": "string",
+      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    },
+    "active_period": {
+      "type": "object",
+      "required": ["start"],
+      "properties": {
+        "start": {
+          "type": "string",
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+        },
+        "end": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "headquarters": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "geographic_scope": {
+      "type": "string",
+      "enum": ["global", "regional", "sub-regional"]
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "partof": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["id"],
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "suborganizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "acronyms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lang", "value"],
+        "properties": {
+          "lang": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "wikidata_id": {
+      "type": "string",
+      "pattern": "^Q[1-9][0-9]*$"
+    },
+    "membership_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "founding_members": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_verified": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short text summarizing what the entity is for"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of keywords for the entity"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "name"],
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Topic identifier (e.g., 'culture', 'climate', 'economy')"
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable topic name"
+          }
+        },
+        "additionalProperties": true
+      },
+      "description": "List of topics with which this entity is associated"
+    }
+  }
+}
+
+
