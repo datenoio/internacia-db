@@ -2,17 +2,15 @@ id: EASC
 blocktype:
 - intorg
 status: formal
+founded: '1992-03-13'
+geographic_scope: regional
 languages:
 - en
+- ru
 links:
-- url: http://www.easc.org.by/
+- url: https://easc.by
   type: website
-name: The Interstate Council for Standardization, Metrology and Certification of the
-  Commonwealth of Independence States
-translations:
-- lang: en
-  name: The Interstate Council for Standardization, Metrology and Certification of
-    the Commonwealth of Independence States
+name: Interstate Council for Standardization, Metrology and Certification
 includes:
 - id: AM
   name: Armenia
@@ -38,10 +36,6 @@ includes:
   name: Kyrgyz Republic
   type: country
   status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
 - id: RU
   name: Russian Federation
   type: country
@@ -54,24 +48,46 @@ includes:
   name: Turkmenistan
   type: country
   status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-membership_count: 12
-description: International entity focused on standardization.
+membership_count: 10
+headquarters:
+  city: Minsk
+  country: BY
+  coordinates:
+    lat: 53.9045
+    lng: 27.5615
+acronyms:
+- lang: en
+  value: EASC
+- lang: ru
+  value: МГС
+legal_status: intergovernmental
+description: Intergovernmental body responsible for developing and implementing a
+  harmonized policy in the fields of standardization, metrology, and certification
+  among CIS member states. Recognized by ISO as a Regional Organization for
+  Standardization since 1996.
 tags:
 - EASC
 - council
 - interstate
 - intorg
-- iso
-- standard
+- CIS
 - standardization
+- metrology
+- certification
+- standard
 topics:
 - key: standardization
   name: Standardization
+- key: metrology
+  name: Metrology
+- key: certification
+  name: Certification
+other_names:
+- id: en
+  name: Interstate Council for Standardization, Metrology and Certification
+- id: ru
+  name: Межгосударственный совет по стандартизации, метрологии и сертификации

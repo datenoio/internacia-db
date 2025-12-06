@@ -1,6 +1,9 @@
 id: WMO
 blocktype:
 - unagency
+- meteorology
+- scientific
+- environment
 status: formal
 partof: UN
 languages:
@@ -15,12 +18,7 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/World_Meteorological_Organisation
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q193094
-  type: wikidata
 name: World Meteorological Organization
-translations:
-- lang: en
-  name: World Meteorological Organization
 includes:
 - id: DZ
   name: Algeria
@@ -783,8 +781,21 @@ includes:
   type: country
   status: member
 membership_count: 190
-wikidata_id: Q193094
+wikidata_id: Q170424
 description: International organization focused on climate change.
+other_names:
+- id: ar
+  name: المنظمة العالمية للأرصاد الجوية
+- id: zh
+  name: 世界气象组织
+- id: en
+  name: World Meteorological Organization
+- id: fr
+  name: Organisation météorologique mondiale
+- id: ru
+  name: Всемирная метеорологическая организация
+- id: es
+  name: Organización Meteorológica Mundial
 tags:
 - WMO
 - climate

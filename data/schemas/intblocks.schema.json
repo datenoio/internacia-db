@@ -262,6 +262,23 @@
         "additionalProperties": true
       },
       "description": "List of topics with which this entity is associated"
+    },
+    "other_names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')" },
+          "name": { "type": "string", "description": "Name in the specified language" }
+        },
+        "additionalProperties": true
+      },
+      "description": "Names in multiple languages (UN official languages)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or historical information about the entity"
     }
   }
 }

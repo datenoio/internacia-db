@@ -7,8 +7,8 @@ This script generates datasets from the `data/countries` and `data/intblocks` di
 
 ## Roadmap
 
-- [ ] Create a Python SDK for easy data access
-- [ ] Develop a REST API for data retrieval
+- [x] Create a Python SDK for easy data access - See [internacia-python](../internacia-python)
+- [x] Develop a REST API for data retrieval - See [internacia-api](../internacia-api)
 
 The datasets are stored in the `data/datasets` directory.   
 
@@ -151,6 +151,8 @@ The `countries` dataset contains detailed information about 252 countries and te
 | `gini` | Struct | Gini index `{year, value}` |
 | `timezones` | List[String] | List of timezones |
 | `native_names` | Map | Map of lang code -> `{official, common}` |
+| `other_names` | List[Struct] | Name translations in different languages `{id, name}` |
+| `common_names` | List[String] | Common names and aliases |
 
 ### International Blocks Schema
 The `intblocks` dataset contains information about international organizations, alliances, and unions.
@@ -163,7 +165,7 @@ The `intblocks` dataset contains information about international organizations, 
 | `name` | String | Name of the block |
 | `languages` | List[String] | Official languages |
 | `links` | List[Struct] | External links `{url, type}` |
-| `translations` | List[Struct] | Name translations `{lang, name}` |
+| `other_names` | List[Struct] | Name translations in different languages `{id, name}` |
 | `founded` | String | Foundation year/date |
 | `geographic_scope` | String | Scope (e.g., "Regional", "Global") |
 | `regions` | List[String] | Regions covered |
@@ -198,7 +200,7 @@ python3 scripts/builder.py info
 
 The builder reads YAML files from:
 - `data/countries/*.yaml` - Country data (252 files)
-- `data/intblocks/**/*.yaml` - International blocks data (727 files across 49 categories)
+- `data/intblocks/**/*.yaml` - International blocks data (1001+ files across 53+ categories)
 
 ## Notes
 
@@ -206,3 +208,8 @@ The builder reads YAML files from:
 - All generated files use UTF-8 encoding
 - Nested structures in Parquet/DuckDB are JSON-serialized for compatibility
 - Existing output files are overwritten without warning
+
+## Related Projects
+
+- [internacia-api](../internacia-api): REST API service for accessing Internacia data
+- [internacia-python](../internacia-python): Python SDK for programmatic data access

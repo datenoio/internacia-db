@@ -92,7 +92,12 @@ def get_countries_schema() -> pa.Schema:
         ('native_names', pa.map_(pa.string(), pa.struct([
             ('official', pa.string()),
             ('common', pa.string())
-        ])))
+        ]))),
+        ('other_names', pa.list_(pa.struct([
+            ('id', pa.string()),
+            ('name', pa.string())
+        ]))),
+        ('common_names', pa.list_(pa.string()))
     ])
 
 
@@ -148,7 +153,11 @@ def get_intblocks_schema() -> pa.Schema:
         ('partof', pa.list_(pa.string())),  # Normalized to list of strings
         ('dissolved', pa.string()),
         ('predecessor', pa.string()),
-        ('successor', pa.string())
+        ('successor', pa.string()),
+        ('other_names', pa.list_(pa.struct([
+            ('id', pa.string()),
+            ('name', pa.string())
+        ])))
     ])
 
 
@@ -159,8 +168,16 @@ def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, 
     Fixes known issues:
     - Boolean 'lang' values (from 'no' parsed as False) -> converted to "no"
     - Inconsistent 'partof' field -> normalized to list of strings
+    - Boolean values in string fields -> converted to strings
+    - None values in required string fields -> converted to empty strings
     """
     cleaned_data = []
+    
+    # String fields that should never be None or bool
+    string_fields = {
+        'id', 'status', 'name', 'founded', 'geographic_scope', 'wikidata_id', 
+        'legal_status', 'description', 'dissolved', 'predecessor', 'successor'
+    }
     
     for item in data:
         # Deep copy to avoid modifying original if needed, but for now just modifying dict
@@ -175,6 +192,8 @@ def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, 
                         new_t = t.copy()
                         if 'lang' in new_t and isinstance(new_t['lang'], bool):
                             new_t['lang'] = "no" if new_t['lang'] is False else "yes"
+                        if 'name' in new_t and isinstance(new_t['name'], bool):
+                            new_t['name'] = "no" if new_t['name'] is False else "yes"
                         new_translations.append(new_t)
                 cleaned_item['translations'] = new_translations
             
@@ -202,6 +221,87 @@ def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, 
                 elif isinstance(partof, list):
                     # Ensure all items are strings
                     cleaned_item['partof'] = [str(p) for p in partof]
+            
+            # Fix boolean values in string fields
+            for field in string_fields:
+                if field in cleaned_item:
+                    if isinstance(cleaned_item[field], bool):
+                        cleaned_item[field] = "yes" if cleaned_item[field] else "no"
+                    elif cleaned_item[field] is None:
+                        cleaned_item[field] = ""
+            
+            # Ensure includes fields are strings
+            if 'includes' in cleaned_item:
+                for member in cleaned_item['includes']:
+                    if isinstance(member, dict):
+                        for key in ['id', 'name', 'type', 'status', 'joined', 'role', 'note']:
+                            if key in member:
+                                if isinstance(member[key], bool):
+                                    member[key] = "yes" if member[key] else "no"
+                                elif member[key] is None:
+                                    member[key] = ""
+            
+            # Ensure links fields are strings
+            if 'links' in cleaned_item:
+                for link in cleaned_item['links']:
+                    if isinstance(link, dict):
+                        for key in ['url', 'type']:
+                            if key in link:
+                                if isinstance(link[key], bool):
+                                    link[key] = "yes" if link[key] else "no"
+                                elif link[key] is None:
+                                    link[key] = ""
+            
+            # Ensure other_names fields are strings
+            if 'other_names' in cleaned_item:
+                for name in cleaned_item['other_names']:
+                    if isinstance(name, dict):
+                        for key in ['id', 'name']:
+                            if key in name:
+                                if isinstance(name[key], bool):
+                                    name[key] = "yes" if name[key] else "no"
+                                elif name[key] is None:
+                                    name[key] = ""
+            
+            # Ensure acronyms fields are strings
+            if 'acronyms' in cleaned_item:
+                for acronym in cleaned_item['acronyms']:
+                    if isinstance(acronym, dict):
+                        for key in ['lang', 'value']:
+                            if key in acronym:
+                                if isinstance(acronym[key], bool):
+                                    acronym[key] = "yes" if acronym[key] else "no"
+                                elif acronym[key] is None:
+                                    acronym[key] = ""
+            
+            # Ensure headquarters fields are strings/floats
+            if 'headquarters' in cleaned_item:
+                hq = cleaned_item['headquarters']
+                if isinstance(hq, dict):
+                    for key in ['city', 'country']:
+                        if key in hq:
+                            if isinstance(hq[key], bool):
+                                hq[key] = "yes" if hq[key] else "no"
+                            elif hq[key] is None:
+                                hq[key] = ""
+                    if 'coordinates' in hq and isinstance(hq['coordinates'], dict):
+                        for key in ['lat', 'lng']:
+                            if key in hq['coordinates']:
+                                if isinstance(hq['coordinates'][key], bool):
+                                    hq['coordinates'][key] = 0.0
+                                elif hq['coordinates'][key] is None:
+                                    hq['coordinates'][key] = 0.0
+            
+            # Ensure topics fields are strings
+            if 'topics' in cleaned_item:
+                for topic in cleaned_item['topics']:
+                    if isinstance(topic, dict):
+                        for key in ['key', 'name']:
+                            if key in topic:
+                                if isinstance(topic[key], bool):
+                                    topic[key] = "yes" if topic[key] else "no"
+                                elif topic[key] is None:
+                                    topic[key] = ""
         
         cleaned_data.append(cleaned_item)
         

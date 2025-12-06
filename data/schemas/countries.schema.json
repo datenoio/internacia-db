@@ -154,6 +154,29 @@
         "male": { "type": "string" }
       },
       "additionalProperties": true
+    },
+    "other_names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')" },
+          "name": { "type": "string", "description": "Name in the specified language" }
+        },
+        "additionalProperties": true
+      },
+      "description": "Names in multiple languages (UN official languages)"
+    },
+    "common_names": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Common English names and alternative names for the country"
+    },
+    "m49_code": {
+      "type": "string",
+      "pattern": "^\\d{3}$",
+      "description": "UN M49 numeric code (3-digit code for countries)"
     }
   }
 }

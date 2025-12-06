@@ -5,10 +5,19 @@ status: formal
 links:
 - url: https://en.wikipedia.org/wiki/Overseas_Issuing_Institute
   type: wikipedia
-name: Overseas Issuing Institute
-translations:
+- url: https://en.wikipedia.org/wiki/CFP_franc
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2538
+  type: wikidata
+name: CFP Franc Zone
+acronyms:
 - lang: en
-  name: Overseas Issuing Institute
+  value: CFP
+- lang: en
+  value: XPF
+geographic_scope: regional
+regions:
+- Oceania
 includes:
 - id: PF
   name: French Polynesia
@@ -18,20 +27,25 @@ includes:
   name: New Caledonia
   type: country
   status: member
-membership_count: 2
-description: International entity focused on currency.
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: member
+membership_count: 3
+wikidata_id: Q2538
+description: Monetary union of French overseas collectivities in the Pacific Ocean using the CFP franc (XPF), pegged to the euro at a fixed exchange rate of 1,000 XPF to 8.38 euros. The currency is issued by the Institut d'Émission d'Outre-Mer (IEOM), established in 1966.
 tags:
+- CFP
 - OII
+- XPF
 - bank
-- communication
 - currency
 - economy
 - finance
-- institute
-- issuing
-- overseas
-- telecom
-- telecommunications
+- franc
+- oceania
+- pacific
+- zone
 topics:
 - key: currency
   name: Currency
@@ -39,5 +53,12 @@ topics:
   name: Economy
 - key: finance
   name: Finance
-- key: telecommunications
-  name: Telecommunications
+other_names:
+- id: en
+  name: CFP Franc Zone
+- id: en
+  name: Overseas Issuing Institute
+- id: fr
+  name: Zone franc CFP
+- id: fr
+  name: Institut d'Émission d'Outre-Mer
