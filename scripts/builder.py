@@ -161,6 +161,18 @@ def get_intblocks_schema() -> pa.Schema:
     ])
 
 
+def get_blocktypes_schema() -> pa.Schema:
+    """Define explicit PyArrow schema for blocktypes."""
+    return pa.schema([
+        ('id', pa.string()),
+        ('name', pa.string()),
+        ('other_names', pa.list_(pa.struct([
+            ('lang', pa.string()),
+            ('name', pa.string())
+        ])))
+    ])
+
+
 def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, Any]]:
     """
     Clean data to ensure consistency with schema.
@@ -303,6 +315,28 @@ def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, 
                                 elif topic[key] is None:
                                     topic[key] = ""
         
+        if dataset_type == 'blocktypes':
+            # Ensure other_names fields are strings
+            if 'other_names' in cleaned_item:
+                if cleaned_item['other_names'] is None:
+                    cleaned_item['other_names'] = []
+                elif isinstance(cleaned_item['other_names'], list):
+                    for name in cleaned_item['other_names']:
+                        if isinstance(name, dict):
+                            for key in ['lang', 'name']:
+                                if key in name:
+                                    if isinstance(name[key], bool):
+                                        name[key] = "yes" if name[key] else "no"
+                                    elif name[key] is None:
+                                        name[key] = ""
+            # Ensure id and name are strings
+            for field in ['id', 'name']:
+                if field in cleaned_item:
+                    if isinstance(cleaned_item[field], bool):
+                        cleaned_item[field] = "yes" if cleaned_item[field] else "no"
+                    elif cleaned_item[field] is None:
+                        cleaned_item[field] = ""
+        
         cleaned_data.append(cleaned_item)
         
     return cleaned_data
@@ -368,11 +402,13 @@ def save_parquet(data: List[Dict[str, Any]], output_file: Path, schema: pa.Schem
 def create_duckdb_database(
     countries_data: List[Dict[str, Any]], 
     intblocks_data: List[Dict[str, Any]], 
+    blocktypes_data: List[Dict[str, Any]],
     output_file: Path,
     countries_schema: pa.Schema,
-    intblocks_schema: pa.Schema
+    intblocks_schema: pa.Schema,
+    blocktypes_schema: pa.Schema
 ):
-    """Create DuckDB database with countries and intblocks tables."""
+    """Create DuckDB database with countries, intblocks, and blocktypes tables."""
     # Remove existing database if it exists
     if output_file.exists():
         output_file.unlink()
@@ -391,13 +427,20 @@ def create_duckdb_database(
         intblocks_table = pa.Table.from_pylist(intblocks_data, schema=intblocks_schema)
         con.execute("CREATE TABLE intblocks AS SELECT * FROM intblocks_table")
         
+        # Create blocktypes table
+        typer.echo("Creating blocktypes table...")
+        blocktypes_table = pa.Table.from_pylist(blocktypes_data, schema=blocktypes_schema)
+        con.execute("CREATE TABLE blocktypes AS SELECT * FROM blocktypes_table")
+        
         # Get row counts
         countries_count = con.execute("SELECT COUNT(*) FROM countries").fetchone()[0]
         intblocks_count = con.execute("SELECT COUNT(*) FROM intblocks").fetchone()[0]
+        blocktypes_count = con.execute("SELECT COUNT(*) FROM blocktypes").fetchone()[0]
         
         typer.echo(f"✓ Saved DuckDB: {output_file}")
         typer.echo(f"  - Countries: {countries_count} rows")
         typer.echo(f"  - Intblocks: {intblocks_count} rows")
+        typer.echo(f"  - Blocktypes: {blocktypes_count} rows")
         
     finally:
         con.close()
@@ -419,13 +462,13 @@ def build(
     )
 ):
     """
-    Build datasets from data/countries and data/intblocks directories.
+    Build datasets from data/countries, data/intblocks directories, and data/datasets/blocktypes.yaml.
     
     Generates datasets in multiple formats:
     - JSONL: Zstd-compressed line-delimited JSON
     - YAML: Zstd-compressed YAML
     - Parquet: Zstd-compressed Parquet with explicit schema
-    - DuckDB: Database with countries and intblocks tables
+    - DuckDB: Database with countries, intblocks, and blocktypes tables
     """
     project_root = get_project_root()
     
@@ -476,9 +519,34 @@ def build(
     typer.echo("🧹 Cleaning data...")
     intblocks_data = clean_data(intblocks_data, 'intblocks')
     
+    # Load blocktypes data
+    blocktypes_file = project_root / "data" / "datasets" / "blocktypes.yaml"
+    if not blocktypes_file.exists():
+        typer.echo(f"Error: Blocktypes file not found: {blocktypes_file}", err=True)
+        raise typer.Exit(1)
+    
+    typer.echo("📁 Loading blocktypes data...")
+    try:
+        with open(blocktypes_file, 'r', encoding='utf-8') as f:
+            blocktypes_data = yaml.safe_load(f)
+            if blocktypes_data is None:
+                blocktypes_data = []
+            elif not isinstance(blocktypes_data, list):
+                typer.echo(f"Warning: blocktypes.yaml should contain a list, got {type(blocktypes_data)}", err=True)
+                blocktypes_data = []
+    except Exception as e:
+        typer.echo(f"Error loading {blocktypes_file}: {e}", err=True)
+        raise typer.Exit(1)
+    
+    typer.echo(f"   Loaded {len(blocktypes_data)} blocktypes")
+    
+    # Clean blocktypes data
+    blocktypes_data = clean_data(blocktypes_data, 'blocktypes')
+    
     # Get schemas
     countries_schema = get_countries_schema()
     intblocks_schema = get_intblocks_schema()
+    blocktypes_schema = get_blocktypes_schema()
     
     # Generate datasets
     typer.echo("\n💾 Generating datasets...\n")
@@ -487,22 +555,27 @@ def build(
     if "jsonl" in requested_formats:
         save_jsonl_zst(countries_data, output_dir / "countries.jsonl.zst")
         save_jsonl_zst(intblocks_data, output_dir / "intblocks.jsonl.zst")
+        save_jsonl_zst(blocktypes_data, output_dir / "blocktypes.jsonl.zst")
     
     if "yaml" in requested_formats:
         save_yaml_zst(countries_data, output_dir / "countries.yaml.zst")
         save_yaml_zst(intblocks_data, output_dir / "intblocks.yaml.zst")
+        save_yaml_zst(blocktypes_data, output_dir / "blocktypes.yaml.zst")
     
     if "parquet" in requested_formats:
         save_parquet(countries_data, output_dir / "countries.parquet", schema=countries_schema)
         save_parquet(intblocks_data, output_dir / "intblocks.parquet", schema=intblocks_schema)
+        save_parquet(blocktypes_data, output_dir / "blocktypes.parquet", schema=blocktypes_schema)
     
     if "duckdb" in requested_formats:
         create_duckdb_database(
             countries_data, 
-            intblocks_data, 
+            intblocks_data,
+            blocktypes_data,
             output_dir / "internacia.duckdb",
             countries_schema=countries_schema,
-            intblocks_schema=intblocks_schema
+            intblocks_schema=intblocks_schema,
+            blocktypes_schema=blocktypes_schema
         )
     
     typer.echo(f"\n✅ All datasets generated successfully!")
