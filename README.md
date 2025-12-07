@@ -200,7 +200,7 @@ python3 scripts/builder.py info
 
 The builder reads YAML files from:
 - `data/countries/*.yaml` - Country data (252 files)
-- `data/intblocks/**/*.yaml` - International blocks data (1001+ files across 53+ categories)
+- `data/intblocks/**/*.yaml` - International blocks data (1021+ files across 53+ categories)
 
 ## Notes
 

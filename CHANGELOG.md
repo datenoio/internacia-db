@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0] - 2025-01-XX
+## [1.1.0] - 2025-12-07
 
 ### Added
 - **Countries dataset**: Added `other_names` field containing name translations in multiple languages (Arabic, Chinese, English, French, Russian, Spanish)
@@ -22,7 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `generate_un_regional_groups.py`: Generate UN regional groups
   - `insert_environment_members.py`: Insert environment members into intblocks
   - `remove_translations.py`: Utility to remove deprecated translations field
-- **Dataset expansion**: Increased international blocks from 727 to 1001+ files across 53+ categories
+- **Dataset expansion**: Increased international blocks from 727 to 1021+ files across 53+ categories
+- **New international block**: Added PACER Plus (Pacific Agreement on Closer Economic Relations Plus) free trade agreement
 
 ### Changed
 - **International Blocks dataset**: Replaced `translations` field with `other_names` field for consistency. The new field uses `id` instead of `lang` to identify languages, maintaining the same `name` structure
