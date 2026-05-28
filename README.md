@@ -56,7 +56,10 @@ This will create the following files in `data/datasets/`:
 - `intblocks.jsonl.zst` - All international blocks data in JSONL format (Zstd compressed)
 - `intblocks.yaml.zst` - All international blocks data in YAML format (Zstd compressed)
 - `intblocks.parquet` - All international blocks data in Parquet format (Zstd compressed)
-- `internacia.duckdb` - DuckDB database with `countries` and `intblocks` tables
+- `blocktypes.jsonl.zst` - All blocktypes data in JSONL format (Zstd compressed)
+- `blocktypes.yaml.zst` - All blocktypes data in YAML format (Zstd compressed)
+- `blocktypes.parquet` - All blocktypes data in Parquet format (Zstd compressed)
+- `internacia.duckdb` - DuckDB database with `countries`, `intblocks`, and `blocktypes` tables
 
 ### Build Specific Formats
 
@@ -200,7 +203,12 @@ python3 scripts/builder.py info
 
 The builder reads YAML files from:
 - `data/countries/*.yaml` - Country data (252 files)
-- `data/intblocks/**/*.yaml` - International blocks data (1021+ files across 53+ categories)
+- `data/intblocks/**/*.yaml` - International blocks data (1065 files, current build)
+
+Current generated dataset sizes (latest rebuild):
+- `countries`: 252 rows
+- `intblocks`: 1065 rows
+- `blocktypes`: 85 rows
 
 ## Notes
 
