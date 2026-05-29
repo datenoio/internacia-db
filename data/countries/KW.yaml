@@ -58,3 +58,55 @@ other_names:
   name: Kuwait
 common_names:
 - State of Kuwait
+population:
+  value: 4897263
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 17820.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Asia/Riyadh
+native_names:
+  ar:
+    official: الكويت
+    common: الكويت
+  en:
+    official: Kuwait
+    common: State of Kuwait
+  es:
+    official: Kuwait
+    common: Estado de Kuwait
+  fr:
+    official: Koweït
+    common: Kuwait
+  ru:
+    official: Кувейт
+    common: Государство Кувейт
+  zh:
+    official: 科威特
+    common: 科威特
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

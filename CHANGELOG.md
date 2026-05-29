@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-05-29
+
+Countries reference data quality release: validation gates, profile enrichment, entity status modeling, and release governance. Based on gap analysis in `dev/research/countries_gaps_,manus_20260528.md`.
+
+### Added
+
+- **Country validation** (`scripts/validate_countries.py`): JSON Schema checks, ISO identifier rules, completeness thresholds, entity status enforcement, and intblock cross-reference validation.
+- **Completeness manifest** (`data/schemas/countries_completeness.yaml`): per-field null-rate gates with warn/error modes.
+- **Country enrichment** (`scripts/enrich_countries.py`): World Bank + Wikidata + IANA tzdata for `population`, `area`, `gini`, `timezones`, and `native_names`; `backfill-provenance` subcommand.
+- **IANA timezone reference**: bundled `scripts/data/zone1970.tab`.
+- **Entity status fields**: `entity_type`, `code_status`, optional `recognition_status` on all 252 country records.
+- **Entity annotation utility** (`scripts/annotate_entity_status.py`).
+- **Country code policy** (`docs/country-code-policy.md`): ISO vs user-assigned codes, filter examples, deferred CIS2 entity notes.
+- **Field provenance**: optional `provenance` list on country records (`field`, `source`, `retrieved_at`, `url`, `license`).
+- **Build manifest** (`data/datasets/countries.manifest.json`): `version`, `build_date`, `git_commit`, `row_count`, `schema_hash`.
+- **Baseline diff utility** (`scripts/diff_countries_baseline.py`).
+- **Include name audit** (`scripts/report_country_include_names.py`): intblock alias reporting (warn-only).
+- **CI workflow** (`.github/workflows/validate.yml`): validate, completeness report artifact, parquet build, baseline diff.
+
+### Changed
+
+- **Countries profile fields**: `population`, `area`, and `gini` are structured indicators `{value, year, source, source_id}` in YAML and Parquet (**breaking** — was bare `int64` for population).
+- **Countries data populated**: formerly empty fields (`population`, `area`, `timezones`, `native_names`) filled across all 252 records where sources exist.
+- **Borders contract**: documented and validated as ISO 3166-1 **alpha-3** land-border codes.
+- **Builder integration**: runs country validation before export; strips categorical whitespace; writes manifest on parquet/duckdb build.
+- **Extended JSON Schema** (`data/schemas/countries.schema.json`): full builder field coverage including entity status and provenance.
+- **Dataset outputs rebuilt**: all countries artifacts regenerated.
+
+### Migration
+
+- **Parquet population**: column is now a struct. Access count via `population.value` (pandas: `df['population'].struct.field('value')`).
+- **Current ISO filter**: `code_status == 'official_iso3166_1'` returns 249 records; excludes `AN` (obsolete), `JG` and `KV` (user-assigned).
+- **Borders joins**: use alpha-3 codes in `borders` or map via `iso3code`.
+- **Upgrade check**: compare `countries.manifest.json` `schema_hash` before deploying downstream consumers.
+
 ## [1.1.2] - 2026-05-28
 
 ### Added

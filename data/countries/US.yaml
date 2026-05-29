@@ -60,3 +60,92 @@ common_names:
 - USA
 - United States of America
 - America
+population:
+  value: 340110988
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 9147420.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 41.8
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Adak
+- America/Anchorage
+- America/Boise
+- America/Chicago
+- America/Denver
+- America/Detroit
+- America/Indiana/Indianapolis
+- America/Indiana/Knox
+- America/Indiana/Marengo
+- America/Indiana/Petersburg
+- America/Indiana/Tell_City
+- America/Indiana/Vevay
+- America/Indiana/Vincennes
+- America/Indiana/Winamac
+- America/Juneau
+- America/Kentucky/Louisville
+- America/Kentucky/Monticello
+- America/Los_Angeles
+- America/Menominee
+- America/Metlakatla
+- America/New_York
+- America/Nome
+- America/North_Dakota/Beulah
+- America/North_Dakota/Center
+- America/North_Dakota/New_Salem
+- America/Phoenix
+- America/Sitka
+- America/Yakutat
+- Pacific/Honolulu
+native_names:
+  ar:
+    official: الولايات المتحدة
+    common: أمريكا
+  en:
+    official: United States
+    common: the States
+  es:
+    official: Estados Unidos
+    common: EUA
+  fr:
+    official: États-Unis
+    common: É.-U.
+  ru:
+    official: США
+    common: Соединённые Штаты Америки
+  zh:
+    official: 美國
+    common: 美利坚合众国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

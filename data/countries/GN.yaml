@@ -65,3 +65,64 @@ other_names:
   name: Guinea
 common_names:
 - Republic of Guinea
+population:
+  value: 14754785
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 245720.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 29.6
+  year: 2018
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Abidjan
+native_names:
+  ar:
+    official: غينيا
+    common: جمهورية غينيا
+  en:
+    official: Guinea
+    common: Guinea-Conakry
+  es:
+    official: Guinea
+    common: República de Guinea
+  fr:
+    official: Guinée
+    common: Guinée-Conakry
+  ru:
+    official: Гвинея
+    common: Гвинейская Республика
+  zh:
+    official: 几内亚
+    common: 幾內亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

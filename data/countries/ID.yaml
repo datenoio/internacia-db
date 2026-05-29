@@ -62,3 +62,67 @@ other_names:
   name: Indonesia
 common_names:
 - Republic of Indonesia
+population:
+  value: 283487931
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1892555.47
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 34.4
+  year: 2025
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Jakarta
+- Asia/Jayapura
+- Asia/Makassar
+- Asia/Pontianak
+native_names:
+  ar:
+    official: إندونيسيا
+    common: جمهورية إندونيسيا
+  en:
+    official: Indonesia
+    common: Republic of Indonesia
+  es:
+    official: Indonesia
+    common: República de Indonesia
+  fr:
+    official: Indonésie
+    common: République d'Indonésie
+  ru:
+    official: Индонезия
+    common: Республика Индонезия
+  zh:
+    official: 印度尼西亚
+    common: 印尼
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

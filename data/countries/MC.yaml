@@ -57,3 +57,55 @@ other_names:
   name: Mónaco
 common_names:
 - Principality of Monaco
+population:
+  value: 38631
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 2.084
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Europe/Paris
+native_names:
+  ar:
+    official: موناكو
+    common: إمارة موناكو
+  en:
+    official: Monaco
+    common: Principality of Monaco
+  es:
+    official: Mónaco
+    common: Principado de Mónaco
+  fr:
+    official: Monaco
+    common: Principauté de Monaco
+  ru:
+    official: Монако
+    common: Княжество Монако
+  zh:
+    official: 摩納哥
+    common: 摩纳哥
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

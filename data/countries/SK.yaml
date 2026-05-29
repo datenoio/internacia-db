@@ -59,3 +59,67 @@ other_names:
   name: Словакия
 - id: es
   name: Eslovaquia
+population:
+  value: 5422069
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 48080.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 23.8
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Prague
+native_names:
+  ar:
+    official: سلوفاكيا
+    common: جمهورية سلوفاكيا
+  en:
+    official: Slovakia
+    common: Slovak Republic
+  es:
+    official: Eslovaquia
+    common: República Eslovaca
+  fr:
+    official: Slovaquie
+    common: République slovaque
+  ru:
+    official: Словакия
+    common: Slovensko
+  zh:
+    official: 斯洛伐克
+    common: 斯洛伐克
+common_names:
+- Slovak Republic
+- Slovakia
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

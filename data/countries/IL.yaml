@@ -61,3 +61,64 @@ other_names:
   name: Israel
 common_names:
 - State of Israel
+population:
+  value: 9974400
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 21640.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 38.3
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Jerusalem
+native_names:
+  ar:
+    official: إسرائيل
+    common: الدولة العبرية
+  en:
+    official: Israel
+    common: ISR
+  es:
+    official: Israel
+    common: Estado de Israel
+  fr:
+    official: Israël
+    common: État d'Israël
+  ru:
+    official: Израиль
+    common: Государство Израиль
+  zh:
+    official: 以色列
+    common: 以色列
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

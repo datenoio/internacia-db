@@ -82,3 +82,67 @@ other_names:
   name: Namibia
 common_names:
 - Republic of Namibia
+population:
+  value: 3030131
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 823290.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 59.1
+  year: 2015
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Windhoek
+native_names:
+  ar:
+    official: ناميبيا
+    common: نامبيا
+  de:
+    official: Namibia
+    common: Republik Namibia
+  en:
+    official: Namibia
+    common: Republic of Namibia
+  es:
+    official: Namibia
+    common: República de Namibia
+  fr:
+    official: Namibie
+    common: République de Namibie
+  ru:
+    official: Намибия
+    common: Республика Намибия
+  zh:
+    official: 纳米比亚
+    common: 納米比亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

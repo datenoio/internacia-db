@@ -64,3 +64,64 @@ other_names:
   name: Costa de Marfil
 common_names:
 - Republic of Côte d'Ivoire
+population:
+  value: 31934230
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 318000.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 35.3
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Abidjan
+native_names:
+  ar:
+    official: ساحل العاج
+    common: كوت ديفوار
+  en:
+    official: Ivory Coast
+    common: Republic of Côte d'Ivoire
+  es:
+    official: Costa de Marfil
+    common: República de Costa de Marfil
+  fr:
+    official: Côte d'Ivoire
+    common: Côte d’Ivoire
+  ru:
+    official: Кот-д’Ивуар
+    common: Республика Кот-д’Ивуар
+  zh:
+    official: 科特迪瓦
+    common: 象牙海岸
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

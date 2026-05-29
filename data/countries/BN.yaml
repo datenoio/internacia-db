@@ -60,3 +60,55 @@ other_names:
   name: Brunéi
 common_names:
 - Nation of Brunei, Abode of Peace
+population:
+  value: 462721
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 5270.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Asia/Kuching
+native_names:
+  ar:
+    official: بروناي
+    common: اتحاد بروناي
+  en:
+    official: Brunei
+    common: bn
+  es:
+    official: Brunéi
+    common: Estado de Brunéi, Morada de la Paz
+  fr:
+    official: Brunei
+    common: BN
+  ru:
+    official: Бруней
+    common: Государство Бруней-Даруссалам
+  zh:
+    official: 汶莱
+    common: 文莱
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

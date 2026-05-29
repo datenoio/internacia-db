@@ -63,3 +63,64 @@ other_names:
 common_names:
 - Czech Republic
 - Czechia
+population:
+  value: 10905028
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 77167.31
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 25.7
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Prague
+native_names:
+  ar:
+    official: جمهورية التشيك
+    common: الجمهورية التشيكية
+  en:
+    official: Czech Republic
+    common: Czechia
+  es:
+    official: República Checa
+    common: Bohemia
+  fr:
+    official: Tchéquie
+    common: République tchèque
+  ru:
+    official: Чехия
+    common: Чешская Республика
+  zh:
+    official: 捷克
+    common: 捷克共和國
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

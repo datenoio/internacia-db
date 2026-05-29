@@ -62,3 +62,65 @@ other_names:
   name: Vanuatu
 common_names:
 - Republic of Vanuatu
+population:
+  value: 327777
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 12190.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 32.3
+  year: 2019
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Pacific/Efate
+native_names:
+  ar:
+    official: فانواتو
+    common: فانواتو
+  en:
+    official: Vanuatu
+    common: Republic of Vanuatu
+  es:
+    official: Vanuatu
+    common: República de Vanuatu
+  fr:
+    official: Vanuatu
+    common: République de Vanuatu
+  ru:
+    official: Вануату
+    common: Республика Вануату
+  zh:
+    official: 萬那杜
+    common: 瓦努阿图
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

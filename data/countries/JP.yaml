@@ -53,3 +53,67 @@ other_names:
   name: Япония
 - id: es
   name: Japón
+population:
+  value: 123975371
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 364569.27
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 32.3
+  year: 2020
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Tokyo
+native_names:
+  ar:
+    official: اليابان
+    common: يابان
+  en:
+    official: Japan
+    common: State of Japan
+  es:
+    official: Japón
+    common: Estado de Japón
+  fr:
+    official: Japon
+    common: pays du soleil levant
+  ru:
+    official: Япония
+    common: Страна восходящего солнца
+  zh:
+    official: 日本
+    common: 日本国
+common_names:
+- Japan
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -64,3 +64,66 @@ other_names:
   name: Босния и Герцеговина
 - id: es
   name: Bosnia y Herzegovina
+population:
+  value: 3164253
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 51200.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 30.3
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Belgrade
+native_names:
+  ar:
+    official: البوسنة والهرسك
+    common: البوسنة والهرسك
+  en:
+    official: Bosnia and Herzegovina
+    common: Bosnia-Herzegovina
+  es:
+    official: Bosnia y Herzegovina
+    common: Bosnia-Herzegovia
+  fr:
+    official: Bosnie-Herzégovine
+    common: Bosnie Herzégovine
+  ru:
+    official: Босния и Герцеговина
+    common: Босния
+  zh:
+    official: 波斯尼亚和黑塞哥维那
+    common: 波士尼亚与黑塞哥维纳
+common_names:
+- Bosnia and Herzegovina
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

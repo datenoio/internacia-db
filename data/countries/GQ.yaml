@@ -62,3 +62,67 @@ other_names:
   name: Guinea Ecuatorial
 common_names:
 - Republic of Equatorial Guinea
+population:
+  value: 1892516
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 28050.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 38.5
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Lagos
+native_names:
+  ar:
+    official: غينيا الاستوائية
+    common: غينيا الاستوائية
+  en:
+    official: Equatorial Guinea
+    common: Republic of Equatorial Guinea
+  es:
+    official: Guinea Ecuatorial
+    common: República de Guinea Ecuatorial
+  fr:
+    official: Guinée équatoriale
+    common: Guinée-Équatoriale
+  pt:
+    official: Guiné Equatorial
+    common: República da Guiné Equatorial
+  ru:
+    official: Экваториальная Гвинея
+    common: Республика Экваториальная Гвинея
+  zh:
+    official: 赤道几内亚
+    common: 赤道幾內亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

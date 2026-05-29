@@ -62,3 +62,65 @@ other_names:
   name: Comoras
 common_names:
 - Union of the Comoros
+population:
+  value: 866628
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1861.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 30.3
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Nairobi
+native_names:
+  ar:
+    official: جزر القمر
+    common: الاتحاد القمري
+  en:
+    official: Comoros
+    common: Juzur al-Qumur
+  es:
+    official: Comoras
+    common: Unión de las Comoras
+  fr:
+    official: Comores
+    common: Union des Comores
+  ru:
+    official: Коморы
+    common: Союз Коморских Островов
+  zh:
+    official: 葛摩
+    common: 科摩罗
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

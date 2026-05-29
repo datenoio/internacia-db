@@ -53,3 +53,58 @@ other_names:
   name: Тёркс и Кайкос
 - id: es
   name: Islas Turcas y Caicos
+population:
+  value: 46535
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 950.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- America/Grand_Turk
+native_names:
+  ar:
+    official: جزر توركس وكيكوس
+    common: جزر توركس وكيكوس
+  en:
+    official: Turks and Caicos Islands
+    common: TCI
+  es:
+    official: Islas Turcas y Caicos
+    common: Islas Turcas y Caicos
+  fr:
+    official: Îles Turques et Caïques
+    common: Îles Turks-et-Caïcos
+  ru:
+    official: Тёркс и Кайкос
+    common: Острова Тёркс и Кайкос
+  zh:
+    official: 特克斯和凯科斯群岛
+    common: 土克凱可群島
+common_names:
+- Turks and Caicos Islands
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

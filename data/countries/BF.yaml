@@ -63,3 +63,66 @@ other_names:
   name: Буркина-Фасо
 - id: es
   name: Burkina Faso
+population:
+  value: 23548781
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 273600.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 37.4
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Abidjan
+native_names:
+  ar:
+    official: بوركينا فاسو
+    common: بوركينافاسو
+  en:
+    official: Burkina Faso
+    common: bf
+  es:
+    official: Burkina Faso
+    common: Burkina Faso
+  fr:
+    official: Burkina Faso
+    common: Burkina
+  ru:
+    official: Буркина-Фасо
+    common: Буркина-Фасо
+  zh:
+    official: 布吉納法索
+    common: 布基纳法索
+common_names:
+- Burkina Faso
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

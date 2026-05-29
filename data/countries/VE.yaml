@@ -63,3 +63,64 @@ other_names:
 common_names:
 - Venezuela
 - Bolivarian Republic of Venezuela
+population:
+  value: 28405543
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 882050.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 44.7
+  year: 2006
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Caracas
+native_names:
+  ar:
+    official: فنزويلا
+    common: فنزويلا
+  en:
+    official: Venezuela
+    common: Bolivarian Republic of Venezuela
+  es:
+    official: Venezuela
+    common: RB Venezuela
+  fr:
+    official: Venezuela
+    common: Vénézuéla
+  ru:
+    official: Венесуэла
+    common: Боливарианская Республика Венесуэла
+  zh:
+    official: 委內瑞拉
+    common: 委內瑞拉
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

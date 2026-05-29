@@ -59,3 +59,64 @@ common_names:
 - South Korea
 - Republic of Korea
 - ROK
+population:
+  value: 51751065
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 97600.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 32.9
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Seoul
+native_names:
+  ar:
+    official: كوريا الجنوبية
+    common: جمهورية كوريا
+  en:
+    official: South Korea
+    common: Republic of Korea
+  es:
+    official: Corea del Sur
+    common: República de Corea
+  fr:
+    official: Corée du Sud
+    common: République de Corée
+  ru:
+    official: Республика Корея
+    common: Южная Корея
+  zh:
+    official: 大韩民国
+    common: 韩国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

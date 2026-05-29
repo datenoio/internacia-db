@@ -76,3 +76,65 @@ other_names:
 common_names:
 - People's Republic of China
 - PRC
+population:
+  value: 1408975000
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 9388210.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 36.0
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Shanghai
+- Asia/Urumqi
+native_names:
+  ar:
+    official: الصين
+    common: الصين الشعبية
+  en:
+    official: People's Republic of China
+    common: Red China
+  es:
+    official: República Popular China
+    common: China Popular
+  fr:
+    official: République populaire de Chine
+    common: Chine communiste
+  ru:
+    official: Китай
+    common: КНР
+  zh:
+    official: 中华人民共和国
+    common: 中国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

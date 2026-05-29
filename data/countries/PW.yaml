@@ -60,3 +60,56 @@ other_names:
   name: Palaos
 common_names:
 - Republic of Palau
+population:
+  value: 17695
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 460.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Pacific/Palau
+native_names:
+  ar:
+    official: بالاو
+    common: بالاو
+  en:
+    official: Palau
+    common: Republic of Palau
+  es:
+    official: Palaos
+    common: República de Palaos
+  fr:
+    official: Palaos
+    common: Palau
+  ru:
+    official: Палау
+    common: Республика Палау
+  zh:
+    official: 帛琉
+    common: 帕劳
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

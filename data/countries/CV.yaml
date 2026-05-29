@@ -58,3 +58,68 @@ other_names:
   name: Cabo Verde
 common_names:
 - Republic of Cabo Verde
+population:
+  value: 524877
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 4030.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 42.4
+  year: 2015
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Atlantic/Cape_Verde
+native_names:
+  ar:
+    official: الرأس الأخضر
+    common: الرأس الأخضر
+  en:
+    official: Cape Verde
+    common: Republic of Cape Verde
+  es:
+    official: Cabo Verde
+    common: República de Cabo Verde
+  fr:
+    official: Cap-Vert
+    common: îles du Cap-Vert
+  pt:
+    official: Cabo Verde
+    common: República de Cabo Verde
+  ru:
+    official: Кабо-Верде
+    common: Республика Кабо-Верде
+  zh:
+    official: 佛得角
+    common: 維德角
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

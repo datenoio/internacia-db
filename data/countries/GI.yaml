@@ -51,3 +51,57 @@ other_names:
   name: Гибралтар
 - id: es
   name: Gibraltar
+population:
+  value: 39329
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 10.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Europe/Gibraltar
+native_names:
+  ar:
+    official: جبل طارق
+    common: جبل طارق (منطقة حكم ذاتي)
+  en:
+    official: Gibraltar
+    common: gi
+  es:
+    official: Gibraltar
+    common: la Roca
+  fr:
+    official: Gibraltar
+    common: Gibraltar
+  ru:
+    official: Гибралтар
+    common: Гибралтар
+  zh:
+    official: 直布羅陀
+    common: 直布罗陀
+common_names:
+- Gibraltar
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

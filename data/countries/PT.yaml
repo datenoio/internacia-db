@@ -41,3 +41,58 @@ demonyms:
   female: Portuguese
   male: Portuguese
 m49_code: '620'
+wikidata_id: Q45
+population:
+  value: 10694681
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 91605.6
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 33.9
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Atlantic/Azores
+- Atlantic/Madeira
+- Europe/Lisbon
+native_names:
+  en:
+    official: Portugal
+    common: Portuguese Republic
+  pt:
+    official: Portugal
+    common: República Portuguesa
+common_names:
+- Portugal
+- Portuguese Republic
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

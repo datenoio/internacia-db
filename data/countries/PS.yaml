@@ -65,3 +65,65 @@ other_names:
 common_names:
 - Palestine
 - State of Palestine
+population:
+  value: 5289152
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 6025.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 36.4
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Gaza
+- Asia/Hebron
+native_names:
+  ar:
+    official: دولة فلسطين
+    common: فلسطين
+  en:
+    official: Palestine
+    common: PSE
+  es:
+    official: Palestina
+    common: Estado de Palestina
+  fr:
+    official: État de Palestine
+    common: État palestinien
+  ru:
+    official: Государство Палестина
+    common: Палестинские территории
+  zh:
+    official: 巴勒斯坦
+    common: 巴勒斯坦國
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

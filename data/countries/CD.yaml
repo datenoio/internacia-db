@@ -78,3 +78,65 @@ common_names:
 - Congo
 - Democratic Republic of the Congo
 - DRC
+population:
+  value: 109276265
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 2267050.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 44.7
+  year: 2020
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Lagos
+- Africa/Maputo
+native_names:
+  ar:
+    official: جمهورية الكونغو الديمقراطية
+    common: الكونغو
+  en:
+    official: Democratic Republic of the Congo
+    common: DRC
+  es:
+    official: República Democrática del Congo
+    common: Congo
+  fr:
+    official: République démocratique du Congo
+    common: Congo-Kinshasa
+  ru:
+    official: Демократическая Республика Конго
+    common: ДРК
+  zh:
+    official: 刚果民主共和国
+    common: 剛果民主共和國
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -58,3 +58,58 @@ other_names:
   name: Остров Мэн
 - id: es
   name: Isla de Man
+population:
+  value: 84160
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 570.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Europe/London
+native_names:
+  ar:
+    official: جزيرة مان
+    common: آيل أوف مان
+  en:
+    official: Isle of Man
+    common: Mann
+  es:
+    official: Isla de Man
+    common: Isla de Man
+  fr:
+    official: Île de Man
+    common: Insula Mona
+  ru:
+    official: Остров Мэн
+    common: Мэн
+  zh:
+    official: 马恩岛
+    common: 曼岛
+common_names:
+- Isle of Man
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -65,3 +65,64 @@ other_names:
   name: Таджикистан
 - id: es
   name: Tayikistán
+population:
+  value: 10590927
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 138790.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 36.1
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Dushanbe
+native_names:
+  ar:
+    official: طاجيكستان
+    common: تاجیکستان
+  en:
+    official: Tajikistan
+    common: Republic of Tajikistan
+  es:
+    official: Tayikistán
+    common: República de Tayikistán
+  fr:
+    official: Tadjikistan
+    common: TJ
+  ru:
+    official: Таджикистан
+    common: Республика Таджикистан
+  zh:
+    official: 塔吉克斯坦
+    common: 塔吉克斯坦
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

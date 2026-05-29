@@ -64,3 +64,55 @@ common_names:
 - North Korea
 - Democratic People's Republic of Korea
 - DPRK
+population:
+  value: 26498823
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 120410.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Asia/Pyongyang
+native_names:
+  ar:
+    official: كوريا الشمالية
+    common: جمهورية كوريا الديمقراطية الشعبية
+  en:
+    official: North Korea
+    common: PRK
+  es:
+    official: Corea del Norte
+    common: Norcorea
+  fr:
+    official: Corée du Nord
+    common: République populaire démocratique de Corée
+  ru:
+    official: КНДР
+    common: Северная Корея
+  zh:
+    official: 朝鮮民主主義人民共和國
+    common: 朝鲜
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -60,3 +60,64 @@ other_names:
   name: Gambia
 common_names:
 - Republic of the Gambia
+population:
+  value: 2759988
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 10120.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 38.8
+  year: 2020
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Abidjan
+native_names:
+  ar:
+    official: غامبيا
+    common: جمهورية غامبيا
+  en:
+    official: The Gambia
+    common: Islamic Republic of the Gambia
+  es:
+    official: Gambia
+    common: República de Gambia
+  fr:
+    official: Gambie
+    common: GM
+  ru:
+    official: Гамбия
+    common: Республика Гамбия
+  zh:
+    official: 岡比亞
+    common: 甘比亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

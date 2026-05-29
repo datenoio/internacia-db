@@ -66,3 +66,55 @@ other_names:
 common_names:
 - Libya
 - State of Libya
+population:
+  value: 7381023
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1759540.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Africa/Tripoli
+native_names:
+  ar:
+    official: ليبيا
+    common: ليبية
+  en:
+    official: Libya
+    common: State of Libya
+  es:
+    official: Libia
+    common: Estado de Libia
+  fr:
+    official: Libye
+    common: LY
+  ru:
+    official: Ливия
+    common: Государство Ливия
+  zh:
+    official: 利比亞
+    common: 利比亚国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

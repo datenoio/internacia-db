@@ -85,3 +85,64 @@ other_names:
   name: Sudáfrica
 common_names:
 - Republic of South Africa
+population:
+  value: 64007187
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1213090.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 54.1
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Johannesburg
+native_names:
+  ar:
+    official: جنوب إفريقيا
+    common: جنوب أفريقيا
+  en:
+    official: South Africa
+    common: Republic of South Africa
+  es:
+    official: Sudáfrica
+    common: República de Sudáfrica
+  fr:
+    official: Afrique du Sud
+    common: République sud-africaine
+  ru:
+    official: ЮАР
+    common: Южная Африка
+  zh:
+    official: 南非
+    common: 南非共和国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

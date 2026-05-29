@@ -64,3 +64,64 @@ other_names:
   name: Malaui
 common_names:
 - Republic of Malawi
+population:
+  value: 21655286
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 94280.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 38.5
+  year: 2019
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Maputo
+native_names:
+  ar:
+    official: ملاوي
+    common: جمهورية مالاوي
+  en:
+    official: Malawi
+    common: Republic of Malawi
+  es:
+    official: Malaui
+    common: Malawi
+  fr:
+    official: Malawi
+    common: République du Malawi
+  ru:
+    official: Малави
+    common: Республика Малави
+  zh:
+    official: 馬拉威
+    common: 马拉维
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

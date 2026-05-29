@@ -1,0 +1,52 @@
+name: Validate datasets
+
+on:
+  pull_request:
+    paths:
+      - 'data/countries/**'
+      - 'data/intblocks/**'
+      - 'data/schemas/**'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/validate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/countries/**'
+      - 'data/intblocks/**'
+      - 'data/schemas/**'
+      - 'scripts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate countries
+        run: python scripts/validate_countries.py --report completeness-report.json
+
+      - name: Upload completeness report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: completeness-report
+          path: completeness-report.json
+
+      - name: Build datasets
+        run: python scripts/builder.py build --formats parquet
+
+      - name: Diff countries baseline
+        run: python scripts/diff_countries_baseline.py --allow-row-count-change
+
+      - name: Report include name aliases
+        run: python scripts/report_country_include_names.py

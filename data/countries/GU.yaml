@@ -57,3 +57,58 @@ other_names:
   name: Гуам
 - id: es
   name: Guam
+population:
+  value: 167777
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 540.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Pacific/Guam
+native_names:
+  ar:
+    official: غوام
+    common: غوام
+  en:
+    official: Guam
+    common: GU
+  es:
+    official: Guam
+    common: Guaján
+  fr:
+    official: Guam
+    common: US-GU
+  ru:
+    official: Гуам
+    common: Территория Гуам
+  zh:
+    official: 關島
+    common: 关岛
+common_names:
+- Guam
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

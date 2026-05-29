@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Countries YAML schema (core subset)",
+  "title": "Countries YAML schema",
   "type": "object",
   "additionalProperties": true,
-  "required": ["code", "name", "iso3code", "numeric_code"],
+  "required": ["code", "name", "iso3code", "numeric_code", "entity_type", "code_status"],
   "properties": {
     "code": {
       "type": "string",
@@ -24,11 +24,11 @@
     },
     "capital_city": {
       "type": "object",
-      "required": ["name", "lat", "lng"],
+      "required": ["name"],
       "properties": {
         "name": { "type": "string" },
-        "lat": { "type": "string" },
-        "lng": { "type": "string" }
+        "lat": { "type": ["string", "number"] },
+        "lng": { "type": ["string", "number"] }
       },
       "additionalProperties": true
     },
@@ -114,7 +114,50 @@
     },
     "borders": {
       "type": "array",
-      "items": { "type": "string" }
+      "description": "Land border neighbors as ISO 3166-1 alpha-3 codes (e.g. CAN, MEX)",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$"
+      }
+    },
+    "population": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": "integer" },
+        "year": { "type": "integer" },
+        "source": { "type": "string" },
+        "source_id": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "area": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": "number" },
+        "year": { "type": "integer" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "gini": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": "number" },
+        "year": { "type": "integer" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "native_names": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "official": { "type": "string" },
+          "common": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
     },
     "landlocked": {
       "type": "boolean"
@@ -123,8 +166,12 @@
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^UTC[+-]\\d{2}:\\d{2}$"
+        "minLength": 1
       }
+    },
+    "timezone_status": {
+      "type": "string",
+      "enum": ["not_applicable"]
     },
     "tld": {
       "type": "string"
@@ -177,6 +224,59 @@
       "type": "string",
       "pattern": "^\\d{3}$",
       "description": "UN M49 numeric code (3-digit code for countries)"
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": [
+        "sovereign_state",
+        "dependent_territory",
+        "special_administrative_region",
+        "disputed_territory",
+        "historical_entity",
+        "supranational_grouping",
+        "statistical_area"
+      ]
+    },
+    "code_status": {
+      "type": "string",
+      "enum": [
+        "official_iso3166_1",
+        "user_assigned",
+        "obsolete",
+        "exceptionally_reserved"
+      ]
+    },
+    "recognition_status": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string" },
+        "un_member": { "type": "boolean" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "parent_entity": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "minLength": 2, "maxLength": 2 },
+        "name": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "source", "retrieved_at"],
+        "properties": {
+          "field": { "type": "string" },
+          "source": { "type": "string" },
+          "url": { "type": "string" },
+          "retrieved_at": { "type": "string" },
+          "license": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
     }
   }
 }

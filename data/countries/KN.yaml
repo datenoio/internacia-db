@@ -58,3 +58,56 @@ other_names:
   name: San Cristóbal y Nieves
 common_names:
 - Federation of Saint Christopher and Nevis
+population:
+  value: 46843
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 260.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- America/Puerto_Rico
+native_names:
+  ar:
+    official: سانت كيتس ونيفيس
+    common: سانت كيتس ونيفيس
+  en:
+    official: Saint Kitts and Nevis
+    common: Saint Christopher and Nevis
+  es:
+    official: San Cristóbal y Nieves
+    common: Federación de San Cristóbal y Nieves
+  fr:
+    official: Saint-Christophe-et-Niévès
+    common: Fédération de Saint-Christophe-et-Niévès
+  ru:
+    official: Сент-Китс и Невис
+    common: Федерация Сент-Китс и Невис
+  zh:
+    official: 聖克里斯多福及尼維斯
+    common: 圣基茨和尼维斯
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

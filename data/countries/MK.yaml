@@ -66,3 +66,64 @@ common_names:
 - Macedonia
 - North Macedonia
 - Republic of North Macedonia
+population:
+  value: 1824359
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 25220.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 33.5
+  year: 2019
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Belgrade
+native_names:
+  ar:
+    official: مقدونيا الشمالية
+    common: جمهورية مقدونيا اليوغوسلافية السابقة
+  en:
+    official: North Macedonia
+    common: Republic of North Macedonia
+  es:
+    official: Macedonia del Norte
+    common: Antigua República Yugoslava de Macedonia
+  fr:
+    official: Macédoine du Nord
+    common: ARYM
+  ru:
+    official: Северная Македония
+    common: Македония
+  zh:
+    official: 北马其顿
+    common: 馬其頓
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

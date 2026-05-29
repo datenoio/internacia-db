@@ -1,129 +1,130 @@
 # Internacia Datasets
 
-
-This repository contains comprehensive datasets of countries, intergovernmental organizations, and country groups. It serves as a reference data source for data enrichment the **Dateno** search engine project.
-
-This script generates datasets from the `data/countries` and `data/intblocks` directories in multiple formats for easy consumption.
-
-## Roadmap
-
-- [x] Create a Python SDK for easy data access - See [internacia-python](../internacia-python)
-- [x] Develop a REST API for data retrieval - See [internacia-api](../internacia-api)
-
-The datasets are stored in the `data/datasets` directory.   
-
-The datasets are compressed with Zstandard compression for maximum efficiency.
+Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/` and `data/intblocks/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
 
 ## Features
 
-- ✅ Uses **typer** for clean CLI interface
-- ✅ Generates datasets in **JSONL**, **YAML**, **Parquet**, and **DuckDB** formats
-- ✅ Uses **Zstandard** compression for all file formats for maximum efficiency
-- ✅ Uses **tqdm** progress bars for visual feedback
-- ✅ Flexible output directory configuration
-- ✅ Selective format generation
+- **Multi-format export**: JSONL, YAML, Parquet, and DuckDB (Zstandard compression, level 22)
+- **Countries quality pipeline**: schema validation, completeness gates, entity status policy, and field-level provenance
+- **Profile enrichment**: population, area, gini, timezones, and native names from World Bank, Wikidata, and IANA tzdata
+- **Build metadata**: `countries.manifest.json` with version, commit, row count, and schema hash
+- **CI validation**: pull-request checks via `.github/workflows/validate.yml`
+- **CLI tools**: Typer-based scripts with tqdm progress bars
 
 ## Installation
 
-Install required dependencies:
-
 ```bash
-pip install -r scripts/requirements.txt
+pip install -r requirements.txt
 ```
 
-## Usage
-
-### Display Information
-
-Show information about available data sources:
+## Quick start
 
 ```bash
+# Inspect data sources
 python3 scripts/builder.py info
-```
 
-### Build All Datasets
+# Validate country YAML (no build)
+python3 scripts/validate_countries.py
 
-Generate datasets in all formats (JSONL, YAML, Parquet, DuckDB):
-
-```bash
+# Build all datasets
 python3 scripts/builder.py build
+
+# Build specific formats only
+python3 scripts/builder.py build --formats parquet,duckdb
 ```
 
-This will create the following files in `data/datasets/`:
-- `countries.jsonl.zst` - All countries data in JSONL format (Zstd compressed)
-- `countries.yaml.zst` - All countries data in YAML format (Zstd compressed)
-- `countries.parquet` - All countries data in Parquet format (Zstd compressed)
-- `intblocks.jsonl.zst` - All international blocks data in JSONL format (Zstd compressed)
-- `intblocks.yaml.zst` - All international blocks data in YAML format (Zstd compressed)
-- `intblocks.parquet` - All international blocks data in Parquet format (Zstd compressed)
-- `blocktypes.jsonl.zst` - All blocktypes data in JSONL format (Zstd compressed)
-- `blocktypes.yaml.zst` - All blocktypes data in YAML format (Zstd compressed)
-- `blocktypes.parquet` - All blocktypes data in Parquet format (Zstd compressed)
-- `internacia.duckdb` - DuckDB database with `countries`, `intblocks`, and `blocktypes` tables
+## Output files
 
-### Build Specific Formats
+Each build writes to `data/datasets/`:
 
-Generate only specific formats:
+| File | Description |
+|------|-------------|
+| `countries.jsonl.zst` | Countries (JSONL, zstd) |
+| `countries.yaml.zst` | Countries (YAML, zstd) |
+| `countries.parquet` | Countries (Parquet, zstd) |
+| `countries.manifest.json` | Build metadata (version, commit, row count, schema hash) |
+| `intblocks.jsonl.zst` | International blocks (JSONL, zstd) |
+| `intblocks.yaml.zst` | International blocks (YAML, zstd) |
+| `intblocks.parquet` | International blocks (Parquet, zstd) |
+| `blocktypes.jsonl.zst` | Block types (JSONL, zstd) |
+| `blocktypes.yaml.zst` | Block types (YAML, zstd) |
+| `blocktypes.parquet` | Block types (Parquet, zstd) |
+| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes` tables) |
+
+Current row counts: **252** countries, **1065** intblocks, **85** blocktypes.
+
+## Validation and quality
+
+The builder runs `validate_countries.py` before export. Validation covers:
+
+- JSON Schema conformance (`data/schemas/countries.schema.json`)
+- ISO identifier formats and duplicate detection
+- Completeness thresholds (`data/schemas/countries_completeness.yaml`)
+- Entity status policy (`entity_type`, `code_status`)
+- Intblock cross-references (country `includes` resolve to country sources)
 
 ```bash
-# Generate only JSONL and DuckDB
-python3 scripts/builder.py build --formats jsonl,duckdb
+# Full validation with JSON report
+python3 scripts/validate_countries.py --report completeness-report.json
 
-# Generate only Parquet
-python3 scripts/builder.py build --formats parquet
+# Enrich profile fields from external sources
+python3 scripts/enrich_countries.py
+python3 scripts/enrich_countries.py backfill-provenance
+
+# Apply entity status annotations
+python3 scripts/annotate_entity_status.py
+
+# Audit intblock include name aliases (warn-only)
+python3 scripts/report_country_include_names.py
+
+# Compare manifest to main branch baseline
+python3 scripts/diff_countries_baseline.py
 ```
 
-### Custom Output Directory
+Country code policy (ISO vs user-assigned, filtering examples): [docs/country-code-policy.md](docs/country-code-policy.md)
 
-Specify a custom output directory:
+## Consumer migration
 
-```bash
-python3 scripts/builder.py build --output-dir /path/to/output
+Breaking and semantic changes in the latest countries schema (see [CHANGELOG.md](CHANGELOG.md)):
+
+- **Population / area / gini**: structured as `{value, year, source, source_id}` — use `.value` for the numeric field.
+- **Borders**: land neighbors as ISO **alpha-3** codes (e.g. `CAN`, `MEX`), not alpha-2.
+- **Entity filter**: `code_status == 'official_iso3166_1'` returns **249** current ISO-style records.
+- **Build metadata**: compare `countries.manifest.json` `schema_hash` when upgrading downstream pipelines.
+
+**Pandas example** (structured population):
+
+```python
+import pandas as pd
+
+df = pd.read_parquet("data/datasets/countries.parquet")
+pop = df["population"].struct.field("value")
 ```
 
-## Output Formats
-
-### JSONL & YAML (Zstandard Compressed)
-- **JSONL**: Line-delimited JSON, compressed with Zstandard (`.jsonl.zst`). Efficient for streaming and large datasets.
-- **YAML**: Standard YAML, compressed with Zstandard (`.yaml.zst`).
-- **Compression**: All text formats use high-level Zstandard compression (level 22) for maximum space savings.
-
-To decompress:
-```bash
-zstd -d data/datasets/countries.jsonl.zst
-```
-
-### Parquet
-Columnar storage format optimized for analytics.
-- **Compression**: Zstandard compressed (level 22).
-- **Schema**: Explicitly typed with native nested structures (Lists and Structs).
-
-### DuckDB
-Full relational database with SQL support. Nested structures are stored as native DuckDB `LIST` and `STRUCT` types.
+**DuckDB example** (nested intblock translations):
 
 ```python
 import duckdb
 
-con = duckdb.connect('data/datasets/internacia.duckdb')
-
-# Query nested structures directly
-# Example: Get all English translations
+con = duckdb.connect("data/datasets/internacia.duckdb")
 con.execute("""
-    SELECT id, name, t.name as english_name 
-    FROM intblocks, UNNEST(translations) as t 
-    WHERE t.lang = 'en' 
+    SELECT id, name, t.name AS english_name
+    FROM intblocks, UNNEST(translations) AS t
+    WHERE t.lang = 'en'
     LIMIT 5
 """).fetchall()
 ```
 
-## Dataset Structure
+## Countries schema
 
-### Countries Schema
-The `countries` dataset contains detailed information about 252 countries and territories.
+252 country and territory records. Key fields:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `code` | String | ISO 3166-1 alpha-2 code (e.g., "US") |
+| `code` | String | ISO 3166-1 alpha-2 code (e.g. `US`) |
+| `entity_type` | String | `sovereign_state`, `dependent_territory`, `historical_entity`, etc. |
+| `code_status` | String | `official_iso3166_1`, `user_assigned`, `obsolete` |
+| `recognition_status` | Struct | Optional recognition/dispute metadata |
 | `name` | String | Common name |
 | `iso3code` | String | ISO 3166-1 alpha-3 code |
 | `capital_city` | Struct | `{name, lng, lat}` |
@@ -132,92 +133,100 @@ The `countries` dataset contains detailed information about 252 countries and te
 | `incomeLevel` | Struct | World Bank income level `{id, value}` |
 | `lendingType` | Struct | World Bank lending type `{id, value}` |
 | `numeric_code` | String | ISO 3166-1 numeric code |
-| `wikidata_id` | String | Wikidata Item ID |
+| `wikidata_id` | String | Wikidata item ID |
 | `official_name` | String | Official full name |
-| `languages` | List[Struct] | List of `{code, name, official}` |
-| `currencies` | List[Struct] | List of `{code, name, symbol}` |
-| `un_member` | Boolean | Is UN member? |
-| `independent` | Boolean | Is independent state? |
+| `languages` | List[Struct] | `{code, name, official}` |
+| `currencies` | List[Struct] | `{code, name, symbol}` |
+| `un_member` | Boolean | UN member |
+| `independent` | Boolean | Independent state |
 | `subregion` | String | UN subregion |
-| `continents` | List[String] | List of continents |
-| `borders` | List[String] | List of bordering country codes |
-| `landlocked` | Boolean | Is landlocked? |
+| `continents` | List[String] | Continents |
+| `borders` | List[String] | Land borders as ISO **alpha-3** codes |
+| `landlocked` | Boolean | Landlocked |
 | `tld` | String | Top-level domain |
-| `calling_codes` | List[String] | Telephone calling codes |
+| `calling_codes` | List[String] | Telephone codes |
 | `flag_emoji` | String | Flag emoji |
 | `car_side` | String | Driving side |
-| `start_of_week` | String | Start of week day |
+| `start_of_week` | String | Start of week |
 | `demonyms` | Struct | `{female, male}` |
 | `m49_code` | String | UN M49 code |
-| `population` | Integer | Population estimate |
-| `area` | Float | Area in sq km |
-| `gini` | Struct | Gini index `{year, value}` |
-| `timezones` | List[String] | List of timezones |
-| `native_names` | Map | Map of lang code -> `{official, common}` |
-| `other_names` | List[Struct] | Name translations in different languages `{id, name}` |
-| `common_names` | List[String] | Common names and aliases |
+| `population` | Struct | `{value, year, source, source_id}` |
+| `area` | Struct | Land area sq km `{value, year, source, source_id}` |
+| `gini` | Struct | Gini index `{value, year, source, source_id}` |
+| `timezones` | List[String] | IANA timezone identifiers |
+| `timezone_status` | String | `not_applicable` when no zones apply |
+| `native_names` | Map | Lang code → `{official, common}` |
+| `other_names` | List[Struct] | Translations `{id, name}` |
+| `common_names` | List[String] | Aliases and common names |
+| `provenance` | List[Struct] | Field sourcing `{field, source, retrieved_at, url, license}` |
 
-### International Blocks Schema
-The `intblocks` dataset contains information about international organizations, alliances, and unions.
+Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-assigned grouping), `KV` (user-assigned, disputed).
+
+## International blocks schema
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | String | Unique identifier |
-| `blocktype` | List[String] | Types of block (e.g., "Political Union") |
+| `blocktype` | List[String] | Block types |
 | `status` | String | Current status |
-| `name` | String | Name of the block |
+| `name` | String | Name |
 | `languages` | List[String] | Official languages |
-| `links` | List[Struct] | External links `{url, type}` |
-| `other_names` | List[Struct] | Name translations in different languages `{id, name}` |
-| `founded` | String | Foundation year/date |
-| `geographic_scope` | String | Scope (e.g., "Regional", "Global") |
+| `links` | List[Struct] | `{url, type}` |
+| `other_names` | List[Struct] | `{id, name}` translations |
+| `founded` | String | Foundation date |
+| `geographic_scope` | String | Scope |
 | `regions` | List[String] | Regions covered |
-| `includes` | List[Struct] | Member countries `{id, name, type, status, joined, role, note}` |
-| `membership_count` | Integer | Number of members |
-| `wikidata_id` | String | Wikidata Item ID |
+| `includes` | List[Struct] | Members `{id, name, type, status, joined, role, note}` — **`id` is authoritative**; `name` is a source label |
+| `membership_count` | Integer | Member count |
+| `wikidata_id` | String | Wikidata item ID |
 | `legal_status` | String | Legal status |
-| `description` | String | Brief description |
-| `tags` | List[String] | Classification tags |
-| `topics` | List[Struct] | Related topics `{key, name}` |
-| `headquarters` | Struct | `{city, country, coordinates: {lat, lng}}` |
-| `acronyms` | List[Struct] | Acronyms `{lang, value}` |
+| `description` | String | Description |
+| `tags` | List[String] | Tags |
+| `topics` | List[Struct] | `{key, name}` |
+| `headquarters` | Struct | `{city, country, coordinates}` |
+| `acronyms` | List[Struct] | `{lang, value}` |
 | `partof` | List[String] | Parent organizations |
-| `dissolved` | String | Dissolution date (if applicable) |
-| `predecessor` | String | Predecessor organization |
-| `successor` | String | Successor organization |
+| `dissolved` | String | Dissolution date |
+| `predecessor` | String | Predecessor |
+| `successor` | String | Successor |
 
-## Command Reference
+## Data sources
 
-```bash
-# Show general help
-python3 scripts/builder.py --help
+**YAML sources**
 
-# Show help for build command
-python3 scripts/builder.py build --help
+- `data/countries/*.yaml` — 252 country/territory records
+- `data/intblocks/**/*.yaml` — 1065 international block records
 
-# Show data source information
-python3 scripts/builder.py info
-```
+**External enrichment**
 
-## Data Sources
+- [World Bank](https://data.worldbank.org/) — population, area, gini, income classifications
+- [Wikidata](https://www.wikidata.org/) — entity linking, native names, fallbacks
+- [IANA tzdata](https://data.iana.org/time-zones/) — timezone mapping (`scripts/data/zone1970.tab`)
 
-The builder reads YAML files from:
-- `data/countries/*.yaml` - Country data (252 files)
-- `data/intblocks/**/*.yaml` - International blocks data (1065 files, current build)
+## Scripts
 
-Current generated dataset sizes (latest rebuild):
-- `countries`: 252 rows
-- `intblocks`: 1065 rows
-- `blocktypes`: 85 rows
+| Script | Purpose |
+|--------|---------|
+| `scripts/builder.py` | Validate and export datasets |
+| `scripts/validate_countries.py` | Country schema, completeness, and cross-dataset checks |
+| `scripts/validate_links.py` | Intblock URL and Wikidata validation |
+| `scripts/enrich_countries.py` | Enrich country profiles; `backfill-provenance` subcommand |
+| `scripts/annotate_entity_status.py` | Set `entity_type` and `code_status` |
+| `scripts/report_country_include_names.py` | Intblock include name alias audit |
+| `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline |
 
 ## Notes
 
-- Progress bars show real-time loading status
-- All generated files use UTF-8 encoding
-- Nested structures in Parquet/DuckDB are JSON-serialized for compatibility
-- Existing output files are overwritten without warning
+- All text files use UTF-8 encoding; generated outputs overwrite existing files.
+- Decompress zstd files: `zstd -d data/datasets/countries.jsonl.zst`
+- Gap analysis research: `dev/research/countries_gaps_,manus_20260528.md`
 
-## Related Projects
+## Related projects
 
-- [internacia-api](../internacia-api): REST API service for accessing Internacia data
-- [internacia-python](../internacia-python): Python SDK for programmatic data access
+- [internacia-api](../internacia-api) — REST API
+- [internacia-python](../internacia-python) — Python SDK
+
+## Roadmap
+
+- [x] Python SDK — [internacia-python](../internacia-python)
+- [x] REST API — [internacia-api](../internacia-api)

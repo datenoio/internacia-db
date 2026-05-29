@@ -63,3 +63,64 @@ other_names:
   name: Albania
 common_names:
 - Republic of Albania
+population:
+  value: 2377128
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 27400.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 29.4
+  year: 2020
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Tirane
+native_names:
+  ar:
+    official: ألبانيا
+    common: ألبانيا
+  en:
+    official: Albania
+    common: Republic of Albania
+  es:
+    official: Albania
+    common: República de Albania
+  fr:
+    official: Albanie
+    common: république d'Albanie
+  ru:
+    official: Албания
+    common: Республика Албания
+  zh:
+    official: 阿爾巴尼亞
+    common: 阿尔巴尼亚共和国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

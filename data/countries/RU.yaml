@@ -75,3 +75,90 @@ other_names:
 common_names:
 - Russia
 - Russian Federation
+population:
+  value: 143533851
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 16376870.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 33.0
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Anadyr
+- Asia/Barnaul
+- Asia/Chita
+- Asia/Irkutsk
+- Asia/Kamchatka
+- Asia/Khandyga
+- Asia/Krasnoyarsk
+- Asia/Magadan
+- Asia/Novokuznetsk
+- Asia/Novosibirsk
+- Asia/Omsk
+- Asia/Sakhalin
+- Asia/Srednekolymsk
+- Asia/Tomsk
+- Asia/Ust-Nera
+- Asia/Vladivostok
+- Asia/Yakutsk
+- Asia/Yekaterinburg
+- Europe/Astrakhan
+- Europe/Kaliningrad
+- Europe/Kirov
+- Europe/Moscow
+- Europe/Samara
+- Europe/Saratov
+- Europe/Simferopol
+- Europe/Ulyanovsk
+- Europe/Volgograd
+native_names:
+  ar:
+    official: روسيا
+    common: روسيا الاتحادية
+  en:
+    official: Russia
+    common: Russian Federation
+  es:
+    official: Rusia
+    common: Federación Rusa
+  fr:
+    official: Russie
+    common: Rus.
+  ru:
+    official: Россия
+    common: Российская Федерация
+  zh:
+    official: 俄罗斯
+    common: 俄羅斯
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -67,3 +67,70 @@ other_names:
   name: Kazajistán
 common_names:
 - Republic of Kazakhstan
+population:
+  value: 20592571
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 2699700.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 29.2
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Almaty
+- Asia/Aqtau
+- Asia/Aqtobe
+- Asia/Atyrau
+- Asia/Oral
+- Asia/Qostanay
+- Asia/Qyzylorda
+native_names:
+  ar:
+    official: كازاخستان
+    common: قازاقستان
+  en:
+    official: Kazakhstan
+    common: Republic of Kazakhstan
+  es:
+    official: Kazajistán
+    common: República de Kazajistán
+  fr:
+    official: Kazakhstan
+    common: Kazakstan
+  ru:
+    official: Казахстан
+    common: Республика Казахстан
+  zh:
+    official: 哈萨克斯坦
+    common: 哈萨克斯坦共和国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

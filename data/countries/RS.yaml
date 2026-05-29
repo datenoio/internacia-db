@@ -67,3 +67,64 @@ other_names:
   name: Serbia
 common_names:
 - Republic of Serbia
+population:
+  value: 6586476
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 84090.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 32.8
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Belgrade
+native_names:
+  ar:
+    official: صربيا
+    common: جمهورية صربيا
+  en:
+    official: Serbia
+    common: Republic of Serbia
+  es:
+    official: Serbia
+    common: República de Serbia
+  fr:
+    official: Serbie
+    common: République de Serbie
+  ru:
+    official: Сербия
+    common: Республика Сербия
+  zh:
+    official: 塞爾維亞
+    common: 塞国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

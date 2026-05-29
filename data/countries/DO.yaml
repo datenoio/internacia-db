@@ -63,3 +63,64 @@ other_names:
 common_names:
 - Dominican Republic
 - DR
+population:
+  value: 11427557
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 48198.02
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 39.0
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Santo_Domingo
+native_names:
+  ar:
+    official: جمهورية الدومينيكان
+    common: جمهورية الدومنيكان
+  en:
+    official: Dominican Republic
+    common: República Dominicana
+  es:
+    official: República Dominicana
+    common: República Dominicana
+  fr:
+    official: République dominicaine
+    common: Dominicaine
+  ru:
+    official: Доминиканская Республика
+    common: Доминикана
+  zh:
+    official: 多明尼加
+    common: 多明尼加共和國
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

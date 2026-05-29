@@ -57,3 +57,88 @@ other_names:
   name: Канада
 - id: es
   name: Canadá
+population:
+  value: 41288599
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 8788700.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 31.5
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Cambridge_Bay
+- America/Dawson
+- America/Dawson_Creek
+- America/Edmonton
+- America/Fort_Nelson
+- America/Glace_Bay
+- America/Goose_Bay
+- America/Halifax
+- America/Inuvik
+- America/Iqaluit
+- America/Moncton
+- America/Panama
+- America/Phoenix
+- America/Puerto_Rico
+- America/Rankin_Inlet
+- America/Regina
+- America/Resolute
+- America/St_Johns
+- America/Swift_Current
+- America/Toronto
+- America/Vancouver
+- America/Whitehorse
+- America/Winnipeg
+native_names:
+  ar:
+    official: كندا
+    common: كندا
+  en:
+    official: Canada
+    common: Can
+  es:
+    official: Canadá
+    common: Dominio de Canadá
+  fr:
+    official: Canada
+    common: le Canada
+  ru:
+    official: Канада
+    common: Канада
+  zh:
+    official: 加拿大
+    common: 坎拿大
+common_names:
+- Canada
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -64,3 +64,64 @@ other_names:
   name: Panamá
 common_names:
 - Republic of Panama
+population:
+  value: 4515577
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 74180.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 49.7
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Panama
+native_names:
+  ar:
+    official: بنما
+    common: باناما
+  en:
+    official: Panama
+    common: Republic of Panama
+  es:
+    official: Panamá
+    common: República de Panamá
+  fr:
+    official: Panama
+    common: République du Panama
+  ru:
+    official: Панама
+    common: Республика Панама
+  zh:
+    official: 巴拿馬
+    common: 巴拿马
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

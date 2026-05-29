@@ -12,3 +12,49 @@ lendingType:
   id: NC
   value: Not classified
 m49_code: '830'
+wikidata_id: Q84804
+population:
+  value: 168126
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 198.0
+  year: 2021
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Europe/Guernsey
+- Europe/Jersey
+native_names:
+  en:
+    official: Urdoma
+    common: Urdoma
+common_names:
+- Channel Islands
+- Urdoma
+borders: []
+entity_type: supranational_grouping
+code_status: user_assigned
+recognition_status:
+  status: collective_grouping
+  notes: Not a current ISO 3166-1 alpha-2 code; use GG and JE for constituent territories.
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

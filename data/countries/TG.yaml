@@ -62,3 +62,64 @@ other_names:
   name: Togo
 common_names:
 - Togolese Republic
+population:
+  value: 9515236
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 54390.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 37.9
+  year: 2021
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Abidjan
+native_names:
+  ar:
+    official: توغو
+    common: جمهورية توغو
+  en:
+    official: Togo
+    common: Togolese Republic
+  es:
+    official: Togo
+    common: República Togolesa
+  fr:
+    official: Togo
+    common: République togolaise
+  ru:
+    official: Того
+    common: Тоголезская Республика
+  zh:
+    official: 多哥
+    common: 多哥共和国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

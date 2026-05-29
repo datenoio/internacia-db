@@ -60,3 +60,65 @@ other_names:
   name: Sri Lanka
 common_names:
 - Democratic Socialist Republic of Sri Lanka
+population:
+  value: 21916000
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 61860.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 37.7
+  year: 2019
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Colombo
+native_names:
+  ar:
+    official: سريلانكا
+    common: جمهورية سريلنكا الاشتراكية الديمقراطية
+  en:
+    official: Sri Lanka
+    common: Democratic Socialist Republic of Sri Lanka
+  es:
+    official: Sri Lanka
+    common: República Democrática Socialista de Sri Lanka
+  fr:
+    official: Sri Lanka
+    common: Ceylan
+  ru:
+    official: Шри-Ланка
+    common: Демократическая Социалистическая Республика Шри-Ланка
+  zh:
+    official: 斯里蘭卡
+    common: 錫蘭
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

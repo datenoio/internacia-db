@@ -58,3 +58,55 @@ other_names:
   name: Hong Kong
 common_names:
 - Hong Kong Special Administrative Region of the People's Republic of China
+population:
+  value: 7524100
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1050.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Asia/Hong_Kong
+native_names:
+  ar:
+    official: هونغ كونغ
+    common: هونك كونك
+  en:
+    official: Hong Kong
+    common: HKSAR
+  es:
+    official: Hong Kong
+    common: Xianggang
+  fr:
+    official: Hong Kong
+    common: RAS de Hong Kong
+  ru:
+    official: Гонконг
+    common: Специальный административный район Гонконг
+  zh:
+    official: 香港
+    common: 香港特别行政区
+code_status: official_iso3166_1
+entity_type: special_administrative_region
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

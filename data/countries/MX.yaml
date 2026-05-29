@@ -62,3 +62,75 @@ other_names:
   name: México
 common_names:
 - United Mexican States
+population:
+  value: 130861007
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1943950.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 42.6
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Bahia_Banderas
+- America/Cancun
+- America/Chihuahua
+- America/Ciudad_Juarez
+- America/Hermosillo
+- America/Matamoros
+- America/Mazatlan
+- America/Merida
+- America/Mexico_City
+- America/Monterrey
+- America/Ojinaga
+- America/Tijuana
+native_names:
+  ar:
+    official: المكسيك
+    common: الولايات المتحدة المكسيكية
+  en:
+    official: Mexico
+    common: Mexican United States
+  es:
+    official: México
+    common: Méjico
+  fr:
+    official: Mexique
+    common: États-Unis mexicains
+  ru:
+    official: Мексика
+    common: Мексиканские Соединённые Штаты
+  zh:
+    official: 墨西哥
+    common: 墨西哥合眾國
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

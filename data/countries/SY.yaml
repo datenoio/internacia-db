@@ -65,3 +65,64 @@ other_names:
 common_names:
 - Syria
 - Syrian Arab Republic
+population:
+  value: 24672760
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 183630.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 26.4
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Damascus
+native_names:
+  ar:
+    official: سوريا
+    common: سورية
+  en:
+    official: Syria
+    common: Syrian Arab Republic
+  es:
+    official: Siria
+    common: República Árabe Siria
+  fr:
+    official: Syrie
+    common: République arabe syrienne
+  ru:
+    official: Сирия
+    common: Сирийская Арабская Республика
+  zh:
+    official: 敘利亞
+    common: 西里亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

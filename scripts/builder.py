@@ -7,6 +7,11 @@ in multiple formats: JSONL (zstd), YAML (zstd), Parquet (zstd), and DuckDB datab
 """
 
 import json
+import hashlib
+import re
+import subprocess
+import sys
+from datetime import datetime, timezone
 import yaml
 from pathlib import Path
 from typing import List, Dict, Any
@@ -24,6 +29,64 @@ app = typer.Typer(help="Dataset builder for Internacia project")
 def get_project_root() -> Path:
     """Get the project root directory."""
     return Path(__file__).parent.parent
+
+
+def get_git_commit() -> str:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"],
+            capture_output=True,
+            text=True,
+            cwd=get_project_root(),
+            check=True,
+        )
+        return result.stdout.strip() or "unknown"
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return "unknown"
+
+
+def get_dataset_version() -> str:
+    changelog = get_project_root() / "CHANGELOG.md"
+    if not changelog.exists():
+        return "unknown"
+    text = changelog.read_text(encoding="utf-8")
+    dated = re.findall(r"## \[([^\]]+)\] - \d{4}-\d{2}-\d{2}", text)
+    if dated:
+        return dated[0]
+    match = re.search(r"## \[([^\]]+)\]", text)
+    return match.group(1) if match else "unknown"
+
+
+def schema_hash(schema: pa.Schema) -> str:
+    digest = hashlib.sha256(schema.serialize().to_pybytes()).hexdigest()
+    return digest[:16]
+
+
+def write_countries_manifest(
+    output_dir: Path,
+    schema: pa.Schema,
+    row_count: int,
+) -> None:
+    manifest = {
+        "dataset": "countries",
+        "version": get_dataset_version(),
+        "build_date": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "git_commit": get_git_commit(),
+        "row_count": row_count,
+        "schema_hash": schema_hash(schema),
+    }
+    path = output_dir / "countries.manifest.json"
+    path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved manifest: {path}")
+
+
+def _indicator_struct(value_type: pa.DataType) -> pa.DataType:
+    return pa.struct([
+        ('value', value_type),
+        ('year', pa.int64()),
+        ('source', pa.string()),
+        ('source_id', pa.string()),
+    ])
 
 
 def get_countries_schema() -> pa.Schema:
@@ -68,6 +131,17 @@ def get_countries_schema() -> pa.Schema:
         ]))),
         ('un_member', pa.bool_()),
         ('independent', pa.bool_()),
+        ('entity_type', pa.string()),
+        ('code_status', pa.string()),
+        ('recognition_status', pa.struct([
+            ('status', pa.string()),
+            ('un_member', pa.bool_()),
+            ('notes', pa.string()),
+        ])),
+        ('parent_entity', pa.struct([
+            ('code', pa.string()),
+            ('name', pa.string()),
+        ])),
         ('subregion', pa.string()),
         ('continents', pa.list_(pa.string())),
         ('borders', pa.list_(pa.string())),
@@ -82,13 +156,11 @@ def get_countries_schema() -> pa.Schema:
             ('male', pa.string())
         ])),
         ('m49_code', pa.string()),
-        ('population', pa.int64()),
-        ('area', pa.float64()),
-        ('gini', pa.struct([
-            ('year', pa.int64()),
-            ('value', pa.float64())
-        ])),
+        ('population', _indicator_struct(pa.int64())),
+        ('area', _indicator_struct(pa.float64())),
+        ('gini', _indicator_struct(pa.float64())),
         ('timezones', pa.list_(pa.string())),
+        ('timezone_status', pa.string()),
         ('native_names', pa.map_(pa.string(), pa.struct([
             ('official', pa.string()),
             ('common', pa.string())
@@ -97,7 +169,14 @@ def get_countries_schema() -> pa.Schema:
             ('id', pa.string()),
             ('name', pa.string())
         ]))),
-        ('common_names', pa.list_(pa.string()))
+        ('common_names', pa.list_(pa.string())),
+        ('provenance', pa.list_(pa.struct([
+            ('field', pa.string()),
+            ('source', pa.string()),
+            ('url', pa.string()),
+            ('retrieved_at', pa.string()),
+            ('license', pa.string()),
+        ]))),
     ])
 
 
@@ -314,6 +393,63 @@ def clean_data(data: List[Dict[str, Any]], dataset_type: str) -> List[Dict[str, 
                                     topic[key] = "yes" if topic[key] else "no"
                                 elif topic[key] is None:
                                     topic[key] = ""
+
+        if dataset_type == 'countries':
+            sub = cleaned_item.get('subregion')
+            if isinstance(sub, str):
+                cleaned_item['subregion'] = sub.strip()
+            for key in ('region', 'adminregion'):
+                obj = cleaned_item.get(key)
+                if isinstance(obj, dict) and isinstance(obj.get('value'), str):
+                    obj['value'] = obj['value'].strip()
+
+            if cleaned_item.get('borders') is None:
+                cleaned_item['borders'] = []
+
+            for field in ('population', 'area', 'gini'):
+                val = cleaned_item.get(field)
+                if isinstance(val, (int, float)) and field == 'population':
+                    cleaned_item[field] = {
+                        'value': int(val),
+                        'year': 0,
+                        'source': 'legacy',
+                        'source_id': '',
+                    }
+                elif isinstance(val, (int, float)) and field == 'area':
+                    cleaned_item[field] = {
+                        'value': float(val),
+                        'year': 0,
+                        'source': 'legacy',
+                        'source_id': '',
+                    }
+                elif isinstance(val, dict):
+                    cleaned_item[field] = {
+                        'value': val.get('value'),
+                        'year': int(val.get('year') or 0),
+                        'source': str(val.get('source') or ''),
+                        'source_id': str(val.get('source_id') or ''),
+                    }
+
+            cc = cleaned_item.get('capital_city')
+            if isinstance(cc, dict):
+                for coord in ('lat', 'lng'):
+                    if coord in cc and cc[coord] is not None:
+                        try:
+                            cc[coord] = float(cc[coord])
+                        except (TypeError, ValueError):
+                            cc[coord] = 0.0
+                    elif coord not in cc:
+                        cc[coord] = 0.0
+
+            prov = cleaned_item.get('provenance')
+            if prov is None:
+                cleaned_item['provenance'] = []
+            elif isinstance(prov, list):
+                for entry in prov:
+                    if isinstance(entry, dict):
+                        for key in ('field', 'source', 'url', 'retrieved_at', 'license'):
+                            if key in entry and entry[key] is None:
+                                entry[key] = ""
         
         if dataset_type == 'blocktypes':
             # Ensure other_names fields are strings
@@ -498,11 +634,26 @@ def build(
         typer.echo(f"Error: Countries directory not found: {countries_dir}", err=True)
         raise typer.Exit(1)
     
+    typer.echo("📁 Validating countries data...")
+    validator = project_root / "scripts" / "validate_countries.py"
+    result = subprocess.run(
+        [sys.executable, str(validator)],
+        cwd=str(project_root),
+        capture_output=True,
+        text=True,
+    )
+    if result.stdout:
+        typer.echo(result.stdout.rstrip())
+    if result.stderr:
+        typer.echo(result.stderr.rstrip(), err=True)
+    if result.returncode != 0:
+        typer.echo("Country validation failed; aborting build.", err=True)
+        raise typer.Exit(1)
+
     typer.echo("📁 Loading countries data...")
     countries_data = load_yaml_files(countries_dir, "Loading countries")
     typer.echo(f"   Loaded {len(countries_data)} countries")
     
-    # Clean countries data (not strictly needed for now but good practice)
     countries_data = clean_data(countries_data, 'countries')
     
     # Load intblocks data
@@ -566,6 +717,7 @@ def build(
         save_parquet(countries_data, output_dir / "countries.parquet", schema=countries_schema)
         save_parquet(intblocks_data, output_dir / "intblocks.parquet", schema=intblocks_schema)
         save_parquet(blocktypes_data, output_dir / "blocktypes.parquet", schema=blocktypes_schema)
+        write_countries_manifest(output_dir, countries_schema, len(countries_data))
     
     if "duckdb" in requested_formats:
         create_duckdb_database(
@@ -577,6 +729,8 @@ def build(
             intblocks_schema=intblocks_schema,
             blocktypes_schema=blocktypes_schema
         )
+        if "parquet" not in requested_formats:
+            write_countries_manifest(output_dir, countries_schema, len(countries_data))
     
     typer.echo(f"\n✅ All datasets generated successfully!")
     typer.echo(f"📂 Output location: {output_dir}")

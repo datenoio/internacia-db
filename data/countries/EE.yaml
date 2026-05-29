@@ -58,3 +58,64 @@ other_names:
   name: Estonia
 common_names:
 - Republic of Estonia
+population:
+  value: 1372341
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 42730.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 30.7
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Europe/Tallinn
+native_names:
+  ar:
+    official: إستونيا
+    common: جمهورية إستونيا
+  en:
+    official: Estonia
+    common: Republic of Estonia
+  es:
+    official: Estonia
+    common: República de Estonia
+  fr:
+    official: Estonie
+    common: Esthonie
+  ru:
+    official: Эстония
+    common: Эстонская Республика
+  zh:
+    official: 愛沙尼亞
+    common: 愛沙尼亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

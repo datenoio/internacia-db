@@ -1,0 +1,33 @@
+# Completeness thresholds for countries dataset validation.
+# mode: warn | error
+
+special_entity_allowlist: []
+
+unresolved_country_includes:
+  mode: warn
+
+fields:
+  population:
+    max_null_rate: 0.0
+    mode: error
+  area:
+    max_null_rate: 0.0
+    mode: error
+  gini:
+    max_null_rate: 0.45
+    mode: warn
+  timezones:
+    max_null_rate: 0.0
+    mode: error
+  native_names:
+    max_null_rate: 0.0
+    mode: error
+  wikidata_id:
+    max_null_rate: 0.05
+    mode: warn
+  common_names:
+    max_null_rate: 0.25
+    mode: warn
+  capital_city:
+    max_null_rate: 0.05
+    mode: warn

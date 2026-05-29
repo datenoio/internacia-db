@@ -60,3 +60,65 @@ other_names:
   name: Samoa
 common_names:
 - Independent State of Samoa
+population:
+  value: 218019
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 2780.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 38.7
+  year: 2013
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Pacific/Apia
+native_names:
+  ar:
+    official: ساموا
+    common: ساموا الغربية
+  en:
+    official: Samoa
+    common: Western Samoa
+  es:
+    official: Samoa
+    common: Estado Independiente de Samoa
+  fr:
+    official: Samoa
+    common: Samoa occidentales
+  ru:
+    official: Самоа
+    common: Независимое Государство Самоа
+  zh:
+    official: 萨摩亚
+    common: 薩摩亞
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

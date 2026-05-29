@@ -56,3 +56,67 @@ other_names:
   name: Гренада
 - id: es
   name: Granada
+population:
+  value: 117207
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 340.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 43.8
+  year: 2018
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Puerto_Rico
+native_names:
+  ar:
+    official: غرنادة
+    common: غَرْنَادَة
+  en:
+    official: Grenada
+    common: gd
+  es:
+    official: Granada
+    common: Isla de Granada
+  fr:
+    official: Grenade
+    common: gd
+  ru:
+    official: Гренада
+    common: Гренада
+  zh:
+    official: 格瑞那達
+    common: 格林納達
+common_names:
+- Grenada
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

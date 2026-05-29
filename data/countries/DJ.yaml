@@ -64,3 +64,64 @@ other_names:
   name: Yibuti
 common_names:
 - Republic of Djibouti
+population:
+  value: 1168722
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 23180.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 41.6
+  year: 2017
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Nairobi
+native_names:
+  ar:
+    official: جيبوتي
+    common: جيبوتي
+  en:
+    official: Djibouti
+    common: Republic of Djibouti
+  es:
+    official: Yibuti
+    common: Djibouti
+  fr:
+    official: Djibouti
+    common: la République de Djibouti
+  ru:
+    official: Джибути
+    common: Республика Джибути
+  zh:
+    official: 吉布提
+    common: 吉布地
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

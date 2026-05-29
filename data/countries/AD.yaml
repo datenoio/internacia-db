@@ -58,3 +58,55 @@ other_names:
   name: Andorra
 common_names:
 - Principality of Andorra
+population:
+  value: 81938
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 470.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Europe/Andorra
+native_names:
+  ar:
+    official: أندورا
+    common: أندورا
+  en:
+    official: Andorra
+    common: Principality of Andorra
+  es:
+    official: Andorra
+    common: Principado de Andorra
+  fr:
+    official: Andorre
+    common: Principauté d'Andorre
+  ru:
+    official: Андорра
+    common: Княжество Андорра
+  zh:
+    official: 安道尔
+    common: 安道尔公国
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

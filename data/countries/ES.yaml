@@ -67,3 +67,66 @@ other_names:
   name: España
 common_names:
 - Kingdom of Spain
+population:
+  value: 48848840
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 499697.4
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 33.4
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Ceuta
+- Atlantic/Canary
+- Europe/Madrid
+native_names:
+  ar:
+    official: إسبانيا
+    common: مملكة إسبانيا
+  en:
+    official: Spain
+    common: Kingdom of Spain
+  es:
+    official: España
+    common: Reino de España
+  fr:
+    official: Espagne
+    common: Royaume d'Espagne
+  ru:
+    official: Испания
+    common: Королевство Испания
+  zh:
+    official: 西班牙
+    common: 西班牙王國
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

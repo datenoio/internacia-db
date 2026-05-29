@@ -3,6 +3,8 @@ name: United States Minor Outlying Islands
 iso3code: UMI
 capital_city:
   name: Washington DC
+  lat: 38.8895
+  lng: -77.032
 numeric_code: '581'
 wikidata_id: Q16645
 official_name: United States Minor Outlying Islands
@@ -42,3 +44,59 @@ other_names:
   name: Внешние малые острова США
 - id: es
   name: Islas ultramarinas de Estados Unidos
+population:
+  value: 300
+  year: 0
+  source: Wikidata
+  source_id: P1082
+area:
+  value: 34.2
+  year: 0
+  source: Wikidata
+  source_id: P2046
+timezones:
+- Pacific/Pago_Pago
+- Pacific/Tarawa
+native_names:
+  ar:
+    official: جزر الولايات المتحدة الصغيرة النائية
+    common: جزر الولايات المتحدة البعيدة الصغيرة
+  en:
+    official: United States Minor Outlying Islands
+    common: um
+  es:
+    official: Islas ultramarinas de Estados Unidos
+    common: Islas ultramarinas de Estados Unidos
+  fr:
+    official: îles mineures éloignées des États-Unis
+    common: îles mineures éloignées des États-Unis
+  ru:
+    official: Внешние малые острова США
+    common: Внешние малые острова США
+  zh:
+    official: 美国本土外小岛屿
+    common: 美国本土外小岛屿
+common_names:
+- United States Minor Outlying Islands
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+- field: area
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

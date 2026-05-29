@@ -59,3 +59,56 @@ other_names:
   name: Islas Marianas del Norte
 common_names:
 - Commonwealth of the Northern Mariana Islands
+population:
+  value: 44278
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 460.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Pacific/Guam
+native_names:
+  ar:
+    official: جزر ماريانا الشمالية
+    common: جزر ماريانا الشمالية
+  en:
+    official: Northern Mariana Islands
+    common: MP
+  es:
+    official: Islas Marianas del Norte
+    common: Mancomunidad de las Islas Marías del Norte
+  fr:
+    official: îles Mariannes du Nord
+    common: Mariannes du Nord
+  ru:
+    official: Северные Марианские Острова
+    common: Содружество Северных Марианских островов
+  zh:
+    official: 北马里亚纳群岛
+    common: 北马里亚纳群岛
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -66,3 +66,64 @@ other_names:
   name: Uganda
 common_names:
 - Republic of Uganda
+population:
+  value: 50015092
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 200520.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 42.7
+  year: 2019
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Nairobi
+native_names:
+  ar:
+    official: أوغندا
+    common: جمهورية أوغندا
+  en:
+    official: Uganda
+    common: Republic of Uganda
+  es:
+    official: Uganda
+    common: República de Uganda
+  fr:
+    official: Ouganda
+    common: UG
+  ru:
+    official: Уганда
+    common: Республика Уганда
+  zh:
+    official: 烏干達
+    common: 乌干达
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

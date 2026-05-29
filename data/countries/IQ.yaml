@@ -69,3 +69,64 @@ other_names:
   name: Irak
 common_names:
 - Republic of Iraq
+population:
+  value: 46042015
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 434130.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 29.8
+  year: 2023
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Asia/Baghdad
+native_names:
+  ar:
+    official: العراق
+    common: جمهورية العراق
+  en:
+    official: Iraq
+    common: Republic of Iraq
+  es:
+    official: Irak
+    common: Iraq
+  fr:
+    official: Irak
+    common: Iraq
+  ru:
+    official: Ирак
+    common: Республика Ирак
+  zh:
+    official: 伊拉克
+    common: 伊拉克
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

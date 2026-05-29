@@ -68,3 +68,64 @@ other_names:
   name: Sudán
 common_names:
 - Republic of the Sudan
+population:
+  value: 50448963
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 1868000.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 34.2
+  year: 2014
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Khartoum
+native_names:
+  ar:
+    official: السودان
+    common: جمهورية السودان
+  en:
+    official: Sudan
+    common: Republic of the Sudan
+  es:
+    official: Sudán
+    common: República de Sudán
+  fr:
+    official: Soudan
+    common: SD
+  ru:
+    official: Судан
+    common: Республика Судан
+  zh:
+    official: 苏丹
+    common: 蘇丹
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

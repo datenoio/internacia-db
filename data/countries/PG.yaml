@@ -64,3 +64,65 @@ other_names:
   name: Papúa Nueva Guinea
 common_names:
 - Independent State of Papua New Guinea
+population:
+  value: 10576502
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 452860.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 41.9
+  year: 2009
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Pacific/Bougainville
+- Pacific/Port_Moresby
+native_names:
+  ar:
+    official: بابوا غينيا الجديدة
+    common: بابوا وغينيا الجديدة
+  en:
+    official: Papua New Guinea
+    common: Independent State of Papua New Guinea
+  es:
+    official: Papúa Nueva Guinea
+    common: Estado Independiente de Papúa Nueva Guinea
+  fr:
+    official: Papouasie-Nouvelle-Guinée
+    common: État indépendant de Papouasie-Nouvelle-Guinée
+  ru:
+    official: Папуа — Новая Гвинея
+    common: Независимое Государство Папуа — Новая Гвинея
+  zh:
+    official: 巴布亚新几内亚
+    common: 巴布亞紐幾內亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

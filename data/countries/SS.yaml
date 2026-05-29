@@ -65,3 +65,64 @@ other_names:
   name: Sudán del Sur
 common_names:
 - Republic of South Sudan
+population:
+  value: 11943408
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 631930.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 44.0
+  year: 2016
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Juba
+native_names:
+  ar:
+    official: جنوب السودان
+    common: جمهورية جنوب السودان
+  en:
+    official: South Sudan
+    common: Republic of South Sudan
+  es:
+    official: Sudán del Sur
+    common: República de Sudán del Sur
+  fr:
+    official: Soudan du Sud
+    common: République du Soudan du Sud
+  ru:
+    official: Южный Судан
+    common: Республика Южный Судан
+  zh:
+    official: 南蘇丹
+    common: 南苏丹
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

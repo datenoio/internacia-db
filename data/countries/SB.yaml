@@ -56,3 +56,67 @@ other_names:
   name: Соломоновы Острова
 - id: es
   name: Islas Salomón
+population:
+  value: 819198
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 27990.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 37.1
+  year: 2012
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Pacific/Guadalcanal
+native_names:
+  ar:
+    official: جزر سليمان
+    common: جزر سليمان
+  en:
+    official: Solomon Islands
+    common: sb
+  es:
+    official: Islas Salomón
+    common: Islas Solomón
+  fr:
+    official: Îles Salomon
+    common: îles Salomon
+  ru:
+    official: Соломоновы Острова
+    common: Соломоны
+  zh:
+    official: 所罗门群岛
+    common: 所羅門群島
+common_names:
+- Solomon Islands
+borders: []
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

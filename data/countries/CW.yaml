@@ -59,3 +59,56 @@ other_names:
   name: Curazao
 common_names:
 - Country of Curaçao
+population:
+  value: 155967
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 444.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- America/Puerto_Rico
+native_names:
+  ar:
+    official: كوراساو
+    common: جزر كوراكاو
+  en:
+    official: Curaçao
+    common: Island Territory of Curaçao
+  es:
+    official: Curazao
+    common: Curaçao
+  fr:
+    official: Curaçao
+    common: Kòrsou
+  ru:
+    official: Кюрасао
+    common: Кюрасао
+  zh:
+    official: 库拉索
+    common: 库拉骚
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

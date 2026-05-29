@@ -61,3 +61,65 @@ other_names:
   name: Ecuador
 common_names:
 - Republic of Ecuador
+population:
+  value: 18135478
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 248360.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 45.9
+  year: 2025
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Guayaquil
+- Pacific/Galapagos
+native_names:
+  ar:
+    official: الإكوادور
+    common: اكوادور
+  en:
+    official: Ecuador
+    common: Republic of Ecuador
+  es:
+    official: Ecuador
+    common: República del Ecuador
+  fr:
+    official: Équateur
+    common: République de l'Équateur
+  ru:
+    official: Эквадор
+    common: Республика Эквадор
+  zh:
+    official: 厄瓜多尔
+    common: 厄瓜多爾
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

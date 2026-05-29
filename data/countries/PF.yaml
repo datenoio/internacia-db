@@ -53,3 +53,60 @@ other_names:
   name: Французская Полинезия
 - id: es
   name: Polinesia Francesa
+population:
+  value: 281807
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 3471.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+timezones:
+- Pacific/Gambier
+- Pacific/Marquesas
+- Pacific/Tahiti
+native_names:
+  ar:
+    official: بولنيزيا الفرنسية
+    common: بولينسيا الفرنسية
+  en:
+    official: French Polynesia
+    common: pf
+  es:
+    official: Polinesia Francesa
+    common: Francopolinesio
+  fr:
+    official: Polynésie française
+    common: F-OH
+  ru:
+    official: Французская Полинезия
+    common: Французская Полинезия
+  zh:
+    official: 法屬玻里尼西亞
+    common: 法屬波利尼西亞群島
+common_names:
+- French Polynesia
+borders: []
+code_status: official_iso3166_1
+entity_type: dependent_territory
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

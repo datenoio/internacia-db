@@ -62,3 +62,64 @@ other_names:
   name: Honduras
 common_names:
 - Republic of Honduras
+population:
+  value: 10825703
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 111890.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 45.7
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Tegucigalpa
+native_names:
+  ar:
+    official: هندوراس
+    common: هندوراس
+  en:
+    official: Honduras
+    common: hn
+  es:
+    official: Honduras
+    common: República de Honduras
+  fr:
+    official: Honduras
+    common: HN
+  ru:
+    official: Гондурас
+    common: Республика Гондурас
+  zh:
+    official: 洪都拉斯
+    common: 宏都拉斯
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

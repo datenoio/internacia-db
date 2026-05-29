@@ -69,3 +69,82 @@ other_names:
   name: Brasil
 common_names:
 - Federative Republic of Brazil
+population:
+  value: 211998573
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 8358140.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 50.3
+  year: 2024
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- America/Araguaina
+- America/Bahia
+- America/Belem
+- America/Boa_Vista
+- America/Campo_Grande
+- America/Cuiaba
+- America/Eirunepe
+- America/Fortaleza
+- America/Maceio
+- America/Manaus
+- America/Noronha
+- America/Porto_Velho
+- America/Recife
+- America/Rio_Branco
+- America/Santarem
+- America/Sao_Paulo
+native_names:
+  ar:
+    official: البرازيل
+    common: برازيلي
+  en:
+    official: Brazil
+    common: Federative Republic of Brazil
+  es:
+    official: Brasil
+    common: República Federativa de Brasil
+  fr:
+    official: Brésil
+    common: République fédérative du Brésil
+  pt:
+    official: Brasil
+    common: República Federativa do Brasil
+  ru:
+    official: Бразилия
+    common: Estados Unidos del Brazil
+  zh:
+    official: 巴西
+    common: 巴西
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

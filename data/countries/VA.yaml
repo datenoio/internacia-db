@@ -47,3 +47,55 @@ other_names:
   name: Ciudad del Vaticano
 common_names:
 - Vatican City State
+population:
+  value: 1000
+  year: 0
+  source: Wikidata
+  source_id: P1082
+area:
+  value: 0.49
+  year: 0
+  source: Wikidata
+  source_id: P2046
+timezones:
+- Europe/Rome
+native_names:
+  ar:
+    official: الفاتيكان
+    common: دولة مدينة الفاتيكان
+  en:
+    official: Vatican City
+    common: Vatican City State
+  es:
+    official: Ciudad del Vaticano
+    common: Estado de la Ciudad del Vaticano
+  fr:
+    official: Vatican
+    common: État de la Cité du Vatican
+  ru:
+    official: Ватикан
+    common: Città del Vaticano
+  zh:
+    official: 梵蒂岡城國
+    common: 梵蒂岡
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+- field: area
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -67,3 +67,64 @@ other_names:
   name: Zambia
 common_names:
 - Republic of Zambia
+population:
+  value: 21314956
+  year: 2024
+  source: World Bank
+  source_id: SP.POP.TOTL
+area:
+  value: 743390.0
+  year: 2023
+  source: World Bank
+  source_id: AG.LND.TOTL.K2
+gini:
+  value: 51.5
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI
+timezones:
+- Africa/Maputo
+native_names:
+  ar:
+    official: زامبيا
+    common: جمهورية زامبيا
+  en:
+    official: Zambia
+    common: Republic of Zambia
+  es:
+    official: Zambia
+    common: República de Zambia
+  fr:
+    official: Zambie
+    common: zm
+  ru:
+    official: Замбия
+    common: Республика Замбия
+  zh:
+    official: 贊比亞
+    common: 尚比亞
+code_status: official_iso3166_1
+entity_type: sovereign_state
+provenance:
+- field: population
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SP.POP.TOTL
+- field: area
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-05-29'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-05-29'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-05-29'
+  url: https://www.wikidata.org/
+  license: CC0
