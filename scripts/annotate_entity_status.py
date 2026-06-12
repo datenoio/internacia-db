@@ -14,8 +14,6 @@ app = typer.Typer(help="Annotate country entity status fields")
 ROOT = Path(__file__).resolve().parents[1]
 COUNTRIES_DIR = ROOT / "data" / "countries"
 
-NON_ISO_CODES = frozenset({"AN", "JG", "KV"})
-
 SPECIAL_ADMIN = frozenset({"HK", "MO"})
 DISPUTED_TERRITORY = frozenset({"EH"})
 

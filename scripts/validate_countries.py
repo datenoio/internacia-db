@@ -22,22 +22,26 @@ WIKIDATA = re.compile(r"^Q[1-9][0-9]*$")
 DEFERRED_COUNTRY_IDS = frozenset({"XA", "XS", "XT", "XN"})
 NON_ISO_ALPHA2 = frozenset({"AN", "JG", "KV"})
 
-ENTITY_TYPES = frozenset({
-    "sovereign_state",
-    "dependent_territory",
-    "special_administrative_region",
-    "disputed_territory",
-    "historical_entity",
-    "supranational_grouping",
-    "statistical_area",
-})
+ENTITY_TYPES = frozenset(
+    {
+        "sovereign_state",
+        "dependent_territory",
+        "special_administrative_region",
+        "disputed_territory",
+        "historical_entity",
+        "supranational_grouping",
+        "statistical_area",
+    }
+)
 
-CODE_STATUSES = frozenset({
-    "official_iso3166_1",
-    "user_assigned",
-    "obsolete",
-    "exceptionally_reserved",
-})
+CODE_STATUSES = frozenset(
+    {
+        "official_iso3166_1",
+        "user_assigned",
+        "obsolete",
+        "exceptionally_reserved",
+    }
+)
 
 EXPECTED_OFFICIAL_ISO_COUNT = 249
 
@@ -69,9 +73,7 @@ def is_null_field(record: dict[str, Any], field: str) -> bool:
     return False
 
 
-def validate_schema(
-    record: dict[str, Any], schema: dict[str, Any], rel_path: str
-) -> list[str]:
+def validate_schema(record: dict[str, Any], schema: dict[str, Any], rel_path: str) -> list[str]:
     errors: list[str] = []
     validator = jsonschema.Draft7Validator(schema)
     for err in sorted(validator.iter_errors(record), key=lambda e: e.path):
@@ -80,9 +82,7 @@ def validate_schema(
     return errors
 
 
-def validate_entity_status(
-    record: dict[str, Any], rel_path: str
-) -> tuple[list[str], list[str]]:
+def validate_entity_status(record: dict[str, Any], rel_path: str) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -102,26 +102,19 @@ def validate_entity_status(
 
     if code in NON_ISO_ALPHA2:
         if code_status == "official_iso3166_1":
-            errors.append(
-                f"{rel_path}: non-ISO code '{code}' must not have code_status official_iso3166_1"
-            )
+            errors.append(f"{rel_path}: non-ISO code '{code}' must not have code_status official_iso3166_1")
     elif code_status != "official_iso3166_1":
-        errors.append(
-            f"{rel_path}: ISO-style code '{code}' must have code_status official_iso3166_1"
-        )
+        errors.append(f"{rel_path}: ISO-style code '{code}' must have code_status official_iso3166_1")
 
     return errors, warnings
 
 
 def validate_official_iso_count(records: list[dict[str, Any]]) -> list[str]:
     errors: list[str] = []
-    count = sum(
-        1 for r in records if r.get("code_status") == "official_iso3166_1"
-    )
+    count = sum(1 for r in records if r.get("code_status") == "official_iso3166_1")
     if count != EXPECTED_OFFICIAL_ISO_COUNT:
         errors.append(
-            f"entity policy: expected {EXPECTED_OFFICIAL_ISO_COUNT} "
-            f"official_iso3166_1 records, found {count}"
+            f"entity policy: expected {EXPECTED_OFFICIAL_ISO_COUNT} official_iso3166_1 records, found {count}"
         )
     return errors
 
@@ -144,9 +137,7 @@ def check_duplicates(
             if not val:
                 continue
             if val in mapping and mapping[val] != rel:
-                errors.append(
-                    f"duplicate {field} '{val}' in {rel} and {mapping[val]}"
-                )
+                errors.append(f"duplicate {field} '{val}' in {rel} and {mapping[val]}")
             else:
                 mapping[val] = rel
     return errors
@@ -163,6 +154,25 @@ def validate_borders(record: dict[str, Any], rel_path: str) -> list[str]:
     for b in borders:
         if not isinstance(b, str) or not ALPHA3.match(b):
             errors.append(f"{rel_path}: border '{b}' must be ISO alpha-3 uppercase")
+    return errors
+
+
+def validate_indicator_years(record: dict[str, Any], rel_path: str) -> list[str]:
+    """Reject placeholder year values in population/area/gini structs.
+
+    A year must either be a positive integer or absent; `year: 0` is a
+    data error that pollutes downstream consumers.
+    """
+    errors: list[str] = []
+    for field in ("population", "area", "gini"):
+        val = record.get(field)
+        if not isinstance(val, dict):
+            continue
+        year = val.get("year")
+        if year is None:
+            continue
+        if not isinstance(year, int) or isinstance(year, bool) or year <= 0:
+            errors.append(f"{rel_path}: {field}.year must be a positive integer or omitted, got {year!r}")
     return errors
 
 
@@ -203,10 +213,7 @@ def validate_completeness(
             "mode": mode,
         }
         if null_rate > max_rate:
-            msg = (
-                f"completeness: {field} null rate {null_rate:.2%} "
-                f"exceeds max {max_rate:.2%} ({null_count}/{n})"
-            )
+            msg = f"completeness: {field} null rate {null_rate:.2%} exceeds max {max_rate:.2%} ({null_count}/{n})"
             if mode == "error":
                 errors.append(msg)
             else:
@@ -257,24 +264,16 @@ def validate_intblock_refs(
         )
 
     for cid, sources in sorted(other.items()):
-        msg = (
-            f"cross-dataset: country include '{cid}' unresolved "
-            f"({len(sources)} references, e.g. {sources[0]})"
-        )
+        msg = f"cross-dataset: country include '{cid}' unresolved ({len(sources)} references, e.g. {sources[0]})"
         if mode == "error":
             errors.append(msg)
         else:
             warnings.append(msg)
 
     if deferred:
-        warnings.append(
-            f"cross-dataset summary: {len(deferred)} deferred id(s): "
-            + ", ".join(sorted(deferred))
-        )
+        warnings.append(f"cross-dataset summary: {len(deferred)} deferred id(s): " + ", ".join(sorted(deferred)))
     if other:
-        warnings.append(
-            f"cross-dataset summary: {len(other)} unexpected unresolved id(s)"
-        )
+        warnings.append(f"cross-dataset summary: {len(other)} unexpected unresolved id(s)")
 
     return errors, warnings
 
@@ -328,6 +327,7 @@ def main(
         all_records.append(record)
         errors.extend(validate_schema(record, schema, rel))
         errors.extend(validate_borders(record, rel))
+        errors.extend(validate_indicator_years(record, rel))
         warnings.extend(audit_whitespace(record, rel))
         ent_errors, ent_warnings = validate_entity_status(record, rel)
         errors.extend(ent_errors)
@@ -336,12 +336,17 @@ def main(
     errors.extend(check_duplicates(records))
     errors.extend(validate_official_iso_count(all_records))
 
-    comp_errors, comp_warnings, completeness_report = validate_completeness(
-        all_records, completeness_cfg
-    )
+    comp_errors, comp_warnings, completeness_report = validate_completeness(all_records, completeness_cfg)
     errors.extend(comp_errors)
     warnings.extend(comp_warnings)
 
+    if intblocks_dir.exists():
+        xref_errors, xref_warnings = validate_intblock_refs(countries_dir, intblocks_dir, completeness_cfg)
+        errors.extend(xref_errors)
+        warnings.extend(xref_warnings)
+
+    # Write the report only after every check (including cross-dataset
+    # references) has contributed its findings.
     if report:
         summary = {
             "countries_validated": len(records),
@@ -354,22 +359,12 @@ def main(
         report.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
         typer.echo(f"Wrote validation report: {report}")
 
-    if intblocks_dir.exists():
-        xref_errors, xref_warnings = validate_intblock_refs(
-            countries_dir, intblocks_dir, completeness_cfg
-        )
-        errors.extend(xref_errors)
-        warnings.extend(xref_warnings)
-
     for w in warnings:
         typer.echo(f"WARN: {w}", err=True)
     for e in errors:
         typer.echo(f"ERROR: {e}", err=True)
 
-    typer.echo(
-        f"Validated {len(records)} countries: "
-        f"{len(errors)} error(s), {len(warnings)} warning(s)"
-    )
+    typer.echo(f"Validated {len(records)} countries: {len(errors)} error(s), {len(warnings)} warning(s)")
 
     if errors or (fail_on_warning and warnings):
         raise typer.Exit(1)

@@ -10,13 +10,14 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
 - **CLI Framework**: Typer for command-line interfaces
 - **Data Processing**: 
   - PyYAML for YAML parsing
-  - Pandas for data manipulation
   - PyArrow for Parquet schema definition and columnar data
   - DuckDB for relational database generation
+  - jsonschema for source YAML validation
 - **Compression**: Zstandard (zstd) at level 22 for maximum efficiency
 - **Utilities**: 
   - tqdm for progress bars
   - requests for HTTP validation
+- **Dev tooling**: pytest (tests/), ruff (lint + format), pre-commit; pinned in `requirements-dev.txt`
 - **Data Formats**: YAML (source), JSONL, YAML, Parquet, DuckDB (output)
 
 ## Project Conventions
@@ -46,10 +47,10 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
   - Schemas: `data/schemas/`
 
 ### Testing Strategy
-- **Validation Script**: `scripts/validate_links.py` validates:
-  - URL accessibility and format
-  - Wikidata entity existence and name matching
-  - Data consistency (wikidata_id vs links)
+- **Unit/integration tests**: `tests/` (pytest) covers `clean_data` normalization, validation logic, manifest generation, and Parquet/DuckDB exports; runs in CI
+- **Source validation**: `scripts/validate_countries.py` and `scripts/validate_intblocks.py` enforce JSON Schemas, completeness thresholds, duplicates, taxonomy, and cross-dataset references; both run in CI on every PR
+- **Link validation**: `scripts/validate_links.py` validates URL accessibility and Wikidata entity/name consistency; runs weekly via `.github/workflows/link-validation.yml`
+- **Baseline diff**: `scripts/diff_countries_baseline.py` compares countries and intblocks manifests against the main-branch baseline
 - **Data Quality**: Schema enforcement through PyArrow schemas prevents type mismatches
 - **Error Reporting**: Detailed error messages with file paths and specific issues
 
@@ -68,7 +69,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
   - Multilingual names (`other_names`, `common_names`)
   - Wikidata integration for entity linking
 
-- **International Blocks Dataset**: Contains 1021+ organizations across 53+ categories:
+- **International Blocks Dataset**: Contains 1,057 organizations across 51 categories:
   - Intergovernmental organizations (UN, EU, NATO, etc.)
   - Trade agreements and economic unions
   - Regional alliances and groups
@@ -86,7 +87,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
 
 - **Key Identifiers**:
   - Countries: ISO 3166-1 alpha-2 codes (e.g., "US", "FR")
-  - International blocks: Custom IDs (e.g., "un", "eu", "nato")
+  - International blocks: Custom uppercase IDs, unique across categories (e.g., "UN", "EU", "NATO")
   - Wikidata: Q-numbers (e.g., "Q30" for United States)
 
 ## Important Constraints

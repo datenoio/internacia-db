@@ -1,0 +1,28 @@
+# Completeness thresholds for intblock records.
+#
+# Thresholds start at the measured 2026-06 baselines (warn mode) and should
+# be ratcheted down as enrichment progresses. A field counts as null when it
+# is absent, None, empty string, empty list, or empty dict.
+fields:
+  description:
+    max_null_rate: 0.0
+    mode: error
+  name:
+    max_null_rate: 0.0
+    mode: error
+  blocktype:
+    max_null_rate: 0.0
+    mode: error
+  wikidata_id:
+    # 2026-06 baseline: 424/1065 missing (39.8%)
+    max_null_rate: 0.42
+    mode: warn
+  includes:
+    # 2026-06 baseline: 82/1065 missing (7.7%); some records are
+    # legitimately membership-free (acronyms, government forms).
+    max_null_rate: 0.10
+    mode: warn
+  links:
+    # 2026-06 baseline: 48/1065 missing (4.5%)
+    max_null_rate: 0.06
+    mode: warn

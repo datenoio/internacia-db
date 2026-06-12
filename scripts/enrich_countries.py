@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-import re
 import time
 import urllib.parse
 import urllib.request
@@ -82,10 +81,7 @@ def fetch_json(url: str) -> Any:
 
 def fetch_world_bank(indicator_id: str) -> dict[str, dict[str, Any]]:
     """Return iso3 -> {value, year} for latest observation."""
-    url = (
-        "https://api.worldbank.org/v2/country/all/indicator/"
-        f"{indicator_id}?format=json&per_page=400&mrnev=1"
-    )
+    url = f"https://api.worldbank.org/v2/country/all/indicator/{indicator_id}?format=json&per_page=400&mrnev=1"
     payload = fetch_json(url)
     rows = payload[1] if len(payload) > 1 and payload[1] else []
     out: dict[str, dict[str, Any]] = {}

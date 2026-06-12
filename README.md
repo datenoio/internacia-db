@@ -1,20 +1,26 @@
 # Internacia Datasets
 
+[![Validate datasets](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml)
+
 Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/` and `data/intblocks/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
 
 ## Features
 
 - **Multi-format export**: JSONL, YAML, Parquet, and DuckDB (Zstandard compression, level 22)
 - **Countries quality pipeline**: schema validation, completeness gates, entity status policy, and field-level provenance
+- **Intblocks quality pipeline**: schema validation, blocktype taxonomy checks, duplicate detection, and completeness gates
 - **Profile enrichment**: population, area, gini, timezones, and native names from World Bank, Wikidata, and IANA tzdata
-- **Build metadata**: `countries.manifest.json` with version, commit, row count, and schema hash
-- **CI validation**: pull-request checks via `.github/workflows/validate.yml`
+- **Build metadata**: `countries.manifest.json` and `intblocks.manifest.json` with version, commit, row count, and schema hash
+- **CI validation**: pull-request checks, tests, and lint via `.github/workflows/validate.yml`; weekly link validation; tagged releases with dataset assets
 - **CLI tools**: Typer-based scripts with tqdm progress bars
 
 ## Installation
 
+Requires Python 3.11+ (CI runs 3.11). Dependencies are pinned for reproducible builds.
+
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt        # runtime
+pip install -r requirements-dev.txt    # development (adds pytest, ruff, pre-commit)
 ```
 
 ## Quick start
@@ -25,6 +31,9 @@ python3 scripts/builder.py info
 
 # Validate country YAML (no build)
 python3 scripts/validate_countries.py
+
+# Validate intblock YAML (no build)
+python3 scripts/validate_intblocks.py
 
 # Build all datasets
 python3 scripts/builder.py build
@@ -43,6 +52,7 @@ Each build writes to `data/datasets/`:
 | `countries.yaml.zst` | Countries (YAML, zstd) |
 | `countries.parquet` | Countries (Parquet, zstd) |
 | `countries.manifest.json` | Build metadata (version, commit, row count, schema hash) |
+| `intblocks.manifest.json` | Build metadata (version, commit, row count, schema hash) |
 | `intblocks.jsonl.zst` | International blocks (JSONL, zstd) |
 | `intblocks.yaml.zst` | International blocks (YAML, zstd) |
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
@@ -51,21 +61,23 @@ Each build writes to `data/datasets/`:
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes` tables) |
 
-Current row counts: **252** countries, **1065** intblocks, **85** blocktypes.
+Current row counts: **252** countries, **1057** intblocks, **85** blocktypes.
 
 ## Validation and quality
 
 The builder runs `validate_countries.py` before export. Validation covers:
 
-- JSON Schema conformance (`data/schemas/countries.schema.json`)
-- ISO identifier formats and duplicate detection
-- Completeness thresholds (`data/schemas/countries_completeness.yaml`)
+- JSON Schema conformance (`data/schemas/countries.schema.json`, `data/schemas/intblocks.schema.json`)
+- ISO identifier formats and duplicate detection (country codes and intblock ids)
+- Completeness thresholds (`data/schemas/countries_completeness.yaml`, `data/schemas/intblocks_completeness.yaml`)
 - Entity status policy (`entity_type`, `code_status`)
+- Blocktype taxonomy and `partof` reference checks for intblocks
 - Intblock cross-references (country `includes` resolve to country sources)
 
 ```bash
-# Full validation with JSON report
+# Full validation with JSON reports
 python3 scripts/validate_countries.py --report completeness-report.json
+python3 scripts/validate_intblocks.py --report intblocks-report.json
 
 # Enrich profile fields from external sources
 python3 scripts/enrich_countries.py
@@ -77,8 +89,12 @@ python3 scripts/annotate_entity_status.py
 # Audit intblock include name aliases (warn-only)
 python3 scripts/report_country_include_names.py
 
-# Compare manifest to main branch baseline
+# Compare manifests to main branch baseline
 python3 scripts/diff_countries_baseline.py
+
+# Run tests and lint
+pytest tests/
+ruff check scripts/ tests/
 ```
 
 Country code policy (ISO vs user-assigned, filtering examples): [docs/country-code-policy.md](docs/country-code-policy.md)
@@ -87,7 +103,7 @@ Country code policy (ISO vs user-assigned, filtering examples): [docs/country-co
 
 Breaking and semantic changes in the latest countries schema (see [CHANGELOG.md](CHANGELOG.md)):
 
-- **Population / area / gini**: structured as `{value, year, source, source_id}` — use `.value` for the numeric field.
+- **Population / area / gini**: structured as `{value, year, source, source_id}` — use `.value` for the numeric field. `year` is **null** when the source year is unknown (never `0`).
 - **Borders**: land neighbors as ISO **alpha-3** codes (e.g. `CAN`, `MEX`), not alpha-2.
 - **Entity filter**: `code_status == 'official_iso3166_1'` returns **249** current ISO-style records.
 - **Build metadata**: compare `countries.manifest.json` `schema_hash` when upgrading downstream pipelines.
@@ -195,7 +211,7 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 **YAML sources**
 
 - `data/countries/*.yaml` — 252 country/territory records
-- `data/intblocks/**/*.yaml` — 1065 international block records
+- `data/intblocks/**/*.yaml` — 1057 international block records
 
 **External enrichment**
 
@@ -209,17 +225,29 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 |--------|---------|
 | `scripts/builder.py` | Validate and export datasets |
 | `scripts/validate_countries.py` | Country schema, completeness, and cross-dataset checks |
-| `scripts/validate_links.py` | Intblock URL and Wikidata validation |
+| `scripts/validate_intblocks.py` | Intblock schema, taxonomy, duplicates, and completeness checks |
+| `scripts/validate_links.py` | Intblock URL and Wikidata validation (run weekly in CI) |
 | `scripts/enrich_countries.py` | Enrich country profiles; `backfill-provenance` subcommand |
 | `scripts/annotate_entity_status.py` | Set `entity_type` and `code_status` |
 | `scripts/report_country_include_names.py` | Intblock include name alias audit |
-| `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline |
+| `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline (countries + intblocks) |
+
+One-off migration scripts live in `dev/scripts/` and are not part of the maintained pipeline.
+
+## Releases
+
+Tagged releases (`vX.Y.Z`) automatically rebuild all formats and attach them as GitHub Release assets (`.github/workflows/release.yml`). Consumers can either clone the repository (datasets are committed under `data/datasets/`) or download versioned assets from the Releases page.
 
 ## Notes
 
 - All text files use UTF-8 encoding; generated outputs overwrite existing files.
 - Decompress zstd files: `zstd -d data/datasets/countries.jsonl.zst`
-- Gap analysis research: `dev/research/countries_gaps_,manus_20260528.md`
+- Gap analysis research: `dev/research/countries_gaps_manus_20260528.md`
+- `data/_legacy/` contains pre-1.0 Airtable JSON exports kept for reference only; nothing in the pipeline consumes them.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the YAML authoring guide, validation workflow, and PR checklist.
 
 ## Related projects
 

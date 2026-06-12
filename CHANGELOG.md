@@ -7,9 +7,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Intblocks quality and engineering hardening release: intblocks validation pipeline, automated tests, dev tooling, CI/CD workflows, and data fixes.
+
+### Added
+
+- **Intblocks validation** (`scripts/validate_intblocks.py`): JSON Schema checks, duplicate id detection, blocktype taxonomy validation, `partof` reference resolution, lifecycle consistency (`dissolved` implies `historical`), and completeness gates; runs in CI and before every build.
+- **Intblocks completeness config** (`data/schemas/intblocks_completeness.yaml`): per-field null-rate thresholds with warn/error modes.
+- **Intblocks build manifest** (`data/datasets/intblocks.manifest.json`): `version`, `build_date`, `git_commit`, `row_count`, `schema_hash`; baseline diff extended to cover it.
+- **Test suite** (`tests/`, 49 tests): `clean_data` normalization, country/intblock validation logic, cross-dataset include resolution, Parquet/DuckDB export round-trips, and manifest generation.
+- **Dev tooling**: `pyproject.toml` (ruff + pytest config), `.pre-commit-config.yaml`, `requirements-dev.txt`.
+- **Contributor guide** (`CONTRIBUTING.md`): setup, YAML authoring conventions, validation workflow, PR checklist.
+- **Workflows**: weekly scheduled link validation (`.github/workflows/link-validation.yml`), tag-triggered release with dataset assets (`.github/workflows/release.yml`), Dependabot for pip and GitHub Actions.
+
+### Changed
+
+- **Builder hardening** (`scripts/builder.py`): runs both countries and intblocks validation before export; YAML parse failures abort the build instead of silently skipping files; Parquet schema mismatches fail loudly (removed pandas fallback); fixed DuckDB export (PyArrow tables are now registered explicitly, restoring `internacia.duckdb` generation).
+- **Intblocks schema reconciled** (`data/schemas/intblocks.schema.json`): status, include type/status, and geographic scope enums now match observed legitimate values; `founded` accepts decade notation; `partof` accepts strings or objects.
+- **Indicator years**: missing `population`/`area`/`gini` years are exported as `null` instead of `0` (**semantic change**); validator rejects `year: 0`.
+- **Pinned dependencies** (`requirements.txt`): exact versions for reproducible builds; CI uses pip caching.
+- **One-off scripts relocated**: `enrich_gap_records.py` and `fill_includes_agreement_intorg.py` moved to `dev/scripts/`.
+
+### Fixed
+
+- **Intblocks deduplicated**: merged 8 duplicate records (OFID, GEF, ICRC, IFRC, NPI, IFAD, UNHCR, UNICEF) keeping the richer record with combined blocktypes; resolved 2 acronym collisions (African Solidarity Fund renamed to `FSA`, CAF Development Bank renamed to `CAFBANK`). Row count: 1065 → 1057 (**breaking** for consumers joining on removed ids).
+- **Country data corrections**: `AN.yaml` (Netherlands Antilles) had Anguilla's wikidata id, names, and indicators; `JG.yaml` (Channel Islands) pointed to the wrong Wikidata entity (Urdoma); removed all `year: 0` placeholders across 36 country files.
+- **YAML boolean traps**: quoted `NO` (Norway) and `no` (Norwegian) values that were parsed as `false` in intblock records (NORDEL, CEPI, and others).
+- **Lifecycle consistency**: dissolved organizations (EASTERNBLOC, WESTERNBLOC, FRUGALFOUR, ICSU, NORDEL, GATT) now carry `status: historical`.
+- **Reference fixes**: `partof` aliases corrected (`AU` → `AFUNION`, `GCC` → `CCASG`); missing `wikidata_id` filled for ISA, Kimberley Process, EAEU; UNFCCC duplicate member entry removed.
+- **Validation report ordering**: `validate_countries.py --report` now includes cross-dataset results.
+
+### Migration
+
+- **Removed intblock ids**: `ASF` (African Solidarity Fund) is now `FSA`; `CAF` (development bank) is now `CAFBANK`; duplicate ids listed above resolve to a single record.
+- **Indicator year**: treat `population.year == null` as "year unknown" (previously `0`).
+
 ## [1.2.0] - 2026-05-29
 
-Countries reference data quality release: validation gates, profile enrichment, entity status modeling, and release governance. Based on gap analysis in `dev/research/countries_gaps_,manus_20260528.md`.
+Countries reference data quality release: validation gates, profile enrichment, entity status modeling, and release governance. Based on gap analysis in `dev/research/countries_gaps_manus_20260528.md`.
 
 ### Added
 

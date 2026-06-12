@@ -6,8 +6,12 @@ on:
       - 'data/countries/**'
       - 'data/intblocks/**'
       - 'data/schemas/**'
+      - 'data/datasets/blocktypes.yaml'
       - 'scripts/**'
+      - 'tests/**'
       - 'requirements.txt'
+      - 'requirements-dev.txt'
+      - 'pyproject.toml'
       - '.github/workflows/validate.yml'
   push:
     branches: [main]
@@ -15,7 +19,15 @@ on:
       - 'data/countries/**'
       - 'data/intblocks/**'
       - 'data/schemas/**'
+      - 'data/datasets/blocktypes.yaml'
       - 'scripts/**'
+      - 'tests/**'
+      - 'requirements.txt'
+      - 'requirements-dev.txt'
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -28,24 +40,39 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint
+        run: ruff check scripts/ tests/
+
+      - name: Run tests
+        run: pytest tests/
 
       - name: Validate countries
         run: python scripts/validate_countries.py --report completeness-report.json
 
-      - name: Upload completeness report
+      - name: Validate intblocks
+        run: python scripts/validate_intblocks.py --report intblocks-report.json
+
+      - name: Upload validation reports
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: completeness-report
-          path: completeness-report.json
+          name: validation-reports
+          path: |
+            completeness-report.json
+            intblocks-report.json
 
       - name: Build datasets
-        run: python scripts/builder.py build --formats parquet
+        run: python scripts/builder.py build --formats parquet,duckdb
 
-      - name: Diff countries baseline
+      - name: Diff manifests against baseline
         run: python scripts/diff_countries_baseline.py --allow-row-count-change
 
       - name: Report include name aliases

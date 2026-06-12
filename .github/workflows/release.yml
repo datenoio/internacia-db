@@ -1,0 +1,52 @@
+name: Release datasets
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate countries
+        run: python scripts/validate_countries.py
+
+      - name: Validate intblocks
+        run: python scripts/validate_intblocks.py
+
+      - name: Build all dataset formats
+        run: python scripts/builder.py build
+
+      - name: Create GitHub release with dataset assets
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            data/datasets/countries.jsonl.zst
+            data/datasets/countries.yaml.zst
+            data/datasets/countries.parquet
+            data/datasets/countries.manifest.json
+            data/datasets/intblocks.jsonl.zst
+            data/datasets/intblocks.yaml.zst
+            data/datasets/intblocks.parquet
+            data/datasets/intblocks.manifest.json
+            data/datasets/blocktypes.jsonl.zst
+            data/datasets/blocktypes.yaml.zst
+            data/datasets/blocktypes.parquet
+            data/datasets/internacia.duckdb

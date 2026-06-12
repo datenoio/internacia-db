@@ -25,7 +25,7 @@
     },
     "status": {
       "type": "string",
-      "enum": ["formal", "informal", "de-facto"]
+      "enum": ["formal", "informal", "de-facto", "historical"]
     },
     "listed": {
       "type": "string",
@@ -85,11 +85,29 @@
           },
           "type": {
             "type": "string",
-            "enum": ["country", "organization"]
+            "enum": ["country", "organization", "territory", "historical-country"]
           },
           "status": {
             "type": "string",
-            "enum": ["member", "observer", "associated", "associated_observer"]
+            "enum": [
+              "member",
+              "observer",
+              "associated",
+              "associated_observer",
+              "associate",
+              "associate_member",
+              "founding_member",
+              "former_member",
+              "participant",
+              "recipient",
+              "contributor",
+              "represented",
+              "funder",
+              "cooperating",
+              "partner",
+              "validation",
+              "extension"
+            ]
           },
           "joined": {
             "type": ["string", "null"],
@@ -105,7 +123,8 @@
     },
     "founded": {
       "type": "string",
-      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+      "pattern": "^(\\d{4}s|\\d{4}(-\\d{2}(-\\d{2})?)?)$",
+      "description": "Foundation date (YYYY, YYYY-MM, YYYY-MM-DD) or decade (e.g. 1950s) when only decade precision is known"
     },
     "dissolved": {
       "type": "string",
@@ -154,7 +173,7 @@
     },
     "geographic_scope": {
       "type": "string",
-      "enum": ["global", "regional", "sub-regional"]
+      "enum": ["global", "regional", "sub-regional", "bilateral"]
     },
     "regions": {
       "type": "array",
@@ -176,13 +195,20 @@
         {
           "type": "array",
           "items": {
-            "type": "object",
-            "required": ["id"],
-            "properties": {
-              "id": { "type": "string" },
-              "name": { "type": "string" }
-            },
-            "additionalProperties": true
+            "oneOf": [
+              {
+                "type": "object",
+                "required": ["id"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "name": { "type": "string" }
+                },
+                "additionalProperties": true
+              },
+              {
+                "type": "string"
+              }
+            ]
           }
         },
         {
