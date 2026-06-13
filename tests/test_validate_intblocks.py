@@ -106,6 +106,26 @@ def test_validate_aliases_rejects_bad_reason():
     assert any("invalid reason" in e for e in errors)
 
 
+def test_description_quality_warns_over_threshold():
+    records = [
+        {"id": "A", "description": "International entity focused on trade."},
+        {"id": "B", "description": "A real, specific description."},
+    ]
+    config = {"quality": {"templated_description": {"max": 0.25, "mode": "warn"}}}
+    errors, warnings, report = vi.validate_description_quality(records, config)
+    assert errors == []
+    assert len(warnings) == 1
+    assert report["templated_count"] == 1
+    assert report["templated_rate"] == 0.5
+
+
+def test_description_quality_no_config_reports_only():
+    records = [{"id": "A", "description": "International entity focused on trade."}]
+    errors, warnings, report = vi.validate_description_quality(records, {})
+    assert errors == [] and warnings == []
+    assert report["templated_count"] == 1
+
+
 def test_completeness_thresholds():
     records = [{"id": "A", "wikidata_id": "Q1"}, {"id": "B"}]
     config = {"fields": {"wikidata_id": {"max_null_rate": 0.25, "mode": "warn"}}}

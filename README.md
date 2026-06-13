@@ -88,6 +88,10 @@ python3 scripts/validate_intblocks.py --report intblocks-report.json
 python3 scripts/enrich_countries.py
 python3 scripts/enrich_countries.py backfill-provenance
 
+# Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names)
+python3 scripts/enrich_intblocks.py --dry-run
+python3 scripts/enrich_intblocks.py
+
 # Apply entity status annotations
 python3 scripts/annotate_entity_status.py
 
@@ -260,6 +264,7 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 | `scripts/validate_intblocks.py` | Intblock schema, taxonomy, duplicates, and completeness checks |
 | `scripts/validate_links.py` | Intblock URL and Wikidata validation (run weekly in CI) |
 | `scripts/enrich_countries.py` | Enrich country profiles; `backfill-provenance` subcommand |
+| `scripts/enrich_intblocks.py` | Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names) |
 | `scripts/annotate_entity_status.py` | Set `entity_type` and `code_status` |
 | `scripts/report_country_include_names.py` | Intblock include name alias audit |
 | `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline (countries + intblocks) |

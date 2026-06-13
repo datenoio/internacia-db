@@ -16,6 +16,13 @@ app = typer.Typer(help="Validate internacia-db intblock data")
 
 WIKIDATA = re.compile(r"^Q[1-9][0-9]*$")
 
+# Boilerplate description pattern (kept in sync with enrich_intblocks.py).
+TEMPLATED_DESC = re.compile(
+    r"^\s*(international entity focused on|an? international (organization|entity)|"
+    r"regional (organization|entity) focused on|international organization for)",
+    re.IGNORECASE,
+)
+
 
 def project_root() -> Path:
     return Path(__file__).parent.parent
@@ -143,6 +150,29 @@ def validate_aliases(
     return errors
 
 
+def validate_description_quality(
+    records: list[dict[str, Any]], config: dict[str, Any]
+) -> tuple[list[str], list[str], dict[str, Any]]:
+    """Measure the share of records using templated boilerplate descriptions."""
+    errors: list[str] = []
+    warnings: list[str] = []
+    n = len(records)
+    rule = (config.get("quality") or {}).get("templated_description") or {}
+    templated = sum(1 for r in records if TEMPLATED_DESC.match(str(r.get("description") or "")))
+    rate = templated / n if n else 0.0
+    report = {"templated_count": templated, "templated_rate": round(rate, 4)}
+    if not rule:
+        return errors, warnings, report
+    max_rate = float(rule.get("max", 1.0))
+    mode = rule.get("mode", "warn")
+    report["max"] = max_rate
+    report["mode"] = mode
+    if rate > max_rate:
+        msg = f"description quality: templated rate {rate:.2%} exceeds max {max_rate:.2%} ({templated}/{n})"
+        (errors if mode == "error" else warnings).append(msg)
+    return errors, warnings, report
+
+
 def validate_completeness(
     records: list[dict[str, Any]], config: dict[str, Any]
 ) -> tuple[list[str], list[str], dict[str, Any]]:
@@ -243,6 +273,10 @@ def main(
     errors.extend(comp_errors)
     warnings.extend(comp_warnings)
 
+    desc_errors, desc_warnings, description_report = validate_description_quality(all_records, completeness_cfg)
+    errors.extend(desc_errors)
+    warnings.extend(desc_warnings)
+
     if report:
         summary = {
             "intblocks_validated": len(records),
@@ -251,6 +285,7 @@ def main(
             "errors": errors,
             "warnings": warnings,
             "completeness": completeness_report,
+            "description_quality": description_report,
         }
         report.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
         typer.echo(f"Wrote validation report: {report}")

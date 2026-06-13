@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Intblocks enrichment** (`scripts/enrich_intblocks.py`): backfills `wikidata_id` (high-confidence matches only), replaces templated boilerplate descriptions with Wikidata descriptions, and adds multilingual `other_names` and acronym aliases — all with field-level `provenance`. Intblock records now support a `provenance` list (validated and exported in all formats). Initial run: +55 `wikidata_id` (coverage 60%→66%), templated descriptions 43%→24%, provenance on 459 records.
+- **Intblocks description-quality gate**: `validate_intblocks.py` measures the templated-description rate against a configurable threshold in `intblocks_completeness.yaml` (`quality.templated_description`).
 - **Data license**: explicit `DATA_LICENSE` (CC BY 4.0) for datasets, separate from the MIT code license, plus `ATTRIBUTION.md` documenting World Bank (CC BY 4.0), Wikidata (CC0), and IANA tzdata sources and a recommended citation. Build manifests and metadata now carry a `data_license` SPDX field.
 - **Self-describing datasets**: `internacia.duckdb` now includes a `_meta` table (one row per dataset with `version`, `build_date`, `git_commit`, `row_count`, `schema_hash`, `data_license`); each Parquet export is accompanied by a `<dataset>.meta.json` sidecar.
 - **Identifier stability**: `data/intblocks_aliases.yaml` source plus generated `intblocks_aliases.{json,parquet}` mapping retired/renamed intblock ids to current ids (`reason`: `renamed`/`merged`/`disambiguated`). `validate_intblocks.py` checks alias integrity (targets resolve; collisions allowed only when `disambiguated`). Seeded with the v1.3.0 `ASF`→`FSA` and `CAF`→`CAFBANK` disambiguations.

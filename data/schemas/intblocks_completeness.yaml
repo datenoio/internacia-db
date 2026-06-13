@@ -14,8 +14,8 @@ fields:
     max_null_rate: 0.0
     mode: error
   wikidata_id:
-    # 2026-06 baseline: 424/1065 missing (39.8%)
-    max_null_rate: 0.42
+    # 2026-06: 424/1065 missing; after Wikidata backfill 363/1057 (34.3%).
+    max_null_rate: 0.36
     mode: warn
   includes:
     # 2026-06 baseline: 82/1065 missing (7.7%); some records are
@@ -25,4 +25,12 @@ fields:
   links:
     # 2026-06 baseline: 48/1065 missing (4.5%)
     max_null_rate: 0.06
+    mode: warn
+
+# Content-quality gates (not simple null-rate checks).
+quality:
+  templated_description:
+    # 2026-06: 455/1057 (43%); after Wikidata backfill 253/1057 (23.9%).
+    # Ratchet down as more descriptions are sourced.
+    max: 0.25
     mode: warn

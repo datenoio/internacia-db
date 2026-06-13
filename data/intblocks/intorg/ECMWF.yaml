@@ -25,6 +25,16 @@ acronyms:
   value: EZMW
 - lang: en
   value: ECMWF
+- lang: zh
+  value: ECMWF
+- lang: zh
+  value: 歐洲中範圍天氣預報中心
+- lang: fr
+  value: CEPMMT
+- lang: fr
+  value: ECMWF
+- lang: de
+  value: EZMW
 includes:
 - id: AT
   name: Austria
@@ -180,13 +190,26 @@ topics: []
 other_names:
 - id: ar
   name: المركز الأوروبي للتنبؤات الجوية المتوسطة المدى
-- id: zh
-  name: 歐洲中期天氣預報中心
+- id: de
+  name: ECMWF
 - id: en
   name: European Centre for Medium-Range Weather Forecasts
+- id: es
+  name: Centro Europeo de Previsiones Meteorológicas a Plazo Medio
 - id: fr
   name: centre européen de prévision météorologique à moyen terme
 - id: ru
   name: Европейский центр среднесрочных прогнозов погоды
-- id: es
-  name: Centro Europeo de Previsiones Meteorológicas a Plazo Medio
+- id: zh
+  name: 歐洲中期天氣預報中心
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

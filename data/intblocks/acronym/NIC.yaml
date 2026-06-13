@@ -13,6 +13,20 @@ acronyms:
   value: NIC
 - lang: en
   value: NPI
+- lang: en
+  value: NIE
+- lang: zh
+  value: 新興國家
+- lang: zh
+  value: 新興工業國家
+- lang: fr
+  value: N.P.I
+- lang: fr
+  value: NPIA
+- lang: fr
+  value: NPI
+- lang: es
+  value: NIC
 includes:
 - id: BR
   name: Brazil
@@ -66,13 +80,28 @@ topics: []
 other_names:
 - id: ar
   name: دولة مصنعة جديدة
-- id: zh
-  name: 新興工業化國家
+- id: de
+  name: Schwellenland
 - id: en
   name: Newly Industrialized Country
-- id: fr
-  name: nouveaux pays industrialisés
-- id: ru
-  name: Новые индустриальные страны
 - id: es
   name: país recientemente industrializado
+- id: fr
+  name: nouveaux pays industrialisés
+- id: pt
+  name: países recentemente industrializados
+- id: ru
+  name: Новые индустриальные страны
+- id: zh
+  name: 新興工業化國家
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

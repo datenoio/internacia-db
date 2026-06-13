@@ -24,8 +24,28 @@ acronyms:
   value: IOC
 - lang: fr
   value: CIO
+- lang: en
+  value: I.O.C.
+- lang: zh
+  value: 國際奧委會
+- lang: zh
+  value: 國際奧林匹克委員會
+- lang: zh
+  value: IOC
+- lang: ru
+  value: МОК
+- lang: es
+  value: COI
+- lang: de
+  value: IOK
+- lang: pt
+  value: COI
 legal_status: non-governmental
-description: The International Olympic Committee is a not-for-profit independent international organization committed to building a better world through sport. It organizes the modern Olympic Games and Youth Olympic Games, held in summer and winter, every four years. The IOC recognizes 206 National Olympic Committees (NOCs), each representing a member country or territory.
+description: The International Olympic Committee is a not-for-profit independent international
+  organization committed to building a better world through sport. It organizes the
+  modern Olympic Games and Youth Olympic Games, held in summer and winter, every four
+  years. The IOC recognizes 206 National Olympic Committees (NOCs), each representing
+  a member country or territory.
 tags:
 - IOC
 - olympic
@@ -40,16 +60,22 @@ topics:
 - key: youth_sports
   name: Youth Sports
 other_names:
-- id: en
-  name: International Olympic Committee
-- id: fr
-  name: Comité International Olympique
-- id: es
-  name: Comité Olímpico Internacional
+- id: ar
+  name: اللجنة الأولمبية الدولية
 - id: de
   name: Internationales Olympisches Komitee
+- id: en
+  name: International Olympic Committee
+- id: es
+  name: Comité Olímpico Internacional
+- id: fr
+  name: Comité International Olympique
+- id: pt
+  name: Comité Olímpico Internacional
 - id: ru
   name: Международный олимпийский комитет
+- id: zh
+  name: 国际奥林匹克委员会
 membership_count: 206
 wikidata_id: Q40970
 includes:
@@ -921,3 +947,14 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

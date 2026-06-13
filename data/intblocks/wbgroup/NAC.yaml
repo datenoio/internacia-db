@@ -17,7 +17,7 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: International entity focused on development.
+description: Continent in the Americas.
 tags:
 - NAC
 - aid
@@ -42,13 +42,40 @@ links:
 other_names:
 - id: ar
   name: أمريكا الشمالية
-- id: zh
-  name: 北美洲
+- id: de
+  name: Nordamerika
 - id: en
   name: North America
-- id: fr
-  name: Amérique du Nord
-- id: ru
-  name: Северная Америка
 - id: es
   name: América del Norte
+- id: fr
+  name: Amérique du Nord
+- id: pt
+  name: América do Norte e América Central
+- id: ru
+  name: Северная Америка
+- id: zh
+  name: 北美洲
+provenance:
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+acronyms:
+- lang: en
+  value: NA
+- lang: en
+  value: NOAM
+- lang: zh
+  value: 北美

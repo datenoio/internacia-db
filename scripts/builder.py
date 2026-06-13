@@ -273,6 +273,20 @@ def get_intblocks_schema() -> pa.Schema:
             ("predecessor", pa.string()),
             ("successor", pa.string()),
             ("other_names", pa.list_(pa.struct([("id", pa.string()), ("name", pa.string())]))),
+            (
+                "provenance",
+                pa.list_(
+                    pa.struct(
+                        [
+                            ("field", pa.string()),
+                            ("source", pa.string()),
+                            ("url", pa.string()),
+                            ("retrieved_at", pa.string()),
+                            ("license", pa.string()),
+                        ]
+                    )
+                ),
+            ),
         ]
     )
 
@@ -438,6 +452,17 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                                     topic[key] = "yes" if topic[key] else "no"
                                 elif topic[key] is None:
                                     topic[key] = ""
+
+            # Normalize provenance entries (None -> [], None subfields -> "")
+            prov = cleaned_item.get("provenance")
+            if prov is None:
+                cleaned_item["provenance"] = []
+            elif isinstance(prov, list):
+                for entry in prov:
+                    if isinstance(entry, dict):
+                        for key in ("field", "source", "url", "retrieved_at", "license"):
+                            if key in entry and entry[key] is None:
+                                entry[key] = ""
 
         if dataset_type == "countries":
             sub = cleaned_item.get("subregion")
