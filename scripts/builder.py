@@ -59,9 +59,31 @@ def get_dataset_version() -> str:
     return match.group(1) if match else "unknown"
 
 
+# SPDX identifier for the dataset (data) license; see DATA_LICENSE / ATTRIBUTION.md.
+DATA_LICENSE_SPDX = "CC-BY-4.0"
+
+
 def schema_hash(schema: pa.Schema) -> str:
     digest = hashlib.sha256(schema.serialize().to_pybytes()).hexdigest()
     return digest[:16]
+
+
+def dataset_metadata(
+    dataset: str,
+    schema: pa.Schema,
+    row_count: int,
+) -> dict[str, Any]:
+    """Build the canonical metadata record shared by manifests, the DuckDB
+    ``_meta`` table, and Parquet ``.meta.json`` sidecars."""
+    return {
+        "dataset": dataset,
+        "version": get_dataset_version(),
+        "build_date": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "git_commit": get_git_commit(),
+        "row_count": row_count,
+        "schema_hash": schema_hash(schema),
+        "data_license": DATA_LICENSE_SPDX,
+    }
 
 
 def write_manifest(
@@ -70,17 +92,39 @@ def write_manifest(
     schema: pa.Schema,
     row_count: int,
 ) -> None:
-    manifest = {
-        "dataset": dataset,
-        "version": get_dataset_version(),
-        "build_date": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "git_commit": get_git_commit(),
-        "row_count": row_count,
-        "schema_hash": schema_hash(schema),
-    }
+    manifest = dataset_metadata(dataset, schema, row_count)
     path = output_dir / f"{dataset}.manifest.json"
     path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     typer.echo(f"✓ Saved manifest: {path}")
+
+
+def write_meta_sidecar(
+    output_dir: Path,
+    dataset: str,
+    schema: pa.Schema,
+    row_count: int,
+) -> None:
+    """Write a ``<dataset>.meta.json`` sidecar next to the Parquet export so
+    Parquet-only consumers can read version info without the full manifest."""
+    meta = dataset_metadata(dataset, schema, row_count)
+    path = output_dir / f"{dataset}.meta.json"
+    path.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved meta sidecar: {path}")
+
+
+def get_meta_schema() -> pa.Schema:
+    """Schema for the embedded DuckDB ``_meta`` table."""
+    return pa.schema(
+        [
+            ("dataset", pa.string()),
+            ("version", pa.string()),
+            ("build_date", pa.string()),
+            ("git_commit", pa.string()),
+            ("row_count", pa.int64()),
+            ("schema_hash", pa.string()),
+            ("data_license", pa.string()),
+        ]
+    )
 
 
 def _indicator_struct(value_type: pa.DataType) -> pa.DataType:
@@ -481,6 +525,54 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
     return cleaned_data
 
 
+def get_aliases_schema() -> pa.Schema:
+    """Schema for the intblock identifier alias artifact."""
+    return pa.schema(
+        [
+            ("alias", pa.string()),
+            ("target", pa.string()),
+            ("reason", pa.string()),
+            ("since", pa.string()),
+            ("note", pa.string()),
+        ]
+    )
+
+
+def load_intblock_aliases(project_root: Path) -> list[dict[str, Any]]:
+    """Load the intblock identifier alias source (retired/renamed ids → current id)."""
+    path = project_root / "data" / "intblocks_aliases.yaml"
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = yaml.safe_load(f) or []
+    aliases: list[dict[str, Any]] = []
+    for entry in raw:
+        if not isinstance(entry, dict):
+            continue
+        aliases.append(
+            {
+                "alias": str(entry.get("alias") or ""),
+                "target": str(entry.get("target") or ""),
+                "reason": str(entry.get("reason") or ""),
+                "since": str(entry.get("since") or ""),
+                "note": str(entry.get("note") or ""),
+            }
+        )
+    return aliases
+
+
+def save_aliases(aliases: list[dict[str, Any]], output_dir: Path, write_parquet: bool = True) -> None:
+    """Write the intblock alias artifact as JSON and (optionally) Parquet."""
+    json_path = output_dir / "intblocks_aliases.json"
+    json_path.write_text(json.dumps(aliases, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved alias map: {json_path}")
+    if write_parquet:
+        table = pa.Table.from_pylist(aliases, schema=get_aliases_schema())
+        parquet_path = output_dir / "intblocks_aliases.parquet"
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        typer.echo(f"✓ Saved alias map (parquet): {parquet_path}")
+
+
 def load_yaml_files(directory: Path, desc: str = "Loading files") -> list[dict[str, Any]]:
     """Load all YAML files from a directory (including subdirectories).
 
@@ -571,6 +663,14 @@ def create_duckdb_database(
             con.execute(f"CREATE TABLE {name} AS SELECT * FROM arrow_source")
             con.unregister("arrow_source")
             counts[name] = con.execute(f"SELECT COUNT(*) FROM {name}").fetchone()[0]
+
+        # Embed a self-describing _meta table (one row per dataset) so the
+        # database file carries its own version/schema info.
+        meta_rows = [dataset_metadata(name, schema, len(data)) for name, data, schema in tables]
+        meta_table = pa.Table.from_pylist(meta_rows, schema=get_meta_schema())
+        con.register("arrow_source", meta_table)
+        con.execute("CREATE TABLE _meta AS SELECT * FROM arrow_source")
+        con.unregister("arrow_source")
 
         typer.echo(f"✓ Saved DuckDB: {output_file}")
         typer.echo(f"  - Countries: {counts['countries']} rows")
@@ -702,6 +802,10 @@ def build(
     # Clean blocktypes data
     blocktypes_data = clean_data(blocktypes_data, "blocktypes")
 
+    # Load intblock identifier aliases (retired/renamed ids → current id)
+    intblock_aliases = load_intblock_aliases(project_root)
+    typer.echo(f"   Loaded {len(intblock_aliases)} intblock alias(es)")
+
     # Get schemas
     countries_schema = get_countries_schema()
     intblocks_schema = get_intblocks_schema()
@@ -727,6 +831,9 @@ def build(
         save_parquet(blocktypes_data, output_dir / "blocktypes.parquet", schema=blocktypes_schema)
         write_manifest(output_dir, "countries", countries_schema, len(countries_data))
         write_manifest(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
+        write_meta_sidecar(output_dir, "countries", countries_schema, len(countries_data))
+        write_meta_sidecar(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
+        write_meta_sidecar(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
 
     if "duckdb" in requested_formats:
         create_duckdb_database(
@@ -741,6 +848,9 @@ def build(
         if "parquet" not in requested_formats:
             write_manifest(output_dir, "countries", countries_schema, len(countries_data))
             write_manifest(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
+
+    # Always emit the intblock alias artifact so consumers can remap retired ids.
+    save_aliases(intblock_aliases, output_dir, write_parquet="parquet" in requested_formats)
 
     typer.echo("\n✅ All datasets generated successfully!")
     typer.echo(f"📂 Output location: {output_dir}")

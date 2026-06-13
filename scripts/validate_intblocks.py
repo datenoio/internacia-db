@@ -110,6 +110,39 @@ def validate_lifecycle(
     return warnings
 
 
+def validate_aliases(
+    aliases: list[dict[str, Any]],
+    known_ids: set[str],
+) -> list[str]:
+    """Alias integrity: every target must resolve to an existing intblock id, and
+    an alias that collides with a current id must be marked ``disambiguated``."""
+    errors: list[str] = []
+    seen_aliases: set[str] = set()
+    for entry in aliases:
+        if not isinstance(entry, dict):
+            errors.append(f"alias entry is not a mapping: {entry!r}")
+            continue
+        alias = str(entry.get("alias") or "")
+        target = str(entry.get("target") or "")
+        reason = str(entry.get("reason") or "")
+        if not alias or not target:
+            errors.append(f"alias entry missing alias/target: {entry!r}")
+            continue
+        if alias in seen_aliases:
+            errors.append(f"duplicate alias '{alias}'")
+        seen_aliases.add(alias)
+        if reason not in {"renamed", "merged", "disambiguated"}:
+            errors.append(f"alias '{alias}': invalid reason '{reason}'")
+        if target not in known_ids:
+            errors.append(f"alias '{alias}': target '{target}' does not match any intblock id")
+        if alias in known_ids and reason != "disambiguated":
+            errors.append(
+                f"alias '{alias}' collides with a current intblock id; "
+                f"mark reason 'disambiguated' if the acronym was reassigned"
+            )
+    return errors
+
+
 def validate_completeness(
     records: list[dict[str, Any]], config: dict[str, Any]
 ) -> tuple[list[str], list[str], dict[str, Any]]:
@@ -164,6 +197,7 @@ def main(
     schema_path = root / "data" / "schemas" / "intblocks.schema.json"
     completeness_path = root / "data" / "schemas" / "intblocks_completeness.yaml"
     blocktypes_path = root / "data" / "datasets" / "blocktypes.yaml"
+    aliases_path = root / "data" / "intblocks_aliases.yaml"
 
     schema = load_json(schema_path)
     completeness_cfg = load_yaml(completeness_path) or {}
@@ -198,6 +232,11 @@ def main(
         errors.extend(validate_blocktypes(records, taxonomy))
     warnings.extend(validate_partof_refs(records))
     warnings.extend(validate_lifecycle(records))
+
+    if aliases_path.exists():
+        known_ids = {str(rec.get("id", "")) for _, rec in records if rec.get("id")}
+        aliases = load_yaml(aliases_path) or []
+        errors.extend(validate_aliases(aliases, known_ids))
 
     all_records = [rec for _, rec in records]
     comp_errors, comp_warnings, completeness_report = validate_completeness(all_records, completeness_cfg)

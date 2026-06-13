@@ -78,6 +78,34 @@ def test_schema_validation_against_repo_schema():
     assert any("blocktype" in e for e in errors)
 
 
+def test_validate_aliases_accepts_valid_rename():
+    aliases = [{"alias": "OLD", "target": "NEW", "reason": "renamed", "since": "1.4.0"}]
+    assert vi.validate_aliases(aliases, {"NEW"}) == []
+
+
+def test_validate_aliases_rejects_dangling_target():
+    aliases = [{"alias": "OLD", "target": "MISSING", "reason": "renamed", "since": "1.4.0"}]
+    errors = vi.validate_aliases(aliases, {"NEW"})
+    assert any("MISSING" in e for e in errors)
+
+
+def test_validate_aliases_rejects_unmarked_collision():
+    aliases = [{"alias": "ASF", "target": "FSA", "reason": "renamed", "since": "1.3.0"}]
+    errors = vi.validate_aliases(aliases, {"ASF", "FSA"})
+    assert any("collides" in e for e in errors)
+
+
+def test_validate_aliases_allows_disambiguated_collision():
+    aliases = [{"alias": "ASF", "target": "FSA", "reason": "disambiguated", "since": "1.3.0"}]
+    assert vi.validate_aliases(aliases, {"ASF", "FSA"}) == []
+
+
+def test_validate_aliases_rejects_bad_reason():
+    aliases = [{"alias": "OLD", "target": "NEW", "reason": "typo", "since": "1.4.0"}]
+    errors = vi.validate_aliases(aliases, {"NEW"})
+    assert any("invalid reason" in e for e in errors)
+
+
 def test_completeness_thresholds():
     records = [{"id": "A", "wikidata_id": "Q1"}, {"id": "B"}]
     config = {"fields": {"wikidata_id": {"max_null_rate": 0.25, "mode": "warn"}}}

@@ -51,15 +51,20 @@ Each build writes to `data/datasets/`:
 | `countries.jsonl.zst` | Countries (JSONL, zstd) |
 | `countries.yaml.zst` | Countries (YAML, zstd) |
 | `countries.parquet` | Countries (Parquet, zstd) |
-| `countries.manifest.json` | Build metadata (version, commit, row count, schema hash) |
-| `intblocks.manifest.json` | Build metadata (version, commit, row count, schema hash) |
+| `countries.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
+| `countries.meta.json` | Version metadata sidecar for Parquet consumers |
+| `intblocks.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
+| `intblocks.meta.json` | Version metadata sidecar for Parquet consumers |
 | `intblocks.jsonl.zst` | International blocks (JSONL, zstd) |
 | `intblocks.yaml.zst` | International blocks (YAML, zstd) |
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
+| `intblocks_aliases.json` | Retired/renamed intblock id → current id map |
+| `intblocks_aliases.parquet` | Alias map (Parquet, zstd) |
 | `blocktypes.jsonl.zst` | Block types (JSONL, zstd) |
 | `blocktypes.yaml.zst` | Block types (YAML, zstd) |
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
-| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes` tables) |
+| `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
+| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
 
 Current row counts: **252** countries, **1057** intblocks, **85** blocktypes.
 
@@ -130,6 +135,33 @@ con.execute("""
     LIMIT 5
 """).fetchall()
 ```
+
+## Versioning and identifier stability
+
+Datasets are **self-describing**. The DuckDB file carries a `_meta` table and each Parquet file has a
+`<dataset>.meta.json` sidecar, both mirroring the manifest fields (`version`, `build_date`,
+`git_commit`, `row_count`, `schema_hash`, `data_license`):
+
+```python
+import duckdb
+
+con = duckdb.connect("data/datasets/internacia.duckdb")
+con.execute("SELECT dataset, version, schema_hash FROM _meta").fetchall()
+```
+
+**Identifier stability.** Country `code` and intblock `id` are stable join keys. When an intblock id is
+renamed, merged, or its acronym is reassigned to a different entity, the old id is recorded in
+`intblocks_aliases.json` (and `.parquet`) so downstream joins can remap:
+
+```python
+import json
+
+aliases = {a["alias"]: a["target"] for a in json.load(open("data/datasets/intblocks_aliases.json"))}
+current_id = aliases.get("ASF", "ASF")  # -> "FSA"
+```
+
+A `reason` of `disambiguated` means the old id still exists but now refers to a **different** entity
+(e.g. `ASF` is now the African Standby Force; the African Solidarity Fund moved to `FSA`).
 
 ## Countries schema
 
@@ -244,6 +276,16 @@ Tagged releases (`vX.Y.Z`) automatically rebuild all formats and attach them as 
 - Decompress zstd files: `zstd -d data/datasets/countries.jsonl.zst`
 - Gap analysis research: `dev/research/countries_gaps_manus_20260528.md`
 - `data/_legacy/` contains pre-1.0 Airtable JSON exports kept for reference only; nothing in the pipeline consumes them.
+
+## License
+
+- **Code** (everything under `scripts/`, `tests/`, and build tooling) — MIT, see [LICENSE](LICENSE).
+- **Data** (curated sources under `data/` and generated artifacts in `data/datasets/`) —
+  Creative Commons Attribution 4.0 (CC BY 4.0), see [DATA_LICENSE](DATA_LICENSE).
+
+Upstream sources (World Bank, Wikidata, IANA tzdata) and citation guidance are documented in
+[ATTRIBUTION.md](ATTRIBUTION.md). The data license SPDX identifier is recorded in each build manifest
+and in the `_meta`/`*.meta.json` metadata.
 
 ## Contributing
 

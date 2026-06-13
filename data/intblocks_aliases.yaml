@@ -1,0 +1,32 @@
+# Intblock identifier aliases: retired/renamed ids -> current id.
+#
+# Source of truth for the generated data/datasets/intblocks_aliases.{json,parquet}
+# artifacts. Add an entry here in the SAME change that renames or merges an
+# intblock id, so downstream consumers keyed on the old id can remap.
+#
+# Fields:
+#   alias  - the retired/old id a consumer may still hold
+#   target - the current id it now maps to (must exist in the intblocks dataset)
+#   reason - renamed | merged | disambiguated
+#   since  - the version that introduced the change
+#   note   - optional human context
+#
+# reason: disambiguated means the acronym was reassigned: the old id still
+# exists as a CURRENT id but now refers to a DIFFERENT entity, and the entity
+# that previously held it moved to `target`.
+
+- alias: ASF
+  target: FSA
+  reason: disambiguated
+  since: 1.3.0
+  note: >-
+    African Solidarity Fund moved from ASF to FSA in v1.3.0. The id ASF now
+    refers to the African Standby Force (military), a different entity.
+
+- alias: CAF
+  target: CAFBANK
+  reason: disambiguated
+  since: 1.3.0
+  note: >-
+    CAF development bank moved from CAF to CAFBANK in v1.3.0. The id CAF now
+    refers to the Confederation of African Football (sports), a different entity.
