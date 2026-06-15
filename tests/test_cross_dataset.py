@@ -54,14 +54,29 @@ def test_allowlisted_include_passes(tmp_path):
     assert warnings == []
 
 
-def test_deferred_ids_warn_with_policy_note(tmp_path):
+def test_cis2_entity_codes_resolve_when_profiles_exist(tmp_path):
     countries_dir, intblocks_dir = _setup(
         tmp_path,
-        "id: ORG\nincludes:\n- id: XA\n  name: Deferred\n  type: country\n  status: member\n",
+        "id: ORG\nincludes:\n- id: XA\n  name: Abkhazia\n  type: country\n  status: member\n",
+    )
+    (countries_dir / "XA.yaml").write_text(
+        "code: XA\nname: Abkhazia\nentity_type: disputed_territory\ncode_status: user_assigned\n",
+        encoding="utf-8",
     )
     errors, warnings = vc.validate_intblock_refs(countries_dir, intblocks_dir, {})
     assert errors == []
-    assert any("deferred policy" in w for w in warnings)
+    assert warnings == []
+
+
+def test_deferred_ids_no_longer_special_cased(tmp_path):
+    countries_dir, intblocks_dir = _setup(
+        tmp_path,
+        "id: ORG\nincludes:\n- id: XA\n  name: Abkhazia\n  type: country\n  status: member\n",
+    )
+    errors, warnings = vc.validate_intblock_refs(countries_dir, intblocks_dir, {})
+    assert errors == []
+    assert any("unresolved" in w for w in warnings)
+    assert not any("deferred policy" in w for w in warnings)
 
 
 def test_organization_includes_ignored(tmp_path):

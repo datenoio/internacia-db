@@ -1,0 +1,69 @@
+DATA QUALITY REPORT - COUNTRY: MF
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: MF
+Total Records with Issues: 4
+Total Issues Found: 6
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: LOW
+
+File: data/countries/MF.yaml
+Record ID: MF
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: http://.fr
+Suggested Action: Duplicate link 'http://.fr' found in multiple records: [('data/countries/FR.yaml', 'FR'), ('data/countries/MF.yaml', 'MF')]
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 3
+Priority: MEDIUM
+
+File: data/intblocks/geographic/CARIBBEAN.yaml
+Record ID: CARIBBEAN
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on regional cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+[WHITESPACE_IN_CATEGORICAL_FIELD]
+Count: 1
+Priority: LOW
+
+File: data/countries/MF.yaml
+Record ID: MF
+Issue: WHITESPACE_IN_CATEGORICAL_FIELD
+Field: region.value
+Current Value: Latin America & Caribbean 
+Suggested Action: Strip leading/trailing whitespace
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 2 issues
+TEMPLATED_DESCRIPTION: 3 issues
+WHITESPACE_IN_CATEGORICAL_FIELD: 1 issue

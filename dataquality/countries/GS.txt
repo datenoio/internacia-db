@@ -1,0 +1,43 @@
+DATA QUALITY REPORT - COUNTRY: GS
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: GS
+Total Records with Issues: 2
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 1
+Priority: LOW
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 1 issue
+TEMPLATED_DESCRIPTION: 2 issues

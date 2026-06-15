@@ -1,0 +1,45 @@
+DATA QUALITY REPORT - RULE: WHITESPACE_IN_CATEGORICAL_FIELD
+================================================================================
+Generated: 2026-06-14 20:30:46
+Issue Type: WHITESPACE_IN_CATEGORICAL_FIELD
+Priority: LOW
+Total Issues Found: 5
+
+Description: Leading/trailing whitespace found in categorical text fields.
+
+=== AFFECTED RECORDS ===
+
+File: data/countries/CW.yaml
+Record ID: CW
+Country: CW
+Field: region.value
+Current Value: Latin America & Caribbean 
+Suggested Action: Strip leading/trailing whitespace
+
+File: data/countries/MF.yaml
+Record ID: MF
+Country: MF
+Field: region.value
+Current Value: Latin America & Caribbean 
+Suggested Action: Strip leading/trailing whitespace
+
+File: data/countries/SS.yaml
+Record ID: SS
+Country: SS
+Field: region.value
+Current Value: Sub-Saharan Africa 
+Suggested Action: Strip leading/trailing whitespace
+
+File: data/countries/SX.yaml
+Record ID: SX
+Country: SX
+Field: region.value
+Current Value: Latin America & Caribbean 
+Suggested Action: Strip leading/trailing whitespace
+
+File: data/countries/VG.yaml
+Record ID: VG
+Country: VG
+Field: region.value
+Current Value: Latin America & Caribbean 
+Suggested Action: Strip leading/trailing whitespace

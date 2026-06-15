@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - RULE: UNRESOLVED_PARTOF_REF
+================================================================================
+Generated: 2026-06-14 20:30:46
+Issue Type: UNRESOLVED_PARTOF_REF
+Priority: MEDIUM
+Total Issues Found: 3
+
+Description: An intblock's partof references a non-existent intblock ID.
+
+=== AFFECTED RECORDS ===
+
+File: data/intblocks/aviation/ACSA.yaml
+Record ID: ACSA
+Country: CR
+Field: partof
+Current Value: COCESNA
+Suggested Action: partof reference 'COCESNA' does not match any known intblock id
+
+File: data/intblocks/fund/ACF.yaml
+Record ID: ACF
+Country: RU
+Field: partof
+Current Value: EAEC
+Suggested Action: partof reference 'EAEC' does not match any known intblock id
+
+File: data/intblocks/parliamentary/IPAEURASEC.yaml
+Record ID: IPAEURASEC
+Country: BY
+Field: partof
+Current Value: EAEC
+Suggested Action: partof reference 'EAEC' does not match any known intblock id

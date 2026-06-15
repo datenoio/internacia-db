@@ -1,0 +1,225 @@
+DATA QUALITY REPORT - COUNTRY: BF
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: BF
+Total Records with Issues: 28
+Total Issues Found: 29
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 11
+Priority: LOW
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+File: data/intblocks/agreement/CTBT.yaml
+Record ID: CTBT
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.ctbto.org/
+Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+
+File: data/intblocks/intorg/CTBTO.yaml
+Record ID: CTBTO
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.ctbto.org/
+Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+
+File: data/intblocks/aviation/URSAC.yaml
+Record ID: URSAC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+Suggested Action: Duplicate link 'https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs' found in multiple records: [('data/intblocks/aviation/ASSAAC.yaml', 'ASSAAC'), ('data/intblocks/aviation/URSAC.yaml', 'URSAC')]
+
+File: data/intblocks/unagency/UNDP.yaml
+Record ID: UNDP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNFPA.yaml
+Record ID: UNFPA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNRWA.yaml
+Record ID: UNRWA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNWOMEN.yaml
+Record ID: UNWOMEN
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/WFP.yaml
+Record ID: WFP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNEP.yaml
+Record ID: UNEP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q170088
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
+
+File: data/intblocks/unagency/UNHABITAT.yaml
+Record ID: UNHABITAT
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q170088
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 18
+Priority: MEDIUM
+
+File: data/intblocks/agriculture/IFDC.yaml
+Record ID: IFDC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on agriculture.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/bank/FSA.yaml
+Record ID: FSA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development providing financial services.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/bank/ICSID.yaml
+Record ID: ICSID
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development providing financial services.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development providing financial services.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/economic/CENSAD.yaml
+Record ID: CENSAD
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: Regional organization focused on development for economic integration.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/energy/APNPP.yaml
+Record ID: APNPP
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on economic cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/food/CIFAA.yaml
+Record ID: CIFAA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on agriculture.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/fund/COMMONFUND.yaml
+Record ID: COMMONFUND
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/intorg/ISSA.yaml
+Record ID: ISSA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on security and defense.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/intorg/WFTU.yaml
+Record ID: WFTU
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: Regional organization focused on regional cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/parliamentary/ACPEUPA.yaml
+Record ID: ACPEUPA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on parliamentary.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/parliamentary/APU.yaml
+Record ID: APU
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: Regional organization focused on parliamentary.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/taxation/WATAF.yaml
+Record ID: WATAF
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: Regional organization focused on improving the effectiveness and efficiency of tax administrations in West Africa. Provides a platform for collaboration, knowledge sharing, and capacity building among its member countries.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/LMY.yaml
+Record ID: LMY
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/SSA.yaml
+Record ID: SSA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/SSF.yaml
+Record ID: SSF
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 11 issues
+TEMPLATED_DESCRIPTION: 18 issues

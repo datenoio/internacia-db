@@ -1,10 +1,10 @@
 id: ISO
 name: International Organization for Standardization
 blocktype:
+- standards
 - intorg
 - technical
 - technology
-- standards
 status: formal
 founded: '1947-02-23'
 geographic_scope: global
@@ -29,11 +29,9 @@ headquarters:
     lng: 6.1432
 membership_count: 252
 legal_status: intergovernmental
-notes: ISO members are national standards bodies, not countries directly. Each member
-  represents one country. ISO has 167 member bodies representing countries worldwide.
-  Full member list should be verified from official ISO website.
-description: International organization that develops and publishes international
-  standards.
+notes: ISO members are national standards bodies, not countries directly. Each member represents one country. ISO has 167
+  member bodies representing countries worldwide. Full member list should be verified from official ISO website.
+description: International organization that develops and publishes international standards.
 tags:
 - ISO
 - standardization
@@ -1067,3 +1065,16 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+provenance:
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.iso.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.iso.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.iso.org/

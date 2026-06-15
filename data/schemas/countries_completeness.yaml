@@ -14,7 +14,7 @@ fields:
     max_null_rate: 0.0
     mode: error
   gini:
-    max_null_rate: 0.45
+    max_null_rate: 0.33
     mode: warn
   timezones:
     max_null_rate: 0.0
@@ -31,3 +31,10 @@ fields:
   capital_city:
     max_null_rate: 0.05
     mode: warn
+  centroid:
+    max_null_rate: 0.0
+    mode: error
+
+provenance:
+  max_age_months: 12
+  mode: warn

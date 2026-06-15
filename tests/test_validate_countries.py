@@ -93,3 +93,27 @@ def test_official_iso_count_enforced():
     records = [{"code_status": "official_iso3166_1"}] * (vc.EXPECTED_OFFICIAL_ISO_COUNT - 1)
     errors = vc.validate_official_iso_count(records)
     assert len(errors) == 1
+
+
+def test_validate_currency_codes_warns_invalid():
+    record = {"currencies": [{"code": "usd", "name": "US Dollar"}]}
+    warnings = vc.validate_currency_codes(record, "x.yaml")
+    assert len(warnings) == 1
+    assert "ISO 4217" in warnings[0]
+
+
+def test_validate_currency_codes_accepts_valid():
+    record = {"currencies": [{"code": "USD", "name": "US Dollar"}]}
+    assert vc.validate_currency_codes(record, "x.yaml") == []
+
+
+def test_validate_provenance_freshness_warns_stale():
+    record = {"provenance": [{"field": "population", "source": "World Bank", "retrieved_at": "2020-01-01"}]}
+    warnings = vc.validate_provenance_freshness(record, "x.yaml", max_age_months=12)
+    assert len(warnings) == 1
+    assert "stale" in warnings[0]
+
+
+def test_validate_provenance_freshness_accepts_recent():
+    record = {"provenance": [{"field": "population", "source": "World Bank", "retrieved_at": "2026-06-01"}]}
+    assert vc.validate_provenance_freshness(record, "x.yaml", max_age_months=12) == []

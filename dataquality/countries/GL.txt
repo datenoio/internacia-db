@@ -1,0 +1,88 @@
+DATA QUALITY REPORT - COUNTRY: GL
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: GL
+Total Records with Issues: 5
+Total Issues Found: 8
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 3
+Priority: LOW
+
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/DVD_region_code
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/DVD_region_code' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
+
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q746611
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q746611' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 5
+Priority: MEDIUM
+
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/ECS.yaml
+Record ID: ECS
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/NOC.yaml
+Record ID: NOC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 3 issues
+TEMPLATED_DESCRIPTION: 5 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: DVD_2
+File: data/intblocks/dvdregion/DVD_2.yaml
+Issue Count: 3
+Issues:
+  - TEMPLATED_DESCRIPTION: description
+  - DUPLICATE_LINK: links
+  - DUPLICATE_LINK: links

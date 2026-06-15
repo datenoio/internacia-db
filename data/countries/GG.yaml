@@ -86,21 +86,56 @@ borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
 provenance:
+- field: centroid
+  source: mledoze/countries
+  url: https://github.com/mledoze/countries
+  retrieved_at: '2026-06-15'
+- field: region
+  source: UN M49 inference
+  retrieved_at: '2026-06-15'
+  url: https://unstats.un.org/unsd/methodology/m49/
 - field: population
   source: Wikidata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
 - field: area
   source: Wikidata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
 - field: timezones
   source: IANA tzdata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
   source: Wikidata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+- field: adminregion
+  source: UN M49 inference
+  retrieved_at: '2026-06-15'
+  url: https://unstats.un.org/unsd/methodology/m49/
+- field: incomeLevel
+  source: UN M49 inference
+  retrieved_at: '2026-06-15'
+  url: https://unstats.un.org/unsd/methodology/m49/
+- field: lendingType
+  source: UN M49 inference
+  retrieved_at: '2026-06-15'
+  url: https://unstats.un.org/unsd/methodology/m49/
+centroid:
+  lat: 49.46666666
+  lng: -2.58333333
+region:
+  id: ECS
+  value: Europe & Central Asia (all income levels)
+incomeLevel:
+  id: NOC
+  value: 'High income: nonOECD'
+lendingType:
+  id: NC
+  value: Not classified
+adminregion:
+  id: ECA
+  value: Europe & Central Asia (developing only)

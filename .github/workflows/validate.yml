@@ -5,9 +5,10 @@ on:
     paths:
       - 'data/countries/**'
       - 'data/intblocks/**'
+      - 'data/blocktypes/**'
       - 'data/schemas/**'
-      - 'data/datasets/blocktypes.yaml'
       - 'scripts/**'
+      - 'internacia_builder/**'
       - 'tests/**'
       - 'requirements.txt'
       - 'requirements-dev.txt'
@@ -18,9 +19,10 @@ on:
     paths:
       - 'data/countries/**'
       - 'data/intblocks/**'
+      - 'data/blocktypes/**'
       - 'data/schemas/**'
-      - 'data/datasets/blocktypes.yaml'
       - 'scripts/**'
+      - 'internacia_builder/**'
       - 'tests/**'
       - 'requirements.txt'
       - 'requirements-dev.txt'
@@ -49,7 +51,7 @@ jobs:
         run: pip install -r requirements-dev.txt
 
       - name: Lint
-        run: ruff check scripts/ tests/
+        run: ruff check internacia_builder/ scripts/ tests/
 
       - name: Run tests
         run: pytest tests/

@@ -12,6 +12,14 @@ Instructions for AI coding assistants using OpenSpec for spec-driven development
 - Validate: `openspec validate [change-id] --strict` and fix issues
 - Request approval: Do not start implementation until proposal is approved
 
+## Dataset Scope (Countries)
+
+The **countries** dataset is **reference data**: identifiers (ISO codes), geography, entity status, Wikidata links, and stable classification fields used for joins and enrichment downstream.
+
+**Do not** add socioeconomic profile fields to countries (for example HDI, GDP per capita, government type, internet penetration, or similar time-series indicators). Those belong in separate downstream datasets or consumer-specific enrichment, not in this repository.
+
+Existing demographic and World Bank classification fields (`population`, `area`, `gini`, `region`, `incomeLevel`, etc.) remain in scope where already defined in the schema.
+
 ## Three-Stage Workflow
 
 ### Stage 1: Creating Changes

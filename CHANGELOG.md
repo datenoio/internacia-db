@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-06-15
+
+Coverage expansion, taxonomy governance, builder refactor, and enrichment tooling release.
+
+### Added
+
+- User-assigned country profiles for CIS2 entities (`XA`, `XS`, `XT`, `XN`) with `recognition_status` metadata; countries row count **252 → 256**.
+- Country `centroid: {lat, lng}` on all 256 records.
+- Intblocks **COCESNA**, **EPLO**, **FILAC** (P2 backlog); intblocks row count **1067 → 1070**.
+- Nine intblock coverage gaps (UNSC, UNGA, UNHRC, CHIP4, DEPA, PEPFAR, MSF, UNCITRAL, UNCLOS) and topic taxonomy governance (`docs/topic-taxonomy.md`, `data/schemas/topic_aliases.yaml`).
+- `scripts/apply_manus_roadmap.py` for batch topic/directory/centroid migrations.
+- `enrich_countries.py check`: report stale provenance and missing fields (no network).
+- `validate_countries.py`: ISO 4217 currency code warnings and provenance freshness checks.
+- `.github/workflows/enrichment-check.yml`: monthly enrichment freshness report.
+- G5 Sahel historical record (`G5SAHEL`) and `enrich_intblocks.py backfill-founded` for Wikidata inception dates.
+
+### Changed
+
+- `builder.py` imports validators directly (no subprocess); validation logic moved to `internacia_builder/`.
+- `enrich_intblocks.py backfill-founded` also checks Wikidata P1619 (date of official opening).
+- Blocktypes taxonomy source moved to `data/blocktypes/blocktypes.yaml`; `data/datasets/blocktypes.yaml` is now build output.
+- Intblock directory taxonomy aligned with blocktype values (`tax/`, `transport/`, `unregionalblock/`, `audit` blocktype); 169 primary blocktype mismatches remediated.
+- Topic keys consolidated (11 synonym groups, sports unification); `validate_intblocks.py` warns on deprecated keys and directory misalignment.
+- `enrich_countries.py`: paginated World Bank fetch, M49-based classification for non-WB entities.
+- `enrich_intblocks.py`: `--ids` filter for batch high-profile enrichment.
+- **Dataset outputs rebuilt**: 256 countries, 1070 intblocks, 86 blocktypes.
+
 ## [1.4.0] - 2026-06-15
 
 Intblocks taxonomy reorganization and enrichment release: domain-folder classification, Wikidata enrichment, data licensing, and self-describing dataset metadata.

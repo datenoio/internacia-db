@@ -2,7 +2,7 @@
 
 [![Validate datasets](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml)
 
-Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/` and `data/intblocks/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
+Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
 
 ## Features
 
@@ -31,9 +31,11 @@ python3 scripts/builder.py info
 
 # Validate country YAML (no build)
 python3 scripts/validate_countries.py
+# or: internacia-validate-countries   (after pip install -e .)
 
 # Validate intblock YAML (no build)
 python3 scripts/validate_intblocks.py
+# or: internacia-validate-intblocks
 
 # Build all datasets
 python3 scripts/builder.py build
@@ -60,13 +62,14 @@ Each build writes to `data/datasets/`:
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
 | `intblocks_aliases.json` | Retired/renamed intblock id → current id map |
 | `intblocks_aliases.parquet` | Alias map (Parquet, zstd) |
+| `blocktypes.yaml` | Block types (plain YAML copy of source, regenerated on build) |
 | `blocktypes.jsonl.zst` | Block types (JSONL, zstd) |
 | `blocktypes.yaml.zst` | Block types (YAML, zstd) |
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
 
-Current row counts: **252** countries, **1057** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1070** intblocks, **86** blocktypes.
 
 ## Validation and quality
 
@@ -103,7 +106,7 @@ python3 scripts/diff_countries_baseline.py
 
 # Run tests and lint
 pytest tests/
-ruff check scripts/ tests/
+ruff check internacia_builder/ scripts/ tests/
 ```
 
 Country code policy (ISO vs user-assigned, filtering examples): [docs/country-code-policy.md](docs/country-code-policy.md)
@@ -169,7 +172,7 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 
 ## Countries schema
 
-252 country and territory records. Key fields:
+256 country and territory records. Key fields:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -246,8 +249,8 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 
 **YAML sources**
 
-- `data/countries/*.yaml` — 252 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1057 international block records across 60+ domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/countries/*.yaml` — 256 country/territory records
+- `data/intblocks/<category>/*.yaml` — 1070 international block records across 60+ domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 
@@ -259,9 +262,10 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 
 | Script | Purpose |
 |--------|---------|
+| `internacia_builder/` | Installable package (`pip install -e .`): validation modules, shared paths/HTTP helpers |
 | `scripts/builder.py` | Validate and export datasets |
-| `scripts/validate_countries.py` | Country schema, completeness, and cross-dataset checks |
-| `scripts/validate_intblocks.py` | Intblock schema, taxonomy, duplicates, and completeness checks |
+| `scripts/validate_countries.py` | Shim → `internacia_builder.validate.countries` |
+| `scripts/validate_intblocks.py` | Shim → `internacia_builder.validate.intblocks` |
 | `scripts/validate_links.py` | Intblock URL and Wikidata validation (run weekly in CI) |
 | `scripts/enrich_countries.py` | Enrich country profiles; `backfill-provenance` subcommand |
 | `scripts/enrich_intblocks.py` | Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names) |

@@ -1,0 +1,269 @@
+DATA QUALITY REPORT - COUNTRY: GE
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: GE
+Total Records with Issues: 29
+Total Issues Found: 33
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 10
+Priority: LOW
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+File: data/intblocks/agreement/CTBT.yaml
+Record ID: CTBT
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.ctbto.org/
+Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+
+File: data/intblocks/intorg/CTBTO.yaml
+Record ID: CTBTO
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.ctbto.org/
+Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+
+File: data/intblocks/unagency/UNDP.yaml
+Record ID: UNDP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNFPA.yaml
+Record ID: UNFPA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNRWA.yaml
+Record ID: UNRWA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNWOMEN.yaml
+Record ID: UNWOMEN
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/WFP.yaml
+Record ID: WFP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q163740
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
+
+File: data/intblocks/unagency/UNEP.yaml
+Record ID: UNEP
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q170088
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
+
+File: data/intblocks/unagency/UNHABITAT.yaml
+Record ID: UNHABITAT
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://www.wikidata.org/wiki/Q170088
+Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 19
+Priority: MEDIUM
+
+File: data/intblocks/aviation/IRU.yaml
+Record ID: IRU
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: Regional organization focused on regional cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development providing financial services.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/energy/ERRA.yaml
+Record ID: ERRA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on economic cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/food/GFCM.yaml
+Record ID: GFCM
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on agriculture.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/fund/COMMONFUND.yaml
+Record ID: COMMONFUND
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/gaspipeline/BTE.yaml
+Record ID: BTE
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on economic cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/gaspipeline/SOUCAPIPE.yaml
+Record ID: SOUCAPIPE
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on economic cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/geographic/CAUCASUS.yaml
+Record ID: CAUCASUS
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on regional cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/intorg/ISSA.yaml
+Record ID: ISSA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on security and defense.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/intorg/MOUNTPART.yaml
+Record ID: MOUNTPART
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/military/IPAP.yaml
+Record ID: IPAP
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on military cooperation for military cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/parliamentary/PABSEC.yaml
+Record ID: PABSEC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on parliamentary.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/project/PIMS.yaml
+Record ID: PIMS
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on security and defense.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/ECA.yaml
+Record ID: ECA
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/ECS.yaml
+Record ID: ECS
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/LMC.yaml
+Record ID: LMC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/wbgroup/LMY.yaml
+Record ID: LMY
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on development.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+[UNRESOLVED_COUNTRY_INCLUDE]
+Count: 4
+Priority: IMPORTANT
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XA
+Suggested Action: Country include 'XA' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XS
+Suggested Action: Country include 'XS' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XT
+Suggested Action: Country include 'XT' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XN
+Suggested Action: Country include 'XN' does not match any valid country file
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 10 issues
+TEMPLATED_DESCRIPTION: 19 issues
+UNRESOLVED_COUNTRY_INCLUDE: 4 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: CIS2
+File: data/intblocks/political/CIS2.yaml
+Issue Count: 4
+Issues:
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes

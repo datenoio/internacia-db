@@ -13,24 +13,37 @@ import json
 import re
 import subprocess
 import sys
+import time
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 import duckdb
+import jsonschema
 import pyarrow as pa
 import pyarrow.parquet as pq
+import requests
 import typer
 import yaml
 import zstandard as zstd
 from tqdm import tqdm
+
+from internacia_builder.paths import project_root as package_project_root
+from internacia_builder.validate.countries import run_validation as run_countries_validation
+from internacia_builder.validate.intblocks import run_validation as run_intblocks_validation
 
 app = typer.Typer(help="Dataset builder for Internacia project")
 
 
 def get_project_root() -> Path:
     """Get the project root directory."""
-    return Path(__file__).parent.parent
+    return package_project_root()
+
+
+def blocktypes_source_path(root: Path | None = None) -> Path:
+    """Authoritative blocktypes taxonomy YAML (not generated)."""
+    root = root or get_project_root()
+    return root / "data" / "blocktypes" / "blocktypes.yaml"
 
 
 def get_git_commit() -> str:
@@ -198,6 +211,7 @@ def get_countries_schema() -> pa.Schema:
             ("population", _indicator_struct(pa.int64())),
             ("area", _indicator_struct(pa.float64())),
             ("gini", _indicator_struct(pa.float64())),
+            ("centroid", pa.struct([("lat", pa.float64()), ("lng", pa.float64())])),
             ("timezones", pa.list_(pa.string())),
             ("timezone_status", pa.string()),
             ("native_names", pa.map_(pa.string(), pa.struct([("official", pa.string()), ("common", pa.string())]))),
@@ -719,7 +733,7 @@ def build(
     ),
 ):
     """
-    Build datasets from data/countries, data/intblocks directories, and data/datasets/blocktypes.yaml.
+    Build datasets from data/countries, data/intblocks, and data/blocktypes/blocktypes.yaml.
 
     Generates datasets in multiple formats:
     - JSONL: Zstd-compressed line-delimited JSON
@@ -755,23 +769,12 @@ def build(
         typer.echo(f"Error: Countries directory not found: {countries_dir}", err=True)
         raise typer.Exit(1)
 
-    for dataset, script in (
-        ("countries", "validate_countries.py"),
-        ("intblocks", "validate_intblocks.py"),
+    for dataset, run_fn in (
+        ("countries", run_countries_validation),
+        ("intblocks", run_intblocks_validation),
     ):
         typer.echo(f"📁 Validating {dataset} data...")
-        validator = project_root / "scripts" / script
-        result = subprocess.run(
-            [sys.executable, str(validator)],
-            cwd=str(project_root),
-            capture_output=True,
-            text=True,
-        )
-        if result.stdout:
-            typer.echo(result.stdout.rstrip())
-        if result.stderr:
-            typer.echo(result.stderr.rstrip(), err=True)
-        if result.returncode != 0:
+        if run_fn() != 0:
             typer.echo(f"{dataset} validation failed; aborting build.", err=True)
             raise typer.Exit(1)
 
@@ -804,9 +807,9 @@ def build(
     intblocks_data = clean_data(intblocks_data, "intblocks")
 
     # Load blocktypes data
-    blocktypes_file = project_root / "data" / "datasets" / "blocktypes.yaml"
+    blocktypes_file = blocktypes_source_path(project_root)
     if not blocktypes_file.exists():
-        typer.echo(f"Error: Blocktypes file not found: {blocktypes_file}", err=True)
+        typer.echo(f"Error: Blocktypes source not found: {blocktypes_file}", err=True)
         raise typer.Exit(1)
 
     typer.echo("📁 Loading blocktypes data...")
@@ -826,6 +829,12 @@ def build(
 
     # Clean blocktypes data
     blocktypes_data = clean_data(blocktypes_data, "blocktypes")
+
+    blocktypes_yaml_out = output_dir / "blocktypes.yaml"
+    blocktypes_yaml_out.write_text(
+        yaml.dump(blocktypes_data, sort_keys=False, allow_unicode=True, default_flow_style=False),
+        encoding="utf-8",
+    )
 
     # Load intblock identifier aliases (retired/renamed ids → current id)
     intblock_aliases = load_intblock_aliases(project_root)
@@ -911,6 +920,1339 @@ def info():
     typer.echo("  • Parquet - Zstd-compressed columnar format")
     typer.echo("  • DuckDB - Relational database with SQL support")
     typer.echo()
+# ==============================================================================
+# Data Quality Analysis and Reporting
+# ==============================================================================
+
+# Priority mapping for issue types
+ISSUE_PRIORITY_MAP = {
+    "CRITICAL": [
+        "SCHEMA_ERROR",
+        "DUPLICATE_IDENTIFIER",
+        "DUPLICATE_INTBLOCK_ID",
+    ],
+    "IMPORTANT": [
+        "INVALID_BORDER_REFERENCE",
+        "INVALID_INDICATOR_YEAR",
+        "INVALID_ENTITY_TYPE",
+        "INVALID_CODE_STATUS",
+        "INVALID_ISO_COUNT",
+        "UNKNOWN_BLOCKTYPE",
+        "ALIAS_INTEGRITY_ERROR",
+        "UNRESOLVED_COUNTRY_INCLUDE",
+        "COMPLETENESS_ERROR",
+    ],
+    "MEDIUM": [
+        "UNRESOLVED_PARTOF_REF",
+        "LIFECYCLE_INCONSISTENCY",
+        "TEMPLATED_DESCRIPTION",
+        "COMPLETENESS_WARN",
+        "INVALID_URL",
+        "INVALID_ID",
+    ],
+    "LOW": [
+        "WHITESPACE_IN_CATEGORICAL_FIELD",
+        "DUPLICATE_LINK",
+    ],
+}
+
+RULE_DESCRIPTIONS = {
+    "SCHEMA_ERROR": "YAML source does not validate against its JSON Schema definition.",
+    "DUPLICATE_IDENTIFIER": "Multiple countries share the same code, ISO3 code, or numeric code.",
+    "DUPLICATE_INTBLOCK_ID": "Multiple intblocks share the same ID.",
+    "INVALID_BORDER_REFERENCE": "Country borders list references a non-existent or invalid alpha-3 code.",
+    "INVALID_INDICATOR_YEAR": "Population, area, or Gini index contains a zero or negative year.",
+    "INVALID_ENTITY_TYPE": "Country record has an invalid or missing entity type classification.",
+    "INVALID_CODE_STATUS": "Country record has an invalid or missing ISO code status classification.",
+    "INVALID_ISO_COUNT": "Total count of official ISO 3166-1 country records does not match the expected count (249).",
+    "UNKNOWN_BLOCKTYPE": "An intblock references a blocktype not defined in the taxonomy.",
+    "UNRESOLVED_PARTOF_REF": "An intblock's partof references a non-existent intblock ID.",
+    "LIFECYCLE_INCONSISTENCY": "Historical intblock uses non-standard ended key or has status mismatch.",
+    "ALIAS_INTEGRITY_ERROR": "Acronym alias targets an unresolved ID or is misconfigured.",
+    "TEMPLATED_DESCRIPTION": "An intblock uses templated boilerplate description.",
+    "UNRESOLVED_COUNTRY_INCLUDE": "An intblock's includes references a non-existent country code.",
+    "COMPLETENESS_ERROR": "Completeness validation failed (error mode) due to too many missing values.",
+    "COMPLETENESS_WARN": "Completeness validation warned (warn mode) due to missing values.",
+    "WHITESPACE_IN_CATEGORICAL_FIELD": "Leading/trailing whitespace found in categorical text fields.",
+    "DUPLICATE_LINK": "Multiple records share the same external URL.",
+    "INVALID_URL": "A URL in the intblock is invalid or inaccessible.",
+    "INVALID_ID": "A Wikidata Q-ID is invalid or doesn't match the record's name.",
+}
+
+EXPECTED_OFFICIAL_ISO_COUNT = 249
+
+
+def get_priority_level(issue_type: str) -> str:
+    for priority, issue_types in ISSUE_PRIORITY_MAP.items():
+        if issue_type in issue_types:
+            return priority
+    return "MEDIUM"
+
+
+def is_null_field(record: dict[str, Any], field: str) -> bool:
+    if field == "timezones" and record.get("timezone_status") == "not_applicable":
+        return False
+    if field not in record:
+        return True
+    val = record[field]
+    if val is None:
+        return True
+    if val == "" or val == [] or val == {}:
+        return True
+    return False
+
+
+def extract_country_codes(record: dict[str, Any], dataset_type: str) -> list[str]:
+    codes = []
+    if dataset_type == "countries":
+        code = record.get("code")
+        if code:
+            codes.append(str(code).upper())
+    elif dataset_type == "intblocks":
+        # Headquarters country
+        hq = record.get("headquarters") or {}
+        hq_country = hq.get("country")
+        if hq_country and len(str(hq_country)) == 2:
+            codes.append(str(hq_country).upper())
+        
+        # Includes countries
+        for inc in record.get("includes") or []:
+            if isinstance(inc, dict) and inc.get("type") == "country":
+                cid = inc.get("id")
+                if cid and len(str(cid)) == 2:
+                    c_upper = str(cid).upper()
+                    if c_upper not in codes:
+                        codes.append(c_upper)
+    return codes if codes else ["UNKNOWN"]
+
+
+# Country Checker Functions
+def check_country_schema(record: dict[str, Any], schema: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    validator = jsonschema.Draft7Validator(schema)
+    for err in sorted(validator.iter_errors(record), key=lambda e: e.path):
+        path = ".".join(str(p) for p in err.path) or "(root)"
+        errors.append({
+            "issue_type": "SCHEMA_ERROR",
+            "field": path,
+            "current_value": str(err.instance),
+            "suggested_action": f"Fix schema error: {err.message}"
+        })
+    return errors
+
+
+def check_country_borders(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    borders = record.get("borders")
+    if borders is None:
+        return errors
+    if not isinstance(borders, list):
+        errors.append({
+            "issue_type": "INVALID_BORDER_REFERENCE",
+            "field": "borders",
+            "current_value": str(borders),
+            "suggested_action": "borders must be a list of alpha-3 country codes"
+        })
+        return errors
+    for b in borders:
+        if not isinstance(b, str) or not re.match(r"^[A-Z]{3}$", b):
+            errors.append({
+                "issue_type": "INVALID_BORDER_REFERENCE",
+                "field": "borders",
+                "current_value": str(b),
+                "suggested_action": f"border '{b}' must be ISO alpha-3 uppercase"
+            })
+    return errors
+
+
+def check_country_indicator_years(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    for field in ("population", "area", "gini"):
+        val = record.get(field)
+        if not isinstance(val, dict):
+            continue
+        year = val.get("year")
+        if year is None:
+            continue
+        if not isinstance(year, int) or isinstance(year, bool) or year <= 0:
+            errors.append({
+                "issue_type": "INVALID_INDICATOR_YEAR",
+                "field": f"{field}.year",
+                "current_value": str(year),
+                "suggested_action": f"{field}.year must be a positive integer or omitted"
+            })
+    return errors
+
+
+def check_country_whitespace(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    sub = record.get("subregion")
+    if isinstance(sub, str) and sub != sub.strip():
+        errors.append({
+            "issue_type": "WHITESPACE_IN_CATEGORICAL_FIELD",
+            "field": "subregion",
+            "current_value": sub,
+            "suggested_action": "Strip leading/trailing whitespace"
+        })
+    for key in ("region", "adminregion"):
+        obj = record.get(key)
+        if isinstance(obj, dict):
+            val = obj.get("value")
+            if isinstance(val, str) and val != val.strip():
+                errors.append({
+                    "issue_type": "WHITESPACE_IN_CATEGORICAL_FIELD",
+                    "field": f"{key}.value",
+                    "current_value": val,
+                    "suggested_action": "Strip leading/trailing whitespace"
+                })
+    return errors
+
+
+def check_country_entity_status(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    code = str(record.get("code", ""))
+    entity_type = record.get("entity_type")
+    code_status = record.get("code_status")
+
+    entity_types = {
+        "sovereign_state",
+        "dependent_territory",
+        "special_administrative_region",
+        "disputed_territory",
+        "historical_entity",
+        "supranational_grouping",
+        "statistical_area",
+    }
+    code_statuses = {
+        "official_iso3166_1",
+        "user_assigned",
+        "obsolete",
+        "exceptionally_reserved",
+    }
+    non_iso_alpha2 = {"AN", "JG", "KV"}
+
+    if not entity_type:
+        errors.append({
+            "issue_type": "INVALID_ENTITY_TYPE",
+            "field": "entity_type",
+            "current_value": None,
+            "suggested_action": "Specify entity_type"
+        })
+    elif entity_type not in entity_types:
+        errors.append({
+            "issue_type": "INVALID_ENTITY_TYPE",
+            "field": "entity_type",
+            "current_value": entity_type,
+            "suggested_action": f"entity_type must be one of {sorted(entity_types)}"
+        })
+
+    if not code_status:
+        errors.append({
+            "issue_type": "INVALID_CODE_STATUS",
+            "field": "code_status",
+            "current_value": None,
+            "suggested_action": "Specify code_status"
+        })
+    elif code_status not in code_statuses:
+        errors.append({
+            "issue_type": "INVALID_CODE_STATUS",
+            "field": "code_status",
+            "current_value": code_status,
+            "suggested_action": f"code_status must be one of {sorted(code_statuses)}"
+        })
+
+    if code in non_iso_alpha2:
+        if code_status == "official_iso3166_1":
+            errors.append({
+                "issue_type": "INVALID_CODE_STATUS",
+                "field": "code_status",
+                "current_value": code_status,
+                "suggested_action": f"non-ISO code '{code}' must not have code_status official_iso3166_1"
+            })
+    elif code_status and code_status != "official_iso3166_1":
+        if re.match(r"^[A-Z]{2}$", code) and code not in {"XA", "XS", "XT", "XN"}:
+            errors.append({
+                "issue_type": "INVALID_CODE_STATUS",
+                "field": "code_status",
+                "current_value": code_status,
+                "suggested_action": f"ISO-style code '{code}' must have code_status official_iso3166_1"
+            })
+
+    return errors
+
+
+def check_country_duplicates(records: list[dict[str, Any]], rel_paths: list[str]) -> list[dict[str, Any]]:
+    errors = []
+    by_code = {}
+    by_iso3 = {}
+    by_numeric = {}
+
+    for path, rec in zip(rel_paths, records):
+        record_id = rec.get("code", "unknown")
+        for field, mapping in (
+            ("code", by_code),
+            ("iso3code", by_iso3),
+            ("numeric_code", by_numeric),
+        ):
+            val = str(rec.get(field, ""))
+            if not val:
+                continue
+            if val in mapping and mapping[val][0] != path:
+                errors.append({
+                    "issue_type": "DUPLICATE_IDENTIFIER",
+                    "field": field,
+                    "current_value": val,
+                    "suggested_action": f"Duplicate {field} '{val}' found in both {path} and {mapping[val][0]}",
+                    "file_path": path,
+                    "record_id": record_id
+                })
+            else:
+                mapping[val] = (path, record_id)
+    return errors
+
+
+def validate_official_iso_count(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    errors = []
+    count = sum(1 for r in records if r.get("code_status") == "official_iso3166_1")
+    if count != EXPECTED_OFFICIAL_ISO_COUNT:
+        errors.append({
+            "issue_type": "INVALID_ISO_COUNT",
+            "field": "code_status",
+            "current_value": str(count),
+            "suggested_action": f"Expected exactly {EXPECTED_OFFICIAL_ISO_COUNT} official_iso3166_1 records, but found {count}"
+        })
+    return errors
+
+
+def validate_completeness(records: list[dict[str, Any]], config: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    n = len(records)
+    if n == 0:
+        return errors
+    fields_cfg = config.get("fields", {})
+    for field, rules in fields_cfg.items():
+        null_count = sum(1 for r in records if is_null_field(r, field))
+        null_rate = null_count / n
+        max_rate = float(rules.get("max_null_rate", 1.0))
+        mode = rules.get("mode", "warn")
+        if null_rate > max_rate:
+            issue_type = "COMPLETENESS_ERROR" if mode == "error" else "COMPLETENESS_WARN"
+            errors.append({
+                "issue_type": issue_type,
+                "field": field,
+                "current_value": f"{null_rate:.2%} null rate ({null_count}/{n})",
+                "suggested_action": f"Ensure {field} is populated (max null rate allowed: {max_rate:.2%})"
+            })
+    return errors
+
+
+# Intblocks Checker Functions
+def check_intblock_schema(record: dict[str, Any], schema: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    validator = jsonschema.Draft7Validator(schema)
+    for err in sorted(validator.iter_errors(record), key=lambda e: e.path):
+        path = ".".join(str(p) for p in err.path) or "(root)"
+        errors.append({
+            "issue_type": "SCHEMA_ERROR",
+            "field": path,
+            "current_value": str(err.instance),
+            "suggested_action": f"Fix schema error: {err.message}"
+        })
+    return errors
+
+
+def check_intblock_duplicates(records: list[dict[str, Any]], rel_paths: list[str]) -> list[dict[str, Any]]:
+    errors = []
+    seen = {}
+    for path, rec in zip(rel_paths, records):
+        rid = str(rec.get("id", ""))
+        if not rid:
+            continue
+        if rid in seen and seen[rid][0] != path:
+            errors.append({
+                "issue_type": "DUPLICATE_INTBLOCK_ID",
+                "field": "id",
+                "current_value": rid,
+                "suggested_action": f"Duplicate intblock ID '{rid}' found in both {path} and {seen[rid][0]}",
+                "file_path": path,
+                "record_id": rid
+            })
+        else:
+            seen[rid] = (path, rid)
+    return errors
+
+
+def check_intblock_blocktypes(record: dict[str, Any], taxonomy: set[str]) -> list[dict[str, Any]]:
+    errors = []
+    for bt in record.get("blocktype") or []:
+        if str(bt) not in taxonomy:
+            errors.append({
+                "issue_type": "UNKNOWN_BLOCKTYPE",
+                "field": "blocktype",
+                "current_value": str(bt),
+                "suggested_action": f"blocktype '{bt}' must exist in the blocktypes taxonomy"
+            })
+    return errors
+
+
+def check_intblock_lifecycle(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    if "ended" in record:
+        errors.append({
+            "issue_type": "LIFECYCLE_INCONSISTENCY",
+            "field": "ended",
+            "current_value": str(record.get("ended")),
+            "suggested_action": "Use the standard 'dissolved' field instead of 'ended'"
+        })
+    if record.get("dissolved") and record.get("status") not in ("historical", None):
+        errors.append({
+            "issue_type": "LIFECYCLE_INCONSISTENCY",
+            "field": "status",
+            "current_value": str(record.get("status")),
+            "suggested_action": f"Record has a dissolved date but status is '{record.get('status')}', expected 'historical'"
+        })
+    return errors
+
+
+def check_intblock_description_quality(record: dict[str, Any]) -> list[dict[str, Any]]:
+    errors = []
+    desc = str(record.get("description") or "")
+    templated_desc_re = re.compile(
+        r"^\s*(international entity focused on|an? international (organization|entity)|"
+        r"regional (organization|entity) focused on|international organization for)",
+        re.IGNORECASE,
+    )
+    if templated_desc_re.match(desc):
+        errors.append({
+            "issue_type": "TEMPLATED_DESCRIPTION",
+            "field": "description",
+            "current_value": desc,
+            "suggested_action": "Rewrite description to avoid templated boilerplate"
+        })
+    return errors
+
+
+def check_intblock_links(
+    record: dict[str, Any],
+    check_http: bool = False,
+    check_wikidata: bool = False,
+) -> list[dict[str, Any]]:
+    errors = []
+    entity_name = record.get("name", "")
+    links = record.get("links", [])
+    wikidata_ids_in_links = []
+
+    try:
+        import sys
+        scripts_dir = str(Path(__file__).parent)
+        if scripts_dir not in sys.path:
+            sys.path.append(scripts_dir)
+        from validate_links import validate_url, validate_wikidata_entity, extract_wikidata_id, REQUEST_DELAY
+    except ImportError:
+        def extract_wikidata_id(url: str) -> str | None:
+            match = re.search(r"Q\d+", url)
+            return match.group(0) if match else None
+
+        def validate_url(url: str, timeout: int = 10) -> tuple[bool, str, int]:
+            return True, "", 200
+
+        def validate_wikidata_entity(qid: str, entity_name: str) -> tuple[bool, str]:
+            return True, ""
+        
+        REQUEST_DELAY = 0.0
+
+    for i, link in enumerate(links):
+        if not isinstance(link, dict):
+            errors.append({
+                "issue_type": "SCHEMA_ERROR",
+                "field": f"links[{i}]",
+                "current_value": str(link),
+                "suggested_action": "Link must be a dictionary"
+            })
+            continue
+
+        url = link.get("url", "")
+        link_type = link.get("type", "")
+
+        if not url:
+            errors.append({
+                "issue_type": "SCHEMA_ERROR",
+                "field": f"links[{i}].url",
+                "current_value": None,
+                "suggested_action": "Missing URL"
+            })
+            continue
+
+        if not link_type:
+            errors.append({
+                "issue_type": "SCHEMA_ERROR",
+                "field": f"links[{i}].type",
+                "current_value": None,
+                "suggested_action": "Missing type"
+            })
+            continue
+
+        if link_type == "wikidata":
+            qid = extract_wikidata_id(url)
+            if qid:
+                wikidata_ids_in_links.append(qid)
+            else:
+                errors.append({
+                    "issue_type": "INVALID_URL",
+                    "field": f"links[{i}].url",
+                    "current_value": url,
+                    "suggested_action": "Could not extract Q-number from Wikidata URL"
+                })
+
+        if check_http:
+            is_valid, error_msg, _ = validate_url(url)
+            if not is_valid:
+                errors.append({
+                    "issue_type": "INVALID_URL",
+                    "field": f"links[{i}].url",
+                    "current_value": url,
+                    "suggested_action": f"URL check failed: {error_msg}"
+                })
+            time.sleep(REQUEST_DELAY)
+
+    wikidata_id = record.get("wikidata_id")
+    if wikidata_id:
+        if not re.match(r"^Q\d+$", str(wikidata_id)):
+            errors.append({
+                "issue_type": "INVALID_ID",
+                "field": "wikidata_id",
+                "current_value": str(wikidata_id),
+                "suggested_action": "wikidata_id has invalid format (must be Q followed by digits)"
+            })
+        else:
+            if wikidata_ids_in_links and wikidata_id not in wikidata_ids_in_links:
+                errors.append({
+                    "issue_type": "INVALID_ID",
+                    "field": "wikidata_id",
+                    "current_value": str(wikidata_id),
+                    "suggested_action": f"wikidata_id does not match any wikidata link Q-numbers: {wikidata_ids_in_links}"
+                })
+
+            if check_wikidata and entity_name:
+                is_valid, error_msg = validate_wikidata_entity(wikidata_id, entity_name)
+                if not is_valid:
+                    errors.append({
+                        "issue_type": "INVALID_ID",
+                        "field": "wikidata_id",
+                        "current_value": str(wikidata_id),
+                        "suggested_action": f"Wikidata validation failed: {error_msg}"
+                    })
+                time.sleep(REQUEST_DELAY)
+
+    if wikidata_ids_in_links and not wikidata_id:
+        errors.append({
+            "issue_type": "INVALID_ID",
+            "field": "wikidata_id",
+            "current_value": None,
+            "suggested_action": f"Record has wikidata link(s) but missing wikidata_id field. Found: {wikidata_ids_in_links}"
+        })
+
+    return errors
+
+
+def validate_partof_refs(
+    records: list[dict[str, Any]],
+    rel_paths: list[str],
+) -> list[dict[str, Any]]:
+    errors = []
+    known_ids = {str(rec.get("id", "")) for rec in records if rec.get("id")}
+    for path, rec in zip(rel_paths, records):
+        record_id = rec.get("id", "unknown")
+        partof = rec.get("partof")
+        if partof is None:
+            continue
+        if isinstance(partof, str):
+            refs = [partof]
+        elif isinstance(partof, dict):
+            refs = [str(partof.get("id", ""))]
+        elif isinstance(partof, list):
+            refs = [str(p.get("id", "")) if isinstance(p, dict) else str(p) for p in partof]
+        else:
+            continue
+        for ref in refs:
+            if ref and ref not in known_ids:
+                errors.append({
+                    "issue_type": "UNRESOLVED_PARTOF_REF",
+                    "field": "partof",
+                    "current_value": ref,
+                    "suggested_action": f"partof reference '{ref}' does not match any known intblock id",
+                    "file_path": path,
+                    "record_id": record_id
+                })
+    return errors
+
+
+def validate_aliases(
+    aliases: list[dict[str, Any]],
+    known_ids: set[str],
+) -> list[dict[str, Any]]:
+    errors = []
+    seen_aliases = set()
+    for entry in aliases:
+        if not isinstance(entry, dict):
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": str(entry),
+                "suggested_action": "Alias entry must be a dictionary"
+            })
+            continue
+        alias = str(entry.get("alias") or "")
+        target = str(entry.get("target") or "")
+        reason = str(entry.get("reason") or "")
+        if not alias or not target:
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": f"alias={alias}, target={target}",
+                "suggested_action": "Alias entry must contain non-empty alias and target fields"
+            })
+            continue
+        if alias in seen_aliases:
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": alias,
+                "suggested_action": f"Duplicate alias entry for '{alias}'"
+            })
+        seen_aliases.add(alias)
+        if reason not in {"renamed", "merged", "disambiguated"}:
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": reason,
+                "suggested_action": f"Alias '{alias}': invalid reason '{reason}' (must be renamed, merged, or disambiguated)"
+            })
+        if target not in known_ids:
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": target,
+                "suggested_action": f"Alias '{alias}' target '{target}' does not match any existing intblock id"
+            })
+        if alias in known_ids and reason != "disambiguated":
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": alias,
+                "suggested_action": f"Alias '{alias}' collides with a current intblock id; mark reason 'disambiguated'"
+            })
+    return errors
+
+
+def validate_intblock_refs(
+    countries_dir: Path,
+    intblocks_records: list[dict[str, Any]],
+    intblocks_paths: list[str],
+    completeness_cfg: dict[str, Any],
+) -> list[dict[str, Any]]:
+    errors = []
+    allowlist = set(completeness_cfg.get("special_entity_allowlist") or [])
+    mode = (completeness_cfg.get("unresolved_country_includes") or {}).get("mode", "warn")
+    issue_type = "UNRESOLVED_COUNTRY_INCLUDE"
+
+    for path, data in zip(intblocks_paths, intblocks_records):
+        record_id = data.get("id", "unknown")
+        for inc in data.get("includes") or []:
+            if not isinstance(inc, dict) or inc.get("type") != "country":
+                continue
+            raw_id = inc.get("id", "")
+            if isinstance(raw_id, bool):
+                continue
+            cid = str(raw_id).strip()
+            if not re.match(r"^[A-Z]{2}$", cid):
+                continue
+            country_file = countries_dir / f"{cid}.yaml"
+            if country_file.exists() or cid in allowlist:
+                continue
+
+            errors.append({
+                "issue_type": issue_type,
+                "field": "includes",
+                "current_value": cid,
+                "suggested_action": f"Country include '{cid}' does not match any valid country file",
+                "file_path": path,
+                "record_id": record_id
+            })
+    return errors
+
+
+# Report Writers
+def generate_full_report(issues: list[dict[str, Any]], records_with_issues: dict[str, Any], total_records: int, output_path: Path) -> None:
+    report_lines = []
+    report_lines.append("DATA QUALITY ANALYSIS REPORT")
+    report_lines.append("=" * 80)
+    report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    report_lines.append(f"Total Records Analyzed: {total_records}")
+    report_lines.append(f"Total Issues Found: {len(issues)}")
+    report_lines.append(f"Records with Issues: {len(records_with_issues)}")
+    report_lines.append("")
+    
+    issues_by_type = {}
+    for issue in issues:
+        issue_type = issue["issue_type"]
+        issues_by_type.setdefault(issue_type, []).append(issue)
+    
+    report_lines.append("=== ISSUES BY TYPE ===")
+    report_lines.append("")
+    
+    for issue_type in sorted(issues_by_type.keys()):
+        issues_list = issues_by_type[issue_type]
+        report_lines.append(f"[{issue_type}]")
+        report_lines.append(f"Count: {len(issues_list)}")
+        report_lines.append(f"Priority: {issues_list[0].get('priority', 'MEDIUM')}")
+        report_lines.append("")
+        
+        for issue in issues_list[:50]:
+            report_lines.append(f"File: {issue.get('file_path', 'unknown')}")
+            report_lines.append(f"Record ID: {issue.get('record_id', 'unknown')}")
+            report_lines.append(f"Country: {issue.get('country_code', 'UNKNOWN')}")
+            report_lines.append(f"Issue: {issue_type}")
+            report_lines.append(f"Field: {issue.get('field', 'unknown')}")
+            report_lines.append(f"Current Value: {issue.get('current_value')}")
+            report_lines.append(f"Suggested Action: {issue.get('suggested_action')}")
+            report_lines.append("")
+        
+        if len(issues_list) > 50:
+            n = len(issues_list) - 50
+            report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
+            report_lines.append("")
+            
+    report_lines.append("")
+    report_lines.append("=== SUMMARY BY ISSUE TYPE ===")
+    report_lines.append("")
+    for issue_type in sorted(issues_by_type.keys()):
+        count = len(issues_by_type[issue_type])
+        priority = issues_by_type[issue_type][0].get("priority", "MEDIUM") if issues_by_type[issue_type] else "MEDIUM"
+        report_lines.append(f"{issue_type} ({priority}): {count} issue" + ("s" if count != 1 else ""))
+        
+    report_lines.append("")
+    report_lines.append("=== SUMMARY BY PRIORITY ===")
+    report_lines.append("")
+    issues_by_priority = {}
+    for issue in issues:
+        priority = issue.get("priority", "MEDIUM")
+        issues_by_priority.setdefault(priority, []).append(issue)
+        
+    for priority in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
+        if priority in issues_by_priority:
+            count = len(issues_by_priority[priority])
+            report_lines.append(f"{priority}: {count} issue" + ("s" if count != 1 else ""))
+            
+    report_lines.append("")
+    report_lines.append("=== RECORDS WITH MULTIPLE ISSUES (3+) ===")
+    report_lines.append("")
+    
+    multi_issue_records = {
+        rid: data for rid, data in records_with_issues.items() if len(data["issues"]) >= 3
+    }
+    
+    if multi_issue_records:
+        for record_id, data in sorted(multi_issue_records.items(), key=lambda x: len(x[1]["issues"]), reverse=True)[:100]:
+            report_lines.append(f"Record ID: {record_id}")
+            report_lines.append(f"File: {data.get('file_path', 'unknown')}")
+            report_lines.append(f"Country: {data.get('country_code', 'UNKNOWN')}")
+            report_lines.append(f"Issue Count: {len(data['issues'])}")
+            report_lines.append("Issues:")
+            for issue in data["issues"]:
+                report_lines.append(f"  - {issue['issue_type']} ({issue.get('priority', 'MEDIUM')}): {issue['field']}")
+            report_lines.append("")
+    else:
+        report_lines.append("No records found with 3+ issues")
+        
+    output_path.write_text("\n".join(report_lines), encoding="utf-8")
+
+
+def generate_country_reports(issues_by_country: dict[str, list[dict[str, Any]]], records_by_country: dict[str, dict[str, Any]], output_dir: Path) -> None:
+    countries_dir = output_dir / "countries"
+    countries_dir.mkdir(parents=True, exist_ok=True)
+    
+    countries_with_issues = {c for c, issues in issues_by_country.items() if issues}
+    if countries_dir.exists():
+        for f in countries_dir.iterdir():
+            if f.is_file() and f.name.endswith(".txt"):
+                country_code = f.name[:-4]
+                if country_code not in countries_with_issues:
+                    f.unlink()
+
+    for country_code, country_issues in issues_by_country.items():
+        if not country_issues:
+            continue
+            
+        country_records = records_by_country.get(country_code, {})
+        report_lines = []
+        report_lines.append(f"DATA QUALITY REPORT - COUNTRY: {country_code}")
+        report_lines.append("=" * 80)
+        report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        report_lines.append(f"Country Code: {country_code}")
+        report_lines.append(f"Total Records with Issues: {len(country_records)}")
+        report_lines.append(f"Total Issues Found: {len(country_issues)}")
+        report_lines.append("")
+        
+        issues_by_type = {}
+        for issue in country_issues:
+            issue_type = issue["issue_type"]
+            issues_by_type.setdefault(issue_type, []).append(issue)
+            
+        report_lines.append("=== ISSUES BY TYPE ===")
+        report_lines.append("")
+        
+        for issue_type in sorted(issues_by_type.keys()):
+            issues_list = issues_by_type[issue_type]
+            report_lines.append(f"[{issue_type}]")
+            report_lines.append(f"Count: {len(issues_list)}")
+            report_lines.append(f"Priority: {issues_list[0].get('priority', 'MEDIUM')}")
+            report_lines.append("")
+            
+            for issue in issues_list[:100]:
+                report_lines.append(f"File: {issue.get('file_path', 'unknown')}")
+                report_lines.append(f"Record ID: {issue.get('record_id', 'unknown')}")
+                report_lines.append(f"Issue: {issue_type}")
+                report_lines.append(f"Field: {issue.get('field', 'unknown')}")
+                report_lines.append(f"Current Value: {issue.get('current_value')}")
+                report_lines.append(f"Suggested Action: {issue.get('suggested_action')}")
+                report_lines.append("")
+                
+            if len(issues_list) > 100:
+                n = len(issues_list) - 100
+                report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
+                report_lines.append("")
+                
+        report_lines.append("")
+        report_lines.append("=== SUMMARY BY ISSUE TYPE ===")
+        report_lines.append("")
+        for issue_type in sorted(issues_by_type.keys()):
+            count = len(issues_by_type[issue_type])
+            report_lines.append(f"{issue_type}: {count} issue" + ("s" if count != 1 else ""))
+            
+        multi_issue_records = {
+            rid: data for rid, data in country_records.items() if len(data["issues"]) >= 3
+        }
+        
+        if multi_issue_records:
+            report_lines.append("")
+            report_lines.append("=== RECORDS WITH MULTIPLE ISSUES (3+) ===")
+            report_lines.append("")
+            for record_id, data in sorted(multi_issue_records.items(), key=lambda x: len(x[1]["issues"]), reverse=True)[:50]:
+                report_lines.append(f"Record ID: {record_id}")
+                report_lines.append(f"File: {data.get('file_path', 'unknown')}")
+                report_lines.append(f"Issue Count: {len(data['issues'])}")
+                report_lines.append("Issues:")
+                for issue in data["issues"]:
+                    report_lines.append(f"  - {issue['issue_type']}: {issue['field']}")
+                report_lines.append("")
+                
+        country_file = countries_dir / f"{country_code}.txt"
+        country_file.write_text("\n".join(report_lines), encoding="utf-8")
+
+
+def generate_priority_reports(issues_by_priority: dict[str, list[dict[str, Any]]], output_dir: Path) -> None:
+    priorities_dir = output_dir / "priorities"
+    priorities_dir.mkdir(parents=True, exist_ok=True)
+    
+    for priority in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
+        priority_issues = issues_by_priority.get(priority, [])
+        report_lines = []
+        if not priority_issues:
+            report_lines.append(f"DATA QUALITY REPORT - PRIORITY: {priority}")
+            report_lines.append("=" * 80)
+            report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            report_lines.append(f"Priority Level: {priority}")
+            report_lines.append("Total Issues Found: 0")
+            report_lines.append("")
+            report_lines.append("No issues at this priority level.")
+            priority_file = priorities_dir / f"{priority}.txt"
+            priority_file.write_text("\n".join(report_lines), encoding="utf-8")
+            continue
+            
+        report_lines.append(f"DATA QUALITY REPORT - PRIORITY: {priority}")
+        report_lines.append("=" * 80)
+        report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        report_lines.append(f"Priority Level: {priority}")
+        report_lines.append(f"Total Issues Found: {len(priority_issues)}")
+        report_lines.append("")
+        
+        issues_by_type = {}
+        for issue in priority_issues:
+            issue_type = issue["issue_type"]
+            issues_by_type.setdefault(issue_type, []).append(issue)
+            
+        report_lines.append("=== ISSUES BY TYPE ===")
+        report_lines.append("")
+        
+        for issue_type in sorted(issues_by_type.keys()):
+            issues_list = issues_by_type[issue_type]
+            report_lines.append(f"[{issue_type}]")
+            report_lines.append(f"Count: {len(issues_list)}")
+            report_lines.append("")
+            
+            for issue in issues_list[:100]:
+                report_lines.append(f"File: {issue.get('file_path', 'unknown')}")
+                report_lines.append(f"Record ID: {issue.get('record_id', 'unknown')}")
+                report_lines.append(f"Country: {issue.get('country_code', 'UNKNOWN')}")
+                report_lines.append(f"Issue: {issue_type}")
+                report_lines.append(f"Field: {issue.get('field', 'unknown')}")
+                report_lines.append(f"Current Value: {issue.get('current_value')}")
+                report_lines.append(f"Suggested Action: {issue.get('suggested_action')}")
+                report_lines.append("")
+                
+            if len(issues_list) > 100:
+                n = len(issues_list) - 100
+                report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
+                report_lines.append("")
+                
+        report_lines.append("")
+        report_lines.append("=== SUMMARY BY ISSUE TYPE ===")
+        report_lines.append("")
+        for issue_type in sorted(issues_by_type.keys()):
+            count = len(issues_by_type[issue_type])
+            report_lines.append(f"{issue_type}: {count} issue" + ("s" if count != 1 else ""))
+            
+        report_lines.append("")
+        report_lines.append("=== SUMMARY BY COUNTRY ===")
+        report_lines.append("")
+        issues_by_country = {}
+        for issue in priority_issues:
+            country_code = issue.get("country_code", "UNKNOWN")
+            issues_by_country.setdefault(country_code, []).append(issue)
+            
+        for country_code in sorted(issues_by_country.keys()):
+            count = len(issues_by_country[country_code])
+            report_lines.append(f"{country_code}: {count} issue" + ("s" if count != 1 else ""))
+            
+        priority_file = priorities_dir / f"{priority}.txt"
+        priority_file.write_text("\n".join(report_lines), encoding="utf-8")
+
+
+def generate_rule_reports(issues_by_type: dict[str, list[dict[str, Any]]], output_dir: Path) -> None:
+    rules_dir = output_dir / "rules"
+    rules_dir.mkdir(parents=True, exist_ok=True)
+    
+    known_issue_types = []
+    for issue_types in ISSUE_PRIORITY_MAP.values():
+        known_issue_types.extend(issue_types)
+        
+    for issue_type in known_issue_types:
+        if not issues_by_type.get(issue_type):
+            safe_name = re.sub(r"[^A-Za-z0-9_-]+", "_", issue_type)
+            rule_file = rules_dir / f"{safe_name}.txt"
+            if rule_file.exists():
+                rule_file.unlink()
+
+    for issue_type, issues_list in issues_by_type.items():
+        if not issues_list:
+            continue
+            
+        priority = issues_list[0].get("priority", "MEDIUM")
+        report_lines = []
+        report_lines.append(f"DATA QUALITY REPORT - RULE: {issue_type}")
+        report_lines.append("=" * 80)
+        report_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        report_lines.append(f"Issue Type: {issue_type}")
+        report_lines.append(f"Priority: {priority}")
+        report_lines.append(f"Total Issues Found: {len(issues_list)}")
+        
+        rule_desc = RULE_DESCRIPTIONS.get(issue_type)
+        if rule_desc:
+            report_lines.append("")
+            report_lines.append(f"Description: {rule_desc}")
+            
+        report_lines.append("")
+        report_lines.append("=== AFFECTED RECORDS ===")
+        report_lines.append("")
+        
+        for issue in issues_list[:100]:
+            report_lines.append(f"File: {issue.get('file_path', 'unknown')}")
+            report_lines.append(f"Record ID: {issue.get('record_id', 'unknown')}")
+            report_lines.append(f"Country: {issue.get('country_code', 'UNKNOWN')}")
+            report_lines.append(f"Field: {issue.get('field', 'unknown')}")
+            report_lines.append(f"Current Value: {issue.get('current_value')}")
+            report_lines.append(f"Suggested Action: {issue.get('suggested_action')}")
+            report_lines.append("")
+            
+        if len(issues_list) > 100:
+            n = len(issues_list) - 100
+            report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
+            report_lines.append("")
+            
+        safe_name = re.sub(r"[^A-Za-z0-9_-]+", "_", issue_type)
+        rule_file = rules_dir / f"{safe_name}.txt"
+        rule_file.write_text("\n".join(report_lines), encoding="utf-8")
+
+
+@app.command()
+def analyze_quality(
+    output: Path = typer.Option(
+        None,
+        "--output",
+        "-o",
+        help="Output directory for quality reports (default: dataquality)",
+    ),
+    check_http: bool = typer.Option(
+        False,
+        "--check-http",
+        help="Enable HTTP accessibility checking for links (slow)",
+    ),
+    check_wikidata: bool = typer.Option(
+        False,
+        "--check-wikidata",
+        help="Enable Wikidata API validation for wikidata_id (slow)",
+    ),
+) -> None:
+    """
+    Analyze countries and intblocks records for missing values and data quality issues,
+    generating organized reports.
+    """
+    project_root = get_project_root()
+    countries_dir = project_root / "data" / "countries"
+    intblocks_dir = project_root / "data" / "intblocks"
+    
+    if not countries_dir.exists():
+        typer.echo(f"Error: Countries directory not found at {countries_dir}", err=True)
+        raise typer.Exit(1)
+        
+    if not intblocks_dir.exists():
+        typer.echo(f"Error: Intblocks directory not found at {intblocks_dir}", err=True)
+        raise typer.Exit(1)
+
+    if output is None:
+        output_dir = project_root / "dataquality"
+    else:
+        output_dir = output
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "countries").mkdir(exist_ok=True)
+    (output_dir / "priorities").mkdir(exist_ok=True)
+    (output_dir / "rules").mkdir(exist_ok=True)
+
+    typer.echo("🔍 Scanning data sources...")
+    typer.echo(f"  Countries: {countries_dir}")
+    typer.echo(f"  Intblocks: {intblocks_dir}")
+    typer.echo(f"  Output: {output_dir}")
+
+    schema_path_countries = project_root / "data" / "schemas" / "countries.schema.json"
+    completeness_path_countries = project_root / "data" / "schemas" / "countries_completeness.yaml"
+    schema_path_intblocks = project_root / "data" / "schemas" / "intblocks.schema.json"
+    completeness_path_intblocks = project_root / "data" / "schemas" / "intblocks_completeness.yaml"
+    blocktypes_path = blocktypes_source_path(project_root)
+    aliases_path = project_root / "data" / "intblocks_aliases.yaml"
+
+    try:
+        schema_countries = json.loads(schema_path_countries.read_text(encoding="utf-8"))
+        completeness_cfg_countries = yaml.safe_load(completeness_path_countries.read_text(encoding="utf-8")) or {}
+    except Exception as e:
+        typer.echo(f"Error loading country schema/config: {e}", err=True)
+        raise typer.Exit(1)
+
+    try:
+        schema_intblocks = json.loads(schema_path_intblocks.read_text(encoding="utf-8"))
+        completeness_cfg_intblocks = yaml.safe_load(completeness_path_intblocks.read_text(encoding="utf-8")) or {}
+    except Exception as e:
+        typer.echo(f"Error loading intblock schema/config: {e}", err=True)
+        raise typer.Exit(1)
+
+    taxonomy = set()
+    if blocktypes_path.exists():
+        try:
+            bt_data = yaml.safe_load(blocktypes_path.read_text(encoding="utf-8")) or []
+            taxonomy = {str(b.get("id", "")) for b in bt_data if isinstance(b, dict)}
+        except Exception as e:
+            typer.echo(f"Warning: could not load blocktypes taxonomy: {e}", err=True)
+
+    aliases = []
+    if aliases_path.exists():
+        try:
+            aliases = yaml.safe_load(aliases_path.read_text(encoding="utf-8")) or []
+        except Exception as e:
+            typer.echo(f"Warning: could not load aliases: {e}", err=True)
+
+    country_files = sorted(countries_dir.glob("*.yaml"))
+    country_records = []
+    country_rel_paths = []
+    all_issues = []
+    records_with_issues = {}
+    total_records = 0
+
+    for path in country_files:
+        total_records += 1
+        rel_path = str(path.relative_to(project_root))
+        try:
+            with open(path, encoding="utf-8") as f:
+                record = yaml.safe_load(f)
+            if not record:
+                continue
+            country_records.append(record)
+            country_rel_paths.append(rel_path)
+            
+            record_id = record.get("code", "unknown")
+            record_issues = []
+            
+            record_issues.extend(check_country_schema(record, schema_countries))
+            record_issues.extend(check_country_borders(record))
+            record_issues.extend(check_country_indicator_years(record))
+            record_issues.extend(check_country_whitespace(record))
+            record_issues.extend(check_country_entity_status(record))
+            
+            for issue in record_issues:
+                issue["file_path"] = rel_path
+                issue["record_id"] = record_id
+                issue["priority"] = get_priority_level(issue["issue_type"])
+                
+            all_issues.extend(record_issues)
+            if record_issues:
+                records_with_issues[record_id] = {
+                    "file_path": rel_path,
+                    "issues": record_issues,
+                }
+        except Exception as e:
+            all_issues.append({
+                "issue_type": "SCHEMA_ERROR",
+                "field": "(root)",
+                "current_value": str(e),
+                "suggested_action": f"YAML parse error: {e}",
+                "file_path": rel_path,
+                "record_id": path.stem,
+                "priority": "CRITICAL"
+            })
+            records_with_issues[path.stem] = {
+                "file_path": rel_path,
+                "issues": [all_issues[-1]]
+            }
+
+    intblock_files = sorted(intblocks_dir.rglob("*.yaml"))
+    intblock_records = []
+    intblock_rel_paths = []
+
+    for path in intblock_files:
+        total_records += 1
+        rel_path = str(path.relative_to(project_root))
+        try:
+            with open(path, encoding="utf-8") as f:
+                record = yaml.safe_load(f)
+            if not record:
+                continue
+            intblock_records.append(record)
+            intblock_rel_paths.append(rel_path)
+            
+            record_id = record.get("id", "unknown")
+            record_issues = []
+            
+            record_issues.extend(check_intblock_schema(record, schema_intblocks))
+            record_issues.extend(check_intblock_blocktypes(record, taxonomy))
+            record_issues.extend(check_intblock_lifecycle(record))
+            record_issues.extend(check_intblock_description_quality(record))
+            record_issues.extend(check_intblock_links(record, check_http, check_wikidata))
+            
+            for issue in record_issues:
+                issue["file_path"] = rel_path
+                issue["record_id"] = record_id
+                issue["priority"] = get_priority_level(issue["issue_type"])
+                
+            all_issues.extend(record_issues)
+            if record_issues:
+                records_with_issues[record_id] = {
+                    "file_path": rel_path,
+                    "issues": record_issues,
+                }
+        except Exception as e:
+            all_issues.append({
+                "issue_type": "SCHEMA_ERROR",
+                "field": "(root)",
+                "current_value": str(e),
+                "suggested_action": f"YAML parse error: {e}",
+                "file_path": rel_path,
+                "record_id": path.stem,
+                "priority": "CRITICAL"
+            })
+            records_with_issues[path.stem] = {
+                "file_path": rel_path,
+                "issues": [all_issues[-1]]
+            }
+
+    cross_issues = []
+    cross_issues.extend(check_country_duplicates(country_records, country_rel_paths))
+    cross_issues.extend(validate_official_iso_count(country_records))
+    cross_issues.extend(validate_completeness(country_records, completeness_cfg_countries))
+    
+    cross_issues.extend(check_intblock_duplicates(intblock_records, intblock_rel_paths))
+    cross_issues.extend(validate_partof_refs(intblock_records, intblock_rel_paths))
+    cross_issues.extend(validate_aliases(aliases, {str(r.get("id", "")) for r in intblock_records if r.get("id")}))
+    cross_issues.extend(validate_completeness(intblock_records, completeness_cfg_intblocks))
+    cross_issues.extend(validate_intblock_refs(countries_dir, intblock_records, intblock_rel_paths, completeness_cfg_countries))
+
+    link_to_records = {}
+    for path, rec in zip(country_rel_paths + intblock_rel_paths, country_records + intblock_records):
+        rid = rec.get("code") or rec.get("id") or "unknown"
+        urls = []
+        tld = rec.get("tld")
+        if tld:
+            urls.append(f"http://{tld}")
+        for link in rec.get("links") or []:
+            if isinstance(link, dict) and link.get("url"):
+                urls.append(link["url"])
+        for u in urls:
+            link_to_records.setdefault(u, []).append((path, rid))
+            
+    for url, metas in link_to_records.items():
+        if url and len(metas) > 1:
+            for path, rid in metas:
+                cross_issues.append({
+                    "issue_type": "DUPLICATE_LINK",
+                    "field": "links",
+                    "current_value": url,
+                    "suggested_action": f"Duplicate link '{url}' found in multiple records: {metas}",
+                    "file_path": path,
+                    "record_id": rid
+                })
+
+    for issue in cross_issues:
+        issue.setdefault("file_path", "cross-record")
+        issue.setdefault("record_id", "cross-record")
+        issue["priority"] = get_priority_level(issue["issue_type"])
+        
+    all_issues.extend(cross_issues)
+
+    for issue in all_issues:
+        rec_id = issue.get("record_id", "unknown")
+        dataset_type = "countries" if issue["file_path"].startswith("data/countries") else "intblocks"
+        if issue["file_path"] == "cross-record":
+            issue["country_code"] = "UNKNOWN"
+            continue
+            
+        record_found = None
+        if dataset_type == "countries":
+            for r in country_records:
+                if r.get("code") == rec_id:
+                    record_found = r
+                    break
+        else:
+            for r in intblock_records:
+                if r.get("id") == rec_id:
+                    record_found = r
+                    break
+                    
+        if record_found:
+            codes = extract_country_codes(record_found, dataset_type)
+            issue["country_code"] = codes[0] if codes else "UNKNOWN"
+            issue["all_country_codes"] = codes
+        else:
+            issue["country_code"] = "UNKNOWN"
+            issue["all_country_codes"] = ["UNKNOWN"]
+
+    records_with_issues = {}
+    for issue in all_issues:
+        path = issue.get("file_path", "unknown")
+        rid = issue.get("record_id", "unknown")
+        if path == "cross-record" or rid == "cross-record":
+            continue
+        if rid not in records_with_issues:
+            records_with_issues[rid] = {
+                "file_path": path,
+                "country_code": issue.get("country_code", "UNKNOWN"),
+                "all_country_codes": issue.get("all_country_codes", ["UNKNOWN"]),
+                "issues": []
+            }
+        records_with_issues[rid]["issues"].append(issue)
+
+    issues_by_country = {}
+    records_by_country = {}
+    for rid, data in records_with_issues.items():
+        for code in data.get("all_country_codes", ["UNKNOWN"]):
+            issues_by_country.setdefault(code, [])
+            records_by_country.setdefault(code, {})
+            
+            c_issues = [iss for iss in data["issues"] if iss.get("country_code") == code or code in iss.get("all_country_codes", [])]
+            issues_by_country[code].extend(c_issues)
+            records_by_country[code][rid] = {
+                "file_path": data["file_path"],
+                "issues": c_issues,
+            }
+
+    issues_by_priority = {}
+    for issue in all_issues:
+        priority = issue.get("priority", "MEDIUM")
+        issues_by_priority.setdefault(priority, []).append(issue)
+
+    issues_by_type = {}
+    for issue in all_issues:
+        issue_type = issue["issue_type"]
+        issues_by_type.setdefault(issue_type, []).append(issue)
+
+    generate_full_report(all_issues, records_with_issues, total_records, output_dir / "full_report.txt")
+    
+    full_jsonl = output_dir / "full_report.jsonl"
+    with open(full_jsonl, "w", encoding="utf-8") as f:
+        for issue in all_issues:
+            clean_issue = {
+                "issue_type": issue.get("issue_type"),
+                "field": issue.get("field"),
+                "current_value": issue.get("current_value"),
+                "suggested_action": issue.get("suggested_action"),
+                "file_path": issue.get("file_path"),
+                "record_id": issue.get("record_id"),
+                "priority": issue.get("priority"),
+                "country_code": issue.get("country_code"),
+            }
+            f.write(json.dumps(clean_issue, ensure_ascii=False) + "\n")
+
+    primary_jsonl = output_dir / "primary_priority.jsonl"
+    filtered_records = [
+        (rid, data) for rid, data in records_with_issues.items() if len(data["issues"]) >= 3
+    ]
+    sorted_records = sorted(
+        filtered_records,
+        key=lambda x: (
+            len(x[1]["issues"]),
+            sum(1 for iss in x[1]["issues"] if iss.get("priority") == "CRITICAL"),
+            sum(1 for iss in x[1]["issues"] if iss.get("priority") == "IMPORTANT"),
+        ),
+        reverse=True
+    )
+    with open(primary_jsonl, "w", encoding="utf-8") as f:
+        for rid, data in sorted_records:
+            priority_counts = {}
+            for iss in data["issues"]:
+                p = iss.get("priority", "MEDIUM")
+                priority_counts[p] = priority_counts.get(p, 0) + 1
+            clean_rec = {
+                "record_id": rid,
+                "file_path": data["file_path"],
+                "country_code": data.get("country_code", "UNKNOWN"),
+                "all_country_codes": data.get("all_country_codes", []),
+                "total_issues": len(data["issues"]),
+                "priority_counts": priority_counts,
+                "issues": [
+                    {
+                        "issue_type": iss.get("issue_type"),
+                        "field": iss.get("field"),
+                        "priority": iss.get("priority"),
+                        "current_value": iss.get("current_value"),
+                        "suggested_action": iss.get("suggested_action"),
+                    }
+                    for iss in data["issues"]
+                ]
+            }
+            f.write(json.dumps(clean_rec, ensure_ascii=False) + "\n")
+
+    generate_country_reports(issues_by_country, records_by_country, output_dir)
+    generate_priority_reports(issues_by_priority, output_dir)
+    generate_rule_reports(issues_by_type, output_dir)
+
+    typer.echo(f"\n✅ Quality analysis completed!")
+    typer.echo(f"  Total records analyzed: {total_records}")
+    typer.echo(f"  Total issues found: {len(all_issues)}")
+    typer.echo(f"  Records with issues: {len(records_with_issues)}")
+    typer.echo(f"  Reports saved in: {output_dir}")
+    
+    typer.echo("\nPriority breakdown:")
+    for p in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
+        cnt = len(issues_by_priority.get(p, []))
+        typer.echo(f"  {p}: {cnt}")
 
 
 if __name__ == "__main__":

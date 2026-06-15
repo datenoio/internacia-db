@@ -30,12 +30,12 @@ includes:
   name: Estonia
   type: country
   status: member
-  joined: '2020-10'
+  joined: 2020-10
 - id: JO
   name: Jordan
   type: country
   status: member
-  joined: '2023-09'
+  joined: 2023-09
 - id: LV
   name: Latvia
   type: country
@@ -45,7 +45,7 @@ includes:
   name: Lithuania
   type: country
   status: member
-  joined: '2020-03'
+  joined: 2020-03
 - id: RO
   name: Romania
   type: country
@@ -78,7 +78,10 @@ includes:
   joined: '2019'
 membership_count: 12
 legal_status: intergovernmental
-description: Multinational coalition established to ensure maritime security and the free flow of commerce in key Middle Eastern waterways, including the Persian Gulf, Strait of Hormuz, Gulf of Oman, Gulf of Aden, Bab el-Mandeb Strait, and the Southern Red Sea.
+description: Multinational coalition established to ensure maritime security and the
+  free flow of commerce in key Middle Eastern waterways, including the Persian Gulf,
+  Strait of Hormuz, Gulf of Oman, Gulf of Aden, Bab el-Mandeb Strait, and the Southern
+  Red Sea.
 tags:
 - IMSC
 - cooperation
@@ -103,3 +106,22 @@ other_names:
   name: International Maritime Security Construct
 - id: en
   name: IMSC
+provenance:
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://en.wikipedia.org/wiki/International_Maritime_Security_Construct
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://en.wikipedia.org/wiki/International_Maritime_Security_Construct
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://en.wikipedia.org/wiki/International_Maritime_Security_Construct
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0
+wikidata_id: Q67918859

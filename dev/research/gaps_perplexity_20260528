@@ -1,0 +1,257 @@
+# Internacia-DB: Missing International Blocks — Gap Analysis Report
+
+## Executive Summary
+
+The [internacia-db](https://github.com/datenoio/internacia-db) repository currently catalogues **1,021 international blocks** across 84 unique blocktype categories. While the database is impressively broad — spanning everything from military alliances to rail gauges — this analysis identifies **three major categories of gaps**: (1) entirely absent high-priority organizations and groupings, (2) underdeveloped thematic domains with only 1–4 records each, and (3) structural issues in the taxonomy where 34 blocktypes are actively used in the data but are not defined in the `blocktypes.yaml` schema file.
+
+***
+
+## 1. Current Database Overview
+
+### Key Statistics
+
+| Metric | Value |
+|--------|-------|
+| Total intblocks records | 1,021 |
+| Status: formal | 851 |
+| Status: informal | 126 |
+| Status: de-facto | 43 |
+| Status: historical | **1** (only GATT) |
+| Unique blocktypes in data | 84 |
+| Blocktypes defined in `blocktypes.yaml` | 51 |
+| Blocktypes used but **not** defined | **34** |
+| Blocks without Wikidata ID | 427 (42%) |
+| Blocks without founding year | 382 (37%) |
+| Blocks without geographic scope | 666 (65%) |
+
+
+
+### Blocktype Distribution (Top 15)
+
+| Blocktype | Count |
+|-----------|-------|
+| intorg | 297 |
+| political | 92 |
+| economic | 54 |
+| research | 50 |
+| agreement | 50 |
+| military | 46 |
+| energy | 44 |
+| unagency | 43 |
+| bank | 42 |
+| cultural | 34 |
+| fta | 32 |
+| forum | 30 |
+| parliamentary | 30 |
+| scientific | 29 |
+| gaspipeline | 26 |
+
+
+
+***
+
+## 2. Missing International Blocks — Priority Additions
+
+### 2.1 Historical Blocs (Critical Gap)
+
+Only **one** block carries `status: historical` (GATT) — a severe underrepresentation. The Cold War era produced multiple major alliances that shaped the modern world and belong in any complete geopolitical reference database.
+
+| Suggested ID | Name | Type | Period | Members |
+|---|---|---|---|---|
+| `WARSAWPACT` | Warsaw Pact / Warsaw Treaty Organization | military, political | 1955–1991 | 8 (Soviet-led Eastern Bloc) |
+| `SEATO` | Southeast Asia Treaty Organization | military | 1954–1977 | 8 (US, UK, France, Australia, NZ, Pakistan, Philippines, Thailand) |
+| `CENTO` | Central Treaty Organization (Baghdad Pact) | military | 1955–1979 | 5 (UK, Turkey, Iraq, Iran, Pakistan) |
+
+Additionally, **NAFTA** (`status: formal`) and **TPP** exist in the database but should carry `status: historical` since both have been superseded (by USMCA and CPTPP respectively).
+
+### 2.2 Recent Geopolitical Formations (2020–2025)
+
+These are active, significant groupings formed in the last five years that are entirely absent:
+
+| Suggested ID | Name | Blocktype(s) | Founded | Notes |
+|---|---|---|---|---|
+| `IPEF` | Indo-Pacific Economic Framework | economic, trade | 2022 | US-led, 14 members covering 40% of global GDP |
+| `EPC2022` | European Political Community (2022 revival) | political, forum | 2022 | Macron-initiated; 47 European states including non-EU members |
+| `MSP` | Minerals Security Partnership | economic | 2022 | 14 countries + EU; critical minerals supply chain |
+| `GLOBALGATEWAY` | Global Gateway | economic, project | 2021 | EU's €300B global infrastructure investment initiative |
+| `PGII` | Partnership for Global Infrastructure and Investment | economic, project | 2022 | G7 infrastructure initiative, formerly Build Back Better World (B3W) |
+| `D10` | D10 Group | political | 2021 | Democracy 10: G7 + Australia, South Korea, India (proposed/informal) |
+| `BRICSPLUS` | BRICS+ / BRICS 2024 Expanded | political, economic | 2024 | Tracks the 2024 expansion to include Egypt, Ethiopia, Iran, UAE (+ Indonesia 2025) |
+
+Note: The existing `BRICS` record already reflects the current 10-member configuration (including Egypt, Ethiopia, Iran, UAE, Indonesia). A separate `BRICSPLUS` entry tracking the expansion process and invited-but-declined members (Saudi Arabia) may aid historical tracking.
+
+### 2.3 East Asian Regional Forums
+
+The database has `ASEAN` but is missing its derivative frameworks, which are major fixtures in Asian diplomacy:
+
+| Suggested ID | Name | Blocktype(s) | Founded | Members |
+|---|---|---|---|---|
+| `ASEANPLUS3` | ASEAN+3 | political, economic, forum | 1997 | ASEAN 10 + China, Japan, South Korea |
+| `EAS` | East Asia Summit | political, forum | 2005 | ASEAN 10 + 8 (China, Japan, S Korea, India, Australia, NZ, US, Russia) |
+
+*Note: The current `EAS` ID is occupied by "East Asia & Pacific (all income levels)" — a World Bank classification with blocktype `wbgroup`. The East Asia Summit needs a distinct ID such as `EASFORUM` or `EASTASIASUMMIT`.*
+
+### 2.4 Health & Pandemic Response
+
+The `health` blocktype has only 4 records (WHO, UNAIDS, PAHO, GAVI). Given the prominence of global health security, the following deserve inclusion:
+
+| Suggested ID | Name | Blocktype(s) | Founded | Notes |
+|---|---|---|---|---|
+| `COVAX` | COVAX (COVID-19 Vaccines Global Access) | health, agreement | 2020 | 192 participating economies; key COVID-19 vaccine mechanism |
+| `AFRICACDC` | Africa Centres for Disease Control and Prevention | health, intorg | 2017 | AU body; 55 member states |
+| `GHSA` | Global Health Security Agenda | health, agreement | 2014 | 70+ country partnership |
+| `PANDEMICTREATY` | WHO Pandemic Agreement (CA+) | health, agreement | 2024 | First global pandemic treaty; adopted May 2025 |
+| `CEPI` | Coalition for Epidemic Preparedness Innovations | health, intorg | 2017 | *Already in DB but with no `health` blocktype* |
+
+### 2.5 Digital Governance & Cybersecurity
+
+The `digital` blocktype has only **1 record** and `cybersecurity` has only **1 record**. This is a critical gap for a modern geopolitical dataset:
+
+| Suggested ID | Name | Blocktype(s) | Founded | Notes |
+|---|---|---|---|---|
+| `BUDCONV` | Budapest Convention on Cybercrime | legal, cybersecurity | 2001 | Council of Europe treaty; 68 parties |
+| `GPAI` | Global Partnership on Artificial Intelligence | digital, technology | 2020 | 29 member countries |
+| `IGF` | Internet Governance Forum | digital, forum | 2006 | UN multi-stakeholder forum; 170+ countries |
+| `FOCONLINE` | Freedom Online Coalition | digital, political | 2011 | 36 member governments |
+| `GFCE` | Global Forum on Cyber Expertise | cybersecurity, intorg | 2015 | 180+ members |
+
+### 2.6 Arms Control Agreements (Missing Treaties)
+
+The `armscontrol` blocktype (8 records) is missing several UN-ratified treaties:
+
+| Suggested ID | Name | Blocktype(s) | Founded | Parties |
+|---|---|---|---|---|
+| `ATT` | Arms Trade Treaty | armscontrol, agreement | 2014 | 115 parties |
+| `CCM` | Convention on Cluster Munitions | armscontrol, agreement | 2008 | 112 parties |
+| `JCPOA` | Joint Comprehensive Plan of Action | armscontrol, agreement | 2015 | Iran + P5+1 (complex status) |
+| `OPENSKY` | Open Skies Treaty | armscontrol, agreement | 2002 | 34 original parties (US withdrew 2020) |
+
+*Note: `TPNW` (Treaty on the Prohibition of Nuclear Weapons) exists in the DB under blocktype `agreement` but lacks the `armscontrol` blocktype tag.*
+
+### 2.7 Geographic & Classification Groups
+
+| Suggested ID | Name | Blocktype(s) | Notes |
+|---|---|---|---|
+| `SIDS` | Small Island Developing States | geographic, political | 39 UN-recognized states; distinct from AOSIS |
+| `V20` | Vulnerable Twenty Group | political, climate | 68 climate-vulnerable nations' finance ministers |
+| `FIPIC` | Forum for India-Pacific Islands Cooperation | political, forum | India + 14 Pacific Island states |
+
+***
+
+## 3. Taxonomy Gaps — Undefined Blocktypes
+
+The `blocktypes.yaml` file defines **51 types**, but **34 additional types** are actively used in the data with no corresponding taxonomy definition. These need formal entries added to `blocktypes.yaml`:
+
+### High Priority (10+ records each)
+
+| Blocktype ID | Records in DB | Suggested Definition |
+|---|---|---|
+| `ocean` | 23 | International bodies governing ocean/sea resources |
+| `transport` | 23 | Multi-modal transport cooperation frameworks |
+| `aviation` | 21 | Civil aviation safety and regulatory organizations |
+| `tax` | 15 | Tax administration and compliance cooperation |
+| `aviation_safety` | 14 | Aviation safety oversight organizations |
+| `mining` | 6 | Extractive industries and mining cooperation |
+
+### Medium Priority (3–9 records each)
+
+| Blocktype ID | Records | Notes |
+|---|---|---|
+| `health` | 4 | Global public health bodies |
+| `water` | 4 | Transboundary water management |
+| `space` | 3 | Space exploration and governance |
+| `human_rights` | 3 | Human rights protection mechanisms |
+| `counter_terrorism` | 3 | Counter-terrorism cooperation |
+| `forestry` | 3 | Forest management organizations |
+| `armscontrol` (defined) | — | Already defined; needs more entries |
+| `nuclear` | 2 | Nuclear policy and governance |
+| `maritime` | 2 | Maritime law and safety (separate from `ocean`) |
+| `biodiversity` | 2 | Biodiversity conservation frameworks |
+| `migration` | 2 | Migration governance |
+
+### Low Priority (1–2 records each — needs population)
+
+These blocktypes exist with only 1 record each: `agriculture`, `climate`, `cybersecurity`, `development`, `digital`, `disaster`, `financial`, `fisheries`, `gender`, `labor`, `technology`, `tourism`, `waste`, `youth`.
+
+***
+
+## 4. Data Quality Issues
+
+### 4.1 ID Conflict: ICC / ICW
+
+The International Criminal Court is stored under ID `ICW` (with correct Wikidata ID Q47488), while `ICC` is used for the International Cricket Council. This is likely a deliberate workaround, but the acronym conflict should be documented and the `ICW` ID may confuse users.
+
+**Recommendation:** Consider using `INTCRIMINALCOURT` or `ICC_COURT` for the International Criminal Court, and clearly note the disambiguation.
+
+### 4.2 Duplicate Entry: EAU / EAEU
+
+Both `EAU` ("Eurasian Economic Union", blocktypes: `economic`, `political`) and `EAEU` ("Eurasian Economic Union", blocktypes: `economic`, `customs`) describe the same organization. These should either be merged or one should be marked as an alias.
+
+### 4.3 Historical Status Severely Underutilized
+
+Only GATT carries `status: historical`. The following clearly-defunct organizations in the database should be reclassified:
+
+| ID | Name | Dissolved | Current status in DB |
+|---|---|---|---|
+| `NAFTA` | North American Free Trade Agreement | 2020 (superseded) | formal |
+| `TPP` | Trans-Pacific Partnership | 2017 (superseded by CPTPP) | formal |
+| `GATT` | General Agreement on Tariffs and Trade | 1995 | historical ✅ |
+| `EASTERNBLOC` | Eastern Bloc | 1991 | informal |
+| `WESTERNBLOC` | Western Bloc | ~1991 | informal |
+| `KEDO` | Korean Peninsula Energy Development Organization | 2006 | formal |
+| `ISAF` | International Security Assistance Force | 2015 | formal |
+
+Adding a `dissolved` date field and consistently using `status: historical` would significantly improve the dataset's temporal accuracy.
+
+### 4.4 Geographic Scope Coverage
+
+65% of all blocks (666/1,021) have no `geographic_scope` value. Among major global bodies: the UN is classified as `regional`, and NATO, EU, G7, BRICS all have `None`. A systematic pass to fill `geographic_scope` with values (`global`, `regional`, `sub-regional`, `bilateral`) would improve query utility.
+
+### 4.5 Missing Wikidata Coverage
+
+42% of blocks (427/1,021) lack a Wikidata ID. Wikidata provides structured, cross-referenced metadata (founding dates, headquarters, membership lists, alternative names) that could enrich the database significantly. A bot-assisted Wikidata reconciliation pass is recommended.
+
+***
+
+## 5. Thematic Domain Expansion Recommendations
+
+Beyond specific missing entries, several **thematic domains** warrant systematic expansion:
+
+| Domain | Current Coverage | Key Missing Entries |
+|---|---|---|
+| **Health / Pandemic** | 4 health records | Africa CDC, COVAX, GHSA, Pandemic Treaty, G-FIND, CEPI (health tag) |
+| **Digital / Cyber** | 1 digital, 1 cybersecurity | Budapest Convention, GPAI, IGF, Freedom Online Coalition, GFCE |
+| **Climate / Environment** | 1 climate, 22 environment | V20, AOSIS Finance Track, Just Energy Transition Partnerships (JETPs) |
+| **Arms Control** | 8 records | ATT, CCM, JCPOA, Open Skies, ICAN (Nobel Peace/advocacy) |
+| **Historical Blocs** | 1 record | Warsaw Pact, SEATO, CENTO, SEATO, Colombo Plan (historic phase) |
+| **Indo-Pacific Architecture** | sparse | IPEF, EAS, ASEAN+3, FIPIC, Quad Working Groups |
+| **Labor / Social** | 1 labor record | ILO regional bodies, Better Work, ITUC |
+| **Space Governance** | 3 space records | Artemis Accords, UNOOSA, Outer Space Treaty regime |
+| **Food Security** | 18 food records | GAFSP, GAIN, SDG2 Advocacy Hub |
+
+***
+
+## 6. Prioritized Action Plan
+
+### Immediate Additions (High Impact, Well-Established)
+
+1. **Historical Cold War blocs**: Warsaw Pact, SEATO, CENTO — foundational for any geopolitical reference
+2. **ASEAN+3 and East Asia Summit** — arguably the most significant missing regional forums globally
+3. **IPEF** — the primary US trade framework in Indo-Pacific (2022-)
+4. **Budapest Convention** — the only global cybercrime treaty (2001, 68 parties)
+5. **Africa CDC** — AU's flagship health body
+6. **Arms Trade Treaty (ATT)** and **Convention on Cluster Munitions (CCM)**
+
+### Taxonomy Fixes (Structural)
+
+1. Add `ocean`, `transport`, `aviation`, `tax`, `aviation_safety`, `mining`, `health`, `space`, `water`, `digital`, `cybersecurity`, `climate`, `human_rights`, `counter_terrorism`, `labor`, `migration`, `nuclear`, `maritime`, `forestry`, `biodiversity`, `disaster`, `gender`, `youth`, `waste`, `fisheries`, `agriculture`, `development`, `tourism`, `financial`, `security`, `technical`, `technology`, `unregionalblock`, `unregionalgroup` to `blocktypes.yaml`
+2. Resolve `ICC`/`ICW` naming conflict
+3. Merge or clarify `EAU`/`EAEU` duplicate
+4. Apply `status: historical` to defunct organizations
+
+### Data Enrichment (Quality)
+
+1. Fill `geographic_scope` for all major global organizations
+2. Reconcile missing Wikidata IDs (427 blocks)
+3. Add founding/dissolved dates to all historical organizations
+4. Add `dissolved` field to schema for defunct organizations

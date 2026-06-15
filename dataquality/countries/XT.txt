@@ -1,0 +1,56 @@
+DATA QUALITY REPORT - COUNTRY: XT
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: XT
+Total Records with Issues: 1
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[UNRESOLVED_COUNTRY_INCLUDE]
+Count: 4
+Priority: IMPORTANT
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XA
+Suggested Action: Country include 'XA' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XS
+Suggested Action: Country include 'XS' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XT
+Suggested Action: Country include 'XT' does not match any valid country file
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Issue: UNRESOLVED_COUNTRY_INCLUDE
+Field: includes
+Current Value: XN
+Suggested Action: Country include 'XN' does not match any valid country file
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+UNRESOLVED_COUNTRY_INCLUDE: 4 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: CIS2
+File: data/intblocks/political/CIS2.yaml
+Issue Count: 4
+Issues:
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes
+  - UNRESOLVED_COUNTRY_INCLUDE: includes

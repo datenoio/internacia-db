@@ -1,0 +1,50 @@
+DATA QUALITY REPORT - COUNTRY: UM
+================================================================================
+Generated: 2026-06-14 20:30:46
+Country Code: UM
+Total Records with Issues: 3
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: LOW
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
+Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+
+File: data/countries/UM.yaml
+Record ID: UM
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: http://.us
+Suggested Action: Duplicate link 'http://.us' found in multiple records: [('data/countries/UM.yaml', 'UM'), ('data/countries/US.yaml', 'US')]
+
+[TEMPLATED_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on transportation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Issue: TEMPLATED_DESCRIPTION
+Field: description
+Current Value: International entity focused on cultural cooperation.
+Suggested Action: Rewrite description to avoid templated boilerplate
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 2 issues
+TEMPLATED_DESCRIPTION: 2 issues

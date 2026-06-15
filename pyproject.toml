@@ -1,20 +1,50 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "internacia-builder"
+version = "0.0.0"
+description = "Build, validation, and enrichment tooling for internacia-db"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer==0.26.3",
+    "pyyaml==6.0.3",
+    "tqdm==4.67.3",
+    "duckdb==1.5.3",
+    "pandas==3.0.3",
+    "pyarrow==24.0.0",
+    "zstandard==0.25.0",
+    "requests==2.34.2",
+    "jsonschema==4.26.0",
+]
+
+[project.scripts]
+internacia-validate-countries = "internacia_builder.cli:validate_countries"
+internacia-validate-intblocks = "internacia_builder.cli:validate_intblocks"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["internacia_builder*"]
+
 [tool.ruff]
 target-version = "py311"
 line-length = 120
-include = ["scripts/*.py", "tests/*.py"]
+include = ["internacia_builder/**/*.py", "scripts/*.py", "tests/*.py"]
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
+    "E",
+    "W",
+    "F",
+    "I",
+    "B",
+    "UP",
 ]
 ignore = [
-    "E501",  # long lines in data-heavy scripts
-    "B008",  # typer.Option/Argument in defaults is the standard Typer idiom
+    "E501",
+    "B008",
 ]
 
 [tool.pytest.ini_options]

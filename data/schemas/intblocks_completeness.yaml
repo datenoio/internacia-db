@@ -26,11 +26,23 @@ fields:
     # 2026-06 baseline: 48/1065 missing (4.5%)
     max_null_rate: 0.06
     mode: warn
+  legal_status:
+    max_null_rate: 0.75
+    mode: warn
+  geographic_scope:
+    max_null_rate: 0.60
+    mode: warn
+  headquarters:
+    max_null_rate: 0.55
+    mode: warn
+  topics:
+    max_null_rate: 0.05
+    mode: warn
 
 # Content-quality gates (not simple null-rate checks).
 quality:
   templated_description:
     # 2026-06: 455/1057 (43%); after Wikidata backfill 253/1057 (23.9%).
     # Ratchet down as more descriptions are sourced.
-    max: 0.25
+    max: 0.22
     mode: warn

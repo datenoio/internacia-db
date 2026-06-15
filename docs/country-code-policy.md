@@ -4,7 +4,7 @@ This document describes how `internacia-db` treats country codes, entity classif
 
 ## Scope
 
-The countries dataset includes **252** records: **249** with current ISO 3166-1-style alpha-2 codes plus **3** non-standard entries (`AN`, `JG`, `KV`) retained with explicit status metadata.
+The countries dataset includes **256** records: **249** with current ISO 3166-1-style alpha-2 codes plus **7** non-standard entries retained with explicit status metadata.
 
 ## Code status (`code_status`)
 
@@ -22,6 +22,10 @@ The countries dataset includes **252** records: **249** with current ISO 3166-1-
 | `AN` | Netherlands Antilles | `obsolete` | Dissolved; successors include `CW`, `SX`, `BQ` |
 | `JG` | Channel Islands | `user_assigned` | Collective grouping; **`GG` (Guernsey) and `JE` (Jersey) are canonical territory codes** for constituents |
 | `KV` | Kosovo | `user_assigned` | Commonly used code; not ISO 3166-1 official |
+| `XA` | Abkhazia | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
+| `XS` | South Ossetia | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
+| `XT` | Transnistria | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
+| `XN` | Artsakh | `user_assigned` | CIS2 historical reference; `entity_type: historical_entity` (dissolved 2023) |
 
 ## Entity type (`entity_type`)
 
@@ -53,19 +57,27 @@ df[~df["code_status"].isin(["obsolete", "user_assigned"])]
 
 UN M49 regional groupings in `region` and `subregion` are for **statistical convenience** and do not imply political affiliation or recognition status.
 
-## Deferred: CIS2 special entities
+## CIS2 special entities
 
-Four intblock references in `data/intblocks/political/CIS2.yaml` use `type: country` for codes **`XA`**, **`XS`**, **`XT`**, **`XN`** (Abkhazia, South Ossetia, Transnistria, Artsakh). These are **not** in the countries dataset. Policy options (not yet implemented):
+Four intblock references in `data/intblocks/political/CIS2.yaml` use `type: country` for codes **`XA`**, **`XS`**, **`XT`**, **`XN`** (Abkhazia, South Ossetia, Transnistria, Artsakh). These have **user-assigned** country profiles in the dataset for cross-dataset join resolution.
 
-1. Add special-status country profiles with `code_status: user_assigned`
-2. Reclassify intblock includes to `disputed_entity`
-3. Allowlist without profiles until a policy decision is made
+Consumers excluding non-standard codes:
 
-Validation currently emits **warnings** for these unresolved references.
+```python
+df[~df["code"].isin(["AN", "JG", "KV", "XA", "XS", "XT", "XN"])]
+```
+
+Or filter on `code_status == "official_iso3166_1"` for the 249 ISO records only.
 
 ## Borders convention
 
 The `borders` field stores **ISO 3166-1 alpha-3** land-border neighbor codes, not alpha-2.
+
+## World Bank classification gaps
+
+World Bank `region`, `incomeLevel`, and `lendingType` are absent for ~33 entities (high-income OECD members, overseas territories, and special statistical areas) because the World Bank does not classify them. `adminregion` may also be missing for high-income economies outside the Bank's administrative taxonomy.
+
+For these records, enrichment MAY source regional classifications from **UN M49** with provenance documenting the alternative authority. Expected absences for uninhabited territories and special entities should not fail validation when documented in the record's provenance.
 
 ## Related tools
 

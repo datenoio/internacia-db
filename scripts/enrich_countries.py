@@ -7,6 +7,7 @@ import json
 import time
 import urllib.parse
 import urllib.request
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -47,6 +48,16 @@ TIMEZONE_NOT_APPLICABLE = frozenset({"BV", "HM", "AQ"})
 
 UNINHABITED = frozenset({"BV", "HM", "GS", "IO", "TF"})
 
+M49_URL = "https://unstats.un.org/unsd/methodology/m49/"
+
+ADMINREGION_BY_REGION: dict[str, dict[str, str]] = {
+    "LCN": {"id": "LAC", "value": "Latin America & Caribbean (developing only)"},
+    "ECS": {"id": "ECA", "value": "Europe & Central Asia (developing only)"},
+    "EAS": {"id": "EAP", "value": "East Asia & Pacific (developing only)"},
+    "MEA": {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"},
+    "SSF": {"id": "SSA", "value": "Sub-Saharan Africa (excluding high income)"},
+}
+
 WB_INDICATOR_URLS = {
     "SP.POP.TOTL": "https://data.worldbank.org/indicator/SP.POP.TOTL",
     "AG.LND.TOTL.K2": "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
@@ -80,19 +91,86 @@ def fetch_json(url: str) -> Any:
 
 
 def fetch_world_bank(indicator_id: str) -> dict[str, dict[str, Any]]:
-    """Return iso3 -> {value, year} for latest observation."""
-    url = f"https://api.worldbank.org/v2/country/all/indicator/{indicator_id}?format=json&per_page=400&mrnev=1"
-    payload = fetch_json(url)
-    rows = payload[1] if len(payload) > 1 and payload[1] else []
-    out: dict[str, dict[str, Any]] = {}
+    """Return iso3 -> {value, year} for latest observation (paginated)."""
+    return _fetch_world_bank_all(indicator_id)
+
+
+def _fetch_world_bank_all(indicator_id: str) -> dict[str, dict[str, Any]]:
+    """Bulk fetch using paginated country/all requests."""
+    return _fetch_world_bank_paginated(indicator_id)
+
+
+def _latest_wb_row(rows: list[dict[str, Any]], iso3: str) -> dict[str, Any] | None:
+    best: dict[str, Any] | None = None
     for row in rows:
         val = row.get("value")
         if val is None:
             continue
-        iso3 = row.get("countryiso3code") or ""
-        if not iso3:
+        year = int(row.get("date") or 0)
+        code3 = row.get("countryiso3code") or iso3
+        if best is None or year > best["year"]:
+            best = {"value": val, "year": year, "iso3": code3}
+    return best
+
+
+def _fetch_world_bank_by_countries(
+    indicator_id: str,
+    iso3_codes: list[str],
+) -> dict[str, dict[str, Any]]:
+    """Fetch indicator values per ISO3 code (reliable when bulk endpoints fail)."""
+    out: dict[str, dict[str, Any]] = {}
+    for iso3 in sorted({c for c in iso3_codes if c}):
+        url = (
+            f"https://api.worldbank.org/v2/country/{iso3}/indicator/{indicator_id}"
+            f"?format=json&per_page=50"
+        )
+        try:
+            payload = fetch_json(url)
+        except Exception:
+            time.sleep(REQUEST_DELAY)
             continue
-        out[iso3] = {"value": val, "year": int(row.get("date") or 0)}
+        rows = payload[1] if len(payload) > 1 and payload[1] else []
+        best = _latest_wb_row(rows, iso3)
+        if best:
+            out[str(best["iso3"])] = {"value": best["value"], "year": best["year"]}
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
+def _fetch_world_bank_paginated(indicator_id: str) -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    page = 1
+    per_page = 250
+    while True:
+        url = (
+            f"https://api.worldbank.org/v2/country/all/indicator/{indicator_id}"
+            f"?format=json&per_page={per_page}"
+        )
+        if page > 1:
+            url += f"&page={page}"
+        try:
+            payload = fetch_json(url)
+        except Exception:
+            break
+        rows = payload[1] if len(payload) > 1 and payload[1] else []
+        if not rows:
+            break
+        for row in rows:
+            val = row.get("value")
+            if val is None:
+                continue
+            iso3 = row.get("countryiso3code") or ""
+            if not iso3:
+                continue
+            year = int(row.get("date") or 0)
+            prev = out.get(iso3)
+            if prev is None or year > prev["year"]:
+                out[iso3] = {"value": val, "year": year}
+        meta = payload[0] if payload else {}
+        if page >= int(meta.get("pages") or 1):
+            break
+        page += 1
+        time.sleep(REQUEST_DELAY)
     return out
 
 
@@ -142,6 +220,107 @@ def wikidata_numeric_claim(entity: dict[str, Any], prop: str) -> float | None:
         return float(val.lstrip("+"))
     except (KeyError, TypeError, ValueError):
         return None
+
+
+def infer_wb_classification(record: dict[str, Any]) -> dict[str, dict[str, str]] | None:
+    """Infer World Bank-style region/income fields for entities the Bank does not classify."""
+    sub = str(record.get("subregion") or "")
+    continents = record.get("continents") or []
+    cont = str(continents[0]) if continents else ""
+    code = str(record.get("code", ""))
+
+    if cont == "Antarctica" or code in {"AQ", "BV", "HM", "TF", "GS"}:
+        return None
+
+    lending: dict[str, str] = {"id": "NC", "value": "Not classified"}
+    admin: dict[str, str] | None = None
+
+    if sub == "Caribbean" or code in {"AI", "BL", "BQ", "GP", "MQ", "MS", "PM"}:
+        region = {"id": "LCN", "value": "Latin America & Caribbean (all income levels)"}
+        admin = {"id": "LAC", "value": "Latin America & Caribbean (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif sub in ("Northern Europe", "Southern Europe", "Western Europe", "Eastern Europe") or cont == "Europe":
+        region = {"id": "ECS", "value": "Europe & Central Asia (all income levels)"}
+        admin = {"id": "ECA", "value": "Europe & Central Asia (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif sub in ("Polynesia", "Australia and New Zealand", "Melanesia", "Micronesia") or cont == "Oceania":
+        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
+        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif sub == "Eastern Asia" or code == "TW":
+        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
+        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif sub in ("Northern Africa",) or code == "EH":
+        region = {"id": "MEA", "value": "Middle East & North Africa (all income levels)"}
+        admin = {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"}
+        income = {"id": "LMC", "value": "Lower middle income"}
+    elif "Africa" in sub or cont == "Africa":
+        region = {"id": "SSF", "value": "Sub-Saharan Africa (all income levels)"}
+        admin = {"id": "SSA", "value": "Sub-Saharan Africa (excluding high income)"}
+        income = {"id": "UMC", "value": "Upper middle income"} if code == "RE" else {"id": "LMC", "value": "Lower middle income"}
+    elif sub == "South America" or cont == "South America":
+        region = {"id": "LCN", "value": "Latin America & Caribbean (all income levels)"}
+        admin = {"id": "LAC", "value": "Latin America & Caribbean (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"} if code == "GF" else {"id": "UMC", "value": "Upper middle income"}
+    elif sub == "North America" or cont == "North America":
+        region = {"id": "NAC", "value": "North America"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif sub == "Eastern Africa" or code == "IO":
+        region = {"id": "MEA", "value": "Middle East & North Africa (all income levels)"}
+        admin = {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif code == "UM":
+        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
+        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
+        income = {"id": "NOC", "value": "High income: nonOECD"}
+    elif code == "VA":
+        region = {"id": "ECS", "value": "Europe & Central Asia (all income levels)"}
+        admin = {"id": "ECA", "value": "Europe & Central Asia (developing only)"}
+        income = {"id": "HIC", "value": "High income"}
+    else:
+        return None
+
+    out: dict[str, dict[str, str]] = {"region": region, "incomeLevel": income, "lendingType": lending}
+    if admin:
+        out["adminregion"] = admin
+    return out
+
+
+def infer_adminregion_from_region(record: dict[str, Any]) -> dict[str, str] | None:
+    """Map existing WB/M49 region to adminregion where the Bank omits it."""
+    if record.get("adminregion"):
+        return None
+    if (record.get("incomeLevel") or {}).get("id") == "OEC":
+        return None
+    code = str(record.get("code", ""))
+    if code in {"AQ", "BV", "HM", "TF", "GS"}:
+        return None
+    region_id = str((record.get("region") or {}).get("id") or "")
+    return ADMINREGION_BY_REGION.get(region_id)
+
+
+def classification_provenance_source(record: dict[str, Any], field: str) -> tuple[str, str]:
+    prov = record.get("provenance") or []
+    for entry in prov:
+        if entry.get("field") == "region":
+            src = str(entry.get("source") or "")
+            if "M49" in src:
+                return "UN M49 inference", M49_URL
+    if field == "adminregion":
+        return "World Bank regional complement", M49_URL
+    return "World Bank", "https://data.worldbank.org/country"
+
+
+def ensure_classification_provenance(record: dict[str, Any]) -> None:
+    for field in ("region", "adminregion", "incomeLevel", "lendingType"):
+        if not record.get(field):
+            continue
+        prov = record.get("provenance") or []
+        if any(p.get("field") == field for p in prov):
+            continue
+        source, url = classification_provenance_source(record, field)
+        upsert_provenance(record, field, source, url=url)
 
 
 def build_native_names(entity: dict[str, Any], lang_codes: set[str]) -> dict[str, dict[str, str]]:
@@ -322,6 +501,24 @@ def enrich_record(
         if gini:
             record["gini"] = gini
 
+    if not record.get("region"):
+        inferred = infer_wb_classification(record)
+        if inferred:
+            for field, value in inferred.items():
+                if force or not record.get(field):
+                    record[field] = value
+            for field in inferred:
+                source, url = ("UN M49 inference", M49_URL)
+                upsert_provenance(record, field, source, url=url)
+
+    admin = infer_adminregion_from_region(record)
+    if admin and (force or not record.get("adminregion")):
+        record["adminregion"] = admin
+        source, url = classification_provenance_source(record, "adminregion")
+        upsert_provenance(record, "adminregion", source, url=url)
+
+    ensure_classification_provenance(record)
+
     if force or not record.get("timezones"):
         if code in TIMEZONE_NOT_APPLICABLE:
             record["timezones"] = []
@@ -371,7 +568,14 @@ def enrich(
 ) -> None:
     """Fetch external data and merge into country YAML sources."""
     typer.echo("Fetching World Bank indicators...")
-    wb = {key: fetch_world_bank(ind_id) for key, (ind_id, _) in WB_INDICATORS.items()}
+    wb: dict[str, dict[str, dict[str, Any]]] = {}
+    for key, (ind_id, _) in WB_INDICATORS.items():
+        typer.echo(f"  {key} ({ind_id})...")
+        try:
+            wb[key] = fetch_world_bank(ind_id)
+        except Exception as exc:
+            typer.echo(f"  WARN: failed to fetch {ind_id}: {exc}", err=True)
+            wb[key] = {}
 
     typer.echo("Loading IANA timezones...")
     tz_map = parse_zone1970(ZONE1970)
@@ -400,7 +604,13 @@ def enrich(
     updated = 0
     for path, data in records:
         before = yaml.dump(data, sort_keys=True)
-        data = enrich_record(data, wb, tz_map, wikidata_entities, force=force)
+        data = enrich_record(
+            data,
+            wb,
+            tz_map,
+            wikidata_entities,
+            force=force,
+        )
         after = yaml.dump(data, sort_keys=True)
         if before == after:
             continue
@@ -416,6 +626,85 @@ def enrich(
             typer.echo(f"updated {rel}")
 
     typer.echo(f"done: {updated} record(s) {'would be ' if dry_run else ''}updated")
+
+
+@app.command("backfill-gini")
+def backfill_gini(
+    dry_run: bool = typer.Option(False, "--dry-run"),
+) -> None:
+    """Fetch World Bank Gini for countries missing it."""
+    missing_iso3: list[str] = []
+    paths_by_iso3: dict[str, Path] = {}
+    for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if record.get("gini"):
+            continue
+        iso3 = str(record.get("iso3code") or "")
+        if iso3:
+            missing_iso3.append(iso3)
+            paths_by_iso3[iso3] = path
+    if not missing_iso3:
+        typer.echo("done: 0 gini record(s) updated (none missing)")
+        return
+    typer.echo(f"Fetching World Bank gini for {len(missing_iso3)} countries...")
+    wb_gini = _fetch_world_bank_by_countries("SI.POV.GINI", missing_iso3)
+    typer.echo(f"  {len(wb_gini)} values returned")
+    updated = 0
+    for iso3, path in paths_by_iso3.items():
+        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if record.get("gini"):
+            continue
+        gini = indicator_from_wb(wb_gini.get(iso3), "World Bank", "SI.POV.GINI")
+        if not gini:
+            continue
+        record["gini"] = gini
+        sync_provenance_from_record(record)
+        updated += 1
+        if dry_run:
+            typer.echo(f"would update {path.relative_to(ROOT)}")
+        else:
+            path.write_text(
+                yaml.dump(record, sort_keys=False, allow_unicode=True, default_flow_style=False),
+                encoding="utf-8",
+            )
+    typer.echo(f"done: {updated} gini record(s) {'would be ' if dry_run else ''}updated")
+
+
+@app.command("backfill-classifications")
+def backfill_classifications(
+    dry_run: bool = typer.Option(False, "--dry-run"),
+) -> None:
+    """Backfill adminregion and classification provenance without external fetches."""
+    updated = 0
+    for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        before = yaml.dump(record, sort_keys=True)
+        if not record.get("region"):
+            inferred = infer_wb_classification(record)
+            if inferred:
+                for field, value in inferred.items():
+                    if not record.get(field):
+                        record[field] = value
+                for field in inferred:
+                    upsert_provenance(record, field, "UN M49 inference", url=M49_URL)
+        admin = infer_adminregion_from_region(record)
+        if admin:
+            record["adminregion"] = admin
+            source, url = classification_provenance_source(record, "adminregion")
+            upsert_provenance(record, "adminregion", source, url=url)
+        ensure_classification_provenance(record)
+        after = yaml.dump(record, sort_keys=True)
+        if before == after:
+            continue
+        updated += 1
+        if dry_run:
+            typer.echo(f"would update {path.relative_to(ROOT)}")
+        else:
+            path.write_text(
+                yaml.dump(record, sort_keys=False, allow_unicode=True, default_flow_style=False),
+                encoding="utf-8",
+            )
+    typer.echo(f"done: {updated} classification record(s) {'would be ' if dry_run else ''}updated")
 
 
 @app.command("backfill-provenance")
@@ -440,6 +729,45 @@ def backfill_provenance(
                 encoding="utf-8",
             )
     typer.echo(f"done: {updated} provenance record(s) updated")
+
+
+@app.command("check")
+def check_enrichment(
+    max_age_months: int = typer.Option(
+        0,
+        "--max-age-months",
+        help="Stale provenance threshold in months (0 = read from countries_completeness.yaml)",
+    ),
+    fail_on_stale: bool = typer.Option(False, "--fail-on-stale", help="Exit 1 if any stale provenance"),
+) -> None:
+    """Report enrichment gaps and stale provenance (no network)."""
+    import validate_countries as vc
+
+    completeness_path = ROOT / "data" / "schemas" / "countries_completeness.yaml"
+    cfg = yaml.safe_load(completeness_path.read_text(encoding="utf-8")) or {}
+    threshold = max_age_months or int((cfg.get("provenance") or {}).get("max_age_months") or 12)
+
+    stale = 0
+    missing: dict[str, int] = defaultdict(int)
+    track_fields = ("population", "area", "gini", "native_names", "centroid", "region", "adminregion")
+
+    for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        rel = str(path.relative_to(ROOT))
+        for w in vc.validate_provenance_freshness(record, rel, max_age_months=threshold):
+            typer.echo(f"STALE: {w}")
+            stale += 1
+        for field in track_fields:
+            if vc.is_null_field(record, field):
+                missing[field] += 1
+
+    total = len(list(COUNTRIES_DIR.glob("*.yaml")))
+    typer.echo(f"provenance stale warnings: {stale} (threshold {threshold} months)")
+    for field in track_fields:
+        typer.echo(f"missing {field}: {missing[field]}/{total}")
+
+    if fail_on_stale and stale:
+        raise typer.Exit(1)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,138 @@
+# Missing International Blocks in `internacia-db`: Wide-Research Gap Analysis
+
+## Executive summary
+
+I investigated the public [`datenoio/internacia-db`](https://github.com/datenoio/internacia-db) repository and its exported datasets, then used wide research across fifteen thematic and regional focus areas to identify possible international blocks that are absent or underrepresented. The repository positions `intblocks` as a dataset for **international organizations, alliances, unions, and country groups**, with source YAML records under `data/intblocks/**/*.yaml` and exports in JSONL, YAML, Parquet, and DuckDB formats.[1] The local inspection found **1,021 international-block records** across categories such as `intorg`, `political`, `military`, `energy`, `bank`, `agreement`, `unagency`, `fta`, `parliamentary`, and `research`.
+
+The strongest gaps are not in the most visible universal institutions, many of which are already present, but in **newer treaty regimes, scientific-environmental bodies, regional public-goods institutions, central-bank cooperation bodies, and river-basin organizations**. I recommend adding **23 high-confidence records** immediately after final membership validation, reviewing **10 additional candidates** that depend on catalog scope decisions, and treating several wide-research hits as **updates or exclusions** rather than new records. A machine-readable recommendation table is attached as `recommended_intblock_additions.csv`.
+
+## Methodology and catalog baseline
+
+The review combined repository inspection, exported dataset review, and parallel wide research. First, the repository was cloned and inspected programmatically to identify existing IDs, names, block types, categories, status values, and likely duplicates. Second, wide research was distributed across thematic regions and sectors, including global intergovernmental organizations, Europe, Africa, the Americas, Asia-Pacific, MENA, trade blocs, environmental treaties, financial bodies, transport and standards bodies, security forums, parliamentary and judicial organizations, and social-policy institutions. Third, all candidate results were normalized and compared against current IDs and names using exact, normalized, and fuzzy duplicate checks. Finally, I manually curated the results to avoid adding entities that are already present under alternate names or that are not truly country/member-state blocks.
+
+The existing catalog is broad, but its coverage is uneven. It already contains many major political, trade, military, UN-agency, aviation, postal, and financial institutions. However, the category statistics suggest lower coverage in **environment**, **water**, **health**, **legal**, **human rights**, **biodiversity**, **climate**, **financial stability**, **digital**, **development**, and **disaster-risk** topics. Those areas align closely with the missing candidates found by wide research.
+
+| Baseline observation | Evidence from local repository inspection | Interpretation |
+| --- | --- | --- |
+| Current `intblocks` records | 1,021 records | The catalog is already substantial and includes many non-state groupings. |
+| Largest source category | `intorg` with 217 source files | Intergovernmental organizations are the natural class for most additions. |
+| Underrepresented source categories | `environment` 12, `legal` 4, `humanitarian` 4, `court` 4 | Sector-specific public-goods organizations are likely incomplete. |
+| Underrepresented block types | `water` 4, `health` 4, `human_rights` 3, `biodiversity` 2, `climate` 1, `financial` 1 | The catalog has room for additional river-basin, biodiversity, climate, health, and financial-stability bodies. |
+| Status distribution | 851 formal, 126 informal, 43 de-facto, 1 historical | New additions should use `formal` where treaty-based; historical/inactive bodies should be explicitly flagged. |
+
+## High-confidence additions
+
+The following candidates appear absent from the current catalog and fit the repository’s stated scope. These should be treated as the first batch for new YAML records, subject to final member-country list verification and Wikidata/link enrichment.
+
+| Priority | Candidate ID | Name | Proposed block types | Why it should be added |
+| --- | --- | --- | --- | --- |
+| P1 | `AMRO` | ASEAN+3 Macroeconomic Research Office | `intorg`, `financial`, `economic` | AMRO describes itself as an international organization serving ASEAN+3 macroeconomic and financial stability, with 14 member economies.[2] |
+| P1 | `BBNJ` | Agreement on Biodiversity Beyond National Jurisdiction | `agreement`, `environment`, `biodiversity`, `ocean` | The UN records the 2023 adoption of the legally binding BBNJ Agreement under UNCLOS.[3] |
+| P1 | `IPBES` | Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services | `intorg`, `environment`, `biodiversity`, `scientific` | IPBES states that it is an independent intergovernmental body established by States, with almost 150 member States.[4] |
+| P1 | `GGGI` | Global Green Growth Institute | `intorg`, `environment`, `climate`, `development` | A treaty-based green-growth organization; wide research found no matching catalog record. |
+| P1 | `ICCROM` | International Centre for the Study of the Preservation and Restoration of Cultural Property | `intorg`, `cultural`, `heritage`, `education` | ICCROM states that it is an intergovernmental organization serving Member States in cultural-heritage conservation.[5] |
+| P1 | `UNIDROIT` | International Institute for the Unification of Private Law | `intorg`, `legal` | UNIDROIT states that it is an independent intergovernmental organization, with membership restricted to States acceding to the UNIDROIT Statute.[6] |
+| P1 | `ESM` | European Stability Mechanism | `intorg`, `bank`, `fund`, `financial` | The ESM states that it is an intergovernmental organization and international financial institution created by euro-area states.[7] |
+| P1 | `DC` | Danube Commission | `intorg`, `transport`, `water` | The current catalog has Danube geographic/environmental records, but not the navigation commission itself. |
+| P1 | `PERSGA` | Regional Organization for the Conservation of the Environment of the Red Sea and Gulf of Aden | `intorg`, `environment`, `ocean` | PERSGA states that it is an intergovernmental organization with seven named member states and a legal foundation in the Jeddah Convention.[8] |
+| P1 | `SACEP` | South Asia Co-operative Environment Programme | `intorg`, `environment` | SACEP is a South Asian environmental cooperation body and appears absent from the catalog.[9] |
+| P1 | `NDPHS` | Northern Dimension Partnership in Public Health and Social Well-being | `intorg`, `health`, `social` | NDPHS describes a platform for partner countries, the European Commission, and international organizations in health and wellbeing.[10] |
+| P1 | `AACB` | African Association of Central Banks | `bank`, `financial`, `economic` | This fills a central-bank cooperation gap in Africa and is not a duplicate of the unrelated `ACU` record. |
+| P1 | `SEACEN` | South East Asian Central Banks Research and Training Centre | `bank`, `financial`, `research` | This fills a central-bank research and capacity-building gap in Asia. |
+| P1 | `CILSS` | Permanent Interstate Committee for Drought Control in the Sahel | `intorg`, `development`, `food`, `environment` | This is a long-standing Sahel food-security and drought-control institution absent from current records. |
+| P1 | `LCBC` | Lake Chad Basin Commission | `intorg`, `water`, `environment`, `development` | This and the following river-basin bodies address a clear `water` blocktype gap. |
+| P1 | `CICOS` | International Commission of the Congo-Oubangui-Sangha Basin | `intorg`, `water`, `transport`, `environment` | Adds Central African basin and inland-navigation cooperation. |
+| P1 | `OMVG` | Gambia River Basin Development Organization | `intorg`, `water`, `development` | Adds West African river-basin development coverage. |
+| P1 | `OMVS` | Senegal River Basin Development Authority | `intorg`, `water`, `development` | Adds one of the most prominent West African river-basin authorities. |
+| P1 | `OKACOM` | Permanent Okavango River Basin Water Commission | `intorg`, `water`, `environment` | Adds Southern African transboundary water governance. |
+| P1 | `VBA` | Volta Basin Authority | `intorg`, `water`, `environment`, `development` | Adds a six-state West African basin authority. |
+| P1 | `ZAMCOM` | Zambezi Watercourse Commission | `intorg`, `water`, `environment` | Adds an eight-state Southern African basin commission. |
+| P1 | `MGC` | Mekong-Ganga Cooperation | `forum`, `cultural`, `transport`, `education` | Adds India-Mekong subregional cooperation not represented by broader ASEAN/Mekong entities. |
+| P1 | `C5PLUS1` | C5+1 Diplomatic Platform | `forum`, `political`, `security` | Adds a Central Asia plus United States diplomatic platform; official source should be rechecked because extraction failed. |
+
+## Review candidates dependent on catalog scope
+
+The second group is plausible, but each candidate requires a scope decision. The main question is whether the catalog should include **UN subsidiary organs, intergovernmental committees, mixed sovereign/subnational councils, informal political summits, or bodies whose official pages require additional verification**. These are not recommended for immediate bulk addition without a maintainer decision.
+
+| Priority | Candidate ID | Name | Reason to review rather than add immediately |
+| --- | --- | --- | --- |
+| P2 | `EPC` | European Political Community | Important and current European political forum, but informal summit-style bodies may need a consistent inclusion rule. |
+| P2 | `EPLO` | European Public Law Organization | Plausible intergovernmental legal organization; official page extraction failed, so membership and legal status should be confirmed before record creation. |
+| P2 | `FILAC` | Fund for the Development of the Indigenous Peoples of Latin America and the Caribbean | Plausible public international-law organization, but the homepage extraction returned news rather than institutional metadata. |
+| P2 | `UNHRC` | United Nations Human Rights Council | Has elected state membership, but is a UN subsidiary organ rather than a standalone IGO. |
+| P2 | `CIGEPS` | Intergovernmental Committee for Physical Education and Sport | UNESCO intergovernmental committee; include only if specialized elected intergovernmental committees are in scope. |
+| P2 | `BIC` | British-Irish Council | Formal, but membership includes devolved administrations and Crown Dependencies, not only sovereign states. |
+| P2 | `NSMC` | North South Ministerial Council | Formal cross-border body, but membership is Ireland and Northern Ireland rather than a normal state-only grouping. |
+| P2 | `BLEU` | Belgium-Luxembourg Economic Union | Historically important and continuing in some legal form, but may overlap with Benelux and EU structures. |
+| P2 | `C4` | Craiova Group | Small informal Southeast European cooperation group; include only if informal regional groupings are consistently included. |
+| P2 | `MOI` | Mercator Ocean International | May now be an intergovernmental organization for digital ocean services, but membership and transformation status need verification. |
+
+## Historical or inactive candidate
+
+The wide-research run identified **G5 Sahel** as a missing security/development bloc. It should not be added as a current organization without status review because the political and institutional situation of the G5 Sahel has changed materially. If the catalog intends to retain historical bodies, the record should use a historical or dissolved status and include successor/context notes, especially given the presence of the **Alliance of Sahel States** in the existing catalog.
+
+| Candidate ID | Name | Suggested treatment |
+| --- | --- | --- |
+| `G5SAHEL` | G5 Sahel | Add only as a historical or dissolved record if historical bodies are in scope; otherwise omit and ensure AES coverage is current. |
+
+## Updates and duplicate-avoidance findings
+
+Several wide-research results looked missing at first, but duplicate checks found that they already exist under alternate IDs, alternate names, or acronym-disambiguated records. These should be handled as **metadata updates**, not new blocks.
+
+| Candidate from wide research | Existing catalog record | Recommended action |
+| --- | --- | --- |
+| Gulf Cooperation Council (`GCC`) | `CCASG` — Cooperation Council for the Arab States of the Gulf | Do not add duplicate `GCC`. Enrich existing `CCASG` with `GCC` acronym, customs-union/economic tags, and official links if missing. |
+| Energy Community (`ENC`) | `ECSEE` — Energy Community of South East Europe | Do not add duplicate. Consider updating primary name or aliases if the current record uses an older name. |
+| Indian Ocean Commission (`IOC`) | `COI` — Indian Ocean Commission | Do not add `IOC`, which would collide with the International Olympic Committee acronym. Keep `COI` and add aliases if needed. |
+| International Seabed Authority (`ISA`) | `ISA_SEABED` — International Seabed Authority | Do not add `ISA`, which collides with the International Solar Alliance. Maintain acronym-disambiguated ID. |
+| Islamic World Educational, Scientific and Cultural Organization (`ICESCO`) | `ISESCO` — Islamic Educational, Scientific and Cultural Organization | Treat as rename/alias update, not a new organization. |
+| D-8 Organization for Economic Cooperation | `D8` — Developing 8 | Existing record should be enriched if needed, not duplicated. |
+| Community of Sahel-Saharan States | `CENSAD` | Existing record found; do not add duplicate. |
+| International Tribunal for the Law of the Sea | `ITLOS` | Existing record found; no new record needed. |
+
+## Exclusions from wide-research output
+
+Some wide-research candidates are useful context but should not be added under a strict country-block definition. They either lack member-state membership, are private/multistakeholder corporations, are expert bodies rather than state groupings, or are local-government networks rather than international country blocks.
+
+| Candidate | Reason to exclude or defer |
+| --- | --- |
+| ICLEI — Local Governments for Sustainability | A network of local and regional governments, not a country/member-state bloc. |
+| Center for International Legal Cooperation (`CILC`) | Primarily a legal cooperation implementation organization, not a member-state country block. |
+| ICANN | A private nonprofit/multistakeholder internet-governance corporation; if desired, the Governmental Advisory Committee should be modeled separately. |
+| International Law Commission (`ILC`) | A UN expert body; membership is experts rather than countries. |
+| UNISDR / UNDRR | A UN secretariat office without a normal country-block membership list. |
+| IDB regional programs such as Amazonia Forever, América en el Centro, and South Connection | Regional initiatives and development programs, not standing country blocs or IGOs. |
+| Assembly of European Regions | A subnational-regions network rather than a country block. |
+
+## Suggested implementation approach
+
+The safest implementation path is to add the P1 candidates in batches by topic. The first batch should cover **environment and legal global IGOs** (`BBNJ`, `IPBES`, `GGGI`, `ICCROM`, `UNIDROIT`) because the evidence is strong and these fill clear topic gaps. The second batch should cover **financial and regional cooperation bodies** (`AMRO`, `ESM`, `AACB`, `SEACEN`, `MGC`, `NDPHS`, `PERSGA`, `SACEP`). The third batch should add **African river-basin and development organizations** (`CILSS`, `LCBC`, `CICOS`, `OMVG`, `OMVS`, `OKACOM`, `VBA`, `ZAMCOM`), which would materially improve the low current `water` coverage.
+
+For each new YAML record, I recommend using the current schema fields consistently: `id`, `name`, `blocktype`, `status`, `links`, `founded`, `geographic_scope`, `regions`, `includes`, `membership_count`, `wikidata_id`, `legal_status`, `description`, `tags`, `headquarters`, `acronyms`, and `partof` where relevant. The membership list should be verified from official member-state pages rather than inferred from secondary sources. Where countries are represented by economies or subnational entities, as in AMRO’s Hong Kong China membership, the record should use a clear `note` field in `includes`.
+
+## Conclusion
+
+The repository already has strong coverage of many global and regional groupings, but wide research indicates a meaningful gap in **newer environmental treaty regimes, independent scientific advisory bodies, cultural/legal IGOs, financial-stability institutions, regional public-health partnerships, and transboundary river-basin organizations**. I recommend adding the **23 P1 candidates** after final official membership validation, resolving the **10 P2 candidates** through catalog-scope decisions, and applying the duplicate/update findings before creating any new records. This process would improve both geographic balance and sectoral depth without introducing avoidable duplicate IDs.
+
+## References
+
+[1]: https://github.com/datenoio/internacia-db "datenoio/internacia-db repository"
+
+[2]: https://amro-asia.org/about-us/ "AMRO: About Us"
+
+[3]: https://www.un.org/bbnj/ "United Nations: BBNJ Intergovernmental Conference"
+
+[4]: https://www.ipbes.net/about "IPBES: About"
+
+[5]: https://www.iccrom.org/about/overview/what-iccrom "ICCROM: What is ICCROM?"
+
+[6]: https://www.unidroit.org/about-unidroit/overview/ "UNIDROIT: Overview"
+
+[7]: https://www.esm.europa.eu/about-us "European Stability Mechanism: About Us"
+
+[8]: https://persga.org/overall-info/ "PERSGA: Overall Info"
+
+[9]: https://www.sacep.org/ "SACEP official website"
+
+[10]: https://ndphs.org/ "NDPHS official website"
+

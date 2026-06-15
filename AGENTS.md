@@ -12,6 +12,7 @@ Use `@/openspec/AGENTS.md` to learn:
 - How to create and apply change proposals
 - Spec format and conventions
 - Project structure and guidelines
+- **Countries dataset scope**: reference data only — do not add socioeconomic profile fields (HDI, GDP, government type, etc.)
 
 Keep this managed block so 'openspec update' can refresh the instructions.
 

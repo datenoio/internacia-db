@@ -68,18 +68,25 @@ borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
 provenance:
+- field: centroid
+  source: mledoze/countries
+  url: https://github.com/mledoze/countries
+  retrieved_at: '2026-06-15'
 - field: population
   source: uninhabited
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
 - field: area
   source: Wikidata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
 - field: timezones
   source: not_applicable
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
 - field: native_names
   source: Wikidata
-  retrieved_at: '2026-05-29'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+centroid:
+  lat: -53.1
+  lng: 72.51666666

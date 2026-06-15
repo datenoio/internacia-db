@@ -1,8 +1,8 @@
 id: AFRICACDC
 blocktype:
+- health
 - intorg
 - humanitarian
-- health
 status: formal
 languages:
 - en
@@ -30,8 +30,7 @@ legal_status: intergovernmental
 acronyms:
 - lang: en
   value: Africa CDC
-description: African Union public health agency coordinating disease surveillance
-  and outbreak response across member states.
+description: African Union public health agency coordinating disease surveillance and outbreak response across member states.
 tags:
 - AFRICACDC
 - Africa CDC
@@ -260,3 +259,16 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+provenance:
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://africacdc.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://africacdc.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://africacdc.org/

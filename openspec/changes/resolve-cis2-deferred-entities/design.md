@@ -13,15 +13,9 @@ CIS2 intblock membership includes four entities not present in the countries dat
 
 ## Decisions
 
-### Decision: Policy options (choose one at implementation)
+### Decision: Option A — User-assigned country profiles (implemented)
 
-**Option A — User-assigned country profiles:** Add four country YAML records with `code_status: user_assigned`, `entity_type: disputed_territory`, and `recognition_status` metadata.
-
-**Option B — Typed includes:** Change CIS2 includes to a non-country type (e.g. `disputed_territory`) with documented allowlist; validators accept allowlisted ids without country files.
-
-**Option C — Permanent deferred allowlist:** Keep no country files; add explicit allowlist in completeness config with documented permanent deferral.
-
-**Recommendation:** Option A or B for explicit consumer join paths.
+Add four country YAML records with `code_status: user_assigned`, appropriate `entity_type` (`disputed_territory` for XA/XS/XT; `historical_entity` for XN), and `recognition_status` metadata. Cross-dataset validation resolves CIS2 includes without deferred warnings.
 
 ## Risks / Trade-offs
 
@@ -30,4 +24,4 @@ CIS2 intblock membership includes four entities not present in the countries dat
 
 ## Open Questions
 
-- Which option do Dateno / internacia-api consumers prefer for join behavior?
+- None for this change; Option A approved and applied.

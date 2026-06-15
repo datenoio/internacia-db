@@ -36,7 +36,7 @@ UN_LANGS = ["en", "ar", "zh", "fr", "ru", "es", "de", "pt"]
 
 # Boilerplate descriptions produced by earlier automated imports.
 TEMPLATED_DESC = re.compile(
-    r"^\s*(international entity focused on|an? international (organization|entity)|"
+    r"^\s*(international (entity|organization) focused on|an? international (organization|entity)|"
     r"regional (organization|entity) focused on|international organization for)",
     re.IGNORECASE,
 )
@@ -85,13 +85,16 @@ def wikidata_search(name: str, limit: int = 10) -> list[dict[str, Any]]:
     return data.get("search") or []
 
 
-def wikidata_entities(qids: list[str], langs: list[str]) -> dict[str, dict[str, Any]]:
+def wikidata_entities(qids: list[str], langs: list[str], *, with_claims: bool = False) -> dict[str, dict[str, Any]]:
     if not qids:
         return {}
+    props = "labels|aliases|descriptions"
+    if with_claims:
+        props += "|claims"
     params = {
         "action": "wbgetentities",
         "ids": "|".join(qids),
-        "props": "labels|aliases|descriptions",
+        "props": props,
         "languages": "|".join(langs),
         "format": "json",
     }
@@ -172,18 +175,73 @@ def clean_description(text: str) -> str:
     return text
 
 
+DESC_LANGS = ["en", "fr", "de", "es", "pt", "ru", "ar"]
+
+
+def pick_wikidata_description(entity: dict[str, Any], min_len: int = 8) -> str | None:
+    descriptions = entity.get("descriptions") or {}
+    for lang in DESC_LANGS:
+        desc = (descriptions.get(lang) or {}).get("value")
+        if desc and len(desc.strip()) >= min_len:
+            return str(desc).strip()
+    return None
+
+
+def grouping_fallback_description(record: dict[str, Any]) -> str | None:
+    """Build a specific description when Wikidata has no usable text."""
+    if not is_templated(str(record.get("description") or "")):
+        return None
+    name = str(record.get("name") or record.get("id") or "").strip()
+    if not name:
+        return None
+    blocktypes = [str(b) for b in (record.get("blocktype") or [])]
+    regions = record.get("regions") or []
+    region_part = f" in {regions[0]}" if regions else ""
+    members = record.get("membership_count") or len(record.get("includes") or [])
+
+    if "geographic" in blocktypes:
+        if members:
+            return f"{name} is a regional grouping of {members} countries{region_part}."
+        return f"{name} is a geographic region{region_part}."
+
+    primary = blocktypes[0] if blocktypes else "organization"
+    if members:
+        return f"{name} is an international {primary} body with {members} members."
+    return f"{name} is an international {primary} organization."
+
+
+def infer_description(record: dict[str, Any], entity: dict[str, Any]) -> str | None:
+    desc = pick_wikidata_description(entity)
+    if desc:
+        return clean_description(desc)
+    fallback = grouping_fallback_description(record)
+    if fallback:
+        return fallback
+    labels = entity.get("labels") or {}
+    for lang in DESC_LANGS:
+        label = (labels.get(lang) or {}).get("value")
+        if label and len(label) >= 3:
+            name = str(record.get("name") or record.get("id") or label)
+            if normalize(label) != normalize(name):
+                return f"{name} ({label})."
+            break
+    return None
+
+
 def enrich_descriptions(record: dict[str, Any], entity: dict[str, Any], *, force: bool) -> bool:
     current = str(record.get("description") or "")
     if not (force or is_templated(current) or not current):
         return False
-    desc = ((entity.get("descriptions") or {}).get("en") or {}).get("value")
-    if not desc or len(desc) < 12:
-        return False
-    new_desc = clean_description(desc)
-    if new_desc == current:
+    new_desc = infer_description(record, entity) if entity else None
+    if not new_desc and is_templated(current):
+        new_desc = grouping_fallback_description(record)
+    if not new_desc or new_desc == current:
         return False
     record["description"] = new_desc
-    upsert_provenance(record, "description", "Wikidata", url=WIKIDATA_URL, license="CC0")
+    source = "Wikidata" if entity and pick_wikidata_description(entity) else "inferred grouping"
+    url = WIKIDATA_URL if source == "Wikidata" else ""
+    license = "CC0" if source == "Wikidata" else ""
+    upsert_provenance(record, "description", source, url=url, license=license)
     return True
 
 
@@ -230,23 +288,122 @@ def enrich_acronyms(record: dict[str, Any], entity: dict[str, Any]) -> bool:
     return added
 
 
+def wikidata_inception_date(entity: dict[str, Any]) -> str | None:
+    claims = entity.get("claims") or {}
+    for prop in ("P571", "P580", "P1619"):  # inception, start time, date of official opening
+        for stmt in claims.get(prop) or []:
+            try:
+                time_val = str(stmt["mainsnak"]["datavalue"]["value"]["time"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            match = re.match(r"([+-]?)(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?", time_val)
+            if not match:
+                continue
+            year = match.group(2)
+            month = match.group(3)
+            day = match.group(4)
+            if month and day:
+                return f"{year}-{month}-{day}"
+            if month:
+                return f"{year}-{month}"
+            return year
+    return None
+
+
+def enrich_founded(record: dict[str, Any], entity: dict[str, Any]) -> bool:
+    if record.get("founded"):
+        return False
+    founded = wikidata_inception_date(entity)
+    if not founded:
+        return False
+    record["founded"] = founded
+    qid = str(record.get("wikidata_id") or "")
+    upsert_provenance(
+        record,
+        "founded",
+        "Wikidata",
+        url=f"{WIKIDATA_URL}wiki/{qid}" if qid else WIKIDATA_URL,
+        license="CC0",
+    )
+    return True
+
+
+@app.command("backfill-founded")
+def backfill_founded(
+    subdir: str = typer.Option("", "--subdir", help="Restrict to intblocks subdirectory"),
+    dry_run: bool = typer.Option(False, "--dry-run"),
+    limit: int = typer.Option(0, "--limit", help="Max records to process (0 = all)"),
+) -> None:
+    """Backfill founded dates from Wikidata P571/P580 for records with wikidata_id."""
+    search_dir = INTBLOCKS_DIR / subdir if subdir else INTBLOCKS_DIR
+    paths = sorted(search_dir.rglob("*.yaml"))
+    records: list[tuple[Path, dict[str, Any]]] = []
+    for path in paths:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if data.get("founded") or not data.get("wikidata_id"):
+            continue
+        records.append((path, data))
+    if limit:
+        records = records[:limit]
+    typer.echo(f"Backfilling founded for {len(records)} record(s)...")
+    qids = sorted({str(d["wikidata_id"]) for _, d in records})
+    entities: dict[str, dict[str, Any]] = {}
+    for i in range(0, len(qids), 50):
+        entities.update(wikidata_entities(qids[i : i + 50], ["en"], with_claims=True))
+        time.sleep(REQUEST_DELAY)
+    updated = 0
+    for path, data in records:
+        entity = entities.get(str(data.get("wikidata_id") or ""), {})
+        if not enrich_founded(data, entity):
+            continue
+        updated += 1
+        if dry_run:
+            typer.echo(f"would update {path.relative_to(ROOT)} -> founded={data['founded']}")
+        else:
+            path.write_text(
+                yaml.dump(data, sort_keys=False, allow_unicode=True, default_flow_style=False),
+                encoding="utf-8",
+            )
+    typer.echo(f"done: {updated} founded field(s) {'would be ' if dry_run else ''}updated")
+
+
 @app.command()
 def enrich(
     id: str = typer.Option("", "--id", help="Single intblock id to enrich"),
+    ids: str = typer.Option("", "--ids", help="Comma-separated intblock ids"),
+    subdir: str = typer.Option("", "--subdir", help="Restrict to a subdirectory of data/intblocks (e.g. political)"),
     limit: int = typer.Option(0, "--limit", help="Process at most N files (0 = all)"),
     dry_run: bool = typer.Option(False, "--dry-run", help="Print changes without writing"),
     force: bool = typer.Option(False, "--force", help="Overwrite existing descriptions"),
     skip_wikidata: bool = typer.Option(False, "--skip-wikidata", help="Skip wikidata_id backfill"),
     skip_descriptions: bool = typer.Option(False, "--skip-descriptions", help="Skip description enrichment"),
     skip_names: bool = typer.Option(False, "--skip-names", help="Skip multilingual name/acronym enrichment"),
+    templated_only: bool = typer.Option(
+        False,
+        "--templated-only",
+        help="Only process records with templated boilerplate descriptions",
+    ),
 ) -> None:
     """Fetch Wikidata data and merge it into intblock YAML sources."""
-    paths = sorted(INTBLOCKS_DIR.rglob("*.yaml"))
+    search_dir = INTBLOCKS_DIR / subdir if subdir else INTBLOCKS_DIR
+    if not search_dir.is_dir():
+        raise typer.BadParameter(f"subdir not found: {search_dir}")
+    id_filter = {s.strip() for s in ids.split(",") if s.strip()} if ids else set()
+    if id:
+        matches = sorted(search_dir.rglob(f"{id.upper()}.yaml"))
+        paths = matches or sorted(search_dir.rglob("*.yaml"))
+    else:
+        paths = sorted(search_dir.rglob("*.yaml"))
     records: list[tuple[Path, dict[str, Any]]] = []
     originals: dict[Path, str] = {}
     for path in paths:
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        if id and str(data.get("id")) != id:
+        rid = str(data.get("id") or "")
+        if id and rid != id.upper():
+            continue
+        if id_filter and rid not in id_filter:
+            continue
+        if templated_only and not is_templated(str(data.get("description") or "")):
             continue
         records.append((path, data))
         originals[path] = yaml.dump(data, sort_keys=True, allow_unicode=True)
@@ -279,10 +436,9 @@ def enrich(
     updated = 0
     for path, data in records:
         entity = entities.get(str(data.get("wikidata_id") or ""), {})
-        if entity:
-            if not skip_descriptions:
-                enrich_descriptions(data, entity, force=force)
-            if not skip_names:
+        if not skip_descriptions:
+            enrich_descriptions(data, entity, force=force)
+        if entity and not skip_names:
                 enrich_other_names(data, entity)
                 enrich_acronyms(data, entity)
         after = yaml.dump(data, sort_keys=True, allow_unicode=True)
