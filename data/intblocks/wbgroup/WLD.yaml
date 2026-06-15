@@ -1013,7 +1013,7 @@ includes:
   type: country
   status: member
 membership_count: 252
-description: International entity focused on development.
+description: World aggregate covering all economies tracked by the World Bank.
 tags:
 - WLD
 - aid
@@ -1030,20 +1030,48 @@ topics:
   name: Economy
 - key: finance
   name: Finance
-wikidata_id: Q77076820
+wikidata_id: Q16502
 links:
-- url: https://www.wikidata.org/wiki/Q77076820
+- url: https://www.wikidata.org/wiki/Q16502
   type: wikidata
 other_names:
 - id: ar
-  name: نبيت العالم على الإنترنت
-- id: zh
-  name: 世界在线植物志
+  name: العالم
+- id: de
+  name: Welt
 - id: en
-  name: World Flora Online
-- id: fr
-  name: World Flora Online
-- id: ru
-  name: World Flora Online
+  name: world
 - id: es
-  name: World Flora Online
+  name: mundo
+- id: fr
+  name: monde
+- id: pt
+  name: mundo
+- id: ru
+  name: мир
+- id: zh
+  name: 世界
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: description
+  source: World Bank
+  retrieved_at: '2026-06-13'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+acronyms:
+- lang: ar
+  value: عالم
+- lang: zh
+  value: 天地

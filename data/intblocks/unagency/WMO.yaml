@@ -14,11 +14,22 @@ languages:
 - ru
 - zh
 links:
-- url: http://www.wmo.int/
+- url: https://wmo.int/
   type: website
 - url: https://en.wikipedia.org/wiki/World_Meteorological_Organisation
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q170424
+  type: wikidata
 name: World Meteorological Organization
+founded: '1950'
+geographic_scope: global
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.2
+    lng: 6.15
+legal_status: intergovernmental
 includes:
 - id: DZ
   name: Algeria
@@ -82,10 +93,6 @@ includes:
   status: member
 - id: EG
   name: Egypt
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
   type: country
   status: member
 - id: ER
@@ -252,6 +259,10 @@ includes:
   name: Bhutan
   type: country
   status: member
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
 - id: KH
   name: Cambodia
   type: country
@@ -284,6 +295,10 @@ includes:
   name: Japan
   type: country
   status: member
+- id: JO
+  name: Jordan
+  type: country
+  status: member
 - id: KZ
   name: Kazakhstan
   type: country
@@ -298,6 +313,10 @@ includes:
   status: member
 - id: LA
   name: Lao People's Democratic Republic
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
   type: country
   status: member
 - id: MY
@@ -342,6 +361,10 @@ includes:
   status: member
 - id: SA
   name: Saudi Arabia
+  type: country
+  status: member
+- id: SY
+  name: Syrian Arab Republic
   type: country
   status: member
 - id: SG
@@ -500,10 +523,6 @@ includes:
   name: Saint Lucia
   type: country
   status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
 - id: TT
   name: Trinidad and Tobago
   type: country
@@ -524,12 +543,20 @@ includes:
   name: Kiribati
   type: country
   status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
 - id: FM
   name: Micronesia, Federated States of
   type: country
   status: member
 - id: NR
   name: Nauru
+  type: country
+  status: member
+- id: NU
+  name: Niue
   type: country
   status: member
 - id: NZ
@@ -716,10 +743,6 @@ includes:
   name: Russian Federation
   type: country
   status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
 - id: RS
   name: Serbia
   type: country
@@ -780,9 +803,39 @@ includes:
   name: New Caledonia
   type: country
   status: member
-membership_count: 190
+membership_count: 193
 wikidata_id: Q170424
-description: International organization focused on climate change.
+official_documents:
+- url: https://wmo.int
+  type: document
+- url: https://public.wmo.int
+  type: document
+social_media:
+  twitter: https://twitter.com/WMO
+  facebook: https://www.facebook.com/WorldMeteorologicalOrganization
+  linkedin: https://www.linkedin.com/company/world-meteorological-organization
+  youtube: https://www.youtube.com/channel/UCMCDaG2oNwzEZLTk4ZJiWjg
+description: Specialized agency of the United Nations for meteorology.
+tags:
+- OMM
+- WMO
+- climate
+- environment
+- hydrology
+- meteorological
+- meteorology
+- nature
+- organization
+- unagency
+- weather
+- world
+topics:
+- key: climate
+  name: Climate
+- key: environment
+  name: Environment
+- key: meteorology
+  name: Meteorology
 other_names:
 - id: ar
   name: المنظمة العالمية للأرصاد الجوية
@@ -800,31 +853,6 @@ other_names:
   name: Всемирная метеорологическая организация
 - id: zh
   name: 世界气象组织
-tags:
-- WMO
-- climate
-- environment
-- meteorological
-- nature
-- organization
-- unagency
-- world
-topics:
-- key: climate
-  name: Climate
-- key: environment
-  name: Environment
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
 - lang: en
   value: WMO
@@ -842,3 +870,19 @@ acronyms:
   value: WMO
 - lang: pt
   value: WMO
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0

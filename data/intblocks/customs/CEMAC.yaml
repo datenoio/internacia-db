@@ -6,27 +6,13 @@ status: formal
 languages:
 - fr
 links:
-- url: http://www.cemac.int/
+- url: https://www.cemac.int/
   type: website
 - url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
-  type: wikipedia
-- url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa#Economic_and_Monetary_Community_of_Central_Africa
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1940250
   type: wikidata
 name: Economic and Monetary Community of Central Africa
-acronyms:
-- lang: en
-  value: CEMAC
-- lang: fr
-  value: CEMAC
-- lang: de
-  value: CEMAC
-- lang: pt
-  value: CEMAC
-geographic_scope: regional
-regions:
-- Africa
 includes:
 - id: CM
   name: Cameroon
@@ -52,13 +38,55 @@ includes:
   name: Gabon
   type: country
   status: member
+founded: '1999'
+headquarters:
+  city: Bangui
+  country: CF
+  coordinates:
+    lat: 4.37325
+    lng: 18.562833333333
+geographic_scope: regional
+regions:
+- Africa
+acronyms:
+- lang: en
+  value: CEMAC
+- lang: fr
+  value: CEMAC
+- lang: de
+  value: CEMAC
+- lang: pt
+  value: CEMAC
+- lang: es
+  value: CEMAC
+founding_members:
+- CM
+- CF
+- TD
+- CG
+- GQ
+- GA
 membership_count: 6
-description: Regional organization of Central African countries sharing a customs
-  union and common currency (Central African CFA franc).
+wikidata_id: Q1940250
+legal_status: intergovernmental
+description: Treaty-based intergovernmental organization binding six Central African
+  states that share the Central African CFA franc (XAF). Established by the 1994 Treaty
+  of N'Djamena and operational since 1999, when it superseded the Customs and Economic
+  Union of Central Africa (UDEAC, founded 1964); promotes economic integration through
+  a customs union with a common external tariff and a monetary union.
+notes: Strong overlap in membership and mandates with ECCAS. Common institutions include
+  the Commission in Bangui, Court of Justice in N'Djamena, Parliament in Malabo, Bank
+  of Central African States (BEAC) in Yaoundé, Central African Banking Commission
+  (COBAC) and Central African Financial Market Supervisory Commission (COSUMAF) in
+  Libreville, and Development Bank of the Central African States (BDEAC) in Brazzaville.
+  Equatorial Guinea joined in 1983. Full tariff elimination within the bloc has been
+  delayed; capital movement is free.
 tags:
 - CEMAC
+- UDEAC
 - african
 - central
+- commerce
 - community
 - cooperation
 - customs
@@ -67,6 +95,8 @@ tags:
 - monetary
 - regional
 - regional_cooperation
+- trade
+- union
 topics:
 - key: customs
   name: Customs
@@ -74,7 +104,8 @@ topics:
   name: Economy
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q1940250
+- key: trade
+  name: Trade
 other_names:
 - id: ar
   name: المجموعة الاقتصادية والنقدية لوسط إفريقيا
@@ -91,6 +122,26 @@ other_names:
 - id: zh
   name: 中部非洲经济与货币共同体
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q1940250
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q1940250
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -98,6 +149,6 @@ provenance:
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q1940250
   license: CC0

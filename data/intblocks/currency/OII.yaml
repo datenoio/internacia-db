@@ -2,17 +2,28 @@ id: OII
 blocktype:
 - currency
 status: formal
+languages:
+- fr
 links:
-- url: https://en.wikipedia.org/wiki/Overseas_Issuing_Institute
-  type: wikipedia
 - url: https://en.wikipedia.org/wiki/CFP_franc
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q214393
+  type: wikidata
 name: CFP Franc Zone
+founded: '1945'
 acronyms:
 - lang: en
   value: CFP
 - lang: en
   value: XPF
+- lang: en
+  value: Pacific franc
+- lang: fr
+  value: CFP
+- lang: fr
+  value: XPF
+- lang: fr
+  value: FCFP
 geographic_scope: regional
 regions:
 - Oceania
@@ -30,9 +41,20 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: Monetary union of French overseas collectivities in the Pacific Ocean using the CFP franc (XPF), pegged to the euro at a fixed exchange rate of 1,000 XPF to 8.38 euros. The currency is issued by the Institut d'Émission d'Outre-Mer (IEOM), established in 1966.
+wikidata_id: Q214393
+description: Monetary union of three French Pacific overseas collectivities—French
+  Polynesia, New Caledonia and Wallis and Futuna—using the CFP franc (XPF). Created
+  in December 1945 alongside the CFA franc; pegged to the French franc until 1999 and
+  to the euro since at F.CFP 1,000 = €8.38. Currency is issued by the Institut d'émission
+  d'outre-mer (IEOM), which has operated since 1967.
+notes: CFP originally stood for Colonies françaises du Pacifique; since 2022 officially
+  denotes Collectivités françaises du Pacifique. Distinct territorial coin and banknote
+  series existed until unified designs were introduced in 2014 (notes) and 2023 (coins).
+  The New Hebrides used a separate CFP franc until 1969; Vanuatu replaced it with the
+  vatu in 1982. France guarantees convertibility; IEOM headquarters are in Paris.
 tags:
 - CFP
+- IEOM
 - OII
 - XPF
 - bank
@@ -40,8 +62,11 @@ tags:
 - economy
 - finance
 - franc
+- monetary
 - oceania
 - pacific
+- regional
+- regional_cooperation
 - zone
 topics:
 - key: currency
@@ -50,12 +75,56 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
+- id: ar
+  name: فرنك باسيفيكي
+- id: de
+  name: CFP-Franc
+- id: en
+  name: CFP Franc
 - id: en
   name: CFP Franc Zone
 - id: en
-  name: Overseas Issuing Institute
+  name: Pacific Franc
+- id: es
+  name: Franco CFP
+- id: fr
+  name: franc Pacifique
 - id: fr
   name: Zone franc CFP
 - id: fr
-  name: Institut d'Émission d'Outre-Mer
+  name: franc des collectivités françaises du Pacifique
+- id: pt
+  name: Franco CFP
+- id: ru
+  name: французский тихоокеанский франк
+- id: zh
+  name: 太平洋法郎
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/CFP_franc
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/CFP_franc
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/CFP_franc
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q214393
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q214393
+  license: CC0

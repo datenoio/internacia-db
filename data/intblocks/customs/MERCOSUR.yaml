@@ -6,50 +6,101 @@ languages:
 - es
 - pt
 links:
-- url: http://www.mercosur.org.uy/
+- url: https://www.mercosur.int/
   type: website
 - url: https://en.wikipedia.org/wiki/MERCOSUR
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4264
   type: wikidata
-name: Mercosur
+name: Southern Common Market
 includes:
 - id: AR
   name: Argentina
   type: country
   status: member
+  joined: '1991-03-26'
 - id: BO
   name: Bolivia
   type: country
   status: member
+  joined: '2024-07-08'
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '1991-03-26'
 - id: PY
   name: Paraguay
   type: country
   status: member
+  joined: '1991-03-26'
 - id: UY
   name: Uruguay
   type: country
   status: member
+  joined: '1991-03-26'
 - id: VE
   name: Venezuela
   type: country
   status: member
-membership_count: 6
-description: South American economic agreement.
+  joined: '2012-07-31'
+founded: '1991-03-26'
+headquarters:
+  city: Montevideo
+  country: UY
+  coordinates:
+    lat: -34.91405555555556
+    lng: -56.17136111111111
+geographic_scope: regional
+regions:
+- South America
+acronyms:
+- lang: en
+  value: MERCOSUR
+- lang: es
+  value: MERCOSUR
+- lang: pt
+  value: MERCOSUL
+- lang: fr
+  value: MERCOSUR
+- lang: ru
+  value: МЕРКОСУР
+- lang: zh
+  value: 南錐共同市場
+- lang: zh
+  value: 南共市
+founding_members:
+- AR
+- BR
+- PY
+- UY
+membership_count: 5
+wikidata_id: Q4264
+legal_status: intergovernmental
+description: South American trade bloc and customs union established by the Treaty of
+  Asunción (1991) and Protocol of Ouro Preto (1994). Free trade among founding members
+  began in 1994; the customs union with a common external tariff took effect on 1 January
+  1995. Bolivia became a full member in July 2024.
+notes: Venezuela remains a formal member but has been suspended since 1 December 2016
+  and does not participate in bloc decisions. Associate countries (Chile, Colombia,
+  Ecuador, Guyana, Panama, Peru, and Suriname) have trade agreements with Mercosur but
+  are not part of the customs union. Also known as Mercosur (Spanish) and Mercosul
+  (Portuguese).
 tags:
+- MERCOSUL
 - MERCOSUR
+- american
 - commerce
 - cooperation
 - customs
 - economy
+- mercosul
 - mercosur
 - regional
 - regional_cooperation
+- south
 - trade
+- union
 topics:
 - key: customs
   name: Customs
@@ -59,14 +110,15 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
-wikidata_id: Q4264
 other_names:
 - id: ar
   name: ميركوسور
+- id: de
+  name: Gemeinsamer Markt des Südens
 - id: en
-  name: Mercosur
+  name: Southern Common Market
 - id: es
-  name: Mercosur
+  name: Mercado Común del Sur
 - id: fr
   name: Marché commun du Sud
 - id: pt
@@ -77,22 +129,37 @@ other_names:
   name: 南方共同市場
 provenance:
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/MERCOSUR
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/MERCOSUR
+  license: CC BY-SA 4.0
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q4264
   license: CC0
-acronyms:
-- lang: zh
-  value: 南錐共同市場
-- lang: zh
-  value: 南共市
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/MERCOSUR
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q4264
+  license: CC0

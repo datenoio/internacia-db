@@ -13,7 +13,7 @@ languages:
 - ru
 - zh
 links:
-- url: http://www.who.int/
+- url: https://www.who.int/
   type: website
 - url: https://en.wikipedia.org/wiki/World_Health_Organization
   type: wikipedia
@@ -797,13 +797,14 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1948'
+founded: '1948-04-07'
+geographic_scope: global
 headquarters:
   city: Geneva
   country: CH
   coordinates:
-    lat: 46.2
-    lng: 6.15
+    lat: 46.2335
+    lng: 6.1342
 acronyms:
 - lang: en
   value: WHO
@@ -825,9 +826,28 @@ acronyms:
   value: СЗО
 - lang: en
   value: PSO
+- lang: zh
+  value: 聯合國衛生組織
+- lang: zh
+  value: 世卫
+- lang: zh
+  value: 世界衛生組織
+- lang: fr
+  value: OMS
+- lang: es
+  value: OMS
+- lang: de
+  value: WGO
+- lang: pt
+  value: OMS
 membership_count: 194
 wikidata_id: Q7817
 legal_status: intergovernmental
+recognition_status: UN agency
+notes: WHO is a UN specialized agency and the directing and coordinating authority
+  on international health. It sets norms and standards, supports national health
+  programmes, and leads global responses to health emergencies. Its 194 Member States
+  include all UN member states plus associate members such as Cook Islands and Niue.
 official_documents:
 - url: https://www.who.int
   type: document
@@ -848,7 +868,7 @@ social_media:
   facebook: https://www.facebook.com/who
   linkedin: https://www.linkedin.com/company/world-health-organization
   youtube: https://www.youtube.com/channel/UC07-dOwgza1IguKA86jqxNA
-description: International organization focused on public health.
+description: United Nations agency concerned with international public health.
 tags:
 - OMS
 - PSO
@@ -868,16 +888,38 @@ tags:
 topics:
 - key: health
   name: Health
+- key: medical
+  name: Medical
 other_names:
 - id: ar
   name: منظمة الصحة العالمية
-- id: zh
-  name: 世界卫生组织
+- id: de
+  name: Weltgesundheitsorganisation
 - id: en
   name: World Health Organization
-- id: fr
-  name: Organisation mondiale de la santé
-- id: ru
-  name: Всемирная организация здравоохранения
 - id: es
   name: Organización Mundial de la Salud
+- id: fr
+  name: Organisation mondiale de la santé
+- id: pt
+  name: Organização Mundial de Saúde
+- id: ru
+  name: Всемирная организация здравоохранения
+- id: zh
+  name: 世界卫生组织
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0

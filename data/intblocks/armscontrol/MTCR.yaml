@@ -2,87 +2,67 @@ id: MTCR
 blocktype:
 - armscontrol
 status: informal
+languages:
+- en
 links:
+- url: https://www.mtcr.info/
+  type: website
 - url: https://en.wikipedia.org/wiki/Missile_Technology_Control_Regime
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1072120
   type: wikidata
 name: Missile Technology Control Regime
 includes:
-- id: CA
-  name: Canada
+- id: AR
+  name: Argentina
   type: country
   status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: AT
   name: Austria
   type: country
   status: member
-- id: GR
-  name: Greece
+- id: BE
+  name: Belgium
   type: country
   status: member
-- id: TR
-  name: Türkiye
+- id: BG
+  name: Bulgaria
   type: country
   status: member
-- id: PT
-  name: Portugal
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CZ
+  name: Czechia
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FI
+  name: Finland
   type: country
   status: member
 - id: FR
@@ -93,79 +73,131 @@ includes:
   name: United Kingdom
   type: country
   status: member
-- id: BR
-  name: Brazil
+- id: GR
+  name: Greece
   type: country
   status: member
-- id: RU
-  name: Russian Federation
+- id: HU
+  name: Hungary
   type: country
   status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
-- id: CZ
-  name: Czechia
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
+- id: IE
+  name: Ireland
   type: country
   status: member
 - id: IN
   name: India
   type: country
   status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
 - id: KR
   name: Korea, Republic of
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
   type: country
   status: member
 - id: NL
   name: Netherlands
   type: country
   status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: associated
+- id: EE
+  name: Estonia
+  type: country
+  status: associated
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: associated
+- id: LV
+  name: Latvia
+  type: country
+  status: associated
 founded: '1987'
 headquarters:
-  city: Ministry for Europe and Foreign Affairs
+  city: Paris
   country: FR
+  coordinates:
+    lat: 48.8566
+    lng: 2.3522
+geographic_scope: global
+regions:
+- Global
+official_documents:
+- url: https://www.mtcr.info/en/mtcr-guidelines
+  type: document
+  name: MTCR Guidelines and the Equipment, Software and Technology Annex
+- url: https://www.mtcr.info/en/mtcr-annex
+  type: document
+  name: Equipment, Software and Technology Annex
 acronyms:
 - lang: en
   value: MTCR
-- lang: fr
-  value: MTCR
-- lang: es
-  value: MTCR
-- lang: de
-  value: MTCR
 membership_count: 35
 wikidata_id: Q1072120
-description: Multilateral export control regime to prevent the proliferation of missile
-  and unmanned aerial vehicle technology.
+description: Multilateral export control regime governing the international transfer
+  of missile and unmanned aerial vehicle technology. Established in April 1987 by the
+  G7 countries, it is an informal political understanding among partner states—not
+  a treaty and not legally binding. Partners coordinate national export controls on
+  goods and technologies that could contribute to delivery systems for weapons of mass
+  destruction, with particular focus on systems capable of carrying a 500 kg payload
+  at least 300 km.
 tags:
 - MTCR
 - arms
@@ -173,11 +205,13 @@ tags:
 - armscontrol
 - control
 - defense
+- export_control
 - missile
 - research
 - science
 - security
 - technology
+- uav
 - weapon
 topics:
 - key: arms_control
@@ -186,6 +220,12 @@ topics:
   name: Science
 - key: security
   name: Security
+notes: No permanent secretariat; the rotating Plenary host serves as Chair for one
+  year. Point of Contact functions are performed by the French Ministry of Foreign
+  Affairs in Paris, with monthly intersessional consultations. Brazil has chaired since
+  November 2023. Four states (Cyprus, Estonia, Kazakhstan, Latvia) adhere unilaterally
+  to MTCR Guidelines without full partnership. India became the 35th partner in June
+  2016.
 other_names:
 - id: ar
   name: نظام تحكم تكنولوجيا القذائف
@@ -205,17 +245,25 @@ other_names:
   name: 飛彈科技管制建制
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Missile_Technology_Control_Regime
+  license: CC BY-SA 4.0
+- field: notes
+  source: MTCR
+  retrieved_at: '2026-06-14'
+  url: https://www.mtcr.info/en/partners
+- field: official_documents
+  source: MTCR
+  retrieved_at: '2026-06-14'
+  url: https://www.mtcr.info/en/mtcr-guidelines
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-14'
   url: https://www.wikidata.org/
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-14'
   url: https://www.wikidata.org/
   license: CC0

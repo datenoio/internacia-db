@@ -2,17 +2,29 @@ id: CFAWEST
 blocktype:
 - currency
 status: formal
+partof: CFAZ
 languages:
 - fr
 links:
 - url: https://en.wikipedia.org/wiki/West_African_CFA_franc
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q861690
+  type: wikidata
 name: West African CFA Franc Zone
+founded: '1962-05-12'
 acronyms:
 - lang: en
   value: XOF
 - lang: en
   value: CFA West
+- lang: en
+  value: FCFA
+- lang: en
+  value: BCEAO franc
+- lang: fr
+  value: XOF
+- lang: fr
+  value: FCFA
 geographic_scope: regional
 regions:
 - Africa
@@ -50,17 +62,32 @@ includes:
   type: country
   status: member
 membership_count: 8
-description: Monetary union of West African countries using the West African CFA franc
-  (XOF), pegged to the euro.
+wikidata_id: Q861690
+description: Monetary union of eight West African states using the West African CFA
+  franc (XOF), issued by the Central Bank of West African States (BCEAO) in Dakar
+  and pegged to the euro. Established with the West African Monetary Union (UMOA)
+  in 1962; the same members constitute the West African Economic and Monetary Union
+  (UEMOA).
+notes: Distinct from but equal in value to the Central African CFA franc (XAF) under
+  the broader CFA franc system. Guinea-Bissau joined in 1997. France guarantees convertibility
+  and CFA notes are printed by the Bank of France. ECOWAS and UEMOA have announced
+  plans to replace the CFA franc with a common eco currency.
 tags:
 - CFA
 - CFAWEST
+- XOF
+- FCFA
+- BCEAO
+- UEMOA
 - african
 - bank
 - currency
 - economy
 - finance
 - franc
+- monetary
+- regional
+- regional_cooperation
 - west
 - zone
 topics:
@@ -70,8 +97,46 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
+- id: ar
+  name: منطقة فرنك CFA لغرب إفريقيا
+- id: de
+  name: Westafrikanische CFA-Franc-Zone
 - id: en
   name: West African CFA Franc Zone
+- id: es
+  name: Zona del franco CFA de África Occidental
 - id: fr
   name: Zone franc CFA d'Afrique de l'Ouest
+- id: ru
+  name: Западноафриканская зона франка КФА
+- id: zh
+  name: 西非CFA法郎区
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q3550329
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q861690
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q861690
+  license: CC0

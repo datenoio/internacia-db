@@ -2,12 +2,22 @@ id: NWFZ
 blocktype:
 - armscontrol
 status: informal
+languages:
+- en
+- es
+- fr
+- pt
+- ar
+- ru
+- zh
 links:
+- url: https://www.un.org/nwfz/
+  type: website
 - url: https://en.wikipedia.org/wiki/Nuclear-Weapon-Free_Zone
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q757662
   type: wikidata
-name: Nuclear-Weapons-Free Zone
+name: Nuclear-Weapon-Free Zones
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -478,39 +488,96 @@ includes:
   type: country
   status: member
 membership_count: 117
-description: International entity focused on arms control.
+geographic_scope: global
+wikidata_id: Q757662
+official_documents:
+- url: https://www.un.org/en/ga/search/view_doc.asp?symbol=A/RES/3472(XXX)B
+  type: document
+  name: UN General Assembly resolution 3472 B (1975) defining nuclear-weapon-free zones
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  type: document
+  name: Treaty on the Non-Proliferation of Nuclear Weapons (NPT), Article VII
+description: Category of regional treaties and areas recognized by the United Nations
+  in which the development, manufacture, possession, control, testing, stationing,
+  or transit of nuclear weapons is prohibited. Five treaty-based zones cover Latin
+  America and the Caribbean (Tlatelolco), the South Pacific (Rarotonga), Southeast
+  Asia (Bangkok), Africa (Pelindaba), and Central Asia; Mongolia holds a special
+  non-treaty status under UN General Assembly resolution 53/77 D. Distinct from the
+  broader term nuclear-free zone, which may also ban nuclear power.
 tags:
 - NWFZ
+- UN
+- NPT
 - arms
 - arms_control
 - armscontrol
 - atomic
 - defense
-- energy
+- disarmament
 - free
+- non_proliferation
 - nuclear
-- oil
+- regional
 - security
 - weapon
 - weapons
+- zone
 topics:
 - key: arms_control
   name: Arms Control
-- key: energy
-  name: Energy
 - key: nuclear
   name: Nuclear
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
-wikidata_id: Q757662
+notes: Defined under UN General Assembly resolution 3472 B (1975) and NPT Article
+  VII. This record aggregates member states across all land-based treaty zones plus
+  Mongolia. Antarctica, outer space, and the seabed are separate UN-recognized
+  nuclear-weapon-free zones not included here. Several zones include protocols
+  inviting nuclear-weapon states to respect the zone; not all such protocols have
+  been ratified.
 other_names:
 - id: ar
   name: منطقة خالية من الأسلحة النووية
-- id: zh
-  name: 無核武地帶
+- id: de
+  name: atomwaffenfreie Zone
 - id: en
   name: nuclear-weapon-free zone
 - id: fr
   name: zone exempte d'armes nucléaires
+- id: pt
+  name: zona livre de armamento nuclear
 - id: ru
   name: Безъядерная зона
+- id: zh
+  name: 無核武地帶
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Nuclear-weapon-free_zone
+  license: CC BY-SA 4.0
+- field: notes
+  source: United Nations
+  retrieved_at: '2026-06-14'
+  url: https://www.un.org/nwfz/
+- field: official_documents
+  source: United Nations
+  retrieved_at: '2026-06-14'
+  url: https://www.un.org/nwfz/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+acronyms:
+- lang: en
+  value: NWFZ
+- lang: fr
+  value: ZEAN

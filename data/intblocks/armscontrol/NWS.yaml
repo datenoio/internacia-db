@@ -2,12 +2,14 @@ id: NWS
 blocktype:
 - armscontrol
 status: informal
+languages:
+- en
 links:
-- url: https://en.wikipedia.org/wiki/List_of_countries_with_nuclear_weapons
+- url: https://en.wikipedia.org/wiki/List_of_states_with_nuclear_weapons#Recognized_nuclear-weapon_states
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q189062
   type: wikidata
-name: States with nuclear weapons
+name: NPT Nuclear-Weapon States
 includes:
 - id: CN
   name: China
@@ -29,42 +31,54 @@ includes:
   name: United States
   type: country
   status: member
+geographic_scope: global
 membership_count: 5
-description: States possessing nuclear weapons.
+wikidata_id: Q189062
+official_documents:
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  type: document
+  name: Treaty on the Non-Proliferation of Nuclear Weapons (NPT)
+description: Informal designation for the five states recognized under Article IX.3
+  of the Treaty on the Non-Proliferation of Nuclear Weapons (NPT) as nuclear-weapon
+  states. China, France, Russia, the United Kingdom, and the United States had
+  manufactured and detonated a nuclear weapon before 1 January 1967. They are also
+  the five permanent members of the UN Security Council.
 tags:
 - NWS
+- NPT
 - arms
 - arms_control
 - armscontrol
 - atomic
 - defense
-- energy
+- non_proliferation
 - nuclear
-- oil
+- nuclear_weapons
 - security
-- states
 - weapon
 topics:
 - key: arms_control
   name: Arms Control
-- key: energy
-  name: Energy
 - key: nuclear
   name: Nuclear
 - key: security
   name: Security
-wikidata_id: Q189062
+notes: The acronym NWS is standard in non-proliferation discourse. This record covers
+  only the five NPT-recognized nuclear-weapon states, not other nuclear-armed states
+  outside that treaty framework (India, Pakistan, Israel, and North Korea). South
+  Africa dismantled its arsenal; Belarus, Kazakhstan, and Ukraine transferred
+  Soviet-era weapons to Russia after 1991.
 other_names:
 - id: ar
   name: دول نووية
 - id: de
   name: Atommacht
 - id: en
-  name: states with nuclear weapons
+  name: nuclear-weapon states
 - id: es
-  name: lista de países con armas nucleares
+  name: Estados con armas nucleares
 - id: fr
-  name: liste des États dotés de l'arme nucléaire
+  name: États dotés de l'arme nucléaire
 - id: pt
   name: países com armamento nuclear
 - id: ru
@@ -73,21 +87,32 @@ other_names:
   name: 核武器擁有國列表
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/List_of_states_with_nuclear_weapons#Recognized_nuclear-weapon_states
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/List_of_states_with_nuclear_weapons
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: United Nations
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-14'
   url: https://www.wikidata.org/
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-14'
   url: https://www.wikidata.org/
   license: CC0
 acronyms:
+- lang: en
+  value: NWS
 - lang: zh
   value: 核武國家列表
 - lang: zh

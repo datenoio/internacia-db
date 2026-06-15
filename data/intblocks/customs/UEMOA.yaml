@@ -6,53 +6,32 @@ status: formal
 languages:
 - fr
 links:
+- url: https://www.uemoa.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1929699
   type: wikidata
 name: West African Economic and Monetary Union
-founded: '1994'
-headquarters:
-  city: Ouagadougou
-  country: BF
-  coordinates:
-    lat: 12.368611111111111
-    lng: -1.5274999999999999
-acronyms:
-- lang: en
-  value: UEMOA
-- lang: en
-  value: WAEMU
-- lang: fr
-  value: UEMOA
-- lang: ru
-  value: UEMOA
-- lang: de
-  value: WAEMU
-- lang: de
-  value: UEMOA
-geographic_scope: regional
-regions:
-- Africa
 includes:
-- id: BJ
-  name: Benin
-  type: country
-  status: member
 - id: BF
   name: Burkina Faso
+  type: country
+  status: member
+- id: BJ
+  name: Benin
   type: country
   status: member
 - id: CI
   name: Côte d'Ivoire
   type: country
   status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
 - id: GW
   name: Guinea-Bissau
+  type: country
+  status: member
+- id: ML
+  name: Mali
   type: country
   status: member
 - id: NE
@@ -67,14 +46,55 @@ includes:
   name: Togo
   type: country
   status: member
+founded: '1994-01-10'
+headquarters:
+  city: Ouagadougou
+  country: BF
+  coordinates:
+    lat: 12.368611111111111
+    lng: -1.5274999999999999
+geographic_scope: regional
+regions:
+- Africa
+acronyms:
+- lang: en
+  value: UEMOA
+- lang: en
+  value: WAEMU
+- lang: en
+  value: UMOA
+- lang: en
+  value: WAMU
+- lang: fr
+  value: UEMOA
+- lang: fr
+  value: UMOA
+- lang: ru
+  value: UEMOA
+- lang: de
+  value: WAEMU
+- lang: de
+  value: UEMOA
+- lang: pt
+  value: UEMOA
 membership_count: 8
 wikidata_id: Q1929699
-description: Regional organization of West African countries sharing a customs union
-  and common currency (West African CFA franc).
+legal_status: intergovernmental
+description: Treaty-based intergovernmental organization binding eight West African
+  states that share the West African CFA franc (XOF). Established in 1994 to promote
+  monetary and financial stability, economic integration, and a common external tariff;
+  succeeded the West African Monetary Union (WAMU/UMOA), founded in 1962.
+notes: Territorially overlaps with ECOWAS. Common institutions include the Commission,
+  Court of Justice, and Court of Accounts in Ouagadougou; the Central Bank of West
+  African States (BCEAO) in Dakar; and the West African Development Bank (BOAD) in
+  Lomé. Guinea-Bissau joined in 1997.
 tags:
 - UEMOA
 - WAEMU
+- UMOA
+- WAMU
 - african
+- commerce
 - cooperation
 - customs
 - economic
@@ -82,6 +102,7 @@ tags:
 - monetary
 - regional
 - regional_cooperation
+- trade
 - union
 - west
 topics:
@@ -91,6 +112,8 @@ topics:
   name: Economy
 - key: regional_cooperation
   name: Regional Cooperation
+- key: trade
+  name: Trade
 other_names:
 - id: ar
   name: الاتحاد الاقتصادي والنقدي لغرب إفريقيا
@@ -109,6 +132,21 @@ other_names:
 - id: zh
   name: 西非經濟貨幣聯盟
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q1929699
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -116,6 +154,6 @@ provenance:
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q1929699
   license: CC0

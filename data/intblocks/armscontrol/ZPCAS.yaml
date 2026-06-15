@@ -2,7 +2,14 @@ id: ZPCAS
 blocktype:
 - armscontrol
 status: formal
+languages:
+- en
+- es
+- fr
+- pt
 links:
+- url: https://www.gov.br/defesa/pt-br/assuntos/relacoes-internacionais/forums-internacionais-1/zona-de-paz-e-cooperacao-do-atlantico-sul-zopacas/zopacas
+  type: website
 - url: https://en.wikipedia.org/wiki/South_Atlantic_Peace_and_Cooperation_Zone
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q47539
@@ -105,7 +112,10 @@ includes:
   name: Togo
   type: country
   status: member
-founded: '1986'
+founded: '1986-10-27'
+founding_members:
+- AR
+- BR
 headquarters:
   city: Brasília
   country: BR
@@ -117,28 +127,52 @@ regions:
 - South Atlantic Ocean
 membership_count: 24
 wikidata_id: Q47539
-description: Organization.
+legal_status: intergovernmental
+official_documents:
+- url: https://www.un.org/en/ga/search/view_doc.asp?symbol=A/RES/41/11
+  type: document
+  name: UN General Assembly resolution 41/11 establishing the Zone of Peace and Cooperation
+    of the South Atlantic
+description: Transcontinental consultative forum established by UN General Assembly
+  resolution 41/11 in 1986 on Brazil's initiative. Promotes cooperation, peace, and
+  security in the South Atlantic region, with particular emphasis on preventing the
+  geographical proliferation of nuclear weapons and reducing the military presence
+  of extra-regional powers. Member states adopted a declaration on denuclearization
+  of the South Atlantic at Brasília in 1994.
 tags:
 - ZPCAS
+- ZOPACAS
+- UN
 - arms
 - arms_control
 - armscontrol
 - atlantic
 - cooperation
 - defense
+- denuclearization
+- nuclear
 - peace
 - regional
 - regional_cooperation
 - security
 - south
+- south_atlantic
 - weapon
 topics:
 - key: arms_control
   name: Arms Control
+- key: nuclear
+  name: Nuclear
 - key: regional_cooperation
   name: Regional Cooperation
 - key: security
   name: Security
+notes: Established by UN General Assembly resolution A/RES/41/11 (27 October 1986).
+  Comprises 24 member states in South America and West Africa. Holds periodic ministerial
+  meetings on a rotating presidency basis. The South Atlantic is not itself a treaty-based
+  nuclear-weapon-free zone, though member states are parties to the African Nuclear
+  Weapons Free Zone Treaty and the Treaty for the Prohibition of Nuclear Weapons in
+  Latin America and the Caribbean.
 other_names:
 - id: de
   name: Südatlantischen Zone des Friedens und der Zusammenarbeit
@@ -154,10 +188,19 @@ other_names:
   name: 南大西洋和平與合作區
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/South_Atlantic_Peace_and_Cooperation_Zone
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/South_Atlantic_Peace_and_Cooperation_Zone
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: United Nations
+  retrieved_at: '2026-06-14'
+  url: https://www.un.org/en/ga/search/view_doc.asp?symbol=A/RES/41/11
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -169,6 +212,10 @@ provenance:
   url: https://www.wikidata.org/
   license: CC0
 acronyms:
+- lang: en
+  value: ZPCAS
+- lang: en
+  value: ZOPACAS
 - lang: zh
   value: 南大西洋和平与合作区
 - lang: es

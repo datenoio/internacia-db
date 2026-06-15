@@ -6,27 +6,19 @@ status: formal
 languages:
 - es
 links:
+- url: https://www.sieca.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_American_Common_Market
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q190019
   type: wikidata
 name: Central American Common Market
-founded: '1960-12-13'
-headquarters:
-  city: Guatemala City
-  country: GT
-  coordinates:
-    lat: 14.6349
-    lng: -90.5069
-geographic_scope: regional
-regions:
-- Central America
 includes:
 - id: CR
   name: Costa Rica
   type: country
   status: member
-  joined: 1962-07
+  joined: '1963-09-23'
 - id: SV
   name: El Salvador
   type: country
@@ -47,23 +39,60 @@ includes:
   type: country
   status: member
   joined: '1960-12-13'
+founded: '1960-12-13'
+headquarters:
+  city: Guatemala City
+  country: GT
+  coordinates:
+    lat: 14.6349
+    lng: -90.5069
+geographic_scope: regional
+regions:
+- Central America
+acronyms:
+- lang: en
+  value: CACM
+- lang: es
+  value: MCCA
+- lang: en
+  value: MCCA
+founding_members:
+- GT
+- SV
+- HN
+- NI
 membership_count: 5
 wikidata_id: Q190019
 legal_status: intergovernmental
-description: Regional customs union and common market established to promote economic
-  integration and free trade among Central American nations through the elimination
-  of tariffs and the adoption of common external tariffs.
+partof:
+  id: SICA
+  name: Central American Integration System
+description: Regional customs union and common market established by the General
+  Treaty on Central American Economic Integration (Managua, 13 December 1960). Seeks
+  to eliminate internal tariffs, adopt a common external tariff and coordinate economic
+  policy among Central American states. Administered by the Secretariat for Central
+  American Economic Integration (SIECA).
+notes: Founded by Guatemala, El Salvador, Honduras and Nicaragua at Managua in 1960;
+  Costa Rica acceded in 1963. Integration stalled after the 1969 Honduras–El Salvador
+  war and ODECA was suspended in 1973. Revived under the Guatemala Protocol (1993),
+  which readjusted the 1960 treaty within the Central American Integration System
+  (SICA). Panama participates in the broader Central American economic integration
+  process through SICA but is not part of the five-state customs union. Also known
+  as Mercado Común Centroamericano (MCCA).
 tags:
 - CACM
+- MCCA
 - central
 - america
 - commerce
 - common
 - customs
 - economy
+- integration
 - market
 - regional
 - regional_cooperation
+- sieca
 - trade
 topics:
 - key: customs
@@ -74,13 +103,6 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: CACM
-- lang: es
-  value: MCCA
-- lang: en
-  value: MCCA
 other_names:
 - id: ar
   name: السوق المشتركة لأمريكا الوسطى
@@ -99,13 +121,38 @@ other_names:
 - id: zh
   name: 中美洲共同市场
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Central_American_Common_Market
+  license: CC BY-SA 4.0
+- field: notes
+  source: SIECA
+  retrieved_at: '2026-06-14'
+  url: https://www.sieca.int/faq/
+  license: public domain
+- field: includes
+  source: SIECA
+  retrieved_at: '2026-06-14'
+  url: https://www.sieca.int/faq/
+  license: public domain
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Central_American_Integration_System
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q190019
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q190019
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q190019
   license: CC0

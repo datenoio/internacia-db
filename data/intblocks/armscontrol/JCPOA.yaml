@@ -2,65 +2,163 @@ id: JCPOA
 blocktype:
 - armscontrol
 - agreement
-status: formal
+status: historical
 languages:
 - en
+- fa
+- fr
+- de
+- ru
+- zh
 links:
+- url: https://eeas.europa.eu/archives/docs/joint_comprehensive_plan_of_action_en.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q18785272
+- url: https://www.wikidata.org/wiki/Q17001802
   type: wikidata
 name: Joint Comprehensive Plan of Action
-founded: '2015'
+includes:
+- id: IR
+  name: Iran, Islamic Republic of
+  type: country
+  status: former_member
+  left: '2025-10-18'
+- id: CN
+  name: China
+  type: country
+  status: former_member
+- id: FR
+  name: France
+  type: country
+  status: former_member
+- id: DE
+  name: Germany
+  type: country
+  status: former_member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+- id: US
+  name: United States
+  type: country
+  status: former_member
+  left: '2018-05-08'
+- id: EU
+  name: European Union
+  type: organization
+  status: former_member
+founded: '2016-01-16'
+dissolved: '2025-10-18'
 headquarters:
   city: Vienna
   country: AT
 geographic_scope: global
 regions:
 - Global
-includes:
-- id: IR
-  name: Iran, Islamic Republic of
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: former_member
-membership_count: 7
-wikidata_id: Q18785272
+membership_count: 8
+wikidata_id: Q17001802
 legal_status: treaty
+official_documents:
+- url: https://eeas.europa.eu/archives/docs/joint_comprehensive_plan_of_action_en.pdf
+  type: document
+  name: Joint Comprehensive Plan of Action (EEAS)
 acronyms:
 - lang: en
   value: JCPOA
-description: Agreement on Iran's nuclear program between Iran and the P5+1 (E3+3);
-  implementation status has varied since 2018.
+- lang: fa
+  value: برجام
+- lang: en
+  value: Iran nuclear deal
+- lang: en
+  value: Iran Deal
+description: International agreement between Iran and the P5+1 (China, France, Russia,
+  the United Kingdom, and the United States, plus Germany) together with the European
+  Union to limit Iran's nuclear program in exchange for sanctions relief and enhanced
+  IAEA monitoring. Finalized in Vienna on 14 July 2015 and implemented from 16 January
+  2016. The United States withdrew in May 2018; Iran announced termination of the agreement
+  on 18 October 2025.
 tags:
-- Iran
+- BARJAM
+- E3+3
+- Iran-Deal
+- Iran-nuclear-deal
 - JCPOA
 - P5+1
+- arms-control
 - armscontrol
+- IAEA
 - nuclear
+- non-proliferation
+- sanctions
 topics:
 - key: armscontrol
   name: Arms Control
+- key: security
+  name: Security
+- key: law
+  name: Law
+notes: Not a signed treaty under U.S. law; the JCPOA reflects political commitments
+  between Iran, the P5+1, and the EU. Negotiations built on the 2013 Joint Plan of
+  Action interim agreement. Iran agreed to limits on enrichment, centrifuges, and stockpiles,
+  and to IAEA verification at Natanz, Fordow, and Arak; in return UN, EU, and U.S.
+  nuclear-related sanctions were lifted. U.S. withdrawal in 2018 reimposed sanctions
+  and largely nullified the economic provisions. Iran officially terminated the agreement
+  on 18 October 2025, ten years after Adoption Day.
+other_names:
+- id: de
+  name: Wiener Abkommen über das iranische Atomprogramm
+- id: en
+  name: Joint Comprehensive Plan of Action
+- id: es
+  name: Plan de Acción Conjunto y Completo
+- id: fa
+  name: برنامه جامع اقدام مشترک
+- id: fr
+  name: Plan global d'action conjoint
+- id: pt
+  name: Plano de Ação Conjunto Global
+- id: ru
+  name: Совместный всеобъемлющий план действий
+- id: zh
+  name: 關於伊朗核計劃的全面協議
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: European External Action Service
+  retrieved_at: '2026-06-14'
+  url: https://eeas.europa.eu/archives/docs/joint_comprehensive_plan_of_action_en.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q17001802
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q17001802
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q17001802
+  license: CC0

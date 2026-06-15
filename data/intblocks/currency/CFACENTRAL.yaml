@@ -2,31 +2,33 @@ id: CFACENTRAL
 blocktype:
 - currency
 status: formal
+partof: CFAZ
 languages:
 - fr
 links:
 - url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q847739
+  type: wikidata
 name: Central African CFA Franc Zone
+founded: '1945'
 acronyms:
 - lang: en
   value: XAF
+- lang: en
+  value: FCFA
 - lang: en
   value: CFA Central
 geographic_scope: regional
 regions:
 - Africa
 includes:
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: TD
-  name: Chad
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CG
@@ -41,19 +43,38 @@ includes:
   name: Gabon
   type: country
   status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
 membership_count: 6
-description: Monetary union of Central African countries using the Central African
-  CFA franc (XAF), pegged to the euro.
+wikidata_id: Q847739
+description: Monetary union of six Central African states using the Central African
+  CFA franc (XAF). Introduced in 1945 to replace the French Equatorial African franc;
+  pegged to the French franc until 1999 and to the euro since then at €1 = F.CFA
+  655.957. Currency is issued by the Bank of Central African States (BEAC) for members
+  of the Economic and Monetary Community of Central Africa (CEMAC).
+notes: CFA originally stood for Colonies françaises d'Afrique and now Communauté
+  financière africaine. Equatorial Guinea adopted the franc in 1984, replacing the
+  ekwele at 1 franc = 4 bipkwele. Of equal value to but not interchangeable with
+  the West African CFA franc (XOF). Strong institutional overlap with CEMAC; notes
+  and coins since 2006 bear the CEMAC legend.
 tags:
+- BEAC
 - CFA
+- CEMAC
 - CFACENTRAL
 - african
 - bank
 - central
+- cooperation
 - currency
 - economy
 - finance
 - franc
+- monetary
+- regional
+- regional_cooperation
 - zone
 topics:
 - key: currency
@@ -62,8 +83,48 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
+- id: ar
+  name: فرنك وسط إفريقي
+- id: de
+  name: CFA-Franc BEAC
 - id: en
   name: Central African CFA Franc Zone
+- id: es
+  name: franco CFA de África Central
 - id: fr
   name: Zone franc CFA d'Afrique centrale
+- id: pt
+  name: franco CFA da África Central
+- id: ru
+  name: франк КФА BEAC
+- id: zh
+  name: 中非非洲金融共同体法郎
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q847739
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q847739
+  license: CC0

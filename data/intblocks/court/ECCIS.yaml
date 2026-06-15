@@ -3,6 +3,7 @@ blocktype:
 - court
 status: formal
 partof: CIS
+geographic_scope: regional
 languages:
 - ru
 - en
@@ -13,33 +14,53 @@ links:
   type: wikipedia
 - url: https://ru.wikipedia.org/wiki/Экономический_суд_СНГ
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q4306397
+  type: wikidata
 name: Economic Court of the Commonwealth of Independent States
 includes:
 - id: BY
   name: Belarus
   type: country
   status: member
+  joined: '1992'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '1994'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '1994'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '1992'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1994'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-founded: '1992'
+  joined: '1992'
+- id: AM
+  name: Armenia
+  type: country
+  status: former_member
+  joined: '1993'
+  left: '2006'
+- id: MD
+  name: Moldova, Republic of
+  type: country
+  status: former_member
+  joined: '1995'
+  left: '2010'
+founded: '1992-07-06'
 headquarters:
   city: Minsk
   country: BY
@@ -52,8 +73,10 @@ acronyms:
 - lang: ru
   value: ЭССНГ
 membership_count: 6
-description: International court focused on economic disputes and interpretation of
-  CIS agreements.
+wikidata_id: Q4306397
+description: Judicial body established under the 1992 Agreement on the status of the
+  Economic Court of the CIS to adjudicate economic disputes among enterprises and ensure
+  uniform application of CIS economic agreements.
 tags:
 - ECCIS
 - court
@@ -71,18 +94,32 @@ topics:
 other_names:
 - id: en
   name: Economic Court of the Commonwealth of Independent States
-- id: ru
-  name: Экономический Суд Содружества Независимых Государств
 - id: es
   name: Tribunal Económico de la Comunidad de Estados Independientes
 - id: fr
   name: Cour économique de la Communauté des États indépendants
+- id: ru
+  name: Экономический Суд Содружества Независимых Государств
 - id: zh
   name: 独立国家联合体经济法院
-wikidata_id: Q4306397
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Economic_Court_of_the_Commonwealth_of_Independent_States
+  license: CC BY-SA
+- field: includes
+  source: CIS Executive Committee
+  retrieved_at: '2026-06-14'
+  url: https://eccis.org/page/206/ekonomiceskij-sud-sodruzestva-nezavisimyh-gosudarstv
+  license: unknown
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
   url: https://www.wikidata.org/
   license: CC0

@@ -4,44 +4,93 @@ blocktype:
 status: formal
 languages:
 - ru
+- en
 links:
-- url: http://www.tsouz.ru/Pages/Default.aspx
+- url: https://www.eaeunion.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Customs_Union_of_Belarus,_Kazakhstan_and_Russia
+- url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
   type: wikipedia
-name: Customs Union of Belarus, Kazakhstan and Russia
+- url: https://www.wikidata.org/wiki/Q2663713
+  type: wikidata
+name: Customs Union of the Eurasian Economic Union
 includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
 - id: BY
   name: Belarus
   type: country
   status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
+  joined: '2010-01-01'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '2010-01-01'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '2010-01-01'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '2015-01-01'
 - id: KG
   name: Kyrgyzstan
   type: country
   status: member
+  joined: '2015-08-12'
+founded: '2010-01-01'
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7558
+    lng: 37.6173
+geographic_scope: regional
+regions:
+- Europe
+- Asia
+acronyms:
+- lang: en
+  value: EACU
+- lang: en
+  value: TSOUZ
+- lang: ja
+  value: EACU
+- lang: ro
+  value: EACU
+- lang: ru
+  value: ТС
+founding_members:
+- RU
+- BY
+- KZ
 membership_count: 5
-description: Regional organization focused on customs.
+wikidata_id: Q2663713
+legal_status: intergovernmental
+partof:
+  id: EAEU
+  name: Eurasian Economic Union
+description: Customs union comprising all member states of the Eurasian Economic Union;
+  it took effect on 1 January 2010 as the Customs Union of Russia, Belarus and Kazakhstan
+  and now applies a common external tariff with no internal customs duties.
+notes: Superseded the EurAsEC customs union framework; since 2015 governed under Part
+  Two of the Treaty on the Eurasian Economic Union. Armenia and Kyrgyzstan joined with
+  the EAEU. Also known historically as the Customs Union of Belarus, Kazakhstan and
+  Russia (Таможенный союз, TSOUZ).
 tags:
+- EACU
 - TSOUZ
 - belarus
 - commerce
 - cooperation
 - customs
 - economy
+- eurasian
+- kazakhstan
 - regional
 - regional_cooperation
+- russia
 - trade
 - union
 topics:
@@ -53,3 +102,54 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
+other_names:
+- id: ar
+  name: الاتحاد الجمركي الأوراسي
+- id: en
+  name: Customs Union of the Eurasian Economic Union
+- id: es
+  name: Unión aduanera euroasiática
+- id: fr
+  name: Union douanière de l'Union eurasiatique
+- id: pt
+  name: União Aduaneira da Eurásia
+- id: ru
+  name: Таможенный союз ЕАЭС
+- id: zh
+  name: 欧亚关税同盟
+provenance:
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q2663713
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q2663713
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q2663713
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q2663713
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q2663713
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA

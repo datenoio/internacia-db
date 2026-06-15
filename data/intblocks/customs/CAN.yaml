@@ -5,30 +5,88 @@ status: formal
 languages:
 - es
 links:
-- url: http://www.comunidadandina.org/
+- url: https://www.comunidadandina.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Andean_Community_of_Nations
+- url: https://en.wikipedia.org/wiki/Andean_Community
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q471690
+  type: wikidata
 name: Andean Community of Nations
 includes:
 - id: BO
-  name: Bolivia, Plurinational State of
+  name: Bolivia
   type: country
   status: member
+  joined: '1969-05-26'
 - id: CO
   name: Colombia
   type: country
   status: member
+  joined: '1969-05-26'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '1969-05-26'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '1969-05-26'
+- id: CL
+  name: Chile
+  type: country
+  status: former_member
+  joined: '1969-05-26'
+  left: '1976'
+- id: VE
+  name: Venezuela
+  type: country
+  status: former_member
+  joined: '1973'
+  left: '2006'
+founded: '1969-05-26'
+headquarters:
+  city: Lima
+  country: PE
+  coordinates:
+    lat: -12.06
+    lng: -77.0375
+geographic_scope: regional
+regions:
+- South America
+acronyms:
+- lang: en
+  value: CAN
+- lang: es
+  value: CAN
+- lang: pt
+  value: CAN
+- lang: fr
+  value: CAN
+- lang: de
+  value: CAN
+- lang: ru
+  value: CAN
+- lang: zh
+  value: 安第斯共同体
+founding_members:
+- BO
+- CL
+- CO
+- EC
+- PE
 membership_count: 4
-description: Regional organization focused on customs.
+wikidata_id: Q471690
+legal_status: intergovernmental
+description: South American integration organization and customs union established
+  by the Cartagena Agreement (1969). Operates a free trade zone and common external
+  tariff among Bolivia, Colombia, Ecuador and Peru; formerly known as the Andean
+  Pact (Pacto Andino) until institutional reforms in 1996–1997.
+notes: Venezuela joined in 1973 and withdrew in 2006. Chile was a founding member
+  but withdrew in 1976; it has been an associate member since 2006. Mercosur members
+  Argentina, Brazil, Paraguay and Uruguay are associate members since 2005. Also known
+  as Comunidad Andina de Naciones or Andean Community.
 tags:
 - CAN
 - andean
@@ -40,7 +98,9 @@ tags:
 - nations
 - regional
 - regional_cooperation
+- south
 - trade
+- union
 topics:
 - key: customs
   name: Customs
@@ -50,3 +110,56 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
+other_names:
+- id: ar
+  name: مجموعة دول الأنديز
+- id: de
+  name: Andengemeinschaft
+- id: en
+  name: Andean Community
+- id: es
+  name: Comunidad Andina
+- id: fr
+  name: Communauté andine des Nations
+- id: pt
+  name: Comunidade Andina
+- id: ru
+  name: Андское сообщество
+- id: zh
+  name: 安第斯共同体
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Andean_Community
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Andean_Community
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q471690
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q471690
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q471690
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Andean_Community
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q471690
+  license: CC0

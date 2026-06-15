@@ -5,14 +5,494 @@ blocktype:
 status: formal
 languages:
 - en
+- ar
+- zh
+- fr
+- ru
+- es
 links:
 - url: https://www.thearmstradetreaty.org/
   type: website
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-8&chapter=26&clang=_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Arms_Trade_Treaty
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q546247
+- url: https://www.wikidata.org/wiki/Q688993
   type: wikidata
 name: Arms Trade Treaty
+includes:
+- id: AD
+  name: Andorra
+  type: country
+  status: member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AL
+  name: Albania
+  type: country
+  status: member
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AU
+  name: Australia
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BS
+  name: Bahamas
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
 founded: '2014'
 headquarters:
   city: Geneva
@@ -20,13 +500,23 @@ headquarters:
 geographic_scope: global
 regions:
 - Global
-membership_count: 115
-wikidata_id: Q546247
+membership_count: 118
+wikidata_id: Q688993
 legal_status: treaty
+official_documents:
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-8&chapter=26&clang=_en
+  type: document
+  name: Arms Trade Treaty
 acronyms:
 - lang: en
   value: ATT
-description: Multilateral treaty regulating international trade in conventional arms.
+description: Multilateral treaty regulating international trade in conventional arms
+  including battle tanks, armoured combat vehicles, large-calibre artillery systems,
+  combat aircraft, attack helicopters, warships, missiles and missile launchers, and
+  small arms and light weapons. Adopted by the UN General Assembly on 2 April 2013
+  and opened for signature on 3 June 2013; entered into force on 24 December 2014.
+  Requires states parties to establish national control systems and to assess exports
+  against criteria including human rights and international humanitarian law.
 tags:
 - ATT
 - arms-trade
@@ -39,3 +529,48 @@ topics:
   name: Arms Control
 - key: law
   name: Law
+provenance:
+- field: includes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-8&chapter=26&clang=_en
+- field: membership_count
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-8&chapter=26&clang=_en
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Arms_Trade_Treaty
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-8&chapter=26&clang=_en
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+other_names:
+- id: ar
+  name: معاهدة تجارة الأسلحة
+- id: zh
+  name: 武器贸易条约
+- id: en
+  name: Arms Trade Treaty
+- id: fr
+  name: traité sur le commerce des armes
+- id: ru
+  name: Международный договор о торговле оружием
+- id: es
+  name: Tratado de comercio de armas
+- id: de
+  name: Arms Trade Treaty
+- id: pt
+  name: Tratado de Comércio de Armas Convencionais

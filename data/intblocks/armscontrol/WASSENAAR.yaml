@@ -2,8 +2,10 @@ id: WASSENAAR
 blocktype:
 - armscontrol
 status: formal
+languages:
+- en
 links:
-- url: http://www.wassenaar.org/
+- url: https://www.wassenaar.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Wassenaar_Arrangement
   type: wikipedia
@@ -40,7 +42,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czech Republic
+  name: Czechia
   type: country
   status: member
 - id: DK
@@ -136,7 +138,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovak Republic
+  name: Slovakia
   type: country
   status: member
 - id: SI
@@ -148,7 +150,7 @@ includes:
   type: country
   status: member
 - id: KR
-  name: Korea, Rep.
+  name: Korea, Republic of
   type: country
   status: member
 - id: ES
@@ -164,7 +166,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
 - id: UA
@@ -186,20 +188,33 @@ headquarters:
   coordinates:
     lat: 48.208333333333336
     lng: 16.3725
+geographic_scope: global
+official_documents:
+- url: https://www.wassenaar.org/app/publications/documents/guidelines%20%26%20procedures%20-%20founding%20documents.pdf
+  type: document
+  name: Guidelines and Procedures, including the Initial Elements
 acronyms:
 - lang: en
   value: WA
 membership_count: 42
 wikidata_id: Q673158
-description: International entity focused on arms control.
+description: Multilateral export control regime governing the international transfer
+  of conventional arms and dual-use goods and technologies. Established on 12 July
+  1996 in Wassenaar, Netherlands, as the successor to the Cold War-era CoCom. Participating
+  states coordinate national export policies to promote transparency and responsibility;
+  the arrangement is not a treaty and is not legally binding.
 tags:
 - WA
 - WASSENAAR
+- CoCom
 - arms
 - arms_control
 - armscontrol
 - arrangement
+- conventional_arms
 - defense
+- dual_use
+- export_control
 - security
 - wassenaar
 - weapon
@@ -208,16 +223,51 @@ topics:
   name: Arms Control
 - key: security
   name: Security
+notes: Secretariat based in Vienna. India became the 42nd participating state in December
+  2017. Member states exchange information every six months on deliveries of conventional
+  arms to non-members. Control lists cover dual-use goods and technologies (Basic
+  List) and munitions (Munitions List). Russia announced suspension of participation
+  in December 2022 following its invasion of Ukraine but remains listed on the official
+  participating states page.
 other_names:
 - id: ar
   name: اتفاقية فسنار
-- id: zh
-  name: 瓦瑟纳尔协定
+- id: de
+  name: Wassenaar-Abkommen
 - id: en
   name: Wassenaar Arrangement
-- id: fr
-  name: Arrangement de Wassenaar
-- id: ru
-  name: Вассенарские соглашения
 - id: es
   name: Acuerdo de Wassenaar
+- id: fr
+  name: Arrangement de Wassenaar
+- id: pt
+  name: Arranjo de Wassenaar
+- id: ru
+  name: Вассенарские соглашения
+- id: zh
+  name: 瓦瑟纳尔协定
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Wassenaar_Arrangement
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Wassenaar_Arrangement
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: Wassenaar Arrangement Secretariat
+  retrieved_at: '2026-06-14'
+  url: https://www.wassenaar.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0

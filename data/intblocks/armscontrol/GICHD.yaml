@@ -1,11 +1,13 @@
 id: GICHD
 blocktype:
+- intorg
 - armscontrol
 status: formal
 languages:
 - en
 - es
 - fr
+- de
 links:
 - url: https://www.gichd.org/
   type: website
@@ -15,6 +17,10 @@ links:
   type: wikidata
 name: Geneva International Centre for Humanitarian Demining
 includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
 - id: AU
   name: Australia
   type: country
@@ -23,8 +29,12 @@ includes:
   name: Austria
   type: country
   status: member
-- id: CA
-  name: Canada
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+- id: CO
+  name: Colombia
   type: country
   status: member
 - id: FI
@@ -39,16 +49,28 @@ includes:
   name: Germany
   type: country
   status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
 - id: IT
   name: Italy
   type: country
   status: member
-- id: NL
-  name: Netherlands
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
   type: country
   status: member
 - id: 'NO'
   name: Norway
+  type: country
+  status: member
+- id: SN
+  name: Senegal
   type: country
   status: member
 - id: SE
@@ -64,33 +86,55 @@ includes:
   type: country
   status: member
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
-membership_count: 13
+- id: VN
+  name: Viet Nam
+  type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: UNODA
+  name: United Nations Office for Disarmament Affairs
+  type: organization
+  status: member
+- id: UNMAS
+  name: United Nations Mine Action Service
+  type: organization
+  status: member
+membership_count: 22
 founded: '1998'
 headquarters:
   city: Geneva
   country: CH
   coordinates:
-    lat: 46.2
-    lng: 6.15
+    lat: 46.2233
+    lng: 6.1467
+geographic_scope: global
+acronyms:
+- lang: en
+  value: GICHD
+- lang: de
+  value: GICHD
 wikidata_id: Q684784
-description: International entity focused on arms control.
+legal_status: foundation
+description: Swiss foundation and international centre working to reduce risks from
+  landmines, cluster munitions, and other explosive ordnance worldwide. Supports national
+  authorities and partners through field advisory services, standards development,
+  research, and regional cooperation programmes on mine action and ammunition management.
 tags:
 - GICHD
-- arms
-- arms_control
 - armscontrol
-- centre
-- defense
-- disaster
-- disaster_relief
-- emergency
-- geneva
-- international
+- demining
+- mine_action
+- cluster_munitions
+- explosive_ordnance
+- humanitarian
+- intorg
 - security
-- weapon
 topics:
 - key: arms_control
   name: Arms Control
@@ -98,10 +142,44 @@ topics:
   name: Disaster Relief
 - key: security
   name: Security
+notes: Governed by a Council of Foundation under Swiss law and supervised by the Swiss
+  Federal Department of Home Affairs. Core funding comes from about 30 governments
+  and organisations; Switzerland provides roughly half of the annual budget. Iraq,
+  UNMAS, and United States council seats were vacant as of 2025.
 other_names:
 - id: ar
   name: مركز جنيف الدولي لإزالة الألغام للأغراض الإنسانية
+- id: de
+  name: Genfer Internationales Zentrum für Humanitäre Minenräumung
 - id: en
   name: Geneva International Centre for Humanitarian Demining
 - id: fr
   name: centre international de déminage humanitaire
+provenance:
+- field: includes
+  source: GICHD
+  retrieved_at: '2026-06-14'
+  url: https://www.gichd.org/the-gichd/who-we-are/council-of-foundation/
+- field: description
+  source: GICHD
+  retrieved_at: '2026-06-14'
+  url: https://www.gichd.org/the-gichd/about-us/
+- field: notes
+  source: GICHD
+  retrieved_at: '2026-06-14'
+  url: https://www.gichd.org/the-gichd/who-we-are/council-of-foundation/
+- field: headquarters.coordinates
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q684784
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/wiki/Q684784
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -15,6 +15,8 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Confederation_of_African_Football
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q168360
+  type: wikidata
 name: Confédération Africaine de Football
 headquarters:
   city: Cairo
@@ -27,8 +29,19 @@ acronyms:
   value: CAF
 - lang: fr
   value: CAF
+- lang: zh
+  value: 非洲足球联合会
+- lang: zh
+  value: 非洲足联
+- lang: zh
+  value: 非洲足協
+- lang: ru
+  value: CAF
 legal_status: non-governmental
-description: CAF is the continental governing body for association football in Africa. It organizes regional competitions including the Africa Cup of Nations, CAF Champions League, and CAF Confederation Cup. CAF comprises 54 member associations representing countries across Africa.
+description: CAF is the continental governing body for association football in Africa.
+  It organizes regional competitions including the Africa Cup of Nations, CAF Champions
+  League, and CAF Confederation Cup. CAF comprises 54 member associations representing
+  countries across Africa.
 tags:
 - CAF
 - football
@@ -44,14 +57,22 @@ topics:
 - key: champions_league
   name: Champions League
 other_names:
-- id: en
-  name: Confederation of African Football
-- id: fr
-  name: Confédération Africaine de Football
 - id: ar
   name: الاتحاد الأفريقي لكرة القدم
+- id: de
+  name: Confédération Africaine de Football
+- id: en
+  name: Confederation of African Football
+- id: es
+  name: Confederación Africana de Fútbol
+- id: fr
+  name: Confédération Africaine de Football
+- id: pt
+  name: Confederação Africana de Futebol
 - id: ru
   name: Конфедерация африканского футбола
+- id: zh
+  name: 非洲足球協會
 membership_count: 54
 includes:
 - id: DZ
@@ -270,3 +291,20 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+wikidata_id: Q168360
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

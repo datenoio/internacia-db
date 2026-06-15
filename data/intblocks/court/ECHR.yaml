@@ -14,7 +14,7 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q122880
   type: wikidata
-name: European Court Of Human Rights
+name: European Court of Human Rights
 includes:
 - id: 'NO'
   name: Norway
@@ -200,13 +200,23 @@ includes:
   name: Serbia
   type: country
   status: member
-founded: '1959'
+founded: '1959-01-21'
 headquarters:
   city: Strasbourg
   country: FR
   coordinates:
     lat: 48.573333333333
     lng: 7.7522222222222
+geographic_scope: regional
+regions:
+- Europe
+official_documents:
+- url: https://conventions.coe.int/Treaty/en/Treaties/Html/005.htm
+  type: document
+  name: European Convention on Human Rights
+- url: https://www.echr.coe.int/documents/rules_of_the_court_eng.pdf
+  type: document
+  name: Rules of Court
 acronyms:
 - lang: en
   value: ECtHR
@@ -230,13 +240,19 @@ acronyms:
   value: EGMR
 membership_count: 46
 wikidata_id: Q122880
-description: International court focused on human rights.
+legal_status: international court
+last_verified: '2026-06-14'
+description: International court of the Council of Europe in Strasbourg that interprets
+  and enforces the European Convention on Human Rights. It hears applications from
+  individuals, groups, and contracting states alleging violations of convention rights.
+  All 46 Council of Europe member states are currently within its jurisdiction.
 tags:
 - CEDH
 - ECHR
 - ECTHR
 - EGMR
 - TEDH
+- council_of_europe
 - court
 - european
 - human rights
@@ -244,11 +260,15 @@ tags:
 - law
 - legal
 - rights
+- strasbourg
 topics:
 - key: human_rights
   name: Human Rights
 - key: law
   name: Law
+notes: Established on 21 January 1959; became a full-time permanent court on 1 November
+  1998 under Protocol 11. Each member state appoints one judge. Russia ceased to be
+  a contracting party when expelled from the Council of Europe in March 2022.
 other_names:
 - id: ar
   name: المحكمة الأوروبية لحقوق الإنسان
@@ -267,6 +287,23 @@ other_names:
 - id: zh
   name: 欧洲人权法院
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/European_Court_of_Human_Rights
+  license: CC BY-SA 4.0
+- field: notes
+  source: Council of Europe
+  retrieved_at: '2026-06-14'
+  url: https://www.echr.coe.int/
+- field: official_documents
+  source: Council of Europe
+  retrieved_at: '2026-06-14'
+  url: https://www.echr.coe.int/documents/d/echr/convention_ENG
+- field: includes
+  source: Council of Europe
+  retrieved_at: '2026-06-14'
+  url: https://www.coe.int/en/web/about-us/member-states
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

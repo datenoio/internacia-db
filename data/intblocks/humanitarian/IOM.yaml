@@ -23,7 +23,7 @@ headquarters:
   country: CH
   coordinates:
     lat: 46.2276
-    lng: 6.1270
+    lng: 6.127
 acronyms:
 - lang: en
   value: IOM
@@ -35,12 +35,16 @@ acronyms:
   value: МОМ
 - lang: zh
   value: 国际移民组织
+- lang: de
+  value: IOM
+- lang: pt
+  value: OIM
 legal_status: intergovernmental
 recognition_status: UN related organization
-notes: IOM is an intergovernmental organization that provides services and advice concerning
-  migration to governments and migrants. As of 2024, IOM comprises 175 member states
-  and 8 observer states. The organization works to promote humane and orderly migration
-  for the benefit of all.
+notes: IOM is an intergovernmental organization that provides services and advice
+  concerning migration to governments and migrants. As of 2024, IOM comprises 175
+  member states and 8 observer states. The organization works to promote humane and
+  orderly migration for the benefit of all.
 description: Intergovernmental organization focused on migration management and assistance.
 tags:
 - IOM
@@ -62,16 +66,20 @@ topics:
 other_names:
 - id: ar
   name: المنظمة الدولية للهجرة
-- id: zh
-  name: 国际移民组织
+- id: de
+  name: Internationale Organisation für Migration
 - id: en
   name: International Organization for Migration
-- id: fr
-  name: Organisation internationale pour les migrations
-- id: ru
-  name: Международная организация по миграции
 - id: es
   name: Organización Internacional para las Migraciones
+- id: fr
+  name: Organisation internationale pour les migrations
+- id: pt
+  name: Organização Internacional para as Migrações
+- id: ru
+  name: Международная организация по миграции
+- id: zh
+  name: 国际移民组织
 includes:
 - id: AF
   name: Afghanistan
@@ -822,3 +830,20 @@ includes:
   type: country
   status: member
 membership_count: 187
+wikidata_id: Q472311
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -2,7 +2,13 @@ id: SCHENGENAREA
 blocktype:
 - customs
 status: formal
+languages:
+- en
+- fr
+- de
 links:
+- url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Schengen_Area
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1969730
@@ -13,126 +19,179 @@ includes:
   name: Austria
   type: country
   status: member
+  joined: '1997-12-01'
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '1995-03-26'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '2024-03-31'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '2008-12-12'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2023-01-01'
 - id: CZ
   name: Czechia
   type: country
   status: member
+  joined: '2007-12-21'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '2001-03-25'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2007-12-21'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '2001-03-25'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1995-03-26'
 - id: DE
   name: Germany
   type: country
   status: member
+  joined: '1995-03-26'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '2000-01-01'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2007-12-21'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '2001-03-25'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1997-10-26'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2007-12-21'
 - id: LI
   name: Liechtenstein
   type: country
   status: member
+  joined: '2011-12-19'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2007-12-21'
 - id: LU
   name: Luxembourg
   type: country
   status: member
+  joined: '1995-03-26'
 - id: MT
   name: Malta
   type: country
   status: member
+  joined: '2007-12-21'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1995-03-26'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '2001-03-25'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2007-12-21'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1995-03-26'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2024-03-31'
 - id: SK
   name: Slovakia
   type: country
   status: member
+  joined: '2007-12-21'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2007-12-21'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1995-03-26'
 - id: SE
   name: Sweden
   type: country
   status: member
+  joined: '2001-03-25'
+founded: '1995-03-26'
+geographic_scope: regional
+regions:
+- Europe
+founding_members:
+- BE
+- FR
+- DE
+- LU
+- NL
 membership_count: 29
-description: Area of 29 European states without mutual border controls.
+wikidata_id: Q1969730
+legal_status: treaty_organization
+description: Area of 29 European states that have abolished passport and many other
+  types of border control at their mutual borders; governed by the Schengen Agreement
+  and Convention, integrated into EU law since 1999, and extended to Iceland, Liechtenstein,
+  Norway, and Switzerland through EFTA association agreements.
+notes: Ireland and Cyprus are EU member states outside the Schengen Area (Ireland
+  maintains the Common Travel Area with the United Kingdom; Cyprus is committed to
+  join). Bulgaria and Romania completed land-border integration on 1 January 2025 after
+  air and sea controls were lifted on 31 March 2024. Monaco, Andorra, San Marino,
+  and Vatican City maintain open or semi-open borders with Schengen states but are
+  not formal members.
 tags:
 - SCHENGENAREA
 - area
 - commerce
 - customs
 - economy
+- european
+- regional
+- regional_cooperation
 - schengen
 - trade
 topics:
@@ -140,9 +199,10 @@ topics:
   name: Customs
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
-wikidata_id: Q1969730
 other_names:
 - id: ar
   name: منطقة شنغن
@@ -171,3 +231,18 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0

@@ -7,17 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-06-15
+
+Intblocks taxonomy reorganization and enrichment release: domain-folder classification, Wikidata enrichment, data licensing, and self-describing dataset metadata.
+
 ### Added
 
-- **Intblocks enrichment** (`scripts/enrich_intblocks.py`): backfills `wikidata_id` (high-confidence matches only), replaces templated boilerplate descriptions with Wikidata descriptions, and adds multilingual `other_names` and acronym aliases — all with field-level `provenance`. Intblock records now support a `provenance` list (validated and exported in all formats). Initial run: +55 `wikidata_id` (coverage 60%→66%), templated descriptions 43%→24%, provenance on 459 records.
+- **Intblocks enrichment** (`scripts/enrich_intblocks.py`): backfills `wikidata_id` (high-confidence matches only), replaces templated boilerplate descriptions with Wikidata descriptions, and adds multilingual `other_names` and acronym aliases — all with field-level `provenance`. Intblock records now support a `provenance` list (validated and exported in all formats). Coverage: +55 `wikidata_id` (60%→66%), templated descriptions 43%→24%, provenance on 459 records.
 - **Intblocks description-quality gate**: `validate_intblocks.py` measures the templated-description rate against a configurable threshold in `intblocks_completeness.yaml` (`quality.templated_description`).
 - **Data license**: explicit `DATA_LICENSE` (CC BY 4.0) for datasets, separate from the MIT code license, plus `ATTRIBUTION.md` documenting World Bank (CC BY 4.0), Wikidata (CC0), and IANA tzdata sources and a recommended citation. Build manifests and metadata now carry a `data_license` SPDX field.
 - **Self-describing datasets**: `internacia.duckdb` now includes a `_meta` table (one row per dataset with `version`, `build_date`, `git_commit`, `row_count`, `schema_hash`, `data_license`); each Parquet export is accompanied by a `<dataset>.meta.json` sidecar.
 - **Identifier stability**: `data/intblocks_aliases.yaml` source plus generated `intblocks_aliases.{json,parquet}` mapping retired/renamed intblock ids to current ids (`reason`: `renamed`/`merged`/`disambiguated`). `validate_intblocks.py` checks alias integrity (targets resolve; collisions allowed only when `disambiguated`). Seeded with the v1.3.0 `ASF`→`FSA` and `CAF`→`CAFBANK` disambiguations.
+- **Domain category folders**: new intblock source directories — `agriculture`, `audit`, `aviation`, `climate`, `cultural`, `education`, `health`, `intelligence`, `maritime`, `space`, `statistics`, `taxation`, `tourism`, `transportation`, and `water` — with ~150 records relocated from the catch-all `intorg/` folder into their primary domain.
+- **New intblock records**: OPCW, GICNT, BIS, ICCROM, WTO, AANZFTA, OIV, CARICC, and regional fisheries/aviation/audit bodies among others.
+- **Blocktype taxonomy**: added `statistics` blocktype (86 total).
 
 ### Changed
 
+- **Intblocks folder taxonomy**: records are filed under their primary domain category rather than `intorg/` when a dedicated folder exists; `intorg/` now holds general-purpose intergovernmental organizations only (~81 records, down from ~230).
+- **Description quality**: acronym and geographic group records updated with substantive descriptions replacing generic "International entity." boilerplate.
+- **Currency record**: `CMA` (Comorian franc) moved from `cuscurr/` to `currency/`.
 - **Release assets**: the release workflow now publishes `*.meta.json` sidecars and the `intblocks_aliases.*` artifacts.
+- **Dataset outputs rebuilt**: all artifacts regenerated (252 countries, 1057 intblocks, 86 blocktypes).
 
 ## [1.3.0] - 2026-06-12
 

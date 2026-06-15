@@ -12,6 +12,8 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Scientific_Committee_on_Antarctic_Research
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1510361
+  type: wikidata
 name: Scientific Committee on Antarctic Research
 headquarters:
   city: Cambridge
@@ -21,6 +23,8 @@ headquarters:
     lng: 0.1218
 acronyms:
 - lang: en
+  value: SCAR
+- lang: fr
   value: SCAR
 includes:
 - id: AR
@@ -203,9 +207,13 @@ membership_count: 44
 geographic_scope: global
 regions:
 - worldwide
-description: Thematic organization of the International Science Council (ISC) that initiates, develops, and coordinates high-quality international scientific research in Antarctica and the Southern Ocean, and provides independent scientific advice to the Antarctic Treaty Consultative Meetings.
+description: Thematic organization of the International Science Council (ISC) that
+  initiates, develops, and coordinates high-quality international scientific research
+  in Antarctica and the Southern Ocean, and provides independent scientific advice
+  to the Antarctic Treaty Consultative Meetings.
 legal_status: non-governmental
-notes: Comprises 32 full members and 12 associate members. Organizes biennial Open Science Conferences to facilitate collaboration among scientists worldwide.
+notes: Comprises 32 full members and 12 associate members. Organizes biennial Open
+  Science Conferences to facilitate collaboration among scientists worldwide.
 tags:
 - SCAR
 - antarctic
@@ -222,7 +230,36 @@ topics:
 - key: polar
   name: Polar Research
 other_names:
+- id: ar
+  name: اللجنة العلمية لأبحاث أنتاركتيكا
+- id: de
+  name: Wissenschaftlicher Ausschuss für Antarktisforschung
 - id: en
   name: Scientific Committee on Antarctic Research
+- id: es
+  name: Comité Científico para la Investigación en la Antártida
 - id: fr
   name: Comité scientifique pour la recherche antarctique
+- id: pt
+  name: Comitê Científico sobre Pesquisa Antártica
+- id: ru
+  name: Научный комитет по изучению Антарктики
+- id: zh
+  name: 南極研究科學委員會
+wikidata_id: Q1510361
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

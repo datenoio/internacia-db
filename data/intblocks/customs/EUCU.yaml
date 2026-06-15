@@ -2,7 +2,13 @@ id: EUCU
 blocktype:
 - customs
 status: formal
+languages:
+- en
+- fr
+- de
 links:
+- url: https://taxation-customs.ec.europa.eu/
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1377619
@@ -117,9 +123,65 @@ includes:
   name: Sweden
   type: country
   status: member
-membership_count: 27
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+- id: AD
+  name: Andorra
+  type: country
+  status: associated
+- id: SM
+  name: San Marino
+  type: country
+  status: associated
+- id: TR
+  name: Türkiye
+  type: country
+  status: associated
+founded: '1968'
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8466
+    lng: 4.3528
+geographic_scope: regional
+regions:
+- Europe
+acronyms:
+- lang: en
+  value: EUCU
+- lang: zh
+  value: 欧洲联盟关税同盟
+- lang: zh
+  value: 欧盟关税联盟
+- lang: zh
+  value: 歐洲關稅同盟
+founding_members:
+- BE
+- FR
+- DE
+- IT
+- LU
+- NL
+membership_count: 28
 wikidata_id: Q1377619
-description: European Union common customs area.
+legal_status: treaty_organization
+partof:
+  id: EU
+  name: European Union
+description: Customs union comprising all European Union member states, applying a
+  common external tariff and eliminating internal customs duties; established in
+  1968 as the Community Customs Union and administered by the European Commission
+  on behalf of the Union in international trade negotiations.
+notes: Monaco and the British Sovereign Base Areas of Akrotiri and Dhekelia are integral
+  parts of the EU customs territory. Andorra, San Marino and Türkiye participate through
+  separate bilateral customs union agreements, with partial exclusions for agricultural
+  goods in the Andorra and Türkiye arrangements. Some EU member state territories—including
+  Büsingen am Hochrhein, Heligoland, Livigno, Ceuta and Melilla—do not participate.
+  The United Kingdom and Gibraltar are outside the customs union; Northern Ireland
+  has special post-Brexit trade arrangements under the Windsor Framework.
 tags:
 - EUCU
 - commerce
@@ -159,10 +221,25 @@ other_names:
   name: 欧盟关税同盟
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -173,10 +250,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: 欧洲联盟关税同盟
-- lang: zh
-  value: 欧盟关税联盟
-- lang: zh
-  value: 歐洲關稅同盟

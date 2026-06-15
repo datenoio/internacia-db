@@ -5,15 +5,476 @@ blocktype:
 status: formal
 languages:
 - en
+- ar
+- zh
+- fr
+- ru
+- es
 links:
 - url: https://www.clusterconvention.org/
   type: website
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-6&chapter=26&clang=_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Convention_on_Cluster_Munitions
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q844393
+- url: https://www.wikidata.org/wiki/Q331588
   type: wikidata
 name: Convention on Cluster Munitions
-founded: '2008'
+includes:
+- id: AD
+  name: Andorra
+  type: country
+  status: member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AL
+  name: Albania
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AU
+  name: Australia
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+- id: VA
+  name: Vatican City
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: former_member
+  left: '2025-03-06'
+founded: '2010'
 headquarters:
   city: Geneva
   country: CH
@@ -21,13 +482,24 @@ geographic_scope: global
 regions:
 - Global
 membership_count: 112
-wikidata_id: Q844393
+wikidata_id: Q331588
 legal_status: treaty
+official_documents:
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-6&chapter=26&clang=_en
+  type: document
+  name: Convention on Cluster Munitions
 acronyms:
 - lang: en
   value: CCM
-description: International treaty prohibiting cluster munitions and requiring clearance
-  and victim assistance.
+- lang: zh
+  value: 国际禁止集束炸弹公约
+- lang: zh
+  value: 禁用集束炸弹公约
+description: International treaty prohibiting all use, transfer, production, and stockpiling
+  of cluster munitions. Adopted in Dublin on 30 May 2008 and opened for signature
+  in Oslo on 3 December 2008; entered into force on 1 August 2010. Establishes a framework
+  for victim assistance, clearance of contaminated areas, risk reduction education,
+  and stockpile destruction.
 tags:
 - CCM
 - armscontrol
@@ -37,3 +509,53 @@ tags:
 topics:
 - key: armscontrol
   name: Arms Control
+notes: 'As of June 2026, 112 states are parties. Lithuania withdrew on 6 March 2025.
+  Twelve states have signed but not ratified: Angola, Central African Republic, Cyprus,
+  Democratic Republic of the Congo, Djibouti, Haiti, Indonesia, Jamaica, Kenya, Liberia,
+  Tanzania, and Uganda. Major non-parties include Brazil, China, India, Israel, Pakistan,
+  Russia, and the United States.'
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Convention_on_Cluster_Munitions
+  license: CC BY-SA 4.0
+- field: notes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-6&chapter=26&clang=_en
+- field: includes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-6&chapter=26&clang=_en
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-6&chapter=26&clang=_en
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+other_names:
+- id: ar
+  name: اتفاقية الذخائر العنقودية
+- id: de
+  name: Übereinkommen über Streumunition
+- id: en
+  name: Convention on Cluster Munitions
+- id: es
+  name: Normas acerca de las municiones de racimo
+- id: fr
+  name: Convention sur les armes à sous-munitions
+- id: pt
+  name: Convenção sobre Munições de Dispersão
+- id: ru
+  name: Конвенция по кассетным боеприпасам
+- id: zh
+  name: 集束彈藥公約

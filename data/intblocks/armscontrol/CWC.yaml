@@ -1,9 +1,17 @@
 id: CWC
 blocktype:
 - armscontrol
-status: informal
+- agreement
+status: formal
+languages:
+- en
+- ar
+- zh
+- fr
+- ru
+- es
 links:
-- url: http://www.opcw.org/
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26&clang=_en
   type: website
 - url: https://en.wikipedia.org/wiki/Chemical_Weapons_Convention
   type: wikipedia
@@ -536,6 +544,10 @@ includes:
   name: Pakistan
   type: country
   status: member
+- id: PS
+  name: Palestine, State of
+  type: country
+  status: member
 - id: PW
   name: Palau
   type: country
@@ -780,17 +792,33 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 192
+geographic_scope: global
+regions:
+- Global
+membership_count: 193
 wikidata_id: Q547896
-description: International chemical focused on arms control.
+legal_status: treaty
+official_documents:
+- url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26&clang=_en
+  type: document
+  name: Convention on the Prohibition of the Development, Production, Stockpiling
+    and Use of Chemical Weapons and on their Destruction
+description: Multilateral treaty prohibiting the development, production, stockpiling,
+  and use of chemical weapons and requiring their destruction. Opened for signature
+  in Paris and New York on 13 January 1993; entered into force on 29 April 1997. The
+  Organisation for the Prohibition of Chemical Weapons (OPCW) in The Hague verifies
+  compliance and oversees destruction of declared stockpiles.
 tags:
 - CWC
+- OPCW
 - arms
 - arms_control
 - armscontrol
 - chemical
+- chemical_weapons
 - convention
 - defense
+- disarmament
 - security
 - weapon
 - weapons
@@ -799,16 +827,61 @@ topics:
   name: Arms Control
 - key: security
   name: Security
+notes: As of 2024, 193 states have ratified or acceded. Non-parties are Egypt, Israel,
+  North Korea, and South Sudan; Israel has signed but not ratified. Syria acceded
+  in September 2013. Palestine acceded on 17 May 2018. The OPCW implements and verifies
+  the convention.
 other_names:
 - id: ar
   name: معاهدة حظر الأسلحة الكيميائية
-- id: zh
-  name: 禁止化学武器公约
+- id: de
+  name: Chemiewaffenkonvention
 - id: en
   name: Chemical Weapons Convention
-- id: fr
-  name: Convention sur l'interdiction des armes chimiques
-- id: ru
-  name: Конвенция о запрещении химического оружия
 - id: es
   name: Convención sobre Armas Químicas
+- id: fr
+  name: Convention sur l'interdiction des armes chimiques
+- id: pt
+  name: Convenção sobre Armas Químicas
+- id: ru
+  name: Конвенция о запрещении химического оружия
+- id: zh
+  name: 禁止化学武器公约
+provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Chemical_Weapons_Convention
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Chemical_Weapons_Convention
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-06-14'
+  url: https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26&clang=_en
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-06-14'
+  url: https://en.wikipedia.org/wiki/Chemical_Weapons_Convention
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-14'
+  url: https://www.wikidata.org/
+  license: CC0
+acronyms:
+- lang: en
+  value: CWC
+- lang: de
+  value: CWÜ
+- lang: de
+  value: CWC
