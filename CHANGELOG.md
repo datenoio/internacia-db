@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Intblock **BLASMBL** (Baltic Assembly); intblocks row count **1070 → 1071**.
+
 ## [1.5.0] - 2026-06-15
 
 Coverage expansion, taxonomy governance, builder refactor, and enrichment tooling release.
