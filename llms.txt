@@ -1,0 +1,76 @@
+# Internacia Datasets
+
+> Machine-friendly reference data for countries, intergovernmental organizations (intblocks),
+> and organization block types. Licensed CC-BY-4.0 (data). Code is MIT.
+> Version and schema: see data/datasets/*.manifest.json
+
+## What this is
+
+- **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names
+- **Intblocks** (1070 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, etc.
+- **Blocktypes** (86 records): taxonomy for intblock categories
+
+This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
+Do NOT expect HDI, GDP, government type, internet penetration, or similar indicators here.
+
+## Preferred access (do not parse source YAML unless editing)
+
+- DuckDB: data/datasets/internacia.duckdb
+  - Tables: countries, intblocks, blocktypes, _meta
+- Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+- Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
+- Python SDK: https://github.com/commondataio/internacia-python
+- REST API: https://github.com/commondataio/internacia-api
+
+## Schemas and metadata
+
+- JSON Schema (source YAML): data/schemas/countries.schema.json, data/schemas/intblocks.schema.json
+  - Each property includes a description field for agents and tooling
+- Build manifests: data/datasets/countries.manifest.json, intblocks.manifest.json, blocktypes.manifest.json
+  - Fields: version, build_date, git_commit, row_count, schema_hash, data_license
+- Parquet sidecars: data/datasets/{countries,intblocks,blocktypes}.meta.json
+- ID remaps: data/datasets/intblocks_aliases.json (and .parquet)
+
+Check schema_hash before upgrading downstream pipelines. Breaking changes are in CHANGELOG.md.
+
+## Join keys
+
+- Countries: code (ISO alpha-2, primary), iso3code (alpha-3), numeric_code, wikidata_id (Q-number)
+- Intblocks: id (uppercase string, e.g. EU, NATO, UN)
+- Intblock membership: includes[].id → country code (authoritative); includes[].name is a display label only
+- Intblock taxonomy: blocktype (list of blocktype keys), partof (parent org ids)
+- Blocktypes: id matches intblocks.blocktype values
+
+## Critical gotchas
+
+- borders uses ISO alpha-3 codes, NOT alpha-2
+- population, area, gini are structs: {value, year, source, source_id} — use .value for the number
+- Current ISO countries only (249): filter code_status == 'official_iso3166_1'
+- 7 non-standard country codes retained with explicit status: AN, JG, KV, XA, XS, XT, XN
+- World Bank region/incomeLevel/lendingType missing for ~33 entities (territories WB does not classify)
+- Intblock id renames: consult intblocks_aliases.json; reason=disambiguated means old id now refers to a different entity
+- timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
+
+## Example queries (DuckDB)
+
+SELECT dataset, version, schema_hash FROM _meta;
+
+SELECT code, name FROM countries WHERE un_member = true;
+
+SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+
+SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
+
+SELECT i.id, i.name FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE m.id = 'LA' AND m.type = 'country' LIMIT 10;
+
+SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10;
+
+## Full documentation
+
+- docs/query-examples.md — verified query cookbook (countries, borders, intblocks, joins)
+- docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
+- README.md — installation, build, schema tables, code examples
+- docs/country-code-policy.md — non-standard codes, entity_type, filtering
+- ATTRIBUTION.md — upstream sources and citation
+- CONTRIBUTING.md — YAML authoring (for maintainers only)
+- .cursor/skills/internacia-contribute/SKILL.md — Cursor maintainer workflow

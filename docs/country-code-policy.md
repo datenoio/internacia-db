@@ -47,11 +47,27 @@ The countries dataset includes **256** records: **249** with current ISO 3166-1-
 df[df["code_status"] == "official_iso3166_1"]
 ```
 
+**DuckDB equivalent:**
+
+```sql
+SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+```
+
 **Exclude obsolete and user-assigned:**
 
 ```python
 df[~df["code_status"].isin(["obsolete", "user_assigned"])]
 ```
+
+**DuckDB equivalent:**
+
+```sql
+SELECT code, name FROM countries
+WHERE code_status NOT IN ('obsolete', 'user_assigned');
+```
+
+For UN members, border neighbors, and intblock membership joins, see
+[query-examples.md](query-examples.md).
 
 ## UN M49 disclaimer
 

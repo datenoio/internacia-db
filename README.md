@@ -14,6 +14,13 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - **CI validation**: pull-request checks, tests, and lint via `.github/workflows/validate.yml`; weekly link validation; tagged releases with dataset assets
 - **CLI tools**: Typer-based scripts with tqdm progress bars
 
+## AI agents and LLMs
+
+- [llms.txt](llms.txt) — compact index (datasets, join keys, gotchas)
+- [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, query recipes, scope boundaries
+- [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook
+- [.cursor/skills/internacia-contribute/SKILL.md](.cursor/skills/internacia-contribute/SKILL.md) — maintainer workflow for editing YAML
+
 ## Installation
 
 Requires Python 3.11+ (CI runs 3.11). Dependencies are pinned for reproducible builds.

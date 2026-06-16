@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Consumer query cookbook [docs/query-examples.md](docs/query-examples.md) with verified DuckDB and Pandas examples (UN members, borders, intblock membership, cross-joins).
 - Intblock **BLASMBL** (Baltic Assembly); intblocks row count **1070 → 1071**.
 
 ## [1.5.0] - 2026-06-15
