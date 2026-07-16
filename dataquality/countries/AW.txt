@@ -1,95 +1,249 @@
 DATA QUALITY REPORT - COUNTRY: AW
 ================================================================================
-Generated: 2026-06-14 20:30:46
+Generated: 2026-07-16 17:10:26
 Country Code: AW
-Total Records with Issues: 6
-Total Issues Found: 9
+Total Records with Issues: 21
+Total Issues Found: 28
 
 === ISSUES BY TYPE ===
 
 [DUPLICATE_LINK]
-Count: 3
+Count: 8
 Priority: LOW
 
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
+File: data/intblocks/bank/IFC.yaml
+Record ID: IFC
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://en.wikipedia.org/wiki/DVD_region_code
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/DVD_region_code' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
+File: data/intblocks/audit/CAROSAI.yaml
+Record ID: CAROSAI
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.wikidata.org/wiki/Q746611
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q746611' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
+Current Value: intosai.org/about-us/regional-organizations
+Suggested Action: Website 'intosai.org/about-us/regional-organizations' is shared by unrelated records: ['ARABOSAI', 'ASOSAI', 'CAROSAI', 'EUROSAI', 'OLACEFS', 'PASAI']
 
-File: data/intblocks/traffichand/RHTRAFFIC.yaml
-Record ID: RHTRAFFIC
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
-[TEMPLATED_DESCRIPTION]
-Count: 6
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: worldbank.org/en/about/history
+Suggested Action: Website 'worldbank.org/en/about/history' is shared by unrelated records: ['IBRD', 'IDA', 'WB']
+
+File: data/intblocks/wbgroup/HIC.yaml
+Record ID: HIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/HIC.yaml
+Record ID: HIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+[HISTORICAL_ENTITY_ACTIVE_MEMBER]
+Count: 7
 Priority: MEDIUM
 
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[6].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
-File: data/intblocks/geographic/CARIBBEAN.yaml
-Record ID: CARIBBEAN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on regional cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
+File: data/intblocks/wbgroup/HIC.yaml
+Record ID: HIC
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[2].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
-File: data/intblocks/police/CLACIP.yaml
-Record ID: CLACIP
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on legal matters.
-Suggested Action: Rewrite description to avoid templated boilerplate
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
-File: data/intblocks/traffichand/RHTRAFFIC.yaml
-Record ID: RHTRAFFIC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on transportation.
-Suggested Action: Rewrite description to avoid templated boilerplate
+File: data/intblocks/intorg/IAIS.yaml
+Record ID: IAIS
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/standards/ISO.yaml
+Record ID: ISO
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
 File: data/intblocks/wbgroup/LCN.yaml
 Record ID: LCN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[1].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
 File: data/intblocks/writingdirection/WDLTR.yaml
 Record ID: WDLTR
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[5].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+[MEMBERSHIP_COUNT_MISMATCH]
+Count: 13
+Priority: MEDIUM
+
+File: data/intblocks/bank/IFC.yaml
+Record ID: IFC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 186
+Suggested Action: membership_count 186 matches neither total includes (195) nor member-class includes (195)
+
+File: data/intblocks/cultural/NTU.yaml
+Record ID: NTU
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 2
+Suggested Action: membership_count 2 matches neither total includes (9) nor member-class includes (7)
+
+File: data/intblocks/geographic/CARIBBEAN.yaml
+Record ID: CARIBBEAN
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 28
+Suggested Action: membership_count 28 matches neither total includes (29) nor member-class includes (29)
+
+File: data/intblocks/sports/CONCACAF.yaml
+Record ID: CONCACAF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 41
+Suggested Action: membership_count 41 matches neither total includes (40) nor member-class includes (40)
+
+File: data/intblocks/sports/FIFA.yaml
+Record ID: FIFA
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 211
+Suggested Action: membership_count 211 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/FIVB.yaml
+Record ID: FIVB
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 222
+Suggested Action: membership_count 222 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/ICC.yaml
+Record ID: ICC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 110
+Suggested Action: membership_count 110 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/IOC.yaml
+Record ID: IOC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 206
+Suggested Action: membership_count 206 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/ITF.yaml
+Record ID: ITF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 211
+Suggested Action: membership_count 211 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/IWF.yaml
+Record ID: IWF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 195
+Suggested Action: membership_count 195 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/WORLDAQUATICS.yaml
+Record ID: WORLDAQUATICS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 210
+Suggested Action: membership_count 210 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/WORLDATHLETICS.yaml
+Record ID: WORLDATHLETICS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 214
+Suggested Action: membership_count 214 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/tax/CIAT.yaml
+Record ID: CIAT
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 38
+Suggested Action: membership_count 38 matches neither total includes (42) nor member-class includes (42)
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 3 issues
-TEMPLATED_DESCRIPTION: 6 issues
+DUPLICATE_LINK: 8 issues
+HISTORICAL_ENTITY_ACTIVE_MEMBER: 7 issues
+MEMBERSHIP_COUNT_MISMATCH: 13 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: DVD_4
-File: data/intblocks/dvdregion/DVD_4.yaml
+Record ID: WB
+File: data/intblocks/bank/WB.yaml
 Issue Count: 3
 Issues:
-  - TEMPLATED_DESCRIPTION: description
   - DUPLICATE_LINK: links
   - DUPLICATE_LINK: links
+  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[6].status
+
+Record ID: HIC
+File: data/intblocks/wbgroup/HIC.yaml
+Issue Count: 3
+Issues:
+  - DUPLICATE_LINK: links
+  - DUPLICATE_LINK: links
+  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[2].status
+
+Record ID: WLD
+File: data/intblocks/wbgroup/WLD.yaml
+Issue Count: 3
+Issues:
+  - DUPLICATE_LINK: links
+  - DUPLICATE_LINK: links
+  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[7].status

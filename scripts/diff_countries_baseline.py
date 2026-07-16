@@ -13,7 +13,7 @@ app = typer.Typer(help="Diff dataset manifests against baseline branch")
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS_DIR = ROOT / "data" / "datasets"
-DATASETS = ("countries", "intblocks")
+DATASETS = ("countries", "intblocks", "blocktypes")
 
 
 def git_show_manifest(ref: str, dataset: str) -> dict | None:

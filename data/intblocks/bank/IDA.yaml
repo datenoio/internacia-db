@@ -1,7 +1,12 @@
 id: IDA
+name: International Development Association
 blocktype:
 - bank
 status: formal
+founded: '1960-09-24'
+active_period:
+  start: '1960-09-24'
+geographic_scope: global
 partof: WB
 languages:
 - ar
@@ -10,13 +15,72 @@ languages:
 - fr
 - zh
 links:
-- url: http://www.worldbank.org/ida
+- url: https://ida.worldbank.org/
+  type: website
+- url: https://www.worldbank.org/en/about/leadership/members
+  type: website
+- url: https://www.worldbank.org/en/about/history
   type: website
 - url: https://en.wikipedia.org/wiki/International_Development_Association
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q827525
   type: wikidata
-name: International Development Association
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Articles of Agreement
+  of the International Development Association (entered into force 24 September 1960)
+secretariat:
+  location: Washington, D.C., United States
+  head: President
+  organization: International Development Association
+membership_count: 172
+founding_members:
+- AU
+- CA
+- CN
+- DE
+- IN
+- IT
+- MY
+- 'NO'
+- PK
+- SD
+- SE
+- TH
+- GB
+- US
+- VN
+description: Concessional lending arm of the World Bank Group, established in 1960 to provide interest-free
+  loans and grants to the world's poorest countries that lack access to commercial capital or IBRD
+  lending. Together with IBRD it forms the World Bank, sharing executive leadership and staff in
+  Washington, D.C. IDA financing supports poverty reduction, human development, infrastructure, and
+  climate resilience in eligible low-income and lower-middle-income economies.
+tags:
+- IDA
+- aid
+- association
+- bank
+- concessional
+- development
+- economy
+- finance
+- global
+- international
+- multilateral
+- poverty
+- world-bank
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
 includes:
 - id: EG
   name: Egypt
@@ -706,33 +770,14 @@ includes:
   name: Kosovo
   type: country
   status: member
-founded: '1960'
-headquarters:
-  city: Washington, D.C.
-  country: US
-  coordinates:
-    lat: 38.895
-    lng: -77.036666666667
-membership_count: 172
+acronyms:
+- lang: en
+  value: IDA
 wikidata_id: Q827525
-description: International Development Association is an international bank body with
-  172 members.
-tags:
-- IDA
-- aid
-- association
-- bank
-- development
-- economy
-- finance
-- international
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Concessional arm of the World Bank Group. Articles of Agreement entered into force on 24 September
+  1960 with 15 founding signatories. IBRD membership is a prerequisite for IDA membership. Shares
+  governance with IBRD as the World Bank; replenished by donor contributions every three years.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: مؤسسة التنمية الدولية
@@ -747,10 +792,53 @@ other_names:
 - id: es
   name: Asociación Internacional de Fomento
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://ida.worldbank.org/en/about/history
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://ida.worldbank.org/en/about/history
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.worldbank.org/ida
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://ida.worldbank.org/en/about/history
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://ida.worldbank.org/en/about/history
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

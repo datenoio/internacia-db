@@ -2,6 +2,15 @@ id: LCN
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://www.worldbank.org/ext/en/region/lac
+  type: website
+- url: https://api.worldbank.org/v2/region/LCN
+  type: website
+- url: https://en.wikipedia.org/wiki/Latin_America_and_the_Caribbean
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q72829598
+  type: wikidata
 name: Latin America & Caribbean (all income levels)
 includes:
 - id: AG
@@ -161,8 +170,7 @@ includes:
   type: country
   status: member
 membership_count: 39
-description: Latin America & Caribbean (all income levels) is an international wbgroup
-  body with 39 members.
+description: World Bank regional aggregate for Latin America & Caribbean (all income levels).
 tags:
 - LCN
 - aid
@@ -181,7 +189,24 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+wikidata_id: Q72829598
+acronyms:
+- lang: en
+  value: LAC
+- lang: en
+  value: LA&C
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank Data API
+  retrieved_at: '2026-07-13'
+  url: https://api.worldbank.org/v2/region/LCN
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/
+  license: CC0

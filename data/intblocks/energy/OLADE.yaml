@@ -1,14 +1,42 @@
 id: OLADE
+name: Latin American and Caribbean Energy Organization
 blocktype:
 - energy
 status: formal
+founded: '1973-11-02'
+active_period:
+  start: '1973-11-02'
+geographic_scope: regional
+regions:
+- Americas
+- Latin America
+- Caribbean
 languages:
 - en
 - es
+- pt
+- fr
 links:
 - url: https://www.olade.org/en/
   type: website
-name: Latin-American Energy Organisation
+- url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+  type: website
+- url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Latinoamericana_de_Energ%C3%ADa
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q3356053
+  type: wikidata
+headquarters:
+  city: Quito
+  country: EC
+  coordinates:
+    lat: -0.1311809
+    lng: -78.502644
+legal_status: intergovernmental
+recognition_status: Intergovernmental public organization established by the Lima Convention signed on 2 November 1973 and ratified by 27 Latin American and Caribbean states; governed by the Convention and ministerial meetings; officially renamed the Latin American and Caribbean Energy Organization (OLACDE) in November 2025 after all member states ratified a 2007 amendment to Article 1
+secretariat:
+  location: Av. Mariscal Antonio José de Sucre N58-63 y Fernández Salvador, Edif. Olacde – San Carlos, Quito, Ecuador
+  head: Executive Secretary
+  organization: Latin American and Caribbean Energy Organization
 includes:
 - id: AR
   name: Argentina
@@ -119,25 +147,114 @@ includes:
   type: country
   status: member
 membership_count: 27
-description: Latin-American Energy Organisation is an international energy body with
-  27 members.
+description: Intergovernmental public organization for cooperation, coordination, and technical advisory services in the energy sector across Latin America and the Caribbean. Established on 2 November 1973 by the Lima Convention and ratified by 27 member states, OLACDE (formerly OLADE) promotes regional energy integration, conservation, rational use, commercialization, and protection of energy resources. Headquartered in Quito, Ecuador, it serves as the region's principal technical-political energy body, publishing economic-energy statistics (SieLAC), training programmes (capevLAC), and policy coordination on oil, gas, renewables, methane emissions, and clean hydrogen.
 tags:
 - OLADE
-- american
-- economy
+- OLACDE
 - energy
-- environment
-- latin
-- nature
+- latin_america
+- caribbean
+- intergovernmental
+- regional
 - oil
+- gas
+- renewables
+- integration
+- statistics
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
+- key: economy
+  name: Economy
 - key: environment
   name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Latin American and Caribbean Energy Organization
+- id: es
+  name: Organización Latinoamericana y Caribeña de Energía
+- id: es
+  name: Organización Latinoamericana de Energía
+- id: fr
+  name: Organisation latino-américaine de l'énergie
+- id: pt
+  name: Organização Latino-americana de Energia
+- id: de
+  name: Lateinamerikanische Energieorganisation
+- id: ar
+  name: منظمة أمريكا اللاتينية للطاقة
+- id: zh
+  name: 拉丁美洲能源组织
+acronyms:
+- lang: en
+  value: OLACDE
+- lang: en
+  value: OLADE
+previous_names:
+- id: en
+  name: Latin American Energy Organization
+  period: 1973-2025
+- id: es
+  name: Organización Latinoamericana de Energía
+  period: 1973-2025
+notes: Officially renamed from the Latin American Energy Organization (OLADE) to the Latin American and Caribbean Energy Organization (OLACDE) in November 2025 after all 27 member states ratified an amendment to Article 1 of the 1973 Lima Convention; the process began in 2007 and concluded with Haiti's ratification in October 2025. The record id remains OLADE for dataset continuity. Operates programmes including SieLAC (energy statistics), capevLAC (training), OEMLAC (methane emissions monitoring), and CertHiLAC (clean hydrogen certification). Partner in the Joint Organisations Data Initiative (JODI) alongside APEC, Eurostat, GECF, IEA, IEF, OPEC, and UNSD.
+wikidata_id: Q3356053
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/
+- field: headquarters
+  source: OpenStreetMap
+  retrieved_at: '2026-07-13'
+  url: https://www.openstreetmap.org/way/31233429
+  license: ODbL 1.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/
+- field: previous_names
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3356053
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.olade.org/en/noticias/olade-officially-changes-its-name-to-olacde/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3356053
+  license: CC0

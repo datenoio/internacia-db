@@ -5,7 +5,9 @@ blocktype:
 - intorg
 - aviation_safety
 status: formal
-founded: '2000'
+founded: '2000-09-01'
+active_period:
+  start: '2000-09-01'
 geographic_scope: regional
 regions:
 - Americas
@@ -14,25 +16,43 @@ languages:
 - es
 - en
 links:
-- url: https://cocesna.org/en/history/
+- url: https://cocesna.org/index.php?id=12
+  type: website
+- url: https://cocesna.org/
+  type: website
+- url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
   type: website
 headquarters:
-  city: Alajuela
-  country: CR
+  city: Tegucigalpa
+  country: HN
+  coordinates:
+    lat: 14.0608
+    lng: -87.2174
 legal_status: intergovernmental
+recognition_status: Division of COCESNA recognized by ICAO as a Level 2 Regional Safety Oversight Organization (RSOO) for Central America
 partof: COCESNA
+secretariat:
+  location: Tegucigalpa, Honduras
+  organization: COCESNA Gerencia de Seguridad Aeronáutica
 membership_count: 6
-description: Regional aviation safety oversight organization established as a division of the Central American Corporation
-  for Air Navigation Services (COCESNA) to harmonize and standardize aviation safety oversight across Central America. ACSA
-  promotes best practices in aviation safety, including air operations, airworthiness, and aerodrome standards.
+founding_members:
+- BZ
+- CR
+- SV
+- GT
+- HN
+- NI
+description: Regional aviation safety oversight organization (RSOO) established as a division of the Central American Corporation for Air Navigation Services (COCESNA). Inaugurated on 1 September 2000, ACSA harmonizes civil aviation safety oversight across the six COCESNA member states, providing audits, inspections, and technical assistance in air operations, airworthiness, aerodromes, and related areas. Services are ISO 9001:2015 certified and directed to civil aviation authorities and aviation service providers in the region.
 tags:
 - ACSA
 - aviation
 - safety
 - oversight
+- rsoo
 - intorg
 - central_america
 - regional
+- cocesna
 topics:
 - key: aviation
   name: Aviation
@@ -75,16 +95,58 @@ other_names:
   name: Central American Agency of Aviation Safety
 - id: es
   name: Agencia Centroamericana de Seguridad Aérea
+notes: Created by the COCESNA Governing Council on 15 December 1999 and ratified by the Council of Transport Ministers of COCESNA states on 12 May 2000; formally inaugurated on 1 September 2000. Legal domicile is Costa Rica, although ACSA operates administratively as a COCESNA division headquartered in Tegucigalpa, Honduras. Governed by a Technical Board composed of the civil aviation authorities of COCESNA member states under the administrative supervision of COCESNA General Management. Also referred to as the Central American Agency for Aeronautical Safety.
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://cocesna.org/en/history/
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
+- field: recognition_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://cocesna.org/en/history/
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://cocesna.org/en/history/
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
+- field: founded
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/implementation/9734_partb_cons_en.pdf
+- field: active_period
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/implementation/9734_partb_cons_en.pdf
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=12
+- field: includes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: membership_count
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: founding_members
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: notes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/implementation/9734_partb_cons_en.pdf

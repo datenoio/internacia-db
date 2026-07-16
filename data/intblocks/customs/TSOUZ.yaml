@@ -1,7 +1,18 @@
 id: TSOUZ
+name: Customs Union of the Eurasian Economic Union
 blocktype:
 - customs
 status: formal
+founded: '2010-01-01'
+active_period:
+  start: '2010-01-01'
+partof:
+  id: EAEU
+  name: Eurasian Economic Union
+geographic_scope: regional
+regions:
+- Europe
+- Asia
 languages:
 - ru
 - en
@@ -12,7 +23,33 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2663713
   type: wikidata
-name: Customs Union of the Eurasian Economic Union
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established on 1 January 2010 as the Customs Union of Belarus, Kazakhstan and Russia with implementation of the common external tariff; successor to the Eurasian Economic Community customs framework (terminated 1 January 2015) and now regulated under Part Two of the Treaty on the Eurasian Economic Union, the EAEU Customs Code and decisions of the Supreme Eurasian Economic Council and Eurasian Economic Commission; five-state union (Armenia, Belarus, Kazakhstan, Kyrgyzstan, Russia) with no internal customs duties and a common external tariff; negotiates international trade agreements in goods as a single entity under Article 35 of the EAEU Treaty
+secretariat:
+  location: Moscow, Russian Federation
+  organization: Eurasian Economic Commission
+  head: Board of the Eurasian Economic Commission
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7558
+    lng: 37.6173
+acronyms:
+- lang: en
+  value: EACU
+- lang: en
+  value: TSOUZ
+- lang: ja
+  value: EACU
+- lang: ro
+  value: EACU
+- lang: ru
+  value: ТС
+founding_members:
+- RU
+- BY
+- KZ
 includes:
 - id: BY
   name: Belarus
@@ -39,43 +76,18 @@ includes:
   type: country
   status: member
   joined: '2015-08-12'
-founded: '2010-01-01'
-headquarters:
-  city: Moscow
-  country: RU
-  coordinates:
-    lat: 55.7558
-    lng: 37.6173
-geographic_scope: regional
-regions:
-- Europe
-- Asia
-acronyms:
-- lang: en
-  value: EACU
-- lang: en
-  value: TSOUZ
-- lang: ja
-  value: EACU
-- lang: ro
-  value: EACU
-- lang: ru
-  value: ТС
-founding_members:
-- RU
-- BY
-- KZ
 membership_count: 5
 wikidata_id: Q2663713
-legal_status: intergovernmental
-partof:
-  id: EAEU
-  name: Eurasian Economic Union
-description: Customs union comprising all member states of the Eurasian Economic Union; it took effect on 1 January 2010 as
-  the Customs Union of Russia, Belarus and Kazakhstan and now applies a common external tariff with no internal customs duties.
-notes: Superseded the EurAsEC customs union framework; since 2015 governed under Part Two of the Treaty on the Eurasian Economic
-  Union. Armenia and Kyrgyzstan joined with the EAEU. Also known historically as the Customs Union of Belarus, Kazakhstan
-  and Russia (Таможенный союз, TSOUZ).
+description: Customs union comprising all member states of the Eurasian Economic Union, applying a common external tariff and
+  eliminating internal customs duties. Established on 1 January 2010 as the Customs Union of Belarus, Kazakhstan and Russia
+  and now governed under Part Two of the Treaty on the Eurasian Economic Union and the EAEU Customs Code, administered by
+  the Eurasian Economic Commission.
+notes: Rooted in 1995 bilateral and trilateral customs agreements between Russia, Belarus and Kazakhstan; the launch date was
+  set in 2007 and the common external tariff took effect on 1 January 2010. Internal customs borders were removed after July
+  2011. Armenia joined on 2 January 2015 and Kyrgyzstan on 6 August 2015 with the EAEU accession. Superseded the EurAsEC
+  customs union framework; older agreements remain in force where not contrary to the EAEU Treaty. Also known historically
+  as the Customs Union of Belarus, Kazakhstan and Russia (Таможенный союз, TSOUZ).
+last_verified: '2026-07-12'
 tags:
 - EACU
 - TSOUZ
@@ -117,49 +129,64 @@ other_names:
   name: 欧亚关税同盟
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/wiki/Q2663713
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q2663713
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q2663713
   license: CC0
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/wiki/Q2663713
-  license: CC0
-- field: includes
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
-  license: CC BY-SA
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/wiki/Q2663713
-  license: CC0
-- field: description
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
-  license: CC BY-SA
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eaeunion.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eaeunion.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eaeunion.org/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Customs_Union_of_the_Eurasian_Economic_Union
+  license: CC BY-SA 4.0

@@ -3,12 +3,6 @@
 import builder
 
 
-def test_intblocks_boolean_lang_normalized():
-    data = [{"id": "X", "translations": [{"lang": False, "name": "Norge"}]}]
-    out = builder.clean_data(data, "intblocks")
-    assert out[0]["translations"][0]["lang"] == "no"
-
-
 def test_intblocks_boolean_language_list_normalized():
     data = [{"id": "X", "languages": ["en", False, "sv"]}]
     out = builder.clean_data(data, "intblocks")

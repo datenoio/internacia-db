@@ -1,7 +1,18 @@
 id: OIF
+name: Organisation internationale de la Francophonie
 blocktype:
 - cultural
 status: formal
+founded: '1970-03-20'
+active_period:
+  start: '1970-03-20'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
+- Oceania
 languages:
 - ar
 - en
@@ -15,7 +26,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q134102
   type: wikidata
-name: Organisation internationale de la Francophonie
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established at the Niamey Conference on 20 March 1970 as the Agency for Cultural and Technical Co-operation (ACCT); evolved through the 1997 Hanoi summit and the 2005 Charter of La Francophonie into the Organisation internationale de la Francophonie; 53 member states and governments across Africa, the Americas, Asia, Europe, and Oceania
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+secretariat:
+  location: Paris, France
+  head: Secretary-General
+  organization: Organisation internationale de la Francophonie
 includes:
 - id: CA
   name: Canada
@@ -229,13 +251,6 @@ includes:
   name: Seychelles
   type: country
   status: member
-founded: '1970'
-headquarters:
-  city: Paris
-  country: FR
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
 acronyms:
 - lang: en
   value: OIF
@@ -261,20 +276,32 @@ acronyms:
   value: OIF
 membership_count: 53
 wikidata_id: Q134102
-description: International organization of French-speaking governments.
+description: Intergovernmental organization of 53 member states and governments united by affiliation with the French language and francophone culture. Founded as the Agency for Cultural and Technical Co-operation (ACCT) at the Niamey Conference on 20 March 1970 and reconstituted under the 2005 Charter of La Francophonie. Headquartered in Paris, it promotes French language, cultural and linguistic diversity, peace, democracy, and human rights, and supports education, research, and sustainable development. Observer of the United Nations.
 tags:
 - OIF
 - cultural
 - culture
+- democracy
 - education
 - francophonie
+- french
+- global
+- intergovernmental
+- language
 - organisation
+- regional_cooperation
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: language
+  name: Language
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: democracy
+  name: Democracy
 other_names:
 - id: ar
   name: المنظمة الدولية للناطقين بالفرنسية
@@ -292,7 +319,56 @@ other_names:
   name: Франкофония
 - id: zh
   name: 法语国家及地区国际组织
+notes: Governed by biannual Summits of heads of state and government, an annual Ministerial Conference, and a Permanent Council. The Executive Secretariat, led by the Secretary-General, is based in Paris. Operating agencies include TV5Monde, the Association of Francophone Universities (AUF), and the Parliamentary Assembly of the Francophonie. Quebec, New Brunswick, and the French Community of Belgium hold regional member status. Mali, Burkina Faso, and Niger were suspended following coups and announced withdrawal in 2025.
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.francophonie.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q134102
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q134102
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.francophonie.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.francophonie.org/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -303,12 +379,8 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.francophonie.org/
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie
+  license: CC BY-SA 4.0

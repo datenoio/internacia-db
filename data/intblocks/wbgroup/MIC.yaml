@@ -2,6 +2,11 @@ id: MIC
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
 name: Middle income
 includes:
 - id: AG
@@ -421,6 +426,7 @@ includes:
   type: country
   status: member
 membership_count: 104
+geographic_scope: global
 description: World Bank income group for economies between the low-income and high-income
   thresholds.
 tags:
@@ -430,6 +436,7 @@ tags:
 - development
 - economy
 - finance
+- income
 - middle
 - wbgroup
 topics:
@@ -439,7 +446,20 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: MIC
 provenance:
 - field: description
   source: World Bank
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+last_verified: '2026-07-13'

@@ -1,49 +1,34 @@
 id: BOS
+name: Bank of the South
 blocktype:
 - bank
 status: formal
+founded: '2009-09-26'
+active_period:
+  start: '2009-09-26'
+geographic_scope: regional
+regions:
+- South America
+languages:
+- en
+- es
+- pt
 links:
 - url: https://en.wikipedia.org/wiki/Bank_of_the_South
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q806667
   type: wikidata
-name: Bank of South
-founded: '2007'
 headquarters:
   city: Caracas
   country: VE
   coordinates:
     lat: 10.5
     lng: -66.933333333333
-includes:
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: BO
-  name: Bolivia, Plurinational State of
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
-  type: country
-  status: member
+legal_status: intergovernmental
+recognition_status: Regional multilateral development bank established by agreement signed at Bariloche, Argentina on 26 September 2009 by Argentina, Brazil, Bolivia, Ecuador, Paraguay, Uruguay, and Venezuela
+secretariat:
+  location: Caracas, Venezuela (planned headquarters)
+  organization: Bank of the South
 membership_count: 7
 founding_members:
 - AR
@@ -53,8 +38,7 @@ founding_members:
 - PY
 - UY
 - VE
-wikidata_id: Q806667
-description: International development bank focused on development providing financial services.
+description: Proposed regional multilateral development bank established by seven South American states to provide an alternative to IMF and World Bank financing for social programs and infrastructure. Planned headquarters in Caracas, Venezuela, with an initial capital target of USD 20 billion and one-state-one-vote governance. As of 2016 it had not received initial capital deposits; operations remained on hold through 2017 and beyond.
 tags:
 - BOS
 - aid
@@ -62,7 +46,10 @@ tags:
 - development
 - economy
 - finance
+- latin-america
+- multilateral
 - south
+- south-america
 topics:
 - key: development
   name: Development
@@ -70,6 +57,52 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: BO
+  name: Bolivia, Plurinational State of
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  joined: '2009-09-26'
+- id: VE
+  name: Venezuela, Bolivarian Republic of
+  type: country
+  status: member
+  joined: '2009-09-26'
+acronyms:
+- lang: en
+  value: BOS
+- lang: es
+  value: BancoSur
+wikidata_id: Q806667
+notes: Founding agreement signed 26 September 2009 with planned initial capital of USD 20 billion (Argentina, Brazil, and Venezuela pledged USD 4 billion each; Bolivia, Ecuador, Paraguay, and Uruguay smaller shares). Preliminary founding documents were signed in Quito in May 2007. As of 2016 the bank had not received its first capital deposits; Ecuadorian President Rafael Correa stated in May 2017 that the project remained stalled. Uruguay evaluated withdrawal in August 2017 following Venezuela's 2017 Constituent Assembly. Colombia formally requested membership in October 2007 but was not among the seven founding signatories.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك الجنوب
@@ -81,8 +114,72 @@ other_names:
   name: banque du Sud
 - id: es
   name: Banco del Sur
+- id: pt
+  name: Banco do Sul
+- id: nl
+  name: Bank van het Zuiden
 provenance:
-- field: headquarters
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/wiki/Q806667
+  license: CC0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_the_South
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q806667
+  license: CC0

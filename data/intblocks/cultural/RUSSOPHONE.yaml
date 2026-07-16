@@ -1,14 +1,22 @@
 id: RUSSOPHONE
+name: Russophone
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Asia
+- Europe
 languages:
 - ru
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Russophone
   type: wikipedia
-name: Russophone
+- url: https://www.wikidata.org/wiki/Q137292834
+  type: wikidata
+legal_status: informal
+recognition_status: Informal cultural and linguistic concept (not a formal organization) describing territories and communities where Russian is an official language, lingua franca, or historically dominant interethnic language; the term Russophone (from French russophone) denotes Russian speakers and, by extension, the geographic distribution of the Russian language since the Soviet era; distinct from the political soft-power concept of the Russian World (Russkiy mir) promoted by the Russian Federation since the 2000s
 includes:
 - id: RU
   name: Russian Federation
@@ -27,25 +35,86 @@ includes:
   type: country
   status: member
 membership_count: 4
-description: Cultural region comprising countries and regions with significant Russian-speaking
-  populations, where Russian serves as an official language or lingua franca.
+wikidata_id: Q137292834
+description: Cultural and linguistic region comprising post-Soviet sovereign states where Russian holds official or co-official constitutional status. The core grouping comprises the Russian Federation, Belarus, Kazakhstan, and Kyrgyzstan; distinct from the broader Russophone world encompassing former Soviet republics, diaspora communities, and territories where Russian serves as a lingua franca without national official status.
+notes: This record reflects the four-country core (RU, BY, KZ, KG) where Russian holds official or co-official status under national constitutions. Broader definitions of the Russophone world encompass all former Soviet republics—particularly Ukraine, the Baltic states, Moldova, and Central Asia—where Russian remains widely spoken; diaspora communities in Israel, Germany, and the United States; and territories such as Transnistria and Abkhazia where Russian is co-official. This grouping is distinct from the state-promoted Russian World (Russkiy mir) soft-power initiative.
+last_verified: '2026-07-12'
 tags:
 - RUSSOPHONE
+- central-asia
 - cultural
 - culture
+- cyrillic
+- eastern-europe
 - education
+- language
+- linguistic
+- post-soviet
+- regional
 - russian
 - russophone
+- russosphere
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
-wikidata_id: Q2622713
+other_names:
+- id: ar
+  name: الناطقون بالروسية
+- id: de
+  name: russischsprachige Welt
+- id: en
+  name: Russian-speaking world
+- id: es
+  name: rusohablante
+- id: fr
+  name: Russophone
+- id: pt
+  name: russofonia
+- id: ru
+  name: русскоязычный мир
+- id: zh
+  name: 俄语圈
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q137292834
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q137292834
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Russophone
+  license: CC BY-SA 4.0

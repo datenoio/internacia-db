@@ -1,7 +1,17 @@
 id: EUCU
+name: European Union Customs Union
 blocktype:
 - customs
 status: formal
+founded: '1968-07-01'
+active_period:
+  start: '1968-07-01'
+partof:
+  id: EU
+  name: European Union
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 - fr
@@ -13,7 +23,34 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1377619
   type: wikidata
-name: European Union Customs Union
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established as the Community Customs Union (completed 1 July 1968) under the EEC/EU treaties; comprises all EU member states, Monaco, and the British Sovereign Base Areas of Akrotiri and Dhekelia with a common external tariff and no internal customs duties; administered by the European Commission on behalf of the Union in international trade negotiations; Andorra, San Marino and Türkiye participate through separate bilateral customs union agreements
+secretariat:
+  location: Brussels, Belgium
+  organization: Directorate-General for Taxation and Customs Union, European Commission
+  head: Director-General
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8466
+    lng: 4.3528
+acronyms:
+- lang: en
+  value: EUCU
+- lang: zh
+  value: 欧洲联盟关税同盟
+- lang: zh
+  value: 欧盟关税联盟
+- lang: zh
+  value: 歐洲關稅同盟
+founding_members:
+- BE
+- FR
+- DE
+- IT
+- LU
+- NL
 includes:
 - id: AT
   name: Austria
@@ -139,38 +176,8 @@ includes:
   name: Türkiye
   type: country
   status: associated
-founded: '1968'
-headquarters:
-  city: Brussels
-  country: BE
-  coordinates:
-    lat: 50.8466
-    lng: 4.3528
-geographic_scope: regional
-regions:
-- Europe
-acronyms:
-- lang: en
-  value: EUCU
-- lang: zh
-  value: 欧洲联盟关税同盟
-- lang: zh
-  value: 欧盟关税联盟
-- lang: zh
-  value: 歐洲關稅同盟
-founding_members:
-- BE
-- FR
-- DE
-- IT
-- LU
-- NL
 membership_count: 28
 wikidata_id: Q1377619
-legal_status: treaty_organization
-partof:
-  id: EU
-  name: European Union
 description: Customs union comprising all European Union member states, applying a common external tariff and eliminating
   internal customs duties; established in 1968 as the Community Customs Union and administered by the European Commission
   on behalf of the Union in international trade negotiations.
@@ -179,6 +186,7 @@ notes: Monaco and the British Sovereign Base Areas of Akrotiri and Dhekelia are 
   for agricultural goods in the Andorra and Türkiye arrangements. Some EU member state territories—including Büsingen am Hochrhein,
   Heligoland, Livigno, Ceuta and Melilla—do not participate. The United Kingdom and Gibraltar are outside the customs union;
   Northern Ireland has special post-Brexit trade arrangements under the Windsor Framework.
+last_verified: '2026-07-12'
 tags:
 - EUCU
 - commerce
@@ -219,43 +227,61 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
   license: CC BY-SA 4.0
 - field: includes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
   license: CC BY-SA 4.0
 - field: founded
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
   license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1377619
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1377619
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://taxation-customs.ec.europa.eu/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://taxation-customs.ec.europa.eu/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://taxation-customs.ec.europa.eu/
+- field: recognition_status
+  source: European Commission
+  retrieved_at: '2026-07-12'
+  url: https://taxation-customs.ec.europa.eu/
+- field: secretariat
+  source: European Commission
+  retrieved_at: '2026-07-12'
+  url: https://taxation-customs.ec.europa.eu/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Union_Customs_Union
+  license: CC BY-SA 4.0

@@ -1,7 +1,14 @@
 id: NAERC
+name: North American Electric Reliability Corporation
 blocktype:
 - energy
 status: formal
+founded: '1968-06-01'
+active_period:
+  start: '2006-03-28'
+geographic_scope: regional
+regions:
+- North America
 languages:
 - en
 - es
@@ -9,10 +16,24 @@ languages:
 links:
 - url: https://www.nerc.com/
   type: website
+- url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+  type: website
 - url: https://en.wikipedia.org/wiki/North_American_Electric_Reliability_Corporation
   type: wikipedia
-name: North American Electric Reliability Corporation
-founded: '1968'
+- url: https://www.wikidata.org/wiki/Q2000377
+  type: wikidata
+headquarters:
+  city: Atlanta
+  country: US
+  coordinates:
+    lat: 33.847404
+    lng: -84.366719
+legal_status: nonprofit
+recognition_status: Not-for-profit international regulatory authority designated as the U.S. Electric Reliability Organization (ERO) by the Federal Energy Regulatory Commission on 20 July 2006 under the Energy Policy Act of 2005; registered as a 501(c)(6) organization; successor to the North American Electric Reliability Council formed in 1968
+secretariat:
+  location: Atlanta, Georgia, United States
+  head: President & CEO
+  organization: North American Electric Reliability Corporation
 includes:
 - id: US
   name: United States
@@ -27,7 +48,7 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: "Nonprofit organization ensuring reliability and security of the bulk power system across North America. Oversees multiple synchronous interconnections: Eastern Interconnection, Western Interconnection, Texas Interconnection, and Quebec Interconnection."
+description: Not-for-profit international regulatory authority ensuring reliability and security of the North American bulk power system. NERC develops and enforces mandatory Reliability Standards, monitors the grid, assesses resource adequacy, and coordinates six regional reliability entities across the Eastern, Western, Texas, and Quebec interconnections covering the contiguous United States, Canada, and northern Baja California, Mexico.
 tags:
 - NAERC
 - NERC
@@ -52,4 +73,83 @@ other_names:
   name: North American Electric Reliability Corporation
 - id: en
   name: NERC
+- id: en
+  name: North American Electric Reliability Council
+- id: en
+  name: National Electric Reliability Council
+- id: fr
+  name: North American Electric Reliability Corporation
+- id: de
+  name: North American Electric Reliability Corporation
+- id: zh
+  name: 北美電力可靠度協會
+- id: ja
+  name: 北米電力信頼度協議会
+acronyms:
+- lang: en
+  value: NERC
+previous_names:
+- id: en
+  name: North American Electric Reliability Council
+  period: 1981-2007
+- id: en
+  name: National Electric Reliability Council
+  period: 1968-1981
 notes: "The North American power grid consists of four major interconnections that operate synchronously within their regions but are linked asynchronously through HVDC ties: Eastern Interconnection (east of Rocky Mountains), Western Interconnection (Pacific to Rocky Mountains), Texas Interconnection (independent within Texas), and Quebec Interconnection (Quebec province). NERC oversees six regional reliability entities coordinating standards across these interconnections."
+wikidata_id: Q2000377
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2000377
+  license: CC0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nerc.com/AboutNERC/Pages/default.aspx
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/North_American_Electric_Reliability_Corporation
+  license: CC BY-SA 4.0
+- field: previous_names
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/North_American_Electric_Reliability_Corporation
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2000377
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2000377
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2000377
+  license: CC0

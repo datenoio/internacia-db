@@ -1,36 +1,66 @@
 id: WADB
+name: West African Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1973-11-14'
+active_period:
+  start: '1976'
+partof: UEMOA
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
+- pt
 links:
-- url: http://www.boad.org/
+- url: https://www.boad.org/en/
+  type: website
+- url: https://www.boad.org/en/find-out-more/
   type: website
 - url: https://en.wikipedia.org/wiki/West_African_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2883427
   type: wikidata
-name: West African Development Bank
-founded: '1973'
 headquarters:
   city: Lomé
   country: TG
   coordinates:
     lat: 6.13
     lng: 1.2158333333333333
-wikidata_id: Q2883427
-description: International development bank focused on development providing financial services.
+legal_status: intergovernmental
+recognition_status: International public development finance institution established by agreement signed on 14 November 1973 by West African Monetary Union (WAMU) member states; operational since 1976; serves as the common development financing institution of the West African Economic and Monetary Union (UEMOA/WAEMU)
+secretariat:
+  location: Lomé, Togo
+  head: President
+  organization: West African Development Bank
+membership_count: 14
+founding_members:
+- BJ
+- BF
+- CI
+- GW
+- ML
+- NE
+- SN
+- TG
+description: Common development finance institution of the eight WAEMU member states, established in 1973 and headquartered in Lomé, Togo. BOAD promotes balanced development and West African economic integration by financing priority projects in agriculture, infrastructure, energy, transport, digital economy, health, education, and the private sector through concessional (Development and Cohesion Fund) and non-concessional (Bank window) financing instruments including medium- and long-term loans, equity investments, guarantees, and refinancing facilities.
 tags:
 - WADB
-- african
+- BOAD
+- africa
 - aid
 - bank
+- boad
 - development
 - economy
 - finance
-- west
+- multilateral
+- regional
+- uemoa
+- waemu
+- west-africa
 topics:
 - key: development
   name: Development
@@ -38,20 +68,169 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: CI
+  name: Côte d'Ivoire
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: NE
+  name: Niger
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '1973-11-14'
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+- id: BCEAO
+  name: Central Bank of West African States
+  type: organization
+  status: member
+- id: AFDB
+  name: African Development Bank
+  type: organization
+  status: member
+- id: EIB
+  name: European Investment Bank
+  type: organization
+  status: member
+- id: BADEA
+  name: Arab Bank for Economic Development in Africa
+  type: organization
+  status: member
+  joined: '2023-12'
+acronyms:
+- lang: en
+  value: WADB
+- lang: en
+  value: BOAD
+- lang: fr
+  value: BOAD
+- lang: pt
+  value: BDOA
+wikidata_id: Q2883427
+notes: Shareholders are grouped into Series A (WAEMU states plus BCEAO) and Series B (France, Germany via KfW, Belgium, Morocco, India via Exim Bank, China, AfDB, EIB, and BADEA). Guinea-Bissau joined WAEMU in 1997. BADEA acquired a USD 30 million equity stake in December 2023. Current strategic plan is Djoliba (2021–2025). Hosts the Lomé Regional Collaboration Center (UNFCCC) since 2013.
+last_verified: '2026-07-12'
 other_names:
+- id: ca
+  name: Banc de Desenvolupament de l'Àfrica Occidental
 - id: de
   name: Westafrikanische Entwicklungsbank
 - id: en
   name: West African Development Bank
 - id: es
   name: Banco de Desarrollo del África Occidental
+- id: fi
+  name: Länsi-Afrikan kehityspankki
 - id: fr
   name: Banque ouest-africaine de développement
+- id: ha
+  name: Bankin Raya Afirka ta Yamma
+- id: ja
+  name: 西アフリカ開発銀行
 - id: pt
   name: Banco de Desenvolvimento do Oeste Africano
 - id: zh
   name: 西非开发银行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q2883427
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q2883427
+  license: CC0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.boad.org/en/find-out-more/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_Development_Bank
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://admin.boad.org/wp-content/uploads/2024/10/Annual-Report-2023.pdf
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -62,12 +241,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.boad.org/
-acronyms:
-- lang: fr
-  value: BOAD
-- lang: pt
-  value: BDOA

@@ -1,25 +1,41 @@
 id: IGA
+name: International Geothermal Association
 blocktype:
 - energy
 status: formal
+founded: '1988-07-06'
+active_period:
+  start: '1988-07-06'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://www.worldgeothermal.org/
   type: website
+- url: https://www.worldgeothermal.org/about/
+  type: website
+- url: https://www.worldgeothermal.org/contact/
+  type: website
+- url: https://www.worldgeothermal.org/membership/
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Geothermal_Association
   type: wikipedia
-name: International Geothermal Association
-founded: '1988'
+- url: https://www.wikidata.org/wiki/Q17081558
+  type: wikidata
 headquarters:
-  city: Bonn
+  city: Bochum
   country: DE
   coordinates:
-    lat: 50.719444444444
-    lng: 7.1222222222222
-geographic_scope: global
-regions:
-- worldwide
+    lat: 51.483333333333
+    lng: 7.2166666666667
+legal_status: ngo
+recognition_status: Non-profit international NGO founded on 6 July 1988 in Auckland, New Zealand; granted UN ECOSOC special consultative status in April 2015; holds special observer status with the Green Climate Fund; founding member of the Global Renewables Alliance (formed at COP27, November 2022)
+secretariat:
+  location: Bochum, Germany
+  head: Chief Executive Officer
+  organization: International Geothermal Association
 includes:
 - id: US
   name: United States
@@ -102,7 +118,6 @@ includes:
   type: country
   status: member
 membership_count: 10000
-legal_status: ngo
 description: Non-profit, non-governmental organization dedicated to promoting geothermal energy worldwide. The International
   Geothermal Association (IGA) advocates for and promotes the sustainable utilization and development of geothermal resources
   globally. Founded in 1988, IGA has consultative status with the United Nations and works to shape a future where geothermal
@@ -118,6 +133,9 @@ tags:
 - international
 - nature
 - renewable
+- climate
+- advocacy
+- academy
 topics:
 - key: economy
   name: Economy
@@ -127,6 +145,8 @@ topics:
   name: Environment
 - key: renewable
   name: Renewable Energy
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: en
   name: International Geothermal Association
@@ -138,16 +158,67 @@ other_names:
   name: Asociación Internacional de Geotermia
 - id: zh
   name: 国际地热协会
+acronyms:
+- lang: en
+  value: IGA
+notes: Founded on 6 July 1988 in Auckland, New Zealand; first foundation meeting held in Castelnuovo V.C., Italy, in May 1989.
+  Secretariat relocated from Bonn to Bochum, Germany (Lise-Meitner-Allee 24). Governance includes a Board of Directors and
+  an executive team led by the Chief Executive Officer. Membership categories include individual, corporate club, institutional,
+  student, affiliated, sustaining, and honorary members. IGA organizes the World Geothermal Congress and operates the IGA Academy
+  for training and capacity building. A founding member of the Global Renewables Alliance alongside GWEC, GSC, IHA, LDES, and
+  GH2.
+wikidata_id: Q17081558
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldgeothermal.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldgeothermal.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/about/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.thinkgeoenergy.com/iga-obtains-un-special-consultative-status/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/contact/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/contact/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Geothermal_Association
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Geothermal_Association
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Geothermal_Association
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldgeothermal.org/about/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://www.worldgeothermal.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17081558

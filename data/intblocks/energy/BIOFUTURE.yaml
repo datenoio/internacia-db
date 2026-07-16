@@ -1,22 +1,41 @@
 id: BIOFUTURE
+name: Biofuture Platform
 blocktype:
 - energy
 status: formal
+partof: CEM
+founded: '2016-11'
+active_period:
+  start: '2020'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://biofutureplatform.org/
   type: website
-name: Biofuture Platform
-founded: '2016'
-partof:
-- CEM
-geographic_scope: global
-regions:
-- worldwide
+- url: https://biofutureplatform.org/biofuture-platform/
+  type: website
+- url: https://biofutureplatform.org/members/
+  type: website
+- url: https://www.iea.org/about/international-collaborations/biofuture-platform
+  type: website
+headquarters:
+  city: Paris
+  country: FR
+legal_status: intergovernmental
+recognition_status: Government-led, multi-stakeholder initiative launched at COP22 in Marrakech, Morocco, in November 2016 under Brazilian leadership; integrated into the Clean Energy Ministerial (CEM) as the CEM Biofuture Platform Initiative at CEM11 in 2020
+secretariat:
+  location: Paris, France
+  organization: International Energy Agency (Facilitator)
 includes:
 - id: AR
   name: Argentina
+  type: country
+  status: member
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: BR
@@ -47,6 +66,10 @@ includes:
   name: France
   type: country
   status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
 - id: IN
   name: India
   type: country
@@ -57,6 +80,14 @@ includes:
   status: member
 - id: IT
   name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KE
+  name: Kenya
   type: country
   status: member
 - id: MA
@@ -87,10 +118,6 @@ includes:
   name: South Africa
   type: country
   status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
@@ -103,14 +130,13 @@ includes:
   name: Uruguay
   type: country
   status: member
-membership_count: 23
-legal_status: intergovernmental
-description: Government-led, multi-stakeholder initiative established in 2016 during COP22 in Marrakech to accelerate the
-  development and deployment of sustainable bio-based alternatives to fossil fuels, chemicals, and materials. In 2020, the
+membership_count: 25
+description: Government-led, multi-stakeholder initiative established in November 2016 during COP22 in Marrakech to accelerate
+  the development and deployment of sustainable bio-based alternatives to fossil fuels, chemicals, and materials. In 2020, the
   Biofuture Platform became part of the Clean Energy Ministerial (CEM) as the CEM Biofuture Platform Initiative. The initiative
-  is currently chaired by Italy, with the International Energy Agency (IEA) serving as the Facilitator. The platform focuses
-  on fostering consensus on biomass sustainability, promoting policy best practices, enabling supportive financing mechanisms,
-  and promoting cooperation on policy, regulations, and technologies.
+  is chaired by Italy (via the Politecnico di Torino), with the International Energy Agency (IEA) serving as Facilitator since
+  February 2019. The platform focuses on fostering consensus on biomass sustainability, promoting policy best practices, enabling
+  supportive financing mechanisms, and promoting cooperation on policy, regulations, and technologies.
 tags:
 - BIOFUTURE
 - bioeconomy
@@ -140,12 +166,60 @@ other_names:
   name: Plateforme Biofuture
 - id: es
   name: Plataforma Biofuture
+acronyms:
+- lang: en
+  value: BIOFUTURE
+notes: Brazil served as interim facilitator from launch until the IEA assumed the facilitator role in February 2019. Official
+  partners include the IEA Bioenergy Technology Collaboration Programme (TCP), IRENA, and GBEP. The initiative operates a Biofuture
+  Industry Council and a 2025–2027 Action Plan focused on sustainable fuels, feedstock carbon-intensity standards, and bio-based
+  chemicals and materials.
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://biofutureplatform.org/
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/biofuture-platform
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/contacts/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/contacts/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/members/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://biofutureplatform.org/biofuture-platform/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://biofutureplatform.org/

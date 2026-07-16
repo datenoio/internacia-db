@@ -1,20 +1,12 @@
 id: EEHUB
+name: Energy Efficiency Hub
 blocktype:
 - energy
 status: formal
-languages:
-- en
-links:
-- url: https://energyefficiencyhub.org
-  type: website
-name: Energy Efficiency Hub
 founded: '2019'
-headquarters:
-  city: Paris
-  country: FR
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
+predecessor: IPEEC
+active_period:
+  start: '2019'
 geographic_scope: global
 regions:
 - Africa
@@ -23,6 +15,29 @@ regions:
 - North America
 - Oceania
 - South America
+languages:
+- en
+links:
+- url: https://energyefficiencyhub.org
+  type: website
+- url: https://energyefficiencyhub.org/about/
+  type: website
+- url: https://energyefficiencyhub.org/members/
+  type: website
+- url: https://www.iea.org/about/international-collaborations/energy-efficiency-hub
+  type: website
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+legal_status: voluntary
+recognition_status: Voluntary government-to-government collaboration proposed at the 2017 G20 Leaders' Summit in Hamburg; established in 2019; IEA Governing Board approved hosting the Secretariat as a Special Activity in 2019; Secretariat operations began in Paris in 2021 with an official launch in December 2021
+secretariat:
+  location: Paris, France
+  head: Head of Secretariat
+  organization: Energy Efficiency Hub Secretariat (hosted by the International Energy Agency)
 includes:
 - id: AR
   name: Argentina
@@ -49,7 +64,7 @@ includes:
   type: country
   status: member
 - id: EU
-  name: European Union
+  name: European Commission
   type: organization
   status: member
 - id: FR
@@ -93,13 +108,11 @@ includes:
   type: country
   status: member
 membership_count: 17
-legal_status: voluntary
-description: Voluntary collaboration among governments established in 2019 to enhance global dialogue and cooperation on energy
-  efficiency. The Hub fosters collaboration to enhance energy efficiency work globally by sharing information and best practices
-  between countries, international organisations, and the private sector. Its Secretariat is hosted by the International Energy
-  Agency (IEA) in Paris, France. The Hub was officially launched on December 1, 2021, and currently has 17 member governments
-  across the globe. The organization operates through thematic Task Groups focusing on digitalisation, appliances and equipment,
-  buildings, energy management, and practical energy-saving solutions.
+description: Voluntary government-to-government platform for global collaboration on energy efficiency, established in 2019 to
+  strengthen deployment of energy efficiency policies through information exchange and best practices. The Hub's 17 member
+  governments collectively account for about two-thirds of global final energy use. Members coordinate through a Steering
+  Committee and thematic Task Groups on digitalisation, appliances and equipment, buildings, energy management, and practical
+  energy-saving solutions. The Secretariat is hosted by the International Energy Agency in Paris, France.
 tags:
 - EEHUB
 - energy
@@ -109,6 +122,8 @@ tags:
 - collaboration
 - environment
 - climate
+- task_groups
+- g20
 topics:
 - key: energy
   name: Energy
@@ -116,16 +131,64 @@ topics:
   name: Environment
 - key: economy
   name: Economy
+- key: climate_change
+  name: Climate Change
+other_names:
+- id: en
+  name: Energy Efficiency Hub
+acronyms:
+- lang: en
+  value: EEHUB
+notes: Proposed at the 2017 G20 Hamburg Summit; founding members established a Steering Committee in 2018; IEA Governing Board
+  approved hosting in 2019; Secretariat recruited and launched in December 2021. Membership is open to national governments
+  that are IEA Members, IEA Association countries, or Clean Energy Ministerial (CEM) Members. India joined in January 2025.
+  Governance includes a Steering Committee (one representative per member), a Chair appointed by the Committee (European
+  Commission as of 2024), and three Vice Chairs (Canada, China, and the United States). Task Groups include the Digitalisation
+  Working Group (DWG), Super-efficient Equipment and Appliance Deployment (SEAD), Energy Efficiency in Buildings, TOP TENs,
+  and the Energy Management Action Network (EMAK).
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://energyefficiencyhub.org
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://energyefficiencyhub.org
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://energyefficiencyhub.org
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/energy-efficiency-hub
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/members/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/about/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://energyefficiencyhub.org/

@@ -1,15 +1,68 @@
 id: AFREXIMBANK
+name: African Export-Import Bank
 blocktype:
 - bank
 status: formal
+founded: '1993-05-08'
+active_period:
+  start: '1993-05-08'
+geographic_scope: regional
+regions:
+- Africa
+- Caribbean
 languages:
 - en
+- fr
 links:
 - url: https://www.afreximbank.com/
   type: website
+- url: https://www.afreximbank.com/about-us/
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Export-Import_Bank
   type: wikipedia
-name: African Export-Import Bank
+- url: https://www.wikidata.org/wiki/Q4689766
+  type: wikidata
+headquarters:
+  city: Cairo
+  country: EG
+  coordinates:
+    lat: 30.095688772286
+    lng: 31.31857098656
+legal_status: intergovernmental
+recognition_status: Pan-African trade finance institution established under the Agreement Establishing the African Export-Import Bank, signed at the African Development Bank headquarters in Abidjan on 8 May 1993 and officially launched at the inaugural General Meeting of Shareholders in Abuja in October 1993
+secretariat:
+  location: Cairo, Egypt (Heliopolis)
+  head: President
+  organization: African Export-Import Bank
+membership_count: 67
+description: Pan-African multilateral trade finance institution established in 1993 under the auspices of the African Development Bank to stimulate expansion and diversification of African trade. Headquartered in Cairo, Egypt, Afreximbank provides trade finance, project and export development finance, and advisory services to African and Caribbean member governments and private businesses, supporting intra-African trade and regional economic integration.
+tags:
+- AFREXIMBANK
+- africa
+- african
+- aid
+- bank
+- caribbean
+- commerce
+- development
+- economy
+- export
+- finance
+- import
+- multilateral
+- pan-african
+- trade
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 includes:
 - id: DZ
   name: Algeria
@@ -279,31 +332,14 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-founded: '1993'
-membership_count: 67
-description: International development bank focused on development providing financial
-  services.
-tags:
-- AFREXIMBANK
-- african
-- aid
-- bank
-- commerce
-- development
-- economy
-- export
-- finance
-- import
-- trade
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: trade
-  name: Trade
+acronyms:
+- lang: en
+  value: Afreximbank
+- lang: fr
+  value: Afreximbank
+wikidata_id: Q4689766
+notes: Multilateral export-import bank with 67 participating member states (54 African and 13 Caribbean). Created under AfDB auspices; operations commenced in 1994. Maintains six regional offices across Africa and the Caribbean. Shareholders are divided into Class A (African governments and institutions), Class B (African private investors), Class C (non-regional institutions), and Class D (general investors).
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك الأفريقي للاستيراد والتصدير
@@ -317,8 +353,44 @@ other_names:
   name: Banque africaine d'import-export
 - id: zh
   name: 非洲輸出入銀行
-wikidata_id: Q4689766
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afreximbank.com/about-us/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afreximbank.com/about-us/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afreximbank.com/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Export-Import_Bank
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afreximbank.com/about-us/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4689766
+  license: CC0
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Export-Import_Bank
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Export-Import_Bank
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Export-Import_Bank
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -328,4 +400,9 @@ provenance:
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4689766
   license: CC0

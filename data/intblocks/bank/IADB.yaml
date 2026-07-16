@@ -1,20 +1,87 @@
 id: IADB
+name: Inter-American Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1959-04-08'
+active_period:
+  start: '1959-04-08'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
 languages:
 - en
 - es
 - fr
 - pt
 links:
-- url: http://www.iadb.org/
+- url: https://www.iadb.org/
+  type: website
+- url: https://www.iadb.org/en/who-we-are/about-us
   type: website
 - url: https://en.wikipedia.org/wiki/Inter-American_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1153087
   type: wikidata
-name: Inter-American Development Bank
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the Inter-American Development Bank (1959), adopted through the Organization of American States
+secretariat:
+  location: Washington, D.C., United States
+  head: President
+  organization: Inter-American Development Bank
+membership_count: 48
+founding_members:
+- AR
+- BO
+- BR
+- CL
+- CO
+- CR
+- CU
+- DO
+- EC
+- SV
+- GT
+- HT
+- HN
+- MX
+- NI
+- PA
+- PY
+- PE
+- US
+- UY
+- VE
+description: Multilateral development finance institution and the leading source of development financing for Latin America and the Caribbean. Established in 1959 under the Agreement Establishing the Inter-American Development Bank, the IDB provides sovereign loans, technical assistance, and policy support to borrowing member governments and works with the private sector through IDB Invest and IDB Lab. Headquartered in Washington, D.C., it has 48 member countries—26 borrowing and 22 non-borrowing—with Latin American and Caribbean members holding a majority of voting power.
+tags:
+- IADB
+- IDB
+- aid
+- american
+- bank
+- caribbean
+- development
+- economy
+- finance
+- latin-america
+- multilateral
+- regional
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AR
   name: Argentina
@@ -208,13 +275,6 @@ includes:
   name: United States
   type: country
   status: member
-founded: '1959'
-headquarters:
-  city: Washington, D.C.
-  country: US
-  coordinates:
-    lat: 38.895
-    lng: -77.036666666667
 acronyms:
 - lang: en
   value: IDB
@@ -236,26 +296,9 @@ acronyms:
   value: BID
 - lang: pt
   value: BID
-membership_count: 48
 wikidata_id: Q1153087
-description: International development bank focused on development providing financial services.
-tags:
-- IADB
-- IDB
-- aid
-- american
-- bank
-- development
-- economy
-- finance
-- inter
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Regional multilateral development bank with 48 members (26 borrowing, 22 non-borrowing). Formally established 8 April 1959 when OAS members signed the Articles of Agreement; Annex A lists 21 original signatories. Latin American and Caribbean borrowing members hold 50.02% of voting power. Host country is the United States. Private-sector operations are carried out through IDB Invest; innovation and venture activities through IDB Lab.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التنمية للبلدان الأمريكية
@@ -274,6 +317,48 @@ other_names:
 - id: zh
   name: 美洲開發銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/en/who-we-are/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/en/who-we-are/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/en/who-we-are/about-us/history-idb
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/en/who-we-are/about-us/history-idb
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Inter-American_Development_Bank
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Inter-American_Development_Bank
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: OAS treaty text
+  retrieved_at: '2026-07-12'
+  url: http://www.oas.org/dil/treaties_C-15_Agreement_Establishing_the_Inter-American_Development_Bank.htm
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iadb.org/en/who-we-are/about-us
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -284,7 +369,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iadb.org/

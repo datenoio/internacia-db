@@ -1,58 +1,50 @@
 id: ACF
+name: Eurasian Fund for Stabilization and Development
 blocktype:
 - fund
 status: formal
-partof: EAEU
+founded: '2009-06-09'
+active_period:
+  start: '2009-06-09'
+geographic_scope: regional
+regions:
+- Asia
+- Eurasia
+- Europe
+partof: EABR
 languages:
 - en
 - ru
 links:
 - url: https://efsd.org/en/
   type: website
-name: Eurasian Fund for Stabilization and Development
-includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-membership_count: 6
-founded: '2009'
-geographic_scope: regional
-regions:
-- Asia
-- Europe
-acronyms:
-- lang: en
-  value: EFSD
-- lang: en
-  value: ACF
-- lang: ru
-  value: АКФ
+- url: https://efsd.org/en/about/
+  type: website
+- url: https://efsd.org/en/about/documents/incorporation_documents/
+  type: website
+- url: https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%B0%D0%B7%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%BE%D0%BD%D0%B4_%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8_%D0%B8_%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F
+  type: wikipedia
 headquarters:
   city: Moscow
   country: RU
-description: Eurasian Fund for Stabilization and Development is an international fund
-  body with 6 members.
+  coordinates:
+    lat: 55.7522
+    lng: 37.5394
+legal_status: intergovernmental
+recognition_status: Regional financial arrangement established on 9 June 2009 by treaty among Armenia, Belarus, Kazakhstan, Kyrgyzstan, Russia, and Tajikistan as the EurAsEC Anti-Crisis Fund; renamed the Eurasian Fund for Stabilization and Development on 15 June 2015; resources managed by the Eurasian Development Bank under the Fund Management Agreement
+secretariat:
+  location: Moscow, Russian Federation
+  head: EFSD Council (Ministers of Finance of member states)
+  organization: Eurasian Fund for Stabilization and Development
+membership_count: 6
+founding_members:
+- AM
+- BY
+- KZ
+- KG
+- RU
+- TJ
+description: Regional financial arrangement with resources of US$8.513 billion, established in 2009 by six post-Soviet states to overcome crisis consequences, ensure long-run economic sustainability, and foster integration among member countries. Provides budget and balance-of-payments credits to governments, investment loans to states and companies, and grants for social-sector programmes; day-to-day resource management is performed by the Eurasian Development Bank.
 tags:
 - ACF
 - EFSD
@@ -62,22 +54,97 @@ tags:
 - eurasian
 - finance
 - fund
+- regional
 - stabilization
 - АКФ
+- ЕФСР
 topics:
 - key: development
   name: Development
+- key: economy
+  name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '2009-06-09'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '2009-06-09'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '2009-06-09'
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: member
+  joined: '2009-06-09'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '2009-06-09'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '2009-06-09'
+acronyms:
+- lang: en
+  value: EFSD
+- lang: en
+  value: ACF
+- lang: ru
+  value: АКФ
+- lang: ru
+  value: ЕФСР
+notes: Formerly the EurAsEC Anti-Crisis Fund (ACF); renamed EFSD on 15 June 2015. Tajikistan is a founding member but is not part of the EAEU. The EFSD Council comprises the finance ministers of member states; the Eurasian Development Bank serves as Resources Manager.
+last_verified: '2026-07-12'
+other_names:
+- id: en
+  name: Eurasian Fund for Stabilization and Development
+- id: ru
+  name: Евразийский фонд стабилизации и развития
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://efsd.org/en/
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://efsd.org/en/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/documents/incorporation_documents/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/documents/incorporation_documents/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://efsd.org/en/about/documents/incorporation_documents/
+- field: other_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%B0%D0%B7%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%BE%D0%BD%D0%B4_%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8_%D0%B8_%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F
+  license: CC BY-SA 4.0

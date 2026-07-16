@@ -37,6 +37,8 @@ other_names:
   name: alfabeto armenio
 - id: fr
   name: alphabet arménien
+- id: hy
+  name: հայերենի այբուբեն
 - id: pt
   name: Alfabeto arménio
 - id: ru
@@ -44,13 +46,40 @@ other_names:
 - id: zh
   name: 亞美尼亞字母
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q11932
+  license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/
+  license: CC0
+acronyms:
+- lang: de
+  value: Armn
+- lang: en
+  value: Armn
+- lang: hy
+  value: Հայոց գիր
+- lang: ru
+  value: армянский алфавит
+- lang: ru
+  value: армянская письменность
+last_verified: '2026-07-13'

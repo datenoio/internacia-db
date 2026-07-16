@@ -1,7 +1,14 @@
 id: CAN
+name: Andean Community of Nations
 blocktype:
 - customs
 status: formal
+founded: '1969-05-26'
+active_period:
+  start: '1969-05-26'
+geographic_scope: regional
+regions:
+- South America
 languages:
 - es
 links:
@@ -11,7 +18,39 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q471690
   type: wikidata
-name: Andean Community of Nations
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established by the Cartagena Agreement (26 May 1969) and institutional reforms under the Trujillo Protocol (1996); operates a free trade zone and common external tariff (NANDINA) among Bolivia, Colombia, Ecuador and Peru; administered by the General Secretariat in Lima
+secretariat:
+  location: Lima, Peru
+  organization: General Secretariat of the Andean Community
+  head: Secretary General
+headquarters:
+  city: Lima
+  country: PE
+  coordinates:
+    lat: -12.033333
+    lng: -77.016667
+acronyms:
+- lang: en
+  value: CAN
+- lang: es
+  value: CAN
+- lang: pt
+  value: CAN
+- lang: fr
+  value: CAN
+- lang: de
+  value: CAN
+- lang: ru
+  value: CAN
+- lang: zh
+  value: 安第斯共同体
+founding_members:
+- BO
+- CL
+- CO
+- EC
+- PE
 includes:
 - id: BO
   name: Bolivia
@@ -45,55 +84,28 @@ includes:
   status: former_member
   joined: '1973'
   left: '2006'
-founded: '1969-05-26'
-headquarters:
-  city: Lima
-  country: PE
-  coordinates:
-    lat: -12.06
-    lng: -77.0375
-geographic_scope: regional
-regions:
-- South America
-acronyms:
-- lang: en
-  value: CAN
-- lang: es
-  value: CAN
-- lang: pt
-  value: CAN
-- lang: fr
-  value: CAN
-- lang: de
-  value: CAN
-- lang: ru
-  value: CAN
-- lang: zh
-  value: 安第斯共同体
-founding_members:
-- BO
-- CL
-- CO
-- EC
-- PE
 membership_count: 4
 wikidata_id: Q471690
-legal_status: intergovernmental
 description: South American integration organization and customs union established by the Cartagena Agreement (1969). Operates
   a free trade zone and common external tariff among Bolivia, Colombia, Ecuador and Peru; formerly known as the Andean Pact
   (Pacto Andino) until institutional reforms in 1996–1997.
 notes: Venezuela joined in 1973 and withdrew in 2006. Chile was a founding member but withdrew in 1976; it has been an associate
-  member since 2006. Mercosur members Argentina, Brazil, Paraguay and Uruguay are associate members since 2005. Also known
-  as Comunidad Andina de Naciones or Andean Community.
+  member since 2006. Mercosur members Argentina, Brazil, Paraguay and Uruguay are associate members since 2005. The common
+  external tariff was approved in 1994; the Trujillo Protocol (1996) renamed the bloc the Andean Community of Nations. Peru
+  temporarily suspended liberalization obligations in 1992 and rejoined the free trade zone in 1997. The EU trade agreement
+  with Colombia, Peru and Ecuador entered into full force in 2024. Also known as Comunidad Andina de Naciones or Andean Community.
+last_verified: '2026-07-12'
 tags:
 - CAN
 - andean
+- cartagena
 - commerce
 - community
 - cooperation
 - customs
 - economy
 - nations
+- pacto_andino
 - regional
 - regional_cooperation
 - south
@@ -108,6 +120,13 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
+previous_names:
+- id: en
+  name: Andean Pact
+  period: 1969-1996
+- id: es
+  name: Pacto Andino
+  period: 1969-1996
 other_names:
 - id: ar
   name: مجموعة دول الأنديز
@@ -128,44 +147,62 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Andean_Community
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Andean_Community
   license: CC BY-SA 4.0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q471690
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q471690
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q471690
   license: CC0
 - field: includes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Andean_Community
   license: CC BY-SA 4.0
 - field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q471690
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.comunidadandina.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.comunidadandina.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.comunidadandina.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.comunidadandina.org/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Andean_Community
+  license: CC BY-SA 4.0
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Andean_Community
+  license: CC BY-SA 4.0

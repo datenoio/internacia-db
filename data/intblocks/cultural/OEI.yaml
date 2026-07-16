@@ -1,18 +1,41 @@
 id: OEI
+name: Organization of Ibero-American States
 blocktype:
 - cultural
 - education
 status: formal
+founded: '1949'
+active_period:
+  start: '1949'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Europe
+- Latin America
 languages:
 - es
+- pt
+- ca
 links:
-- url: http://www.oei.es/
+- url: https://oei.int/
   type: website
 - url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q421023
   type: wikidata
-name: Organization of Ibero-American States
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization of 23 Iberophone sovereign states in Europe, the Americas, and Africa; originally founded in 1949 as the Office of Latin American Education and reconstituted as an intergovernmental body in 1954
+secretariat:
+  location: Madrid, Spain
+  head: Secretary-General
+  organization: Organization of Ibero-American States
+headquarters:
+  city: Madrid
+  country: ES
+  coordinates:
+    lat: 40.448311111111
+    lng: -3.7035944444444
 includes:
 - id: AD
   name: Andorra
@@ -106,13 +129,6 @@ includes:
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
-founded: '1949'
-headquarters:
-  city: calle de Bravo Murillo
-  country: ES
-  coordinates:
-    lat: 40.448311111111
-    lng: -3.7035944444444
 acronyms:
 - lang: en
   value: OEI
@@ -124,7 +140,9 @@ acronyms:
   value: OEI
 membership_count: 23
 wikidata_id: Q421023
-description: International organization based in Madrid, Spain.
+description: Intergovernmental organization of 23 Iberophone sovereign states across Europe, the Americas, and Africa, formally known as the Organization of Ibero-American States for Education, Science and Culture. Founded in 1949 as the Office of Latin American Education and reconstituted as an intergovernmental organization in 1954, the OEI promotes cooperation in education, science, technology, and culture among its member states. Its General Secretariat is headquartered in Madrid and coordinates programs including the Ibero-American Summits of Heads of State and Government.
+notes: In 1985 the organization adopted its present name and objectives, replacing the 1957 statutes. The Ibero-American General Secretariat (SEGIB), created in 2003, supports summit administration and Ibero-American cooperation initiatives. Operating languages include Spanish, Portuguese, and Catalan.
+last_verified: '2026-07-12'
 tags:
 - OEI
 - american
@@ -132,13 +150,22 @@ tags:
 - culture
 - education
 - ibero
+- iberoamericana
+- intergovernmental
 - organization
+- regional
+- regional_cooperation
+- science
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: science
+  name: Science
 other_names:
 - id: ar
   name: منظمة الدول الأيبيرية الأمريكية للتربية والعلم والثقافة
@@ -158,6 +185,64 @@ other_names:
 - id: zh
   name: 伊比利亚-美洲国家组织
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q421023
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://oei.int/
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://oei.int/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organization_of_Ibero-American_States
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -166,14 +251,5 @@ provenance:
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.oei.es/
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0

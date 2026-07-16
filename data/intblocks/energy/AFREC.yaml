@@ -1,8 +1,15 @@
 id: AFREC
+name: African Energy Commission
 blocktype:
 - energy
 status: formal
 partof: AFUNION
+founded: '2001-07-11'
+active_period:
+  start: '2008-02-15'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
@@ -12,17 +19,20 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/African_Energy_Commission
   type: wikipedia
-name: African Energy Commission
-founded: '2001'
+- url: https://www.wikidata.org/wiki/Q4689761
+  type: wikidata
 headquarters:
   city: Algiers
   country: DZ
   coordinates:
     lat: 36.753888888889
     lng: 3.0588888888889
-geographic_scope: regional
-regions:
-- Africa
+legal_status: intergovernmental
+recognition_status: Specialized agency of the African Union under the Department for Infrastructure and Energy; created by OAU Decision AHG/Dec.167 (XXXVII) at the 37th Summit in Lusaka, 11 July 2001; launched through the Algiers Declaration AU/EXP/EN/Decl.(III) at the meeting of AU Ministers in charge of Energy, 15–17 February 2008; membership governed by the AFREC Convention
+secretariat:
+  location: Algiers, Algeria
+  head: Executive Director
+  organization: African Energy Commission
 includes:
 - id: DZ
   name: Algeria
@@ -165,7 +175,6 @@ includes:
   type: country
   status: member
 membership_count: 35
-legal_status: intergovernmental
 description: Specialized agency of the African Union (AU) responsible for coordinating and harmonizing energy policies across
   the continent. The African Energy Commission (AFREC) was established in 2001 by the Organisation of African Unity (OAU)
   and officially launched in 2008. AFREC's objectives include developing energy policies, creating and updating African energy
@@ -176,12 +185,15 @@ description: Specialized agency of the African Union (AU) responsible for coordi
 tags:
 - AFREC
 - africa
+- african_union
 - economy
 - energy
 - environment
 - international
 - nature
 - regional
+- specialized_agency
+- statistics
 topics:
 - key: economy
   name: Economy
@@ -189,6 +201,8 @@ topics:
   name: Energy
 - key: environment
   name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: African Energy Commission
@@ -196,20 +210,72 @@ other_names:
   name: Commission de l'énergie de l'Afrique
 - id: ar
   name: لجنة الطاقة الأفريقية
+- id: de
+  name: Afrikanische Energiekommission
 - id: ru
   name: Африканская энергетическая комиссия
 - id: es
   name: Comisión de Energía de África
+- id: zh
+  name: 非洲能源委员会
+acronyms:
+- lang: en
+  value: AFREC
+wikidata_id: Q4689761
+notes: Operates the Africa Energy Information System (AEIS) and publishes the African Energy Statistics Database annually since 2012. Programmes include oil and gas, biomass, energy efficiency, energy transition, and capacity building. Membership reflects states that have ratified and deposited the AFREC Convention, not the full AU roster.
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
   url: https://www.au-afrec.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.au-afrec.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.au-afrec.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Energy_Commission
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://www.au-afrec.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
   url: https://www.au-afrec.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Energy_Commission
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Energy_Commission
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.au-afrec.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q4689761
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q4689761
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q4689761
+  license: CC0

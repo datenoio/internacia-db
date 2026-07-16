@@ -1,15 +1,37 @@
 id: CAPP
+name: Central African Power Pool
 blocktype:
 - energy
 status: formal
+partof: ECCAS
+founded: '2003'
+active_period:
+  start: '2003'
+geographic_scope: regional
+regions:
+- Central Africa
+- Africa
 languages:
 - en
 - fr
 links:
+- url: https://peac-ac.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_African_Power_Pool
   type: wikipedia
-name: Central African Power Pool
-founded: '2003'
+- url: https://www.wikidata.org/wiki/Q65062894
+  type: wikidata
+headquarters:
+  city: Brazzaville
+  country: CG
+  coordinates:
+    lat: -4.271944
+    lng: 15.289444
+legal_status: intergovernmental
+recognition_status: Specialized agency of the Economic Community of Central African States (ECCAS/CEEAC), established in 2003 through intergovernmental and inter-utility memoranda of understanding; made an autonomous specialized ECCAS agency by the 12th ECCAS Conference of Heads of State and Government in January 2005
+secretariat:
+  location: 14th floor, Namemba Tower, Brazzaville, Republic of the Congo
+  organization: Permanent Secretariat of the Central African Power Pool (PEAC)
 includes:
 - id: AO
   name: Angola
@@ -56,9 +78,14 @@ includes:
   type: country
   status: member
 membership_count: 11
-description: Regional power pool promoting development of integrated power infrastructure and free power market in Central Africa. Aims to establish legal, commercial, and technical framework for power exchanges between member states.
+description: Specialized agency of the Economic Community of Central African States (ECCAS) responsible for implementing regional
+  energy policy, developing cross-border electricity interconnections, and organizing power exchanges among Central African
+  member states. One of five African regional power pools, CAPP coordinates national utilities through intergovernmental and
+  inter-utility agreements to build integrated transmission infrastructure and a liberalized regional electricity market.
 tags:
 - CAPP
+- PEAC
+- ECCAS
 - energy
 - grid
 - power
@@ -81,4 +108,72 @@ other_names:
   name: Central African Power Pool
 - id: fr
   name: Pool énergétique de l'Afrique centrale
-notes: Established to enhance regional power infrastructure development and facilitate cross-border electricity trade among Central African countries.
+acronyms:
+- lang: en
+  value: CAPP
+- lang: fr
+  value: PEAC
+notes: Governance includes a Council of Ministers for Energy, an Executive Committee of energy ministry directors, a Management
+  Committee of national power utilities, and the Permanent Secretariat in Brazzaville. Public ECCAS and PEAC documentation
+  generally references ten member states; Rwanda also participates according to its national power utility (REG). Burundi and
+  the Democratic Republic of the Congo are also members of the Eastern Africa Power Pool (EAPP).
+wikidata_id: Q65062894
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/wp-content/uploads/2024/01/DSPER_final-_-Eng.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Central_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Central_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/wp-content/uploads/2024/01/DSPER_final-_-Eng.pdf
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://peac-ac.org/wp-content/uploads/2024/01/DSPER_final-_-Eng.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q65062894
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q65062894
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q65062894
+  license: CC0

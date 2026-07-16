@@ -6,8 +6,13 @@ blocktype:
 - fund
 - intorg
 status: formal
-founded: '1973'
+founded: '1973-11-28'
+active_period:
+  start: '1975-03'
 geographic_scope: regional
+regions:
+- Africa
+- Middle East
 languages:
 - ar
 - en
@@ -15,21 +20,48 @@ languages:
 links:
 - url: https://www.badea.org/
   type: website
+- url: https://www.badea.org/our-history/
+  type: website
 - url: https://en.wikipedia.org/wiki/Arab_Bank_for_Economic_Development_in_Africa
   type: wikipedia
-acronyms:
-- lang: en
-  value: BADEA
-- lang: ar
-  value: باديا
-- lang: fr
-  value: BADEA
+- url: https://www.wikidata.org/wiki/Q4783148
+  type: wikidata
 headquarters:
   city: Khartoum
   country: SD
   coordinates:
     lat: 15.5007
     lng: 32.5599
+legal_status: intergovernmental
+recognition_status: International financial institution established pursuant to the resolution of the 6th Arab Summit Conference at Algiers on 28 November 1973; Establishing Agreement signed by 18 League of Arab States members on 18 February 1974; operations commenced in March 1975
+secretariat:
+  location: Khartoum, Sudan
+  head: President
+  organization: Arab Bank for Economic Development in Africa
+membership_count: 21
+description: Arab-owned multilateral development bank established in 1973 to strengthen economic, financial, and technical cooperation between Arab and African regions. Owned by 21 League of Arab States shareholder countries, BADEA provides concessional project finance, technical assistance grants, trade finance, and private-sector support exclusively to non-shareholder countries in Sub-Saharan Africa, with a focus on infrastructure, agriculture, SME development, and Arab–African trade.
+tags:
+- BADEA
+- africa
+- aid
+- arab
+- arab-league
+- bank
+- cooperation
+- development
+- economy
+- finance
+- multilateral
+- sub-saharan
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: DZ
   name: Algeria
@@ -115,39 +147,76 @@ includes:
   name: Yemen
   type: country
   status: member
-membership_count: 21
-description: International development bank focused on development providing financial services.
-tags:
-- BADEA
-- africa
-- aid
-- arab
-- bank
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-regions:
-- Africa
-- Middle East
+acronyms:
+- lang: en
+  value: BADEA
+- lang: ar
+  value: باديا
+- lang: fr
+  value: BADEA
 wikidata_id: Q4783148
+notes: Arab-owned MDB operating exclusively in Sub-Saharan Africa (44 non-shareholder beneficiary countries as of 2025). Shareholders are League of Arab States members. Member of the Arab Coordination Group. Pursues lending through rolling five-year plans aligned with SDGs and AU Agenda 2063.
+last_verified: '2026-07-12'
+other_names:
+- id: ar
+  name: المصرف العربي للتنمية الاقتصادية في إفريقيا
+- id: de
+  name: Arab Bank for Economic Development in Africa
+- id: en
+  name: Arab Bank for Economic Development in Africa
+- id: es
+  name: Banco Árabe para el Desarrollo Económico en África
+- id: fr
+  name: Banque arabe pour le développement économique en Afrique
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/at-the-glance/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/at-the-glance/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/our-history/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/our-history/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/organizational-structure/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/our-history/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/at-the-glance/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/our-history/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.badea.org/at-the-glance/
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.badea.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.badea.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4783148
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -5,8 +5,13 @@ blocktype:
 - economic
 - intorg
 status: formal
-founded: '1958'
+founded: '1958-01-01'
+active_period:
+  start: '1958-01-01'
 geographic_scope: regional
+regions:
+- Europe
+partof: EU
 languages:
 - en
 - fr
@@ -14,24 +19,58 @@ languages:
 links:
 - url: https://www.eib.org/
   type: website
+- url: https://www.eib.org/en/about/index.htm
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Investment_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q152096
   type: wikidata
-acronyms:
-- lang: en
-  value: EIB
-- lang: zh
-  value: 塞恩斯伯里公司
-- lang: zh
-  value: 森宝利
 headquarters:
   city: Luxembourg
   country: LU
   coordinates:
     lat: 49.6117
     lng: 6.1319
-partof: EU
+legal_status: intergovernmental
+recognition_status: International financial institution established under the Treaty establishing the European Economic Community (Treaty of Rome), which entered into force on 1 January 1958
+secretariat:
+  location: Luxembourg, Luxembourg
+  head: President
+  organization: European Investment Bank
+membership_count: 27
+founding_members:
+- BE
+- DE
+- FR
+- IT
+- LU
+- NL
+description: The European Union's investment bank and the world's largest multilateral lender by volume. Established in 1958 under the Treaty of Rome and owned by EU member states, the EIB provides long-term loans, equity investments, and guarantees to public and private projects aligned with EU policy objectives in climate, infrastructure, SMEs, cohesion, and development. Headquartered in Luxembourg, it focuses about 90% of lending inside the EU while also supporting EU development and cooperation policies in partner countries worldwide.
+tags:
+- EIB
+- aid
+- bank
+- climate
+- cohesion
+- development
+- economy
+- europe
+- european
+- finance
+- infrastructure
+- investment
+- multilateral
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: infrastructure
+  name: Infrastructure
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AT
   name: Austria
@@ -141,59 +180,93 @@ includes:
   name: Sweden
   type: country
   status: member
-membership_count: 27
+acronyms:
+- lang: en
+  value: EIB
+- lang: fr
+  value: BEI
+- lang: de
+  value: EIB
+- lang: es
+  value: BEI
+- lang: pt
+  value: BEI
+- lang: ru
+  value: ЕИБ
+- lang: zh
+  value: 欧洲投资银行
 wikidata_id: Q152096
-description: International development bank focused on development providing financial services.
-tags:
-- EIB
-- aid
-- bank
-- development
-- economy
-- europe
-- european
-- finance
-- investment
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: EU member states are the sole shareholders, with capital subscriptions broadly proportional to GDP. Part of the EIB Group together with the European Investment Fund (EIF). Issued the world's first green bonds in 2007. Also an institutional shareholder of the European Bank for Reconstruction and Development (EBRD). Headquarters moved from Brussels to Luxembourg in 1968.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
-  name: سينسبري
+  name: البنك الأوروبي للاستثمار
 - id: de
   name: Europäische Investitionsbank
 - id: en
   name: European Investment Bank
 - id: es
-  name: Sainsbury's
+  name: Banco Europeo de Inversiones
 - id: fr
   name: Banque européenne d'investissement
 - id: pt
-  name: Sainsbury's
+  name: Banco Europeu de Investimento
 - id: ru
-  name: Sainsbury's
+  name: Европейский инвестиционный банк
 - id: zh
-  name: 森寶利
+  name: 欧洲投资银行
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.eib.org/
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.eib.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Investment_Bank
+  license: CC BY-SA 4.0

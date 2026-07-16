@@ -1,20 +1,31 @@
 #!/usr/bin/env python3
-"""Validate country YAML sources, completeness, and intblock cross-references."""
+"""Validate country YAML sources, completeness, and intblock cross-references.
+
+Rule logic lives in :mod:`internacia_builder.validate.country_rules` and
+:mod:`internacia_builder.validate.cross_rules`; this module adapts the shared
+issue dicts to CLI error/warning messages and drives the validation run.
+"""
 
 from __future__ import annotations
 
 import json
 import re
 from collections import defaultdict
-from datetime import date
 from pathlib import Path
 from typing import Any
 
-import jsonschema
 import typer
 import yaml
 
 from internacia_builder.paths import project_root
+from internacia_builder.validate import country_rules, cross_rules
+from internacia_builder.validate.country_rules import (  # noqa: F401 (re-exported API)
+    CODE_STATUSES,
+    ENTITY_TYPES,
+    EXPECTED_OFFICIAL_ISO_COUNT,
+    NON_ISO_ALPHA2,
+    is_null_field,
+)
 
 app = typer.Typer(help="Validate internacia-db country data")
 
@@ -24,30 +35,6 @@ NUMERIC3 = re.compile(r"^\d{3}$")
 ISO4217 = re.compile(r"^[A-Z]{3}$")
 WIKIDATA = re.compile(r"^Q[1-9][0-9]*$")
 DEFERRED_COUNTRY_IDS = frozenset()
-NON_ISO_ALPHA2 = frozenset({"AN", "JG", "KV", "XA", "XS", "XT", "XN"})
-
-ENTITY_TYPES = frozenset(
-    {
-        "sovereign_state",
-        "dependent_territory",
-        "special_administrative_region",
-        "disputed_territory",
-        "historical_entity",
-        "supranational_grouping",
-        "statistical_area",
-    }
-)
-
-CODE_STATUSES = frozenset(
-    {
-        "official_iso3166_1",
-        "user_assigned",
-        "obsolete",
-        "exceptionally_reserved",
-    }
-)
-
-EXPECTED_OFFICIAL_ISO_COUNT = 249
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -60,66 +47,27 @@ def load_yaml(path: Path) -> dict[str, Any]:
         return yaml.safe_load(f) or {}
 
 
-def is_null_field(record: dict[str, Any], field: str) -> bool:
-    if field == "timezones" and record.get("timezone_status") == "not_applicable":
-        return False
-    if field not in record:
-        return True
-    val = record[field]
-    if val is None:
-        return True
-    if val == "" or val == [] or val == {}:
-        return True
-    return False
+def _messages(issues: list[dict[str, Any]], rel_path: str) -> list[str]:
+    return [f"{rel_path}: {issue['suggested_action']}" for issue in issues]
 
 
 def validate_schema(record: dict[str, Any], schema: dict[str, Any], rel_path: str) -> list[str]:
-    errors: list[str] = []
-    validator = jsonschema.Draft7Validator(schema)
-    for err in sorted(validator.iter_errors(record), key=lambda e: e.path):
-        path = ".".join(str(p) for p in err.path) or "(root)"
-        errors.append(f"{rel_path}: {path}: {err.message}")
-    return errors
+    return [
+        f"{rel_path}: {issue['field']}: {issue['message']}"
+        for issue in country_rules.check_country_schema(record, schema)
+    ]
 
 
 def validate_entity_status(record: dict[str, Any], rel_path: str) -> tuple[list[str], list[str]]:
-    errors: list[str] = []
-    warnings: list[str] = []
+    return _messages(country_rules.check_country_entity_status(record), rel_path), []
 
-    code = str(record.get("code", ""))
-    entity_type = record.get("entity_type")
-    code_status = record.get("code_status")
 
-    if not entity_type:
-        errors.append(f"{rel_path}: missing entity_type")
-    elif entity_type not in ENTITY_TYPES:
-        errors.append(f"{rel_path}: invalid entity_type '{entity_type}'")
-
-    if not code_status:
-        errors.append(f"{rel_path}: missing code_status")
-    elif code_status not in CODE_STATUSES:
-        errors.append(f"{rel_path}: invalid code_status '{code_status}'")
-
-    if code in NON_ISO_ALPHA2:
-        if code_status == "official_iso3166_1":
-            errors.append(f"{rel_path}: non-ISO code '{code}' must not have code_status official_iso3166_1")
-    elif code_status != "official_iso3166_1":
-        errors.append(f"{rel_path}: ISO-style code '{code}' must have code_status official_iso3166_1")
-
-    return errors, warnings
+def validate_entity_flags(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_entity_flags(record), rel_path)
 
 
 def validate_currency_codes(record: dict[str, Any], rel_path: str) -> list[str]:
-    warnings: list[str] = []
-    for idx, cur in enumerate(record.get("currencies") or []):
-        if not isinstance(cur, dict):
-            continue
-        code = cur.get("code")
-        if code is None:
-            continue
-        if not isinstance(code, str) or not ISO4217.match(code):
-            warnings.append(f"{rel_path}: currencies[{idx}].code '{code}' is not ISO 4217 uppercase")
-    return warnings
+    return _messages(country_rules.check_country_currency_codes(record), rel_path)
 
 
 def validate_provenance_freshness(
@@ -128,122 +76,87 @@ def validate_provenance_freshness(
     *,
     max_age_months: int,
 ) -> list[str]:
-    warnings: list[str] = []
-    today = date.today()
-    for entry in record.get("provenance") or []:
-        if not isinstance(entry, dict):
-            continue
-        field = entry.get("field")
-        retrieved = entry.get("retrieved_at")
-        if not field or not retrieved:
-            continue
-        try:
-            year, month, day = (int(p) for p in str(retrieved).split("-"))
-            retrieved_date = date(year, month, day)
-        except (TypeError, ValueError):
-            warnings.append(f"{rel_path}: provenance[{field}].retrieved_at invalid: {retrieved!r}")
-            continue
-        age_months = (today.year - retrieved_date.year) * 12 + (today.month - retrieved_date.month)
-        if age_months > max_age_months:
-            warnings.append(
-                f"{rel_path}: provenance for '{field}' stale ({retrieved}, >{max_age_months} months)"
-            )
-    return warnings
+    return _messages(
+        country_rules.check_provenance_freshness(record, max_age_months=max_age_months),
+        rel_path,
+    )
+
+
+def validate_provenance_integrity(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_provenance_integrity(record), rel_path)
 
 
 def validate_centroid_coords(record: dict[str, Any], rel_path: str) -> list[str]:
-    warnings: list[str] = []
-    centroid = record.get("centroid")
-    if not isinstance(centroid, dict):
-        return warnings
-    lat = centroid.get("lat")
-    lng = centroid.get("lng")
-    if lat is not None and not (-90 <= float(lat) <= 90):
-        warnings.append(f"{rel_path}: centroid.lat out of range")
-    if lng is not None and not (-180 <= float(lng) <= 180):
-        warnings.append(f"{rel_path}: centroid.lng out of range")
-    return warnings
+    return _messages(country_rules.check_country_coordinates(record), rel_path)
+
+
+def validate_locale_fields(record: dict[str, Any], rel_path: str) -> list[str]:
+    """tld, calling codes, timezones, flag emoji, and landlocked consistency."""
+    issues = (
+        country_rules.check_country_tld(record)
+        + country_rules.check_country_calling_codes(record)
+        + country_rules.check_country_timezones(record)
+        + country_rules.check_country_flag_emoji(record)
+        + country_rules.check_country_landlocked(record)
+    )
+    return _messages(issues, rel_path)
+
+
+def validate_region_hierarchy(
+    record: dict[str, Any], rel_path: str, allowlist: set[str]
+) -> list[str]:
+    return _messages(country_rules.check_country_region_hierarchy(record, allowlist), rel_path)
+
+
+def validate_capital_distance(
+    record: dict[str, Any], rel_path: str, config: dict[str, Any]
+) -> list[str]:
+    return _messages(country_rules.check_country_capital_distance(record, config), rel_path)
+
+
+def validate_text_encoding(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_text_encoding(record), rel_path)
 
 
 def validate_official_iso_count(records: list[dict[str, Any]]) -> list[str]:
-    errors: list[str] = []
-    count = sum(1 for r in records if r.get("code_status") == "official_iso3166_1")
-    if count != EXPECTED_OFFICIAL_ISO_COUNT:
-        errors.append(
-            f"entity policy: expected {EXPECTED_OFFICIAL_ISO_COUNT} official_iso3166_1 records, found {count}"
-        )
-    return errors
+    return [
+        f"entity policy: {issue['suggested_action']}"
+        for issue in country_rules.validate_official_iso_count(records)
+    ]
 
 
 def check_duplicates(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
-    errors: list[str] = []
-    by_code: dict[str, str] = {}
-    by_iso3: dict[str, str] = {}
-    by_numeric: dict[str, str] = {}
-
-    for rel, rec in records:
-        for field, mapping in (
-            ("code", by_code),
-            ("iso3code", by_iso3),
-            ("numeric_code", by_numeric),
-        ):
-            val = str(rec.get(field, ""))
-            if not val:
-                continue
-            if val in mapping and mapping[val] != rel:
-                errors.append(f"duplicate {field} '{val}' in {rel} and {mapping[val]}")
-            else:
-                mapping[val] = rel
-    return errors
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"duplicate {issue['field']} '{issue['current_value']}' in {issue['file_path']} and {issue['other_path']}"
+        for issue in country_rules.check_country_duplicates(recs, rel_paths)
+    ]
 
 
 def validate_borders(record: dict[str, Any], rel_path: str) -> list[str]:
-    errors: list[str] = []
-    borders = record.get("borders")
-    if borders is None:
-        return errors
-    if not isinstance(borders, list):
-        errors.append(f"{rel_path}: borders must be a list")
-        return errors
-    for b in borders:
-        if not isinstance(b, str) or not ALPHA3.match(b):
-            errors.append(f"{rel_path}: border '{b}' must be ISO alpha-3 uppercase")
-    return errors
+    return _messages(country_rules.check_country_borders(record), rel_path)
 
 
 def validate_indicator_years(record: dict[str, Any], rel_path: str) -> list[str]:
-    """Reject placeholder year values in population/area/gini structs.
+    return _messages(country_rules.check_country_indicator_years(record), rel_path)
 
-    A year must either be a positive integer or absent; `year: 0` is a
-    data error that pollutes downstream consumers.
-    """
-    errors: list[str] = []
-    for field in ("population", "area", "gini"):
-        val = record.get(field)
-        if not isinstance(val, dict):
-            continue
-        year = val.get("year")
-        if year is None:
-            continue
-        if not isinstance(year, int) or isinstance(year, bool) or year <= 0:
-            errors.append(f"{rel_path}: {field}.year must be a positive integer or omitted, got {year!r}")
-    return errors
+
+def validate_indicator_values(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_indicator_values(record), rel_path)
+
+
+def validate_filename(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_filename(record, rel_path), rel_path)
 
 
 def audit_whitespace(record: dict[str, Any], rel_path: str) -> list[str]:
-    warnings: list[str] = []
-    sub = record.get("subregion")
-    if isinstance(sub, str) and sub != sub.strip():
-        warnings.append(f"{rel_path}: subregion has leading/trailing whitespace")
-    for key in ("region", "adminregion"):
-        obj = record.get(key)
-        if isinstance(obj, dict):
-            val = obj.get("value")
-            if isinstance(val, str) and val != val.strip():
-                warnings.append(f"{rel_path}: {key}.value has leading/trailing whitespace")
-    return warnings
+    return [
+        f"{rel_path}: {issue['field']} has leading/trailing whitespace"
+        for issue in country_rules.check_country_whitespace(record)
+    ]
 
 
 def validate_completeness(
@@ -381,6 +294,9 @@ def run_validation(
     warnings: list[str] = []
     records: list[tuple[str, dict[str, Any]]] = []
     all_records: list[dict[str, Any]] = []
+    region_allowlist = {
+        str(x) for x in ((completeness_cfg.get("region_hierarchy") or {}).get("allowlist") or [])
+    }
 
     yaml_files = sorted(countries_dir.glob("*.yaml"))
     if not yaml_files:
@@ -388,7 +304,7 @@ def run_validation(
         return 1
 
     for path in yaml_files:
-        rel = str(path.relative_to(root))
+        rel = str(path.relative_to(root)) if path.is_relative_to(root) else str(path)
         try:
             record = load_yaml(path)
         except yaml.YAMLError as e:
@@ -399,15 +315,41 @@ def run_validation(
         errors.extend(validate_schema(record, schema, rel))
         errors.extend(validate_borders(record, rel))
         errors.extend(validate_indicator_years(record, rel))
+        errors.extend(validate_filename(record, rel))
+        warnings.extend(validate_indicator_values(record, rel))
         warnings.extend(audit_whitespace(record, rel))
         ent_errors, ent_warnings = validate_entity_status(record, rel)
         errors.extend(ent_errors)
         warnings.extend(ent_warnings)
+        warnings.extend(validate_entity_flags(record, rel))
         warnings.extend(validate_centroid_coords(record, rel))
         warnings.extend(validate_currency_codes(record, rel))
+        warnings.extend(validate_provenance_integrity(record, rel))
+        warnings.extend(validate_locale_fields(record, rel))
+        warnings.extend(validate_region_hierarchy(record, rel, region_allowlist))
+        warnings.extend(validate_capital_distance(record, rel, completeness_cfg))
+        warnings.extend(validate_text_encoding(record, rel))
 
     errors.extend(check_duplicates(records))
     errors.extend(validate_official_iso_count(all_records))
+
+    rel_paths = [rel for rel, _ in records]
+    errors.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_border_resolution(all_records, rel_paths)
+    )
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_border_reciprocity(
+            all_records,
+            rel_paths,
+            cross_rules.load_border_reciprocity_allowlist(completeness_cfg),
+        )
+    )
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_parent_entity_refs(all_records, rel_paths)
+    )
 
     comp_errors, comp_warnings, completeness_report = validate_completeness(all_records, completeness_cfg)
     errors.extend(comp_errors)

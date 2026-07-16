@@ -1,58 +1,28 @@
 id: ACTO
+name: Amazon Cooperation Treaty Organization
 blocktype:
 - intorg
+- environment
 status: formal
+founded: '1995-02-25'
+active_period:
+  start: '1995-02-25'
+geographic_scope: regional
+regions:
+- South America
+- Amazon
 languages:
 - en
 - es
 - nl
 - pt
 links:
+- url: https://otca.org/en/
+  type: website
 - url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q602399
   type: wikidata
-name: Amazon Cooperation Treaty Organization
-includes:
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
-  type: country
-  status: member
-founded: '1995'
-headquarters:
-  city: Brasília
-  country: BR
-  coordinates:
-    lat: -15.793888888889
-    lng: -47.882777777778
 acronyms:
 - lang: en
   value: ACTO
@@ -60,43 +30,173 @@ acronyms:
   value: OTCA
 - lang: en
   value: OOAS
-geographic_scope: regional
-regions:
-- South America
+- lang: es
+  value: OTCA
+- lang: fr
+  value: OTCA
+legal_status: intergovernmental organization
+recognition_status: Sole multilateral intergovernmental organization dedicated exclusively to the Amazon region
+headquarters:
+  city: Brasília
+  country: BR
+  coordinates:
+    lat: -15.793888888889
+    lng: -47.882777777778
+secretariat:
+  location: Brasília, Brazil
+  head: Secretary-General
 membership_count: 8
-wikidata_id: Q602399
-description: The Amazon Cooperation Treaty Organization is an international organization that is used to promote regional
-  cooperation in the Amazon region.
+description: Intergovernmental organization of the eight Amazonian countries established to strengthen implementation of the Amazon Cooperation Treaty (1978). ACTO coordinates political and technical regional cooperation on forest protection, sustainable development, biodiversity, and climate preservation in the world's largest tropical rainforest and river basin. The Permanent Secretariat in Brasília, inaugurated in December 2002, plans regional projects and represents the Amazon at international forums.
 tags:
 - ACTO
-- OOAS
 - OTCA
+- OOAS
 - amazon
+- biodiversity
+- climate
 - cooperation
+- environment
+- forest
 - intorg
+- rainforest
 - regional
 - regional_cooperation
+- south-america
+- sustainable_development
 - treaty
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+- key: environment
+  name: Environment
+- key: climate_change
+  name: Climate Change
+- key: development
+  name: Development
+includes:
+- id: BO
+  name: Bolivia
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: BR
+  name: Brazil
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: CO
+  name: Colombia
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: EC
+  name: Ecuador
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: GY
+  name: Guyana
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: PE
+  name: Peru
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: SR
+  name: Suriname
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: founding_member
+  joined: '1978-07-03'
+founding_members:
+- BO
+- BR
+- CO
+- EC
+- GY
+- PE
+- SR
+- VE
+wikidata_id: Q602399
 other_names:
-- id: zh
-  name: 亞馬遜合作條約組織
+- id: ar
+  name: منظمة معاهدة التعاون الأمازوني
+- id: de
+  name: Organisation des Amazonas-Übereinkommens
 - id: en
   name: Amazon Cooperation Treaty Organization
-- id: fr
-  name: Organisation du traité de coopération amazonienne
-- id: ru
-  name: Амазонский пакт
 - id: es
   name: Organización del Tratado de Cooperación Amazónica
+- id: fr
+  name: Organisation du traité de coopération amazonienne
+- id: nl
+  name: Organisatie van de Overeenkomst voor Amazonische Samenwerking
+- id: pt
+  name: Organização do Tratado de Cooperação Amazônica
+- id: ru
+  name: Амазонский пакт
+- id: zh
+  name: 亞馬遜合作條約組織
+notes: The Amazon Cooperation Treaty (ACT) was signed in Brasília on 3 July 1978 by the eight Amazonian countries and amended in 1998 to create ACTO as a permanent body with legal personality. ACTO replaced rotating pro tempore secretariats; the Permanent Secretariat has been based in Brasília since December 2002. Governance operates by consensus among member countries through the Amazon Cooperation Treaty Council and meetings of foreign ministers.
+last_verified: '2026-07-12'
 provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q602399
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q602399
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/who-we-are/
+- field: regions
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/who-we-are/
+- field: legal_status
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/who-we-are/
+- field: recognition_status
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/
+- field: description
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/who-we-are/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
+- field: secretariat
+  source: FAO Open Knowledge
+  retrieved_at: '2026-07-12'
+  url: https://openknowledge.fao.org/server/api/core/bitstreams/96bced40-2471-4e94-b927-335ef1ea8c29/content/y5841e12.htm
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Amazon_Cooperation_Treaty_Organization
+- field: notes
+  source: ACTO official website
+  retrieved_at: '2026-07-12'
+  url: https://otca.org/en/who-we-are/

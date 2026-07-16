@@ -1,17 +1,91 @@
 id: EBRD
+name: European Bank for Reconstruction and Development
 blocktype:
 - bank
 status: formal
+founded: '1991-03-28'
+active_period:
+  start: '1991-03-28'
+geographic_scope: regional
+regions:
+- Central Asia
+- Europe
+- Mediterranean
 languages:
 - en
 links:
 - url: https://www.ebrd.com/
   type: website
+- url: https://www.ebrd.com/home/who-we-are.html
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q488981
   type: wikidata
-name: European Bank for Reconstruction and Development
+headquarters:
+  city: London
+  country: GB
+  coordinates:
+    lat: 51.504722222222
+    lng: -0.019444444444
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the European Bank for Reconstruction and Development (1990), which entered into force on 28 March 1991
+secretariat:
+  location: London, United Kingdom
+  head: President
+  organization: European Bank for Reconstruction and Development
+membership_count: 77
+founding_members:
+- AT
+- BG
+- CA
+- CY
+- DE
+- DK
+- EG
+- ES
+- FI
+- FR
+- GB
+- HU
+- IE
+- IL
+- IT
+- KR
+- LI
+- LU
+- MA
+- MT
+- NL
+- 'NO'
+- PL
+- RO
+- SE
+- TR
+- US
+description: Multilateral development bank established in 1991 to foster transition to open, market-oriented economies across central and eastern Europe, central Asia, and the southern and eastern Mediterranean. Owned by 77 countries plus the European Union and European Investment Bank as institutional shareholders, the EBRD invests primarily in the private sector alongside commercial partners, providing loans, equity investments, and guarantees to support competitiveness, governance, inclusion, and green-economy transition in its countries of operations.
+tags:
+- EBRD
+- aid
+- bank
+- development
+- economy
+- europe
+- european
+- finance
+- multilateral
+- reconstruction
+- regional
+- transition
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AL
   name: Albania
@@ -321,63 +395,6 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-founded: '1991'
-headquarters:
-  city: London
-  coordinates:
-    lat: 51.507222222222
-    lng: -0.1275
-membership_count: 77
-wikidata_id: Q488981
-description: International development bank focused on development providing financial services.
-tags:
-- EBRD
-- aid
-- bank
-- development
-- economy
-- european
-- finance
-- reconstruction
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-other_names:
-- id: ar
-  name: البنك الأوروبي لإعادة البناء والتنمية
-- id: de
-  name: Europäische Bank für Wiederaufbau und Entwicklung
-- id: en
-  name: European Bank for Reconstruction and Development
-- id: es
-  name: Banco Europeo para la Reconstrucción y el Desarrollo
-- id: fr
-  name: Banque européenne pour la reconstruction et le développement
-- id: pt
-  name: Banco Europeu para a Reconstrução e o Desenvolvimento
-- id: ru
-  name: Европейский банк реконструкции и развития
-- id: zh
-  name: 欧洲复兴开发银行
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ebrd.com/
 acronyms:
 - lang: en
   value: EBRD
@@ -397,3 +414,75 @@ acronyms:
   value: EBWE
 - lang: de
   value: EBRD
+wikidata_id: Q488981
+notes: 77 country shareholders plus the European Union and European Investment Bank as institutional shareholders; lending is limited to countries of operations from central Europe to central Asia and the southern and eastern Mediterranean. The establishing agreement was signed on 29 May 1990 and entered into force on 28 March 1991.
+last_verified: '2026-07-12'
+other_names:
+- id: ar
+  name: البنك الأوروبي لإعادة البناء والتنمية
+- id: de
+  name: Europäische Bank für Wiederaufbau und Entwicklung
+- id: en
+  name: European Bank for Reconstruction and Development
+- id: es
+  name: Banco Europeo para la Reconstrucción y el Desarrollo
+- id: fr
+  name: Banque européenne pour la reconstruction et le développement
+- id: pt
+  name: Banco Europeu para a Reconstrução e o Desenvolvimento
+- id: ru
+  name: Европейский банк реконструкции и развития
+- id: zh
+  name: 欧洲复兴开发银行
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ebrd.com/home/who-we-are.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ebrd.com/home/who-we-are.html
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ebrd.com/home/who-we-are.html
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ebrd.com/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Bank_for_Reconstruction_and_Development
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

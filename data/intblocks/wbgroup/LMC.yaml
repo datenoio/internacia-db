@@ -2,6 +2,13 @@ id: LMC
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://api.worldbank.org/v2/incomelevel/LMC
+  type: website
+- url: https://api.worldbank.org/v2/country?incomelevel=LMC
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+  type: website
 name: Lower middle income
 includes:
 - id: AM
@@ -229,11 +236,12 @@ includes:
   type: country
   status: member
 membership_count: 56
-description: Lower middle income is an international wbgroup body with 56 members.
+description: World Bank income group aggregate for lower middle income economies.
 tags:
 - LMC
 - aid
 - bank
+- income
 - development
 - economy
 - finance
@@ -248,5 +256,6 @@ topics:
   name: Finance
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank Data API
+  retrieved_at: '2026-07-13'
+  url: https://api.worldbank.org/v2/incomelevel/LMC

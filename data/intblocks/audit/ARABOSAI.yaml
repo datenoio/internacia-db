@@ -1,30 +1,62 @@
 id: ARABOSAI
+name: Arab Organization of Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
-languages:
-- ar
-links:
-- url: https://www.arabosai.org/
-  type: website
-name: Arab Organization of Supreme Audit Institutions
 founded: '1976'
+active_period:
+  start: '1976'
 geographic_scope: regional
 regions:
 - Middle East
 - North Africa
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
+languages:
+- ar
+- en
+links:
+- url: https://www.arabosai.org/
+  type: website
+- url: https://www.arabosai.org/en/home/
+  type: website
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
+- url: https://en.wikipedia.org/wiki/ARABOSAI
+  type: wikipedia
+acronyms:
+- lang: ar
+  value: ARABOSAI
+- lang: en
+  value: ARABOSAI
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in the Arab region
 headquarters:
   city: Tunis
   country: TN
   coordinates:
     lat: 36.8065
     lng: 10.1815
-acronyms:
-- lang: ar
-  value: ARABOSAI
-- lang: en
-  value: ARABOSAI
+secretariat:
+  location: Tunis, Tunisia
+  organization: Court of Accounts of Tunisia
+  head: Secretary-General
+membership_count: 22
+description: Regional association of supreme audit institutions in the Arab region, established in 1976 at the founding meeting of SAI heads in Cairo. Promotes exchange of ideas, training, and technical cooperation among member SAIs, raises awareness of public audit within Arab nations, and strengthens cooperation with INTOSAI, the League of Arab States, and other regional and international audit bodies. One of seven regional organisations of INTOSAI; the General Secretariat is hosted by the Court of Accounts of Tunisia in Tunis.
+tags:
+- ARABOSAI
+- arab
+- audit
+- intorg
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: DZ
   name: Algeria
@@ -114,30 +146,55 @@ includes:
   name: Yemen
   type: country
   status: member
-membership_count: 22
-description: Regional association of supreme audit institutions in the Arab region, promoting exchange of ideas, training,
-  and technical cooperation among SAIs. One of seven regional organisations of INTOSAI.
-tags:
-- ARABOSAI
-- arab
-- audit
-- intorg
-- organisation
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governed by a General Assembly, Governing Board, and General Secretariat. Operates standing committees on institutional capacity building, professional issues, information technology oversight, SDGs auditing, strategic planning, and the Journal of Financial Control. As of 2026, the ARABOSAI chair is held by Saudi Arabia and the General Secretariat is hosted by the Court of Accounts of Tunisia in Tunis.
 other_names:
 - id: ar
   name: المنظمة العربية للأجهزة العليا للرقابة
 - id: en
   name: Arab Organization of Supreme Audit Institutions
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabosai.org/en/home/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabosai.org/en/home/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabosai.org/en/home/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.arabosai.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabosai.org/en/home/organization-structures
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://www.arabosai.org/

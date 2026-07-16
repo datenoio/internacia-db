@@ -1,18 +1,69 @@
 id: BIS
+name: Bank for International Settlements
 blocktype:
 - bank
 - intorg
 status: formal
+founded: '1930-05-17'
+active_period:
+  start: '1930-05-17'
+geographic_scope: global
 languages:
 - en
 links:
-- url: http://www.bis.org
+- url: https://www.bis.org/
+  type: website
+- url: https://www.bis.org/about/index.htm
   type: website
 - url: https://en.wikipedia.org/wiki/Bank_for_International_Settlements
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q309195
   type: wikidata
-name: Bank of International Settlements
+headquarters:
+  city: Basel
+  country: CH
+  coordinates:
+    lat: 47.560555555556
+    lng: 7.5905555555556
+legal_status: intergovernmental
+recognition_status: International financial institution established under the Hague Agreement of 20 January 1930; capital held
+  exclusively by member central banks and monetary authorities
+secretariat:
+  location: Basel, Switzerland
+  head: General Manager
+  organization: Bank for International Settlements
+membership_count: 63
+founding_members:
+- BE
+- FR
+- DE
+- IT
+- JP
+- CH
+- GB
+- US
+description: International financial institution established in 1930 to support central banks' pursuit of monetary and financial
+  stability through international cooperation, and to act as a bank for central banks. Owned by 63 member central banks and
+  monetary authorities representing countries that together account for about 95% of world GDP. Headquartered in Basel,
+  Switzerland, with representative offices in Hong Kong SAR and Mexico City.
+tags:
+- BIS
+- bank
+- central-banks
+- finance
+- international
+- intorg
+- monetary-policy
+- multilateral
+- settlements
+- stability
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: governance
+  name: Governance
 includes:
 - id: DZ
   name: Algeria
@@ -262,26 +313,20 @@ includes:
   name: European Central Bank
   type: organization
   status: member
-founded: '1930'
-headquarters:
-  city: Basel
-  country: CH
-  lat: 47.560555555556
-  lng: 7.5905555555556
-membership_count: 62
+acronyms:
+- lang: en
+  value: BIS
+- lang: en
+  value: B.I.S.
+- lang: zh
+  value: 國際結算銀行
+- lang: pt
+  value: BIS
 wikidata_id: Q309195
-description: The Bank of International Settlements is an international organization that is used to promote regional cooperation
-  in the financial sector.
-tags:
-- BIS
-- bank
-- finance
-- international
-- intorg
-- settlements
-topics:
-- key: finance
-  name: Finance
+notes: Central-bank-owned institution serving as a forum for international monetary and financial cooperation and as a bank
+  for central banks. Hosts the Basel Committee on Banking Supervision and supports related standard-setting bodies. This file
+  lists 62 members (61 countries plus the ECB); the BIS reports 63 member central banks and monetary authorities.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التسويات الدولية
@@ -300,6 +345,50 @@ other_names:
 - id: zh
   name: 國際清算銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/member_cb.htm
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_for_International_Settlements
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_for_International_Settlements
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bis.org/about/index.htm
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -310,16 +399,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.bis.org
-acronyms:
-- lang: en
-  value: BIS
-- lang: en
-  value: B.I.S.
-- lang: zh
-  value: 國際結算銀行
-- lang: pt
-  value: BIS

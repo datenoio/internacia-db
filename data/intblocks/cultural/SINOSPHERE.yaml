@@ -1,14 +1,23 @@
 id: SINOSPHERE
+name: Sinosphere
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Asia
+- East Asia
+- Southeast Asia
 languages:
 - zh
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Sinosphere
   type: wikipedia
-name: Sinosphere
+- url: https://www.wikidata.org/wiki/Q716566
+  type: wikidata
+legal_status: informal
+recognition_status: Informal geographic and cultural concept (not a formal organization) describing countries and regions historically influenced by Chinese civilization, particularly through Literary Chinese, Chinese characters, and shared Confucian, Taoist, and Buddhist traditions; also termed the East Asian cultural sphere or Sinic world; scholarly definitions typically centre on China, Taiwan, Japan, North Korea, South Korea, and Vietnam, with Singapore and Mongolia often included in extended lists; distinct from the Sinophone world, which denotes territories where Chinese is spoken as a primary language
 includes:
 - id: CN
   name: China
@@ -31,14 +40,24 @@ includes:
   type: country
   status: member
 membership_count: 5
-description: Cultural region comprising countries and regions with significant Chinese-speaking
-  populations and cultural influence.
+wikidata_id: Q716566
+description: Geographic and cultural region encompassing territories shaped by Imperial Chinese civilization, shared use of Chinese characters, and common East Asian philosophical and administrative traditions. Scholarly definitions of the Sinosphere typically include China, Taiwan, Japan, North Korea, South Korea, and Vietnam; this record reflects the five Internacia entities in the Chinese-speaking administrative core (CN, TW, HK, MO, SG). Distinct from the broader Sinophone diaspora and from formal intergovernmental bodies in the region.
+notes: This record maps the Chinese-speaking administrative core rather than the full six-country scholarly Sinosphere (which adds Japan, North Korea, South Korea, and Vietnam). Hong Kong and Macao are listed separately because Internacia treats them as distinct country entities. Broader definitions may also include Mongolia, Malaysia, and overseas Chinese communities. Japan, Korea, and Vietnam developed indigenous phonographic writing systems but long retained Literary Chinese in official and scholarly use.
+last_verified: '2026-07-12'
 tags:
 - SINOSPHERE
 - chinese
+- chinese-characters
+- confucian
 - cultural
 - culture
+- east-asia
 - education
+- geopolitical
+- hanzi
+- informal
+- regional
+- sinic
 - sinosphere
 - university
 topics:
@@ -47,14 +66,66 @@ topics:
 - key: education
   name: Education
 other_names:
+- id: ar
+  name: المجال الثقافي لشرق آسيا
+- id: de
+  name: Sinosphäre
 - id: en
   name: Sinosphere
+- id: es
+  name: sinoesfera
+- id: fr
+  name: Sinosphère
+- id: ja
+  name: 漢字文化圏
+- id: ko
+  name: 한자 문화권
+- id: pt
+  name: esfera cultural da Ásia Oriental
+- id: ru
+  name: Китайский мир
+- id: vi
+  name: vùng văn hóa Đông Á
 - id: zh
   name: 漢字文化圈
-wikidata_id: Q716566
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q716566
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q716566
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Sinosphere
+  license: CC BY-SA 4.0

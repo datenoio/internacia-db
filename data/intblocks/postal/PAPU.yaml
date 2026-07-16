@@ -4,10 +4,33 @@ blocktype:
 status: formal
 languages:
 - en
+- fr
 links:
-- url: http://www.upap-papu.org/
+- url: https://www.upap-papu.post/
+  type: website
+- url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PAPU
   type: website
 name: Pan-African Postal Union
+founded: '1980-01-18'
+geographic_scope: regional
+regions:
+- Africa
+legal_status: specialized agency of the African Union
+recognition_status: Restricted union of the Universal Postal Union
+acronyms:
+- lang: en
+  value: PAPU
+- lang: fr
+  value: UPAP
+headquarters:
+  city: Arusha
+  country: TZ
+  coordinates:
+    lat: -3.3656418
+    lng: 36.7059782
+secretariat:
+  location: Arusha, Tanzania
+  organization: Pan-African Postal Union Secretariat
 includes:
 - id: DZ
   name: Algeria
@@ -190,7 +213,7 @@ includes:
   type: country
   status: member
 membership_count: 45
-description: A specialized agency of the African Union responsible for coordinating and developing postal services among African member states. Established in 1980 and headquartered in Arusha, Tanzania, it operates as a restricted union of the Universal Postal Union.
+description: A specialized institution of the African Union that coordinates activities aimed at developing postal services across the continent. Established on 18 January 1980 at the constitutive Plenipotentiary Conference in Arusha, Tanzania, following a 1977 OAU summit resolution in Libreville, Gabon, it operates as a restricted union of the Universal Postal Union with 45 member states.
 tags:
 - PAPU
 - african
@@ -208,3 +231,52 @@ topics:
   name: Regional Cooperation
 - key: telecommunications
   name: Telecommunications
+other_names:
+- id: en
+  name: Pan-African Postal Union
+- id: fr
+  name: Union panafricaine des postes
+notes: Established by the constitutive Plenipotentiary Conference of African postal ministers held 8–18 January 1980 in Arusha, convened after the OAU summit in Libreville (2–6 July 1977). The OAU Council of Ministers accepted PAPU as a specialized agency at its thirty-fifth ordinary session in Freetown, Sierra Leone (18–28 June 1980), recalling resolution CM/Res. 586 (XXIX). Membership grew from 35 founding states to 45.
+last_verified: '2026-07-12'
+provenance:
+- field: founded
+  source: Pan-African Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upap-papu.post/the-union/history/
+- field: geographic_scope
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PAPU
+- field: recognition_status
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PAPU
+- field: description
+  source: Pan-African Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upap-papu.post/the-union/
+- field: secretariat
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PAPU
+- field: headquarters
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PAPU
+- field: other_names
+  source: Union of International Associations
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100059078
+- field: acronyms
+  source: Union of International Associations
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100059078
+- field: notes
+  source: Pan-African Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upap-papu.post/the-union/
+- field: headquarters.coordinates
+  source: OpenStreetMap
+  retrieved_at: '2026-07-12'
+  url: https://www.openstreetmap.org/way/1479274255
+  license: ODbL 1.0

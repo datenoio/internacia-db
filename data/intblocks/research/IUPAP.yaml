@@ -8,14 +8,229 @@ languages:
 links:
 - url: https://iupap.org/
   type: website
+- url: https://iupap.org/members/
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Physics
   type: wikipedia
 name: International Union of Pure and Applied Physics
+includes:
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AU
+  name: Australia
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: EG
+  name: Egypt
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IR
+  name: Iran
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KR
+  name: Korea
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: NP
+  name: Nepal
+  type: country
+  status: associate_member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russia
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovakia
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: TW
+  name: Taiwan
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+membership_count: 52
 founded: '1922'
+headquarters:
+  city: Geneva
+  country: CH
 geographic_scope: global
 regions:
 - worldwide
-description: International non-governmental organization.
+description: International non-governmental scientific union covering all areas of physics through national adhering bodies and scientific commissions. Member of the International Science Council (ISC).
 tags:
 - IUPAP
 - international
@@ -32,7 +247,10 @@ topics:
   name: Science
 - key: technology
   name: Technology
+- key: physics
+  name: Physics
 wikidata_id: Q28346
+last_verified: '2026-07-15'
 provenance:
 - field: wikidata_id
   source: Wikidata
@@ -58,6 +276,22 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://iupap.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://iupap.org/members/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://iupap.org/members/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://iupap.org/who-we-are/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://iupap.org/who-we-are/
 other_names:
 - id: ar
   name: الاتحاد الدولي للفيزياء البحتة والتطبيقية

@@ -8,8 +8,10 @@ languages:
 links:
 - url: https://www.iala.int
   type: website
-- url: https://en.wikipedia.org/wiki/International_Association_of_Marine_Aids_to_Navigation_and_Lighthouse_Authorities
+- url: https://en.wikipedia.org/wiki/International_Organization_for_Marine_Aids_to_Navigation
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1666362
+  type: wikidata
 name: International Organization for Marine Aids to Navigation
 includes:
 - id: SG
@@ -188,9 +190,9 @@ headquarters:
     lat: 48.8986
     lng: 2.0931
 membership_count: 42
+geographic_scope: global
 legal_status: intergovernmental
-description: International Organization for Marine Aids to Navigation is an international
-  intorg body with 42 members.
+description: Intergovernmental organization that develops and harmonizes standards for marine aids to navigation, including lighthouses, buoyage, and related systems for safe, economic, and efficient vessel movement. Established in 1957 as the International Association of Lighthouse Authorities, renamed in 1998, and reconstituted as an intergovernmental organization under a convention that entered into force on 22 August 2024. Headquarters in Saint-Germain-en-Laye, France.
 tags:
 - IALA
 - international
@@ -207,21 +209,79 @@ topics:
 - key: safety
   name: Safety
 other_names:
+- id: ar
+  name: المنظمة الدولية للمساعدات الملاحية
+- id: de
+  name: International Association of Lighthouse Authorities
 - id: en
   name: International Organization for Marine Aids to Navigation
-- id: fr
-  name: Organisation internationale de signalisation maritime
 - id: en
   name: International Association of Marine Aids to Navigation and Lighthouse Authorities
+- id: es
+  name: Asociación Internacional de Ayudas a la Navegación Marítima y Autoridades
+    de Faros
+- id: fr
+  name: Organisation internationale de signalisation maritime
+- id: pt
+  name: Associação Internacional de Sinalização Marítima
+- id: ru
+  name: Международная ассоциация маячных служб
+- id: zh
+  name: 國際航標組織
+wikidata_id: Q1666362
+acronyms:
+- lang: en
+  value: IALA
+- lang: zh
+  value: 國際航標協會
+- lang: zh
+  value: 國際燈塔協會
+- lang: zh
+  value: 国际航标协会
+- lang: zh
+  value: 國際航標及燈塔協會
+- lang: fr
+  value: AISM
+- lang: fr
+  value: IALA
+- lang: ru
+  value: МАМС
+- lang: de
+  value: AISM
+- lang: pt
+  value: IALA
+- lang: pt
+  value: AISM
+last_verified: '2026-07-16'
 provenance:
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.iala.int
+  retrieved_at: '2026-07-16'
+  url: https://www.iala.int/about-iala/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-16'
   url: https://www.iala.int
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q1666362
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-16'
+  url: https://en.wikipedia.org/wiki/International_Organization_for_Marine_Aids_to_Navigation
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-16'
+  url: https://www.iala.int/about-iala/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q1666362
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q1666362
+  license: CC0

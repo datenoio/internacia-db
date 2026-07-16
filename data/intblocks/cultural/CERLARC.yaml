@@ -1,7 +1,17 @@
 id: CERLARC
+name: Regional Center for the Promotion of Books in Latin America and Caribbean
 blocktype:
 - cultural
 status: formal
+founded: '1971-04-23'
+active_period:
+  start: '1971-04-23'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
+- Iberia
+partof: UNESCO
 languages:
 - en
 - es
@@ -10,18 +20,24 @@ languages:
 links:
 - url: https://cerlalc.org/
   type: website
+- url: https://cerlalc.org/quienes-somos/
+  type: website
 - url: https://en.wikipedia.org/wiki/Cerlalc
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5064513
   type: wikidata
-name: Regional Center for the Promotion of Books in Latin America and Caribbean
-founded: '1971'
+legal_status: intergovernmental
+recognition_status: UNESCO Category 2 centre established under the International Cooperation Agreement between Colombia and UNESCO signed on 23 April 1971; intergovernmental organization of 21 Ibero-American member states headquartered in Bogotá
 headquarters:
   city: Bogotá
   country: CO
   coordinates:
     lat: 4.60971
     lng: -74.08175
+secretariat:
+  location: Bogotá, Colombia
+  head: Director
+  organization: Regional Center for the Promotion of Books in Latin America and Caribbean
 includes:
 - id: AR
   name: Argentina
@@ -99,23 +115,46 @@ includes:
   name: Dominican Republic
   type: country
   status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
 - id: VE
   name: Venezuela
   type: country
   status: member
-membership_count: 20
+acronyms:
+- lang: en
+  value: CERLALC
+- lang: es
+  value: CERLALC
+- lang: es
+  value: CERLAL
+- lang: pt
+  value: CERLALC
+- lang: pt
+  value: CERLAL
+membership_count: 21
 wikidata_id: Q5064513
-description: Regional Center for the Promotion of Books in Latin America and Caribbean
-  is an international cultural body with 20 members.
+description: Intergovernmental UNESCO Category 2 centre headquartered in Bogotá that supports Ibero-American governments in book, reading, and public-library policy. Created through the 1971 Colombia–UNESCO cooperation agreement, CERLALC provides technical assistance, research, training, and regional programs—including ISBN coordination, Redplanes reading plans, Iberbibliotecas, and the Ibero-American Observatory of Culture and Education for Early Childhood—to strengthen publishing ecosystems and reading societies across 21 member states.
+notes: Governed by a Council of representatives from all 21 member states plus UNESCO and Colombian host-country delegates; an Executive Committee of six rotating member states approves the annual technical program and budget. Director Margarita Cuéllar Barona has led the centre since 2024. Originated from UNESCO's 1966 book-promotion program; the national precursor CERLAL was established in Bogotá on 3 March 1970 before becoming a regional centre in 1971.
+last_verified: '2026-07-12'
 tags:
 - CERLARC
+- CERLALC
+- books
 - centro
 - cooperation
 - cultural
 - culture
 - education
+- iberoamerica
+- intergovernmental
+- libraries
+- reading
 - regional
 - regional_cooperation
+- unesco
 - university
 topics:
 - key: culture
@@ -134,31 +173,68 @@ other_names:
 - id: zh
   name: 拉丁美洲和加勒比区域图书推广中心
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5064513
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5064513
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5064513
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cerlalc.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-acronyms:
-- lang: en
-  value: CERLALC
-- lang: es
-  value: CERLALC
-- lang: es
-  value: CERLAL
-- lang: pt
-  value: CERLALC
-- lang: pt
-  value: CERLAL
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Cerlalc
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Cerlalc
+  license: CC BY-SA 4.0
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cerlalc.org/quienes-somos/

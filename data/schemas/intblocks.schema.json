@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Intblocks YAML schema (core subset)",
   "type": "object",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "required": ["id", "name", "blocktype", "status"],
   "properties": {
     "id": {
@@ -12,9 +12,6 @@
     "name": {
       "type": "string",
       "minLength": 1
-    },
-    "abbrRU": {
-      "type": "string"
     },
     "blocktype": {
       "type": "array",
@@ -26,10 +23,6 @@
     "status": {
       "type": "string",
       "enum": ["formal", "informal", "de-facto", "historical"]
-    },
-    "listed": {
-      "type": "string",
-      "enum": ["yes", "no"]
     },
     "languages": {
       "type": "array",
@@ -50,22 +43,6 @@
           "type": {
             "type": "string",
             "enum": ["website", "wikipedia", "wikidata"]
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "translations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["lang", "name"],
-        "properties": {
-          "lang": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
           }
         },
         "additionalProperties": true
@@ -251,6 +228,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "membership_applicability": {
+      "type": "string",
+      "enum": ["not_applicable"],
+      "description": "When not_applicable, an empty includes list is intentional (conceptual entities, acronyms, etc.)"
+    },
     "founding_members": {
       "type": "array",
       "items": { "type": "string" }
@@ -321,6 +303,63 @@
         "additionalProperties": true
       },
       "description": "Field-level sourcing for enriched fields"
+    },
+    "legal_status": {
+      "type": "string",
+      "description": "Legal character of the entity (e.g. intergovernmental, treaty, non-binding)"
+    },
+    "recognition_status": {
+      "type": "string",
+      "description": "How the entity is recognized within a broader system (e.g. UN specialized agency)"
+    },
+    "predecessor": {
+      "type": "string",
+      "description": "Id of the entity this one succeeded"
+    },
+    "successor": {
+      "type": "string",
+      "description": "Id of the entity that succeeded this one"
+    },
+    "previous_names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "period": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "description": "Former names with the period they were used"
+    },
+    "official_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "type": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "description": "Links to founding or official documents"
+    },
+    "social_media": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Social media handles keyed by platform"
+    },
+    "secretariat": {
+      "type": "object",
+      "properties": {
+        "location": { "type": "string" },
+        "organization": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "description": "Secretariat location and host organization"
     }
   }
 }

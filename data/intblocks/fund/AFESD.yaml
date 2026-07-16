@@ -1,19 +1,49 @@
 id: AFESD
+name: Arab Fund for Economic and Social Development
 blocktype:
 - fund
 status: formal
 partof: LAS
+founded: '1968-05-16'
+active_period:
+  start: '1972-02-06'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
 - ar
 - en
 links:
 - url: https://www.arabfund.org/
   type: website
+- url: https://www.arabfund.org/about-us/
+  type: website
 - url: https://en.wikipedia.org/wiki/Arab_Fund_for_Economic_and_Social_Development
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1137381
   type: wikidata
-name: Arab Fund for Economic and Social Development
+legal_status: development finance institution
+recognition_status: Established by agreement of the Economic and Social Council of the League of Arab States on 16 May 1968; began operations after its first Board of Governors meeting on 6 February 1972; membership comprises League of Arab States member states
+headquarters:
+  city: Kuwait City
+  country: KW
+  coordinates:
+    lat: 29.375
+    lng: 47.98
+secretariat:
+  location: Kuwait City, Kuwait
+  head: Chairman of the Board of Directors and General Manager
+  organization: Arab Fund for Economic and Social Development
+acronyms:
+- lang: en
+  value: FADES
+- lang: en
+  value: AFESD
+- lang: fr
+  value: FADES
+- lang: pt
+  value: AFESD
 includes:
 - id: EG
   name: Egypt
@@ -99,25 +129,8 @@ includes:
   name: Palestine, State of
   type: country
   status: member
-founded: '1968'
-headquarters:
-  city: Kuwait City
-  country: KW
-  coordinates:
-    lat: 29.375
-    lng: 47.98
-acronyms:
-- lang: en
-  value: FADES
-- lang: en
-  value: AFESD
-- lang: fr
-  value: FADES
-- lang: pt
-  value: AFESD
 membership_count: 21
-wikidata_id: Q1137381
-description: Kuwait-based pan-Arab development finance institution.
+description: Kuwait-based pan-Arab development finance institution that provides loans and financing for economic and social development projects in League of Arab States member countries, with priority for inter-Arab projects. Established by agreement of the League's Economic and Social Council on 16 May 1968 and began operations after its first Board of Governors meeting on 6 February 1972.
 tags:
 - AFESD
 - FADES
@@ -128,11 +141,20 @@ tags:
 - economic
 - finance
 - fund
+- las
+- middle_east
+- regional
+- social
 topics:
 - key: development
   name: Development
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q1137381
+notes: Governed by a Board of Governors and a Board of Directors chaired by the General Manager; operations departments cover project financing, investments, financial affairs, and support services. Provides loans to public and private institutions and technical assistance for development projects across the Arab world.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: الصندوق العربي للإنماء الاقتصادي والاجتماعي
@@ -145,22 +167,55 @@ other_names:
 - id: pt
   name: Fundo Árabe para Desenvolvimento Econômico e Social
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1137381
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabfund.org/about-us/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabfund.org/about-us/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_Fund_for_Economic_and_Social_Development
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_Fund_for_Economic_and_Social_Development
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.arabfund.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_Fund_for_Economic_and_Social_Development
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1137381
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1137381
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1137381
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.arabfund.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_Fund_for_Economic_and_Social_Development
+  license: CC BY-SA 4.0

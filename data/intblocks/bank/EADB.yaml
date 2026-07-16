@@ -1,17 +1,67 @@
 id: EADB
+name: East African Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1967'
+active_period:
+  start: '1967'
+geographic_scope: regional
+regions:
+- Africa
+- East Africa
+partof: EAC
 languages:
 - en
 links:
-- url: http://www.eadb.org/
+- url: https://www.eadb.org/
+  type: website
+- url: https://www.eadb.org/about/about-us/
+  type: website
+- url: https://www.eadb.org/about/history/
+  type: website
+- url: https://www.eadb.org/publications/eadb-charter/
   type: website
 - url: https://en.wikipedia.org/wiki/East_African_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5327655
   type: wikidata
-name: East African Development Bank
+headquarters:
+  city: Kampala
+  country: UG
+  coordinates:
+    lat: 0.31361111111111
+    lng: 32.581111111111
+legal_status: intergovernmental
+recognition_status: Regional development finance institution established under the treaty of the East African Cooperation in 1967; re-established under its own charter in 1980 following the collapse of the first East African Community
+secretariat:
+  location: Kampala, Uganda
+  head: Director General
+  organization: East African Development Bank
+membership_count: 4
+description: Regional development finance institution and organ of the East African Community, established in 1967 to provide long-term finance for enterprises supporting socio-economic development and regional integration in East Africa. Owned by Kenya, Uganda, Tanzania, and Rwanda together with development and commercial financial institution shareholders, EADB offers loans, equity investments, trade finance, and advisory services across the member states.
+tags:
+- EADB
+- africa
+- african
+- aid
+- bank
+- development
+- east
+- east-africa
+- economy
+- finance
+- multilateral
+- regional
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: KE
   name: Kenya
@@ -29,32 +79,20 @@ includes:
   name: Rwanda
   type: country
   status: member
-membership_count: 4
-founded: '1967'
-headquarters:
-  city: Kampala
-  country: UG
-  coordinates:
-    lat: 0.31361111111111
-    lng: 32.581111111111
+  joined: '2008'
+founding_members:
+- KE
+- TZ
+- UG
+acronyms:
+- lang: en
+  value: EADB
+official_documents:
+- url: https://www.eadb.org/publications/eadb-charter/
+  type: charter
 wikidata_id: Q5327655
-description: International development bank focused on development providing financial services.
-tags:
-- EADB
-- african
-- aid
-- bank
-- development
-- east
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Re-established under its own charter in 1980 after the first East African Community dissolved in 1977. Rwanda was admitted in 2008. The bank also has non-member shareholders including the African Development Bank and other development finance institutions.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك تنمية شرق أفريقيا
@@ -65,7 +103,42 @@ other_names:
 - id: es
   name: Banco de Desarrollo de África Oriental
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eadb.org/about/about-us/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eadb.org/about/about-us/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/East_African_Development_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eadb.org/about/history/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eadb.org/about/structure/
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.eadb.org/
+  url: https://www.eadb.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eadb.org/about/history/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/East_African_Development_Bank
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5327655
+  license: CC0

@@ -254,9 +254,9 @@ ORDER BY name;
 ### Multilingual intblock names
 
 ```sql
-SELECT id, name, tr.name AS translated_name, tr.lang
-FROM intblocks, UNNEST(translations) AS tr
-WHERE tr.lang = 'fr'
+SELECT id, name, onm.name AS translated_name, onm.id AS lang
+FROM intblocks, UNNEST(other_names) AS onm
+WHERE onm.id = 'fr'
 ORDER BY id
 LIMIT 20;
 ```

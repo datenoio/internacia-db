@@ -1,15 +1,57 @@
 id: ACBF
+name: African Capacity Building Foundation
 blocktype:
 - intorg
+- development
 status: formal
+founded: '1991'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
+- fr
 links:
 - url: https://theacbf.org
   type: website
 - url: https://www.wikidata.org/wiki/Q30267810
   type: wikidata
-name: African Capacity Building Foundation
+legal_status: specialized agency of the African Union
+recognition_status: African Union specialized agency for capacity development
+acronyms:
+- lang: en
+  value: ACBF
+- lang: fr
+  value: ACBF
+headquarters:
+  city: Harare
+  country: ZW
+  coordinates:
+    lat: -17.767953
+    lng: 31.047329
+partof:
+  id: AFUNION
+  name: African Union
+membership_count: 40
+description: Specialized agency of the African Union and leading continental institution for capacity building. ACBF strengthens public and private institutions and leaders with the skills, tools, and knowledge to drive inclusive and sustainable development across Africa, aligning investments with long-term goals including Agenda 2063. Headquartered in Harare, Zimbabwe, with over 30 years of experience since its establishment in 1991.
+tags:
+- ACBF
+- africa
+- african
+- african-union
+- building
+- capacity
+- capacity-building
+- development
+- intorg
+- regional
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: BJ
   name: Benin
@@ -171,32 +213,6 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 40
-founded: '1991'
-geographic_scope: regional
-regions:
-- Africa
-acronyms:
-- lang: en
-  value: ACBF
-- lang: fr
-  value: ACBF
-partof:
-  id: AFUNION
-  name: African Union
-headquarters:
-  city: Harare
-  country: ZW
-description: The African Capacity Building Foundation is a foundation that is used to build capacity in Africa.
-tags:
-- ACBF
-- african
-- building
-- capacity
-- intorg
-topics:
-- key: economy
-  name: Economy
 wikidata_id: Q30267810
 other_names:
 - id: zh
@@ -205,6 +221,8 @@ other_names:
   name: African Capacity Building Foundation
 - id: fr
   name: Fondation pour le renforcement des capacités en Afrique
+notes: Operates programs including the Ubora Academy, Institutional Accelerator Model, Capacity Knowledge Hub, and Fiscal Agent Services.
+last_verified: '2026-07-12'
 provenance:
 - field: acronyms
   source: Wikidata
@@ -218,4 +236,29 @@ provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://theacbf.org
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://theacbf.org
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://theacbf.org
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://theacbf.org
+- field: headquarters.coordinates
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q30267810
+  license: CC0
+- field: topics
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://theacbf.org
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://theacbf.org

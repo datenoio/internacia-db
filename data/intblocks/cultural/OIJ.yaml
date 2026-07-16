@@ -1,8 +1,18 @@
 id: OIJ
+name: International Youth Organization for Ibero-America
 blocktype:
 - cultural
 - youth
 status: formal
+founded: '1992'
+active_period:
+  start: '1992'
+geographic_scope: regional
+regions:
+- Americas
+- Europe
+- Latin America
+- Ibero-America
 languages:
 - es
 - pt
@@ -13,7 +23,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q25932145
   type: wikidata
-name: International Youth Organization for Ibero-America
+legal_status: intergovernmental
+recognition_status: Only public international organization devoted exclusively to youth in the Ibero-American space; formally constituted in 1996 with full international legal personality by the 21 states participating in the Ibero-American Summits; holds observer status at the United Nations General Assembly since 2016 (A/RES/71/154); member of the Council of Ibero-American Organizations
+secretariat:
+  location: Recoletos 8, Paseo de Recoletos, Madrid, Spain
+  head: Secretary-General
+  organization: General Secretariat of the International Youth Organization for Ibero-America
+headquarters:
+  city: Madrid
+  country: ES
+  coordinates:
+    lat: 40.41694444444445
+    lng: -3.703333333333333
 includes:
 - id: AR
   name: Argentina
@@ -99,13 +120,6 @@ includes:
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
-founded: '1992'
-headquarters:
-  city: Madrid
-  country: ES
-  coordinates:
-    lat: 40.41694444444445
-    lng: -3.703333333333333
 acronyms:
 - lang: en
   value: OIJ
@@ -113,25 +127,30 @@ acronyms:
   value: OIJ
 - lang: pt
   value: OIJ
-geographic_scope: regional
-regions:
-- Ibero-America
 membership_count: 21
 wikidata_id: Q25932145
-description: Public international organization on youth issues.
+description: Intergovernmental public international organization dedicated exclusively to youth policy in Ibero-America. Founded in 1992 and formally constituted in 1996 with international legal personality, OIJ coordinates the official national youth bodies of 21 Spanish- and Portuguese-speaking member states. Headquartered in Madrid, it promotes youth participation, evidence-based public policy, and multisectoral cooperation through programs including the Nueva Agenda de Juventudes (NAJ), the Ibero-American Youth Pact, and the Ibero-American Youth Survey.
+notes: Created in 1992 as the Organización Iberoamericana de Juventud through a cooperation agreement between the Organization of Ibero-American States (OEI) and the Ibero-American Youth Conference; formally constituted as an international organization on 1 August 1996. Institutional refoundation in 2020 modernized governance and financing. A regional office opened in Brazil in 2023. Alexandre Pupo Quintino assumed as Secretary-General on 17 May 2025, launching the 2025–2029 action plan focused on youth democracy, climate justice, employment, digital wellbeing, and interseccional inclusion.
+last_verified: '2026-07-12'
 tags:
 - OIJ
 - cultural
 - culture
 - education
+- iberoamerica
 - iberoamericana
+- intergovernmental
 - juventud
+- regional
 - university
+- youth
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: youth
+  name: Youth
 other_names:
 - id: ar
   name: منظمة الشباب الدولية لأمريكا اللاتينية
@@ -143,12 +162,56 @@ other_names:
   name: Organismo Internacional de Juventude para a Ibero-América
 - id: zh
   name: 伊比利亚-美洲国际青年组织
+previous_names:
+- id: es
+  name: Organización Iberoamericana de Juventud
+  period: 1992–1996
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.oij.org/
+- field: legal_status
+  source: United Nations
+  retrieved_at: '2026-07-12'
+  url: https://www.un.org/en/ga/sixth/71/ibero_american_youth.shtml
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Organismo_Internacional_de_Juventud_para_Iberoam%C3%A9rica
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Organismo_Internacional_de_Juventud_para_Iberoam%C3%A9rica
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.oij.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.oij.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Organismo_Internacional_de_Juventud_para_Iberoam%C3%A9rica
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://oij.org/somos/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Organismo_Internacional_de_Juventud_para_Iberoam%C3%A9rica
+  license: CC BY-SA 4.0
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Organismo_Internacional_de_Juventud_para_Iberoam%C3%A9rica
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -159,11 +222,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.oij.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.oij.org/

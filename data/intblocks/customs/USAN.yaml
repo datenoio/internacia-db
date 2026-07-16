@@ -1,9 +1,17 @@
 id: USAN
+name: Union of South American Nations
 blocktype:
 - customs
 status: formal
+founded: '2008-05-23'
+active_period:
+  start: '2011-03-11'
+geographic_scope: regional
+regions:
+- South America
 languages:
 - es
+- pt
 links:
 - url: https://www.unasursg.org/
   type: website
@@ -11,70 +19,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4230
   type: wikidata
-name: Union of South American Nations
-includes:
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: BO
-  name: Bolivia, Plurinational State of
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: former_member
-  left: '2018'
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: former_member
-  left: '2019-03-13'
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: former_member
-  left: '2018'
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: former_member
-  left: '2020-03-10'
-- id: VE
-  name: Venezuela, Bolivarian Republic of
-  type: country
-  status: member
-founded: '2008-05-23'
+legal_status: intergovernmental
+recognition_status: Intergovernmental regional organization established by the UNASUR Constitutive Treaty (signed 23 May 2008, in force 11 March 2011); evolved from the South American Community of Nations (Cusco Declaration, 8 December 2004); pursued trade and economic integration including customs union goals that were never fully implemented; headquartered in Quito, Ecuador; largely inactive since 2018 after widespread suspensions and withdrawals; Argentina, Brazil and Colombia rejoined in 2023; Secretary General post vacant since January 2017
+secretariat:
+  location: Quito, Ecuador
+  organization: General Secretariat of the Union of South American Nations
+  head: Secretary General (vacant since January 2017)
 headquarters:
   city: Quito
   country: EC
   coordinates:
     lat: -0.22
     lng: -78.5125
-geographic_scope: regional
-regions:
-- South America
 acronyms:
 - lang: en
   value: UNASUR
@@ -114,13 +70,96 @@ acronyms:
   value: CSN
 - lang: pt
   value: UNASUL
+founding_members:
+- AR
+- BO
+- BR
+- CL
+- CO
+- EC
+- GY
+- PE
+- PY
+- SR
+- UY
+- VE
+includes:
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: BO
+  name: Bolivia, Plurinational State of
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: CL
+  name: Chile
+  type: country
+  status: former_member
+  joined: '2011-03-11'
+  left: '2018'
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: EC
+  name: Ecuador
+  type: country
+  status: former_member
+  joined: '2011-03-11'
+  left: '2019-03-13'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: PY
+  name: Paraguay
+  type: country
+  status: former_member
+  joined: '2011-03-11'
+  left: '2018'
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+  joined: '2011-03-11'
+- id: UY
+  name: Uruguay
+  type: country
+  status: former_member
+  joined: '2011-03-11'
+  left: '2020-03-10'
+- id: VE
+  name: Venezuela, Bolivarian Republic of
+  type: country
+  status: member
+  joined: '2011-03-11'
 membership_count: 8
 wikidata_id: Q4230
-legal_status: intergovernmental
-description: South American intergovernmental union pursuing trade and economic integration; customs union goals were never
-  fully implemented. Largely inactive since 2018, though Argentina, Brazil, and Colombia rejoined in 2023.
-notes: Peru suspended its participation in 2018. Chile, Ecuador, Paraguay, and Uruguay have withdrawn. The political profile
-  of the same organization is recorded as UNASUR.
+description: South American intergovernmental union established by the UNASUR Constitutive Treaty (23 May 2008, in force 11
+  March 2011). Pursued trade and economic integration including customs union goals that were never fully implemented.
+  Largely inactive since 2018, though Argentina, Brazil, and Colombia rejoined in 2023.
+notes: Evolved from the South American Community of Nations proclaimed by the Cusco Declaration (8 December 2004). The
+  Constitutive Treaty was signed in Brasília on 23 May 2008 and entered into force on 11 March 2011 when Uruguay became
+  the ninth ratifying state. Peru suspended its participation in 2018. Chile, Ecuador, Paraguay, and Uruguay have
+  withdrawn. Argentina rejoined on 6 April 2023, Brazil on 5 May 2023, and Colombia on 5 December 2023. The Secretary
+  General post has been vacant since Ernesto Samper's term ended in January 2017. A South American Parliament is planned
+  for Cochabamba, Bolivia. The political profile of the same organization is recorded as UNASUR.
+last_verified: '2026-07-12'
 tags:
 - UNASUL
 - UNASUR
@@ -164,44 +203,60 @@ other_names:
   name: 南美洲国家联盟
 provenance:
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
+  license: CC BY-SA 4.0
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4230
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4230
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4230
   license: CC0
-- field: includes
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
-  license: CC BY-SA
-- field: description
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
-  license: CC BY-SA
-- field: founded
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4230
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.unasursg.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.unasursg.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: UNASUR
+  retrieved_at: '2026-07-12'
   url: https://www.unasursg.org/
+  license: public domain
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
+  license: CC BY-SA 4.0

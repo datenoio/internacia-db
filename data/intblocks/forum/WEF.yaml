@@ -13,6 +13,8 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/World_Economic_Forum
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q170418
+  type: wikidata
 name: World Economic Forum
 headquarters:
   city: Cologny
@@ -23,8 +25,106 @@ headquarters:
 acronyms:
 - lang: en
   value: WEF
+- lang: zh
+  value: 世界经济论坛
+- lang: zh
+  value: 達佛斯開放論壇
+- lang: zh
+  value: 达沃斯论坛
+- lang: ru
+  value: ВЭФ
+- lang: de
+  value: WEF
+- lang: pt
+  value: FEM
 membership_count: 1000
-description: International forum focused on economic cooperation and global economic issues.
+wikidata_id: Q170418
+legal_status: foundation
+regions:
+- Global
+includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: partner
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: partner
+- id: CO
+  name: Colombia
+  type: country
+  status: partner
+- id: DE
+  name: Germany
+  type: country
+  status: partner
+- id: FR
+  name: France
+  type: country
+  status: partner
+- id: GB
+  name: United Kingdom
+  type: country
+  status: partner
+- id: IL
+  name: Israel
+  type: country
+  status: partner
+- id: IN
+  name: India
+  type: country
+  status: partner
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: partner
+- id: MY
+  name: Malaysia
+  type: country
+  status: partner
+- id: OM
+  name: Oman
+  type: country
+  status: partner
+- id: QA
+  name: Qatar
+  type: country
+  status: partner
+- id: RS
+  name: Serbia
+  type: country
+  status: partner
+- id: RW
+  name: Rwanda
+  type: country
+  status: partner
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: partner
+- id: UA
+  name: Ukraine
+  type: country
+  status: partner
+- id: US
+  name: United States
+  type: country
+  status: partner
+- id: VN
+  name: Vietnam
+  type: country
+  status: partner
+- id: ZA
+  name: South Africa
+  type: country
+  status: partner
+description: Swiss foundation convening leaders from business, government, and civil
+  society to address global economic and political challenges. Hosts the annual meeting
+  in Davos and operates the Centre for the Fourth Industrial Revolution network of
+  government partnerships.
+notes: membership_count reflects institutional Partner companies; includes lists
+  governments hosting Centres for the Fourth Industrial Revolution in the WEF network.
 tags:
 - WEF
 - davos
@@ -42,16 +142,20 @@ topics:
 other_names:
 - id: ar
   name: المنتدى الاقتصادي العالمي
-- id: zh
-  name: 世界经济论坛
+- id: de
+  name: Weltwirtschaftsforum
 - id: en
   name: World Economic Forum
-- id: fr
-  name: Forum économique mondial
-- id: ru
-  name: Всемирный экономический форум
 - id: es
   name: Foro Económico Mundial
+- id: fr
+  name: Forum économique mondial
+- id: pt
+  name: Fórum Económico Mundial
+- id: ru
+  name: Всемирный экономический форум
+- id: zh
+  name: 世界经济论坛
 provenance:
 - field: geographic_scope
   source: official sources
@@ -61,3 +165,32 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.weforum.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-15'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-15'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-15'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-15'
+  url: https://www.wikidata.org/wiki/Q170418
+  license: CC0
+- field: description
+  source: World Economic Forum
+  retrieved_at: '2026-07-15'
+  url: https://www.weforum.org/
+- field: includes
+  source: World Economic Forum
+  retrieved_at: '2026-07-15'
+  url: https://www.weforum.org/press/2026/01/world-economic-forum-to-launch-five-new-centres-for-the-fourth-industrial-revolution/
+last_verified: '2026-07-15'

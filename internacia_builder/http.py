@@ -1,59 +1,30 @@
+"""Shared HTTP helpers for enrichment scripts.
+
+A single place for the JSON-over-HTTP client so enrichment tools share one
+User-Agent, timeout, and decoding behavior instead of duplicating urllib code.
+"""
+
 from __future__ import annotations
 
-import time
+import json
+import urllib.request
 from typing import Any
 
-import requests
-
-DEFAULT_RATE_LIMIT_S = 0.1
-DEFAULT_TIMEOUT_S = 60
-DEFAULT_RETRIES = 3
+DEFAULT_USER_AGENT = "Internacia-DB Enricher/1.0"
+DEFAULT_TIMEOUT = 60
 
 
-class HttpClient:
-    """Shared HTTP session with simple retry and rate limiting."""
+def fetch_json(
+    url: str,
+    *,
+    user_agent: str = DEFAULT_USER_AGENT,
+    timeout: int = DEFAULT_TIMEOUT,
+) -> Any:
+    """Fetch ``url`` and decode the response body as JSON.
 
-    def __init__(
-        self,
-        *,
-        rate_limit_s: float = DEFAULT_RATE_LIMIT_S,
-        timeout_s: float = DEFAULT_TIMEOUT_S,
-        retries: int = DEFAULT_RETRIES,
-        session: requests.Session | None = None,
-    ) -> None:
-        self.rate_limit_s = rate_limit_s
-        self.timeout_s = timeout_s
-        self.retries = retries
-        self.session = session or requests.Session()
-        self._last_request_at = 0.0
-
-    def _throttle(self) -> None:
-        elapsed = time.monotonic() - self._last_request_at
-        if elapsed < self.rate_limit_s:
-            time.sleep(self.rate_limit_s - elapsed)
-
-    def request(self, method: str, url: str, **kwargs: Any) -> requests.Response:
-        kwargs.setdefault("timeout", self.timeout_s)
-        last_exc: Exception | None = None
-        for attempt in range(self.retries):
-            self._throttle()
-            try:
-                response = self.session.request(method, url, **kwargs)
-                self._last_request_at = time.monotonic()
-                if response.status_code in {429, 500, 502, 503, 504} and attempt + 1 < self.retries:
-                    time.sleep(0.5 * (attempt + 1))
-                    continue
-                response.raise_for_status()
-                return response
-            except requests.RequestException as exc:
-                last_exc = exc
-                if attempt + 1 >= self.retries:
-                    raise
-                time.sleep(0.5 * (attempt + 1))
-        raise last_exc  # pragma: no cover
-
-    def get(self, url: str, **kwargs: Any) -> requests.Response:
-        return self.request("GET", url, **kwargs)
-
-    def get_json(self, url: str, **kwargs: Any) -> Any:
-        return self.get(url, **kwargs).json()
+    Uses ``utf-8-sig`` decoding to tolerate BOM-prefixed responses (some
+    upstream APIs emit them).
+    """
+    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310 - trusted upstream APIs
+        return json.loads(resp.read().decode("utf-8-sig"))

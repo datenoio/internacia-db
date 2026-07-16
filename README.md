@@ -10,9 +10,11 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - **Countries quality pipeline**: schema validation, completeness gates, entity status policy, and field-level provenance
 - **Intblocks quality pipeline**: schema validation, blocktype taxonomy checks, duplicate detection, and completeness gates
 - **Profile enrichment**: population, area, gini, timezones, and native names from World Bank, Wikidata, and IANA tzdata
-- **Build metadata**: `countries.manifest.json` and `intblocks.manifest.json` with version, commit, row count, and schema hash
+- **Data-quality analyzer**: 50+ rules (referential integrity, temporal consistency, geographic plausibility, naming) reported under `dataquality/`; runs in CI and fails on CRITICAL/IMPORTANT findings
+- **Build metadata**: `countries.manifest.json`, `intblocks.manifest.json`, and `blocktypes.manifest.json` with version, commit, row count, and schema hash — all sharing a single frozen build identity
+- **Artifact consistency guard**: `check_generated_artifacts.py` verifies committed exports agree across formats and match YAML sources (runs in CI and release)
 - **CI validation**: pull-request checks, tests, and lint via `.github/workflows/validate.yml`; weekly link validation; tagged releases with dataset assets
-- **CLI tools**: Typer-based scripts with tqdm progress bars
+- **CLI tools**: Typer-based scripts with tqdm progress bars; console entry points `internacia-build`, `internacia-analyze-quality`, `internacia-validate-countries`, `internacia-validate-intblocks`
 
 ## AI agents and LLMs
 
@@ -69,6 +71,7 @@ Each build writes to `data/datasets/`:
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
 | `intblocks_aliases.json` | Retired/renamed intblock id → current id map |
 | `intblocks_aliases.parquet` | Alias map (Parquet, zstd) |
+| `blocktypes.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `blocktypes.yaml` | Block types (plain YAML copy of source, regenerated on build) |
 | `blocktypes.jsonl.zst` | Block types (JSONL, zstd) |
 | `blocktypes.yaml.zst` | Block types (YAML, zstd) |
@@ -76,18 +79,19 @@ Each build writes to `data/datasets/`:
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1070** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1071** intblocks, **86** blocktypes.
 
 ## Validation and quality
 
-The builder runs `validate_countries.py` before export. Validation covers:
+The builder runs both `validate_countries.py` and `validate_intblocks.py` before export. Validation covers:
 
 - JSON Schema conformance (`data/schemas/countries.schema.json`, `data/schemas/intblocks.schema.json`)
 - ISO identifier formats and duplicate detection (country codes and intblock ids)
 - Completeness thresholds (`data/schemas/countries_completeness.yaml`, `data/schemas/intblocks_completeness.yaml`)
 - Entity status policy (`entity_type`, `code_status`)
 - Blocktype taxonomy and `partof` reference checks for intblocks
-- Intblock cross-references (country `includes` resolve to country sources)
+- Intblock cross-references (country `includes` resolve to country sources; `includes[].status` values come from `data/schemas/includes_status.yaml`)
+- Referential integrity (borders, `predecessor`/`successor`/`suborganizations`, headquarters countries, duplicate `wikidata_id`) plus temporal, geographic-plausibility, and naming rules — shared between the validators and the quality analyzer (`internacia_builder/validate/*_rules.py`)
 
 ```bash
 # Full validation with JSON reports
@@ -101,15 +105,20 @@ python3 scripts/enrich_countries.py backfill-provenance
 # Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names)
 python3 scripts/enrich_intblocks.py --dry-run
 python3 scripts/enrich_intblocks.py
+python3 scripts/enrich_intblocks.py backfill-structural   # headquarters + founded
+
+# Generate the data-quality report (dataquality/ — by rule, priority, country)
+python3 scripts/builder.py analyze-quality
 
 # Apply entity status annotations
 python3 scripts/annotate_entity_status.py
 
-# Audit intblock include name aliases (warn-only)
-python3 scripts/report_country_include_names.py
-
 # Compare manifests to main branch baseline
 python3 scripts/diff_countries_baseline.py
+
+# Verify committed exports match sources and each other; check doc links
+python3 scripts/check_generated_artifacts.py
+python3 scripts/check_markdown_links.py
 
 # Run tests and lint
 pytest tests/
@@ -136,7 +145,7 @@ df = pd.read_parquet("data/datasets/countries.parquet")
 pop = df["population"].struct.field("value")
 ```
 
-**DuckDB example** (nested intblock translations):
+**DuckDB example** (nested intblock multilingual names):
 
 ```python
 import duckdb
@@ -144,8 +153,8 @@ import duckdb
 con = duckdb.connect("data/datasets/internacia.duckdb")
 con.execute("""
     SELECT id, name, t.name AS english_name
-    FROM intblocks, UNNEST(translations) AS t
-    WHERE t.lang = 'en'
+    FROM intblocks, UNNEST(other_names) AS t
+    WHERE t.id = 'en'
     LIMIT 5
 """).fetchall()
 ```
@@ -252,12 +261,18 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 | `predecessor` | String | Predecessor |
 | `successor` | String | Successor |
 
+The table above lists exported columns. Source YAML may carry additional curation fields that are
+validated but not exported (`membership_applicability`, `founding_members`, `suborganizations`,
+`secretariat`, `last_verified`, `previous_names`, `official_documents`, `social_media`,
+`recognition_status`); see `data/schemas/intblocks.schema.json` for the full source contract.
+Valid `includes[].status` values are cataloged in `data/schemas/includes_status.yaml`.
+
 ## Data sources
 
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1070 international block records across 60+ domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — 1071 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 
@@ -269,16 +284,17 @@ Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-as
 
 | Script | Purpose |
 |--------|---------|
-| `internacia_builder/` | Installable package (`pip install -e .`): validation modules, shared paths/HTTP helpers |
-| `scripts/builder.py` | Validate and export datasets |
+| `internacia_builder/` | Installable package (`pip install -e .`): build/export, quality analyzer, validation rule modules, shared paths/HTTP helpers |
+| `scripts/builder.py` | Shim → `internacia_builder.build` / `internacia_builder.quality` (`build`, `info`, `analyze-quality`) |
 | `scripts/validate_countries.py` | Shim → `internacia_builder.validate.countries` |
 | `scripts/validate_intblocks.py` | Shim → `internacia_builder.validate.intblocks` |
 | `scripts/validate_links.py` | Intblock URL and Wikidata validation (run weekly in CI) |
 | `scripts/enrich_countries.py` | Enrich country profiles; `backfill-provenance` subcommand |
-| `scripts/enrich_intblocks.py` | Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names) |
+| `scripts/enrich_intblocks.py` | Enrich intblocks from Wikidata (wikidata_id, descriptions, multilingual names); `backfill-structural` fills headquarters and founded dates |
 | `scripts/annotate_entity_status.py` | Set `entity_type` and `code_status` |
-| `scripts/report_country_include_names.py` | Intblock include name alias audit |
-| `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline (countries + intblocks) |
+| `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline (countries, intblocks, blocktypes) |
+| `scripts/check_generated_artifacts.py` | Cross-format primary-key parity, source/export parity, build-identity guard |
+| `scripts/check_markdown_links.py` | Internal Markdown link checker |
 
 One-off migration scripts live in `dev/scripts/` and are not part of the maintained pipeline.
 

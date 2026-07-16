@@ -1,13 +1,23 @@
 id: HISPAM
+name: Hispanic America
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- North America
+- Central America
+- Caribbean
+- South America
+languages:
+- es
 links:
 - url: https://en.wikipedia.org/wiki/Hispanic_America
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q653884
   type: wikidata
-name: Hispanic America
+legal_status: informal
+recognition_status: Informal geographic and cultural concept (not a formal organization) describing Spanish-speaking countries of the Americas, also termed Hispanoamérica or América Hispana and historically known as Spanish America or Castilian America; sometimes grouped with Brazil as Ibero-America but distinct from Latin America, which also includes Portuguese-speaking Brazil and, in some definitions, former French colonies in the Western Hemisphere
 includes:
 - id: AR
   name: Argentina
@@ -83,7 +93,9 @@ includes:
   status: member
 membership_count: 18
 wikidata_id: Q653884
-description: Countries in the Americas with predominantly Spanish-speaking populations.
+description: Cultural and geographic region comprising the Spanish-speaking countries of the Americas, where Spanish is the main language—sometimes sharing official status with indigenous languages—and Latin Catholicism is the predominant religion. The 18 sovereign states span North America, Central America, the Caribbean, and South America.
+notes: This record reflects the 18 sovereign Spanish-speaking states listed in standard Hispanic America definitions (AR, BO, CL, CO, CR, CU, DO, EC, SV, GT, HN, MX, NI, PA, PY, PE, UY, VE). Puerto Rico and other dependent territories are excluded because they are not sovereign countries. Spain, Equatorial Guinea, and overseas Hispanic communities belong to the broader Hispanidad concept. Brazil and other Portuguese America are part of Latin America and Ibero-America but not Hispanic America.
+last_verified: '2026-07-12'
 tags:
 - HISPAM
 - america
@@ -91,6 +103,10 @@ tags:
 - culture
 - education
 - hispanic
+- hispanoamerica
+- latin-america
+- regional
+- spanish-america
 - university
 topics:
 - key: culture
@@ -100,19 +116,58 @@ topics:
 other_names:
 - id: ar
   name: أمريكا الإسبانية
-- id: zh
-  name: 西班牙语美洲
+- id: de
+  name: Hispanoamerika
 - id: en
   name: Hispanic America
-- id: fr
-  name: Amérique hispanique
-- id: ru
-  name: испанская Америка
 - id: es
   name: Hispanoamérica
+- id: fr
+  name: Amérique hispanique
+- id: pt
+  name: América espanhola
+- id: ru
+  name: испанская Америка
+- id: zh
+  name: 西班牙语美洲
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q653884
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q653884
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanic_America
+  license: CC BY-SA 4.0

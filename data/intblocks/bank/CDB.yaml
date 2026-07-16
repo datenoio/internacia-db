@@ -1,17 +1,59 @@
 id: CDB
+name: Caribbean Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1969-10-18'
+active_period:
+  start: '1970-01-26'
+geographic_scope: regional
+regions:
+- Caribbean
+- Latin America
 languages:
 - en
 links:
-- url: http://www.caribank.org/
+- url: https://www.caribank.org/
+  type: website
+- url: https://www.caribank.org/about-us
   type: website
 - url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3772571
   type: wikidata
-name: Caribbean Development Bank
+headquarters:
+  city: Wildey
+  country: BB
+  coordinates:
+    lat: 13.118055555556
+    lng: -59.603055555556
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the Caribbean Development Bank, signed in Kingston, Jamaica on 18 October 1969 and entered into force on 26 January 1970
+secretariat:
+  location: Wildey, St. Michael, Barbados
+  head: President
+  organization: Caribbean Development Bank
+membership_count: 28
+description: Regional multilateral development bank serving the Caribbean through loans, grants, and technical assistance for social and economic development. Established by an agreement signed in Kingston in October 1969 and operational since January 1970, CDB supports borrowing member countries in mobilizing resources, promoting investment, and reducing poverty through sustainable, resilient, and inclusive development. Its 28 members comprise 19 regional borrowing members, four regional non-borrowing members (Brazil, Colombia, Mexico, and Venezuela), and five non-regional non-borrowing members (Canada, China, Germany, Italy, and the United Kingdom). Headquartered in Wildey, St. Michael, Barbados, with a country office in Haiti.
+tags:
+- CDB
+- aid
+- bank
+- caribbean
+- development
+- economy
+- finance
+- multilateral
+- regional
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: CA
   name: Canada
@@ -33,6 +75,7 @@ includes:
   name: China
   type: country
   status: member
+  joined: '1998'
 - id: DE
   name: Germany
   type: country
@@ -125,36 +168,14 @@ includes:
   name: Virgin Islands, British
   type: country
   status: member
-founded: '1970'
-headquarters:
-  city: Saint Michael
-  country: BB
-  coordinates:
-    lat: 13.118055555556
-    lng: -59.603055555556
 acronyms:
 - lang: en
   value: CDB
 - lang: zh
   value: CDB
-membership_count: 28
 wikidata_id: Q3772571
-description: International development bank focused on development providing financial services.
-tags:
-- CDB
-- aid
-- bank
-- caribbean
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Membership comprises 19 regional borrowing members, four regional non-borrowing members (Brazil, Colombia, Mexico, Venezuela), and five non-regional non-borrowing members (Canada, China, Germany, Italy, United Kingdom). British Overseas Territory members are counted as one country for governance purposes.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التنمية الكاريبي
@@ -171,6 +192,47 @@ other_names:
 - id: zh
   name: 加勒比开发银行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caribank.org/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caribank.org/about-us
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caribank.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caribank.org/about-us
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Development_Bank
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -181,7 +243,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.caribank.org/

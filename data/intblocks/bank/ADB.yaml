@@ -1,17 +1,93 @@
 id: ADB
+name: Asian Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1966-12-19'
+active_period:
+  start: '1966-12-19'
+geographic_scope: regional
+regions:
+- Asia
+- Pacific
 languages:
 - en
 links:
 - url: https://www.adb.org/
   type: website
+- url: https://www.adb.org/who-we-are/about
+  type: website
 - url: https://en.wikipedia.org/wiki/Asian_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q188822
   type: wikidata
-name: Asian Development Bank
+headquarters:
+  city: Mandaluyong
+  country: PH
+  coordinates:
+    lat: 14.583333333333
+    lng: 121.03333333333
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the Asian Development Bank (1966)
+secretariat:
+  location: Mandaluyong, Metro Manila, Philippines
+  head: President
+  organization: Asian Development Bank
+membership_count: 69
+founding_members:
+- AF
+- AT
+- AU
+- BE
+- CA
+- DK
+- FI
+- DE
+- IN
+- ID
+- IT
+- JP
+- KH
+- KR
+- LA
+- MY
+- NL
+- NP
+- NZ
+- 'NO'
+- PK
+- PH
+- WS
+- SG
+- LK
+- SE
+- TW
+- TH
+- GB
+- US
+- VN
+description: Multilateral development bank established in 1966 to foster economic growth and cooperation in Asia and the Pacific. Owned by 69 members (50 regional and 19 non-regional), ADB provides loans, grants, equity investments, and technical assistance for infrastructure, climate action, social development, and private sector operations across the region.
+tags:
+- ADB
+- aid
+- asia
+- asian
+- bank
+- development
+- economy
+- finance
+- infrastructure
+- multilateral
+- pacific
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: infrastructure
+  name: Infrastructure
 includes:
 - id: CA
   name: Canada
@@ -29,6 +105,11 @@ includes:
   name: Ireland
   type: country
   status: member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+  joined: '2024'
 - id: ES
   name: Spain
   type: country
@@ -85,6 +166,11 @@ includes:
   name: United Kingdom
   type: country
   status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '2007'
 - id: CN
   name: China
   type: country
@@ -169,6 +255,11 @@ includes:
   name: Nauru
   type: country
   status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
+  joined: '2019'
 - id: FM
   name: Micronesia, Federated States of
   type: country
@@ -277,13 +368,6 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1966'
-headquarters:
-  city: Mandaluyong
-  country: PH
-  coordinates:
-    lat: 14.583333333333
-    lng: 121.03333333333
 acronyms:
 - lang: en
   value: ADB
@@ -291,24 +375,9 @@ acronyms:
   value: 亞洲發展銀行
 - lang: zh
   value: 亚洲开发银行
-membership_count: 66
 wikidata_id: Q188822
-description: International development bank focused on development providing financial services.
-tags:
-- ADB
-- aid
-- asian
-- bank
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Regional multilateral development bank with 69 members (50 from Asia and the Pacific, 19 non-regional). Opened in Manila on 19 December 1966 with 31 founding members. Membership categories are regional and non-regional; voting power reflects capital subscriptions. Host country is the Philippines.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التنمية الآسيوي
@@ -327,6 +396,46 @@ other_names:
 - id: zh
   name: 亞洲開發銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adb.org/who-we-are/about
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -337,7 +446,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.adb.org/

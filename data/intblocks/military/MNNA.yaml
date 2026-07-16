@@ -2,16 +2,121 @@ id: MNNA
 blocktype:
 - military
 status: formal
-partof: NATO
+languages:
+- en
 links:
+- url: https://www.state.gov/major-non-nato-ally-status/
+  type: website
 - url: https://en.wikipedia.org/wiki/Major_non-NATO_ally
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q145560
   type: wikidata
 name: Major non-NATO ally
 founded: '1987'
+geographic_scope: global
+regions:
+- worldwide
+includes:
+- id: AR
+  name: Argentina
+  type: country
+  status: partner
+- id: AU
+  name: Australia
+  type: country
+  status: partner
+- id: BH
+  name: Bahrain
+  type: country
+  status: partner
+- id: BR
+  name: Brazil
+  type: country
+  status: partner
+- id: CO
+  name: Colombia
+  type: country
+  status: partner
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: partner
+- id: IL
+  name: Israel
+  type: country
+  status: partner
+- id: JP
+  name: Japan
+  type: country
+  status: partner
+- id: JO
+  name: Jordan
+  type: country
+  status: partner
+- id: KE
+  name: Kenya
+  type: country
+  status: partner
+- id: KW
+  name: Kuwait
+  type: country
+  status: partner
+- id: MA
+  name: Morocco
+  type: country
+  status: partner
+- id: NZ
+  name: New Zealand
+  type: country
+  status: partner
+- id: PK
+  name: Pakistan
+  type: country
+  status: partner
+- id: PE
+  name: Peru
+  type: country
+  status: partner
+- id: PH
+  name: Philippines
+  type: country
+  status: partner
+- id: QA
+  name: Qatar
+  type: country
+  status: partner
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: partner
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: partner
+- id: TW
+  name: Taiwan
+  type: country
+  status: partner
+  note: Treated as MNNA under U.S. law without formal designation
+- id: TH
+  name: Thailand
+  type: country
+  status: partner
+- id: TN
+  name: Tunisia
+  type: country
+  status: partner
+- id: AF
+  name: Afghanistan
+  type: country
+  status: former_member
+  note: Revoked July 2022 after Taliban takeover
+membership_count: 22
 wikidata_id: Q145560
-description: Designation given by the United States government to close allies.
+legal_status: US statutory designation
+description: United States statutory designation (22 U.S.C. § 2321k) for close allies outside NATO, conferring enhanced defense
+  cooperation benefits such as priority access to excess defense articles, cooperative research and development, and participation
+  in certain U.S. defense programs.
 tags:
 - MNNA
 - defense
@@ -56,6 +161,19 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-15'
+  url: https://en.wikipedia.org/wiki/Major_non-NATO_ally
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.state.gov/major-non-nato-ally-status/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.state.gov/major-non-nato-ally-status/
 acronyms:
 - lang: en
   value: MNNA

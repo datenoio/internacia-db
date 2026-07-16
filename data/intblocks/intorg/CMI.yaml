@@ -1,18 +1,58 @@
 id: CMI
+name: Comité Maritime International
 blocktype:
 - intorg
+- legal
 status: formal
+founded: '1897'
+active_period:
+  start: '1897'
+geographic_scope: global
+regions:
+- Global
 languages:
 - en
 - fr
 links:
-- url: https://comitemaritime.org
+- url: https://comitemaritime.org/
+  type: website
+- url: https://comitemaritime.org/about-us/
+  type: website
+- url: https://comitemaritime.org/members/national-maritime-law-association/
   type: website
 - url: https://en.wikipedia.org/wiki/Comit%C3%A9_Maritime_International
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5779422
   type: wikidata
-name: Comité Maritime International
+acronyms:
+- lang: en
+  value: CMI
+legal_status: nongovernmental
+recognition_status: Non-governmental not-for-profit international organization established in Antwerp in 1897; the oldest operating international organization dedicated to maritime law and a key contributor to the unification of maritime law through draft conventions adopted by diplomatic conferences
+headquarters:
+  city: Antwerp
+  country: BE
+  coordinates:
+    lat: 51.2205
+    lng: 4.4003
+secretariat:
+  location: Ernest van Dijckkaai 8, B-2000 Antwerpen, Belgium
+  head: President
+membership_count: 54
+description: International non-governmental organization founded in Antwerp in 1897 to promote the unification of maritime law in all its aspects. The oldest operating international body dedicated to maritime law, CMI unites National Maritime Law Associations (NMLAs) from around the world and has drafted foundational conventions including the Hague Rules, the Visby Amendments, and the Rotterdam Rules. Works in close cooperation with the International Maritime Organization (IMO) and holds colloquia, conferences, and symposia on contemporary maritime law issues.
+tags:
+- CMI
+- international
+- intorg
+- legal
+- maritime
+- maritime_law
+- law
+topics:
+- key: maritime
+  name: Maritime
+- key: law
+  name: Law
 includes:
 - id: AR
   name: Argentina
@@ -22,8 +62,14 @@ includes:
   name: Australia
   type: country
   status: member
+  note: Joint National Maritime Law Association with New Zealand
 - id: NZ
   name: New Zealand
+  type: country
+  status: member
+  note: Joint National Maritime Law Association with Australia
+- id: BD
+  name: Bangladesh
   type: country
   status: member
 - id: BE
@@ -34,6 +80,10 @@ includes:
   name: Brazil
   type: country
   status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
 - id: CA
   name: Canada
   type: country
@@ -42,12 +92,36 @@ includes:
   name: Chile
   type: country
   status: member
+- id: CN
+  name: China
+  type: country
+  status: member
 - id: CO
   name: Colombia
   type: country
   status: member
+- id: CD
+  name: Democratic Republic of the Congo
+  type: country
+  status: member
 - id: HR
   name: Croatia
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: FI
+  name: Finland
   type: country
   status: member
 - id: FR
@@ -62,9 +136,13 @@ includes:
   name: Greece
   type: country
   status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
 - id: HK
   name: Hong Kong
-  type: country
+  type: territory
   status: member
 - id: IN
   name: India
@@ -86,12 +164,16 @@ includes:
   name: Japan
   type: country
   status: member
-- id: KR
-  name: Republic of Korea
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MT
   name: Malta
+  type: country
+  status: member
+- id: MX
+  name: Mexico
   type: country
   status: member
 - id: ME
@@ -102,16 +184,36 @@ includes:
   name: Netherlands
   type: country
   status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
 - id: 'NO'
   name: Norway
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PH
+  name: Philippines
   type: country
   status: member
 - id: PL
   name: Poland
   type: country
   status: member
-- id: PT
-  name: Portugal
+- id: KR
+  name: Republic of Korea
   type: country
   status: member
 - id: RO
@@ -124,6 +226,10 @@ includes:
   status: member
 - id: SG
   name: Singapore
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
   type: country
   status: member
 - id: ZA
@@ -142,14 +248,15 @@ includes:
   name: Switzerland
   type: country
   status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
 - id: TR
   name: Türkiye
   type: country
   status: member
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+  note: Represented by UAE NPIO Maritime Law Association
 - id: UA
   name: Ukraine
   type: country
@@ -170,44 +277,66 @@ includes:
   name: Venezuela
   type: country
   status: member
-founded: '1897'
-headquarters:
-  city: Antwerp
-  country: BE
-  coordinates:
-    lat: 51.2205
-    lng: 4.4003
-membership_count: 42
 wikidata_id: Q5779422
-legal_status: nongovernmental
-description: The Comité Maritime International is an international organization that is used to promote regional cooperation
-  in the maritime law sector.
-tags:
-- CMI
-- international
-- intorg
-- legal
-- maritime
-- maritime_law
-- law
-topics:
-- key: maritime
-  name: Maritime
-- key: law
-  name: Law
 other_names:
 - id: en
   name: Comité Maritime International
-- id: fr
-  name: Comité Maritime International
 - id: en
   name: International Maritime Committee
+- id: fr
+  name: Comité Maritime International
+- id: de
+  name: Comité Maritime International
+- id: es
+  name: Comité Marítimo Internacional
+- id: ru
+  name: Международный морской комитет
+notes: Formed in 1897 in Antwerp from the first national maritime law associations, beginning with Belgium (1896). Membership is through National Maritime Law Associations (NMLAs); Australia and New Zealand share a joint NMLA. Ann Fenech of Malta became the first female president in 2022. CMI also maintains categories of titulary members, consultative members, provisional members, and members honoris causa beyond the NMLA roster.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5779422
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5779422
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://comitemaritime.org
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/about-us/history/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/members/national-maritime-law-association/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://comitemaritime.org
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Comit%C3%A9_Maritime_International
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/members/national-maritime-law-association/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/about-us/history/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://comitemaritime.org/about-us/history/

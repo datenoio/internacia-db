@@ -1,13 +1,22 @@
 id: ARABW
+name: Arab World
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
+languages:
+- ar
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Arab_world
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q143487
   type: wikidata
-name: Arab World
+legal_status: informal
+recognition_status: Informal geographic and cultural concept (not a formal organization) describing Arabic-speaking states mainly in West Asia and North Africa; the standard territorial definition comprises the 22 member states of the Arab League, though broader linguistic or diaspora-based definitions also exist in scholarship and policy discourse
 includes:
 - id: DZ
   name: Algeria
@@ -99,14 +108,23 @@ includes:
   status: member
 membership_count: 22
 wikidata_id: Q143487
-description: Geographic and cultural region; collective term for the Arabic-speaking
-  countries of Asia and Africa, or of Asia only.
+description: Geographic and cultural region spanning West Asia and North Africa where Arabic is the lingua franca and shared Arab identity is a major political and cultural frame. At minimum the concept covers states where Arabs form a plurality; the standard territorial definition aligns with the 22 member states of the Arab League, stretching from the Atlantic to the Arabian Sea and divided conventionally into the Mashriq (east) and Maghreb (west).
+notes: This record reflects the 22-state Arab League membership list (DZ, BH, KM, DJ, EG, IQ, JO, KW, LB, LY, MR, MA, OM, PS, QA, SA, SO, SD, SY, TN, AE, YE). Broader definitions may include Arabic-speaking minorities or diaspora communities; Chad, Eritrea, and Israel recognize Arabic officially but are not Arab League members and are excluded here. Malta, whose Maltese derives from Arabic, is likewise excluded.
+last_verified: '2026-07-12'
 tags:
 - ARABW
 - arab
+- arab-states
+- arab-world
+- arabsphere
 - cultural
 - culture
 - education
+- maghreb
+- mashriq
+- middle_east
+- north_africa
+- regional
 - university
 - world
 topics:
@@ -132,13 +150,43 @@ other_names:
 - id: zh
   name: 阿拉伯世界
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q143487
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q143487
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0
+- field: includes
+  source: Arab League membership
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Arab_world
+  license: CC BY-SA 4.0

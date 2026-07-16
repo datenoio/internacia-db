@@ -1,8 +1,15 @@
 id: UEMOA
+name: West African Economic and Monetary Union
 blocktype:
 - customs
 - cuscurr
 status: formal
+founded: '1994-01-10'
+active_period:
+  start: '1994-01-10'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - fr
 links:
@@ -12,50 +19,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1929699
   type: wikidata
-name: West African Economic and Monetary Union
-includes:
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: CI
-  name: Côte d'Ivoire
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-founded: '1994-01-10'
+legal_status: treaty_organization
+recognition_status: Treaty-based customs and monetary union established by the Treaty of 10 January 1994 at Dakar; succeeded the West African Monetary Union (WAMU/UMOA, founded 1962); eight-state customs union sharing the West African CFA franc (XOF) with a common external tariff; administered by the Commission of UEMOA in Ouagadougou
+secretariat:
+  location: Ouagadougou, Burkina Faso
+  organization: Commission of the West African Economic and Monetary Union
+  head: President of the Commission
 headquarters:
   city: Ouagadougou
   country: BF
   coordinates:
     lat: 12.368611111111111
     lng: -1.5274999999999999
-geographic_scope: regional
-regions:
-- Africa
 acronyms:
 - lang: en
   value: UEMOA
@@ -77,20 +52,74 @@ acronyms:
   value: UEMOA
 - lang: pt
   value: UEMOA
+founding_members:
+- BJ
+- BF
+- CI
+- ML
+- NE
+- SN
+- TG
+includes:
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: CI
+  name: Côte d'Ivoire
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '1997-05-02'
+- id: ML
+  name: Mali
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: NE
+  name: Niger
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '1994-01-10'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '1994-01-10'
 membership_count: 8
 wikidata_id: Q1929699
-legal_status: intergovernmental
 description: Treaty-based intergovernmental organization binding eight West African states that share the West African CFA
   franc (XOF). Established in 1994 to promote monetary and financial stability, economic integration, and a common external
   tariff; succeeded the West African Monetary Union (WAMU/UMOA), founded in 1962.
-notes: Territorially overlaps with ECOWAS. Common institutions include the Commission, Court of Justice, and Court of Accounts
-  in Ouagadougou; the Central Bank of West African States (BCEAO) in Dakar; and the West African Development Bank (BOAD) in
-  Lomé. Guinea-Bissau joined in 1997.
+notes: Territorially overlaps with ECOWAS, with which UEMOA coordinates trade liberalisation and macroeconomic convergence.
+  Common institutions include the Council of Heads of State and Council of Ministers; Commission, Court of Justice, and Court
+  of Accounts in Ouagadougou; the Central Bank of West African States (BCEAO) in Dakar; the Banking Commission (CB-UMOA)
+  and Financial Markets Authority (AMF-UMOA) in Abidjan; and the West African Development Bank (BOAD) in Lomé. Guinea-Bissau
+  joined on 2 May 1997 as the eighth and only non-francophone member. France revised the monetary cooperation agreement in
+  December 2019, ending the operations account mechanism in January 2020 while maintaining euro convertibility guarantees.
+last_verified: '2026-07-12'
 tags:
 - UEMOA
 - WAEMU
 - UMOA
 - WAMU
+- BCEAO
+- XOF
 - african
 - commerce
 - cooperation
@@ -132,38 +161,57 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
   license: CC BY-SA 4.0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1929699
   license: CC0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1929699
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1929699
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.uemoa.int/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.uemoa.int/
-- field: headquarters
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
+  license: CC BY-SA 4.0
+- field: secretariat
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.uemoa.int/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_Economic_and_Monetary_Union
+  license: CC BY-SA 4.0

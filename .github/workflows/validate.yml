@@ -3,10 +3,10 @@ name: Validate datasets
 on:
   pull_request:
     paths:
-      - 'data/countries/**'
-      - 'data/intblocks/**'
-      - 'data/blocktypes/**'
-      - 'data/schemas/**'
+      - 'data/**'
+      - 'docs/**'
+      - '*.md'
+      - 'llms.txt'
       - 'scripts/**'
       - 'internacia_builder/**'
       - 'tests/**'
@@ -62,6 +62,12 @@ jobs:
       - name: Validate intblocks
         run: python scripts/validate_intblocks.py --report intblocks-report.json
 
+      - name: Check internal Markdown links
+        run: python scripts/check_markdown_links.py
+
+      - name: Check committed dataset artifacts (freshness + cross-format parity)
+        run: python scripts/check_generated_artifacts.py
+
       - name: Upload validation reports
         uses: actions/upload-artifact@v4
         if: always()
@@ -77,5 +83,30 @@ jobs:
       - name: Diff manifests against baseline
         run: python scripts/diff_countries_baseline.py --allow-row-count-change
 
-      - name: Report include name aliases
-        run: python scripts/report_country_include_names.py
+      - name: Analyze data quality
+        run: python scripts/builder.py analyze-quality --output dataquality
+
+      - name: Fail on high-priority quality issues
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          report = Path("dataquality/full_report.jsonl")
+          high = [json.loads(l) for l in report.read_text().splitlines()
+                  if l.strip() and json.loads(l).get("priority") in ("CRITICAL", "IMPORTANT")]
+          if high:
+              print(f"{len(high)} CRITICAL/IMPORTANT quality issue(s):")
+              for h in high[:20]:
+                  print(f"  [{h['priority']}] {h['issue_type']} {h.get('file_path')}")
+              sys.exit(1)
+          print("No CRITICAL/IMPORTANT quality issues.")
+          PY
+
+      - name: Upload quality report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-report
+          path: |
+            dataquality/full_report.txt
+            dataquality/full_report.jsonl

@@ -1,22 +1,75 @@
 id: APG
+name: Asia/Pacific Group on Money Laundering
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '1997'
+active_period:
+  start: '1997'
+geographic_scope: regional
+regions:
+- Asia-Pacific
+languages:
+- en
 links:
-- url: http://www.apgml.org/
+- url: https://www.apgml.org/
+  type: website
+- url: https://www.apgml.org/about-apg/
+  type: website
+- url: https://www.apgml.org/members/
   type: website
 - url: https://en.wikipedia.org/wiki/Asia/Pacific_Group_on_Money_Laundering
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4058305
   type: wikidata
-name: The Asia/Pacific Group on Money Laundering
-founded: '1997'
+acronyms:
+- lang: en
+  value: APG
+- lang: en
+  value: APGML
+- lang: zh
+  value: 亞太防制洗錢組織
+- lang: ru
+  value: АТГ
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering and counter-terrorist financing; associate member of the Financial Action Task Force
+partof:
+  id: FATF
+  name: Financial Action Task Force
 headquarters:
   city: Sydney
   country: AU
-  coordinates:
-    lat: -33.867777777777775
-    lng: 151.21
+membership_count: 42
+description: Intergovernmental FATF-style regional body (FSRB) whose 42 member jurisdictions in the Asia-Pacific region commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Established in 1997 at a meeting in Thailand following regional symposia from 1993; the APG Secretariat is hosted in Sydney, Australia. Conducts mutual evaluations, coordinates technical assistance and training, researches money laundering and terrorist financing typologies, engages with the global FSRB network and FATF, and works with the private sector and international partners including the IMF, World Bank, UN, INTERPOL, and the Egmont Group.
+tags:
+- AML
+- APG
+- CFT
+- FATF
+- FSRB
+- asia
+- financial
+- intorg
+- legal
+- money_laundering
+- pacific
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
 - id: AF
   name: Afghanistan
@@ -59,7 +112,7 @@ includes:
   type: country
   status: member
 - id: HK
-  name: Hong Kong
+  name: Hong Kong, China
   type: country
   status: member
 - id: IN
@@ -83,7 +136,7 @@ includes:
   type: country
   status: member
 - id: MO
-  name: Macao
+  name: Macao, China
   type: country
   status: member
 - id: MY
@@ -186,18 +239,7 @@ includes:
   name: Vietnam
   type: country
   status: member
-membership_count: 42
 wikidata_id: Q4058305
-description: The Asia/Pacific Group on Money Laundering is an international organization that is used to promote regional
-  cooperation in the money laundering sector.
-tags:
-- APG
-- asia
-- intorg
-- pacific
-topics:
-- key: economy
-  name: Economy
 other_names:
 - id: ar
   name: فريق آسيا والمحيط الهادئ المعني بغسل الأموال
@@ -209,22 +251,61 @@ other_names:
   name: Asia/Pacific Group on Money Laundering
 - id: ru
   name: Азиатско-Тихоокеанская группа по борьбе с отмыванием денег
-acronyms:
-- lang: en
-  value: APG
-- lang: en
-  value: APGML
-- lang: zh
-  value: 亞太防制洗錢組織
-- lang: ru
-  value: АТГ
+notes: Evolved from the FATF-Asia Secretariat (1993–1997) and regional Asia Money Laundering Symposia. Formally established in 1997 when 13 jurisdictions agreed to create a permanent group; the Secretariat is in Sydney and is primarily funded by member jurisdictions with additional support from Australia. Australia holds the permanent Co-Chair; a rotating Co-Chair is appointed for two-year terms. Twelve APG members are also FATF members. Observer jurisdictions and international organisations participate in APG work.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4058305
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q4058305
+  license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q4058305
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.apgml.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/members/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Asia/Pacific_Group_on_Money_Laundering
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.apgml.org/about-apg/

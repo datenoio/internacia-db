@@ -7,7 +7,7 @@ capital_city:
   lng: -63.03
 region:
   id: LCN
-  value: 'Latin America & Caribbean '
+  value: Latin America & Caribbean
 incomeLevel:
   id: HIC
   value: High income
@@ -92,9 +92,14 @@ native_names:
     common: 荷属圣马丁
 common_names:
 - Sint Maarten
+- Sint Maarten (Dutch part)
 code_status: official_iso3166_1
 entity_type: dependent_territory
 provenance:
+- field: common_names
+  source: manual
+  retrieved_at: '2026-07-16'
+  notes: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries

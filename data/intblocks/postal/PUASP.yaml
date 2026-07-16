@@ -3,13 +3,46 @@ blocktype:
 - postal
 status: formal
 languages:
+- en
 - es
+- pt
 links:
+- url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+  type: website
 - url: https://www.upaep.int/
   type: website
+- url: https://en.wikipedia.org/wiki/Postal_Union_of_the_Americas,_Spain_and_Portugal
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2641262
   type: wikidata
 name: Postal Union of the Americas, Spain and Portugal
+founded: '1911'
+geographic_scope: regional
+regions:
+- Americas
+- Iberia
+legal_status: restricted union of postal operators
+recognition_status: Restricted union of the Universal Postal Union
+acronyms:
+- lang: en
+  value: PUASP
+- lang: en
+  value: UPAEP
+- lang: es
+  value: UPAEP
+- lang: pt
+  value: UPAEP
+- lang: fr
+  value: UPAEP
+headquarters:
+  city: Montevideo
+  country: UY
+  coordinates:
+    lat: -34.913333
+    lng: -56.181389
+secretariat:
+  location: Cebollatí 1470, Montevideo, Uruguay
+  organization: Secretaría General de la UPAEP
 includes:
 - id: AR
   name: Argentina
@@ -125,9 +158,9 @@ includes:
   status: member
 membership_count: 28
 description: A restricted union of the Universal Postal Union comprising the postal
-  administrations of the countries of the Americas together with Spain and Portugal.
-  Founded in 1911 and headquartered in Montevideo, Uruguay, it promotes the development
-  and modernization of postal services among its members.
+  administrations of the Americas together with Spain and Portugal. Founded in 1911
+  in Montevideo, Uruguay, it promotes the development and modernization of postal
+  services among its members.
 tags:
 - PUASP
 - americas
@@ -146,7 +179,6 @@ topics:
   name: Regional Cooperation
 - key: telecommunications
   name: Telecommunications
-wikidata_id: Q2641262
 other_names:
 - id: en
   name: Postal Union of the Americas, Spain and Portugal
@@ -160,7 +192,64 @@ other_names:
   name: UPAEP
 - id: zh
   name: 美西葡邮政联盟
+previous_names:
+- id: en
+  name: Postal Union of the Americas and Spain
+  period: 1966-1990
+- id: es
+  name: Unión Postal de las Américas y España
+  period: 1966-1990
+- id: en
+  name: Panamerican Postal Congress
+  period: 1926-1936
+- id: es
+  name: Congreso Postal Panamericano
+  period: 1926-1936
+wikidata_id: Q2641262
+notes: Originated as the South American Postal Congress (Congreso Postal Sudamericano)
+  at Montevideo on 8 January 1911. Renamed the Panamerican Postal Congress in 1926,
+  the American-Spanish Postal Congress in 1936, the Postal Union of the Americas
+  and Spain in 1966, and adopted its current name when Portugal joined in 1990.
+  Official languages are Spanish and Portuguese. Headquarters and secretariat are
+  at Cebollatí 1470 in Montevideo.
+last_verified: '2026-07-12'
 provenance:
+- field: founded
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+- field: geographic_scope
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+- field: recognition_status
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+- field: description
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+- field: secretariat
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUASP
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Postal_Union_of_the_Americas,_Spain_and_Portugal
+- field: headquarters.coordinates
+  source: Wikimapia
+  retrieved_at: '2026-07-12'
+  url: http://wikimapia.org/street/17026/Cebollat%C3%AD
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Postal_Union_of_the_Americas,_Spain_and_Portugal
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Postal_Union_of_the_Americas,_Spain_and_Portugal
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -168,23 +257,11 @@ provenance:
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q2641262
   license: CC0
-acronyms:
-- lang: fr
-  value: UPAEP
-- lang: fr
-  value: PUASP
-- lang: fr
-  value: UPAE
-- lang: fr
-  value: PUAS
-- lang: ru
-  value: PUASP
-founded: '1911-00-00'
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q2641262
+  license: CC0

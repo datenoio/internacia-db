@@ -5,28 +5,88 @@ blocktype:
 - economic
 - intorg
 status: formal
-founded: '2015-07-15'
+founded: '2014-07-15'
+active_period:
+  start: '2015-07-03'
 geographic_scope: global
+regions:
+- Asia
+- Africa
+- South America
+partof: null
 languages:
 - en
+- pt
+- ru
+- zh
 links:
 - url: https://www.ndb.int/
   type: website
+- url: https://www.ndb.int/about-ndb/
+  type: website
 - url: https://en.wikipedia.org/wiki/New_Development_Bank
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1960634
+- url: https://www.wikidata.org/wiki/Q8579145
   type: wikidata
 acronyms:
 - lang: en
   value: NDB
 - lang: en
   value: BRICS Bank
+- lang: pt
+  value: NBD
+- lang: ru
+  value: БРИКС
+- lang: zh
+  value: 金砖银行
 headquarters:
   city: Shanghai
   country: CN
   coordinates:
-    lat: 31.2304
-    lng: 121.4737
+    lat: 31.18917
+    lng: 121.49583
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement on the New Development Bank signed at the Fortaleza BRICS Summit on 15 July 2014; the agreement entered into force on 3 July 2015
+secretariat:
+  location: Shanghai, China
+  head: President
+  organization: New Development Bank
+membership_count: 10
+founding_members:
+- BR
+- RU
+- IN
+- CN
+- ZA
+description: Multilateral development bank established by Brazil, Russia, India, China, and South Africa to mobilise resources for infrastructure and sustainable development in emerging markets and developing countries. Headquartered in Shanghai, NDB finances clean energy, transport, water and sanitation, digital infrastructure, environmental protection, and social infrastructure projects, with AA+ long-term issuer ratings from S&P and Fitch.
+tags:
+- BRICS BANK
+- NDB
+- aid
+- bank
+- brics
+- commerce
+- development
+- economic
+- economy
+- emerging_markets
+- finance
+- infrastructure
+- intorg
+- multilateral
+- sustainability
+- trade
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: infrastructure
+  name: Infrastructure
+- key: trade
+  name: Trade
 includes:
 - id: BR
   name: Brazil
@@ -78,70 +138,89 @@ includes:
   type: country
   status: member
   joined: '2023-01-01'
-membership_count: 10
-founding_members:
-- BR
-- RU
-- IN
-- CN
-- ZA
-wikidata_id: Q1960634
-legal_status: intergovernmental
-notes: Also known as BRICS Bank. Founded by BRICS countries, expanded to include new members. Full current membership should
-  be verified from official NDB website.
-partof: null
-description: International development bank focused on development providing financial services.
-tags:
-- BRICS BANK
-- NDB
-- aid
-- bank
-- commerce
-- development
-- economic
-- economy
-- finance
-- intorg
-- trade
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: trade
-  name: Trade
+wikidata_id: Q8579145
+notes: Also known as BRICS Bank. Founded with equal US$10 billion paid-in capital subscriptions among the five founding members. Membership expanded beyond original BRICS founders from 2021; this file documents ten members with join dates — additional members admitted since 2024 should be verified from the official NDB website.
+last_verified: '2026-07-12'
 other_names:
+- id: ar
+  name: بنك التنمية الجديد
 - id: de
-  name: Nectonema melanocephalum
+  name: Neue Entwicklungsbank
 - id: en
   name: New Development Bank
 - id: en
   name: BRICS Bank
 - id: es
-  name: Nectonema melanocephalum
+  name: Nuevo Banco de Desarrollo
 - id: fr
-  name: Nectonema melanocephalum
+  name: Nouvelle banque de développement
 - id: pt
-  name: Nectonema melanocephalum
+  name: Novo Banco de Desenvolvimento
 - id: ru
-  name: Nectonema melanocephalum
+  name: Банк развития БРИКС
+- id: zh
+  name: 新开发银行
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ndb.int/
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ndb.int/
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ndb.int/
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ndb.int/about-ndb/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8579145
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8579145
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8579145
+  license: CC0

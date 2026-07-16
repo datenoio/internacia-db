@@ -41,9 +41,30 @@ python scripts/validate_intblocks.py     # schema, taxonomy, duplicates, complet
 pytest tests/                            # unit and integration tests
 ruff check scripts/ tests/               # lint
 python scripts/builder.py build --formats parquet,duckdb   # full build check
+python scripts/check_generated_artifacts.py                # committed exports match source + each other
+python scripts/check_markdown_links.py                     # internal doc links
 ```
 
 CI runs the same checks on every pull request (`.github/workflows/validate.yml`).
+
+### Data-quality gate and reports
+
+CI also runs `python scripts/builder.py analyze-quality` and **fails only on
+CRITICAL/IMPORTANT** findings; MEDIUM/LOW issues are advisory. The `dataquality/`
+report is regenerated on each run and uploaded as a workflow artifact — treat the
+CI artifact (or a fresh local run) as authoritative rather than any stale committed
+copy. Do not commit ad-hoc `dataquality/*_run/` directories.
+
+Rule implementations live in a single shared layer
+(`internacia_builder/validate/country_rules.py`, `intblock_rules.py`,
+`cross_rules.py`) used by both the CLI validators and `analyze-quality`, so a
+rule behaves identically in CI gates and in `dataquality/` reports. IMPORTANT-tier
+referential-integrity rules (unresolved borders, org references, headquarters
+countries, duplicate `wikidata_id`) fail CI; legitimate exceptions are declared in
+the documented allowlists in `data/schemas/countries_completeness.yaml`
+(`borders.reciprocity_allowlist`) and `data/schemas/intblocks_completeness.yaml`
+(`references.org_ref_allowlist`, `references.wikidata_duplicate_allowlist`) with a
+reason comment per entry.
 
 ## Pull request checklist
 

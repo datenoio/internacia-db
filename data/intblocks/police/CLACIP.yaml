@@ -4,7 +4,19 @@ blocktype:
 status: formal
 languages:
 - es
+- en
 name: La Comunidad Latinoamericana y del Caribe de Inteligencia Policial
+founded: '2005-02-18'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
+legal_status: informal
+acronyms:
+- lang: en
+  value: CLACIP
+- lang: es
+  value: CLACIP
 includes:
 - id: AR
   name: Argentina
@@ -95,23 +107,54 @@ includes:
   type: country
   status: member
 membership_count: 22
-description: La Comunidad Latinoamericana y del Caribe de Inteligencia Policial is
-  an international police body with 22 members.
+description: Regional forum of Latin American and Caribbean police and national intelligence
+  agencies established in Bogotá in 2005 to exchange intelligence, investigative techniques,
+  and coordinated action against transnational organized crime, cybercrime, human trafficking,
+  and terrorism.
 tags:
 - CLACIP
 - comunidad
+- cooperation
 - defense
+- intelligence
 - latinoamericana
 - law
 - legal
 - police
+- regional
+- regional_cooperation
 - security
 topics:
 - key: law
   name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
+other_names:
+- id: en
+  name: Latin American and Caribbean Community of Police Intelligence
+- id: es
+  name: Comunidad Latinoamericana y del Caribe de Inteligencia Policial
+last_verified: '2026-07-14'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://apccolombia.gov.co/node/733
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.ministeriodegobierno.gob.ec/42-delegados-de-la-clacip-compartieron-experiencias-y-compromisos-por-la-seguridad-ciudadana/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://pilac.law.harvard.edu/americas-region-efforts/tag/CLACIP
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.elcohetealaluna.com/cooperacion-policial-sin-controles/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.fotw.info/flags/int-clap.html

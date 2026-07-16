@@ -1,10 +1,17 @@
 id: APPO
+name: African Petroleum Producers' Organization
 blocktype:
 - energy
 status: formal
+founded: '1987-01-27'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
+- pt
+- ar
 links:
 - url: https://apposecretariat.org/
   type: website
@@ -12,7 +19,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2867596
   type: wikidata
-name: African Petroleum Producers' Organization
+headquarters:
+  city: Brazzaville
+  country: CG
+  coordinates:
+    lat: -4.269444444444445
+    lng: 15.27111111111111
+legal_status: intergovernmental
+recognition_status: Founded in Lagos, Nigeria on 27 January 1987 as the African Petroleum Producers Association (APPA); reorganized and renamed the African Petroleum Producers Organization (APPO) in 2017
+secretariat:
+  location: Brazzaville, Republic of the Congo
+  head: Secretary General
+  organization: African Petroleum Producers' Organization
 includes:
 - id: DZ
   name: Algeria
@@ -86,20 +104,31 @@ includes:
   name: Chad
   type: country
   status: member
+- id: VE
+  name: Venezuela
+  type: country
+  status: observer
 membership_count: 18
 wikidata_id: Q2867596
-description: African Petroleum Producers' Organization is an international energy
-  body with 18 members.
+description: Intergovernmental forum of African oil-producing countries promoting cooperation, knowledge sharing, and harmonization
+  of petroleum policies. Founded in Lagos in 1987 as the African Petroleum Producers Association and renamed APPO in 2017,
+  the secretariat is headquartered in Brazzaville, Republic of the Congo. Works to advance hydrocarbon research, energy security,
+  and sustainable development across the continent.
 tags:
 - APPO
+- africa
 - african
 - economy
 - energy
 - environment
+- hydrocarbons
+- intergovernmental
+- international
 - nature
 - oil
 - petroleum
 - producers
+- regional
 topics:
 - key: economy
   name: Economy
@@ -107,6 +136,8 @@ topics:
   name: Energy
 - key: environment
   name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: رابطة منتجي النفط الأفريقية
@@ -118,22 +149,69 @@ other_names:
   name: Organización Africana de Productores de Petróleo
 - id: fr
   name: Association des producteurs de pétrole africains
+- id: pt
+  name: Organização dos Produtores Africanos de Petróleo
 - id: zh
   name: 非洲石油生产国组织
+acronyms:
+- lang: en
+  value: APPO
+- lang: es
+  value: APPO
+notes: Venezuela has observer status since 2021. Organizational reforms include the Africa Energy Investment Corporation (AEIC)
+  and the Africa Energy Bank initiative. Eight founding members joined at the 1987 Lagos meeting; membership has since expanded
+  to 18 African producer states.
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://apposecretariat.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://apposecretariat.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Petroleum_Producers%27_Organization
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Petroleum_Producers%27_Organization
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://apposecretariat.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Petroleum_Producers%27_Organization
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Petroleum_Producers%27_Organization
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/African_Petroleum_Producers%27_Organization
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2867596
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2867596
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-acronyms:
-- lang: es
-  value: APPO
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2867596
+  license: CC0

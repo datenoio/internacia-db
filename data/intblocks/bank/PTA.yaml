@@ -1,50 +1,124 @@
 id: PTA
+name: Trade and Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1985-11-06'
+active_period:
+  start: '1985-11-06'
+geographic_scope: regional
+regions:
+- Africa
+- COMESA
+- East Africa
+- Southern Africa
 partof: COMESA
 languages:
 - en
 - fr
 links:
-- url: http://www.ptabank.org/
+- url: https://www.tdbgroup.org/
   type: website
-- url: https://en.wikipedia.org/wiki/PTA_Bank
+- url: https://www.tdbgroup.org/about-us/
+  type: website
+- url: https://www.tdbgroup.org/history/
+  type: website
+- url: https://www.tdbgroup.org/members/
+  type: website
+- url: https://en.wikipedia.org/wiki/Trade_and_Development_Bank
   type: wikipedia
-name: Preferential Trade Area Bank
+- url: https://www.wikidata.org/wiki/Q13657031
+  type: wikidata
+headquarters:
+  city: Bujumbura
+  country: BI
+  coordinates:
+    lat: -3.3822
+    lng: 29.3644
+legal_status: treaty-based multilateral institution
+recognition_status: Multilateral development finance institution established on 6 November 1985 under Chapter Nine of the Treaty for the Establishment of the Preferential Trade Area for Eastern and Southern African States; financial arm of COMESA
+secretariat:
+  location: Bujumbura, Burundi
+  head: President and Chief Executive Officer
+  organization: Trade and Development Bank
+membership_count: 26
+description: Multilateral treaty-based development finance institution, formerly known as the PTA Bank, established in 1985 as the financial arm of COMESA to finance trade, regional economic integration, and sustainable development across eastern and southern Africa. Rebranded as the Trade and Development Bank (TDB) in 2017, it provides trade finance, project and infrastructure finance, asset management, and advisory services. Shareholders comprise 26 African member states plus non-regional and institutional investors; the bank operates principle offices in Bujumbura and Port Louis, Mauritius, and regional offices in Nairobi, Harare, Addis Ababa, and Kinshasa.
+tags:
+- PTA
+- TDB
+- africa
+- aid
+- bank
+- comesa
+- development
+- economy
+- finance
+- infrastructure
+- multilateral
+- trade
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 includes:
-- id: AO
-  name: Angola
-  type: country
-  status: member
 - id: BI
   name: Burundi
   type: country
   status: member
-- id: KM
-  name: Comoros
+- id: BW
+  name: Botswana
   type: country
   status: member
+- id: CD
+  name: Congo, The Democratic Republic of the
+  type: country
+  status: member
+  joined: '2009'
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '2000'
 - id: DJ
   name: Djibouti
+  type: country
+  status: member
+- id: EG
+  name: Egypt
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
   type: country
   status: member
 - id: ET
   name: Ethiopia
   type: country
   status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
 - id: KE
   name: Kenya
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: MG
   name: Madagascar
   type: country
   status: member
+  joined: '2018'
 - id: MW
   name: Malawi
   type: country
@@ -57,6 +131,7 @@ includes:
   name: Mozambique
   type: country
   status: member
+  joined: '2016'
 - id: RW
   name: Rwanda
   type: country
@@ -65,14 +140,28 @@ includes:
   name: Seychelles
   type: country
   status: member
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
 - id: SO
   name: Somalia
   type: country
   status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  joined: '2016'
 - id: SZ
   name: Eswatini
   type: country
   status: member
+  joined: '2016'
 - id: TZ
   name: Tanzania
   type: country
@@ -89,26 +178,77 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 19
-description: International development bank focused on development providing financial
-  services.
-tags:
-- PTA
-- aid
-- area
-- bank
-- commerce
-- development
-- economy
-- finance
-- preferential
-- trade
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: trade
-  name: Trade
+acronyms:
+- lang: en
+  value: PTA
+- lang: en
+  value: TDB
+wikidata_id: Q13657031
+notes: Formerly Preferential Trade Area Bank (PTA Bank); rebranded to Trade and Development Bank in 2017. Full legal name is Eastern and Southern African Trade and Development Bank. Parent of TDB Group, which also comprises the Trade and Development Fund, ESATAL, TDB Captive Insurance Company, and the TDB Academy. Institutional shareholders include the African Development Bank, BADEA, OPEC Fund, and Angola's Fundo Soberano de Angola (FSDEA).
+other_names:
+- id: en
+  name: Eastern and Southern African Trade and Development Bank
+- id: en
+  name: Preferential Trade Area Bank
+- id: en
+  name: PTA Bank
+last_verified: '2026-07-12'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/about-us/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/about-us/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/about-us/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/members/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/members/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/history/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q13657031
+  license: CC0
+- field: name
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.tdbgroup.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q13657031
+  license: CC0

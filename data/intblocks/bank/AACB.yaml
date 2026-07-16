@@ -1,26 +1,55 @@
 id: AACB
+name: Association of African Central Banks
 blocktype:
 - bank
 - economic
 status: formal
+founded: '1968'
+active_period:
+  start: '1968'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 links:
 - url: https://www.aacb.org/
   type: website
+- url: https://www.aacb.org/index.php/en/content/about-us
+  type: website
+- url: https://aacb.org/banques-centrales-membres
+  type: website
+- url: https://www.aacb.org/index.php/en/content/aacb-executive-secretariat
+  type: website
 - url: https://en.wikipedia.org/wiki/Association_of_African_Central_Banks
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q131411943
   type: wikidata
-name: Association of African Central Banks
-founded: '1968'
 headquarters:
   city: Dakar
   country: SN
-geographic_scope: regional
-regions:
+legal_status: association
+recognition_status: Established under the Articles of the Association of African Central Banks adopted in 1968; Executive Secretariat hosted by BCEAO at its Dakar headquarters since 2001
+secretariat:
+  location: Dakar, Senegal (hosted at BCEAO headquarters)
+  head: Executive Secretary
+  organization: AACB Executive Secretariat
+membership_count: 53
+description: Regional forum of African central bank governors promoting monetary, banking, and financial cooperation across the continent. Governed by an Assembly of Governors (all member central bank governors), a Bureau, five African Union sub-regional committees (North, West, Central, East, and Southern Africa), and an Executive Secretariat hosted by BCEAO in Dakar, Senegal. Supports capacity building through research, seminars, symposiums, and technical training, and works toward deeper monetary and financial integration including the long-term goal of an African Central Bank and single currency.
+tags:
+- AACB
+- ABCA
 - Africa
+- central-banks
+- cooperation
+- finance
+- monetary-policy
+topics:
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AO
   name: Angola
@@ -76,10 +105,6 @@ includes:
   status: member
 - id: EG
   name: Egypt
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
   type: country
   status: member
 - id: ET
@@ -238,31 +263,64 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 54
-wikidata_id: Q131411943
-legal_status: association
 acronyms:
 - lang: en
   value: AACB
 - lang: fr
   value: ABCA
-description: International organization of African central banks promoting monetary, banking, and financial cooperation among
-  member states.
-tags:
-- AACB
-- ABCA
-- Africa
-- central-banks
-- finance
-topics:
-- key: finance
-  name: Finance
+wikidata_id: Q131411943
+notes: Concept proposed at the May 1963 OAU summit in Addis Ababa; first meeting of African central bank governors held in Addis Ababa in February 1965; Articles of the Association adopted in 1968. The Assembly of Governors is the governing body; five AU sub-regional committees coordinate North, West, Central, East, and Southern Africa. Secretariat relocated to BCEAO premises in Dakar following the 25th Assembly decision (August 2001, Johannesburg). Membership comprises 41 central banks representing 53 African countries (BEAC and BCEAO are regional central banks covering multiple member states).
+last_verified: '2026-07-12'
 other_names:
 - id: en
   name: Association of African Central Banks
 - id: fr
   name: Association des banques centrales africaines
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/aacb-executive-secretariat
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/aacb-executive-secretariat
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/aacb-executive-secretariat
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aacb.org/banques-centrales-membres
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aacb.org/banques-centrales-membres
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aacb.org/index.php/en/content/about-us
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-14'
@@ -273,20 +331,3 @@ provenance:
   retrieved_at: '2026-06-14'
   url: https://www.aacb.org/
   license: CC0
-- field: includes
-  source: African Union membership
-  retrieved_at: '2026-06-14'
-  url: https://aacb.org/banques-centrales-membres
-  license: ''
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aacb.org/
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aacb.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aacb.org/

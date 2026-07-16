@@ -1,25 +1,37 @@
 id: CEM
+name: Clean Energy Ministerial
 blocktype:
 - energy
 status: formal
+founded: '2010'
+active_period:
+  start: '2010'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://www.cleanenergyministerial.org/
   type: website
+- url: https://www.cleanenergyministerial.org/who-we-are/
+  type: website
 - url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
   type: wikipedia
-name: Clean Energy Ministerial
-founded: '2010'
+- url: https://www.wikidata.org/wiki/Q25326640
+  type: wikidata
 headquarters:
   city: Paris
   country: FR
   coordinates:
     lat: 48.856666666667
     lng: 2.3522222222222
-geographic_scope: global
-regions:
-- worldwide
+legal_status: intergovernmental
+recognition_status: High-level global multilateral forum of energy ministers established in 2010; institutional framework adopted in 2016 at CEM7 (San Francisco) as CEM 2.0, aligning work with the Paris Agreement and UN Sustainable Development Goals; independent multilateral secretariat hosted by the International Energy Agency in Paris since 2016
+secretariat:
+  location: Paris, France
+  head: Head of Secretariat
+  organization: Clean Energy Ministerial Secretariat (hosted by the International Energy Agency)
 includes:
 - id: AU
   name: Australia
@@ -138,7 +150,6 @@ includes:
   type: organization
   status: member
 membership_count: 29
-legal_status: intergovernmental
 description: High-level global forum that promotes policies and programs to accelerate the deployment of clean energy technologies.
   The Clean Energy Ministerial (CEM) facilitates collaboration among member countries to share best practices and encourage
   the transition to a global clean energy economy. Established in 2010, CEM comprises 29 countries and the European Commission,
@@ -174,16 +185,61 @@ other_names:
   name: Reunión Ministerial de Energía Limpia
 - id: zh
   name: 清洁能源部长级会议
+acronyms:
+- lang: en
+  value: CEM
+notes: Governance includes a rotating Steering Committee of member governments, annual ministerial meetings hosted by rotating member countries, and voluntary technical initiatives and campaigns. The secretariat was initially housed in the U.S. Department of Energy (2010–2016) before moving to the IEA in Paris. Since 2016, Mission Innovation ministerial meetings have been co-located with CEM meetings.
+wikidata_id: Q25326640
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.cleanenergyministerial.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.cleanenergyministerial.org/who-we-are/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
+  license: CC BY-SA 4.0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.cleanenergyministerial.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.cleanenergyministerial.org/who-we-are/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.cleanenergyministerial.org/who-we-are/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.cleanenergyministerial.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.cleanenergyministerial.org/who-we-are/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Clean_Energy_Ministerial
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q25326640
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q25326640
+  license: CC0

@@ -1,20 +1,11 @@
 id: GRA
+name: Global Renewables Alliance
 blocktype:
 - energy
 status: formal
-languages:
-- en
-links:
-- url: https://globalrenewablesalliance.org
-  type: website
-name: Global Renewables Alliance
-founded: '2022'
-headquarters:
-  city: Brussels
-  country: BE
-  coordinates:
-    lat: 50.8503
-    lng: 4.3517
+founded: '2022-11'
+active_period:
+  start: '2022-11'
 geographic_scope: global
 regions:
 - Africa
@@ -23,9 +14,33 @@ regions:
 - North America
 - Oceania
 - South America
-acronyms:
-- lang: en
-  value: GRA
+languages:
+- en
+links:
+- url: https://globalrenewablesalliance.org
+  type: website
+- url: https://globalrenewablesalliance.org/about/
+  type: website
+- url: https://globalrenewablesalliance.org/about/partners/
+  type: website
+- url: https://globalrenewablesalliance.org/news/global-industry-leaders-and-irena-join-forces-to-accelerate-renewable-deployment/
+  type: website
+- url: https://globalrenewablesalliance.org/news/global-renewables-alliance-joins-global-movement-to-electrify-now/
+  type: website
+- url: https://globalrenewablesalliance.org/news/global-renewables-alliance-joins-global-movement-to-electrify-now/
+  type: website
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8503
+    lng: 4.3517
+legal_status: alliance
+recognition_status: Industry alliance formed through a memorandum of understanding signed at COP27 (November 2022) by six global renewable energy industry associations; co-leads advocacy for the COP28 UAE Consensus target to triple global renewable energy capacity to at least 11,000 GW by 2030; signed a partnership MoU with IRENA in June 2023
+secretariat:
+  location: Brussels, Belgium
+  head: Chief Executive Officer
+  organization: Global Renewables Alliance
 includes:
 - id: GWEC
   name: Global Wind Energy Council
@@ -52,18 +67,16 @@ includes:
   type: organization
   status: member
 membership_count: 6
-legal_status: alliance
-description: Alliance established in 2022 to unify the global renewable energy industry and accelerate the transition to sustainable
-  energy. The Global Renewables Alliance (GRA) brings together six leading international industry associations representing
-  wind, solar, hydropower, geothermal, energy storage, and green hydrogen sectors. The alliance works to strengthen the private
-  sector's voice in accelerating the energy transition, with a shared goal of tripling global renewable energy capacity by
-  2030 to at least 11,000 GW. The GRA collaborates closely with governments, industry leaders, investors, NGOs, multilateral
-  organisations, and corporations to drive action towards this target. The alliance partners with the International Renewable
-  Energy Agency (IRENA) and hosts events such as the Global Renewables Hub at COP meetings and the Global Renewables Summit.
+description: Global alliance of six leading renewable energy industry associations representing wind, solar, hydropower, geothermal,
+  long-duration energy storage, and green hydrogen. Formed at COP27 in November 2022 through a memorandum of understanding,
+  the alliance provides a unified private-sector voice advocating for the COP28 UAE Consensus target to triple global renewable
+  energy capacity to at least 11,000 GW by 2030. GRA works with governments, industry, investors, NGOs, and multilateral
+  organisations including IRENA, and hosts initiatives such as the Global Renewables Summit and the Electrify Now campaign.
 tags:
 - GRA
 - energy
 - renewable
+- clean_energy
 - alliance
 - cooperation
 - international
@@ -76,6 +89,8 @@ tags:
 - geothermal
 - storage
 - hydrogen
+- electrification
+- cop28
 topics:
 - key: energy
   name: Energy
@@ -83,16 +98,74 @@ topics:
   name: Environment
 - key: economy
   name: Economy
+- key: climate_change
+  name: Climate Change
+- key: renewable
+  name: Renewable Energy
+other_names:
+- id: en
+  name: Global Renewables Alliance
+acronyms:
+- lang: en
+  value: GRA
+notes: Founding members signed an MoU at COP27 in Sharm El-Sheikh in November 2022. GRA signed a partnership MoU with IRENA
+  in June 2023. The alliance co-hosts the Global Renewables Summit (first held in New York in September 2024 during UN General
+  Assembly High-Level Week) and maintains a Global Renewables Hub presence at COP meetings. Over 20 multinational companies
+  participate as coalition partners alongside strategic partners including IRENA and Ember. Ben Backwell (CEO of GWEC) chairs
+  the alliance from January 2025; Bruce Douglas serves as Chief Executive Officer. The Electrify Now campaign, co-led by
+  GRA and the European Commission, launched on 23 June 2026 at London Climate Week to accelerate electrification to 35% of
+  final energy consumption by 2035.
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://globalrenewablesalliance.org
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://globalrenewablesalliance.org
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/news/grs24-announcement/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://globalrenewablesalliance.org
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energyglobal.com/other-renewables/18112022/clean-energy-industries-form-alliance-at-cop27/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energyglobal.com/other-renewables/18112022/clean-energy-industries-form-alliance-at-cop27/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/about/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/news/grs24-announcement/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/news/global-renewables-alliance-joins-global-movement-to-electrify-now/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://globalrenewablesalliance.org/

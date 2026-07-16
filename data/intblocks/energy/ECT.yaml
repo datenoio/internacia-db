@@ -1,26 +1,38 @@
 id: ECT
+name: Energy Charter Treaty
 blocktype:
 - energy
 - intorg
 status: formal
+founded: '1991'
+active_period:
+  start: '1998-04-16'
+geographic_scope: global
+regions:
+- Europe
+- Central Asia
+- Asia
 languages:
 - en
+- ru
 links:
+- url: https://www.energycharter.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Energy_Charter_Treaty
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2001857
   type: wikidata
-name: Energy Charter Treaty
-founded: '1991'
-acronyms:
-- lang: en
-  value: TCE
-- lang: en
-  value: ECT
-- lang: fr
-  value: TCE
-- lang: de
-  value: ECT
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846667
+    lng: 4.3525
+legal_status: treaty
+recognition_status: Multilateral energy treaty signed in Lisbon in December 1994 and in force since 16 April 1998; originated from the 1991 European Energy Charter political declaration; governed by the Energy Charter Conference, which holds United Nations General Assembly observer status (resolution 62/75)
+secretariat:
+  location: Brussels, Belgium
+  organization: Energy Charter Secretariat
 includes:
 - id: AL
   name: Albania
@@ -171,8 +183,11 @@ includes:
   type: country
   status: member
 membership_count: 37
-wikidata_id: Q2001857
-description: International energy focused on economic cooperation.
+description: Multilateral treaty establishing a legally binding framework for cross-border cooperation in the energy sector,
+  covering trade, transit, investment promotion and protection, and energy efficiency. Originated from the 1991 European Energy
+  Charter political declaration and entered into force in April 1998. The Energy Charter Conference serves as the governing
+  body; the Secretariat is based in Brussels. Includes investor-state dispute settlement (ISDS) provisions that have generated
+  significant international arbitration awards.
 tags:
 - ECT
 - TCE
@@ -180,6 +195,9 @@ tags:
 - economy
 - energy
 - environment
+- investment
+- ISDS
+- multilateral
 - nature
 - oil
 - treaty
@@ -207,7 +225,64 @@ other_names:
   name: Энергетическая хартия
 - id: zh
   name: 能源宪章条约
+acronyms:
+- lang: en
+  value: TCE
+- lang: en
+  value: ECT
+- lang: fr
+  value: TCE
+- lang: de
+  value: ECT
+wikidata_id: Q2001857
+notes: Membership has contracted since 2022 as many European states and the European Union have denounced the treaty, citing
+  climate policy conflicts and ISDS risk. Former members include France, Germany, Poland, Italy, Spain, Portugal, the United
+  Kingdom, the Netherlands, Denmark, Slovenia, Luxembourg, and the European Union/Euratom (2023–2025). Russia applied the treaty
+  provisionally but terminated provisional application in 2009; Australia ended provisional application in 2021. Belarus was
+  suspended in June 2022. Several remaining members have announced pending withdrawals. The `includes` list may not reflect
+  current party status.
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energycharter.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energycharter.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energycharter.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energycharter.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energycharter.org/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Charter_Treaty
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Charter_Treaty
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Charter_Treaty
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Charter_Treaty
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

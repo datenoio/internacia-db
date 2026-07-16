@@ -925,7 +925,7 @@ includes:
   type: country
   status: member
 - id: TW
-  name: TW
+  name: Taiwan
   type: country
   status: member
 - id: TZ
@@ -957,7 +957,7 @@ includes:
   type: country
   status: member
 - id: VA
-  name: VA
+  name: Vatican City
   type: country
   status: member
 - id: VC
@@ -1013,6 +1013,7 @@ includes:
   type: country
   status: member
 membership_count: 252
+geographic_scope: global
 description: World aggregate covering all economies tracked by the World Bank.
 tags:
 - WLD
@@ -1032,6 +1033,10 @@ topics:
   name: Finance
 wikidata_id: Q16502
 links:
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
 - url: https://www.wikidata.org/wiki/Q16502
   type: wikidata
 other_names:
@@ -1054,22 +1059,45 @@ other_names:
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/
   license: CC0
 - field: description
   source: World Bank
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: tags
+  source: Internacia
+  retrieved_at: '2026-07-13'
+- field: topics
+  source: Internacia
+  retrieved_at: '2026-07-13'
+- field: links
+  source: Internacia
+  retrieved_at: '2026-07-13'
+last_verified: '2026-07-13'
 acronyms:
 - lang: ar
   value: عالم

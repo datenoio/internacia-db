@@ -1,7 +1,14 @@
 id: MERCOSUR
+name: Southern Common Market
 blocktype:
 - customs
 status: formal
+founded: '1991-03-26'
+active_period:
+  start: '1995-01-01'
+geographic_scope: regional
+regions:
+- South America
 languages:
 - es
 - pt
@@ -12,7 +19,38 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4264
   type: wikidata
-name: Southern Common Market
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established by the Treaty of Asunción (26 March 1991) and Protocol of Ouro Preto (16 December 1994); free trade among founding members from 1994 and common external tariff effective 1 January 1995; administered by the Secretariat of Mercosur in Montevideo; five active full members (Argentina, Bolivia, Brazil, Paraguay and Uruguay) with Venezuela formally a member but suspended since December 2016
+secretariat:
+  location: Montevideo, Uruguay
+  organization: Secretariat of Mercosur
+  head: Director of the Secretariat
+headquarters:
+  city: Montevideo
+  country: UY
+  coordinates:
+    lat: -34.91405555555556
+    lng: -56.17136111111111
+acronyms:
+- lang: en
+  value: MERCOSUR
+- lang: es
+  value: MERCOSUR
+- lang: pt
+  value: MERCOSUL
+- lang: fr
+  value: MERCOSUR
+- lang: ru
+  value: МЕРКОСУР
+- lang: zh
+  value: 南錐共同市場
+- lang: zh
+  value: 南共市
+founding_members:
+- AR
+- BR
+- PY
+- UY
 includes:
 - id: AR
   name: Argentina
@@ -44,45 +82,15 @@ includes:
   type: country
   status: member
   joined: '2012-07-31'
-founded: '1991-03-26'
-headquarters:
-  city: Montevideo
-  country: UY
-  coordinates:
-    lat: -34.91405555555556
-    lng: -56.17136111111111
-geographic_scope: regional
-regions:
-- South America
-acronyms:
-- lang: en
-  value: MERCOSUR
-- lang: es
-  value: MERCOSUR
-- lang: pt
-  value: MERCOSUL
-- lang: fr
-  value: MERCOSUR
-- lang: ru
-  value: МЕРКОСУР
-- lang: zh
-  value: 南錐共同市場
-- lang: zh
-  value: 南共市
-founding_members:
-- AR
-- BR
-- PY
-- UY
 membership_count: 5
 wikidata_id: Q4264
-legal_status: intergovernmental
 description: South American trade bloc and customs union established by the Treaty of Asunción (1991) and Protocol of Ouro
   Preto (1994). Free trade among founding members began in 1994; the customs union with a common external tariff took effect
   on 1 January 1995. Bolivia became a full member in July 2024.
 notes: Venezuela remains a formal member but has been suspended since 1 December 2016 and does not participate in bloc decisions.
   Associate countries (Chile, Colombia, Ecuador, Guyana, Panama, Peru, and Suriname) have trade agreements with Mercosur but
   are not part of the customs union. Also known as Mercosur (Spanish) and Mercosul (Portuguese).
+last_verified: '2026-07-12'
 tags:
 - MERCOSUL
 - MERCOSUR
@@ -127,44 +135,59 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/MERCOSUR
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/MERCOSUR
   license: CC BY-SA 4.0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: includes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/MERCOSUR
   license: CC BY-SA 4.0
 - field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.mercosur.int/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.mercosur.int/
+- field: recognition_status
+  source: MERCOSUR
+  retrieved_at: '2026-07-12'
+  url: https://www.mercosur.int/en/about-mercosur
+  license: public domain
+- field: secretariat
+  source: MERCOSUR
+  retrieved_at: '2026-07-12'
+  url: https://www.mercosur.int/en/about-mercosur/secretariat-of-mercosur/directorate-of-the-secretariat-of-mercosur
+  license: public domain
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/MERCOSUR
+  license: CC BY-SA 4.0

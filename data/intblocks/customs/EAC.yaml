@@ -1,7 +1,14 @@
 id: EAC
+name: East African Community
 blocktype:
 - customs
 status: formal
+founded: '2005-01-01'
+active_period:
+  start: '2005-01-01'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - sw
@@ -12,7 +19,49 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q337456
   type: wikidata
-name: East African Community
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established by the Protocol on the Establishment of the East African Community Customs Union (signed March 2004, effective 1 January 2005); first regional integration milestone under Article 75 of the EAC Treaty; operates a Common External Tariff and duty-free trade among partner states; administered by the East African Community Secretariat in Arusha
+secretariat:
+  location: Arusha, Tanzania
+  organization: East African Community Secretariat
+  head: Secretary General
+headquarters:
+  city: Arusha
+  country: TZ
+  coordinates:
+    lat: -3.3666666666667
+    lng: 36.683333333333
+acronyms:
+- lang: en
+  value: EAC
+- lang: fr
+  value: CAE
+- lang: es
+  value: CAO
+- lang: fr
+  value: OAG
+- lang: tr
+  value: OAK
+- lang: tr
+  value: ŞAC
+- lang: ru
+  value: ВАС
+- lang: ru
+  value: САС
+- lang: zh
+  value: 东共体
+- lang: zh
+  value: 东非共同体
+- lang: zh
+  value: 東共體
+- lang: de
+  value: EAC
+- lang: pt
+  value: EAC
+founding_members:
+- KE
+- TZ
+- UG
 includes:
 - id: KE
   name: Kenya
@@ -54,50 +103,8 @@ includes:
   type: country
   status: member
   joined: '2024-03-04'
-founded: '2005-01-01'
-headquarters:
-  city: Arusha
-  country: TZ
-  coordinates:
-    lat: -3.3666666666667
-    lng: 36.683333333333
-geographic_scope: regional
-regions:
-- Africa
-acronyms:
-- lang: en
-  value: EAC
-- lang: fr
-  value: CAE
-- lang: es
-  value: CAO
-- lang: fr
-  value: OAG
-- lang: tr
-  value: OAK
-- lang: tr
-  value: ŞAC
-- lang: ru
-  value: ВАС
-- lang: ru
-  value: САС
-- lang: zh
-  value: 东共体
-- lang: zh
-  value: 东非共同体
-- lang: zh
-  value: 東共體
-- lang: de
-  value: EAC
-- lang: pt
-  value: EAC
-founding_members:
-- KE
-- TZ
-- UG
 membership_count: 8
 wikidata_id: Q337456
-legal_status: intergovernmental
 description: Customs union of the East African Community, established by the Protocol on the Establishment of the East African
   Community Customs Union (signed March 2004, effective 1 January 2005). Applies a Common External Tariff on third-country
   imports, duty-free trade among partner states, and common customs procedures.
@@ -107,6 +114,7 @@ notes: Kenya, Tanzania and Uganda were the founding customs-union partners; Rwan
   and sensitive-tariff exceptions beyond the four-tier CET (0%, 10%, 25%, 35%) adopted since July 2022, and Rules of Origin
   have not been updated since 2015. The customs union is one pillar of broader EAC integration alongside the 2010 Common Market
   Protocol.
+last_verified: '2026-07-12'
 tags:
 - CAE
 - CAO
@@ -157,43 +165,58 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/East_African_Community
   license: CC BY-SA 4.0
 - field: notes
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/East_African_Community
-  license: CC BY-SA 4.0
+  source: East African Community
+  retrieved_at: '2026-07-12'
+  url: https://www.eac.int/customs-union
+  license: public domain
 - field: includes
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/East_African_Community
-  license: CC BY-SA 4.0
+  source: East African Community
+  retrieved_at: '2026-07-12'
+  url: https://www.eac.int/customs-union
+  license: public domain
 - field: founded
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/East_African_Community
   license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q337456
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q337456
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eac.int/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eac.int/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.eac.int/
+- field: recognition_status
+  source: East African Community
+  retrieved_at: '2026-07-12'
+  url: https://www.eac.int/customs-union
+  license: public domain
+- field: secretariat
+  source: East African Community
+  retrieved_at: '2026-07-12'
+  url: https://www.eac.int/customs-union
+  license: public domain
+- field: active_period
+  source: East African Community
+  retrieved_at: '2026-07-12'
+  url: https://www.eac.int/customs-union
+  license: public domain

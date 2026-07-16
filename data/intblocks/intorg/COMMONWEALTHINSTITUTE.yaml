@@ -1,18 +1,60 @@
 id: COMMONWEALTHINSTITUTE
+name: Commonwealth Institute
 blocktype:
 - intorg
-status: formal
-partof: COMMONWEALTH
+- cultural
+status: historical
+founded: '1958'
+dissolved: '2015-08-17'
+active_period:
+  start: '1958'
+  end: '2015-08-17'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Asia
+- Caribbean
+- Europe
+- Pacific
+partof:
+  id: COMMONWEALTH
+  name: Commonwealth of Nations
 languages:
 - en
 links:
-- url: http://www.commonwealth.org.uk/
+- url: https://cet1886.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Commonwealth_Institute
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5153789
   type: wikidata
-name: Commonwealth Institute
+legal_status: charity
+recognition_status: Educational and cultural body established by the Commonwealth Institute Act 1958 as successor to the Imperial Institute; governed by Commonwealth high commissioners in London, the UK Foreign Secretary, the Commonwealth Secretary-General, and four independent British citizens; operations closed in 2002 and the organisation was liquidated in 2015, with net proceeds vested in the Commonwealth Education Trust
+headquarters:
+  city: London
+  country: GB
+  coordinates:
+    lat: 51.499888888889
+    lng: -0.20019444444444
+membership_count: 55
+description: Educational and cultural organisation that promoted knowledge of the Commonwealth of Nations through exhibitions, a library, and public events. Established in 1958 under the Commonwealth Institute Act as successor to the Imperial Institute and headquartered from 1962 in a landmark building on Kensington High Street, London. Funded by Commonwealth governments and the UK, it ran permanent and temporary displays, cultural programming, and the Commonwealth Poetry Prize until financial pressures led to closure of public operations in 2004 and voluntary liquidation completed in August 2015. Its Kensington building was redeveloped as the Design Museum (opened 2016); charitable activities continued through the Commonwealth Education Trust.
+tags:
+- COMMONWEALTHINSTITUTE
+- commonwealth
+- cultural
+- education
+- historical
+- intorg
+- london
+- museum
+topics:
+- key: culture
+  name: Culture
+- key: education
+  name: Education
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: CA
   name: Canada
@@ -234,19 +276,6 @@ includes:
   name: Eswatini
   type: country
   status: member
-membership_count: 55
-description: The Commonwealth Institute is an international organization that is used to promote regional cooperation in the Commonwealth region.
-tags:
-- COMMONWEALTHINSTITUTE
-- commonwealth
-- communication
-- institute
-- intorg
-- telecom
-- telecommunications
-topics:
-- key: telecommunications
-  name: Telecommunications
 wikidata_id: Q5153789
 other_names:
 - id: de
@@ -255,14 +284,65 @@ other_names:
   name: Commonwealth Institute
 - id: zh
   name: 帝國研究院
+previous_names:
+- id: imperial-institute
+  name: Imperial Institute
+  period: 1888-1958
+notes: Governance members comprised Commonwealth high commissioners in London, the UK Foreign Secretary, the Commonwealth Secretary-General, and four independent British citizens rather than voluntary national membership like the Commonwealth Foundation. Public operations at Kensington High Street closed in 2004; the building (Grade II* listed) was sold in 2007 and reopened in 2016 as the Design Museum. Successor charity is the Commonwealth Education Trust (registered 2007), now based at New Zealand House. The Imperial Institute predecessor was established by royal charter in 1888 and renamed in 1958.
+last_verified: '2026-07-12'
 provenance:
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5153789
   license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5153789
   license: CC0
+- field: links
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5153789
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Institute

@@ -1,11 +1,21 @@
 id: ESM
+name: European Stability Mechanism
 blocktype:
 - bank
 - intorg
 - fund
 status: formal
+founded: '2012-09-27'
+active_period:
+  start: '2012-09-27'
+geographic_scope: regional
+regions:
+- Europe
+partof: EMU
 languages:
 - en
+- fr
+- de
 links:
 - url: https://www.esm.europa.eu/
   type: website
@@ -13,14 +23,57 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2040462
   type: wikidata
-name: European Stability Mechanism
-founded: '2012'
 headquarters:
   city: Luxembourg
   country: LU
-geographic_scope: regional
-regions:
-- Europe
+  coordinates:
+    lat: 49.63529
+    lng: 6.1684
+legal_status: intergovernmental
+recognition_status: Intergovernmental financial institution established under the Treaty Establishing the European Stability Mechanism, which entered into force on 27 September 2012
+secretariat:
+  location: Luxembourg, Luxembourg
+  head: Managing Director
+  organization: European Stability Mechanism
+membership_count: 21
+founding_members:
+- AT
+- BE
+- CY
+- EE
+- FI
+- FR
+- DE
+- GR
+- IE
+- IT
+- LU
+- MT
+- NL
+- PT
+- SK
+- SI
+- ES
+description: Permanent intergovernmental financial institution and lender of last resort for euro area member states. Established in 2012 under a dedicated treaty to replace temporary crisis facilities (EFSF and EFSM), the ESM provides conditional financial assistance—including sovereign loans, bank recapitalisation, and precautionary credit lines—to safeguard financial stability in the euro area. Headquartered in Luxembourg, it has an authorised lending capacity of €500 billion, with shareholders limited to euro area states.
+tags:
+- ESM
+- crisis
+- economy
+- euro-area
+- europe
+- european
+- finance
+- financial-assistance
+- multilateral
+- regional
+- stability
+topics:
+- key: finance
+  name: Finance
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AT
   name: Austria
@@ -28,6 +81,10 @@ includes:
   status: member
 - id: BE
   name: Belgium
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
   type: country
   status: member
 - id: HR
@@ -102,58 +159,93 @@ includes:
   name: Spain
   type: country
   status: member
-membership_count: 20
-wikidata_id: Q2040462
-legal_status: intergovernmental
 acronyms:
 - lang: en
   value: ESM
+- lang: fr
+  value: MES
+- lang: de
+  value: ESM
+- lang: es
+  value: MEE
+- lang: pt
+  value: MEE
+- lang: ru
+  value: ЕМС
 - lang: zh
-  value: 米斯西
-- lang: zh
-  value: 西米斯選區
-- lang: zh
-  value: 西米斯选区
-description: Intergovernmental financial institution of euro-area member states.
-tags:
-- ESM
-- economy
-- euro-area
-- finance
-- financial-assistance
-- stability
-topics:
-- key: finance
-  name: Finance
-- key: economy
-  name: Economy
+  value: 欧洲稳定机制
+wikidata_id: Q2040462
+notes: Replaced temporary EFSF and EFSM crisis facilities. Operations commenced on 8 October 2012. Later euro adopters joined as ESM shareholders when they entered the euro area (Latvia 2014, Lithuania 2015, Croatia 2023, Bulgaria 2026). Article 136 TFEU amendment authorizing euro area stability mechanisms entered into force on 1 May 2013. Also administers legacy EFSF bond programmes.
+last_verified: '2026-07-12'
 other_names:
+- id: ar
+  name: آلية الاستقرار الأوروبية
+- id: de
+  name: Europäischer Stabilitätsmechanismus
 - id: en
-  name: Meath West
+  name: European Stability Mechanism
+- id: es
+  name: Mecanismo Europeo de Estabilidad
 - id: fr
-  name: Meath West
+  name: Mécanisme européen de stabilité
+- id: pt
+  name: Mecanismo Europeu de Estabilidade
+- id: ru
+  name: Европейский механизм стабильности
 - id: zh
-  name: 西米斯
+  name: 欧洲稳定机制
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.esm.europa.eu/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
 - field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: secretariat
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.esm.europa.eu/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.esm.europa.eu/
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Stability_Mechanism
+  license: CC BY-SA 4.0

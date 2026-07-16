@@ -1,27 +1,45 @@
 id: SEGIB
+name: Ibero-American General Secretariat
 blocktype:
 - cultural
+- political
 status: formal
+founded: '2005'
+active_period:
+  start: '2005'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Europe
+- Latin America
+partof:
+  id: CUMBREIBEROAMERICANA
+  name: Ibero-American Summits of Heads of State and Governments
 languages:
 - es
+- pt
 links:
 - url: https://www.segib.org/
   type: website
+- url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  type: wikipedia
 - url: https://es.wikipedia.org/wiki/Secretar%C3%ADa_General_Iberoamericana
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q9075403
   type: wikidata
-name: Ibero-American General Secretariat
-founded: '2003'
+legal_status: intergovernmental
+recognition_status: Permanent support body for the Ibero-American Summits of Heads of State and Government, coordinating technical, institutional, and administrative management within the Organization of Ibero-American States framework; approved in 2003 and operational since 2005
+secretariat:
+  location: Madrid, Spain
+  head: Secretary-General
+  organization: Ibero-American General Secretariat
 headquarters:
   city: Madrid
   country: ES
   coordinates:
-    lat: 40.41694444444445
-    lng: -3.703333333333333
-acronyms:
-- lang: en
-  value: SEGIB
+    lat: 40.422061693518
+    lng: -3.6915810697346
 includes:
 - id: AD
   name: Andorra
@@ -32,7 +50,7 @@ includes:
   type: country
   status: member
 - id: BO
-  name: Bolivia
+  name: Bolivia, Plurinational State of
   type: country
   status: member
 - id: BR
@@ -108,44 +126,123 @@ includes:
   type: country
   status: member
 - id: VE
-  name: Venezuela
+  name: Venezuela, Bolivarian Republic of
   type: country
   status: member
 - id: GQ
   name: Equatorial Guinea
   type: country
-  status: member
-membership_count: 23
+  status: associate_member
+acronyms:
+- lang: en
+  value: SEGIB
+- lang: es
+  value: SEGIB
+- lang: pt
+  value: SEGIB
+membership_count: 22
 wikidata_id: Q9075403
-description: Support body to the Pro-Tempore Secretariat for the administrative management
-  and coordination for the Ibero-American Summits.
+description: Permanent support body for the Ibero-American Summits of Heads of State and Government, coordinating technical, institutional, and administrative management within the Organization of Ibero-American States framework. Approved at the 2003 summit in Santa Cruz de la Sierra and operational since 2005 as successor to the Secretariat of Ibero-American Cooperation, SEGIB is headquartered in Madrid with regional offices in Mexico City, Lima, and Montevideo. It supports summit preparation and follow-up, promotes Ibero-American cooperation, and coordinates with other Ibero-American organizations.
+notes: Creation was approved in 2003 at the XIII Ibero-American Summit; operations began in 2005 when Enrique V. Iglesias became the first Secretary-General. Spain provides the majority of the budget (about 60%). Nine associate members, including Equatorial Guinea, participate alongside the 22 full member states. Andrés Allamand (Chile) has served as Secretary-General since February 2022.
+last_verified: '2026-07-12'
 tags:
 - SEGIB
+- american
 - cultural
 - culture
 - education
 - general
+- ibero
 - iberoamericana
+- intergovernmental
+- political
+- regional
+- regional_cooperation
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: political
+  name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 伊比利亚-美洲总秘书处
 - id: en
   name: Ibero-American General Secretariat
 - id: es
   name: Secretaría General Iberoamericana
+- id: pt
+  name: Secretaria-Geral Ibero-Americana
+- id: zh
+  name: 伊比利亚-美洲总秘书处
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q9075403
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Ibero-American_General_Secretariat
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.segib.org/
-- field: description
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.segib.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Secretar%C3%ADa_General_Iberoamericana
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Secretar%C3%ADa_General_Iberoamericana
+  license: CC BY-SA 4.0
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q9075403
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q9075403
   license: CC0

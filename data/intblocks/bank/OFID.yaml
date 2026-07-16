@@ -6,33 +6,80 @@ blocktype:
 - fund
 - intorg
 status: formal
-founded: '1976'
+founded: '1976-01-28'
+active_period:
+  start: '1976-01-28'
 geographic_scope: global
 languages:
+- ar
 - en
 links:
-- url: https://www.ofid.org/
+- url: https://opecfund.org/
+  type: website
+- url: https://opecfund.org/who-we-are/at-a-glance
+  type: website
+- url: https://opecfund.org/who-we-are/member-countries
+  type: website
+- url: https://opecfund.org/who-we-are/governance
   type: website
 - url: https://en.wikipedia.org/wiki/OPEC_Fund_for_International_Development
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7074800
   type: wikidata
-acronyms:
-- lang: en
-  value: OFID
 headquarters:
   city: Vienna
   country: AT
   coordinates:
     lat: 48.2082
     lng: 16.3738
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Agreement Establishing the OPEC Fund signed on 28 January 1976; became a permanent international development agency in May 1980; holds UN General Assembly observer status since 1981
+secretariat:
+  location: Vienna, Austria
+  head: President
+  organization: OPEC Fund for International Development
+membership_count: 12
+founding_members:
+- DZ
+- EC
+- GA
+- ID
+- IR
+- IQ
+- KW
+- LY
+- NG
+- QA
+- SA
+- AE
+- VE
+description: Multilateral development finance institution established in 1976 by OPEC member states to reinforce financial cooperation with other developing countries. Owned by 12 shareholder countries, the OPEC Fund provides concessional loans, grants, trade finance, and technical assistance exclusively to non-member low- and middle-income countries across 125+ partner economies, focusing on infrastructure, energy, food security, MSME employment, water and sanitation, healthcare, and education.
+tags:
+- OFID
+- aid
+- bank
+- climate
+- development
+- economy
+- finance
+- fund
+- global
+- multilateral
+- opec
+- opec-fund
+- south-south
+- sustainable-development
+- vienna
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
 includes:
 - id: DZ
   name: Algeria
-  type: country
-  status: member
-- id: AO
-  name: Angola
   type: country
   status: member
 - id: EC
@@ -41,6 +88,10 @@ includes:
   status: member
 - id: GA
   name: Gabon
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
   type: country
   status: member
 - id: IR
@@ -63,10 +114,6 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
 - id: SA
   name: Saudi Arabia
   type: country
@@ -79,36 +126,74 @@ includes:
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
-membership_count: 13
+acronyms:
+- lang: en
+  value: OFID
 wikidata_id: Q7074800
-description: International development bank focused on development providing financial services.
-tags:
-- OFID
-- aid
-- bank
-- development
-- economy
-- finance
-- fund
-- opec
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: OPEC Fund membership is distinct from OPEC; the two organizations are separate entities. Does not lend to member countries except emergency grants. Rebranded as OFID in 1981 and reverted to the OPEC Fund name in 2007; ceased using the OFID abbreviation in 2020. Holds AA+/Stable credit ratings from Fitch and S&P. Committed over US$32 billion to development projects since inception.
+last_verified: '2026-07-12'
 other_names:
 - id: en
   name: OPEC Fund for International Development
 - id: ar
   name: الصندوق العربي للإنماء الاقتصادي والاجتماعي
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/at-a-glance
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ofid.org/
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/governance
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/news-events/news/the-opec-fund-at-50-the-greatest-threat-to-our-planet-is-the-belief-that-someone-else-will-save-it.
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/governance
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ofid.org/
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/member-countries
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/member-countries
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/news-events/news/the-opec-fund-at-50-the-greatest-threat-to-our-planet-is-the-belief-that-someone-else-will-save-it.
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/member-countries
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://opecfund.org/who-we-are/member-countries
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

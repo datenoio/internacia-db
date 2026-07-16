@@ -5,12 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.6.0] - 2026-07-16
+
+Data-quality expansion release: shared rule engine with 40+ new referential, temporal, and plausibility checks; intblocks schema tightened (**breaking**); space category consolidation; artifact-consistency and link-check CI guards; hundreds of data fixes.
 
 ### Added
 
 - Consumer query cookbook [docs/query-examples.md](docs/query-examples.md) with verified DuckDB and Pandas examples (UN members, borders, intblock membership, cross-joins).
 - Intblock **BLASMBL** (Baltic Assembly); intblocks row count **1070 → 1071**.
+- `data/datasets/blocktypes.manifest.json` — blocktypes now emit a build manifest like countries/intblocks.
+- `scripts/check_generated_artifacts.py` — cross-format primary-key parity, source/export parity, and single-build-identity guard (wired into CI and release).
+- `scripts/check_markdown_links.py` — internal Markdown link checker (wired into CI).
+- Intblock structural enrichment: `enrich_intblocks.py backfill-structural` fills `headquarters` (Wikidata P159/P625) and `founded` (P571), stamping `last_verified`; `last_verified` coverage now reported by `validate_intblocks.py`.
+- Capital cities for 10 previously capital-less entities (GI, HK, IL, MO, PS, TW, VA, XA, XS, XT) with provenance; remaining capital-less entities documented as expected exclusions in `docs/country-code-policy.md`.
+- `internacia-build` and `internacia-analyze-quality` console entry points; shared HTTP client `internacia_builder.http`; `internacia_builder.__version__` now reports the release version.
+- **Expanded data-quality rules** (`expand-data-quality-rules`): new referential-integrity checks — `UNRESOLVED_BORDER_REFERENCE` (borders resolve to existing `iso3code`, no self-reference), `NONRECIPROCAL_BORDER` (advisory, with allowlist), `UNRESOLVED_ORG_REF` (`predecessor`/`successor`/`suborganizations`), `UNRESOLVED_HQ_COUNTRY`, and `DUPLICATE_WIKIDATA_ID` (with documented allowlist for concept-level Q-ids). New consistency/plausibility checks — `CHRONOLOGY_ERROR`, `DUPLICATE_INCLUDE_ENTRY`, `MEMBERSHIP_COUNT_MISMATCH`, `CONTRADICTORY_APPLICABILITY`, `INVALID_INDICATOR_VALUE`, `INCONSISTENT_ENTITY_FLAGS`, `PROVENANCE_INTEGRITY`, and the `INCLUDE_NAME_MISMATCH` advisory (replaces `scripts/report_country_include_names.py`). CI-only rules (`INVALID_CURRENCY_CODE`, `INVALID_COORDINATES`, `STALE_PROVENANCE`, `FILENAME_ID_MISMATCH`, `DIRECTORY_BLOCKTYPE_MISMATCH`, `DEPRECATED_TOPIC_KEY`) now also appear in `dataquality/` reports.
+- `data/schemas/includes_status.yaml` — canonical catalog of `includes[].status` participation values (member, observer, founding_member, former_member, etc.); `validate_intblocks.py` and the quality analyzer now check every include status against it (`INVALID_INCLUDE_STATUS`) and flag entries with no status at all.
+- Intblock `membership_applicability: not_applicable` marker for records where an empty `includes` list is intentional (conceptual entities, acronym groups, DVD regions); records with neither `includes` nor the marker are flagged by the new `MISSING_INCLUDES_APPLICABILITY` rule.
+- **Extended data-quality rules** (`add-extended-quality-rules`): country field validity — `INVALID_TLD`, `INVALID_CALLING_CODE`, `INVALID_TIMEZONE` (IANA tz database), `FLAG_EMOJI_MISMATCH`, `LANDLOCKED_INCONSISTENCY`, `REGION_HIERARCHY_MISMATCH` (canonical continent→subregion table with allowlist), `UNRESOLVED_PARENT_ENTITY`. Geographic plausibility — `CAPITAL_FAR_FROM_CENTROID` and `HQ_COORDINATES_OUTSIDE_COUNTRY` (area-scaled great-circle budgets that catch swapped/mis-signed coordinates). Intblock temporal/membership — `INCLUDE_DATE_INCONSISTENCY` (precision-aware `joined`/`left` checks), `FOUNDING_MEMBER_NOT_INCLUDED`, `HISTORICAL_ENTITY_ACTIVE_MEMBER`, `STALE_LAST_VERIFIED`. Lineage and naming advisories — `SUCCESSOR_RECIPROCITY`, `PARTOF_SUBORG_RECIPROCITY`, `DUPLICATE_ACRONYM` (with allowlist for real-world collisions). Text integrity — `MOJIBAKE_TEXT`. `UNKNOWN_TOPIC_KEY` is backed by the new canonical topic catalog `data/schemas/topics.yaml` (153 keys seeded from current usage).
+
+### Changed
+
+- **INOGATE enriched**: filled `includes` (12 partner countries plus Russia as observer), marked `status: historical` with `founded`/`dissolved` (1996–2016), and added `energy` blocktype, secretariat, headquarters, and provenance.
+- **BREAKING (intblocks schema)**: `intblocks.schema.json` now sets `additionalProperties: false`. Declared canonical fields `legal_status`, `recognition_status`, `predecessor`, `successor`, `previous_names`, `official_documents`, `social_media`, `secretariat`; removed unused `abbrRU`, `listed`, and `translations`.
+- **BREAKING (intblocks export)**: the empty `translations` column was removed from the Parquet/DuckDB export (use `other_names`).
+- Intblock validation now errors (previously warned/unchecked) when a filename stem does not match the record `id`, or a record's category directory is absent from its `blocktype` list. Renamed `UFM.yaml` → `UfM.yaml`; added `space` to 22 space records; normalized one-off keys (`succeeded_by`, plural `predecessors`/`successors`, `official_languages`, `purpose`).
+- 25 space-related records (space treaties, agencies, and coordination bodies — e.g. OUTERTREATY, ARTEMISACCORDS, ESA, ISS, UNOOSA, COPUOS, EUMETSAT, COSPAR) consolidated into the `data/intblocks/space/` category directory from `agreement/`, `forum/`, `intorg/`, `meteorology/`, `project/`, `scientific/`, and `unagency/`.
+- `data/schemas/intblocks_completeness.yaml` restructured into priority/requirement tiers (high: `includes`; medium: `wikidata_id`, non-templated `description`; low: `languages`, `headquarters`, `regions`, `other_names`, `provenance`, `links`) with measured 2026-07 baselines as warn thresholds, plus documented allowlists for org references, wikidata duplicates, and acronym collisions.
+- Quality analyzer `DUPLICATE_LINK` rule de-noised (normalized URLs, excludes reference-catalog hosts and hierarchically related orgs, drops synthetic TLD pseudo-links): 77 → 22 flags. `analyze-quality` now runs in CI and fails on CRITICAL/IMPORTANT.
+- Build now emits a single frozen build identity (`build_date`/`git_commit`) across all manifests, sidecars, and DuckDB `_meta` rows.
+- `gini` completeness threshold documented and re-scoped (0.33 → 0.40, warn) reflecting World Bank coverage reality.
+- Build/export logic moved into the installable `internacia_builder.build`; `scripts/builder.py` is now a thin shim.
+- Refreshed stale documentation counts across README, `llms.txt`, `docs/`, and `openspec/project.md` (256 countries, 1071 intblocks, 86 blocktypes).
+- Data-quality checkers consolidated into a single shared layer (`internacia_builder/validate/country_rules.py`, `intblock_rules.py`, `cross_rules.py`) used by both `analyze-quality` and the `validate_countries`/`validate_intblocks` CLIs, eliminating the duplicated rule logic in `build.py`.
+
+### Fixed
+
+- All 377 `INCLUDE_NAME_MISMATCH` advisories resolved: IFDC's Benin member used Belgium's code (`BE` → `BJ`); World Bank WLD placeholder display names `TW`/`VA` replaced with real names; legitimate alternate names (e.g. `Türkiye`, `Holy See`, `Chinese Taipei`, ISO 3166 long forms) added to 15 country records' `common_names` with provenance; scoped-membership qualifiers (e.g. "Denmark (in respect of the Faroe Islands and Greenland)", "Malaysia (Labuan)", Bonaire/Sint Eustatius under `BQ`) moved from `includes[].name` into `includes[].note`.
+- Wrong `wikidata_id` on seven UN records (UNDP, WFP, UNFPA, UNRWA, UN Women shared the generic "nonprofit organization" item Q163740; UN-Habitat and SIDS carried UNEP's and WMO's Q-ids); Kosovo's empty `borders` populated (ALB, MKD, MNE, SRB); 27 intblock `founded`/`dissolved` placeholder dates (`YYYY-00-00`) normalized.
+- Swapped/incorrect capital coordinates for Western Sahara (`EH`: El Aaiún was placed in Zambia) and the French Southern Territories (`TF`: Port-aux-Français was placed near Mont-Saint-Michel), surfaced by the new `CAPITAL_FAR_FROM_CENTROID` rule.
+- Missing lineage back-references added: `WTO.predecessor: GATT`, `ICSU.successor: ISC`, `EEHUB.predecessor: IPEEC`, `ENTSOE.predecessor: NORDEL`, `G8 ↔ G7`, and `BRIC ↔ BRICS`; `IMF` now declares `partof: UN` (it was already listed in UN suborganizations); IATTC's Spanish acronym `CIAT` re-tagged from `lang: en` to `lang: es`.
 
 ## [1.5.0] - 2026-06-15
 

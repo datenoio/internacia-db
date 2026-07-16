@@ -1,0 +1,66 @@
+DATA QUALITY REPORT - RULE: HISTORICAL_ENTITY_ACTIVE_MEMBER
+================================================================================
+Generated: 2026-07-16 17:10:26
+Issue Type: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Priority: MEDIUM
+Total Issues Found: 8
+
+Description: An active block lists a historical entity country with an active-class include status.
+
+=== AFFECTED RECORDS ===
+
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
+Country: US
+Field: includes[6].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/intorg/IAIS.yaml
+Record ID: IAIS
+Country: CH
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/political/CIS2.yaml
+Record ID: CIS2
+Country: GE
+Field: includes[3].status
+Current Value: member
+Suggested Action: 'XN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/standards/ISO.yaml
+Record ID: ISO
+Country: CH
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/wbgroup/HIC.yaml
+Record ID: HIC
+Country: AD
+Field: includes[2].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/wbgroup/LCN.yaml
+Record ID: LCN
+Country: AG
+Field: includes[1].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Country: AD
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/writingdirection/WDLTR.yaml
+Record ID: WDLTR
+Country: AD
+Field: includes[5].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry

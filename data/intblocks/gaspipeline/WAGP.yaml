@@ -3,13 +3,40 @@ blocktype:
 - gaspipeline
 status: de-facto
 links:
+- url: https://www.wagpa.org/the-wagp/
+  type: website
 - url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7984259
   type: wikidata
 name: West African Gas Pipeline
+acronyms:
+- lang: en
+  value: WAGP
+geographic_scope: regional
+regions:
+- West Africa
+- Africa
+includes:
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+membership_count: 4
 wikidata_id: Q7984259
-description: Natural gas pipeline in West Africa.
+description: Natural gas pipeline transporting gas from Nigeria to Benin, Togo, and Ghana.
 tags:
 - WAGP
 - african
@@ -45,3 +72,11 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: West African Gas Pipeline Authority
+  retrieved_at: '2026-07-15'
+  url: https://www.wagpa.org/the-wagp/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline

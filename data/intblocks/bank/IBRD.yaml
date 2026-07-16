@@ -1,18 +1,111 @@
 id: IBRD
+name: International Bank for Reconstruction and Development
 blocktype:
 - bank
 status: formal
+founded: '1945-12-27'
+active_period:
+  start: '1945-12-27'
+geographic_scope: global
 partof: WB
 languages:
+- ar
 - en
+- es
+- fr
+- zh
 links:
-- url: http://www.worldbank.org/ibrd
+- url: https://www.worldbank.org/en/about/leadership/members
+  type: website
+- url: https://www.worldbank.org/en/about/history
   type: website
 - url: https://en.wikipedia.org/wiki/International_Bank_for_Reconstruction_and_Development
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q191384
   type: wikidata
-name: International Bank for Reconstruction and Development
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Articles of Agreement of the International
+  Bank for Reconstruction and Development (entered into force 27 December 1945)
+secretariat:
+  location: Washington, D.C., United States
+  head: President
+  organization: International Bank for Reconstruction and Development
+membership_count: 189
+founding_members:
+- BE
+- BO
+- BR
+- CA
+- CL
+- CN
+- CR
+- DK
+- EC
+- EG
+- ET
+- FR
+- GB
+- GR
+- GT
+- HN
+- IN
+- IQ
+- IR
+- IS
+- LU
+- MX
+- NI
+- NL
+- 'NO'
+- PA
+- PE
+- PH
+- PY
+- SV
+- US
+- UY
+- ZA
+description: Original lending arm of the World Bank Group and one of the Bretton Woods institutions established
+  in 1944. IBRD provides loans, guarantees, and advisory services to middle-income and creditworthy
+  low-income countries for projects in infrastructure, education, health, agriculture, and environmental
+  management. Together with IDA it forms the World Bank; membership in IBRD is a prerequisite for
+  joining other World Bank Group institutions. Owned by 189 member governments, it is AAA-rated and
+  raises capital on international bond markets.
+tags:
+- BIAF
+- BIRD
+- BIRF
+- BIRS
+- BİYB
+- IBRD
+- MBOR
+- aid
+- bank
+- development
+- economy
+- finance
+- global
+- international
+- multilateral
+- reconstruction
+- world-bank
+- МБВР
+- МБРР
+- РАТБ
+- ՎԶՄԲ
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
 includes:
 - id: UY
   name: Uruguay
@@ -770,13 +863,6 @@ includes:
   name: Kosovo
   type: country
   status: member
-founded: '1945'
-headquarters:
-  city: Washington, D.C.
-  country: US
-  coordinates:
-    lat: 38.895
-    lng: -77.036666666667
 acronyms:
 - lang: en
   value: IBRD
@@ -814,35 +900,11 @@ acronyms:
   value: IBRD
 - lang: pt
   value: BIRD
-membership_count: 189
 wikidata_id: Q191384
-description: International development bank focused on development providing financial services.
-tags:
-- BIAF
-- BIRD
-- BIRF
-- BIRS
-- BİYB
-- IBRD
-- MBOR
-- aid
-- bank
-- development
-- economy
-- finance
-- international
-- reconstruction
-- МБВР
-- МБРР
-- РАТБ
-- ՎԶՄԲ
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Bretton Woods institution and the original World Bank lending arm. Articles of Agreement entered
+  into force on 27 December 1945; operations began in 1946. IBRD membership requires prior IMF membership
+  and is a prerequisite for IDA, IFC, and MIGA membership. Shares governance with IDA as the World Bank.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك الدولي للإنشاء والتعمير
@@ -861,6 +923,46 @@ other_names:
 - id: zh
   name: 国际复兴开发银行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -871,7 +973,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.worldbank.org/ibrd

@@ -1,25 +1,64 @@
 id: CF
+name: Commonwealth Foundation
 blocktype:
 - intorg
+- cultural
 status: formal
-partof: COMMONWEALTH
+founded: '1966'
+active_period:
+  start: '1966-03-01'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
+- Oceania
+partof:
+  id: COMMONWEALTH
+  name: Commonwealth of Nations
 languages:
 - en
 links:
-- url: http://www.commonwealthfoundation.com/
+- url: https://commonwealthfoundation.com/
+  type: website
+- url: https://commonwealthfoundation.com/where-we-work/
   type: website
 - url: https://en.wikipedia.org/wiki/Commonwealth_Foundation
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3075649
   type: wikidata
-name: Commonwealth Foundation
-founded: '1965'
+acronyms:
+- lang: en
+  value: CF
+legal_status: intergovernmental organisation
+recognition_status: Established by Commonwealth Heads of Government in 1966 and reconstituted as an international organisation in 1983; one of three Commonwealth intergovernmental agencies alongside the Commonwealth Secretariat and Commonwealth of Learning
 headquarters:
   city: Marlborough House
   country: GB
   coordinates:
     lat: 51.505
     lng: -0.13583333333333
+membership_count: 51
+description: Intergovernmental organisation serving as the Commonwealth's agency for civil society, established in 1966 and headquartered at Marlborough House in London. Funded by member governments, it supports NGOs, professional associations, faith-based groups, media, and trade unions through grants and programmes that strengthen participatory governance across the Commonwealth. Membership is voluntary and separate from membership of the Commonwealth of Nations.
+tags:
+- CF
+- civil-society
+- commonwealth
+- cultural
+- foundation
+- governance
+- grants
+- intorg
+- london
+- ngo
+topics:
+- key: culture
+  name: Culture
+- key: political
+  name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: CA
   name: Canada
@@ -41,6 +80,10 @@ includes:
   name: Malta
   type: country
   status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
 - id: BZ
   name: Belize
   type: country
@@ -53,10 +96,6 @@ includes:
   name: South Africa
   type: country
   status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
 - id: AU
   name: Australia
   type: country
@@ -67,10 +106,6 @@ includes:
   status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
   type: country
   status: member
 - id: TO
@@ -93,16 +128,8 @@ includes:
   name: Papua New Guinea
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
 - id: KI
   name: Kiribati
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
   type: country
   status: member
 - id: GY
@@ -173,10 +200,6 @@ includes:
   name: Tanzania, United Republic of
   type: country
   status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
 - id: ZM
   name: Zambia
   type: country
@@ -241,18 +264,11 @@ includes:
   name: Eswatini
   type: country
   status: member
-membership_count: 55
+- id: GI
+  name: Gibraltar
+  type: country
+  status: associate_member
 wikidata_id: Q3075649
-description: The Commonwealth Foundation is an international organization that is used to promote regional cooperation in
-  the Commonwealth region.
-tags:
-- CF
-- commonwealth
-- foundation
-- intorg
-topics:
-- key: economy
-  name: Economy
 other_names:
 - id: zh
   name: 英联邦基金会
@@ -264,8 +280,46 @@ other_names:
   name: Фонд Содружества Наций
 - id: es
   name: Fundación de la Mancomunidad de Naciones
+notes: Membership is voluntary and distinct from Commonwealth of Nations membership. As of 2026 the foundation reports 51 member governments plus Gibraltar as associate member; Fiji, Nauru, Singapore, Togo, and Tuvalu remain Commonwealth members that have not joined the foundation.
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Foundation
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Foundation
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/where-we-work/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/where-we-work/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.commonwealthfoundation.com/
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Foundation
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Commonwealth_Foundation
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/where-we-work/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/where-we-work/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://commonwealthfoundation.com/where-we-work/
+last_verified: '2026-07-12'

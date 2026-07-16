@@ -6,10 +6,21 @@ blocktype:
 - aviation_safety
 status: formal
 founded: '2005-06-11'
+active_period:
+  start: '2005-06-11'
 geographic_scope: regional
+regions:
+- Pacific
+- Oceania
 languages:
 - en
 links:
+- url: https://paso.aero/
+  type: website
+- url: https://paso.aero/about/paso/
+  type: website
+- url: https://paso.aero/our-work/regionalism/
+  type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Aviation_Safety_Office
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q16962397
@@ -23,11 +34,18 @@ headquarters:
   coordinates:
     lat: -17.7333
     lng: 168.3167
-membership_count: 10
 legal_status: intergovernmental
-description: Intergovernmental civil aviation authority responsible for aviation safety and security in Pacific Island states.
-  PASO provides specialized services in airworthiness, aviation security, and flight operations, offering technical assistance
-  to its member states to ensure compliance with International Civil Aviation Organization (ICAO) standards.
+recognition_status: Regional Aviation Safety Oversight Organization (RSOO) recognised by ICAO; sole international organisation responsible for regional regulatory aviation safety oversight under the Pacific Islands Civil Aviation Safety and Security Treaty (PICASST); member of the Council of Regional Organisations of the Pacific (CROP)
+secretariat:
+  location: Port Vila, Vanuatu
+  organization: PASO Office
+membership_count: 10
+founding_members:
+- KI
+- PG
+- WS
+- VU
+description: Intergovernmental regional aviation safety oversight organisation providing quality aviation safety and security services for Pacific member states. PASO is the sole international organisation responsible for regional regulatory aviation safety oversight for the ten PICASST signatories, and works as an ICAO-recognised Regional Aviation Safety Oversight Organization (RSOO). Headquartered in Port Vila, Vanuatu under a hosting agreement with the Vanuatu Government, it conducts audits, inspections, and regulatory assistance to harmonise civil aviation frameworks and ensure compliance with ICAO standards.
 tags:
 - PASO
 - aviation
@@ -36,6 +54,10 @@ tags:
 - intorg
 - pacific
 - regional
+- icao
+- oversight
+- rsoo
+- crop
 topics:
 - key: aviation
   name: Aviation
@@ -43,6 +65,10 @@ topics:
   name: Safety
 - key: security
   name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: oversight
+  name: Oversight
 includes:
 - id: CK
   name: Cook Islands
@@ -96,20 +122,63 @@ includes:
   name: New Zealand
   type: country
   status: associated
-wikidata_id: Q16962397
 other_names:
 - id: en
   name: Pacific Aviation Safety Office
+wikidata_id: Q16962397
+notes: Concept emerged from a Pacific Islands Forum Leaders Meeting in 2002. The Pacific Islands Civil Aviation Safety and Security Treaty (PICASST) was signed on 7 August 2004 in Apia, Samoa, with Kiribati, Papua New Guinea, Samoa, and Vanuatu as original signatories; the treaty entered into force on 11 June 2005. PASO as an organisation was created in 2007 with Asian Development Bank support, and its office was established in Vanuatu under a hosting agreement with the Vanuatu Government; a renewed indefinite hosting agreement was signed in May 2018. Member of CROP and the only CROP agency permanently based in Vanuatu. Tonga withdrew on 7 April 2006 but rejoined on 24 August 2006. Works closely with CASA Australia, the Civil Aviation Authority of Fiji, and CAANZ.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q16962397
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Pacific_Aviation_Safety_Office
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/our-work/regionalism/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Pacific_Aviation_Safety_Office
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Pacific_Aviation_Safety_Office
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Pacific_Aviation_Safety_Office
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://paso.aero/about/paso/

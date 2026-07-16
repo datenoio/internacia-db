@@ -1,17 +1,32 @@
 id: CFACENTRAL
+name: Central African CFA Franc Zone
 blocktype:
 - currency
 status: formal
+founded: '1945-12-26'
+active_period:
+  start: '1945-12-26'
 partof: CFAZ
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - fr
 links:
+- url: https://www.beac.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q847739
   type: wikidata
-name: Central African CFA Franc Zone
-founded: '1945'
+legal_status: monetary_union
+recognition_status: Regional monetary union of six Central African states using the Central African CFA franc (XAF, ISO 4217 code 950); currency issued exclusively by the Bank of Central African States (BEAC) for members of the Economic and Monetary Community of Central Africa (CEMAC); pegged to the euro at €1 = F.CFA 655.957 with French Treasury convertibility guarantee; equal in value to but not interchangeable with the West African CFA franc (XOF)
+headquarters:
+  city: Yaoundé
+  country: CM
+  coordinates:
+    lat: 3.868084
+    lng: 11.523089
 acronyms:
 - lang: en
   value: XAF
@@ -19,9 +34,20 @@ acronyms:
   value: FCFA
 - lang: en
   value: CFA Central
-geographic_scope: regional
-regions:
-- Africa
+- lang: fr
+  value: XAF
+- lang: fr
+  value: FCFA
+- lang: de
+  value: XAF
+- lang: es
+  value: XAF
+- lang: ru
+  value: XAF
+- lang: zh
+  value: XAF
+- lang: zh
+  value: 中非法郎
 includes:
 - id: CF
   name: Central African Republic
@@ -49,18 +75,16 @@ includes:
   status: member
 membership_count: 6
 wikidata_id: Q847739
-description: Monetary union of six Central African states using the Central African CFA franc (XAF). Introduced in 1945 to
-  replace the French Equatorial African franc; pegged to the French franc until 1999 and to the euro since then at €1 = F.CFA
-  655.957. Currency is issued by the Bank of Central African States (BEAC) for members of the Economic and Monetary Community
-  of Central Africa (CEMAC).
-notes: CFA originally stood for Colonies françaises d'Afrique and now Communauté financière africaine. Equatorial Guinea adopted
-  the franc in 1984, replacing the ekwele at 1 franc = 4 bipkwele. Of equal value to but not interchangeable with the West
-  African CFA franc (XOF). Strong institutional overlap with CEMAC; notes and coins since 2006 bear the CEMAC legend.
+description: Monetary union of six Central African states using the Central African CFA franc (XAF). Introduced on 26 December 1945 to replace the French Equatorial African franc; pegged to the French franc until 1999 and to the euro since then at €1 = F.CFA 655.957. Currency is issued by the Bank of Central African States (BEAC) for members of the Economic and Monetary Community of Central Africa (CEMAC).
+notes: CFA originally stood for Colonies françaises d'Afrique and now Communauté financière africaine. Equatorial Guinea adopted the franc in 1984, replacing the ekwele at 1 franc = 4 bipkwele. Of equal value to but not interchangeable with the West African CFA franc (XOF). Strong institutional overlap with CEMAC; notes and coins since 2006 bear the CEMAC legend. Bank of France prints CFA franc notes in Chamalières.
+last_verified: '2026-07-12'
 tags:
 - BEAC
 - CFA
 - CEMAC
 - CFACENTRAL
+- XAF
+- FCFA
 - african
 - bank
 - central
@@ -102,30 +126,50 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
   license: CC BY-SA 4.0
 - field: founded
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
   license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q189972
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q847739
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q847739
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Central_African_CFA_franc
+  retrieved_at: '2026-07-12'
+  url: https://www.beac.int/

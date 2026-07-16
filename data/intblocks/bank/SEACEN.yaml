@@ -1,134 +1,298 @@
 id: SEACEN
+name: South East Asian Central Banks Research and Training Centre
 blocktype:
 - bank
 - research
 status: formal
+founded: '1982'
+active_period:
+  start: '1982'
+geographic_scope: regional
+regions:
+- Asia
+- Asia-Pacific
 languages:
 - en
 links:
 - url: https://www.seacen.org/
   type: website
+- url: https://www.seacen.org/about-us/
+  type: website
 - url: https://en.wikipedia.org/wiki/South_East_Asian_Central_Banks_Research_and_Training_Centre
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7569008
+- url: https://www.wikidata.org/wiki/Q124314087
   type: wikidata
-name: South East Asian Central Banks Research and Training Centre
-founded: '1982'
 headquarters:
   city: Kuala Lumpur
   country: MY
-geographic_scope: regional
-regions:
-- Asia
-includes:
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: HK
-  name: Hong Kong
-  type: territory
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KR
-  name: Korea, Republic of
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-membership_count: 20
-wikidata_id: Q7569008
-legal_status: intergovernmental
-acronyms:
-- lang: en
-  value: SEACEN
-description: Regional central bank research and training centre for Southeast Asian and partner economies.
+  coordinates:
+    lat: 3.1619
+    lng: 101.7147
+legal_status: association
+recognition_status: Regional central bank research and training centre established as a legal entity in 1982; hosted at Bank Negara Malaysia's Sasana Kijang complex in Kuala Lumpur since 2011
+secretariat:
+  location: Sasana Kijang, Kuala Lumpur, Malaysia (hosted by Bank Negara Malaysia)
+  head: Executive Director
+  organization: The SEACEN Centre
+membership_count: 19
+founding_members:
+- ID
+- KR
+- MY
+- NP
+- PH
+- SG
+- LK
+- TH
+description: Regional not-for-profit institution serving central banks and monetary authorities across the Asia-Pacific. Established in 1982 as a legal entity following governor conferences dating to 1967, The SEACEN Centre provides learning programmes, collaborative research, and networking platforms in macroeconomic and monetary policy management, financial stability and supervision, payment and settlement systems, and leadership and governance. Membership comprises 19 full members plus associate and observer central banks invited to learning programmes and the annual Governors' Conference.
 tags:
 - Asia
 - SEACEN
+- asia-pacific
 - central-banks
+- capacity-building
 - finance
+- monetary-policy
 - research
+- training
 topics:
 - key: finance
   name: Finance
 - key: research
   name: Research
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '2003'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2006'
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '2011'
+- id: HK
+  name: Hong Kong
+  type: territory
+  status: member
+  joined: '2014'
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '2013'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '1972'
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
+  joined: '1990'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '2012'
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '1966'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '1991'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '1999'
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+  joined: '1972'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '2005'
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '1966'
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+  joined: '1966'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  joined: '1966'
+- id: TW
+  name: Chinese Taipei
+  type: country
+  status: member
+  joined: '1992'
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+  joined: '1966'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '2006'
+- id: AU
+  name: Australia
+  type: country
+  status: associate_member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: associate_member
+- id: BT
+  name: Bhutan
+  type: country
+  status: associate_member
+- id: MO
+  name: Macao
+  type: territory
+  status: associate_member
+- id: PK
+  name: Pakistan
+  type: country
+  status: associate_member
+- id: TO
+  name: Tonga
+  type: country
+  status: associate_member
+- id: FJ
+  name: Fiji
+  type: country
+  status: associate_member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: associate_member
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: associate_member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: observer
+- id: IR
+  name: Iran, Islamic Republic of
+  type: country
+  status: observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+- id: MV
+  name: Maldives
+  type: country
+  status: observer
+- id: NZ
+  name: New Zealand
+  type: country
+  status: observer
+- id: WS
+  name: Samoa
+  type: country
+  status: observer
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: observer
+acronyms:
+- lang: en
+  value: SEACEN
+wikidata_id: Q124314087
+notes: Concept proposed at the 1967 SEACEN Governors Conference in the Philippines; governors agreed in 1972 to establish a single research and training centre in Kuala Lumpur; work commenced in 1973. Incorporated as a legal entity in 1982 with eight member central banks, growing to 19 full members. Relocated to the Sasana Kijang complex (Bank Negara Malaysia) in 2011. Also collaborates with 26 regional and international strategic partners and invites 15 additional central banks to learning programmes.
+last_verified: '2026-07-12'
+other_names:
+- id: en
+  name: South East Asian Central Banks Research and Training Centre
+- id: en
+  name: The SEACEN Centre
+- id: ko
+  name: 동남아시아중앙은행기구
+- id: zh
+  name: 东南亚中央银行
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.seacen.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.seacen.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.seacen.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.seacen.org/about-us/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q124314087
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q124314087
+  license: CC0

@@ -1,30 +1,72 @@
 id: AFUNIONRAIL
+name: African Union of Railways
 blocktype:
 - intorg
+- transport
 status: formal
-partof: AFUNION
+founded: '1972-09-23'
+active_period:
+  start: '1972-09-23'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 - ar
 links:
+- url: https://www.railwaygazette.com/data/knowledge-hub/organisation-categories/associations/union-of-african-railways-uac/
+  type: website
+- url: https://uia.org/s/or/en/1100026706
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Union_of_Railways
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4689944
   type: wikidata
-name: African Union of Railways
-founded: '1972'
-geographic_scope: regional
-regions:
-- Africa
 acronyms:
 - lang: en
   value: UAR
 - lang: fr
+  value: UAC
+- lang: fr
   value: UACF
+legal_status: specialized agency of the African Union
+recognition_status: Continental railway association coordinating African rail administrations; designated a specialized agency of the Organization of African Unity in 1976
 headquarters:
-  city: Addis Ababa
-  country: ET
+  city: Kinshasa
+  country: CD
+  coordinates:
+    lat: -4.321705
+    lng: 15.312597
+partof:
+  id: AFUNION
+  name: African Union
+membership_count: 54
+description: Continental railway association established at an ECA conference in Addis Ababa in September 1972 to study unification of African railways, improve and coordinate services, connect existing lines, and standardize equipment. Formerly the Union of African Railways (UAR), it operates as a specialized agency under the African Union and collaborates with the International Union of Railways (UIC) on interoperability, safety, and the African Integrated High-Speed Railway Network.
+tags:
+- AFUNIONRAIL
+- UAC
+- UACF
+- UAR
+- africa
+- african
+- african-union
+- cooperation
+- infrastructure
+- intorg
+- railways
+- regional
+- regional_cooperation
+- transport
+- transportation
+- union
+topics:
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: transport
+  name: Transport
+- key: infrastructure
+  name: Infrastructure Development
 includes:
 - id: EG
   name: Egypt
@@ -242,49 +284,65 @@ includes:
   name: Eswatini
   type: country
   status: member
-membership_count: 54
 wikidata_id: Q4689944
-description: The African Union of Railways is an international organization that is used to promote regional cooperation in
-  the railway sector.
-tags:
-- AFUNIONRAIL
-- UACF
-- UAR
-- african
-- aviation
-- cooperation
-- intorg
-- railways
-- regional
-- regional_cooperation
-- transport
-- transportation
-- union
-topics:
-- key: regional_cooperation
-  name: Regional Cooperation
-- key: transport
-  name: Transport
 other_names:
 - id: ar
   name: الاتحاد الأفريقي للسكك الحديدية
-- id: zh
-  name: 非洲鐵路聯盟
 - id: en
   name: African Union of Railways
+- id: fr
+  name: Union africaine des chemins de fer
 - id: ru
   name: Союз африканских железных дорог
+- id: zh
+  name: 非洲鐵路聯盟
+notes: Founded at the UN Economic Commission for Africa conference in Addis Ababa on 23 September 1972. Also known historically as the Union of African Railways (UAR). The secretariat is based in Kinshasa, Democratic Republic of the Congo. Works with UIC on continental rail interoperability and supports the African Integrated High-Speed Railway Network.
+last_verified: '2026-07-12'
 provenance:
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q4689944
   license: CC0
+- field: founded
+  source: UIA Yearbook
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100026706
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/African_Union_of_Railways
+  source: UIA Yearbook
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100026706
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/African_Union_of_Railways
+  source: Railway Gazette International
+  retrieved_at: '2026-07-12'
+  url: https://www.railwaygazette.com/data/knowledge-hub/organisation-categories/associations/union-of-african-railways-uac/
+- field: headquarters.coordinates
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q3838
+  license: CC0
+- field: legal_status
+  source: African Union annual report
+  retrieved_at: '2026-07-12'
+  url: https://au.int/sites/default/files/documents/39999-doc-2020_ex20cl2012142028xxxvi2920_e.pdf
+- field: recognition_status
+  source: UIA Yearbook
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100026706
+- field: acronyms
+  source: Railway Gazette International
+  retrieved_at: '2026-07-12'
+  url: https://www.railwaygazette.com/data/knowledge-hub/organisation-categories/associations/union-of-african-railways-uac/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q4689944
+  license: CC0
+- field: notes
+  source: UIA Yearbook
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100026706
+- field: topics
+  source: UIA Yearbook
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100026706

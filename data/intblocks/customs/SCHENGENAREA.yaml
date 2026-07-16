@@ -1,7 +1,17 @@
 id: SCHENGENAREA
+name: Schengen Area
 blocktype:
 - customs
 status: formal
+founded: '1995-03-26'
+active_period:
+  start: '1995-03-26'
+partof:
+  id: EU
+  name: European Union
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 - fr
@@ -13,7 +23,24 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1969730
   type: wikidata
-name: Schengen Area
+legal_status: treaty_organization
+recognition_status: Treaty-based open-border area established by the Schengen Agreement (1985) and Schengen Convention (1990); operational since 26 March 1995; integrated into EU law by the Amsterdam Treaty (1999); 29 participating states comprising 25 EU member states plus Iceland, Liechtenstein, Norway and Switzerland through EFTA association agreements; common rules on external border controls, visa policy and police cooperation administered within the EU Area of Freedom, Security and Justice
+secretariat:
+  location: Brussels, Belgium
+  organization: Directorate-General for Migration and Home Affairs, European Commission
+  head: Director-General
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8466
+    lng: 4.3528
+founding_members:
+- BE
+- FR
+- DE
+- LU
+- NL
 includes:
 - id: AT
   name: Austria
@@ -160,19 +187,8 @@ includes:
   type: country
   status: member
   joined: '2001-03-25'
-founded: '1995-03-26'
-geographic_scope: regional
-regions:
-- Europe
-founding_members:
-- BE
-- FR
-- DE
-- LU
-- NL
 membership_count: 29
 wikidata_id: Q1969730
-legal_status: treaty_organization
 description: Area of 29 European states that have abolished passport and many other types of border control at their mutual
   borders; governed by the Schengen Agreement and Convention, integrated into EU law since 1999, and extended to Iceland,
   Liechtenstein, Norway, and Switzerland through EFTA association agreements.
@@ -180,6 +196,7 @@ notes: Ireland and Cyprus are EU member states outside the Schengen Area (Irelan
   United Kingdom; Cyprus is committed to join). Bulgaria and Romania completed land-border integration on 1 January 2025 after
   air and sea controls were lifted on 31 March 2024. Monaco, Andorra, San Marino, and Vatican City maintain open or semi-open
   borders with Schengen states but are not formal members.
+last_verified: '2026-07-12'
 tags:
 - SCHENGENAREA
 - area
@@ -219,35 +236,57 @@ other_names:
   name: 申根区
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: includes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Schengen_Area
-  license: CC BY-SA 4.0
-- field: founded
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Schengen_Area
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Schengen_Area
   license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1969730
+  license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
+- field: recognition_status
+  source: European Commission
+  retrieved_at: '2026-07-12'
+  url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
+- field: secretariat
+  source: European Commission
+  retrieved_at: '2026-07-12'
+  url: https://home-affairs.ec.europa.eu/policies/schengen-area_en
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Schengen_Area
+  license: CC BY-SA 4.0

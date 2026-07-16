@@ -1,34 +1,39 @@
 id: ISA
+name: International Solar Alliance
 blocktype:
 - energy
 - intorg
 status: formal
+founded: '2015-11-30'
+active_period:
+  start: '2015-11-30'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
 links:
 - url: https://isa.int
   type: website
+- url: https://isa.int/about
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Solar_Alliance
   type: wikipedia
-name: International Solar Alliance
-founded: '2015-11-30'
+- url: https://www.wikidata.org/wiki/Q21594952
+  type: wikidata
 headquarters:
   city: Gurugram
   country: IN
   coordinates:
     lat: 28.4089
     lng: 77.0378
-geographic_scope: global
-regions:
-- worldwide
-acronyms:
-- lang: en
-  value: ISA
-- lang: fr
-  value: ASI
-membership_count: 9
 legal_status: intergovernmental
+recognition_status: Treaty-based intergovernmental organization launched jointly by India and France at COP21 in Paris on 30 November 2015; Framework Agreement opened for signature in Marrakesh in November 2016 and entered into force after ratification by 15 countries; headquartered at the National Institute of Solar Energy (NISE) in Gurugram, India; India serves as President and France as Co-President; open to all United Nations member states, with countries outside the tropics eligible to join but without voting rights
+secretariat:
+  location: Gurugram, India
+  head: Director General
+  organization: International Solar Alliance Secretariat (hosted at the National Institute of Solar Energy)
 founding_members:
 - IN
 - FR
@@ -46,7 +51,9 @@ includes:
 - id: US
   name: United States of America
   type: country
-  status: member
+  status: former_member
+  joined: '2021'
+  left: '2026-01-07'
 - id: JP
   name: Japan
   type: country
@@ -71,13 +78,10 @@ includes:
   name: Australia
   type: country
   status: member
+membership_count: 112
 description: Treaty-based intergovernmental organization dedicated to promoting solar energy adoption to combat climate change
   and reduce dependence on fossil fuels. The alliance aims to mobilize $1 trillion in solar investments by 2030, provide energy
   access to 1 billion people, and install 1,000 gigawatts of solar energy capacity.
-notes: The alliance primarily focuses on countries located between the Tropic of Cancer and the Tropic of Capricorn (sunshine
-  countries), but is open to all United Nations member states. Countries outside the tropics can join but do not have voting
-  rights. Founded jointly by India and France. India serves as President and France as Co-President. Full membership list
-  includes 120+ countries.
 tags:
 - ISA
 - ASI
@@ -97,17 +101,82 @@ topics:
   name: Climate Change
 other_names:
 - id: en
-  name: Danish Meat Trade College
+  name: International Solar Alliance
+- id: fr
+  name: Alliance solaire internationale
+- id: es
+  name: Alianza Solar Internacional
+- id: ar
+  name: التحالف الدولي للطاقة الشمسية
+- id: zh
+  name: 国际太阳能联盟
+- id: de
+  name: International Solar Alliance
+acronyms:
+- lang: en
+  value: ISA
+- lang: fr
+  value: ASI
+notes: The alliance primarily focuses on countries located between the Tropic of Cancer and the Tropic of Capricorn (sunshine
+  countries), but is open to all United Nations member states. Countries outside the tropics can join but do not have voting
+  rights. As of 2026, 112 countries have signed and ratified the Framework Agreement and 15 additional countries are signatories.
+  The United States joined in 2021 but announced withdrawal on 7 January 2026. Also known as the International Agency for Solar
+  Policy and Application (IASPA).
+wikidata_id: Q21594952
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://isa.int
+  retrieved_at: '2026-07-13'
+  url: https://isa.int/about
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Solar_Alliance
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Solar_Alliance
+  license: CC BY-SA 4.0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://isa.int
+  retrieved_at: '2026-07-13'
+  url: https://isa.int/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://isa.int/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Solar_Alliance
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Solar_Alliance
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://isa.int
+  retrieved_at: '2026-07-13'
+  url: https://isa.int/about
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://isa.int/about
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Solar_Alliance
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q21594952
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q21594952
+  license: CC0

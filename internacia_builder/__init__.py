@@ -1,3 +1,7 @@
-"""Internacia dataset build, validation, and enrichment tooling."""
+"""Internacia dataset build, validation, and enrichment tooling.
 
-__version__ = "0.0.0"
+Versioning policy: ``__version__`` tracks the current dataset release documented
+in ``CHANGELOG.md`` (the value returned in build manifests). Bump both together.
+"""
+
+__version__ = "1.6.0"

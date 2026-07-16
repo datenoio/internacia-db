@@ -1,7 +1,15 @@
 id: EAPP
+name: Eastern Africa Power Pool
 blocktype:
 - energy
 status: formal
+founded: '2005-02-24'
+active_period:
+  start: '2005-02-24'
+geographic_scope: regional
+regions:
+- Eastern Africa
+- Africa
 languages:
 - en
 links:
@@ -9,8 +17,20 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Eastern_Africa_Power_Pool
   type: wikipedia
-name: Eastern Africa Power Pool
-founded: '2005'
+- url: https://www.wikidata.org/wiki/Q65062545
+  type: wikidata
+headquarters:
+  city: Addis Ababa
+  country: ET
+  coordinates:
+    lat: 9.017777777777779
+    lng: 38.80583333333333
+legal_status: intergovernmental
+recognition_status: Regional power pool established on 24 February 2005 through an Inter-Governmental Memorandum of Understanding (IGMOU) among Eastern African states and an Inter-Utility Memorandum of Understanding (IUMOU) among national electricity utilities; one of five African regional power pools
+secretariat:
+  location: Wereda 02, House 059, Bole Sub City, Addis Ababa, Ethiopia
+  head: Secretary General
+  organization: General Secretariat of the Eastern Africa Power Pool
 includes:
 - id: BI
   name: Burundi
@@ -65,7 +85,10 @@ includes:
   type: country
   status: member
 membership_count: 13
-description: Regional power pool establishing integrated power market in Eastern Africa. Enables member countries to trade electricity, increasing access to reliable, affordable, and sustainable electricity.
+description: Regional power pool coordinating cross-border electricity trade and grid interconnection among Eastern African
+  member states. Established in 2005 through intergovernmental and inter-utility memoranda of understanding, EAPP develops regional
+  generation and transmission infrastructure, synchronizes national grids, and facilitates a competitive regional electricity
+  market. The General Secretariat is based in Addis Ababa, Ethiopia.
 tags:
 - EAPP
 - energy
@@ -78,6 +101,8 @@ tags:
 - interconnection
 - electricity
 - power_pool
+- regional
+- intergovernmental
 topics:
 - key: energy
   name: Energy
@@ -88,4 +113,63 @@ topics:
 other_names:
 - id: en
   name: Eastern Africa Power Pool
-notes: Aims to establish a regional power market facilitating cross-border electricity trade and enhancing energy security in Eastern Africa.
+acronyms:
+- lang: en
+  value: EAPP
+wikidata_id: Q65062545
+notes: Original members in 2005 were Burundi, Democratic Republic of the Congo, Egypt, Ethiopia, Kenya, Rwanda, and Sudan;
+  Tanzania joined in 2010, Libya in 2011, Djibouti and Uganda in 2012, and South Sudan and Somalia joined later. Eritrea may
+  join. Governance includes a Council of Ministers, an Executive Committee, a Management Committee of utilities, and the
+  General Secretariat. The Independent Regulatory Board (IRB) coordinates cross-border electricity trade; Uganda's cabinet
+  approved hosting the IRB headquarters in Kampala in 2023. Four synchronized grid clusters operate in the region as of 2019.
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Eastern_Africa_Power_Pool
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Eastern_Africa_Power_Pool
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Eastern_Africa_Power_Pool
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://eappool.org/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q65062545
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q65062545
+  license: CC0

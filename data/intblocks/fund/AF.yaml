@@ -1,16 +1,12 @@
 id: AF
+name: Adaptation Fund
 blocktype:
 - fund
 status: formal
-languages:
-- en
-links:
-- url: https://www.adaptation-fund.org
-  type: website
-- url: https://en.wikipedia.org/wiki/Adaptation_Fund
-  type: wikipedia
-name: Adaptation Fund
+partof: UNFCCC
 founded: '2001'
+active_period:
+  start: '2008-01-01'
 geographic_scope: global
 regions:
 - Africa
@@ -19,12 +15,29 @@ regions:
 - North America
 - Oceania
 - South America
-acronyms:
-- lang: en
-  value: AF
+languages:
+- en
+links:
+- url: https://www.adaptation-fund.org
+  type: website
+- url: https://www.adaptation-fund.org/about/governance/
+  type: website
+- url: https://en.wikipedia.org/wiki/Adaptation_Fund
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q352378
+  type: wikidata
+legal_status: multilateral climate fund
+recognition_status: Established under the Kyoto Protocol to finance concrete adaptation projects and programmes in developing countries that are Parties to the Protocol and particularly vulnerable to climate change; supervised by the 16-member Adaptation Fund Board; World Bank serves as interim trustee; the Board has had legal capacity in the Federal Republic of Germany since 1 February 2011
 headquarters:
   city: Washington, D.C.
   country: US
+secretariat:
+  location: Washington, D.C., United States
+  head: Head of the Fund
+  organization: Adaptation Fund Board Secretariat
+acronyms:
+- lang: en
+  value: AF
 includes:
 - id: BE
   name: Belgium
@@ -123,15 +136,18 @@ includes:
   type: country
   status: contributor
 membership_count: 24
-description: Adaptation Fund is an international fund body with 24 members.
+description: International fund that finances concrete climate change adaptation and resilience projects and programmes in developing countries particularly vulnerable to climate change, supervised by the Adaptation Fund Board and financed largely through a two percent share of proceeds from Certified Emission Reductions under the Kyoto Protocol's Clean Development Mechanism plus government and private contributions.
 tags:
 - AF
 - adaptation
 - aid
+- cdm
 - climate
 - development
 - finance
 - fund
+- resilience
+- unfccc
 topics:
 - key: development
   name: Development
@@ -139,15 +155,58 @@ topics:
   name: Finance
 - key: climate_change
   name: Climate Change
+wikidata_id: Q352378
+notes: Pioneered Direct Access and Enhanced Direct Access, empowering countries to access funding and develop local projects through accredited national implementing entities; since 2010 has committed over US$1.39 billion for localized adaptation projects with about 45 million beneficiaries.
+last_verified: '2026-07-12'
+other_names:
+- id: en
+  name: Adaptation Fund
+- id: es
+  name: Fondo de Adaptación
+- id: ar
+  name: صندوق التكيف
+- id: zh
+  name: 氣候調適基金
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q352378
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.adaptation-fund.org
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/governance/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/governance/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.adaptation-fund.org
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/governance/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/governance/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/governance/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q352378
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.adaptation-fund.org/about/

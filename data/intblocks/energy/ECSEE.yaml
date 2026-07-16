@@ -1,19 +1,41 @@
 id: ECSEE
+name: Energy Community
 blocktype:
 - energy
 status: formal
+founded: '2005-10-25'
+active_period:
+  start: '2006-07-01'
+geographic_scope: regional
+regions:
+- South East Europe
+- Europe
 languages:
 - en
 links:
-- url: http://www.energy-community.org
+- url: https://www.energy-community.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Energy_Community
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2989312
   type: wikidata
-name: Energy Community of South East Europe
-founded: '2006'
+headquarters:
+  city: Vienna
+  country: AT
+  coordinates:
+    lat: 48.210772
+    lng: 16.367136
+legal_status: intergovernmental
+recognition_status: Established by the Treaty establishing the Energy Community, signed in Athens on 25 October 2005 and in force since 1 July 2006; extends the EU internal energy market and relevant energy, environment, and competition acquis to Contracting Parties in Southeast and Eastern Europe
+secretariat:
+  location: Am Hof 4, Level 5-6, 1010 Vienna, Austria
+  head: Director
+  organization: Energy Community Secretariat
 includes:
+- id: EU
+  name: European Union
+  type: organization
+  status: member
 - id: AL
   name: Albania
   type: country
@@ -39,7 +61,7 @@ includes:
   type: country
   status: member
 - id: MK
-  name: Macedonia, FYR
+  name: North Macedonia
   type: country
   status: member
 - id: RS
@@ -50,21 +72,33 @@ includes:
   name: Ukraine
   type: country
   status: member
-membership_count: 9
-wikidata_id: Q2989312
-description: International organisation.
+- id: AM
+  name: Armenia
+  type: country
+  status: observer
+- id: 'NO'
+  name: Norway
+  type: country
+  status: observer
+- id: TR
+  name: Türkiye
+  type: country
+  status: observer
+membership_count: 10
+description: International organization extending the EU internal energy market to Southeast and Eastern Europe. Contracting Parties commit to implementing relevant EU energy acquis, developing compatible regulatory frameworks, and liberalizing energy markets. The Secretariat in Vienna monitors compliance, supports transposition of legislation, and coordinates institutional bodies including the Ministerial Council, Permanent High Level Group, and Energy Community Regulatory Board.
 tags:
 - ECSEE
-- community
-- cooperation
-- economy
 - energy
-- environment
-- nature
-- oil
+- electricity
+- gas
+- renewable_energy
 - regional
 - regional_cooperation
-- south
+- europe
+- southeast_europe
+- intergovernmental
+- market_integration
+- acquis
 topics:
 - key: economy
   name: Economy
@@ -81,28 +115,73 @@ other_names:
   name: Energy Community
 - id: en
   name: Energy Community
+- id: en
+  name: Energy Community of South East Europe
 - id: fr
   name: communauté de l'énergie
 - id: ru
   name: Энергетическое сообщество
 - id: zh
   name: 能源共同體
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
 - lang: en
   value: ECSEE
+notes: The European Union is a treaty Party alongside nine Contracting Parties. Armenia, Norway, and Türkiye hold observer status; 19 EU member states participate in institutional meetings without being treaty Parties. Georgia joined as a Contracting Party on 1 July 2017; Moldova and Ukraine acceded in 2010 and 2011 respectively. Bulgaria, Croatia, and Romania transitioned from Contracting Party to Participant status upon EU accession. The Ministerial Council extended the treaty duration to 2026 in October 2013. Regional project offices operate in Kyiv, Chișinău, and Tbilisi.
+wikidata_id: Q2989312
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energy-community.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energy-community.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energy-community.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Community
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energy-community.org/secretariat/contact.html
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.energy-community.org/secretariat/contact.html
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Community
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Community
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Energy_Community
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2989312
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2989312
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2989312
+  license: CC0

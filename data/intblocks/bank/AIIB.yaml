@@ -6,14 +6,23 @@ blocktype:
 - intorg
 status: formal
 founded: '2016-01-16'
+active_period:
+  start: '2016-01-16'
 geographic_scope: global
+regions:
+- Asia
 languages:
 - en
+- zh
 links:
 - url: https://www.aiib.org/
   type: website
+- url: https://www.aiib.org/en/about-aiib/index.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Asian_Infrastructure_Investment_Bank
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q18109843
+  type: wikidata
 acronyms:
 - lang: en
   value: AIIB
@@ -208,7 +217,7 @@ includes:
   name: United States
   type: country
   status: observer
-membership_count: 34
+membership_count: 111
 founding_members:
 - CN
 - IN
@@ -244,14 +253,25 @@ founding_members:
 - MN
 - NZ
 legal_status: intergovernmental
-notes: Multilateral development bank. This file includes major founding and early members (34 members + 1 observer). Full
-  member list (109+ members as of 2024) should be verified and completed from official AIIB website. US is an observer, not
-  a member.
+recognition_status: Multilateral development bank established under the Articles of Agreement of the Asian Infrastructure
+  Investment Bank (entered into force 25 December 2015; operations began 16 January 2016)
+secretariat:
+  location: Beijing, China (Asia Financial Center)
+  head: President
+  organization: Asian Infrastructure Investment Bank
+notes: Multilateral development bank capitalized at USD 100 billion and AAA-rated by major credit rating agencies. As of 2025,
+  AIIB reports 111 approved members worldwide (53 regional and 58 non-regional). This file includes major founding and early
+  members only (34 members + 1 observer); the full membership list should be completed from the official AIIB website. The
+  United States is an observer, not a member.
 partof: null
-description: International development bank focused on development providing financial services.
+description: Multilateral development bank established in 2016 to finance sustainable infrastructure across Asia and beyond.
+  Capitalized at USD 100 billion and AAA-rated, AIIB invests in green, technology-enabled, and connectivity-focused
+  infrastructure. As of 2025, it has 111 approved members worldwide and has invested nearly USD 70 billion in over 350
+  projects across 40 economies.
 tags:
 - AIIB
 - aid
+- asia
 - asian
 - bank
 - commerce
@@ -262,6 +282,7 @@ tags:
 - infrastructure
 - intorg
 - investment
+- multilateral
 - trade
 topics:
 - key: development
@@ -270,6 +291,8 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: infrastructure
+  name: Infrastructure
 - key: trade
   name: Trade
 other_names:
@@ -290,7 +313,48 @@ other_names:
 - id: zh
   name: 亚洲基础设施投资银行
 wikidata_id: Q18109843
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.aiib.org/en/about-aiib/index.html
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -306,15 +370,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aiib.org/
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aiib.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aiib.org/

@@ -1,17 +1,32 @@
 id: CFAWEST
+name: West African CFA Franc Zone
 blocktype:
 - currency
 status: formal
+founded: '1962-05-12'
+active_period:
+  start: '1962-05-12'
 partof: CFAZ
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - fr
 links:
+- url: https://www.bceao.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/West_African_CFA_franc
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q861690
   type: wikidata
-name: West African CFA Franc Zone
-founded: '1962-05-12'
+legal_status: monetary_union
+recognition_status: Regional monetary union of eight West African states using the West African CFA franc (XOF, ISO 4217 code 952); currency issued exclusively by the Central Bank of West African States (BCEAO) for members of the West African Economic and Monetary Union (UEMOA); pegged to the euro at €1 = F.CFA 655.957 with French Treasury convertibility guarantee; equal in value to but not interchangeable with the Central African CFA franc (XAF)
+headquarters:
+  city: Dakar
+  country: SN
+  coordinates:
+    lat: 14.672555555555556
+    lng: -17.432
 acronyms:
 - lang: en
   value: XOF
@@ -25,9 +40,16 @@ acronyms:
   value: XOF
 - lang: fr
   value: FCFA
-geographic_scope: regional
-regions:
-- Africa
+- lang: de
+  value: XOF
+- lang: es
+  value: XOF
+- lang: ru
+  value: XOF
+- lang: zh
+  value: XOF
+- lang: zh
+  value: 西非法郎
 includes:
 - id: BJ
   name: Benin
@@ -63,21 +85,19 @@ includes:
   status: member
 membership_count: 8
 wikidata_id: Q861690
-description: Monetary union of eight West African states using the West African CFA franc (XOF), issued by the Central Bank
-  of West African States (BCEAO) in Dakar and pegged to the euro. Established with the West African Monetary Union (UMOA)
-  in 1962; the same members constitute the West African Economic and Monetary Union (UEMOA).
-notes: Distinct from but equal in value to the Central African CFA franc (XAF) under the broader CFA franc system. Guinea-Bissau
-  joined in 1997. France guarantees convertibility and CFA notes are printed by the Bank of France. ECOWAS and UEMOA have
-  announced plans to replace the CFA franc with a common eco currency.
+description: Monetary union of eight West African states using the West African CFA franc (XOF). Introduced in 1945 to replace the French West African franc; pegged to the French franc until 1999 and to the euro since then at €1 = F.CFA 655.957. Currency is issued by the Central Bank of West African States (BCEAO) for members of the West African Economic and Monetary Union (UEMOA), established under the West African Monetary Union treaty of 12 May 1962.
+notes: CFA originally stood for Colonies françaises d'Afrique and now Communauté financière africaine. Guinea-Bissau adopted the franc in 1997, replacing the peso at 1 franc = 65 pesos. Of equal value to but not interchangeable with the Central African CFA franc (XAF). Strong institutional overlap with UEMOA; notes and coins bear the UEMOA legend. Bank of France prints CFA franc notes in Chamalières. France ended reserve-deposit requirements for the West African CFA franc in 2019–2020. ECOWAS and UEMOA have announced plans to replace the CFA franc with a common eco currency, targeting 2027.
+last_verified: '2026-07-12'
 tags:
+- BCEAO
 - CFA
 - CFAWEST
+- UEMOA
 - XOF
 - FCFA
-- BCEAO
-- UEMOA
 - african
 - bank
+- cooperation
 - currency
 - economy
 - finance
@@ -98,46 +118,68 @@ topics:
   name: Regional Cooperation
 other_names:
 - id: ar
-  name: منطقة فرنك CFA لغرب إفريقيا
+  name: فرنك غرب إفريقي
 - id: de
-  name: Westafrikanische CFA-Franc-Zone
+  name: CFA-Franc BCEAO
 - id: en
   name: West African CFA Franc Zone
 - id: es
-  name: Zona del franco CFA de África Occidental
+  name: franco CFA de África Occidental
 - id: fr
   name: Zone franc CFA d'Afrique de l'Ouest
+- id: pt
+  name: franco CFA da África Ocidental
 - id: ru
-  name: Западноафриканская зона франка КФА
+  name: франк КФА BCEAO
 - id: zh
-  name: 西非CFA法郎区
+  name: 西非非洲金融共同体法郎
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/West_African_CFA_franc
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/West_African_CFA_franc
   license: CC BY-SA 4.0
 - field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  license: CC BY-SA 4.0
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/wiki/Q3550329
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q620942
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q861690
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q861690
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/West_African_CFA_franc
+  retrieved_at: '2026-07-12'
+  url: https://www.bceao.int/

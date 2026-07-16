@@ -1,26 +1,66 @@
 id: AMRO
+name: ASEAN+3 Macroeconomic Research Office
 blocktype:
 - intorg
 - economic
 - bank
 status: formal
-languages:
-- en
-links:
-- url: https://www.amro-asia.org/
-  type: website
-- url: https://en.wikipedia.org/wiki/ASEAN%2B3_Macroeconomic_Research_Office
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q28162743
-  type: wikidata
-name: ASEAN+3 Macroeconomic Research Office
 founded: '2011'
-headquarters:
-  city: Singapore
-  country: SG
+active_period:
+  start: '2016'
 geographic_scope: regional
 regions:
 - Asia
+partof:
+  id: ASEANPLUS3
+  name: ASEAN Plus Three
+languages:
+- en
+- zh
+- ja
+- ko
+links:
+- url: https://www.amro-asia.org/
+  type: website
+- url: https://www.amro-asia.org/about-us/
+  type: website
+- url: https://www.amro-asia.org/factsheet/
+  type: website
+- url: https://en.wikipedia.org/wiki/AMRO
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q123122898
+  type: wikidata
+acronyms:
+- lang: en
+  value: AMRO
+legal_status: intergovernmental
+recognition_status: International organization under the AMRO Agreement, which entered into force in 2016; permanent observer at the United Nations General Assembly since 2017
+headquarters:
+  city: Singapore
+  country: SG
+membership_count: 14
+description: International organization serving the ASEAN+3 region's 14 member economies — the ten ASEAN member states plus China, Hong Kong China, Japan, and Korea. Established in Singapore in 2011 and transformed into an international organization when the AMRO Agreement entered into force in 2016. Conducts macroeconomic surveillance, supports the Chiang Mai Initiative Multilateralisation (CMIM) regional financing arrangement, and provides technical assistance to members.
+tags:
+- AMRO
+- ASEAN+3
+- CMIM
+- asia
+- economy
+- finance
+- financial-stability
+- intorg
+- macroeconomic
+- regional
+- regional_cooperation
+- singapore
+- surveillance
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: BN
   name: Brunei Darussalam
@@ -75,53 +115,62 @@ includes:
   type: country
   status: member
 - id: HK
-  name: Hong Kong
+  name: Hong Kong, China
   type: territory
   status: member
-membership_count: 14
-wikidata_id: Q28162743
-legal_status: intergovernmental
-acronyms:
-- lang: en
-  value: AMRO
-description: Regional macroeconomic surveillance organization for ASEAN+3 economies.
-tags:
-- AMRO
-- ASEAN+3
-- economy
-- finance
-- macroeconomic
-topics:
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+  note: Represented as Hong Kong, China in AMRO membership
+wikidata_id: Q123122898
 other_names:
-- id: ar
-  name: تاج النسر
-- id: de
-  name: Geierhaube
 - id: en
-  name: Vulture crown
-- id: fr
-  name: Couronne de vautour
+  name: ASEAN+3 Macroeconomic Research Office
 - id: zh
-  name: 禿鷲王冠
+  name: 东盟+3宏观经济研究办公室
+notes: Established as a company limited by guarantee in Singapore in 2011 following the 2009 ASEAN+3 Finance Ministers agreement to create an independent regional surveillance unit. The AMRO Agreement entered into force in 2016, establishing AMRO as an international organization. Headquarters in Singapore.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q123122898
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q123122898
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.amro-asia.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/history/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.amro-asia.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.amro-asia.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/history/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/history/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.amro-asia.org/about-us/

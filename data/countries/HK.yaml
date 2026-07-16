@@ -12,8 +12,7 @@ lendingType:
   value: Not classified
 numeric_code: '344'
 wikidata_id: Q8646
-official_name: Hong Kong Special Administrative Region of the People's Republic of
-  China
+official_name: Hong Kong Special Administrative Region of the People's Republic of China
 languages:
 - code: eng
   name: English
@@ -56,6 +55,8 @@ other_names:
   name: Hong Kong
 common_names:
 - Hong Kong Special Administrative Region of the People's Republic of China
+- Hong Kong SAR
+- Hong Kong, China
 population:
   value: 7524100
   year: 2024
@@ -90,6 +91,10 @@ native_names:
 code_status: official_iso3166_1
 entity_type: special_administrative_region
 provenance:
+- field: common_names
+  source: manual
+  retrieved_at: '2026-07-16'
+  notes: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -128,9 +133,17 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: capital_city
+  source: manual
+  retrieved_at: '2026-07-11'
+  notes: De-facto seat of government / administrative capital
 centroid:
   lat: 22.267
   lng: 114.188
 adminregion:
   id: EAP
   value: East Asia & Pacific (developing only)
+capital_city:
+  name: Hong Kong
+  lng: 114.1694
+  lat: 22.3193

@@ -1,40 +1,50 @@
 id: CEPI
+name: Coalition for Epidemic Preparedness Innovations
 blocktype:
 - intorg
+- health
 - humanitarian
 status: formal
+founded: '2017-01-01'
+active_period:
+  start: '2017-01-01'
+geographic_scope: global
+regions:
+- Global
 languages:
 - en
 links:
 - url: https://cepi.net/
   type: website
+- url: https://cepi.net/about/investors/
+  type: website
 - url: https://en.wikipedia.org/wiki/Coalition_for_Epidemic_Preparedness_Innovations
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q28055304
+- url: https://www.wikidata.org/wiki/Q27133033
   type: wikidata
-name: Coalition for Epidemic Preparedness Innovations
-founded: '2017-01-01'
-geographic_scope: global
+acronyms:
+- lang: en
+  value: CEPI
+legal_status: public-private partnership
+recognition_status: Foundation incorporated under Norwegian law; launched at the World Economic Forum in Davos in January 2017 with initial US$460 million from sovereign and philanthropic investors. Co-leads the COVAX vaccine access mechanism with Gavi and WHO.
 headquarters:
   city: Oslo
   country: 'NO'
   coordinates:
     lat: 59.9139
     lng: 10.7522
-acronyms:
-- lang: en
-  value: CEPI
-wikidata_id: Q28055304
-legal_status: public-private partnership
-description: Global partnership to accelerate the development of vaccines against emerging infectious diseases and ensure
-  equitable access during outbreaks.
+membership_count: 30
+description: Global partnership that finances independent research to develop vaccines against emerging infectious diseases and ensure equitable access during outbreaks. Launched at the World Economic Forum in Davos in January 2017 with initial funding from sovereign governments and philanthropic foundations. Focuses on WHO blueprint priority pathogens including MERS-CoV, Nipah, Lassa fever, Rift Valley fever, Chikungunya, and Disease X. Co-leads the COVAX mechanism with Gavi and WHO; adopted a 100 Days Mission vision (2022) to develop new pandemic vaccines within 100 days. Headquartered in Oslo with offices in London and Washington, D.C.
 tags:
 - CEPI
+- COVAX
 - epidemic
+- global-health
 - health
 - immunization
 - intorg
 - medical
+- pandemic
 - partnership
 - preparedness
 - vaccine
@@ -42,9 +52,6 @@ tags:
 topics:
 - key: health
   name: Health
-other_names:
-- id: en
-  name: Coalition for Epidemic Preparedness Innovations
 includes:
 - id: AU
   name: Australia
@@ -166,16 +173,73 @@ includes:
   name: United States
   type: country
   status: funder
+founding_members:
+- 'NO'
+- IN
+wikidata_id: Q27133033
+other_names:
+- id: ar
+  name: تحالف ابتكارات التأهب للوباء
+- id: en
+  name: Coalition for Epidemic Preparedness Innovations
+- id: es
+  name: Coalición para las Innovaciones en Preparación para Epidemias
+- id: fr
+  name: Coalition pour les innovations en matière de préparation aux épidémies
+- id: pt
+  name: Coalizão para Inovações em Preparação para Epidemias
+- id: zh
+  name: 流行病防备创新联盟
+notes: Founded at Davos 2017 by the governments of Norway and India, the Bill & Melinda Gates Foundation, Wellcome, and the World Economic Forum. Sovereign and philanthropic investors form the Investors Council, which nominates board representatives and approves investments over US$100 million. CEPI also receives support from the European Commission and private-sector partners. Not a treaty-based intergovernmental organization; operates as a Norwegian foundation funding vaccine R&D partnerships worldwide.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q27133033
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q27133033
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Epidemic_Preparedness_Innovations
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cepi.net/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Epidemic_Preparedness_Innovations
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cepi.net/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cepi.net/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cepi.net/about/investors/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cepi.net/about/investors/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Epidemic_Preparedness_Innovations
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Epidemic_Preparedness_Innovations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cepi.net/about/investors/

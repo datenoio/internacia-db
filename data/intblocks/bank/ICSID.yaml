@@ -1,18 +1,66 @@
 id: ICSID
+name: International Centre for Settlement of Investment Disputes
 blocktype:
 - bank
 status: formal
+founded: '1966-10-14'
+active_period:
+  start: '1966-10-14'
+geographic_scope: global
 partof: WB
 languages:
 - en
+- es
+- fr
 links:
-- url: http://icsid.worldbank.org
+- url: https://icsid.worldbank.org/
+  type: website
+- url: https://icsid.worldbank.org/about
   type: website
 - url: https://en.wikipedia.org/wiki/International_Centre_for_Settlement_of_Investment_Disputes
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q899770
   type: wikidata
-name: International Centre for Settlement of Investment Disputes
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: International treaty institution established under the Convention on the Settlement of Investment Disputes between States and Nationals of Other States (ICSID Convention), signed on 18 March 1965 and entered into force on 14 October 1966
+secretariat:
+  location: Washington, D.C., United States
+  head: Secretary-General
+  organization: International Centre for Settlement of Investment Disputes
+membership_count: 149
+description: Autonomous international arbitration institution and one of the five organizations of the World Bank Group. Established under the ICSID Convention, which entered into force on 14 October 1966, ICSID provides facilities for the conciliation and arbitration of international investment disputes between contracting member states and foreign nationals. Member states participate through the Administrative Council and may nominate arbitrators and conciliators to ICSID panels; the Secretariat, led by the Secretary-General, manages proceedings and institutional support. ICSID is designated as the forum for investor–state dispute settlement in most bilateral investment treaties and in numerous national investment laws and contracts.
+tags:
+- CIRDI
+- ICSID
+- arbitration
+- bank
+- development
+- dispute-settlement
+- economy
+- finance
+- international
+- investment
+- investment-arbitration
+- multilateral
+- settlement
+- worldbank
+topics:
+- key: development
+  name: Development
+- key: dispute_resolution
+  name: Dispute Resolution
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
 includes:
 - id: UY
   name: Uruguay
@@ -610,34 +658,16 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1965'
 acronyms:
 - lang: en
   value: CIRDI
 - lang: en
   value: ICSID
-membership_count: 149
+- lang: fr
+  value: CIRDI
 wikidata_id: Q899770
-description: International Centre for Settlement of Investment Disputes is an international
-  bank body with 149 members.
-tags:
-- CIRDI
-- ICSID
-- aid
-- bank
-- centre
-- development
-- economy
-- finance
-- international
-- settlement
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: One of five World Bank Group institutions alongside IBRD, IDA, IFC, and MIGA. The ICSID Convention was opened for signature on 18 March 1965 and entered into force on 14 October 1966 after 20 ratifications. ICSID provides institutional support rather than adjudicating cases directly; tribunals and conciliation commissions conduct proceedings under the ICSID Convention, Regulations and Rules or the Additional Facility Rules.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: المركز الدولي لتسوية المنازعات الاستشارية
@@ -649,9 +679,52 @@ other_names:
   name: Centre international pour le règlement des différends relatifs aux investissements
 - id: ru
   name: Международный центр по урегулированию инвестиционных споров
+- id: de
+  name: Internationales Zentrum zur Beilegung von Investitionsstreitigkeiten
 - id: es
   name: Centro Internacional de Arreglo de Diferencias Relativas a Inversiones
+- id: pt
+  name: Centro Internacional de Resolução de Disputas Relativas a Investimentos
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about/member-states
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://icsid.worldbank.org/about
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

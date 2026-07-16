@@ -1,24 +1,44 @@
 id: CMA
+name: Common Monetary Area
 blocktype:
 - currency
 status: de-facto
+founded: '1986-07'
+active_period:
+  start: '1986-07'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 links:
+- url: https://www.resbank.co.za/
+  type: website
 - url: https://en.wikipedia.org/wiki/Common_Monetary_Area
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1116201
   type: wikidata
-name: Common Monetary Area
-founded: '1986'
+legal_status: monetary_union
+recognition_status: Regional monetary arrangement of four Southern African states; member currencies (LSL, NAD, SZL) pegged at par with the South African rand (ZAR, ISO 4217 code 710), which is legal tender throughout the area; foreign exchange regulations and monetary policy reflect the influence of the South African Reserve Bank (SARB); formalized as the Rand Monetary Area in December 1974 and restyled as the Multilateral Monetary Area (MMA) when Namibia joined in February 1992
+headquarters:
+  city: Pretoria
+  country: ZA
+  coordinates:
+    lat: -25.74530671852458
+    lng: 28.196007116338144
 acronyms:
 - lang: en
   value: CMA
 - lang: en
   value: RMA
-geographic_scope: regional
-regions:
-- Africa
+- lang: en
+  value: MMA
+- lang: en
+  value: ZAR
+- lang: af
+  value: CMA
+- lang: af
+  value: GMG
 includes:
 - id: LS
   name: Lesotho
@@ -41,11 +61,18 @@ wikidata_id: Q1116201
 description: Monetary union linking Lesotho, Namibia, South Africa and Eswatini. Enacted in July 1986, succeeding the Rand
   Monetary Area established in December 1974; member states issue national currencies (loti, Namibian dollar, lilangeni) pegged
   at par with the South African rand, which remains legal tender throughout the area.
+notes: Closely associated with but distinct from the Southern African Customs Union (SACU), which includes Botswana in addition
+  to all CMA members. Botswana declined to join the 1974 Rand Monetary Area and adopted the pula in 1976. Foreign exchange
+  regulations and monetary policy reflect the influence of the South African Reserve Bank. Namibia joined in February 1992;
+  the agreement was then restyled as the Multilateral Monetary Area (MMA), though the zone is still commonly called the CMA.
+last_verified: '2026-07-12'
 tags:
 - CMA
+- MMA
 - RMA
 - SACU
 - SARB
+- ZAR
 - african
 - common
 - cooperation
@@ -53,6 +80,7 @@ tags:
 - economy
 - finance
 - monetary
+- rand
 - regional
 - regional_cooperation
 - southern
@@ -65,11 +93,9 @@ topics:
   name: Finance
 - key: regional_cooperation
   name: Regional Cooperation
-notes: Closely associated with but distinct from the Southern African Customs Union (SACU), which includes Botswana in addition
-  to all CMA members. Botswana declined to join the 1974 Rand Monetary Area and adopted the pula in 1976. Foreign exchange
-  regulations and monetary policy reflect the influence of the South African Reserve Bank. Namibia joined in February 1992;
-  the agreement was then restyled as the Multilateral Monetary Area (MMA), though the zone is still commonly called the CMA.
 other_names:
+- id: af
+  name: Gemeenskaplike Monetêre Gebied
 - id: ar
   name: منطقة العملة المشتركة
 - id: de
@@ -87,30 +113,50 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Common_Monetary_Area
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Common_Monetary_Area
   license: CC BY-SA 4.0
 - field: founded
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Common_Monetary_Area
   license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Common_Monetary_Area
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Common_Monetary_Area
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Common_Monetary_Area
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q59159622
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1116201
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1116201
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Common_Monetary_Area
+  retrieved_at: '2026-07-12'
+  url: https://www.resbank.co.za/

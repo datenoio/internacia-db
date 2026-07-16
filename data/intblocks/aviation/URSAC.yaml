@@ -5,7 +5,9 @@ blocktype:
 - intorg
 - aviation_safety
 status: formal
-founded: '2000'
+founded: '2020-11-03'
+active_period:
+  start: '2020-11-03'
 geographic_scope: regional
 regions:
 - Africa
@@ -14,27 +16,49 @@ languages:
 - fr
 - en
 links:
+- url: https://www.uemoa.int/
+  type: website
+- url: https://e-docucenter.uemoa.int/fr/27-principales-realisations-de-lunion
+  type: website
 - url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+  type: website
+- url: https://www.icao.int/sites/default/files/safety/afiplan/Documents/25th-Steering-Committee/FINAL-REPORT-AFI-Plan-RSOO-Study-02-12-21.pdf
   type: website
 headquarters:
   city: Ouagadougou
   country: BF
+  coordinates:
+    lat: 12.368611111111111
+    lng: -1.5274999999999999
 legal_status: intergovernmental
+recognition_status: Specialized institution of UEMOA recognized by ICAO as a Regional Safety Oversight Organization (RSOO) for West Africa; transitional unit within the UEMOA Commission pending full operationalization of ACSAC
 partof: UEMOA
+secretariat:
+  location: Ouagadougou, Burkina Faso
+  organization: UEMOA Commission, Department of Community Spatial Planning and Transport (DATC)
 membership_count: 9
-description: Regional civil aviation safety and security oversight unit for the West African Economic and Monetary Union (UEMOA).
-  URSAC enhances aviation safety and security oversight through regional cooperation and harmonization of regulations among
-  UEMOA member states.
+founding_members:
+- BJ
+- BF
+- CI
+- GW
+- ML
+- NE
+- SN
+- TG
+description: Regional aviation safety and security oversight organization (RSOO) established as a unit within the UEMOA Commission's Department of Community Spatial Planning and Transport (DATC). Created on 3 November 2020 to succeed the ICAO-led COSCAP-UEMOA programme and security audit programme pending full operationalization of the Agence Communautaire de Supervision de la Sécurité et de la Sûreté de l'Aviation Civile (ACSAC), URSAC assists UEMOA member states in fulfilling Chicago Convention obligations, harmonizes civil aviation safety and security regulations, and provides oversight assistance including airport certification and inspector training.
 tags:
 - URSAC
 - aviation
 - safety
 - security
 - oversight
+- rsoo
 - intorg
 - africa
 - west_africa
 - regional
+- uemoa
 topics:
 - key: aviation
   name: Aviation
@@ -84,21 +108,65 @@ includes:
 acronyms:
 - lang: fr
   value: URSAC
+- lang: en
+  value: URSAC
 other_names:
 - id: fr
   name: Unité Régionale de Supervision de la Sécurité et de la Sûreté de l'Aviation Civile de l'UEMOA
 - id: en
   name: UEMOA Regional Unit for Civil Aviation Safety and Security Oversight
+notes: UEMOA established ACSAC by Additional Act No. 07/2013/CCEG/UEMOA of 24 October 2013, transforming the COSCAP-UEMOA programme (operational from 2006) into a community agency with both safety and security oversight functions. Operationalization of ACSAC was delayed by hosting arrangements and financing; the UEMOA Commission created URSAC on 3 November 2020 within the DATC transport department to continue COSCAP activities until ACSAC becomes fully operational. All eight UEMOA member states are also ASECNA states and therefore participate in AAMAC; a 2014 tripartite MOU with AAMAC and ASSA-AC confines AAMAC to ANS oversight while assigning ACSAC/URSAC and ASSA-AC other safety areas. Mauritania participated in the predecessor COSCAP-UEMOA arrangement and remains on ICAO's RSOO membership list, although UEMOA's ACSAC transition now excludes Mauritania, which also participates in MENA and AAMAC. In June 2018 UEMOA agreed a regional levy of 260 CFA francs per international passenger to fund the RSOO, pending implementation; the Commission continues interim financing.
+last_verified: '2026-07-12'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://e-docucenter.uemoa.int/fr/27-principales-realisations-de-lunion
+- field: legal_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/afiplan/Documents/25th-Steering-Committee/FINAL-REPORT-AFI-Plan-RSOO-Study-02-12-21.pdf
+- field: recognition_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
   url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/en/presentation-of-uemoa
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/en/organes/commission
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/en/organes/commission
+- field: founded
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/afiplan/Documents/25th-Steering-Committee/FINAL-REPORT-AFI-Plan-RSOO-Study-02-12-21.pdf
+- field: active_period
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/afiplan/Documents/25th-Steering-Committee/FINAL-REPORT-AFI-Plan-RSOO-Study-02-12-21.pdf
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/en/presentation-of-uemoa
+- field: includes
+  source: ICAO
+  retrieved_at: '2026-07-12'
   url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: membership_count
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uemoa.int/en/presentation-of-uemoa
+- field: notes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/safety/afiplan/Documents/25th-Steering-Committee/FINAL-REPORT-AFI-Plan-RSOO-Study-02-12-21.pdf

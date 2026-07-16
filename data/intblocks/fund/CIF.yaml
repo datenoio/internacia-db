@@ -1,16 +1,12 @@
 id: CIF
+name: Climate Investment Funds
 blocktype:
 - fund
 status: formal
-languages:
-- en
-links:
-- url: https://www.climateinvestmentfunds.org
-  type: website
-- url: https://en.wikipedia.org/wiki/Climate_Investment_Funds
-  type: wikipedia
-name: Climate Investment Funds
+partof: WB
 founded: '2008'
+active_period:
+  start: '2008-07-01'
 geographic_scope: global
 regions:
 - Africa
@@ -19,12 +15,31 @@ regions:
 - North America
 - Oceania
 - South America
-acronyms:
-- lang: en
-  value: CIF
+languages:
+- en
+links:
+- url: https://www.cif.org
+  type: website
+- url: https://www.cif.org/governance
+  type: website
+- url: https://www.cif.org/cif-funding
+  type: website
+- url: https://en.wikipedia.org/wiki/Climate_Investment_Funds
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q5133438
+  type: wikidata
+legal_status: multilateral climate fund
+recognition_status: Established in 2008 as financial intermediary funds under governance frameworks adopted by the Clean Technology Fund and Strategic Climate Fund Trust Fund Committees; governed by equal representation of contributor and recipient countries with consensus decision-making; IBRD serves as Trustee and the CIF Secretariat is hosted by the World Bank in Washington, D.C.; investments are implemented exclusively through six multilateral development banks
 headquarters:
   city: Washington, D.C.
   country: US
+secretariat:
+  location: Washington, D.C., United States
+  head: Head of the CIF Secretariat
+  organization: CIF Secretariat
+acronyms:
+- lang: en
+  value: CIF
 includes:
 - id: AU
   name: Australia
@@ -87,15 +102,19 @@ includes:
   type: country
   status: contributor
 membership_count: 15
-description: Multilateral fund established to finance and scale climate pilot projects in developing countries.
+description: Leading multilateral climate finance partnership established in 2008 that channels concessional grants, loans, equity, and guarantees through six multilateral development banks to support country-led climate action in developing and middle-income countries, comprising the Clean Technology Fund for low-carbon technology scale-up and the Strategic Climate Fund for targeted adaptation, resilience, renewable energy, and nature-based programs.
 tags:
 - CIF
 - aid
 - climate
+- ctf
 - development
 - finance
 - fund
 - investment
+- mdb
+- scf
+- wb
 topics:
 - key: development
   name: Development
@@ -104,30 +123,8 @@ topics:
 - key: climate_change
   name: Climate Change
 wikidata_id: Q5133438
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.climateinvestmentfunds.org
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.climateinvestmentfunds.org
+notes: Fifteen contributor countries have pledged over US$12 billion to CIF, with committed capital unlocking more than US$64 billion in additional financing; in 2024 became the first multilateral climate fund to list bonds on capital markets through the CIF Capital Markets Mechanism.
+last_verified: '2026-07-12'
 other_names:
 - id: en
   name: Climate Investment Funds
@@ -135,3 +132,46 @@ other_names:
   name: Fondos de Inversión en el Clima
 - id: zh
   name: 氣候投資基金
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5133438
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/cif-funding
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/cif-funding
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/governance
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/governance
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/governance
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/governance
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/governance
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5133438
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cif.org/about-cif

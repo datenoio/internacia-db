@@ -13,12 +13,40 @@ languages:
 links:
 - url: https://cites.org/
   type: website
+- url: https://cites.org/eng/disc/text.php
+  type: website
+- url: https://cites.org/eng/disc/sec/index.php
+  type: website
 - url: https://en.wikipedia.org/wiki/CITES
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q191836
+  type: wikidata
 name: Convention on International Trade in Endangered Species of Wild Fauna and Flora
 founded: '1973'
-description: International convention focused on wildlife conservation and environmental
-  protection established through an international agreement.
+active_period:
+  start: '1975-07-01'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.2044
+    lng: 6.1432
+legal_status: treaty
+recognition_status: Multilateral environmental treaty open for signature at Washington, D.C. on 3 March 1973; entered into force on 1 July 1975; registered with the United Nations as Treaty Series No. I:14537; Secretariat administered by UNEP
+secretariat:
+  location: Geneva, Switzerland
+  organization: CITES Secretariat (administered by the United Nations Environment Programme)
+description: Multilateral treaty regulating international trade in wild animals and plants to ensure that such trade is legal,
+  sustainable, and does not threaten species survival. Adopted in Washington, D.C. on 3 March 1973 and entered into force
+  on 1 July 1975; protects more than 40,000 species through a system of permits and certificates.
 tags:
 - CITES
 - agreement
@@ -30,6 +58,7 @@ tags:
 - flora
 - law
 - legal
+- trade
 - wildlife
 topics:
 - key: conservation
@@ -41,20 +70,25 @@ topics:
 other_names:
 - id: ar
   name: اتفاقية التجارة الدولية في الأنواع المهددة بالانقراض
-- id: zh
-  name: 濒危野生动植物种国际贸易公约
+- id: de
+  name: Washingtoner Artenschutzübereinkommen
 - id: en
   name: Convention on International Trade in Endangered Species of Wild Fauna and
     Flora
-- id: fr
-  name: Convention sur le commerce international des espèces de faune et de flore
-    sauvages menacées d'extinction
-- id: ru
-  name: Конвенция о международной торговле видами дикой фауны и флоры, находящимися
-    под угрозой исчезновения
 - id: es
   name: Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna
     y Flora Silvestres
+- id: fr
+  name: Convention sur le commerce international des espèces de faune et de flore
+    sauvages menacées d'extinction
+- id: pt
+  name: Convenção sobre o Comércio Internacional das Espécies da Fauna e da Flora
+    Silvestres Ameaçadas de Extinção
+- id: ru
+  name: Конвенция о международной торговле видами дикой фауны и флоры, находящимися
+    под угрозой исчезновения
+- id: zh
+  name: 濒危野生动植物种国际贸易公约
 includes:
 - id: AD
   name: Andorra
@@ -797,9 +831,64 @@ notes: CITES entered into force in 1975. As of 2025, it has 185 parties (184 cou
   in specimens of wild animals and plants does not threaten their survival.
 membership_count: 185
 wikidata_id: Q191836
+official_documents:
+- url: https://cites.org/eng/disc/text.php
+  type: document
+  name: Convention on International Trade in Endangered Species of Wild Fauna and Flora
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280105383
+  type: document
+  name: United Nations Treaty Series registration (I:14537)
+acronyms:
+- lang: en
+  value: CITES
+- lang: zh
+  value: 濒危野生动植物种国际贸易公约
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/what.php
+- field: active_period
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/what.php
+- field: geographic_scope
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/what.php
+- field: legal_status
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/text.php
+- field: recognition_status
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/what.php
+- field: secretariat
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/sec/index.php
+- field: headquarters
+  source: CITES Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://cites.org/eng/disc/sec/index.php
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280105383
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q191836
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q191836
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q191836
   license: CC0

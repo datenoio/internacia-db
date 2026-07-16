@@ -6,13 +6,19 @@ blocktype:
 - scientific
 status: formal
 founded: '2000-11-20'
+active_period:
+  start: '2000-11-20'
 geographic_scope: global
+regions:
+- Global
 languages:
 - en
 - fr
-- it
+- es
 links:
 - url: https://cisri.org/
+  type: website
+- url: https://treaties.un.org/doc/Publication/UNTS/Volume%202151/v2151.pdf
   type: website
 - url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
   type: wikipedia
@@ -21,21 +27,25 @@ links:
 acronyms:
 - lang: en
   value: CISRI
+legal_status: intergovernmental
+recognition_status: Multilateral treaty-based intergovernmental organization established under the Free Agreement for cooperation in scientific research and humanitarian use of micro-alga spirulina as food; registered with the United Nations Treaty Series (I-37542, volume 2151); treaty entered into force on 20 November 2000 upon ratification by two states
 headquarters:
   city: Rome
   country: IT
   coordinates:
     lat: 41.9028
     lng: 12.4964
-legal_status: intergovernmental
+secretariat:
+  location: Rome and Novara, Italy
+  head: Secretary-General
+suborganizations:
+- id: CISRI_SPIRULINA
+  name: Intergovernmental Institution for the Use of Micro-alga Spirulina (Spirulina Program)
 membership_count: 8
 founding_members:
 - CD
 - GN
-description: Intergovernmental organization established to promote scientific research, initiatives, and education in favor
-  of international cooperation. The organization focuses particularly on the humanitarian use of micro-alga spirulina as food
-  to combat malnutrition. CISRI's organizational structure comprises a General Council, Secretariat, and an Intergovernmental
-  Institution for the Use of Micro-alga Spirulina (Spirulina Program).
+description: Intergovernmental organization established to promote scientific research, initiatives, and education in favor of international cooperation, with a focus on the humanitarian use of micro-alga spirulina as food to combat malnutrition. Governed by a General Council and Secretariat, with the Intergovernmental Institution for the Use of Micro-alga Spirulina (Spirulina Program) as an affiliated body. Based in Rome and Novara, Italy; treaty registered with the United Nations in 2001.
 tags:
 - CISRI
 - scientific_research
@@ -88,24 +98,72 @@ includes:
   name: Honduras
   type: country
   status: member
-notes: Established through the "Free Agreement for cooperation in scientific research and humanitarian use of micro-alga spirulina
-  as food." The founding agreement was initially signed by the Democratic Republic of the Congo and Guinea. Italy was initially
-  a member but requested to be removed from the annexes of the relevant United Nations documents in 2009. The organization
-  has offices in both Rome and Novara, Italy.
+notes: Established through the "Free Agreement for cooperation in scientific research and humanitarian use of micro-alga spirulina as food." The founding agreement was signed in Kinshasa (24 August 2000) and Conakry (20 November 2000) by the Democratic Republic of the Congo and Guinea. Italy was initially listed as a party but requested removal from the annexes of United Nations registration documents I-37542 and I-37543 in 2009. The organization maintains offices in both Rome and Novara, Italy.
 wikidata_id: Q15991224
 other_names:
 - id: en
   name: Collaborative Inter-Governmental Scientific Research Institute
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q15991224
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q15991224
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cisri.org/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cisri.org/
+- field: recognition_status
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-12'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%202151/v2151.pdf
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cisri.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cisri.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: suborganizations
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute
+- field: languages
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-12'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%202151/v2151.pdf
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Collaborative_Inter-Governmental_Scientific_Research_Institute

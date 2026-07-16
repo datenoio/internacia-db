@@ -1,18 +1,104 @@
 id: MIGA
+name: Multilateral Investment Guarantee Agency
 blocktype:
 - bank
 status: formal
+founded: '1988-04-12'
+active_period:
+  start: '1988-04-12'
+geographic_scope: global
 partof: WB
 languages:
+- ar
 - en
+- es
+- fr
+- zh
 links:
-- url: http://www.miga.org/
+- url: https://www.miga.org/
+  type: website
+- url: https://www.miga.org/history
+  type: website
+- url: https://www.worldbank.org/en/about/leadership/members
   type: website
 - url: https://en.wikipedia.org/wiki/Multilateral_Investment_Guarantee_Agency
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1043527
   type: wikidata
-name: Multilateral investment guarantee agency
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Convention establishing the Multilateral
+  Investment Guarantee Agency (entered into force 12 April 1988)
+secretariat:
+  location: Washington, D.C., United States
+  head: Executive Vice President and CEO
+  organization: Multilateral Investment Guarantee Agency
+membership_count: 182
+founding_members:
+- BH
+- BD
+- BB
+- CA
+- CL
+- CY
+- DK
+- EC
+- EG
+- DE
+- GD
+- ID
+- JM
+- JP
+- JO
+- KR
+- KW
+- LS
+- MW
+- NL
+- NG
+- PK
+- WS
+- SA
+- SN
+- SE
+- CH
+- GB
+- US
+description: Political risk insurance and credit enhancement arm of the World Bank Group, established on 12 April 1988 to
+  promote foreign direct investment in developing countries. MIGA provides guarantees against non-commercial risks—including
+  currency transfer restrictions, expropriation, war and civil disturbance, breach of contract, and non-honoring of sovereign
+  financial obligations—for cross-border investments in eligible developing member economies. As the hub of the World Bank
+  Group Guarantee Platform, it mobilizes private capital by giving investors confidence to commit in frontier markets. IBRD
+  membership is a prerequisite for MIGA membership.
+tags:
+- MIGA
+- aid
+- bank
+- development
+- economy
+- finance
+- global
+- guarantee
+- insurance
+- international
+- investment
+- multilateral
+- political-risk
+- world-bank
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: investment
+  name: Investment
 includes:
 - id: UY
   name: Uruguay
@@ -742,68 +828,6 @@ includes:
   name: Somalia
   type: country
   status: member
-founded: '1988'
-headquarters:
-  city: Washington, D.C.
-  country: US
-  coordinates:
-    lat: 38.895
-    lng: -77.036666666667
-membership_count: 182
-wikidata_id: Q1043527
-description: International financial institution.
-tags:
-- MIGA
-- aid
-- bank
-- development
-- economy
-- finance
-- multilateral
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-other_names:
-- id: ar
-  name: وكالة ضمان الاستثمار متعدد الأطراف
-- id: de
-  name: Multilaterale Investitions-Garantie-Agentur
-- id: en
-  name: Multilateral Investment Guarantee Agency
-- id: es
-  name: Organismo Multilateral de Garantía de Inversiones
-- id: fr
-  name: Agence multilatérale de garantie des investissements
-- id: pt
-  name: Agência Multilateral de Garantia de Investimentos
-- id: ru
-  name: Многостороннее агентство по гарантиям инвестиций
-- id: zh
-  name: 多邊投資擔保機構
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.miga.org/
 acronyms:
 - lang: en
   value: MIGA
@@ -823,3 +847,81 @@ acronyms:
   value: MIGA
 - lang: pt
   value: AMGI
+wikidata_id: Q1043527
+notes: One of five World Bank Group institutions alongside IBRD, IDA, IFC, and ICSID. Convention entered into force on 12 April
+  1988 with 29 founding members. IBRD membership is a prerequisite for MIGA membership. As of 2024, six World Bank member
+  states (Brunei, Kiribati, Marshall Islands, San Marino, Tonga, and Tuvalu) are not MIGA members.
+last_verified: '2026-07-12'
+other_names:
+- id: ar
+  name: وكالة ضمان الاستثمار متعدد الأطراف
+- id: de
+  name: Multilaterale Investitions-Garantie-Agentur
+- id: en
+  name: Multilateral Investment Guarantee Agency
+- id: es
+  name: Organismo Multilateral de Garantía de Inversiones
+- id: fr
+  name: Agence multilatérale de garantie des investissements
+- id: pt
+  name: Agência Multilateral de Garantia de Investimentos
+- id: ru
+  name: Многостороннее агентство по гарантиям инвестиций
+- id: zh
+  name: 多邊投資擔保機構
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/history
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/sites/default/files/archive/Documents/MIGA%20Convention%20February%202016.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/history
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/history
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.miga.org/history
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q1043527
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q1043527
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1043527
+  license: CC0

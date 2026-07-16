@@ -1,18 +1,103 @@
 id: ISBD
+name: Islamic Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1974-08-12'
+active_period:
+  start: '1975-10-20'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- Middle East
+- South America
 languages:
 - ar
 - en
 links:
-- url: http://www.isdb.org
+- url: https://www.isdb.org/
+  type: website
+- url: https://www.isdb.org/who-we-are
   type: website
 - url: https://en.wikipedia.org/wiki/Islamic_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q41230
   type: wikidata
-name: Islamic Development Bank
+headquarters:
+  city: Jeddah
+  country: SA
+  coordinates:
+    lat: 21.542777777778
+    lng: 39.172777777778
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the Islamic Development Bank,
+  signed in Jeddah on 12 August 1974 following the December 1973 conference of Finance Ministers of OIC member states;
+  formally opened on 20 October 1975
+secretariat:
+  location: Jeddah, Saudi Arabia
+  head: President
+  organization: Islamic Development Bank Group
+membership_count: 57
+founding_members:
+- SA
+- LY
+- EG
+- QA
+- AE
+- KW
+- TR
+- ID
+- PK
+- BD
+- DZ
+- MA
+- TN
+- MR
+- NE
+- OM
+- GN
+- JO
+- MY
+- SD
+- SO
+- BH
+description: Multilateral development bank established in 1974 to foster economic development and social progress in member
+  countries and Muslim communities worldwide in accordance with Shari'ah principles. The IsDB Group comprises five entities
+  — the Islamic Development Bank, IsDB Institute, Islamic Corporation for the Development of the Private Sector (ICD),
+  Islamic Corporation for the Insurance of Investment and Export Credit (ICIEC), and International Islamic Trade Finance
+  Corporation (ITFC). With 57 shareholding member states across four continents, it provides project financing, trade finance,
+  equity investments, and technical assistance. Membership requires OIC membership; Saudi Arabia is the largest shareholder.
+  The bank holds AAA credit ratings and is an observer at the United Nations General Assembly.
+tags:
+- BID
+- IDB
+- ISBD
+- IsDB
+- aid
+- bank
+- development
+- economy
+- finance
+- global
+- infrastructure
+- islamic
+- multilateral
+- oic
+- shariah
+- south-south
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: infrastructure
+  name: Infrastructure
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AF
   name: Afghanistan
@@ -242,37 +327,19 @@ includes:
   name: Yemen, Rep.
   type: country
   status: member
-founded: '1973'
-headquarters:
-  city: Jeddah
-  country: SA
-  coordinates:
-    lat: 21.542777777778
-    lng: 39.172777777778
 acronyms:
 - lang: en
-  value: BID
-- lang: en
   value: IDB
-membership_count: 57
+- lang: en
+  value: IsDB
+- lang: fr
+  value: BID
 wikidata_id: Q41230
-description: International development bank focused on development providing financial services.
-tags:
-- BID
-- ISBD
-- aid
-- bank
-- development
-- economy
-- finance
-- islamic
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: South-South multilateral development finance institution with 57 OIC member-state shareholders across four continents.
+  Opened with 22 founding members in 1975; membership has grown to 57. IsDB Group comprises five entities (IsDB, IsDB Institute,
+  ICD, ICIEC, ITFC). Holds AAA credit ratings from S&P, Moody's, and Fitch; Saudi Arabia is the largest shareholder (~22.5%
+  paid-up capital). Observer at the United Nations General Assembly.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك الإسلامي للتنمية
@@ -291,6 +358,46 @@ other_names:
 - id: zh
   name: 伊斯蘭開發銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.isdb.org/who-we-are
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -301,7 +408,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.isdb.org

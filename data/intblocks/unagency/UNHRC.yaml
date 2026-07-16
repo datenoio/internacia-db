@@ -16,9 +16,198 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/United_Nations_Human_Rights_Council
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1766307
+- url: https://www.wikidata.org/wiki/Q205650
   type: wikidata
 name: United Nations Human Rights Council
+includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
+- id: AO
+  name: Angola
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: BO
+  name: Bolivia, Plurinational State of
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: CD
+  name: Congo, The Democratic Republic of the
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CI
+  name: Côte d'Ivoire
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czechia
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: EG
+  name: Egypt
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+- id: VN
+  name: Viet Nam
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
 founded: '2006-03-15'
 geographic_scope: global
 legal_status: intergovernmental
@@ -28,11 +217,10 @@ headquarters:
   coordinates:
     lat: 46.2044
     lng: 6.1432
+wikidata_id: Q205650
 membership_count: 47
-notes: Forty-seven UN member states serve three-year terms on the Council, elected by the General Assembly.
-wikidata_id: Q1766307
-description: UN intergovernmental body responsible for promoting and protecting human rights around the world and addressing
-  violations.
+description: UN intergovernmental body responsible for promoting and protecting human rights around the
+  world and addressing violations.
 tags:
 - UNHRC
 - human_rights
@@ -43,12 +231,16 @@ topics:
 other_names:
 - id: ar
   name: مجلس حقوق الإنسان التابع للأمم المتحدة
+- id: de
+  name: UN-Menschenrechtsrat
 - id: en
   name: United Nations Human Rights Council
-- id: fr
-  name: Conseil des droits de l'homme des Nations unies
 - id: es
   name: Consejo de Derechos Humanos de las Naciones Unidas
+- id: fr
+  name: Conseil des droits de l'homme des Nations unies
+- id: pt
+  name: Conselho de Direitos Humanos das Nações Unidas
 - id: ru
   name: Совет по правам человека ООН
 - id: zh
@@ -56,7 +248,44 @@ other_names:
 acronyms:
 - lang: en
   value: UNHRC
+- lang: en
+  value: HRC
+- lang: de
+  value: UNHRC
+- lang: pt
+  value: CDH
+- lang: zh
+  value: UNHRC
+notes: Forty-seven UN Member States serve three-year terms on the Council, elected by the General Assembly
+  under equitable geographic distribution (13 African, 13 Asia-Pacific, 6 Eastern European, 8 Latin American
+  and Caribbean, 7 Western European and other). Members may not seek immediate re-election after two consecutive
+  terms. Membership cycle begins 1 January each year. Includes lists the 47 members serving as of 2026-07-16
+  (terms 2024–2026, 2025–2027, and 2026–2028).
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q205650
+  license: CC0
+  note: Corrected from Q1766307 (Perry's Chemical Engineers' Handbook).
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q205650
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-16'
+  url: https://www.wikidata.org/wiki/Q205650
+  license: CC0
+- field: includes
+  source: UN General Assembly HRC election page; Wikipedia current members
+  retrieved_at: '2026-07-16'
+  url: https://www.un.org/en/ga/80/meetings/elections/hrc.shtml
+- field: membership_count
+  source: UN General Assembly resolution 60/251
+  retrieved_at: '2026-07-16'
+  url: https://www.un.org/en/ga/80/meetings/elections/hrc.shtml
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'

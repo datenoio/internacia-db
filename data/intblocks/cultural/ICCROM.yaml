@@ -1,44 +1,40 @@
 id: ICCROM
+name: International Centre for the Study of the Preservation and Restoration of Cultural Property
 blocktype:
 - cultural
 - intorg
 - education
 status: formal
-languages:
-- en
-links:
-- url: https://www.iccrom.org/
-  type: website
-- url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q748789
-  type: wikidata
-name: International Centre for the Study of the Preservation and Restoration of Cultural Property
 founded: '1956'
-headquarters:
-  city: Rome
-  country: IT
+active_period:
+  start: '1959-01-01'
 geographic_scope: global
 regions:
 - Global
-membership_count: 194
-wikidata_id: Q748789
+languages:
+- en
+- fr
+links:
+- url: https://www.iccrom.org/
+  type: website
+- url: https://www.iccrom.org/about/overview/member-states/full-list
+  type: website
+- url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q590182
+  type: wikidata
 legal_status: intergovernmental
-acronyms:
-- lang: en
-  value: ICCROM
-description: The International Centre for the Study of the Preservation and Restoration of Cultural Property is an international
-  organization that is used to promote regional cooperation in the cultural heritage sector.
-tags:
-- ICCROM
-- conservation
-- culture
-- heritage
-topics:
-- key: culture
-  name: Culture
-- key: heritage
-  name: Heritage
+recognition_status: Intergovernmental organization established by UNESCO General Conference resolution (1956), headquartered in Rome under an agreement between UNESCO and Italy; advisory body to the UNESCO World Heritage Committee since 1972
+headquarters:
+  city: Rome
+  country: IT
+  coordinates:
+    lat: 41.8872
+    lng: 12.4828
+secretariat:
+  location: Via di San Michele 13, 00153 Rome, Italy
+  head: Director-General
+  organization: International Centre for the Study of the Preservation and Restoration of Cultural Property
 includes:
 - id: AD
   name: Andorra
@@ -50,10 +46,6 @@ includes:
   status: member
 - id: AF
   name: Afghanistan
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
   type: country
   status: member
 - id: AL
@@ -112,10 +104,6 @@ includes:
   name: Bahrain
   type: country
   status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
 - id: BJ
   name: Benin
   type: country
@@ -132,36 +120,12 @@ includes:
   name: Brazil
   type: country
   status: member
-- id: BS
-  name: Bahamas, The
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
 - id: BW
   name: Botswana
   type: country
   status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
 - id: CA
   name: Canada
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
   type: country
   status: member
 - id: CG
@@ -174,10 +138,6 @@ includes:
   status: member
 - id: CI
   name: Cote d'Ivoire
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
   type: country
   status: member
 - id: CL
@@ -204,10 +164,6 @@ includes:
   name: Cuba
   type: country
   status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
 - id: CY
   name: Cyprus
   type: country
@@ -218,18 +174,6 @@ includes:
   status: member
 - id: DE
   name: Germany
-  type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: DM
-  name: Dominica
   type: country
   status: member
 - id: DO
@@ -252,10 +196,6 @@ includes:
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
 - id: ES
   name: Spain
   type: country
@@ -266,14 +206,6 @@ includes:
   status: member
 - id: FI
   name: Finland
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
   type: country
   status: member
 - id: FR
@@ -288,10 +220,6 @@ includes:
   name: United Kingdom
   type: country
   status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
 - id: GE
   name: Georgia
   type: country
@@ -304,24 +232,12 @@ includes:
   name: Gambia, The
   type: country
   status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
 - id: GR
   name: Greece
   type: country
   status: member
 - id: GT
   name: Guatemala
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
   type: country
   status: member
 - id: GY
@@ -344,10 +260,6 @@ includes:
   name: Hungary
   type: country
   status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
 - id: IE
   name: Ireland
   type: country
@@ -368,16 +280,8 @@ includes:
   name: Iran, Islamic Rep.
   type: country
   status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
 - id: IT
   name: Italy
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
   type: country
   status: member
 - id: JO
@@ -392,28 +296,8 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
 - id: KH
   name: Cambodia
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
   type: country
   status: member
 - id: KR
@@ -424,10 +308,6 @@ includes:
   name: Kuwait
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
 - id: LA
   name: Lao PDR
   type: country
@@ -436,16 +316,8 @@ includes:
   name: Lebanon
   type: country
   status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
 - id: LK
   name: Sri Lanka
-  type: country
-  status: member
-- id: LR
-  name: Liberia
   type: country
   status: member
 - id: LS
@@ -460,10 +332,6 @@ includes:
   name: Luxembourg
   type: country
   status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
 - id: LY
   name: Libya
   type: country
@@ -476,20 +344,12 @@ includes:
   name: Monaco
   type: country
   status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
 - id: ME
   name: Montenegro
   type: country
   status: member
 - id: MG
   name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
   type: country
   status: member
 - id: MK
@@ -544,10 +404,6 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
 - id: NG
   name: Nigeria
   type: country
@@ -568,14 +424,6 @@ includes:
   name: Nepal
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
@@ -584,16 +432,8 @@ includes:
   name: Oman
   type: country
   status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
 - id: PE
   name: Peru
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
   type: country
   status: member
 - id: PH
@@ -610,10 +450,6 @@ includes:
   status: member
 - id: PT
   name: Portugal
-  type: country
-  status: member
-- id: PW
-  name: Palau
   type: country
   status: member
 - id: PY
@@ -644,10 +480,6 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
 - id: SC
   name: Seychelles
   type: country
@@ -660,10 +492,6 @@ includes:
   name: Sweden
   type: country
   status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
 - id: SI
   name: Slovenia
   type: country
@@ -672,36 +500,12 @@ includes:
   name: Slovak Republic
   type: country
   status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
 - id: SM
   name: San Marino
   type: country
   status: member
 - id: SN
   name: Senegal
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
   type: country
   status: member
 - id: SY
@@ -728,20 +532,8 @@ includes:
   name: Tajikistan
   type: country
   status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
 - id: TN
   name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -752,24 +544,12 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
 - id: TZ
   name: Tanzania
   type: country
   status: member
 - id: UA
   name: Ukraine
-  type: country
-  status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: US
-  name: United States
   type: country
   status: member
 - id: UY
@@ -780,24 +560,12 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
 - id: VE
   name: Venezuela, RB
   type: country
   status: member
 - id: VN
   name: Vietnam
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: WS
-  name: Samoa
   type: country
   status: member
 - id: YE
@@ -816,16 +584,93 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+acronyms:
+- lang: en
+  value: ICCROM
+membership_count: 137
+wikidata_id: Q590182
+description: Intergovernmental organization headquartered in Rome that promotes the conservation and restoration of cultural heritage worldwide through training, information, research, cooperation, and advocacy. Established following a 1956 UNESCO General Conference resolution and operational since 1959, ICCROM serves Member States with capacity building, a leading conservation library, and advisory support as a UNESCO World Heritage Committee advisory body.
+notes: ICCROM reports 139 Member States on its website, including the Sovereign Order of Malta, which is not represented in ISO country codes. The United States withdrew membership effective 7 January 2026. ICCROM-ATHAR Regional Conservation Centre opened in Sharjah, United Arab Emirates, in 2014.
+last_verified: '2026-07-12'
+tags:
+- ICCROM
+- conservation
+- cultural
+- culture
+- education
+- heritage
+- intorg
+- preservation
+- restoration
+- unesco
+topics:
+- key: culture
+  name: Culture
+- key: heritage
+  name: Heritage
+- key: education
+  name: Education
+other_names:
+- id: en
+  name: International Centre for the Study of the Preservation and Restoration of Cultural Property
+- id: fr
+  name: centre international d'études pour la conservation et la restauration des biens culturels
+- id: es
+  name: Centro Internacional de Estudios de Conservación y Restauración de los Bienes Culturales
+- id: it
+  name: Centro internazionale di studi per la conservazione ed il restauro dei beni culturali
+- id: de
+  name: ICCROM
+- id: ar
+  name: المركز الدولي لدراسة صون وترميم الممتلكات الثقافية
+- id: ru
+  name: Международный исследовательский центр по сохранению и реставрации культурных ценностей
+- id: zh
+  name: 文化資產保存修復研究國際中心
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q590182
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q590182
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iccrom.org/about/overview/what-iccrom
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.iccrom.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.iccrom.org/about/overview/what-iccrom
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
+  license: CC BY-SA 4.0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.iccrom.org/
 - field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
+  license: CC BY-SA 4.0
+- field: includes
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.iccrom.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.iccrom.org/about/overview/member-states/full-list
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Centre_for_the_Study_of_the_Preservation_and_Restoration_of_Cultural_Property
+  license: CC BY-SA 4.0

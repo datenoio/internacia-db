@@ -1,18 +1,46 @@
 id: ERRA
+name: Energy Regulators Regional Association
 blocktype:
 - energy
 status: formal
+founded: '2000-12-11'
+active_period:
+  start: '2000-12-11'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Central Europe
+- Eastern Europe
+- Eurasia
+- Middle East
+- North America
+- South America
 languages:
 - en
 - ru
 links:
-- url: http://www.erranet.org/
+- url: https://erranet.org/
+  type: website
+- url: https://erranet.org/about-us/what-is-erra/
+  type: website
+- url: https://erranet.org/members/
   type: website
 - url: https://en.wikipedia.org/wiki/Energy_Regulators_Regional_Association
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5376973
   type: wikidata
-name: Energy Regulators Regional Association
+headquarters:
+  city: Budapest
+  country: HU
+  coordinates:
+    lat: 47.5006
+    lng: 19.0376
+legal_status: association
+recognition_status: Inter-institutional non-profit association inaugurated on 11 December 2000 in Bucharest by 15 founding energy regulators; legally registered in Hungary in April 2001; secretariat headquartered at Logodi utca 44/B, Budapest
+secretariat:
+  location: Logodi utca 44/B, Budapest, Hungary
+  organization: ERRA Secretariat
 includes:
 - id: AL
   name: Albania
@@ -152,8 +180,11 @@ includes:
   status: associated
 membership_count: 26
 wikidata_id: Q5376973
-description: Energy Regulators Regional Association is an international energy body
-  with 26 members.
+description: Inter-institutional non-profit association bringing together independent energy regulatory bodies from Europe,
+  Asia, Africa, the Middle East, and the Americas to strengthen energy regulation through cooperation, education, research,
+  and information exchange. Founded in Bucharest on 11 December 2000 by 15 regulators and registered in Hungary in April 2001,
+  ERRA is headquartered in Budapest. As of 2026, the association lists about 50 member regulatory organisations across 46
+  countries on five continents.
 tags:
 - ERRA
 - cooperation
@@ -177,7 +208,59 @@ topics:
 other_names:
 - id: en
   name: Energy Regulators Regional Association
+- id: ru
+  name: Региональная ассоциация органов регулирования энергетики
+acronyms:
+- lang: en
+  value: ERRA
+notes: Predecessor cooperative platform began in 1998 with 12 regulatory bodies; institutionalised with USAID support from
+  1999 to 2008 and early technical assistance from NARUC. Founding members were Albania, Armenia, Bulgaria, Estonia, Georgia,
+  Hungary, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Moldova, Poland, Romania, Russia, and Ukraine. Membership is open to
+  energy regulatory organisations (full and associate categories). ERRA runs training programmes, annual conferences, regulatory
+  committees on grids, markets, and customers in the energy transition, and publishes research papers and regulatory stories.
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra-rus/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://erranet.org/about-us/what-is-erra/

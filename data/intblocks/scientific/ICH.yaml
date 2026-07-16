@@ -4,13 +4,19 @@ blocktype:
 - intorg
 status: formal
 founded: '1990'
+active_period:
+  start: '1990'
 languages:
 - en
 links:
 - url: https://www.ich.org/
   type: website
+- url: https://www.ich.org/page/members
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Council_for_Harmonisation_of_Technical_Requirements_for_Pharmaceuticals_for_Human_Use
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1666462
+  type: wikidata
 name: International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
 headquarters:
   city: Geneva
@@ -23,15 +29,207 @@ acronyms:
   value: ICH
 - lang: fr
   value: CIH
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: observer
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+- id: AU
+  name: Australia
+  type: country
+  status: observer
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: observer
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: observer
+- id: CU
+  name: Cuba
+  type: country
+  status: observer
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: observer
+- id: DZ
+  name: Algeria
+  type: country
+  status: observer
+- id: EG
+  name: Egypt
+  type: country
+  status: member
+- id: EU
+  name: European Commission
+  type: organization
+  status: founding_member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: HK
+  name: Hong Kong, China
+  type: country
+  status: observer
+- id: ID
+  name: Indonesia
+  type: country
+  status: observer
+- id: IL
+  name: Israel
+  type: country
+  status: observer
+- id: IN
+  name: India
+  type: country
+  status: observer
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: observer
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: founding_member
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
+- id: KW
+  name: Kuwait
+  type: country
+  status: observer
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: observer
+- id: LB
+  name: Lebanon
+  type: country
+  status: observer
+- id: MD
+  name: Moldova
+  type: country
+  status: observer
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
+  type: country
+  status: observer
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: observer
+- id: PH
+  name: Philippines
+  type: country
+  status: observer
+- id: PY
+  name: Paraguay
+  type: country
+  status: observer
+- id: RU
+  name: Russian Federation
+  type: country
+  status: observer
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: observer
+- id: TH
+  name: Thailand
+  type: country
+  status: observer
+- id: TN
+  name: Tunisia
+  type: country
+  status: observer
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+- id: TW
+  name: Chinese Taipei
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: observer
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
 membership_count: 25
 geographic_scope: global
 regions:
 - worldwide
 description: International organization that harmonizes technical requirements for pharmaceuticals for human use. Brings together
-  regulatory authorities and pharmaceutical industry to develop guidelines for drug development and registration.
+  regulatory authorities and pharmaceutical industry to develop consensus guidelines for drug development, registration, and
+  pharmacovigilance. The ICH Association has been registered as a non-profit legal entity under Swiss law since 2015.
 legal_status: non-governmental
-notes: Comprises 25 Members (regulatory authorities and industry associations) and 41 Observers. Founding regulatory members
-  include European Commission, U.S. FDA, and Japan's MHLW/PMDA. Industry members include EFPIA, PhRMA, and JPMA.
+recognition_status: ICH Association registered as a non-profit legal entity under Swiss law in 2015; 25 Members (regulatory
+  authorities and industry associations) and 41 Observers as of November 2025
+secretariat:
+  location: Geneva, Switzerland
+  organization: ICH Secretariat
+notes: 'Comprises 25 Members and 41 Observers as of November 2025. Members include founding regulatory authorities (European
+  Commission, U.S. FDA, Japan MHLW/PMDA), standing regulatory members (Health Canada, Swissmedic), additional national regulatory
+  authorities, and industry associations (EFPIA, PhRMA, JPMA, BIO, Global Self-Care Federation, IGBA). Industry members
+  are not mapped in includes because membership is held by associations rather than sovereign states. Observer roster also
+  includes IFPMA, WHO, regional harmonisation initiatives (APEC, ASEAN, EAC, GHC, PANDRH, SADC), and international organisations
+  (CIOMS, EDQM, IPEC, PIC/S, USP, Gates Foundation, APIC). NAFDAC (Nigeria) and SAHPRA (South Africa) joined as Members
+  at the 51st ICH Assembly in Singapore, November 2025.'
 tags:
 - ICH
 - pharmaceuticals
@@ -90,4 +288,16 @@ provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.ich.org/
+- field: includes
+  source: ICH
+  retrieved_at: '2026-07-15'
+  url: https://admin.ich.org/sites/default/files/2025-12/OverviewOfICH_2025_1126_0.pdf
+- field: recognition_status
+  source: ICH
+  retrieved_at: '2026-07-15'
+  url: https://admin.ich.org/sites/default/files/2025-12/OverviewOfICH_2025_1126_0.pdf
+- field: secretariat
+  source: ICH
+  retrieved_at: '2026-07-15'
   url: https://www.ich.org/

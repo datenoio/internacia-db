@@ -1,25 +1,39 @@
 id: IHA
+name: International Hydropower Association
 blocktype:
 - energy
 status: formal
+founded: '1995'
+active_period:
+  start: '1995'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://www.hydropower.org/
   type: website
+- url: https://www.hydropower.org/who-we-are
+  type: website
+- url: https://www.hydropower.org/contact
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Hydropower_Association
   type: wikipedia
-name: International Hydropower Association
-founded: '1995'
+- url: https://www.wikidata.org/wiki/Q2176077
+  type: wikidata
 headquarters:
   city: London
   country: GB
   coordinates:
-    lat: 51.507222222222
-    lng: -0.1275
-geographic_scope: global
-regions:
-- worldwide
+    lat: 51.5045
+    lng: -0.0195
+legal_status: industry_association
+recognition_status: Non-profit membership organisation established in 1995 to advance sustainable hydropower; serves as the global voice for the hydropower sector, building and sharing knowledge on its role in renewable energy systems, freshwater management, and climate change solutions
+secretariat:
+  location: One Canada Square, London E14 5AA, United Kingdom
+  head: Chief Executive Officer
+  organization: International Hydropower Association Central Office
 includes:
 - id: CN
   name: China
@@ -298,13 +312,12 @@ includes:
   type: country
   status: member
 membership_count: 100
-legal_status: industry_association
-description: International organization representing organizations committed to the responsible and sustainable development
-  and operation of hydropower. The International Hydropower Association (IHA) serves as the global voice for sustainable hydropower,
-  building and sharing knowledge on its role in renewable energy systems, responsible freshwater management, and climate change
-  solutions. IHA operates in over 120 countries, with members including leading hydropower owners, operators, developers,
-  designers, suppliers, and consultants. Approximately one-third (450 GW) of global installed hydropower capacity is directly
-  managed and operated by IHA's membership.
+description: International non-profit membership organisation representing organisations committed to the responsible and
+  sustainable development and operation of hydropower. The International Hydropower Association (IHA) serves as the global
+  voice for sustainable hydropower, building and sharing knowledge on its role in renewable energy systems, responsible freshwater
+  management, and climate change solutions. IHA has over 100 corporate and affiliate members operating in more than 120 countries,
+  including hydropower owners, operators, developers, designers, suppliers, and consultants. Approximately one-third (450
+  GW) of global installed hydropower capacity is directly managed and operated by IHA members.
 tags:
 - IHA
 - economy
@@ -335,16 +348,63 @@ other_names:
   name: Asociación Internacional de Hidroelectricidad
 - id: zh
   name: 国际水电协会
+acronyms:
+- lang: en
+  value: IHA
+notes: Membership comprises corporate and affiliate organisations rather than sovereign governments; member organisations
+  operate in over 120 countries. CEO Eddie Rich leads the Central Office, which manages IHA's work programmes; the Board governs
+  the association on behalf of members. Hosts the World Hydropower Congress and publishes the Hydropower Status report series.
+wikidata_id: Q2176077
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.hydropower.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.hydropower.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/contact
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.hydropower.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/contact
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/who-we-are
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.hydropower.org/our-team
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2176077
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2176077
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2176077
+  license: CC0

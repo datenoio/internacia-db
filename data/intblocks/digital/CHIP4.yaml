@@ -1,61 +1,118 @@
 id: CHIP4
+name: Chip 4 Alliance
 blocktype:
 - digital
 - technology
 status: informal
+founded: '2022-09'
+active_period:
+  start: '2022-09'
+geographic_scope: regional
+regions:
+- Americas
+- East Asia
+- Pacific
 languages:
 - en
 links:
-- url: https://en.wikipedia.org/wiki/Chip_4_alliance
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q120755347
-  type: wikidata
-name: Chip 4 Alliance
-founded: '2023'
-geographic_scope: regional
+- url: https://www.scmp.com/tech/tech-war/article/3211594/tech-war-taiwan-says-us-led-chip-4-alliance-held-first-senior-officials-meeting
+  type: website
+- url: https://www.taipeitimes.com/News/front/archives/2023/02/27/2003795105
+  type: website
+- url: https://globaltaiwan.org/2023/09/the-chip-4-alliance-and-taiwansouth-korea-relations/
+  type: website
 legal_status: informal_forum
+recognition_status: Informal US-led working group (also called Fab 4 or Chip 4); not a treaty organization or permanent secretariat. Taiwan's Ministry of Foreign Affairs refers to the grouping as the US-East Asia Semiconductor Supply Chain Resilience Working Group.
 membership_count: 4
 includes:
 - id: US
   name: United States
   type: country
   status: member
+  joined: '2022-09'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2022-09'
 - id: KR
   name: Korea, Republic of
   type: country
   status: member
+  joined: '2022-09'
 - id: TW
   name: Taiwan
   type: country
   status: member
-wikidata_id: Q120755347
-description: Informal coordination forum among the United States, Japan, South Korea, and Taiwan on semiconductor supply chain
-  resilience and technology export controls.
+  joined: '2022-09'
+description: Informal US-led coordination forum among the United States, Japan, South Korea, and Taiwan on semiconductor supply
+  chain resilience, export controls, and technology security. Convened by Washington in response to pandemic-era chip shortages
+  and intensifying US–China technology competition, the grouping held a preparatory working-level videoconference in September
+  2022 and its first senior-officials meeting on 16 February 2023. Members coordinate across complementary strengths in chip
+  design (US), manufacturing (Taiwan and South Korea), and materials and equipment (Japan).
 tags:
 - CHIP4
+- Fab4
+- export_controls
+- geopolitical
+- informal
+- regional
+- regional_cooperation
 - semiconductors
+- supply_chain
 - technology
 topics:
 - key: digital
   name: Digital
 - key: technology
   name: Technology
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: economy
+  name: Economy
 other_names:
 - id: en
   name: Chip 4 Alliance
+- id: en
+  name: Fab 4
+- id: en
+  name: US-East Asia Semiconductor Supply Chain Resilience Working Group
 acronyms:
 - lang: en
   value: Chip 4
+- lang: en
+  value: Fab 4
+notes: Also widely called Fab 4. The US convened the first working-level meeting in September 2022 after months of coordination;
+  senior officials met by videoconference on 16 February 2023, hosted by the American Institute in Taiwan. The alliance has
+  no founding treaty, charter, or standing secretariat. South Korea joined talks cautiously given its economic ties with China.
+  China has criticized the initiative as a US-led effort to contain Beijing in the semiconductor sector.
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: South China Morning Post
+  retrieved_at: '2026-07-12'
+  url: https://www.scmp.com/tech/tech-war/article/3211594/tech-war-taiwan-says-us-led-chip-4-alliance-held-first-senior-officials-meeting
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Chip_4_alliance
+  source: Global Taiwan Institute
+  retrieved_at: '2026-07-12'
+  url: https://globaltaiwan.org/2023/09/the-chip-4-alliance-and-taiwansouth-korea-relations/
+- field: recognition_status
+  source: South China Morning Post
+  retrieved_at: '2026-07-12'
+  url: https://www.scmp.com/tech/tech-war/article/3211594/tech-war-taiwan-says-us-led-chip-4-alliance-held-first-senior-officials-meeting
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Chip_4_alliance
+  source: Global Taiwan Institute
+  retrieved_at: '2026-07-12'
+  url: https://globaltaiwan.org/2023/09/the-chip-4-alliance-and-taiwansouth-korea-relations/
+- field: founded
+  source: Taipei Times
+  retrieved_at: '2026-07-12'
+  url: https://www.taipeitimes.com/News/front/archives/2023/02/27/2003795105
+- field: includes
+  source: South China Morning Post
+  retrieved_at: '2026-07-12'
+  url: https://www.scmp.com/tech/tech-war/article/3211594/tech-war-taiwan-says-us-led-chip-4-alliance-held-first-senior-officials-meeting
+- field: notes
+  source: Taipei Times
+  retrieved_at: '2026-07-12'
+  url: https://www.taipeitimes.com/News/front/archives/2023/02/27/2003795105

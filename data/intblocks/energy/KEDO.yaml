@@ -1,7 +1,17 @@
 id: KEDO
+name: Korean Peninsula Energy Development Organization
 blocktype:
 - energy
-status: formal
+status: historical
+founded: '1995-03-15'
+dissolved: '2006'
+active_period:
+  start: '1995-03-15'
+  end: '2006'
+geographic_scope: regional
+regions:
+- East Asia
+- Korean Peninsula
 languages:
 - en
 links:
@@ -11,8 +21,21 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q497003
   type: wikidata
-name: Korean Peninsula Energy Development Organization
-founded: '1995'
+headquarters:
+  city: New York
+  country: US
+  coordinates:
+    lat: 40.7128
+    lng: -74.006
+legal_status: intergovernmental
+recognition_status: Multilateral consortium established on 15 March 1995 by the United States, South Korea, and Japan to implement the 1994 U.S.–North Korea Agreed Framework; funded construction of two light-water reactor nuclear power plants at Kumho in North Korea to replace Magnox reactors at Yongbyon suspected of supporting a weapons programme
+secretariat:
+  location: New York, United States
+  organization: KEDO Secretariat
+founding_members:
+- US
+- KR
+- JP
 includes:
 - id: US
   name: United States
@@ -80,27 +103,28 @@ includes:
   status: member
   joined: '2000-12-11'
 membership_count: 13
-wikidata_id: Q497003
-description: Korean Peninsula Energy Development Organization is an international
-  energy body with 13 members.
+description: Multilateral organization created in 1995 by the United States, South Korea, and Japan to implement the 1994
+  Agreed Framework with North Korea. KEDO's principal mission was to construct two light-water reactor nuclear power plants
+  at Kumho in North Korea, replacing indigenous Magnox reactors at Yongbyon. The consortium grew to 13 members and invested
+  roughly $1.5 billion before the project was terminated in January 2006 following the breakdown of the Agreed Framework.
 tags:
 - KEDO
-- aid
-- development
-- economy
 - energy
-- environment
-- korean
-- nature
-- oil
-- peninsula
+- nuclear
+- korea
+- north_korea
+- light_water_reactor
+- agreed_framework
+- development
+- historical
+- nonproliferation
 topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
+- key: nuclear
+  name: Nuclear
+- key: development
+  name: Development
 - key: environment
   name: Environment
 other_names:
@@ -116,22 +140,90 @@ other_names:
   name: Organisation de développement énergétique coréenne
 - id: zh
   name: 韩半岛能源开发机构
+acronyms:
+- lang: en
+  value: KEDO
+- lang: fr
+  value: KEDO
+- lang: zh
+  value: 韓半島能源開發機構
+notes: Founding members were the United States, South Korea, and Japan; other countries and the European Atomic Energy
+  Community joined between 1995 and 2000. Groundbreaking at the Kumho site took place on 19 August 1997; first concrete
+  was poured on 7 August 2002, but construction remained well behind schedule. After the Agreed Framework collapsed in 2003,
+  KEDO preserved project assets until the reactor project was formally terminated on 9 January 2006. Executive directors
+  were Stephen W. Bosworth (1995–1997), L. Desaix Anderson (1997–2001), and Charles Kartman (2001–2005). South Korea
+  contributed the largest share of funding (about $1.45 billion), followed by Japan ($498 million) and the United States
+  ($405 million).
+wikidata_id: Q497003
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Korean_Peninsula_Energy_Development_Organization
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q497003
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q497003
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-acronyms:
-- lang: zh
-  value: 韓半島能源開發機構
-- lang: fr
-  value: KEDO
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q497003
+  license: CC0

@@ -21,6 +21,175 @@ headquarters:
 acronyms:
 - lang: en
   value: EMS
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: KV
+  name: Kosovo
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
 membership_count: 60
 geographic_scope: regional
 regions:
@@ -28,8 +197,9 @@ regions:
 description: Professional society that promotes mathematics in Europe. Comprises approximately 60 national mathematical societies
   across Europe, representing mathematicians from European countries.
 legal_status: non-governmental
-notes: Member societies include mathematical societies from Austria, Belgium, Croatia, Cyprus, Denmark, Estonia, Finland,
-  France, Germany, Greece, Iceland, Ireland, Lithuania, Luxembourg, Sweden, and many other European countries.
+notes: Full corporate members are national mathematical societies; about 60 societies represent 42 European countries and
+  territories. Several countries have multiple member societies (e.g. Belgium, France, Italy, Norway, Romania, Russia,
+  Spain, and the United Kingdom). Affiliate member of the International Mathematical Union.
 tags:
 - EMS
 - mathematics
@@ -83,3 +253,12 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://euromathsoc.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/European_Mathematical_Society
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://euromathsoc.org/about

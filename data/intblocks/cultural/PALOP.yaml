@@ -1,7 +1,11 @@
 id: PALOP
+name: Portuguese-speaking African countries
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - pt
 links:
@@ -9,7 +13,11 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1360686
   type: wikidata
-name: Portuguese-speaking African countries
+legal_status: informal
+recognition_status: Informal cultural and linguistic grouping (with a formalized 1992 interstate cooperation framework among the five founding Portuguese-speaking African states) describing African countries where Portuguese is an official language; Equatorial Guinea was traditionally excluded from the PALOP acronym but is now commonly included in the expanded six-country Lusophone Africa definition after adopting Portuguese in 2011 and joining CPLP and FORPALOP in 2014
+partof:
+  id: CPLP
+  name: Community of Portuguese Language Countries
 includes:
 - id: AO
   name: Angola
@@ -17,6 +25,10 @@ includes:
   status: member
 - id: CV
   name: Cabo Verde
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
   type: country
   status: member
 - id: GW
@@ -42,26 +54,30 @@ acronyms:
   value: PALOP
 - lang: pt
   value: PALOP
-partof:
-  id: CPLP
-  name: Community of Portuguese Language Countries
-membership_count: 5
+membership_count: 6
 wikidata_id: Q1360686
-description: 'Six African countries where Portuguese is an official language: Angola,
-  Cape Verde, Guinea-Bissau, Mozambique, São Tomé and Príncipe and Equatorial Guinea.'
+description: Cultural and linguistic grouping of six African countries where Portuguese is an official language — Angola, Cabo Verde, Guinea-Bissau, Mozambique, São Tomé and Príncipe, and Equatorial Guinea (which adopted Portuguese in 2011). The five former Portuguese colonies formed the interstate PALOP cooperation framework in 1992; Equatorial Guinea, a former Spanish colony, joined the broader Lusophone African community through CPLP membership in 2014 and FORPALOP in 2014. PALOP countries cooperate on culture, education, and language preservation with Portugal, the European Union, and the United Nations.
+notes: This record reflects six Internacia country entities where Portuguese is an official language in Africa (AO, CV, GW, MZ, ST, GQ). The five founding members (PALOP-5) established interstate cooperation in 1992; Equatorial Guinea adopted Portuguese as its third official language in October 2011 to facilitate CPLP accession (2014) and subsequently joined the FORPALOP political-diplomatic forum. Portuguese use in Equatorial Guinea remains limited. All six are members of CPLP alongside Portugal, Brazil, and Timor-Leste. Distinct from broader Lusophone definitions that include Portugal, Brazil, or Timor-Leste.
+last_verified: '2026-07-12'
 tags:
 - PALOP
+- africa
 - african
 - cultural
 - culture
 - education
+- informal
+- lusophone
 - portuguese
+- regional
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: دول أفريقية ناطقة بالبرتغالية
@@ -80,18 +96,48 @@ other_names:
 - id: zh
   name: 非洲葡萄牙語諸國
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1360686
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1360686
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1360686
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries
+  license: CC BY-SA 4.0

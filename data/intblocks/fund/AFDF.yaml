@@ -1,21 +1,39 @@
 id: AFDF
+name: African Development Fund
 blocktype:
 - fund
 status: formal
 partof: AFDB
+founded: '1972'
+active_period:
+  start: '1974'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 links:
 - url: https://adf.afdb.org
   type: website
-- url: https://en.wikipedia.org/wiki/African_Development_Fund
+- url: https://www.afdb.org/en/about-us
+  type: website
+- url: https://en.wikipedia.org/wiki/African_Development_Bank
   type: wikipedia
-name: African Development Fund
-founded: '1972'
-geographic_scope: regional
-regions:
-- Africa
+- url: https://www.wikidata.org/wiki/Q100411453
+  type: wikidata
+legal_status: multilateral development fund
+recognition_status: Concessional window of the African Development Bank Group established in 1972; provides development finance on concessional terms to low-income regional member countries unable to borrow on non-concessional AfDB terms, with governance by a Board of Directors comprising representatives of donor states and the AfDB
+headquarters:
+  city: Abidjan
+  country: CI
+  coordinates:
+    lat: 5.3363888888889
+    lng: -4.0266666666667
+secretariat:
+  location: Abidjan, Côte d'Ivoire
+  head: President
+  organization: African Development Bank Group
 acronyms:
 - lang: en
   value: ADF
@@ -351,7 +369,7 @@ includes:
   type: country
   status: member
 membership_count: 82
-description: Fund administered by the African Development Bank to support African nations.
+description: Concessional window of the African Development Bank Group, established in 1972 and operational since 1974. Provides low-interest loans, grants, and technical assistance to low-income African regional member countries unable to borrow on non-concessional AfDB terms, administered from the Bank Group headquarters in Abidjan.
 tags:
 - ADF
 - AFDF
@@ -359,37 +377,75 @@ tags:
 - african
 - aid
 - bank
+- concessional
 - development
 - finance
 - fund
+- multilateral
+- poverty
 topics:
 - key: development
   name: Development
+- key: economy
+  name: Economy
 - key: finance
   name: Finance
 wikidata_id: Q100411453
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://adf.afdb.org
+notes: Established in 1972 and became operational in 1974. Comprises 29 state participants and 24 regional donors as of 2026; financing is sourced mainly from periodic replenishments by non-regional donor countries. The ADF President chairs the Fund alongside the AfDB President.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: صندوق التنمية الإفريقي
+- id: de
+  name: Afrikanischer Entwicklungsfonds
 - id: en
   name: African Development Fund
+- id: es
+  name: Fondo Africano de Desarrollo
+- id: fr
+  name: Fonds africain de développement
+- id: pt
+  name: Fundo Africano de Desenvolvimento
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q100411453
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://adf.afdb.org
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q100411453
+  license: CC0

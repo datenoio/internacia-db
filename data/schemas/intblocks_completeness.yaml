@@ -1,48 +1,172 @@
-# Completeness thresholds for intblock records.
+# Completeness and quality gates for intblock records.
 #
-# Thresholds start at the measured 2026-06 baselines (warn mode) and should
-# be ratcheted down as enrichment progresses. A field counts as null when it
-# is absent, None, empty string, empty list, or empty dict.
+# Each field rule supports:
+#   priority: high | medium | low       — reporting tier in analyze-quality
+#   requirement: mandatory | preferred — whether the field should be populated
+#   max_null_rate + mode: warn | error  — dataset-level gate
+#
+# Thresholds start at measured 2026-07 baselines (warn mode) and should be
+# ratcheted down as enrichment progresses. A field counts as null when it is
+# absent, None, empty string, empty list, or empty dict — except `includes`
+# when membership_applicability is `not_applicable`.
+
 fields:
+  # --- high priority ---
+  includes:
+    priority: high
+    requirement: mandatory
+    # Target: 0.0 error once membership_applicability markers are applied.
+    max_null_rate: 0.07
+    mode: warn
   description:
+    priority: medium
+    requirement: mandatory
     max_null_rate: 0.0
     mode: error
   name:
+    priority: high
+    requirement: mandatory
     max_null_rate: 0.0
     mode: error
   blocktype:
+    priority: high
+    requirement: mandatory
     max_null_rate: 0.0
     mode: error
+
+  # --- medium priority (preferred) ---
   wikidata_id:
-    # 2026-06: 424/1065 missing; after Wikidata backfill 363/1057 (34.3%).
-    max_null_rate: 0.36
+    priority: medium
+    requirement: preferred
+    # 2026-07: 192/1071 missing (17.9%).
+    max_null_rate: 0.18
     mode: warn
-  includes:
-    # 2026-06 baseline: 82/1065 missing (7.7%); some records are
-    # legitimately membership-free (acronyms, government forms).
-    max_null_rate: 0.10
+
+  # --- low priority (preferred) ---
+  languages:
+    priority: low
+    requirement: preferred
+    # 2026-07: 210/1071 missing (19.6%).
+    max_null_rate: 0.20
+    mode: warn
+  headquarters:
+    priority: low
+    requirement: preferred
+    # 2026-07: 485/1071 missing (45.3%).
+    max_null_rate: 0.46
+    mode: warn
+
+  # --- low priority (mandatory) ---
+  regions:
+    priority: low
+    requirement: mandatory
+    # 2026-07: 596/1071 missing (55.6%).
+    max_null_rate: 0.56
+    mode: warn
+  other_names:
+    priority: low
+    requirement: mandatory
+    # 2026-07: 85/1071 missing (7.9%).
+    max_null_rate: 0.08
+    mode: warn
+  provenance:
+    priority: low
+    requirement: mandatory
+    # 2026-07: 51/1071 missing (4.8%).
+    max_null_rate: 0.05
     mode: warn
   links:
-    # 2026-06 baseline: 48/1065 missing (4.5%)
-    max_null_rate: 0.06
+    priority: low
+    requirement: mandatory
+    # 2026-07: 20/1071 missing (1.9%).
+    max_null_rate: 0.02
     mode: warn
+
+  # --- existing gates (unchanged baselines) ---
   legal_status:
     max_null_rate: 0.75
     mode: warn
   geographic_scope:
     max_null_rate: 0.60
     mode: warn
-  headquarters:
-    max_null_rate: 0.55
-    mode: warn
   topics:
     max_null_rate: 0.05
     mode: warn
+  last_verified:
+    max_null_rate: 1.0
+    mode: warn
+
+includes:
+  membership_applicability:
+    priority: high
+    requirement: mandatory
+    # Records without includes must declare membership_applicability: not_applicable.
+    require_marker_when_empty: true
+    mode: warn
+  status:
+    priority: high
+    requirement: mandatory
+    catalog: includes_status.yaml
+    mode: error
+  membership_count:
+    # MEMBERSHIP_COUNT_MISMATCH fires when membership_count differs from both the
+    # total includes count and the member-class includes count by more than this.
+    tolerance: 0
+
+# Referential-integrity suppressions used by analyze-quality and validate_intblocks.
+references:
+  # Affiliated bodies referenced from suborganizations/predecessor/successor that
+  # intentionally have no standalone intblock record.
+  org_ref_allowlist:
+    - CISRI_SPIRULINA  # CISRI Spirulina Program; affiliated body, no own record
+  # Q-ids intentionally shared by several records (concept-level items or
+  # duplicate records pending a maintainer merge decision).
+  wikidata_duplicate_allowlist:
+    - Q746611   # DVD region code: concept item shared by DVD_1..DVD_6
+    - Q243630   # BRICS: BRIC predecessor grouping has no separate item
+    - Q458      # European Union: EUU is the World Bank grouping mirror of EU
+    - Q4230     # UNASUR/USAN: duplicate records pending maintainer merge
+    - Q1197115  # UKUSA Agreement: NINEEYES extension has no separate item
+    - Q816706   # SADC: SADCFTA free trade area has no separate item
+    - Q5153892  # Commonwealth of Learning: COMMLEARN/COL pending maintainer merge
+    - Q2863003  # ABCANZ Armies: ABCANZ/ABCZNZ pending maintainer merge
+  # English acronyms legitimately shared by distinct same-blocktype records
+  # (real-world collisions, currency codes, convention/secretariat pairs).
+  # Suppresses DUPLICATE_ACRONYM.
+  acronym_duplicate_allowlist:
+    - PERSGA   # Jeddah Convention and its implementing organization
+    - SPREP    # Noumea Convention and its administering organization
+    - KP       # Kimberley Process and Kyoto Protocol both go by KP
+    - IDB      # Inter-American Development Bank and Islamic Development Bank
+    - ADF      # African Development Fund and Asian Development Fund
+    - IAU      # International Astronomical Union and Intl. Association of Universities
+    - ISA      # International Solar Alliance and International Seabed Authority
+    - LAC      # Latin America & Caribbean: UN grouping and World Bank mirror
+    - XAF      # CFA franc currency code shared by zone and central-zone records
+    - XOF      # CFA franc currency code shared by zone and west-zone records
+    - FCFA     # CFA franc colloquial acronym shared across CFA zone records
+    - NPO      # Wikidata-imported alias noise on UN agencies pending cleanup
+    - NPI      # Wikidata-imported alias noise on UN agencies pending cleanup
+    - IGF      # Wikidata-imported alias noise on IMF pending cleanup
 
 # Content-quality gates (not simple null-rate checks).
 quality:
   templated_description:
-    # 2026-06: 455/1057 (43%); after Wikidata backfill 253/1057 (23.9%).
-    # Ratchet down as more descriptions are sourced.
+    priority: medium
+    requirement: mandatory
+    # 2026-07: templated rate ~22%; ratchet down as descriptions are sourced.
     max: 0.22
     mode: warn
+  # STALE_LAST_VERIFIED advisory: records whose last_verified date is older
+  # than this many months should be re-verified. 0 disables the rule.
+  last_verified_max_age_months: 12
+
+# HQ_COORDINATES_OUTSIDE_COUNTRY: headquarters coordinates must lie within
+# max(min_km, area_multiplier * sqrt(area_km2)) of the HQ country's centroid
+# (default_km when area is unknown). Allowlist holds intblock ids.
+geography:
+  hq_distance:
+    min_km: 500
+    area_multiplier: 2.5
+    default_km: 1500
+    allowlist: []

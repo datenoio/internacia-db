@@ -1,21 +1,45 @@
 id: JODI
+name: Joint Organizations Data Initiative
 blocktype:
 - energy
 status: formal
+founded: '2001-04'
+active_period:
+  start: '2001-04'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 links:
 - url: https://www.jodidata.org/
   type: website
+- url: https://www.jodidata.org/about-jodi/history.aspx
+  type: website
+- url: https://www.ief.org/about/jodi
+  type: website
+- url: https://www.iea.org/about/international-collaborations/joint-organisations-data-initiative
+  type: website
 - url: https://en.wikipedia.org/wiki/Joint_Organisations_Data_Initiative
   type: wikipedia
-name: Joint Organizations Data Initiative
-founded: '2001'
+headquarters:
+  city: Riyadh
+  country: SA
+  coordinates:
+    lat: 24.7136
+    lng: 46.6753
+legal_status: initiative
+recognition_status: Launched in April 2001 as the Joint Oil Data Exercise after Energy Ministers at the 7th IEF Ministerial (Riyadh, 2000) called for greater oil market transparency; made a permanent reporting mechanism in 2002–2003; IEF Secretariat assumed coordination in January 2005; rebranded as the Joint Organisations Data Initiative with natural gas coverage (JODI-Gas); GECF joined as the eighth partner in April 2014; JODI-Gas World Database publicly released in May 2014
+secretariat:
+  location: Riyadh, Saudi Arabia
+  organization: International Energy Forum Secretariat (JODI coordinator since January 2005)
 partof:
 - IEF
-geographic_scope: global
-regions:
-- worldwide
 includes:
 - id: AE
   name: United Arab Emirates
@@ -394,17 +418,15 @@ includes:
   type: country
   status: participant
 membership_count: 114
-legal_status: initiative
-description: 'International collaboration established in April 2001 as the "Joint Oil Data Exercise" and rebranded as JODI
-  in 2005. Coordinated by the International Energy Forum (IEF), JODI aims to enhance the transparency and reliability of global
-  energy data, focusing on oil and natural gas statistics. The initiative involves eight partner organizations: APEC, Eurostat,
-  GECF, IEA, OLADE, OPEC, UNSD, and IEF. JODI-Oil includes data from 114 participating countries and economies, representing
-  over 90% of global oil supply and demand. JODI-Gas encompasses data from 88 countries and economies, covering around 90%
-  of global natural gas supply and demand. The primary objective is to provide a reliable, freely accessible, and comprehensive
-  database of energy statistics to mitigate data uncertainty, thereby promoting stable energy markets and informed decision-making.'
+description: Global collaborative initiative to improve the availability, reliability, and public dissemination of monthly
+  oil and natural gas statistics. Established in April 2001 as the Joint Oil Data Exercise by six organizations (APEC, Eurostat,
+  IEA, OLADE, OPEC, and UNSD) and coordinated by the International Energy Forum Secretariat since January 2005. Eight partner
+  organizations now support JODI-Oil and JODI-Gas databases covering more than 100 participating countries and economies,
+  representing roughly 90% of global oil and natural gas supply and demand.
 tags:
 - JODI
 - data
+- dialogue
 - energy
 - gas
 - initiative
@@ -427,12 +449,51 @@ other_names:
   name: Initiative conjointe des organisations sur les données
 - id: es
   name: Iniciativa Conjunta de Datos de las Organizaciones
+acronyms:
+- lang: en
+  value: JODI
+notes: Eight partner organizations are APEC, Eurostat, GECF, IEA, IEF, OLADE, OPEC, and UNSD. JODI-Oil World Database was
+  publicly released in 2005; JODI-Gas became a permanent initiative in October 2012 and its world database launched in May
+  2014. The `includes` list reflects JODI-Oil participating countries; participant counts for oil and gas may differ.
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.jodidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.jodidata.org/about-jodi/history.aspx
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/jodi
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.jodidata.org/about-jodi/history.aspx
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.jodidata.org/about-jodi/history.aspx
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/jodi
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/jodi
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.jodidata.org/about-jodi/history.aspx
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.jodidata.org/about-jodi/history.aspx
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/joint-organisations-data-initiative
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://www.jodidata.org/

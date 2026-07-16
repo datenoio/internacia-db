@@ -1,27 +1,56 @@
 id: CAROSAI
+name: Caribbean Organization of Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '1988'
+active_period:
+  start: '1988'
+geographic_scope: regional
+regions:
+- Caribbean
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - en
 links:
 - url: https://www.carosai.org/
   type: website
-name: Caribbean Organization of Supreme Audit Institutions
-founded: '1988'
-geographic_scope: regional
-regions:
-- Caribbean
+- url: https://carosai.org/about-us/
+  type: website
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
 acronyms:
 - lang: en
   value: CAROSAI
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in the Caribbean
 headquarters:
   city: Kingston
   country: JM
   coordinates:
     lat: 17.9712148
     lng: -76.7928128
+secretariat:
+  location: Kingston, Jamaica
+  organization: Auditor General's Department
+  head: Secretary-General
+membership_count: 23
+description: Regional association of supreme audit institutions in the Caribbean, established on 7 August 1988 in Port of Spain, Trinidad and Tobago. Promotes exchange of ideas and experience in government auditing, training and continuing education, technical assistance, and comprehensive auditing among member SAIs, and raises audit consciousness across the region. One of seven regional organisations of INTOSAI; the General Secretariat is hosted by the Auditor General's Department of Jamaica in Kingston.
+tags:
+- CAROSAI
+- audit
+- caribbean
+- intorg
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -115,25 +144,53 @@ includes:
   name: Sint Maarten
   type: country
   status: member
-membership_count: 23
-description: Regional association of supreme audit institutions in the Caribbean, promoting exchange of ideas, training, and
-  technical cooperation among SAIs. One of seven regional organisations of INTOSAI.
-tags:
-- CAROSAI
-- audit
-- caribbean
-- intorg
-- organisation
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governed by an Executive Council of six members elected every three years at the Plenary. The Regional Institutional Strengthening Committee (RISC) provides training and capacity-building support to member SAIs. As of 2025, following the XIII CAROSAI Congress in Nassau, the Chair is held by the Bahamas (Brenda Neely), the incoming Chair is Saint Lucia (from 2028), and the General Secretariat remains with the Auditor General's Department of Jamaica (Pamela Monroe Ellis, Secretary-General since 2016). Saint Maarten and Belize serve on the Executive Council; Trinidad and Tobago conducts CAROSAI's audit; and Suriname represents CAROSAI on the INTOSAI Governing Board.
+other_names:
+- id: en
+  name: Caribbean Organisation of Supreme Audit Institutions
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://carosai.org/about-us/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://carosai.org/about-us/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://carosai.org/about-us/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.carosai.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://intosaijournal.org/a-new-chapter-in-caribbean-public-audits-highlights-from-the-xiii-carosai-congress/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://www.carosai.org/

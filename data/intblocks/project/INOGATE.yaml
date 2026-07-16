@@ -1,26 +1,110 @@
 id: INOGATE
 blocktype:
 - project
+- energy
 - transport
-status: formal
+status: historical
 partof: EU
+founded: '1996'
+dissolved: '2016'
+active_period:
+  start: '1996'
+  end: '2016'
+geographic_scope: regional
+regions:
+- Eastern Europe
+- Caucasus
+- Central Asia
 languages:
 - en
 - ru
 links:
+- url: https://web.archive.org/web/20191118023706/http://www.inogate.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/INOGATE
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2459896
   type: wikidata
 name: INOGATE (INterstate Oil and GAs Transportation to Europe)
+legal_status: intergovernmental
+secretariat:
+  location: Kyiv, Ukraine
+  organization: INOGATE Technical Secretariat
+headquarters:
+  city: Kyiv
+  country: UA
+  coordinates:
+    lat: 50.4501
+    lng: 30.5234
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: partner
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: partner
+- id: BY
+  name: Belarus
+  type: country
+  status: partner
+- id: GE
+  name: Georgia
+  type: country
+  status: partner
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: partner
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: partner
+- id: MD
+  name: Moldova
+  type: country
+  status: partner
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: partner
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: partner
+- id: TR
+  name: Turkey
+  type: country
+  status: partner
+- id: UA
+  name: Ukraine
+  type: country
+  status: partner
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: partner
+- id: RU
+  name: Russian Federation
+  type: country
+  status: observer
+membership_count: 12
 wikidata_id: Q2459896
-description: International energy co-operation programme.
+description: EU-funded international energy co-operation programme between the European Union, the littoral states of the
+  Black and Caspian seas and their neighbouring countries, operational from 1996 to 2016. Initially focused on oil and gas
+  pipeline transportation from Eastern Europe and the Caucasus to the EU, it evolved after the 2004 Baku Initiative and
+  2006 Astana Declaration into a broader energy partnership covering energy security, market convergence with EU internal
+  energy market principles, sustainable energy development, and investment attraction. Its Technical Secretariat in Kyiv
+  was discontinued in April 2016.
 tags:
 - INOGATE
-- aviation
 - energy
 - europe
+- gas
+- historical
 - oil
+- pipelines
 - project
 - transport
 - transportation
@@ -38,9 +122,52 @@ other_names:
   name: INOGATE
 - id: es
   name: INOGATE
+notes: Partner countries were Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Kyrgyzstan, Moldova, Tajikistan, Turkey,
+  Turkmenistan, Ukraine and Uzbekistan; Turkey was a partner country but not a beneficiary, and the Russian Federation
+  held observer status only. Funded by the Tacis Regional Cooperation Programme until 2006 and thereafter by the European
+  Neighbourhood and Partnership Instrument (ENPI). The coordinating Technical Secretariat was based in Kyiv with regional
+  offices in Tbilisi and Tashkent. After the programme closed in 2016, EU regional energy cooperation with the 11 partner
+  countries continued through international bodies such as the International Energy Agency, the Energy Community
+  Secretariat and the Energy Charter.
+last_verified: '2026-07-14'
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://en.wikipedia.org/wiki/INOGATE
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://enlargement.ec.europa.eu/news/eu-boost-its-focus-energy-cooperation-partner-countries-eastern-neighbourhood-and-central-asia-2016-03-17_en
+  license: CC BY 4.0

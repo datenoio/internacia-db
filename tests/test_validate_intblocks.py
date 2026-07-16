@@ -1,6 +1,57 @@
 """Unit tests for validate_intblocks checks."""
 
+import builder
 import validate_intblocks as vi
+
+from internacia_builder.paths import project_root
+from internacia_builder.validate import completeness as vc
+
+# Fields declared in the JSON Schema but intentionally not exported to Arrow
+# (source-only metadata not needed by columnar consumers).
+SOURCE_ONLY_INTBLOCK_FIELDS = {
+    "abbrRU",
+    "listed",
+    "translations",
+    "active_period",
+    "founding_members",
+    "last_verified",
+    "notes",
+    "suborganizations",
+    "official_documents",
+    "recognition_status",
+    "social_media",
+    "secretariat",
+    "previous_names",
+}
+
+
+def test_intblock_filename_must_match_id():
+    records = [
+        ("data/intblocks/political/UfM.yaml", {"id": "UfM"}),
+        ("data/intblocks/political/UFM.yaml", {"id": "UfM"}),
+    ]
+    errors = vi.validate_filename_ids(records)
+    assert len(errors) == 1
+    assert "does not match id 'UfM'" in errors[0]
+
+
+def test_directory_alignment_requires_dir_in_blocktype():
+    records = [
+        ("data/intblocks/space/OK.yaml", {"id": "OK", "blocktype": ["agreement", "space"]}),
+        ("data/intblocks/space/BAD.yaml", {"id": "BAD", "blocktype": ["agreement"]}),
+    ]
+    errors = vi.validate_directory_alignment(records)
+    assert len(errors) == 1
+    assert "space" in errors[0]
+
+
+def test_intblocks_schema_export_parity():
+    """Every Arrow export field must be declared in the JSON Schema."""
+    schema = vi.load_json(vi.project_root() / "data" / "schemas" / "intblocks.schema.json")
+    declared = set(schema["properties"])
+    export_fields = set(builder.get_intblocks_schema().names)
+    missing = export_fields - declared
+    assert not missing, f"exported intblock fields not declared in JSON Schema: {sorted(missing)}"
 
 
 def test_check_duplicate_ids():
@@ -133,3 +184,35 @@ def test_completeness_thresholds():
     assert errors == []
     assert len(warnings) == 1
     assert report["fields"]["wikidata_id"]["null_count"] == 1
+
+
+def test_includes_not_null_when_membership_not_applicable():
+    record = {"id": "X", "membership_applicability": "not_applicable"}
+    assert vc.is_null_intblock_field(record, "includes") is False
+
+
+def test_membership_applicability_warns_when_includes_missing():
+    records = [("a.yaml", {"id": "X"})]
+    config = {"includes": {"membership_applicability": {"require_marker_when_empty": True, "mode": "warn"}}}
+    errors, warnings = vc.validate_membership_applicability(records, config)
+    assert errors == []
+    assert len(warnings) == 1
+    assert "membership_applicability" in warnings[0]
+
+
+def test_includes_status_rejects_unknown_status():
+    catalog = vc.load_includes_status_catalog(project_root() / "data" / "schemas")
+    records = [("a.yaml", {"id": "X", "includes": [{"id": "US", "name": "United States", "type": "country", "status": "bogus"}]})]
+    config = {"includes": {"status": {"mode": "error"}}}
+    errors, warnings = vc.validate_includes_status(records, catalog, config)
+    assert len(errors) == 1
+    assert "bogus" in errors[0]
+
+
+def test_includes_status_accepts_catalog_status():
+    catalog = vc.load_includes_status_catalog(project_root() / "data" / "schemas")
+    records = [("a.yaml", {"id": "X", "includes": [{"id": "US", "name": "United States", "type": "country", "status": "member"}]})]
+    config = {"includes": {"status": {"mode": "error"}}}
+    errors, warnings = vc.validate_includes_status(records, catalog, config)
+    assert errors == []
+    assert warnings == []

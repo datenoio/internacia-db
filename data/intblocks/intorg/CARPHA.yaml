@@ -1,15 +1,65 @@
 id: CARPHA
+name: Caribbean Public Health Agency
 blocktype:
 - intorg
+- health
 status: formal
+founded: '2013-01-02'
+active_period:
+  start: '2013-01-02'
+geographic_scope: regional
+regions:
+- Caribbean
+- Americas
+partof:
+  id: CARICOM
+  name: Caribbean Community
 languages:
 - en
+- es
+- fr
+- nl
 links:
 - url: https://www.carpha.org/
   type: website
+- url: https://www.carpha.org/Who-We-Are/About
+  type: website
+- url: https://caricom.org/institutions/caribbean-public-health-agency-carpha/
+  type: website
+- url: https://en.wikipedia.org/wiki/Caribbean_Public_Health_Agency
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5008830
   type: wikidata
-name: Caribbean Public Health Agency
+acronyms:
+- lang: en
+  value: CARPHA
+legal_status: intergovernmental
+recognition_status: Regional public health agency established by CARICOM Heads of Government in 2011 and operational since 2 January 2013; successor to five Caribbean health institutions (CEHI, CAREC, CFNI, CHRC, and CRDTL)
+headquarters:
+  city: Port of Spain
+  country: TT
+  coordinates:
+    lat: 10.67389
+    lng: -61.52444
+membership_count: 24
+description: Regional intergovernmental public health agency serving Caribbean member states, established by CARICOM Heads of Government and operational since 2013. Merged five predecessor institutions and is headquartered in Port of Spain, Trinidad and Tobago with campuses in Jamaica and Saint Lucia. Coordinates regional disease surveillance, laboratory services, environmental health, emergency response, and medicines quality control for communicable and non-communicable diseases.
+tags:
+- CARPHA
+- caribbean
+- caricom
+- health
+- intorg
+- medical
+- port-of-spain
+- public
+- public-health
+- regional
+- regional_cooperation
+topics:
+- key: health
+  name: Health
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AI
   name: Anguilla
@@ -107,18 +157,6 @@ includes:
   name: Turks and Caicos Islands
   type: country
   status: member
-membership_count: 24
-description: The Caribbean Public Health Agency is an international organization that is used to promote regional cooperation in the health sector.
-tags:
-- CARPHA
-- caribbean
-- health
-- intorg
-- medical
-- public
-topics:
-- key: health
-  name: Health
 wikidata_id: Q5008830
 other_names:
 - id: en
@@ -126,16 +164,33 @@ other_names:
 - id: es
   name: Agencia de Salud Pública del Caribe
 provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: en
-  value: CARPHA
+- field: description
+  source: CARPHA official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.carpha.org/Who-We-Are/About
+- field: founded
+  source: CARPHA official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.carpha.org/Orientation-for-Government-Officials
+- field: headquarters
+  source: CARPHA official sources; Wikidata coordinates
+  retrieved_at: '2026-07-12'
+  url: https://www.carpha.org/Who-We-Are/Member-States
+- field: legal_status
+  source: CARICOM
+  retrieved_at: '2026-07-12'
+  url: https://caricom.org/institutions/caribbean-public-health-agency-carpha/
+- field: recognition_status
+  source: CARPHA official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.carpha.org/Orientation-for-Government-Officials
+- field: partof
+  source: CARICOM
+  retrieved_at: '2026-07-12'
+  url: https://caricom.org/institutions/caribbean-public-health-agency-carpha/
+last_verified: '2026-07-12'

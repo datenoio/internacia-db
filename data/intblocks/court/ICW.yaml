@@ -9,7 +9,11 @@ languages:
 links:
 - url: https://www.icc-cpi.int/
   type: website
+- url: https://www.icc-cpi.int/about/the-court
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Criminal_Court
+  type: wikipedia
+- url: https://en.wikipedia.org/wiki/States_parties_to_the_Rome_Statute_of_the_International_Criminal_Court
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q47488
   type: wikidata
@@ -640,7 +644,9 @@ includes:
   type: country
   status: member
   joined: '2002-11-13'
-founded: '2002'
+founded: '2002-07-01'
+active_period:
+  start: '2002-07-01'
 headquarters:
   city: The Hague
   country: NL
@@ -648,6 +654,10 @@ headquarters:
     lat: 52.08
     lng: 4.31
 geographic_scope: global
+official_documents:
+- url: https://www.icc-cpi.int/resource-library/Documents/RS-Eng.pdf
+  type: document
+  name: Rome Statute of the International Criminal Court
 acronyms:
 - lang: en
   value: CPI
@@ -667,24 +677,42 @@ acronyms:
   value: МУС
 membership_count: 125
 wikidata_id: Q47488
-description: Intergovernmental organization and international tribunal.
+legal_status: international court
+recognition_status: Established by the Rome Statute of the International Criminal Court (adopted 17 July 1998, entered into
+  force 1 July 2002); jurisdiction over genocide, crimes against humanity, war crimes, and (from 2018) the crime of aggression
+  for states parties and situations referred by the UN Security Council
+secretariat:
+  location: The Hague, Netherlands
+  head: Registrar
+  organization: International Criminal Court
+last_verified: '2026-07-12'
+description: Permanent international criminal court seated in The Hague, Netherlands, established on 1 July 2002 under the
+  Rome Statute. The ICC is the world's first permanent tribunal with jurisdiction to prosecute individuals for genocide, crimes
+  against humanity, war crimes, and the crime of aggression. It complements national courts and may exercise jurisdiction only
+  when national courts are unwilling or unable to act. As of 2025, 125 states are parties to the Rome Statute.
 tags:
 - CPI
 - ICC
 - ICW
 - court
 - criminal
+- criminal_justice
+- hague
 - human rights
 - human_rights
 - international
 - law
 - legal
+- rome_statute
 - rights
 topics:
 - key: human_rights
   name: Human Rights
 - key: law
   name: Law
+notes: Rome Statute adopted on 17 July 1998; entered into force on 1 July 2002 after 60 ratifications. Record id `ICW` disambiguates
+  from `ICC`, which denotes the International Cricket Council. Burundi (withdrew 2017) and the Philippines (withdrew 2019)
+  are former states parties. Prosecutor Karim Khan (since 2021); President Tomoko Akane (since 2024).
 other_names:
 - id: ar
   name: المحكمة الجنائية الدولية
@@ -703,21 +731,41 @@ other_names:
 - id: zh
   name: 国际刑事法院
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q47488
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q47488
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q47488
   license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/about/the-court
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/about/the-court
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/resource-library/Documents/RS-Eng.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/about/the-court
+- field: official_documents
+  source: ICC
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/resource-library/Documents/RS-Eng.pdf
 - field: includes
   source: Wikipedia / ICC Assembly of States Parties
   retrieved_at: '2026-06-14'
@@ -731,3 +779,12 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.icc-cpi.int/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icc-cpi.int/about/the-court
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Criminal_Court
+  license: CC BY-SA 4.0

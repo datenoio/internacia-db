@@ -5,11 +5,33 @@ status: formal
 languages:
 - en
 links:
-- url: http://www.caribbeanpostalunion.org/
+- url: https://cpu.post/
   type: website
+- url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+  type: website
+- url: https://en.wikipedia.org/wiki/Caribbean_Postal_Union
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q48743201
   type: wikidata
 name: Caribbean Postal Union
+founded: '1997-09'
+geographic_scope: regional
+regions:
+- Caribbean
+legal_status: restricted union of postal operators
+recognition_status: Restricted union of the Universal Postal Union
+acronyms:
+- lang: en
+  value: CPU
+headquarters:
+  city: Castries
+  country: LC
+  coordinates:
+    lat: 13.9094
+    lng: -60.9789
+secretariat:
+  location: Castries, Saint Lucia
+  organization: Caribbean Postal Union
 includes:
 - id: AI
   name: Anguilla
@@ -104,7 +126,7 @@ includes:
   type: country
   status: member
 membership_count: 23
-description: A regional postal union bringing together the postal administrations of Caribbean states and territories to coordinate, harmonize, and improve postal services across the region.
+description: A restricted union of the Universal Postal Union linking the postal administrations of Caribbean states and territories. Created in 1997 with European Union and CARIFORUM support to coordinate, harmonize, and improve postal services across the region.
 tags:
 - CPU
 - caribbean
@@ -129,5 +151,53 @@ other_names:
   name: 加勒比邮政联盟
 - id: en
   name: Caribbean Postal Union
+- id: fr
+  name: Union postale des Caraïbes
+- id: es
+  name: Unión Postal del Caribe
 - id: ru
   name: Карибский почтовый союз
+notes: Fifteen Caribbean postal administrations signed the CPU Convention at the September 1997 meeting in Saint Lucia, bringing the union into force. Headquarters were established in Castries in 2000.
+last_verified: '2026-07-12'
+provenance:
+- field: founded
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: geographic_scope
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: recognition_status
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: description
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: secretariat
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Postal_Union
+- field: links
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/CPU
+- field: notes
+  source: Government of Saint Lucia
+  retrieved_at: '2026-07-12'
+  url: https://archive.stlucia.gov.lc/pr2000/saint_lucia_to_become_h_q__for_caribbean_postal_union.htm
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q48743201
+  license: CC0
+- field: headquarters.coordinates
+  source: Geodatos
+  retrieved_at: '2026-07-12'
+  url: https://www.geodatos.net/en/coordinates/saint-lucia/castries

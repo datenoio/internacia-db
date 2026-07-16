@@ -1,9 +1,21 @@
 id: NTU
+name: Dutch Language Union
 blocktype:
 - cultural
 status: formal
+founded: '1980-09-09'
+active_period:
+  start: '1980-09-09'
+geographic_scope: regional
+regions:
+- Europe
+- South America
+- Caribbean
+- Africa
+- Asia
 languages:
 - nl
+- en
 links:
 - url: https://taalunie.org/
   type: website
@@ -11,7 +23,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q152299
   type: wikidata
-name: Dutch Language Union
+legal_status: intergovernmental
+recognition_status: Treaty-based intergovernmental institution governing Dutch language standardisation, established by the Netherlands and Belgium on 9 September 1980; Suriname joined as associate member in 2005; the treaty extends to Caribbean Netherlands since 2013; Aruba, Curaçao, and Sint Maarten cooperate under framework agreements; Indonesia and South Africa participate as special partners
+headquarters:
+  city: The Hague
+  country: NL
+  coordinates:
+    lat: 52.08
+    lng: 4.31
+secretariat:
+  location: The Hague and Brussels
+  head: Secretary-General
+  organization: Secretariat-General of the Dutch Language Union
 includes:
 - id: BE
   name: Belgium
@@ -23,6 +46,10 @@ includes:
   status: member
 - id: SR
   name: Suriname
+  type: country
+  status: associated
+- id: BQ
+  name: Caribbean Netherlands
   type: country
   status: associated
 - id: AW
@@ -45,15 +72,18 @@ includes:
   name: Indonesia
   type: country
   status: observer
-founded: '1980'
-headquarters:
-  city: The Hague
-  coordinates:
-    lat: 52.08
-    lng: 4.31
+acronyms:
+- lang: en
+  value: NTU
+- lang: nl
+  value: NTU
+- lang: zh
+  value: 荷語聯盟
 membership_count: 2
 wikidata_id: Q152299
-description: Dutch language regulator.
+description: Intergovernmental treaty organization for Dutch language policy, standardisation, and international education. Founded on 9 September 1980 by the Netherlands and Belgium (Flanders), it coordinates spelling reforms, publishes the Woordenlijst Nederlandse taal (Groene boekje), and supports Dutch teaching worldwide. Suriname became an associate member in 2005; the treaty extends to Caribbean Netherlands and framework agreements cover Aruba, Curaçao, and Sint Maarten.
+notes: Governed by a Committee of Ministers (Dutch and Flemish education and culture ministers), an Interparliamentary Commission, a Council for Dutch Language and Literature, and a Secretariat-General with offices in The Hague and Brussels. Binational institutes include the Instituut voor de Nederlandse Taal in Leiden and the Royal Academy of Dutch Language and Literature in Belgium. Indonesia and South Africa participate as special partners. Administers the Prijs der Nederlandse Letteren and Toneelschrijfprijs.
+last_verified: '2026-07-12'
 tags:
 - NTU
 - cooperation
@@ -61,9 +91,13 @@ tags:
 - culture
 - dutch
 - education
+- intergovernmental
 - language
+- linguistic
+- nederlands
 - regional
 - regional_cooperation
+- taalunie
 - union
 - university
 topics:
@@ -76,12 +110,16 @@ topics:
 other_names:
 - id: ar
   name: اتحاد اللغة الهولندية
+- id: de
+  name: Niederländische Sprachunion
 - id: en
   name: Dutch Language Union
 - id: es
   name: Unión de la Lengua Neerlandesa
 - id: fr
   name: Union de la langue néerlandaise
+- id: nl
+  name: Nederlandse Taalunie
 - id: pt
   name: União da língua Neerlandesa
 - id: ru
@@ -89,25 +127,65 @@ other_names:
 - id: zh
   name: 荷蘭語聯盟
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q152299
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://taalunie.org/over-de-taalunie
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q152299
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q152299
   license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Dutch_Language_Union
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Dutch_Language_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q152299
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q152299
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://taalunie.org/over-de-taalunie
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://taalunie.org/
-acronyms:
-- lang: zh
-  value: 荷語聯盟
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Dutch_Language_Union
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Dutch_Language_Union
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Dutch_Language_Union
+  license: CC BY-SA 4.0

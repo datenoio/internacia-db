@@ -5,6 +5,8 @@ blocktype:
 - intorg
 status: formal
 founded: '1969-01-17'
+active_period:
+  start: '1969-01-17'
 geographic_scope: regional
 regions:
 - Africa
@@ -16,17 +18,26 @@ languages:
 links:
 - url: https://www.afcac.org/
   type: website
+- url: https://www.afcac.org/overview_executing_agency/
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q88402135
+  type: wikidata
 headquarters:
   city: Dakar
   country: SN
+  coordinates:
+    lat: 14.74889
+    lng: -17.48917
 legal_status: intergovernmental
+recognition_status: Specialized agency of the African Union for civil aviation; executing agency of the Yamoussoukro Decision (empowered 2007) and the Single African Air Transport Market (SAATM)
 partof: AFUNION
+secretariat:
+  location: Dakar, Senegal
+  head: Secretary General
 membership_count: 54
-description: Specialized agency of the African Union established to coordinate civil aviation matters across the continent.
-  AFCAC promotes the development of civil aviation in Africa, ensures safety and security standards, and facilitates collaboration
-  among member states to address common challenges in the aviation sector.
+description: African Union specialized agency for civil aviation across the continent, headquartered in Dakar. Established on 17 January 1969 at an ICAO and OAU conference in Addis Ababa, AFCAC coordinates safety, security, air transport, and regulatory harmonization among member states. Empowered in 2007 as executing agency of the Yamoussoukro Decision and SAATM, and works with ICAO on SARPs implementation through initiatives such as the AFI-CIS safety oversight scheme.
 tags:
 - AFCAC
 - aviation
@@ -35,9 +46,16 @@ tags:
 - intorg
 - africa
 - regional
+- african_union
+- saatm
+- yamoussoukro
 topics:
 - key: aviation
   name: Aviation
+- key: safety
+  name: Safety
+- key: transport
+  name: Transport
 - key: regional_cooperation
   name: Regional Cooperation
 includes:
@@ -262,6 +280,8 @@ acronyms:
   value: AFCAC
 - lang: fr
   value: CAFAC
+- lang: pt
+  value: CAFAC
 other_names:
 - id: ar
   name: اللجنة الأفريقية للطيران المدني
@@ -269,29 +289,69 @@ other_names:
   name: African Civil Aviation Commission
 - id: fr
   name: Commission africaine de l'aviation civile
+- id: pt
+  name: Comissão Africana de Aviação Civil
 - id: zh
   name: 非洲民航委員會
 wikidata_id: Q88402135
+notes: Constitution provisionally effective until 20 states ratified on 12 January 1972; revised constitutions adopted in 2001 and 2009, with the 2009 constitution taking effect in April 2021. Governed by a Plenary (member states, meets every three years), an elected Bureau (President and five Vice Presidents by AU region), and a Secretariat headed by the Secretary General. Membership is open to AU or UN Economic Commission for Africa member states; all AU members except Western Sahara are AFCAC members. Empowered as executing agency of the Yamoussoukro Decision by the AU Assembly in 2007.
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q88402135
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q88402135
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afcac.org/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.afcac.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afcac.org/overview_executing_agency/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.afcac.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.afcac.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afcac.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afcac.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Civil_Aviation_Commission

@@ -1,8 +1,19 @@
 id: OLACEFS
+name: Organization of Latin American and Caribbean Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '1963'
+active_period:
+  start: '1963'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - es
 - en
@@ -10,16 +21,14 @@ languages:
 links:
 - url: https://www.olacefs.com/
   type: website
+- url: https://olacefs.com/en/members/
+  type: website
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
 - url: https://en.wikipedia.org/wiki/Organization_of_Latin_American_and_Caribbean_Supreme_Audit_Institutions
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q18693201
   type: wikidata
-name: Organization of Latin American and Caribbean Supreme Audit Institutions
-founded: '1963'
-geographic_scope: regional
-regions:
-- Latin America
-- Caribbean
 acronyms:
 - lang: en
   value: OLACEFS
@@ -27,6 +36,34 @@ acronyms:
   value: OLACEFS
 - lang: pt
   value: OLACEFS
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in Latin America and the Caribbean
+headquarters:
+  city: Santiago
+  country: CL
+  coordinates:
+    lat: -33.4428
+    lng: -70.6547
+secretariat:
+  location: Santiago, Chile
+  organization: Office of the Comptroller General of the Republic of Chile
+  head: Executive Secretary
+membership_count: 22
+description: Regional association of supreme audit institutions in Latin America and the Caribbean, tracing its origins to the First Congress of Latin American Supreme Audit Institutions (CLADEFS) held in Caracas, Venezuela in 1963 and the subsequent founding of the Latin American Institute of Auditing Sciences (ILACIF) in 1965. Renamed the Organization of Latin American and Caribbean Supreme Audit Institutions (OLACEFS) in 1990. Promotes scientific research, training, specialization, and technical advice, assistance and coordination among member SAIs. One of seven regional organisations of INTOSAI; the Executive Secretariat is hosted by the Office of the Comptroller General of the Republic of Chile in Santiago.
+tags:
+- OLACEFS
+- audit
+- caribbean
+- intorg
+- latin
+- latin_america
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AR
   name: Argentina
@@ -128,21 +165,7 @@ includes:
   name: Portugal
   type: country
   status: associate_member
-membership_count: 22
-wikidata_id: Q18693201
-description: Regional association of supreme audit institutions in Latin America and the Caribbean, promoting research, training,
-  and technical cooperation among SAIs. One of seven regional organisations of INTOSAI.
-tags:
-- OLACEFS
-- audit
-- caribbean
-- intorg
-- latin
-- organization
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governed by a General Assembly, Board of Directors, Presidency, and Executive Secretariat. Originated as the Latin American Institute of Auditing Sciences (ILACIF) in 1965 and was renamed OLACEFS in 1990. Operates standing committees on capacity building and legal advisory matters, plus technical commissions on good governance, environment, performance indicators, ICT, and citizen participation. As of 2026, the OLACEFS presidency is held by Brazil (Tribunal de Contas da União) and the Executive Secretariat is hosted by the Office of the Comptroller General of the Republic of Chile in Santiago; under the OLACEFS Charter, headquarters follows the Executive Secretary's SAI.
 other_names:
 - id: en
   name: Organization of Latin American and Caribbean Supreme Audit Institutions
@@ -150,8 +173,50 @@ other_names:
   name: Organización Latinoamericana y del Caribe de Entidades Fiscalizadoras Superiores
 - id: pt
   name: Organização Latino-Americana e do Caribe de Entidades Fiscalizadoras Superiores
+wikidata_id: Q18693201
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.olacefs.com/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.olacefs.com/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://olacefs.com/en/members/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://www.olacefs.com/

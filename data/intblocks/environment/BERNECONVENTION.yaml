@@ -3,6 +3,7 @@ blocktype:
 - environment
 - agreement
 status: formal
+partof: COE
 languages:
 - en
 - es
@@ -13,20 +14,42 @@ languages:
 links:
 - url: https://www.coe.int/en/web/bern-convention
   type: website
+- url: https://www.coe.int/en/web/conventions/full-list/-/conventions/treaty/104
+  type: website
 - url: https://en.wikipedia.org/wiki/Berne_Convention_on_the_Conservation_of_European_Wildlife_and_Natural_Habitats
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q375083
+  type: wikidata
 name: Berne Convention on the Conservation of European Wildlife and Natural Habitats
 founded: '1979'
-description: International convention focused on European wildlife conservation and
-  environmental protection established through an international agreement.
+active_period:
+  start: '1982-06-01'
+geographic_scope: regional
+regions:
+- Europe
+- Africa
+headquarters:
+  city: Strasbourg
+  country: FR
+  coordinates:
+    lat: 48.595
+    lng: 7.77194444
+legal_status: treaty
+recognition_status: Council of Europe treaty (ETS No. 104) on nature conservation; opened for signature in Bern on 19 September 1979 and entered into force on 1 June 1982; first international treaty to protect both species and habitats across Europe and selected African states
+secretariat:
+  location: Strasbourg, France
+  organization: Bern Convention Secretariat (Council of Europe)
+description: Council of Europe binding treaty for conserving European wild flora and fauna and their natural habitats, promoting cross-border cooperation on nature conservation.
 tags:
 - BERNECONVENTION
 - agreement
 - berne
 - conservation
 - convention
+- council_of_europe
 - environment
 - european
+- habitats
 - wildlife
 topics:
 - key: conservation
@@ -38,19 +61,24 @@ topics:
 other_names:
 - id: ar
   name: اتفاقية برن
-- id: zh
-  name: 伯尔尼公约
+- id: de
+  name: Übereinkommen über die Erhaltung der europäischen wildlebenden Pflanzen und Tiere
+    und ihrer natürlichen Lebensräume
 - id: en
   name: Berne Convention on the Conservation of European Wildlife and Natural Habitats
-- id: fr
-  name: Convention de Berne relative à la conservation de la vie sauvage et du milieu
-    naturel de l'Europe
-- id: ru
-  name: Бернская конвенция об охране дикой фауны и флоры и природных сред обитания
-    в Европе
 - id: es
   name: Convenio de Berna relativo a la Conservación de la Vida Silvestre y del Medio
     Natural de Europa
+- id: fr
+  name: Convention de Berne relative à la conservation de la vie sauvage et du milieu
+    naturel de l'Europe
+- id: pt
+  name: Convenção sobre a Vida Selvagem e os Habitats Naturais na Europa
+- id: ru
+  name: Бернская конвенция об охране дикой фауны и флоры и природных сред обитания
+    в Европе
+- id: zh
+  name: 伯尔尼公约
 includes:
 - id: AL
   name: Albania
@@ -259,9 +287,43 @@ notes: The Berne Convention entered into force in 1982. As of 2025, it has 50 me
   flora and fauna and their natural habitats, and to promote European cooperation
   in this field.
 wikidata_id: Q375083
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/bern-convention
+- field: active_period
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/conventions/full-list/-/conventions/treaty/104
+- field: geographic_scope
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/bern-convention
+- field: legal_status
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/conventions/full-list/-/conventions/treaty/104
+- field: recognition_status
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/bern-convention
+- field: secretariat
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/bern-convention
+- field: headquarters
+  source: Council of Europe
+  retrieved_at: '2026-07-13'
+  url: https://www.coe.int/en/web/bern-convention
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q375083
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q375083
   license: CC0

@@ -1,17 +1,39 @@
 id: IRENA
+name: International Renewable Energy Agency
 blocktype:
 - energy
 status: formal
+founded: '2009-01-26'
+active_period:
+  start: '2010-07-08'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: http://irena.org/
+- url: https://www.irena.org/
+  type: website
+- url: https://www.irena.org/about
+  type: website
+- url: https://www.irena.org/membership
   type: website
 - url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q392739
   type: wikidata
-name: International Renewable Energy Agency
+headquarters:
+  city: Abu Dhabi
+  country: AE
+  coordinates:
+    lat: 24.4289
+    lng: 54.6147
+legal_status: intergovernmental
+recognition_status: Treaty-based intergovernmental organization established at the Founding Conference in Bonn on 26 January 2009; statute entered into force on 8 July 2010 after ratification by 25 member states; official United Nations observer; first international organization focused exclusively on renewable energy
+secretariat:
+  location: Masdar City, Abu Dhabi, United Arab Emirates
+  head: Director-General
+  organization: IRENA Secretariat
 includes:
 - id: AF
   name: Afghanistan
@@ -697,35 +719,29 @@ includes:
   name: European Union
   type: organization
   status: member
-founded: '2009'
-headquarters:
-  city: United Arab Emirates
-  country: AE
-  coordinates:
-    lat: 24.4
-    lng: 54.3
-geographic_scope: regional
-regions:
-- worldwide
 membership_count: 171
-wikidata_id: Q392739
-description: International organization.
+description: Intergovernmental organization mandated to facilitate cooperation, advance knowledge, and promote the adoption
+  and sustainable use of renewable energy worldwide. Established in 2009 and operational since July 2010, IRENA is the first
+  international organization focused exclusively on renewable energy, serving both industrialized and developing countries.
+  It provides policy advice, capacity building, technology transfer, and authoritative data on renewable energy deployment,
+  and holds official United Nations observer status.
 tags:
 - IRENA
-- economy
 - energy
 - environment
 - international
-- nature
-- oil
-- renewable
+- intergovernmental
+- renewable_energy
+- climate
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
 - key: environment
   name: Environment
+- key: economy
+  name: Economy
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: ar
   name: الوكالة الدولية للطاقة المتجددة
@@ -743,30 +759,12 @@ other_names:
   name: Международное агентство по возобновляемым источникам энергии
 - id: zh
   name: 國際可再生能源機構
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://irena.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://irena.org/
+notes: Founding Conference held in Bonn on 26 January 2009 with 75 signatory states; headquarters selected at the Preparatory
+  Commission meeting in Sharm el-Sheikh in June 2009. The Innovation and Technology Centre is in Bonn, Germany, and a liaison
+  office for United Nations and international institutions is in Vienna, Austria. The Assembly is the supreme governing body;
+  a 21-member Council oversees budget and programme matters. Francesco La Camera (Italy) has served as Director-General since
+  April 2019. The UN General Assembly declared 26 January as International Day of Clean Energy in 2023, marking IRENA's
+  founding anniversary.
 acronyms:
 - lang: en
   value: IRENA
@@ -784,3 +782,62 @@ acronyms:
   value: IRENA
 - lang: pt
   value: IRENA
+wikidata_id: Q392739
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.irena.org/about
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.irena.org/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.irena.org/about
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.irena.org/institutionalstructure
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Renewable_Energy_Agency
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q392739
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q392739
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q392739
+  license: CC0

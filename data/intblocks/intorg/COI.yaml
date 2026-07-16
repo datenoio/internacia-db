@@ -1,58 +1,136 @@
 id: COI
+name: Indian Ocean Commission
 blocktype:
 - intorg
 - ocean
 status: formal
+founded: '1982'
+active_period:
+  start: '1982'
+geographic_scope: regional
+regions:
+- Africa
+- Indian Ocean
 languages:
 - fr
 links:
-- url: http://www.coi-ioc.org/
+- url: https://www.commissionoceanindien.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1115631
   type: wikidata
-name: Indian Ocean Commission
+acronyms:
+- lang: en
+  value: COI
+- lang: fr
+  value: COI
+- lang: zh
+  value: 印度洋会议
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization linking five African Indian Ocean nations, institutionalized by the Victoria Agreement (1984) and revised in March 2020; General Secretariat established in Mauritius in 1989
+headquarters:
+  city: Ebene
+  country: MU
+  coordinates:
+    lat: -20.2441
+    lng: 57.4918
+secretariat:
+  location: Ebene, Mauritius
+  head: Secretary-General
+membership_count: 5
+founding_members:
+- MG
+- MU
+- SC
+description: Intergovernmental organization created in 1982 in Port Louis, Mauritius, to promote regional cooperation among Comoros, Madagascar, Mauritius, Réunion (France), and Seychelles. Institutionalized by the Victoria Agreement (1984) and revised in 2020. Coordinates projects on maritime security, environmental management, fisheries, climate change adaptation, food security, public health, and regional connectivity. General Secretariat based in Ebène, Mauritius.
+tags:
+- COI
+- africa
+- commission
+- environment
+- fisheries
+- indian_ocean
+- intorg
+- maritime
+- ocean
+- regional
+- regional_cooperation
+topics:
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: security
+  name: Security
+- key: climate_change
+  name: Climate Change
+- key: health
+  name: Health
 includes:
 - id: KM
   name: Comoros
   type: country
   status: member
+  joined: '1986'
 - id: MG
   name: Madagascar
   type: country
   status: member
+  joined: '1982'
 - id: MU
   name: Mauritius
   type: country
   status: member
+  joined: '1982'
 - id: SC
   name: Seychelles
   type: country
   status: member
+  joined: '1982'
 - id: RE
   name: Réunion
   type: country
   status: member
-founded: '1982'
-acronyms:
-- lang: en
-  value: COI
-- lang: zh
-  value: 印度洋会议
-membership_count: 5
+  joined: '1986'
+- id: CN
+  name: China
+  type: country
+  status: observer
+  joined: '2016'
+- id: OIF
+  name: Organisation internationale de la Francophonie
+  type: organization
+  status: observer
+  joined: '2017'
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+  joined: '2017'
+- id: IN
+  name: India
+  type: country
+  status: observer
+  joined: '2020'
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+  joined: '2020'
+- id: UN
+  name: United Nations
+  type: organization
+  status: observer
+  joined: '2020'
+- id: KR
+  name: Republic of Korea
+  type: country
+  status: observer
+  joined: '2025-04-17'
 wikidata_id: Q1115631
-description: The Indian Ocean Commission is an international organization that is used to promote regional cooperation in
-  the Indian Ocean region.
-tags:
-- COI
-- commission
-- indian
-- intorg
-- ocean
-topics:
-- key: economy
-  name: Economy
 other_names:
 - id: ar
   name: لجنة المحيط الهندي
@@ -70,14 +148,61 @@ other_names:
   name: Комиссия Индийского океана
 - id: zh
   name: 印度洋委员会
+notes: Uses ID `COI` rather than `IOC` to avoid collision with the International Olympic Committee; the common English abbreviation is IOC while the French acronym is COI (Commission de l'Océan Indien). Réunion participates as a French overseas department. The Sovereign Order of Malta is also an observer (2017) but has no separate intblock record. Current Secretary-General is Edgard Razafindravahy (Madagascar, since July 2024). Chaired the Contact Group on Piracy off the Coast of Somalia (CGPCS) secretariat in 2018–2020.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1115631
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1115631
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1115631
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Indian_Ocean_Commission

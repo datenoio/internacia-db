@@ -81,3 +81,36 @@ def test_upsert_provenance_replaces_same_field():
     entries = [p for p in record["provenance"] if p["field"] == "wikidata_id"]
     assert len(entries) == 1
     assert entries[0]["source"] == "Wikidata"
+
+
+def test_enrich_headquarters_fills_city_and_coordinates():
+    record = {"wikidata_id": "Q1"}
+    entity = {"claims": {"P159": [{"mainsnak": {"datavalue": {"value": {"id": "Q90"}}}}]}}
+    cities = {
+        "Q90": {
+            "labels": {"en": {"value": "Paris"}},
+            "claims": {"P625": [{"mainsnak": {"datavalue": {"value": {"latitude": 48.8566, "longitude": 2.3522}}}}]},
+        }
+    }
+    assert ei.enrich_headquarters(record, entity, cities) is True
+    assert record["headquarters"]["city"] == "Paris"
+    assert record["headquarters"]["coordinates"]["lat"] == 48.8566
+    assert any(p["field"] == "headquarters" for p in record["provenance"])
+
+
+def test_enrich_headquarters_preserves_existing():
+    record = {"headquarters": {"city": "Geneva"}}
+    entity = {"claims": {"P159": [{"mainsnak": {"datavalue": {"value": {"id": "Q90"}}}}]}}
+    assert ei.enrich_headquarters(record, entity, {}) is False
+
+
+def test_enrich_founded_preserves_existing():
+    record = {"founded": "1949"}
+    entity = {"claims": {"P571": [{"mainsnak": {"datavalue": {"value": {"time": "+1950-01-01T00:00:00Z"}}}}]}}
+    assert ei.enrich_founded(record, entity) is False
+
+
+def test_stamp_last_verified_sets_iso_date():
+    record = {}
+    ei.stamp_last_verified(record)
+    assert len(record["last_verified"]) == 10 and record["last_verified"][4] == "-"

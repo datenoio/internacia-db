@@ -1,8 +1,17 @@
 id: ECCBCB
+name: Eastern Caribbean Central Bank
 blocktype:
 - bank
 status: formal
+founded: '1983-07-05'
+active_period:
+  start: '1983-10'
 partof: OECS
+geographic_scope: regional
+regions:
+- Caribbean
+languages:
+- en
 links:
 - url: https://www.eccb-centralbank.org/
   type: website
@@ -10,7 +19,40 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1210260
   type: wikidata
-name: Eastern Caribbean Central Bank
+headquarters:
+  city: Basseterre
+  country: KN
+  coordinates:
+    lat: 17.298333333333
+    lng: -62.734166666667
+legal_status: intergovernmental
+recognition_status: Common central bank of the Eastern Caribbean Currency Union, established under the Eastern Caribbean Central Bank Agreement signed at Port of Spain on 5 July 1983; exclusive issuer of the Eastern Caribbean dollar (XCD)
+secretariat:
+  location: Basseterre, St. Kitts and Nevis
+  head: Governor
+  organization: Eastern Caribbean Central Bank
+membership_count: 8
+description: Supranational central bank serving the eight member states and territories of the Eastern Caribbean Currency Union within the Organisation of Eastern Caribbean States. Established under the Eastern Caribbean Central Bank Agreement signed at Port of Spain on 5 July 1983 as successor to the Eastern Caribbean Currency Authority, ECCB issues the Eastern Caribbean dollar (XCD), conducts monetary policy, and supervises the banking system across its member jurisdictions. Headquartered in Basseterre, St. Kitts and Nevis.
+tags:
+- ECCB
+- ECCBCB
+- OECS
+- XCD
+- bank
+- caribbean
+- central
+- eastern
+- economy
+- finance
+- monetary
+- regional
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AI
   name: Anguilla
@@ -44,33 +86,27 @@ includes:
   name: St. Vincent and the Grenadines
   type: country
   status: member
-membership_count: 8
-founded: '1983'
-headquarters:
-  city: Basseterre
-  country: KN
-  coordinates:
-    lat: 17.298333333333
-    lng: -62.734166666667
+founding_members:
+- AI
+- AG
+- DM
+- GD
+- MS
+- KN
+- LC
+- VC
+acronyms:
+- lang: en
+  value: ECCB
+- lang: zh
+  value: 東加勒比海中央銀行
+- lang: zh
+  value: 东加勒比中央银行
+- lang: ru
+  value: ECCB
 wikidata_id: Q1210260
-description: International development bank focused on development providing financial services.
-tags:
-- ECCBCB
-- aid
-- bank
-- caribbean
-- central
-- development
-- eastern
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Succeeded the Eastern Caribbean Currency Authority (1965–1983), which had replaced the British Caribbean Currency Board. ECCB was the first supranational banking supervisor, ahead of BEAC, BCEAO, and the ECB. The EC dollar has been pegged to the US dollar at EC$2.70 since 7 July 1976. British Virgin Islands, Guadeloupe, and Martinique are OECS members but use other currencies and are not part of the currency union.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك المركزي لشرق الكاريبي
@@ -89,6 +125,49 @@ other_names:
 - id: zh
   name: 東加勒比中央銀行
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccb-centralbank.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.eccb-centralbank.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Central_Bank
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -99,16 +178,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.eccb-centralbank.org/
-acronyms:
-- lang: en
-  value: ECCB
-- lang: zh
-  value: 東加勒比海中央銀行
-- lang: zh
-  value: 东加勒比中央银行
-- lang: ru
-  value: ECCB

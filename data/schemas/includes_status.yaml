@@ -1,0 +1,58 @@
+# Reference catalog for includes[].status participation values in intblocks.
+# Used by validate_intblocks.py and analyze-quality reporting.
+#
+# Each status describes how a country (or other entity) relates to the block.
+# The canonical key set matches data/schemas/intblocks.schema.json.
+
+statuses:
+  member:
+    name: Member
+    description: Full member state or participant with regular membership rights.
+  observer:
+    name: Observer
+    description: Observer status without full voting or membership rights.
+  associated:
+    name: Associated
+    description: Associated state or territory linked to the block under special terms.
+  associated_observer:
+    name: Associated observer
+    description: Associated participant with observer-level participation.
+  associate:
+    name: Associate
+    description: Associate participant with limited or partial membership.
+  associate_member:
+    name: Associate member
+    description: Associate member with defined but non-full membership rights.
+  founding_member:
+    name: Founding member
+    description: Original founding participant at establishment.
+  former_member:
+    name: Former member
+    description: Former participant that left or was dissolved from membership.
+  participant:
+    name: Participant
+    description: Active participant without classical membership framing.
+  recipient:
+    name: Recipient
+    description: Recipient of benefits, funding, or programme participation.
+  contributor:
+    name: Contributor
+    description: Contributing state or entity providing resources or support.
+  represented:
+    name: Represented
+    description: Entity represented within the block by another member or proxy.
+  funder:
+    name: Funder
+    description: Funding contributor to the block or its programmes.
+  cooperating:
+    name: Cooperating
+    description: Cooperating partner with formal but non-member involvement.
+  partner:
+    name: Partner
+    description: Partner entity in a formal cooperation arrangement.
+  validation:
+    name: Validation
+    description: Validation or accreditation relationship (e.g. standards recognition).
+  extension:
+    name: Extension
+    description: Extension or outreach relationship beyond core membership.

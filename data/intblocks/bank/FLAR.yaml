@@ -6,8 +6,13 @@ blocktype:
 - fund
 - intorg
 status: formal
-founded: '1978'
+founded: '1978-11-12'
+active_period:
+  start: '1988-06-10'
 geographic_scope: regional
+regions:
+- Latin America
+- South America
 languages:
 - es
 - en
@@ -15,14 +20,18 @@ languages:
 links:
 - url: https://www.flar.net/
   type: website
-- url: https://en.wikipedia.org/wiki/Latin_American_Reserve_Fund
+- url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1800810
+- url: https://www.wikidata.org/wiki/Q8961938
   type: wikidata
 acronyms:
 - lang: en
   value: FLAR
 - lang: es
+  value: FLAR
+- lang: de
+  value: FLAR
+- lang: pt
   value: FLAR
 headquarters:
   city: Bogotá
@@ -30,6 +39,37 @@ headquarters:
   coordinates:
     lat: 4.711
     lng: -74.0721
+legal_status: intergovernmental
+recognition_status: Regional reserve fund established under the 1978 Andean Reserve Fund agreement and reconstituted by the 1988 FLAR Constitutive Convention, which opened membership to other Latin American countries
+secretariat:
+  location: Bogotá, Colombia
+  head: Executive President
+  organization: Latin American Reserve Fund
+membership_count: 8
+description: Regional multilateral reserve fund providing balance-of-payments financing, liquidity support, and international reserve management services to member central banks across Latin America. Originally established in 1978 as the Andean Reserve Fund (FAR) by Cartagena Agreement countries and reconstituted as the Latin American Reserve Fund (FLAR) in 1988, it is headquartered in Bogotá and governed by finance ministers and central bank governors of its member states.
+tags:
+- FLAR
+- aid
+- balance-of-payments
+- bank
+- development
+- economy
+- finance
+- fund
+- latin-america
+- liquidity
+- multilateral
+- regional-cooperation
+- reserve-fund
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: BO
   name: Bolivia, Plurinational State of
@@ -43,10 +83,16 @@ includes:
   name: Costa Rica
   type: country
   status: member
+  joined: '2000'
 - id: EC
   name: Ecuador
   type: country
   status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+  joined: '2013'
 - id: PE
   name: Peru
   type: country
@@ -55,46 +101,82 @@ includes:
   name: Uruguay
   type: country
   status: member
+  joined: '2009'
 - id: VE
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
-membership_count: 7
-wikidata_id: Q1800810
-description: International development bank focused on development providing financial services.
-tags:
-- FLAR
-- aid
-- bank
-- development
-- economy
-- finance
-- fund
-- latin
-- reserve
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+founding_members:
+- BO
+- CO
+- EC
+- PE
+- VE
+wikidata_id: Q8961938
+notes: Originally the Fondo Andino de Reservas (FAR), created by the five Cartagena Agreement countries. The 1988 FLAR Constitutive Convention superseded the FAR agreement and transferred its assets and liabilities. Costa Rica joined in 2000, Uruguay in 2009, and Paraguay in 2013. Part of the Andean Integration System.
+last_verified: '2026-07-12'
 other_names:
-- id: de
-  name: Lajos Rácz
 - id: en
-  name: Lajos Rácz
+  name: Latin American Reserve Fund
+- id: es
+  name: Fondo Latinoamericano de Reservas
+- id: pt
+  name: Fundo Latino-Americano de Reservas
+- id: de
+  name: Fondo Latinoamericano de Reservas
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.flar.net/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.flar.net/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://es.wikipedia.org/wiki/Fondo_Latinoamericano_de_Reservas
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8961938
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8961938
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q8961938
+  license: CC0

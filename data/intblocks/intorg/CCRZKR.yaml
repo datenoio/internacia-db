@@ -1,20 +1,47 @@
 id: CCRZKR
+name: Central Commission for the Navigation of the Rhine
 blocktype:
 - intorg
+- transport
 status: formal
+founded: '1815'
+active_period:
+  start: '1815'
+geographic_scope: regional
+regions:
+- Europe
 languages:
-- en
 - de
 - fr
 - nl
 links:
-- url: http://www.ccr-zkr.org/
+- url: https://www.ccr-zkr.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q190650
   type: wikidata
-name: Central Commission for the Navigation of the Rhine
+acronyms:
+- lang: en
+  value: CCNR
+- lang: en
+  value: CCR
+- lang: en
+  value: ZKR
+- lang: de
+  value: ZKR
+- lang: fr
+  value: CCNR
+- lang: nl
+  value: CCR
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established at the Congress of Vienna (1815); the world's oldest international organization still in operation. Rhine navigation is governed by the Revised Convention for Rhine Navigation (Mannheim Convention as revised, signed 20 November 1963, entered into force 14 April 1967).
+headquarters:
+  city: Strasbourg
+  country: FR
+  coordinates:
+    lat: 48.573333333333
+    lng: 7.7522222222222
 includes:
 - id: BE
   name: Belgium
@@ -36,28 +63,9 @@ includes:
   name: Switzerland
   type: country
   status: member
-founded: '1815'
-headquarters:
-  city: Strasbourg
-  country: FR
-  coordinates:
-    lat: 48.573333333333
-    lng: 7.7522222222222
-acronyms:
-- lang: en
-  value: CCNR
-- lang: en
-  value: ZKR
-- lang: en
-  value: CCR
-- lang: fr
-  value: CCNR
-- lang: de
-  value: ZKR
 membership_count: 5
 wikidata_id: Q190650
-description: The Central Commission for the Navigation of the Rhine is an international organization that is used to promote
-  regional cooperation in the navigation sector.
+description: Intergovernmental organization of Belgium, France, Germany, the Netherlands, and Switzerland to ensure safe and efficient navigation on the Rhine and promote European prosperity through inland waterway transport. Founded in 1815 following the Congress of Vienna, it is the world's oldest international organization still in operation. Headquartered at the Palais du Rhin in Strasbourg since 1920, the CCNR regulates Rhine traffic, adopts navigation regulations, assists with river works, and serves as the seat of the Rhine navigation tribunal.
 tags:
 - CCNR
 - CCR
@@ -65,11 +73,22 @@ tags:
 - ZKR
 - central
 - commission
+- europe
+- inland
 - intorg
+- intergovernmental
 - navigation
+- regional
+- rhine
+- river
+- transport
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: transport
+  name: Transport
 other_names:
 - id: ar
   name: اللجنة المركزية للملاحة في نهر الراين
@@ -81,22 +100,68 @@ other_names:
   name: Comisión Central para la Navegación del Rin
 - id: fr
   name: Commission centrale pour la navigation du Rhin
+- id: nl
+  name: Centrale Commissie voor de Rijnvaart
 - id: pt
   name: Comissão Central de Navegação do Reno
 - id: zh
   name: 莱茵河航运中央委员会
+notes: Working languages are German, French, and Dutch. Belgium is a member despite the Rhine not passing through Belgian territory; the Belgian Rhine fleet ranks third by volume transported after the Netherlands and Germany. The commission met in plenary twice yearly; decisions are taken unanimously by two to four commissioners per member state.
+last_verified: '2026-07-12'
 provenance:
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q190650
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q190650
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q190650
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q190650
   license: CC0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.ccr-zkr.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.ccr-zkr.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine
+- field: languages
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Commission_for_Navigation_on_the_Rhine

@@ -1,17 +1,42 @@
 id: IEF
+name: International Energy Forum
 blocktype:
 - energy
 status: formal
+founded: '1991'
+active_period:
+  start: '1991'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 links:
-- url: http://www.ief.org/
+- url: https://www.ief.org/
+  type: website
+- url: https://www.ief.org/about/the-ief
   type: website
 - url: https://en.wikipedia.org/wiki/International_Energy_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q10858058
   type: wikidata
-name: International Energy Forum
+headquarters:
+  city: Riyadh
+  country: SA
+  coordinates:
+    lat: 24.7136
+    lng: 46.6753
+legal_status: intergovernmental
+recognition_status: Established in Paris in July 1991 as an informal producer-consumer ministerial dialogue; permanent Secretariat opened in Riyadh in 2002; IEF Charter signed at an Extraordinary Ministerial Meeting in Riyadh on 22 February 2011, formalizing the global energy dialogue framework
+secretariat:
+  location: Riyadh, Saudi Arabia
+  head: Secretary General
+  organization: International Energy Forum Secretariat
 includes:
 - id: AF
   name: Afghanistan
@@ -274,15 +299,20 @@ includes:
   type: country
   status: member
 membership_count: 65
-wikidata_id: Q10858058
-description: International forum focused on economic cooperation.
+description: Neutral inter-governmental forum for energy dialogue among producing, consuming, and transit countries. Established
+  in Paris in July 1991 as an informal ministerial dialogue; member states signed the IEF Charter in Riyadh in February 2011.
+  The permanent Secretariat is based in the Diplomatic Quarter of Riyadh, Saudi Arabia. Coordinates the Joint Organisations
+  Data Initiative (JODI) with partner organizations including IEA and OPEC through a long-standing trilateral work program.
 tags:
 - IEF
+- dialogue
 - economy
 - energy
 - environment
 - forum
+- gas
 - international
+- JODI
 - nature
 - oil
 topics:
@@ -303,7 +333,55 @@ other_names:
   name: International Energy Forum
 - id: zh
   name: 国际能源论坛
+acronyms:
+- lang: en
+  value: IEF
+wikidata_id: Q10858058
+notes: Biennial Ministerial Meetings are among the world's largest gatherings of energy ministers. Member countries collectively
+  account for more than 90 percent of global oil and gas supply and demand. The IEF coordinates JODI (Joint Organisations
+  Data Initiative) with APEC, EUROSTAT, GECF, IEA, OLADE, OPEC, and UNSD. The `includes` list may not reflect the current
+  full Charter membership roster published by the IEF.
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/the-ief
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/the-ief
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/the-ief
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/ief-charter
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/the-ief
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Energy_Forum
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Energy_Forum
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Energy_Forum
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ief.org/about/the-ief
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -314,6 +392,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: en
-  value: IEF

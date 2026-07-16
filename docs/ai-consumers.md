@@ -37,11 +37,18 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1070 | `id` | `data/datasets/intblocks.manifest.json` |
-| `blocktypes` | 86 | `id` | `data/datasets/blocktypes.meta.json` |
+| `intblocks` | 1071 | `id` | `data/datasets/intblocks.manifest.json` |
+| `blocktypes` | 86 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
 over reading individual YAML source files under `data/countries/` and `data/intblocks/`.
+
+**Consistency guarantee.** CI (`scripts/check_generated_artifacts.py`) enforces that
+every export format (JSONL, YAML, Parquet, DuckDB) exposes the same primary-key set
+and row count per dataset, that these match the YAML source, and that all manifests,
+`*.meta.json` sidecars, and the DuckDB `_meta` table share one build identity
+(`version`, `git_commit`, `build_date`). You can rely on any format being complete
+and interchangeable.
 
 ## Versioning and stability
 

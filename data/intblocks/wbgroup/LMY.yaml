@@ -581,7 +581,8 @@ includes:
   type: country
   status: member
 membership_count: 144
-description: Low & middle income is an international wbgroup body with 144 members.
+description: World Bank income classification grouping for economies classified as low-
+  or middle-income (low, lower-middle, upper-middle income).
 tags:
 - LMY
 - aid
@@ -599,5 +600,19 @@ topics:
   name: Finance
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank Data Help Desk (Country and Lending Groups)
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+- field: includes
+  source: World Bank Data Help Desk (Country and Lending Groups)
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+- field: membership_count
+  source: World Bank Data Help Desk (Country and Lending Groups)
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+links:
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+  type: website
+- url: https://datatopics.worldbank.org/WORLD-DEVELOPMENT-INDICATORS/THE-WORLD-BY-INCOME-AND-REGION.HTML
+  type: website

@@ -5,6 +5,8 @@ blocktype:
 - intorg
 status: formal
 founded: '1973-12-14'
+active_period:
+  start: '1975-10-21'
 geographic_scope: regional
 regions:
 - Americas
@@ -15,30 +17,55 @@ languages:
 - en
 - pt
 links:
-- url: https://www.lacac.org/
+- url: https://clac-lacac.org/?lang=en
+  type: website
+- url: https://clac-lacac.org/us/?lang=en
+  type: website
+- url: https://www.icao.int/sites/default/files/postalhistory/civil_aviation_commissions.htm
   type: website
 - url: https://en.wikipedia.org/wiki/Latin_American_Civil_Aviation_Commission
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q131103399
+  type: wikidata
 headquarters:
   city: Lima
   country: PE
+  coordinates:
+    lat: -12.0962
+    lng: -77.0369
 legal_status: intergovernmental
+recognition_status: Consultative international organization whose recommendations require approval by each member state; statutory treaty registered with the United Nations (registration No. 20170, vol. 1241, 22 July 1981); Mexico is depositary state of the Multilateral Treaty establishing LACAC
+secretariat:
+  location: Av. Víctor Andrés Belaúnde 147, San Isidro, Lima, Peru
+  head: Secretary
+  organization: Secretariat of the Latin American Civil Aviation Commission
 membership_count: 22
-description: Regional intergovernmental organization comprising Latin American and Caribbean states to coordinate and promote
-  civil aviation activities in the region. LACAC facilitates cooperation among member states in aviation safety, security,
-  and development.
+description: Regional consultative intergovernmental organization comprising 22 Latin American and Caribbean states, formally known as Comisión Latinoamericana de Aviación Civil (CLAC). Established on 14 December 1973 at the Second Conference of Aeronautical Authorities of Latin America in Mexico City and operational from 21 October 1975, LACAC provides civil aviation authorities a framework to coordinate air transport policy, operational safety, aviation security and facilitation, airport management, training, and environmental matters. Recommendations are non-binding and subject to approval by each member state. The Secretariat has been headquartered in Lima, Peru since 2007; Mexico serves as depositary state of the founding treaty. LACAC cooperates closely with ICAO under a Mutual Cooperation Agreement (2005) and administers a Multilateral Open Skies Agreement among member states.
 tags:
 - LACAC
+- CLAC
 - aviation
 - latin_america
 - caribbean
 - intorg
 - regional
+- consultative
+- icao
+- open_skies
+- policy
 topics:
 - key: aviation
   name: Aviation
 - key: regional_cooperation
   name: Regional Cooperation
+- key: safety
+  name: Safety
+- key: security
+  name: Security
+- key: transport
+  name: Transport
+- key: policy
+  name: Policy
 includes:
 - id: AR
   name: Argentina
@@ -133,6 +160,8 @@ acronyms:
   value: LACAC
 - lang: es
   value: CLAC
+- lang: pt
+  value: CLAC
 other_names:
 - id: es
   name: Comisión Latinoamericana de Aviación Civil
@@ -140,16 +169,60 @@ other_names:
   name: Latin American Civil Aviation Commission
 - id: pt
   name: Comissão Latino-Americana de Aviação Civil
+- id: fr
+  name: Commission latino-américaine de l'aviation civile
+- id: zh
+  name: 拉丁美洲民航委员会
+wikidata_id: Q131103399
+notes: Statute approved at the Second Conference of Aeronautical Authorities of Latin America in Mexico City on 14 December 1973; entered into force on 21 October 1975 upon ratification by 12 member states. First Assembly held in Buenos Aires in August 1974 with 16 subscribing states. Governed by an Assembly (ordinary sessions at least every two years), an Executive Committee (President and Vice Presidents elected by the Assembly), and a Secretariat organized by the Executive Committee. Secretariat headquarters selected in 2005 (Lima, Peru over proposals from Argentina, Brazil, Chile, and Venezuela); Headquarters Agreement with Peru signed in 2006; financial autonomy phase began in 2007. ICAO provided Secretariat services under a 1978 Modus Vivendi until the 2005 Mutual Cooperation Agreement; finances managed under the ICAO Technical Cooperation Bureau Regional Project scheme. Membership limited to South America, Central America including Panama, Mexico, and Caribbean states.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q131103399
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.lacac.org/
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.lacac.org/
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.lacac.org/
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
+- field: founded
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/civil_aviation_commissions.htm
+- field: active_period
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/civil_aviation_commissions.htm
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://clac-lacac.org/us/?lang=en

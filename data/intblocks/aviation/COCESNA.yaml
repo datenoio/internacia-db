@@ -5,6 +5,8 @@ blocktype:
 - intorg
 status: formal
 founded: '1960-02-26'
+active_period:
+  start: '1960-02-26'
 geographic_scope: regional
 regions:
 - Americas
@@ -15,23 +17,44 @@ languages:
 links:
 - url: https://cocesna.org/
   type: website
+- url: https://cocesna.org/index.php?id=11
+  type: website
 - url: http://www.oas.org/juridico/spanish/firmas/f-70.html
+  type: website
+- url: https://www.icao.int/sites/default/files/postalhistory/cocesna_corporacion_centroamericana_de_servicios_de_navegacion_aerea.htm
+  type: website
+- url: https://canso.org/member/cocesna/
   type: website
 headquarters:
   city: Tegucigalpa
   country: HN
+  coordinates:
+    lat: 14.0608
+    lng: -87.2174
 legal_status: intergovernmental
+recognition_status: Specialized body of the Central American Integration System (SICA) with exclusive rights to provide air traffic control, aeronautical telecommunications, navigation aids, and aeronautical information services across the Central American flight information region
 partof: SICA
+secretariat:
+  location: Tegucigalpa, Honduras
+  organization: Dirección Ejecutiva (Executive Directorate)
 membership_count: 6
-description: Intergovernmental regional organization providing air traffic control, aeronautical telecommunications, and
-  meteorological services across the Central American flight information region.
+founding_members:
+- CR
+- SV
+- GT
+- HN
+- NI
+description: Intergovernmental regional organization and specialized body of the Central American Integration System (SICA) that provides integrated air navigation services across the Central American flight information region (FIR), covering approximately 2.6 million km² of continental and maritime airspace. Established on 26 February 1960, COCESNA holds exclusive rights to air traffic control, aeronautical telecommunications, navigation aids, aeronautical information management, and related meteorological support for its six member states. Services are delivered through the Central American Air Navigation Agency (ACNA), created on 1 June 2001, which operates the Central American Area Control Centre (CENAMER ACC) from Tegucigalpa, Honduras.
 tags:
 - COCESNA
 - aviation
 - air_navigation
+- air_traffic
 - intorg
 - central_america
 - regional
+- sica
+- fir
 topics:
 - key: aviation
   name: Aviation
@@ -72,24 +95,58 @@ other_names:
   name: Central American Corporation for Air Navigation Services
 - id: es
   name: Corporación Centroamericana de Servicios de Navegación Aérea
+notes: Established on 26 February 1960 by Costa Rica, El Salvador, Guatemala, Honduras, and Nicaragua under the Constitutive Agreement; Belize joined in 1966. Governed by a Board of Directors composed of representatives of member civil aviation authorities. Provides air navigation services through ACNA (Agencia Centroamericana de Navegación Aérea), created on 1 June 2001, which operates the CENAMER ACC and maintains technical offices in all six member states. Related COCESNA units include ACSA (aviation safety oversight), ICCAE (training), and AIM. Recipient of the ICAO Edward Warner Award in October 1976 for coordinated air navigation and communications services. Headquarters located 150 m south of Toncontín International Airport, Tegucigalpa, Honduras.
+last_verified: '2026-07-12'
 provenance:
 - field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://cocesna.org/
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=11
 - field: founded
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/cocesna_corporacion_centroamericana_de_servicios_de_navegacion_aerea.htm
+- field: active_period
+  source: ICAO
+  retrieved_at: '2026-07-12'
   url: https://www.icao.int/sites/default/files/postalhistory/cocesna_corporacion_centroamericana_de_servicios_de_navegacion_aerea.htm
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cocesna.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=11
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cocesna.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://cocesna.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cocesna.org/index.php?id=11
+- field: includes
+  source: CANSO
+  retrieved_at: '2026-07-12'
+  url: https://canso.org/member/cocesna/
+- field: membership_count
+  source: CANSO
+  retrieved_at: '2026-07-12'
+  url: https://canso.org/member/cocesna/
+- field: founding_members
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/cocesna_corporacion_centroamericana_de_servicios_de_navegacion_aerea.htm
+- field: notes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/cocesna_corporacion_centroamericana_de_servicios_de_navegacion_aerea.htm

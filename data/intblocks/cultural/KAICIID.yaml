@@ -1,9 +1,15 @@
 id: KAICIID
+name: International Dialogue Centre
 blocktype:
 - cultural
 - intorg
 status: formal
-founded: '2012'
+founded: '2012-11-27'
+active_period:
+  start: '2012-11-27'
+geographic_scope: global
+regions:
+- Global
 languages:
 - ar
 - en
@@ -14,7 +20,20 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
   type: wikipedia
-name: International Dialogue Centre
+- url: https://www.wikidata.org/wiki/Q6324948
+  type: wikidata
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established by Saudi Arabia, Austria, and Spain under the 13 October 2011 Vienna establishment agreement; inaugurated on 27 November 2012 with endorsement from UN Secretary-General Ban Ki-moon
+headquarters:
+  city: Lisbon
+  country: PT
+  coordinates:
+    lat: 38.7222
+    lng: -9.1394
+secretariat:
+  location: Rua Castilho 52, 1250-071 Lisbon, Portugal
+  head: Secretary-General
+  organization: International Dialogue Centre – KAICIID
 includes:
 - id: SA
   name: Saudi Arabia
@@ -28,42 +47,110 @@ includes:
   name: Austria
   type: country
   status: member
+- id: VA
+  name: Holy See
+  type: country
+  status: observer
 - id: PT
   name: Portugal
   type: country
   status: observer
-headquarters:
-  city: Lisbon
-  country: PT
-  coordinates:
-    lat: 38.7222
-    lng: -9.1394
 acronyms:
 - lang: en
   value: KAICIID
+- lang: de
+  value: KAICIID
 membership_count: 3
-description: Intergovernmental organization dedicated to fostering interreligious and intercultural dialogue worldwide.
+wikidata_id: Q6324948
+description: Intergovernmental organization founded by Saudi Arabia, Austria, and Spain to promote interreligious and intercultural dialogue, peacebuilding, and social cohesion worldwide. Established under a 13 October 2011 Vienna agreement and inaugurated on 27 November 2012; headquarters were in Vienna until relocation to Lisbon on 1 July 2022. Governed by a dual structure of a Council of Parties (member states) and a Board of Directors (representatives of major world religions); the Holy See participates as founding observer.
+notes: Headquarters operated from Palais Sturany in Vienna from 2012 until relocation to Lisbon on 1 July 2022, following Austria's 2019 parliamentary motion to withdraw from the seat agreement. Portugal signed a new seat agreement in October 2021 and was invited to join the Council of Parties in November 2024. Programmes focus on Africa, the Arab region, Asia, and Europe, including the KAICIID Fellows Programme and partnerships with UNAOC, Religions for Peace, and the World Organization of the Scout Movement.
+last_verified: '2026-07-12'
 tags:
 - KAICIID
 - cultural
 - culture
 - dialogue
+- interfaith
+- intergovernmental
 - interreligious
 - intercultural
 - international
 - organization
+- peacebuilding
+- religion
 topics:
 - key: culture
   name: Culture
 - key: religion
   name: Religion
+- key: peacebuilding
+  name: Peacebuilding
 other_names:
-- id: en
-  name: International Dialogue Centre
 - id: ar
   name: مركز الملك عبد الله بن عبد العزيز العالمي للحوار بين أتباع الأديان والثقافات
+- id: de
+  name: König-Abdullah-Zentrum für interreligiösen und interkulturellen Dialog
+- id: en
+  name: International Dialogue Centre
+- id: fr
+  name: KAICIID Dialogue Centre
+- id: pt
+  name: KAICIID
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q6324948
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q6324948
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q6324948
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.kaiciid.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.kaiciid.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.kaiciid.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/KAICIID_Dialogue_Centre
+  license: CC BY-SA 4.0

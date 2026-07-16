@@ -1,0 +1,24 @@
+DATA QUALITY REPORT - RULE: DUPLICATE_ACRONYM
+================================================================================
+Generated: 2026-07-16 17:10:26
+Issue Type: DUPLICATE_ACRONYM
+Priority: LOW
+Total Issues Found: 2
+
+Description: Advisory: unrelated same-blocktype records share an English acronym (possible duplicate entity).
+
+=== AFFECTED RECORDS ===
+
+File: data/intblocks/cultural/COL.yaml
+Record ID: COL
+Country: CA
+Field: acronyms
+Current Value: COL
+Suggested Action: English acronym 'COL' is shared by same-blocktype records ['COL', 'COMMLEARN']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/education/COMMLEARN.yaml
+Record ID: COMMLEARN
+Country: CA
+Field: acronyms
+Current Value: COL
+Suggested Action: English acronym 'COL' is shared by same-blocktype records ['COL', 'COMMLEARN']; merge duplicates or allowlist the acronym

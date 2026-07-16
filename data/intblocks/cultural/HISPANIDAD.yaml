@@ -1,13 +1,23 @@
 id: HISPANIDAD
+name: Hispanidad
 blocktype:
 - cultural
-status: formal
+status: informal
+geographic_scope: global
+regions:
+- Americas
+- Africa
+- Europe
+languages:
+- es
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Hispanidad
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1547045
   type: wikidata
-name: Hispanidad
+legal_status: informal
+recognition_status: Informal cultural and linguistic concept (not a formal organization) describing shared identity among Spanish speakers and the Hispanic diaspora; the term was revived in the early twentieth century by Miguel de Unamuno and later promoted in Francoist Spain through institutions such as the Council of the Hispanidad (1940); observed annually as the Fiesta/Día de la Hispanidad on 12 October; distinct from formal Ibero-American intergovernmental bodies and from the broader category of all Spanish-speaking territories worldwide
 includes:
 - id: AR
   name: Argentina
@@ -95,13 +105,22 @@ includes:
   status: member
 membership_count: 21
 wikidata_id: Q1547045
-description: Hispanic World.
+description: Cultural and linguistic concept describing a shared Spanish-speaking identity among sovereign states, former Spanish colonies, and associated territories. The core sovereign grouping comprises the twenty Spanish-speaking republics of the Americas plus Spain and Equatorial Guinea, with Puerto Rico frequently included as a self-governing U.S. territory; distinct from formal Ibero-American organizations (OEI, SEGIB, Cumbre Iberoamericana) and broader diaspora definitions that may include the Philippines, Belize, Gibraltar, or Hispanic communities in the United States.
+notes: This record reflects the 21 Internacia country and territory entities in the core Hispanidad grouping (20 Spanish-speaking sovereign states plus Puerto Rico). Spain (ES) and Equatorial Guinea (GQ) complete the sovereign set alongside Latin American republics. Gibraltar, the Philippines, Belize, and Hispanic populations in the southwestern United States are sometimes included in extended definitions but are excluded here. Hispanidad is independent of race in U.S. Census usage and differs from Latinidad (Latin American identity) emphasized in some Argentine Peronist discourse after 1950.
+last_verified: '2026-07-12'
 tags:
 - HISPANIDAD
 - cultural
 - culture
 - education
+- geopolitical
+- hispanic
+- hispanic-world
 - hispanidad
+- iberian-america
+- informal
+- spanish
+- spanish-speaking
 - university
 topics:
 - key: culture
@@ -114,7 +133,7 @@ other_names:
 - id: de
   name: hispanität
 - id: en
-  name: hispanidad
+  name: Hispanidad
 - id: es
   name: hispanidad
 - id: fr
@@ -123,14 +142,46 @@ other_names:
   name: hispanidade
 - id: ru
   name: Испанидад
+- id: zh
+  name: 西班牙性
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1547045
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1547045
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Hispanidad
+  license: CC BY-SA 4.0

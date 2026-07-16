@@ -1,25 +1,51 @@
 id: ECCU
+name: Eastern Caribbean Currency Union
 blocktype:
 - currency
 status: formal
+founded: '1983'
+active_period:
+  start: '1983'
 partof: OECS
+geographic_scope: regional
+regions:
+- Caribbean
 languages:
 - en
 links:
+- url: https://www.eccb-centralbank.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5330041
   type: wikidata
-name: Eastern Caribbean Currency Union
-founded: '1983'
+legal_status: monetary_union
+recognition_status: Regional monetary union of eight Eastern Caribbean states and territories using the Eastern Caribbean dollar (XCD, ISO 4217 code 951); currency issued and supervised by the Eastern Caribbean Central Bank (ECCB) within the Organisation of Eastern Caribbean States; pegged to the US dollar at EC$2.70 = US$1 since 7 July 1976
+headquarters:
+  city: Basseterre
+  country: KN
+  coordinates:
+    lat: 17.298333333333
+    lng: -62.734166666667
 acronyms:
 - lang: en
   value: ECCU
 - lang: en
   value: XCD
-geographic_scope: regional
-regions:
-- Caribbean
+- lang: en
+  value: EC dollar
+- lang: fr
+  value: XCD
+- lang: de
+  value: XCD
+- lang: es
+  value: XCD
+- lang: ru
+  value: XCD
+- lang: zh
+  value: XCD
+- lang: zh
+  value: 东加勒比元
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -55,13 +81,14 @@ includes:
   status: member
 membership_count: 8
 wikidata_id: Q5330041
-description: Monetary union of eight Eastern Caribbean states and territories sharing the Eastern Caribbean dollar (XCD),
+description: Monetary union of eight Eastern Caribbean states and territories sharing the Eastern Caribbean dollar (XCD, ISO 4217 code 951),
   issued and supervised by the Eastern Caribbean Central Bank (ECCB). Established in 1983 to replace the Eastern Caribbean
   Currency Authority as a development of the Organisation of Eastern Caribbean States. The EC dollar has been pegged to the
   US dollar at EC$2.70 since 7 July 1976.
 notes: Members are Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, St. Lucia, St. Vincent and the Grenadines,
   Anguilla and Montserrat. British Virgin Islands, an OECS associate member, uses the US dollar and is not part of the union.
   One of four regional currency unions worldwide. Before 1976 the EC dollar was pegged to the British pound at EC$4.80 = £1.
+last_verified: '2026-07-12'
 tags:
 - ECCB
 - ECCU
@@ -107,30 +134,49 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
   license: CC BY-SA 4.0
 - field: founded
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
   license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccb-centralbank.org/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q5330041
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q5330041
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Currency_Union
+  retrieved_at: '2026-07-12'
+  url: https://www.eccb-centralbank.org/

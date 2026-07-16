@@ -55,6 +55,7 @@ other_names:
   name: Macao
 common_names:
 - Macao Special Administrative Region of the People's Republic of China
+- Macao, China
 population:
   value: 687000
   year: 2024
@@ -92,6 +93,10 @@ native_names:
 code_status: official_iso3166_1
 entity_type: special_administrative_region
 provenance:
+- field: common_names
+  source: manual
+  retrieved_at: '2026-07-16'
+  notes: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -130,9 +135,17 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: capital_city
+  source: manual
+  retrieved_at: '2026-07-11'
+  notes: De-facto seat of government / administrative capital
 centroid:
   lat: 22.16666666
   lng: 113.55
 adminregion:
   id: EAP
   value: East Asia & Pacific (developing only)
+capital_city:
+  name: Macao
+  lng: 113.5439
+  lat: 22.1987

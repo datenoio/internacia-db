@@ -1,43 +1,53 @@
 id: NEFCO
+name: Nordic Environment Finance Corporation
 blocktype:
 - bank
 status: formal
+founded: '1990'
+active_period:
+  start: '1990'
+geographic_scope: regional
+regions:
+- Nordic countries
+- Eastern Europe
+- Europe
 languages:
 - en
+- fi
+- sv
+- da
+- 'no'
+- is
 - ru
 links:
 - url: https://www.nefco.org/
+  type: website
+- url: https://www.nefco.org/about-nefco/
   type: website
 - url: https://en.wikipedia.org/wiki/Nefco
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3736769
   type: wikidata
-name: Nordic Environment Finance Corporation
-includes:
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-founded: '1990'
+headquarters:
+  city: Helsinki
+  country: FI
+  coordinates:
+    lat: 60.1719659
+    lng: 24.9488108
+legal_status: intergovernmental
+recognition_status: International financial institution established in 1990 by the five Nordic governments (Denmark, Finland, Iceland, Norway, and Sweden)
+secretariat:
+  location: Helsinki, Finland
+  head: Managing Director
+  organization: Nordic Environment Finance Corporation
 membership_count: 5
-wikidata_id: Q3736769
-description: Internatonal finance institution.
+founding_members:
+- DK
+- FI
+- IS
+- 'NO'
+- SE
+description: Nordic-owned international financial institution established in 1990 by Denmark, Finland, Iceland, Norway, and Sweden to finance environmental and climate projects. Known as the Nordic Green Bank, Nefco lends from paid-in capital and manages trust funds to support Nordic green SME scale-up and public-sector environmental investments, with a primary focus on Eastern Europe, the Baltic Sea region, and Ukraine. Headquartered in Helsinki, Finland.
 tags:
 - NEFCO
 - aid
@@ -47,8 +57,12 @@ tags:
 - economy
 - environment
 - finance
+- green
+- ifi
+- multilateral
 - nature
 - nordic
+- sme
 topics:
 - key: climate_change
   name: Climate Change
@@ -60,16 +74,106 @@ topics:
   name: Environment
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '1990'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1990'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '1990'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1990'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1990'
+acronyms:
+- lang: en
+  value: NEFCO
+- lang: en
+  value: Nordic Green Bank
+wikidata_id: Q3736769
+notes: Also known as the Nordic Green Bank. One of three Nordic international financial institutions alongside the Nordic Investment Bank (NIB) and Nordic Development Fund (NDF). Manages donor trust funds including the Nordic Project Fund (Nopef) and implements EU and multilateral programmes such as E5P and NDEP. Suspended remaining projects in Russia after the 2022 invasion of Ukraine and ceased new funding in Belarus after the 2020 election dispute.
+last_verified: '2026-07-12'
 other_names:
 - id: en
   name: Nefco
-- id: fr
-  name: Nefco
+- id: en
+  name: Nordic Environment Finance Corporation
+- id: en
+  name: Nordic Green Bank
+- id: fi
+  name: Pohjoismainen ympäristörahoitusyhtiö
+- id: is
+  name: Norræna umhverfisfjármögnunarfélagið
 - id: ru
   name: НЕФКО
 provenance:
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/about-nefco/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/about-nefco/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/about-nefco/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Nefco
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/contact/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/contact/
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q3736769
   license: CC0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Nefco
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Nefco
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/about-nefco/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q3736769
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nefco.org/about-nefco/

@@ -6,6 +6,8 @@ blocktype:
 - economic
 status: formal
 founded: '2015-11-21'
+active_period:
+  start: '2015-11-21'
 geographic_scope: global
 regions:
 - Asia
@@ -23,6 +25,8 @@ links:
 acronyms:
 - lang: en
   value: CPOPC
+legal_status: intergovernmental organization
+recognition_status: Intergovernmental organization founded by Indonesia and Malaysia in November 2015 to promote cooperation in the oil palm sector; formally established on 21 November 2015 and reached full operation in 2017; secretariat based in Jakarta
 headquarters:
   city: Jakarta
   country: ID
@@ -32,7 +36,7 @@ headquarters:
 secretariat:
   location: Jakarta, Indonesia
   head: Executive Director
-membership_count: 3
+membership_count: 5
 founding_members:
 - ID
 - MY
@@ -76,11 +80,17 @@ includes:
   name: Honduras
   type: country
   status: member
-  joined: 2023-05
+  joined: '2023-05'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: observer
+  status: member
+  joined: '2024-12-30'
+- id: CD
+  name: Democratic Republic of the Congo
+  type: country
+  status: member
+  joined: '2025-03'
 - id: CO
   name: Colombia
   type: country
@@ -93,15 +103,12 @@ includes:
   name: Nigeria
   type: country
   status: observer
-- id: CD
-  name: Democratic Republic of the Congo
-  type: country
-  status: observer
-notes: Indonesia and Malaysia together produce 90% of the world's palm oil. The organization was formally founded on 21 November
-  2015 and reached full operation in 2017. Colombia, Ghana, Honduras, and Papua New Guinea have attended meetings as observers,
-  and are expected to become full members. In February 2023, Malaysia, as chair, invited Thailand to join the organisation.
-  The CPOPC claimed in 2022 that palm oil in both founding countries supported 3.6% of GDP and the employment of 19 million
-  people, including 3.35 million smallholders.
+notes: Indonesia and Malaysia together produce about 90% of the world's palm oil. The organization was formally founded on 21
+  November 2015 and reached full operation in 2017. Honduras became the third full member in May 2023; Papua New Guinea joined
+  on 30 December 2024; and the Democratic Republic of the Congo became the fifth member and first African full member in March
+  2025. Colombia, Ghana, and Nigeria remain observers; Nigeria has been moving toward full membership. In February 2023, Malaysia,
+  as chair, invited Thailand to join the organisation. The CPOPC claimed in 2022 that palm oil in both founding countries
+  supported 3.6% of GDP and the employment of 19 million people, including 3.35 million smallholders.
 wikidata_id: Q117468542
 other_names:
 - id: ar
@@ -110,17 +117,63 @@ other_names:
   name: Council of Palm Oil Producing Countries
 - id: es
   name: Consejo de Países Productores de Aceite de Palma
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q117468542
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q117468542
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_of_Palm_Oil_Producing_Countries
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.cpopc.net/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_of_Palm_Oil_Producing_Countries
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_of_Palm_Oil_Producing_Countries
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_of_Palm_Oil_Producing_Countries
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cpopc.net/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://www.cpopc.net/

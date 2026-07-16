@@ -1,18 +1,60 @@
 id: AFDB
+name: African Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1964-09-10'
+active_period:
+  start: '1964-09-10'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 links:
-- url: http://www.afdb.org
+- url: https://www.afdb.org/
+  type: website
+- url: https://www.afdb.org/en/about-us
   type: website
 - url: https://en.wikipedia.org/wiki/African_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q340195
   type: wikidata
-name: African Development Bank
+headquarters:
+  city: Abidjan
+  country: CI
+  coordinates:
+    lat: 5.3363888888889
+    lng: -4.0266666666667
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the African Development Bank (1963), which entered into force in September 1964
+secretariat:
+  location: Abidjan, Côte d'Ivoire
+  head: President
+  organization: African Development Bank Group
+membership_count: 82
+description: Multilateral development finance institution and Africa's premier development bank. The African Development Bank Group comprises the African Development Bank, the African Development Fund, and the Nigeria Trust Fund. It mobilizes resources and provides non-concessional and concessional financing, guarantees, equity investments, and technical expertise to support sustainable economic growth, social progress, and regional integration in African member countries.
+tags:
+- AFDB
+- africa
+- african
+- aid
+- bank
+- development
+- economy
+- finance
+- infrastructure
+- multilateral
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: infrastructure
+  name: Infrastructure
 includes:
 - id: CA
   name: Canada
@@ -342,31 +384,18 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1963'
-headquarters:
-  city: Abidjan
-  country: CI
-  coordinates:
-    lat: 5.3363888888889
-    lng: -4.0266666666667
-membership_count: 82
+acronyms:
+- lang: en
+  value: AfDB
+- lang: fr
+  value: BAD
+- lang: de
+  value: AFDB
+- lang: pt
+  value: BAD
 wikidata_id: Q340195
-description: International development bank focused on development providing financial services.
-tags:
-- AFDB
-- african
-- aid
-- bank
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Regional multilateral development bank with 82 members (54 regional and 28 non-regional). Non-regional members joined from 1982 onward. Headquarters returned to Abidjan in 2014 after temporary relocation to Tunis (2003–2014). Maintains AAA credit rating; voting power is split approximately 60% regional and 40% non-regional.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التنمية الإفريقي
@@ -385,6 +414,42 @@ other_names:
 - id: zh
   name: 非洲開發銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.afdb.org/en/about-us
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -395,14 +460,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.afdb.org
-acronyms:
-- lang: fr
-  value: BAD
-- lang: de
-  value: AFDB
-- lang: pt
-  value: BAD

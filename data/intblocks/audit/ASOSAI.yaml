@@ -1,27 +1,57 @@
 id: ASOSAI
+name: Asian Organization of Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '1979'
+active_period:
+  start: '1979'
+geographic_scope: regional
+regions:
+- Asia
+- Oceania
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - en
 links:
 - url: https://asosai.org/
   type: website
-name: Asian Organization of Supreme Audit Institutions
-founded: '1979'
-geographic_scope: regional
-regions:
-- Asia
+- url: http://www.asosai.org/asosai/client/web120/subject/n1/n120/n706/n1360/index.jsp
+  type: website
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
+acronyms:
+- lang: en
+  value: ASOSAI
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in Asia and Oceania
 headquarters:
   city: Beijing
   country: CN
   coordinates:
     lat: 39.8584
     lng: 116.2864
-acronyms:
-- lang: en
-  value: ASOSAI
+secretariat:
+  location: Beijing, China
+  organization: National Audit Office of the People's Republic of China
+  head: Secretary-General
+membership_count: 48
+description: Regional association of supreme audit institutions in Asia and Oceania, established in 1979 with 11 founding members. Promotes understanding and cooperation among member SAIs through exchange of ideas and experiences, training and continuing education for government auditors, research and publication, and regional links with audit institutions worldwide. One of seven regional organisations of INTOSAI; the General Secretariat is hosted by the National Audit Office of China in Beijing.
+tags:
+- ASOSAI
+- asian
+- audit
+- intorg
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AF
   name: Afghanistan
@@ -215,25 +245,53 @@ includes:
   name: Yemen, Rep.
   type: country
   status: member
-membership_count: 48
-description: Regional association of supreme audit institutions in Asia and Oceania, promoting understanding and cooperation
-  among member institutions. One of seven regional organisations of INTOSAI.
-tags:
-- ASOSAI
-- asian
-- audit
-- intorg
-- organization
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governed by an Assembly, Governing Board, Secretariat, and Audit Committee. Membership comprises Charter Members, Members, and Associate Members. The ASOSAI Charter was adopted in Berlin in September 1978; the first Assembly met in New Delhi in May 1979. As of 2026, the ASOSAI chair is held by India (Comptroller and Auditor General K. Sanjay Murthy) and the General Secretariat is hosted by the National Audit Office of China in Beijing (Secretary-General Kai Hou, Auditor General).
+other_names:
+- id: en
+  name: Asian Organization of Supreme Audit Institutions
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: http://www.asosai.org/asosai/client/web120/subject/n1/n120/n706/n1360/index.jsp
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: http://www.asosai.org/asosai/client/web120/subject/n1/n120/n706/n1360/index.jsp
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://asosai.org/asosai/pub/about_us/organization/secretariat/list.jsp
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: http://www.asosai.org/asosai/client/web120/subject/n1/n120/n706/n1360/index.jsp
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: http://www.asosai.org/asosai/client/web120/subject/n1/n120/n706/n1360/index.jsp
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://asosai.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://asosai.org/asosai/pub/about_us/organization/secretariat/list.jsp
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://asosai.org/

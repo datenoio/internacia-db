@@ -10,6 +10,8 @@ languages:
 links:
 - url: https://www.echr.coe.int/
   type: website
+- url: https://www.echr.coe.int/Pages/home.aspx?p=about/mission
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Court_of_Human_Rights
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q122880
@@ -200,13 +202,21 @@ includes:
   name: Serbia
   type: country
   status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+  joined: '1998-05-05'
+  left: '2022-03-16'
 founded: '1959-01-21'
+active_period:
+  start: '1959-01-21'
 headquarters:
   city: Strasbourg
   country: FR
   coordinates:
-    lat: 48.573333333333
-    lng: 7.7522222222222
+    lat: 48.59717
+    lng: 7.77458
 geographic_scope: regional
 regions:
 - Europe
@@ -239,12 +249,29 @@ acronyms:
 - lang: de
   value: EGMR
 membership_count: 46
+founding_members:
+- BE
+- DK
+- FR
+- GB
+- IE
+- IT
+- LU
+- NL
+- 'NO'
+- SE
 wikidata_id: Q122880
 legal_status: international court
-last_verified: '2026-06-14'
-description: International court of the Council of Europe in Strasbourg that interprets and enforces the European Convention
-  on Human Rights. It hears applications from individuals, groups, and contracting states alleging violations of convention
-  rights. All 46 Council of Europe member states are currently within its jurisdiction.
+recognition_status: International court established under the European Convention on Human Rights (1950); became a full-time permanent court on 1 November 1998 under Protocol No. 11; jurisdiction extends to all states party to the Convention
+secretariat:
+  location: Strasbourg, France
+  head: Registrar
+  organization: European Court of Human Rights
+last_verified: '2026-07-12'
+description: International court of the Council of Europe in Strasbourg, also known as the Strasbourg Court, that interprets
+  and enforces the European Convention on Human Rights. It hears applications from individuals, groups, and contracting states
+  alleging violations of convention rights. All 46 current Council of Europe member states are contracting parties within its
+  jurisdiction.
 tags:
 - CEDH
 - ECHR
@@ -253,20 +280,28 @@ tags:
 - TEDH
 - council_of_europe
 - court
+- europe
 - european
+- european_convention
 - human rights
 - human_rights
 - law
 - legal
+- regional
+- regional_cooperation
 - rights
 - strasbourg
+- strasbourg_court
 topics:
 - key: human_rights
   name: Human Rights
 - key: law
   name: Law
-notes: Established on 21 January 1959; became a full-time permanent court on 1 November 1998 under Protocol 11. Each member
-  state appoints one judge. Russia ceased to be a contracting party when expelled from the Council of Europe in March 2022.
+- key: regional_cooperation
+  name: Regional Cooperation
+notes: Established on 21 January 1959; became a full-time permanent court on 1 November 1998 under Protocol No. 11. Each contracting
+  state appoints one judge. Russia ratified the Convention in 1998 but ceased to be a contracting party when expelled from
+  the Council of Europe on 16 March 2022.
 other_names:
 - id: ar
   name: المحكمة الأوروبية لحقوق الإنسان
@@ -292,7 +327,7 @@ provenance:
   license: CC BY-SA 4.0
 - field: notes
   source: Council of Europe
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.echr.coe.int/
 - field: official_documents
   source: Council of Europe
@@ -300,7 +335,7 @@ provenance:
   url: https://www.echr.coe.int/documents/d/echr/convention_ENG
 - field: includes
   source: Council of Europe
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.coe.int/en/web/about-us/member-states
 - field: other_names
   source: Wikidata
@@ -324,3 +359,24 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.echr.coe.int/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q122880
+  license: CC0
+- field: active_period
+  source: Council of Europe
+  retrieved_at: '2026-07-12'
+  url: https://www.echr.coe.int/
+- field: recognition_status
+  source: Council of Europe
+  retrieved_at: '2026-07-12'
+  url: https://conventions.coe.int/Treaty/en/Treaties/Html/005.htm
+- field: secretariat
+  source: Council of Europe
+  retrieved_at: '2026-07-12'
+  url: https://www.echr.coe.int/
+- field: founding_members
+  source: Council of Europe
+  retrieved_at: '2026-07-12'
+  url: https://conventions.coe.int/Treaty/en/Treaties/Html/005.htm

@@ -3,7 +3,7 @@
 > **Generated:** 2026-06-12 (independent repository analysis)
 > **Repository:** internacia-db — reference datasets of countries, intergovernmental organizations, and country groups
 > **Current release:** v1.2.0 (2026-05-29)
-> **Consumers:** Dateno search engine, [internacia-api](../internacia-api), [internacia-python](../internacia-python)
+> **Consumers:** Dateno search engine, [internacia-api](https://github.com/commondataio/internacia-api), [internacia-python](https://github.com/commondataio/internacia-python)
 
 This document is a prioritized improvement plan across **features**, **code quality**, and **product quality**, based on a full review of the data layer (1,317 source YAML files), all nine build/validation scripts (~3,070 lines of Python), CI configuration, and project governance. It is intended for periodic review.
 
@@ -11,7 +11,7 @@ This document is a prioritized improvement plan across **features**, **code qual
 
 ## Executive Summary
 
-Internacia-db is a mature data-as-code repository with a strong **countries** quality pipeline: JSON Schema validation, completeness gates with per-field null-rate thresholds, field-level provenance, entity status policy, release manifest with schema hash, and CI enforcement on every PR. The countries dataset (252 records) is in good shape — 100% provenance and wikidata coverage, enforced population/area/timezone completeness.
+Internacia-db is a mature data-as-code repository with a strong **countries** quality pipeline: JSON Schema validation, completeness gates with per-field null-rate thresholds, field-level provenance, entity status policy, release manifest with schema hash, and CI enforcement on every PR. The countries dataset (256 records) is in good shape — 100% provenance and wikidata coverage, enforced population/area/timezone completeness.
 
 The **intblocks** dataset (1,065 records, 4x larger than countries) has none of that governance: its JSON schema exists but is enforced nowhere, 40% of records lack `wikidata_id`, 38% have boilerplate descriptions, no record has provenance, and the schema itself has drifted from the data (invalid enum values are in active use). On the engineering side there are **no tests at all**, dependencies are unpinned, and the central `builder.py` contains a likely-broken DuckDB export path that CI never exercises.
 
@@ -31,7 +31,7 @@ Top five priorities, in order:
 
 - **Multi-format export pipeline** — JSONL.zst, YAML.zst, Parquet (explicit PyArrow schemas), DuckDB from a single `scripts/builder.py` entry point.
 - **Countries quality gates** — `scripts/validate_countries.py` enforces `data/schemas/countries.schema.json`, duplicate detection, ISO format checks, and `data/schemas/countries_completeness.yaml` thresholds (population/area/timezones/native_names at 0% null, gini warn at 45%).
-- **Provenance and enrichment** — World Bank, Wikidata, and IANA tzdata enrichment with field-level `provenance` entries; 252/252 countries have provenance and `wikidata_id`.
+- **Provenance and enrichment** — World Bank, Wikidata, and IANA tzdata enrichment with field-level `provenance` entries; 256/256 countries have provenance and `wikidata_id`.
 - **Release traceability** — `countries.manifest.json` with version, commit, row count, schema hash; `diff_countries_baseline.py` compares against the main-branch baseline in CI.
 - **Working CI** — `.github/workflows/validate.yml` runs validation, a Parquet build, baseline diff, and an include-name audit on every relevant PR.
 - **Documented entity policy** — `docs/country-code-policy.md` cleanly explains the 249 + 3 non-standard codes (`AN`, `JG`, `KV`) and filtering recipes.
@@ -41,9 +41,9 @@ Top five priorities, in order:
 
 | Dataset | Records | Source path | Governance |
 |---------|--------:|-------------|------------|
-| Countries | 252 | `data/countries/*.yaml` | Schema + completeness + CI + manifest |
-| Intblocks | 1,065 (51 categories) | `data/intblocks/**/*.yaml` | None enforced |
-| Blocktypes | 85 | `data/datasets/blocktypes.yaml` | None; source file lives in the output directory |
+| Countries | 256 | `data/countries/*.yaml` | Schema + completeness + CI + manifest |
+| Intblocks | 1,071 (63 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
+| Blocktypes | 86 | `data/blocktypes/blocktypes.yaml` | Taxonomy source; copied to output on build |
 
 ### 1.3 Verified defects (found during this analysis)
 

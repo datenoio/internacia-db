@@ -6,27 +6,41 @@ blocktype:
 - aviation_safety
 status: formal
 founded: '2003-09-28'
+active_period:
+  start: '2003-09-28'
 geographic_scope: regional
 regions:
 - Europe
 languages:
 - en
+- fr
+- de
+- es
 links:
 - url: https://www.easa.europa.eu/
   type: website
+- url: https://www.easa.europa.eu/en/the-agency/the-agency
+  type: website
+- url: https://www.easa.europa.eu/en/domains/international-cooperation/easa-by-country?ctype%5Beasa_mbm%5D=easa_mbm&easa_relationship%5B0%5D=field_easa_country_mbmo_target_id
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Union_Aviation_Safety_Agency
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q276255
+  type: wikidata
 headquarters:
   city: Cologne
   country: DE
   coordinates:
     lat: 50.9375
     lng: 6.9603
-legal_status: intergovernmental
+legal_status: agency of the European Union
+recognition_status: EU agency established under Regulation (EU) 2018/1139 (Basic Regulation); all EU Member States participate automatically, and EFTA states Iceland, Liechtenstein, Norway, and Switzerland participate under Article 129 with management board observer status but without voting rights
 partof: EU
+secretariat:
+  location: Cologne, Germany
+  organization: Executive Director
 membership_count: 31
-description: Agency of the European Union responsible for civil aviation safety and environmental protection within Europe.
-  EASA maintains and enhances aviation safety standards across Europe, including all EU member states and EFTA countries.
+description: Agency of the European Union responsible for civil aviation safety and environmental protection across Europe. EASA proposes and develops aviation safety rules and standards, certifies aircraft, parts, and equipment, approves and oversees aviation organisations, and provides oversight and support to national civil aviation authorities in shared competence areas such as air operations and air traffic management. Its jurisdiction covers all EU Member States and participating EFTA countries. Created as the European Aviation Safety Agency in 2002 and renamed the European Union Aviation Safety Agency in 2018, it took over core functions of the Joint Aviation Authorities and reached full functionality in 2008.
 tags:
 - EASA
 - aviation
@@ -36,6 +50,8 @@ tags:
 - europe
 - regional
 - eu
+- certification
+- regulatory
 topics:
 - key: aviation
   name: Aviation
@@ -43,6 +59,8 @@ topics:
   name: Safety
 - key: environmental_protection
   name: Environmental Protection
+- key: regulatory
+  name: Regulatory
 includes:
 - id: AT
   name: Austria
@@ -176,22 +194,75 @@ other_names:
   name: European Union Aviation Safety Agency
 - id: fr
   name: Agence européenne de la sécurité aérienne
+- id: de
+  name: Europäische Agentur für Flugsicherheit
+- id: es
+  name: Agencia Europea de Seguridad Aérea
+- id: pt
+  name: Agência Europeia para a Segurança da Aviação
+- id: ru
+  name: Европейское агентство по безопасности полётов
+- id: ar
+  name: وكالة سلامة الطيران الأوروبية
+- id: zh
+  name: 欧盟航空安全局
 wikidata_id: Q276255
+notes: Legally established by Regulation (EC) No 1592/2002 adopted on 15 July 2002 as the European Aviation Safety Agency (EASA); began operations on 28 September 2003 and assumed product certification responsibilities from national authorities on 28 September 2003. Reached full functionality in 2008 after taking over core Joint Aviation Authorities functions. Renamed the European Union Aviation Safety Agency under Regulation (EU) 2018/1139. Governed by a Management Board, Executive Director, and Board of Appeal. The United Kingdom participated until leaving EASA at the end of the Brexit transition on 31 December 2020. Cooperates internationally through bilateral agreements and the Pan-European Partners (PANEP) initiative with Eastern Partnership states.
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q276255
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q276255
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/the-agency
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.easa.europa.eu/
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/the-agency
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/domains/international-cooperation/easa-by-country?ctype%5Beasa_mbm%5D=easa_mbm&easa_relationship%5B0%5D=field_easa_country_mbmo_target_id
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.easa.europa.eu/
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/the-agency
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.easa.europa.eu/
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/the-agency
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/agency-organisation-structure/executive-director
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q276255
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q276255
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/domains/international-cooperation/easa-by-country?ctype%5Beasa_mbm%5D=easa_mbm&easa_relationship%5B0%5D=field_easa_country_mbmo_target_id
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/domains/international-cooperation/easa-by-country?ctype%5Beasa_mbm%5D=easa_mbm&easa_relationship%5B0%5D=field_easa_country_mbmo_target_id
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.easa.europa.eu/en/the-agency/the-agency

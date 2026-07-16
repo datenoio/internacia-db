@@ -1,24 +1,60 @@
 id: OPEC
+name: Organization of the Petroleum Exporting Countries
 blocktype:
 - energy
 status: formal
+founded: '1960-09-14'
+active_period:
+  start: '1961-01-01'
+geographic_scope: global
+regions:
+- Africa
+- Middle East
+- South America
 languages:
 - en
 links:
 - url: https://www.opec.org/
   type: website
+- url: https://www.opec.org/opec_web/en/about_us/24.htm
+  type: website
 - url: https://en.wikipedia.org/wiki/OPEC
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7795
   type: wikidata
-name: Organization of the Petroleum Exporting Countries
+headquarters:
+  city: Vienna
+  country: AT
+  coordinates:
+    lat: 48.208333333333336
+    lng: 16.3725
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established at the Baghdad Conference on 14 September 1960 by Iran, Iraq, Kuwait, Saudi Arabia, and Venezuela; OPEC Statute entered into force in January 1961; headquarters relocated from Geneva to Vienna in September 1965
+secretariat:
+  location: Vienna, Austria
+  head: Secretary General
+  organization: Organization of the Petroleum Exporting Countries
+founding_members:
+- IR
+- IQ
+- KW
+- SA
+- VE
 includes:
 - id: DZ
   name: Algeria
   type: country
   status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+- id: GA
+  name: Gabon
   type: country
   status: member
 - id: IR
@@ -33,26 +69,6 @@ includes:
   name: Kuwait
   type: country
   status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: CG
-  name: Congo
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
 - id: LY
   name: Libya
   type: country
@@ -61,86 +77,28 @@ includes:
   name: Nigeria
   type: country
   status: member
-founded: '1960'
-headquarters:
-  city: Vienna
-  country: AT
-  coordinates:
-    lat: 48.208333333333336
-    lng: 16.3725
-acronyms:
-- lang: en
-  value: OPEC
-- lang: en
-  value: OPEL
-- lang: en
-  value: OPEP
-- lang: en
-  value: OPUL
-- lang: ru
-  value: АПЕК
-- lang: en
-  value: ETOP
-- lang: ru
-  value: ОПЕК
-- lang: he
-  value: אופ״ק
-- lang: he
-  value: אָפּע״ק
-- lang: en
-  value: ოპეკი
-- lang: ru
-  value: МЭЕҰ
-- lang: zh
-  value: 油組
-- lang: zh
-  value: 油组
-- lang: en
-  value: ABEP
-- lang: en
-  value: ONEP
-- lang: en
-  value: LPEE
-- lang: en
-  value: ՆԱԵԿ
-- lang: zh
-  value: 欧佩克
-- lang: zh
-  value: 歐佩克
-membership_count: 12
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+- id: VE
+  name: Venezuela
+  type: country
+  status: member
+membership_count: 11
 wikidata_id: Q7795
-description: Organization of the Petroleum Exporting Countries is an international
-  energy body with 12 members.
+description: Intergovernmental organization of major oil-exporting countries coordinating petroleum policies to secure fair and stable prices, an efficient economic supply of petroleum to consuming nations, and a fair return on capital. Founded in Baghdad in September 1960 by five founding members, OPEC is headquartered in Vienna and holds the OPEC Conference as its supreme decision-making body. Member countries collectively account for a large share of global proven oil reserves and crude oil production.
 tags:
-- ABEP
-- ETOP
-- LPEE
-- ONEP
 - OPEC
-- OPEL
-- OPEP
-- OPUL
-- commerce
-- economy
 - energy
-- environment
-- exporting
-- nature
 - oil
-- organization
 - petroleum
+- intergovernmental
+- international
+- cartel
 - trade
-- АПЕК
-- МЭЕҰ
-- ОПЕК
-- ՆԱԵԿ
-- אָפּע״ק
-- אופ״ק
-- ᲝᲞᲔᲙᲘ
-- 欧佩克
-- 歐佩克
-- 油組
-- 油组
+- economy
+- environment
 topics:
 - key: economy
   name: Economy
@@ -163,11 +121,80 @@ other_names:
   name: Организация стран — экспортёров нефти
 - id: es
   name: Organización de Países Exportadores de Petróleo
+acronyms:
+- lang: en
+  value: OPEC
+- lang: fr
+  value: OPEP
+- lang: es
+  value: OPEP
+- lang: ru
+  value: ОПЕК
+- lang: ar
+  value: أوبك
+- lang: zh
+  value: 欧佩克
+notes: The United Arab Emirates withdrew from OPEC and OPEC+ effective 1 May 2026 after nearly 60 years of membership. Former members also include Angola, Ecuador, Indonesia, and Qatar. OPEC+ is a separate larger framework formed in late 2016 that coordinates production policy between OPEC members and selected non-OPEC producers such as Russia and Kazakhstan. Canada, Egypt, Norway, and Oman have attended OPEC meetings as observers.
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.opec.org/opec_web/en/about_us/24.htm
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.opec.org/opec_web/en/about_us/24.htm
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.opec.org/opec_web/en/about_us/24.htm
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.opec.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPEC
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.bbc.com/news/articles/cj4pxwlr52yo
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7795
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7795
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7795
+  license: CC0

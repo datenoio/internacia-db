@@ -2,6 +2,11 @@ id: ECA
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://www.worldbank.org/en/region/eca
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
 name: Europe & Central Asia (developing only)
 includes:
 - id: AL
@@ -93,8 +98,13 @@ includes:
   type: country
   status: member
 membership_count: 22
-description: Europe & Central Asia (developing only) is an international wbgroup body
-  with 22 members.
+geographic_scope: regional
+regions:
+- Europe
+- Central Asia
+description: World Bank geographic region for developing economies across Europe and
+  Central Asia. This analytical variant excludes high-income economies from the regional
+  aggregate used in World Development Indicators.
 tags:
 - ECA
 - aid
@@ -113,7 +123,44 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: ECA
+other_names:
+- id: ar
+  name: أوروبا وآسيا الوسطى
+- id: de
+  name: Europa und Zentralasien
+- id: en
+  name: Europe and Central Asia
+- id: es
+  name: Europa y Asia Central
+- id: fr
+  name: Europe et Asie centrale
+- id: pt
+  name: Europa e Ásia Central
+- id: ru
+  name: Европа и Центральная Азия
+- id: zh
+  name: 欧洲和中亚
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: other_names
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbank.org/en/region/eca

@@ -2,13 +2,47 @@ id: PUMED
 blocktype:
 - postal
 status: formal
+languages:
+- en
+- fr
+- ar
 links:
 - url: https://euromed-postal.org/
   type: website
+- url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+  type: website
 name: The Postal Union for the Mediterranean
+founded: '2011-03-15'
+geographic_scope: regional
+regions:
+- Mediterranean
+legal_status: restricted union of postal operators
+recognition_status: Restricted union of the Universal Postal Union (since 12 March 2012)
+acronyms:
+- lang: en
+  value: PUMed
+- lang: en
+  value: PUMED
+headquarters:
+  city: Marsa
+  country: MT
+  coordinates:
+    lat: 35.8802685
+    lng: 14.484995
+secretariat:
+  location: c/o MaltaPost p.l.c., 305 Triq Ħal Qormi, Il-Marsa MTP 1001, Malta
+  organization: MaltaPost p.l.c.
 includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
 - id: DZ
   name: Algeria
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
   type: country
   status: member
 - id: HR
@@ -31,10 +65,6 @@ includes:
   name: Greece
   type: country
   status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
 - id: IT
   name: Italy
   type: country
@@ -55,6 +85,10 @@ includes:
   name: Malta
   type: country
   status: member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
 - id: MC
   name: Monaco
   type: country
@@ -65,10 +99,6 @@ includes:
   status: member
 - id: MA
   name: Morocco
-  type: country
-  status: member
-- id: PS
-  name: State of Palestine
   type: country
   status: member
 - id: PT
@@ -83,10 +113,6 @@ includes:
   name: Spain
   type: country
   status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
 - id: TN
   name: Tunisia
   type: country
@@ -95,21 +121,20 @@ includes:
   name: Turkey
   type: country
   status: member
-- id: VA
-  name: Vatican City
-  type: country
-  status: member
-membership_count: 23
-description: A restricted union of the Universal Postal Union that brings together postal operators of countries in the Mediterranean basin to foster cooperation and the development of postal services across the region. It was established in 2011.
+membership_count: 22
+description: A restricted union of the Universal Postal Union bringing together designated
+  postal operators of Mediterranean countries to foster cooperation and develop postal
+  services across the region. Established in Rome on 15 March 2011 by 14 postal operators
+  and recognized as a UPU restricted union on 12 March 2012, it draws members chiefly
+  from the Arab Permanent Postal Commission and PostEurop.
 tags:
 - PUMED
 - communication
 - cooperation
+- mediterranean
 - postal
 - regional
 - regional_cooperation
-- research
-- science
 - telecom
 - telecommunications
 - union
@@ -118,7 +143,59 @@ topics:
   name: Postal
 - key: regional_cooperation
   name: Regional Cooperation
-- key: science
-  name: Science
 - key: telecommunications
   name: Telecommunications
+other_names:
+- id: en
+  name: Euromed Postal
+- id: ar
+  name: البريد الاورومتوسطي
+- id: fr
+  name: Union postale pour la Méditerranée
+notes: Governing bodies are the General Meeting and the Board of Directors. Administrative
+  contact is c/o MaltaPost in Marsa, Malta; the Secretary General is based at PTT in
+  Ankara, Turkey. Strategic priorities cover enhancing communication, promoting financial
+  inclusion, stimulating trade, and sharing resources.
+last_verified: '2026-07-12'
+provenance:
+- field: founded
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+- field: geographic_scope
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+- field: recognition_status
+  source: Euromed Postal
+  retrieved_at: '2026-07-12'
+  url: https://euromed-postal.org/about-us/
+- field: description
+  source: Euromed Postal
+  retrieved_at: '2026-07-12'
+  url: https://euromed-postal.org/about-us/
+- field: includes
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+- field: secretariat
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+- field: headquarters
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/PUMed
+- field: headquarters.coordinates
+  source: OpenStreetMap Nominatim
+  retrieved_at: '2026-07-12'
+  url: https://nominatim.openstreetmap.org/
+  license: ODbL
+- field: notes
+  source: Euromed Postal
+  retrieved_at: '2026-07-12'
+  url: https://euromed-postal.org/about-us/
+- field: other_names
+  source: Euromed Postal
+  retrieved_at: '2026-07-12'
+  url: https://euromed-postal.org/

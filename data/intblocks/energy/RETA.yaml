@@ -1,23 +1,34 @@
 id: RETA
+name: Regulatory Energy Transition Accelerator
 blocktype:
 - energy
 status: formal
+founded: '2021-11'
+active_period:
+  start: '2021-11'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://retatheaccelerator.org/
   type: website
-name: Regulatory Energy Transition Accelerator
-founded: '2021'
+- url: https://www.iea.org/about/international-collaborations/reta
+  type: website
+- url: https://www.iea.org/news/regulatory-energy-transition-accelerator-launched-at-cop26-by-iea-ofgem-irena-and-the-world-bank
+  type: website
 headquarters:
   city: Paris
   country: FR
   coordinates:
-    lat: 48.850833333333334
-    lng: 2.2930555555555556
-geographic_scope: global
-regions:
-- worldwide
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+legal_status: initiative
+recognition_status: Launched on 3 November 2021 at COP26 in Glasgow as part of the Green Grids Initiative (GGI-OSOWOG) by Ofgem, the International Energy Agency (IEA), IRENA, the World Bank, RMI, the Regulatory Assistance Project (RAP), and Energy Innovation; the IEA invited to provide coordinating administrative functions
+secretariat:
+  location: Paris, France
+  organization: International Energy Agency (RETA Administrator)
 includes:
 - id: AL
   name: Albania
@@ -179,6 +190,10 @@ includes:
   name: Turks and Caicos Islands
   type: country
   status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
 - id: UY
   name: Uruguay
   type: country
@@ -191,17 +206,23 @@ includes:
   name: Vanuatu
   type: country
   status: member
-membership_count: 50
-description: Initiative to enhance the capacity of energy regulators to increase the speed of clean energy transitions. Works
-  directly with energy regulators to facilitate knowledge sharing, peer-to-peer learning, and thought leadership on regulatory
-  issues. Launched in 2021 at COP26 by Ofgem, IEA, IRENA, the World Bank, RMI, Energy Innovation and RAP along with regulators
-  from around the world as part of the Green Grids Initiative.
+membership_count: 44
+description: Global initiative launched at COP26 in November 2021 to enhance the capacity of energy regulators to accelerate
+  clean energy transitions. RETA works directly with energy regulators worldwide to facilitate knowledge sharing, peer-to-peer
+  learning, and thought leadership on regulatory issues, and serves as a central resource for knowledge products and regulatory
+  tools. Founded by Ofgem, the International Energy Agency (IEA), IRENA, the World Bank, RMI, the Regulatory Assistance
+  Project (RAP), and Energy Innovation as part of the Green Grids Initiative; the IEA provides coordinating administrative
+  functions. More than 60 regulatory authorities from over 40 countries participate.
 tags:
 - RETA
 - clean_energy
+- climate
+- cop26
 - economy
 - energy
 - environment
+- ggi
+- grid
 - international
 - nature
 - regulatory
@@ -217,18 +238,64 @@ topics:
   name: Environment
 - key: renewable
   name: Renewable Energy
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: en
   name: Regulatory Energy Transition Accelerator
+- id: en
+  name: RETA/The Accelerator
 acronyms:
 - lang: en
   value: RETA
+notes: Focus areas include flexible renewable-based systems, regulatory frameworks for the energy transition, network planning
+  for wide-scale electrification, regional interconnection, and fair and inclusive energy transitions. Activities are delivered
+  through dissemination workshops, bilateral and multilateral exchanges, bespoke technical assistance, and knowledge products.
+  Delivery partners include RAP, RMI, and Energy Innovation. Participating regulatory networks include AFUR, CAMPUT, ERERA,
+  ERRA, ICER, MEDREG, NARUC, OOCUR, and RAERESA. CEER participates indirectly via ICER membership.
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://retatheaccelerator.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
   url: https://retatheaccelerator.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/reta
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/news/regulatory-energy-transition-accelerator-launched-at-cop26-by-iea-ofgem-irena-and-the-world-bank
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/reta
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/international-collaborations/reta
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/news/regulatory-energy-transition-accelerator-launched-at-cop26-by-iea-ofgem-irena-and-the-world-bank
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/news/regulatory-energy-transition-accelerator-launched-at-cop26-by-iea-ofgem-irena-and-the-world-bank
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://retatheaccelerator.org/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://retatheaccelerator.org/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://retatheaccelerator.org/

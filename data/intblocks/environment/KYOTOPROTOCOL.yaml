@@ -1,9 +1,22 @@
 id: KYOTOPROTOCOL
+name: Kyoto Protocol
 blocktype:
 - environment
 - agreement
+- climate
 status: formal
 partof: UNFCCC
+founded: '1997-12-11'
+active_period:
+  start: '2005-02-16'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 - es
@@ -12,21 +25,43 @@ languages:
 - ru
 - zh
 links:
-- url: https://unfccc.int/kyoto_protocol
+- url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+  type: website
+- url: https://unfccc.int/process/the-kyoto-protocol/status-of-ratification
+  type: website
+- url: https://unfccc.int/resource/docs/convkp/kpeng.pdf
   type: website
 - url: https://en.wikipedia.org/wiki/Kyoto_Protocol
   type: wikipedia
-name: Kyoto Protocol
-founded: '1997'
-description: International protocol focused on climate change mitigation and greenhouse gas emissions reduction established
-  under the UNFCCC framework.
+- url: https://www.wikidata.org/wiki/Q47359
+  type: wikidata
+headquarters:
+  city: Bonn
+  country: DE
+  coordinates:
+    lat: 50.7186
+    lng: 7.1275
+legal_status: treaty
+recognition_status: Protocol to the United Nations Framework Convention on Climate Change adopted at COP 3 in Kyoto on 11 December 1997; opened for signature from 16 March 1998 to 15 March 1999; entered into force on 16 February 2005 (United Nations Treaty Series vol. 2303, p. 162); commits Annex I Parties to binding greenhouse gas emission-reduction targets and establishes flexible mechanisms including emissions trading, the Clean Development Mechanism, and Joint Implementation; administered by the UNFCCC Secretariat in Bonn
+secretariat:
+  location: Bonn, Germany
+  organization: UNFCCC Secretariat
+description: International climate treaty requiring developed countries and economies in transition (Annex I Parties) to implement binding greenhouse gas emission-reduction targets for the first commitment period (2008–2012), with flexible market-based mechanisms including emissions trading, the Clean Development Mechanism, and Joint Implementation. Adopted at COP 3 in Kyoto in 1997 as a protocol to the UNFCCC and entered into force in 2005; the Doha Amendment extended commitments through a second commitment period (2013–2020).
 tags:
 - KYOTOPROTOCOL
 - agreement
 - climate
+- climate_change
+- emissions
 - environment
+- GHG
+- greenhouse_gases
 - kyoto
+- law
+- legal
 - protocol
+- treaty
+- unfccc
 topics:
 - key: climate_change
   name: Climate Change
@@ -37,16 +72,27 @@ topics:
 other_names:
 - id: ar
   name: بروتوكول كيوتو
-- id: zh
-  name: 京都议定书
+- id: de
+  name: Kyoto-Protokoll
 - id: en
   name: Kyoto Protocol
-- id: fr
-  name: Protocole de Kyoto
-- id: ru
-  name: Киотский протокол
 - id: es
   name: Protocolo de Kioto
+- id: fr
+  name: Protocole de Kyoto
+- id: pt
+  name: Protocolo de Quioto
+- id: ru
+  name: Киотский протокол
+- id: zh
+  name: 京都议定书
+acronyms:
+- lang: en
+  value: KP
+- lang: fr
+  value: KP
+- lang: es
+  value: KP
 includes:
 - id: AE
   name: United Arab Emirates
@@ -800,13 +846,78 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-notes: The Kyoto Protocol was adopted in 1997 and entered into force in 2005. As of 2022, it has 192 parties. The protocol
-  commits industrialized countries and economies in transition to limit and reduce greenhouse gas emissions.
+official_documents:
+- url: https://unfccc.int/resource/docs/convkp/kpeng.pdf
+  type: document
+  name: Kyoto Protocol to the United Nations Framework Convention on Climate Change
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-a&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (vol. 2303, p. 162)
+notes: The Kyoto Protocol was adopted on 11 December 1997 at COP 3 in Kyoto and entered into force on 16 February 2005. As of
+  2026, it has 192 parties (191 states and the European Union). The first commitment period ran from 2008 to 2012. The Doha
+  Amendment, adopted in 2012, established a second commitment period through 2020 and entered into force on 31 December
+  2020. Major non-parties that signed but did not ratify include the United States. The Paris Agreement has largely succeeded
+  the Protocol's binding target framework, but Kyoto mechanisms and compliance infrastructure remain relevant.
 membership_count: 192
 wikidata_id: Q47359
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: active_period
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: founded
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: geographic_scope
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process/the-kyoto-protocol/status-of-ratification
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-a&chapter=27&clang=_en
+- field: recognition_status
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: secretariat
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: headquarters
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/about-us/secretariat
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-a&chapter=27&clang=_en
+- field: membership_count
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process/the-kyoto-protocol/status-of-ratification
+- field: notes
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-kyoto-protocol
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q47359
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q47359
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q47359
   license: CC0

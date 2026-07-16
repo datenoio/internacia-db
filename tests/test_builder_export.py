@@ -110,10 +110,10 @@ def test_manifest_fields_and_schema_hash_stability(tmp_path):
 
 def test_intblocks_manifest(tmp_path):
     schema = builder.get_intblocks_schema()
-    builder.write_manifest(tmp_path, "intblocks", schema, 1057)
+    builder.write_manifest(tmp_path, "intblocks", schema, 1071)
     manifest = json.loads((tmp_path / "intblocks.manifest.json").read_text(encoding="utf-8"))
     assert manifest["dataset"] == "intblocks"
-    assert manifest["row_count"] == 1057
+    assert manifest["row_count"] == 1071
 
 
 def test_duckdb_meta_table_is_queryable(tmp_path):

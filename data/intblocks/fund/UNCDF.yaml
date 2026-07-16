@@ -1,18 +1,12 @@
 id: UNCDF
+name: United Nations Capital Development Fund
 blocktype:
 - fund
 status: formal
-partof: UN
-languages:
-- en
-- fr
-links:
-- url: https://www.uncdf.org
-  type: website
-- url: https://en.wikipedia.org/wiki/United_Nations_Capital_Development_Fund
-  type: wikipedia
-name: United Nations Capital Development Fund
-founded: '1966'
+partof: UNDP
+founded: '1966-12-13'
+active_period:
+  start: '1966-12-13'
 geographic_scope: global
 regions:
 - Africa
@@ -21,6 +15,36 @@ regions:
 - North America
 - Oceania
 - South America
+languages:
+- en
+- fr
+links:
+- url: https://www.uncdf.org
+  type: website
+- url: https://www.uncdf.org/who-we-are
+  type: website
+- url: https://www.uncdf.org/who-we-are/governance-and-funding
+  type: website
+- url: https://en.wikipedia.org/wiki/United_Nations_Capital_Development_Fund
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q356037
+  type: wikidata
+- url: https://www.uncdf.org/where-we-work
+  type: website
+- url: https://transparency.uncdf.org
+  type: website
+legal_status: autonomous UN organization
+recognition_status: Established by UN General Assembly Resolution 2186 on 13 December 1966 as an autonomous organization within the United Nations; administered by the UNDP Administrator as Managing Director per GA Resolution 2321 (1967); mandate reoriented by GA Resolution 3122 (1973) to serve first and foremost the least developed countries; voluntarily funded and affiliated with the United Nations Development Programme
+headquarters:
+  city: New York
+  country: US
+  coordinates:
+    lat: 40.7489
+    lng: -73.968
+secretariat:
+  location: New York, United States
+  head: Executive Secretary
+  organization: United Nations Capital Development Fund
 acronyms:
 - lang: en
   value: UNCDF
@@ -28,54 +52,325 @@ acronyms:
   value: FENU
 - lang: de
   value: UNCDF
-headquarters:
-  city: New York
-  country: US
-description: United Nations agency.
+includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: recipient
+- id: AO
+  name: Angola
+  type: country
+  status: recipient
+- id: BD
+  name: Bangladesh
+  type: country
+  status: recipient
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: recipient
+- id: BI
+  name: Burundi
+  type: country
+  status: recipient
+- id: BJ
+  name: Benin
+  type: country
+  status: recipient
+- id: BT
+  name: Bhutan
+  type: country
+  status: recipient
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: recipient
+- id: CF
+  name: Central African Republic
+  type: country
+  status: recipient
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: recipient
+- id: CM
+  name: Cameroon
+  type: country
+  status: recipient
+- id: CN
+  name: China
+  type: country
+  status: recipient
+- id: DJ
+  name: Djibouti
+  type: country
+  status: recipient
+- id: DZ
+  name: Algeria
+  type: country
+  status: recipient
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: recipient
+- id: ER
+  name: Eritrea
+  type: country
+  status: recipient
+- id: ET
+  name: Ethiopia
+  type: country
+  status: recipient
+- id: FJ
+  name: Fiji
+  type: country
+  status: recipient
+- id: GA
+  name: Gabon
+  type: country
+  status: recipient
+- id: GH
+  name: Ghana
+  type: country
+  status: recipient
+- id: GM
+  name: Gambia, The
+  type: country
+  status: recipient
+- id: GN
+  name: Guinea
+  type: country
+  status: recipient
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: recipient
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: recipient
+- id: ID
+  name: Indonesia
+  type: country
+  status: recipient
+- id: IN
+  name: India
+  type: country
+  status: recipient
+- id: JM
+  name: Jamaica
+  type: country
+  status: recipient
+- id: JO
+  name: Jordan
+  type: country
+  status: recipient
+- id: KE
+  name: Kenya
+  type: country
+  status: recipient
+- id: KH
+  name: Cambodia
+  type: country
+  status: recipient
+- id: KI
+  name: Kiribati
+  type: country
+  status: recipient
+- id: LA
+  name: Lao PDR
+  type: country
+  status: recipient
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: recipient
+- id: LR
+  name: Liberia
+  type: country
+  status: recipient
+- id: LS
+  name: Lesotho
+  type: country
+  status: recipient
+- id: MA
+  name: Morocco
+  type: country
+  status: recipient
+- id: MG
+  name: Madagascar
+  type: country
+  status: recipient
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: recipient
+- id: ML
+  name: Mali
+  type: country
+  status: recipient
+- id: MM
+  name: Myanmar
+  type: country
+  status: recipient
+- id: MR
+  name: Mauritania
+  type: country
+  status: recipient
+- id: MV
+  name: Maldives
+  type: country
+  status: recipient
+- id: MW
+  name: Malawi
+  type: country
+  status: recipient
+- id: MY
+  name: Malaysia
+  type: country
+  status: recipient
+- id: MZ
+  name: Mozambique
+  type: country
+  status: recipient
+- id: NE
+  name: Niger
+  type: country
+  status: recipient
+- id: NG
+  name: Nigeria
+  type: country
+  status: recipient
+- id: NP
+  name: Nepal
+  type: country
+  status: recipient
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: recipient
+- id: PH
+  name: Philippines
+  type: country
+  status: recipient
+- id: RW
+  name: Rwanda
+  type: country
+  status: recipient
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: recipient
+- id: SD
+  name: Sudan
+  type: country
+  status: recipient
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: recipient
+- id: SN
+  name: Senegal
+  type: country
+  status: recipient
+- id: SO
+  name: Somalia
+  type: country
+  status: recipient
+- id: SS
+  name: South Sudan
+  type: country
+  status: recipient
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: recipient
+- id: TD
+  name: Chad
+  type: country
+  status: recipient
+- id: TG
+  name: Togo
+  type: country
+  status: recipient
+- id: TH
+  name: Thailand
+  type: country
+  status: recipient
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: recipient
+- id: TO
+  name: Tonga
+  type: country
+  status: recipient
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: recipient
+- id: TV
+  name: Tuvalu
+  type: country
+  status: recipient
+- id: TZ
+  name: Tanzania
+  type: country
+  status: recipient
+- id: UG
+  name: Uganda
+  type: country
+  status: recipient
+- id: VN
+  name: Vietnam
+  type: country
+  status: recipient
+- id: VU
+  name: Vanuatu
+  type: country
+  status: recipient
+- id: WS
+  name: Samoa
+  type: country
+  status: recipient
+- id: ZA
+  name: South Africa
+  type: country
+  status: recipient
+- id: ZM
+  name: Zambia
+  type: country
+  status: recipient
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: recipient
+membership_count: 73
+description: UN flagship catalytic blended-finance platform that supplements capital assistance to developing economies through grants, concessional loans, and risk-absorbing guarantees, with priority for least developed countries, small island developing states, and fragile settings. Established by the UN General Assembly in 1966 and affiliated with UNDP, UNCDF crowds in public and private capital to build investable markets where conventional finance is scarce.
 tags:
 - UNCDF
 - FENU
 - aid
+- blended_finance
 - capital
+- catalytic
 - development
 - finance
 - fund
+- ldc
+- microfinance
+- undp
 - un
 topics:
 - key: development
   name: Development
 - key: finance
   name: Finance
+- key: economy
+  name: Economy
 wikidata_id: Q356037
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.uncdf.org
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.uncdf.org
+notes: Operates in 73 countries and territories with active programme presence as of 2023, including 44 LDCs and fragile settings; mobilized approximately US$500 million in resources with 65+ ongoing projects. Focus areas include local development finance, inclusive finance, and catalytic capital instruments; the UNDP Administrator serves as Managing Director while the Executive Secretary leads day-to-day operations.
+last_verified: '2026-07-15'
 other_names:
 - id: ar
   name: صندوق الأمم المتحدة لتنمية رأس المال
@@ -91,3 +386,60 @@ other_names:
   name: Фонд ООН для инвестиций в развитие
 - id: zh
   name: 聯合國資本發展基金
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q356037
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/who-we-are
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/who-we-are
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/who-we-are
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q356037
+  license: CC0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/who-we-are/governance-and-funding
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.uncdf.org/who-we-are
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q356037
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q356037
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://transparency.uncdf.org
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.uncdf.org/where-we-work
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.uncdf.org/where-we-work

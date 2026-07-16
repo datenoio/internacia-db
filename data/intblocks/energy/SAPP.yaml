@@ -1,16 +1,40 @@
 id: SAPP
+name: Southern African Power Pool
 blocktype:
 - energy
 status: formal
+partof: SADC
+founded: '1995-08-01'
+active_period:
+  start: '1995-08-01'
+geographic_scope: regional
+regions:
+- Southern Africa
+- Africa
 languages:
 - en
 links:
 - url: https://www.sapp.co.zw/
   type: website
+- url: https://www.sapp.co.zw/about-sapp
+  type: website
+- url: https://www.sapp.co.zw/contact-us
+  type: website
 - url: https://en.wikipedia.org/wiki/Southern_African_Power_Pool
   type: wikipedia
-name: Southern African Power Pool
-founded: '1995'
+- url: https://www.sadc.int/historical-events/southern-africa-power-pool-sapp-established
+  type: website
+headquarters:
+  city: Harare
+  country: ZW
+  coordinates:
+    lat: -17.82772
+    lng: 31.05337
+legal_status: intergovernmental
+recognition_status: Regional power pool established in August 1995 through an Inter-Governmental Memorandum of Understanding signed at the SADC summit in Kempton Park, South Africa; governed by four agreements covering intergovernmental, inter-utility, operating-member, and operating-guideline frameworks; first power pool established in Africa
+secretariat:
+  location: SAPP Co-ordination Centre, 24 Golden Stairs Road, Emerald Hill, Harare, Zimbabwe
+  organization: SAPP Coordination Centre
 includes:
 - id: BW
   name: Botswana
@@ -61,7 +85,11 @@ includes:
   type: country
   status: member
 membership_count: 12
-description: Regional integrated power grid system coordinating electricity transmission and trading among Southern African countries. Facilitates cross-border electricity exchange and enhances regional energy security.
+description: Regional power pool coordinating cross-border electricity trade and grid interconnection among Southern African
+  member states under the Southern African Development Community (SADC). Established in 1995 through an Inter-Governmental
+  Memorandum of Understanding, SAPP was the first power pool in Africa and develops regional generation and transmission
+  infrastructure, synchronizes national grids, and operates competitive electricity markets including day-ahead and intra-day
+  trading. The Coordination Centre is based in Harare, Zimbabwe.
 tags:
 - SAPP
 - energy
@@ -74,6 +102,9 @@ tags:
 - interconnection
 - electricity
 - power_pool
+- regional
+- intergovernmental
+- SADC
 topics:
 - key: energy
   name: Energy
@@ -84,4 +115,61 @@ topics:
 other_names:
 - id: en
   name: Southern African Power Pool
-notes: Nine countries are currently interconnected in the synchronized grid. Malawi is scheduled to be connected by end of 2025, with Tanzania and Angola planned for connection by 2028.
+acronyms:
+- lang: en
+  value: SAPP
+notes: Created at the August 1995 SADC summit in Kempton Park, South Africa; the Revised Inter-Governmental Memorandum of
+  Understanding was signed on 23 February 2006. SAPP is governed by four agreements covering intergovernmental, inter-utility,
+  operating-member, and operating-guideline frameworks. Nine countries are interconnected in the synchronized grid; Malawi
+  is scheduled to connect by end of 2025, with Tanzania and Angola planned for connection by 2028. Operating members include
+  national utilities such as Eskom, ZESCO, and BPC; non-operating members include Malawi (ESCOM), Angola (RNT), and Tanzania
+  (TANESCO). Governance includes an Executive Committee of utility CEOs, a Management Committee, four sub-committees
+  (Environmental, Markets, Operating, Planning), and the Coordination Centre Board. SAPP established the Short-Term Energy
+  Market in April 2001 and the day-ahead market in December 2009, later adding forward physical and intra-day markets.
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/contact-us
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/contact-us
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Southern_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/about-sapp
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.sapp.co.zw/

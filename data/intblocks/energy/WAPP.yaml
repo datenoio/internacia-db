@@ -1,17 +1,40 @@
 id: WAPP
+name: West African Power Pool
 blocktype:
 - energy
 status: formal
+partof: ECOWAS
+founded: '1999-12-05'
+active_period:
+  start: '1999-12-05'
+geographic_scope: regional
+regions:
+- West Africa
+- Africa
 languages:
 - en
 - fr
 links:
 - url: https://www.ecowapp.org/
   type: website
+- url: https://www.ecowapp.org/en/content/governing-structures
+  type: website
 - url: https://en.wikipedia.org/wiki/West_African_Power_Pool
   type: wikipedia
-name: West African Power Pool
-founded: '1999'
+- url: https://www.wikidata.org/wiki/Q1376279
+  type: wikidata
+headquarters:
+  city: Cotonou
+  country: BJ
+  coordinates:
+    lat: 6.361944
+    lng: 2.490278
+legal_status: intergovernmental
+recognition_status: Specialized institution of the Economic Community of West African States (ECOWAS), created by Decision A/DEC.5/12/99 at the 22nd ECOWAS Authority summit on 5 December 1999; Articles of Agreement adopted by Decisions A/DEC.18/01/06 and A/DEC.20/01/06 at the 29th summit in Niamey on 18 January 2006, granting the General Secretariat status as an ECOWAS specialized institution; headquarters agreement with Benin signed 5 July 2006
+secretariat:
+  location: PK6, Zone des Ambassades, Akpakpa, 06 BP 2907, Cotonou, Republic of Benin
+  head: Secretary General
+  organization: General Secretariat of the West African Power Pool
 includes:
 - id: BJ
   name: Benin
@@ -70,9 +93,13 @@ includes:
   type: country
   status: member
 membership_count: 14
-description: Specialized agency of ECOWAS integrating national power systems into a unified regional electricity market. Aims to establish an integrated power grid across West African countries.
+description: Specialized institution of the Economic Community of West African States (ECOWAS) that integrates national power
+  systems into a unified regional electricity market. WAPP coordinates public and private generation, transmission, and distribution
+  utilities across fourteen mainland West African member states to develop cross-border interconnections, harmonize grid planning
+  and operation, and facilitate competitive regional electricity trade. The General Secretariat is based in Cotonou, Benin.
 tags:
 - WAPP
+- ECOWAS
 - energy
 - grid
 - power
@@ -83,7 +110,8 @@ tags:
 - interconnection
 - electricity
 - power_pool
-- ECOWAS
+- regional
+- intergovernmental
 topics:
 - key: energy
   name: Energy
@@ -96,4 +124,68 @@ other_names:
   name: West African Power Pool
 - id: fr
   name: Pool énergétique de l'Afrique de l'Ouest
-notes: Cape Verde is not a member due to its island geography preventing connection to the mainland transmission grid. Mali, Burkina Faso, and Niger remain members despite their withdrawal from ECOWAS in 2024.
+acronyms:
+- lang: en
+  value: WAPP
+wikidata_id: Q1376279
+notes: Covers fourteen of fifteen ECOWAS member states; Cape Verde is excluded because its island geography prevents connection
+  to the mainland transmission grid. Governance comprises the General Assembly of member utilities, a fifteen-member Executive
+  Board, five Organizational Committees (engineering and operations, strategic planning and environment, finance, human resources
+  and governance, and distribution and commercial), and the General Secretariat. Regional infrastructure planning follows the
+  ECOWAS Master Plan for Regional Power Generation and Transmission Infrastructure (2019–2033). Mali, Burkina Faso, and Niger
+  remain members despite their withdrawal from ECOWAS in 2024.
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/sites/default/files/wapp_2021_annual_report.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/en/content/governing-structures
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/West_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/West_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/West_African_Power_Pool
+  license: CC BY-SA 4.0
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.ecowapp.org/en/content/governing-structures
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1376279
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1376279
+  license: CC0

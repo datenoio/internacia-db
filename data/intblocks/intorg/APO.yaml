@@ -1,108 +1,240 @@
 id: APO
+name: Asian Productivity Organization
 blocktype:
 - intorg
 status: formal
+founded: '1961-05-11'
+active_period:
+  start: '1961-05-11'
+geographic_scope: regional
+regions:
+- Asia
+- Pacific
 languages:
 - en
-- jp
+- ja
 links:
-- url: http://www.apo-tokyo.org
+- url: https://www.apo-tokyo.org/
   type: website
-name: Asian Productivity Organisation
+- url: https://www.apo-tokyo.org/overview/
+  type: website
+- url: https://www.wikidata.org/wiki/Q16166565
+  type: wikidata
+acronyms:
+- lang: en
+  value: APO
+legal_status: intergovernmental organization
+recognition_status: Nonpolitical, nonprofit regional intergovernmental organization established under the Convention on the Asian Productivity Organization; membership open to UN ESCAP member countries
+headquarters:
+  city: Tokyo
+  country: JP
+  coordinates:
+    lat: 35.7081
+    lng: 139.762
+secretariat:
+  location: 1-24-1 Hongo, Bunkyo-ku, Tokyo, Japan
+  head: Secretary-General
+membership_count: 21
+description: Intergovernmental organization established on 11 May 1961 to increase productivity in the Asia-Pacific region through mutual cooperation among member economies. The APO contributes to sustainable socioeconomic development through policy advisory services, acting as a regional think tank, and undertaking initiatives in industry, agriculture, services, and the public sector. Each member is represented through a government-appointed National Productivity Organization (NPO); the Governing Body of member directors meets annually and the Secretariat is headquartered in Tokyo.
+tags:
+- APO
+- asia
+- asia-pacific
+- capacity-building
+- intorg
+- npo
+- organisation
+- productivity
+- regional
+- regional_cooperation
+- think-tank
+- tokyo
+topics:
+- key: economy
+  name: Economy
+- key: development
+  name: Development
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '1982'
 - id: KH
   name: Cambodia
   type: country
   status: member
+  joined: '2004'
 - id: TW
   name: Chinese Taipei
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: FJ
   name: Fiji
   type: country
   status: member
+  joined: '1984'
 - id: HK
   name: Hong Kong
   type: country
   status: member
+  joined: '1963'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '1968'
 - id: IR
   name: Iran, Islamic Republic of
   type: country
   status: member
+  joined: '1965'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: KR
   name: Korea, Republic of
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: LA
   name: Lao PDR
   type: country
   status: member
+  joined: '2002'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1983'
 - id: MN
   name: Mongolia
   type: country
   status: member
+  joined: '1992'
 - id: NP
   name: Nepal
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: SG
   name: Singapore
   type: country
   status: member
+  joined: '1969'
 - id: LK
   name: Sri Lanka
   type: country
   status: member
+  joined: '1966'
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1961-05-11'
 - id: TR
   name: Türkiye
   type: country
   status: member
+  joined: '2020'
 - id: VN
   name: Vietnam
   type: country
   status: member
-membership_count: 21
-description: The Asian Productivity Organization is an international organization that is used to promote regional cooperation
-  in the productivity sector.
-tags:
-- APO
-- asian
-- intorg
-- organisation
-- productivity
-topics:
-- key: economy
-  name: Economy
+  joined: '1996'
+founding_members:
+- TW
+- IN
+- JP
+- KR
+- NP
+- PK
+- PH
+- TH
+wikidata_id: Q16166565
+other_names:
+- id: ar
+  name: المنظمة الآسيوية للإنتاجية
+- id: de
+  name: Asian Productivity Organization
+- id: en
+  name: Asian Productivity Organization
+- id: fr
+  name: Organisation asiatique de productivité
+- id: ja
+  name: アジア生産性機構
+- id: zh
+  name: 亞洲生產力組織
+notes: Founded at the conclusion of the first Asian Productivity Conference in Tokyo (1959); eight economies were founding members under the Convention signed on 11 May 1961. Governance comprises the annual Governing Body Meeting of government-appointed directors, National Productivity Organizations in each member economy, and the Tokyo-based Secretariat headed by a Secretary-General.
+last_verified: '2026-07-12'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q16166565
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q16166565
+  license: CC0
+- field: founded
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: geographic_scope
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: regions
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: legal_status
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: recognition_status
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: description
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: headquarters
+  source: APO Annual Report
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/wp-content/uploads/2017/08/APO-Annual-Report-2016_websize.pdf
+- field: secretariat
+  source: APO Annual Report
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/wp-content/uploads/2017/08/APO-Annual-Report-2016_websize.pdf
+- field: includes
+  source: APO official website
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-tokyo.org/overview/
+- field: founding_members
+  source: APO Center of Excellence on Smart Manufacturing
+  retrieved_at: '2026-07-12'
+  url: https://www.apo-coesm.org/en/post/list/20

@@ -1,16 +1,23 @@
 id: DUTCHSPHERE
+name: Dutch-speaking countries
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Caribbean
+- Europe
+- South America
 languages:
 - nl
 - en
 links:
-- url: https://en.wikipedia.org/wiki/Dutch_language
+- url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7411
+- url: https://www.wikidata.org/wiki/Q13882310
   type: wikidata
-name: Dutch-speaking countries
+legal_status: informal
+recognition_status: Informal geographic and cultural concept (not a formal organization) describing territories where Dutch holds official status, commonly termed the Nederlands taalgebied (Dutch language area); anchored by the Dutch Language Union member states and the constituent countries of the Kingdom of the Netherlands; distinct from the broader Afrikaans-speaking sphere in southern Africa
 includes:
 - id: NL
   name: Netherlands
@@ -28,6 +35,10 @@ includes:
   name: Aruba
   type: country
   status: member
+- id: BQ
+  name: Caribbean Netherlands
+  type: country
+  status: member
 - id: CW
   name: Curaçao
   type: country
@@ -36,33 +47,85 @@ includes:
   name: Sint Maarten
   type: country
   status: member
-membership_count: 6
-description: Cultural region comprising countries and regions where Dutch is an official
-  language or widely spoken.
+membership_count: 7
+wikidata_id: Q13882310
+description: Cultural and linguistic region comprising sovereign states and Kingdom of the Netherlands constituent countries where Dutch is an official language. The core European states are the Netherlands and Belgium (where Dutch is co-official and dominant in Flanders); Suriname is the sole Dutch-official state in South America; Aruba, Caribbean Netherlands, Curaçao, and Sint Maarten complete the Caribbean component of the Kingdom. The concept aligns with the Nederlands taalgebied and the Dutch Language Union but excludes Afrikaans-official states such as South Africa and Namibia.
+notes: This record reflects the seven Internacia country entities where Dutch is an official language (NL, BE, SR, AW, BQ, CW, SX). Belgium is included at country level because Dutch is nationwide co-official and the majority language in Flanders. South Africa and Namibia, where Afrikaans holds official status, are excluded because Afrikaans is treated as a separate language despite mutual intelligibility with Dutch. Broader definitions may add diaspora communities or Dutch-speaking minorities in France and Germany.
+last_verified: '2026-07-12'
 tags:
 - DUTCHSPHERE
+- caribbean
 - cultural
 - culture
 - dutch
+- dutch-speaking
 - education
 - flemish
+- nederlands-taalgebied
+- regional
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
-wikidata_id: Q7411
 other_names:
 - id: ar
-  name: الهولندية
-- id: zh
-  name: 荷蘭語
+  name: منطقة اللغة الهولندية
+- id: de
+  name: Niederländischer Sprachraum
 - id: en
-  name: Dutch
-- id: fr
-  name: néerlandais
-- id: ru
-  name: нидерландский язык
+  name: Dutch language area
 - id: es
-  name: neerlandés
+  name: países de habla neerlandesa
+- id: fr
+  name: diffusion de la langue néerlandaise
+- id: nl
+  name: Nederlands taalgebied
+- id: pt
+  name: área de língua neerlandesa
+- id: ru
+  name: голландоязычные страны
+- id: zh
+  name: 荷兰语国家和地区
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q13882310
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q13882310
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Afrikaans_and_Dutch_are_official_languages
+  license: CC BY-SA 4.0

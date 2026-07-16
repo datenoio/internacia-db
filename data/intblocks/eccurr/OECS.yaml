@@ -1,83 +1,159 @@
 id: OECS
+name: Organisation of Eastern Caribbean States
 blocktype:
 - eccurr
 status: formal
+founded: '1981-06-18'
+active_period:
+  start: '1981-06-18'
+geographic_scope: regional
+regions:
+- Caribbean
 languages:
 - en
+- fr
 links:
 - url: https://www.oecs.org/
   type: website
-- url: https://en.wikipedia.org/wiki/OECS
+- url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q392770
   type: wikidata
-name: Organisation of Eastern Caribbean States
+legal_status: treaty_organization
+recognition_status: Treaty-based inter-governmental organisation for economic harmonisation and integration in the Eastern Caribbean, established by the Treaty of Basseterre (18 June 1981); seven protocol members form an economic union under the Revised Treaty of Basseterre (effective 21 January 2011) within the broader Caribbean Community (CARICOM) framework; eight members participate in the Eastern Caribbean Currency Union (ECCU) using the Eastern Caribbean dollar
+secretariat:
+  location: Castries, Saint Lucia
+  organization: OECS Commission
+  head: Director General
+headquarters:
+  city: Castries
+  country: LC
+  coordinates:
+    lat: 13.9094
+    lng: -60.9789
+acronyms:
+- lang: en
+  value: OECS
+- lang: fr
+  value: OECO
+- lang: fr
+  value: OECS
+- lang: ru
+  value: OECS
+- lang: es
+  value: OECS
+- lang: de
+  value: OECS
+- lang: pt
+  value: OECO
+- lang: pt
+  value: OECS
+founding_members:
+- AG
+- DM
+- GD
+- MS
+- KN
+- LC
+- VC
 includes:
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
+  joined: '1981-06-18'
 - id: DM
   name: Commonwealth of Dominica
   type: country
   status: member
+  joined: '1981-06-18'
 - id: GD
   name: Grenada
   type: country
   status: member
+  joined: '1981-06-18'
 - id: MS
   name: Montserrat
   type: country
   status: member
+  joined: '1981-06-18'
 - id: KN
   name: St. Kitts and Nevis
   type: country
   status: member
+  joined: '1981-06-18'
 - id: LC
   name: St. Lucia
   type: country
   status: member
+  joined: '1981-06-18'
 - id: VC
   name: St. Vincent and the Grenadines
   type: country
   status: member
+  joined: '1981-06-18'
 - id: AI
   name: Anguilla
   type: country
   status: associated
+  joined: '1995'
 - id: VG
   name: British Virgin Islands
   type: country
   status: associated
+  joined: '1984-11-22'
 - id: MQ
   name: Martinique
   type: country
   status: associated
+  joined: '2016-04-12'
 - id: GP
   name: Guadeloupe
   type: country
   status: associated
+  joined: '2019-03-14'
 - id: MF
   name: Saint Martin
   type: country
   status: associated
+  joined: '2019-12'
 membership_count: 7
-description: Organisation of Eastern Caribbean States is an international eccurr body
-  with 7 members.
+wikidata_id: Q392770
+description: Inter-governmental organisation of Eastern Caribbean states and territories dedicated to economic harmonisation
+  and integration, established by the Treaty of Basseterre on 18 June 1981. Seven independent and non-independent protocol
+  members form an economic union under the Revised Treaty of Basseterre (effective 21 January 2011), operating within the
+  broader Caribbean Community (CARICOM) framework. Eight members participate in the Eastern Caribbean Currency Union (ECCU),
+  sharing the Eastern Caribbean dollar.
+notes: Full members are Antigua and Barbuda, Dominica, Grenada, Montserrat, St. Kitts and Nevis, St. Lucia and St. Vincent
+  and the Grenadines. Associate members are Anguilla (from 1995), British Virgin Islands (from 1984), Martinique (from 2016),
+  Guadeloupe (from 2019) and Saint Martin (from 2019). The OECS Commission is headquartered in Castries, Saint Lucia.
+  Montserrat remained a protocol member but did not ratify the 2010 economic union treaty by the January 2011 deadline. Anguilla
+  uses the Eastern Caribbean dollar through the ECCU; the British Virgin Islands uses the US dollar. Martinique, Guadeloupe
+  and Saint Martin are French overseas departments and collectivity.
+last_verified: '2026-07-12'
 tags:
 - OECS
+- OECO
+- basseterre
 - caribbean
+- castries
 - currency
 - eastern
 - eccurr
+- economic_union
 - economy
+- integration
 - organisation
+- regional
+- regional_cooperation
+- treaty
 topics:
 - key: currency
   name: Currency
 - key: economy
   name: Economy
-wikidata_id: Q392770
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: منظمة دول شرق الكاريبي
@@ -96,39 +172,57 @@ other_names:
 - id: zh
   name: 東加勒比國家組織
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Eastern_Caribbean_States
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.oecs.org/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q392770
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q392770
   license: CC0
-acronyms:
-- lang: en
-  value: OECS
-- lang: fr
-  value: OECO
-- lang: fr
-  value: OECS
-- lang: ru
-  value: OECS
-- lang: es
-  value: OECS
-- lang: de
-  value: OECS
-- lang: pt
-  value: OECO
-- lang: pt
-  value: OECS
-founded: '1981-00-00'

@@ -1,7 +1,16 @@
 id: IPEEC
+name: International Partnership for Energy Efficiency Cooperation
 blocktype:
 - energy
-status: formal
+status: historical
+founded: '2009'
+dissolved: '2019'
+active_period:
+  start: '2009'
+  end: '2019'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
@@ -11,12 +20,20 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q17081633
   type: wikidata
-name: International Partnership for Energy Efficiency Cooperation
+- url: https://www.dcceew.gov.au/energy/international-activity/ipeec
+  type: website
 headquarters:
   city: Paris
+  country: FR
   coordinates:
     lat: 48.85666666666667
     lng: 2.352222222222222
+legal_status: voluntary
+recognition_status: Voluntary ministerial forum established when G8 members plus China, South Korea, Brazil, and Mexico signed the Terms of Reference in Rome on 24 May 2009; the International Energy Agency hosted the Secretariat from establishment; membership grew to 17 G20 economies; mandate extended through 31 December 2019, after which functions transferred to the Energy Efficiency Hub
+secretariat:
+  location: Paris, France
+  head: Head of Secretariat
+  organization: IPEEC Secretariat (hosted by the International Energy Agency)
 includes:
 - id: AR
   name: Argentina
@@ -39,7 +56,7 @@ includes:
   type: country
   status: member
 - id: EU
-  name: European Union
+  name: European Commission
   type: organization
   status: member
 - id: FR
@@ -87,43 +104,112 @@ includes:
   type: country
   status: member
 membership_count: 17
-wikidata_id: Q17081633
-description: International forum.
+description: High-level voluntary international forum of developed and developing economies that promoted global cooperation
+  on energy efficiency. IPEEC facilitated policy exchange, joint projects, and coordination of sectoral task groups among
+  its 17 G20 member economies, which together represented over 80% of global energy use and greenhouse gas emissions. From
+  2014 it coordinated implementation of the G20 Energy Efficiency Action Plan and, from 2016, the G20 Energy Efficiency Leading
+  Programme. The IPEEC Secretariat was hosted by the International Energy Agency in Paris. Its mandate ended on 31 December
+  2019; activities and staff transferred to the Energy Efficiency Hub.
 tags:
 - IPEEC
-- cooperation
-- economy
+- energy_efficiency
 - energy
 - environment
 - international
-- nature
-- oil
-- partnership
-- regional
-- regional_cooperation
+- collaboration
+- g20
+- historical
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
 - key: environment
   name: Environment
-- key: regional_cooperation
-  name: Regional Cooperation
+- key: economy
+  name: Economy
+- key: climate_change
+  name: Climate Change
 other_names:
-- id: zh
-  name: 國際能源效率合作夥伴關係
 - id: en
   name: International Partnership for Energy Efficiency Cooperation
+- id: zh
+  name: 國際能源效率合作夥伴關係
 - id: ru
   name: Международное партнерство по сотрудничеству в области энергоэффективности
+- id: fr
+  name: Partenariat international pour la coopération en matière d'efficacité énergétique
+- id: es
+  name: Asociación Internacional para la Cooperación en Eficiencia Energética
+acronyms:
+- lang: en
+  value: IPEEC
+notes: Founded at the May 2009 G8 Energy Ministers meeting in Rome following the 2008 Aomori Declaration; founding members
+  were Brazil, Canada, China, the European Commission, France, Germany, India, Italy, Japan, Korea, Mexico, Russia, the
+  United Kingdom, and the United States, with Argentina, Australia, and South Africa joining later. Governance included an
+  Executive Committee and a Policy Committee, each meeting twice yearly. Sectoral work was organized through task groups
+  including SEAD, BEET, EMWG/EMAK, TTG, HELE, NDTG, EEFTG, IPEEI, and TOP TENs. The EU Council extended the Terms of Reference
+  through 31 December 2019 to complete the G20 energy efficiency work programme and enable administrative transfer of task
+  groups, funds, and Secretariat staff to the Energy Efficiency Hub.
+successor: EEHUB
+wikidata_id: Q17081633
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.dcceew.gov.au/energy/international-activity/ipeec
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.dcceew.gov.au/energy/international-activity/ipeec
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.dcceew.gov.au/energy/international-activity/ipeec
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.legislation.gov.uk/eudn/2019/1133/pdfs/eudn_20191133_adopted_en.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.ipeec.org/
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
+- field: successor
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.dcceew.gov.au/energy/international-activity/ipeec
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/International_Partnership_for_Energy_Efficiency_Cooperation
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17081633
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17081633
+  license: CC0

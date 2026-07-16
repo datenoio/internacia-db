@@ -3,6 +3,15 @@ blocktype:
 - wbgroup
 - currency
 status: formal
+links:
+- url: https://databank.worldbank.org/metadataglossary/world-development-indicators/country/EMU
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://en.wikipedia.org/wiki/Eurozone
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q8268
+  type: wikidata
 name: Euro area
 includes:
 - id: AT
@@ -86,7 +95,12 @@ includes:
   type: country
   status: member
 membership_count: 20
-description: Region of EU countries using the Euro.
+geographic_scope: regional
+regions:
+- Europe
+description: World Bank aggregate for economies in the euro area that use the euro
+  as currency. This analytical grouping combines euro-area member countries in
+  World Development Indicators.
 tags:
 - EMU
 - aid
@@ -94,6 +108,7 @@ tags:
 - development
 - economy
 - euro
+- europe
 - finance
 - wbgroup
 topics:
@@ -104,11 +119,6 @@ topics:
 - key: finance
   name: Finance
 founded: '1999'
-links:
-- url: https://en.wikipedia.org/wiki/Eurozone
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q8268
-  type: wikidata
 acronyms:
 - lang: en
   value: EMU
@@ -116,9 +126,6 @@ acronyms:
   value: EA
 - lang: zh
   value: 歐元區
-regions:
-- Europe
-geographic_scope: regional
 other_names:
 - id: ar
   name: منطقة اليورو
@@ -140,12 +147,19 @@ other_names:
   name: 欧元区
 wikidata_id: Q8268
 provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: description
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://databank.worldbank.org/metadataglossary/world-development-indicators/country/EMU
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/898614-aggregate-api-queries
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/898614-aggregate-api-queries
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
@@ -160,7 +174,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Eurozone

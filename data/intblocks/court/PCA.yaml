@@ -1,7 +1,11 @@
 id: PCA
+name: Permanent Court of Arbitration
 blocktype:
 - court
 status: formal
+founded: '1899'
+active_period:
+  start: '1899-07-29'
 geographic_scope: global
 languages:
 - en
@@ -9,11 +13,28 @@ languages:
 links:
 - url: https://pca-cpa.org/
   type: website
+- url: https://pca-cpa.org/en/about/introduction/
+  type: website
+- url: https://pca-cpa.org/en/about/structure/contracting-parties/
+  type: website
 - url: https://en.wikipedia.org/wiki/Permanent_Court_of_Arbitration
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1045198
   type: wikidata
-name: Permanent Court of Arbitration
+legal_status: intergovernmental arbitral institution
+recognition_status: Established under the 1899 Convention for the Pacific Settlement of International Disputes, as amended
+  by the 1907 Convention; membership comprises 128 Contracting Parties to one or both founding conventions; United Nations
+  General Assembly observer since 1993; distinct from the International Court of Justice, which also sits in the Peace Palace
+headquarters:
+  city: The Hague
+  country: NL
+  coordinates:
+    lat: 52.0866
+    lng: 4.2955
+secretariat:
+  location: The Hague, Netherlands
+  head: Secretary-General
+  organization: Permanent Court of Arbitration (International Bureau)
 includes:
 - id: AE
   name: United Arab Emirates
@@ -527,13 +548,13 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-founded: '1899'
-headquarters:
-  city: The Hague
-  country: NL
-  coordinates:
-    lat: 52.0866
-    lng: 4.2955
+official_documents:
+- url: https://www.icrc.org/en/doc/resources/documents/misc/57jngk.htm
+  type: document
+  name: Convention for the Pacific Settlement of International Disputes (1899)
+- url: https://www.icrc.org/en/doc/resources/documents/misc/57jny2.htm
+  type: document
+  name: Convention for the Pacific Settlement of International Disputes (1907)
 acronyms:
 - lang: en
   value: CPA
@@ -553,15 +574,15 @@ acronyms:
   value: PCA
 membership_count: 128
 wikidata_id: Q1045198
-legal_status: intergovernmental
-description: Intergovernmental organization headquartered at the Peace Palace in The Hague that provides administrative support
-  for international arbitration and related dispute resolution. Established by the 1899 Hague Convention for the Pacific Settlement
-  of International Disputes; membership comprises 128 Contracting Parties to the 1899 and/or 1907 Conventions. Not a conventional
-  court or UN agency, but a permanent registry for inter-state, investor-state, and other arbitral proceedings.
+description: Intergovernmental arbitral institution headquartered at the Peace Palace in The Hague that provides administrative
+  support for international arbitration, conciliation, and related dispute resolution. Established by the 1899 Hague Convention
+  for the Pacific Settlement of International Disputes; 128 Contracting Parties have acceded to the 1899 and/or 1907 Conventions.
+  Not a conventional court or UN agency, but a permanent registry for inter-state, investor-state, and other arbitral proceedings.
 notes: Contracting Parties accede by ratifying the 1899 and/or 1907 Hague Conventions on Pacific Settlement of International
-  Disputes; 52 states are parties to both conventions. Includes 126 UN member states plus Kosovo and Palestine. UN General
-  Assembly observer since 1993. Distinct from the International Court of Justice, which also sits in the Peace Palace. Secretary-General
-  Marcin Czepelak (since 2022).
+  Disputes; 52 states are parties to both conventions. Includes 126 UN member states plus Kosovo and Palestine. Secretary-General
+  Marcin Czepelak (elected 14 February 2022; term 1 June 2022 to 31 May 2027). Recent accessions include Timor-Leste (2024),
+  Vanuatu (2024), Armenia (2025), Moldova (2025), Indonesia (2026), and Botswana (2026).
+last_verified: '2026-07-12'
 tags:
 - CPA
 - PCA
@@ -599,38 +620,60 @@ other_names:
 - id: zh
   name: 常设仲裁法院
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1045198
+  license: CC0
 - field: description
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Permanent_Court_of_Arbitration
-  license: CC BY-SA 4.0
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://pca-cpa.org/en/about/introduction/
 - field: notes
   source: PCA
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://pca-cpa.org/en/about/structure/contracting-parties/
 - field: includes
   source: PCA
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://pca-cpa.org/en/about/structure/contracting-parties/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1045198
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1045198
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://pca-cpa.org/
+  retrieved_at: '2026-07-12'
+  url: https://pca-cpa.org/en/about/introduction/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://pca-cpa.org/en/about/introduction/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Permanent_Court_of_Arbitration
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: ICRC
+  retrieved_at: '2026-07-12'
+  url: https://www.icrc.org/en/doc/resources/documents/misc/57jngk.htm
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://pca-cpa.org/
+  retrieved_at: '2026-07-12'
+  url: https://pca-cpa.org/en/about/introduction/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://pca-cpa.org/
+  retrieved_at: '2026-07-12'
+  url: https://pca-cpa.org/en/about/the-peace-palace/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Permanent_Court_of_Arbitration
+  license: CC BY-SA 4.0

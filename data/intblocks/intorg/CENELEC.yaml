@@ -1,17 +1,42 @@
 id: CENELEC
+name: European Committee for Electrotechnical Standardization
 blocktype:
 - intorg
 status: formal
+founded: '1973'
+active_period:
+  start: '1973'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
+- de
 links:
-- url: http://www.cenelec.eu/
+- url: https://www.cenelec.eu/
   type: website
 - url: https://en.wikipedia.org/wiki/CENELEC
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1378146
   type: wikidata
-name: European Committee for Electrotechnical Standardization
+acronyms:
+- lang: en
+  value: CENELEC
+- lang: zh
+  value: 歐洲電子技術標準委員會
+- lang: fr
+  value: CENELEC
+- lang: de
+  value: CENELEC
+legal_status: non-profit organization under Belgian law
+recognition_status: Officially recognized European standards body by the European Union, European Free Trade Association, and the United Kingdom, alongside CEN and ETSI; recognized under Regulation (EU) No 1025/2012 on European standardization
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846666666666664
+    lng: 4.351666666666667
 includes:
 - id: AT
   name: Austria
@@ -34,7 +59,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czech Republic
+  name: Czechia
   type: country
   status: member
 - id: DK
@@ -122,7 +147,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -142,7 +167,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
 - id: GB
@@ -150,22 +175,24 @@ includes:
   type: country
   status: member
 membership_count: 34
-description: The European Committee for Electrotechnical Standardization is an international
-  organization that is used to promote regional cooperation in the electrotechnical
-  sector.
+wikidata_id: Q1378146
+description: Regional standards organization whose 34 national electrotechnical committees develop harmonized European Standards (EN) for electrical and electronic products and services. Founded in 1973, CENELEC forms the European electrotechnical leg of the European standardization system alongside CEN (general standards) and ETSI (telecommunications). Officially recognized by the EU, EFTA, and the United Kingdom as a European standards body under Regulation (EU) No 1025/2012.
 tags:
 - CENELEC
 - committee
 - electrotechnical
+- europe
 - european
 - intorg
 - iso
+- regional
 - standard
 - standardization
 topics:
 - key: standardization
   name: Standardization
-wikidata_id: Q1378146
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: اللجنة الأوروبية للتقييس الكهروتقني
@@ -183,34 +210,62 @@ other_names:
   name: CENELEC
 - id: zh
   name: 欧洲电工标准化委员会
+notes: CENELEC was formed in 1973, consolidating predecessor bodies CENELCOM and CENEL. It operates the CEN/CENELEC Management Centre in Brussels jointly with CEN. The Dresden Agreement (1996, updated as the Frankfurt Agreement in 2016) coordinates standard development with IEC; IEC standards adopted by CENELEC are published as EN IEC standards. CENELEC also maintains affiliate relationships with EU candidate countries and Companion Standardization Body agreements with partner countries.
+last_verified: '2026-07-12'
 provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1378146
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1378146
   license: CC0
-acronyms:
-- lang: en
-  value: CENELEC
-- lang: zh
-  value: 歐洲電子技術標準委員會
-- lang: fr
-  value: CENELEC
-- lang: de
-  value: CENELEC
-founded: '1973-00-00'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1378146
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1378146
+  license: CC0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cenelec.eu/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CENELEC
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cenelec.eu/

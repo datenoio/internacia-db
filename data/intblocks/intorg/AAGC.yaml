@@ -5,10 +5,23 @@ blocktype:
 - economic
 status: formal
 founded: '2017-05-25'
+active_period:
+  start: '2017-05-25'
 geographic_scope: regional
+regions:
+- Asia
+- Africa
+- Indo-Pacific
 languages:
 - en
+- ja
 links:
+- url: https://aagc.ris.org.in/
+  type: website
+- url: https://www.eria.org/research/asia-africa-growth-corridor-aagc
+  type: website
+- url: https://www.eria.org/Asia-Africa-Growth-Corridor-Vision-Document-full.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q30674437
@@ -20,25 +33,40 @@ acronyms:
   value: CECAA
 - lang: pt
   value: CCAA
-legal_status: intergovernmental
+legal_status: economic cooperation agreement
+recognition_status: India-Japan bilateral cooperation initiative launched at the African Development Bank annual meeting
 membership_count: 17
-description: Economic cooperation agreement between India, Japan and multiple African countries focusing on infrastructure
-  development, digital connectivity, and economic cooperation. AAGC aims to develop quality infrastructure in Africa, complemented
-  by digital connectivity, to create a free and open Indo-Pacific region.
+description: Economic cooperation initiative of the governments of India and Japan to promote sustainable and inclusive development between Asia and Africa through quality infrastructure and digital connectivity. Launched with a vision document at the African Development Bank meeting in Ahmedabad on 25 May 2017, developed by RIS (New Delhi), ERIA (Jakarta), and IDE-JETRO (Tokyo). The AAGC prioritizes maritime corridors linking African ports with India and Southeast Asia, with focus on health and pharmaceuticals, agriculture, disaster management, and skills development.
 tags:
 - AAGC
-- economic
-- infrastructure
-- connectivity
-- intorg
+- africa
+- asia
 - asia-africa
+- connectivity
+- development
+- economic
+- india
+- indo-pacific
+- infrastructure
+- intorg
+- japan
+- maritime
+- regional
+- regional_cooperation
+- transport
 topics:
+- key: connectivity
+  name: Digital Connectivity
+- key: development
+  name: Development
 - key: economy
   name: Economy
 - key: infrastructure
   name: Infrastructure Development
-- key: connectivity
-  name: Digital Connectivity
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: transport
+  name: Transport
 includes:
 - id: BD
   name: Bangladesh
@@ -47,15 +75,17 @@ includes:
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '2017-05-25'
 - id: IR
-  name: Iran, Islamic Republic of
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '2017-05-25'
 - id: KE
   name: Kenya
   type: country
@@ -108,6 +138,9 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+founding_members:
+- IN
+- JP
 wikidata_id: Q30674437
 other_names:
 - id: ar
@@ -118,22 +151,52 @@ other_names:
   name: Corridor de Croissance Asie-Afrique
 - id: pt
   name: Corredor Econômico para o Crescimento da Ásia e da África
+notes: Not a treaty-based international organization; coordinated through a vision study by the Research and Information System for Developing Countries (RIS), the Economic Research Institute for ASEAN and East Asia (ERIA), and the Institute of Developing Economies–JETRO (IDE-JETRO). Four pillars comprise development and cooperation projects, quality infrastructure and institutional connectivity, capacity and skill enhancement, and people-to-people partnerships. Primarily a sea corridor linking Africa with India and Southeast Asia, distinct from land-based connectivity initiatives.
+last_verified: '2026-07-12'
 provenance:
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q30674437
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q30674437
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Asia Africa Growth Corridor Vision Document
+  retrieved_at: '2026-07-12'
+  url: https://www.eria.org/Asia-Africa-Growth-Corridor-Vision-Document-full.pdf
+- field: regions
+  source: Asia Africa Growth Corridor Vision Document
+  retrieved_at: '2026-07-12'
+  url: https://www.eria.org/Asia-Africa-Growth-Corridor-Vision-Document-full.pdf
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
+- field: description
+  source: Asia Africa Growth Corridor Vision Document
+  retrieved_at: '2026-07-12'
+  url: https://www.eria.org/Asia-Africa-Growth-Corridor-Vision-Document-full.pdf
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Asia-Africa_Growth_Corridor
+- field: notes
+  source: Asia Africa Growth Corridor Vision Document
+  retrieved_at: '2026-07-12'
+  url: https://www.eria.org/Asia-Africa-Growth-Corridor-Vision-Document-full.pdf

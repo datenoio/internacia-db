@@ -1,7 +1,12 @@
 id: WB
+name: World Bank
 blocktype:
 - bank
 status: formal
+founded: '1945-12-27'
+active_period:
+  start: '1945-12-27'
+geographic_scope: global
 languages:
 - ar
 - en
@@ -10,13 +15,92 @@ languages:
 - ru
 - zh
 links:
-- url: http://www.worldbank.org/
+- url: https://www.worldbank.org/
+  type: website
+- url: https://www.worldbank.org/en/about/history
+  type: website
+- url: https://www.worldbank.org/en/about/leadership/members
   type: website
 - url: https://en.wikipedia.org/wiki/World_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7164
   type: wikidata
-name: World Bank
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.895
+    lng: -77.036666666667
+legal_status: intergovernmental
+recognition_status: Collective name for the International Bank for Reconstruction and Development (IBRD) and
+  the International Development Association (IDA), two Bretton Woods institutions established at the United
+  Nations Monetary and Financial Conference (July 1944); IBRD Articles of Agreement entered into force 27
+  December 1945
+secretariat:
+  location: Washington, D.C., United States
+  head: President
+  organization: World Bank
+membership_count: 213
+founding_members:
+- BE
+- BO
+- BR
+- CA
+- CL
+- CN
+- CR
+- DK
+- EC
+- EG
+- ET
+- FR
+- GB
+- GR
+- GT
+- HN
+- IN
+- IQ
+- IR
+- IS
+- LU
+- MX
+- NI
+- NL
+- 'NO'
+- PA
+- PE
+- PH
+- PY
+- SV
+- US
+- UY
+- ZA
+description: Global multilateral development institution comprising IBRD and IDA, the two Bretton Woods lending
+  arms collectively known as the World Bank. Headquartered in Washington, D.C., it provides loans, grants,
+  guarantees, and technical assistance to governments for poverty reduction, infrastructure, education,
+  health, and environmental projects. Part of the broader World Bank Group, which also includes IFC, MIGA,
+  and ICSID; shares executive leadership and staff with its constituent institutions.
+tags:
+- BM
+- WB
+- aid
+- bank
+- bretton-woods
+- development
+- economy
+- finance
+- global
+- international
+- multilateral
+- world
+- world-bank
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
 includes:
 - id: AD
   name: Andorra
@@ -870,13 +954,6 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-founded: '1945'
-headquarters:
-  city: World Bank Headquarters
-  country: US
-  coordinates:
-    lat: 38.898919916456705
-    lng: -77.04246523090436
 acronyms:
 - lang: en
   value: WB
@@ -887,7 +964,6 @@ suborganizations:
   name: International Bank for Reconstruction and Development
 - id: IDA
   name: International Development Association
-membership_count: 213
 wikidata_id: Q7164
 official_documents:
 - url: https://www.worldbank.org/
@@ -903,23 +979,10 @@ social_media:
   facebook: https://www.facebook.com/BancoMundialBrasil
   linkedin: https://www.linkedin.com/company/the-world-bank
   youtube: https://www.youtube.com/channel/UCE9mrcoX-oE-2f1BL-iPPoQ
-description: International development bank focused on development providing financial services.
-tags:
-- BM
-- WB
-- aid
-- bank
-- development
-- economy
-- finance
-- world
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Bretton Woods institution; the World Bank is the collective name for IBRD and IDA, which share governance
+  and staff in Washington, D.C. The broader World Bank Group also includes IFC, MIGA, and ICSID. Membership
+  spans 213 economies including sovereign states and eligible territories.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك الدولي
@@ -934,7 +997,57 @@ other_names:
 - id: es
   name: Banco Mundial
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.worldbank.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/history
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

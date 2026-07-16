@@ -1,7 +1,15 @@
 id: CAFBANK
+name: CAF – Development Bank of Latin America and the Caribbean
 blocktype:
 - bank
 status: formal
+founded: '1968-02-07'
+active_period:
+  start: '1970-06'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
 languages:
 - en
 - es
@@ -9,11 +17,57 @@ languages:
 links:
 - url: https://www.caf.com/
   type: website
+- url: https://www.caf.com/en/who-we-are/
+  type: website
+- url: https://www.caf.com/en/who-we-are/where-are-we/
+  type: website
 - url: https://en.wikipedia.org/wiki/Andean_Development_Corporation
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2614129
   type: wikidata
-name: CAF – Development Bank of Latin America and the Caribbean
+headquarters:
+  city: Caracas
+  country: VE
+  coordinates:
+    lat: 10.4961
+    lng: -66.8536
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Constitutive Agreement signed on 7 February 1968 in Bogotá; commenced operations on 8 June 1970
+secretariat:
+  location: Caracas, Venezuela
+  head: President
+  organization: CAF – Development Bank of Latin America and the Caribbean
+membership_count: 23
+founding_members:
+- BO
+- CL
+- CO
+- EC
+- PE
+- VE
+description: Multilateral development bank headquartered in Caracas, Venezuela, formerly known as the Andean Development Corporation (Corporación Andina de Fomento). Established in 1968 and operational since June 1970, CAF promotes sustainable development and regional integration in Latin America and the Caribbean through loans, technical cooperation, guarantees, and specialized services to public and private sector clients. Shareholders comprise 23 countries from the region and Europe plus 13 regional private banks.
+tags:
+- CAF
+- aid
+- andean
+- bank
+- caribbean
+- corporation
+- development
+- economy
+- finance
+- latin-america
+- multilateral
+- regional
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AR
   name: Argentina
@@ -107,61 +161,6 @@ includes:
   name: Spain
   type: country
   status: member
-membership_count: 23
-description: Latin American development bank.
-tags:
-- CAF
-- aid
-- andean
-- bank
-- corporation
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-wikidata_id: Q2614129
-other_names:
-- id: de
-  name: Lateinamerikanische Entwicklungsbank
-- id: en
-  name: CAF – Development Bank of Latin America and the Caribbean
-- id: es
-  name: CAF -banco de desarrollo de América Latina y el Caribe
-- id: fr
-  name: Corporación Andina de Fomento
-- id: pt
-  name: Banco de Desenvolvimento da América Latina
-- id: ru
-  name: Андская корпорация развития
-- id: zh
-  name: 拉丁美洲和加勒比开发银行
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q2614129
-  license: CC0
 acronyms:
 - lang: zh
   value: 拉美开发银行
@@ -175,4 +174,75 @@ acronyms:
   value: CAF
 - lang: pt
   value: CAF
-founded: '1970-02-07'
+- lang: en
+  value: CAF
+wikidata_id: Q2614129
+notes: Formerly the Andean Development Corporation (Corporación Andina de Fomento). Country shareholders are divided into Series A (full members), B, and C categories; 13 private banks in the region also hold shares.
+last_verified: '2026-07-12'
+other_names:
+- id: de
+  name: Lateinamerikanische Entwicklungsbank
+- id: en
+  name: CAF – Development Bank of Latin America and the Caribbean
+- id: es
+  name: CAF – banco de desarrollo de América Latina y el Caribe
+- id: fr
+  name: Corporación Andina de Fomento
+- id: pt
+  name: Banco de Desenvolvimento da América Latina
+- id: ru
+  name: Андская корпорация развития
+- id: zh
+  name: 拉丁美洲和加勒比开发银行
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caf.com/en/who-we-are/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caf.com/en/who-we-are/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CAF_%E2%80%93_Development_Bank_of_Latin_America_and_the_Caribbean
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CAF_%E2%80%93_Development_Bank_of_Latin_America_and_the_Caribbean
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caf.com/en/who-we-are/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.caf.com/en/who-we-are/where-are-we/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CAF_%E2%80%93_Development_Bank_of_Latin_America_and_the_Caribbean
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CAF_%E2%80%93_Development_Bank_of_Latin_America_and_the_Caribbean
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/CAF_%E2%80%93_Development_Bank_of_Latin_America_and_the_Caribbean
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

@@ -1,58 +1,45 @@
 id: EABR
+name: Eurasian Development Bank
 blocktype:
 - bank
 status: formal
-partof: EABR
+founded: '2006-01-12'
+active_period:
+  start: '2006-06'
+geographic_scope: regional
+regions:
+- Eurasia
+- Asia
+partof: null
 languages:
 - en
 - ru
 links:
 - url: https://www.eabr.org/
   type: website
+- url: https://www.eabr.org/en/about/
+  type: website
 - url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q498991
   type: wikidata
-name: Eurasian Development Bank
-founded: '2006'
 headquarters:
   city: Almaty
   country: KZ
   coordinates:
     lat: 43.24
     lng: 76.915
-includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Agreement Establishing the Eurasian Development Bank, signed on 12 January 2006 and operational from June 2006; recognised by the OECD as a multilateral financial institution in January 2013
+secretariat:
+  location: Almaty, Kazakhstan
+  head: Chairman of the Management Board
+  organization: Eurasian Development Bank
 membership_count: 7
-wikidata_id: Q498991
-description: International development bank focused on development providing financial services.
+founding_members:
+- RU
+- KZ
+description: Multilateral development bank established in 2006 at the initiative of Russia and Kazakhstan to promote market economies, economic growth, and trade and economic ties among its member states through investment activities. Headquartered in Almaty, the EDB finances transport infrastructure, digital systems, green energy, agriculture, manufacturing, and water and energy projects with a focus on integration effects across Eurasia.
 tags:
 - EABR
 - aid
@@ -61,6 +48,9 @@ tags:
 - economy
 - eurasian
 - finance
+- integration
+- multilateral
+- regional
 topics:
 - key: development
   name: Development
@@ -68,6 +58,52 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '2006'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '2006'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '2009'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '2009'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '2010'
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: member
+  joined: '2011'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '2025'
+acronyms:
+- lang: en
+  value: EDB
+- lang: ru
+  value: ЕАБР
+wikidata_id: Q498991
+notes: Also known internationally by the English acronym EDB. Uzbekistan joined as the seventh member in 2025. The Bank maintains a branch in Saint Petersburg and representative offices in Astana, Bishkek, Dushanbe, Yerevan, Minsk, and Moscow.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك التنمية الأوراسي
@@ -84,6 +120,53 @@ other_names:
 - id: zh
   name: 欧亚开发银行
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eabr.org/en/about/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eabr.org/en/about/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.eabr.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eurasian_Development_Bank
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -94,12 +177,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.eabr.org/
-acronyms:
-- lang: en
-  value: EDB
-- lang: ru
-  value: ЕАБР

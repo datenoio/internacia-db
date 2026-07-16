@@ -47,6 +47,8 @@ other_names:
   name: Ciudad del Vaticano
 common_names:
 - Vatican City State
+- Holy See
+- Holy See (Vatican City State)
 population:
   value: 1000
   source: Wikidata
@@ -79,6 +81,10 @@ native_names:
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: common_names
+  source: manual
+  retrieved_at: '2026-07-16'
+  notes: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -117,6 +123,10 @@ provenance:
   source: UN M49 inference
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
+- field: capital_city
+  source: manual
+  retrieved_at: '2026-07-11'
+  notes: De-facto seat of government / administrative capital
 centroid:
   lat: 41.9
   lng: 12.45
@@ -132,3 +142,7 @@ lendingType:
 adminregion:
   id: ECA
   value: Europe & Central Asia (developing only)
+capital_city:
+  name: Vatican City
+  lng: 12.4534
+  lat: 41.9029

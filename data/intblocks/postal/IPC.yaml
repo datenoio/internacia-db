@@ -5,11 +5,34 @@ status: formal
 languages:
 - en
 links:
-- url: http://www.ipc.be/
+- url: https://www.ipc.be/
   type: website
+- url: https://en.wikipedia.org/wiki/International_Post_Corporation
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1666817
   type: wikidata
 name: International Post Corporation
+founded: '1989'
+geographic_scope: global
+regions:
+- Europe
+- Asia-Pacific
+- North America
+legal_status: cooperative company incorporated in Belgium
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8772602
+    lng: 4.433266
+secretariat:
+  location: Brussels, Belgium
+  organization: International Post Corporation
+acronyms:
+- lang: en
+  value: IPC
+- lang: de
+  value: IPC
 includes:
 - id: AU
   name: Australia
@@ -116,12 +139,14 @@ includes:
   type: country
   status: member
 membership_count: 26
-description: Cooperative association of national postal services from major countries
-  in Europe.
+description: A cooperative association of 26 national postal operators in Europe, Asia-Pacific, and North America. Founded in 1989 and headquartered in Brussels, IPC provides service quality standards, interoperability tools, business intelligence, and platforms for cooperation to help members improve cross-border mail, packet, and parcel services and defend existing business while expanding into new growth areas.
 tags:
 - IPC
 - communication
+- cooperation
 - corporation
+- e-commerce
+- global
 - international
 - post
 - postal
@@ -140,30 +165,61 @@ other_names:
   name: International Post Corporation
 - id: zh
   name: 国际邮政公司
+notes: Incorporated as a cooperative company in Belgium. Governed by a Board of chief executives from eleven member posts plus IPC's president and CEO. IPC's solutions and services are used by over 190 posts worldwide; collectively, member operations deliver about 80% of global mail volumes. Core activities include international mail quality monitoring, e-commerce research, incentive-based inter-post payments, and a sector-wide sustainability programme launched in 2009. IPC is a signatory to the UN Global Compact.
+last_verified: '2026-07-12'
 provenance:
+- field: founded
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc
+- field: geographic_scope
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc
+- field: legal_status
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc/corporate-structure
+- field: headquarters
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc/contact
+- field: secretariat
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc/contact
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc
+- field: membership_count
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc
+- field: notes
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc/corporate-structure
+- field: links
+  source: International Post Corporation
+  retrieved_at: '2026-07-12'
+  url: https://www.ipc.be/about-ipc
+- field: headquarters.coordinates
+  source: OpenStreetMap Nominatim
+  retrieved_at: '2026-07-12'
+  url: https://nominatim.openstreetmap.org/search?q=Avenue+du+Bourget+44,+Brussels,+Belgium
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1666817
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1666817
   license: CC0
-acronyms:
-- lang: en
-  value: IPC
-- lang: de
-  value: IPC
-founded: '1989-00-00'
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1666817
+  license: CC0

@@ -1,18 +1,65 @@
 id: CABEI
+name: Central American Bank for Economic Integration
 blocktype:
 - bank
 status: formal
+founded: '1960-12-13'
+active_period:
+  start: '1960-12-13'
+geographic_scope: regional
+regions:
+- Central America
+- Latin America
 partof: SICA
 languages:
 - es
 links:
 - url: https://www.bcie.org/
   type: website
+- url: https://www.bcie.org/en/about-us
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_American_Bank_for_Economic_Integration
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q190008
   type: wikidata
-name: Central American Bank for Economic Integration
+headquarters:
+  city: Tegucigalpa
+  country: HN
+  coordinates:
+    lat: 14.105783333333333
+    lng: -87.20470555555555
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Constitutive Agreement of the Central American Bank for Economic Integration, signed in Managua on 13 December 1960 alongside the General Treaty on Central American Economic Integration
+secretariat:
+  location: Tegucigalpa, Honduras
+  head: Executive President
+  organization: Central American Bank for Economic Integration
+membership_count: 15
+description: Leading multilateral development bank for Central America and the financial arm of regional integration and development. Founded in 1960 by Guatemala, El Salvador, Honduras, Nicaragua, and Costa Rica, CABEI (BCIE in Spanish) invests in projects that reduce poverty and inequality, strengthen regional integration, and support the competitive insertion of its 15 member countries in the global economy, with emphasis on environmental and social sustainability. Headquartered in Tegucigalpa, Honduras, with regional offices in Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica, and Panama.
+tags:
+- BCIE
+- CABEI
+- SICA
+- aid
+- american
+- bank
+- central-america
+- cooperation
+- development
+- economy
+- finance
+- multilateral
+- regional
+- regional_cooperation
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: ES
   name: Spain
@@ -74,37 +121,22 @@ includes:
   name: Korea, Rep.
   type: country
   status: member
-founded: '1960'
-headquarters:
-  city: Tegucigalpa
-  country: HN
-  coordinates:
-    lat: 14.105783333333333
-    lng: -87.20470555555555
-membership_count: 15
+acronyms:
+- lang: en
+  value: CABEI
+- lang: zh
+  value: 中美洲經濟整合銀行
+- lang: zh
+  value: CABEI
+- lang: zh
+  value: 中美洲銀行
+- lang: es
+  value: CABEI
+- lang: pt
+  value: BCIE
 wikidata_id: Q190008
-description: International development bank focused on development providing financial services.
-tags:
-- CABEI
-- aid
-- american
-- bank
-- central
-- cooperation
-- development
-- economy
-- finance
-- regional
-- regional_cooperation
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: regional_cooperation
-  name: Regional Cooperation
+notes: Founding shareholders are Guatemala, Honduras, El Salvador, Nicaragua, and Costa Rica; Panama and the Dominican Republic joined as regional non-founding members; Mexico, Argentina, Colombia, Spain, Cuba, Taiwan, and South Korea are extra-regional shareholders. Belize participates as a beneficiary country eligible for loans and guarantees but is not a shareholder.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك أمريكا الوسطى للتكامل الاقتصادي
@@ -119,6 +151,42 @@ other_names:
 - id: zh
   name: 中美洲经济一体化银行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bcie.org/en/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bcie.org/en/about-us
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_American_Bank_for_Economic_Integration
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_American_Bank_for_Economic_Integration
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bcie.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.bcie.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_American_Bank_for_Economic_Integration
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_American_Bank_for_Economic_Integration
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -129,20 +197,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.bcie.org/
-acronyms:
-- lang: en
-  value: CABEI
-- lang: zh
-  value: 中美洲經濟整合銀行
-- lang: zh
-  value: CABEI
-- lang: zh
-  value: 中美洲銀行
-- lang: es
-  value: CABEI
-- lang: pt
-  value: BCIE

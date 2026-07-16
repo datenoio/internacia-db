@@ -1,13 +1,30 @@
 id: BASREC
+name: Baltic Sea Region Energy Co-operation
 blocktype:
 - energy
 status: formal
+partof: CBSS
+founded: '1998'
+active_period:
+  start: '1998'
+geographic_scope: regional
+regions:
+- Baltic Sea region
+- Northern Europe
 languages:
 - en
 links:
 - url: http://basrec.net/
   type: website
-name: Baltic Sea Region Energy Co-operation
+- url: http://basrec.net/about-basrec/
+  type: website
+- url: https://uia.org/s/or/en/1100047290
+  type: website
+legal_status: intergovernmental
+recognition_status: Ministerial cooperation process under the Council of the Baltic Sea States (CBSS), established by energy ministers of the Baltic Sea region and the European Commission; steered by the Group of Senior Energy Officials (GSEO)
+secretariat:
+  location: Rotating presidency (member state)
+  organization: BASREC Presidency
 includes:
 - id: DK
   name: Denmark
@@ -54,25 +71,67 @@ includes:
   type: country
   status: member
 membership_count: 11
-description: Baltic Sea Region Energy Co-operation is an international energy body
-  with 11 members.
+description: Regional energy cooperation forum under the Council of the Baltic Sea States, bringing together energy ministers and senior officials from eleven Baltic Sea countries with the European Commission. Promotes dialogue on energy policy, energy efficiency, renewable energy, and integrated regional energy markets. Format revised in 2015; meetings are now convened ad hoc at the Group of Senior Energy Officials level.
 tags:
 - BASREC
 - baltic
-- economy
+- baltic_sea
+- climate
 - energy
 - environment
-- nature
-- oil
-- region
+- regional_cooperation
+- renewable_energy
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
 - key: environment
   name: Environment
+- key: climate_change
+  name: Climate Change
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Baltic Sea Region Energy Cooperation
+acronyms:
+- lang: en
+  value: BASREC
+notes: Founded at the 1998 Stavanger ministerial conference; formal establishment confirmed at the 1999 Helsinki ministerial meeting. Before the 2015 format revision, BASREC operated as a three-year ministerial process with rotating annual presidencies (1 July–30 June), an Executive Committee, and project funding. Under the revised format there are no regular ministerial meetings or new project budgets; any member may propose a GSEO-level meeting on a topic of common interest.
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://basrec.net/about-basrec/

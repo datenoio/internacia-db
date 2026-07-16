@@ -1,35 +1,66 @@
 id: ETDB
+name: ECO Trade and Development Bank
 blocktype:
 - bank
 status: formal
+founded: '2005-08-03'
+active_period:
+  start: '2008-12'
+geographic_scope: regional
+regions:
+- Asia
+- Middle East
+- Europe
+partof: ECO
 languages:
 - en
 links:
 - url: https://www.etdb.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Economic_Cooperation_Organization#ECO_Trade_and_Development_Bank
+- url: https://www.etdb.org/who-we-are/etdb-in-brief/
+  type: website
+- url: https://en.wikipedia.org/wiki/ECO_Trade_and_Development_Bank
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q225950
+- url: https://www.wikidata.org/wiki/Q28221177
   type: wikidata
-name: ECO Trade and Development Bank
-founded: '1985'
 headquarters:
-  city: Tehran
-  country: IR
+  city: Istanbul
+  country: TR
   coordinates:
-    lat: 35.68888888888889
-    lng: 51.389722222222225
-acronyms:
-- lang: en
-  value: ECO
-- lang: en
-  value: OCE
-- lang: en
-  value: OWZ
-- lang: fr
-  value: OCE
-- lang: de
-  value: OWZ
+    lat: 41.059444444444445
+    lng: 28.986944444444443
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under the Articles of Agreement signed in March 1995 by Iran, Pakistan, and Türkiye; the treaty entered into force on 3 August 2005 and was registered with the United Nations on 19 May 2008 as treaty no. 44939
+secretariat:
+  location: Istanbul, Türkiye
+  head: President
+  organization: ECO Trade and Development Bank
+membership_count: 6
+description: ECO multilateral development bank promoting intra-regional trade and economic development among its six shareholder countries. Established under a UN-registered treaty that entered into force in August 2005 and operational since December 2008, ETDB provides project finance, corporate finance, trade finance, and SME lending to public and private entities. Headquartered in Istanbul with representative offices in Karachi and Tehran.
+tags:
+- ETDB
+- ECO
+- aid
+- bank
+- commerce
+- development
+- economy
+- eurasia
+- finance
+- multilateral
+- regional
+- trade
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 includes:
 - id: IR
   name: Iran, Islamic Rep.
@@ -40,74 +71,83 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
 - id: AF
   name: Afghanistan
   type: country
   status: member
+  joined: '2014'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '2013'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
-membership_count: 6
-wikidata_id: Q225950
-description: International development bank focused on development providing financial services.
-tags:
-- ECO
-- ETDB
-- OCE
-- OWZ
-- aid
-- bank
-- commerce
-- development
-- economy
-- finance
-- trade
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: trade
-  name: Trade
+  joined: '2015'
+founding_members:
+- IR
+- PK
+- TR
+acronyms:
+- lang: en
+  value: ETDB
+wikidata_id: Q28221177
+notes: ETDB has six shareholder members; the broader ECO has ten member states. Representative offices in Karachi and Tehran are liaison offices without transactional or banking approval authority.
+last_verified: '2026-07-12'
 other_names:
-- id: ar
-  name: منظمة التعاون الاقتصادي
-- id: de
-  name: Organisation für wirtschaftliche Zusammenarbeit
 - id: en
   name: ECO Trade and Development Bank
 - id: es
-  name: Organización de Cooperación Económica
-- id: fr
-  name: Organisation de coopération économique
-- id: pt
-  name: Organização de Cooperação Económica
-- id: ru
-  name: Организация экономического сотрудничества
-- id: zh
-  name: 经济合作组织
+  name: Banco de Comercio y Desarrollo de la Organización de Cooperación Económica
+- id: fa
+  name: بانک تجارت و توسعه اکو
+- id: sl
+  name: Banka za trgovino in razvoj Organizacije za mednarodno sodelovanje
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.etdb.org/who-we-are/etdb-in-brief/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q28221177
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q28221177
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.etdb.org/

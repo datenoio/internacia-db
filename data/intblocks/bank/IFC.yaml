@@ -2,11 +2,12 @@ id: IFC
 name: International Finance Corporation
 blocktype:
 - bank
-- economic
-- intorg
 status: formal
-founded: '1956'
+founded: '1956-07-20'
+active_period:
+  start: '1956-07-20'
 geographic_scope: global
+partof: WB
 languages:
 - ar
 - en
@@ -16,20 +17,85 @@ languages:
 links:
 - url: https://www.ifc.org/
   type: website
+- url: https://www.ifc.org/en/about/history
+  type: website
+- url: https://www.worldbank.org/en/about/leadership/members
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Finance_Corporation
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q448647
+- url: https://www.wikidata.org/wiki/Q656801
   type: wikidata
-acronyms:
-- lang: en
-  value: IFC
 headquarters:
   city: Washington, D.C.
   country: US
   coordinates:
     lat: 38.895
     lng: -77.036666666667
-partof: WB
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Articles of Agreement of the International
+  Finance Corporation (entered into force 20 July 1956)
+secretariat:
+  location: Washington, D.C., United States
+  head: Managing Director
+  organization: International Finance Corporation
+membership_count: 186
+founding_members:
+- AU
+- BO
+- CA
+- CO
+- CR
+- DE
+- DK
+- DO
+- EC
+- EG
+- ET
+- FI
+- FR
+- GB
+- GT
+- HN
+- HT
+- IN
+- IS
+- JO
+- JP
+- LK
+- MX
+- NI
+- 'NO'
+- PA
+- PE
+- PK
+- SE
+- SV
+- US
+description: Private-sector arm of the World Bank Group, established in 1956 to promote sustainable private sector investment
+  in developing countries. Unlike IBRD and IDA, which lend to governments, IFC provides loans, equity, guarantees, and advisory
+  services to private enterprises and financial institutions without requiring sovereign guarantees. Owned by 186 member governments
+  and consistently AAA-rated, it mobilizes capital for projects in infrastructure, manufacturing, agribusiness, financial
+  markets, and climate finance across emerging markets.
+tags:
+- IFC
+- aid
+- bank
+- development
+- economy
+- finance
+- global
+- international
+- investment
+- multilateral
+- private-sector
+- world-bank
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
 includes:
 - id: AD
   name: Andorra
@@ -811,28 +877,19 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 195
-wikidata_id: Q448647
-description: International development bank focused on development providing financial services.
-tags:
-- IFC
-- aid
-- bank
-- development
-- economy
-- finance
-- world
-- worldbank
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+acronyms:
+- lang: en
+  value: IFC
+wikidata_id: Q656801
+notes: One of five World Bank Group institutions alongside IBRD, IDA, MIGA, and ICSID. Articles of Agreement entered into
+  force on 20 July 1956 with 31 founding members. IBRD membership is a prerequisite for IFC membership. The World Bank Group
+  President serves as IFC President; day-to-day operations are led by the Managing Director.
+last_verified: '2026-07-12'
 other_names:
+- id: ar
+  name: مؤسسة التمويل الدولية
 - id: de
-  name: Alvelos
+  name: Internationale Finanz-Corporation
 - id: en
   name: International Finance Corporation
 - id: es
@@ -840,22 +897,64 @@ other_names:
 - id: fr
   name: Société financière internationale
 - id: pt
-  name: Alvelos
+  name: Corporação Financeira Internacional
 - id: ru
-  name: Алвелуш
+  name: Международная финансовая корпорация
 - id: zh
-  name: 阿尔韦卢什
+  name: 国际金融公司
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/en/about/history
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/content/dam/ifc/doc/2023/ifc-articles-of-agreement-en.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/content/dam/ifc/doc/2023/ifc-articles-of-agreement-en.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/en/about/history
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.worldbank.org/en/about/leadership/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/en/about/history
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://documents1.worldbank.org/curated/en/167361467990972836/txt/104636-WP-PUBLIC-2003-03-Origins-of-the-IFC.txt
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ifc.org/en/about/history
 - field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q656801
+  license: CC0
+- field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ifc.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ifc.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q656801
+  license: CC0

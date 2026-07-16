@@ -1,25 +1,41 @@
 id: NEA
+name: Nuclear Energy Agency
 blocktype:
 - energy
 status: formal
 partof: OECD
+founded: '1958-02-01'
+active_period:
+  start: '1958-02-01'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
+- fr
 links:
-- url: http://www.oecd-nea.org/
+- url: https://www.oecd-nea.org/
+  type: website
+- url: https://www.oecd-nea.org/jcms/tro_5705/about-us
+  type: website
+- url: https://www.oecd-nea.org/jcms/tro_6814/member-countries
   type: website
 - url: https://en.wikipedia.org/wiki/Nuclear_Energy_Agency
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q369760
   type: wikidata
-name: Nuclear Energy Agency
-founded: '1958'
 headquarters:
   city: Boulogne-Billancourt
   country: FR
   coordinates:
     lat: 48.835277777778
     lng: 2.2413888888889
+legal_status: intergovernmental
+recognition_status: Intergovernmental agency established by OECD Council Decision C(57)255 entering into force on 1 February 1958 as the European Nuclear Energy Agency; renamed the OECD Nuclear Energy Agency in 1972; governed by the Steering Committee for Nuclear Energy reporting to the OECD Council
+secretariat:
+  location: Boulogne-Billancourt, France
+  head: Director-General
+  organization: OECD Nuclear Energy Agency
 includes:
 - id: AR
   name: Argentina
@@ -192,8 +208,11 @@ includes:
   status: member
   joined: '1976'
 membership_count: 34
-wikidata_id: Q369760
-description: Intergovernmental agency.
+description: Intergovernmental agency within the OECD that facilitates cooperation among countries with advanced nuclear
+  technology infrastructures. Established on 1 February 1958 as the European Nuclear Energy Agency (ENEA), it was renamed
+  the OECD Nuclear Energy Agency in 1972 as membership expanded beyond Europe. The NEA assists member countries in
+  developing the scientific, technological, and legal bases for the safe, environmentally sound, and economical use of
+  nuclear energy for peaceful purposes, covering nuclear safety, technology, science, environment, and law.
 tags:
 - NEA
 - agency
@@ -201,9 +220,11 @@ tags:
 - economy
 - energy
 - environment
-- nature
+- international
+- intergovernmental
 - nuclear
-- oil
+- nuclear_safety
+- oecd
 topics:
 - key: economy
   name: Economy
@@ -230,30 +251,69 @@ other_names:
   name: Агентство по ядерной энергетике
 - id: zh
   name: 经合组织核能署
+acronyms:
+- lang: en
+  value: NEA
+- lang: fr
+  value: AEN
+notes: Originally established as the European Nuclear Energy Agency (ENEA) in 1958. Renamed the OECD Nuclear Energy Agency
+  in 1972 following Japan's accession. Russia joined in 2013 but membership was suspended following the 2022 invasion of
+  Ukraine. The Director-General is William D. Magwood, IV (since September 2014). Seven specialised standing technical
+  committees operate under the Steering Committee for Nuclear Energy.
+wikidata_id: Q369760
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_5705/about-us
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/pl_40042/history-of-the-nea
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/pl_40042/history-of-the-nea
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_6814/member-countries
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_5705/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/pl_40042/history-of-the-nea
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_5705/about-us
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_5705/about-us
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_6814/member-countries
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.oecd-nea.org/jcms/tro_6814/member-countries
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q369760
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q369760
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.oecd-nea.org/
-acronyms:
-- lang: en
-  value: EN
-- lang: fr
-  value: AEN
-- lang: fr
-  value: NEA

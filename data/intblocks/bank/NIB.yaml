@@ -1,76 +1,126 @@
 id: NIB
+name: Nordic Investment Bank
 blocktype:
 - bank
 status: formal
+founded: '1975-12-04'
+active_period:
+  start: '1975-12-04'
+geographic_scope: regional
+regions:
+- Nordic countries
+- Baltic states
+- Europe
 languages:
 - en
+- fi
+- sv
+- da
+- 'no'
+- is
 links:
-- url: http://www.nib.int/
+- url: https://www.nib.int/
+  type: website
+- url: https://www.nib.int/who-we-are/
   type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Investment_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2020649
   type: wikidata
-name: Nordic Investment Bank
-founded: '1976'
 headquarters:
   city: Helsinki
   country: FI
   coordinates:
-    lat: 60.170833333333334
-    lng: 24.9375
-includes:
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
+    lat: 60.1686
+    lng: 24.953
+legal_status: intergovernmental
+recognition_status: International financial institution established on 4 December 1975 by Denmark, Finland, Iceland, Norway, and Sweden; Estonia, Latvia, and Lithuania became members on 1 January 2005
+secretariat:
+  location: Helsinki, Finland
+  head: President and CEO
+  organization: Nordic Investment Bank
 membership_count: 8
-wikidata_id: Q2020649
-description: International development bank focused on development providing financial services.
+founding_members:
+- DK
+- FI
+- IS
+- 'NO'
+- SE
+description: International financial institution owned by Denmark, Estonia, Finland, Iceland, Latvia, Lithuania, Norway, and Sweden. Established in 1975 to promote economic growth and cooperation in the Nordic-Baltic region, NIB provides long-term financing raised on international capital markets for projects that improve productivity and benefit the environment. Headquartered in Helsinki, Finland, with a regional hub in Riga, Latvia.
 tags:
 - NIB
 - aid
 - bank
+- baltic
 - development
 - economy
+- environment
 - finance
+- ifi
 - investment
+- multilateral
 - nordic
+- sustainability
 topics:
 - key: development
   name: Development
 - key: economy
   name: Economy
+- key: environment
+  name: Environment
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '1975-12-04'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2005-01-01'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1975-12-04'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '1975-12-04'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2005-01-01'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2005-01-01'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1975-12-04'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1975-12-04'
+acronyms:
+- lang: en
+  value: NIB
+- lang: de
+  value: NIB
+wikidata_id: Q2020649
+notes: One of three Nordic international financial institutions alongside the Nordic Environment Finance Corporation (NEFCO) and Nordic Development Fund (NDF). Operations began in August 1976. English is the Bank's official working language. Also finances projects outside the member countries, including in areas adjacent to the membership region.
+last_verified: '2026-07-12'
 other_names:
 - id: de
   name: Nordische Investitionsbank
@@ -79,28 +129,60 @@ other_names:
 - id: es
   name: Banco Nórdico de Inversiones
 - id: fr
-  name: banque nordique d’investissement
+  name: banque nordique d'investissement
 - id: ru
   name: Северный инвестиционный банк
 - id: zh
   name: 北歐投資銀行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Nordic_Investment_Bank
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.nib.int/who-we-are/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q2020649
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q2020649
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.nib.int/
-acronyms:
-- lang: en
-  value: NIB
-- lang: de
-  value: NIB

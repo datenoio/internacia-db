@@ -1,27 +1,55 @@
 id: AFROSAIE
+name: African Organisation of English-speaking Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '2005'
+active_period:
+  start: '2005'
+geographic_scope: regional
+regions:
+- Africa
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - en
 links:
 - url: https://afrosai-e.org.za/
   type: website
-name: African Organisation of English-speaking Supreme Audit Institutions
-founded: '2005'
-geographic_scope: regional
-regions:
-- Africa
+- url: https://afrosai-e.org.za/who-we-are/
+  type: website
 acronyms:
 - lang: en
   value: AFROSAI-E
+legal_status: membership association
+recognition_status: English-language regional organisation within INTOSAI, serving as the English-speaking subgroup of the African Organisation of Supreme Audit Institutions (AFROSAI)
 headquarters:
   city: Pretoria
   country: ZA
   coordinates:
     lat: -25.7479
     lng: 28.2293
+secretariat:
+  location: Pretoria, South Africa
+  organization: Auditor-General of South Africa
+  head: Chief Executive Officer
+membership_count: 26
+description: Regional association of supreme audit institutions in English-speaking Africa. AFROSAI-E is the English-language subgroup of AFROSAI, the African branch of INTOSAI. It supports member SAIs through capacity building, knowledge sharing, technical cooperation, and the Institutional Capacity Building Framework (ICBF). The Executive Secretariat is hosted by the Auditor-General of South Africa in Pretoria.
+tags:
+- AFROSAIE
+- african
+- audit
+- english
+- intorg
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AO
   name: Angola
@@ -127,27 +155,49 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 26
-description: Regional association of supreme audit institutions in English-speaking Africa, promoting capacity building, knowledge
-  sharing, and technical cooperation among SAIs. The English-language subgroup of AFROSAI and one of seven regional organisations
-  of INTOSAI.
-tags:
-- AFROSAIE
-- african
-- audit
-- english
-- intorg
-- organisation
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governing Board consists of the heads of the 26 member SAIs and meets annually. Four oversight subcommittees cover audit and governance, human resources, finance and planning, and capacity building. As of 2026, the Governing Board Chair is Nancy Gathungu (Auditor-General of Kenya) and the Vice-Chair is Gherezgiher Ghebremedhin Chirum (Auditor-General of Eritrea). Meisie Nkau serves as Chief Executive Officer of the Executive Secretariat.
+other_names:
+- id: en
+  name: African Organisation of English-Speaking Supreme Audit Institutions
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://afrosai-e.org.za/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://afrosai-e.org.za/who-we-are/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://afrosai-e.org.za/

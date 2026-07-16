@@ -60,7 +60,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
 - **Commits**: Descriptive commit messages following conventional commits
 
 ## Domain Context
-- **Countries Dataset**: Reference data for 252 countries and territories. In scope:
+- **Countries Dataset**: Reference data for 256 countries and territories. In scope:
   - ISO 3166-1 codes (alpha-2, alpha-3, numeric)
   - Geographic data (borders, continents, subregions, coordinates, centroids)
   - Demographic reference fields (population, area, Gini index where available)
@@ -71,7 +71,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
 
   **Out of scope**: socioeconomic profile expansion (HDI, GDP per capita, government type, internet penetration, and similar indicators). Do not propose or implement those fields in countries; consumers should enrich downstream.
 
-- **International Blocks Dataset**: Contains 1,057 organizations across 51 categories:
+- **International Blocks Dataset**: Contains 1,071 organizations across 63 categories:
   - Intergovernmental organizations (UN, EU, NATO, etc.)
   - Trade agreements and economic unions
   - Regional alliances and groups

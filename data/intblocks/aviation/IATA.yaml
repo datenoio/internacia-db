@@ -1,9 +1,14 @@
 id: IATA
+name: International Air Transport Association
 blocktype:
 - aviation
 - intorg
 - transport
 status: formal
+founded: '1945-04-19'
+active_period:
+  start: '1945-04-19'
+geographic_scope: global
 languages:
 - en
 - fr
@@ -11,52 +16,29 @@ languages:
 links:
 - url: https://www.iata.org/
   type: website
+- url: https://www.iata.org/en/about/
+  type: website
+- url: https://www.iata.org/en/about/members/
+  type: website
+- url: https://www.iata.org/en/about/corporate-structure/
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Air_Transport_Association
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q19755
   type: wikidata
-name: International Air Transport Association
-founded: '1945-04-19'
 headquarters:
   city: Montreal
   country: CA
   coordinates:
     lat: 45.5017
     lng: -73.5673
-acronyms:
-- lang: en
-  value: IATA
-- lang: ar
-  value: إياتا
-- lang: ar
-  value: اياتا
-- lang: ar
-  value: الإياتا
-- lang: ar
-  value: الاياتا
-- lang: ar
-  value: الأياتا
-- lang: ar
-  value: أياتا
-- lang: zh
-  value: 国际航空运输协会
-- lang: fr
-  value: IATA
-- lang: ru
-  value: ИАТА
-- lang: es
-  value: IATA
-- lang: de
-  value: IATA
-- lang: pt
-  value: IATA
-- lang: pt
-  value: AITA
-geographic_scope: global
-description: Global trade association representing approximately 290 airlines from around 120 countries, accounting for about
-  82% of total air traffic. IATA sets technical standards for airlines, promotes safe and efficient air transport, and advocates
-  for the interests of airlines worldwide. The association provides various services including training, consulting, and publications
-  related to air transport.
+legal_status: trade association incorporated under Canadian federal law
+recognition_status: Non-governmental trade association whose members are airlines operating scheduled and non-scheduled air services that maintain IATA Operational Safety Audit (IOSA) registration
+secretariat:
+  location: Montreal, Canada
+  organization: Director General
+membership_count: 194
+description: Global trade association representing over 370 member airlines from more than 120 countries, together carrying about 85% of scheduled international air traffic. IATA develops industry standards for safety, security, and financial systems; operates settlement systems such as the Billing and Settlement Plan; advocates for airline interests with governments and international organisations; and provides training, consulting, and regulatory compliance support. Founded in Havana on 19 April 1945 as the successor to the International Air Traffic Association (1919).
 tags:
 - IATA
 - aviation
@@ -72,24 +54,10 @@ topics:
   name: Transport
 - key: aviation
   name: Aviation
-wikidata_id: Q19755
-other_names:
-- id: ar
-  name: الاتحاد الدولي للنقل الجوي
-- id: de
-  name: International Air Transport Association
-- id: en
-  name: International Air Transport Association
-- id: es
-  name: Asociación Internacional de Transporte Aéreo
-- id: fr
-  name: Association internationale du transport aérien
-- id: pt
-  name: Associação Internacional de Transportes Aéreos
-- id: ru
-  name: Международная ассоциация воздушного транспорта
-- id: zh
-  name: 国际航空运输协会
+- key: standards
+  name: Standards
+- key: advocacy
+  name: Advocacy
 includes:
 - id: AD
   name: Andorra
@@ -867,23 +835,112 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 194
+acronyms:
+- lang: en
+  value: IATA
+- lang: ar
+  value: إياتا
+- lang: ar
+  value: اياتا
+- lang: ar
+  value: الإياتا
+- lang: ar
+  value: الاياتا
+- lang: ar
+  value: الأياتا
+- lang: ar
+  value: أياتا
+- lang: zh
+  value: 国际航空运输协会
+- lang: fr
+  value: IATA
+- lang: ru
+  value: ИАТА
+- lang: es
+  value: IATA
+- lang: de
+  value: IATA
+- lang: pt
+  value: IATA
+- lang: pt
+  value: AITA
+other_names:
+- id: ar
+  name: الاتحاد الدولي للنقل الجوي
+- id: de
+  name: International Air Transport Association
+- id: en
+  name: International Air Transport Association
+- id: es
+  name: Asociación Internacional de Transporte Aéreo
+- id: fr
+  name: Association internationale du transport aérien
+- id: pt
+  name: Associação Internacional de Transportes Aéreos
+- id: ru
+  name: Международная ассоциация воздушного транспорта
+- id: zh
+  name: 国际航空运输协会
+wikidata_id: Q19755
+notes: Founded in Havana on 19 April 1945 with 57 member airlines from 31 nations; incorporated under a Special Act of the Parliament of Canada on 18 December 1945 with head office in Montreal. Successor to the International Air Traffic Association founded at The Hague in 1919. Governed by an Annual General Meeting of member airlines, a Board of Directors (31 airline CEOs plus the Director General as of June 2026), nine Industry Committees, three Steering Groups, and six Traffic Conferences. The includes roster tracks countries represented by member airlines rather than sovereign membership.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q19755
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q19755
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q19755
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/history/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/members/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.iata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.iata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/management/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/history/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/history/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/members/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/members/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.iata.org/en/about/corporate-structure/

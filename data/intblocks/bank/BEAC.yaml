@@ -1,25 +1,69 @@
 id: BEAC
+name: Bank of Central African States
 blocktype:
 - bank
 status: formal
+founded: '1972'
+active_period:
+  start: '1973-04-02'
 partof: CEMAC
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - fr
 links:
 - url: https://www.beac.int/
   type: website
+- url: https://www.beac.int/histoire-de-lemission-monetaire-en-afrique-centrale/
+  type: website
 - url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q189972
   type: wikidata
-name: Bank of Central African States
+headquarters:
+  city: Yaoundé
+  country: CM
+  coordinates:
+    lat: 3.868084
+    lng: 11.523089
+legal_status: intergovernmental
+recognition_status: Common central bank of the Economic and Monetary Community of Central Africa (CEMAC), established under the 22 November 1972 Brazzaville cooperation conventions; exclusive issuer of the Central African CFA franc (XAF)
+secretariat:
+  location: Yaoundé, Cameroon
+  head: Governor
+  organization: Bank of Central African States
+membership_count: 6
+description: Central bank of the six-member Economic and Monetary Community of Central Africa (CEMAC), serving Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea, and Gabon. Established in 1972 to succeed the Banque Centrale des États de l'Afrique Équatoriale et du Cameroun (BCEAEC) and operational since April 1973, BEAC holds the exclusive right to issue the Central African CFA franc (XAF) and conducts monetary policy, banking supervision, and financial stability functions for the union.
+tags:
+- BEAC
+- CEMAC
+- africa
+- bank
+- central
+- cfa-franc
+- economy
+- finance
+- monetary
+- regional
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
-- id: TD
-  name: Chad
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CF
   name: Central African Republic
+  type: country
+  status: member
+- id: TD
+  name: Chad
   type: country
   status: member
 - id: CG
@@ -34,17 +78,12 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
-founded: '1972'
-headquarters:
-  city: Abéché
-  country: TD
-  coordinates:
-    lat: 13.833055555556
-    lng: 20.834722222222
+founding_members:
+- CM
+- CF
+- TD
+- CG
+- GA
 acronyms:
 - lang: en
   value: BEAC
@@ -52,25 +91,9 @@ acronyms:
   value: BEAC
 - lang: de
   value: BEAC
-membership_count: 6
 wikidata_id: Q189972
-description: International development bank focused on development providing financial services.
-tags:
-- BEAC
-- african
-- aid
-- bank
-- central
-- development
-- economy
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Succeeded the BCEAEC (Institut d'Émission, 1955–1959; headquartered in Paris through the early 1970s). Member states chose Yaoundé as headquarters in February 1973; full transfer from Paris completed in early 1977. Equatorial Guinea joined on 1 January 1985. Central African Banking Commission (COBAC) established within BEAC in 1990 and operational from 1993. One of the CEMAC common institutions alongside BDEAC (development bank, Brazzaville), COBAC, and COSUMAF (Libreville).
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك المركزي لدول وسط إفريقيا
@@ -89,6 +112,55 @@ other_names:
 - id: zh
   name: 中非国家银行
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.beac.int/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q189972
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q189972
+  license: CC0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Bank_of_Central_African_States
+  license: CC BY-SA 4.0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -96,10 +168,6 @@ provenance:
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q189972
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.beac.int/

@@ -1,22 +1,60 @@
 id: CTO
+name: Caribbean Tourism Organization
 blocktype:
 - intorg
 status: formal
+founded: '1989'
+active_period:
+  start: '1989'
+geographic_scope: regional
+regions:
+- Caribbean
+- Americas
 languages:
 - en
+- fr
+- es
+- nl
 links:
 - url: https://www.onecaribbean.org/
   type: website
+- url: https://www.onecaribbean.org/about-cto/
+  type: website
+- url: https://www.onecaribbean.org/members-lists/government-members-list/
+  type: website
 - url: https://en.wikipedia.org/wiki/Caribbean_Tourism_Organization
   type: wikipedia
-name: Caribbean Tourism Organization
-founded: '1989'
+- url: https://www.wikidata.org/wiki/Q5039432
+  type: wikidata
+acronyms:
+- lang: en
+  value: CTO
+legal_status: intergovernmental
+recognition_status: Regional tourism development agency headquartered in Barbados; established in 1989 through the merger of the Caribbean Tourism Association (founded 1951) and the Caribbean Tourism Research and Development Centre (founded 1974); comprises government members from Dutch, English, French, and Spanish Caribbean territories plus allied private-sector members
 headquarters:
-  city: Bridgetown
+  city: Warrens
   country: BB
   coordinates:
     lat: 13.14365
     lng: -59.60552
+secretariat:
+  location: 7th Floor, Baobab Tower, Warrens, St. Michael, BB 22026, Barbados
+  head: Secretary-General
+membership_count: 25
+description: Regional tourism development agency headquartered in Barbados, established in 1989 through the merger of the Caribbean Tourism Association (1951) and the Caribbean Tourism Research and Development Centre (1974). Promotes sustainable Caribbean tourism for the economic and social benefit of Caribbean people through destination marketing, research, advocacy, technical assistance, and human resource development. Governed by a Council of Ministers and Board of Directors representing government members; vision is to position the Caribbean as the most desirable year-round warm-weather destination under the motto Leading Sustainable Tourism – One Sea, One Voice, One Caribbean.
+tags:
+- CTO
+- caribbean
+- organization
+- regional
+- tourism
+- travel
+- intorg
+topics:
+- key: tourism
+  name: Tourism
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AI
   name: Anguilla
@@ -24,10 +62,6 @@ includes:
   status: member
 - id: AG
   name: Antigua and Barbuda
-  type: country
-  status: member
-- id: AW
-  name: Aruba
   type: country
   status: member
 - id: BS
@@ -46,20 +80,12 @@ includes:
   name: Bermuda
   type: country
   status: member
-- id: BQ
-  name: Bonaire, Sint Eustatius and Saba
-  type: country
-  status: member
 - id: VG
   name: Virgin Islands, British
   type: country
   status: member
 - id: KY
   name: Cayman Islands
-  type: country
-  status: member
-- id: CU
-  name: Cuba
   type: country
   status: member
 - id: CW
@@ -70,16 +96,8 @@ includes:
   name: Dominica
   type: country
   status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
 - id: GD
   name: Grenada
-  type: country
-  status: member
-- id: GP
-  name: Guadeloupe
   type: country
   status: member
 - id: GY
@@ -102,10 +120,11 @@ includes:
   name: Montserrat
   type: country
   status: member
-- id: PR
-  name: Puerto Rico
+- id: BQ
+  name: Caribbean Netherlands
   type: country
   status: member
+  note: Membership held by Sint Eustatius
 - id: KN
   name: Saint Kitts and Nevis
   type: country
@@ -114,16 +133,16 @@ includes:
   name: Saint Lucia
   type: country
   status: member
+- id: MF
+  name: Saint Martin (French part)
+  type: country
+  status: member
 - id: SX
   name: Sint Maarten
   type: country
   status: member
 - id: VC
   name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: SR
-  name: Suriname
   type: country
   status: member
 - id: TT
@@ -138,24 +157,6 @@ includes:
   name: Virgin Islands, U.S.
   type: country
   status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
-  type: country
-  status: member
-membership_count: 31
-description: Regional intergovernmental organization dedicated to promoting sustainable tourism development in the Caribbean
-  region for the economic and social benefit of Caribbean people.
-tags:
-- CTO
-- caribbean
-- organization
-- regional
-- tourism
-- travel
-- intorg
-topics:
-- key: tourism
-  name: Tourism
 other_names:
 - id: en
   name: Caribbean Tourism Organization
@@ -165,14 +166,65 @@ other_names:
   name: Organisation du tourisme des Caraïbes
 - id: nl
   name: Caribische Toerisme Organisatie
+notes: Government membership changes frequently; the May 2025 official list comprises 25 territories including separate listings for Saint Martin, Sint Maarten, and Sint Eustatius. Allied (private-sector) members such as the Caribbean Hotel and Tourism Association operate alongside government members. The organization also maintains a New York liaison office and operates the Caribbean Tourism Institute eLearning platform in partnership with Velsoft Training Materials Inc.
 wikidata_id: Q5039432
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5039432
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5039432
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/about-cto/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/about-cto/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/about-cto/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/about-cto/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/contact-cto/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/contact-cto/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/members-lists/government-members-list/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://www.onecaribbean.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Tourism_Organization
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Tourism_Organization
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/about-cto/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.onecaribbean.org/members-lists/government-members-list/

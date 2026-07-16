@@ -1,17 +1,44 @@
 id: CEN
+name: European Committee for Standardization
 blocktype:
 - intorg
 status: formal
+founded: '1961'
+active_period:
+  start: '1961'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
+- de
 links:
-- url: http://www.cen.eu/
+- url: https://www.cen.eu/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q648403
   type: wikidata
-name: European Committee for Standardization
+acronyms:
+- lang: en
+  value: CEN
+- lang: zh
+  value: 歐洲標準協調委員會
+- lang: zh
+  value: 欧洲标准化委员会
+- lang: fr
+  value: CEN
+- lang: de
+  value: CEN
+legal_status: not-for-profit membership association
+recognition_status: Officially recognized European standards body by the European Union, European Free Trade Association, and the United Kingdom, alongside CENELEC and ETSI; recognized under Regulation (EU) No 1025/2012 on European standardization
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846666666666664
+    lng: 4.351666666666667
 includes:
 - id: AT
   name: Austria
@@ -149,46 +176,103 @@ includes:
   name: United Kingdom
   type: country
   status: member
-founded: '1961'
-headquarters:
-  city: City of Brussels
-  country: BE
-  coordinates:
-    lat: 50.846666666666664
-    lng: 4.351666666666667
-acronyms:
-- lang: en
-  value: CEN
 membership_count: 34
 wikidata_id: Q648403
-description: The European Committee for Standardization is an international organization that is used to promote regional
-  cooperation in the standardization sector.
+description: Public standards organization whose 34 national member bodies develop European Standards (EN) for all sectors
+  except electrotechnical (CENELEC) and telecommunications (ETSI). Founded in 1961, CEN fosters the European single market
+  and global trade by providing coherent sets of standards. Officially recognized by the EU, EFTA, and the United Kingdom
+  as a European standards body under Regulation (EU) No 1025/2012.
 tags:
 - CEN
 - committee
+- europe
 - european
 - intorg
 - iso
+- regional
 - standard
 - standardization
 topics:
 - key: standardization
   name: Standardization
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: اللجنة الأوربية للقياس
-- id: zh
-  name: 歐洲標準委員會
+- id: de
+  name: Europäisches Komitee für Normung
 - id: en
   name: European Committee for Standardization
-- id: fr
-  name: Comité européen de normalisation
-- id: ru
-  name: Европейский комитет по стандартизации
 - id: es
   name: Comité Europeo de Normalización
+- id: fr
+  name: Comité européen de normalisation
+- id: pt
+  name: Comité Europeu de Normalização
+- id: ru
+  name: Европейский комитет по стандартизации
+- id: zh
+  name: 歐洲標準委員會
+notes: CEN operates the CEN/CENELEC Management Centre in Brussels jointly with CENELEC. Members are national standards
+  bodies of all EU member states, three EFTA countries (Iceland, Norway, Switzerland), and the United Kingdom, North Macedonia,
+  Serbia, and Türkiye. CEN also maintains affiliate and partner relationships with standards bodies in neighboring and partner
+  countries. The Vienna Agreement (1991) governs cooperation with ISO to avoid duplication of standards.
+last_verified: '2026-07-12'
 provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q648403
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q648403
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q648403
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q648403
+  license: CC0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.cen.eu/
+  retrieved_at: '2026-07-12'
+  url: https://www.cen.eu/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/European_Committee_for_Standardization
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cen.eu/

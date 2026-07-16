@@ -5,7 +5,9 @@ blocktype:
 - intorg
 - aviation_safety
 status: formal
-founded: 2011-01
+founded: '2011-01-19'
+active_period:
+  start: '2011-01-19'
 geographic_scope: regional
 regions:
 - Europe
@@ -19,17 +21,27 @@ languages:
 links:
 - url: https://transport.ec.europa.eu/transport-modes/air/about-encasia-network_en
   type: website
+- url: https://www.esasi.org/about-6
+  type: website
 - url: https://www.esasi.org/aviation-authorities
   type: website
+- url: https://transport.ec.europa.eu/system/files/2023-05/2022-encasia-report.pdf
+  type: website
+- url: https://en.wikipedia.org/wiki/European_Network_of_Civil_Aviation_Safety_Investigation_Authorities
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q105400601
+  type: wikidata
 headquarters:
   city: Brussels
   country: BE
 legal_status: intergovernmental
+recognition_status: Independent network established under Regulation (EU) No 996/2010 comprising the civil aviation safety investigation authorities of all EU Member States; Iceland, Kosovo, Norway, and Switzerland participate as observers
 partof: EU
+secretariat:
+  location: Brussels, Belgium
+  organization: SIA-Secretary (rotating among member authorities, supported by the European Commission)
 membership_count: 27
-description: Network comprising the heads of civil aviation safety investigation authorities from EU Member States, established
-  following Regulation (EU) No 996/2010. ENCASIA enhances the quality and independence of aviation safety investigations,
-  promotes information exchange and best practices, and coordinates peer reviews and training programs.
+description: European network of civil aviation safety investigation authorities established following the entry into force of Regulation (EU) No 996/2010 to improve the quality, independence, and harmonization of aviation safety investigations across Europe. ENCASIA brings together the heads of national safety investigation authorities from EU Member States to share best practices, coordinate mutual support through the European Mutual Support System (EMSS), conduct peer reviews, develop training initiatives, and advise EU institutions on accident investigation and prevention. Its website is hosted by the European Commission and its work programmes are funded through EC grants co-funded by members.
 tags:
 - ENCASIA
 - aviation
@@ -38,6 +50,9 @@ tags:
 - intorg
 - europe
 - regional
+- eu
+- emss
+- peer_review
 topics:
 - key: aviation
   name: Aviation
@@ -156,6 +171,22 @@ includes:
   name: Sweden
   type: country
   status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: observer
+- id: KV
+  name: Kosovo
+  type: country
+  status: observer
+- id: 'NO'
+  name: Norway
+  type: country
+  status: observer
+- id: CH
+  name: Switzerland
+  type: country
+  status: observer
 acronyms:
 - lang: en
   value: ENCASIA
@@ -163,21 +194,55 @@ other_names:
 - id: en
   name: European Network of Civil Aviation Safety Investigation Authorities
 wikidata_id: Q105400601
+notes: Established in January 2011 following the entry into force of Regulation (EU) No 996/2010 on the investigation and prevention of accidents and incidents in civil aviation; Rules of Procedure were formally approved on 19 January 2011. Governed by the heads of member safety investigation authorities (SIAs), who elect a Chair and Deputy Chair for three-year terms. Seven working groups address communication, cooperation, the European Mutual Support System (EMSS), planning and resources, peer reviews, safety recommendations, and ICAO matters. Peer reviews play an essential role in supporting implementation of Regulation 996/2010 in Member States. Funded through European Commission grants co-funded by members. The United Kingdom participated until departing after Brexit in 2020; Switzerland joined as an observer the same year. Observers include Iceland, Kosovo, Norway, and Switzerland. Plenary meetings are typically held in Brussels; the ENCASIA website is hosted by the European Commission.
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q105400601
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://transport.ec.europa.eu/transport-modes/air/about-encasia-network_en
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://transport.ec.europa.eu/transport-modes/air/about-encasia-network_en
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/about-6
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/aviation-authorities
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://transport.ec.europa.eu/transport-modes/air/about-encasia-network_en
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://transport.ec.europa.eu/transport-modes/air/about-encasia-network_en
+  retrieved_at: '2026-07-12'
+  url: https://transport.ec.europa.eu/system/files/2023-05/2022-encasia-report.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://transport.ec.europa.eu/system/files/2023-05/2022-encasia-report.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/about-6
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/about-6
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/aviation-authorities
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.esasi.org/aviation-authorities
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://transport.ec.europa.eu/system/files/2023-05/2022-encasia-report.pdf

@@ -1,11 +1,70 @@
 id: CFATF
+name: Caribbean Financial Action Task Force
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '1992'
+active_period:
+  start: '1992'
+geographic_scope: regional
+regions:
+- Caribbean
+- Americas
+languages:
+- en
 links:
-- url: http://www.cfatf-gafic.org/
+- url: https://www.cfatf-gafic.org/
   type: website
-name: The Caribbean Financial Action Task Force
+- url: https://cfatf-gafic.org/about-us/
+  type: website
+- url: https://en.wikipedia.org/wiki/Caribbean_Financial_Action_Task_Force
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q19605347
+  type: wikidata
+acronyms:
+- lang: en
+  value: CFATF
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering, counter-terrorist financing, and counter-proliferation financing; associate member of the Financial Action Task Force
+partof:
+  id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Port of Spain
+  country: TT
+  coordinates:
+    lat: 10.67389
+    lng: -61.52444
+membership_count: 27
+description: Intergovernmental FATF-style regional body (FSRB) whose member jurisdictions in the Caribbean Basin, Central America, and South America commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Evolved from the May 1990 Aruba meeting, where regional representatives formulated 19 recommendations complementary to the original FATF 40 Recommendations, and the November 1992 Kingston Ministerial Meeting, which endorsed the FATF and CFATF standards and mandated the CFATF Secretariat. The Secretariat is hosted by the Government of Trinidad and Tobago in Port of Spain and conducts mutual evaluations, coordinates training and technical assistance, conducts typology exercises, and represents CFATF interests within the FATF Global Network.
+tags:
+- AML
+- CFATF
+- CFT
+- FATF
+- FSRB
+- caribbean
+- financial
+- intorg
+- legal
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
 - id: AI
   name: Anguilla
@@ -115,14 +174,62 @@ includes:
   name: Venezuela
   type: country
   status: member
-membership_count: 27
-description: The Caribbean Financial Action Task Force is an international organization that is used to promote regional cooperation
-  in the financial action task force sector.
-tags:
-- CFATF
-- caribbean
-- financial
-- intorg
-topics:
-- key: economy
-  name: Economy
+wikidata_id: Q19605347
+other_names:
+- id: ar
+  name: فرقة العمل المعنية بالإجراءات المالية في منطقة البحر الكاريبي
+- id: en
+  name: Caribbean Financial Action Task Force
+- id: pt
+  name: Caribbean Financial Action Task Force
+- id: ru
+  name: Карибская группа разработки финансовых мер борьбы с отмыванием денег
+notes: Established through the 1990 Aruba Recommendations and the 1992 Kingston Declaration. The CFATF Secretariat coordinates mutual evaluations, bi-annual plenary meetings, training and technical assistance, and typology research on behalf of member jurisdictions. As an FSRB within the FATF Global Network, CFATF works with COSUN jurisdictions and observer organisations. Official membership lists may differ from historical or observer designations; verify against the CFATF website for current status.
+last_verified: '2026-07-12'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q19605347
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q19605347
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Financial_Action_Task_Force
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Financial_Action_Task_Force
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Caribbean_Financial_Action_Task_Force
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cfatf-gafic.org/about-us/

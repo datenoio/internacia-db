@@ -5,7 +5,9 @@ blocktype:
 - intorg
 - aviation_safety
 status: formal
-founded: '2010'
+founded: '2009-06-30'
+active_period:
+  start: '2009-06-30'
 geographic_scope: regional
 regions:
 - Africa
@@ -15,22 +17,44 @@ languages:
 links:
 - url: https://www.bagasoo.org/
   type: website
+- url: https://www.bagasoo.org/about/
+  type: website
+- url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+  type: website
+- url: https://en.wikipedia.org/wiki/Banjul_Accord_Group
+  type: wikipedia
 headquarters:
   city: Abuja
   country: NG
+  coordinates:
+    lat: 9.0765
+    lng: 7.3986
 legal_status: intergovernmental
+recognition_status: Regional Safety Oversight Organization (RSOO) of the Banjul Accord Group, recognized by ICAO; evolved from the ICAO Cooperative Development of Operational and Continuing Airworthiness Programme (COSCAP-BAG)
+secretariat:
+  location: Abuja, Nigeria
+  organization: Executive Director
 membership_count: 7
-description: Regional aviation safety oversight organization established by the Banjul Accord Group member states to enhance
-  aviation safety in West Africa through regional cooperation and harmonization of regulations.
+founding_members:
+- CV
+- GM
+- GH
+- GN
+- LR
+- NG
+- SL
+description: Regional aviation safety oversight organization (RSOO) established by the seven Banjul Accord Group member states to harmonize civil aviation safety regulations, pool regional inspector resources, and provide audit, quality assurance, and training support across West Africa. BAGASOO evolved from the ICAO-led COSCAP-BAG programme and was formally established by the BAGASOO Agreement signed on 30 June 2009. It promotes implementation of ICAO standards and the Global Aviation Safety Plan (GASP) and develops tools such as SIMCA (Safety Information Management for Civil Aviation) for member civil aviation authorities.
 tags:
 - BAGASOO
 - aviation
 - safety
 - oversight
+- rsoo
 - intorg
 - africa
 - west_africa
 - regional
+- banjul_accord
 topics:
 - key: aviation
   name: Aviation
@@ -67,19 +91,60 @@ includes:
   name: Sierra Leone
   type: country
   status: member
+acronyms:
+- lang: en
+  value: BAGASOO
 other_names:
 - id: en
   name: Banjul Accord Group Aviation Safety Oversight Organisation
+notes: The BAGASOO Agreement was signed on 30 June 2009 by the Ministers responsible for Civil Aviation of the seven Banjul Accord Group member states and annexed to the BAG international legal instrument. BAGASOO is governed by a Board of Directors composed of the Directors General of member civil aviation authorities, with the Executive Director as member and secretary. Technical divisions cover Administration, Legal, Training and Support, and aviation specialty areas including flight operations, personnel licensing, airworthiness, air navigation services, and aerodromes. A Passenger Safety Charge levy intended to fund operations from 2012 was not implemented by member states; BAGASOO has pursued alternative revenue sources and cooperation with ECOWAS and ICAO regional programmes.
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.bagasoo.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
+- field: recognition_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.bagasoo.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.bagasoo.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bagasoo.org/about/
+- field: includes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: membership_count
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: founding_members
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: notes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/WACAF/MeetingDocs/2025/RAIO%20AFI%202025%20/Documentation/Draft-report-AF-RSOO-Feasibility-study_Vfinal-icao-v2.pdf

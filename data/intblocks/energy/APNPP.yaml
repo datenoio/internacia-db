@@ -2,11 +2,19 @@ id: APNPP
 blocktype:
 - energy
 status: formal
+founded: '2006-07'
+geographic_scope: regional
+regions:
+- Africa
+languages:
+- en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/APNPP
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q4653348
+  type: wikidata
 name: Pan-African Non-Petroleum Producers Association
-founded: '2006'
 includes:
 - id: BJ
   name: Benin
@@ -69,16 +77,23 @@ includes:
   type: country
   status: member
 membership_count: 15
-description: Pan-African Non-Petroleum Producers Association is an international energy
-  body with 15 members.
+legal_status: intergovernmental
+wikidata_id: Q4653348
+description: Association of 15 African non-oil-producing nations that signed a treaty in July 2006 to promote biofuel production
+  and reduce the economic impact of high oil prices. The acronym derives from the French Association des pays non producteurs
+  de pétrole; the grouping is sometimes described as Africa's "Green OPEC".
 tags:
 - APNPP
+- africa
 - african
+- biofuels
 - economy
 - energy
 - environment
 - nature
+- non_petroleum
 - oil
+- regional
 topics:
 - key: economy
   name: Economy
@@ -86,10 +101,61 @@ topics:
   name: Energy
 - key: environment
   name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: renewable
+  name: Renewable Energy
 other_names:
 - id: en
-  name: APNPP
+  name: Pan-African Non-Petroleum Producers Association
+- id: fr
+  name: Association des pays non producteurs de pétrole
+acronyms:
+- lang: en
+  value: APNPP
+- lang: fr
+  value: APNPP
+notes: First proposed by Abdoulaye Wade; coordination led by Senegal's Ministry of Energy and Mines. No dedicated secretariat
+  website is known; public reporting on the association largely dates to the late 2000s.
+last_verified: '2026-07-13'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/APNPP
+  license: CC BY-SA 4.0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q4653348
+  license: CC0

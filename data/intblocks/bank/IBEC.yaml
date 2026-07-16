@@ -1,40 +1,57 @@
 id: IBEC
+name: International Bank for Economic Co-operation
 blocktype:
 - bank
+- intorg
 status: formal
+founded: '1963-10-22'
+active_period:
+  start: '1964-05-18'
+geographic_scope: regional
+regions:
+- Asia
+- Europe
 languages:
 - en
 - ru
 links:
-- url: http://www.ibec.int/
+- url: https://www.ibec.int/
   type: website
+- url: https://www.ibec.int/en/about/
+  type: website
+- url: https://pl.wikipedia.org/wiki/Mi%C4%99dzynarodowy_Bank_Wsp%C3%B3%C5%82pracy_Gospodarczej
+  type: wikipedia
 - url: https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B0%D0%BD%D0%BA_%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1520558
   type: wikidata
-name: The International Bank for Economic Cooperation
-includes:
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-membership_count: 3
-founded: '1964'
+acronyms:
+- lang: en
+  value: IBEC
+- lang: ru
+  value: МБЭС
 headquarters:
   city: Moscow
+  country: RU
   coordinates:
     lat: 55.75055555555556
     lng: 37.6175
-wikidata_id: Q1520558
-description: International development bank focused on development providing financial services.
+legal_status: intergovernmental
+recognition_status: UN-registered intergovernmental development financial institution established under the Agreement Concerning the Organization and Activities of the International Bank for Economic Co-operation (22 October 1963), registered with the UN Secretariat as No. 7388 on 20 August 1964
+secretariat:
+  location: Moscow, Russian Federation
+  head: Chairman of the Council
+  organization: International Bank for Economic Co-operation
+membership_count: 3
+founding_members:
+- BG
+- CZ
+- HU
+- MN
+- PL
+- RO
+- RU
+description: Multilateral development financial institution established in 1963 to promote economic cooperation, trade integration, and sustainable development among member states. Headquartered in Moscow, IBEC provides trade finance, direct and syndicated loans, treasury operations, and cash management services to companies in its member countries, with a mandate to bridge East–West economic relations. Current members are Mongolia, the Russian Federation, and Viet Nam.
 tags:
 - IBEC
 - aid
@@ -44,8 +61,10 @@ tags:
 - economy
 - finance
 - international
+- multilateral
 - regional
 - regional_cooperation
+- trade-finance
 topics:
 - key: development
   name: Development
@@ -55,6 +74,26 @@ topics:
   name: Finance
 - key: regional_cooperation
   name: Regional Cooperation
+includes:
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: VN
+  name: Viet Nam
+  type: country
+  status: member
+  joined: '1977'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+wikidata_id: Q1520558
+official_documents:
+- url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+  type: charter
+notes: Founded in 1963 by Bulgaria, Czechoslovakia, the German Democratic Republic, Hungary, Mongolia, Poland, Romania, and the Soviet Union to facilitate multilateral settlements within Comecon. Cuba joined in 1974 and Viet Nam in 1977. Former members withdrew after the dissolution of Comecon and Eastern Bloc states; only Mongolia, the Russian Federation, and Viet Nam remain. Authorized capital is €400 million (€200 million paid in).
+last_verified: '2026-07-12'
 other_names:
 - id: de
   name: Internationale Bank für wirtschaftliche Zusammenarbeit
@@ -63,6 +102,46 @@ other_names:
 - id: ru
   name: Международный банк экономического сотрудничества
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/en/about/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/en/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/en/about/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.ibec.int/upload/iblock/584/EN_Agreement%20and%20Statutes%202014%20A4.pdf
+- field: notes
+  source: Britannica
+  retrieved_at: '2026-07-12'
+  url: https://www.britannica.com/topic/International-Bank-for-Economic-Cooperation
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -73,12 +152,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.ibec.int/
-acronyms:
-- lang: en
-  value: IBEC
-- lang: ru
-  value: МБЭС

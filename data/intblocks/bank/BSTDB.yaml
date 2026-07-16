@@ -1,25 +1,65 @@
 id: BSTDB
+name: Black Sea Trade and Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1997-01-24'
+active_period:
+  start: '1999-06'
+geographic_scope: regional
+regions:
+- Black Sea
+- Europe
 partof: BSEC
 languages:
 - en
 links:
 - url: https://www.bstdb.org/
   type: website
+- url: https://www.bstdb.org/who-we-are/about-bstdb
+  type: website
 - url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2061083
   type: wikidata
-name: Black Sea Trade and Development Bank
-founded: '1997'
 headquarters:
   city: Thessaloniki
   country: GR
   coordinates:
     lat: 40.640277777777776
     lng: 22.935555555555556
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Agreement Establishing the Black Sea Trade and Development Bank, a UN-registered treaty that entered into force on 24 January 1997
+secretariat:
+  location: Thessaloniki, Greece
+  head: President
+  organization: Black Sea Trade and Development Bank
+membership_count: 11
+description: BSEC multilateral development finance institution serving the eleven founding Black Sea Economic Cooperation member countries. Established under a UN-registered treaty that entered into force in January 1997 and operational since June 1999, BSTDB provides loans, guarantees, and equity for development projects and trade transactions to public and private enterprises without political conditionality. Headquartered in Thessaloniki, Greece.
+tags:
+- BSTDB
+- BSEC
+- aid
+- bank
+- black-sea
+- commerce
+- development
+- economy
+- finance
+- multilateral
+- regional
+- trade
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 includes:
 - id: AL
   name: Albania
@@ -65,28 +105,24 @@ includes:
   name: Ukraine
   type: country
   status: member
-membership_count: 11
+founding_members:
+- AL
+- AM
+- AZ
+- BG
+- GE
+- GR
+- MD
+- RO
+- RU
+- TR
+- UA
+acronyms:
+- lang: en
+  value: BSTDB
 wikidata_id: Q2061083
-description: International development bank focused on development providing financial services.
-tags:
-- BSTDB
-- aid
-- bank
-- black
-- commerce
-- development
-- economy
-- finance
-- trade
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
-- key: trade
-  name: Trade
+notes: BSEC has thirteen member states but BSTDB membership is limited to the eleven founding shareholders; Serbia and North Macedonia are BSEC members but do not hold BSTDB shareholding.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: بنك البحر الأسود للتنمية والتجارة
@@ -103,12 +139,50 @@ other_names:
 - id: zh
   name: 黑海贸易和开发银行
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bstdb.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bstdb.org/who-we-are/about-bstdb
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.bstdb.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Black_Sea_Trade_and_Development_Bank
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.bstdb.org/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q2061083
+  license: CC0

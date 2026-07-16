@@ -1,8 +1,16 @@
 id: WDRTL
+name: Right-to-left writing direction
 blocktype:
 - writingdirection
 status: informal
-name: Right-to-left writing direction
+geographic_scope: regional
+links:
+- url: https://en.wikipedia.org/wiki/Writing_direction
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7333457
+  type: wikidata
+legal_status: informal
+recognition_status: Typographic and script-direction concept (not a formal organization) describing horizontal writing in which each line is read from right to left and lines are ordered from top to bottom; termed RTL script directionality in Unicode and Wikidata (P1406); the dominant layout for Arabic, Hebrew, Persian, and related abjad scripts; overlaps with left-to-right (WDLTR) where countries also use LTR for Latin-script or bilingual contexts; distinct from top-to-bottom (WDTTB) membership; Chad (TD) is the only entity listed in both WDLTR and WDRTL
 includes:
 - id: AF
   name: Afghanistan
@@ -117,18 +125,81 @@ includes:
   type: country
   status: member
 membership_count: 28
-description: Right-to-left writing direction is an international writingdirection
-  body with 28 members.
+wikidata_id: Q7333457
+description: Script directionality in which horizontal lines are read from right to left and sequenced from top to bottom on the page. Right-to-left (RTL) is the predominant layout for Arabic, Hebrew, Persian, and related abjad scripts. This record maps 28 Internacia country entities whose primary official writing uses horizontal RTL direction.
+notes: Members are concentrated in the Middle East, North Africa, and West and South Asia. Israel (IL) uses both RTL (Hebrew) and LTR (Latin) in practice; Chad (TD) is the only entity listed in both WDLTR and WDRTL. All other Internacia country entities whose dominant official script is LTR are listed under WDLTR.
+last_verified: '2026-07-13'
 tags:
 - WDRTL
 - cultural
 - culture
-- right
+- regional
+- right-to-left
+- rtl
+- typography
+- unicode
 - writingdirection
 topics:
 - key: culture
   name: Culture
+other_names:
+- id: ar
+  name: من اليمين إلى اليسار
+- id: de
+  name: von rechts nach links
+- id: en
+  name: right-to-left
+- id: es
+  name: sinistroverso
+- id: fr
+  name: de droite à gauche
+- id: ru
+  name: справа налево
+- id: zh
+  name: 從右至左
+acronyms:
+- lang: en
+  value: RTL
+- lang: en
+  value: WDRTL
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7333457
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7333457
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q7333457
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0

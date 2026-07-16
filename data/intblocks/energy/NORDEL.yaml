@@ -1,7 +1,17 @@
 id: NORDEL
+name: Nordic Electricity Market
 blocktype:
 - energy
 status: historical
+founded: '1963'
+dissolved: '2009-07-01'
+active_period:
+  start: '1963'
+  end: '2009-07-01'
+geographic_scope: regional
+regions:
+- Nordic countries
+- Northern Europe
 languages:
 - en
 - sv
@@ -9,11 +19,17 @@ languages:
 - da
 - fi
 links:
+- url: https://www.entsoe.eu/news-events/former-associations/
+  type: website
+- url: https://uia.org/s/or/en/1100034547
+  type: website
 - url: https://en.wikipedia.org/wiki/NORDEL
   type: wikipedia
-name: Nordic Electricity Market
-founded: '1963'
-dissolved: '2009'
+- url: https://www.wikidata.org/wiki/Q1961320
+  type: wikidata
+legal_status: association
+recognition_status: Cooperation body of Nordic transmission system operators (TSOs) in Denmark, Finland, Iceland, Norway, and Sweden, founded in 1963 to harmonize the Nordic electricity market and power system; wound up on 1 July 2009 when operational tasks transferred to ENTSO-E
+successor: ENTSOE
 includes:
 - id: 'NO'
   name: Norway
@@ -36,7 +52,7 @@ includes:
   type: country
   status: member
 membership_count: 5
-description: Former Nordic synchronized power grid system. Integrated into ENTSO-E in 2009. The Nordic synchronous grid continues to operate with Norway, Sweden, Finland, and eastern Denmark (Zealand) synchronized.
+description: Former cooperation body of Nordic transmission system operators (TSOs) in Denmark, Finland, Iceland, Norway, and Sweden. Founded in 1963 to create preconditions for an effective and harmonized Nordic electricity market, maintain security of supply in the Nordic power system, and serve as a forum between TSOs, authorities, and market participants. Wound up on 1 July 2009; operational tasks transferred to ENTSO-E.
 tags:
 - NORDEL
 - energy
@@ -48,6 +64,7 @@ tags:
 - scandinavia
 - interconnection
 - electricity
+- historical
 topics:
 - key: energy
   name: Energy
@@ -58,10 +75,73 @@ topics:
 other_names:
 - id: en
   name: Nordic Electricity Market
+- id: en
+  name: Organisation for the Nordic Transmission System Operators
 - id: sv
   name: Nordiska elmarknaden
+- id: sv
+  name: Nordel
 - id: 'no'
   name: Nordisk kraftmarked
-notes: NORDEL was dissolved in 2009 and integrated into ENTSO-E. The Nordic synchronous grid continues to operate, connecting Norway, Sweden, Finland, and eastern Denmark. Western Denmark is synchronized with Continental Europe. Iceland operates independently and is not synchronized with the Nordic grid.
-
-successor: ENTSOE
+- id: da
+  name: Nordisk elmarked
+- id: fi
+  name: Nordel
+acronyms:
+- lang: en
+  value: NORDEL
+notes: NORDEL was dissolved on 1 July 2009 and integrated into ENTSO-E alongside UCTE and ETSO. The Nordic synchronous grid continues to operate, connecting Norway, Sweden, Finland, and eastern Denmark (Zealand). Western Denmark (Jutland and Funen) is synchronized with Continental Europe. Iceland operates independently and is not synchronized with the Nordic grid.
+wikidata_id: Q1961320
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: successor
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/news-events/former-associations/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1961320
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1961320
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1961320
+  license: CC0

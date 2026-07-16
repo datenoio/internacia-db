@@ -1,18 +1,38 @@
 id: NSG
+name: Nuclear Suppliers Group
 blocktype:
 - energy
 status: formal
+founded: '1974'
+active_period:
+  start: '1975-11'
+geographic_scope: global
+regions:
+- Global
 languages:
 - en
 - es
+- fr
 links:
-- url: http://www.nuclearsuppliersgroup.org/
+- url: https://nuclearsuppliersgroup.org/en/
+  type: website
+- url: https://www.iaea.org/topics/nuclear-safety-and-security/nuclear-suppliers-group
   type: website
 - url: https://en.wikipedia.org/wiki/Nuclear_Suppliers_Group
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1480793
   type: wikidata
-name: Nuclear Suppliers Group
+headquarters:
+  city: Vienna
+  country: AT
+  coordinates:
+    lat: 48.208333333333336
+    lng: 16.3725
+legal_status: informal
+recognition_status: Politically binding multilateral export control arrangement of 48 participating governments; established in 1974 following India's nuclear test; first plenary meetings held in London in November 1975 (informally the "London Club"); implements NSG Guidelines published as IAEA INFCIRC/254 for nuclear transfers and Part 2 for nuclear-related dual-use items; decisions taken by consensus; complements the parallel Zangger Committee under NPT Article III.2
+secretariat:
+  location: Vienna, Austria
+  organization: NSG Point of Contact (Permanent Mission of Japan to the International Organizations in Vienna)
 includes:
 - id: CA
   name: Canada
@@ -206,37 +226,30 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1974'
-acronyms:
-- lang: en
-  value: NSG
-- lang: fr
-  value: GFN
-- lang: fr
-  value: NSG
 membership_count: 48
-wikidata_id: Q1480793
-description: International forum focused on economic cooperation.
+description: Multilateral export control regime through which 48 nuclear supplier countries coordinate national export policies
+  on nuclear material, equipment, technology, and nuclear-related dual-use goods to prevent proliferation of nuclear weapons.
+  Established after India's 1974 nuclear test and first convened in London in November 1975; commonly known as the "London
+  Club". Participating governments implement two sets of NSG Guidelines (IAEA INFCIRC/254) covering nuclear and dual-use
+  items; the arrangement is politically binding but not a treaty.
 tags:
 - NSG
-- atomic
-- economy
-- energy
-- environment
-- group
-- nature
 - nuclear
-- oil
-- suppliers
+- energy
+- export_control
+- non_proliferation
+- london_club
+- dual_use
+- safeguards
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
-- key: environment
-  name: Environment
 - key: nuclear
   name: Nuclear
+- key: security
+  name: Security
+- key: arms_control
+  name: Arms Control
 other_names:
 - id: ar
   name: مجموعة الموردين النوويين
@@ -244,6 +257,8 @@ other_names:
   name: Nuclear Suppliers Group
 - id: en
   name: Nuclear Suppliers Group
+- id: en
+  name: London Club
 - id: es
   name: Grupo de abastecedores nucleares
 - id: fr
@@ -254,7 +269,80 @@ other_names:
   name: Группа ядерных поставщиков
 - id: zh
   name: 核供應國集團
+acronyms:
+- lang: en
+  value: NSG
+- lang: fr
+  value: GFN
+- lang: fr
+  value: NSG
+previous_names:
+- id: en
+  name: London Club
+  period: 1975-
+official_documents:
+- url: https://www.iaea.org/publications/documents/infcircs/infcirc254-part-1
+  type: document
+  name: NSG Guidelines for Nuclear Transfers (IAEA INFCIRC/254, Part 1)
+- url: https://www.iaea.org/publications/documents/infcircs/infcirc254-part-2
+  type: document
+  name: NSG Guidelines for Nuclear-Related Dual-Use Transfers (IAEA INFCIRC/254, Part 2)
+- url: https://www.iaea.org/sites/default/files/infcirc539r1.pdf
+  type: document
+  name: The Nuclear Suppliers Group — Its Guidelines, Origins, Structure, and Role (IAEA INFCIRC/539)
+notes: No permanent secretariat; administrative support and the NSG point of contact are provided by the Permanent Mission
+  of Japan to the International Organizations in Vienna. The rotating NSG Chair is held by a participating government for one-year
+  terms. Guidelines were first published in 1978 as IAEA INFCIRC/254; Part 2 dual-use controls were added in 1992.
+wikidata_id: Q1480793
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://www.nuclearsuppliersgroup.org/images/Files%20and%20Documents/Documents/Publications/infcirc539r8.pdf
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://nuclearsuppliersgroup.org/en/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.seco.admin.ch/en/nuclear-suppliers-group
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://www.nuclearsuppliersgroup.org/images/Files%20and%20Documents/Documents/Publications/infcirc539r8.pdf
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.armscontrol.org/factsheets/nuclear-suppliers-group-nsg-glance
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.nti.org/education-center/treaties-and-regimes/nuclear-suppliers-group-nsg/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1480793
+  license: CC0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Nuclear_Suppliers_Group
+  license: CC BY-SA 4.0
+- field: previous_names
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Nuclear_Suppliers_Group
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: http://www.nuclearsuppliersgroup.org/images/Files%20and%20Documents/Documents/Publications/infcirc539r8.pdf
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://nuclearsuppliersgroup.org/en/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

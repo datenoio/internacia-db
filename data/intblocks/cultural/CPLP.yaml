@@ -1,7 +1,17 @@
 id: CPLP
+name: Community of Portuguese Language Countries
 blocktype:
 - cultural
 status: formal
+founded: '1996-07-17'
+active_period:
+  start: '1996-07-17'
+geographic_scope: global
+regions:
+- Africa
+- South America
+- Asia
+- Europe
 languages:
 - pt
 links:
@@ -11,7 +21,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q182500
   type: wikidata
-name: Community of Portuguese Language Countries
+headquarters:
+  city: Penafiel Palace
+  country: PT
+  coordinates:
+    lat: 38.710776
+    lng: -9.134351
+legal_status: intergovernmental
+recognition_status: International organization and political association of Lusophone nations founded at the 1st CPLP Heads of State and Government Summit in Lisbon on 17 July 1996; nine member states and numerous associate observers participate in its multilateral cooperation forum
+secretariat:
+  location: Penafiel Palace, Lisbon, Portugal
+  head: Executive Secretary
+  organization: Executive Secretariat of the Community of Portuguese Language Countries
 includes:
 - id: AO
   name: Angola
@@ -49,15 +70,10 @@ includes:
   name: Timor-Leste
   type: country
   status: member
-founded: '1996'
-headquarters:
-  city: Penafiel Palace
-  country: PT
-  coordinates:
-    lat: 38.710776
-    lng: -9.134351
 acronyms:
 - lang: en
+  value: CPLP
+- lang: pt
   value: CPLP
 - lang: zh
   value: 葡萄牙語國家共同體
@@ -71,19 +87,20 @@ acronyms:
   value: CPLP
 - lang: de
   value: CPLP
-- lang: pt
-  value: CLPC
 membership_count: 9
 wikidata_id: Q182500
-description: International organization.
+description: Intergovernmental association of nine Lusophone member states across Africa, the Americas, Asia, and Europe. Founded at the 1st CPLP Heads of State and Government Summit in Lisbon on 17 July 1996, the CPLP promotes political and diplomatic cooperation, dissemination of the Portuguese language, and collaboration in education, health, science, culture, and other sectors. The Executive Secretariat is headquartered at Penafiel Palace in Lisbon.
 tags:
 - CPLP
+- africa
 - community
 - cooperation
 - cultural
 - culture
 - education
+- intergovernmental
 - language
+- lusophone
 - portuguese
 - regional
 - regional_cooperation
@@ -112,12 +129,51 @@ other_names:
   name: Содружество португалоязычных стран
 - id: zh
   name: 葡萄牙语国家共同体
+notes: Governed by a biannual Conference of Heads of State and Government with an annual Council of Foreign Ministers and a Permanent Steering Committee. Timor-Leste joined in 2002 and Equatorial Guinea in 2014. The organization also maintains associate observer status for numerous countries and partner organizations.
+last_verified: '2026-07-12'
 provenance:
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cplp.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Community_of_Portuguese_Language_Countries
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Community_of_Portuguese_Language_Countries
+  license: CC BY-SA 4.0
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q182500
   license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q182500
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Community_of_Portuguese_Language_Countries
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.cplp.org/
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Community_of_Portuguese_Language_Countries
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cplp.org/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -128,7 +184,8 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.cplp.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Community_of_Portuguese_Language_Countries
+  license: CC BY-SA 4.0

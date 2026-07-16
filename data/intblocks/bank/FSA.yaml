@@ -1,19 +1,40 @@
 id: FSA
+name: African Solidarity Fund
 blocktype:
 - bank
+- fund
 status: formal
-languages:
-- fr
-links:
-- url: https://fondsolidariteafricain.org/
-  type: website
-- url: https://www.wikidata.org/wiki/Q92194452
-  type: wikidata
-name: African Solidarity Fund
+founded: '1976-12-21'
+active_period:
+  start: '1979-09'
 geographic_scope: regional
 regions:
 - Africa
-membership_count: 23
+languages:
+- fr
+- en
+links:
+- url: https://fondsolidariteafricain.org/
+  type: website
+- url: https://fondsolidariteafricain.org/a-propos/presentation
+  type: website
+- url: https://en.wikipedia.org/wiki/African_Solidarity_Fund
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q92194452
+  type: wikidata
+headquarters:
+  city: Niamey
+  country: NE
+  coordinates:
+    lat: 13.5127
+    lng: 2.1098
+legal_status: intergovernmental
+recognition_status: Multilateral financial guarantee institution established under the Agreement creating the African Solidarity Fund (Paris, 21 December 1976); recognized as a specialized agency of the African Union (February 2025)
+secretariat:
+  location: Niamey, Niger
+  head: Director General
+  organization: African Solidarity Fund
+membership_count: 24
 includes:
 - id: BJ
   name: Benin
@@ -103,14 +124,20 @@ includes:
   name: Sierra Leone
   type: country
   status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  joined: '2026-06'
 - id: TG
   name: Togo
   type: country
   status: member
-description: African Solidarity Fund is an international bank body with 23 members.
+description: Multilateral financial guarantee institution headquartered in Niamey, Niger. Established in December 1976 and operational since September 1979, the African Solidarity Fund supports economic and social development across its African member states by guaranteeing bank loans and bond issues, providing refinancing and interest-rate subsidies, and mobilizing local and external savings to finance productive investment projects in industry, agriculture, infrastructure, and services.
 tags:
 - FSA
 - ASF
+- africa
 - african
 - aid
 - bank
@@ -118,6 +145,8 @@ tags:
 - economy
 - finance
 - fund
+- guarantee
+- multilateral
 - solidarity
 topics:
 - key: development
@@ -127,16 +156,53 @@ topics:
 - key: finance
   name: Finance
 wikidata_id: Q92194452
+acronyms:
+- lang: en
+  value: FSA
+- lang: en
+  value: ASF
+- lang: fr
+  value: FSA
 other_names:
 - id: en
-  name: African Solidarity Fund (ASF)
+  name: African Solidarity Fund
 - id: fr
   name: Fonds de solidarité africain
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/African_Solidarity_Fund
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://fondsolidariteafricain.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fondsolidariteafricain.org/a-propos/presentation
+last_verified: '2026-07-12'

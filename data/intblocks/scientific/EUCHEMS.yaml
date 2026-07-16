@@ -23,6 +23,147 @@ acronyms:
   value: EuChemS
 - lang: en
   value: ECS
+includes:
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
 membership_count: 50
 geographic_scope: regional
 regions:
@@ -30,9 +171,10 @@ regions:
 description: Non-profit organization that represents chemistry in Europe. Serves as a platform for scientific discussion,
   networking, and provides a unified European voice on key policy issues in chemistry and related fields.
 legal_status: non-governmental
-notes: Comprises 50 member organisations representing chemists from 36 countries across Europe. Collectively represents over
-  140,000 active chemists. Recent additions include the Society of Physical Chemists of Serbia and the Chemical Society of
-  the Republic of Moldova (2025).
+notes: Comprises 50 member organisations representing chemists from 35 countries across Europe. Several countries have multiple
+  member societies (e.g. Austria, Belgium, Germany, Portugal, Serbia, and Spain). Collectively represents over 140,000 active
+  chemists. Recent additions include the Society of Physical Chemists of Serbia and the Chemical Society of the Republic of
+  Moldova (2025).
 tags:
 - EuChemS
 - chemistry
@@ -80,3 +222,11 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.euchems.eu/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.euchems.eu/members-3/member-societies/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.euchems.eu/members-3/member-societies/

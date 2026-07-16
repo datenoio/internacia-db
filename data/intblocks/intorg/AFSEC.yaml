@@ -1,24 +1,76 @@
 id: AFSEC
+name: The African Electrotechnical Standardization Commission
 blocktype:
 - intorg
+- standards
 status: formal
+founded: '2008-02-17'
+active_period:
+  start: '2008-02-17'
+geographic_scope: regional
+regions:
+- Africa
+partof: AFREC
 languages:
 - en
+- fr
 links:
 - url: https://afsec-africa.org
   type: website
-name: The African Electrotechnical Standardization Commission
+acronyms:
+- lang: en
+  value: AFSEC
+legal_status: subsidiary body of the African Energy Commission
+recognition_status: Established under African Union auspices as a subsidiary body of AFREC following the 2008 Algiers ministerial declaration on energy
+headquarters:
+  city: Cairo
+  country: EG
+secretariat:
+  location: Cairo, Egypt
+  organization: Ministry of Electricity and Renewable Energy, Egypt
+membership_count: 19
+description: Subsidiary body of the African Energy Commission (AFREC) under African Union auspices, established following the 17 February 2008 declaration of the Conference of African Ministers of Energy in Algiers. AFSEC harmonizes and develops electrotechnical standards and conformity assessment requirements to improve electricity access and support Africa's industrialization, drawing on internationally accepted standards including IEC publications. Headquarters in Cairo, Egypt since 2019 (hosted by Egypt's Ministry of Electricity and Renewable Energy), after relocating from a temporary secretariat in South Africa.
+tags:
+- AFSEC
+- africa
+- afrec
+- african
+- cairo
+- conformity
+- electrotechnical
+- energy
+- iec
+- intorg
+- regional
+- standard
+- standardization
+- standards
+topics:
+- key: standardization
+  name: Standardization
+- key: energy
+  name: Energy
+- key: development
+  name: Development
 includes:
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
 - id: CI
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CD
-  name: Democratic Republic of the Congo
-  type: country
-  status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ET
@@ -29,12 +81,12 @@ includes:
   name: Ghana
   type: country
   status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
 - id: KE
   name: Kenya
+  type: country
+  status: member
+- id: LR
+  name: Liberia
   type: country
   status: member
 - id: MW
@@ -57,20 +109,16 @@ includes:
   name: Senegal
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
+- id: TD
+  name: Chad
   type: country
   status: member
 - id: UG
   name: Uganda
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -81,16 +129,70 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 18
-description: The African Electrotechnical Standardization Commission is an international organization that is used to promote regional cooperation in the electrotechnical sector.
-tags:
-- AFSEC
-- african
-- electrotechnical
-- intorg
-- iso
-- standard
-- standardization
-topics:
-- key: standardization
-  name: Standardization
+other_names:
+- id: en
+  name: The African Electrotechnical Standardization Commission
+- id: fr
+  name: Commission Africaine de Normalisation Electrotechnique
+official_documents:
+- url: https://afsec-africa.org/AFSEC_Statute.aspx
+  type: statute
+notes: AFSEC is one of the PAQI (Pan-African Quality Infrastructure) pillars and participates in AfCFTA technical-barriers-to-trade implementation. As of 2026 the secretariat lists 19 statutory members and 13 affiliate members; the homepage counter may lag updates. National electrotechnical committees represent each statutory member.
+last_verified: '2026-07-12'
+provenance:
+- field: founded
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: active_period
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: geographic_scope
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: regions
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: partof
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: legal_status
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/ABOUT_AFSEC.aspx
+- field: recognition_status
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: description
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/ABOUT_AFSEC.aspx
+- field: headquarters
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/ABOUT_AFSEC.aspx
+- field: secretariat
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/ABOUT_AFSEC.aspx
+- field: includes
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/Statutory_Members.aspx
+- field: membership_count
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/Statutory_Members.aspx
+- field: other_names
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/
+- field: notes
+  source: AFSEC official website
+  retrieved_at: '2026-07-12'
+  url: https://afsec-africa.org/

@@ -1,27 +1,36 @@
 id: RDR
+name: Council for German Orthography
 blocktype:
 - cultural
+- education
 status: formal
+founded: '2004'
+active_period:
+  start: '2004'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - de
+- en
 links:
-- url: http://rechtschreibrat.ids-mannheim.de/
+- url: https://rechtschreibrat.ids-mannheim.de/
   type: website
 - url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1939300
   type: wikidata
-name: Council for German Orthography
-founded: '2004'
+legal_status: intergovernmental
+recognition_status: Intergovernmental normative body for Standard High German orthography in the German Sprachraum; established in 2004 as successor to the Intergovernmental Commission for German Orthography under the Wiener Absichtserklärung (Vienna Declaration of Intent), bringing together supporters and opponents of the 1996 orthography reform
+secretariat:
+  location: Institut für Deutsche Sprache (IDS), R 5, 6-13, 68161 Mannheim, Germany
+  organization: Council for German Orthography
 headquarters:
   city: Mannheim
   country: DE
   coordinates:
     lat: 49.48777777777778
     lng: 8.466111111111111
-acronyms:
-- lang: en
-  value: RfdR
 includes:
 - id: DE
   name: Germany
@@ -47,18 +56,38 @@ includes:
   name: Italy
   type: country
   status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: observer
+acronyms:
+- lang: de
+  value: RdR
+- lang: en
+  value: RdR
+- lang: de
+  value: RfdR
 membership_count: 6
 wikidata_id: Q1939300
-description: International normative body regulating German orthography.
+description: Intergovernmental council regulating Standard High German orthography across the German Sprachraum. Formed in 2004 as successor to the Intergovernmental Commission for German Orthography, the council comprises 41 councillors from six participating states and regions (Germany, Austria, Switzerland, Liechtenstein, the German-speaking Community of Belgium, and South Tyrol in Italy), publishes the official rules and word list, and monitors spelling usage in school, administration, and legal texts.
+notes: Belgium participates through the German-speaking Community (Ostbelgien); Italy through South Tyrol (Südtirol/Bozen). Luxembourg holds observer status without voting rights. The council chairman (Germany) also has no voting right. In 2003 the council joined the Gesellschaft für deutsche Sprache, Goethe-Institut, and Institut für Deutsche Sprache to found the Deutscher Sprachrat (German Language Council), later joined by the DAAD.
+last_verified: '2026-07-12'
 tags:
 - RDR
 - RFDR
 - council
 - cultural
 - culture
+- dach
 - education
 - german
+- german-sprachraum
+- intergovernmental
+- language
 - orthography
+- regional
+- spelling
+- sprachraum
 - university
 topics:
 - key: culture
@@ -71,7 +100,7 @@ other_names:
 - id: en
   name: Council for German Orthography
 - id: es
-  name: Rat für deutsche Rechtschreibung
+  name: Consejo para la ortografía alemana
 - id: fr
   name: Conseil pour l'orthographe allemande
 - id: pt
@@ -80,18 +109,69 @@ other_names:
   name: Совет по немецкому правописанию
 - id: zh
   name: 德语正字法协会
+previous_names:
+- id: de
+  name: Zwischenstaatliche Kommission für deutsche Rechtschreibung
+  period: pre-2004
+official_documents:
+- url: https://rechtschreibrat.ids-mannheim.de/regeln-und-woerterverzeichnis3/arbeitsgrundlagen/
+  type: statute
+- url: https://rechtschreibrat.ids-mannheim.de/regeln-und-woerterverzeichnis3/arbeitsgrundlagen/
+  type: founding_document
 provenance:
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://rechtschreibrat.ids-mannheim.de/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
+- field: active_period
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1939300
   license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://rechtschreibrat.ids-mannheim.de/
+  url: https://rechtschreibrat.ids-mannheim.de/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://rechtschreibrat.ids-mannheim.de/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1939300
+  license: CC0
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_for_German_Orthography
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://rechtschreibrat.ids-mannheim.de/regeln-und-woerterverzeichnis3/arbeitsgrundlagen/

@@ -89,6 +89,18 @@ Or filter on `code_status == "official_iso3166_1"` for the 249 ISO records only.
 
 The `borders` field stores **ISO 3166-1 alpha-3** land-border neighbor codes, not alpha-2.
 
+## Capital city exclusions
+
+Most entities populate `capital_city` (name + coordinates) with a `provenance`
+entry; de-facto seats of government are used where no formally recognized capital
+exists (e.g. `IL` Jerusalem, `PS` Ramallah, `TW` Taipei, `HK`/`MO` administrative
+seats, and the disputed `XA`/`XS`/`XT` capitals). The following entities have **no
+capital by design** and are expected exclusions rather than data gaps:
+
+- `AQ` Antarctica, `BV` Bouvet Island, `HM` Heard Island and McDonald Islands — uninhabited territories.
+- `JG` Channel Islands — a grouping (Jersey and Guernsey are separate entities), not a single administrative unit.
+- `XN` Artsakh — historical entity dissolved in 2023; retained for join resolution only.
+
 ## World Bank classification gaps
 
 World Bank `region`, `incomeLevel`, and `lendingType` are absent for ~33 entities (high-income OECD members, overseas territories, and special statistical areas) because the World Bank does not classify them. `adminregion` may also be missing for high-income economies outside the Bank's administrative taxonomy.

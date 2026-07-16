@@ -2,6 +2,11 @@ id: MNA
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://www.worldbank.org/en/region/mena
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
 name: Middle East & North Africa (developing only)
 includes:
 - id: DJ
@@ -57,8 +62,13 @@ includes:
   type: country
   status: member
 membership_count: 13
-description: Middle East & North Africa (developing only) is an international wbgroup
-  body with 13 members.
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
+description: World Bank geographic region for developing economies across the Middle East
+  and North Africa. This analytical variant excludes high-income economies from the
+  regional aggregate used in World Development Indicators.
 tags:
 - MNA
 - aid
@@ -77,7 +87,31 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: MNA
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank (WDI)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: membership_count
+  source: World Bank (WDI)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: acronyms
+  source: World Bank (WDI)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html

@@ -2,6 +2,13 @@ id: LIC
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
+- url: https://www.wikidata.org/wiki/Q28035133
+  type: wikidata
 name: Low income
 includes:
 - id: AF
@@ -165,6 +172,7 @@ includes:
   type: country
   status: member
 membership_count: 40
+geographic_scope: global
 description: World Bank income group for economies with the lowest gross national
   income per capita.
 tags:
@@ -174,6 +182,7 @@ tags:
 - development
 - economy
 - finance
+- low
 - wbgroup
 topics:
 - key: development
@@ -182,7 +191,26 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+wikidata_id: Q28035133
+acronyms:
+- lang: en
+  value: LIC
 provenance:
 - field: description
   source: World Bank
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/
+  license: CC0
+last_verified: '2026-07-13'

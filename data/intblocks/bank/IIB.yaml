@@ -2,82 +2,63 @@ id: IIB
 name: International Investment Bank
 blocktype:
 - bank
-- economic
-- intorg
 status: formal
-founded: '1970'
+founded: '1970-07-10'
+active_period:
+  start: '1971-01-01'
 geographic_scope: regional
+regions:
+- Europe
+- Asia
 languages:
 - en
 - ru
 links:
 - url: https://iib.int/
   type: website
+- url: https://iib.int/en/about/
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Investment_Bank
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1665000
+- url: https://www.wikidata.org/wiki/Q1824234
   type: wikidata
 acronyms:
 - lang: en
   value: IIB
-- lang: en
-  value: ISGV
-- lang: de
-  value: ISGV
+- lang: ru
+  value: МИБ
 headquarters:
-  city: Budapest
-  country: HU
+  city: Moscow
+  country: RU
   coordinates:
-    lat: 47.4979
-    lng: 19.0402
-includes:
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
-  type: country
-  status: member
-membership_count: 9
-wikidata_id: Q1665000
-description: International development bank focused on development providing financial services.
+    lat: 55.75055555555556
+    lng: 37.6175
+legal_status: intergovernmental
+recognition_status: Multilateral development finance institution established under the Agreement Establishing the International Investment Bank (10 July 1970), registered with the United Nations as treaty no. 11417
+secretariat:
+  location: Moscow, Russia
+  head: Chairman of the Board
+  organization: International Investment Bank
+membership_count: 4
+founding_members:
+- BG
+- HU
+- MN
+- PL
+- RO
+- RU
+description: Multilateral development bank established in 1970 under Comecon auspices to finance joint investment projects among Eastern Bloc and associated states. Operations were suspended after the dissolution of the Soviet Union and later revived by Russia. Headquarters were in Moscow until relocation to Budapest in 2019–2020, then returned to Moscow in 2023. Four member states remain as of 2023 (Cuba, Mongolia, Russia, and Vietnam); Bulgaria, Czech Republic, Hungary, Romania, and Slovakia withdrew following the 2022 invasion of Ukraine.
 tags:
 - IIB
 - aid
 - bank
 - development
 - economy
+- eurasia
 - finance
 - investment
+- multilateral
+- regional
 topics:
 - key: development
   name: Development
@@ -85,33 +66,149 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
+includes:
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: VN
+  name: Viet Nam
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: former_member
+  left: '2023'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: former_member
+  left: '2022'
+- id: HU
+  name: Hungary
+  type: country
+  status: former_member
+  left: '2023-10-19'
+- id: RO
+  name: Romania
+  type: country
+  status: former_member
+  left: '2023'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: former_member
+  left: '2022'
+- id: PL
+  name: Poland
+  type: country
+  status: former_member
+  left: '2000'
+wikidata_id: Q1824234
+notes: Originally a Comecon-era institution with Warsaw Pact and associated members. Poland withdrew in 2000; most European members exited in 2022–2023 after the Russian invasion of Ukraine. Headquarters moved from Moscow to Budapest in 2019 and returned to Moscow in October 2023. The bank was subject to U.S. sanctions in April 2023.
+last_verified: '2026-07-12'
 other_names:
+- id: ar
+  name: المصرف الدولي للاستثمار
+- id: bg
+  name: Международна инвестиционна банка
+- id: ca
+  name: Banc Internacional d'Inversions
+- id: cs
+  name: Mezinárodní investiční banka
 - id: de
-  name: Institut für Sächsische Geschichte und Volkskunde
+  name: International Investment Bank
 - id: en
   name: International Investment Bank
 - id: es
-  name: Institut für Sächsische Geschichte und Volkskunde
+  name: Banco Internacional de Inversiones
 - id: fr
-  name: Institut für Sächsische Geschichte und Volkskunde
+  name: Banque internationale d'investissement
+- id: hu
+  name: Nemzetközi Beruházási Bank
+- id: pl
+  name: Międzynarodowy Bank Inwestycyjny
 - id: ru
   name: Международный инвестиционный банк
+- id: zh
+  name: 国际投资银行
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://iib.int/en/about/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://iib.int/en/about/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1824234
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/International_Investment_Bank
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1824234
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1824234
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://iib.int/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://iib.int/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1824234
+  license: CC0

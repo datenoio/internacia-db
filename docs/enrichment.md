@@ -56,7 +56,7 @@ python scripts/builder.py build
 
 ## Gini completeness ratcheting
 
-Current coverage: ~170/252 records with `gini` (~32.5% null). `countries_completeness.yaml` sets `gini.max_null_rate: 0.33` in **warn** mode. When coverage improves materially, lower `max_null_rate` and optionally switch `mode` to `error` in a documented release.
+Current coverage: ~170/256 records with `gini` (~33.6% null). `countries_completeness.yaml` sets `gini.max_null_rate: 0.33` in **warn** mode. When coverage improves materially, lower `max_null_rate` and optionally switch `mode` to `error` in a documented release.
 
 ## Out of scope
 

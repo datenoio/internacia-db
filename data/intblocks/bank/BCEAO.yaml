@@ -1,15 +1,60 @@
 id: BCEAO
+name: Central Bank of West African States
 blocktype:
 - bank
 status: formal
+founded: '1959'
+active_period:
+  start: '1959'
+partof: UEMOA
+geographic_scope: regional
+regions:
+- Africa
+languages:
+- en
+- fr
 links:
-- url: http://www.bceao.int
+- url: https://www.bceao.int/
   type: website
-- url: https://en.wikipedia.org/wiki/BCEAO
+- url: https://www.bceao.int/en/presentation/about-us
+  type: website
+- url: https://en.wikipedia.org/wiki/Central_Bank_of_West_African_States
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q620942
   type: wikidata
-name: Central Bank of West African States
+headquarters:
+  city: Dakar
+  country: SN
+  coordinates:
+    lat: 14.672555555555556
+    lng: -17.432
+legal_status: intergovernmental
+recognition_status: Common central bank of the West African Economic and Monetary Union (UEMOA), established under the West African Monetary Union treaty signed on 12 May 1962; exclusive issuer of the West African CFA franc (XOF)
+secretariat:
+  location: Dakar, Senegal
+  head: Governor
+  organization: Central Bank of West African States
+membership_count: 8
+description: Central bank of the eight-member West African Economic and Monetary Union (UEMOA), serving Benin, Burkina Faso, Côte d'Ivoire, Guinea-Bissau, Mali, Niger, Senegal, and Togo. Established in 1959 and headquartered in Dakar, Senegal, BCEAO holds the exclusive right to issue the West African CFA franc (XOF) and conducts monetary policy, banking supervision, and financial stability functions for the union.
+tags:
+- BCEAO
+- africa
+- bank
+- central
+- cfa-franc
+- economy
+- finance
+- monetary
+- regional
+- uemoa
+- west-africa
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: BJ
   name: Benin
@@ -43,26 +88,14 @@ includes:
   name: Togo
   type: country
   status: member
-membership_count: 8
-description: International development bank focused on development providing financial
-  services.
-tags:
-- BCEAO
-- aid
-- bank
-- central
-- development
-- economy
-- finance
-- west
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+acronyms:
+- lang: en
+  value: BCEAO
+- lang: fr
+  value: BCEAO
 wikidata_id: Q620942
+notes: Successor to the Institut d'émission de l'Afrique occidentale française et du Togo (1955–1959). UMOA treaty signed 12 May 1962; headquarters relocated from Paris to Dakar in 1978 and inaugurated 26 May 1979. Mali left in 1962 (rejoined 1984); Mauritania withdrew 1973; Guinea-Bissau joined 1997. UMOA rebranded as UEMOA in 1994. Hosts the AACB Executive Secretariat since 2001.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: البنك المركزي لدول غرب إفريقيا
@@ -76,10 +109,57 @@ other_names:
   name: Центральный банк государств Западной Африки
 - id: es
   name: Banco Central de los Estados de África Occidental
-founded: '1959-00-00'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bceao.int/en/presentation/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bceao.int/en/presentation/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Bank_of_West_African_States
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Bank_of_West_African_States
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.bceao.int/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q620942
+  license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q620942
+  license: CC0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Bank_of_West_African_States
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Central_Bank_of_West_African_States
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q620942
   license: CC0

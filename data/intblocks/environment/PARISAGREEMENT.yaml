@@ -1,9 +1,22 @@
 id: PARISAGREEMENT
+name: Paris Agreement
 blocktype:
 - environment
 - agreement
+- climate
 status: formal
 partof: UNFCCC
+founded: '2015-12-12'
+active_period:
+  start: '2016-11-04'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 - es
@@ -14,19 +27,43 @@ languages:
 links:
 - url: https://unfccc.int/process-and-meetings/the-paris-agreement
   type: website
+- url: https://unfccc.int/process-and-meetings/the-paris-agreement/status-of-ratification
+  type: website
+- url: https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement
+  type: website
 - url: https://en.wikipedia.org/wiki/Paris_Agreement
   type: wikipedia
-name: Paris Agreement
-founded: '2015'
-description: International agreement focused on climate change mitigation, adaptation, and finance established under the UNFCCC
-  framework.
+- url: https://www.wikidata.org/wiki/Q21707860
+  type: wikidata
+headquarters:
+  city: Bonn
+  country: DE
+  coordinates:
+    lat: 50.7186
+    lng: 7.1275
+legal_status: treaty
+recognition_status: Agreement under the United Nations Framework Convention on Climate Change adopted at COP 21 in Paris on 12 December 2015 (Decision 1/CP.21); opened for signature at United Nations Headquarters in New York from 22 April 2016 to 21 April 2017; entered into force on 4 November 2016 (United Nations Treaty Series vol. 3156, registration No. 54113); commits all Parties to nationally determined contributions and global stocktakes with the goal of holding the increase in the global average temperature well below 2°C above pre-industrial levels and pursuing efforts to limit the increase to 1.5°C; administered by the UNFCCC Secretariat in Bonn
+secretariat:
+  location: Bonn, Germany
+  organization: UNFCCC Secretariat
+description: Legally binding international climate treaty under the UNFCCC committing all Parties to nationally determined
+  contributions (NDCs) toward limiting global warming to well below 2°C above pre-industrial levels while pursuing efforts
+  to limit the increase to 1.5°C. Adopted at COP 21 in Paris in December 2015 and entered into force in November 2016;
+  establishes a five-year cycle of increasingly ambitious climate action, global stocktakes, an enhanced transparency framework,
+  and mechanisms for climate finance, technology transfer, and capacity-building.
 tags:
 - PARISAGREEMENT
 - agreement
 - climate
+- climate_change
+- cop21
 - environment
+- law
+- legal
+- NDC
 - paris
 - treaty
+- unfccc
 topics:
 - key: climate_change
   name: Climate Change
@@ -36,17 +73,21 @@ topics:
   name: Law
 other_names:
 - id: ar
-  name: اتفاقية باريس
-- id: zh
-  name: 巴黎协定
+  name: اتفاق باريس للمناخ
+- id: de
+  name: Übereinkommen von Paris
 - id: en
   name: Paris Agreement
-- id: fr
-  name: Accord de Paris
-- id: ru
-  name: Парижское соглашение
 - id: es
   name: Acuerdo de París
+- id: fr
+  name: Accord de Paris
+- id: pt
+  name: Acordo de Paris
+- id: ru
+  name: Парижское соглашение по климату
+- id: zh
+  name: 巴黎協議
 includes:
 - id: AD
   name: Andorra
@@ -808,14 +849,72 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-notes: The Paris Agreement was adopted in 2015 and entered into force in 2016. As of 2024, it has been ratified by 194 parties
-  (193 countries and the European Union). The agreement aims to limit global warming to well below 2°C, preferably to 1.5°C,
-  compared to pre-industrial levels.
+official_documents:
+- url: https://unfccc.int/resource/docs/2015/cop21/eng/l09r01.pdf
+  type: document
+  name: Paris Agreement under the United Nations Framework Convention on Climate Change
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-d&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (vol. 3156, No. 54113)
+notes: The Paris Agreement was adopted on 12 December 2015 at COP 21 in Paris and entered into force on 4 November 2016. As
+  of 2026, it has 194 parties. The agreement aims to hold the increase in the global average temperature to well below 2°C
+  above pre-industrial levels and pursue efforts to limit the increase to 1.5°C. Parties submit nationally determined contributions
+  (NDCs) on a five-year cycle, with global stocktakes assessing collective progress toward the long-term temperature goals.
 membership_count: 194
 wikidata_id: Q21707860
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: active_period
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: founded
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: geographic_scope
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement/status-of-ratification
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-d&chapter=27&clang=_en
+- field: recognition_status
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: secretariat
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: headquarters
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/about-us/secretariat
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-d&chapter=27&clang=_en
+- field: membership_count
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement/status-of-ratification
+- field: notes
+  source: UNFCCC
+  retrieved_at: '2026-07-13'
+  url: https://unfccc.int/process-and-meetings/the-paris-agreement
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q21707860
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q21707860
   license: CC0

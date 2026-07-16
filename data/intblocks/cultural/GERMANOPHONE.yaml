@@ -1,14 +1,21 @@
 id: GERMANOPHONE
+name: German-speaking Europe
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - de
 - en
 links:
 - url: https://en.wikipedia.org/wiki/German-speaking_Europe
   type: wikipedia
-name: German-speaking Europe
+- url: https://www.wikidata.org/wiki/Q106704299
+  type: wikidata
+legal_status: informal
+recognition_status: Informal geographic and linguistic concept (not a formal organization) describing European states where German is an official or majority language; the core territorial definition centres on the D-A-CH countries (Germany, Austria, Switzerland), extended in policy discourse to Liechtenstein, Luxembourg, and multilingual Belgium
 includes:
 - id: DE
   name: Germany
@@ -35,18 +42,80 @@ includes:
   type: country
   status: member
 membership_count: 6
-description: Cultural region comprising countries and regions with significant German-speaking
-  populations.
+wikidata_id: Q106704299
+description: Geographic and linguistic region in central Europe where German serves as the primary official or majority language. The core grouping comprises Germany, Austria, and Switzerland (the D-A-CH countries), with Liechtenstein, Luxembourg, and Belgium often included in extended definitions; distinct from broader notions of the Germanosphere or German diaspora communities outside Europe.
+notes: This record reflects the six-country extended core (DE, AT, CH, LI, LU, BE) common in German-speaking Europe discourse. Broader definitions may include South Tyrol (Italy) and other European regions with German-speaking minorities; distinct from the global Germanosphere which covers diaspora communities worldwide. An annual informal summit of German-speaking heads of state has convened since 2004.
+last_verified: '2026-07-12'
 tags:
 - GERMANOPHONE
+- central-europe
 - cultural
 - culture
+- dach
+- deutsche-sprachraum
 - education
+- europe
+- geographic
 - german
+- german-speaking
 - germanophone
+- language
+- linguistic
+- regional
+- sprachraum
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+other_names:
+- id: en
+  name: German-speaking Europe
+- id: es
+  name: Europa germanoparlante
+- id: fr
+  name: Europe germanophone
+- id: pt
+  name: Europa germanófona
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q106704299
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q106704299
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/German-speaking_Europe
+  license: CC BY-SA 4.0

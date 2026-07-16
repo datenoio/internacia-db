@@ -1,30 +1,63 @@
 id: CICA
+name: Conference on Interaction and Confidence-Building Measures in Asia
 blocktype:
 - intorg
+- security
+- political
 status: formal
+founded: '1999-09-14'
+active_period:
+  start: '1999-09-14'
+geographic_scope: regional
+regions:
+- Asia
 languages:
 - en
 - ru
 links:
-- url: http://www.s-cica.org/
+- url: https://www.s-cica.org/
+  type: website
+- url: https://www.s-cica.org/index.php?view=about
+  type: website
+- url: https://www.s-cica.org/index.php?view=basic_documents
   type: website
 - url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q605501
   type: wikidata
-name: Conference on Interaction and Confidence-Building Measures in Asia
-founded: '1993'
+acronyms:
+- lang: en
+  value: CICA
+- lang: ru
+  value: СВМДА
+legal_status: intergovernmental
+recognition_status: Regional security dialogue forum with a permanent secretariat in Kazakhstan; operates through consensus-based intergovernmental mechanisms with the Almaty Act (2002) as its founding charter
 headquarters:
   city: Astana
   country: KZ
   coordinates:
     lat: 51.133333333333
     lng: 71.433333333333
-acronyms:
-- lang: en
-  value: CICA
-- lang: ru
-  value: СВМДА
+membership_count: 28
+description: Intergovernmental forum for enhancing cooperation on peace, security, and stability in Asia through dialogue and confidence-building measures. Proposed by Kazakhstan at the United Nations General Assembly in 1992 and established at the first foreign ministers meeting in Almaty on 14 September 1999. The Almaty Act (2002) serves as the CICA charter; decisions are taken by consensus. Permanent Secretariat headquartered in Astana, Kazakhstan. Work spans military-political, economic, environmental, human, and new-challenges dimensions across 28 member states, with additional observer states and organizations.
+tags:
+- CICA
+- asia
+- cbm
+- confidence
+- conference
+- interaction
+- intorg
+- peace
+- regional
+- regional_cooperation
+- security
+- СВМДА
+topics:
+- key: security
+  name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AF
   name: Afghanistan
@@ -138,20 +171,83 @@ includes:
   name: Vietnam
   type: country
   status: member
-membership_count: 28
+- id: BY
+  name: Belarus
+  type: country
+  status: observer
+- id: ID
+  name: Indonesia
+  type: country
+  status: observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+- id: LA
+  name: Lao PDR
+  type: country
+  status: observer
+- id: MY
+  name: Malaysia
+  type: country
+  status: observer
+- id: PH
+  name: Philippines
+  type: country
+  status: observer
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: observer
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: observer
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+- id: IOM
+  name: International Organization for Migration
+  type: organization
+  status: observer
+- id: LAS
+  name: League of Arab States
+  type: organization
+  status: observer
+- id: OSCE
+  name: Organization for Security and Co-operation in Europe
+  type: organization
+  status: observer
+- id: TURKPA
+  name: Parliamentary Assembly of Turkic States
+  type: organization
+  status: observer
+- id: UN
+  name: United Nations
+  type: organization
+  status: observer
+founding_members:
+- AF
+- AZ
+- CN
+- EG
+- IN
+- IR
+- IL
+- KZ
+- KG
+- PK
+- PS
+- RU
+- TJ
+- TR
+- UZ
 wikidata_id: Q605501
-description: The Conference on Interaction and Confidence-Building Measures in Asia is an international organization that
-  is used to promote regional cooperation in the interaction and confidence-building measures sector.
-tags:
-- CICA
-- conference
-- confidence
-- interaction
-- intorg
-- СВМДА
-topics:
-- key: economy
-  name: Economy
 other_names:
 - id: ar
   name: المؤتمر المعني بالتفاعل وتدابير بناء الثقة في آسيا
@@ -165,8 +261,56 @@ other_names:
   name: Совещание по взаимодействию и мерам доверия в Азии
 - id: es
   name: Conferencia de Interacción y Medidas de Confianza en Asia
+notes: Initiative proposed by Kazakhstan President Nursultan Nazarbayev at the 47th UN General Assembly on 5 October 1992. First ministerial meeting (1999) adopted the Declaration on Principles Guiding Relations between CICA Member States; the Almaty Act charter followed at the 2002 summit. Permanent Secretariat established in Kazakhstan in 2006. Rotating two-year chairmanship; Azerbaijan chairs for 2024–2026. Also maintains partner relationships with ECO, SCO, UNODC, and EAEU.
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q605501
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q605501
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.s-cica.org/index.php?view=about
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.s-cica.org/index.php?view=about
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.s-cica.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.s-cica.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.s-cica.org/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Conference_on_Interaction_and_Confidence-Building_Measures_in_Asia
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.s-cica.org/index.php?view=basic_documents

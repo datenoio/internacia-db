@@ -10,18 +10,18 @@ Every enriched field records a provenance entry.
 
 from __future__ import annotations
 
-import json
 import re
 import time
 import unicodedata
 import urllib.parse
-import urllib.request
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 import typer
 import yaml
+
+from internacia_builder.http import fetch_json as _fetch_json
 
 app = typer.Typer(help="Enrich intblock records from Wikidata")
 
@@ -30,6 +30,7 @@ INTBLOCKS_DIR = ROOT / "data" / "intblocks"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 WIKIDATA_URL = "https://www.wikidata.org/"
 REQUEST_DELAY = 0.1
+USER_AGENT = "Internacia-DB Intblocks Enricher/1.0"
 
 # Languages backfilled into other_names (UN official languages + common extras).
 UN_LANGS = ["en", "ar", "zh", "fr", "ru", "es", "de", "pt"]
@@ -45,9 +46,7 @@ WD_LINK = re.compile(r"wikidata\.org/(?:wiki|entity)/(Q[1-9][0-9]*)")
 
 
 def fetch_json(url: str) -> Any:
-    req = urllib.request.Request(url, headers={"User-Agent": "Internacia-DB Intblocks Enricher/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return json.loads(resp.read().decode("utf-8-sig"))
+    return _fetch_json(url, user_agent=USER_AGENT, timeout=60)
 
 
 def normalize(text: str) -> str:
@@ -328,6 +327,129 @@ def enrich_founded(record: dict[str, Any], entity: dict[str, Any]) -> bool:
     return True
 
 
+def stamp_last_verified(record: dict[str, Any]) -> None:
+    """Record the date this record was last touched by enrichment/verification."""
+    record["last_verified"] = date.today().isoformat()
+
+
+def wikidata_coordinates(entity: dict[str, Any]) -> tuple[float, float] | None:
+    """Read a coordinate-location (P625) claim as (lat, lng)."""
+    for stmt in (entity.get("claims") or {}).get("P625") or []:
+        try:
+            value = stmt["mainsnak"]["datavalue"]["value"]
+            return float(value["latitude"]), float(value["longitude"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return None
+
+
+def wikidata_hq_qid(entity: dict[str, Any]) -> str | None:
+    """Read the headquarters-location (P159) claim as a Q-id."""
+    for stmt in (entity.get("claims") or {}).get("P159") or []:
+        try:
+            return str(stmt["mainsnak"]["datavalue"]["value"]["id"])
+        except (KeyError, TypeError):
+            continue
+    return None
+
+
+def enrich_headquarters(
+    record: dict[str, Any],
+    entity: dict[str, Any],
+    city_entities: dict[str, dict[str, Any]] | None = None,
+) -> bool:
+    """Fill ``headquarters`` (city + coordinates) from Wikidata P159/P625 claims.
+
+    Never overwrites an existing hand-curated ``headquarters`` value.
+    """
+    if record.get("headquarters"):
+        return False
+    hq: dict[str, Any] = {}
+    coords = wikidata_coordinates(entity)
+    hq_qid = wikidata_hq_qid(entity)
+    if hq_qid and city_entities and hq_qid in city_entities:
+        city = city_entities[hq_qid]
+        label = (city.get("labels") or {}).get("en", {}).get("value")
+        if label:
+            hq["city"] = str(label)
+        if coords is None:
+            coords = wikidata_coordinates(city)
+    if coords is not None:
+        hq["coordinates"] = {"lat": coords[0], "lng": coords[1]}
+    if not hq:
+        return False
+    record["headquarters"] = hq
+    qid = str(record.get("wikidata_id") or "")
+    upsert_provenance(
+        record,
+        "headquarters",
+        "Wikidata",
+        url=f"{WIKIDATA_URL}wiki/{qid}" if qid else WIKIDATA_URL,
+        license="CC0",
+    )
+    return True
+
+
+@app.command("backfill-structural")
+def backfill_structural(
+    subdir: str = typer.Option("", "--subdir", help="Restrict to intblocks subdirectory"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Report changes without writing"),
+    limit: int = typer.Option(0, "--limit", help="Max records to process (0 = all)"),
+) -> None:
+    """Backfill ``headquarters`` (P159/P625) and ``founded`` (P571) from Wikidata.
+
+    Only records with a ``wikidata_id`` and an empty target field are touched;
+    each filled field gets a provenance entry and the record is stamped with
+    ``last_verified``.
+    """
+    search_dir = INTBLOCKS_DIR / subdir if subdir else INTBLOCKS_DIR
+    records: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted(search_dir.rglob("*.yaml")):
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if not data.get("wikidata_id"):
+            continue
+        if data.get("headquarters") and data.get("founded"):
+            continue
+        records.append((path, data))
+    if limit:
+        records = records[:limit]
+    typer.echo(f"Backfilling structural metadata for {len(records)} record(s)...")
+
+    qids = sorted({str(d["wikidata_id"]) for _, d in records})
+    entities: dict[str, dict[str, Any]] = {}
+    for i in range(0, len(qids), 50):
+        entities.update(wikidata_entities(qids[i : i + 50], ["en"], with_claims=True))
+        time.sleep(REQUEST_DELAY)
+
+    # Resolve headquarters city entities (P159 targets) for labels + coordinates.
+    hq_qids = sorted({q for e in entities.values() if (q := wikidata_hq_qid(e))})
+    city_entities: dict[str, dict[str, Any]] = {}
+    for i in range(0, len(hq_qids), 50):
+        city_entities.update(wikidata_entities(hq_qids[i : i + 50], ["en"], with_claims=True))
+        time.sleep(REQUEST_DELAY)
+
+    updated = 0
+    for path, data in records:
+        entity = entities.get(str(data.get("wikidata_id") or ""), {})
+        changed = False
+        changed |= enrich_headquarters(data, entity, city_entities)
+        changed |= enrich_founded(data, entity)
+        if not changed:
+            continue
+        stamp_last_verified(data)
+        updated += 1
+        rel = path.relative_to(ROOT)
+        if dry_run:
+            typer.echo(f"would update {rel} -> hq={data.get('headquarters')} founded={data.get('founded')}")
+        else:
+            path.write_text(
+                yaml.dump(data, sort_keys=False, allow_unicode=True, default_flow_style=False),
+                encoding="utf-8",
+            )
+            typer.echo(f"updated {rel}")
+    typer.echo(f"done: {updated} record(s) {'would be ' if dry_run else ''}updated")
+
+
 @app.command("backfill-founded")
 def backfill_founded(
     subdir: str = typer.Option("", "--subdir", help="Restrict to intblocks subdirectory"),
@@ -356,6 +478,7 @@ def backfill_founded(
         entity = entities.get(str(data.get("wikidata_id") or ""), {})
         if not enrich_founded(data, entity):
             continue
+        stamp_last_verified(data)
         updated += 1
         if dry_run:
             typer.echo(f"would update {path.relative_to(ROOT)} -> founded={data['founded']}")
@@ -444,6 +567,7 @@ def enrich(
         after = yaml.dump(data, sort_keys=True, allow_unicode=True)
         if after == originals[path]:
             continue
+        stamp_last_verified(data)
         updated += 1
         rel = path.relative_to(ROOT)
         if dry_run:

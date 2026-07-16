@@ -1,18 +1,42 @@
 id: OPANAL
+name: Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean
 blocktype:
 - energy
 status: formal
+founded: '1967-02-14'
+active_period:
+  start: '1967-02-14'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
 languages:
 - en
 - es
+- pt
 links:
-- url: http://opanal.org/
+- url: https://www.opanal.org/
   type: website
 - url: https://en.wikipedia.org/wiki/OPANAL
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3369762
   type: wikidata
-name: Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean
+- url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
+  type: website
+- url: https://www.iaea.org/topics/nuclear-safety-and-security/treaty-of-tlatelolco
+  type: website
+headquarters:
+  city: Mexico City
+  country: MX
+  coordinates:
+    lat: 19.430301
+    lng: -99.176257
+legal_status: treaty
+recognition_status: Treaty-based regional organization under the Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (Treaty of Tlatelolco), signed 14 February 1967 in Mexico City; first nuclear-weapon-free zone treaty covering a densely populated region; entered into force through progressive ratification beginning 22 April 1968; Cuba was the last regional state to accede (ratified 2002); OPANAL has United Nations General Assembly observer status
+secretariat:
+  location: Mexico City, Mexico
+  head: Secretary General
+  organization: OPANAL Secretariat
 includes:
 - id: UY
   name: Uruguay
@@ -146,41 +170,38 @@ includes:
   name: Nicaragua
   type: country
   status: member
-founded: '1967'
-headquarters:
-  city: Mexico City
-  country: MX
-  coordinates:
-    lat: 19.353773
-    lng: -99.13589
 membership_count: 33
-wikidata_id: Q3369762
-description: International organization which promotes nuclear disarmament.
+description: Intergovernmental organization established under the Treaty of Tlatelolco to ensure the prohibition of nuclear
+  weapons in Latin America and the Caribbean. Signed on 14 February 1967 in Mexico City, the treaty created the world's first
+  nuclear-weapon-free zone covering a densely populated region. OPANAL verifies treaty compliance, convenes biennial General
+  Conferences of its 33 member states, and maintains the Council and Secretariat in Mexico City. Member states commit not to
+  develop, manufacture, store, or acquire nuclear weapons and not to permit testing or stationing of nuclear weapons on their
+  territory.
 tags:
 - OPANAL
-- agency
-- arms
-- arms_control
-- atomic
-- economy
-- energy
-- environment
-- nature
 - nuclear
-- oil
+- energy
+- arms_control
+- disarmament
+- tlatelolco
+- latin_america
+- caribbean
+- regional
+- non_proliferation
 - prohibition
 - weapon
+- agency
 topics:
 - key: arms_control
   name: Arms Control
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
-- key: environment
-  name: Environment
 - key: nuclear
   name: Nuclear
+- key: security
+  name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: وكالة حظر الأسلحة النووية في أمريكا اللاتينية ومنطقة البحر الكاريبي
@@ -194,12 +215,73 @@ other_names:
   name: Organismo para a Proscrição das Armas Nucleares na América Latina e no Caribe
 - id: zh
   name: 拉丁美洲和加勒比禁止核武器组织
+acronyms:
+- lang: en
+  value: OPANAL
+- lang: es
+  value: OPANAL
+- lang: de
+  value: OPANAL
+- lang: pt
+  value: OPANAL
+official_documents:
+- url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
+  type: document
+  name: Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (Treaty of Tlatelolco)
+notes: Governed by a General Conference (ordinary sessions every two years), a Council, and a Secretariat headed by the Secretary
+  General, all elected by the General Conference. First Secretary General was Leopoldo Benites of Ecuador. Flávio Roberto
+  Bonzanini of Brazil was re-elected Secretary General in September 2021. Cuba was the last country in the region to accede,
+  ratifying in 2002. Official working language is Spanish. The OPANAL website (opanal.org) was under renovation as of 2026.
+wikidata_id: Q3369762
+last_verified: '2026-07-13'
 provenance:
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPANAL
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPANAL
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPANAL
+  license: CC BY-SA 4.0
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3369762
   license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3369762
+  license: CC0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPANAL
+  license: CC BY-SA 4.0
+- field: official_documents
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/OPANAL
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -210,16 +292,8 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://opanal.org/
-acronyms:
-- lang: en
-  value: OPANAL
-- lang: es
-  value: OPANAL
-- lang: de
-  value: OPANAL
-- lang: pt
-  value: OPANAL
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3369762
+  license: CC0

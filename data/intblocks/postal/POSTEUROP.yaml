@@ -3,11 +3,38 @@ blocktype:
 - postal
 status: formal
 languages:
-- es
+- en
+- fr
 links:
-- url: http://www.posteurop.org/
+- url: https://www.posteurop.org/
   type: website
+- url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/POSTEUROP
+  type: website
+- url: https://en.wikipedia.org/wiki/PostEurop
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q511645
+  type: wikidata
 name: Association of European Public Postal Operators
+founded: '1993'
+geographic_scope: regional
+regions:
+- Europe
+legal_status: trade association established under Belgian law
+recognition_status: Restricted union of the Universal Postal Union (since 1996)
+acronyms:
+- lang: en
+  value: PostEurop
+- lang: fr
+  value: PostEurop
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8429501
+    lng: 4.4066344
+secretariat:
+  location: Brussels, Belgium
+  organization: PostEurop Secretariat
 includes:
 - id: AL
   name: Albania
@@ -229,8 +256,40 @@ includes:
   name: Vatican City
   type: country
   status: member
+founding_members:
+- AL
+- AT
+- BE
+- BG
+- HR
+- CY
+- DK
+- FI
+- FR
+- DE
+- HU
+- IS
+- IE
+- IT
+- LI
+- LU
+- MT
+- NL
+- 'NO'
+- PL
+- PT
+- RO
+- ES
+- SE
+- CH
+- GB
 membership_count: 55
-description: A restricted union of the Universal Postal Union and trade association representing European public postal operators. Founded in 1993 and headquartered in Brussels, Belgium, it promotes cooperation and the development of the postal sector across Europe.
+description: A trade association representing European public postal operators and a restricted
+  union of the Universal Postal Union. Formed in 1993 following a CEPT decision to represent
+  postal operators to governments and regulators, it is established under Belgian law with
+  headquarters in Brussels. PostEurop promotes cooperation, sustainability, and innovation
+  across the European postal sector and coordinates the annual EUROPA stamp issue, a role
+  previously held by CEPT.
 tags:
 - POSTEUROP
 - association
@@ -238,21 +297,85 @@ tags:
 - european
 - postal
 - public
+- regional_cooperation
 - telecom
 - telecommunications
 topics:
 - key: postal
   name: Postal
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: telecommunications
   name: Telecommunications
+wikidata_id: Q511645
 other_names:
 - id: zh
   name: 欧洲公共邮政经营者协会
 - id: en
   name: PostEurop
 - id: fr
+  name: Association des opérateurs postaux publics européens
+- id: de
   name: PostEurop
 - id: ru
   name: PostEurop
 - id: es
   name: PostEurop
+notes: Formed in 1993 following a CEPT decision; signed a 1996 Memorandum of Understanding
+  with the UPU to become a restricted union. Coordinates the annual EUROPA stamp programme
+  since taking over from CEPT. Governed by a Board of Directors elected at the annual General
+  Assembly, with day-to-day management by the Secretary General in Brussels. PostEurop reports
+  53 member postal operators in 51 countries and territories; this record lists 55
+  country and territory codes including Crown Dependencies and other postal administrations.
+last_verified: '2026-07-12'
+provenance:
+- field: founded
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/our-history/
+- field: geographic_scope
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/
+- field: legal_status
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/our-history/
+- field: recognition_status
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/POSTEUROP
+- field: description
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/
+- field: headquarters
+  source: Universal Postal Union
+  retrieved_at: '2026-07-12'
+  url: https://www.upu.int/en/Universal-Postal-Union/About-UPU/Restricted-Unions/POSTEUROP
+- field: secretariat
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/
+- field: founding_members
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/our-history/
+- field: notes
+  source: PostEurop
+  retrieved_at: '2026-07-12'
+  url: https://www.posteurop.org/about-us/our-history/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q511645
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q511645
+  license: CC0
+- field: headquarters.coordinates
+  source: OpenStreetMap Nominatim
+  retrieved_at: '2026-07-12'
+  url: https://nominatim.openstreetmap.org/search?q=114+Boulevard+Brand+Whitlock+Brussels

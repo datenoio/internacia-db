@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: BO
 ================================================================================
-Generated: 2026-06-14 20:30:46
+Generated: 2026-07-16 17:10:26
 Country Code: BO
-Total Records with Issues: 39
-Total Issues Found: 46
+Total Records with Issues: 46
+Total Issues Found: 59
 
 === ISSUES BY TYPE ===
 
@@ -11,344 +11,461 @@ Total Issues Found: 46
 Count: 18
 Priority: LOW
 
-File: data/intblocks/cultural/CUMBREIBEROAMERICANA.yaml
-Record ID: CUMBREIBEROAMERICANA
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.segib.org/
-Suggested Action: Duplicate link 'https://www.segib.org/' found in multiple records: [('data/intblocks/cultural/CUMBREIBEROAMERICANA.yaml', 'CUMBREIBEROAMERICANA'), ('data/intblocks/cultural/SEGIB.yaml', 'SEGIB')]
-
-File: data/intblocks/cultural/SEGIB.yaml
-Record ID: SEGIB
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.segib.org/
-Suggested Action: Duplicate link 'https://www.segib.org/' found in multiple records: [('data/intblocks/cultural/CUMBREIBEROAMERICANA.yaml', 'CUMBREIBEROAMERICANA'), ('data/intblocks/cultural/SEGIB.yaml', 'SEGIB')]
-
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://en.wikipedia.org/wiki/DVD_region_code
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/DVD_region_code' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
-
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q746611
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q746611' found in multiple records: [('data/intblocks/dvdregion/DVD_1.yaml', 'DVD_1'), ('data/intblocks/dvdregion/DVD_2.yaml', 'DVD_2'), ('data/intblocks/dvdregion/DVD_3.yaml', 'DVD_3'), ('data/intblocks/dvdregion/DVD_4.yaml', 'DVD_4'), ('data/intblocks/dvdregion/DVD_5.yaml', 'DVD_5'), ('data/intblocks/dvdregion/DVD_6.yaml', 'DVD_6')]
-
-File: data/intblocks/traffichand/RHTRAFFIC.yaml
-Record ID: RHTRAFFIC
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Right-_and_left-hand_traffic' found in multiple records: [('data/intblocks/traffichand/LHTRAFFIC.yaml', 'LHTRAFFIC'), ('data/intblocks/traffichand/RHTRAFFIC.yaml', 'RHTRAFFIC')]
-
 File: data/intblocks/agreement/CTBT.yaml
 Record ID: CTBT
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.ctbto.org/
-Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+Current Value: ctbto.org
+Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
+
+File: data/intblocks/audit/OLACEFS.yaml
+Record ID: OLACEFS
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: intosai.org/about-us/regional-organizations
+Suggested Action: Website 'intosai.org/about-us/regional-organizations' is shared by unrelated records: ['ARABOSAI', 'ASOSAI', 'CAROSAI', 'EUROSAI', 'OLACEFS', 'PASAI']
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: worldbank.org/en/about/history
+Suggested Action: Website 'worldbank.org/en/about/history' is shared by unrelated records: ['IBRD', 'IDA', 'WB']
+
+File: data/intblocks/bank/IFC.yaml
+Record ID: IFC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
 File: data/intblocks/intorg/CTBTO.yaml
 Record ID: CTBTO
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.ctbto.org/
-Suggested Action: Duplicate link 'https://www.ctbto.org/' found in multiple records: [('data/intblocks/agreement/CTBT.yaml', 'CTBT'), ('data/intblocks/intorg/CTBTO.yaml', 'CTBTO')]
+Current Value: ctbto.org
+Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
 
-File: data/intblocks/customs/USAN.yaml
-Record ID: USAN
+File: data/intblocks/bank/IBRD.yaml
+Record ID: IBRD
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Union_of_South_American_Nations' found in multiple records: [('data/intblocks/customs/USAN.yaml', 'USAN'), ('data/intblocks/political/UNASUR.yaml', 'UNASUR')]
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
-File: data/intblocks/customs/USAN.yaml
-Record ID: USAN
+File: data/intblocks/bank/IBRD.yaml
+Record ID: IBRD
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.wikidata.org/wiki/Q4230
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q4230' found in multiple records: [('data/intblocks/customs/USAN.yaml', 'USAN'), ('data/intblocks/political/UNASUR.yaml', 'UNASUR')]
+Current Value: worldbank.org/en/about/history
+Suggested Action: Website 'worldbank.org/en/about/history' is shared by unrelated records: ['IBRD', 'IDA', 'WB']
 
-File: data/intblocks/political/UNASUR.yaml
-Record ID: UNASUR
+File: data/intblocks/bank/MIGA.yaml
+Record ID: MIGA
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://en.wikipedia.org/wiki/Union_of_South_American_Nations
-Suggested Action: Duplicate link 'https://en.wikipedia.org/wiki/Union_of_South_American_Nations' found in multiple records: [('data/intblocks/customs/USAN.yaml', 'USAN'), ('data/intblocks/political/UNASUR.yaml', 'UNASUR')]
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
-File: data/intblocks/political/UNASUR.yaml
-Record ID: UNASUR
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.wikidata.org/wiki/Q4230
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q4230' found in multiple records: [('data/intblocks/customs/USAN.yaml', 'USAN'), ('data/intblocks/political/UNASUR.yaml', 'UNASUR')]
+Current Value: worldbank.org/en/about/leadership/members
+Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
-File: data/intblocks/unagency/UNDP.yaml
-Record ID: UNDP
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: https://www.wikidata.org/wiki/Q163740
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
-
-File: data/intblocks/unagency/UNFPA.yaml
-Record ID: UNFPA
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q163740
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
-
-File: data/intblocks/unagency/UNRWA.yaml
-Record ID: UNRWA
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q163740
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
-
-File: data/intblocks/unagency/UNWOMEN.yaml
-Record ID: UNWOMEN
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q163740
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
-
-File: data/intblocks/unagency/WFP.yaml
-Record ID: WFP
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q163740
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q163740' found in multiple records: [('data/intblocks/unagency/UNDP.yaml', 'UNDP'), ('data/intblocks/unagency/UNFPA.yaml', 'UNFPA'), ('data/intblocks/unagency/UNRWA.yaml', 'UNRWA'), ('data/intblocks/unagency/UNWOMEN.yaml', 'UNWOMEN'), ('data/intblocks/unagency/WFP.yaml', 'WFP')]
-
-File: data/intblocks/unagency/UNEP.yaml
-Record ID: UNEP
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q170088
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
-
-File: data/intblocks/unagency/UNHABITAT.yaml
-Record ID: UNHABITAT
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: https://www.wikidata.org/wiki/Q170088
-Suggested Action: Duplicate link 'https://www.wikidata.org/wiki/Q170088' found in multiple records: [('data/intblocks/unagency/UNEP.yaml', 'UNEP'), ('data/intblocks/unagency/UNHABITAT.yaml', 'UNHABITAT')]
-
-[TEMPLATED_DESCRIPTION]
-Count: 28
-Priority: MEDIUM
-
-File: data/intblocks/bank/IDA.yaml
-Record ID: IDA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development providing financial services.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/cultural/CERLARC.yaml
-Record ID: CERLARC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/cultural/CUMBREIBEROAMERICANA.yaml
-Record ID: CUMBREIBEROAMERICANA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/cultural/HISPAM.yaml
-Record ID: HISPAM
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/cultural/SEGIB.yaml
-Record ID: SEGIB
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/customs/CAN.yaml
-Record ID: CAN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: Regional organization focused on customs.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/dvdregion/DVD_4.yaml
-Record ID: DVD_4
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/economic/ALBA.yaml
-Record ID: ALBA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development for economic integration.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/economic/SELA.yaml
-Record ID: SELA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development for economic integration.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/food/COPESCAALC.yaml
-Record ID: COPESCAALC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on agriculture.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/food/WECAFC.yaml
-Record ID: WECAFC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on agriculture.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/fund/COMMONFUND.yaml
-Record ID: COMMONFUND
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/gaspipeline/GNEAPIPE.yaml
-Record ID: GNEAPIPE
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on economic cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/gaspipeline/YABOGPIPE.yaml
-Record ID: YABOGPIPE
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on economic cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/geographic/AMAZONBASIN.yaml
-Record ID: AMAZONBASIN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on regional cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/geographic/ANDEAN.yaml
-Record ID: ANDEAN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on regional cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/intorg/ISSA.yaml
-Record ID: ISSA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on security and defense.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/intorg/MOUNTPART.yaml
-Record ID: MOUNTPART
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/intorg/WFTU.yaml
-Record ID: WFTU
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: Regional organization focused on regional cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/police/AMERIPOL.yaml
-Record ID: AMERIPOL
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: Regional organization focused on legal matters.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/police/CLACIP.yaml
-Record ID: CLACIP
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on legal matters.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/political/ASPA.yaml
-Record ID: ASPA
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on political for political cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/traffichand/RHTRAFFIC.yaml
-Record ID: RHTRAFFIC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on transportation.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/wbgroup/LAC.yaml
-Record ID: LAC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/wbgroup/LCN.yaml
-Record ID: LCN
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
-
-File: data/intblocks/wbgroup/LMC.yaml
-Record ID: LMC
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
+Current Value: worldbank.org/en/about/history
+Suggested Action: Website 'worldbank.org/en/about/history' is shared by unrelated records: ['IBRD', 'IDA', 'WB']
 
 File: data/intblocks/wbgroup/LMY.yaml
 Record ID: LMY
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on development.
-Suggested Action: Rewrite description to avoid templated boilerplate
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LMY.yaml
+Record ID: LMY
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LMC', 'LMY']
+
+File: data/intblocks/wbgroup/MIC.yaml
+Record ID: MIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/MIC.yaml
+Record ID: MIC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LMC.yaml
+Record ID: LMC
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LMC', 'LMY']
+
+[FOUNDING_MEMBER_NOT_INCLUDED]
+Count: 2
+Priority: MEDIUM
+
+File: data/intblocks/bank/IADB.yaml
+Record ID: IADB
+Issue: FOUNDING_MEMBER_NOT_INCLUDED
+Field: founding_members[6]
+Current Value: CU
+Suggested Action: founding member 'CU' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: FOUNDING_MEMBER_NOT_INCLUDED
+Field: founding_members[8]
+Current Value: PK
+Suggested Action: founding member 'PK' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
+
+[HISTORICAL_ENTITY_ACTIVE_MEMBER]
+Count: 6
+Priority: MEDIUM
+
+File: data/intblocks/bank/WB.yaml
+Record ID: WB
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[6].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/wbgroup/WLD.yaml
+Record ID: WLD
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/intorg/IAIS.yaml
+Record ID: IAIS
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/standards/ISO.yaml
+Record ID: ISO
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[7].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+File: data/intblocks/wbgroup/LCN.yaml
+Record ID: LCN
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[1].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
 
 File: data/intblocks/writingdirection/WDLTR.yaml
 Record ID: WDLTR
-Issue: TEMPLATED_DESCRIPTION
-Field: description
-Current Value: International entity focused on cultural cooperation.
-Suggested Action: Rewrite description to avoid templated boilerplate
+Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
+Field: includes[5].status
+Current Value: member
+Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+
+[MEMBERSHIP_COUNT_MISMATCH]
+Count: 33
+Priority: MEDIUM
+
+File: data/intblocks/agreement/CTBT.yaml
+Record ID: CTBT
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 187
+Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
+
+File: data/intblocks/agreement/KIMBERLEY.yaml
+Record ID: KIMBERLEY
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 59
+Suggested Action: membership_count 59 matches neither total includes (50) nor member-class includes (50)
+
+File: data/intblocks/agreement/TPNW.yaml
+Record ID: TPNW
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 95
+Suggested Action: membership_count 95 matches neither total includes (94) nor member-class includes (94)
+
+File: data/intblocks/audit/OLACEFS.yaml
+Record ID: OLACEFS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 22
+Suggested Action: membership_count 22 matches neither total includes (25) nor member-class includes (25)
+
+File: data/intblocks/bank/IFC.yaml
+Record ID: IFC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 186
+Suggested Action: membership_count 186 matches neither total includes (195) nor member-class includes (195)
+
+File: data/intblocks/cultural/SEGIB.yaml
+Record ID: SEGIB
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 22
+Suggested Action: membership_count 22 matches neither total includes (23) nor member-class includes (23)
+
+File: data/intblocks/customs/MERCOSUR.yaml
+Record ID: MERCOSUR
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 5
+Suggested Action: membership_count 5 matches neither total includes (6) nor member-class includes (6)
+
+File: data/intblocks/energy/IHA.yaml
+Record ID: IHA
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 100
+Suggested Action: membership_count 100 matches neither total includes (69) nor member-class includes (69)
+
+File: data/intblocks/energy/JODI.yaml
+Record ID: JODI
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 114
+Suggested Action: membership_count 114 matches neither total includes (94) nor member-class includes (0)
+
+File: data/intblocks/environment/CBD.yaml
+Record ID: CBD
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 196
+Suggested Action: membership_count 196 matches neither total includes (189) nor member-class includes (189)
+
+File: data/intblocks/environment/CITES.yaml
+Record ID: CITES
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 185
+Suggested Action: membership_count 185 matches neither total includes (184) nor member-class includes (184)
+
+File: data/intblocks/environment/KYOTOPROTOCOL.yaml
+Record ID: KYOTOPROTOCOL
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 192
+Suggested Action: membership_count 192 matches neither total includes (188) nor member-class includes (188)
+
+File: data/intblocks/environment/MONTREALPROTOCOL.yaml
+Record ID: MONTREALPROTOCOL
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 198
+Suggested Action: membership_count 198 matches neither total includes (197) nor member-class includes (197)
+
+File: data/intblocks/environment/PARISAGREEMENT.yaml
+Record ID: PARISAGREEMENT
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 194
+Suggested Action: membership_count 194 matches neither total includes (190) nor member-class includes (190)
+
+File: data/intblocks/environment/UNCCD.yaml
+Record ID: UNCCD
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 197
+Suggested Action: membership_count 197 matches neither total includes (196) nor member-class includes (196)
+
+File: data/intblocks/environment/VIENNACONVENTION.yaml
+Record ID: VIENNACONVENTION
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 198
+Suggested Action: membership_count 198 matches neither total includes (197) nor member-class includes (197)
+
+File: data/intblocks/intorg/COPANT.yaml
+Record ID: COPANT
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 27
+Suggested Action: membership_count 27 matches neither total includes (32) nor member-class includes (32)
+
+File: data/intblocks/intorg/CTBTO.yaml
+Record ID: CTBTO
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 187
+Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
+
+File: data/intblocks/intorg/GLOBALFUND.yaml
+Record ID: GLOBALFUND
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 130
+Suggested Action: membership_count 130 matches neither total includes (121) nor member-class includes (0)
+
+File: data/intblocks/intorg/ISTO.yaml
+Record ID: ISTO
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 88
+Suggested Action: membership_count 88 matches neither total includes (80) nor member-class includes (80)
+
+File: data/intblocks/space/COPUOS.yaml
+Record ID: COPUOS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 104
+Suggested Action: membership_count 104 matches neither total includes (109) nor member-class includes (109)
+
+File: data/intblocks/sports/FIFA.yaml
+Record ID: FIFA
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 211
+Suggested Action: membership_count 211 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/FIVB.yaml
+Record ID: FIVB
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 222
+Suggested Action: membership_count 222 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/ICC.yaml
+Record ID: ICC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 110
+Suggested Action: membership_count 110 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/IOC.yaml
+Record ID: IOC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 206
+Suggested Action: membership_count 206 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/ITF.yaml
+Record ID: ITF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 211
+Suggested Action: membership_count 211 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/IWF.yaml
+Record ID: IWF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 195
+Suggested Action: membership_count 195 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/WORLDAQUATICS.yaml
+Record ID: WORLDAQUATICS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 210
+Suggested Action: membership_count 210 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/WORLDATHLETICS.yaml
+Record ID: WORLDATHLETICS
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 214
+Suggested Action: membership_count 214 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/standards/AMN.yaml
+Record ID: AMN
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 4
+Suggested Action: membership_count 4 matches neither total includes (6) nor member-class includes (6)
+
+File: data/intblocks/tax/CIAT.yaml
+Record ID: CIAT
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 38
+Suggested Action: membership_count 38 matches neither total includes (42) nor member-class includes (42)
+
+File: data/intblocks/unagency/FAO.yaml
+Record ID: FAO
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 194
+Suggested Action: membership_count 194 matches neither total includes (196) nor member-class includes (196)
+
+File: data/intblocks/unagency/UNCTAD.yaml
+Record ID: UNCTAD
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 195
+Suggested Action: membership_count 195 matches neither total includes (193) nor member-class includes (193)
 
 
 === SUMMARY BY ISSUE TYPE ===
 
 DUPLICATE_LINK: 18 issues
-TEMPLATED_DESCRIPTION: 28 issues
+FOUNDING_MEMBER_NOT_INCLUDED: 2 issues
+HISTORICAL_ENTITY_ACTIVE_MEMBER: 6 issues
+MEMBERSHIP_COUNT_MISMATCH: 33 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: DVD_4
-File: data/intblocks/dvdregion/DVD_4.yaml
+Record ID: IDA
+File: data/intblocks/bank/IDA.yaml
 Issue Count: 3
 Issues:
-  - TEMPLATED_DESCRIPTION: description
+  - FOUNDING_MEMBER_NOT_INCLUDED: founding_members[8]
   - DUPLICATE_LINK: links
   - DUPLICATE_LINK: links
+
+Record ID: WB
+File: data/intblocks/bank/WB.yaml
+Issue Count: 3
+Issues:
+  - DUPLICATE_LINK: links
+  - DUPLICATE_LINK: links
+  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[6].status
+
+Record ID: WLD
+File: data/intblocks/wbgroup/WLD.yaml
+Issue Count: 3
+Issues:
+  - DUPLICATE_LINK: links
+  - DUPLICATE_LINK: links
+  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[7].status

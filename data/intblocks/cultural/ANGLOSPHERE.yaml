@@ -1,7 +1,13 @@
 id: ANGLOSPHERE
+name: Anglosphere
 blocktype:
 - cultural
 status: informal
+geographic_scope: global
+regions:
+- Americas
+- Europe
+- Oceania
 languages:
 - en
 links:
@@ -9,7 +15,8 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q541576
   type: wikidata
-name: Anglosphere
+legal_status: informal
+recognition_status: Informal geopolitical and cultural concept (not a formal organization) describing English-speaking countries with common-law traditions and dense political, economic, security, and cultural ties; popularised by James C. Bennett and widely used in foreign-policy discourse but distinct from the broader category of anglophone states
 includes:
 - id: AU
   name: Australia
@@ -37,13 +44,20 @@ includes:
   status: member
 membership_count: 6
 wikidata_id: Q541576
-description: Set of industrialized English-speaking nations based upon British populations.
+description: Western-led sphere of influence among English-speaking countries with strong political, economic, cultural, and military ties. The core grouping comprises Australia, Canada, New Zealand, the United Kingdom, and the United States, with Ireland frequently included in extended definitions; it is not synonymous with all countries where English has official status.
+notes: The core five coordinate through security and cooperation frameworks including Five Eyes, AUKUS, CANZUK proposals, and ABCANZ Armies. Broader scholarly definitions may add South Africa and Commonwealth Caribbean states. This record reflects the six-country extended core (AU, CA, GB, IE, NZ, US) common in Anglosphere discourse.
+last_verified: '2026-07-12'
 tags:
 - ANGLOSPHERE
 - anglosphere
+- anglophone
+- common-law
 - cultural
 - culture
 - education
+- english
+- five-eyes
+- geopolitical
 - university
 topics:
 - key: culture
@@ -53,19 +67,58 @@ topics:
 other_names:
 - id: ar
   name: أنجلوسفير
-- id: zh
-  name: 英语圈
+- id: de
+  name: anglosphäre
 - id: en
   name: Anglosphere
-- id: fr
-  name: monde anglo-saxon
-- id: ru
-  name: Англосфера
 - id: es
   name: angloesfera
+- id: fr
+  name: monde anglo-saxon
+- id: pt
+  name: anglosfera
+- id: ru
+  name: Англосфера
+- id: zh
+  name: 英语圈
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q541576
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q541576
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Anglosphere
+  license: CC BY-SA 4.0

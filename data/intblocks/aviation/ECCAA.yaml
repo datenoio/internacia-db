@@ -1,21 +1,82 @@
 id: ECCAA
+name: Eastern Caribbean Civil Aviation Authority
 blocktype:
 - aviation
 - intorg
 - transport
 status: formal
+founded: '2004-10'
+active_period:
+  start: '2004-10'
+geographic_scope: regional
+regions:
+- Americas
+- Caribbean
+- Eastern Caribbean
 partof: OECS
 languages:
 - en
 links:
+- url: https://www.eccaa.aero/
+  type: website
+- url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+  type: website
+- url: https://www.icao.int/nacc/nacc-sap-eccaa
+  type: website
 - url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Civil_Aviation_Authority
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5330038
   type: wikidata
-name: Eastern Caribbean Civil Aviation Authority
+headquarters:
+  city: Saint John's
+  country: AG
+  coordinates:
+    lat: 17.1274
+    lng: -61.8468
+legal_status: intergovernmental
+recognition_status: OECS institution under the Treaty of Basseterre (1982); multistate civil aviation authority established by agreement signed 21 October 2003 and given legal effect through national legislation in participating states by October 2004
+secretariat:
+  location: Saint John's, Antigua and Barbuda
+  organization: Office of the Director General
+membership_count: 6
+founding_members:
+- AG
+- DM
+- GD
+- KN
+- LC
+- VC
+description: OECS institution and multistate civil aviation authority providing safety and security oversight for Eastern Caribbean ICAO Contracting States. Established in October 2004 after OECS aviation ministers signed the founding agreement in October 2003, ECCAA evolved from the Directorate of Civil Aviation – Eastern Caribbean States (dating to 1957). Headquartered in Saint John's, Antigua and Barbuda, it regulates civil aviation across six participating states in accordance with ICAO Standards and Recommended Practices (SARPs), harmonizes regulations and policies, and conducts inspection, investigation, monitoring, and licensing.
+tags:
+- ECCAA
+- aviation
+- caribbean
+- civil
+- eastern
+- eastern_caribbean
+- intorg
+- oecs
+- regional
+- regulatory
+- safety
+- transport
+- transportation
+topics:
+- key: aviation
+  name: Aviation
+- key: safety
+  name: Safety
+- key: transport
+  name: Transport
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AG
   name: Antigua and Barbuda
+  type: country
+  status: member
+- id: DM
+  name: Dominica
   type: country
   status: member
 - id: GD
@@ -34,22 +95,66 @@ includes:
   name: St. Vincent and the Grenadines
   type: country
   status: member
-membership_count: 5
-wikidata_id: Q5330038
-description: The Eastern Caribbean Civil Aviation Authority is an international organization that is used to promote regional
-  cooperation in the transportation sector.
-tags:
-- ECCAA
-- aviation
-- caribbean
-- civil
-- eastern
-- intorg
-- transport
-- transportation
-topics:
-- key: transport
-  name: Transport
+acronyms:
+- lang: en
+  value: ECCAA
 other_names:
 - id: en
   name: Eastern Caribbean Civil Aviation Authority
+wikidata_id: Q5330038
+notes: Evolved from the Directorate of Civil Aviation – Eastern Caribbean States, first led by a UK-appointed director in 1957; administered by Antigua and Barbuda until 1968, then by the West Indies Associated States Council of Ministers, and recognized as an OECS institution in 1982. Agreement establishing ECCAA signed 21 October 2003 at St Georges, Grenada; ECCAA commenced operations in October 2004 when participating states enacted implementing legislation. Operates outstations serving additional OECS territories including Anguilla, Montserrat, and the British Virgin Islands.
+last_verified: '2026-07-12'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Eastern_Caribbean_Civil_Aviation_Authority
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/
+- field: includes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/nacc/nacc-sap-eccaa
+- field: membership_count
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/nacc/nacc-sap-eccaa
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eccaa.aero/index.php?Itemid=56&id=49&option=com_content&view=article
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5330038
+  license: CC0

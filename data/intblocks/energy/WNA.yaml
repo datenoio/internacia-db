@@ -1,26 +1,44 @@
 id: WNA
+name: World Nuclear Association
 blocktype:
 - energy
 - nuclear
 status: formal
+founded: '2001'
+active_period:
+  start: '2001'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://world-nuclear.org/
   type: website
+- url: https://world-nuclear.org/our-association/who-we-are
+  type: website
+- url: https://world-nuclear.org/our-association/membership
+  type: website
+- url: https://world-nuclear.org/our-association/leadership
+  type: website
+- url: https://world-nuclear.org/our-association/contact-us
+  type: website
 - url: https://en.wikipedia.org/wiki/World_Nuclear_Association
   type: wikipedia
-name: World Nuclear Association
-founded: '2001'
+- url: https://www.wikidata.org/wiki/Q2534166
+  type: wikidata
 headquarters:
   city: London
   country: GB
   coordinates:
     lat: 51.507222222222
     lng: -0.1275
-geographic_scope: global
-regions:
-- worldwide
+legal_status: industry_association
+recognition_status: Non-profit industry association founded in 2001 as the successor to the Uranium Institute (established 1975); serves as the global voice for the nuclear industry, promoting peaceful uses of nuclear energy and representing members across the full nuclear fuel cycle at international forums including the IAEA, OECD Nuclear Energy Agency, UN sustainable development and climate policy bodies, and ICRP deliberations on radiological protection
+secretariat:
+  location: York House, 23 Kingsway, London WC2B 6UJ, United Kingdom
+  head: Director-General
+  organization: World Nuclear Association
 includes:
 - id: AM
   name: Armenia
@@ -150,17 +168,17 @@ includes:
   name: Belarus
   type: country
   status: member
-membership_count: 230
-legal_status: industry_association
-description: International organization representing the global nuclear industry. The World Nuclear Association (WNA) serves
-  as the global voice for the nuclear industry, promoting the peaceful use of nuclear energy and connecting players across
-  the nuclear value chain. WNA members include reactor vendors, nuclear utilities, uranium mining companies, fuel cycle companies,
-  nuclear engineering firms, construction companies, waste management organizations, research institutions, and service providers.
-  As of 2024, WNA comprises over 230 member organizations from 43 countries, representing all major reactor vendors and utilities
-  responsible for 70% of global nuclear generation.
+membership_count: 3000
+description: International non-profit membership organisation representing the global nuclear industry. The World Nuclear Association
+  (WNA) facilitates industry cooperation across the nuclear value chain, represents the sector in key international forums, and
+  provides authoritative public information on nuclear power. WNA members include reactor vendors, utilities, uranium mining
+  and fuel-cycle companies, engineering and construction firms, waste management organisations, research institutions, and service
+  providers. As of 2026, WNA comprises about 3,000 member organisations from 180 member states, with member utilities responsible
+  for roughly 70% of global nuclear generation.
 tags:
 - WNA
 - atomic
+- climate
 - economy
 - energy
 - environment
@@ -177,6 +195,8 @@ topics:
   name: Environment
 - key: nuclear
   name: Nuclear
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: en
   name: World Nuclear Association
@@ -187,17 +207,70 @@ other_names:
 - id: es
   name: Asociación Nuclear Mundial
 - id: zh
-  name: 世界核协会
+  name: 世界核能協會
+acronyms:
+- lang: en
+  value: WNA
+notes: Membership comprises institutional organisations across the nuclear value chain rather than sovereign governments;
+  member organisations are located in 44 countries. Members appoint the Director General and elect a 20-member Board of Management;
+  current Director General is Sama Bilbao y León. Publishes World Nuclear News, hosts the annual World Nuclear Symposium in
+  London, and coordinates the World Nuclear University with the IAEA, OECD-NEA, and WANO. Successor to the Uranium Institute
+  (1975–2001).
+wikidata_id: Q2534166
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://world-nuclear.org/
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://world-nuclear.org/
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/contact-us
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://world-nuclear.org/
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/contact-us
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/who-we-are
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://world-nuclear.org/our-association/leadership
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2534166
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2534166
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q2534166
+  license: CC0

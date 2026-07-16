@@ -3,47 +3,72 @@ name: The Spatial Information Council
 blocktype:
 - intorg
 status: formal
-founded: '1986'
+founded: '1986-01-01'
+active_period:
+  start: '1986-01-01'
 geographic_scope: regional
+regions:
+- Oceania
 languages:
 - en
 links:
 - url: https://www.anzlic.gov.au/
   type: website
+- url: https://www.anzlic.gov.au/anzlic-council
+  type: website
+- url: https://www.anzlic.gov.au/anzlic-council/anzlic-governance
+  type: website
+- url: https://www.directory.gov.au/portfolios/industry-science-and-resources/geoscience-australia/anzlic-spatial-information-council
+  type: website
 - url: https://en.wikipedia.org/wiki/ANZLIC
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q104903227
+  type: wikidata
 acronyms:
 - lang: en
   value: ANZLIC
 - lang: en
   value: ALIC
+legal_status: intergovernmental
+recognition_status: Peak intergovernmental body for spatial information policy in Australia and New Zealand; established by inter-jurisdictional government agreement in 1986
+headquarters:
+  city: Canberra
+  country: AU
+  coordinates:
+    lat: -35.343611111111
+    lng: 149.158333333333
+secretariat:
+  location: Canberra, Australia
+  organization: Geoscience Australia
+membership_count: 2
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-01-01'
 - id: NZ
   name: New Zealand
   type: country
   status: member
-membership_count: 2
-regions:
-- Oceania
-legal_status: intergovernmental
-description: Peak intergovernmental organisation providing leadership in the collection, management and use of spatial information
-  in Australia and New Zealand. Supports the establishment of a Spatial Data Infrastructure in the region and has published
-  geospatial metadata standards.
-notes: Started in 1986 as the Australian Land Information Council (ALIC) and became the Australia and New Zealand Land Information
-  Council (ANZLIC) in 1991. Now refers to itself as The Spatial Information Council.
+  joined: '1991-11'
+description: Peak intergovernmental organisation providing leadership in the collection, management and use of spatial information in Australia and New Zealand. Established in January 1986 as the Australian Land Information Council (ALIC) by agreement between the Australian Prime Minister and state and territory heads of government; New Zealand joined in November 1991 and the council was renamed ANZLIC. Develops policies and strategies to promote accessibility and usability of spatial information, advocates for national-level spatial priorities, and has published geospatial metadata standards. The secretariat is co-located within Geoscience Australia in Canberra; the Intergovernmental Committee on Surveying and Mapping (ICSM) serves as its delivery arm.
+notes: Started in 1986 as the Australian Land Information Council (ALIC) and became the Australia and New Zealand Land Information Council (ANZLIC) in 1991. Now refers to itself as The Spatial Information Council. Council membership comprises senior officials from the Australian Government, Australian states and territories, and the New Zealand Government.
 tags:
 - ANZLIC
+- ALIC
 - spatial
 - information
 - geospatial
+- metadata
+- surveying
+- mapping
 - intorg
 - australia
 - new_zealand
+- oceania
 - regional
+- intergovernmental
 topics:
 - key: spatial_information
   name: Spatial Information
@@ -51,10 +76,63 @@ topics:
   name: Geospatial
 - key: regional_cooperation
   name: Regional Cooperation
+- key: standardization
+  name: Standardization
 other_names:
 - id: en
   name: ANZLIC
+- id: en
+  name: Australian Land Information Council
+- id: en
+  name: Australia and New Zealand Land Information Council
+- id: en
+  name: Australia and New Zealand Spatial Information Council
+- id: en
+  name: The Spatial Information Council
+wikidata_id: Q104903227
+last_verified: '2026-07-12'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q104903227
+  license: CC0
+- field: founded
+  source: Australian Government Directory
+  retrieved_at: '2026-07-12'
+  url: https://www.directory.gov.au/portfolios/industry-science-and-resources/geoscience-australia/australia-and-new-zealand-land-information-council-anzlic
+- field: active_period
+  source: Australian Government Directory
+  retrieved_at: '2026-07-12'
+  url: https://www.directory.gov.au/portfolios/industry-science-and-resources/geoscience-australia/australia-and-new-zealand-land-information-council-anzlic
+- field: recognition_status
+  source: ANZLIC official website
+  retrieved_at: '2026-07-12'
+  url: https://www.anzlic.gov.au/anzlic-council/anzlic-governance
+- field: description
+  source: ANZLIC official website
+  retrieved_at: '2026-07-12'
+  url: https://www.anzlic.gov.au/anzlic-council
+- field: headquarters
+  source: Australian Government Directory
+  retrieved_at: '2026-07-12'
+  url: https://www.directory.gov.au/portfolios/industry-science-and-resources/geoscience-australia/australia-and-new-zealand-land-information-council-anzlic
+- field: secretariat
+  source: ANZLIC official website
+  retrieved_at: '2026-07-12'
+  url: https://www.anzlic.gov.au/contact
+- field: includes
+  source: ANZLIC official website
+  retrieved_at: '2026-07-12'
+  url: https://www.anzlic.gov.au/anzlic-council
+- field: other_names
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/ANZLIC
+- field: notes
+  source: ANZLIC official website
+  retrieved_at: '2026-07-12'
+  url: https://www.anzlic.gov.au/anzlic-council/anzlic-governance
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'

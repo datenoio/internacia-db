@@ -6,28 +6,67 @@ blocktype:
 - aviation_safety
 status: formal
 founded: '2012-01-20'
+active_period:
+  start: '2012-01-20'
 geographic_scope: regional
 regions:
 - Africa
 languages:
 - fr
 - en
+links:
+- url: https://aamac.aero/
+  type: website
+- url: https://aamac.aero/presentation/
+  type: website
+- url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+  type: website
+acronyms:
+- lang: fr
+  value: AAMAC
+- lang: en
+  value: AAMAC
+legal_status: intergovernmental
+recognition_status: Treaty-based Regional Safety Oversight Organization (RSOO) established by the 17 ASECNA member states; recognized by ICAO as an RSOO for the Africa and Indian Ocean (AFI) region
 headquarters:
   city: N'Djamena
   country: TD
-legal_status: intergovernmental
+  coordinates:
+    lat: 12.1348
+    lng: 15.0557
+secretariat:
+  location: N'Djamena, Chad
+  head: Executive Secretary
 membership_count: 17
-description: Regional aviation safety oversight organization established by 17 African and Malagasy states that are also members
-  of ASECNA. AAMAC was created to enhance aviation safety oversight capabilities through regional cooperation and harmonization
-  of regulations across member states.
+founding_members:
+- BJ
+- BF
+- CM
+- CF
+- KM
+- CG
+- CI
+- GQ
+- GA
+- GW
+- MG
+- ML
+- MR
+- NE
+- SN
+- TD
+- TG
+description: Regional aviation safety oversight organization (RSOO) established by treaty on 20 January 2012 among the 17 African and Malagasy states that are members of ASECNA. AAMAC harmonizes civil aviation regulations, audits national civil aviation authorities, and provides certification and surveillance services to maintain uniform safety standards. Governed by a Council and Executive Secretariat, it operates within the ASECNA air navigation framework and focuses on air navigation services (ANS) safety oversight.
 tags:
 - AAMAC
 - aviation
 - safety
 - oversight
+- rsoo
 - intorg
 - africa
 - regional
+- asecna
 topics:
 - key: aviation
   name: Aviation
@@ -40,85 +79,136 @@ includes:
   name: Benin
   type: country
   status: member
+  joined: '2012-01-20'
 - id: BF
   name: Burkina Faso
   type: country
   status: member
+  joined: '2012-01-20'
 - id: CM
   name: Cameroon
   type: country
   status: member
+  joined: '2012-01-20'
 - id: CF
   name: Central African Republic
   type: country
   status: member
+  joined: '2012-01-20'
 - id: KM
   name: Comoros
   type: country
   status: member
+  joined: '2012-01-20'
 - id: CG
   name: Congo
   type: country
   status: member
+  joined: '2012-01-20'
 - id: CI
   name: Côte d'Ivoire
   type: country
   status: member
+  joined: '2012-01-20'
 - id: GQ
   name: Equatorial Guinea
   type: country
   status: member
+  joined: '2012-01-20'
 - id: GA
   name: Gabon
   type: country
   status: member
+  joined: '2012-01-20'
 - id: GW
   name: Guinea-Bissau
   type: country
   status: member
+  joined: '2012-01-20'
 - id: MG
   name: Madagascar
   type: country
   status: member
+  joined: '2012-01-20'
 - id: ML
   name: Mali
   type: country
   status: member
+  joined: '2012-01-20'
 - id: MR
   name: Mauritania
   type: country
   status: member
+  joined: '2012-01-20'
 - id: NE
   name: Niger
   type: country
   status: member
+  joined: '2012-01-20'
 - id: SN
   name: Senegal
   type: country
   status: member
+  joined: '2012-01-20'
 - id: TD
   name: Chad
   type: country
   status: member
+  joined: '2012-01-20'
 - id: TG
   name: Togo
   type: country
   status: member
-acronyms:
-- lang: fr
-  value: AAMAC
+  joined: '2012-01-20'
 other_names:
 - id: fr
   name: Autorités Africaines et Malgaches de l'Aviation Civile
 - id: en
   name: African and Malagasy Civil Aviation Authorities
+notes: Originated from a 2001 study on strengthening civil aviation authorities in ASECNA member states; a memorandum of understanding was adopted in Dakar on 20 December 2001, with internal regulations adopted in 2003. The binding treaty was signed in N'Djamena on 20 January 2012. Although not attached to a regional economic community, AAMAC operates within the ASECNA air navigation service provider framework. A 2014 tripartite MOU with ACSAC (URSAC) and ASSA-AC confines AAMAC to ANS oversight; Council resolution 2015 CDA34-08 further focused activities on ANS regulation harmonization, audits, and provider certification. The official website reports 18 states parties (Rwanda added in 2024 per ICAO); ICAO's RSOO list still reflects the original 17 treaty signatories.
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
+- field: recognition_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/le-secretariat-executif/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
+- field: includes
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/presentation/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://aamac.aero/un-peu-dhistoire/

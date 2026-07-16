@@ -36,7 +36,11 @@ native_names:
     common: Republic of Kosovo
 common_names:
 - Kosovo
-borders: []
+borders:
+- ALB
+- MKD
+- MNE
+- SRB
 entity_type: disputed_territory
 code_status: user_assigned
 recognition_status:
@@ -44,6 +48,10 @@ recognition_status:
   un_member: false
   notes: User-assigned alpha-2 code KV; not an official ISO 3166-1 assignment.
 provenance:
+- field: borders
+  source: CIA World Factbook
+  url: https://www.cia.gov/the-world-factbook/countries/kosovo/
+  retrieved_at: '2026-07-16'
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries

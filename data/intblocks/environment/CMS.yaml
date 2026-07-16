@@ -13,21 +13,58 @@ languages:
 links:
 - url: https://www.cms.int/
   type: website
+- url: https://www.cms.int/legalinstrument/cms
+  type: website
+- url: https://www.cms.int/en/legalinstrument/cms/parties
+  type: website
 - url: https://en.wikipedia.org/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q125371
+  type: wikidata
 name: Convention on the Conservation of Migratory Species of Wild Animals
 founded: '1979'
-description: International convention focused on migratory species conservation and
-  environmental protection established through an international agreement.
+active_period:
+  start: '1983-11-01'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+headquarters:
+  city: Bonn
+  country: DE
+  coordinates:
+    lat: 50.7186
+    lng: 7.1275
+legal_status: treaty
+recognition_status: Multilateral environmental treaty adopted in Bonn on 23 June 1979; entered
+  into force on 1 November 1983 (United Nations Treaty Series vol. 1651, registration No.
+  28395); depositary is the Government of Germany; administered through the CMS Secretariat
+  hosted by the United Nations Environment Programme in Bonn
+secretariat:
+  location: Bonn, Germany
+  organization: CMS Secretariat (United Nations Environment Programme)
+description: Global framework convention for the conservation and sustainable use of migratory
+  species of wild animals and their habitats throughout their range. Adopted in Bonn in 1979
+  and entered into force in 1983; lists threatened migratory species in Appendix I for strict
+  protection and species requiring international cooperation in Appendix II, and provides
+  a platform for binding agreements and memoranda of understanding.
 tags:
 - CMS
 - agreement
 - bonn
+- bonn_convention
 - conservation
 - convention
 - environment
+- law
+- legal
 - migratory
 - species
+- unep
 - wildlife
 topics:
 - key: conservation
@@ -39,26 +76,630 @@ topics:
 other_names:
 - id: ar
   name: اتفاقية حفظ الأنواع المهاجرة من الحيوانات البرية
-- id: zh
-  name: 保护迁徙野生动物物种公约
+- id: de
+  name: Übereinkommen zur Erhaltung wandernder wildlebender Tierarten
 - id: en
   name: Convention on the Conservation of Migratory Species of Wild Animals
-- id: fr
-  name: Convention sur la conservation des espèces migratrices appartenant à la faune
-    sauvage
-- id: ru
-  name: Конвенция о сохранении мигрирующих видов диких животных
 - id: es
   name: Convención sobre la Conservación de las Especies Migratorias de Animales Silvestres
-notes: The CMS, also known as the Bonn Convention, entered into force in 1983. As
-  of 2025, it has 133 member countries (132 countries and the European Union). The
-  convention aims to conserve terrestrial, marine, and avian migratory species throughout
-  their range. Membership list to be populated from official CMS sources.
+- id: fr
+  name: Convention sur la conservation des espèces migratrices appartenant à la faune sauvage
+- id: pt
+  name: Convenção de Bona
+- id: ru
+  name: Конвенция о сохранении мигрирующих видов диких животных
+- id: zh
+  name: 保护迁徙野生动物物种公约
+includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AL
+  name: Albania
+  type: country
+  status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: AO
+  name: Angola
+  type: country
+  status: member
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AU
+  name: Australia
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: LY
+  name: Libya
+  type: country
+  status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+notes: The CMS, also known as the Bonn Convention, entered into force in 1983. As of 2025,
+  it has 133 parties (132 countries and the European Union). The convention aims to conserve
+  terrestrial, marine, and avian migratory species throughout their range.
 membership_count: 133
 wikidata_id: Q125371
+official_documents:
+- url: https://www.cms.int/sites/default/files/instrument/CMS_CMS-text%20E.pdf
+  type: document
+  name: Convention on the Conservation of Migratory Species of Wild Animals
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800bc2fb
+  type: document
+  name: United Nations Treaty Series registration (No. 28395)
+acronyms:
+- lang: en
+  value: CMS
+- lang: en
+  value: Bonn Convention
+- lang: de
+  value: Bonner Konvention
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/legalinstrument/cms
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800bc2fb
+- field: geographic_scope
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/legalinstrument/cms
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800bc2fb
+- field: recognition_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800bc2fb
+- field: secretariat
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/legalinstrument/cms
+- field: headquarters
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/legalinstrument/cms
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800bc2fb
+- field: includes
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/en/legalinstrument/cms/parties
+- field: membership_count
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/en/legalinstrument/cms/parties
+- field: notes
+  source: CMS Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cms.int/en/legalinstrument/cms/parties
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q125371
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q125371
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q125371
   license: CC0

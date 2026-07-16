@@ -5,7 +5,9 @@ blocktype:
 - intorg
 - aviation_safety
 status: formal
-founded: 2015-11
+founded: '2015-11-01'
+active_period:
+  start: '2015-11-01'
 geographic_scope: regional
 regions:
 - Africa
@@ -17,6 +19,12 @@ languages:
 links:
 - url: https://saso.int/
   type: website
+- url: https://saso.int/index.php/who-we-are/member-states
+  type: website
+- url: https://saso.int/index.php/saso-secretariat/saso
+  type: website
+- url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
+  type: website
 headquarters:
   city: Mbabane
   country: SZ
@@ -24,17 +32,20 @@ headquarters:
     lat: -26.3128
     lng: 31.1347
 legal_status: intergovernmental
+recognition_status: Subsidiary organisation of SADC established under the principle of subsidiarity through the SASO Charter; recognized by ICAO as a Regional Safety Oversight Organization (RSOO) for Southern Africa
 partof: SADC
+secretariat:
+  location: Mbabane, Eswatini
+  head: Executive Director
+  organization: SASO Secretariat
 membership_count: 12
-description: Subsidiary organisation of the Southern African Development Community (SADC) established under the principle
-  of subsidiarity to promote the safe and efficient use and development of civil aviation in the SADC region. SASO assists
-  member states in meeting ICAO safety oversight obligations, harmonises aviation safety standards, and coordinates regional
-  technical assistance through its secretariat hosted by Eswatini.
+description: Subsidiary organisation of the Southern African Development Community (SADC) and ICAO-recognized Regional Safety Oversight Organization (RSOO) for Southern Africa. Established under the principle of subsidiarity through the SASO Charter, SASO promotes the safe and efficient use and development of civil aviation across the SADC region. Its secretariat in Mbabane, Eswatini, assists member states in meeting ICAO safety oversight obligations, harmonises aviation safety standards through SADC Generic Regulations and Procedures, and provides advisory, certification, surveillance, regulatory, and training support to national civil aviation authorities.
 tags:
 - SASO
 - aviation
 - safety
 - oversight
+- rsoo
 - intorg
 - africa
 - southern_africa
@@ -48,6 +59,8 @@ topics:
   name: Safety
 - key: regional_cooperation
   name: Regional Cooperation
+- key: regulatory
+  name: Regulatory
 includes:
 - id: AO
   name: Angola
@@ -122,32 +135,58 @@ other_names:
   name: Organisation de la sécurité aérienne de la SADC
 - id: pt
   name: Organização de Segurança da Aviação da SADC
+notes: SADC Ministers of Transport and Meteorology approved an Interim SASO (iSASO) secretariat in October 2013, pending Council of Ministers approval of the SASO Charter. The MoU and Eswatini Hosting Agreement were signed in May 2015; COSCAP-SADC staff relocated to Eswatini in November 2015 to operationalise the organisation. On 2 May 2023 the Democratic Republic of the Congo became the 12th charter signatory, marking transition from interim to full SASO status. Governed by the Civil Aviation Committee (strategic planning) and the Committee of Ministers responsible for Civil Aviation (policy, budget, and Executive Director appointment). The Flight Safety Working Group supports domestication of SADC Generic Regulations and Procedures. As of 31 October 2024, 12 of 16 SADC member states had signed the SASO Charter.
+last_verified: '2026-07-12'
 provenance:
-- field: founded
-  source: SASO
-  retrieved_at: '2026-06-14'
-  url: https://saso.int/index.php/saso-secretariat/saso
-  license: public domain
-- field: includes
-  source: SASO
-  retrieved_at: '2026-06-14'
-  url: https://saso.int/index.php/who-we-are/member-states
-  license: public domain
-- field: headquarters
-  source: Devex
-  retrieved_at: '2026-06-14'
-  url: https://www.devex.com/organizations/sadc-aviation-safety-organisation-saso-178442
-  license: public domain
-- field: other_names
-  source: SASO
-  retrieved_at: '2026-06-14'
-  url: https://saso.int/
-  license: public domain
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://saso.int/
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are
+- field: recognition_status
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/safety/regional-safety-cooperation/List-of-RSOOs
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are/background
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/saso-secretariat/saso
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/saso-secretariat/saso
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/saso-secretariat/saso
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/saso-secretariat/saso
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are/member-states
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/who-we-are/member-states
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://saso.int/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://saso.int/index.php/saso-secretariat/saso

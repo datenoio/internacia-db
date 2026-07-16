@@ -1,25 +1,39 @@
 id: WBA
+name: World Bioenergy Association
 blocktype:
 - energy
 status: formal
+founded: '2008'
+active_period:
+  start: '2008'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://www.worldbioenergy.org/
   type: website
+- url: https://www.worldbioenergy.org/about-us/
+  type: website
+- url: https://www.worldbioenergy.org/members/
+  type: website
 - url: https://en.wikipedia.org/wiki/World_Bioenergy_Association
   type: wikipedia
-name: World Bioenergy Association
-founded: '2008'
+- url: https://www.wikidata.org/wiki/Q17104681
+  type: wikidata
 headquarters:
   city: Stockholm
   country: SE
   coordinates:
     lat: 59.329444444444
     lng: 18.068611111111
-geographic_scope: global
-regions:
-- worldwide
+legal_status: ngo
+recognition_status: International non-profit NGO founded in Stockholm, Sweden, in 2008 to represent bioenergy sector actors globally; registered in Sweden (Business Identity Code 802444-7958)
+secretariat:
+  location: Kammakargatan 22, SE-111 40 Stockholm, Sweden
+  head: Executive Director
+  organization: World Bioenergy Association
 includes:
 - id: US
   name: United States
@@ -198,13 +212,12 @@ includes:
   type: country
   status: member
 membership_count: 127
-legal_status: ngo
-description: International non-governmental organization that promotes the sustainable development of bioenergy globally and
-  supports the business environment for bioenergy. The World Bioenergy Association (WBA) represents the bioenergy sector worldwide,
-  focusing on various bioenergy forms including biomass, biofuels, and biogas. As of 2022, WBA comprises 127 members from
-  38 countries across five continents, including national and regional bioenergy associations, companies, research institutions,
-  and individuals. The association works collaboratively to advance bioenergy initiatives and advocate for sustainable use
-  of bioenergy to meet global energy needs.
+description: International non-profit NGO that promotes the sustainable development of bioenergy globally and supports the
+  business environment for the bioenergy sector. The World Bioenergy Association (WBA) represents bioenergy actors worldwide,
+  covering biomass, biofuels, and biogas. Membership comprises national and regional bioenergy associations, companies,
+  research institutions, and individuals. As of 2022, WBA reported 127 members from 38 countries across five continents. The
+  association has been a member of the International Renewable Energy Alliance (REN Alliance) since 2009 and is represented
+  on the REN21 steering committee.
 tags:
 - WBA
 - bioenergy
@@ -235,16 +248,66 @@ other_names:
   name: Asociación Mundial de Bioenergía
 - id: zh
   name: 世界生物能源协会
+acronyms:
+- lang: en
+  value: WBA
+notes: Founded in Stockholm in 2008 as a non-profit NGO. Member of the International Renewable Energy Alliance (REN Alliance)
+  since 2009. Represented on the REN21 steering committee. Presidents have included Kent Nyström (2008–2012), Heinz Kopetz
+  (2012–2016), Remigijus Lapinskas (2016–2020), and Christian Rakos (since 2020). Executive Director Bharadwaj Kummamuru has
+  led the secretariat since 2017. Publishes the Global Bioenergy Statistics Report and organizes webinars, general assemblies,
+  and industry events.
+wikidata_id: Q17104681
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldbioenergy.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldbioenergy.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/World_Bioenergy_Association
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/World_Bioenergy_Association
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbioenergy.org/about-us/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/World_Bioenergy_Association
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://www.worldbioenergy.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17104681
+  license: CC0

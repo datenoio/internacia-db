@@ -3,8 +3,8 @@ name: French Southern and Antarctic Lands
 iso3code: ATF
 capital_city:
   name: Port-aux-Français
-  lat: 48.81
-  lng: -1.4
+  lat: -49.35
+  lng: 70.22
 numeric_code: '260'
 wikidata_id: Q129003
 official_name: Territory of the French Southern and Antarctic Lands
@@ -45,6 +45,7 @@ other_names:
   name: Tierras Australes y Antárticas Francesas
 common_names:
 - Territory of the French Southern and Antarctic Lands
+- French Southern Territories
 population:
   value: 196
   source: Wikidata
@@ -79,6 +80,10 @@ borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
 provenance:
+- field: common_names
+  source: manual
+  retrieved_at: '2026-07-16'
+  notes: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries

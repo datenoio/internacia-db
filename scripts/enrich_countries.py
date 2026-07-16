@@ -3,10 +3,8 @@
 
 from __future__ import annotations
 
-import json
 import time
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -14,6 +12,8 @@ from typing import Any
 
 import typer
 import yaml
+
+from internacia_builder.http import fetch_json as _fetch_json
 
 app = typer.Typer(help="Enrich country profile fields from World Bank and Wikidata")
 
@@ -81,13 +81,7 @@ LANG3_TO2 = {
 
 
 def fetch_json(url: str) -> Any:
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Internacia-DB Country Enricher/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        raw = resp.read().decode("utf-8-sig")
-    return json.loads(raw)
+    return _fetch_json(url, user_agent="Internacia-DB Country Enricher/1.0", timeout=120)
 
 
 def fetch_world_bank(indicator_id: str) -> dict[str, dict[str, Any]]:

@@ -1,15 +1,67 @@
 id: BEACST
+name: Barents Euro-Arctic Council
 blocktype:
 - intorg
 status: formal
+founded: '1993-01-11'
+active_period:
+  start: '1993-01-11'
+geographic_scope: regional
+regions:
+- Arctic
+- Europe
 languages:
 - en
+- 'no'
+- ru
+- sv
+- fi
+- da
+- is
 links:
-- url: http://www.beac.st/
+- url: https://barents-council.org/
   type: website
+- url: https://en.wikipedia.org/wiki/Barents_Euro-Arctic_Council
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4426190
   type: wikidata
-name: Barents Euro-Arctic council
+acronyms:
+- lang: en
+  value: BEAC
+- lang: ru
+  value: СБЕР
+legal_status: intergovernmental
+recognition_status: Established by the Kirkenes Declaration of 11 January 1993; operates alongside the interregional Barents Regional Council
+headquarters:
+  city: Kirkenes
+  country: 'NO'
+  coordinates:
+    lat: 69.643816
+    lng: 18.94854
+secretariat:
+  location: Kirkenes
+  organization: International Barents Secretariat
+membership_count: 6
+description: Intergovernmental forum for cooperation among Denmark, Finland, Iceland, Norway, Sweden, and the European Union in the Barents Euro-Arctic Region. Founded through the Kirkenes Declaration on 11 January 1993 to promote sustainable development and cross-border regional cooperation. The International Barents Secretariat in Kirkenes, established in 2008, provides technical support for BEAC and the Barents Regional Council.
+tags:
+- BEAC
+- BEACST
+- arctic
+- barents
+- cooperation
+- euro
+- intorg
+- intergovernmental
+- nordic
+- regional
+- regional_cooperation
+topics:
+- key: economy
+  name: Economy
+- key: environment
+  name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: DK
   name: Denmark
@@ -27,26 +79,19 @@ includes:
   name: Norway
   type: country
   status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
 - id: SE
   name: Sweden
   type: country
   status: member
-membership_count: 6
-description: The Barents Euro-Arctic Council is an international organization that
-  is used to promote regional cooperation in the Euro-Arctic region.
-tags:
-- BEACST
-- arctic
-- barents
-- euro
-- intorg
-topics:
-- key: economy
-  name: Economy
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+  left: '2023'
 wikidata_id: Q4426190
 other_names:
 - id: zh
@@ -57,11 +102,11 @@ other_names:
   name: Coopération de Barents
 - id: ru
   name: Совет Баренцева/Евроарктического региона
-acronyms:
-- lang: en
-  value: BEAC
-- lang: ru
-  value: СБЕР
+official_documents:
+- url: https://barents-council.org/files/459_doc_KirkenesDeclaration.pdf
+  type: founding_declaration
+notes: Russia participated from the 1993 Kirkenes Declaration until formally withdrawing from Barents cooperation in 2023. Nine countries attend as observers (Canada, France, Germany, Italy, Japan, Netherlands, Poland, United Kingdom, United States).
+last_verified: '2026-07-12'
 provenance:
 - field: acronyms
   source: Wikidata
@@ -69,8 +114,28 @@ provenance:
   url: https://www.wikidata.org/
   license: CC0
 - field: founded
+  source: Kirkenes Declaration
+  retrieved_at: '2026-07-12'
+  url: https://barents-council.org/files/459_doc_KirkenesDeclaration.pdf
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4426190
   license: CC0
-founded: '1993-00-00'
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://barents-council.org/about-us/cooperation-in-the-barents-euro-arctic-region
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://barents-council.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Barents_Euro-Arctic_Council
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4426190
+  license: CC0

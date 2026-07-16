@@ -1,247 +1,329 @@
 id: CGIARFUND
+name: CGIAR Trust Fund
 blocktype:
 - intorg
+- bank
+- research
+- agriculture
 status: formal
-partof: CGIAR
+founded: '2010'
+active_period:
+  start: '2017-03-01'
+geographic_scope: global
+regions:
+- Global
+partof:
+  id: CGIAR
+  name: CGIAR (Consultative Group on International Agricultural Research)
 languages:
 - en
 links:
-- url: http://www.cgiarfund.org
+- url: https://www.cgiar.org/funders/trust-fund
   type: website
-name: CGIAR Fund
+- url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+  type: website
+- url: https://www.cgiar.org/funders/
+  type: website
+acronyms:
+- lang: en
+  value: CGIAR Fund
+legal_status: financial intermediary fund
+recognition_status: Multi-donor trust fund administered by the World Bank as Trustee and governed by the CGIAR System Council; the current Financial Intermediary Fund (FIF) was established in March 2017, replacing the 2010 FIF following CGIAR System governance reforms.
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.8989
+    lng: -77.0425
+membership_count: 56
+description: Multi-donor trust fund that pools contributions from national governments, development agencies, and foundations to finance CGIAR agricultural research and system functions. Established as a World Bank Financial Intermediary Fund (FIF) in 2010 and reconstituted in March 2017 under a Trustee Agreement between the World Bank and the CGIAR System Organization. Governed by the CGIAR System Council, the Fund channels resources through three complementary windows — Window 1 (unrestricted portfolio funding), Window 2 (donor-designated program investments), and Window 3 (donor-designated center projects). Supports CGIAR Research Centers and research initiatives aligned with the CGIAR 2030 Research and Innovation Strategy.
+tags:
+- CGIAR
+- CGIARFUND
+- agriculture
+- bank
+- development
+- finance
+- fund
+- intorg
+- research
+- trust-fund
+- world-bank
+topics:
+- key: agriculture
+  name: Agriculture
+- key: finance
+  name: Finance
+- key: research
+  name: Research
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: funder
 - id: AT
   name: Austria
   type: country
-  status: member
+  status: funder
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: funder
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: funder
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: funder
 - id: BI
   name: Burundi
   type: country
-  status: member
+  status: funder
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: funder
 - id: TD
   name: Chad
   type: country
-  status: member
+  status: funder
 - id: CN
   name: China
   type: country
-  status: member
+  status: funder
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: funder
 - id: CD
   name: Congo, The Democratic Republic of the
   type: country
-  status: member
+  status: funder
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: funder
 - id: EG
   name: Egypt
   type: country
-  status: member
+  status: funder
 - id: ET
   name: Ethiopia
   type: country
-  status: member
+  status: funder
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: funder
 - id: FR
   name: France
   type: country
-  status: member
+  status: funder
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: funder
 - id: GH
   name: Ghana
   type: country
-  status: member
+  status: funder
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: funder
 - id: IN
   name: India
   type: country
-  status: member
+  status: funder
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: funder
 - id: IR
   name: Iran, Islamic Rep.
   type: country
-  status: member
+  status: funder
 - id: IE
   name: Ireland
   type: country
-  status: member
+  status: funder
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: funder
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: funder
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: funder
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: funder
 - id: KR
   name: Republic of Korea
   type: country
-  status: member
+  status: funder
 - id: LS
   name: Lesotho
   type: country
-  status: member
+  status: funder
 - id: LR
   name: Liberia
   type: country
-  status: member
+  status: funder
 - id: LY
   name: Libya
   type: country
-  status: member
+  status: funder
 - id: LU
   name: Luxembourg
   type: country
-  status: member
+  status: funder
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: funder
 - id: ML
   name: Mali
   type: country
-  status: member
+  status: funder
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: funder
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: funder
 - id: NP
   name: Nepal
   type: country
-  status: member
+  status: funder
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: funder
 - id: NG
   name: Nigeria
   type: country
-  status: member
+  status: funder
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: funder
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: funder
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: funder
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: funder
 - id: PT
   name: Portugal
   type: country
-  status: member
+  status: funder
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: funder
 - id: RW
   name: Rwanda
   type: country
-  status: member
+  status: funder
 - id: ZA
   name: South Africa
   type: country
-  status: member
+  status: funder
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: funder
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: funder
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: funder
 - id: TZ
   name: Tanzania
   type: country
-  status: member
+  status: funder
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: funder
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: funder
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: funder
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: funder
 - id: US
   name: United States
   type: country
-  status: member
-membership_count: 56
-description: The CGIAR Fund is an international organization that is used to promote regional cooperation in the financial cooperation sector.
-tags:
-- CGIARFUND
-- bank
-- finance
-- fund
-- intorg
-topics:
-- key: finance
-  name: Finance
+  status: funder
+other_names:
+- id: en
+  name: CGIAR Fund
+notes: The original CGIAR Fund FIF was established in 2010; the current FIF dates from March 2017 following CGIAR System governance reorganization. Funders may also contribute bilaterally to CGIAR Research Centers outside the Trust Fund. The funder list reflects historical and current sovereign contributors documented in CGIAR funding materials; verify against the CGIAR Funders page for the latest roster.
+last_verified: '2026-07-12'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cgiar.org/funders/trust-fund
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cgiar.org/funders/trust-fund
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cgiar.org/funders/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cgiar.org/funders/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cgiar.org/funders/

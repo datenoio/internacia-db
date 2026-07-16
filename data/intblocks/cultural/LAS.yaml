@@ -1,17 +1,39 @@
 id: LAS
+name: League of Arab States
 blocktype:
 - cultural
 - political
 status: formal
+founded: '1945-03-22'
+active_period:
+  start: '1945-03-22'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
 - ar
 - en
+- fr
 links:
 - url: https://www.lasportal.org/
   type: website
 - url: https://en.wikipedia.org/wiki/League_of_Arab_States
   type: wikipedia
-name: League of Arab States
+- url: https://www.wikidata.org/wiki/Q7172
+  type: wikidata
+legal_status: intergovernmental
+recognition_status: Intergovernmental regional organization of Arab states established by the 1945 Alexandria Protocol and Arab League Charter; coordinates joint political, economic, cultural, and social policy among its 22 member governments
+headquarters:
+  city: Cairo
+  country: EG
+  coordinates:
+    lat: 30.044167
+    lng: 31.234722
+secretariat:
+  location: Cairo, Egypt
+  head: Secretary-General
+  organization: League of Arab States
 includes:
 - id: DZ
   name: Algeria
@@ -101,16 +123,34 @@ includes:
   name: Yemen
   type: country
   status: member
+acronyms:
+- lang: en
+  value: LAS
+- lang: de
+  value: LAS
+- lang: ru
+  value: ЛАГ
+- lang: zh
+  value: 阿盟
 membership_count: 22
-description: League of Arab States is an international cultural body with 22 members.
+wikidata_id: Q7172
+description: Regional intergovernmental organization of 22 Arab states founded in Cairo on 22 March 1945 to strengthen political, economic, cultural, and social cooperation across the Arab world. Headquartered in Cairo, the League coordinates joint policy on security, economics, Palestine, and pan-Arab cultural exchange, and oversees specialized agencies including ALECSO, the Council of Arab Economic Unity, and the Arab Monetary Fund.
+notes: The Alexandria Protocol (October 1944) and Arab League Charter (22 March 1945) established the organization with founding members Egypt, Iraq, Jordan, Lebanon, Saudi Arabia, and Syria; membership later expanded to 22 states. Palestine has been a full member since 1976. Syria's membership has been suspended since November 2011. Observer states include Armenia, Brazil, Eritrea, India, and Venezuela.
+last_verified: '2026-07-12'
 tags:
 - LAS
 - arab
+- arab-league
 - cooperation
 - cultural
 - culture
+- diplomacy
 - education
+- intergovernmental
 - league
+- middle_east
+- north_africa
+- pan-arab
 - political
 - regional
 - regional_cooperation
@@ -125,19 +165,79 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q7172
+other_names:
+- id: ar
+  name: جامعة الدول العربية
+- id: en
+  name: Arab League
+- id: fr
+  name: Ligue arabe
+- id: es
+  name: Liga Árabe
+- id: de
+  name: Arabische Liga
+- id: ru
+  name: Лига арабских государств
+- id: zh
+  name: 阿拉伯国家联盟
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q7172
   license: CC0
-founded: '1945-03-22'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q7172
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q7172
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q7172
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q7172
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q2086335
+  license: CC0
+- field: includes
+  source: Arab League membership
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/League_of_Arab_States
+  license: CC BY-SA 4.0

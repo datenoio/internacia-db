@@ -47,7 +47,7 @@ crosswalks, and distribution.
 ## 3. What the Product Does Well Today (feature review)
 
 - **Multi-format export** (JSONL/YAML/Parquet/DuckDB, zstd-22) from a single `scripts/builder.py`.
-- **Two governed datasets**: countries (252) and intblocks (1,057) now both have schema +
+- **Two governed datasets**: countries (256) and intblocks (1,071) now both have schema +
   completeness + manifest + CI validation (intblocks reached parity in v1.3.0).
 - **Rich query surface via SDK**: lookup by code/iso3/numeric; filter by region, income,
   continent, currency, language, blocktype, member, acronym, tag, topic, founded year; and

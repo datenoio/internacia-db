@@ -2,6 +2,11 @@ id: SSA
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
 name: Sub-Saharan Africa (developing only)
 includes:
 - id: AO
@@ -193,8 +198,9 @@ includes:
   type: country
   status: member
 membership_count: 47
-description: Sub-Saharan Africa (developing only) is an international wbgroup body
-  with 47 members.
+geographic_scope: regional
+description: World Bank analytical grouping for Sub-Saharan Africa (developing only),
+  used in World Development Indicators.
 tags:
 - SSA
 - africa
@@ -212,7 +218,35 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: SSA
+other_names:
+- id: en
+  name: Sub-Saharan Africa (developing only)
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: acronyms
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: other_names
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+last_verified: '2026-07-13'

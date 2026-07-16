@@ -1,82 +1,106 @@
 id: OAPEC
+name: Organization of Arab Petroleum Exporting Countries
 blocktype:
 - energy
 status: formal
+founded: '1968-01-09'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
 - ar
 - en
 links:
 - url: http://www.oapecorg.org/
   type: website
+- url: https://oapecorg.org/Home/About-Us/History
+  type: website
+- url: https://oapecorg.org/Home/About-Us/Member-Countries
+  type: website
 - url: https://en.wikipedia.org/wiki/Organization_of_Arab_Petroleum_Exporting_Countries
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1052077
   type: wikidata
-name: Organization of Arab Petroleum Exporting Countries
-founded: '1968'
 headquarters:
   city: Kuwait
   country: KW
   coordinates:
     lat: 29.166667
     lng: 47.6
+legal_status: intergovernmental
+recognition_status: Regional intergovernmental organization established by agreement signed in Beirut, Lebanon on 9 January 1968 by Kuwait, Libya, and Saudi Arabia; domiciled in Kuwait; membership expanded to eleven countries by 1982; Tunisia's rights and obligations suspended since 1986 pending possible reactivation; at the 113th Ministerial Council Meeting in December 2024, members approved rebranding as the Arab Energy Organization (AEO) to broaden scope to conventional and renewable energy
+secretariat:
+  location: Kuwait, Kuwait
+  head: Secretary General
+  organization: Organization of Arab Petroleum Exporting Countries
+founding_members:
+- KW
+- LY
+- SA
 includes:
 - id: DZ
   name: Algeria
   type: country
   status: member
+  joined: '1970'
 - id: BH
   name: Bahrain
   type: country
   status: member
+  joined: '1970'
 - id: EG
   name: Egypt
   type: country
   status: member
+  joined: '1973'
 - id: IQ
   name: Iraq
   type: country
   status: member
+  joined: '1972'
 - id: KW
   name: Kuwait
   type: country
   status: member
+  joined: '1968'
 - id: LY
   name: Libya
   type: country
   status: member
+  joined: '1968'
 - id: QA
   name: Qatar
   type: country
   status: member
+  joined: '1970'
 - id: SA
   name: Saudi Arabia
   type: country
   status: member
+  joined: '1968'
 - id: SY
   name: Syria
   type: country
   status: member
+  joined: '1972'
 - id: AE
   name: United Arab Emirates
   type: country
   status: member
+  joined: '1970'
 membership_count: 10
-wikidata_id: Q1052077
-description: Organization of Arab Petroleum Exporting Countries is an international
-  energy body with 10 members.
+description: Regional intergovernmental organization coordinating energy policy among Arab oil-producing states. Founded in Beirut in 1968 by Kuwait, Libya, and Saudi Arabia, OAPEC promotes cooperation in petroleum development, safeguards members' interests in the oil industry, and sponsors joint ventures and the Arab Center for Energy Studies. Six of its ten active members are also OPEC members. At the December 2024 Ministerial Council Meeting, members approved rebranding as the Arab Energy Organization (AEO) to expand focus beyond petroleum to all energy sectors including renewables.
 tags:
 - OAPEC
 - arab
-- commerce
-- economy
 - energy
-- environment
-- nature
+- hydrocarbons
+- intergovernmental
+- international
 - oil
-- organization
 - petroleum
-- trade
+- regional
 topics:
 - key: economy
   name: Economy
@@ -84,8 +108,8 @@ topics:
   name: Energy
 - key: environment
   name: Environment
-- key: trade
-  name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: منظمة الأقطار العربية المصدرة للبترول
@@ -103,24 +127,6 @@ other_names:
   name: Организация арабских стран-экспортёров нефти
 - id: zh
   name: 阿拉伯石油输出国组织
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.oapecorg.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
 acronyms:
 - lang: en
   value: OAPEC
@@ -142,3 +148,58 @@ acronyms:
   value: OPAEP
 - lang: pt
   value: OAPEC
+notes: Tunisia joined in 1982 but its rights and obligations were suspended in 1986 after requesting withdrawal; membership remains open for reactivation. Egypt was expelled in 1979 after signing the Camp David Accords and readmitted in 1989. OAPEC organs include the Council of Ministers, Executive Bureau, General Secretariat, and Judicial Tribunal (established 1980). The Arab Energy Conference merged with the Arab Petroleum Congress in 1982.
+wikidata_id: Q1052077
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://oapecorg.org/Home/About-Us/History
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1052077
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1052077
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1052077
+  license: CC0

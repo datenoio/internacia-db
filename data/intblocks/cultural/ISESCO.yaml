@@ -1,19 +1,49 @@
 id: ISESCO
+name: Islamic World Educational, Scientific and Cultural Organization
 blocktype:
 - cultural
 - education
+- intorg
 - scientific
 status: formal
+founded: '1979-05'
+active_period:
+  start: '1979-05-00'
+geographic_scope: global
+regions:
+- Africa
+- Middle East
+- Asia
+- Latin America
+partof: OIC
 languages:
 - ar
 - en
 - fr
 links:
-- url: https://www.isesco.org.ma/
+- url: https://www.icesco.org/en/
   type: website
-- url: https://en.wikipedia.org/wiki/Islamic_Educational,_Scientific_and_Cultural_Organization
+- url: https://en.wikipedia.org/wiki/Islamic_World_Educational,_Scientific_and_Cultural_Organization
   type: wikipedia
-name: Islamic Educational, Scientific and Cultural Organization
+- url: https://www.wikidata.org/wiki/Q1264411
+  type: wikidata
+headquarters:
+  city: Rabat
+  country: MA
+  coordinates:
+    lat: 34.021111111111
+    lng: -6.841388888889
+legal_status: intergovernmental
+recognition_status: Specialized institution of the Organisation of Islamic Cooperation (OIC) concerned with education, science, culture, and communication; full OIC member states become ICESCO members upon signing the Charter and completing membership formalities
+secretariat:
+  location: Rabat, Morocco
+  head: Director-General
+  organization: Islamic World Educational, Scientific and Cultural Organization
+acronyms:
+- lang: en
+  value: ICESCO
+- lang: en
+  value: ISESCO
 includes:
 - id: AF
   name: Afghanistan
@@ -243,36 +273,102 @@ includes:
   name: Thailand
   type: country
   status: observer
-membership_count: 54
-description: Islamic Educational, Scientific and Cultural Organization is an international
-  cultural body with 54 members.
+membership_count: 53
+description: Specialized institution of the Organisation of Islamic Cooperation headquartered in Rabat, Morocco, that strengthens cooperation among member states in education, science, culture, and communication across the Islamic world. Founded by the OIC in May 1979 and renamed the Islamic World Educational, Scientific and Cultural Organization (ICESCO) in January 2020, it promotes dialogue among civilizations, preserves cultural identity, and supports the contribution of Islamic culture to world civilization through specialized centers, ministerial conferences, and programs spanning education, science and environment, social sciences, and culture and communication.
 tags:
+- ICESCO
 - ISESCO
+- africa
+- asia
+- communication
 - cultural
 - culture
 - education
 - educational
+- global
+- intergovernmental
 - islamic
+- latin_america
+- middle_east
+- oic
 - scientific
-- university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
+- key: science
+  name: Science
+- key: communication
+  name: Communication
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: ar
+  name: منظمة العالم الإسلامي للتربية والعلوم والثقافة
+- id: en
+  name: Islamic World Educational, Scientific and Cultural Organization
+- id: fr
+  name: Organisation du Monde Islamique pour l'Éducation, les Sciences et la Culture
 wikidata_id: Q1264411
+notes: Renamed from Islamic Educational, Scientific and Cultural Organization (ISESCO) to Islamic World Educational, Scientific and Cultural Organization (ICESCO) at the 40th Executive Council session in Abu Dhabi on 30 January 2020. Governed by a General Conference (every three years), an Executive Council, and a General Directorate headed by the Director-General. Operates specialized centers for translation and publishing, foresight and AI, civilizational dialogue, Arabic for non-Arabic speakers, chairs and prizes, and heritage in the Islamic world.
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1264411
   license: CC0
-founded: '1979-05-00'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1264411
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icesco.org/en/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icesco.org/en/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Islamic_World_Educational,_Scientific_and_Cultural_Organization
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icesco.org/en/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1264411
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1264411
+  license: CC0
+- field: active_period
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1264411
+  license: CC0
+- field: partof
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1264411
+  license: CC0
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icesco.org/en/
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-06-15'
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.icesco.org/en/

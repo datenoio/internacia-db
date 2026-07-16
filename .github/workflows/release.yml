@@ -33,6 +33,9 @@ jobs:
       - name: Build all dataset formats
         run: python scripts/builder.py build
 
+      - name: Check artifact consistency
+        run: python scripts/check_generated_artifacts.py
+
       - name: Create GitHub release with dataset assets
         uses: softprops/action-gh-release@v2
         with:
@@ -53,5 +56,6 @@ jobs:
             data/datasets/blocktypes.jsonl.zst
             data/datasets/blocktypes.yaml.zst
             data/datasets/blocktypes.parquet
+            data/datasets/blocktypes.manifest.json
             data/datasets/blocktypes.meta.json
             data/datasets/internacia.duckdb

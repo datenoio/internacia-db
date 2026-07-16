@@ -1,28 +1,46 @@
 id: MI
+name: Mission Innovation
 blocktype:
 - energy
 status: formal
+founded: '2015'
+active_period:
+  start: '2015'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://mission-innovation.net/
   type: website
+- url: https://mission-innovation.net/about/
+  type: website
+- url: https://www.mission-innovation.net/our-members/
+  type: website
 - url: https://en.wikipedia.org/wiki/Mission_Innovation
   type: wikipedia
-name: Mission Innovation
-founded: '2015'
+- url: https://www.wikidata.org/wiki/Q22317556
+  type: wikidata
 headquarters:
-  city: London
-  country: GB
+  city: Paris
+  country: FR
   coordinates:
-    lat: 51.507222222222
-    lng: -0.1275
-geographic_scope: global
-regions:
-- worldwide
+    lat: 48.856666666667
+    lng: 2.3522222222222
+legal_status: intergovernmental
+recognition_status: Global government initiative launched at COP21 in Paris on 30 November 2015 by 20 founding governments committed to doubling clean energy research and development investment over five years; Mission Innovation 2.0 relaunched on 2 June 2021 with action-oriented Missions and an Innovation Platform; member governments approved hosting the Secretariat at the International Energy Agency headquarters in Paris
+secretariat:
+  location: Paris, France
+  head: Head of MI Secretariat
+  organization: Mission Innovation Secretariat (hosted by the International Energy Agency)
 includes:
 - id: AU
   name: Australia
+  type: country
+  status: member
+- id: AT
+  name: Austria
   type: country
   status: member
 - id: BR
@@ -45,20 +63,16 @@ includes:
   name: Denmark
   type: country
   status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
 - id: FR
   name: France
   type: country
   status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
   type: country
   status: member
 - id: IT
@@ -73,10 +87,14 @@ includes:
   name: Korea, Republic of
   type: country
   status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: observer
 - id: NL
   name: Netherlands
   type: country
@@ -87,6 +105,14 @@ includes:
   status: member
 - id: SA
   name: Saudi Arabia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: SE
+  name: Sweden
   type: country
   status: member
 - id: AE
@@ -106,12 +132,11 @@ includes:
   type: organization
   status: member
 membership_count: 23
-legal_status: intergovernmental
-description: Global initiative aimed at accelerating public and private clean energy innovation to address climate change,
-  make clean energy widely affordable, and create green jobs. Mission Innovation (MI) was launched on November 30, 2015, during
-  the COP21 conference in Paris. MI members have committed to doubling their clean energy research and development investments
-  over five years. The initiative includes 23 countries and the European Commission, representing over 80% of global clean
-  energy R&D investments. MI works to accelerate clean energy transitions and innovation through international collaboration.
+description: Global government initiative to catalyse action and investment in research, development, and demonstration to make
+  clean energy affordable, attractive, and accessible. Launched at COP21 in November 2015, Mission Innovation (MI) comprises
+  22 countries and the European Commission, representing a large share of global clean energy R&D investment. MI 2.0, launched
+  in June 2021, coordinates public-private Missions and an Innovation Platform to accelerate progress toward Paris Agreement
+  goals and net-zero pathways. The Secretariat is hosted by the International Energy Agency in Paris, France.
 tags:
 - MI
 - clean_energy
@@ -132,6 +157,8 @@ topics:
   name: Environment
 - key: renewable
   name: Renewable Energy
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: en
   name: Mission Innovation
@@ -143,16 +170,65 @@ other_names:
   name: Misión Innovación
 - id: zh
   name: 创新使命
+acronyms:
+- lang: en
+  value: MI
+notes: Founding launch at COP21 on 30 November 2015 alongside the Breakthrough Energy initiative. MI 2.0 (June 2021) introduced
+  public-private Missions and an Innovation Platform with Insights, Collaborate, and Accelerate modules. Ministerial meetings
+  are held annually and often co-located with the Clean Energy Ministerial. Mexico holds observer status. Partner organisations
+  include UNIDO (joined August 2025 at MI-10 in Korea), the EIB Group (joined at MI-8 in Dubai), and the World Economic
+  Forum. The Secretariat previously operated with UK government support before member governments approved IEA hosting in
+  Paris in early 2026.
+wikidata_id: Q22317556
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://mission-innovation.net/
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://mission-innovation.net/
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/news/iea-to-host-mission-innovation-secretariat-in-step-to-enhance-international-energy-technology-cooperation
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://mission-innovation.net/
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/news/iea-to-host-mission-innovation-secretariat-in-step-to-enhance-international-energy-technology-cooperation
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.mission-innovation.net/our-members/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://mission-innovation.net/about/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q22317556
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q22317556
+  license: CC0

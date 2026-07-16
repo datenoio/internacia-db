@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "internacia-builder"
-version = "0.0.0"
+version = "1.6.0"
 description = "Build, validation, and enrichment tooling for internacia-db"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -23,6 +23,8 @@ dependencies = [
 [project.scripts]
 internacia-validate-countries = "internacia_builder.cli:validate_countries"
 internacia-validate-intblocks = "internacia_builder.cli:validate_intblocks"
+internacia-build = "internacia_builder.build:main"
+internacia-analyze-quality = "internacia_builder.quality:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

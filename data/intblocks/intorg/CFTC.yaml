@@ -1,11 +1,60 @@
 id: CFTC
+name: Commonwealth Fund for Technical Co-operation
 blocktype:
 - intorg
+- development
 status: formal
-partof: COMMONWEALTH
+founded: '1971'
+active_period:
+  start: '1971-04-01'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
+- Oceania
+partof:
+  id: COMMONWEALTH
+  name: Commonwealth of Nations
 languages:
 - en
-name: Commonwealth Fund for Technical Co-operation
+links:
+- url: https://thecommonwealth.org/our-work/commonwealth-fund-technical-co-operation-cftc
+  type: website
+- url: https://uia.org/s/or/en/1100058842
+  type: website
+acronyms:
+- lang: en
+  value: CFTC
+legal_status: multilateral development fund
+recognition_status: Established by Commonwealth agreement in 1971 as a multilateral development fund within the Commonwealth Secretariat; principal mechanism through which the Secretariat delivers demand-driven technical cooperation to developing member countries and Commonwealth regional organisations
+headquarters:
+  city: Marlborough House
+  country: GB
+  coordinates:
+    lat: 51.505
+    lng: -0.13583333333333
+membership_count: 55
+description: Multilateral development fund established in 1971 and managed within the Commonwealth Secretariat at Marlborough House in London. Financed by voluntary contributions from Commonwealth member governments, it delivers demand-driven technical assistance — including expert deployments, training, research, and capacity-building — to developing member countries and Commonwealth regional organisations. Emphasises south-south cooperation and country ownership in support of sustainable development, governance, and poverty reduction.
+tags:
+- CFTC
+- commonwealth
+- development
+- finance
+- fund
+- intorg
+- london
+- secretariat
+- technical
+- technical-cooperation
+topics:
+- key: development
+  name: Development
+- key: finance
+  name: Finance
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: CA
   name: Canada
@@ -227,16 +276,33 @@ includes:
   name: Eswatini
   type: country
   status: member
-membership_count: 55
-description: The Commonwealth Fund for Technical Co-operation is an international organization that is used to promote regional cooperation in the technical cooperation sector.
-tags:
-- CFTC
-- bank
-- commonwealth
-- finance
-- fund
-- intorg
-- technical
-topics:
-- key: finance
-  name: Finance
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://thecommonwealth.org/our-work/commonwealth-fund-technical-co-operation-cftc
+- field: legal_status
+  source: UIA
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100058842
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://thecommonwealth.org/news/archive-birth-commonwealth-fund-technical-co-operation
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://thecommonwealth.org/our-work/commonwealth-fund-technical-co-operation-cftc
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://thecommonwealth.org/our-work/commonwealth-fund-technical-co-operation-cftc
+- field: founded
+  source: UIA
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100058842
+- field: active_period
+  source: UIA
+  retrieved_at: '2026-07-12'
+  url: https://uia.org/s/or/en/1100058842
+last_verified: '2026-07-12'

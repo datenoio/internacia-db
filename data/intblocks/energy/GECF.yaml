@@ -1,15 +1,45 @@
 id: GECF
+name: Gas Exporting Countries Forum
 blocktype:
 - energy
 status: formal
+founded: '2001-05-19'
+active_period:
+  start: '2008-12-23'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- South America
 languages:
 - en
+- ar
+- es
+- fr
+- ru
 links:
+- url: https://www.gecf.org/
+  type: website
+- url: https://www.gecf.org/About-Us/Overview
+  type: website
 - url: https://en.wikipedia.org/wiki/Gas_Exporting_Countries_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1031255
   type: wikidata
-name: Gas Exporting Countries Forum
+headquarters:
+  city: Doha
+  country: QA
+  coordinates:
+    lat: 25.286205555555554
+    lng: 51.52943611111111
+legal_status: intergovernmental
+recognition_status: Originally established as an informal forum at the inaugural Ministerial Meeting in Tehran on 19–20 May 2001; officially constituted as a full-fledged international intergovernmental organization at the 7th Ministerial Meeting in Moscow on 23 December 2008 with adoption of the GECF Agreement and Statute; headquarters in Doha, Qatar
+secretariat:
+  location: Doha, Qatar
+  head: Secretary General
+  organization: Gas Exporting Countries Forum Secretariat
 includes:
 - id: DZ
   name: Algeria
@@ -59,32 +89,56 @@ includes:
   name: Venezuela
   type: country
   status: member
-founded: '2001'
-headquarters:
-  city: Doha
-  country: QA
-  coordinates:
-    lat: 25.286205555555554
-    lng: 51.52943611111111
+- id: AO
+  name: Angola
+  type: country
+  status: observer
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: observer
+- id: IQ
+  name: Iraq
+  type: country
+  status: observer
+- id: MY
+  name: Malaysia
+  type: country
+  status: observer
+- id: MR
+  name: Mauritania
+  type: country
+  status: observer
+- id: MZ
+  name: Mozambique
+  type: country
+  status: observer
+- id: PE
+  name: Peru
+  type: country
+  status: observer
+- id: SN
+  name: Senegal
+  type: country
+  status: observer
 membership_count: 12
 wikidata_id: Q1031255
-description: International forum focused on economic cooperation.
+description: International intergovernmental organization of leading natural gas-exporting countries, providing a platform for exchanging experience and information and fostering dialogue between gas producers and consumers. Established at the inaugural Ministerial Meeting in Tehran in May 2001 and constituted as a formal organization in Moscow in December 2008, the GECF Secretariat is headquartered in Doha, Qatar. Member countries collectively hold about 70% of the world's proven natural gas reserves and account for a major share of global gas production and LNG exports.
 tags:
 - GECF
-- commerce
-- countries
-- economy
 - energy
+- natural_gas
+- LNG
+- intergovernmental
+- international
+- gas_exports
+- cooperation
 - environment
-- exporting
-- nature
-- oil
-- trade
 topics:
-- key: economy
-  name: Economy
 - key: energy
   name: Energy
+- key: economy
+  name: Economy
 - key: environment
   name: Environment
 - key: trade
@@ -104,21 +158,6 @@ other_names:
   name: Форум стран-экспортёров газа
 - id: zh
   name: 天然气输出国论坛
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Gas_Exporting_Countries_Forum
 acronyms:
 - lang: en
   value: GECF
@@ -128,3 +167,61 @@ acronyms:
   value: ФСЭГ
 - lang: de
   value: GEFC
+notes: The 2001 Tehran meeting announced a forum among Algeria, Brunei Darussalam, Indonesia, Iran, Malaysia, Nigeria, Oman, Qatar, Russia, and Turkmenistan, with Norway as an observer. The United Arab Emirates upgraded from observer to full member. Observer members as of 2026 are Angola, Azerbaijan, Iraq, Malaysia, Mauritania, Mozambique, Peru, and Senegal. Governance comprises the Ministerial Meeting, Executive Board, and Secretariat. English is the official language of the Forum.
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Overview
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Overview
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/Portals/0/PDF/GECF%20Agreement%20and%20Statute2025.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Secretary-General
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Secretary-General
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Secretary-General
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Secretary-General
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Secretary-General
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/About-Us/Overview
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.gecf.org/Portals/0/PDF/GECF%20Agreement%20and%20Statute2025.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1031255
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1031255
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q1031255
+  license: CC0

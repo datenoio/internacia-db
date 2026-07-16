@@ -1,25 +1,41 @@
 id: WWEA
+name: World Wind Energy Association
 blocktype:
 - energy
 status: formal
+founded: '2001-07-01'
+active_period:
+  start: '2001-07-01'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://www.wwindea.org/
   type: website
+- url: https://www.wwindea.org/organisation/mission
+  type: website
+- url: https://www.wwindea.org/organisation/head-office
+  type: website
+- url: https://www.wwindea.org/membership
+  type: website
 - url: https://en.wikipedia.org/wiki/World_Wind_Energy_Association
   type: wikipedia
-name: World Wind Energy Association
-founded: '2001'
+- url: https://www.wikidata.org/wiki/Q325096
+  type: wikidata
 headquarters:
   city: Bonn
   country: DE
   coordinates:
     lat: 50.721111111111
     lng: 7.1186111111111
-geographic_scope: global
-regions:
-- worldwide
+legal_status: ngo
+recognition_status: International non-profit association founded on 1 July 2001 in Copenhagen, Denmark, at a meeting preparing the first World Wind Energy Conference; headquarters relocated to Bonn, Germany in 2003 near the UN Campus; membership spans national wind energy associations, scientific institutions, companies, and individuals in approximately 100 countries
+secretariat:
+  location: Bonn, Germany
+  head: Secretary General
+  organization: World Wind Energy Association Secretariat
 includes:
 - id: CN
   name: China
@@ -150,7 +166,6 @@ includes:
   type: country
   status: member
 membership_count: 600
-legal_status: ngo
 description: International non-profit organization dedicated to promoting wind energy worldwide. The World Wind Energy Association
   (WWEA) provides a platform for communication among wind energy stakeholders, advises national governments and international
   organizations, and enhances international technology transfer. WWEA has over 600 members across approximately 100 countries,
@@ -186,16 +201,61 @@ other_names:
   name: Asociación Mundial de Energía Eólica
 - id: zh
   name: 世界风能协会
+acronyms:
+- lang: en
+  value: WWEA
+notes: Founded in Copenhagen on 1 July 2001; Dr. Preben Maegaard served as founding president and Stefan Gsänger as secretary
+  general. Headquarters moved to Bonn in 2003 at Charles-de-Gaulle-Str. 5, 53113, near the UN Campus. Governance includes
+  a board with a president, vice presidents, and a secretary general leading the secretariat.
+wikidata_id: Q325096
+last_verified: '2026-07-13'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.wwindea.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/organisation/mission
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.wwindea.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/organisation/mission
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/organisation/mission
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://international.bonn.de/international-profile/guest-contributions/20-years-wwea.php
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/organisation/head-office
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/organisation/head-office
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
   url: https://www.wwindea.org/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/membership
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://international.bonn.de/international-profile/guest-contributions/20-years-wwea.php
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.wwindea.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q325096
+  license: CC0

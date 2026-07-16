@@ -1,8 +1,15 @@
 id: CEMAC
+name: Economic and Monetary Community of Central Africa
 blocktype:
 - customs
 - cuscurr
 status: formal
+founded: '1994-03-16'
+active_period:
+  start: '1999-06-25'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - fr
 links:
@@ -12,42 +19,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1940250
   type: wikidata
-name: Economic and Monetary Community of Central Africa
-includes:
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: CG
-  name: Congo
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-founded: '1999'
+legal_status: treaty_organization
+recognition_status: Treaty-based customs and monetary union established by the Treaty of N'Djamena (16 March 1994); superseded the Customs and Economic Union of Central Africa (UDEAC); six-state customs union sharing the Central African CFA franc (XAF) with a common external tariff; administered by the Commission of CEMAC in Bangui
+secretariat:
+  location: Bangui, Central African Republic
+  organization: Commission of the Economic and Monetary Community of Central Africa
+  head: President of the Commission
 headquarters:
   city: Bangui
   country: CF
   coordinates:
     lat: 4.37325
     lng: 18.562833333333
-geographic_scope: regional
-regions:
-- Africa
 acronyms:
 - lang: en
   value: CEMAC
@@ -64,11 +47,40 @@ founding_members:
 - CF
 - TD
 - CG
-- GQ
 - GA
+includes:
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+  joined: '1964'
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+  joined: '1964'
+- id: TD
+  name: Chad
+  type: country
+  status: member
+  joined: '1964'
+- id: CG
+  name: Congo
+  type: country
+  status: member
+  joined: '1964'
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+  joined: '1983-12-19'
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+  joined: '1964'
 membership_count: 6
 wikidata_id: Q1940250
-legal_status: intergovernmental
 description: Treaty-based intergovernmental organization binding six Central African states that share the Central African
   CFA franc (XAF). Established by the 1994 Treaty of N'Djamena and operational since 1999, when it superseded the Customs
   and Economic Union of Central Africa (UDEAC, founded 1964); promotes economic integration through a customs union with a
@@ -78,6 +90,7 @@ notes: Strong overlap in membership and mandates with ECCAS. Common institutions
   (COBAC) and Central African Financial Market Supervisory Commission (COSUMAF) in Libreville, and Development Bank of the
   Central African States (BDEAC) in Brazzaville. Equatorial Guinea joined in 1983. Full tariff elimination within the bloc
   has been delayed; capital movement is free.
+last_verified: '2026-07-12'
 tags:
 - CEMAC
 - UDEAC
@@ -116,44 +129,62 @@ other_names:
   name: Communauté économique et monétaire de l'Afrique centrale
 - id: pt
   name: Comunidade Económica e Monetária da África Central
+- id: ru
+  name: Центральноафриканское экономическое и валютное сообщество
 - id: zh
   name: 中部非洲经济与货币共同体
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
   license: CC BY-SA 4.0
 - field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/wiki/Q1940250
-  license: CC0
+  source: WIPO Lex
+  retrieved_at: '2026-07-12'
+  url: https://www.wipo.int/wipolex/en/treaties/details/296
+- field: active_period
+  source: WIPO Lex
+  retrieved_at: '2026-07-12'
+  url: https://www.wipo.int/wipolex/en/treaties/details/296
 - field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1940250
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1940250
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q1940250
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.cemac.int/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.cemac.int/
+- field: recognition_status
+  source: WIPO Lex
+  retrieved_at: '2026-07-12'
+  url: https://www.wipo.int/wipolex/en/treaties/details/296
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.cemac.int/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Economic_and_Monetary_Community_of_Central_Africa
+  license: CC BY-SA 4.0

@@ -2,6 +2,11 @@ id: EAS
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://www.worldbank.org/en/region/eap
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
 name: East Asia & Pacific (all income levels)
 includes:
 - id: AS
@@ -149,8 +154,13 @@ includes:
   type: country
   status: member
 membership_count: 36
-description: East Asia & Pacific (all income levels) is an international wbgroup body
-  with 36 members.
+geographic_scope: regional
+regions:
+- East Asia
+- Pacific
+description: World Bank geographic region for economies across East Asia and the Pacific.
+  This analytical variant includes all income levels in the regional aggregate used
+  in World Development Indicators.
 tags:
 - EAS
 - aid
@@ -169,7 +179,44 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: EAS
+other_names:
+- id: ar
+  name: شرق آسيا والمحيط الهادئ
+- id: de
+  name: Ostasien und Pazifik
+- id: en
+  name: East Asia and Pacific
+- id: es
+  name: Asia oriental y Pacífico
+- id: fr
+  name: Asie orientale et Pacifique
+- id: pt
+  name: Ásia Oriental e Pacífico
+- id: ru
+  name: Восточная Азия и Тихоокеанский регион
+- id: zh
+  name: 东亚与太平洋
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: other_names
+  source: World Bank
+  retrieved_at: '2026-07-13'
+  url: https://www.worldbank.org/en/region/eap

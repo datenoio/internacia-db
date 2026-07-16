@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Validate intblock YAML sources: schema, taxonomy, references, completeness."""
+"""Validate intblock YAML sources: schema, taxonomy, references, completeness.
+
+Rule logic lives in :mod:`internacia_builder.validate.intblock_rules` and
+:mod:`internacia_builder.validate.cross_rules`; this module adapts the shared
+issue dicts to CLI error/warning messages and drives the validation run.
+"""
 
 from __future__ import annotations
 
@@ -8,22 +13,22 @@ import re
 from pathlib import Path
 from typing import Any
 
-import jsonschema
 import typer
 import yaml
 
 from internacia_builder.paths import project_root
+from internacia_builder.validate import cross_rules, intblock_rules
+from internacia_builder.validate.completeness import (
+    load_includes_status_catalog,
+    validate_completeness,
+    validate_includes_status,
+    validate_membership_applicability,
+)
+from internacia_builder.validate.intblock_rules import TEMPLATED_DESC_RE as TEMPLATED_DESC
 
 app = typer.Typer(help="Validate internacia-db intblock data")
 
 WIKIDATA = re.compile(r"^Q[1-9][0-9]*$")
-
-# Boilerplate description pattern (kept in sync with enrich_intblocks.py).
-TEMPLATED_DESC = re.compile(
-    r"^\s*(international entity focused on|an? international (organization|entity)|"
-    r"regional (organization|entity) focused on|international organization for)",
-    re.IGNORECASE,
-)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -36,82 +41,66 @@ def load_yaml(path: Path) -> Any:
         return yaml.safe_load(f)
 
 
-def is_null_field(record: dict[str, Any], field: str) -> bool:
-    if field not in record:
-        return True
-    val = record[field]
-    return val is None or val == "" or val == [] or val == {}
-
-
 def validate_schema(record: dict[str, Any], schema: dict[str, Any], rel_path: str) -> list[str]:
-    errors: list[str] = []
-    validator = jsonschema.Draft7Validator(schema)
-    for err in sorted(validator.iter_errors(record), key=lambda e: e.path):
-        path = ".".join(str(p) for p in err.path) or "(root)"
-        errors.append(f"{rel_path}: {path}: {err.message}")
-    return errors
+    return [
+        f"{rel_path}: {issue['field']}: {issue['message']}"
+        for issue in intblock_rules.check_intblock_schema(record, schema)
+    ]
 
 
 def check_duplicate_ids(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
-    errors: list[str] = []
-    seen: dict[str, str] = {}
-    for rel, rec in records:
-        rid = str(rec.get("id", ""))
-        if not rid:
-            continue
-        if rid in seen and seen[rid] != rel:
-            errors.append(f"duplicate id '{rid}' in {rel} and {seen[rid]}")
-        else:
-            seen[rid] = rel
-    return errors
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"duplicate id '{issue['current_value']}' in {issue['file_path']} and {issue['other_path']}"
+        for issue in intblock_rules.check_intblock_duplicates(recs, rel_paths)
+    ]
 
 
 def validate_blocktypes(records: list[tuple[str, dict[str, Any]]], taxonomy: set[str]) -> list[str]:
     """Every blocktype value must exist in the blocktypes taxonomy."""
     errors: list[str] = []
     for rel, rec in records:
-        for bt in rec.get("blocktype") or []:
-            if str(bt) not in taxonomy:
-                errors.append(f"{rel}: unknown blocktype '{bt}'")
+        for issue in intblock_rules.check_intblock_blocktypes(rec, taxonomy):
+            errors.append(f"{rel}: unknown blocktype '{issue['current_value']}'")
+    return errors
+
+
+def validate_filename_ids(records: list[tuple[str, dict[str, Any]]]) -> list[str]:
+    """The YAML filename stem must match the record id exactly, including case."""
+    errors: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_filename(rec, rel):
+            errors.append(f"{rel}: {issue['suggested_action']}")
     return errors
 
 
 def validate_directory_alignment(records: list[tuple[str, dict[str, Any]]]) -> list[str]:
-    """Primary blocktype (first in list) should match parent directory name."""
-    warnings: list[str] = []
+    """The parent category directory name must appear in the record's blocktype list."""
+    errors: list[str] = []
     for rel, rec in records:
-        bts = rec.get("blocktype") or []
-        if not bts:
-            continue
-        parts = rel.split("/")
-        if len(parts) < 3 or parts[0] != "data" or parts[1] != "intblocks":
-            continue
-        dir_name = parts[2]
-        primary = str(bts[0])
-        if primary != dir_name:
-            warnings.append(f"{rel}: primary blocktype '{primary}' does not match directory '{dir_name}'")
-    return warnings
+        for issue in intblock_rules.check_intblock_directory_alignment(rec, rel):
+            errors.append(f"{rel}: {issue['suggested_action']}")
+    return errors
 
 
 def validate_topics(
     records: list[tuple[str, dict[str, Any]]],
     aliases: dict[str, str],
+    catalog: set[str] | None = None,
 ) -> list[str]:
-    """Warn on empty topics or deprecated topic keys."""
+    """Warn on empty topics, deprecated topic keys, and keys missing from the
+    canonical catalog."""
     warnings: list[str] = []
     for rel, rec in records:
         topics = rec.get("topics")
         if topics is None or topics == []:
             warnings.append(f"{rel}: missing topics")
             continue
-        for topic in topics:
-            if not isinstance(topic, dict):
-                continue
-            key = str(topic.get("key") or "")
-            if key in aliases:
-                warnings.append(f"{rel}: deprecated topic '{key}' (use '{aliases[key]}')")
+        for issue in intblock_rules.check_intblock_topics(rec, aliases, catalog):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
     return warnings
 
 
@@ -123,40 +112,121 @@ def load_topic_aliases(path: Path) -> dict[str, str]:
     return {str(k): str(v.get("canonical", "")) for k, v in raw.items() if isinstance(v, dict)}
 
 
+def load_topic_catalog(path: Path) -> set[str]:
+    """Canonical topic keys from data/schemas/topics.yaml."""
+    if not path.exists():
+        return set()
+    data = load_yaml(path) or {}
+    return {str(k) for k in (data.get("topics") or {})}
+
+
 def validate_partof_refs(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
     """partof references should resolve to existing intblock ids (warn-only)."""
-    warnings: list[str] = []
-    known_ids = {str(rec.get("id", "")) for _, rec in records}
-    for rel, rec in records:
-        partof = rec.get("partof")
-        if partof is None:
-            continue
-        if isinstance(partof, str):
-            refs = [partof]
-        elif isinstance(partof, dict):
-            refs = [str(partof.get("id", ""))]
-        elif isinstance(partof, list):
-            refs = [str(p.get("id", "")) if isinstance(p, dict) else str(p) for p in partof]
-        else:
-            continue
-        for ref in refs:
-            if ref and ref not in known_ids:
-                warnings.append(f"{rel}: partof '{ref}' does not match any intblock id")
-    return warnings
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"{issue['file_path']}: partof '{issue['current_value']}' does not match any intblock id"
+        for issue in cross_rules.validate_partof_refs(recs, rel_paths)
+    ]
+
+
+def validate_org_refs(
+    records: list[tuple[str, dict[str, Any]]],
+    alias_names: set[str],
+    allowlist: set[str],
+) -> list[str]:
+    """predecessor/successor/suborganizations references should resolve (warn-only)."""
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_org_refs(recs, rel_paths, alias_names, allowlist)
+    ]
 
 
 def validate_lifecycle(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
-    """Historical entities must use the standard dissolved field, not ad-hoc keys."""
+    """Historical entities must use the standard dissolved field, not ad-hoc keys,
+    and lifecycle status must be consistent with the dissolved date."""
     warnings: list[str] = []
     for rel, rec in records:
-        if "ended" in rec:
-            warnings.append(f"{rel}: uses non-standard 'ended'; use 'dissolved'")
-        if rec.get("dissolved") and rec.get("status") not in ("historical", None):
-            warnings.append(f"{rel}: has dissolved date but status is '{rec.get('status')}', expected 'historical'")
+        for issue in intblock_rules.check_intblock_lifecycle(rec):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_chronology(
+    records: list[tuple[str, dict[str, Any]]],
+) -> list[str]:
+    """founded/dissolved must parse, be ordered, and not lie in the future."""
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_chronology(rec):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_membership_consistency(
+    records: list[tuple[str, dict[str, Any]]],
+    config: dict[str, Any],
+) -> list[str]:
+    """Duplicate includes, membership_count mismatches, contradictory markers."""
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_membership_consistency(rec, config):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_include_dates(
+    records: list[tuple[str, dict[str, Any]]],
+) -> list[str]:
+    """includes[].joined/left date parsing, ordering, and dissolution bounds."""
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_include_dates(rec):
+            warnings.append(f"{rel}: {issue['field']}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_founding_members(
+    records: list[tuple[str, dict[str, Any]]],
+    country_codes: set[str],
+) -> list[str]:
+    """founding_members must resolve to countries and appear in includes."""
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_founding_members(rec, country_codes):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_last_verified(
+    records: list[tuple[str, dict[str, Any]]],
+    config: dict[str, Any],
+) -> list[str]:
+    """Advisory when last_verified is older than the configured maximum age."""
+    max_age = int((config.get("quality") or {}).get("last_verified_max_age_months") or 0)
+    if max_age <= 0:
+        return []
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_last_verified(rec, max_age_months=max_age):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_text_encoding(
+    records: list[tuple[str, dict[str, Any]]],
+) -> list[str]:
+    """Mojibake and control-character detection in name/description."""
+    warnings: list[str] = []
+    for rel, rec in records:
+        for issue in intblock_rules.check_intblock_text_encoding(rec):
+            warnings.append(f"{rel}: {issue['suggested_action']}")
     return warnings
 
 
@@ -166,31 +236,7 @@ def validate_aliases(
 ) -> list[str]:
     """Alias integrity: every target must resolve to an existing intblock id, and
     an alias that collides with a current id must be marked ``disambiguated``."""
-    errors: list[str] = []
-    seen_aliases: set[str] = set()
-    for entry in aliases:
-        if not isinstance(entry, dict):
-            errors.append(f"alias entry is not a mapping: {entry!r}")
-            continue
-        alias = str(entry.get("alias") or "")
-        target = str(entry.get("target") or "")
-        reason = str(entry.get("reason") or "")
-        if not alias or not target:
-            errors.append(f"alias entry missing alias/target: {entry!r}")
-            continue
-        if alias in seen_aliases:
-            errors.append(f"duplicate alias '{alias}'")
-        seen_aliases.add(alias)
-        if reason not in {"renamed", "merged", "disambiguated"}:
-            errors.append(f"alias '{alias}': invalid reason '{reason}'")
-        if target not in known_ids:
-            errors.append(f"alias '{alias}': target '{target}' does not match any intblock id")
-        if alias in known_ids and reason != "disambiguated":
-            errors.append(
-                f"alias '{alias}' collides with a current intblock id; "
-                f"mark reason 'disambiguated' if the acronym was reassigned"
-            )
-    return errors
+    return [issue["suggested_action"] for issue in cross_rules.validate_aliases(aliases, known_ids)]
 
 
 def validate_description_quality(
@@ -214,36 +260,6 @@ def validate_description_quality(
         msg = f"description quality: templated rate {rate:.2%} exceeds max {max_rate:.2%} ({templated}/{n})"
         (errors if mode == "error" else warnings).append(msg)
     return errors, warnings, report
-
-
-def validate_completeness(
-    records: list[dict[str, Any]], config: dict[str, Any]
-) -> tuple[list[str], list[str], dict[str, Any]]:
-    errors: list[str] = []
-    warnings: list[str] = []
-    report_fields: dict[str, Any] = {}
-    n = len(records)
-    if n == 0:
-        return errors, warnings, {"row_count": 0, "fields": report_fields}
-
-    for field, rules in (config.get("fields") or {}).items():
-        null_count = sum(1 for r in records if is_null_field(r, field))
-        null_rate = null_count / n
-        max_rate = float(rules.get("max_null_rate", 1.0))
-        mode = rules.get("mode", "warn")
-        report_fields[field] = {
-            "null_count": null_count,
-            "null_rate": round(null_rate, 4),
-            "max_null_rate": max_rate,
-            "mode": mode,
-        }
-        if null_rate > max_rate:
-            msg = f"completeness: {field} null rate {null_rate:.2%} exceeds max {max_rate:.2%} ({null_count}/{n})"
-            if mode == "error":
-                errors.append(msg)
-            else:
-                warnings.append(msg)
-    return errors, warnings, {"row_count": n, "fields": report_fields}
 
 
 @app.command()
@@ -282,8 +298,11 @@ def run_validation(
     """Run intblock validation; return process exit code (0 = success)."""
     root = project_root()
     intblocks_dir = intblocks_dir or root / "data" / "intblocks"
+    countries_dir = root / "data" / "countries"
     schema_path = root / "data" / "schemas" / "intblocks.schema.json"
     completeness_path = root / "data" / "schemas" / "intblocks_completeness.yaml"
+    countries_completeness_path = root / "data" / "schemas" / "countries_completeness.yaml"
+    schemas_dir = root / "data" / "schemas"
     blocktypes_path = root / "data" / "blocktypes" / "blocktypes.yaml"
     aliases_path = root / "data" / "intblocks_aliases.yaml"
     topic_aliases_path = root / "data" / "schemas" / "topic_aliases.yaml"
@@ -317,18 +336,111 @@ def run_validation(
         errors.extend(validate_schema(record, schema, rel))
 
     errors.extend(check_duplicate_ids(records))
+    errors.extend(validate_filename_ids(records))
     if taxonomy:
         errors.extend(validate_blocktypes(records, taxonomy))
-    warnings.extend(validate_directory_alignment(records))
+    errors.extend(validate_directory_alignment(records))
     topic_aliases = load_topic_aliases(topic_aliases_path)
-    warnings.extend(validate_topics(records, topic_aliases))
+    topic_catalog = load_topic_catalog(schemas_dir / "topics.yaml")
+    warnings.extend(validate_topics(records, topic_aliases, topic_catalog))
     warnings.extend(validate_partof_refs(records))
     warnings.extend(validate_lifecycle(records))
+    warnings.extend(validate_chronology(records))
+    warnings.extend(validate_include_dates(records))
+    warnings.extend(validate_membership_consistency(records, completeness_cfg))
+    warnings.extend(validate_last_verified(records, completeness_cfg))
+    warnings.extend(validate_text_encoding(records))
 
+    rel_paths_all = [rel for rel, _ in records]
+    recs_all = [rec for _, rec in records]
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_successor_reciprocity(recs_all, rel_paths_all)
+    )
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_partof_suborg_reciprocity(recs_all, rel_paths_all)
+    )
+
+    references_cfg = completeness_cfg.get("references") or {}
+    alias_names: set[str] = set()
     if aliases_path.exists():
         known_ids = {str(rec.get("id", "")) for _, rec in records if rec.get("id")}
         aliases = load_yaml(aliases_path) or []
         errors.extend(validate_aliases(aliases, known_ids))
+        alias_names = {str(a.get("alias") or "") for a in aliases if isinstance(a, dict)} - {""}
+
+    warnings.extend(
+        validate_org_refs(
+            records,
+            alias_names,
+            {str(x) for x in (references_cfg.get("org_ref_allowlist") or [])},
+        )
+    )
+
+    if countries_dir.exists():
+        countries_cfg = load_yaml(countries_completeness_path) or {}
+        country_codes = {p.stem for p in countries_dir.glob("*.yaml")}
+        countries_by_code: dict[str, dict[str, Any]] = {}
+        for country_path in sorted(countries_dir.glob("*.yaml")):
+            try:
+                country = load_yaml(country_path)
+            except yaml.YAMLError:
+                continue  # parse errors are reported by validate_countries
+            if isinstance(country, dict) and country.get("code"):
+                countries_by_code[str(country["code"])] = country
+        rel_paths = [rel for rel, _ in records]
+        recs = [rec for _, rec in records]
+        warnings.extend(
+            f"{issue['file_path']}: {issue['suggested_action']}"
+            for issue in cross_rules.check_hq_country(
+                recs,
+                rel_paths,
+                country_codes,
+                set(countries_cfg.get("special_entity_allowlist") or []),
+            )
+        )
+        warnings.extend(validate_founding_members(records, country_codes))
+        warnings.extend(
+            f"{issue['file_path']}: {issue['suggested_action']}"
+            for issue in cross_rules.check_hq_coordinates(
+                recs, rel_paths, countries_by_code, completeness_cfg
+            )
+        )
+        warnings.extend(
+            f"{issue['file_path']}: {issue['suggested_action']}"
+            for issue in cross_rules.check_historical_entity_members(
+                recs, rel_paths, countries_by_code
+            )
+        )
+
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_duplicate_wikidata_ids(
+            rel_paths,
+            recs,
+            {str(x) for x in (references_cfg.get("wikidata_duplicate_allowlist") or [])},
+        )
+    )
+    warnings.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_duplicate_acronyms(
+            recs,
+            rel_paths,
+            {str(x) for x in (references_cfg.get("acronym_duplicate_allowlist") or [])},
+        )
+    )
+
+    includes_status_catalog = load_includes_status_catalog(schemas_dir)
+    membership_errors, membership_warnings = validate_membership_applicability(records, completeness_cfg)
+    errors.extend(membership_errors)
+    warnings.extend(membership_warnings)
+
+    status_errors, status_warnings = validate_includes_status(records, includes_status_catalog, completeness_cfg)
+    errors.extend(status_errors)
+    warnings.extend(status_warnings)
 
     all_records = [rec for _, rec in records]
     comp_errors, comp_warnings, completeness_report = validate_completeness(all_records, completeness_cfg)

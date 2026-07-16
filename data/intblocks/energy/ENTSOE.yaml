@@ -1,17 +1,44 @@
 id: ENTSOE
+name: European Network of Transmission System Operators for Electricity
 blocktype:
 - energy
 status: formal
+founded: '2008-12-19'
+# NORDEL is the only ENTSO-E predecessor body with a record in this database
+# (the merger also absorbed ETSO, UCTE, BALTSO, ATSOI, and UKTSOA).
+predecessor: NORDEL
+active_period:
+  start: '2009-07-01'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
 - url: https://www.entsoe.eu/
   type: website
+- url: https://www.entsoe.eu/about/inside-entsoe/mission-statement/
+  type: website
 - url: https://en.wikipedia.org/wiki/ENTSO-E
   type: wikipedia
-name: European Network of Transmission System Operators for Electricity
-founded: '2009'
+- url: https://www.wikidata.org/wiki/Q1413905
+  type: wikidata
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846667
+    lng: 4.3525
+legal_status: association
+recognition_status: Association of European electricity transmission system operators established on 19 December 2008 and operational from 1 July 2009 under mandates in the EU Third Energy Package, including Regulation (EC) No 714/2009 on cross-border electricity exchanges; registered as an AISBL under Belgian law
+secretariat:
+  location: Rue de Spa 8, Brussels, Belgium
+  organization: ENTSO-E Secretariat
 includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
 - id: AT
   name: Austria
   type: country
@@ -92,10 +119,6 @@ includes:
   name: Luxembourg
   type: country
   status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
 - id: ME
   name: Montenegro
   type: country
@@ -148,10 +171,6 @@ includes:
   name: Switzerland
   type: country
   status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
 - id: UA
   name: Ukraine
   type: country
@@ -160,9 +179,20 @@ includes:
   name: United Kingdom
   type: country
   status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: observer
+- id: TR
+  name: Türkiye
+  type: country
+  status: observer
 membership_count: 36
-description: Integrated synchronized power grid system connecting European countries
-  through coordinated transmission system operators.
+description: Association of 40 European electricity transmission system operators (TSOs) from 36 countries, coordinating the
+  secure operation of Europe's interconnected power grids — the world's largest synchronized electricity system. Established
+  under EU law through the Third Energy Package, ENTSO-E delivers legally mandated tasks including ten-year network development
+  planning, adequacy assessments, market and transparency platforms, and technical coordination across synchronous areas. The
+  Secretariat is based in Brussels, Belgium.
 tags:
 - ENTSOE
 - energy
@@ -173,6 +203,7 @@ tags:
 - europe
 - interconnection
 - electricity
+- tso
 topics:
 - key: energy
   name: Energy
@@ -180,6 +211,8 @@ topics:
   name: Economy
 - key: regional_cooperation
   name: Regional Cooperation
+- key: infrastructure
+  name: Infrastructure
 other_names:
 - id: ar
   name: الشبكة الأوروبية لمشغلي أنظمة نقل الكهرباء
@@ -195,27 +228,13 @@ other_names:
   name: ENTSO-E
 - id: zh
   name: 北欧电网
-notes: The largest interconnected electrical grid in the world. Comprises multiple
-  synchronous areas including Continental Europe Synchronous Area (CESA), Nordic Synchronous
-  Area, and others. Baltic states (Estonia, Latvia, Lithuania) synchronized with CESA
-  in February 2025.
+notes: The largest interconnected electrical grid in the world. Comprises multiple synchronous areas including Continental Europe
+  Synchronous Area (CESA), Nordic Synchronous Area, and the Irish system, plus isolated systems in Cyprus and Iceland. Baltic
+  states (Estonia, Latvia, Lithuania) synchronized with CESA in February 2025. Ukrenergo (Ukraine) became the 40th member
+  TSO on 1 January 2024. Great Britain-based TSOs left on 12 February 2021 following Brexit; only SONI (Northern Ireland)
+  remains from the United Kingdom. Malta has no electricity TSO and is not a member. Türkiye (TEİAŞ) and Moldova (Moldelectrica)
+  hold observer status.
 wikidata_id: Q1413905
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
 - lang: en
   value: ENTSO-E
@@ -231,3 +250,65 @@ acronyms:
   value: ENTSO-E
 - lang: de
   value: ENTSOE
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/about/inside-entsoe/mission-statement/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/about/inside-entsoe/mission-statement/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/about/inside-entsoe/mission-statement/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/about/inside-entsoe/mission-statement/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.entsoe.eu/about/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/ENTSO-E
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/ENTSO-E
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/ENTSO-E
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/ENTSO-E
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/ENTSO-E
+  license: CC BY-SA 4.0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

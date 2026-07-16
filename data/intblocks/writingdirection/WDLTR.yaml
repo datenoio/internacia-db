@@ -1,8 +1,16 @@
 id: WDLTR
+name: Left-to-right writing direction
 blocktype:
 - writingdirection
 status: informal
-name: Left-to-right writing direction
+geographic_scope: global
+links:
+- url: https://en.wikipedia.org/wiki/Writing_direction
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q17321844
+  type: wikidata
+legal_status: informal
+recognition_status: Typographic and script-direction concept (not a formal organization) describing horizontal writing in which each line is read from left to right and lines are ordered from top to bottom; termed LTR script directionality in Unicode and Wikidata (P1406); the dominant layout for Latin, Cyrillic, Greek, Devanagari, and many other scripts; overlaps with top-to-bottom (WDTTB) where countries also use vertical East Asian layouts; distinct from right-to-left (WDRTL) membership
 includes:
 - id: AD
   name: Andorra
@@ -893,18 +901,81 @@ includes:
   type: country
   status: member
 membership_count: 222
-description: Left-to-right writing direction is an international writingdirection
-  body with 222 members.
+wikidata_id: Q17321844
+description: Script directionality in which horizontal lines are read from left to right and sequenced from top to bottom on the page. Left-to-right (LTR) is the predominant layout for Latin, Cyrillic, Greek, Devanagari, and most Southeast Asian and African scripts. This record maps 222 Internacia country entities whose primary official writing uses horizontal LTR direction.
+notes: Excluded entities are chiefly states whose dominant official script is right-to-left (see WDRTL), Taiwan (TW, listed under WDTTB), Vatican City (VA), Somalia (SO), and Internacia synthetic codes (XA, XN, XS, XT). Seven WDTTB members (CN, HK, JP, KP, KR, MN, MO) also appear here because modern horizontal LTR usage is standard alongside vertical layouts. Chad (TD) is the only entity listed in both WDLTR and WDRTL.
+last_verified: '2026-07-13'
 tags:
 - WDLTR
 - cultural
 - culture
-- left
+- global
+- left-to-right
+- ltr
+- typography
+- unicode
 - writingdirection
 topics:
 - key: culture
   name: Culture
+other_names:
+- id: ar
+  name: من اليسار إلى اليمين
+- id: de
+  name: von links nach rechts
+- id: en
+  name: left-to-right
+- id: es
+  name: dextroverso
+- id: fr
+  name: de gauche à droite
+- id: ru
+  name: слева направо
+- id: zh
+  name: 從左至右
+acronyms:
+- lang: en
+  value: LTR
+- lang: en
+  value: WDLTR
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17321844
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17321844
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q17321844
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/Writing_direction
+  license: CC BY-SA 4.0

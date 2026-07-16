@@ -1,17 +1,12 @@
 id: GCF
+name: Green Climate Fund
 blocktype:
 - fund
 status: formal
 partof: UNFCCC
-languages:
-- en
-links:
-- url: https://www.greenclimate.fund
-  type: website
-- url: https://en.wikipedia.org/wiki/Green_Climate_Fund
-  type: wikipedia
-name: Green Climate Fund
 founded: '2010'
+active_period:
+  start: '2011-12-11'
 geographic_scope: global
 regions:
 - Africa
@@ -20,12 +15,33 @@ regions:
 - North America
 - Oceania
 - South America
-acronyms:
-- lang: en
-  value: GCF
+languages:
+- en
+links:
+- url: https://www.greenclimate.fund
+  type: website
+- url: https://www.greenclimate.fund/about
+  type: website
+- url: https://www.greenclimate.fund/about/governance
+  type: website
+- url: https://www.greenclimate.fund/about/secretariat
+  type: website
+- url: https://en.wikipedia.org/wiki/Green_Climate_Fund
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q3075923
+  type: wikidata
+legal_status: multilateral climate fund
+recognition_status: Main operating entity of the financial mechanism of the UNFCCC, established under a Governing Instrument adopted at COP17 in Durban on 11 December 2011; governed by a 24-member Board with equal representation of developing and developed Parties; the COP provides annual policy guidance on priorities and eligibility; headquartered in Songdo, Republic of Korea under a Headquarters Agreement with the Republic of Korea
 headquarters:
   city: Songdo
   country: KR
+secretariat:
+  location: Songdo, Republic of Korea
+  head: Executive Director
+  organization: GCF Secretariat
+acronyms:
+- lang: en
+  value: GCF
 includes:
 - id: AU
   name: Australia
@@ -111,8 +127,8 @@ includes:
   name: Korea, Republic of
   type: country
   status: contributor
-membership_count: 197
-description: UN-sanctioned fund helping developing countries reduce their greenhouse gas emissions.
+membership_count: 21
+description: World's largest dedicated multilateral climate fund, established in 2010 as the main operating entity of the UNFCCC financial mechanism to support developing countries in achieving low-emission, climate-resilient development and implementing the Paris Agreement; channels grants, concessional finance, guarantees, and equity through accredited entities and partners with a targeted 50:50 balance between mitigation and adaptation investments.
 tags:
 - GCF
 - aid
@@ -121,6 +137,9 @@ tags:
 - finance
 - fund
 - green
+- multilateral
+- paris_agreement
+- unfccc
 topics:
 - key: development
   name: Development
@@ -129,30 +148,8 @@ topics:
 - key: climate_change
   name: Climate Change
 wikidata_id: Q3075923
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.greenclimate.fund
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.greenclimate.fund
+notes: Has committed over USD 20 billion across 134 developing countries; largest provider of adaptation finance among climate funds; at least half of adaptation funding directed to LDCs, SIDS, and African States; launched regional offices in Africa, Eastern Europe/Central Asia/Middle East, Latin America and the Caribbean, and the Pacific in 2026.
+last_verified: '2026-07-12'
 other_names:
 - id: ar
   name: صندوق المناخ الأخضر
@@ -168,3 +165,46 @@ other_names:
   name: Fundo Verde para o Clima
 - id: zh
   name: 綠色氣候基金
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q3075923
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about/governance
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about/governance
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about/secretariat
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about/secretariat
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about/governance
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q3075923
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.greenclimate.fund/about

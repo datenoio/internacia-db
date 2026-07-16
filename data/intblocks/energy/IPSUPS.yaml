@@ -1,15 +1,35 @@
 id: IPSUPS
+name: Integrated Power System / Unified Power System
 blocktype:
 - energy
 status: formal
+founded: '1956'
+active_period:
+  start: '1956'
+geographic_scope: regional
+regions:
+- Eurasia
+- Central Asia
+- Eastern Europe
 languages:
 - en
 - ru
 links:
+- url: https://www.so-ups.ru/
+  type: website
 - url: https://en.wikipedia.org/wiki/IPS/UPS
   type: wikipedia
-name: Integrated Power System / Unified Power System
-founded: '1960s'
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7558
+    lng: 37.6173
+legal_status: synchronous grid interconnection
+recognition_status: Wide-area synchronous transmission grid inherited from the Soviet Union's unified energy system; the Russian Unified Power System (UPS) and interconnected national grids of the Integrated Power System (IPS) operate in parallel synchronous mode; coordinated by AO SO UPS (System Operator of the Unified Power System) under Russian law, with bilateral parallel-operation agreements among participating national grids including the BRELL arrangement (2001–2025) for Belarus, Russia, Estonia, Latvia, and Lithuania
+secretariat:
+  location: Moscow, Russia
+  organization: AO SO UPS (System Operator of the Unified Power System)
 includes:
 - id: RU
   name: Russia
@@ -47,8 +67,36 @@ includes:
   name: Uzbekistan
   type: country
   status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: former_member
+- id: LV
+  name: Latvia
+  type: country
+  status: former_member
+- id: LT
+  name: Lithuania
+  type: country
+  status: former_member
+- id: UA
+  name: Ukraine
+  type: country
+  status: former_member
+- id: MD
+  name: Moldova
+  type: country
+  status: former_member
+- id: AM
+  name: Armenia
+  type: country
+  status: former_member
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: former_member
 membership_count: 9
-description: Synchronous electricity grid system connecting Russia and several Commonwealth of Independent States (CIS) countries. Operates across multiple time zones with approximately 300 GW installed capacity.
+description: Wide-area synchronous transmission grid connecting the Russian Unified Power System (UPS) with national power networks of Azerbaijan, Belarus, Georgia, Kazakhstan, Kyrgyzstan, Mongolia, Tajikistan, and Uzbekistan. One of the world's largest synchronized electricity systems with approximately 300 GW installed capacity, spanning eight time zones and serving roughly 280 million customers. Evolved from the Soviet unified energy system; the Russian portion is operated by AO SO UPS.
 tags:
 - IPS
 - UPS
@@ -73,4 +121,59 @@ other_names:
   name: Integrated Power System / Unified Power System
 - id: ru
   name: Единая энергетическая система
-notes: The Baltic states (Estonia, Latvia, Lithuania) disconnected from IPS/UPS in February 2025 to synchronize with the European Continental Synchronous Area. The system serves approximately 280 million customers and produces around 1,200 TWh annually.
+acronyms:
+- lang: en
+  value: IPS
+- lang: en
+  value: UPS
+- lang: ru
+  value: ЕЭС
+- lang: ru
+  value: ОЭС
+notes: The Unified Power System of Russia formed around 1956 when the Center and Middle Volga power systems were interconnected; the Central Asian IPS was established in 1960. After the dissolution of the USSR, the grid continued to operate synchronously across participating states. Ukraine and Moldova disconnected on 24 February 2022 during the Russian invasion of Ukraine and subsequently synchronized with the European grid. The Baltic states (Estonia, Latvia, Lithuania) permanently disconnected on 8 February 2025 under the BRELL agreement to join the Continental Europe Synchronous Area; Kaliningrad now operates as a power island. Armenia operates asynchronously via HVDC links to Georgia and Iran. Turkmenistan disconnected in 2009 and is linked to the Iranian national grid. The system produces around 1,200 TWh annually.
+last_verified: '2026-07-13'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.so-ups.ru/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.so-ups.ru/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/IPS/UPS

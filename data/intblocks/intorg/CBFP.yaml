@@ -1,21 +1,70 @@
 id: CBFP
+name: Congo Basin Forest Partnership
 blocktype:
 - intorg
 - forestry
 status: formal
+founded: '2002-09'
+active_period:
+  start: '2002-09'
+geographic_scope: regional
+regions:
+- Central Africa
+- Congo Basin
+- Africa
 languages:
 - en
 - fr
 links:
-- url: http://www.cbfp.org/
+- url: https://pfbc-cbfp.org/en/
   type: website
 - url: https://en.wikipedia.org/wiki/Congo_Basin_Forest_Partnership
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5160495
   type: wikidata
-name: Congo Basin Forest Partnership
-founded: '2002'
+- url: https://sdgs.un.org/partnerships/congo-basin-forest-partnership-cbfp-partenariat-pour-les-forets-du-basin-du-congo-pfbc
+  type: website
+acronyms:
+- lang: en
+  value: CBFP
+- lang: fr
+  value: PFBC
+legal_status: voluntary multi-stakeholder partnership
+recognition_status: Type II non-binding partnership registered with the UN Commission on Sustainable Development; coordinates through COMIFAC's Convergence Plan
+membership_count: 11
+description: Voluntary multi-stakeholder partnership launched at the 2002 World Summit on Sustainable Development in Johannesburg to coordinate conservation and sustainable management of Congo Basin forest ecosystems. Brings together Central African states, donors, international organizations, NGOs, research institutions, and private-sector actors in seven colleges. Works closely with the Central African Forest Commission (COMIFAC) to support biodiversity protection, climate action, forest governance, and improved livelihoods in the world's second-largest tropical rainforest region.
+tags:
+- CBFP
+- PFBC
+- basin
+- biodiversity
+- central-africa
+- climate
+- congo
+- environment
+- forest
+- forestry
+- intorg
+- partnership
+- regional
+- regional_cooperation
+- sustainable_development
+topics:
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: environment
+  name: Environment
+- key: climate_change
+  name: Climate Change
+- key: sustainable_development
+  name: Sustainable Development
+- key: economy
+  name: Economy
 includes:
+- id: AO
+  name: Angola
+  type: country
+  status: member
 - id: BI
   name: Burundi
   type: country
@@ -56,25 +105,63 @@ includes:
   name: Sao Tome and Principe
   type: country
   status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-membership_count: 11
 wikidata_id: Q5160495
-description: The Congo Basin Forest Partnership is an international organization that is used to promote regional cooperation
-  in the forestry sector.
-tags:
-- CBFP
-- basin
-- congo
-- forest
-- intorg
-topics:
-- key: economy
-  name: Economy
 other_names:
-- id: zh
-  name: 刚果盆地森林伙伴关系
 - id: en
   name: Congo Basin Forest Partnership
+- id: fr
+  name: Partenariat pour les Forêts du Bassin du Congo
+- id: zh
+  name: 刚果盆地森林伙伴关系
+notes: The CBFP has no permanent secretariat; governance relies on a rotating Facilitator, a Council of college representatives, and an annual Meeting of Parties held in COMIFAC member states. Co-facilitation by France and Gabon runs from 2023 to 2025, following earlier facilitations by the United States, France, Germany, Canada, the European Union, and Belgium. As of 2024 the partnership reported about 132–138 total members across seven colleges, including COMIFAC and ECCAS as regional actors.
+last_verified: '2026-07-12'
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q5160495
+  license: CC0
+- field: acronyms
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: founded
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://archive2020-24.pfbc-cbfp.org/cbfp-key-figures.html
+- field: active_period
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://archive2020-24.pfbc-cbfp.org/cbfp-key-figures.html
+- field: geographic_scope
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: regions
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: legal_status
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: recognition_status
+  source: UN Department of Economic and Social Affairs
+  retrieved_at: '2026-07-12'
+  url: https://sdgs.un.org/partnerships/congo-basin-forest-partnership-cbfp-partenariat-pour-les-forets-du-basin-du-congo-pfbc
+- field: description
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: includes
+  source: GIZ CBFP brochure
+  retrieved_at: '2026-07-12'
+  url: https://www.giz.de/en/downloads/giz-2023-en-PFBC.pdf
+- field: notes
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/our-partnership/about-the-cbfp/the-cbfp-at-a-glance
+- field: links
+  source: CBFP official website
+  retrieved_at: '2026-07-12'
+  url: https://pfbc-cbfp.org/en/

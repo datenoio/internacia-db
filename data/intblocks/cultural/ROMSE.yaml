@@ -1,11 +1,26 @@
 id: ROMSE
+name: Romance-speaking Europe
 blocktype:
 - cultural
 status: informal
+geographic_scope: regional
+regions:
+- Europe
+languages:
+- ca
+- fr
+- it
+- pt
+- ro
+- rm
+- es
 links:
 - url: https://en.wikipedia.org/wiki/Romance-speaking_Europe
   type: wikipedia
-name: Romance-speaking Europe
+- url: https://www.wikidata.org/wiki/Q1064023
+  type: wikidata
+legal_status: informal
+recognition_status: Informal geographic and linguistic concept (not a formal organization) describing European territories where Romance languages are official or predominant, occasionally termed Latin Europe; encompasses roughly 215 million European native speakers across the Italo-Western and Eastern Romance branches
 includes:
 - id: AD
   name: Andorra
@@ -60,29 +75,96 @@ includes:
   type: country
   status: member
 membership_count: 13
-description: Part of Europe where Romance languages are spoken.
+wikidata_id: Q1064023
+description: Geographic and linguistic region in southern, western, and parts of eastern Europe where Romance languages serve as the primary official or majority language. The sovereign-state core comprises Andorra, Belgium, France, Italy, Luxembourg, Monaco, Moldova, Portugal, Romania, San Marino, Spain, Switzerland, and Vatican City; multilingual Belgium, Luxembourg, and Switzerland are included at country level because Romance languages hold nationwide official status. The concept is also termed Latin Europe in scholarly discourse and is distinct from the broader Romance-speaking world that includes Latin America.
+notes: This record reflects the thirteen Internacia country entities where a Romance language is an official language (AD, BE, CH, FR, IT, LU, MC, MD, PT, RO, SM, ES, VA). Malta, whose official Maltese is a Semitic language with Romance influences, is excluded. Broader definitions may add Romance-speaking regions within non-Romance states (e.g. Catalonia, Corsica, South Tyrol) or diaspora communities; distinct from formal cultural organizations such as the Organisation internationale de la Francophonie or the global Hispanidad concept.
+last_verified: '2026-07-12'
 tags:
 - ROMSE
 - cultural
 - culture
 - education
 - europe
+- geographic
+- language
+- latin-europe
+- linguistic
+- neolatin
+- regional
 - romance
+- romance-speaking
+- sprachraum
 - university
 topics:
 - key: culture
   name: Culture
 - key: education
   name: Education
-wikidata_id: Q1064023
+other_names:
+- id: ca
+  name: Romània
+- id: de
+  name: Romania
+- id: en
+  name: Latin Europe
+- id: eo
+  name: Latinidlingva Eŭropo
+- id: es
+  name: Europa latina
+- id: fr
+  name: Europe latine
+- id: it
+  name: Europa latina
+- id: nl
+  name: Romaans Europa
+- id: pl
+  name: Europa łacińska
+- id: pt
+  name: Europa latina
+- id: ro
+  name: Europa latină
+- id: sv
+  name: Latineuropa
+- id: zh
+  name: 拉丁歐洲
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1064023
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1064023
   license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0
+- field: includes
+  source: inferred grouping
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Languages_of_Europe#Romance
+  license: CC BY-SA 4.0

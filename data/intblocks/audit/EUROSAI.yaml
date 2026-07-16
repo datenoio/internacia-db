@@ -1,8 +1,18 @@
 id: EUROSAI
+name: European Organisation of Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '1990'
+active_period:
+  start: '1990'
+geographic_scope: regional
+regions:
+- Europe
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - en
 - es
@@ -10,9 +20,41 @@ languages:
 - de
 - ru
 links:
-- url: http://www.eurosai.org/
+- url: https://www.eurosai.org/
   type: website
-name: European Organisation of Supreme Audit Institutions
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
+- url: https://en.wikipedia.org/wiki/EUROSAI
+  type: wikipedia
+acronyms:
+- lang: en
+  value: EUROSAI
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in Europe
+headquarters:
+  city: Madrid
+  country: ES
+  coordinates:
+    lat: 40.4249
+    lng: -3.6996
+secretariat:
+  location: Madrid, Spain
+  organization: Tribunal de Cuentas (Court of Auditors of Spain)
+  head: Secretary-General
+membership_count: 46
+description: Regional association of supreme audit institutions in Europe, established in November 1990 at the Constitutive Conference in Madrid with 30 founding members (the SAIs of 29 European States and the European Court of Auditors). Promotes professional cooperation among member SAIs, exchange of information and documentation, advancement of public sector audit studies, and harmonisation of audit terminology. One of seven regional organisations of INTOSAI; from its inception EUROSAI has prioritised cooperation across previously divided Europe and support for independent public audit bodies in Central and Eastern European transition countries. The permanent Secretariat is hosted by the Court of Auditors of Spain in Madrid.
+tags:
+- EUROSAI
+- audit
+- european
+- intorg
+- organisation
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AL
   name: Albania
@@ -198,17 +240,55 @@ includes:
   name: United Kingdom
   type: country
   status: member
-membership_count: 46
-description: The European Organisation of Supreme Audit Institutions is an international organization that is used to promote
-  regional cooperation in the audit sector.
-tags:
-- EUROSAI
-- communication
-- european
-- intorg
-- organisation
-- supreme
-- audit
-topics:
-- key: audit
-  name: Audit
+notes: Governed by Congress (supreme authority, convened every three years), Governing Board, and Secretariat. As of 2026, the EUROSAI presidency is held by Israel (State Comptroller Matanyahu Englman, 2024–2027) and the General Secretariat is hosted by the Tribunal de Cuentas in Madrid (Secretary-General Enriqueta Chicano Jávega, President of the Spanish Court of Audit). Official membership stands at 51 SAIs; the includes list above reflects 46 entries currently recorded in this dataset.
+other_names:
+- id: en
+  name: European Organisation of Supreme Audit Institutions
+- id: es
+  name: Organización Europea de Entidades de Control Superior de las Cuentas
+last_verified: '2026-07-12'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurosai.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurosai.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurosai.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurosai.org/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurosai.org/

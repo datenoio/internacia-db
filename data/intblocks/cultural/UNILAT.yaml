@@ -1,7 +1,19 @@
 id: UNILAT
+name: Latin Union
 blocktype:
 - cultural
-status: formal
+status: historical
+founded: '1954-05-15'
+dissolved: '2012-07-31'
+active_period:
+  start: '1954-05-15'
+  end: '2012-07-31'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
 languages:
 - ca
 - en
@@ -9,6 +21,7 @@ languages:
 - fr
 - it
 - pt
+- ro
 links:
 - url: http://www.unilat.org/
   type: website
@@ -16,7 +29,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q123209
   type: wikidata
-name: Latin Union
+legal_status: intergovernmental
+recognition_status: International organization of Romance-language nations; established in Madrid on 15 May 1954 and operational from 1983; activities suspended and Secretariat General dissolved in July 2012
+secretariat:
+  location: Paris, France
+  head: Secretary-General
+  organization: Latin Union General Secretariat
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
 includes:
 - id: AD
   name: Andorra
@@ -178,25 +202,37 @@ includes:
   name: Mexico
   type: country
   status: observer
-founded: '1954'
-headquarters:
-  city: Paris
-  country: FR
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
+acronyms:
+- lang: en
+  value: UNILAT
+- lang: es
+  value: UNILAT
+- lang: fr
+  value: UNILAT
+- lang: pt
+  value: UNILAT
+- lang: it
+  value: UNILAT
+- lang: ro
+  value: UNILAT
 membership_count: 37
 wikidata_id: Q123209
-description: International organization.
+description: Intergovernmental organization of nations using Romance languages, headquartered in Paris. Created in Madrid on 15 May 1954 and operational from 1983, the Latin Union aimed to protect, project, and promote the common cultural heritage of Latin peoples across Europe, the Americas, Africa, and the Asia-Pacific. Membership grew to 37 member states with three observers. Due to financial difficulties, it announced suspension of activities in January 2012 and dissolved its Secretariat General effective 31 July 2012.
+notes: Organizational activities were suspended on 26 January 2012; the Secretariat General was dissolved effective 31 July 2012 and all staff employment was terminated. Official languages included Spanish, French, Italian, Portuguese, Romanian, and Catalan. At dissolution the organization had 37 member states and three observers (Argentina, Mexico, and Vatican City); the Sovereign Military Order of Malta also held observer status but is not tracked as a country entity in this dataset.
+last_verified: '2026-07-12'
 tags:
 - UNILAT
 - cooperation
 - cultural
 - culture
 - education
+- historical
+- intergovernmental
 - latin
+- organization
 - regional
 - regional_cooperation
+- romance
 - union
 - university
 topics:
@@ -219,22 +255,79 @@ other_names:
   name: Union latine
 - id: pt
   name: União Latina
+- id: ro
+  name: Uniunea Latină
 - id: ru
   name: Латинский Союз
 - id: zh
   name: 拉丁语联盟
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q123209
+  license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: http://www.unilat.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Latin_Union
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q123209
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q123209
+  license: CC0

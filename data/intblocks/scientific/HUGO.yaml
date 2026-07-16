@@ -5,10 +5,17 @@ blocktype:
 - research
 status: formal
 founded: '1988'
+active_period:
+  start: '1988'
 languages:
 - en
+- fr
 links:
 - url: https://www.hugo-international.org/
+  type: website
+- url: https://www.hugo-international.org/about-us/
+  type: website
+- url: https://www.hugo-international.org/history/
   type: website
 - url: https://en.wikipedia.org/wiki/Human_Genome_Organisation
   type: wikipedia
@@ -16,11 +23,11 @@ links:
   type: wikidata
 name: Human Genome Organization
 headquarters:
-  city: Geneva
-  country: CH
+  city: Farmington
+  country: US
   coordinates:
-    lat: 46.2044
-    lng: 6.1432
+    lat: 41.734
+    lng: -72.7959
 acronyms:
 - lang: en
   value: HUGO
@@ -32,12 +39,20 @@ membership_count: 2000
 geographic_scope: global
 regions:
 - worldwide
-description: International non-profit organization established to coordinate and enhance efforts in human genome research.
-  Promotes international collaboration and addresses the scientific, ethical, legal, and social implications of genomic research.
+description: International non-profit organization of scientists involved in human genetics. Promotes international collaborative
+  efforts to study the human genome and addresses the scientific, ethical, legal, and social implications of genomic research.
+  Plays a coordinating role in global genomics initiatives including gene nomenclature, ethics, education, and capacity building
+  in low- and middle-income countries.
 legal_status: non-governmental
-notes: Initially comprising 42 scientists from 17 countries, HUGO has expanded to over 2,000 members across 92 countries.
-  Played a pivotal role in the Human Genome Project. In 2020, merged with the Human Genomic Variation Society (HGVS) and the
-  Human Variome Project (HVP).
+recognition_status: International non-profit scientific organization whose members are individual scientists and healthcare
+  professionals in human genetics, not sovereign states
+membership_applicability: not_applicable
+notes: Membership is held by individual scientists and healthcare professionals, not states; country-level includes are therefore
+  not applicable. As of 2026, HUGO reports over 2,000 members from across 92 countries, but does not publish a sovereign membership
+  roster. Founded in 1988 at Cold Spring Harbor with a founding council of 42 scientists from 17 countries; played a pivotal
+  role in the Human Genome Project. In 2020, merged with the Human Genomic Variation Society (HGVS) and the Human Variome Project
+  (HVP). Headquarters moved to Farmington, Connecticut, in 2020 (previously Geneva and Seoul). Current president Piero Carninci
+  (2025–present).
 tags:
 - HUGO
 - genomics
@@ -72,6 +87,7 @@ other_names:
 - id: zh
   name: 国际人类基因组组织
 wikidata_id: Q641168
+last_verified: '2026-07-15'
 provenance:
 - field: wikidata_id
   source: Wikidata
@@ -98,5 +114,29 @@ provenance:
   url: https://www.hugo-international.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-15'
   url: https://www.hugo-international.org/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/about-us/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/about-us/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/history/
+- field: membership_applicability
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/about-us/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-15'
+  url: https://www.hugo-international.org/history/

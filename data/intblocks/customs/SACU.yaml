@@ -1,7 +1,14 @@
 id: SACU
+name: Southern African Customs Union
 blocktype:
 - customs
 status: formal
+founded: '1910'
+active_period:
+  start: '1970-03-01'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 links:
@@ -11,38 +18,18 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1344350
   type: wikidata
-name: Southern African Customs Union
-includes:
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-founded: '1910'
+legal_status: treaty_organization
+recognition_status: Treaty-based customs union established by the Southern African Customs Union Agreement (signed 11 December 1969, effective 1 March 1970); world's oldest surviving customs union; maintains free interchange of goods, a common external tariff and common excise duties; customs revenue pooled and shared among members with South Africa as custodian; administered by the SACU Secretariat in Windhoek
+secretariat:
+  location: Windhoek, Namibia
+  organization: SACU Secretariat
+  head: Executive Secretary
 headquarters:
   city: Windhoek
   country: NA
   coordinates:
     lat: -22.57
     lng: 17.083611111111
-geographic_scope: regional
-regions:
-- Africa
 acronyms:
 - lang: en
   value: SACU
@@ -66,16 +53,48 @@ acronyms:
   value: UAAA
 - lang: pt
   value: SACU
+founding_members:
+- ZA
+- BW
+- LS
+- SZ
+includes:
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+  joined: '1970-03-01'
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+  joined: '1970-03-01'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '1990-03-21'
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+  joined: '1970-03-01'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '1970-03-01'
 membership_count: 5
 wikidata_id: Q1344350
-legal_status: intergovernmental
-description: World's oldest surviving customs union, linking Botswana, Eswatini, Lesotho, Namibia and South Africa. Established
-  in 1910 in its present configuration; relaunched under the 1969 agreement effective 1 March 1970. Maintains free interchange
-  of goods, a common external tariff and common excise duties; customs revenue is pooled and shared among members.
+description: Customs union among Botswana, Eswatini, Lesotho, Namibia and South Africa — the world's oldest surviving customs
+  union. Established in 1910 in its present configuration and relaunched under the 1969 SACU Agreement (effective 1 March
+  1970). Maintains free interchange of goods, a common external tariff and common excise duties; customs revenue is pooled
+  and shared among members.
 notes: Closely associated with but distinct from the Common Monetary Area (CMA), which includes Lesotho, Namibia, South Africa
   and Eswatini but excludes Botswana. BLNS members (Botswana, Lesotho, Namibia, Eswatini) receive shares of pooled customs
   and excise revenue; South Africa is custodian of the revenue pool. Namibia joined in 1990 following independence; institutional
   reforms were pursued after South Africa's 1994 democratization. Executive Secretariat based in Windhoek.
+last_verified: '2026-07-12'
 tags:
 - SACU
 - african
@@ -117,33 +136,57 @@ other_names:
 provenance:
 - field: description
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
   license: CC BY-SA 4.0
 - field: notes
   source: Wikipedia
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
   license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1344350
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q1344350
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.sacu.int/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.sacu.int/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.sacu.int/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.sacu.int/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Southern_African_Customs_Union
+  license: CC BY-SA 4.0

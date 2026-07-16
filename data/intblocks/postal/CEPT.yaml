@@ -4,17 +4,33 @@ blocktype:
 status: formal
 languages:
 - en
+- fr
 links:
-- url: http://www.cept.org/
+- url: https://www.cept.org/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Conference_of_Postal_and_Telecommunications_Administrations
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q221779
   type: wikidata
 name: European Conference of Postal and Telecommunications Administrations
-founded: '1959'
+founded: '1959-06-26'
+geographic_scope: regional
+regions:
+- Europe
+legal_status: voluntary association of European postal and telecommunications administrations
+headquarters:
+  city: Copenhagen
+  country: DK
+  coordinates:
+    lat: 55.677049
+    lng: 12.561213
+secretariat:
+  location: Copenhagen, Denmark
+  organization: European Communications Office (ECO)
 acronyms:
 - lang: en
+  value: CEPT
+- lang: fr
   value: CEPT
 - lang: zh
   value: 通訊委員會
@@ -215,49 +231,97 @@ includes:
   status: member
 membership_count: 46
 wikidata_id: Q221779
-description: European regulatory agency umbrella organization for state telecommunications
-  and postal services.
+description: A voluntary European association of national postal and telecommunications administrations
+  that coordinates regulatory, operational, commercial, and standardisation cooperation. Established
+  in Montreux in 1959 and today comprising 46 member countries, CEPT works through three committees
+  on electronic communications (ECC), postal regulation (CERP), and ITU policy (Com-ITU), with
+  support from the European Communications Office in Copenhagen. It also led to the creation of the
+  European Telecommunications Standards Institute (ETSI) in 1988.
 tags:
 - CEPT
 - communication
 - conference
 - european
 - postal
+- regional_cooperation
 - telecom
 - telecommunications
 topics:
 - key: postal
   name: Postal
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: telecommunications
   name: Telecommunications
 other_names:
 - id: ar
   name: المؤتمر الأوروبي لإدارات البريد والاتصالات السلكية واللاسلكية
 - id: de
-  name: Conférence Européenne des Administrations des Postes et des Télécommunications
+  name: Europäische Konferenz der Verwaltungen für Post und Telekommunikation
 - id: en
   name: European Conference of Postal and Telecommunications Administrations
 - id: es
   name: Conferencia Europea de Administraciones de Correos y Telecomunicaciones
 - id: fr
-  name: Conférence européenne des administrations des postes et télécommunications
+  name: Conférence européenne des administrations des postes et des télécommunications
+- id: pt
+  name: Conferência Europeia das Administrações dos Correios e Telecomunicações
 - id: ru
-  name: CEPT
+  name: Европейская конференция администраций почтовых служб и служб связи
 - id: zh
   name: 欧洲邮电管理委员会
+notes: Established on 26 June 1959 in Montreux, Switzerland, by 19 European countries. CEPT committees
+  are the Electronic Communications Committee (ECC), European Committee for Postal Regulation (CERP),
+  and Committee for ITU Policy (Com-ITU); the European Communications Office in Copenhagen provides
+  permanent secretariat support for ECC. CEPT was responsible for creating ETSI in 1988. Membership
+  grew from 19 founding countries to 46; the Russian Federation and Belarus were suspended indefinitely
+  from membership on 17 March 2022.
+last_verified: '2026-07-12'
 provenance:
+- field: founded
+  source: CEPT official website
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/cept/about-cept
+- field: geographic_scope
+  source: CEPT official website
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/cept/about-cept
+- field: legal_status
+  source: CEPT leaflet
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/files/1203/CEPT-Leaflet-May-2024.pdf
+- field: headquarters
+  source: European Communications Office
+  retrieved_at: '2026-07-12'
+  url: https://eccwp.cept.org/info.aspx
+- field: secretariat
+  source: CEPT leaflet
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/files/1203/CEPT-Leaflet-May-2024.pdf
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: CEPT official website
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/cept/about-cept
+- field: membership_count
+  source: CEPT official website
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/cept/background
+- field: notes
+  source: CEPT official website
+  retrieved_at: '2026-07-12'
+  url: https://www.cept.org/cept/news/suspension-of-the-russian-federation-and-belarus-from-cept-membership
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q221779
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q221779
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q221779
   license: CC0

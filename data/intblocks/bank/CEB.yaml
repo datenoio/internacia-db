@@ -1,18 +1,67 @@
 id: CEB
+name: Council of Europe Development Bank
 blocktype:
 - bank
 status: formal
+founded: '1956-04-16'
+active_period:
+  start: '1956-04-16'
+geographic_scope: regional
+regions:
+- Europe
 partof: COE
 languages:
 - en
+- fr
 links:
-- url: http://www.coebank.org/
+- url: https://www.coebank.org/
+  type: website
+- url: https://www.coebank.org/en/about/mission/
+  type: website
+- url: https://www.coebank.org/en/about/member-countries/
   type: website
 - url: https://en.wikipedia.org/wiki/Council_of_Europe_Development_Bank
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q611107
   type: wikidata
-name: Council of Europe Development Bank
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+legal_status: intergovernmental
+recognition_status: Multilateral development bank established under a Council of Europe Partial Agreement signed on 16 April 1956; operates as a separate legal entity from the Council of Europe while maintaining institutional links
+secretariat:
+  location: Paris, France
+  head: Governor
+  organization: Council of Europe Development Bank
+membership_count: 43
+description: Multilateral development bank with an exclusively social mandate, promoting social cohesion across Europe. Established in 1956 as the Resettlement Fund for National Refugees and Over-Population in Europe, renamed the Council of Europe Social Development Fund in 1994 and the Council of Europe Development Bank in 1999. Provides loans, co-financing, and grants to member states for social infrastructure, housing, education, health, disaster recovery, refugee and migrant integration, and job creation. Headquartered at 55 Avenue Kléber in Paris; financially autonomous with AAA/Aaa credit ratings.
+tags:
+- CEB
+- aid
+- bank
+- council
+- council-of-europe
+- development
+- economy
+- europe
+- finance
+- multilateral
+- refugees
+- social-cohesion
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: humanitarian
+  name: Humanitarian
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AL
   name: Albania
@@ -186,43 +235,91 @@ includes:
   name: Ukraine
   type: country
   status: member
-founded: '1956'
-headquarters:
-  city: Paris
-  country: FR
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
-membership_count: 43
+  joined: '2023'
+acronyms:
+- lang: en
+  value: CEB
+- lang: fr
+  value: CEB
 wikidata_id: Q611107
-description: International development bank focused on development providing financial services.
-tags:
-- CEB
-- aid
-- bank
-- council
-- development
-- economy
-- europe
-- finance
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: finance
-  name: Finance
+notes: Oldest European multilateral development bank. All 43 members except the Holy See and Kosovo are Council of Europe member states; Armenia, Austria, Azerbaijan, Monaco, and the United Kingdom are CoE members eligible for CEB membership but not currently shareholders. Ukraine joined in June 2023.
+last_verified: '2026-07-12'
 other_names:
-- id: zh
-  name: 欧洲委员会开发银行
+- id: cs
+  name: Rozvojová banka Rady Evropy
+- id: de
+  name: Entwicklungsbank des Europarates
+- id: el
+  name: Τράπεζα Αναπτύξεως του Συμβουλίου της Ευρώπης
 - id: en
   name: Council of Europe Development Bank
-- id: fr
-  name: banque de développement du Conseil de l'Europe
 - id: es
   name: Banco de Desarrollo del Consejo de Europa
+- id: fr
+  name: banque de développement du Conseil de l'Europe
+- id: ja
+  name: 欧州評議会開発銀行
+- id: pl
+  name: Bank Rozwoju Rady Europy
+- id: ro
+  name: Banca de Dezvoltare a Consiliului Europei
+- id: sl
+  name: Razvojna banka Sveta Evrope
+- id: sv
+  name: Europarådets utvecklingsbank
+- id: uk
+  name: Банк розвитку Ради Європи
+- id: zh
+  name: 欧洲委员会开发银行
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/mission/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/mission/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/mission/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/mission/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/structure-management/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.coebank.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/mission/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/member-countries/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.coebank.org/en/about/member-countries/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Council_of_Europe_Development_Bank
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q611107
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q611107
+  license: CC0

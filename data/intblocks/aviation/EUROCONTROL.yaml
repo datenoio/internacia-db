@@ -1,17 +1,69 @@
 id: EUROCONTROL
+name: European Organisation for the Safety of Air Navigation
 blocktype:
 - aviation
 - intorg
 status: formal
-partof: EU
+founded: '1960-12-13'
+active_period:
+  start: '1963-03-01'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
+- de
+- nl
 links:
-- url: http://www.eurocontrol.int/
+- url: https://www.eurocontrol.int/
+  type: website
+- url: https://www.eurocontrol.int/about-us
+  type: website
+- url: https://www.icao.int/sites/default/files/postalhistory/eurocontrol.htm
   type: website
 - url: https://en.wikipedia.org/wiki/Eurocontrol
   type: wikipedia
-name: European Organisation for the Safety of Air Navigation
+- url: https://www.wikidata.org/wiki/Q663492
+  type: wikidata
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846666666666664
+    lng: 4.351666666666667
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established under the EUROCONTROL International Convention relating to Cooperation for the Safety of Air Navigation (signed 13 December 1960, entered into force 1 March 1963); 42 member states plus 2 Comprehensive Agreement States (Israel and Morocco); European Community accession protocol signed in 2002
+secretariat:
+  location: Brussels, Belgium
+  organization: Directorate General (Agency)
+membership_count: 42
+founding_members:
+- BE
+- FR
+- DE
+- LU
+- NL
+- GB
+description: Intergovernmental organization advancing safe and seamless civil and military air traffic management across the pan-European network. EUROCONTROL supports member states and aviation stakeholders including air navigation service providers, airspace users, airports, and manufacturers through operations, service provision, concept development, research, performance monitoring, and network management. Established by the Brussels Convention of 13 December 1960 (in force 1 March 1963), it operates the Maastricht Upper Area Control Centre and coordinates Single European Sky initiatives with the European Union while maintaining independent intergovernmental governance through the Permanent Commission and Provisional Council.
+tags:
+- EUROCONTROL
+- aviation
+- air_navigation
+- air_traffic
+- european
+- europe
+- intorg
+- regional
+- atm
+- safety
+topics:
+- key: aviation
+  name: Aviation
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: safety
+  name: Safety
 includes:
 - id: 'NO'
   name: Norway
@@ -189,26 +241,9 @@ includes:
   name: Morocco
   type: country
   status: associated
-founded: '1960'
-headquarters:
-  city: City of Brussels
-  country: BE
-  coordinates:
-    lat: 50.846666666666664
-    lng: 4.351666666666667
-membership_count: 42
-description: The European Organisation for the Safety of Air Navigation is an international organization that is used to promote
-  regional cooperation in the air navigation sector.
-tags:
-- EUROCONTROL
-- european
-- intorg
-- organisation
-- safety
-- air_navigation
-topics:
-- key: aviation
-  name: Aviation
+acronyms:
+- lang: en
+  value: EUROCONTROL
 other_names:
 - id: ar
   name: المنظمة الأوروبية لسلامة الملاحة الجوية
@@ -223,13 +258,59 @@ other_names:
 - id: es
   name: Eurocontrol
 wikidata_id: Q663492
+notes: Originally founded by six states (Belgium, France, Germany, Luxembourg, the Netherlands, and the United Kingdom). The Maastricht Upper Area Control Centre (MUAC) was established in 1972 for upper airspace over Benelux and parts of Germany. Iceland became the 42nd member state in 2025. Israel and Morocco participate as Comprehensive Agreement States. Additional sites include the Innovation Hub in Brétigny-sur-Orge, France, and the Aviation Learning Centre in Luxembourg. Employs approximately 2,000 officials with an annual budget exceeding €1 billion.
+last_verified: '2026-07-12'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q663492
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.eurocontrol.int/
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: founded
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/eurocontrol.htm
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us
+- field: founding_members
+  source: ICAO
+  retrieved_at: '2026-07-12'
+  url: https://www.icao.int/sites/default/files/postalhistory/eurocontrol.htm
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.eurocontrol.int/about-us

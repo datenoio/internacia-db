@@ -1,86 +1,181 @@
 id: AANZFTA
+name: ASEAN - Australia - New Zealand Free Trade Agreement
 blocktype:
 - intorg
+- fta
 status: formal
-languages:
-- en
-links:
-- url: http://aanzfta.asean.org/
-  type: website
-- url: https://en.wikipedia.org/wiki/ASEAN-Australia-New_Zealand_Free_Trade_Area
-  type: wikipedia
-name: ASEAN - Australia - New Zealand Free Trade Agreement
-includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
-  type: country
-  status: member
-membership_count: 12
-founded: '2009'
+partof: ASEAN
+founded: '2009-02-27'
+active_period:
+  start: '2010-01-01'
 geographic_scope: regional
 regions:
 - Asia
 - Oceania
+- Southeast Asia
+languages:
+- en
+links:
+- url: https://aanzfta.asean.org/
+  type: website
+- url: https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/background-to-the-asean-australia-new-zealand-free-trade-area
+  type: website
+- url: https://aanzfta.asean.org/uploads/2016/12/AANZFTA_Signing_27_Feb_09_FINAL.pdf
+  type: website
+- url: https://en.wikipedia.org/wiki/ASEAN-Australia-New_Zealand_Free_Trade_Area
+  type: wikipedia
+- url: https://www.wipo.int/wipolex/en/treaties/parties/421
+  type: website
 acronyms:
 - lang: en
   value: AANZFTA
-description: The ASEAN - Australia - New Zealand Free Trade Area is a free trade area between ASEAN, Australia, and New Zealand.
+legal_status: free trade agreement
+recognition_status: ASEAN free trade agreement with Australia and New Zealand under the Closer Economic Relations (CER) framework
+membership_count: 12
+description: Regional free trade agreement among the ten ASEAN member states, Australia, and New Zealand. Signed at Cha-am,
+  Thailand on 27 February 2009 and entering into force on 1 January 2010 for eight parties, with staggered entry for Thailand
+  (12 March 2010), Laos and Cambodia (January 2011), and Indonesia (10 January 2012). Provides extensive tariff elimination,
+  services and investment liberalization, intellectual property protection, and rules of origin governed through operational
+  certification procedures. Described by Australian trade authorities as the highest-quality of ASEAN's free trade agreements
+  with dialogue partners.
 tags:
 - AANZFTA
+- asean
 - australia
 - commerce
+- economy
+- fta
+- free_trade
 - intorg
+- new_zealand
+- oceania
+- regional
+- southeast_asia
 - trade
-- zealand
 topics:
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
+includes:
+- id: AU
+  name: Australia
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: KH
+  name: Cambodia
+  type: country
+  status: founding_member
+  joined: '2011-01-04'
+- id: ID
+  name: Indonesia
+  type: country
+  status: founding_member
+  joined: '2012-01-10'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: founding_member
+  joined: '2011-01-01'
+- id: MY
+  name: Malaysia
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: MM
+  name: Myanmar
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: PH
+  name: Philippines
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: SG
+  name: Singapore
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+- id: TH
+  name: Thailand
+  type: country
+  status: founding_member
+  joined: '2010-03-12'
+- id: VN
+  name: Vietnam
+  type: country
+  status: founding_member
+  joined: '2010-01-01'
+founding_members:
+- AU
+- BN
+- KH
+- ID
+- LA
+- MY
+- MM
+- NZ
+- PH
+- SG
+- TH
+- VN
+other_names:
+- id: en
+  name: ASEAN-Australia-New Zealand Free Trade Area
+- id: en
+  name: Agreement Establishing the ASEAN-Australia-New Zealand Free Trade Area
+notes: Negotiations concluded on 28 August 2008 in Singapore. All twelve parties signed on 27 February 2009. Entry into force
+  required ratification by Australia, New Zealand, and at least four ASEAN member states. The agreement was notified to the
+  WTO on 8 April 2010. An upgraded Second Protocol to AANZFTA entered into force on 21 April 2025.
+last_verified: '2026-07-12'
 provenance:
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://aanzfta.asean.org/
+  source: ASEAN Australia New Zealand Free Trade Area
+  retrieved_at: '2026-07-12'
+  url: https://aanzfta.asean.org/
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-12'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/background-to-the-asean-australia-new-zealand-free-trade-area
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-12'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/background-to-the-asean-australia-new-zealand-free-trade-area
+- field: legal_status
+  source: WIPO Lex
+  retrieved_at: '2026-07-12'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/421
+- field: recognition_status
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-12'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/asean-australia-new-zealand-free-trade-agreement
+- field: description
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-12'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aanzfta/background-to-the-asean-australia-new-zealand-free-trade-area
+- field: includes
+  source: WIPO Lex
+  retrieved_at: '2026-07-12'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/421
+- field: founding_members
+  source: Joint Media Statement on the Signing of AANZFTA
+  retrieved_at: '2026-07-12'
+  url: https://aanzfta.asean.org/uploads/2016/12/AANZFTA_Signing_27_Feb_09_FINAL.pdf
+- field: notes
+  source: Joint Media Statement on the Signing of AANZFTA
+  retrieved_at: '2026-07-12'
+  url: https://aanzfta.asean.org/uploads/2016/12/AANZFTA_Signing_27_Feb_09_FINAL.pdf

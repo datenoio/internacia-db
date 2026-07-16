@@ -2,6 +2,11 @@ id: LAC
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank
+  type: website
 name: Latin America & Caribbean (developing only)
 includes:
 - id: AG
@@ -125,8 +130,8 @@ includes:
   type: country
   status: member
 membership_count: 30
-description: Latin America & Caribbean (developing only) is an international wbgroup
-  body with 30 members.
+description: World Bank analytical grouping for Latin America & Caribbean developing
+  economies (excluding high income).
 tags:
 - LAC
 - aid
@@ -145,7 +150,27 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+other_names:
+- id: en
+  name: Latin America & Caribbean (excluding high income)
+- id: en
+  name: Latin America and the Caribbean (excluding high income)
+acronyms:
+- lang: en
+  value: LAC
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: World Bank Data
+  retrieved_at: '2026-07-13'
+  url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
+  license: All Rights Reserved
+- field: other_names
+  source: World Bank Data
+  retrieved_at: '2026-07-13'
+  url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
+  license: All Rights Reserved
+- field: acronyms
+  source: World Bank Data
+  retrieved_at: '2026-07-13'
+  url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
+  license: All Rights Reserved

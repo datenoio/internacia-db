@@ -1,14 +1,24 @@
 id: ECCIS
+name: Economic Court of the Commonwealth of Independent States
 blocktype:
 - court
 status: formal
 partof: CIS
+founded: '1992-07-06'
+active_period:
+  start: '1992-07-06'
 geographic_scope: regional
+regions:
+- Commonwealth of Independent States
+- Europe
+- Central Asia
 languages:
 - ru
 - en
 links:
 - url: https://sudsng.org/
+  type: website
+- url: https://cis.minsk.by/reestr/ru/index.html#reestr/view/summary?doc=123
   type: website
 - url: https://en.wikipedia.org/wiki/Economic_Court_of_the_Commonwealth_of_Independent_States
   type: wikipedia
@@ -16,7 +26,22 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4306397
   type: wikidata
-name: Economic Court of the Commonwealth of Independent States
+legal_status: international court
+recognition_status: Treaty-based judicial organ established under the 6 July 1992 Agreement on the status of the Economic Court of the Commonwealth of Independent States; recognized among CIS bodies in Part IV of the CIS Statute (1993); seated in Minsk under a 1996 treaty with Belarus
+headquarters:
+  city: Minsk
+  country: BY
+  coordinates:
+    lat: 53.9045
+    lng: 27.5615
+secretariat:
+  location: Minsk, Belarus
+  head: President (Chairman)
+  organization: Economic Court of the Commonwealth of Independent States
+founding_members:
+- BY
+- RU
+- UZ
 includes:
 - id: BY
   name: Belarus
@@ -60,13 +85,6 @@ includes:
   status: former_member
   joined: '1995'
   left: '2010'
-founded: '1992-07-06'
-headquarters:
-  city: Minsk
-  country: BY
-  coordinates:
-    lat: 53.9045
-    lng: 27.5615
 acronyms:
 - lang: en
   value: ECCIS
@@ -74,8 +92,15 @@ acronyms:
   value: ЭССНГ
 membership_count: 6
 wikidata_id: Q4306397
-description: Judicial body established under the 1992 Agreement on the status of the Economic Court of the CIS to adjudicate
-  economic disputes among enterprises and ensure uniform application of CIS economic agreements.
+description: International judicial body of the Commonwealth of Independent States seated in Minsk, Belarus, established
+  on 6 July 1992 under the Agreement on the status of the Economic Court of the CIS. Settles interstate economic disputes
+  arising from CIS international agreements and interprets CIS economic treaties and acts. Current parties are Belarus,
+  Kazakhstan, Kyrgyzstan, Russia, Tajikistan, and Uzbekistan; Armenia (left 2006) and Moldova (left 2010) are former
+  parties. Also performed functions of the EurAsEC Court from 2004 to 2011.
+notes: Judges are appointed by state-parties for renewable 10-year terms; one judge per participating state since 2002.
+  As of 2026 the court is chaired by German Nurbaev. Decisions ascertain treaty violations and recommend measures to
+  participating states; the court does not accept direct applications from private enterprises or individuals.
+last_verified: '2026-07-12'
 tags:
 - ECCIS
 - court
@@ -104,29 +129,44 @@ other_names:
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4306397
   license: CC0
-- field: description
-  source: Wikipedia
-  retrieved_at: '2026-06-14'
-  url: https://en.wikipedia.org/wiki/Economic_Court_of_the_Commonwealth_of_Independent_States
-  license: CC BY-SA
-- field: includes
-  source: CIS Executive Committee
-  retrieved_at: '2026-06-14'
-  url: https://eccis.org/page/206/ekonomiceskij-sud-sodruzestva-nezavisimyh-gosudarstv
-  license: unknown
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.wikidata.org/wiki/Q4306397
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://sudsng.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cis.minsk.by/reestr/ru/index.html#reestr/view/summary?doc=123
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://cis.minsk.by/reestr/ru/index.html#reestr/view/summary?doc=123
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://sudsng.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
+  url: https://sudsng.org/
+- field: includes
+  source: CIS Executive Committee
+  retrieved_at: '2026-07-12'
+  url: https://sudsng.org/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-12'
+  url: https://en.wikipedia.org/wiki/Economic_Court_of_the_Commonwealth_of_Independent_States
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
   url: https://sudsng.org/

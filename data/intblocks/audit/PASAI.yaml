@@ -1,27 +1,58 @@
 id: PASAI
+name: Pacific Association of Supreme Audit Institutions
 blocktype:
 - audit
 - intorg
 status: formal
+founded: '1987'
+active_period:
+  start: '1987'
+geographic_scope: regional
+regions:
+- Pacific
+partof:
+  id: INTOSAI
+  name: The International Organisation of Supreme Audit Institutions
 languages:
 - en
 links:
 - url: https://www.pasai.org/
   type: website
-name: Pacific Association of Supreme Audit Institutions
-founded: '1987'
-geographic_scope: regional
-regions:
-- Pacific
+- url: https://www.pasai.org/about-pasai
+  type: website
+- url: https://www.pasai.org/charter
+  type: website
+- url: https://www.intosai.org/about-us/regional-organizations
+  type: website
+acronyms:
+- lang: en
+  value: PASAI
+legal_status: membership association
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in the Pacific
 headquarters:
   city: Auckland
   country: NZ
   coordinates:
     lat: -36.8485
     lng: 174.7633
-acronyms:
-- lang: en
-  value: PASAI
+secretariat:
+  location: Auckland, New Zealand
+  organization: Office of the Controller and Auditor-General of New Zealand
+  head: Secretary-General
+membership_count: 30
+description: Regional association of supreme audit institutions in the Pacific, evolving from triennial meetings of SAI heads from 1973 and the South Pacific Association of Supreme Audit Institutions (SPASAI) formed in 1987. Promotes transparent, accountable, effective and efficient use of public sector resources by strengthening cooperation, advocacy, and audit capacity among member SAIs. One of seven regional organisations of INTOSAI; the General Secretariat is hosted by the Office of the Controller and Auditor-General of New Zealand in Auckland.
+tags:
+- PASAI
+- audit
+- intorg
+- organisation
+- pacific
+- supreme
+topics:
+- key: audit
+  name: Audit
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AS
   name: American Samoa
@@ -143,25 +174,55 @@ includes:
   name: Samoa
   type: country
   status: member
-membership_count: 30
-description: Regional association of supreme audit institutions in the Pacific, promoting transparent, accountable, effective
-  and efficient use of public sector resources. One of seven regional organisations of INTOSAI.
-tags:
-- PASAI
-- audit
-- intorg
-- organisation
-- pacific
-- supreme
-topics:
-- key: audit
-  name: Audit
+notes: Governed by Congress (supreme authority), Governing Board, and Secretariat. Evolved from the Conference of Heads of Audit Offices in the South Pacific (first meeting 1973 in Suva); SPASAI was recognised as an INTOSAI regional working group in 1986 and renamed PASAI in 2008 to reflect Northern Pacific membership. PASAI Incorporated was registered in New Zealand on 18 November 2009. As of 2026, the Chair is held by New Caledonia (Florence Bonnafoux) and the Secretary-General is Grant Taylor (Controller and Auditor-General of New Zealand). Strategic Plan 2024–2034 prioritises public financial management, audit quality, and SAI governance.
+other_names:
+- id: en
+  name: Pacific Association of Supreme Audit Institutions Incorporated
+- id: en
+  name: South Pacific Association of Supreme Audit Institutions
+last_verified: '2026-07-12'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.pasai.org/about-pasai
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.pasai.org/charter
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.pasai.org/about-pasai
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-12'
   url: https://www.pasai.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.pasai.org/
+  retrieved_at: '2026-07-12'
+  url: https://www.intosai.org/about-us/regional-organizations
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.pasai.org/charter
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://www.pasai.org/charter

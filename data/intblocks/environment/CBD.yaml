@@ -14,12 +14,40 @@ languages:
 links:
 - url: https://www.cbd.int/
   type: website
+- url: https://www.cbd.int/convention/text/
+  type: website
+- url: https://www.cbd.int/information/parties.shtml
+  type: website
+- url: https://www.cbd.int/secretariat/
+  type: website
 - url: https://en.wikipedia.org/wiki/Convention_on_Biological_Diversity
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q152805
+  type: wikidata
 name: Convention on Biological Diversity
 founded: '1992'
-description: International convention focused on biological diversity conservation
-  and environmental protection established through an international agreement.
+active_period:
+  start: '1993-12-29'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+headquarters:
+  city: Montreal
+  country: CA
+  coordinates:
+    lat: 45.5033
+    lng: -73.5868
+legal_status: treaty
+recognition_status: Multilateral environmental treaty opened for signature at the Earth Summit in Rio de Janeiro on 5 June 1992; entered into force on 29 December 1993 (United Nations Treaty Series No. 30619); first global agreement covering conservation, sustainable use of biodiversity, and fair and equitable sharing of benefits from genetic resources; administered by the CBD Secretariat hosted by UNEP in Montreal
+secretariat:
+  location: Montreal, Canada
+  organization: Secretariat of the Convention on Biological Diversity (hosted by the United Nations Environment Programme)
+description: Multilateral environmental treaty for conserving biological diversity, promoting sustainable use of its components, and ensuring fair and equitable sharing of benefits from genetic resources. Opened for signature at the 1992 Rio Earth Summit and entered into force on 29 December 1993; parent framework for the Cartagena and Nagoya Protocols.
 tags:
 - CBD
 - agreement
@@ -31,6 +59,8 @@ tags:
 - environment
 - law
 - legal
+- rio_conventions
+- unep
 topics:
 - key: conservation
   name: Conservation
@@ -41,16 +71,20 @@ topics:
 other_names:
 - id: ar
   name: اتفاقية التنوع البيولوجي
-- id: zh
-  name: 生物多样性公约
+- id: de
+  name: Biodiversitäts-Konvention
 - id: en
   name: Convention on Biological Diversity
-- id: fr
-  name: Convention sur la diversité biologique
-- id: ru
-  name: Конвенция о биологическом разнообразии
 - id: es
   name: Convención sobre la Diversidad Biológica
+- id: fr
+  name: Convention sur la diversité biologique
+- id: pt
+  name: Convenção sobre Diversidade Biológica
+- id: ru
+  name: Конвенция о биологическом разнообразии
+- id: zh
+  name: 生物多样性公约
 includes:
 - id: AE
   name: United Arab Emirates
@@ -808,15 +842,75 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-notes: The CBD entered into force in 1993. As of 2025, it has 193 parties, encompassing
-  nearly all United Nations member states. The convention aims to conserve biological
+notes: The CBD entered into force on 29 December 1993. As of 2026, it has 196 parties,
+  including nearly all United Nations member states, the European Union, the State
+  of Palestine, Cook Islands, and Niue. The convention aims to conserve biological
   diversity, promote sustainable use of its components, and ensure fair and equitable
   sharing of benefits arising from genetic resources.
-membership_count: 193
+membership_count: 196
 wikidata_id: Q152805
+official_documents:
+- url: https://www.cbd.int/convention/text/
+  type: document
+  name: Convention on Biological Diversity
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-8&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (No. 30619)
+acronyms:
+- lang: en
+  value: CBD
+- lang: zh
+  value: CBD
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/secretariat/
+- field: active_period
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/convention/text/
+- field: geographic_scope
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/information/parties.shtml
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-8&chapter=27&clang=_en
+- field: recognition_status
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/secretariat/
+- field: secretariat
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/secretariat/
+- field: headquarters
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/secretariat/
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-13'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-8&chapter=27&clang=_en
+- field: membership_count
+  source: CBD Secretariat
+  retrieved_at: '2026-07-13'
+  url: https://www.cbd.int/information/parties.shtml
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q152805
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q152805
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q152805
   license: CC0

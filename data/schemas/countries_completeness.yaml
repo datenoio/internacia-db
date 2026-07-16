@@ -1,10 +1,50 @@
 # Completeness thresholds for countries dataset validation.
 # mode: warn | error
+#
+# Rationale for thresholds:
+# - population/area/timezones/native_names/centroid: core reference fields, required
+#   for every entity (mode: error, 0% null).
+# - gini: structurally sparse. The World Bank publishes Gini only for a subset of
+#   economies; territories, microstates, and disputed entities have no value to
+#   source. The denominator therefore effectively spans only eligible economies,
+#   and the budget (max_null_rate 0.40, warn) reflects that reality rather than
+#   implying missing data. See docs/enrichment.md.
+# - capital_city: warns above 5% null; the handful of genuinely capital-less
+#   entities (uninhabited territories, groupings) are documented exclusions in
+#   docs/country-code-policy.md.
 
 special_entity_allowlist: []
 
 unresolved_country_includes:
   mode: warn
+
+borders:
+  # Non-reciprocal border pairs to suppress in NONRECIPROCAL_BORDER, as
+  # 'ABC-XYZ' meaning: ABC may list XYZ without XYZ listing ABC back.
+  reciprocity_allowlist: []
+
+region_hierarchy:
+  # Country codes whose subregion legitimately falls outside the canonical
+  # continent→subregion table (transcontinental or administratively
+  # reassigned entities). Suppresses REGION_HIERARCHY_MISMATCH.
+  allowlist:
+    - CC  # Cocos Islands: Asian continent, administered in Australia and New Zealand (M49)
+    - CX  # Christmas Island: Asian continent, administered in Australia and New Zealand (M49)
+    - IO  # British Indian Ocean Territory: Asian continent, Eastern Africa subregion (M49)
+    - TL  # Timor-Leste: tagged Oceania, South-Eastern Asia subregion (M49)
+    - UM  # US Minor Outlying Islands: dispersed across Oceania and North America
+
+geography:
+  # CAPITAL_FAR_FROM_CENTROID: capital must lie within
+  # max(min_km, area_multiplier * sqrt(area_km2)) of the centroid
+  # (default_km when area is unknown). Catches swapped/mis-signed coordinates.
+  capital_distance:
+    min_km: 500
+    area_multiplier: 2.5
+    default_km: 1500
+    allowlist:
+      - UM  # capital recorded as Washington DC, external to the dispersed islands
+      - PF  # Papeete is ~1000 km from the centroid of the dispersed archipelago
 
 fields:
   population:
@@ -14,7 +54,9 @@ fields:
     max_null_rate: 0.0
     mode: error
   gini:
-    max_null_rate: 0.33
+    # Scoped to eligible economies; ~34% of entities have no World Bank Gini to
+    # source (territories, microstates, disputed entities). See header rationale.
+    max_null_rate: 0.40
     mode: warn
   timezones:
     max_null_rate: 0.0

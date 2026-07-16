@@ -1,7 +1,14 @@
 id: FUTURECOAL
+name: FutureCoal
 blocktype:
 - energy
 status: formal
+founded: '1985'
+active_period:
+  start: '1985'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
@@ -9,19 +16,81 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/FutureCoal
   type: wikipedia
-name: FutureCoal
-founded: '1985'
+- url: https://www.wikidata.org/wiki/Q3152360
+  type: wikidata
 headquarters:
   city: London
   country: GB
   coordinates:
     lat: 51.507222222222
     lng: -0.1275
-geographic_scope: global
-regions:
-- worldwide
-membership_count: 50
 legal_status: industry_association
+recognition_status: International non-profit industry association originally established as the International Coal Development Institute in 1985; renamed the World Coal Institute in 1988, the World Coal Association in 2010, and rebranded as FutureCoal in November 2023
+secretariat:
+  location: Suite 2.06, Bridge House, 181 Queen Victoria Street, London EC4V 4EG, United Kingdom
+  organization: FutureCoal Limited
+includes:
+- id: AU
+  name: Australia
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+membership_count: 50
 description: International non-profit organization representing the global coal value chain. FutureCoal, formerly known as
   the World Coal Association (WCA), was originally established as the International Coal Development Institute in 1985, renamed
   to the World Coal Institute in 1988, and to the World Coal Association in 2010, before rebranding as FutureCoal in November
@@ -51,29 +120,92 @@ other_names:
 - id: en
   name: World Coal Association
 - id: en
-  name: WCA
-- id: en
   name: World Coal Institute
 - id: en
   name: International Coal Development Institute
 - id: fr
-  name: FutureCoal
+  name: Institut mondial du charbon
+- id: ar
+  name: رابطة الفحم العالمية
 - id: ru
   name: FutureCoal
 - id: es
   name: FutureCoal
 - id: zh
   name: 未来煤炭
+acronyms:
+- lang: en
+  value: WCA
+- lang: en
+  value: WCI
+notes: CEO Michelle Manook appointed in 2019. Participates in United Nations and International Energy Agency forums, including
+  the UN Framework Convention on Climate Change and the IEA Coal Industry Advisory Board, and is part of the Carbon Sequestration
+  Leadership Forum. Membership is corporate and industry-based rather than sovereign; includes lists countries where corporate
+  members and national industry partners are based, per the FutureCoal launch announcement (November 2023). National chapters
+  include a Southern Africa Chapter and an India Chapter (launched 2026).
+wikidata_id: Q3152360
+last_verified: '2026-07-14'
 provenance:
-- field: legal_status
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
   url: https://www.futurecoal.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
   url: https://www.futurecoal.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.futurecoal.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/FutureCoal
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.futurecoal.org/about/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.futurecoal.org/
+  retrieved_at: '2026-07-13'
+  url: https://www.futurecoal.org/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/FutureCoal
+  license: CC BY-SA 4.0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/FutureCoal
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://en.wikipedia.org/wiki/FutureCoal
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3152360
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3152360
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q3152360
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.newsfilecorp.com/release/187514/Transforming-to-FutureCoal-The-Global-Alliance-for-Sustainable-Coal
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-14'
+  url: https://www.futurecoal.org/global-alliance/

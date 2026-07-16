@@ -1,15 +1,65 @@
 id: COPANT
+name: The Pan American Standards Commission
 blocktype:
 - intorg
 status: formal
+founded: '1949-07-12'
+active_period:
+  start: '1949-07-12'
+geographic_scope: regional
+regions:
+- Americas
 languages:
 - en
+- es
+- pt
 links:
-- url: http://www.copant.org/
+- url: https://copant.org/
   type: website
+- url: https://copant.org/en/sobre-nosotros/
+  type: website
+- url: https://es.wikipedia.org/wiki/Comisi%C3%B3n_Panamericana_de_Normas_T%C3%A9cnicas
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q47529130
   type: wikidata
-name: The Pan American Standards Commission
+acronyms:
+- lang: en
+  value: COPANT
+- lang: es
+  value: COPANT
+- lang: pt
+  value: COPANT
+legal_status: non-profit civil association
+recognition_status: Regional standards organization uniting national standards bodies across the Americas; official reference for technical standardization and conformity assessment in the region; member of the Quality Infrastructure Council of the Americas (QICA) alongside SIM and IAAC
+headquarters:
+  city: Guatemala City
+  country: GT
+  coordinates:
+    lat: 14.631
+    lng: -90.523
+secretariat:
+  location: 10 Avenida 15-63 Apt 1107, Zona 10, 01010, Guatemala City, Guatemala
+  head: Executive Secretary
+membership_count: 27
+description: Regional standards organization comprising national standards bodies across the Americas. Founded on 12 July 1949 in São Paulo, Brazil, as the Pan American Committee on Technical Standards (CPANT); adopted its current name at the 1964 General Assembly in New York. Promotes technical standardization, conformity assessment, and harmonization to facilitate trade, innovation, and quality infrastructure across the region. Governance comprises the Assembly of Members, Board of Directors, and Executive Secretariat; legal domicile in Buenos Aires, Argentina, with the Executive Secretariat based in Guatemala City, Guatemala. Cooperates with ISO, IEC, and other regional standards organizations.
+tags:
+- COPANT
+- american
+- americas
+- conformity_assessment
+- intorg
+- iso
+- qica
+- regional
+- standard
+- standardization
+topics:
+- key: standardization
+  name: Standardization
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 includes:
 - id: AR
   name: Argentina
@@ -139,19 +189,6 @@ includes:
   name: South Africa
   type: country
   status: associated
-membership_count: 27
-description: The Pan American Standards Commission is an international organization
-  that is used to promote regional cooperation in the standardization sector.
-tags:
-- COPANT
-- american
-- intorg
-- iso
-- standard
-- standardization
-topics:
-- key: standardization
-  name: Standardization
 wikidata_id: Q47529130
 other_names:
 - id: de
@@ -160,6 +197,14 @@ other_names:
   name: The Pan American Standards Commission
 - id: es
   name: Comisión Panamericana de Normas Técnicas
+- id: pt
+  name: Comissão Pan-Americana de Normas Técnicas
+previous_names:
+- id: CPANT
+  name: Pan American Committee on Technical Standards
+  period: 1949-1964
+notes: Operational work began at the Montevideo Assembly (24–27 April 1961). Executive Secretariat location follows the residence of the serving Executive Secretary per COPANT statutes; currently Guatemala City. Associated members include extraregional standards bodies (ES, FR, IT, PT, ZA).
+last_verified: '2026-07-12'
 provenance:
 - field: other_names
   source: Wikidata
@@ -172,13 +217,54 @@ provenance:
   url: https://www.wikidata.org/
   license: CC0
 - field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q47529130
-  license: CC0
-acronyms:
-- lang: en
-  value: COPANT
-- lang: es
-  value: COPANT
-founded: '1949-07-12'
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/wp-content/uploads/2025/07/Estatutos_Reglamento_COPANT_Mayo_2025.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/
+- field: previous_names
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/wp-content/uploads/2025/07/Estatutos_Reglamento_COPANT_Mayo_2025.pdf
+- field: topics
+  source: official sources
+  retrieved_at: '2026-07-12'
+  url: https://copant.org/en/sobre-nosotros/

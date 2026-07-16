@@ -1,19 +1,40 @@
 id: IEA
+name: International Energy Agency
 blocktype:
 - energy
 status: formal
+partof: OECD
+founded: '1974-11-18'
+active_period:
+  start: '1974-11-18'
+geographic_scope: global
+regions:
+- worldwide
 languages:
-- zh
 - en
-- ru
 links:
-- url: http://www.iea.org/
+- url: https://www.iea.org/
+  type: website
+- url: https://www.iea.org/about
+  type: website
+- url: https://www.iea.org/about/membership
   type: website
 - url: https://en.wikipedia.org/wiki/International_Energy_Agency
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q826700
   type: wikidata
-name: International Energy Agency
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.853611
+    lng: 2.294722
+legal_status: intergovernmental
+recognition_status: Autonomous intergovernmental organisation established under the Agreement on an International Energy Programme (IEP Agreement) signed on 18 November 1974 within the OECD framework, following the 1973 oil crisis; operates with its own budget and governance structure under a Governing Board and biennial Ministerial meetings
+secretariat:
+  location: Paris, France
+  head: Executive Director
+  organization: International Energy Agency
 includes:
 - id: CA
   name: Canada
@@ -143,16 +164,12 @@ includes:
   name: Netherlands
   type: country
   status: member
-founded: '1974'
-headquarters:
-  city: Carré Suffren
-  country: FR
-  coordinates:
-    lat: 48.85444444
-    lng: 2.29333333
 membership_count: 32
-wikidata_id: Q826700
-description: International Energy Agency is an international energy body with 32 members.
+description: Autonomous intergovernmental organisation that provides policy advice, data, and analysis on the global energy
+  system to 32 OECD member countries. Established in 1974 under the International Energy Programme within the OECD framework,
+  the IEA focuses on energy security, market stability, clean energy transitions, and energy efficiency. Member countries
+  maintain mandatory emergency oil stocks equivalent to 90 days of net imports and participate in coordinated emergency
+  releases during supply disruptions.
 tags:
 - IEA
 - agency
@@ -160,8 +177,10 @@ tags:
 - energy
 - environment
 - international
+- intergovernmental
 - nature
 - oil
+- security
 topics:
 - key: economy
   name: Economy
@@ -169,24 +188,95 @@ topics:
   name: Energy
 - key: environment
   name: Environment
+- key: climate_change
+  name: Climate Change
 other_names:
 - id: ar
   name: الوكالة الدولية للطاقة
-- id: zh
-  name: 國際能源署
+- id: de
+  name: Internationale Energieagentur
 - id: en
   name: International Energy Agency
-- id: fr
-  name: Agence internationale de l'énergie
-- id: ru
-  name: Международное энергетическое агентство
 - id: es
   name: Agencia Internacional de la Energía
+- id: fr
+  name: Agence internationale de l'énergie
+- id: pt
+  name: Agência Internacional de Energia
+- id: ru
+  name: Международное энергетическое агентство
+- id: zh
+  name: 國際能源署
+acronyms:
+- lang: en
+  value: IEA
+- lang: fr
+  value: AIE
+- lang: de
+  value: IEA
+- lang: pt
+  value: AIE
+- lang: ru
+  value: МЭА
+notes: Membership is limited to OECD member states meeting oil stock, data reporting, and emergency response requirements.
+  An Association country category (since 2015) enables deeper engagement with major emerging economies; 14 countries hold
+  association status. Six countries are in accession as of 2024 (Brazil, Chile, Colombia, Costa Rica, Israel, and Romania).
+  The Executive Director is Fatih Birol (since 2015). Headquarters moved from the Château de la Muette to 9 rue de la
+  Fédération in 1996. The IEA hosts secretariats for the Clean Energy Ministerial and Energy Efficiency Hub.
+wikidata_id: Q826700
+last_verified: '2026-07-13'
 provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iea.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/membership
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-13'
+  url: https://www.iea.org/about/membership
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q826700
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-13'
+  url: https://www.wikidata.org/wiki/Q826700
+  license: CC0
