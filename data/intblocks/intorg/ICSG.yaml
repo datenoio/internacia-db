@@ -6,12 +6,14 @@ status: formal
 languages:
 - en
 links:
-- url: https://www.icsg.org/
+- url: https://icsg.org/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Copper_Study_Group
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q17084551
+  type: wikidata
 name: International Copper Study Group
-founded: '1992'
+founded: '1992-01-23'
 headquarters:
   city: Lisbon
   country: PT
@@ -21,10 +23,14 @@ regions:
 acronyms:
 - lang: en
   value: ICSG
-membership_count: 30
-description: Intergovernmental organization that promotes transparency in the global copper market by facilitating exchange
-  of information on production, usage, stocks, trade, and prices. Member states represent approximately 85% of world copper
-  mine production, refined production, and usage.
+membership_count: 26
+wikidata_id: Q17084551
+legal_status: intergovernmental organization
+description: Intergovernmental organization of copper producing and consuming states that
+  serves as the international commodity board for copper. Promotes market transparency
+  through exchange of information on production, usage, stocks, trade, and prices, and
+  provides a forum for international cooperation on copper-related issues. Member states
+  represent approximately 85% of world copper mine production, refined production, and usage.
 tags:
 - ICSG
 - copper
@@ -41,12 +47,12 @@ includes:
   name: Australia
   type: country
   status: member
-- id: BR
-  name: Brazil
+- id: BE
+  name: Belgium
   type: country
   status: member
-- id: CA
-  name: Canada
+- id: BR
+  name: Brazil
   type: country
   status: member
 - id: CL
@@ -57,6 +63,22 @@ includes:
   name: China
   type: country
   status: member
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
 - id: DE
   name: Germany
   type: country
@@ -65,12 +87,32 @@ includes:
   name: India
   type: country
   status: member
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
 - id: JP
   name: Japan
   type: country
   status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
 - id: MX
   name: Mexico
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: PE
@@ -89,30 +131,75 @@ includes:
   name: Russian Federation
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: RS
+  name: Serbia
   type: country
   status: member
 - id: ES
   name: Spain
   type: country
   status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
 - id: US
   name: United States
   type: country
   status: member
-- id: ZM
-  name: Zambia
+- id: CA
+  name: Canada
   type: country
-  status: member
-notes: Membership includes both producing and consuming countries. The organization facilitates international discussions
-  and cooperation on copper-related issues. Full membership list may include additional countries.
+  status: former_member
+- id: GR
+  name: Greece
+  type: country
+  status: former_member
+- id: ID
+  name: Indonesia
+  type: country
+  status: former_member
+- id: NL
+  name: Netherlands
+  type: country
+  status: former_member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: former_member
+- id: PH
+  name: Philippines
+  type: country
+  status: former_member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+notes: Established 23 January 1992 under the Agreement Establishing the Terms of Reference
+  of the International Copper Study Group, negotiated in Geneva in 1989. Secretariat is
+  co-located in Lisbon with the International Nickel Study Group (INSG) and the International
+  Lead and Zinc Study Group (ILZSG). Official membership is 25 member governments plus the
+  European Union (26). Former full members are Canada, Greece, Indonesia, Netherlands,
+  Norway, Philippines, and the United Kingdom.
+last_verified: '2026-07-20'
 provenance:
+- field: includes
+  source: Wikipedia; ICSG World Copper Factbook 2024
+  retrieved_at: '2026-07-20'
+  url: https://en.wikipedia.org/wiki/International_Copper_Study_Group
+- field: founded
+  source: ICSG official website
+  retrieved_at: '2026-07-20'
+  url: https://icsg.org/the-study-group/
+- field: headquarters
+  source: ICSG official website
+  retrieved_at: '2026-07-20'
+  url: https://icsg.org/the-study-group/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-20'
+  url: https://www.wikidata.org/wiki/Q17084551
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
-  url: https://www.icsg.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.icsg.org/
+  url: https://icsg.org/

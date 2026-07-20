@@ -1,10 +1,17 @@
 id: ISA_SEABED
+name: International Seabed Authority
 blocktype:
 - intorg
 - ocean
 - agreement
 status: formal
-founded: '1994'
+founded: '1994-11-16'
+active_period:
+  start: '1994-11-16'
+partof: UNCLOS
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
@@ -13,21 +20,32 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/International_Seabed_Authority
   type: wikipedia
-name: International Seabed Authority
+- url: https://www.wikidata.org/wiki/Q333727
+  type: wikidata
 headquarters:
   city: Kingston
   country: JM
   coordinates:
-    lat: 18.0
-    lng: -76.8
-geographic_scope: global
-regions:
-- worldwide
+    lat: 17.9647
+    lng: -76.7917
+secretariat:
+  location: Kingston, Jamaica
+  head: Secretary-General
+  organization: International Seabed Authority
+legal_status: intergovernmental organization
+recognition_status: Autonomous intergovernmental organization established under Part XI of the 1982 UN
+  Convention on the Law of the Sea (UNCLOS) and the 1994 Agreement relating to the Implementation of Part
+  XI; entered into force with UNCLOS on 16 November 1994; holds observer status at the UN General Assembly
+membership_count: 172
 wikidata_id: Q333727
-description: Intergovernmental organization established under the 1982 UN Convention on the Law of the Sea (UNCLOS) to regulate
-  mineral-related activities on the seabed beyond national jurisdiction. The ISA ensures that seabed mining activities are
-  conducted for the benefit of all humanity while protecting the marine environment.
-legal_status: intergovernmental
+description: Intergovernmental organization established under the 1982 UN Convention on the Law of the
+  Sea (UNCLOS) to authorize and control mineral-related activities in the international seabed Area beyond
+  national jurisdiction, while protecting the marine environment. Membership comprises all UNCLOS parties
+  (171 states and the European Union); the United States participates as an observer.
+notes: ISA membership is identical to UNCLOS states parties. As of July 2026 there are 172 members (171
+  states plus the European Union). The United States has not ratified UNCLOS and is not a member, but
+  participates in ISA meetings as an observer. Headquarters are in Kingston, Jamaica; the current Secretary-General
+  is Leticia Carvalho (term began 1 January 2025).
 acronyms:
 - lang: en
   value: ISA
@@ -51,6 +69,8 @@ topics:
   name: Mining
 - key: environment
   name: Environment
+- key: law
+  name: Law
 other_names:
 - id: ar
   name: السلطة الدولية لقاع البحار
@@ -69,18 +89,6 @@ other_names:
 - id: zh
   name: 国际海底管理局
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
@@ -141,10 +149,6 @@ includes:
   name: Bahrain
   type: country
   status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
 - id: BJ
   name: Benin
   type: country
@@ -154,7 +158,7 @@ includes:
   type: country
   status: member
 - id: BO
-  name: Bolivia
+  name: Bolivia (Plurinational State of)
   type: country
   status: member
 - id: BR
@@ -163,10 +167,6 @@ includes:
   status: member
 - id: BS
   name: Bahamas, The
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
   type: country
   status: member
 - id: BW
@@ -186,15 +186,11 @@ includes:
   type: country
   status: member
 - id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
+  name: Democratic Republic of the Congo
   type: country
   status: member
 - id: CG
-  name: Congo, Rep.
+  name: Congo
   type: country
   status: member
 - id: CH
@@ -202,7 +198,7 @@ includes:
   type: country
   status: member
 - id: CI
-  name: Cote d'Ivoire
+  name: Côte d'Ivoire
   type: country
   status: member
 - id: CK
@@ -219,10 +215,6 @@ includes:
   status: member
 - id: CN
   name: China
-  type: country
-  status: member
-- id: CO
-  name: Colombia
   type: country
   status: member
 - id: CR
@@ -278,20 +270,16 @@ includes:
   type: country
   status: member
 - id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
+  name: Egypt
   type: country
   status: member
 - id: ES
   name: Spain
   type: country
   status: member
-- id: ET
-  name: Ethiopia
-  type: country
+- id: EU
+  name: European Union
+  type: organization
   status: member
 - id: FI
   name: Finland
@@ -302,7 +290,7 @@ includes:
   type: country
   status: member
 - id: FM
-  name: Micronesia, Fed. Sts.
+  name: Micronesia (Federated States of)
   type: country
   status: member
 - id: FR
@@ -314,7 +302,7 @@ includes:
   type: country
   status: member
 - id: GB
-  name: United Kingdom
+  name: United Kingdom of Great Britain and Northern Ireland
   type: country
   status: member
 - id: GD
@@ -381,20 +369,12 @@ includes:
   name: Ireland
   type: country
   status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
 - id: IN
   name: India
   type: country
   status: member
 - id: IQ
   name: Iraq
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: IS
@@ -441,24 +421,16 @@ includes:
   name: St. Kitts and Nevis
   type: country
   status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
 - id: KR
-  name: Korea, Rep.
+  name: Korea, Republic of
   type: country
   status: member
 - id: KW
   name: Kuwait
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
 - id: LA
-  name: Lao PDR
+  name: Lao People's Democratic Republic
   type: country
   status: member
 - id: LB
@@ -493,10 +465,6 @@ includes:
   name: Latvia
   type: country
   status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
 - id: MA
   name: Morocco
   type: country
@@ -506,7 +474,7 @@ includes:
   type: country
   status: member
 - id: MD
-  name: Moldova
+  name: Republic of Moldova
   type: country
   status: member
 - id: ME
@@ -522,7 +490,7 @@ includes:
   type: country
   status: member
 - id: MK
-  name: Macedonia, FYR
+  name: North Macedonia
   type: country
   status: member
 - id: ML
@@ -617,10 +585,6 @@ includes:
   name: Panama
   type: country
   status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
 - id: PG
   name: Papua New Guinea
   type: country
@@ -635,6 +599,10 @@ includes:
   status: member
 - id: PL
   name: Poland
+  type: country
+  status: member
+- id: PS
+  name: Palestine
   type: country
   status: member
 - id: PT
@@ -721,20 +689,8 @@ includes:
   name: Suriname
   type: country
   status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
 - id: ST
   name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
   type: country
   status: member
 - id: SZ
@@ -753,16 +709,8 @@ includes:
   name: Thailand
   type: country
   status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
 - id: TL
   name: Timor-Leste
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
   type: country
   status: member
 - id: TN
@@ -771,10 +719,6 @@ includes:
   status: member
 - id: TO
   name: Tonga
-  type: country
-  status: member
-- id: TR
-  name: Turkey
   type: country
   status: member
 - id: TT
@@ -786,7 +730,7 @@ includes:
   type: country
   status: member
 - id: TZ
-  name: Tanzania
+  name: United Republic of Tanzania
   type: country
   status: member
 - id: UA
@@ -800,25 +744,17 @@ includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: observer
 - id: UY
   name: Uruguay
-  type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
   type: country
   status: member
 - id: VC
   name: St. Vincent and the Grenadines
   type: country
   status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
 - id: VN
-  name: Vietnam
+  name: Viet Nam
   type: country
   status: member
 - id: VU
@@ -830,7 +766,7 @@ includes:
   type: country
   status: member
 - id: YE
-  name: Yemen, Rep.
+  name: Yemen
   type: country
   status: member
 - id: ZA
@@ -845,7 +781,7 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 194
+last_verified: '2026-07-20'
 provenance:
 - field: other_names
   source: Wikidata
@@ -866,6 +802,17 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.isa.org.jm/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.isa.org.jm/
+  source: Wikipedia / official sources
+  retrieved_at: '2026-07-20'
+  url: https://en.wikipedia.org/wiki/International_Seabed_Authority
+- field: includes
+  source: UNCLOS states parties (UN Treaty Collection) synced via UNCLOS intblock
+  retrieved_at: '2026-07-20'
+  url: https://treaties.un.org/Pages/ViewDetailsIII.aspx?src=TREATY&mtdsg_no=XXI-6&chapter=21&clang=_en
+- field: membership_count
+  source: UNCLOS states parties count
+  retrieved_at: '2026-07-20'
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-20'
+  url: https://en.wikipedia.org/wiki/International_Seabed_Authority

@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Intblocks **ARABSAT**, **CDRI**, **WANO**, **PAXSILICA**, **WAICO**; intblocks row count **1071 → 1076**.
+- Intblock **ARABSAT** (Arab Satellite Communications Organization): Arab League intergovernmental satellite operator founded 1976-04-14, Riyadh HQ; 21 shareholder member states.
+- Intblock **CDRI** (Coalition for Disaster Resilient Infrastructure): India-launched global coalition for disaster- and climate-resilient infrastructure (2019-09-23); New Delhi HQ; 58 member countries and 12 partner organizations.
+- Intblock **WANO** (World Association of Nuclear Operators): nonprofit nuclear-operator safety organisation founded 1989-05-15, London HQ; 31 countries with operating commercial NPPs.
+- Intblock **PAXSILICA** (Pax Silica): US-led AI, semiconductor, and critical-minerals supply-chain initiative.
+- Intblock **WAICO** (World Artificial Intelligence Cooperation Organization) — 29 founding members, Shanghai HQ, established 2026-07-16.
+
+### Changed
+
+- Intblock **ISA_SEABED** (International Seabed Authority): synced membership to UNCLOS parties (172 members + US observer); set founded `1994-11-16`, Kingston HQ coordinates, `partof: UNCLOS`, and Wikipedia/Wikidata links.
+- Intblock **ICSG** (International Copper Study Group): refreshed membership to 26 current members (incl. EU) plus 7 former members; set founded date 1992-01-23, Wikidata Q17084551, and Lisbon HQ provenance.
+
 ## [1.6.0] - 2026-07-16
 
 Data-quality expansion release: shared rule engine with 40+ new referential, temporal, and plausibility checks; intblocks schema tightened (**breaking**); space category consolidation; artifact-consistency and link-check CI guards; hundreds of data fixes.

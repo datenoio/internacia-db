@@ -79,7 +79,7 @@ Each build writes to `data/datasets/`:
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1071** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1076** intblocks, **86** blocktypes.
 
 ## Validation and quality
 
@@ -272,7 +272,7 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1071 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — 1076 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 
