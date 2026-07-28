@@ -18,6 +18,7 @@ import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.validate import cross_rules, intblock_rules
+from internacia_builder.validate.output import emit_validation_result
 from internacia_builder.validate.completeness import (
     load_includes_status_catalog,
     validate_completeness,
@@ -279,6 +280,11 @@ def main(
         "--report",
         help="Write JSON validation summary to this path",
     ),
+    json_output: bool = typer.Option(
+        False,
+        "--json",
+        help="Emit structured JSON result to stdout (for agents and automation)",
+    ),
 ) -> None:
     """Run all intblock validation checks."""
     raise typer.Exit(
@@ -286,6 +292,7 @@ def main(
             intblocks_dir=intblocks_dir,
             fail_on_warning=fail_on_warning,
             report=report,
+            json_output=json_output,
         )
     )
 
@@ -294,6 +301,7 @@ def run_validation(
     intblocks_dir: Path | None = None,
     fail_on_warning: bool = False,
     report: Path | None = None,
+    json_output: bool = False,
 ) -> int:
     """Run intblock validation; return process exit code (0 = success)."""
     root = project_root()
@@ -464,12 +472,13 @@ def run_validation(
         report.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
         typer.echo(f"Wrote validation report: {report}")
 
-    for w in warnings:
-        typer.echo(f"WARN: {w}", err=True)
-    for e in errors:
-        typer.echo(f"ERROR: {e}", err=True)
-
-    typer.echo(f"Validated {len(records)} intblocks: {len(errors)} error(s), {len(warnings)} warning(s)")
+    emit_validation_result(
+        dataset="intblocks",
+        validated=len(records),
+        errors=errors,
+        warnings=warnings,
+        json_output=json_output,
+    )
 
     if errors or (fail_on_warning and warnings):
         return 1

@@ -3,6 +3,7 @@
 > Machine-friendly reference data for countries, intergovernmental organizations (intblocks),
 > and organization block types. Licensed CC-BY-4.0 (data). Code is MIT.
 > Version and schema: see data/datasets/*.manifest.json
+> 中文索引: llms.zh.txt
 
 ## What this is
 
@@ -67,10 +68,19 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 
 ## Full documentation
 
+- docs/agents/query.md — query and join workflow (all platforms)
+- docs/agents/zh/query.md — 中文查询工作流（Kimi、GLM、通义灵码）
+- docs/agents/contribute.md — YAML editing workflow (all platforms)
+- docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
+- docs/agents/openspec-quickstart.md — schema change proposals
 - docs/query-examples.md — verified query cookbook (countries, borders, intblocks, joins)
+- docs/query-examples.zh.md — 已验证中文场景查询
 - docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
+- llms.zh.txt — 中文紧凑索引
+- AGENTS.zh.md — 中文智能体路由入口
+- llms-full.txt — extended index for LLM crawlers
+- AGENTS.md — root routing hub
 - README.md — installation, build, schema tables, code examples
 - docs/country-code-policy.md — non-standard codes, entity_type, filtering
 - ATTRIBUTION.md — upstream sources and citation
 - CONTRIBUTING.md — YAML authoring (for maintainers only)
-- .cursor/skills/internacia-contribute/SKILL.md — Cursor maintainer workflow

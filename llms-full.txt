@@ -1,0 +1,73 @@
+# Internacia Datasets
+
+> Extended index for LLM agents and crawlers. Compact version: llms.txt
+> Licensed CC-BY-4.0 (data). Code is MIT. Version: see data/datasets/*.manifest.json
+
+## Summary
+
+Reference data for countries (256), intergovernmental organizations / intblocks (1076), and blocktypes (86).
+Designed for entity linking, geographic classification, and membership joins — NOT socioeconomic profiling.
+
+## Agent entry points
+
+- AGENTS.md — root routing hub (all platforms)
+- AGENTS.zh.md — 中文智能体路由（Kimi、GLM、通义灵码）
+- docs/agents/query.md — query and join workflow
+- docs/agents/zh/query.md — 中文查询工作流
+- docs/agents/contribute.md — YAML editing workflow
+- docs/agents/openspec-quickstart.md — schema change proposals
+- CLAUDE.md — Claude Code shim
+- .github/copilot-instructions.md — GitHub Copilot shim
+
+## Consumption
+
+- docs/ai-consumers.md — full consumption contract, scope, field semantics
+- docs/query-examples.md — verified DuckDB and Pandas recipes
+- docs/country-code-policy.md — non-standard codes and filtering
+
+## Data access
+
+| Method | Location |
+|--------|----------|
+| DuckDB | data/datasets/internacia.duckdb |
+| Parquet | data/datasets/{countries,intblocks,blocktypes}.parquet |
+| JSONL (zstd) | data/datasets/{countries,intblocks,blocktypes}.jsonl.zst |
+| Manifests | data/datasets/*.manifest.json |
+| Aliases | data/datasets/intblocks_aliases.json |
+| Python SDK | https://github.com/commondataio/internacia-python |
+| REST API | https://github.com/commondataio/internacia-api |
+
+## Join keys
+
+- Countries: code (alpha-2), iso3code, wikidata_id
+- Intblocks: id; membership via includes[].id → country code
+- Blocktypes: id matches values in intblocks.blocktype
+
+## Critical gotchas
+
+- borders uses ISO alpha-3, not alpha-2
+- population, area, gini are structs {value, year, source, source_id}
+- Filter current ISO countries: code_status = 'official_iso3166_1' (249 records)
+- Intblock id renames: check intblocks_aliases.json
+- Out of scope: HDI, GDP, government type, internet penetration
+
+## Maintainer docs
+
+- CONTRIBUTING.md — setup and PR checklist
+- docs/enrichment.md — enrichment pipeline
+- openspec/AGENTS.md — full OpenSpec reference
+- ATTRIBUTION.md — upstream sources
+- CHANGELOG.md — breaking changes
+
+## Platform adapters (thin wrappers)
+
+- .cursor/skills/internacia-query/SKILL.md → docs/agents/query.md
+- .cursor/skills/internacia-contribute/SKILL.md → docs/agents/contribute.md
+- .agent/workflows/ — portable step-by-step workflows
+
+## Schemas
+
+- data/schemas/countries.schema.json
+- data/schemas/intblocks.schema.json
+- data/schemas/countries_completeness.yaml
+- data/schemas/intblocks_completeness.yaml

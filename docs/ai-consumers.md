@@ -290,12 +290,18 @@ sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 
 ## Related documentation
 
+- [docs/agents/query.md](agents/query.md) — query and join workflow (all platforms)
+- [docs/agents/zh/query.md](agents/zh/query.md) — 中文查询工作流
+- [docs/query-examples.zh.md](query-examples.zh.md) — 已验证中文 DuckDB 示例
+- [llms.zh.txt](../llms.zh.txt) — 中文紧凑索引
+- [AGENTS.zh.md](../AGENTS.zh.md) — 中文智能体入口
 - [query-examples.md](query-examples.md) — verified DuckDB and Pandas query cookbook
 - [llms.txt](../llms.txt) — compact index for LLM context windows
+- [llms-full.txt](../llms-full.txt) — extended index for crawlers
+- [AGENTS.md](../AGENTS.md) — root routing hub
 - [README.md](../README.md) — full schema tables and build pipeline
 - [country-code-policy.md](country-code-policy.md) — non-standard codes and filtering
 - [enrichment.md](enrichment.md) — how profile fields are sourced (maintainers)
 - [CHANGELOG.md](../CHANGELOG.md) — breaking changes and migration notes
 - [data/schemas/countries.schema.json](../data/schemas/countries.schema.json) — field descriptions for countries
 - [data/schemas/intblocks.schema.json](../data/schemas/intblocks.schema.json) — field descriptions for intblocks
-- [.cursor/skills/internacia-contribute/SKILL.md](../.cursor/skills/internacia-contribute/SKILL.md) — maintainer editing workflow (Cursor)

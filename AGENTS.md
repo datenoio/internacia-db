@@ -1,3 +1,67 @@
+# Internacia DB — AI agent guide
+
+Structured reference data: **256 countries**, **1076 intblocks** (organizations/groups),
+**86 blocktypes**. Licensed CC-BY-4.0 (data); code is MIT.
+
+中文指南：[AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt)
+
+## What do you need?
+
+| Goal | Start here | Do not |
+|------|------------|--------|
+| **Query, join, or enrich** downstream data | [llms.txt](llms.txt) → [docs/ai-consumers.md](docs/ai-consumers.md) | Parse source YAML under `data/countries/` or `data/intblocks/` |
+| **Look up countries, borders, org membership** | [docs/agents/query.md](docs/agents/query.md) | Join intblocks on `includes[].name` (use `includes[].id`) |
+| **Edit country or intblock YAML** | [docs/agents/contribute.md](docs/agents/contribute.md) | Hand-edit `data/datasets/` (generated only) |
+| **Schema change, new capability, breaking export** | [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md) → [openspec/AGENTS.md](openspec/AGENTS.md) | Implement before approval |
+
+## Preferred data access
+
+- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `_meta`)
+- **Parquet:** `data/datasets/{countries,intblocks,blocktypes}.parquet`
+- **Remote:** [internacia-api](https://github.com/commondataio/internacia-api), [internacia-python](https://github.com/commondataio/internacia-python)
+
+Check version before upgrading: `SELECT dataset, version, schema_hash FROM _meta;` or read `data/datasets/*.manifest.json`.
+
+## Join keys and gotchas
+
+- Countries: `code` (alpha-2, primary), `iso3code`, `wikidata_id`
+- Intblocks: `id` (uppercase, e.g. `NATO`, `EU`); membership via `includes[].id` → country `code`
+- **`borders` uses alpha-3**, not alpha-2 — join on `iso3code`
+- **`population` / `area` / `gini` are structs** — use `.value` for the number; `year` is null when unknown (never 0)
+- Current ISO countries only (249): `code_status = 'official_iso3166_1'`
+- Intblock id renames: consult `data/datasets/intblocks_aliases.json`
+
+## Never (scope guardrails)
+
+- Add socioeconomic profile fields to countries (HDI, GDP, government type, internet penetration, etc.)
+- Treat all 256 country codes as official ISO — filter on `code_status`
+- Assume missing World Bank `region` / `incomeLevel` is an error (~33 entities are unclassified)
+
+## Validation (contributors)
+
+```bash
+python scripts/validate_countries.py          # human-readable output
+python scripts/validate_countries.py --json   # structured output for agents
+python scripts/validate_intblocks.py --json
+pytest tests/
+```
+
+## Query examples
+
+Verified DuckDB recipes: [docs/query-examples.md](docs/query-examples.md) (backed by `tests/test_documented_queries.py`).
+Chinese: [docs/query-examples.zh.md](docs/query-examples.zh.md).
+
+## Platform shims
+
+- [AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt) — 中文（Kimi K3、GLM、通义灵码）
+- [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
+- [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
+- [CLAUDE.md](CLAUDE.md) — Claude Code
+- [.github/copilot-instructions.md](.github/copilot-instructions.md) — GitHub Copilot
+- [llms-full.txt](llms-full.txt) — extended index for crawlers
+- [.cursor/skills/](.cursor/skills/) — thin Cursor wrappers → `docs/agents/`
+- [.agent/workflows/](.agent/workflows/) — portable step-by-step workflows
+
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions
 

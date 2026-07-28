@@ -1,0 +1,57 @@
+# Internacia 数据集
+
+> 面向 LLM 智能体的紧凑中文索引。英文版：[llms.txt](llms.txt)
+> 数据许可 CC-BY-4.0；代码 MIT。版本见 data/datasets/*.manifest.json
+
+## 数据集概览
+
+- **Countries（256）**：ISO 代码、地理、人口/面积、世界银行分类、Wikidata、多语言名称
+- **Intblocks（1076）**：联合国机构、贸易集团、区域组织、条约、体育联合会等
+- **Blocktypes（86）**：intblock 分类 taxonomy
+
+这是**用于关联与 enrichment 的参考数据**，不是社会经济画像数据集。
+**不要**在此期望 HDI、GDP、政体、互联网普及率等指标。
+
+## 推荐访问方式（编辑以外勿解析源 YAML）
+
+- DuckDB：data/datasets/internacia.duckdb（表 countries, intblocks, blocktypes, _meta）
+- Parquet：data/datasets/{countries,intblocks,blocktypes}.parquet
+- Python SDK：https://github.com/commondataio/internacia-python
+- REST API：https://github.com/commondataio/internacia-api
+
+## 关联键
+
+- 国家：code（alpha-2 主键）、iso3code、wikidata_id
+- 组织：id（大写，如 EU、NATO、UN）
+- 成员关系：includes[].id → 国家 code（权威）；includes[].name 仅为展示标签
+- 陆地边界：borders 存 alpha-3，用 iso3code 关联
+
+## 关键易错点
+
+- borders 是 ISO alpha-3，不是 alpha-2
+- population、area、gini 为结构体 {value, year, source, source_id}，数值取 .value
+- 当前正式 ISO 国家（249）：code_status == 'official_iso3166_1'
+- 7 个非标准 code：AN, JG, KV, XA, XS, XT, XN
+- intblock id 变更：查 intblocks_aliases.json
+- 中文名称：other_names（id=zh）或 native_names，勿与 includes[].name 混淆
+
+## 示例 SQL（DuckDB）
+
+SELECT dataset, version, schema_hash FROM _meta;
+
+SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+
+SELECT c.code, oname.name FROM countries c, UNNEST(c.other_names) AS t(oname) WHERE oname.id = 'zh' AND c.code = 'CN';
+
+SELECT m.id FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE i.id = 'NATO' AND m.type = 'country';
+
+SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
+
+## 完整文档
+
+- AGENTS.zh.md — 中文路由入口
+- docs/agents/zh/query.md — 查询工作流
+- docs/agents/zh/contribute.md — YAML 编辑工作流
+- docs/query-examples.zh.md — 已验证中文场景查询
+- docs/ai-consumers.md — 消费契约（英文）
+- AGENTS.md — 英文路由入口

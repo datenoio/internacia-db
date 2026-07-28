@@ -18,10 +18,20 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 
 ## AI agents and LLMs
 
+- [AGENTS.md](AGENTS.md) — root routing hub (all platforms)
+- [AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt) — 中文指南（Kimi K3、GLM-5.2、通义灵码）
 - [llms.txt](llms.txt) — compact index (datasets, join keys, gotchas)
-- [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, query recipes, scope boundaries
+- [llms-full.txt](llms-full.txt) — extended index for crawlers
+- [docs/agents/query.md](docs/agents/query.md) — query and join workflow
+- [docs/agents/zh/query.md](docs/agents/zh/query.md) — 中文查询工作流
+- [docs/agents/contribute.md](docs/agents/contribute.md) — YAML editing workflow
+- [docs/query-examples.zh.md](docs/query-examples.zh.md) — 已验证中文 DuckDB 示例
+- [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, scope boundaries
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook
-- [.cursor/skills/internacia-contribute/SKILL.md](.cursor/skills/internacia-contribute/SKILL.md) — maintainer workflow for editing YAML
+- [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
+- [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
+- [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
+- [.cursor/skills/](.cursor/skills/) — thin Cursor wrappers pointing to `docs/agents/`
 
 ## Installation
 
