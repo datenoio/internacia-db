@@ -19,7 +19,7 @@ pre-commit install   # optional but recommended
 - Required fields: `code`, `name`, `iso3code`, `numeric_code`, `entity_type`, `code_status` (see `data/schemas/countries.schema.json`).
 - Non-ISO codes need explicit `code_status` (`user_assigned`, `obsolete`) and a `recognition_status` block — see [docs/country-code-policy.md](docs/country-code-policy.md).
 - `population`/`area`/`gini` are structs: `{value, year, source, source_id}`. **Never use `year: 0`** — omit the year if unknown.
-- Add a `provenance` entry whenever you set or update an enriched field.
+- Add a `provenance` entry whenever you set or update an enriched field. Validation warns when a record has fewer than four provenance entries (`INSUFFICIENT_PROVENANCE`; threshold in `data/schemas/*_completeness.yaml`).
 - See [docs/enrichment.md](docs/enrichment.md) for refresh cadence and maintainer commands.
 
 ### Intblocks (`data/intblocks/<category>/*.yaml`)

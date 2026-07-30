@@ -24,7 +24,7 @@ English: [../contribute.md](../contribute.md)
 - 非 ISO code：需明确 `code_status`（`user_assigned`、`obsolete`）及 `recognition_status`
 - `population`/`area`/`gini`：结构体 `{value, year, source, source_id}` — 未知年份用 `null`，**禁止 `year: 0`**
 - `borders`：**alpha-3** 邻国代码（如 `CAN`、`MEX`），非 alpha-2
-- 富化字段需添加 `provenance`
+- 富化字段需添加 `provenance`（建议每条记录至少 4 条；不足时校验器会报 `INSUFFICIENT_PROVENANCE`，阈值见 `data/schemas/*_completeness.yaml`）
 - 挪威代码 `'NO'`、挪威语 `'no'` 在 YAML 中须加引号，否则被解析为布尔值
 
 ## Intblocks 检查清单

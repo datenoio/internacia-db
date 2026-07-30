@@ -42,7 +42,7 @@ Top five priorities, in order:
 | Dataset | Records | Source path | Governance |
 |---------|--------:|-------------|------------|
 | Countries | 256 | `data/countries/*.yaml` | Schema + completeness + CI + manifest |
-| Intblocks | 1,071 (63 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
+| Intblocks | 1,078 (63 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
 | Blocktypes | 86 | `data/blocktypes/blocktypes.yaml` | Taxonomy source; copied to output on build |
 
 ### 1.3 Verified defects (found during this analysis)

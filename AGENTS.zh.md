@@ -1,6 +1,6 @@
 # Internacia DB — AI 智能体指南（中文）
 
-结构化参考数据：**256** 个国家/地区、**1076** 个国际组织/集团（intblocks）、**86** 种 blocktype 分类。
+结构化参考数据：**256** 个国家/地区、**1078** 个国际组织/集团（intblocks）、**86** 种 blocktype 分类。
 数据许可：CC-BY-4.0；代码：MIT。
 
 English: [AGENTS.md](AGENTS.md)

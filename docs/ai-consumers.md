@@ -37,7 +37,7 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1076 | `id` | `data/datasets/intblocks.manifest.json` |
+| `intblocks` | 1078 | `id` | `data/datasets/intblocks.manifest.json` |
 | `blocktypes` | 86 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet

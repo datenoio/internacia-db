@@ -10,7 +10,7 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - **Countries quality pipeline**: schema validation, completeness gates, entity status policy, and field-level provenance
 - **Intblocks quality pipeline**: schema validation, blocktype taxonomy checks, duplicate detection, and completeness gates
 - **Profile enrichment**: population, area, gini, timezones, and native names from World Bank, Wikidata, and IANA tzdata
-- **Data-quality analyzer**: 50+ rules (referential integrity, temporal consistency, geographic plausibility, naming) reported under `dataquality/`; runs in CI and fails on CRITICAL/IMPORTANT findings
+- **Data-quality analyzer**: 50+ rules (referential integrity, temporal consistency, geographic plausibility, provenance depth, naming) reported under `dataquality/`; runs in CI and fails on CRITICAL/IMPORTANT findings
 - **Build metadata**: `countries.manifest.json`, `intblocks.manifest.json`, and `blocktypes.manifest.json` with version, commit, row count, and schema hash — all sharing a single frozen build identity
 - **Artifact consistency guard**: `check_generated_artifacts.py` verifies committed exports agree across formats and match YAML sources (runs in CI and release)
 - **CI validation**: pull-request checks, tests, and lint via `.github/workflows/validate.yml`; weekly link validation; tagged releases with dataset assets
@@ -89,7 +89,7 @@ Each build writes to `data/datasets/`:
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1076** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1078** intblocks, **86** blocktypes.
 
 ## Validation and quality
 
@@ -101,7 +101,7 @@ The builder runs both `validate_countries.py` and `validate_intblocks.py` before
 - Entity status policy (`entity_type`, `code_status`)
 - Blocktype taxonomy and `partof` reference checks for intblocks
 - Intblock cross-references (country `includes` resolve to country sources; `includes[].status` values come from `data/schemas/includes_status.yaml`)
-- Referential integrity (borders, `predecessor`/`successor`/`suborganizations`, headquarters countries, duplicate `wikidata_id`) plus temporal, geographic-plausibility, and naming rules — shared between the validators and the quality analyzer (`internacia_builder/validate/*_rules.py`)
+- Referential integrity (borders, `predecessor`/`successor`/`suborganizations`, headquarters countries, duplicate `wikidata_id`) plus temporal, geographic-plausibility, provenance depth, and naming rules — shared between the validators and the quality analyzer (`internacia_builder/validate/*_rules.py`)
 
 ```bash
 # Full validation with JSON reports
@@ -282,7 +282,7 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1076 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — 1078 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 

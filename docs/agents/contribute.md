@@ -28,7 +28,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 - `tld` is `.xx`-style lowercase; `calling_codes` are `+digits`; `timezones` must be IANA tz names; `flag_emoji` must match the code's regional-indicator pair; `landlocked: true` requires non-empty `borders`
 - `capital_city` coordinates must be plausible: the analyzer flags capitals beyond an area-scaled distance from `centroid` (`CAPITAL_FAR_FROM_CENTROID`) — a flag usually means swapped lat/lng; legit outliers go in `geography.capital_distance.allowlist`
 - `subregion` must belong to one of the record's `continents`; transcontinental exceptions go in `region_hierarchy.allowlist` of `countries_completeness.yaml`
-- Add `provenance` when setting or updating enriched fields
+- Add `provenance` when setting or updating enriched fields (aim for at least four entries per record — see `provenance.min_count` in completeness schemas; validation warns via `INSUFFICIENT_PROVENANCE`)
 - Refresh via `python scripts/enrich_countries.py` (see [enrichment.md](../enrichment.md))
 
 ## Intblocks checklist
@@ -37,7 +37,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 - `includes[].id` is **authoritative** for joins (country alpha-2); `name` is display-only
 - `includes[].status` must be a key from `data/schemas/includes_status.yaml`
 - Records without `includes` must set `membership_applicability: not_applicable` when membership is intentionally absent
-- Completeness priorities: see `data/schemas/intblocks_completeness.yaml` (high: includes; medium: wikidata_id, non-templated description; low: languages, headquarters, regions, other_names, provenance, links)
+- Completeness priorities: see `data/schemas/intblocks_completeness.yaml` (high: includes; medium: wikidata_id, non-templated description; low: languages, headquarters, regions, other_names, provenance, links). `provenance` should list at least four field-level entries (`min_count: 4`; warns via `INSUFFICIENT_PROVENANCE`).
 - Dissolved orgs: `status: historical` + `dissolved` date; do not invent membership. `founded`/`dissolved` must be real dates (`YYYY`, `YYYY-MM`, `YYYY-MM-DD`, or `YYYYs`) — **never `YYYY-00-00`** — and `dissolved` must not precede `founded`
 - `predecessor`/`successor`/`suborganizations[].id` must resolve to an existing intblock `id` or alias; affiliated bodies without their own record go in `references.org_ref_allowlist` of `intblocks_completeness.yaml`
 - `headquarters.country` must resolve to a `data/countries/{code}.yaml` file

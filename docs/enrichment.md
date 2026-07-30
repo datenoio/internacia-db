@@ -13,6 +13,8 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 
 **Provenance staleness threshold:** 12 months (`provenance.max_age_months` in `data/schemas/countries_completeness.yaml`). Validation warns when `retrieved_at` is older than this.
 
+**Provenance depth threshold:** at least four field-level entries per record (`provenance.min_count` in `data/schemas/countries_completeness.yaml` and `data/schemas/intblocks_completeness.yaml`). Validation warns via `INSUFFICIENT_PROVENANCE` when below the minimum.
+
 ## Maintainer workflow
 
 ### 1. Check current state (no network)
