@@ -4,4 +4,4 @@ Versioning policy: ``__version__`` tracks the current dataset release documented
 in ``CHANGELOG.md`` (the value returned in build manifests). Bump both together.
 """
 
-__version__ = "1.7.0"
+__version__ = "1.8.0"

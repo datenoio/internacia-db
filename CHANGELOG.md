@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-07-30
+
 Membership and provenance enrichment: ~500 intblock records refreshed with sourced rosters, metadata, and provenance; intblocks row count **1076 → 1078** (three added, one duplicate merged).
 
 ### Added
