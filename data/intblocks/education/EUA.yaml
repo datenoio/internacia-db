@@ -1,17 +1,24 @@
 id: EUA
+name: European University Association
 blocktype:
 - education
 - intorg
 status: formal
-founded: '2001'
+founded: '2001-03-31'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
 - url: https://www.eua.eu/
   type: website
+- url: https://eua.eu/our-membership/member-directory.html
+  type: website
 - url: https://en.wikipedia.org/wiki/European_University_Association
   type: wikipedia
-name: European University Association
+- url: https://www.wikidata.org/wiki/Q868940
+  type: wikidata
 headquarters:
   city: Brussels
   country: BE
@@ -21,9 +28,9 @@ headquarters:
 acronyms:
 - lang: en
   value: EUA
-membership_count: 850
-description: European association representing universities and higher education institutions across Europe. EUA promotes
-  cooperation, facilitates policy development, and advocates for higher education in Europe.
+membership_count: 49
+description: >-
+  Representative organisation for universities and national rectors' conferences across Europe. Formed on 31 March 2001 through the merger of the Association of European Universities and the Confederation of European Union Rectors' Conferences in Salamanca. EUA advocates for higher education and research policy, facilitates peer exchange, and represents over 850 member institutions and national associations in 49 countries.
 tags:
 - EUA
 - education
@@ -39,13 +46,258 @@ topics:
   name: Higher Education
 - key: regional_cooperation
   name: Regional Cooperation
+includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
+- id: AD
+  name: Andorra
+  type: country
+  status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: VA
+  name: Vatican City
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+  left: '2022-03'
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
+wikidata_id: Q868940
 other_names:
 - id: en
   name: European University Association
 - id: fr
-  name: Association européenne des universités
+  name: Association des universités européennes
+- id: de
+  name: European University Association
+- id: es
+  name: Asociación de Universidades Europeas
+- id: pt
+  name: Associação das Universidades Europeias
+recognition_status: >-
+  Association of individual universities, national rectors' conferences, and national university associations; membership is at institution or national-association level, not sovereign-state level
+notes: >-
+  Includes lists countries with EUA member institutions or national rectors' conferences as of the official member directory. Individual membership exceeds 850 institutions. Russian members were suspended in March 2022 following the Russian Union of Rectors' support for the invasion of Ukraine. Universities in Kosovo appear under 'Other' in the directory and are not mapped to a country code in this dataset.
+last_verified: '2026-07-29'
 provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.eua.eu/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q868940
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q868940
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eua.eu/our-membership/member-directory.html
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eua.eu/our-membership/membership-and-representation.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eua.eu/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eua.eu/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q868940
+  license: CC0

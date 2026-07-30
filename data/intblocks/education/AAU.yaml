@@ -1,18 +1,25 @@
 id: AAU
+name: Association of African Universities
 blocktype:
 - education
 - intorg
 status: formal
-founded: '1967'
+founded: '1967-11-12'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 links:
 - url: https://www.aau.org/
   type: website
+- url: https://aau.org/subs/membership/
+  type: website
 - url: https://en.wikipedia.org/wiki/Association_of_African_Universities
   type: wikipedia
-name: Association of African Universities
+- url: https://www.wikidata.org/wiki/Q743769
+  type: wikidata
 headquarters:
   city: Accra
   country: GH
@@ -22,10 +29,12 @@ headquarters:
 acronyms:
 - lang: en
   value: AAU
-membership_count: 54
-description: International organization representing higher education institutions across Africa. AAU promotes cooperation
-  and collaboration among African universities, facilitates the exchange of information and experience, and advocates for
-  higher education development in Africa.
+membership_count: 50
+description: >-
+  Apex organization and forum for cooperation among African universities, founded in Rabat on 12 November 1967
+  following UNESCO-led preparatory work. Headquartered in Accra, AAU promotes networking, research collaboration,
+  and higher-education policy advocacy across Africa; membership is institutional (full and associate members),
+  covering hundreds of universities in dozens of countries.
 tags:
 - AAU
 - education
@@ -41,82 +50,13 @@ topics:
   name: Higher Education
 - key: regional_cooperation
   name: Regional Cooperation
-other_names:
-- id: en
-  name: Association of African Universities
-- id: fr
-  name: Association des universités africaines
 includes:
-- id: EG
-  name: Egypt
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: ML
-  name: Mali
+- id: AE
+  name: United Arab Emirates
   type: country
   status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BW
-  name: Botswana
   type: country
   status: member
 - id: BF
@@ -127,48 +67,28 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: KM
-  name: Comoros
+- id: BJ
+  name: Benin
   type: country
   status: member
-- id: CG
-  name: Congo
+- id: BW
+  name: Botswana
   type: country
   status: member
 - id: CD
-  name: Congo, The Democratic Republic of the
+  name: Congo, Dem. Rep.
   type: country
   status: member
-- id: DJ
-  name: Djibouti
+- id: CF
+  name: Central African Republic
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
+- id: CG
+  name: Congo, Rep.
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CM
@@ -176,27 +96,67 @@ includes:
   type: country
   status: member
 - id: CV
-  name: Cabo Verde
+  name: Cape Verde
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+- id: KE
+  name: Kenya
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
+  type: country
+  status: member
+- id: MA
+  name: Morocco
   type: country
   status: member
 - id: MG
   name: Madagascar
   type: country
   status: member
-- id: MW
-  name: Malawi
+- id: ML
+  name: Mali
   type: country
   status: member
 - id: MR
@@ -207,8 +167,12 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MZ
@@ -227,44 +191,119 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
 - id: RW
   name: Rwanda
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
-- id: SZ
-  name: Eswatini
+- id: SL
+  name: Sierra Leone
   type: country
   status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+wikidata_id: Q743769
+other_names:
+- id: en
+  name: Association of African Universities
+- id: fr
+  name: Association des universités africaines
+- id: ar
+  name: اتحاد الجامعات الإفريقية
+- id: pt
+  name: Associação das Universidades Africanas
+recognition_status: >-
+  Association of higher-education institutions; membership is at university level (full members based in Africa,
+  associate members including institutions outside Africa), not sovereign-state level
+notes: >-
+  Includes lists countries with at least one AAU full or associate member institution as of the official member
+  directory. Institutional membership exceeds 400 universities. Associate members outside Africa (Germany, Malaysia,
+  United Arab Emirates) are included because they hold AAU associate membership. Countries previously listed without
+  directory members (Comoros, Djibouti, Equatorial Guinea, Guinea, Guinea-Bissau, Sao Tome and Principe, Seychelles)
+  were removed.
+last_verified: '2026-07-29'
 provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.aau.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q743769
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q743769
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aau.org/subs/membership/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aau.org/subs/membership/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.aau.org/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.aau.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q743769
+  license: CC0

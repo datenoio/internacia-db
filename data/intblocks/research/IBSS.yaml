@@ -1,17 +1,45 @@
 id: IBSS
+name: International Centre for Black Sea Studies
 blocktype:
 - research
 status: formal
+founded: '1998'
+active_period:
+  start: '1998'
+geographic_scope: regional
+regions:
+- Black Sea
+- Europe
+partof: BSEC
 languages:
 - en
+- el
 links:
-- url: http://icbss.org
+- url: https://icbss.org/
+  type: website
+- url: https://icbss.org/icbss-at-a-glance/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Centre_for_Black_Sea_Studies
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6049086
   type: wikidata
-name: International Centre for Black Sea Studies
+headquarters:
+  city: Athens
+  country: GR
+  coordinates:
+    lat: 37.988
+    lng: 23.737
+legal_status: nonprofit
+recognition_status: >-
+  Non-profit research and training institution founded in 1998 in Athens; recognized in the BSEC Charter (Article 24)
+  as the Organization's think-tank and a related body governed by a Board of Directors comprising nationals of BSEC
+  member states
+wikidata_id: Q6049086
+description: >-
+  Research centre and think-tank based in Athens promoting multilateral cooperation in the wider Black Sea region.
+  Founded in 1998 as an independent non-profit institution, ICBSS serves as the official think-tank of the Organization
+  of the Black Sea Economic Cooperation (BSEC), conducting policy-oriented research, capacity building, and coordination
+  of BSEC–EU interaction.
 includes:
 - id: AL
   name: Albania
@@ -41,6 +69,10 @@ includes:
   name: Moldova, Republic of
   type: country
   status: member
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
 - id: RO
   name: Romania
   type: country
@@ -61,46 +93,92 @@ includes:
   name: Ukraine
   type: country
   status: member
-membership_count: 12
-description: Organization.
+membership_count: 13
+acronyms:
+- lang: en
+  value: ICBSS
+- lang: el
+  value: ΔΙ.ΚΕ.Μ.Ε.Π.
 tags:
 - IBSS
-- black
+- ICBSS
+- BSEC
+- Athens
+- black-sea
 - centre
-- international
+- nonprofit
+- policy
+- regional
+- regional_cooperation
 - research
 - science
 - technology
+- think-tank
 topics:
+- key: policy
+  name: Policy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: research
   name: Research
 - key: science
   name: Science
 - key: technology
   name: Technology
-wikidata_id: Q6049086
 other_names:
+- id: el
+  name: Διεθνές Κέντρο Μελετών Ευξείνου Πόντου
 - id: en
   name: International Centre for Black Sea Studies
+- id: en
+  name: International Center for Black Sea Studies
+- id: en
+  name: ICBSS
 - id: fr
   name: International Centre for Black Sea Studies
+notes: >-
+  ICBSS membership corresponds to the thirteen BSEC member states whose nationals serve on the Centre's Board of
+  Directors per BSEC Charter Article 24. Serbia joined BSEC in 2003 and North Macedonia in 2019; the Centre was
+  founded independently in 1998 before the BSEC Charter codified its think-tank role.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: BSEC Charter
+  retrieved_at: '2026-07-29'
+  url: https://www.bsec-organization.org/UploadedDocuments/StatutoryDocumentsAgreements/CHARTERFourthEdition.pdf
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://icbss.org/icbss-at-a-glance/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Centre_for_Black_Sea_Studies
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: BSEC Charter
+  retrieved_at: '2026-07-29'
+  url: https://www.bsec-organization.org/UploadedDocuments/StatutoryDocumentsAgreements/CHARTERFourthEdition.pdf
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6049086
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6049086
   license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q6049086
   license: CC0
-acronyms:
-- lang: en
-  value: ICBSS
-founded: '1998'
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://icbss.org/icbss-at-a-glance/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://icbss.org/icbss-at-a-glance/

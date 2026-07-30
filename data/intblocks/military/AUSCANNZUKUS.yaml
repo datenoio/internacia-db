@@ -1,47 +1,65 @@
 id: AUSCANNZUKUS
+name: AUSCANNZUKUS
 blocktype:
 - military
 status: formal
+founded: '1960'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
   type: wikipedia
-name: AUSCANNZUKUS
-founded: '1950'
-geographic_scope: global
+- url: https://www.wikidata.org/wiki/Q4033111
+  type: wikidata
+acronyms:
+- lang: en
+  value: AUSCANNZUKUS
+legal_status: intergovernmental
+wikidata_id: Q4033111
+description: Naval Command, Control, Communications, and Computers (C4) interoperability organization comprising Australia,
+  Canada, New Zealand, the United Kingdom, and the United States. Originated from 1960 dialogue between Admirals Arleigh Burke
+  and Louis Mountbatten to align naval communications policies ahead of new equipment; matured into the current five-nation
+  body when New Zealand became a full member in 1980. AUSCANNZUKUS fosters knowledge sharing and C4 interoperability among
+  Five Eyes navies through a supervisory board, C4 Committee, and subordinate working groups, increasing operational effectiveness
+  through standardized procedures, equipment, and systems for combined naval operations. Also used as a security caveat in the
+  UKUSA/Five Eyes community.
 includes:
-- id: AU
-  name: Australia
+- id: GB
+  name: United Kingdom
   type: country
   status: member
+  joined: '1960'
+- id: US
+  name: United States
+  type: country
+  status: member
+  joined: '1960'
 - id: CA
   name: Canada
+  type: country
+  status: member
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: NZ
   name: New Zealand
   type: country
   status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
+  joined: '1980'
 membership_count: 5
-legal_status: intergovernmental
-description: Naval Command, Control, Communications, and Computers (C4) interoperability organization comprising Australia,
-  Canada, New Zealand, the United Kingdom, and the United States. AUSCANNZUKUS fosters knowledge sharing and enhances C4 interoperability
-  among the navies of these Five Eyes nations, increasing operational effectiveness through standardized procedures, equipment,
-  and systems for combined naval operations.
+founding_members:
+- GB
+- US
 tags:
 - AUSCANNZUKUS
 - C4
 - cooperation
 - defense
+- five_eyes
 - interoperability
 - maritime
 - military
@@ -54,23 +72,77 @@ topics:
   name: Military
 - key: security
   name: Security
+- key: technology
+  name: Technology
 other_names:
+- id: ca
+  name: AUSCANNZUKUS
+- id: cs
+  name: AUSCANNZUKUS
 - id: en
   name: AUSCANNZUKUS
 - id: en
   name: Naval C4 Interoperability Organization
-wikidata_id: Q4033111
+- id: fa
+  name: آوسکانزوکوس
+- id: he
+  name: ארגון AUSCANNZUKUS
+- id: ja
+  name: AUSCANNZUKUS
+- id: pl
+  name: AUSCANNZUKUS
+- id: ru
+  name: AUSCANNZUKUS
+- id: tr
+  name: AUSCANNZUKUS
+- id: zh
+  name: 澳加新英美
+- id: zh
+  name: 澳新美英加五国海军合作计划
+- id: zh-hant
+  name: 澳新美英加五國海軍合作計劃
+notes: Originated from UK–US naval communications dialogue in 1960; New Zealand became a full member in 1980, completing the
+  five-nation organization. Liaises closely with Washington-based Five Eyes defence bodies including the Combined Communications
+  Electronics Board (CCEB), ABCANZ Armies, the Air and Space Interoperability Council, and the Technical Cooperation Program
+  (TTCP). Also serves as a security caveat label in the UKUSA/Five Eyes intelligence community.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4033111
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/AUSCANNZUKUS
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4033111
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4033111
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/AUSCANNZUKUS

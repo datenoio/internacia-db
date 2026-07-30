@@ -1,22 +1,48 @@
 id: PECC
+name: Pacific Economic Cooperation Council
 blocktype:
 - economic
+- forum
 status: formal
+founded: '1980-09'
+active_period:
+  start: '1980-09'
+geographic_scope: regional
+regions:
+- Asia
+- Oceania
+- North America
+- South America
 languages:
 - en
 links:
-- url: http://www.pecc.org/
+- url: https://www.pecc.org/
+  type: website
+- url: https://www.pecc.org/about/member-committees
+  type: website
+- url: https://www.pecc.org/about/pecc-introduction-and-history
   type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Economic_Cooperation_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q11278256
   type: wikidata
-name: Pacific Economic Cooperation Council
+acronyms:
+- lang: en
+  value: PECC
+- lang: zh
+  value: 太平洋經濟合作理事會
+headquarters:
+  city: Singapore
+  country: SG
+secretariat:
+  location: 29 Heng Mui Keng Terrace, Singapore 119620
+  organization: PECC International Secretariat
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: BN
   name: Brunei Darussalam
   type: country
@@ -24,7 +50,8 @@ includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: CL
   name: Chile
   type: country
@@ -38,25 +65,29 @@ includes:
   type: country
   status: member
 - id: HK
-  name: Hong Kong
+  name: Hong Kong, China
   type: country
   status: member
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: KR
   name: Korea, Republic of
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: MX
   name: Mexico
   type: country
@@ -64,7 +95,8 @@ includes:
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: PE
   name: Peru
   type: country
@@ -72,11 +104,13 @@ includes:
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: TW
   name: Chinese Taipei
   type: country
@@ -84,11 +118,13 @@ includes:
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-09'
 - id: VN
   name: Vietnam
   type: country
@@ -96,8 +132,8 @@ includes:
 - id: FR
   name: France
   type: country
-  status: associated
-  note: Associated through its Pacific Territories
+  status: associate_member
+  note: Associate member through France (Pacific Territories) / FPTPEC
 - id: PIF
   name: Pacific Islands Forum
   type: organization
@@ -106,17 +142,52 @@ includes:
   name: Pacific Basin Economic Council
   type: organization
   status: member
+  note: Institutional member
 - id: PAFTAD
   name: Pacific Trade and Development Conference
   type: organization
   status: member
-membership_count: 23
-founded: '1980'
+  note: Institutional member
+- id: EC
+  name: Ecuador
+  type: country
+  status: former_member
+  joined: '1999-10'
+  note: Listed in older PECC materials; absent from the current official member committees roster
+- id: MN
+  name: Mongolia
+  type: country
+  status: former_member
+  joined: '2000-04'
+  note: Associate member from April 2000 in PECC annexes; absent from the current official member committees roster
+founding_members:
+- AU
+- CA
+- ID
+- JP
+- KR
+- MY
+- NZ
+- PH
+- SG
+- TH
+- US
+membership_count: 24
+legal_status: non-governmental network
 wikidata_id: Q11278256
-description: Network of member committees composed of individuals and institutions.
+description: >-
+  Tripartite network of member committees from business, government, and academic circles promoting economic
+  cooperation and sustainable growth across the Asia-Pacific. Founded at the Pacific Community Seminar (PECC I) in
+  Canberra in September 1980 at the initiative of Japanese and Australian prime ministers Masayoshi Ohira and
+  Malcolm Fraser. PECC is policy-oriented and unofficial; its community-building work helped establish APEC in 1989,
+  and it remains one of three official APEC observers (the only non-governmental one). As of 2026 it comprises 24
+  member committees — 21 full members (including the Pacific Islands Forum), one associate member (France Pacific
+  Territories), and two institutional members (PAFTAD and PBEC) — with an International Secretariat in Singapore
+  since 1990.
 tags:
 - PECC
-- aid
+- apec
+- asia_pacific
 - commerce
 - cooperation
 - development
@@ -125,6 +196,7 @@ tags:
 - pacific
 - regional
 - regional_cooperation
+- track2
 - trade
 topics:
 - key: development
@@ -136,21 +208,66 @@ topics:
 - key: trade
   name: Trade
 other_names:
-- id: zh
-  name: 太平洋经济合作理事会
 - id: en
   name: Pacific Economic Cooperation Council
+- id: en
+  name: Pacific Economic Cooperation Conference
+  note: Original name at founding; "Conference" later changed to "Council"
+- id: zh
+  name: 太平洋经济合作理事会
+- id: ja
+  name: 太平洋経済協力会議
+- id: ko
+  name: 태평양 경제 협력 회의
+- id: id
+  name: Dewan Kerja Sama Ekonomi Pasifik
+notes: >-
+  Full membership is organized as national/economy member committees (e.g. AUSPECC, CNCPEC), not as classic
+  intergovernmental accession. Ecuador (member from October 1999) and Mongolia (associate from April 2000) appear in
+  older PECC annexes and Wikipedia but are not on the current official member committees list (24 committees). Pacific
+  Island economies attended PECC I via Papua New Guinea, Fiji, and Tonga; the Pacific Islands Forum holds the
+  corresponding full committee seat today.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/member-committees
+- field: founding_members
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/pecc-introduction-and-history
 - field: description
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/pecc-introduction-and-history
+- field: founded
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/pecc-introduction-and-history
+- field: headquarters
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/pecc-introduction-and-history
+- field: legal_status
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/pecc-introduction-and-history
+- field: geographic_scope
+  source: PECC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pecc.org/about/structure
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q11278256
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q11278256
   license: CC0
-acronyms:
-- lang: zh
-  value: 太平洋經濟合作理事會
+- field: notes
+  source: PECC historical annex / Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Economic_Cooperation_Council

@@ -2,33 +2,54 @@ id: USAU
 blocktype:
 - fta
 status: formal
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/Australia%E2%80%93United_States_Free_Trade_Agreement
-  type: wikipedia
-- url: https://www.trade.gov/us-australia-free-trade-agreement
-  type: website
-name: Australia-United States Free Trade Agreement
-founded: '2005-01-01'
+founded: '2004-05-18'
+active_period:
+  start: '2005-01-01'
 geographic_scope: bilateral
 regions:
 - Oceania
 - North America
+languages:
+- en
+links:
+- url: https://www.trade.gov/us-australia-free-trade-agreement
+  type: website
+- url: https://www.dfat.gov.au/trade/agreements/in-force/ausfta/australia-united-states-fta
+  type: website
+- url: https://austlii.edu.au/au/other/dfat/treaties/2005/1.html
+  type: website
+- url: https://en.wikipedia.org/wiki/Australia%E2%80%93United_States_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2822802
+  type: wikidata
+name: Australia-United States Free Trade Agreement
+acronyms:
+- lang: en
+  value: AUSFTA
+- lang: en
+  value: US-Australia FTA
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 18 May 2004; entered into force on 1 January 2005 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-18'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-18'
+founding_members:
+- AU
+- US
 membership_count: 2
-description: Bilateral trade agreement between Australia and the United States that entered into force on January 1, 2005.
-  The agreement eliminated tariffs on over 99% of manufactured goods and significantly reduced barriers in various sectors,
-  including agriculture, services, and investment. Since implementation, bilateral goods and services trade has more than
-  tripled.
+description: Bilateral trade agreement between Australia and the United States, signed on 18 May 2004 and entered into force
+  on 1 January 2005. The first U.S. free trade agreement with a developed country since the U.S.-Canada agreement, it eliminated
+  tariffs on over 99% of manufactured goods and significantly reduced barriers in agriculture, services, and investment. Since
+  implementation, bilateral goods and services trade has more than tripled.
 tags:
 - AUSFTA
 - australia
@@ -45,11 +66,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: AUSFTA
-- lang: en
-  value: US-Australia FTA
+wikidata_id: Q2822802
 other_names:
 - id: en
   name: AUSFTA
@@ -60,3 +77,19 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.trade.gov/us-australia-free-trade-agreement
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/au/other/dfat/treaties/2005/1.html
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/ausfta/australia-united-states-fta
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/au/other/dfat/treaties/2005/1.html
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/ausfta/australia-united-states-fta

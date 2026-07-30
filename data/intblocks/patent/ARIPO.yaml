@@ -1,7 +1,12 @@
 id: ARIPO
+name: African Regional Intellectual Property Organization
 blocktype:
 - patent
 status: formal
+founded: '1976-12-09'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 links:
@@ -11,103 +16,6 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q384434
   type: wikidata
-name: African Regional Intellectual Property Organization
-includes:
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: CV
-  name: Cabo Verde
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
-  type: country
-  status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: RW
-  name: Rwanda
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: TZ
-  name: United Republic of Tanzania
-  type: country
-  status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-founded: '1976'
-headquarters:
-  city: Harare
-  country: ZW
-  coordinates:
-    lat: -17.8
-    lng: 31.03
 acronyms:
 - lang: en
   value: ARIPO
@@ -115,10 +23,143 @@ acronyms:
   value: ARIPO
 - lang: de
   value: ARIPO
+headquarters:
+  city: Harare
+  country: ZW
+  coordinates:
+    lat: -17.8
+    lng: 31.03
+includes:
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+  joined: '1985-02-06'
+- id: CV
+  name: Cabo Verde
+  type: country
+  status: member
+  joined: '2022-07-14'
+- id: GM
+  name: Gambia
+  type: country
+  status: member
+  joined: '1978-02-15'
+- id: GH
+  name: Ghana
+  type: country
+  status: founding_member
+  joined: '1978-02-15'
+- id: KE
+  name: Kenya
+  type: country
+  status: founding_member
+  joined: '1978-02-15'
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+  joined: '1987-07-23'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '2009-12-24'
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+  joined: '1978-02-15'
+- id: MU
+  name: Mauritius
+  type: country
+  status: founding_member
+  joined: '2020-09-25'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+  joined: '2000-02-08'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '2003-10-14'
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  joined: '2011-06-24'
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+  joined: '2014-05-19'
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+  joined: '2021-10-01'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+  joined: '1980-12-05'
+- id: SO
+  name: Somalia
+  type: country
+  status: founding_member
+  joined: '1981-12-10'
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  joined: '1978-05-02'
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+  joined: '1987-12-17'
+- id: TZ
+  name: United Republic of Tanzania
+  type: country
+  status: member
+  joined: '1983-10-12'
+- id: UG
+  name: Uganda
+  type: country
+  status: founding_member
+  joined: '1978-08-08'
+- id: ZM
+  name: Zambia
+  type: country
+  status: founding_member
+  joined: '1978-02-15'
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+  joined: '1980-11-11'
+founding_members:
+- GH
+- KE
+- MU
+- SO
+- UG
+- ZM
 membership_count: 22
+legal_status: intergovernmental
 wikidata_id: Q384434
-description: Intergovernmental organization facilitating cooperation among African states in intellectual property matters,
-  primarily serving English-speaking African nations.
+description: >-
+  Intergovernmental organization established by the Lusaka Agreement (1976) for cooperation among African states in
+  patent, trademark, and other intellectual property matters. ARIPO administers regional protocols including the Harare
+  Protocol (patents, industrial designs, and utility models), Banjul Protocol (marks), and Arusha Protocol (plant
+  varieties). Headquartered in Harare, Zimbabwe; membership is open to UNECA and African Union member states.
+notes: >-
+  Cabo Verde became the 22nd member on 14 July 2022. Seychelles joined effective 1 January 2022. Mauritius was an original
+  Lusaka Agreement signatory but acceded on 25 September 2020 and became a Harare Protocol contracting state effective 27
+  August 2025. Somalia has not yet acceded to the Harare Protocol. Distinct from OAPI, which serves French-speaking African
+  countries. The organization was renamed from African Regional Industrial Property Organization in 2005.
 tags:
 - ARIPO
 - patent
@@ -142,7 +183,49 @@ other_names:
   name: African Regional Intellectual Property Organization
 - id: zh
   name: 非洲区域知识产权组织
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: WIPO Lex
+  retrieved_at: '2026-07-30'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/202
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization
+  license: CC BY-SA 4.0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization
+  license: CC BY-SA 4.0
+- field: founded
+  source: WIPO Lex
+  retrieved_at: '2026-07-30'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/202
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.aripo.org/
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q384434
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aripo.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization
+  license: CC BY-SA 4.0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -153,7 +236,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.aripo.org/

@@ -6,80 +6,156 @@ blocktype:
 status: formal
 languages:
 - en
+- ar
 links:
 - url: https://persga.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Regional_Organization_for_the_Conservation_of_the_Environment_of_the_Red_Sea_and_Gulf_of_Aden
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q3355622
+- url: https://www.wikidata.org/wiki/Q22934905
   type: wikidata
 name: Regional Organization for the Conservation of the Environment of the Red Sea and Gulf of Aden
-founded: '1982'
+founded: '1995-09'
+active_period:
+  start: '1995-09'
+geographic_scope: regional
+regions:
+- Red Sea
+- Gulf of Aden
+- Middle East
+- Africa
 headquarters:
   city: Jeddah
   country: SA
-geographic_scope: regional
-regions:
-- Middle East
-- Africa
+secretariat:
+  location: Jeddah
+  organization: PERSGA Secretariat
+  note: Hosted by the Kingdom of Saudi Arabia since establishment in 1995
+partof: JEDDAH
 includes:
 - id: DJ
   name: Djibouti
   type: country
   status: member
+  joined: '1998-03-02'
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
+  joined: '1990-05-31'
 - id: JO
   name: Jordan
   type: country
-  status: member
+  status: founding_member
+  joined: '1988-09-07'
 - id: SA
   name: Saudi Arabia
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-05-22'
 - id: SO
   name: Somalia
   type: country
-  status: member
+  status: founding_member
+  joined: '1988-03-01'
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-06-05'
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1982-05-29'
+founding_members:
+- SD
+- JO
+- SA
+- SO
+- YE
 membership_count: 7
-wikidata_id: Q3355622
+wikidata_id: Q22934905
 legal_status: intergovernmental
+recognition_status: Intergovernmental organization established under Article XVI of the Jeddah Convention (1982) and formally announced at the Cairo Declaration in September 1995; operates under the Arab League umbrella as the regional sea convention secretariat for the Red Sea and Gulf of Aden
 acronyms:
 - lang: en
   value: PERSGA
-description: Intergovernmental organization for marine and coastal environment protection in the Red Sea and Gulf of Aden.
+description: Intergovernmental organization dedicated to the conservation of coastal and marine environments in the Red Sea and Gulf of Aden. Established under the Jeddah Convention and formally announced in September 1995, PERSGA coordinates seven member states — Djibouti, Egypt, Jordan, Saudi Arabia, Somalia, Sudan, and Yemen — to develop and implement regional strategies against marine pollution, habitat degradation, and unsustainable use of marine resources. The Secretariat is headquartered in Jeddah, Saudi Arabia, and reports to a Council of Ministers from member states.
 tags:
 - PERSGA
 - Red-Sea
+- Gulf-of-Aden
 - environment
 - marine
 - ocean
+- Jeddah
+- UNEP
 topics:
 - key: environment
   name: Environment
 - key: ocean
   name: Ocean
+- key: marine
+  name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
-  name: Order of battle during the Siege of Arras
-- id: fr
-  name: ordre de bataille lors du Siège d'Arras
+  name: PERSGA
+- id: ar
+  name: الهيئة الإقليمية للمحافظة على بيئة البحر الأحمر وخليج عدن
+- id: zh
+  name: 红海和亚丁湾区域环境保护组织
+notes: PERSGA's origins trace to the 1970s ALECSO/UNESCO programme for Red Sea and Gulf of Aden environmental protection. The Jeddah Convention (1982) provides its legal basis; Egypt acceded in 1990 and Djibouti in 1998. The organization began operating as the convention secretariat following the Cairo Declaration of September 1995.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources; Jeddah Convention status document
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: founding_members
+  source: official sources; Jeddah Convention status document
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q22934905
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q22934905
   license: CC0
+- field: description
+  source: PERSGA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/about-us/
+- field: founded
+  source: PERSGA official website
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/history/
+- field: active_period
+  source: PERSGA official website
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/history/
+- field: recognition_status
+  source: PERSGA official website
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/about-us/
+- field: secretariat
+  source: PERSGA official website
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/about-us/
+- field: partof
+  source: Jeddah Convention Article XVI
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
+- field: notes
+  source: PERSGA official website; Jeddah Convention
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/history/
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'

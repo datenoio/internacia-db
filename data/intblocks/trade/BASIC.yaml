@@ -1,8 +1,17 @@
 id: BASIC
+name: BASIC countries
 blocktype:
 - trade
 - political
-status: formal
+status: informal
+founded: '2009-11-28'
+active_period:
+  start: '2009-11-28'
+geographic_scope: global
+regions:
+- South America
+- Africa
+- Asia
 languages:
 - en
 links:
@@ -10,18 +19,15 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q795464
   type: wikidata
-name: BASIC countries
 acronyms:
 - lang: en
   value: BASIC
 - lang: zh
   value: 基础四国
-founded: '2009'
-geographic_scope: global
-regions:
-- Americas
-- Africa
-- Asia
+legal_status: informal coordination bloc
+recognition_status: >-
+  Informal bloc of Brazil, South Africa, India, and China formed by agreement on 28 November 2009 ahead of the Copenhagen
+  climate summit; coordinates a common negotiating position in UNFCCC proceedings
 founding_members:
 - BR
 - ZA
@@ -31,32 +37,55 @@ includes:
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-11-28'
 - id: ZA
   name: South Africa
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-11-28'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-11-28'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-11-28'
 membership_count: 4
 wikidata_id: Q795464
-description: Brazil, South Africa, India and China in climate change negotiations.
+description: >-
+  Informal coordination bloc of Brazil, South Africa, India, and China (the acronym reflects the four member states) formed
+  by agreement on 28 November 2009 ahead of the 2009 United Nations Climate Change Conference in Copenhagen. The four large
+  newly industrialized countries coordinate a common negotiating position in UN Framework Convention on Climate Change (UNFCCC)
+  proceedings, including on emission-reduction commitments, climate finance for developing nations, and equitable development
+  space for the Global South. The grouping brokered the Copenhagen Accord with the United States in December 2009 and holds
+  regular ministerial meetings to align positions before UN climate summits. All four members also participate in BRICS.
+notes: >-
+  Distinct from BRICS: BASIC comprises the four BRICS members excluding Russia and focuses specifically on climate-change
+  negotiations rather than broader geopolitical cooperation. Sometimes referred to as the G4 bloc in climate contexts. Not to
+  be confused with the WTO G4 (Brazil, India, China, and South Africa on agricultural trade) or the UN Security Council G4.
+last_verified: '2026-07-29'
 tags:
 - BASIC
+- brics
+- climate
+- climate_change
 - commerce
 - cooperation
 - economy
+- environment
 - political
 - regional
 - regional_cooperation
 - trade
 topics:
+- key: climate_change
+  name: Climate Change
+- key: environment
+  name: Environment
 - key: economy
   name: Economy
 - key: political
@@ -66,35 +95,67 @@ topics:
 - key: trade
   name: Trade
 other_names:
+- id: cs
+  name: Země BASIC
 - id: de
   name: BASIC-Staaten
 - id: en
   name: BASIC countries
+- id: en
+  name: G4 bloc
 - id: es
   name: Bloque BASIC
 - id: fr
   name: États BASIC
+- id: it
+  name: G4
+- id: ja
+  name: G4ブロック
 - id: pt
   name: BASIC
+- id: sl
+  name: države BASIC
 - id: zh
   name: G4集團
+- id: zh
+  name: 基础四国
 provenance:
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q795464
   license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q795464
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q795464
   license: CC0
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BASIC_countries
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BASIC_countries
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BASIC_countries
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BASIC_countries
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BASIC_countries
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/BASIC_countries

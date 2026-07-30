@@ -2,7 +2,17 @@ id: MYANMARCHINA
 blocktype:
 - gaspipeline
 status: de-facto
-name: Myanmar–China pipeline
+founded: '2013-10-21'
+geographic_scope: bilateral
+regions:
+- Asia
+- Southeast Asia
+links:
+- url: https://en.wikipedia.org/wiki/Sino-Myanmar_pipelines
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7524751
+  type: wikidata
+name: Sino-Myanmar gas pipeline
 includes:
 - id: MM
   name: Myanmar
@@ -13,15 +23,23 @@ includes:
   type: country
   status: member
 membership_count: 2
-description: Myanmar–China pipeline is an international gaspipeline body with 2 members.
+wikidata_id: Q7524751
+description: Natural gas pipeline linking Kyaukphyu on Myanmar's Bay of Bengal coast with Kunming in Yunnan, China, and onward
+  to Guizhou and Guangxi. Runs parallel to the Sino-Myanmar crude oil pipeline; the Myanmar section was completed in June 2013
+  and gas deliveries to China began in October 2013. Operated jointly by China National Petroleum Corporation and Myanma Oil
+  and Gas Enterprise, with gas sourced from the Shwe field in offshore blocks A-1 and A-3.
 tags:
 - MYANMARCHINA
-- myanmar
 - china
+- cnpc
 - economy
 - energy
 - gaspipeline
+- kyaukphyu
+- myanmar
 - pipeline
+- shwe
+- sino
 - transport
 - transportation
 topics:
@@ -31,7 +49,49 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: en
+  name: Myanmar–China gas pipeline
+- id: en
+  name: China–Myanmar gas pipeline
+- id: zh
+  name: 中缅天然气管道
+- id: my
+  name: မြန်မာ-တရုတ် ပိုက်လိုင်း
+- id: tr
+  name: Çin-Myanmar boru hatları
+notes: Wikidata Q7524751 describes the combined Sino-Myanmar oil and gas pipeline project; this record covers the natural
+  gas pipeline only.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7524751
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7524751
+  license: CC0
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7524751
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Sino-Myanmar_pipelines
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Sino-Myanmar_pipelines
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7524751
+  license: CC0

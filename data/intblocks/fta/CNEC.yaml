@@ -2,29 +2,55 @@ id: CNEC
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- es
-name: China-Ecuador Free Trade Agreement
-founded: 2023-05
+founded: '2023-05-11'
+active_period:
+  start: '2024-05-01'
 geographic_scope: bilateral
 regions:
 - Asia
 - South America
+languages:
+- en
+- es
+- zh
+links:
+- url: https://fta.mofcom.gov.cn/topic/enecuador.shtml
+  type: website
+- url: https://sice.oas.org/TPD/ECU_CHN/ECU_CHN_e.ASP
+  type: website
+- url: https://aric.adb.org/fta/peoples-republic-of-china-ecuador-free-trade-agreement
+  type: website
+name: China-Ecuador Free Trade Agreement
+acronyms:
+- lang: en
+  value: China-Ecuador FTA
+- lang: es
+  value: TLC China-Ecuador
+- lang: zh
+  value: 中厄自贸协定
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 11 May 2023; entered into force on 1 May 2024 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-05-11'
 - id: EC
   name: Ecuador
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-05-11'
+founding_members:
+- CN
+- EC
 membership_count: 2
-description: Free trade agreement between China and Ecuador that came into effect on May 1, 2024. Approximately 90% of traded
-  products will be exempt from tariffs, with about 60% of these products enjoying immediate zero tariffs upon implementation.
-  Major Ecuadorian exports such as bananas, shrimp, fish, and fish oil will see China's import tariffs gradually reduced to
-  zero.
+description: Bilateral free trade agreement between China and Ecuador, signed on 11 May 2023 and entered into force on 1 May
+  2024. Approximately 90% of traded products are exempt from tariffs, with about 60% enjoying immediate zero tariffs upon
+  implementation. Major Ecuadorian exports such as bananas, shrimp, fish, and fish oil see China's import tariffs gradually
+  reduced to zero. Ecuador became China's 27th free trade partner and its fourth in Latin America, after Chile, Peru, and
+  Costa Rica.
 tags:
 - CNEC
 - china
@@ -39,9 +65,6 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: China-Ecuador FTA
 other_names:
 - id: en
   name: China-Ecuador FTA
@@ -53,3 +76,16 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://fta.mofcom.gov.cn/topic/enecuador.shtml
+- field: founded
+  source: Ministry of Commerce of the People's Republic of China
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/enecuador.shtml
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/TPD/ECU_CHN/ECU_CHN_e.ASP
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/enecuador.shtml

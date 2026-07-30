@@ -1,50 +1,112 @@
 id: PARLANDINO
+name: Andean Parliament
 blocktype:
 - parliamentary
 status: formal
 partof: CAN
+founded: '1979-10-25'
+active_period:
+  start: '1979-10-25'
+geographic_scope: regional
+regions:
+- South America
 languages:
 - es
 links:
-- url: http://www.parlamentoandino.org/
+- url: https://www.parlamentoandino.org/
   type: website
+- url: https://en.wikipedia.org/wiki/Andean_Parliament
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q490447
   type: wikidata
-name: Andean Parliament
+acronyms:
+- lang: en
+  value: PARLANDINO
+- lang: es
+  value: PARLANDINO
+- lang: pt
+  value: PARLANDINO
+headquarters:
+  city: Bogotá
+  country: CO
+  coordinates:
+    lat: 4.60987
+    lng: -74.082
 includes:
 - id: BO
   name: Bolivia
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-10-25'
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-10-25'
 - id: EC
   name: Ecuador
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-10-25'
 - id: PE
   name: Peru
   type: country
-  status: member
-membership_count: 4
-description: International parliament.
+  status: founding_member
+  joined: '1979-10-25'
+- id: CL
+  name: Chile
+  type: country
+  status: associate_member
+  joined: '2015'
+- id: VE
+  name: Venezuela
+  type: country
+  status: former_member
+  joined: '1979-10-25'
+  left: '2006-04-22'
+founding_members:
+- BO
+- CO
+- EC
+- PE
+- VE
+membership_count: 5
+description: Deliberative and oversight body of the Andean Community, composed of 25
+  parliamentarians (five per participating state). Established by the Constitutive Treaty
+  signed in La Paz on 25 October 1979 and in force since January 1984; exercises political
+  control over the Andean Integration System without supranational legislative power.
+  Bolivia, Colombia, Ecuador, and Peru are full members; Chile joined as a permanent
+  associate participant in 2015 despite not being a full Andean Community member.
+notes: Venezuela was a founding signatory but withdrew from the Andean Community and
+  Parliament on 22 April 2006. Chile became a permanent parliament member in 2015. Spain,
+  Mexico, and Panama are permanent observers (2011); Argentina (2016) and Turkey (2019)
+  later joined as observers. Each member state maintains a national liaison office; the
+  General Secretariat is in Bogotá. Colombia, Ecuador, and Peru hold direct elections
+  for Andean parliamentarians; Bolivia selects representatives through its national
+  legislature.
 tags:
 - PARLANDINO
 - andean
+- integration
 - parliament
 - parliamentary
 - political
+- regional
+- regional_cooperation
+- south_america
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q490447
 other_names:
 - id: ar
   name: برلمان الأنديز
+- id: ca
+  name: Parlament Andí
 - id: de
   name: Andenparlament
 - id: en
@@ -53,32 +115,58 @@ other_names:
   name: Parlamento Andino
 - id: fr
   name: Parlement andin
+- id: it
+  name: Parlamento andino
+- id: pl
+  name: Parlament Andyjski
 - id: pt
   name: Parlamento Andino
 - id: zh
   name: 安第斯议会
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490447
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490447
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490447
   license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q490447
   license: CC0
-acronyms:
-- lang: pt
-  value: PARLANDINO
-founded: '1979-10-25'
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Andean_Parliament
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Andean_Parliament
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Andean_Parliament
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490447
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Andean_Parliament
+  license: CC BY-SA 4.0

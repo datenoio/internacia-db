@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: VA
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Country Code: VA
-Total Records with Issues: 10
-Total Issues Found: 14
+Total Records with Issues: 8
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
 
@@ -11,15 +11,15 @@ Total Issues Found: 14
 Count: 4
 Priority: LOW
 
-File: data/intblocks/agreement/CTBT.yaml
-Record ID: CTBT
+File: data/intblocks/intorg/CTBTO.yaml
+Record ID: CTBTO
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: ctbto.org
 Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
 
-File: data/intblocks/intorg/CTBTO.yaml
-Record ID: CTBTO
+File: data/intblocks/agreement/CTBT.yaml
+Record ID: CTBT
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: ctbto.org
@@ -30,67 +30,46 @@ Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
-[HISTORICAL_ENTITY_ACTIVE_MEMBER]
+[INSUFFICIENT_PROVENANCE]
 Count: 3
 Priority: MEDIUM
 
-File: data/intblocks/wbgroup/WLD.yaml
-Record ID: WLD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/intorg/IAIS.yaml
-Record ID: IAIS
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
 
-File: data/intblocks/standards/ISO.yaml
-Record ID: ISO
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/travel/VISAFGE.yaml
+Record ID: VISAFGE
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
 
 [MEMBERSHIP_COUNT_MISMATCH]
-Count: 7
+Count: 3
 Priority: MEDIUM
-
-File: data/intblocks/agreement/CTBT.yaml
-Record ID: CTBT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 187
-Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
-
-File: data/intblocks/agreement/TPNW.yaml
-Record ID: TPNW
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 95
-Suggested Action: membership_count 95 matches neither total includes (94) nor member-class includes (94)
 
 File: data/intblocks/environment/MONTREALPROTOCOL.yaml
 Record ID: MONTREALPROTOCOL
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 198
-Suggested Action: membership_count 198 matches neither total includes (197) nor member-class includes (197)
-
-File: data/intblocks/environment/VIENNACONVENTION.yaml
-Record ID: VIENNACONVENTION
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 198
@@ -102,13 +81,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 187
 Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
-
-File: data/intblocks/space/EUTELSAT.yaml
-Record ID: EUTELSAT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 49
-Suggested Action: membership_count 49 matches neither total includes (46) nor member-class includes (46)
 
 File: data/intblocks/standards/ETSI.yaml
 Record ID: ETSI
@@ -121,15 +93,5 @@ Suggested Action: membership_count 900 matches neither total includes (46) nor m
 === SUMMARY BY ISSUE TYPE ===
 
 DUPLICATE_LINK: 4 issues
-HISTORICAL_ENTITY_ACTIVE_MEMBER: 3 issues
-MEMBERSHIP_COUNT_MISMATCH: 7 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: WLD
-File: data/intblocks/wbgroup/WLD.yaml
-Issue Count: 3
-Issues:
-  - DUPLICATE_LINK: links
-  - DUPLICATE_LINK: links
-  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[7].status
+INSUFFICIENT_PROVENANCE: 3 issues
+MEMBERSHIP_COUNT_MISMATCH: 3 issues

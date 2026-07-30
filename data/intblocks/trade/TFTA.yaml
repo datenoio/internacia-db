@@ -3,7 +3,9 @@ name: Tripartite Free Trade Area
 blocktype:
 - trade
 status: formal
-founded: '2015'
+founded: '2015-06-10'
+active_period:
+  start: '2024-07-25'
 geographic_scope: regional
 regions:
 - Africa
@@ -11,10 +13,15 @@ languages:
 - en
 - fr
 - pt
+- ar
 links:
+- url: https://web.archive.org/web/20150402090632/http://www.comesa-eac-sadc-tripartite.org/
+  type: website
+- url: https://www.tralac.org/resources/by-region/comesa-eac-sadc-tripartite-fta.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Tripartite_Free_Trade_Area
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7842014
+- url: https://www.wikidata.org/wiki/Q20078796
   type: wikidata
 acronyms:
 - lang: en
@@ -27,12 +34,14 @@ partof:
 - COMESA
 - EAC
 - SADC
+legal_status: free trade agreement
+recognition_status: Free trade agreement among the Common Market for Eastern and Southern Africa (COMESA), East African Community (EAC), and Southern African Development Community (SADC); agreed at the First Tripartite Summit in Kampala in October 2008 and officially launched at the Third Tripartite Summit in Sharm El Sheikh on 10 June 2015; entered into force on 25 July 2024 after 14 member states deposited instruments of ratification
 membership_count: 29
-wikidata_id: Q7842014
-legal_status: intergovernmental
-description: 'Free trade area uniting member states from three African regional economic communities: the Common Market for
-  Eastern and Southern Africa (COMESA), the East African Community (EAC), and the Southern African Development Community (SADC).
-  Aims to create a single market facilitating trade, investment, and infrastructure development across member states.'
+wikidata_id: Q20078796
+official_documents:
+- url: https://www.tralac.org/documents/resources/tfta/5810-brief-on-the-eac-comesa-sadc-free-trade-area-october-2023/file.html
+  type: document
+description: African free trade agreement uniting the 29 tripartite member and partner states of COMESA, the EAC, and SADC. Signed on 10 June 2015 and in force from 25 July 2024 after 14 ratifications, it aims to integrate markets, infrastructure, and industrial development across eastern and southern Africa as a stepping stone toward the African Continental Free Trade Area.
 tags:
 - TFTA
 - trade
@@ -49,18 +58,14 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
-- id: de
-  name: Bemlos longicarpus
+- id: ar
+  name: منطقة التجارة الحرة الثلاثية
 - id: en
   name: Tripartite Free Trade Area
-- id: es
-  name: Bemlos longicarpus
 - id: fr
-  name: Zone de libre-échange tripartite
+  name: Zone tripartite de libre-échange
 - id: pt
-  name: Zona de Livre Comércio Tripartida
-- id: ru
-  name: Bemlos longicarpus
+  name: Zona Tripartida de Livre Comércio
 notes: 'The Tripartite Free Trade Area (TFTA) Agreement was finalized and opened for signature in 2015. The agreement officially
   entered into force on July 25, 2024, after reaching the required threshold of 14 ratifications among its member states.
   The TFTA comprises 29 member states, collectively representing 53% of the African Union''s membership, more than 60% of
@@ -71,130 +76,224 @@ includes:
 - id: AO
   name: Angola
   type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: BI
   name: Burundi
   type: country
-  status: member
-- id: KM
-  name: Comoros
+  status: founding_member
+  joined: '2015-06-10'
+- id: BW
+  name: Botswana
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: CD
-  name: Congo, The Democratic Republic of the
+  name: Congo, Dem. Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: DJ
   name: Djibouti
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: ER
   name: Eritrea
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
+- id: ET
+  name: Ethiopia
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
+- id: KM
+  name: Comoros
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
 - id: LS
   name: Lesotho
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: LY
   name: Libya
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: MG
   name: Madagascar
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: MW
   name: Malawi
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: MU
   name: Mauritius
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: NA
   name: Namibia
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: RW
   name: Rwanda
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: SC
   name: Seychelles
   type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: SD
   name: Sudan
   type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
+  status: founding_member
+  joined: '2015-06-10'
+- id: SO
+  name: Somalia
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
+- id: SS
+  name: South Sudan
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
+- id: SZ
+  name: Swaziland
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
+- id: TZ
+  name: Tanzania
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
 - id: TN
   name: Tunisia
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
+- id: ZA
+  name: South Africa
+  type: country
+  status: founding_member
+  joined: '2015-06-10'
 - id: ZM
   name: Zambia
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
 - id: ZW
   name: Zimbabwe
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-06-10'
+founding_members:
+- AO
+- BI
+- BW
+- CD
+- DJ
+- EG
+- ER
+- ET
+- KE
+- KM
+- LS
+- LY
+- MG
+- MW
+- MU
+- MZ
+- NA
+- RW
+- SC
+- SD
+- SO
+- SS
+- SZ
+- TZ
+- TN
+- UG
+- ZA
+- ZM
+- ZW
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q20078796
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q20078796
   license: CC0
+- field: includes
+  source: tralac trade law centre
+  retrieved_at: '2026-07-30'
+  url: https://www.tralac.org/resources/by-region/comesa-eac-sadc-tripartite-fta.html
+- field: founding_members
+  source: tralac trade law centre
+  retrieved_at: '2026-07-30'
+  url: https://www.tralac.org/resources/by-region/comesa-eac-sadc-tripartite-fta.html
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q20078796
+  license: CC0
+- field: active_period
+  source: East African Community
+  retrieved_at: '2026-07-30'
+  url: https://eac.int/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Tripartite_Free_Trade_Area
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Tripartite_Free_Trade_Area
+  source: tralac trade law centre
+  retrieved_at: '2026-07-30'
+  url: https://www.tralac.org/resources/by-region/comesa-eac-sadc-tripartite-fta.html
+- field: recognition_status
+  source: tralac trade law centre
+  retrieved_at: '2026-07-30'
+  url: https://www.tralac.org/resources/by-region/comesa-eac-sadc-tripartite-fta.html
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Tripartite_Free_Trade_Area
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+- field: links
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q20078796
+  license: CC0

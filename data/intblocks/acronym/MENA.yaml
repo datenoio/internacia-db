@@ -2,13 +2,20 @@ id: MENA
 blocktype:
 - acronym
 status: informal
+geographic_scope: sub-regional
+regions:
+- Asia
+- Africa
 languages:
 - en
+- ar
 links:
 - url: https://en.wikipedia.org/wiki/Middle_East_and_North_Africa
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q984212
   type: wikidata
+- url: https://data.worldbank.org/country/ZQ
+  type: website
 name: Middle East and North Africa
 includes:
 - id: AE
@@ -97,27 +104,87 @@ includes:
   status: member
 membership_count: 21
 wikidata_id: Q984212
-description: A geographic region which comprises the Middle East (also called West Asia) and North Africa together. It exists
-  as an alternative to the concept of the Greater Middle East, which comprises the bulk of the Muslim world.
+description: MENA (Middle East and North Africa) is a geographic and economic grouping with no single standardized
+  definition. Internacia follows the World Bank MENA classification of 21 countries and territories — the six Gulf Cooperation
+  Council members plus Algeria, Djibouti, Egypt, Iran, Iraq, Israel, Jordan, Lebanon, Libya, Malta, Morocco, Palestine, Syria,
+  Tunisia, and Yemen. The label is widely used in academia, development finance, media planning, and business; alternative
+  acronyms include WANA (West Asia and North Africa) and SWANA (South West Asia and North Africa).
 tags:
 - MENA
 - acronym
-- east
-- middle
-- north
+- middle-east
+- north-africa
+- regional_cooperation
+- world-bank
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+acronyms:
+- lang: en
+  value: MENA
+- lang: en
+  value: WANA
+- lang: en
+  value: SWANA
 other_names:
 - id: ar
   name: الشرق الأوسط وشمال إفريقيا
-- id: zh
-  name: MENA
+- id: de
+  name: MENA-Region
 - id: en
   name: Middle East and North Africa
+- id: es
+  name: MENA
 - id: fr
+  name: MENA
+- id: pt
   name: MENA
 - id: ru
   name: Страны MENA
-- id: es
+- id: zh
   name: MENA
+notes: MENA has no fixed membership list across organizations. UNICEF, UNAIDS, IMF, and Pew Research use different rosters
+  (e.g. some include Sudan or Somalia, some exclude Israel or Malta). This record uses the World Bank 21-country/territory
+  set. Turkey, Cyprus, Mauritania, Sudan, Somalia, Afghanistan, and Pakistan appear in other MENA/WANA definitions but are
+  excluded here. See also geographic records MIDDLEEAST and MAGHREB for narrower regional definitions.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://data.worldbank.org/country/ZQ
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East_and_North_Africa
+- field: membership_count
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://data.worldbank.org/country/ZQ
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East_and_North_Africa
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East_and_North_Africa
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East_and_North_Africa
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q984212
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q984212
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

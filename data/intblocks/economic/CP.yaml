@@ -1,150 +1,239 @@
 id: CP
+name: Colombo Plan
 blocktype:
 - economic
 status: formal
+founded: '1951-07-01'
+geographic_scope: regional
+regions:
+- Asia
+- Oceania
+- South America
+- Western Asia
 languages:
 - en
 links:
-- url: http://www.colombo-plan.org/
+- url: https://colombo-plan.org/
+  type: website
+- url: https://colombo-plan.org/member-countries/
   type: website
 - url: https://en.wikipedia.org/wiki/Colombo_Plan
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1077459
   type: wikidata
-name: Colombo Plan
+acronyms:
+- lang: en
+  value: CP
+legal_status: intergovernmental
 includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
 - id: AF
   name: Afghanistan
   type: country
   status: member
+  joined: '1963'
+- id: AU
+  name: Australia
+  type: country
+  status: founding_member
+  joined: '1950'
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '1972'
 - id: BT
   name: Bhutan
   type: country
   status: member
+  joined: '1962'
 - id: BN
   name: Brunei Darussalam
   type: country
   status: member
+  joined: '2008'
+- id: CL
+  name: Chile
+  type: country
+  status: member
+  joined: '2021'
 - id: FJ
   name: Fiji
   type: country
   status: member
+  joined: '1972'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '1953'
 - id: IR
-  name: Iran
+  name: Iran, Islamic Rep.
   type: country
   status: member
+  joined: '1966'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '1954'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '1962'
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
   status: member
+  joined: '1951'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1957'
 - id: MV
   name: Maldives
   type: country
   status: member
+  joined: '1963'
 - id: MN
   name: Mongolia
   type: country
   status: member
+  joined: '2004'
 - id: MM
   name: Myanmar
   type: country
   status: member
+  joined: '1952'
 - id: NP
   name: Nepal
   type: country
   status: member
+  joined: '1952'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
+  joined: '1973'
 - id: PH
   name: Philippines
   type: country
   status: member
+  joined: '1954'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '2012'
 - id: SG
   name: Singapore
   type: country
   status: member
+  joined: '1966'
 - id: LK
   name: Sri Lanka
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: TH
   name: Thailand
   type: country
   status: member
-- id: US
-  name: United States of America
-  type: country
-  status: member
+  joined: '1954'
 - id: VN
-  name: Viet Nam
+  name: Vietnam
   type: country
   status: member
-founded: '1951'
+  joined: '2004'
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  joined: '1950'
+  left: '1992'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  joined: '1950'
+  left: '1991'
+- id: KH
+  name: Cambodia
+  type: country
+  status: former_member
+  joined: '1951'
+  left: '1975'
+- id: US
+  name: United States
+  type: country
+  status: former_member
+  joined: '1951'
+  left: '2026-01'
+founding_members:
+- AU
+- CA
+- IN
+- NZ
+- PK
+- LK
+- GB
+membership_count: 27
 headquarters:
   city: Colombo
   country: LK
   coordinates:
     lat: 6.926666666666667
     lng: 79.86055555555555
-membership_count: 26
 wikidata_id: Q1077459
-description: Cooperative organization focused on human resources development.
+description: >-
+  Regional intergovernmental organization for cooperative economic and social development in Asia and the Pacific,
+  focused on human resources development and South–South cooperation. Conceived at the January 1950 Commonwealth
+  Conference on Foreign Affairs in Colombo and commenced operations on 1 July 1951. Programmes cover capacity building,
+  drug demand reduction, gender affairs, and environment and climate change. Chile joined as the 28th member in August
+  2021; the United States withdrew in January 2026.
 tags:
 - CP
 - aid
+- asia_pacific
+- capacity_building
 - colombo
-- commerce
 - development
 - economic
-- economy
-- plan
+- human_resources
+- regional_cooperation
 - trade
 topics:
+- key: capacity_building
+  name: Capacity Building
 - key: development
   name: Development
 - key: economy
   name: Economy
+- key: human_resource_development
+  name: Human Resource Development
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
+- id: en
+  name: Colombo Plan for Cooperative Economic and Social Development in Asia and the Pacific
 - id: ar
   name: خطة كولومبو
 - id: de
@@ -161,18 +250,49 @@ other_names:
   name: План Коломбо
 - id: zh
   name: 科倫坡計劃
+notes: >-
+  Seven Commonwealth founding members were Australia, Canada, Ceylon (Sri Lanka), India, New Zealand, Pakistan, and the
+  United Kingdom. Canada and the United Kingdom later withdrew. South Vietnam was a member (1951–1975) before succession
+  by the Socialist Republic of Vietnam, which withdrew in 1978 and rejoined as a full member in 2004. Headquarters are in
+  Colombo under a host-country agreement with Sri Lanka. The official member-countries page still lists a stale headcount
+  of 26 and omits Chile from its card list; membership here follows the official accession table plus Chile's 2021 CCM
+  admission and the January 2026 U.S. withdrawal.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Colombo Plan Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://colombo-plan.org/member-countries/
+- field: founding_members
+  source: Colombo Plan Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://colombo-plan.org/who-we-are/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Colombo_Plan
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Colombo_Plan
+- field: headquarters
+  source: Colombo Plan Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://colombo-plan.org/
+- field: legal_status
+  source: Colombo Plan Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://colombo-plan.org/who-we-are/
+- field: geographic_scope
+  source: Colombo Plan Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://colombo-plan.org/who-we-are/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1077459
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.colombo-plan.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Colombo_Plan

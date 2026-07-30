@@ -1,93 +1,231 @@
 id: GAFISUD
+name: Financial Action Task Force of Latin America
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '2000'
+active_period:
+  start: '2000'
+geographic_scope: regional
+regions:
+- Latin America
+- Americas
+languages:
+- en
+- es
 links:
-- url: http://www.gafisud.info/
+- url: https://www.gafilat.org/
   type: website
-name: Financial Action Task Force on Money Laundering in South America
+- url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+  type: website
+- url: https://www.gafilat.org/index.php/es/espanol/18-inicio/gafilat/157-what-is-gafilat-3
+  type: website
+- url: https://www.fatf-gafi.org/en/countries/global-network/financial-action-task-force-of-latin-america.html
+  type: website
+acronyms:
+- lang: en
+  value: GAFILAT
+- lang: en
+  value: GAFISUD
+- lang: es
+  value: GAFILAT
+- lang: es
+  value: GAFISUD
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering, counter-terrorist financing, and counter-proliferation financing; associate member of the Financial Action Task Force
+partof:
+  id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Buenos Aires
+  country: AR
+  coordinates:
+    lat: -34.5839
+    lng: -58.3936
+membership_count: 18
+description: Intergovernmental FATF-style regional body (FSRB) whose 18 member jurisdictions in Latin America commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Formally established as the Financial Action Task Force on Money Laundering in South America (GAFISUD) on 8 December 2000 in Cartagena de Indias, Colombia, by nine founding states; later expanded to Central America and the Caribbean and renamed GAFILAT (Grupo de Acción Financiera de Latinoamérica). The Executive Secretariat is hosted in Buenos Aires, Argentina, and conducts mutual evaluations, typology research, training and technical assistance, and regional AML/CFT cooperation within the FATF Global Network.
+tags:
+- AML
+- CFT
+- FATF
+- FSRB
+- GAFILAT
+- GAFISUD
+- americas
+- financial
+- intorg
+- latin_america
+- legal
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
 - id: AR
   name: Argentina
   type: country
   status: member
+  joined: '2000'
 - id: BO
   name: Bolivia
   type: country
   status: member
+  joined: '2000'
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '2000'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '2000'
 - id: CO
   name: Colombia
   type: country
   status: member
+  joined: '2000'
 - id: CR
   name: Costa Rica
   type: country
   status: member
+  joined: '2010'
 - id: CU
   name: Cuba
   type: country
   status: member
+  joined: '2012'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
+  joined: '2016'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '2000'
 - id: SV
   name: El Salvador
   type: country
   status: member
+  joined: '2022'
 - id: GT
   name: Guatemala
   type: country
   status: member
+  joined: '2013'
 - id: HN
   name: Honduras
   type: country
   status: member
+  joined: '2013'
 - id: MX
   name: Mexico
   type: country
   status: member
+  joined: '2006'
 - id: NI
   name: Nicaragua
   type: country
   status: member
+  joined: '2013'
 - id: PA
   name: Panama
   type: country
   status: member
+  joined: '2010'
 - id: PY
   name: Paraguay
   type: country
   status: member
+  joined: '2000'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '2000'
 - id: UY
   name: Uruguay
   type: country
   status: member
-membership_count: 18
-description: The Global Alliance for Financial Information Exchange is an international organization that is used to promote
-  regional cooperation in the financial information exchange sector.
-tags:
-- GAFISUD
-- action
-- financial
-- intorg
-- task
-topics:
-- key: economy
-  name: Economy
+  joined: '2000'
+founding_members:
+- AR
+- BO
+- BR
+- CL
+- CO
+- EC
+- PY
+- PE
+- UY
+other_names:
+- id: en
+  name: Financial Action Task Force on Money Laundering in South America
+- id: es
+  name: Grupo de Acción Financiera de Latinoamérica
+- id: es
+  name: Grupo de Acción Financiera de Sudamérica
+notes: Record id GAFISUD reflects the founding acronym; the organization formally renamed to GAFILAT after Central American and Caribbean members joined. Nine states founded GAFISUD on 8 December 2000 in Cartagena de Indias, Colombia. Mexico joined in 2006; Costa Rica and Panama in 2010; Cuba in 2012; Guatemala, Honduras, and Nicaragua in 2013; the Dominican Republic in 2016; and El Salvador in 2022 (observer from July 2021, full member from 1 January 2022). Observer jurisdictions include Canada, France, Germany, Portugal, Spain, and the United States.
+last_verified: '2026-07-29'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/es/espanol/18-inicio/gafilat/157-what-is-gafilat-3
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/es/espanol/18-inicio/gafilat/157-what-is-gafilat-3
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/es/espanol/18-inicio/gafilat/157-what-is-gafilat-3
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/es/espanol/18-inicio/gafilat/157-what-is-gafilat-3
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gafilat.org/index.php/en/espanol/11-inicio/gafilat/quienes-somos/21-el-organismo-internacional
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://gafilat.org/index.php/en/miembros/el-salvador

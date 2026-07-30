@@ -1,90 +1,180 @@
 id: OSPESCA
+name: Central America Fisheries and Aquaculture Organization
 blocktype:
 - food
 status: formal
-partof: FAO
+partof: SICA
+founded: '1995-12-18'
+active_period:
+  start: '1995-12-18'
+geographic_scope: regional
+regions:
+- Central America
 languages:
 - en
+- es
 links:
 - url: https://www.sica.int/ospesca/
   type: website
+- url: https://www.fao.org/voluntary-guidelines-small-scale-fisheries/news/news-detail/Insights-into-how-OSPESCA-supports-implementation-of-the-SSF-Guidelines-in-Central-America/en
+  type: website
+- url: https://www.oceanexpert.org/institution/16096
+  type: website
 - url: https://www.wikidata.org/wiki/Q134724592
   type: wikidata
-name: Central America Fisheries and Aquaculture Organization
+acronyms:
+- lang: es
+  value: OSPESCA
+- lang: en
+  value: OSPESCA
+legal_status: intergovernmental
+recognition_status: Specialized regional body of the Central American Integration System (SICA) established by the Act of San Salvador on 18 December 1995; attached to the SICA General Secretariat since 2000; coordinates regional fisheries and aquaculture policy across member states
+headquarters:
+  city: San Salvador
+  country: SV
+  note: Dirección Regional Especializada de OSPESCA, Edificio OIRSA, Colonia Escalón
 includes:
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '1998'
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
+  joined: '2013-06-27'
 - id: SV
   name: El Salvador
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
 - id: GT
   name: Guatemala
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
 - id: PA
   name: Panama
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-18'
+founding_members:
+- CR
+- SV
+- GT
+- HN
+- NI
+- PA
 membership_count: 8
-description: Central America Fisheries and Aquaculture Organization is an international
-  food body with 8 members.
+description: Specialized regional fisheries and aquaculture body of the Central American Integration System (SICA), established by the Act of San Salvador on 18 December 1995. OSPESCA coordinates the definition, implementation, and monitoring of regional policies, strategies, and projects for the sustainable development of fisheries and aquaculture across its eight member states — Belize, Costa Rica, the Dominican Republic, El Salvador, Guatemala, Honduras, Nicaragua, and Panama. The organization harmonizes binding regulations on gear, bycatch, IUU fishing, and shared stocks such as Caribbean spiny lobster, and participates in the FAO Network of Regional Fishery Bodies as a regional advisory body.
 tags:
 - OSPESCA
 - agriculture
-- america
-- central
-- cultural
-- culture
+- aquaculture
+- central-america
 - environment
 - farming
 - fisheries
 - food
+- intergovernmental
 - nature
+- regional_cooperation
+- sica
 topics:
 - key: agriculture
   name: Agriculture
-- key: culture
-  name: Culture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q134724592
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 中美洲渔业和水产养殖组织
 - id: en
   name: Central America Fisheries and Aquaculture Organization
 - id: es
   name: Organización del Sector Pesquero y Acuicola del Istmo Centroamericano
-acronyms:
-- lang: es
-  value: OSPESCA
+- id: zh
+  name: 中美洲渔业和水产养殖组织
+wikidata_id: Q134724592
+notes: The six Central American isthmus states founded OSPESCA through the 1995 Act of San Salvador; Belize acceded after joining SICA (1998), and the Dominican Republic became a full SICA and OSPESCA member in 2013. OSPESCA was attached to the SICA General Secretariat in 2000 and reorganized as a specialized regional directorate in 2015. Work is guided by the Fisheries and Aquaculture Integration Policy 2015–2025.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO; SICA; GCFI proceedings
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/voluntary-guidelines-small-scale-fisheries/news/news-detail/Insights-into-how-OSPESCA-supports-implementation-of-the-SSF-Guidelines-in-Central-America/en
+- field: description
+  source: FAO; WCPFC observer application
+  retrieved_at: '2026-07-29'
+  url: https://meetings.wcpfc.int/file/14164/download
+- field: founded
+  source: SICA; OSPESCA official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sica.int/ospesca/
+- field: active_period
+  source: SICA; OSPESCA official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sica.int/ospesca/
+- field: legal_status
+  source: WCPFC observer application
+  retrieved_at: '2026-07-29'
+  url: https://meetings.wcpfc.int/file/14164/download
+- field: recognition_status
+  source: FAO; WCPFC observer application
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/voluntary-guidelines-small-scale-fisheries/news/news-detail/Insights-into-how-OSPESCA-supports-implementation-of-the-SSF-Guidelines-in-Central-America/en
+- field: geographic_scope
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/voluntary-guidelines-small-scale-fisheries/news/news-detail/Insights-into-how-OSPESCA-supports-implementation-of-the-SSF-Guidelines-in-Central-America/en
+- field: headquarters
+  source: OceanExpert
+  retrieved_at: '2026-07-29'
+  url: https://www.oceanexpert.org/institution/16096
+- field: founding_members
+  source: SICA; OSPESCA official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sica.int/ospesca/
+- field: partof
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724592
+  license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724592
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724592
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724592
+  license: CC0
+- field: notes
+  source: FAO; GCFI proceedings; SICA
+  retrieved_at: '2026-07-29'
+  url: https://proceedings.gcfi.org/wp-content/uploads/2020/11/72-GCFI-PDF-26-1.pdf

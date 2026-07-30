@@ -1,116 +1,184 @@
 id: ICES
+name: International Council for the Exploration of the Sea
 blocktype:
 - intorg
 - scientific
 - fisheries
 - ocean
 status: formal
+founded: '1902-07-22'
+active_period:
+  start: '1902-07-22'
+geographic_scope: regional
+regions:
+- North Atlantic
+- Baltic Sea
+- Europe
 languages:
 - en
 links:
-- url: http://www.ices.dk
+- url: https://www.ices.dk/
+  type: website
+- url: https://www.ices.dk/about-ICES/who-we-are/Pages/Member-Countries.aspx
   type: website
 - url: https://en.wikipedia.org/wiki/International_Council_for_the_Exploration_of_the_Sea
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1613859
   type: wikidata
-name: International Council for the Exploration of the Sea
-founded: '1902'
+acronyms:
+- lang: en
+  value: ICES
+- lang: fr
+  value: CIEM
+legal_status: intergovernmental
+recognition_status: Intergovernmental marine science organization established in Copenhagen on 22 July 1902; governed since 22 July 1968 by the Convention for the International Council for the Exploration of the Sea signed on 7 September 1964
 headquarters:
   city: Copenhagen
   country: DK
   coordinates:
     lat: 55.676111111111
     lng: 12.568888888889
+  note: ICES Secretariat at H. C. Andersens Boulevard 44-46, DK-1553 Copenhagen V
+wikidata_id: Q1613859
+description: Intergovernmental marine science organization and regional fishery advisory body whose 19 member countries cooperate on research, data coordination, and non-political scientific advice for the North Atlantic, Baltic Sea, and North Sea. ICES was established in Copenhagen in 1902 and is governed by the 1964 ICES Convention. Its Council sets policy; expert groups and committees produce stock assessments and ecosystem advice for clients including NEAFC, NASCO, OSPAR, HELCOM, and the European Commission. The Secretariat is headquartered in Copenhagen.
 includes:
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '1967-07-20'
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '1967-06-22'
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '1993-12-16'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1965-01-19'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '1964-12-04'
 - id: IE
   name: Ireland
   type: country
   status: member
+  joined: '1965-06-10'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '1993-09-23'
+  note: Membership restored at the 81st ICES Statutory Meeting in Dublin
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2006-05-31'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '1966-11-25'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1966-02-18'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+  joined: '1902-07-22'
+  left: '2025-12-09'
+  note: Founding member as the Soviet Union; participation suspended 30 March 2022; formal withdrawal under Article 17 of the ICES Convention effective nine December 2025
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1965-09-09'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1902-07-22'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1973-04-18'
+founding_members:
+- DK
+- FI
+- DE
+- NL
+- 'NO'
+- SE
+- GB
+- RU
 membership_count: 19
-wikidata_id: Q1613859
-description: International entity.
 tags:
 - ICES
 - council
 - exploration
-- international
+- fisheries
 - intorg
+- marine
+- north atlantic
+- science
 topics:
-- key: economy
-  name: Economy
+- key: agriculture
+  name: Agriculture
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: ocean
+  name: Ocean
+- key: research
+  name: Research
+- key: science
+  name: Science
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: المجلس الدولي لاستكشاف البحار
@@ -126,23 +194,45 @@ other_names:
   name: Conselho Internacional para a Exploração do Mar
 - id: zh
   name: 国际海洋考察理事会
+notes: Affiliate institutes with observer status include Australia, Chile, Greece, Peru, and South Africa; WWF and BirdLife International hold formal NGO observer status. Italy was a member under the 1964 Convention but denounced it effective 17 April 1974.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ICES official website; 1964 ICES Convention (UKTS 1964 No. 67)
+  retrieved_at: '2026-07-29'
+  url: https://www.ices.dk/about-ICES/who-we-are/Pages/Member-Countries.aspx
+- field: description
+  source: ICES official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ices.dk/about-ICES/who-we-are/Pages/Who-we-are.aspx
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1613859
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1613859
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1613859
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.ices.dk
-acronyms:
-- lang: en
-  value: ICES
-- lang: fr
-  value: CIEM
+  source: ICES official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ices.dk/
+- field: recognition_status
+  source: 1964 ICES Convention; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Council_for_the_Exploration_of_the_Sea
+- field: founding_members
+  source: Wikipedia; 1964 ICES Convention
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Council_for_the_Exploration_of_the_Sea
+- field: notes
+  source: ICES official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ices.dk/news-and-events/news-archive/news/Pages/RussianWithdrawal.aspx

@@ -1,187 +1,392 @@
 DATA QUALITY REPORT - PRIORITY: MEDIUM
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Priority Level: MEDIUM
 Total Issues Found: 157
 
 === ISSUES BY TYPE ===
 
-[FOUNDING_MEMBER_NOT_INCLUDED]
-Count: 9
+[INSUFFICIENT_PROVENANCE]
+Count: 46
 
-File: data/intblocks/bank/IADB.yaml
-Record ID: IADB
+File: data/intblocks/dvdregion/DVD_1.yaml
+Record ID: DVD_1
 Country: US
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[6]
-Current Value: CU
-Suggested Action: founding member 'CU' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/bank/IBEC.yaml
-Record ID: IBEC
-Country: RU
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[0]
-Current Value: BG
-Suggested Action: founding member 'BG' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/IBEC.yaml
-Record ID: IBEC
-Country: RU
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[1]
-Current Value: CZ
-Suggested Action: founding member 'CZ' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/IBEC.yaml
-Record ID: IBEC
-Country: RU
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[2]
-Current Value: HU
-Suggested Action: founding member 'HU' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/IBEC.yaml
-Record ID: IBEC
-Country: RU
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[4]
-Current Value: PL
-Suggested Action: founding member 'PL' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/IBEC.yaml
-Record ID: IBEC
-Country: RU
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[5]
-Current Value: RO
-Suggested Action: founding member 'RO' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/IDA.yaml
-Record ID: IDA
-Country: US
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[8]
-Current Value: PK
-Suggested Action: founding member 'PK' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/bank/OFID.yaml
-Record ID: OFID
-Country: AT
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[9]
-Current Value: QA
-Suggested Action: founding member 'QA' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-File: data/intblocks/intorg/CEPI.yaml
-Record ID: CEPI
-Country: NO
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[1]
-Current Value: IN
-Suggested Action: founding member 'IN' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
-
-[HISTORICAL_ENTITY_ACTIVE_MEMBER]
-Count: 8
-
-File: data/intblocks/bank/WB.yaml
-Record ID: WB
-Country: US
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[6].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/intorg/IAIS.yaml
-Record ID: IAIS
-Country: CH
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/political/CIS2.yaml
-Record ID: CIS2
-Country: GE
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[3].status
-Current Value: member
-Suggested Action: 'XN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/standards/ISO.yaml
-Record ID: ISO
-Country: CH
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/wbgroup/HIC.yaml
-Record ID: HIC
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
 Country: AD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[2].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/wbgroup/LCN.yaml
-Record ID: LCN
+File: data/intblocks/dvdregion/DVD_3.yaml
+Record ID: DVD_3
+Country: KH
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/dvdregion/DVD_4.yaml
+Record ID: DVD_4
 Country: AG
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[1].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/wbgroup/WLD.yaml
-Record ID: WLD
-Country: AD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/dvdregion/DVD_5.yaml
+Record ID: DVD_5
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/writingdirection/WDLTR.yaml
-Record ID: WDLTR
+File: data/intblocks/dvdregion/DVD_6.yaml
+Record ID: DVD_6
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/govform/ABSMON.yaml
+Record ID: ABSMON
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/CONMON.yaml
+Record ID: CONMON
+Country: BH
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/FULLPREREP.yaml
+Record ID: FULLPREREP
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/PARMON.yaml
+Record ID: PARMON
+Country: AG
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/PARREP.yaml
+Record ID: PARREP
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/PREREP.yaml
+Record ID: PREREP
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/SEMIPREREP.yaml
+Record ID: SEMIPREREP
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/SINPREP.yaml
+Record ID: SINPREP
+Country: CN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/govform/SUSPCOU.yaml
+Record ID: SUSPCOU
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/lawsystem/LSBIJURIDICAL.yaml
+Record ID: LSBIJURIDICAL
+Country: CA
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 0
+Suggested Action: provenance has 0 entries; expected at least 4
+
+File: data/intblocks/lawsystem/LSCIVILLAW.yaml
+Record ID: LSCIVILLAW
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/lawsystem/LSCOMMONLAW.yaml
+Record ID: LSCOMMONLAW
+Country: AG
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/lawsystem/LSISLAMICLAW.yaml
+Record ID: LSISLAMICLAW
+Country: AF
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/railgauge/CAPGAUGE.yaml
+Record ID: CAPGAUGE
+Country: AO
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/railgauge/IBGAUGE.yaml
+Record ID: IBGAUGE
+Country: ES
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/railgauge/INGAUGE.yaml
+Record ID: INGAUGE
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/railgauge/IRGAUGE.yaml
+Record ID: IRGAUGE
+Country: IE
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/railgauge/MEGAUGE.yaml
+Record ID: MEGAUGE
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/railgauge/RUGAUGE.yaml
+Record ID: RUGAUGE
+Country: RU
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/railgauge/STGAUGE.yaml
+Record ID: STGAUGE
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/ATSC.yaml
+Record ID: ATSC
+Country: US
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/DMBT.yaml
+Record ID: DMBT
+Country: CN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/DVBT.yaml
+Record ID: DVBT
+Country: AL
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/ISDBSTD.yaml
+Record ID: ISDBSTD
+Country: JP
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/PAL.yaml
+Record ID: PAL
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/teleregion/SECAM.yaml
+Record ID: SECAM
+Country: AM
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/traffichand/LHTRAFFIC.yaml
+Record ID: LHTRAFFIC
+Country: AI
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
 Country: AD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[5].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/travel/VISAFBR.yaml
+Record ID: VISAFBR
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/travel/VISAFGE.yaml
+Record ID: VISAFGE
+Country: AD
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/travel/VISAFIR.yaml
+Record ID: VISAFIR
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/travel/VISAFJP.yaml
+Record ID: VISAFJP
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/travel/VISAFRU.yaml
+Record ID: VISAFRU
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/travel/VISAFSA.yaml
+Record ID: VISAFSA
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/travel/VISAFUK.yaml
+Record ID: VISAFUK
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
+
+File: data/intblocks/travel/VISAFUS.yaml
+Record ID: VISAFUS
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
+
+File: data/intblocks/writingsystem/WSETHIOPIC.yaml
+Record ID: WSETHIOPIC
+Country: ET
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/writingsystem/WSHANGUL.yaml
+Record ID: WSHANGUL
+Country: KP
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/writingsystem/WSINDIC.yaml
+Record ID: WSINDIC
+Country: BD
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
+
+File: data/intblocks/writingsystem/WSLATIN.yaml
+Record ID: WSLATIN
+Country: UNKNOWN
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
 
 [MEMBERSHIP_COUNT_MISMATCH]
-Count: 113
+Count: 89
 
-File: data/intblocks/agreement/CTBT.yaml
-Record ID: CTBT
-Country: AF
+File: data/intblocks/agreement/GRECO.yaml
+Record ID: GRECO
+Country: FR
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 187
-Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
-
-File: data/intblocks/agreement/KIMBERLEY.yaml
-Record ID: KIMBERLEY
-Country: AO
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 59
-Suggested Action: membership_count 59 matches neither total includes (50) nor member-class includes (50)
-
-File: data/intblocks/agreement/PELINDABA.yaml
-Record ID: PELINDABA
-Country: DZ
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 44
-Suggested Action: membership_count 44 matches neither total includes (43) nor member-class includes (43)
-
-File: data/intblocks/agreement/TPNW.yaml
-Record ID: TPNW
-Country: DZ
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 95
-Suggested Action: membership_count 95 matches neither total includes (94) nor member-class includes (94)
+Current Value: 48
+Suggested Action: membership_count 48 matches neither total includes (51) nor member-class includes (49)
 
 File: data/intblocks/armscontrol/GICNT.yaml
 Record ID: GICNT
@@ -238,6 +443,14 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 63
 Suggested Action: membership_count 63 matches neither total includes (62) nor member-class includes (62)
+
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Country: US
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 172
+Suggested Action: membership_count 172 matches neither total includes (173) nor member-class includes (173)
 
 File: data/intblocks/bank/IFC.yaml
 Record ID: IFC
@@ -311,13 +524,21 @@ Field: membership_count
 Current Value: 7
 Suggested Action: membership_count 7 matches neither total includes (12) nor member-class includes (12)
 
-File: data/intblocks/economic/PECC.yaml
-Record ID: PECC
-Country: AU
+File: data/intblocks/education/IAU_UNIV.yaml
+Record ID: IAU_UNIV
+Country: FR
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 23
-Suggested Action: membership_count 23 matches neither total includes (24) nor member-class includes (24)
+Current Value: 118
+Suggested Action: membership_count 118 matches neither total includes (116) nor member-class includes (116)
+
+File: data/intblocks/education/SEAMEO.yaml
+Record ID: SEAMEO
+Country: TH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 11
+Suggested Action: membership_count 11 matches neither total includes (20) nor member-class includes (20)
 
 File: data/intblocks/energy/ERRA.yaml
 Record ID: ERRA
@@ -439,37 +660,13 @@ Field: membership_count
 Current Value: 194
 Suggested Action: membership_count 194 matches neither total includes (190) nor member-class includes (190)
 
-File: data/intblocks/environment/UNCCD.yaml
-Record ID: UNCCD
-Country: AD
+File: data/intblocks/forum/PIF.yaml
+Record ID: PIF
+Country: FJ
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 197
-Suggested Action: membership_count 197 matches neither total includes (196) nor member-class includes (196)
-
-File: data/intblocks/environment/VIENNACONVENTION.yaml
-Record ID: VIENNACONVENTION
-Country: AD
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 198
-Suggested Action: membership_count 198 matches neither total includes (197) nor member-class includes (197)
-
-File: data/intblocks/food/GFCM.yaml
-Record ID: GFCM
-Country: AL
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 24
-Suggested Action: membership_count 24 matches neither total includes (29) nor member-class includes (29)
-
-File: data/intblocks/forum/BFA.yaml
-Record ID: BFA
-Country: CN
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 29
-Suggested Action: membership_count 29 matches neither total includes (26) nor member-class includes (26)
+Current Value: 18
+Suggested Action: membership_count 18 matches neither total includes (22) nor member-class includes (22)
 
 File: data/intblocks/forum/WEF.yaml
 Record ID: WEF
@@ -478,22 +675,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 1000
 Suggested Action: membership_count 1000 matches neither total includes (19) nor member-class includes (0)
-
-File: data/intblocks/geographic/CARIBBEAN.yaml
-Record ID: CARIBBEAN
-Country: AG
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 28
-Suggested Action: membership_count 28 matches neither total includes (29) nor member-class includes (29)
-
-File: data/intblocks/geographic/MEDITERRANEAN.yaml
-Record ID: MEDITERRANEAN
-Country: AL
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 23
-Suggested Action: membership_count 23 matches neither total includes (22) nor member-class includes (22)
 
 File: data/intblocks/health/GAVI.yaml
 Record ID: GAVI
@@ -510,6 +691,14 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 54
 Suggested Action: membership_count 54 matches neither total includes (55) nor member-class includes (0)
+
+File: data/intblocks/intorg/CEPI.yaml
+Record ID: CEPI
+Country: NO
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 30
+Suggested Action: membership_count 30 matches neither total includes (31) nor member-class includes (0)
 
 File: data/intblocks/intorg/CF.yaml
 Record ID: CF
@@ -543,21 +732,13 @@ Field: membership_count
 Current Value: 187
 Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
 
-File: data/intblocks/intorg/ECMWF.yaml
-Record ID: ECMWF
-Country: GB
+File: data/intblocks/intorg/GBEP.yaml
+Record ID: GBEP
+Country: IT
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 23
-Suggested Action: membership_count 23 matches neither total includes (35) nor member-class includes (35)
-
-File: data/intblocks/intorg/ETC.yaml
-Record ID: ETC
-Country: BE
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 34
-Suggested Action: membership_count 34 matches neither total includes (35) nor member-class includes (35)
+Current Value: 39
+Suggested Action: membership_count 39 matches neither total includes (95) nor member-class includes (23)
 
 File: data/intblocks/intorg/GLOBALFUND.yaml
 Record ID: GLOBALFUND
@@ -567,62 +748,6 @@ Field: membership_count
 Current Value: 130
 Suggested Action: membership_count 130 matches neither total includes (121) nor member-class includes (0)
 
-File: data/intblocks/intorg/ICSG.yaml
-Record ID: ICSG
-Country: PT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 30
-Suggested Action: membership_count 30 matches neither total includes (17) nor member-class includes (17)
-
-File: data/intblocks/intorg/IFDC.yaml
-Record ID: IFDC
-Country: US
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 33
-Suggested Action: membership_count 33 matches neither total includes (32) nor member-class includes (32)
-
-File: data/intblocks/intorg/IFOAM.yaml
-Record ID: IFOAM
-Country: DE
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 700
-Suggested Action: membership_count 700 matches neither total includes (31) nor member-class includes (31)
-
-File: data/intblocks/intorg/ILZSG.yaml
-Record ID: ILZSG
-Country: GB
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 30
-Suggested Action: membership_count 30 matches neither total includes (16) nor member-class includes (16)
-
-File: data/intblocks/intorg/INSG.yaml
-Record ID: INSG
-Country: PT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 20
-Suggested Action: membership_count 20 matches neither total includes (14) nor member-class includes (14)
-
-File: data/intblocks/intorg/ISTO.yaml
-Record ID: ISTO
-Country: BE
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 88
-Suggested Action: membership_count 88 matches neither total includes (80) nor member-class includes (80)
-
-File: data/intblocks/intorg/MSG.yaml
-Record ID: MSG
-Country: FJ
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 4
-Suggested Action: membership_count 4 matches neither total includes (5) nor member-class includes (5)
-
 File: data/intblocks/intorg/PATA.yaml
 Record ID: PATA
 Country: TH
@@ -631,13 +756,13 @@ Field: membership_count
 Current Value: 40
 Suggested Action: membership_count 40 matches neither total includes (39) nor member-class includes (39)
 
-File: data/intblocks/intorg/SOPAC.yaml
-Record ID: SOPAC
-Country: AU
+File: data/intblocks/intorg/SPRFMO.yaml
+Record ID: SPRFMO
+Country: NZ
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 17
-Suggested Action: membership_count 17 matches neither total includes (21) nor member-class includes (21)
+Suggested Action: membership_count 17 matches neither total includes (19) nor member-class includes (16)
 
 File: data/intblocks/military/ASF.yaml
 Record ID: ASF
@@ -655,14 +780,6 @@ Field: membership_count
 Current Value: 22
 Suggested Action: membership_count 22 matches neither total includes (23) nor member-class includes (0)
 
-File: data/intblocks/project/BRI.yaml
-Record ID: BRI
-Country: CN
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 150
-Suggested Action: membership_count 150 matches neither total includes (1) nor member-class includes (1)
-
 File: data/intblocks/project/INOGATE.yaml
 Record ID: INOGATE
 Country: UA
@@ -671,13 +788,13 @@ Field: membership_count
 Current Value: 12
 Suggested Action: membership_count 12 matches neither total includes (13) nor member-class includes (0)
 
-File: data/intblocks/pta/EUCARIFORUMEPA.yaml
-Record ID: EUCARIFORUMEPA
-Country: AG
+File: data/intblocks/project/PIMS.yaml
+Record ID: PIMS
+Country: DE
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 16
-Suggested Action: membership_count 16 matches neither total includes (15) nor member-class includes (15)
+Current Value: 10
+Suggested Action: membership_count 10 matches neither total includes (22) nor member-class includes (0)
 
 File: data/intblocks/research/ALLIANCEBIOVERSITYCIAT.yaml
 Record ID: ALLIANCEBIOVERSITYCIAT
@@ -702,14 +819,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 30
 Suggested Action: membership_count 30 matches neither total includes (31) nor member-class includes (31)
-
-File: data/intblocks/research/EUREKA.yaml
-Record ID: EUREKA
-Country: BE
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 42
-Suggested Action: membership_count 42 matches neither total includes (46) nor member-class includes (46)
 
 File: data/intblocks/research/IITA.yaml
 Record ID: IITA
@@ -807,46 +916,6 @@ Field: membership_count
 Current Value: 33
 Suggested Action: membership_count 33 matches neither total includes (32) nor member-class includes (32)
 
-File: data/intblocks/space/AFSA.yaml
-Record ID: AFSA
-Country: EG
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 55
-Suggested Action: membership_count 55 matches neither total includes (54) nor member-class includes (54)
-
-File: data/intblocks/space/APRSAF.yaml
-Record ID: APRSAF
-Country: AU
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 52
-Suggested Action: membership_count 52 matches neither total includes (50) nor member-class includes (50)
-
-File: data/intblocks/space/ARTEMISACCORDS.yaml
-Record ID: ARTEMISACCORDS
-Country: AO
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 60
-Suggested Action: membership_count 60 matches neither total includes (54) nor member-class includes (54)
-
-File: data/intblocks/space/COPUOS.yaml
-Record ID: COPUOS
-Country: AT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 104
-Suggested Action: membership_count 104 matches neither total includes (109) nor member-class includes (109)
-
-File: data/intblocks/space/EUTELSAT.yaml
-Record ID: EUTELSAT
-Country: FR
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 49
-Suggested Action: membership_count 49 matches neither total includes (46) nor member-class includes (46)
-
 File: data/intblocks/space/IAF_ASTRO.yaml
 Record ID: IAF_ASTRO
 Country: FR
@@ -854,30 +923,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 604
 Suggested Action: membership_count 604 matches neither total includes (84) nor member-class includes (84)
-
-File: data/intblocks/space/LIABILITYCONVENTION.yaml
-Record ID: LIABILITYCONVENTION
-Country: AR
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 80
-Suggested Action: membership_count 80 matches neither total includes (71) nor member-class includes (71)
-
-File: data/intblocks/space/REGISTRATIONCONVENTION.yaml
-Record ID: REGISTRATIONCONVENTION
-Country: DZ
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 78
-Suggested Action: membership_count 78 matches neither total includes (74) nor member-class includes (74)
-
-File: data/intblocks/space/RESCUEAGREEMENT.yaml
-Record ID: RESCUEAGREEMENT
-Country: AR
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 100
-Suggested Action: membership_count 100 matches neither total includes (101) nor member-class includes (101)
 
 File: data/intblocks/sports/AFC.yaml
 Record ID: AFC
@@ -951,26 +996,104 @@ Field: membership_count
 Current Value: 13
 Suggested Action: membership_count 13 matches neither total includes (14) nor member-class includes (14)
 
-... and 13 more records with this issue
+File: data/intblocks/sports/UEFA.yaml
+Record ID: UEFA
+Country: CH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 55
+Suggested Action: membership_count 55 matches neither total includes (52) nor member-class includes (52)
+
+File: data/intblocks/sports/WORLDAQUATICS.yaml
+Record ID: WORLDAQUATICS
+Country: CH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 210
+Suggested Action: membership_count 210 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/sports/WORLDATHLETICS.yaml
+Record ID: WORLDATHLETICS
+Country: MC
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 214
+Suggested Action: membership_count 214 matches neither total includes (217) nor member-class includes (217)
+
+File: data/intblocks/standards/AMN.yaml
+Record ID: AMN
+Country: UY
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 4
+Suggested Action: membership_count 4 matches neither total includes (6) nor member-class includes (6)
+
+File: data/intblocks/standards/ETSI.yaml
+Record ID: ETSI
+Country: FR
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 900
+Suggested Action: membership_count 900 matches neither total includes (46) nor member-class includes (0)
+
+File: data/intblocks/tax/CIAT.yaml
+Record ID: CIAT
+Country: PA
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 38
+Suggested Action: membership_count 38 matches neither total includes (42) nor member-class includes (42)
+
+File: data/intblocks/tax/CREDAF.yaml
+Record ID: CREDAF
+Country: CM
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 30
+Suggested Action: membership_count 30 matches neither total includes (31) nor member-class includes (31)
+
+File: data/intblocks/tax/IOTA.yaml
+Record ID: IOTA
+Country: HU
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 43
+Suggested Action: membership_count 43 matches neither total includes (44) nor member-class includes (44)
+
+File: data/intblocks/telecom/APT.yaml
+Record ID: APT
+Country: TH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 38
+Suggested Action: membership_count 38 matches neither total includes (42) nor member-class includes (42)
+
+File: data/intblocks/trade/GATT.yaml
+Record ID: GATT
+Country: CH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 128
+Suggested Action: membership_count 128 matches neither total includes (24) nor member-class includes (24)
+
+File: data/intblocks/unagency/FAO.yaml
+Record ID: FAO
+Country: AF
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 194
+Suggested Action: membership_count 194 matches neither total includes (196) nor member-class includes (196)
+
+File: data/intblocks/unagency/UNCTAD.yaml
+Record ID: UNCTAD
+Country: CH
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 195
+Suggested Action: membership_count 195 matches neither total includes (193) nor member-class includes (193)
 
 [MISSING_INCLUDES_APPLICABILITY]
-Count: 27
-
-File: data/intblocks/acronym/FAILEDS.yaml
-Record ID: FAILEDS
-Country: UNKNOWN
-Issue: MISSING_INCLUDES_APPLICABILITY
-Field: includes
-Current Value: None
-Suggested Action: Populate includes or set membership_applicability: not_applicable when membership is intentionally absent
-
-File: data/intblocks/acronym/PERIPHCOUNT.yaml
-Record ID: PERIPHCOUNT
-Country: UNKNOWN
-Issue: MISSING_INCLUDES_APPLICABILITY
-Field: includes
-Current Value: None
-Suggested Action: Populate includes or set membership_applicability: not_applicable when membership is intentionally absent
+Count: 22
 
 File: data/intblocks/dvdregion/DVD_5.yaml
 Record ID: DVD_5
@@ -982,30 +1105,6 @@ Suggested Action: Populate includes or set membership_applicability: not_applica
 
 File: data/intblocks/dvdregion/DVD_6.yaml
 Record ID: DVD_6
-Country: UNKNOWN
-Issue: MISSING_INCLUDES_APPLICABILITY
-Field: includes
-Current Value: None
-Suggested Action: Populate includes or set membership_applicability: not_applicable when membership is intentionally absent
-
-File: data/intblocks/education/EUA.yaml
-Record ID: EUA
-Country: BE
-Issue: MISSING_INCLUDES_APPLICABILITY
-Field: includes
-Current Value: None
-Suggested Action: Populate includes or set membership_applicability: not_applicable when membership is intentionally absent
-
-File: data/intblocks/education/IAU_UNIV.yaml
-Record ID: IAU_UNIV
-Country: FR
-Issue: MISSING_INCLUDES_APPLICABILITY
-Field: includes
-Current Value: None
-Suggested Action: Populate includes or set membership_applicability: not_applicable when membership is intentionally absent
-
-File: data/intblocks/geographic/2OCEANS.yaml
-Record ID: 2OCEANS
 Country: UNKNOWN
 Issue: MISSING_INCLUDES_APPLICABILITY
 Field: includes
@@ -1175,45 +1274,48 @@ Suggested Action: Populate includes or set membership_applicability: not_applica
 
 === SUMMARY BY ISSUE TYPE ===
 
-FOUNDING_MEMBER_NOT_INCLUDED: 9 issues
-HISTORICAL_ENTITY_ACTIVE_MEMBER: 8 issues
-MEMBERSHIP_COUNT_MISMATCH: 113 issues
-MISSING_INCLUDES_APPLICABILITY: 27 issues
+INSUFFICIENT_PROVENANCE: 46 issues
+MEMBERSHIP_COUNT_MISMATCH: 89 issues
+MISSING_INCLUDES_APPLICABILITY: 22 issues
 
 === SUMMARY BY COUNTRY ===
 
-AD: 5 issues
+AD: 3 issues
 AE: 2 issues
 AF: 2 issues
 AG: 3 issues
-AL: 2 issues
-AO: 2 issues
-AR: 3 issues
-AT: 3 issues
-AU: 4 issues
-BE: 8 issues
-CA: 1 issue
-CH: 17 issues
+AI: 1 issue
+AL: 1 issue
+AM: 1 issue
+AO: 1 issue
+AR: 1 issue
+AT: 1 issue
+AU: 1 issue
+BD: 1 issue
+BE: 4 issues
+BH: 1 issue
+CA: 2 issues
+CH: 14 issues
 CL: 1 issue
 CM: 1 issue
 CN: 4 issues
 DE: 6 issues
-DZ: 3 issues
-EG: 1 issue
-ES: 1 issue
-ET: 1 issue
+ES: 2 issues
+ET: 2 issues
 FI: 1 issue
 FJ: 1 issue
 FR: 6 issues
-GB: 8 issues
-GE: 1 issue
+GB: 6 issues
 GT: 1 issue
-HR: 1 issue
 HU: 2 issues
 ID: 1 issue
+IE: 1 issue
 IN: 1 issue
-IT: 1 issue
+IT: 2 issues
+JP: 1 issue
 KE: 2 issues
+KH: 1 issue
+KP: 1 issue
 LC: 1 issue
 LK: 1 issue
 MA: 1 issue
@@ -1222,17 +1324,16 @@ MY: 3 issues
 NG: 1 issue
 NL: 1 issue
 NO: 1 issue
-NZ: 1 issue
+NZ: 2 issues
 PA: 1 issue
 PE: 1 issue
-PT: 2 issues
-RU: 5 issues
+RU: 1 issue
 SA: 1 issue
 SE: 1 issue
 TG: 1 issue
-TH: 1 issue
+TH: 3 issues
 UA: 1 issue
-UNKNOWN: 24 issues
-US: 9 issues
+UNKNOWN: 42 issues
+US: 8 issues
 UY: 2 issues
 VU: 1 issue

@@ -2,25 +2,20 @@ id: EAGLE
 blocktype:
 - acronym
 status: informal
+founded: '2010'
 links:
+- url: https://www.bbvaresearch.com/wp-content/uploads/2015/04/BBVA-EAGLEs-2015_eng_final7.pdf
+  type: website
+- url: https://www.bbvaresearch.com/wp-content/uploads/2015/04/EAGLEs-2015_methodology.pdf
+  type: website
+- url: https://es.wikipedia.org/wiki/Emerging_and_Growth-Leading_Economies
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5370792
   type: wikidata
 name: Emerging and Growth-Leading Economies
 includes:
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
 - id: CN
   name: China
-  type: country
-  status: member
-- id: EG
-  name: Egypt
   type: country
   status: member
 - id: IN
@@ -31,12 +26,8 @@ includes:
   name: Indonesia
   type: country
   status: member
-- id: IR
-  name: Iran
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
+- id: RU
+  name: Russian Federation
   type: country
   status: member
 - id: MX
@@ -47,38 +38,108 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: PK
-  name: Pakistan
+- id: SA
+  name: Saudi Arabia
   type: country
   status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: RU
-  name: Russia
+- id: BR
+  name: Brazil
   type: country
   status: member
 - id: TR
   name: Turkey
   type: country
   status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: TH
+  name: Thailand
+  type: country
+  status: member
 membership_count: 14
-description: High-potential developing countries driving global growt
+wikidata_id: Q5370792
+description: EAGLE (Emerging and Growth-Leading Economies) is a dynamic grouping of emerging markets created by BBVA Research
+  in 2010 for economies whose expected incremental GDP contribution over the next ten years exceeds the average of the G6
+  industrialized nations (G7 excluding the United States). Unlike fixed-acronym groupings such as BRIC or CIVETS, EAGLE membership
+  is revised annually from growth forecasts; the 2015 roster comprised fourteen countries led by China and India. BBVA also maintains
+  an EAGLEs Nest watch list for economies below the EAGLE threshold but above Italy's expected contribution.
 tags:
 - EAGLE
 - acronym
+- bangladesh
+- brazil
+- china
 - emerging
 - growth
+- india
+- indonesia
 - leading
+- mexico
+- nigeria
+- pakistan
+- philippines
+- russia
+- saudi-arabia
+- thailand
+- turkey
 topics:
 - key: economy
   name: Economy
-wikidata_id: Q5370792
+acronyms:
+- lang: en
+  value: EAGLE
 other_names:
-- id: zh
-  name: 雄鹰经济体
+- id: en
+  name: Emerging and Growth-Leading Economies
 - id: en
   name: Emerging and growth-leading economies
 - id: es
   name: Emerging and Growth-Leading Economies
+- id: es
+  name: EAGLEs
+- id: es
+  name: Economías Emergentes que lideran el Crecimiento Global
+- id: zh
+  name: 雄鹰经济体
+notes: Coined by BBVA Research in November 2010 as a forward-looking alternative to static BRIC-style acronyms. The inaugural
+  2011 cohort had ten members (China, India, Brazil, Indonesia, Korea, Russia, Mexico, Egypt, Taiwan, Turkey); membership
+  is re-evaluated each year from ten-year incremental-GDP forecasts. The 2015 EAGLEs roster listed fourteen countries; Egypt,
+  Iran, and Malaysia appear in the Nest watch list rather than the core EAGLE group. Related but distinct from BRIC, CIVETS,
+  E7, N-11, MINT, and VISTA groupings.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: BBVA Research
+  retrieved_at: '2026-07-29'
+  url: https://www.bbvaresearch.com/wp-content/uploads/2015/04/BBVA-EAGLEs-2015_eng_final7.pdf
+- field: description
+  source: BBVA Research
+  retrieved_at: '2026-07-29'
+  url: https://www.bbvaresearch.com/wp-content/uploads/2015/04/EAGLEs-2015_methodology.pdf
+- field: founded
+  source: BBVA Research
+  retrieved_at: '2026-07-29'
+  url: https://www.bbvaresearch.com/wp-content/uploads/2015/04/EAGLEs-2015_methodology.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5370792
+  license: CC0
+- field: notes
+  source: BBVA Research
+  retrieved_at: '2026-07-29'
+  url: https://www.bbvaresearch.com/wp-content/uploads/mult/EM_Watch_Who_are_ENG_14.02.2011_tcm348-270421.pdf

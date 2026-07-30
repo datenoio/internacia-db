@@ -3,10 +3,15 @@ blocktype:
 - research
 - intorg
 status: formal
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
 - url: https://www.cost.eu/
+  type: website
+- url: https://www.cost.eu/about/members/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Cooperation_in_Science_and_Technology
   type: wikipedia
@@ -29,6 +34,9 @@ membership_count: 41
 wikidata_id: Q1024175
 description: Intergovernmental organization established to enhance collaboration among European researchers and innovators
   through networking activities.
+notes: >-
+  COST comprises 41 Full Members (voting in the Committee of Senior Officials), one Cooperating Member
+  (Israel, non-voting in CSO), and one Partner Member (South Africa, observer rights in Actions).
 tags:
 - COST
 - research
@@ -233,7 +241,26 @@ other_names:
   name: Европейское сотрудничество в области науки и технологии
 - id: zh
   name: 歐盟科研
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: COST
+  retrieved_at: '2026-07-30'
+  url: https://www.cost.eu/about/members/
+- field: membership_count
+  source: COST
+  retrieved_at: '2026-07-30'
+  url: https://www.cost.eu/about/members/
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q1024175
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q1024175
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -247,4 +274,8 @@ provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.cost.eu/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
   url: https://www.cost.eu/

@@ -1,7 +1,12 @@
 id: EUROCORPS
+name: Eurocorps
 blocktype:
 - military
 status: formal
+founded: '1992'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 - fr
@@ -9,77 +14,128 @@ languages:
 - es
 - nl
 links:
-- url: http://www.eurocorps.org/
+- url: https://www.eurocorps.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Eurocorps
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q276538
   type: wikidata
-name: Eurocorps
-founded: '1993'
+acronyms:
+- lang: en
+  value: EUROCORPS
+legal_status: treaty
+wikidata_id: Q276538
+description: Multinational army corps headquarters in Strasbourg, founded by France and Germany in 1992 and declared operational
+  in 1995. Six framework nations (Belgium, France, Germany, Luxembourg, Poland, and Spain) place the corps at the disposal of
+  the European Union and NATO; NATO certified it in 2002 as one of nine High Readiness Land Headquarters. Five associated nations
+  (Austria, Greece, Italy, Romania, and Turkey) contribute personnel under separate arrangements. Governed since 2009 by the
+  Treaty of Strasbourg (signed 22 November 2004).
+includes:
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '1992'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '1992'
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+  joined: '1993'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '1994'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '1996'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2022'
+- id: GR
+  name: Greece
+  type: country
+  status: associated
+  joined: '2002'
+- id: TR
+  name: Turkey
+  type: country
+  status: associated
+  joined: '2002'
+- id: IT
+  name: Italy
+  type: country
+  status: associated
+  joined: '2009'
+- id: RO
+  name: Romania
+  type: country
+  status: associated
+  joined: '2016'
+- id: AT
+  name: Austria
+  type: country
+  status: associated
+  joined: '2021'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  joined: '1999'
+  left: '2002'
+- id: NL
+  name: Netherlands
+  type: country
+  status: former_member
+  joined: '1999'
+  left: '2002'
+- id: FI
+  name: Finland
+  type: country
+  status: former_member
+  joined: '2002'
+  left: '2006'
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  joined: '2003'
+  left: '2007'
+membership_count: 11
+founding_members:
+- FR
+- DE
 headquarters:
   city: Strasbourg
   country: FR
   coordinates:
     lat: 48.573333333333
     lng: 7.7522222222222
-includes:
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: TR
-  name: Turkey
-  type: country
-  status: member
-membership_count: 11
-wikidata_id: Q276538
-description: Intergovernmental military corps.
 tags:
 - EUROCORPS
+- collective_security
 - defense
+- europe
 - eurocorps
 - military
+- nato
+- regional
+- regional_cooperation
 - security
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
@@ -89,6 +145,8 @@ other_names:
   name: Eurokorps
 - id: en
   name: Eurocorps
+- id: en
+  name: European Corps
 - id: es
   name: Eurocuerpo
 - id: fr
@@ -99,18 +157,49 @@ other_names:
   name: Европейский корпус
 - id: zh
   name: 歐洲軍團
+notes: Framework nations hold full membership under the Treaty of Strasbourg; associated nations contribute staff without
+  framework-nation status. Poland became the sixth framework nation in 2022 after earlier associate participation. Austria
+  was an associated nation from 2002 to 2011 and rejoined in 2021. The United Kingdom and the Netherlands participated as
+  associated nations from 1999 to 2002; Finland (2002–2006) and Canada (2003–2007) were later associated nations. Commander
+  rotates among framework nations.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurocorps
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q276538
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurocorps
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurocorps
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q276538
   license: CC0
 - field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q276538
+  license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurocorps
+- field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.eurocorps.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.eurocorps.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurocorps

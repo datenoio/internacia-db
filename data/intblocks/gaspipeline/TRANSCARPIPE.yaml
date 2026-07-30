@@ -2,6 +2,12 @@ id: TRANSCARPIPE
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2007-10-12'
+geographic_scope: bilateral
+regions:
+- South America
+languages:
+- es
 links:
 - url: https://en.wikipedia.org/wiki/Trans-Caribbean_pipeline
   type: wikipedia
@@ -19,18 +25,26 @@ includes:
   status: member
 membership_count: 2
 wikidata_id: Q3099797
-description: Pipeline in South America.
+description: Natural gas pipeline (also known as the Antonio Ricaurte Gas Pipeline) linking Maracaibo, Venezuela, with
+  the Ballena gas fields in La Guajira, Colombia. The 224.4 km first stage was commissioned on 12 October 2007 and initially
+  carried Colombian gas to Venezuela for PDVSA reservoir injection; capacity is 5 billion m³/a. Operated by Petróleos de
+  Venezuela S.A.; gas was supplied by Ecopetrol and Chevron. Exports were suspended intermittently from 2009 and PDVSA let
+  the import contract expire on 30 June 2015; the line has been idle since. A proposed extension toward Panama was never
+  built.
 tags:
 - TRANSCARPIPE
-- aviation
 - caribbean
+- colombia
 - economy
 - energy
 - gaspipeline
-- oil
+- maracaibo
+- pdvsa
+- pipeline
 - trans
 - transport
 - transportation
+- venezuela
 topics:
 - key: economy
   name: Economy
@@ -40,21 +54,50 @@ topics:
   name: Transport
 other_names:
 - id: en
-  name: Trans-Caribbean pipeline
+  name: Trans-Caribbean gas pipeline
+- id: en
+  name: Antonio Ricaurte Gas Pipeline
 - id: es
   name: Gasoducto Transcaribeño
+- id: es
+  name: Gasoducto Binacional
 - id: fr
   name: Gazoduc trans-caribéen
 - id: pt
   name: Gasoduto Transcaribenho
+- id: uk
+  name: Транскарибський газопровід
+notes: The Wikipedia infobox lists Panama alongside Venezuela and Colombia because of a proposed westward extension that
+  was never constructed; only the bilateral Maracaibo–La Guajira first stage exists. Gas initially flowed Colombia→Venezuela;
+  a planned reversal for Venezuelan exports to Colombia was repeatedly delayed and never completed.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Caribbean_pipeline
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3099797
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Caribbean_pipeline
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3099797
   license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Caribbean_pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Caribbean_pipeline

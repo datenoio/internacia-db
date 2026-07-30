@@ -1,66 +1,157 @@
 id: PROFOR
+name: Program on Forests
 blocktype:
 - intorg
-status: formal
-partof: WB
+- fund
+- forestry
+status: historical
+founded: '1997'
+dissolved: '2020-06'
+active_period:
+  start: '1997'
+  end: '2020-06'
+geographic_scope: global
 languages:
 - en
 links:
-- url: http://www.profor.info
+- url: https://www.profor.info/
   type: website
+- url: https://www.profor.info/donors
+  type: website
+- url: https://en.wikipedia.org/wiki/PROFOR
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q48742277
   type: wikidata
-name: Program on forests
+acronyms:
+- lang: en
+  value: PROFOR
+legal_status: multi-donor trust fund
+recognition_status: World Bank-hosted multi-donor partnership trust fund; partner of the Collaborative Partnership on Forests (CPF)
+partof: WB
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.898919916456705
+    lng: -77.04246523090436
+membership_count: 8
+description: Multi-donor trust fund for sustainable forest management, poverty reduction, and forest governance. Established at the United Nations Development Programme in 1997 and hosted by the World Bank from 2002, PROFOR provided knowledge, tools, and analysis on livelihoods, finance, governance, and cross-sectoral forest issues for the Bank and partner countries. Eight bilateral donors and the European Union contributed approximately USD 52 million, supporting 273 projects before operations closed in June 2020 upon consolidation into the PROGREEN trust fund.
+tags:
+- PROFOR
+- environment
+- forest
+- forestry
+- fund
+- historical
+- intorg
+- poverty
+- sustainable_development
+- trust_fund
+- world_bank
+topics:
+- key: environment
+  name: Environment
+- key: sustainable_development
+  name: Sustainable Development
+- key: poverty
+  name: Poverty
+- key: development
+  name: Development
+- key: governance
+  name: Governance
 includes:
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: contributor
+  left: '2020-06'
 - id: EU
   name: European Union
   type: organization
-  status: member
-membership_count: 8
-description: International entity.
-tags:
-- PROFOR
-- intorg
-- program
-topics:
-- key: economy
-  name: Economy
+  status: contributor
+  left: '2020-06'
 wikidata_id: Q48742277
 other_names:
 - id: en
   name: Program on Forests
-founded: '1997'
+- id: en
+  name: PROFOR
+notes: Began at UNDP in 1997 and transferred to World Bank administration in 2002. The World Bank housed PROFOR's secretariat. Donors listed on the official website were DFID (United Kingdom), Swiss Development Cooperation, the European Union, GIZ on behalf of Germany, Finland's Department for International Development Cooperation, Japan's International Forestry Cooperation Office, Italy's Ministry of Foreign Affairs, and the Dutch Ministry of Agriculture, Nature and Food Quality. Closed June 2020; successor trust fund PROGREEN focuses on integrated landscape management.
+last_verified: '2026-07-29'
 provenance:
-- field: founded
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q48742277
   license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q48742277
+  license: CC0
+- field: description
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/
+- field: includes
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/donors
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/PROFOR
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/PROFOR
+- field: headquarters
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/donors
+- field: legal_status
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/
+- field: recognition_status
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/
+- field: notes
+  source: PROFOR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.profor.info/donors
+- field: status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/PROFOR

@@ -1,7 +1,17 @@
 id: WAGP
+name: West African Gas Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2006'
+geographic_scope: regional
+regions:
+- West Africa
+- Africa
+languages:
+- en
+- fr
+- ha
 links:
 - url: https://www.wagpa.org/the-wagp/
   type: website
@@ -9,14 +19,11 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7984259
   type: wikidata
-name: West African Gas Pipeline
 acronyms:
 - lang: en
   value: WAGP
-geographic_scope: regional
-regions:
-- West Africa
-- Africa
+- lang: fr
+  value: GOA
 includes:
 - id: NG
   name: Nigeria
@@ -36,18 +43,25 @@ includes:
   status: member
 membership_count: 4
 wikidata_id: Q7984259
-description: Natural gas pipeline transporting gas from Nigeria to Benin, Togo, and Ghana.
+description: 678 km natural gas pipeline and the first regional gas transmission system in sub-Saharan Africa, carrying
+  gas from Nigeria's Escravos–Lagos system via the Itoki terminal near Lagos to Benin, Togo, and Ghana. The route includes
+  a 569 km offshore section parallel to the coast and onshore links at Lagos Beach, Cotonou, Lomé, and Takoradi/Tema in
+  Ghana, with capacity of about 5 billion m³/a. Commissioned in 2006; owned by West African Gas Pipeline Company (WAGPCo)
+  and operated by Chevron.
 tags:
 - WAGP
 - african
-- aviation
+- benin
 - economy
 - energy
 - gaspipeline
-- oil
+- ghana
+- nigeria
+- pipeline
+- togo
 - transport
 - transportation
-- west
+- west-africa
 topics:
 - key: economy
   name: Economy
@@ -58,25 +72,62 @@ topics:
 other_names:
 - id: ar
   name: خط أنابيب غاز غرب أفريقيا
+- id: de
+  name: Westafrikanische Gaspipeline
 - id: en
   name: West African Gas Pipeline
-- id: fr
-  name: West African Gas Pipeline
-- id: ru
-  name: Западноафриканский газопровод
+- id: eo
+  name: Okcident-Afrika Gasodukto
 - id: es
   name: Gasoducto de África occidental
+- id: fr
+  name: Gazoduc ouest-africain
+- id: ha
+  name: Jirgin Gas na Yammacin Afirka
+- id: ja
+  name: 西アフリカ・ガスパイプライン
+- id: pl
+  name: Gazociąg Zachodnioafrykański
+- id: ru
+  name: Западноафриканский газопровод
+- id: uk
+  name: Західно-Африканський газопровід
+notes: Intergovernmental agreement signed in 2003; groundbreaking at Sekondi-Takoradi, Ghana, on 3 December 2004. Shareholders
+  are Chevron (36.7%), NNPC (25%), Shell (18%), Volta River Authority of Ghana (16.3%), Société Togolaise de Gaz (2%),
+  and Société Beninoise de Gaz (2%). Extensions to Côte d'Ivoire and Senegal have been discussed but are not part of
+  the current route.
+last_verified: '2026-07-29'
 provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: includes
-  source: West African Gas Pipeline Authority
-  retrieved_at: '2026-07-15'
-  url: https://www.wagpa.org/the-wagp/
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7984259
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7984259
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-07-15'
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/West_African_Gas_Pipeline

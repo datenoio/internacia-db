@@ -1,82 +1,32 @@
 id: NAFTA
 blocktype:
 - fta
-status: formal
+status: historical
+founded: '1992-12-17'
+dissolved: '2020-07-01'
+active_period:
+  start: '1994-01-01'
+  end: '2020-07-01'
+geographic_scope: regional
+regions:
+- North America
 languages:
 - en
 - es
 - fr
+successor: USMCA
 links:
-- url: http://www.nafta-sec-alena.org/
+- url: https://ustr.gov/about-us/policy-offices/press-office/ustr-archives/north-american-free-trade-agreement-nafta
   type: website
-- url: https://en.wikipedia.org/wiki/NAFTA
+- url: https://ustr.gov/archive/Trade_Agreements/Regional/NAFTA/Section_Index.html
+  type: website
+- url: https://international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/nafta-alena/index.aspx?lang=eng
+  type: website
+- url: https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q181574
   type: wikidata
 name: North American Free Trade Agreement
-includes:
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-membership_count: 3
-description: International north focused on economic cooperation.
-tags:
-- NAFTA
-- american
-- commerce
-- economy
-- free
-- fta
-- north
-- trade
-topics:
-- key: economy
-  name: Economy
-- key: trade
-  name: Trade
-wikidata_id: Q181574
-other_names:
-- id: ar
-  name: نافتا
-- id: de
-  name: Nordamerikanisches Freihandelsabkommen
-- id: en
-  name: North American Free Trade Agreement
-- id: es
-  name: Tratado de Libre Comercio de América del Norte
-- id: fr
-  name: Accord de libre-échange nord-américain
-- id: pt
-  name: Tratado Norte-Americano de Livre Comércio
-- id: ru
-  name: Североамериканская зона свободной торговли
-- id: zh
-  name: 北美自由贸易协议
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q181574
-  license: CC0
 acronyms:
 - lang: en
   value: NAFTA
@@ -110,4 +60,119 @@ acronyms:
   value: NAFTA
 - lang: pt
   value: TLCAN
-founded: '1994-01-01'
+legal_status: free trade agreement
+recognition_status: Trilateral free trade agreement signed on 17 December 1992 by Canada, Mexico, and the United States; entered into force on 1 January 1994 after ratification by all three parties, superseding the 1988 Canada–United States Free Trade Agreement between Canada and the United States. Replaced by the United States-Mexico-Canada Agreement (USMCA), which entered into force on 1 July 2020.
+includes:
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  joined: '1994-01-01'
+  left: '2020-07-01'
+- id: MX
+  name: Mexico
+  type: country
+  status: former_member
+  joined: '1994-01-01'
+  left: '2020-07-01'
+- id: US
+  name: United States
+  type: country
+  status: former_member
+  joined: '1994-01-01'
+  left: '2020-07-01'
+founding_members:
+- CA
+- MX
+- US
+membership_count: 3
+description: Regional free trade agreement among Canada, Mexico, and the United States, signed on 17 December 1992 and entered into force on 1 January 1994, creating one of the world's largest trade blocs. NAFTA progressively eliminated tariffs and trade barriers on goods and services among the three parties, superseding the 1988 Canada–United States Free Trade Agreement. The agreement covered rules of origin, customs procedures, agriculture, government procurement, investment, trade in services, intellectual property, and dispute settlement. It remained in force until replaced by the United States-Mexico-Canada Agreement (USMCA) on 1 July 2020.
+tags:
+- NAFTA
+- ALENA
+- TLCAN
+- america
+- canada
+- commerce
+- economy
+- free
+- fta
+- mexico
+- north america
+- trade
+- united
+- states
+topics:
+- key: economy
+  name: Economy
+- key: trade
+  name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q181574
+other_names:
+- id: ar
+  name: نافتا
+- id: de
+  name: Nordamerikanisches Freihandelsabkommen
+- id: en
+  name: North American Free Trade Agreement
+- id: es
+  name: Tratado de Libre Comercio de América del Norte
+- id: fr
+  name: Accord de libre-échange nord-américain
+- id: pt
+  name: Tratado Norte-Americano de Livre Comércio
+- id: ru
+  name: Североамериканская зона свободной торговли
+- id: zh
+  name: 北美自由贸易协议
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q181574
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q181574
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q181574
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/about-us/policy-offices/press-office/ustr-archives/north-american-free-trade-agreement-nafta
+- field: founded
+  source: U.S. Government Publishing Office
+  retrieved_at: '2026-07-29'
+  url: https://www.govinfo.gov/content/pkg/PPP-1992-book2/html/PPP-1992-book2-doc-pg2200.htm
+- field: active_period
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/about-us/policy-offices/press-office/ustr-archives/north-american-free-trade-agreement-nafta
+- field: dissolved
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/archive/Trade_Agreements/Regional/NAFTA/Section_Index.html
+- field: successor
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q181574
+  license: CC0
+- field: description
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/about-us/policy-offices/press-office/ustr-archives/north-american-free-trade-agreement-nafta
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/nafta-alena/index.aspx?lang=eng

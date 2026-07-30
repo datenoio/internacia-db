@@ -1,110 +1,212 @@
 id: SOPAC
+name: South Pacific Applied Geoscience Commission
 blocktype:
 - intorg
-status: formal
+status: historical
+founded: '1990-10-10'
+dissolved: '2011-01-01'
+active_period:
+  start: '1990-11-18'
+  end: '2011-01-01'
+geographic_scope: regional
+regions:
+- Pacific
+- Oceania
 partof: SPC
 languages:
 - en
 links:
-- url: http://www.sopac.org/
+- url: https://web.archive.org/web/20101224205939/http://www.sopac.org/
   type: website
 - url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
   type: wikipedia
+- url: https://en.wikipedia.org/wiki/Agreement_establishing_the_South_Pacific_Applied_Geoscience_Commission
+  type: wikipedia
+- url: https://gsd.spc.int/media-releases/41-federated-states-of-micronesia
+  type: website
 - url: https://www.wikidata.org/wiki/Q7568102
   type: wikidata
-name: South Pacific Applied Geoscience Commission
-founded: '1990'
+acronyms:
+- lang: en
+  value: SOPAC
+legal_status: intergovernmental
+recognition_status: Established by the Agreement establishing the South Pacific Applied Geoscience Commission (signed 10 October 1990 in Tarawa; entered into force 18 November 1990); operated as an independent regional body affiliated with the Pacific Community (SPC) until Regional Institutional Framework reform transferred its functions to SPC and SPREP; ceased as a separate organisation on 1 January 2011
+headquarters:
+  city: Suva
+  country: FJ
+  coordinates:
+    lat: -18.1416
+    lng: 178.4419
+wikidata_id: Q7568102
+description: Intergovernmental regional organisation that delivered applied geoscience services to Pacific members in three programme areas — Ocean and Islands (seabed resources, maritime boundaries, ocean monitoring), Community Lifelines (energy, water, sanitation, ICT), and Community Risk (hazard assessment and disaster risk management). Established by the 1990 Tarawa Agreement with 14 founding signatories; 12 further states and territories later acceded. Operated within the SPC institutional family until Pacific Islands Forum leaders endorsed Regional Institutional Framework reform in 2009; energy and ICT functions moved to SPC and climate-related functions to SPREP during 2010, and the remaining geoscience mandate integrated into SPC as the Applied Geoscience and Technology Division from 1 January 2011.
 includes:
+- id: AS
+  name: American Samoa
+  type: country
+  status: member
+  left: '2011-01-01'
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: FM
   name: Federated States of Micronesia
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: FJ
   name: Fiji
   type: country
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
+- id: FR
+  name: France
+  type: country
   status: member
+  left: '2011-01-01'
+- id: PF
+  name: French Polynesia
+  type: country
+  status: member
+  left: '2011-01-01'
 - id: GU
   name: Guam
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: MH
   name: Marshall Islands
   type: country
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
+- id: MP
+  name: Northern Mariana Islands
+  type: country
   status: member
+  left: '2011-01-01'
 - id: NR
   name: Nauru
   type: country
   status: member
+  left: '2011-01-01'
+- id: NC
+  name: New Caledonia
+  type: country
+  status: member
+  left: '2011-01-01'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: NU
   name: Niue
   type: country
   status: member
+  left: '2011-01-01'
+- id: PN
+  name: Pitcairn Islands
+  type: country
+  status: member
+  left: '2011-01-01'
 - id: PW
   name: Palau
   type: country
   status: member
+  left: '2011-01-01'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: SB
   name: Solomon Islands
   type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: AS
-  name: American Samoa
-  type: country
-  status: associated
-- id: PF
-  name: French Polynesia
-  type: country
-  status: associated
-- id: NC
-  name: New Caledonia
-  type: country
-  status: associated
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
 - id: TK
   name: Tokelau
   type: country
-  status: associated
-membership_count: 17
-wikidata_id: Q7568102
-description: Inter-governmental regional organisation.
+  status: member
+  left: '2011-01-01'
+- id: TO
+  name: Tonga
+  type: country
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
+- id: US
+  name: United States of America
+  type: country
+  status: member
+  left: '2011-01-01'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: founding_member
+  joined: '1990-10-10'
+  left: '2011-01-01'
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: member
+  left: '2011-01-01'
+founding_members:
+- AU
+- CK
+- FJ
+- GU
+- FM
+- KI
+- MH
+- NZ
+- PG
+- SB
+- TO
+- TV
+- VU
+- WS
+membership_count: 26
 tags:
 - SOPAC
 - applied
+- disaster
+- energy
+- geoscience
+- historical
 - intorg
 - pacific
 - research
@@ -113,12 +215,75 @@ tags:
 topics:
 - key: science
   name: Science
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: disaster_relief
+  name: Disaster Relief
+- key: energy
+  name: Energy
+- key: environment
+  name: Environment
 other_names:
 - id: en
   name: South Pacific Applied Geoscience Commission
+- id: en
+  name: Pacific Islands Applied Geoscience Commission
+- id: ja
+  name: 南太平洋応用地地球科学委員会
+notes: The 1990 Tarawa Agreement entered into force on 18 November 1990 (Australia from 3 February 1991). After accession by American Samoa, France, French Polynesia, Nauru, New Caledonia, Niue, the Northern Mariana Islands, Palau, Pitcairn Islands, Tokelau, the United States, and Wallis and Futuna, membership stood at 26. Partial function transfers to SPC and SPREP began 1 January 2010; core geoscience functions were integrated into SPC as the Applied Geoscience and Technology Division from 1 January 2011. Also known as Pacific Islands Applied Geoscience Commission (PIAGSC) in later branding.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7568102
   license: CC0
+- field: includes
+  source: Wikipedia; Agreement establishing SOPAC
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: description
+  source: Wikipedia; SPC media releases
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: founded
+  source: Wikipedia; Australian Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Agreement_establishing_the_South_Pacific_Applied_Geoscience_Commission
+- field: dissolved
+  source: SPC; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://gsd.spc.int/media-releases/41-federated-states-of-micronesia
+- field: active_period
+  source: Wikipedia; Australian Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Agreement_establishing_the_South_Pacific_Applied_Geoscience_Commission
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: recognition_status
+  source: Wikipedia; SPC
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: headquarters
+  source: Wikipedia; SPC Geoscience Division
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: status
+  source: Wikipedia; SPC
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7568102
+  license: CC0
+- field: notes
+  source: Wikipedia; SPC
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Pacific_Applied_Geoscience_Commission

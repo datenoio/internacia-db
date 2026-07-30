@@ -3,8 +3,10 @@ blocktype:
 - geographic
 status: informal
 links:
-- url: https://en.wikipedia.org/wiki/Alps
+- url: https://en.wikipedia.org/wiki/Alpine_states
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q30386
+  type: wikidata
 name: Alpine Countries
 includes:
 - id: AT
@@ -40,10 +42,13 @@ includes:
   type: country
   status: member
 membership_count: 8
-geographic_scope: regional
+geographic_scope: sub-regional
 regions:
 - Europe
-description: Alpine Countries is a regional grouping of 8 countries in Europe.
+wikidata_id: Q30386
+description: Eight European states with territory in the Alpine region, as defined by the Alpine Convention (1991) —
+  Austria, France, Germany, Italy, Liechtenstein, Monaco, Slovenia, and Switzerland — which cooperate on environmental
+  protection, sustainable development, and mountain policy.
 tags:
 - ALPSC
 - alpine
@@ -55,17 +60,48 @@ tags:
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+other_names:
+- id: ar
+  name: دول جبال الألب
+- id: de
+  name: Alpenländer
+- id: en
+  name: Alpine states
+- id: es
+  name: Países alpinos
+- id: fr
+  name: états alpins
+- id: it
+  name: Stato alpino
+- id: pt
+  name: Países alpinos
+- id: sl
+  name: alpske države
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alpine_states
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alpine_states
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alpine_states
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Alps
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alpine_states
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q30386
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q30386
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q30386

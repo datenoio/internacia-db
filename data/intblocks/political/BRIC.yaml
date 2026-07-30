@@ -1,37 +1,88 @@
 id: BRIC
+name: BRIC
 blocktype:
 - political
-status: informal
+status: historical
+founded: '2009-06-16'
+dissolved: '2010-12-24'
+active_period:
+  start: '2009-06-16'
+  end: '2010-12-24'
 successor: BRICS
+geographic_scope: global
+regions:
+- Latin America
+- Europe
+- South Asia
+- East Asia
+languages:
+- en
 links:
-- url: https://en.wikipedia.org/wiki/BRIC
+- url: https://en.wikipedia.org/wiki/BRICS
+  type: wikipedia
+- url: https://en.wikipedia.org/wiki/BRIC_(economics_term)
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q243630
   type: wikidata
-name: BRIC
+acronyms:
+- lang: en
+  value: BRIC
+- lang: pt
+  value: BRIC
+- lang: ru
+  value: BRIC
+- lang: ru
+  value: БРИК
+- lang: zh
+  value: BRIC
+- lang: zh
+  value: 金磚四國
 includes:
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '2009-06-16'
+  left: '2010-12-24'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2009-06-16'
+  left: '2010-12-24'
 - id: IN
   name: India
   type: country
   status: member
+  joined: '2009-06-16'
+  left: '2010-12-24'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2009-06-16'
+  left: '2010-12-24'
 membership_count: 4
-description: Association of Brazil, Russia, India, China, South Africa, Egypt, Ethiopia,
-  Indonesia, Iran, and the United Arab Emirates.
+founding_members:
+- BR
+- RU
+- IN
+- CN
+legal_status: informal leaders' dialogue
+notes: Jim O'Neill (Goldman Sachs) coined BRIC in 2001 as an investment thesis for Brazil, Russia, India,
+  and China. The four countries held their inaugural leaders' summit in Yekaterinburg, Russia, on 16 June 2009,
+  launching formal political cooperation distinct from the earlier economic acronym. South Africa was formally
+  admitted on 24 December 2010, expanding the format into BRICS; O'Neill argued South Africa's economy was
+  too small to qualify under his original criteria. All four BRIC members continued in BRICS alongside South
+  Africa and later expansions.
+description: Informal leaders' dialogue grouping of Brazil, Russia, India, and China established at the first
+  BRIC summit in Yekaterinburg on 16 June 2009. The acronym originated from Jim O'Neill's 2001 Goldman Sachs
+  investment thesis naming four large emerging economies. South Africa's admission on 24 December 2010 expanded
+  the format into BRICS, ending the original four-country BRIC summit series.
 tags:
 - BRIC
 - cooperation
+- emerging_economies
 - political
 - regional
 - regional_cooperation
@@ -40,80 +91,62 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: economy
+  name: Economy
 wikidata_id: Q243630
 other_names:
-- id: ar
-  name: بريكس
-- id: de
-  name: BRICS
 - id: en
-  name: BRICS
-- id: es
-  name: BRICS
-- id: fr
-  name: BRICS
+  name: BRIC
+- id: en
+  name: BRIC countries
 - id: pt
-  name: BRICS
+  name: BRIC
 - id: ru
-  name: БРИКС
+  name: БРИК
 - id: zh
-  name: 金砖国家
+  name: 金砖四国
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q243630
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRIC_(economics_term)
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q243630
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q243630
   license: CC0
-acronyms:
-- lang: en
-  value: BRICS+
-- lang: ar
-  value: بريكس+
-- lang: zh
-  value: 金磚四國
-- lang: zh
-  value: BRICS
-- lang: zh
-  value: 金磚國
-- lang: zh
-  value: 金磚五國
-- lang: zh
-  value: BRIC
-- lang: zh
-  value: 金磚國家
-- lang: zh
-  value: 金砖多国
-- lang: zh
-  value: 金砖N国
-- lang: fr
-  value: BRIC
-- lang: ru
-  value: BRIC
-- lang: ru
-  value: БРИК
-- lang: ru
-  value: БРЮКИ
-- lang: ru
-  value: БРИКС+
-- lang: de
-  value: BRIICS
-- lang: de
-  value: BRICSAM
-- lang: pt
-  value: BRIC
-founded: '2009-06-16'
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRIC_(economics_term)
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/BRIC_(economics_term)

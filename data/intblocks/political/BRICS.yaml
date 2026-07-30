@@ -1,123 +1,31 @@
 id: BRICS
+name: BRICS
 blocktype:
 - political
 - forum
 status: informal
 predecessor: BRIC
+founded: '2009-06-16'
+active_period:
+  start: '2009-06-16'
+geographic_scope: global
+regions:
+- Latin America
+- Europe
+- South Asia
+- East Asia
+- Africa
+- Middle East
+- Southeast Asia
+languages:
+- en
 links:
 - url: https://en.wikipedia.org/wiki/BRICS
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q243630
   type: wikidata
-name: BRICS
-includes:
-- id: EG
-  name: Egypt
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Republic of
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-founded: '2009'
-membership_count: 10
-wikidata_id: Q243630
-official_documents:
 - url: https://infobrics.org/
-  type: document
-- url: http://www.brics-info.org/
-  type: document
-- url: http://ufa2015.com/
-  type: document
-- url: http://brics2019.itamaraty.gov.br/
-  type: document
-- url: https://brics2023.gov.za/
-  type: document
-description: Association of Brazil, Russia, India, China, South Africa, Egypt, Ethiopia,
-  Indonesia, Iran, and the United Arab Emirates.
-tags:
-- BRICS
-- aid
-- cooperation
-- development
-- economy
-- political
-- regional
-- regional_cooperation
-topics:
-- key: development
-  name: Development
-- key: economy
-  name: Economy
-- key: political
-  name: Political
-- key: regional_cooperation
-  name: Regional Cooperation
-other_names:
-- id: ar
-  name: بريكس
-- id: de
-  name: BRICS
-- id: en
-  name: BRICS
-- id: es
-  name: BRICS
-- id: fr
-  name: BRICS
-- id: pt
-  name: BRICS
-- id: ru
-  name: БРИКС
-- id: zh
-  name: 金砖国家
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  type: website
 acronyms:
 - lang: en
   value: BRICS+
@@ -155,3 +63,163 @@ acronyms:
   value: BRICSAM
 - lang: pt
   value: BRIC
+includes:
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '2009-06-16'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '2009-06-16'
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '2009-06-16'
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '2009-06-16'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '2010-12-24'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '2024-01-01'
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  joined: '2024-01-01'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '2024-01-01'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+  joined: '2024-01-01'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '2025-01-06'
+membership_count: 10
+founding_members:
+- BR
+- RU
+- IN
+- CN
+legal_status: informal intergovernmental summit grouping
+notes: Evolved from the four-country BRIC leaders' dialogue inaugurated at Yekaterinburg on 16 June 2009. South Africa
+  was formally admitted on 24 December 2010, expanding the acronym to BRICS. At the 15th summit in Johannesburg (August
+  2023), Egypt, Ethiopia, Iran, and the United Arab Emirates were invited to join; full membership took effect on
+  1 January 2024. Argentina declined its invitation; Saudi Arabia was invited but had not formally joined as of early
+  2025. Indonesia became the tenth full member on 6 January 2025. The bloc coordinates annual leaders' summits,
+  ministerial meetings, and institutions including the New Development Bank (NDB) and Contingent Reserve Arrangement (CRA).
+  BRICS+ informally denotes the expanded membership since 2024.
+description: Intergovernmental grouping of major emerging economies holding annual leaders' summits and coordinating
+  multilateral cooperation on development, finance, trade, and global governance. Formed as the BRIC dialogue at
+  Yekaterinburg in June 2009; South Africa's admission in December 2010 gave the bloc its BRICS name. Expanded
+  in January 2024 with Egypt, Ethiopia, Iran, and the United Arab Emirates, and in January 2025 with Indonesia,
+  reaching ten full members spanning Latin America, Europe, South Asia, East Asia, Africa, the Middle East, and
+  Southeast Asia.
+tags:
+- BRICS
+- aid
+- cooperation
+- development
+- economy
+- emerging_economies
+- political
+- regional
+- regional_cooperation
+topics:
+- key: development
+  name: Development
+- key: economy
+  name: Economy
+- key: political
+  name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q243630
+other_names:
+- id: ar
+  name: بريكس
+- id: de
+  name: BRICS
+- id: en
+  name: BRICS
+- id: es
+  name: BRICS
+- id: fr
+  name: BRICS
+- id: pt
+  name: BRICS
+- id: ru
+  name: БРИКС
+- id: zh
+  name: 金砖国家
+official_documents:
+- url: https://infobrics.org/
+  type: document
+- url: http://www.brics-info.org/
+  type: document
+- url: http://ufa2015.com/
+  type: document
+- url: http://brics2019.itamaraty.gov.br/
+  type: document
+- url: https://brics2023.gov.za/
+  type: document
+last_verified: '2026-07-30'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q243630
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Member_states_of_BRICS
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q243630
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q243630
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/BRICS
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/BRICS

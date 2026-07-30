@@ -1,128 +1,258 @@
 id: FSB
+name: Financial Stability Board
 blocktype:
 - intorg
 status: formal
+founded: '2009-04'
+active_period:
+  start: '2009-04'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: http://www.financialstabilityboard.org
+- url: https://www.fsb.org/
+  type: website
+- url: https://www.fsb.org/about/organisation-and-governance/members-of-the-financial-stability-board/
   type: website
 - url: https://en.wikipedia.org/wiki/Financial_Stability_Board
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q13411871
   type: wikidata
-name: Financial Stability Board
-founded: '2009'
+acronyms:
+- lang: en
+  value: FSB
+- lang: pt
+  value: FSB
+legal_status: association
+recognition_status: International body established at the April 2009 G20 London Summit as successor to the Financial Stability Forum; incorporated as an association (Verein) under Swiss law in January 2013; Secretariat hosted by the Bank for International Settlements in Basel
 headquarters:
   city: Basel
   country: CH
   coordinates:
     lat: 47.560555555556
     lng: 7.5905555555556
+secretariat:
+  location: Basel
+  organization: Financial Stability Board Secretariat
 partof:
   id: BIS
   name: Bank for International Settlements
+wikidata_id: Q13411871
+description: International body that coordinates national financial authorities and international standard-setting bodies to develop and promote effective regulatory, supervisory, and other financial sector policies. Established in April 2009 as the successor to the Financial Stability Forum at the initiative of G20 leaders; incorporated as a Swiss association (Verein) in January 2013 with its Secretariat hosted by the Bank for International Settlements in Basel. The Plenary — comprising representatives from 24 jurisdictions and 13 international financial institutions and standard-setting bodies — is the sole decision-making organ. Six Regional Consultative Groups extend outreach to approximately 70 additional jurisdictions.
 includes:
 - id: AR
   name: Argentina
   type: country
   status: member
+  joined: '2009-04'
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '2009-04'
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '2009-04'
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '2009-04'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2009-04'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '2009-04'
 - id: DE
   name: Germany
   type: country
   status: member
+  joined: '2009-04'
 - id: HK
-  name: Hong Kong, China
+  name: Hong Kong SAR, China
   type: country
   status: member
+  joined: '2009-04'
 - id: IN
   name: India
   type: country
   status: member
+  joined: '2009-04'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2009-04'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '2009-04'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2009-04'
 - id: KR
-  name: Korea, Republic of
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2009-04'
 - id: MX
   name: Mexico
   type: country
   status: member
+  joined: '2009-04'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '2009-04'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2009-04'
 - id: SA
   name: Saudi Arabia
   type: country
   status: member
+  joined: '2009-04'
 - id: SG
   name: Singapore
   type: country
   status: member
+  joined: '2009-04'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2009-04'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '2009-04'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '2009-04'
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '2009-04'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '2009-04'
 - id: US
   name: United States
   type: country
   status: member
-membership_count: 24
-wikidata_id: Q13411871
-description: The Financial Stability Board is an international organization that is used to promote regional cooperation in
-  the financial stability sector.
+  joined: '2009-04'
+- id: IMF
+  name: International Monetary Fund
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: WB
+  name: World Bank
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: BIS
+  name: Bank for International Settlements
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: OECD
+  name: Organisation for Economic Co-operation and Development
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: ECB
+  name: European Central Bank
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: SSM
+  name: ECB Banking Supervision
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: EC
+  name: European Commission
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: BCBS
+  name: Basel Committee on Banking Supervision
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: IAIS
+  name: International Association of Insurance Supervisors
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: IOSCO
+  name: International Organization of Securities Commissions
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: IASB
+  name: International Accounting Standards Board
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: CGFS
+  name: Committee on the Global Financial System
+  type: organization
+  status: member
+  joined: '2009-04'
+- id: CPMI
+  name: Committee on Payments and Market Infrastructures
+  type: organization
+  status: member
+  joined: '2009-04'
+founding_members:
+- AR
+- AU
+- BR
+- CA
+- CN
+- FR
+- DE
+- HK
+- IN
+- ID
+- IT
+- JP
+- KR
+- MX
+- NL
+- RU
+- SA
+- SG
+- ZA
+- ES
+- CH
+- TR
+- GB
+- US
+membership_count: 37
 tags:
 - FSB
 - board
@@ -132,6 +262,8 @@ tags:
 topics:
 - key: economy
   name: Economy
+- key: finance
+  name: Finance
 other_names:
 - id: ar
   name: مجلس الإستقرار المالي
@@ -149,7 +281,26 @@ other_names:
   name: Совет по финансовой стабильности
 - id: zh
   name: 金融稳定委员会
+notes: Russian authorities remain listed as FSB members but have agreed not to participate in FSB meetings at present. The FSB Secretariat is hosted by the BIS in Basel; country membership covers 24 jurisdictions plus 13 international financial institutions and standard-setting bodies represented on the Plenary.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FSB official website
+  retrieved_at: '2026-07-29'
+  url: https://www.fsb.org/about/organisation-and-governance/members-of-the-financial-stability-board/
+- field: description
+  source: FSB official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.fsb.org/about/organisation-and-governance/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13411871
+  license: CC0
+- field: headquarters
+  source: FSB official website
+  retrieved_at: '2026-07-29'
+  url: https://www.fsb.org/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -160,12 +311,12 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.financialstabilityboard.org
-acronyms:
-- lang: en
-  value: FSB
-- lang: pt
-  value: FSB
+- field: legal_status
+  source: FSB official website
+  retrieved_at: '2026-07-29'
+  url: https://www.fsb.org/about/organisation-and-governance/
+- field: founded
+  source: FSB official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13411871
+  license: CC0

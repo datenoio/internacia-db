@@ -1,15 +1,71 @@
 id: FATF
+name: Financial Action Task Force
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '1989-07'
+active_period:
+  start: '1989-07'
+geographic_scope: global
+regions:
+- worldwide
+languages:
+- en
+- fr
 links:
-- url: http://www.fatf-gafi.org
+- url: https://www.fatf-gafi.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Financial_Action_Task_Force_on_Money_Laundering
+- url: https://www.fatf-gafi.org/en/countries/fatf.html
+  type: website
+- url: https://www.fatf-gafi.org/en/the-fatf/who-we-are/Heads-of-delegation.html
+  type: website
+- url: https://en.wikipedia.org/wiki/Financial_Action_Task_Force
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q681487
   type: wikidata
-name: Financial Action Task Force
+acronyms:
+- lang: en
+  value: FATF
+- lang: fr
+  value: GAFI
+legal_status: intergovernmental
+recognition_status: Intergovernmental policy-making body that sets global standards for anti-money laundering (AML), counter-terrorist financing (CFT), and counter-proliferation financing; coordinates a global network of nine FATF-style regional bodies (FSRBs)
+secretariat:
+  location: Paris, France
+  organization: FATF Secretariat (hosted by the OECD)
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+membership_count: 40
+description: Intergovernmental organisation founded at the 1989 G7 Summit in Paris to develop and promote policies to combat money laundering; its mandate was expanded in 2001 to include terrorist financing and later to proliferation financing. FATF sets the international AML/CFT standards (the 40 Recommendations and Special Recommendations), monitors implementation through mutual evaluations, and maintains public black and grey lists of jurisdictions with strategic deficiencies. The Secretariat is administratively hosted at the OECD in Paris. As of 2026 the FATF comprises 38 member jurisdictions and two regional organisations (the European Commission and the Gulf Cooperation Council), representing major financial centres worldwide, plus a global network of nine FSRBs covering over 200 jurisdictions.
+tags:
+- AML
+- CFT
+- FATF
+- FSRB
+- action
+- financial
+- intorg
+- law
+- legal
+- money_laundering
+- security
+- task
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: security
+  name: Security
 includes:
 - id: AR
   name: Argentina
@@ -35,13 +91,29 @@ includes:
   name: Canada
   type: country
   status: member
+- id: CCASG
+  name: Gulf Cooperation Council
+  type: organization
+  status: member
 - id: CN
   name: China
+  type: country
+  status: member
+- id: DE
+  name: Germany
   type: country
   status: member
 - id: DK
   name: Denmark
   type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: EU
+  name: European Commission
+  type: organization
   status: member
 - id: FI
   name: Finland
@@ -51,8 +123,8 @@ includes:
   name: France
   type: country
   status: member
-- id: DE
-  name: Germany
+- id: GB
+  name: United Kingdom
   type: country
   status: member
 - id: GR
@@ -63,20 +135,25 @@ includes:
   name: Hong Kong, China
   type: country
   status: member
-- id: IS
-  name: Iceland
+- id: ID
+  name: Indonesia
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
+  joined: '2023-10'
 - id: IE
   name: Ireland
   type: country
   status: member
 - id: IL
   name: Israel
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IS
+  name: Iceland
   type: country
   status: member
 - id: IT
@@ -127,20 +204,13 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
+  joined: '2019-06'
 - id: SE
   name: Sweden
+  type: country
+  status: member
+- id: SG
+  name: Singapore
   type: country
   status: member
 - id: CH
@@ -151,43 +221,70 @@ includes:
   name: Turkey
   type: country
   status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
 - id: US
   name: United States
   type: country
   status: member
-membership_count: 37
-description: The Financial Action Task Force on Money Laundering is an international
-  organization that is used to promote regional cooperation in the money laundering
-  sector.
-tags:
-- FATF
-- action
-- financial
-- intorg
-- task
-topics:
-- key: economy
-  name: Economy
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+suborganizations:
+- id: APG
+  name: Asia/Pacific Group on Money Laundering
+- id: CFATF
+  name: Caribbean Financial Action Task Force
+- id: EAG
+  name: Eurasian Group
+- id: ESAAMLG
+  name: Eastern and Southern Africa Anti-Money Laundering Group
+- id: GAFISUD
+  name: Financial Action Task Force of Latin America
+- id: GIABA
+  name: Inter-Governmental Action Group against Money Laundering in West Africa
+- id: MENAFATF
+  name: Middle East and North Africa Financial Action Task Force
 wikidata_id: Q681487
 other_names:
 - id: ar
   name: مجموعة العمل المالي
-- id: zh
-  name: 打擊清洗黑錢財務行動特別組織
+- id: de
+  name: Financial Action Task Force
 - id: en
   name: Financial Action Task Force
+- id: es
+  name: Grupo de Acción Financiera Internacional
 - id: fr
   name: Groupe d'action financière
 - id: ru
   name: Группа разработки финансовых мер борьбы с отмыванием денег
-- id: es
-  name: Grupo de Acción Financiera Internacional
-founded: '1989-07'
+- id: zh
+  name: 打擊清洗黑錢財務行動特別組織
+notes: >-
+  Indonesia became the 40th member in October 2023. Saudi Arabia joined in June 2019. The Russian Federation's membership
+  was suspended on 24 February 2023 following the invasion of Ukraine; it remains listed on the official roster with
+  suspended status and does not participate in FATF meetings or decision-making. The GCC is a full member as a regional
+  organisation; Saudi Arabia is the only individual GCC member state that is also a direct FATF member. Two additional
+  FSRBs — MONEYVAL (Council of Europe) and GABAC (Central Africa) — are part of the FATF Global Network but do not yet
+  have separate intblock records in Internacia.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/fatf.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/the-fatf/who-we-are.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/the-fatf/who-we-are.html
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/the-fatf/who-we-are.html
 - field: founded
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -198,9 +295,21 @@ provenance:
   retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q681487
   license: CC0
-headquarters:
-  city: Paris
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
-last_verified: '2026-07-12'
+- field: suborganizations
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/fatf.html
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q681487
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q681487
+  license: CC0

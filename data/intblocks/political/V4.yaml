@@ -2,14 +2,19 @@ id: V4
 blocktype:
 - political
 status: formal
+founded: '1991-02-15'
+geographic_scope: regional
+regions:
+- Central Europe
+- Europe
 languages:
 - en
-- cz
+- cs
 - pl
 - hu
-- sl
+- sk
 links:
-- url: http://visegradgroup.eu/main.php?folderID=1&articleID=29502&ctag=articlelist&iid=1
+- url: https://www.visegradgroup.eu/
   type: website
 - url: https://en.wikipedia.org/wiki/Visegrad_Group
   type: wikipedia
@@ -21,22 +26,37 @@ includes:
   name: Czech Republic
   type: country
   status: member
+  joined: '1993-01-01'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '1991-02-15'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '1991-02-15'
 - id: SK
   name: Slovak Republic
   type: country
   status: member
+  joined: '1993-01-01'
+founding_members:
+- HU
+- PL
 membership_count: 4
-description: International forum focused on political for political cooperation.
+legal_status: intergovernmental
+wikidata_id: Q244323
+description: Cultural and political alliance of four Central European countries — the Czech
+  Republic, Hungary, Poland, and Slovakia — established at a summit in Visegrád, Hungary on
+  15 February 1991. The group promotes cooperation in military, economic, cultural, and energy
+  affairs. Originally founded by Czechoslovakia, Hungary, and Poland; after Czechoslovakia's
+  dissolution in 1993 the Czech Republic and Slovakia became independent members. All four
+  joined the European Union on 1 May 2004.
 tags:
 - V4
+- central_europe
 - cooperation
 - group
 - political
@@ -48,40 +68,35 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q244323
 other_names:
 - id: ar
   name: مجموعة فيشغراد
+- id: cs
+  name: Visegrádská skupina
 - id: de
   name: Visegrád-Gruppe
 - id: en
   name: Visegrád Group
+- id: en
+  name: Visegrad Group
+- id: en
+  name: Visegrad Four
 - id: es
   name: Grupo Visegrád
 - id: fr
   name: groupe de Visegrád
+- id: hu
+  name: Visegrádi Együttműködés
+- id: pl
+  name: Grupa Wyszehradzka
 - id: pt
   name: Grupo de Visegrado
 - id: ru
   name: Вышеградская группа
+- id: sk
+  name: Vyšehradská skupina
 - id: zh
   name: 維謝格拉德集團
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q244323
-  license: CC0
 acronyms:
 - lang: en
   value: V4
@@ -91,4 +106,52 @@ acronyms:
   value: GV
 - lang: de
   value: V4
-founded: '1991-02-15'
+notes: The alliance name references the 1335 Congress of Visegrád between Bohemian, Polish, and
+  Hungarian rulers. The 1991 founding summit brought together Václav Havel (Czechoslovakia),
+  Lech Wałęsa (Poland), and József Antall (Hungary) to coordinate post-communist transition
+  and Euro-Atlantic integration. The Visegrad Fund supports cultural and civil-society projects;
+  the group operates a rotating presidency among member states.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Visegrad_Group
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Visegrad_Group
+- field: links
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244323
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Visegrad_Group

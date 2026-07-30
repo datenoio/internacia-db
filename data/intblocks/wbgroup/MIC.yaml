@@ -7,42 +7,50 @@ links:
   type: website
 - url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
   type: website
+- url: https://api.worldbank.org/v2/incomelevel/MIC
+  type: website
+- url: https://www.wikidata.org/wiki/Q25450949
+  type: wikidata
 name: Middle income
 includes:
-- id: AG
-  name: Antigua and Barbuda
+- id: AO
+  name: Angola
   type: country
   status: member
 - id: AL
   name: Albania
   type: country
   status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
 - id: AR
   name: Argentina
   type: country
   status: member
-- id: AS
-  name: American Samoa
+- id: AM
+  name: Armenia
   type: country
   status: member
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
 - id: BA
   name: Bosnia and Herzegovina
   type: country
   status: member
-- id: BG
-  name: Bulgaria
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+- id: BZ
+  name: Belize
   type: country
   status: member
 - id: BO
@@ -61,48 +69,36 @@ includes:
   name: Botswana
   type: country
   status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: CG
-  name: Congo, Rep.
+- id: CN
+  name: China
   type: country
   status: member
 - id: CI
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
 - id: CM
   name: Cameroon
   type: country
   status: member
-- id: CN
-  name: China
+- id: CG
+  name: Congo, Rep.
   type: country
   status: member
 - id: CO
   name: Colombia
   type: country
   status: member
-- id: CR
-  name: Costa Rica
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: CV
+  name: Cabo Verde
   type: country
   status: member
 - id: CU
   name: Cuba
-  type: country
-  status: member
-- id: CV
-  name: Cape Verde
   type: country
   status: member
 - id: DJ
@@ -141,24 +137,36 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
 - id: GE
   name: Georgia
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+- id: GD
+  name: Grenada
   type: country
   status: member
 - id: GT
   name: Guatemala
   type: country
   status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
 - id: HN
   name: Honduras
+  type: country
+  status: member
+- id: HT
+  name: Haiti
   type: country
   status: member
 - id: ID
@@ -169,12 +177,12 @@ includes:
   name: India
   type: country
   status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
 - id: IR
   name: Iran, Islamic Rep.
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
   type: country
   status: member
 - id: JM
@@ -185,24 +193,36 @@ includes:
   name: Jordan
   type: country
   status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KV
-  name: Kosovo
-  type: country
-  status: member
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
 - id: LB
   name: Lebanon
+  type: country
+  status: member
+- id: LY
+  name: Libya
   type: country
   status: member
 - id: LC
@@ -217,14 +237,6 @@ includes:
   name: Lesotho
   type: country
   status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
 - id: MA
   name: Morocco
   type: country
@@ -233,8 +245,12 @@ includes:
   name: Moldova
   type: country
   status: member
-- id: ME
-  name: Montenegro
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MX
+  name: Mexico
   type: country
   status: member
 - id: MH
@@ -242,23 +258,27 @@ includes:
   type: country
   status: member
 - id: MK
-  name: Macedonia, FYR
+  name: North Macedonia
+  type: country
+  status: member
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
   type: country
   status: member
 - id: MN
   name: Mongolia
   type: country
   status: member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
 - id: MU
   name: Mauritius
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MX
-  name: Mexico
   type: country
   status: member
 - id: MY
@@ -277,116 +297,104 @@ includes:
   name: Nicaragua
   type: country
   status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PH
-  name: Philippines
+- id: NP
+  name: Nepal
   type: country
   status: member
 - id: PK
   name: Pakistan
   type: country
   status: member
-- id: PS
-  name: West Bank and Gaza
+- id: PE
+  name: Peru
   type: country
   status: member
-- id: PW
-  name: Palau
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
   type: country
   status: member
 - id: PY
   name: Paraguay
   type: country
   status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SD
-  name: Sudan
+- id: PS
+  name: West Bank and Gaza
   type: country
   status: member
 - id: SN
   name: Senegal
   type: country
   status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
+- id: SB
+  name: Solomon Islands
   type: country
   status: member
 - id: SV
   name: El Salvador
   type: country
   status: member
-- id: SY
-  name: Syrian Arab Republic
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SR
+  name: Suriname
   type: country
   status: member
 - id: SZ
-  name: Swaziland
+  name: Eswatini
+  type: country
+  status: member
+- id: TG
+  name: Togo
   type: country
   status: member
 - id: TH
   name: Thailand
   type: country
   status: member
-- id: TL
-  name: Timor-Leste
+- id: TJ
+  name: Tajikistan
   type: country
   status: member
 - id: TM
   name: Turkmenistan
   type: country
   status: member
-- id: TN
-  name: Tunisia
+- id: TL
+  name: Timor-Leste
   type: country
   status: member
 - id: TO
   name: Tonga
   type: country
   status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
 - id: TR
-  name: Turkey
+  name: Turkiye
   type: country
   status: member
 - id: TV
   name: Tuvalu
   type: country
   status: member
-- id: UA
-  name: Ukraine
+- id: TZ
+  name: Tanzania
   type: country
   status: member
-- id: UY
-  name: Uruguay
+- id: UA
+  name: Ukraine
   type: country
   status: member
 - id: UZ
@@ -402,7 +410,7 @@ includes:
   type: country
   status: member
 - id: VN
-  name: Vietnam
+  name: Viet Nam
   type: country
   status: member
 - id: VU
@@ -413,22 +421,25 @@ includes:
   name: Samoa
   type: country
   status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
-- id: YT
-  name: Mayotte
+- id: KV
+  name: Kosovo
   type: country
   status: member
 - id: ZA
   name: South Africa
   type: country
   status: member
-membership_count: 104
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+membership_count: 106
 geographic_scope: global
-description: World Bank income group for economies between the low-income and high-income
-  thresholds.
+description: World Bank income group for economies between the low-income and high-income thresholds.
 tags:
 - MIC
 - aid
@@ -446,20 +457,41 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+wikidata_id: Q25450949
 acronyms:
 - lang: en
   value: MIC
+other_names:
+- id: en
+  name: Middle income
 provenance:
 - field: description
   source: World Bank
-  retrieved_at: '2026-07-13'
+  retrieved_at: '2026-07-30'
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: geographic_scope
   source: World Bank
-  retrieved_at: '2026-07-13'
+  retrieved_at: '2026-07-30'
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?incomelevel=MIC
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?incomelevel=MIC
 - field: acronyms
-  source: World Bank
-  retrieved_at: '2026-07-13'
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
   url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-last_verified: '2026-07-13'
+- field: other_names
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25450949
+  license: CC0
+last_verified: '2026-07-30'

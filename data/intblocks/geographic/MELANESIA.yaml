@@ -5,10 +5,16 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Melanesia
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q37394
+  type: wikidata
 name: Melanesia
 includes:
 - id: FJ
   name: Fiji
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
   type: country
   status: member
 - id: NC
@@ -27,11 +33,15 @@ includes:
   name: Vanuatu
   type: country
   status: member
-membership_count: 5
+membership_count: 6
 geographic_scope: sub-regional
 regions:
 - Oceania
-description: Melanesia is a regional grouping of 5 countries in Oceania.
+wikidata_id: Q37394
+description: Subregion of Oceania in the southwestern Pacific Ocean, extending from New
+  Guinea in the west to the Fiji Islands in the east, encompassing four independent
+  countries plus New Caledonia and the Indonesian provinces of New Guinea, per the
+  Wikipedia regional definition.
 tags:
 - MELANESIA
 - melanesia
@@ -55,11 +65,26 @@ other_names:
   name: Меланезия
 - id: es
   name: Melanesia
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/Melanesia
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesia
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesia
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesia
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q37394
+  license: CC0

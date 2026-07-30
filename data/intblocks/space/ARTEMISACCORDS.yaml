@@ -3,15 +3,42 @@ blocktype:
 - agreement
 - space
 status: formal
+founded: '2020-10-13'
+active_period:
+  start: '2020-10-13'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+languages:
+- en
 links:
+- url: https://www.nasa.gov/artemis-accords/
+  type: website
+- url: https://www.nasa.gov/wp-content/uploads/2024/10/signatories-02.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/Artemis_Accords
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q96341450
   type: wikidata
 name: Artemis Accords
-founded: '2020'
+legal_status: non-binding agreement
+recognition_status: Political declaration of principles for responsible civil space exploration, led by NASA and the U.S. Department
+  of State; first signed on 13 October 2020 by Australia, Canada, Italy, Japan, Luxembourg, the United Arab Emirates, the
+  United Kingdom, and the United States during the International Astronautical Congress.
 wikidata_id: Q96341450
-description: International agreement focused on space exploration.
+description: Non-binding set of principles for safe, peaceful, and sustainable civil exploration and use of outer space, reinforcing
+  commitments under the Outer Space Treaty, the Registration Convention, and the Rescue and Return Agreement. Established in
+  2020 by NASA and the U.S. Department of State with eight inaugural signatories; as of July 2026, 70 countries have signed.
+topics:
+- key: law
+  name: Law
+- key: space
+  name: Space
 tags:
 - ARTEMISACCORDS
 - agreement
@@ -20,10 +47,15 @@ tags:
 - moon
 - space
 - treaty
-topics:
-- key: space
-  name: Space
 includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
 - id: AO
   name: Angola
   type: country
@@ -32,16 +64,12 @@ includes:
   name: Argentina
   type: country
   status: member
-- id: AM
-  name: Armenia
+- id: AT
+  name: Austria
   type: country
   status: member
 - id: AU
   name: Australia
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
   type: country
   status: member
 - id: BD
@@ -52,16 +80,28 @@ includes:
   name: Belgium
   type: country
   status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
 - id: BG
   name: Bulgaria
   type: country
   status: member
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
 - id: CA
   name: Canada
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
   type: country
   status: member
 - id: CL
@@ -80,8 +120,16 @@ includes:
   name: Czechia
   type: country
   status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
 - id: DK
   name: Denmark
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
   type: country
   status: member
 - id: EC
@@ -92,6 +140,10 @@ includes:
   name: Estonia
   type: country
   status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
 - id: FI
   name: Finland
   type: country
@@ -100,8 +152,8 @@ includes:
   name: France
   type: country
   status: member
-- id: DE
-  name: Germany
+- id: GB
+  name: United Kingdom
   type: country
   status: member
 - id: GR
@@ -112,28 +164,36 @@ includes:
   name: Hungary
   type: country
   status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IN
-  name: India
+- id: IE
+  name: Ireland
   type: country
   status: member
 - id: IL
   name: Israel
   type: country
   status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
 - id: IT
   name: Italy
+  type: country
+  status: member
+- id: JO
+  name: Jordan
   type: country
   status: member
 - id: JP
   name: Japan
   type: country
   status: member
-- id: LV
-  name: Latvia
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
 - id: LI
@@ -148,24 +208,52 @@ includes:
   name: Luxembourg
   type: country
   status: member
-- id: MY
-  name: Malaysia
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
   type: country
   status: member
 - id: MX
   name: Mexico
   type: country
   status: member
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
 - id: NL
   name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
   type: country
   status: member
 - id: NZ
   name: New Zealand
   type: country
   status: member
-- id: 'NO'
-  name: Norway
+- id: OM
+  name: Oman
+  type: country
+  status: member
+- id: PA
+  name: Panama
   type: country
   status: member
 - id: PE
@@ -180,8 +268,20 @@ includes:
   name: Poland
   type: country
   status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
 - id: RO
   name: Romania
+  type: country
+  status: member
+- id: RS
+  name: Serbia
   type: country
   status: member
 - id: RW
@@ -192,28 +292,24 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SG
-  name: Singapore
+- id: SE
+  name: Sweden
   type: country
   status: member
-- id: SK
-  name: Slovakia
+- id: SG
+  name: Singapore
   type: country
   status: member
 - id: SI
   name: Slovenia
   type: country
   status: member
-- id: ES
-  name: Spain
+- id: SK
+  name: Slovakia
   type: country
   status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
+- id: SN
+  name: Senegal
   type: country
   status: member
 - id: TH
@@ -224,14 +320,6 @@ includes:
   name: Ukraine
   type: country
   status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
 - id: US
   name: United States
   type: country
@@ -240,7 +328,16 @@ includes:
   name: Uruguay
   type: country
   status: member
-membership_count: 60
+founding_members:
+- AU
+- CA
+- IT
+- JP
+- LU
+- AE
+- GB
+- US
+membership_count: 70
 other_names:
 - id: ar
   name: اتفاقيات أرتميس
@@ -254,3 +351,41 @@ other_names:
   name: Соглашения Артемиды
 - id: es
   name: Acuerdos Artemis
+last_verified: '2026-07-30'
+notes: Signatory roster and membership count verified against NASA's official signatories list (July 2026). The Artemis Accords
+  are political commitments, not a registered treaty; membership consists of countries that have signed the accords.
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96341450
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96341450
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/wp-content/uploads/2024/10/signatories-02.pdf
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/artemis-accords/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/artemis-accords/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/news-release/nasa-international-partners-advance-cooperation-with-first-signings-of-artemis-accords/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/news-release/nasa-international-partners-advance-cooperation-with-first-signings-of-artemis-accords/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.nasa.gov/artemis-accords/

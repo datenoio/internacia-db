@@ -2,15 +2,33 @@ id: EUCARIFORUMEPA
 blocktype:
 - pta
 status: formal
+founded: '2008-10-15'
+active_period:
+  start: '2008-12-29'
+geographic_scope: regional
+regions:
+- Americas
+- Europe
 languages:
 - en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
 - url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/caribbean_en
   type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-caribbean
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-cariforum-states.html
+  type: website
 name: EU-CARIFORUM Economic Partnership Agreement
-founded: '2008'
+acronyms:
+- lang: en
+  value: EU-CARIFORUM EPA
+- lang: fr
+  value: APE UE-CARIFORUM
+legal_status: economic partnership agreement
+recognition_status: Full Economic Partnership Agreement signed on 15 October 2008 in Bridgetown, Barbados between the EU and 14 CARIFORUM states; provisionally applied since 29 December 2008; first comprehensive EU EPA covering goods, services, investment, and a Protocol on Cultural Cooperation; Haiti signed on 10 December 2009 but is not applying the agreement pending parliamentary ratification
 includes:
 - id: EU
   name: European Union
@@ -20,60 +38,82 @@ includes:
   name: Antigua and Barbuda
   type: country
   status: member
+  joined: '2008-12-29'
 - id: BS
-  name: Bahamas
+  name: Bahamas, The
   type: country
   status: member
+  joined: '2008-12-29'
 - id: BB
   name: Barbados
   type: country
   status: member
+  joined: '2008-12-29'
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '2008-12-29'
 - id: DM
   name: Dominica
   type: country
   status: member
+  joined: '2008-12-29'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
+  joined: '2008-12-29'
 - id: GD
   name: Grenada
   type: country
   status: member
+  joined: '2008-12-29'
 - id: GY
   name: Guyana
   type: country
   status: member
+  joined: '2008-12-29'
 - id: JM
   name: Jamaica
   type: country
   status: member
+  joined: '2008-12-29'
 - id: KN
-  name: Saint Kitts and Nevis
+  name: St. Kitts and Nevis
   type: country
   status: member
+  joined: '2008-12-29'
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
+  joined: '2008-12-29'
 - id: VC
-  name: Saint Vincent and the Grenadines
+  name: St. Vincent and the Grenadines
   type: country
   status: member
+  joined: '2008-12-29'
 - id: SR
   name: Suriname
   type: country
   status: member
+  joined: '2008-12-29'
 - id: TT
   name: Trinidad and Tobago
   type: country
   status: member
-membership_count: 16
-description: International economic partnership agreement between the European Union and Caribbean Forum countries providing preferential trade access and development cooperation.
+  joined: '2008-12-29'
+- id: HT
+  name: Haiti
+  type: country
+  status: partner
+membership_count: 15
+description: Full Economic Partnership Agreement signed on 15 October 2008 between the European Union and 14 CARIFORUM states.
+  The agreement provides duty-free, quota-free EU market access for all Caribbean products, phased liberalisation of EU exports
+  to CARIFORUM over 15–25 years with permanent protection for the most sensitive goods, market access in services and investment,
+  rules of origin with regional cumulation, a Protocol on Cultural Cooperation, and development cooperation provisions. It has
+  been provisionally applied since 29 December 2008 and was the first comprehensive EU EPA to enter into force.
 tags:
 - EUCARIFORUMEPA
 - caribbean
@@ -95,3 +135,53 @@ other_names:
   name: Accord de partenariat économique UE-CARIFORUM
 - id: es
   name: Acuerdo de Asociación Económica UE-CARIFORUM
+notes: CARIFORUM regional configuration covers 15 states — Antigua and Barbuda, Bahamas, Barbados, Belize, Dominica, Dominican
+  Republic, Grenada, Guyana, Haiti, Jamaica, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname,
+  and Trinidad and Tobago. Fourteen states signed in October 2008 and provisionally apply the EPA; Haiti signed on 10 December
+  2009 but is not applying it pending parliamentary ratification and continues to trade with the EU under Everything but Arms.
+  The agreement includes regional preference clauses for intra-Caribbean trade and cumulation with other ACP and EU overseas
+  territories in the Caribbean.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/caribbean_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-cariforum-states.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-cariforum-states.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-caribbean
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-cariforum-states.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/caribbean_en
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/caribbean_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/caribbean_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-caribbean

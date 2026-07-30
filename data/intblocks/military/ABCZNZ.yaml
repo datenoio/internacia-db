@@ -2,6 +2,7 @@ id: ABCZNZ
 blocktype:
 - military
 status: formal
+founded: '1947'
 languages:
 - en
 links:
@@ -10,34 +11,48 @@ links:
 - url: https://www.wikidata.org/wiki/Q2863003
   type: wikidata
 name: ABCZNZ Armies
+geographic_scope: global
 includes:
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: CA
   name: Canada
   type: country
   status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
   status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
 membership_count: 5
-description: Organization of Australian, Canadian, New Zealand, United Kingdom and
-  United States armies that work together to optimize coalition interoperability.
+legal_status: intergovernmental
+regions:
+- worldwide
+description: Formal program of the American, British, Canadian, Australian, and New Zealand
+  armies (plus the United States Marine Corps and Royal Marines) that optimizes coalition
+  interoperability and standardization of training and equipment among Five Eyes land forces.
+acronyms:
+- lang: en
+  value: ABCANZ
+- lang: en
+  value: ABCA
+- lang: en
+  value: ABCZNZ
 tags:
+- ABCANZ
 - ABCZNZ
 - armies
 - defense
+- interoperability
 - military
 - security
 topics:
@@ -47,14 +62,22 @@ topics:
   name: Security
 wikidata_id: Q2863003
 other_names:
-- id: zh
-  name: 美英澳新加五国陆军合作计划
+- id: en
+  name: American, British, Canadian, Australian and New Zealand Armies' Program
 - id: en
   name: ABCANZ Armies
+- id: en
+  name: ABCA Armies' Program
+- id: zh
+  name: 美英澳新加五国陆军合作计划
 - id: fr
   name: Armées ABCA
 - id: ru
   name: Программа ABCA
+notes: Established in 1947 among the United States, United Kingdom, and Canada; Australia
+  joined in 1963; New Zealand was an observer from 1965 and became a full member in 2006.
+  The United States Army hosts the permanent Program Office.
+last_verified: '2026-07-29'
 provenance:
 - field: description
   source: Wikidata
@@ -66,4 +89,28 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q2863003
   license: CC0
-founded: '1947'
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2863003
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ABCANZ_Armies
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ABCANZ_Armies
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ABCANZ_Armies
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ABCANZ_Armies
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ABCANZ_Armies

@@ -1,44 +1,87 @@
 id: CRRF
+name: Collective Rapid Reaction Force
 blocktype:
 - military
 status: formal
 partof: CSTO
+founded: '2009-02-04'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
+languages:
+- en
+- ru
 links:
+- url: https://jscsto.odkb-csto.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3919910
   type: wikidata
-name: Collective Rapid Reaction Force
+acronyms:
+- lang: en
+  value: CRRF
+- lang: en
+  value: KSOR
+- lang: ru
+  value: КСОР
+legal_status: intergovernmental
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.760277777778
+    lng: 37.639166666667
+wikidata_id: Q3919910
+description: Joint combined-arms task force comprising independent military units contributed by Collective Security Treaty
+  Organization (CSTO) member states, established by agreement signed at the Moscow summit on 4 February 2009. Mandated to counter
+  limited military aggression against CSTO members and to conduct operations against terrorism and drug trafficking. Belarus
+  acceded on 20 October 2009 after Armenia, Kazakhstan, Kyrgyzstan, Russia, and Tajikistan signed at the founding summit;
+  first joint exercises followed in October 2009 at the Matybulak firing range in Kazakhstan.
 includes:
 - id: AM
   name: Armenia
   type: country
   status: member
+  joined: '2009-02-04'
 - id: BY
   name: Belarus
   type: country
   status: member
+  joined: '2009-10-20'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '2009-02-04'
 - id: KG
   name: Kyrgyzstan
   type: country
   status: member
+  joined: '2009-02-04'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2009-02-04'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '2009-02-04'
 membership_count: 6
-wikidata_id: Q3919910
-description: Military unit.
+founding_members:
+- AM
+- KZ
+- KG
+- RU
+- TJ
 tags:
 - CRRF
+- KSOR
+- csto
 - collective
 - defense
 - military
@@ -48,31 +91,74 @@ tags:
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
+- id: be
+  name: Калектыўныя сілы аператыўнага рэагавання
 - id: en
   name: Collective Rapid Reaction Force
+- id: he
+  name: הכוחות המשותפים לתגובה מהירה
+- id: hy
+  name: Արագ արագագործման հավաքական ուժեր
 - id: pt
   name: Força Coletiva de Reação Rápida
 - id: ru
   name: Коллективные силы оперативного реагирования
+- id: uk
+  name: Колективні сили оперативного реагування
+- id: uz
+  name: Kollektiv tezkor reaksiya kuchlari
+notes: Agreement on creation signed 4 February 2009 by Armenia, Kazakhstan, Kyrgyzstan, Russia, and Tajikistan; Belarus joined
+  20 October 2009. Operates under the CSTO Joint Staff in Moscow. Contributing units include Russian airborne and spetsnaz
+  formations, Kazakh air assault and special operations elements, the Belarusian 103rd Guards Airborne Brigade, the Armenian
+  12th Peacekeeping Brigade, a Kyrgyz infantry battalion under the Scorpion 25th Special Forces Brigade, and a Tajik infantry
+  battalion under the Mobile Forces.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3919910
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3919910
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3919910
   license: CC0
-acronyms:
-- lang: ru
-  value: КСОР
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Rapid_Reaction_Force

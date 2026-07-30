@@ -2,13 +2,15 @@ id: G33
 blocktype:
 - acronym
 status: informal
+founded: '2003'
 links:
+- url: https://www.wto.org/english/tratop_e/agric_e/negoti_groups_e.htm
+  type: website
 - url: https://en.wikipedia.org/wiki/G33_(developing_countries)
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q429736
   type: wikidata
 name: G33
-founded: '2003'
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -26,24 +28,40 @@ includes:
   name: Benin
   type: country
   status: member
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
 - id: CN
   name: China
   type: country
   status: member
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CU
   name: Cuba
   type: country
   status: member
-- id: CD
-  name: Democratic Republic of the Congo
+- id: DM
+  name: Dominica
   type: country
   status: member
 - id: DO
   name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
   type: country
   status: member
 - id: SV
@@ -54,12 +72,12 @@ includes:
   name: Grenada
   type: country
   status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
 - id: GT
   name: Guatemala
+  type: country
+  status: member
+- id: GY
+  name: Guyana
   type: country
   status: member
 - id: HT
@@ -86,16 +104,16 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: LA
-  name: Laos
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
 - id: MG
   name: Madagascar
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
   type: country
   status: member
 - id: MN
@@ -122,24 +140,20 @@ includes:
   name: Panama
   type: country
   status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
 - id: PH
   name: Philippines
   type: country
   status: member
 - id: KN
-  name: Saint Kitts and Nevis
+  name: St. Kitts and Nevis
   type: country
   status: member
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
 - id: VC
-  name: Saint Vincent and the Grenadines
+  name: St. Vincent and the Grenadines
   type: country
   status: member
 - id: SN
@@ -152,6 +166,10 @@ includes:
   status: member
 - id: SR
   name: Suriname
+  type: country
+  status: member
+- id: TW
+  name: Taiwan
   type: country
   status: member
 - id: TZ
@@ -171,7 +189,7 @@ includes:
   type: country
   status: member
 - id: VE
-  name: Venezuela
+  name: Venezuela, RB
   type: country
   status: member
 - id: ZM
@@ -182,28 +200,80 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 43
+membership_count: 47
 wikidata_id: Q429736
-description: A coalition of developing countries, established prior to the 2003 Cancún ministerial conference, that have coordinated
-  during the Doha Round of World Trade Organization negotiations, specifically in regard to agriculture.
+description: >-
+  G33 (also known as the Friends of Special Products in agriculture) is a coalition of developing countries established before
+  the 2003 Cancún WTO ministerial conference to coordinate during the Doha Round agriculture negotiations. Dominated by India,
+  the group seeks flexibility for developing countries to limit market opening in agriculture, advocating for a "special products"
+  exemption from tariff cuts and a "special safeguard mechanism" to raise tariffs in response to import surges. Despite the
+  "33" in its name — reflecting the original founding membership — the coalition had grown to 47 WTO members by 2021.
 tags:
 - G33
 - acronym
+- agriculture
+- developing
+- doha
+- india
+- trade
+- wto
 topics:
 - key: trade
   name: Trade
+- key: agriculture
+  name: Agriculture
+acronyms:
+- lang: en
+  value: G33
+- lang: en
+  value: G-33
 other_names:
 - id: de
   name: G33
+- id: de
+  name: Gruppe der 33
 - id: en
   name: G33
+- id: en
+  name: Friends of Special Products
+- id: en
+  name: Friends of Special Products in agriculture
 - id: fr
   name: G33
+- id: fr
+  name: Groupe des 33
+- id: hu
+  name: G33
+- id: hu
+  name: Harminchármak
 - id: zh
   name: G33聯盟
+notes: >-
+  WTO agriculture negotiating coalition formed ahead of the 2003 Cancún ministerial. Not to be confused with any G33 finance
+  ministers group. Membership roster per WTO "Groups in the agriculture negotiations" (last updated April 2021); Wikipedia
+  cites 48 members, while the WTO official list enumerates 47 WTO members. Distinct from the WTO G-20 (agriculture), G-10,
+  and Cairns Group coalitions in the same negotiations.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: World Trade Organization
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/tratop_e/agric_e/negoti_groups_e.htm
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/G33_(developing_countries)
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q429736
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q429736
   license: CC0
+- field: notes
+  source: World Trade Organization
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/tratop_e/agric_e/negoti_groups_e.htm

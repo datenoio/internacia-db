@@ -30,8 +30,13 @@ includes:
   type: country
   status: member
 membership_count: 5
+geographic_scope: sub-regional
+regions:
+- Europe
 wikidata_id: Q38272
-description: Group of islands in northwest Europe.
+description: Archipelago in northwestern Europe comprising the islands of Great Britain, Ireland, the Isle of Man, and the
+  Channel Islands, with two sovereign states (Ireland and the United Kingdom) plus the Crown Dependencies of Guernsey,
+  Jersey, and the Isle of Man, per the Wikipedia regional definition.
 tags:
 - BRIS
 - british
@@ -60,18 +65,30 @@ other_names:
   name: Британские острова
 - id: zh
   name: 不列顛群島
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British_Isles
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British_Isles
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British_Isles
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British_Isles
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q38272
   license: CC0
-- field: acronyms
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/

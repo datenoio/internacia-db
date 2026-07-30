@@ -2,29 +2,57 @@ id: CNRS
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- sr
-name: China-Serbia Free Trade Agreement
 founded: '2023-10-17'
+active_period:
+  start: '2024-07-01'
 geographic_scope: bilateral
 regions:
 - Asia
 - Europe
+languages:
+- en
+- sr
+- zh
+links:
+- url: https://fta.mofcom.gov.cn/topic/enserbia.shtml
+  type: website
+- url: https://aric.adb.org/fta/peoples-republic-of-china-serbia-free-trade-agreement
+  type: website
+- url: https://investmentpolicy.unctad.org/international-investment-agreements/treaties/treaties-with-investment-provisions/5086/china---serbia-fta-2023-
+  type: website
+- url: https://www.wipo.int/wipolex/en/treaties/textdetails/20076
+  type: website
+name: China-Serbia Free Trade Agreement
+acronyms:
+- lang: en
+  value: China-Serbia FTA
+- lang: sr
+  value: ССЛТ Кина-Србија
+- lang: zh
+  value: 中塞自贸协定
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 17 October 2023; entered into force on 1 July 2024 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-10-17'
 - id: RS
   name: Serbia
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-10-17'
+founding_members:
+- CN
+- RS
 membership_count: 2
-description: Free trade agreement between China and Serbia that came into effect on July 1, 2024. Approximately 90% of products
-  traded between China and Serbia will be exempt from tariffs, with over 60% benefiting from zero tariffs immediately upon
-  implementation. The agreement encompasses 10,412 Serbian products and 8,930 Chinese products, with tariffs on more than
-  95% of products set to be gradually reduced to zero.
+description: Bilateral free trade agreement between China and Serbia, signed on 17 October 2023 and entered into force on
+  1 July 2024. Approximately 90% of products traded between China and Serbia will be exempt from tariffs, with over 60%
+  benefiting from zero tariffs immediately upon implementation. The agreement encompasses 10,412 Serbian products and
+  8,930 Chinese products, with tariffs on more than 95% of products set to be gradually reduced to zero. It is China's 22nd
+  free trade agreement and its first with a central or eastern European country.
 tags:
 - CNRS
 - china
@@ -39,9 +67,6 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: China-Serbia FTA
 other_names:
 - id: en
   name: China-Serbia FTA
@@ -53,3 +78,20 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://fta.mofcom.gov.cn/topic/enserbia.shtml
+- field: founded
+  source: Ministry of Commerce of the People's Republic of China
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/enserbia.shtml
+- field: active_period
+  source: Ministry of Commerce of the People's Republic of China
+  retrieved_at: '2026-07-29'
+  url: https://english.www.gov.cn/news/202406/28/content_WS667e6f42c6d0868f4e8e8a86.html
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/textdetails/20076
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/enserbia.shtml

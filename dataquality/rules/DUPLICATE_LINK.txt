@@ -1,38 +1,66 @@
 DATA QUALITY REPORT - RULE: DUPLICATE_LINK
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Issue Type: DUPLICATE_LINK
 Priority: LOW
-Total Issues Found: 87
+Total Issues Found: 107
 
 Description: Multiple records share the same external URL.
 
 === AFFECTED RECORDS ===
 
-File: data/intblocks/agreement/ABIDJAN.yaml
-Record ID: ABIDJAN
-Country: AO
+File: data/intblocks/acronym/CORECOUNT.yaml
+Record ID: CORECOUNT
+Country: AT
 Field: links
-Current Value: unep.org/unepmap
-Suggested Action: Website 'unep.org/unepmap' is shared by unrelated records: ['ABIDJAN', 'BARCELONA', 'NAIROBI']
+Current Value: jstor.org/stable/2657290
+Suggested Action: Website 'jstor.org/stable/2657290' is shared by unrelated records: ['CORECOUNT', 'PERIPHCOUNT', 'SEMIPERIPH']
 
-File: data/intblocks/agreement/BARCELONA.yaml
-Record ID: BARCELONA
-Country: AL
+File: data/intblocks/acronym/PERIPHCOUNT.yaml
+Record ID: PERIPHCOUNT
+Country: AF
 Field: links
-Current Value: unep.org/unepmap
-Suggested Action: Website 'unep.org/unepmap' is shared by unrelated records: ['ABIDJAN', 'BARCELONA', 'NAIROBI']
+Current Value: jstor.org/stable/2657290
+Suggested Action: Website 'jstor.org/stable/2657290' is shared by unrelated records: ['CORECOUNT', 'PERIPHCOUNT', 'SEMIPERIPH']
 
-File: data/intblocks/agreement/NAIROBI.yaml
-Record ID: NAIROBI
-Country: FR
+File: data/intblocks/acronym/SEMIPERIPH.yaml
+Record ID: SEMIPERIPH
+Country: AR
 Field: links
-Current Value: unep.org/unepmap
-Suggested Action: Website 'unep.org/unepmap' is shared by unrelated records: ['ABIDJAN', 'BARCELONA', 'NAIROBI']
+Current Value: jstor.org/stable/2657290
+Suggested Action: Website 'jstor.org/stable/2657290' is shared by unrelated records: ['CORECOUNT', 'PERIPHCOUNT', 'SEMIPERIPH']
+
+File: data/intblocks/acronym/LLDC.yaml
+Record ID: LLDC
+Country: AF
+Field: links
+Current Value: un.org/ohrlls
+Suggested Action: Website 'un.org/ohrlls' is shared by unrelated records: ['LLDC', 'UNOHRLLS']
+
+File: data/intblocks/unagency/UNOHRLLS.yaml
+Record ID: UNOHRLLS
+Country: US
+Field: links
+Current Value: un.org/ohrlls
+Suggested Action: Website 'un.org/ohrlls' is shared by unrelated records: ['LLDC', 'UNOHRLLS']
+
+File: data/intblocks/agreement/BUCHAREST.yaml
+Record ID: BUCHAREST
+Country: TR
+Field: links
+Current Value: treaties.un.org/pages/showdetails.aspx?objid=080000028058569c
+Suggested Action: Website 'treaties.un.org/pages/showdetails.aspx?objid=080000028058569c' is shared by unrelated records: ['BUCHAREST', 'CARPATIANCONVENTION']
+
+File: data/intblocks/agreement/CARPATIANCONVENTION.yaml
+Record ID: CARPATIANCONVENTION
+Country: AT
+Field: links
+Current Value: treaties.un.org/pages/showdetails.aspx?objid=080000028058569c
+Suggested Action: Website 'treaties.un.org/pages/showdetails.aspx?objid=080000028058569c' is shared by unrelated records: ['BUCHAREST', 'CARPATIANCONVENTION']
 
 File: data/intblocks/agreement/CTBT.yaml
 Record ID: CTBT
-Country: AF
+Country: AD
 Field: links
 Current Value: ctbto.org
 Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
@@ -44,19 +72,19 @@ Field: links
 Current Value: ctbto.org
 Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
 
-File: data/intblocks/agreement/JEDDAH.yaml
-Record ID: JEDDAH
-Country: DJ
+File: data/intblocks/agreement/UNCLOS.yaml
+Record ID: UNCLOS
+Country: AG
 Field: links
-Current Value: persga.org
-Suggested Action: Website 'persga.org' is shared by unrelated records: ['JEDDAH', 'PERSGA']
+Current Value: treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en
+Suggested Action: Website 'treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en' is shared by unrelated records: ['ITLOS', 'UNCLOS']
 
-File: data/intblocks/environment/PERSGA.yaml
-Record ID: PERSGA
-Country: SA
+File: data/intblocks/intorg/ITLOS.yaml
+Record ID: ITLOS
+Country: DE
 Field: links
-Current Value: persga.org
-Suggested Action: Website 'persga.org' is shared by unrelated records: ['JEDDAH', 'PERSGA']
+Current Value: treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en
+Suggested Action: Website 'treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en' is shared by unrelated records: ['ITLOS', 'UNCLOS']
 
 File: data/intblocks/audit/ARABOSAI.yaml
 Record ID: ARABOSAI
@@ -324,194 +352,292 @@ Field: links
 Current Value: col.org
 Suggested Action: Website 'col.org' is shared by unrelated records: ['COL', 'COMMLEARN']
 
+File: data/intblocks/cultural/COL.yaml
+Record ID: COL
+Country: CA
+Field: links
+Current Value: col.org/about/about-col
+Suggested Action: Website 'col.org/about/about-col' is shared by unrelated records: ['COL', 'COMMLEARN']
+
+File: data/intblocks/education/COMMLEARN.yaml
+Record ID: COMMLEARN
+Country: CA
+Field: links
+Current Value: col.org/about/about-col
+Suggested Action: Website 'col.org/about/about-col' is shared by unrelated records: ['COL', 'COMMLEARN']
+
 File: data/intblocks/customs/EAC.yaml
 Record ID: EAC
 Country: TZ
 Field: links
 Current Value: eac.int
-Suggested Action: Website 'eac.int' is shared by unrelated records: ['EAC', 'EARAF']
+Suggested Action: Website 'eac.int' is shared by unrelated records: ['EAC', 'EALA', 'EARAF']
+
+File: data/intblocks/parliamentary/EALA.yaml
+Record ID: EALA
+Country: TZ
+Field: links
+Current Value: eac.int
+Suggested Action: Website 'eac.int' is shared by unrelated records: ['EAC', 'EALA', 'EARAF']
 
 File: data/intblocks/tax/EARAF.yaml
 Record ID: EARAF
 Country: BI
 Field: links
 Current Value: eac.int
-Suggested Action: Website 'eac.int' is shared by unrelated records: ['EAC', 'EARAF']
+Suggested Action: Website 'eac.int' is shared by unrelated records: ['EAC', 'EALA', 'EARAF']
 
 File: data/intblocks/customs/TSOUZ.yaml
 Record ID: TSOUZ
 Country: RU
 Field: links
 Current Value: eaeunion.org
-Suggested Action: Website 'eaeunion.org' is shared by unrelated records: ['EAEU', 'EAU', 'TSOUZ']
+Suggested Action: Website 'eaeunion.org' is shared by unrelated records: ['EAEU', 'TSOUZ']
 
 File: data/intblocks/economic/EAEU.yaml
 Record ID: EAEU
 Country: RU
 Field: links
 Current Value: eaeunion.org
-Suggested Action: Website 'eaeunion.org' is shared by unrelated records: ['EAEU', 'EAU', 'TSOUZ']
+Suggested Action: Website 'eaeunion.org' is shared by unrelated records: ['EAEU', 'TSOUZ']
 
-File: data/intblocks/economic/EAU.yaml
-Record ID: EAU
-Country: AM
-Field: links
-Current Value: eaeunion.org
-Suggested Action: Website 'eaeunion.org' is shared by unrelated records: ['EAEU', 'EAU', 'TSOUZ']
-
-File: data/intblocks/pta/EUCENTRALAFRICAEPA.yaml
-Record ID: EUCENTRALAFRICAEPA
-Country: CM
-Field: links
-Current Value: policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
-Suggested Action: Website 'policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en' is shared by unrelated records: ['EUCENTRALAFRICAEPA', 'EUESAEPA', 'EUSADCEPA', 'EUWESTAFRICAEPA']
-
-File: data/intblocks/pta/EUESAEPA.yaml
-Record ID: EUESAEPA
-Country: MU
-Field: links
-Current Value: policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
-Suggested Action: Website 'policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en' is shared by unrelated records: ['EUCENTRALAFRICAEPA', 'EUESAEPA', 'EUSADCEPA', 'EUWESTAFRICAEPA']
-
-File: data/intblocks/pta/EUSADCEPA.yaml
-Record ID: EUSADCEPA
+File: data/intblocks/economic/SADC.yaml
+Record ID: SADC
 Country: BW
 Field: links
-Current Value: policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
-Suggested Action: Website 'policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en' is shared by unrelated records: ['EUCENTRALAFRICAEPA', 'EUESAEPA', 'EUSADCEPA', 'EUWESTAFRICAEPA']
+Current Value: sadc.int
+Suggested Action: Website 'sadc.int' is shared by unrelated records: ['SADC', 'SADCSTAN']
 
-File: data/intblocks/pta/EUWESTAFRICAEPA.yaml
-Record ID: EUWESTAFRICAEPA
-Country: CI
+File: data/intblocks/standards/SADCSTAN.yaml
+Record ID: SADCSTAN
+Country: BW
 Field: links
-Current Value: policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
-Suggested Action: Website 'policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en' is shared by unrelated records: ['EUCENTRALAFRICAEPA', 'EUESAEPA', 'EUSADCEPA', 'EUWESTAFRICAEPA']
+Current Value: sadc.int
+Suggested Action: Website 'sadc.int' is shared by unrelated records: ['SADC', 'SADCSTAN']
+
+File: data/intblocks/fta/PACIFICALLIANCE.yaml
+Record ID: PACIFICALLIANCE
+Country: PE
+Field: links
+Current Value: alianzapacifico.net/en
+Suggested Action: Website 'alianzapacifico.net/en' is shared by unrelated records: ['PACALL', 'PACIFICALLIANCE']
+
+File: data/intblocks/trade/PACALL.yaml
+Record ID: PACALL
+Country: CL
+Field: links
+Current Value: alianzapacifico.net/en
+Suggested Action: Website 'alianzapacifico.net/en' is shared by unrelated records: ['PACALL', 'PACIFICALLIANCE']
+
+File: data/intblocks/fta/PACIFICALLIANCE.yaml
+Record ID: PACIFICALLIANCE
+Country: PE
+Field: links
+Current Value: alianzapacifico.net/en/what-is-the-pacific-alliance
+Suggested Action: Website 'alianzapacifico.net/en/what-is-the-pacific-alliance' is shared by unrelated records: ['PACALL', 'PACIFICALLIANCE']
+
+File: data/intblocks/trade/PACALL.yaml
+Record ID: PACALL
+Country: CL
+Field: links
+Current Value: alianzapacifico.net/en/what-is-the-pacific-alliance
+Suggested Action: Website 'alianzapacifico.net/en/what-is-the-pacific-alliance' is shared by unrelated records: ['PACALL', 'PACIFICALLIANCE']
+
+File: data/intblocks/intorg/CISRI.yaml
+Record ID: CISRI
+Country: IT
+Field: links
+Current Value: treaties.un.org/doc/publication/unts/volume%202151/v2151.pdf
+Suggested Action: Website 'treaties.un.org/doc/publication/unts/volume%202151/v2151.pdf' is shared by unrelated records: ['CISRI', 'IIMSAM']
+
+File: data/intblocks/intorg/IIMSAM.yaml
+Record ID: IIMSAM
+Country: US
+Field: links
+Current Value: treaties.un.org/doc/publication/unts/volume%202151/v2151.pdf
+Suggested Action: Website 'treaties.un.org/doc/publication/unts/volume%202151/v2151.pdf' is shared by unrelated records: ['CISRI', 'IIMSAM']
+
+File: data/intblocks/intorg/D8TTEN.yaml
+Record ID: D8TTEN
+Country: IR
+Field: links
+Current Value: developing8.org
+Suggested Action: Website 'developing8.org' is shared by unrelated records: ['D8', 'D8TTEN']
+
+File: data/intblocks/political/D8.yaml
+Record ID: D8
+Country: BD
+Field: links
+Current Value: developing8.org
+Suggested Action: Website 'developing8.org' is shared by unrelated records: ['D8', 'D8TTEN']
+
+File: data/intblocks/unregionalblock/ASIAPACIFICGROUP.yaml
+Record ID: ASIAPACIFICGROUP
+Country: AE
+Field: links
+Current Value: un.org/dgacm/en/content/regional-groups
+Suggested Action: Website 'un.org/dgacm/en/content/regional-groups' is shared by unrelated records: ['ASIAPACIFICGROUP', 'WEOG']
+
+File: data/intblocks/unregionalblock/WEOG.yaml
+Record ID: WEOG
+Country: AD
+Field: links
+Current Value: un.org/dgacm/en/content/regional-groups
+Suggested Action: Website 'un.org/dgacm/en/content/regional-groups' is shared by unrelated records: ['ASIAPACIFICGROUP', 'WEOG']
 
 File: data/intblocks/wbgroup/EAS.yaml
 Record ID: EAS
 Country: AS
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/ECA.yaml
 Record ID: ECA
 Country: AL
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/ECS.yaml
 Record ID: ECS
 Country: AD
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/EMU.yaml
 Record ID: EMU
 Country: AT
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/EUU.yaml
 Record ID: EUU
 Country: IE
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/HIC.yaml
 Record ID: HIC
 Country: AD
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LAC.yaml
+Record ID: LAC
+Country: AR
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LCN.yaml
+Record ID: LCN
+Country: AG
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/LIC.yaml
 Record ID: LIC
 Country: AF
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LMC.yaml
+Record ID: LMC
+Country: AO
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/LMY.yaml
 Record ID: LMY
 Country: AF
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/MEA.yaml
 Record ID: MEA
-Country: AE
+Country: AF
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/MIC.yaml
 Record ID: MIC
-Country: AG
+Country: AO
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/MNA.yaml
 Record ID: MNA
 Country: DJ
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
-File: data/intblocks/wbgroup/NOC.yaml
-Record ID: NOC
+File: data/intblocks/wbgroup/NAC.yaml
+Record ID: NAC
 Country: BM
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/NOC.yaml
+Record ID: NOC
+Country: AD
+Field: links
+Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/OEC.yaml
 Record ID: OEC
 Country: AU
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/SAS.yaml
 Record ID: SAS
-Country: AF
+Country: BD
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/SSA.yaml
 Record ID: SSA
 Country: AO
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/SSF.yaml
 Record ID: SSF
 Country: AO
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/UMC.yaml
 Record ID: UMC
 Country: AG
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Country: AD
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/ECA.yaml
 Record ID: ECA
@@ -532,88 +658,55 @@ Record ID: HIC
 Country: AD
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/LIC.yaml
 Record ID: LIC
 Country: AF
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/LMC.yaml
+Record ID: LMC
+Country: AO
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+
+File: data/intblocks/wbgroup/MEA.yaml
+Record ID: MEA
+Country: AF
+Field: links
+Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/MIC.yaml
 Record ID: MIC
-Country: AG
+Country: AO
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/NOC.yaml
 Record ID: NOC
-Country: BM
+Country: AD
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/OEC.yaml
 Record ID: OEC
 Country: AU
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/SSA.yaml
 Record ID: SSA
 Country: AO
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
-File: data/intblocks/wbgroup/SSF.yaml
-Record ID: SSF
-Country: AO
-Field: links
-Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
-
-File: data/intblocks/wbgroup/UMC.yaml
-Record ID: UMC
-Country: AG
-Field: links
-Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
-
-File: data/intblocks/wbgroup/WLD.yaml
-Record ID: WLD
-Country: AD
-Field: links
-Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
-
-File: data/intblocks/wbgroup/LMC.yaml
-Record ID: LMC
-Country: AM
-Field: links
-Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LMC', 'LMY']
-
-File: data/intblocks/wbgroup/LMY.yaml
-Record ID: LMY
-Country: AF
-Field: links
-Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LMC', 'LMY']
-
-File: data/intblocks/wbgroup/MEA.yaml
-Record ID: MEA
-Country: AE
-Field: links
-Current Value: worldbank.org/en/region/mena
-Suggested Action: Website 'worldbank.org/en/region/mena' is shared by unrelated records: ['MEA', 'MNA']
-
-File: data/intblocks/wbgroup/MNA.yaml
-Record ID: MNA
-Country: DJ
-Field: links
-Current Value: worldbank.org/en/region/mena
-Suggested Action: Website 'worldbank.org/en/region/mena' is shared by unrelated records: ['MEA', 'MNA']
+... and 7 more records with this issue

@@ -1,62 +1,101 @@
 id: OCCAR
+name: Organisation for Joint Armament Cooperation
 blocktype:
 - military
 status: formal
+founded: '1996-11-12'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
+- de
+- es
+- it
 links:
+- url: https://www.occar.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Organisation_for_Joint_Armament_Cooperation
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q521227
   type: wikidata
-name: Organisation for Joint Armament Cooperation
+acronyms:
+- lang: en
+  value: OCCAR
+- lang: en
+  value: OCCAR-EA
+legal_status: intergovernmental
+wikidata_id: Q521227
+description: European intergovernmental organisation established on 12 November 1996
+  by the defence ministers of France, Germany, Italy, and the United Kingdom and granted
+  legal status in January 2001 when the four founding states ratified the OCCAR Convention.
+  OCCAR Executive Administration (OCCAR-EA) in Bonn manages cooperative armament programmes
+  through their lifecycle, including A400M, Tiger, Boxer, FREMM, Eurodrone, and MU90 Impact.
+  Belgium joined in 2003 and Spain in 2005. Other European states may participate in individual
+  programmes as non-member participating states or observers without full membership.
 includes:
-- id: ES
-  name: Spain
-  type: country
-  status: member
 - id: BE
   name: Belgium
   type: country
   status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
+  joined: '2003'
 - id: DE
   name: Germany
   type: country
   status: member
-founded: '1996'
+  joined: '2001-01'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '2005'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '2001-01'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2001-01'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '2001-01'
+membership_count: 6
+founding_members:
+- FR
+- DE
+- IT
+- GB
 headquarters:
-  city: Godesberger Allee 150–154
+  city: Bonn
   country: DE
   coordinates:
     lat: 50.701232
     lng: 7.137964
-membership_count: 6
-wikidata_id: Q521227
-description: International organization whose core-business is the through life management
-  of cooperative defence equipment programmes.
 tags:
 - OCCAR
 - armament
+- belgium
 - cooperation
 - defense
+- europe
+- france
+- germany
+- italy
 - joint
 - military
 - organisation
+- procurement
 - regional
 - regional_cooperation
 - security
+- spain
+- united_kingdom
 topics:
 - key: military
   name: Military
@@ -65,21 +104,91 @@ topics:
 - key: security
   name: Security
 other_names:
-- id: zh
-  name: 軍備合作聯合組織
+- id: ca
+  name: Organització Conjunta de Cooperació en Matèria d'Armament
+- id: de
+  name: Organisation Conjointe de Coopération en Matière d'Armement
 - id: en
   name: Organisation for Joint Armament Cooperation
-- id: fr
-  name: Organisation conjointe de coopération en matière d'armement
+- id: en
+  name: OCCAR
+- id: eo
+  name: Organizo por Komuna Armilara Kunlaboro
 - id: es
   name: Organización para la Cooperación Conjunta en Materia de Armamento
+- id: eu
+  name: Armamentu Arloko Lankidetza Bateraturako Erakundea
+- id: fr
+  name: Organisation conjointe de coopération en matière d'armement
+- id: gl
+  name: Organización para a cooperación conxunta en armamento
+- id: he
+  name: הארגון לחימוש משותף של האיחוד האירופי
+- id: hu
+  name: Közös Fegyverkezési Együttműködési Szervezet
+- id: it
+  name: OCCAR
+- id: ja
+  name: 統合装備協力機関
+- id: nb
+  name: Organisasjonen for felles forsvarsmateriellsamarbeid
+- id: nl
+  name: OCCAR
+- id: pl
+  name: OCCAR
+- id: sl
+  name: Organizacijo za skupno oborožitveno sodelovanje
+- id: zh
+  name: 軍備合作聯合組織
+- id: zh
+  name: 联合军备合作组织
+notes: Defence ministers of France, Germany, Italy, and the United Kingdom signed the
+  OCCAR Convention on 12 November 1996; legal status entered into force in January
+  2001 after parliamentary ratification by the four founding states. Belgium acceded
+  in 2003 and Spain in 2005. The Netherlands announced its intention to join in November
+  2023 and submitted treaty approval legislation to parliament in May 2026; formal
+  accession remained pending as of mid-2026. Numerous other states participate in individual
+  OCCAR-managed programmes as non-member participating states or observers without
+  full membership.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Organisation_for_Joint_Armament_Cooperation
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q521227
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_for_Joint_Armament_Cooperation
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q521227
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q521227
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q521227
+  license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_for_Joint_Armament_Cooperation
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.occar.int/about-us
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_for_Joint_Armament_Cooperation

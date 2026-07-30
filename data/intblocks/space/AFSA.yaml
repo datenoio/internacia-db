@@ -1,37 +1,47 @@
 id: AFSA
+name: African Space Agency
 blocktype:
 - intorg
 - space
 status: formal
+partof: AFUNION
+founded: '2023-01-24'
+active_period:
+  start: '2025-04-20'
+geographic_scope: regional
+regions:
+- Africa
 languages:
+- ar
 - en
 - fr
+- pt
 links:
 - url: https://africanspaceagency.org/
   type: website
-name: African Space Agency
-founded: '2023'
+- url: https://en.wikipedia.org/wiki/African_Space_Agency
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q117032291
+  type: wikidata
+acronyms:
+- lang: en
+  value: AfSA
+- lang: en
+  value: AFSA
+legal_status: organ of the African Union
+recognition_status: Established under the Statute of the African Space Agency adopted by the African Union Assembly at its 11th Extraordinary Session in Addis Ababa on 31 January–1 February 2018; headquarters hosted in Cairo, Egypt (32nd AU Summit, February 2019); agency inaugurated 20 April 2025
 headquarters:
   city: Cairo
   country: EG
   coordinates:
     lat: 30.0444
     lng: 31.2357
+secretariat:
+  location: Cairo, Egypt
+  organization: African Space Agency Secretariat
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BW
-  name: Botswana
   type: country
   status: member
 - id: BF
@@ -42,56 +52,52 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: CV
-  name: Cabo Verde
+- id: BJ
+  name: Benin
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
 - id: CG
-  name: Congo
-  type: country
-  status: member
-- id: CD
-  name: Democratic Republic of the Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DJ
   name: Djibouti
   type: country
   status: member
-- id: EG
-  name: Egypt
+- id: DZ
+  name: Algeria
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
+- id: EG
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ER
   name: Eritrea
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
   type: country
   status: member
 - id: ET
@@ -102,16 +108,20 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
 - id: GH
   name: Ghana
   type: country
   status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
 - id: GN
   name: Guinea
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
   type: country
   status: member
 - id: GW
@@ -122,24 +132,28 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
   type: country
   status: member
-- id: MG
-  name: Madagascar
+- id: MA
+  name: Morocco
   type: country
   status: member
-- id: MW
-  name: Malawi
+- id: MG
+  name: Madagascar
   type: country
   status: member
 - id: ML
@@ -154,8 +168,8 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MW
+  name: Malawi
   type: country
   status: member
 - id: MZ
@@ -178,40 +192,40 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
 - id: SC
   name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
-- id: TZ
-  name: Tanzania
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
+  type: country
+  status: member
+- id: TD
+  name: Chad
   type: country
   status: member
 - id: TG
@@ -222,8 +236,16 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
 - id: UG
   name: Uganda
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -234,13 +256,20 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 55
-description: The African Space Agency is an international organization that is used to promote regional cooperation in the
-  space sector.
+membership_count: 54
+description: Continental space agency of the African Union that coordinates and promotes cooperation in space science, technology,
+  and applications across member states. AfSA advises on space policy, harmonizes national programmes, and serves as Africa's
+  focal point for international space partnerships.
+notes: Membership is open to all African Union member states under the AfSA Statute (Article on Membership). The roster mirrors
+  the 54 AU members tracked in this dataset; Western Sahara (EH) is excluded pending AU recognition status. The Statute was
+  adopted in 2018; legal establishment followed on 24 January 2023; headquarters inauguration in Cairo took place on 20
+  April 2025.
+last_verified: '2026-07-30'
 tags:
 - AFSA
 - africa
 - african
+- african_union
 - agency
 - international
 - intorg
@@ -270,15 +299,58 @@ wikidata_id: Q117032291
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q117032291
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q117032291
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q117032291
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q117032291
   license: CC0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://africanspaceagency.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://africanspaceagency.org/
+- field: legal_status
+  source: African Union
+  retrieved_at: '2026-07-30'
+  url: https://au.int/sites/default/files/newsevents/workingdocuments/33178-wd-st20676_e_original.pdf
+- field: recognition_status
+  source: African Union
+  retrieved_at: '2026-07-30'
+  url: https://au.int/sites/default/files/newsevents/workingdocuments/33178-wd-st20676_e_original.pdf
+- field: includes
+  source: African Union
+  retrieved_at: '2026-07-30'
+  url: https://au.int/sites/default/files/newsevents/workingdocuments/33178-wd-st20676_e_original.pdf
+- field: membership_count
+  source: African Union
+  retrieved_at: '2026-07-30'
+  url: https://au.int/sites/default/files/newsevents/workingdocuments/33178-wd-st20676_e_original.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/African_Space_Agency
+  license: CC BY-SA 4.0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://africanspaceagency.org/
+- field: notes
+  source: African Union
+  retrieved_at: '2026-07-30'
+  url: https://au.int/sites/default/files/newsevents/workingdocuments/33178-wd-st20676_e_original.pdf

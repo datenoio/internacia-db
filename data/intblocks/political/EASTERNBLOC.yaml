@@ -4,16 +4,22 @@ blocktype:
 status: historical
 founded: '1947'
 dissolved: '1991'
-geographic_scope: regional
+active_period:
+  start: '1947'
+  end: '1991'
+geographic_scope: global
 regions:
 - Europe
 - Asia
+- North America
 languages:
 - ru
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Eastern_Bloc
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q170541
+  type: wikidata
 name: Eastern Bloc
 acronyms:
 - lang: en
@@ -22,9 +28,12 @@ acronyms:
   value: Communist Bloc
 - lang: en
   value: Soviet Bloc
-membership_count: 28
-description: Coalition of communist states aligned with the Soviet Union during the Cold War, characterized by Marxist-Leninist
-  ideologies, centralized economies, and one-party states. Opposed the capitalist Western Bloc.
+membership_count: 29
+legal_status: informal coalition
+description: Informal Cold War coalition of Marxist–Leninist states aligned with the
+  Soviet Union across Central and Eastern Europe, Asia, and the Americas. Characterized
+  by one-party communist rule, centralized economies, and opposition to the capitalist
+  Western Bloc until the revolutions of 1989–1991.
 tags:
 - EASTERNBLOC
 - cold_war
@@ -41,7 +50,7 @@ other_names:
 - id: ar
   name: الكتلة الشرقية
 - id: de
-  name: Eastern Bloc
+  name: Ostblock
 - id: en
   name: Communist Bloc
 - id: en
@@ -50,155 +59,242 @@ other_names:
   name: Bloque del Este
 - id: fr
   name: Bloc de l'Est
+- id: pt
+  name: Bloco do Leste
 - id: ru
   name: Восточный блок
 - id: zh
   name: 东方集团
 includes:
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-  note: Soviet Union (USSR) during Cold War period
+- id: DE
+  name: German Democratic Republic
+  type: historical-country
+  status: former_member
+  joined: '1949'
+  left: '1990'
 - id: PL
   name: Poland
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
 - id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-  note: Part of Czechoslovakia during Cold War, dissolved 1993
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-  note: Part of Czechoslovakia during Cold War, dissolved 1993
+  name: Czechoslovakia
+  type: historical-country
+  status: former_member
+  joined: '1948'
+  left: '1991'
 - id: HU
   name: Hungary
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
 - id: BG
   name: Bulgaria
   type: country
-  status: member
+  status: former_member
+  joined: '1946'
+  left: '1991'
 - id: AL
   name: Albania
   type: country
-  status: member
-  note: Left Warsaw Pact in 1968
-- id: CN
-  name: China
+  status: former_member
+  joined: '1946'
+  left: '1991'
+  note: Left the Warsaw Pact in 1968 but remained a communist state aligned with China
+- id: RU
+  name: Russian Federation
   type: country
-  status: member
-  note: Initially aligned, later split from Soviet Union in 1960s
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Russian SFSR / core of the Soviet Union during the Cold War
 - id: BY
   name: Belarus
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Byelorussian SSR during the Cold War
 - id: UA
   name: Ukraine
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Ukrainian SSR during the Cold War
 - id: MD
   name: Moldova
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1940'
+  left: '1991'
+  note: Moldavian SSR during the Cold War
 - id: EE
   name: Estonia
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1940'
+  left: '1991'
+  note: Estonian SSR during the Cold War
 - id: LV
   name: Latvia
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1940'
+  left: '1991'
+  note: Latvian SSR during the Cold War
 - id: LT
   name: Lithuania
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1940'
+  left: '1991'
+  note: Lithuanian SSR during the Cold War
 - id: GE
   name: Georgia
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Georgian SSR during the Cold War
 - id: AM
   name: Armenia
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Armenian SSR during the Cold War
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1922'
+  left: '1991'
+  note: Azerbaijani SSR during the Cold War
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1936'
+  left: '1991'
+  note: Kazakh SSR during the Cold War
 - id: UZ
   name: Uzbekistan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1924'
+  left: '1991'
+  note: Uzbek SSR during the Cold War
 - id: TM
   name: Turkmenistan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1924'
+  left: '1991'
+  note: Turkmen SSR during the Cold War
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
+  status: former_member
+  joined: '1929'
+  left: '1991'
+  note: Tajik SSR during the Cold War
 - id: KG
   name: Kyrgyzstan
   type: country
-  status: member
-  note: Part of Soviet Union during Cold War
-wikidata_id: Q11868020
+  status: former_member
+  joined: '1936'
+  left: '1991'
+  note: Kirghiz SSR during the Cold War
+- id: MN
+  name: Mongolia
+  type: country
+  status: former_member
+  joined: '1924'
+  left: '1991'
+- id: CN
+  name: China
+  type: country
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: Initially aligned; Sino-Soviet split from the early 1960s
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: former_member
+  joined: '1948'
+  left: '1991'
+- id: VN
+  name: Vietnam
+  type: country
+  status: former_member
+  joined: '1954'
+  left: '1991'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: former_member
+  joined: '1975'
+  left: '1991'
+- id: KH
+  name: Cambodia
+  type: country
+  status: former_member
+  joined: '1979'
+  left: '1991'
+  note: People's Republic of Kampuchea / State of Cambodia period
+- id: CU
+  name: Cuba
+  type: country
+  status: former_member
+  joined: '1961'
+  left: '1991'
+notes: Informal geopolitical label rather than a treaty organization. Core European
+  membership overlapped the Warsaw Pact and Comecon; Asian and Cuban alignment varied
+  in depth. Yugoslavia is sometimes grouped with the Eastern Bloc but broke with Soviet
+  policy after the 1948 Tito–Stalin split and did not join Comecon or the Warsaw Pact.
+  South Yemen (People's Democratic Republic of Yemen, 1967–1990) is often cited as an
+  aligned state but is not listed separately because unified Yemen (YE) postdates the
+  bloc's dissolution.
+wikidata_id: Q170541
+last_verified: '2026-07-30'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q170541
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_Bloc
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_Bloc
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q170541
   license: CC0
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_Bloc
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_Bloc
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/Eastern_Bloc

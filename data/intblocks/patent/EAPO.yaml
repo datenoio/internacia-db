@@ -1,7 +1,13 @@
 id: EAPO
+name: Eurasian Patent Organization
 blocktype:
 - patent
 status: formal
+founded: '1995-08-12'
+geographic_scope: regional
+regions:
+- Asia
+- Europe
 languages:
 - en
 - ru
@@ -10,55 +16,86 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Eurasian_Patent_Organization
   type: wikipedia
-name: Eurasian Patent Organization
-includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
-founded: '1995'
+- url: https://www.wikidata.org/wiki/Q1374303
+  type: wikidata
+acronyms:
+- lang: en
+  value: EAPO
+- lang: ru
+  value: ЕАПО
 headquarters:
   city: Moscow
   country: RU
   coordinates:
     lat: 55.76
     lng: 37.62
-acronyms:
-- lang: en
-  value: EAPO
-- lang: ru
-  value: ЕАПО
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: founding_member
+  joined: '1996-02-27'
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: founding_member
+  joined: '1995-12-25'
+- id: BY
+  name: Belarus
+  type: country
+  status: founding_member
+  joined: '1995-08-12'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: founding_member
+  joined: '1995-11-04'
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: founding_member
+  joined: '1996-01-13'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: founding_member
+  joined: '1995-09-27'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: founding_member
+  joined: '1995-08-12'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+  joined: '1995-08-12'
+- id: MD
+  name: Moldova
+  type: country
+  status: former_member
+  joined: '1996-02-16'
+  left: '2012-04-26'
+founding_members:
+- AM
+- AZ
+- BY
+- KZ
+- KG
+- RU
+- TJ
 membership_count: 8
-description: Regional patent organization providing unified patent system for member states, primarily former Soviet republics,
-  through a single Eurasian patent application.
+legal_status: intergovernmental
+wikidata_id: Q1374303
+description: >-
+  Intergovernmental organization established by the Eurasian Patent Convention (signed 9 September 1994) to administer a
+  unified Eurasian patent system. A single Eurasian application can grant patent protection across all eight contracting
+  states. The Eurasian Patent Office in Moscow serves as the executive body; Russian is the official working language.
+notes: >-
+  Moldova was a contracting state from 1996 until denouncing the convention effective 26 April 2012. Georgia and Ukraine
+  signed the convention in 1994 but never ratified it. Turkmenistan joined by accession rather than as an original
+  signatory. Distinct from the European Patent Organisation (EPO) and from the Eurasian Economic Union (EAEU), though five
+  EAEU members overlap with current EAPO membership.
 tags:
 - EAPO
 - ЕАПО
@@ -83,8 +120,41 @@ other_names:
   name: Евразийская патентная организация
 - id: zh
   name: 欧亚专利组织
-wikidata_id: Q1374303
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/228
+- field: founding_members
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/228
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Patent_Organization
+- field: founded
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/228
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.eapo.org/
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374303
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eapo.org/en/documents-2/basic-normative-legal-acts/eurasian-patent-convention-v-2/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Patent_Organization
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -95,7 +165,8 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.eapo.org/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

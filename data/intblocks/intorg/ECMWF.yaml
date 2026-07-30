@@ -3,23 +3,22 @@ blocktype:
 - intorg
 - meteorology
 status: formal
+founded: '1975'
+active_period:
+  start: '1975-11-01'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
-- url: http://www.ecmwf.int/
+- url: https://www.ecmwf.int/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Centre_for_Medium-Range_Weather_Forecasts
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1274195
   type: wikidata
 name: European Centre for Medium-Range Weather Forecasts
-founded: '1975'
-headquarters:
-  city: Reading
-  country: GB
-  coordinates:
-    lat: 51.454166666667
-    lng: -0.97305555555556
 acronyms:
 - lang: en
   value: EZMW
@@ -35,151 +34,209 @@ acronyms:
   value: ECMWF
 - lang: de
   value: EZMW
+legal_status: intergovernmental
+recognition_status: Intergovernmental organisation established by the Convention of the European Centre for Medium-Range Weather Forecasts, which entered into force on 1 November 1975; governed by the ECMWF Council with 23 Member States and 12 Co-operating States contributing to its budget
+headquarters:
+  city: Reading
+  country: GB
+  coordinates:
+    lat: 51.454166666667
+    lng: -0.97305555555556
+secretariat:
+  location: Reading
+  organization: European Centre for Medium-Range Weather Forecasts
 includes:
 - id: AT
   name: Austria
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2016-01-01'
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2020-12-01'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1976-09-01'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '2011-06-01'
 - id: IE
   name: Ireland
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1977-09-01'
 - id: LU
   name: Luxembourg
   type: country
   status: member
+  joined: '2002-07-01'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '1989-01-01'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1976-01-01'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2015-01-01'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2012-12-01'
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '1976-05-01'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-11-01'
 - id: BG
   name: Bulgaria
   type: country
-  status: associated
+  status: cooperating
+  joined: '2010-07-12'
 - id: CZ
   name: Czech Republic
   type: country
-  status: associated
+  status: cooperating
+  joined: '2001-08-01'
 - id: GE
   name: Georgia
   type: country
-  status: associated
+  status: cooperating
+  joined: '2021-12-01'
 - id: HU
   name: Hungary
   type: country
-  status: associated
+  status: cooperating
+  joined: '1994-07-01'
 - id: IL
   name: Israel
   type: country
-  status: associated
+  status: cooperating
+  joined: '2010-10-28'
 - id: LV
   name: Latvia
   type: country
-  status: associated
+  status: cooperating
+  joined: '2008-04-30'
 - id: LT
   name: Lithuania
   type: country
-  status: associated
+  status: cooperating
+  joined: '2006-11-20'
 - id: ME
   name: Montenegro
   type: country
-  status: associated
+  status: cooperating
+  joined: '2007-11-05'
 - id: MA
   name: Morocco
   type: country
-  status: associated
+  status: cooperating
+  joined: '2006-12-01'
 - id: MK
   name: North Macedonia
   type: country
-  status: associated
+  status: cooperating
+  joined: '2011-02-09'
 - id: RO
   name: Romania
   type: country
-  status: associated
+  status: cooperating
+  joined: '2003-12-22'
 - id: SK
   name: Slovak Republic
   type: country
-  status: associated
+  status: cooperating
+  joined: '2008-01-01'
+founding_members:
+- AT
+- BE
+- DK
+- FI
+- FR
+- DE
+- IE
+- NL
+- ES
+- SE
+- CH
+- GB
 membership_count: 23
 wikidata_id: Q1274195
-description: The European Centre for Medium-Range Weather Forecasts is an international organization that is used to promote
-  regional cooperation in the meteorology sector.
+description: Independent intergovernmental organisation for medium-range numerical weather prediction, established by convention in 1975 and headquartered in Reading, United Kingdom. ECMWF operates one of the world's largest meteorological supercomputing facilities and produces global and regional forecast products used by national meteorological services. Its 23 Member States are represented in the ECMWF Council; 12 Co-operating States participate under separate co-operation agreements. The Centre collaborates with WMO, EUMETSAT, and national research institutions on modelling, data assimilation, and climate reanalysis.
 tags:
 - ECMWF
 - EZMW
@@ -187,9 +244,14 @@ tags:
 - european
 - intorg
 - medium
+- meteorology
+- weather
+- forecasting
 topics:
-- key: economy
-  name: Economy
+- key: meteorology
+  name: Meteorology
+- key: research
+  name: Research
 other_names:
 - id: ar
   name: المركز الأوروبي للتنبؤات الجوية المتوسطة المدى
@@ -205,7 +267,26 @@ other_names:
   name: Европейский центр среднесрочных прогнозов погоды
 - id: zh
   name: 歐洲中期天氣預報中心
+notes: Yugoslavia was an original ratifier but ceased to be a party on 29 June 2001. ECMWF also maintains data centres in Bologna (Italy) and Bonn (Germany) under separate hosting agreements.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ECMWF official website; official documents
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are/member-states
+- field: description
+  source: ECMWF official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1274195
+  license: CC0
+- field: headquarters
+  source: ECMWF official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -216,7 +297,19 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
+- field: recognition_status
+  source: ECMWF official documents
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are/official-documents
+- field: founded
+  source: ECMWF official documents
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are/official-documents
+- field: legal_status
+  source: ECMWF official documents
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are/official-documents
+- field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.ecmwf.int/
+  retrieved_at: '2026-07-29'
+  url: https://www.ecmwf.int/en/about/who-we-are

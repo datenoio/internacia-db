@@ -1,43 +1,65 @@
 id: IAIS
+name: International Association of Insurance Supervisors
 blocktype:
 - intorg
 status: formal
+founded: '1994'
+active_period:
+  start: '1994'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: http://www.iaisweb.org
+- url: https://www.iais.org/
+  type: website
+- url: https://www.iais.org/about-the-iais/iais-members/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Association_of_Insurance_Supervisors
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1345612
   type: wikidata
-name: International Association of Insurance Supervisors
-founded: '1994'
+acronyms:
+- lang: en
+  value: IAIS
+- lang: zh
+  value: 国际保险监督官员协会
+legal_status: association
+recognition_status: Voluntary membership organisation of insurance supervisors and regulators formed under Article 60 of the Swiss Civil Code; international standard-setting body for insurance supervision; member of the Financial Stability Board
 headquarters:
   city: Basel
   country: CH
   coordinates:
     lat: 47.560555555556
     lng: 7.5905555555556
+membership_count: 144
+wikidata_id: Q1345612
+description: Voluntary membership organisation of insurance supervisors and regulators from more than 200 jurisdictions, accounting for about 97% of global insurance premiums. Established in 1994 and headquartered in Basel, Switzerland, the IAIS develops and promotes internationally consistent insurance supervision standards — including the Insurance Core Principles and the Insurance Capital Standard — and provides a forum for supervisory cooperation. As of July 2026 its membership comprises 218 supervisory bodies mapped to 136 jurisdictions plus eight international organisations; the United States is represented through individual state insurance departments and NAIC.
+tags:
+- IAIS
+- association
+- insurance
+- insurance_supervision
+- international
+- intorg
+- regulation
+topics:
+- key: insurance_supervision
+  name: Insurance Supervision
+- key: finance
+  name: Finance
 includes:
 - id: AD
   name: Andorra
   type: country
   status: member
+- id: ADB
+  name: Asian Development Bank
+  type: organization
+  status: member
 - id: AE
   name: United Arab Emirates
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: AI
-  name: Anguilla
   type: country
   status: member
 - id: AL
@@ -48,24 +70,12 @@ includes:
   name: Armenia
   type: country
   status: member
-- id: AN
-  name: Netherlands Antilles
-  type: country
-  status: member
 - id: AO
   name: Angola
   type: country
   status: member
-- id: AQ
-  name: Antarctica
-  type: country
-  status: member
 - id: AR
   name: Argentina
-  type: country
-  status: member
-- id: AS
-  name: American Samoa
   type: country
   status: member
 - id: AT
@@ -80,10 +90,6 @@ includes:
   name: Aruba
   type: country
   status: member
-- id: AX
-  name: Åland Islands
-  type: country
-  status: member
 - id: AZ
   name: Azerbaijan
   type: country
@@ -96,16 +102,8 @@ includes:
   name: Barbados
   type: country
   status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
 - id: BE
   name: Belgium
-  type: country
-  status: member
-- id: BF
-  name: Burkina Faso
   type: country
   status: member
 - id: BG
@@ -120,13 +118,9 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BL
-  name: Saint Barthélemy
-  type: country
+- id: BIS
+  name: Bank for International Settlements
+  type: organization
   status: member
 - id: BM
   name: Bermuda
@@ -134,14 +128,6 @@ includes:
   status: member
 - id: BN
   name: Brunei Darussalam
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BQ
-  name: Caribbean Netherlands
   type: country
   status: member
 - id: BR
@@ -152,20 +138,8 @@ includes:
   name: Bahamas, The
   type: country
   status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BV
-  name: Bouvet Island
-  type: country
-  status: member
 - id: BW
   name: Botswana
-  type: country
-  status: member
-- id: BY
-  name: Belarus
   type: country
   status: member
 - id: BZ
@@ -176,40 +150,20 @@ includes:
   name: Canada
   type: country
   status: member
-- id: CC
-  name: Cocos (Keeling) Islands
-  type: country
-  status: member
 - id: CD
   name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: CG
-  name: Congo, Rep.
   type: country
   status: member
 - id: CH
   name: Switzerland
   type: country
   status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
-  type: country
+- id: CIMA
+  name: Conférence Interafricaine des Marchés d'Assurances
+  type: organization
   status: member
 - id: CL
   name: Chile
-  type: country
-  status: member
-- id: CM
-  name: Cameroon
   type: country
   status: member
 - id: CN
@@ -224,24 +178,12 @@ includes:
   name: Costa Rica
   type: country
   status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
 - id: CV
   name: Cape Verde
   type: country
   status: member
 - id: CW
   name: Curaçao
-  type: country
-  status: member
-- id: CX
-  name: Christmas Island
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
   type: country
   status: member
 - id: CZ
@@ -252,28 +194,12 @@ includes:
   name: Germany
   type: country
   status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
 - id: DK
   name: Denmark
   type: country
   status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
 - id: DO
   name: Dominican Republic
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
   type: country
   status: member
 - id: EE
@@ -284,64 +210,32 @@ includes:
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: EH
-  name: Western Sahara
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
+- id: EIOPA
+  name: European Insurance and Occupational Pensions Authority
+  type: organization
   status: member
 - id: ES
   name: Spain
   type: country
   status: member
-- id: ET
-  name: Ethiopia
-  type: country
+- id: EU
+  name: European Commission
+  type: organization
   status: member
 - id: FI
   name: Finland
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: FK
-  name: Falkland Islands
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
-- id: FO
-  name: Faeroe Islands
   type: country
   status: member
 - id: FR
   name: France
   type: country
   status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
 - id: GE
   name: Georgia
-  type: country
-  status: member
-- id: GF
-  name: French Guiana
   type: country
   status: member
 - id: GG
@@ -356,68 +250,20 @@ includes:
   name: Gibraltar
   type: country
   status: member
-- id: GL
-  name: Greenland
-  type: country
-  status: member
-- id: GM
-  name: Gambia, The
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GP
-  name: Guadeloupe
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
 - id: GR
   name: Greece
-  type: country
-  status: member
-- id: GS
-  name: South Georgia
   type: country
   status: member
 - id: GT
   name: Guatemala
   type: country
   status: member
-- id: GU
-  name: Guam
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
 - id: HK
   name: Hong Kong SAR, China
   type: country
   status: member
-- id: HM
-  name: Heard Island and McDonald Islands
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
 - id: HR
   name: Croatia
-  type: country
-  status: member
-- id: HT
-  name: Haiti
   type: country
   status: member
 - id: HU
@@ -440,24 +286,12 @@ includes:
   name: Isle of Man
   type: country
   status: member
+- id: IMF
+  name: International Monetary Fund
+  type: organization
+  status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: IO
-  name: British Indian Ocean Territory
-  type: country
-  status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
-  type: country
-  status: member
-- id: IS
-  name: Iceland
   type: country
   status: member
 - id: IT
@@ -466,10 +300,6 @@ includes:
   status: member
 - id: JE
   name: Jersey
-  type: country
-  status: member
-- id: JG
-  name: Channel Islands
   type: country
   status: member
 - id: JM
@@ -488,28 +318,8 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
 - id: KH
   name: Cambodia
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
   type: country
   status: member
 - id: KR
@@ -532,28 +342,12 @@ includes:
   name: Kazakhstan
   type: country
   status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
 - id: LI
   name: Liechtenstein
   type: country
   status: member
 - id: LK
   name: Sri Lanka
-  type: country
-  status: member
-- id: LR
-  name: Liberia
   type: country
   status: member
 - id: LS
@@ -572,16 +366,8 @@ includes:
   name: Latvia
   type: country
   status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
 - id: MA
   name: Morocco
-  type: country
-  status: member
-- id: MC
-  name: Monaco
   type: country
   status: member
 - id: MD
@@ -592,28 +378,8 @@ includes:
   name: Montenegro
   type: country
   status: member
-- id: MF
-  name: Saint Martin
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
 - id: MK
   name: Macedonia, FYR
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
   type: country
   status: member
 - id: MN
@@ -622,22 +388,6 @@ includes:
   status: member
 - id: MO
   name: Macao SAR, China
-  type: country
-  status: member
-- id: MP
-  name: Northern Mariana Islands
-  type: country
-  status: member
-- id: MQ
-  name: Martinique
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MS
-  name: Montserrat
   type: country
   status: member
 - id: MT
@@ -676,20 +426,8 @@ includes:
   name: New Caledonia
   type: country
   status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
-- id: NF
-  name: Norfolk Island
-  type: country
-  status: member
 - id: NG
   name: Nigeria
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
   type: country
   status: member
 - id: NL
@@ -704,17 +442,13 @@ includes:
   name: Nepal
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
+  status: member
+- id: OECD
+  name: Organisation for Economic Co-operation and Development
+  type: organization
   status: member
 - id: OM
   name: Oman
@@ -748,28 +482,12 @@ includes:
   name: Poland
   type: country
   status: member
-- id: PM
-  name: Saint Pierre and Miquelon
-  type: country
-  status: member
-- id: PN
-  name: Pitcairn Islands
-  type: country
-  status: member
-- id: PR
-  name: Puerto Rico
-  type: country
-  status: member
 - id: PS
   name: West Bank and Gaza
   type: country
   status: member
 - id: PT
   name: Portugal
-  type: country
-  status: member
-- id: PW
-  name: Palau
   type: country
   status: member
 - id: PY
@@ -780,20 +498,12 @@ includes:
   name: Qatar
   type: country
   status: member
-- id: RE
-  name: Réunion
-  type: country
-  status: member
 - id: RO
   name: Romania
   type: country
   status: member
 - id: RS
   name: Serbia
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
   type: country
   status: member
 - id: RW
@@ -804,68 +514,24 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
 - id: SC
   name: Seychelles
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: SE
-  name: Sweden
   type: country
   status: member
 - id: SG
   name: Singapore
   type: country
   status: member
-- id: SH
-  name: Saint Helena, Ascension and Tristan da Cunha
-  type: country
-  status: member
 - id: SI
   name: Slovenia
-  type: country
-  status: member
-- id: SJ
-  name: Svalbard and Jan Mayen
   type: country
   status: member
 - id: SK
   name: Slovak Republic
   type: country
   status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
 - id: SR
   name: Suriname
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
   type: country
   status: member
 - id: SV
@@ -876,24 +542,12 @@ includes:
   name: Sint Maarten
   type: country
   status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
 - id: SZ
   name: Swaziland
   type: country
   status: member
 - id: TC
   name: Turks and Caicos Islands
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: TF
-  name: French Southern and Antarctic Lands
   type: country
   status: member
 - id: TG
@@ -904,28 +558,8 @@ includes:
   name: Thailand
   type: country
   status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TK
-  name: Tokelau
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
 - id: TN
   name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -936,16 +570,8 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
 - id: TW
-  name: Republic of China (Taiwan)
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
+  name: Taiwan
   type: country
   status: member
 - id: UA
@@ -954,10 +580,6 @@ includes:
   status: member
 - id: UG
   name: Uganda
-  type: country
-  status: member
-- id: UM
-  name: United States Minor Outlying Islands
   type: country
   status: member
 - id: US
@@ -972,24 +594,8 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: VA
-  name: Vatican City State
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
 - id: VG
   name: British Virgin Islands
-  type: country
-  status: member
-- id: VI
-  name: Virgin Islands (U.S.)
   type: country
   status: member
 - id: VN
@@ -1000,20 +606,12 @@ includes:
   name: Vanuatu
   type: country
   status: member
-- id: WF
-  name: Wallis and Futuna
-  type: country
+- id: WB
+  name: World Bank
+  type: organization
   status: member
 - id: WS
   name: Samoa
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
-- id: YT
-  name: Mayotte
   type: country
   status: member
 - id: ZA
@@ -1028,21 +626,6 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 252
-wikidata_id: Q1345612
-description: The International Association of Insurance Supervisors is an international organization that is used to promote
-  regional cooperation in the insurance sector.
-tags:
-- IAIS
-- association
-- insurance
-- international
-- intorg
-- iso
-- insurance_supervision
-topics:
-- key: insurance_supervision
-  name: Insurance Supervision
 other_names:
 - id: ar
   name: الرابطة الدولية لمشرفي التأمين
@@ -1054,7 +637,26 @@ other_names:
   name: Международная ассоциация страховых надзоров
 - id: zh
   name: 国际保险监理官协会
+notes: IAIS membership is held by individual insurance supervisory authorities rather than governments; multiple supervisors from the same jurisdiction are consolidated to a single country or organisation entry. US state departments and NAIC are represented collectively as US.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: IAIS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.iais.org/wp-json/members/list
+- field: description
+  source: IAIS official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iais.org/about-the-iais/iais-members/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1345612
+  license: CC0
+- field: headquarters
+  source: IAIS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.iais.org/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -1065,12 +667,12 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iaisweb.org
-acronyms:
-- lang: en
-  value: IAIS
-- lang: zh
-  value: 国际保险监督官员协会
+- field: legal_status
+  source: IAIS official website; annual report
+  retrieved_at: '2026-07-29'
+  url: https://www.iais.org/about-the-iais/
+- field: founded
+  source: Wikidata; IAIS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1345612
+  license: CC0

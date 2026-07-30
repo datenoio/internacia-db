@@ -10,8 +10,10 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/International_Nickel_Study_Group
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q111552234
+  type: wikidata
 name: International Nickel Study Group
-founded: '1990'
+founded: '1990-05-23'
 headquarters:
   city: Lisbon
   country: PT
@@ -21,9 +23,14 @@ regions:
 acronyms:
 - lang: en
   value: INSG
-membership_count: 20
-description: Intergovernmental organization that promotes transparency in the global nickel market by facilitating discussions
-  and data exchange among member countries involved in nickel production, consumption, and trade.
+membership_count: 15
+wikidata_id: Q111552234
+legal_status: intergovernmental organization
+description: Intergovernmental organization of nickel producing and consuming states that
+  serves as the international commodity board for nickel. Promotes market transparency
+  through exchange of information on production, usage, stocks, trade, and prices, and
+  provides a forum for international cooperation on nickel-related issues. Has no provision
+  for market stabilization or market intervention.
 tags:
 - INSG
 - nickel
@@ -44,62 +51,89 @@ includes:
   name: Brazil
   type: country
   status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
 - id: CU
   name: Cuba
-  type: country
-  status: member
-- id: FR
-  name: France
   type: country
   status: member
 - id: DE
   name: Germany
   type: country
   status: member
-- id: IN
-  name: India
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: FI
+  name: Finland
   type: country
   status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
+- id: FR
+  name: France
   type: country
   status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
-- id: US
-  name: United States
+- id: IN
+  name: India
   type: country
   status: member
-notes: Membership includes both producing and consuming countries. The organization facilitates international cooperation
-  on nickel-related issues. Full membership list may include additional countries.
+  joined: '2025-06-01'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
+  type: country
+  status: former_member
+  left: '2006'
+notes: Established 23 May 1990 under the Terms of Reference adopted at the 1986 United
+  Nations Conference on Nickel. Secretariat is co-located in Lisbon with the International
+  Copper Study Group (ICSG) and the International Lead and Zinc Study Group (ILZSG).
+  Official membership is 14 member governments plus the European Union (15). India
+  joined on 1 June 2025. Indonesia withdrew in 2006. Canada, China, and the United
+  States participate as invited official observers but are not members.
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.insg.org/
+- field: includes
+  source: INSG official brochure and member countries page
+  retrieved_at: '2026-07-29'
+  url: https://insg.org/index.php/organization/member-countries/
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280041c91
 - field: headquarters
+  source: INSG official website
+  retrieved_at: '2026-07-29'
+  url: https://www.insg.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q111552234
+- field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.insg.org/

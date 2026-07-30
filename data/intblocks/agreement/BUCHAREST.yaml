@@ -4,25 +4,82 @@ blocktype:
 - ocean
 - environment
 status: formal
-founded: '1992'
-languages:
-- en
-links:
-- url: https://www.unep.org/bucharest-convention
-  type: website
-name: Bucharest Convention
-acronyms:
-- lang: en
-  value: BSC
+founded: '1992-04-21'
+active_period:
+  start: '1994-01-15'
 geographic_scope: regional
 regions:
 - Black Sea
 - Europe
 - Asia
-description: Regional convention for the protection of the Black Sea against pollution, establishing the Commission on the
-  Protection of the Black Sea Against Pollution. The convention aims to prevent, reduce, and control pollution and to ensure
-  sustainable use of the Black Sea marine environment.
+languages:
+- bg
+- en
+- ro
+- ru
+- tr
+- uk
+links:
+- url: https://www.unep.org/bucharest-convention
+  type: website
+- url: https://www.blackseacommission.org/
+  type: website
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=080000028058569c
+  type: website
+name: Bucharest Convention
+acronyms:
+- lang: en
+  value: BSC
 legal_status: intergovernmental
+recognition_status: Regional sea convention under the UNEP Regional Seas Programme and the only treaty-based instrument
+  covering all six Black Sea riparian states
+partof: UNEP
+headquarters:
+  city: Istanbul
+  country: TR
+membership_count: 6
+description: Regional convention for the protection of the Black Sea against pollution, signed in Bucharest on 21 April 1992
+  by all six coastal states. Establishes the Commission on the Protection of the Black Sea Against Pollution (Black Sea Commission)
+  and provides the legal framework to prevent, reduce, and control pollution and to ensure sustainable use of the Black Sea
+  marine environment. Entered into force on 15 January 1994.
+includes:
+- id: BG
+  name: Bulgaria
+  type: country
+  status: founding_member
+  joined: '1994-01-15'
+- id: GE
+  name: Georgia
+  type: country
+  status: founding_member
+  joined: '1994-01-15'
+- id: RO
+  name: Romania
+  type: country
+  status: founding_member
+  joined: '1994-01-15'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: founding_member
+  joined: '1994-01-15'
+- id: TR
+  name: Turkey
+  type: country
+  status: founding_member
+  joined: '1994-03-29'
+- id: UA
+  name: Ukraine
+  type: country
+  status: founding_member
+  joined: '1994-04-14'
+founding_members:
+- BG
+- GE
+- RO
+- RU
+- TR
+- UA
 tags:
 - Bucharest
 - Black Sea
@@ -30,6 +87,9 @@ tags:
 - environment
 - agreement
 - marine
+- UNEP
+- regional_cooperation
+- convention
 topics:
 - key: ocean
   name: Ocean
@@ -37,45 +97,70 @@ topics:
   name: Environment
 - key: marine
   name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Bucharest Convention
 - id: en
   name: Convention on the Protection of the Black Sea Against Pollution
+- id: bg
+  name: Конвенция за опазване на Черно море от замърсяване
+- id: ro
+  name: Convenția privind protecția Mării Negre împotriva poluării
 - id: ru
   name: Конвенция о защите Чёрного моря от загрязнения
-includes:
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: TR
-  name: Turkey
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
-membership_count: 6
+- id: tr
+  name: Karadeniz'in Kirletilmesinin Önlenmesine İlişkin Sözleşme
+- id: uk
+  name: Конвенція про захист Чорного моря від забруднення
+notes: All six Black Sea coastal states signed the convention in Bucharest on 21 April 1992. Three protocols on land-based
+  sources, dumping, and emergency oil-spill response were adopted alongside the convention and entered into force with it;
+  a biodiversity and landscape conservation protocol was adopted in Sofia in 2002. The Black Sea Commission Permanent Secretariat
+  has been hosted in Istanbul, Türkiye, since December 2000.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.blackseacommission.org/Official%20Documents/The%20Convention/Overview/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.blackseacommission.org/Official%20Documents/The%20Convention/Overview/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfa.gov.tr/convention-on-the-protection-of-the-black-sea-against-pollution-_bucharest-convention_.en.mfa
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.blackseacommission.org/Official%20Documents/The%20Convention/Overview/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfa.gov.tr/convention-on-the-protection-of-the-black-sea-against-pollution-_bucharest-convention_.en.mfa
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/bucharest-convention
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/bucharest-convention
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/bucharest-convention
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://www.unep.org/bucharest-convention
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.unep.org/bucharest-convention
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.blackseacommission.org/Official%20Documents/The%20Convention/Overview/

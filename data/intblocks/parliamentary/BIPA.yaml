@@ -1,60 +1,147 @@
 id: BIPA
+name: British–Irish Parliamentary Assembly
 blocktype:
 - parliamentary
 status: formal
+founded: '1990'
+active_period:
+  start: '1990'
+geographic_scope: regional
+regions:
+- British Isles
+- Europe
 languages:
+- cy
 - en
+- ga
+- gd
 links:
-- url: http://www.britishirish.org/
+- url: https://www.britishirish.org/
   type: website
 - url: https://en.wikipedia.org/wiki/British%E2%80%93Irish_Parliamentary_Assembly
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4971477
   type: wikidata
-name: British Irish Parliamentary Assembly
-founded: '1990'
+acronyms:
+- lang: en
+  value: BIPA
+headquarters:
+  city: London
+  country: GB
+  coordinates:
+    lat: 51.4994
+    lng: -0.1245
 includes:
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1990'
 - id: IE
   name: Ireland
   type: country
-  status: member
-- id: GG
-  name: Guernsey
-  type: country
-  status: member
-- id: JE
-  name: Jersey
-  type: country
-  status: member
+  status: founding_member
+  joined: '1990'
 - id: IM
   name: Isle of Man
   type: country
   status: member
+  joined: '2001'
+- id: GG
+  name: Guernsey
+  type: country
+  status: member
+  joined: '2001'
+- id: JE
+  name: Jersey
+  type: country
+  status: member
+  joined: '2001'
+founding_members:
+- GB
+- IE
 membership_count: 5
-wikidata_id: Q4971477
-description: British Irish Parliamentary Assembly is an international parliamentary
-  body with 5 members.
+description: Deliberative inter-parliamentary body established in February 1990 as
+  the British–Irish Inter-Parliamentary Body (BIIPB) by the Parliament of the United
+  Kingdom and the Oireachtas to foster mutual understanding between elected representatives
+  in Britain and Ireland. Enlarged in 2001 to include delegations from the Scottish
+  Parliament, Senedd Cymru, the Northern Ireland Assembly, and the legislatures of
+  the Isle of Man, Guernsey, and Jersey. Holds two plenary sessions each year, alternating
+  between the UK and Ireland, and maintains four subject committees. Evolved from
+  Strand 3 of the 1998 Good Friday Agreement, which encouraged elected institutions
+  to develop inter-parliamentary links building on the BIIPB.
+notes: BIPA comprises eight delegating legislatures. The Scottish Parliament, Senedd
+  Cymru, and Northern Ireland Assembly appoint separate delegations (five full members
+  and four associate members each since 2001) but are not modeled as distinct country
+  includes because they are devolved legislatures within the United Kingdom. Each sovereign
+  parliament and devolved or crown-dependency legislature also appoints associate members
+  who may attend plenary sessions and committees in place of full members.
 tags:
 - BIPA
+- BIIPB
 - british
+- interparliamentary
 - irish
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q4971477
 other_names:
-- id: zh
-  name: 英國－愛爾蘭議會大會
 - id: en
   name: British–Irish Parliamentary Assembly
+- id: en
+  name: British-Irish Parliamentary Assembly
+- id: en
+  name: British–Irish Inter-Parliamentary Body
+- id: ga
+  name: Tionól Pharlaiminteach na Breataine agus na hÉireann
+- id: zh
+  name: 英國－愛爾蘭議會大會
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4971477
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4971477
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.britishirish.org/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.britishirish.org/our-members/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://senedd.wales/commission/british-irish-parliamentary-assembly-bipa/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.britishirish.org/our-members/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British%E2%80%93Irish_Parliamentary_Assembly
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/British%E2%80%93Irish_Parliamentary_Assembly
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.britishirish.org/our-members/

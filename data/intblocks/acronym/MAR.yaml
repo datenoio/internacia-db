@@ -2,6 +2,13 @@ id: MAR
 blocktype:
 - acronym
 status: informal
+geographic_scope: sub-regional
+regions:
+- Central America
+- Americas
+languages:
+- es
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Mesoamerican_region
   type: wikipedia
@@ -17,12 +24,16 @@ includes:
   name: Belize
   type: country
   status: member
-- id: GT
-  name: Guatemala
+- id: CR
+  name: Costa Rica
   type: country
   status: member
 - id: SV
   name: El Salvador
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
   type: country
   status: member
 - id: HN
@@ -33,31 +44,94 @@ includes:
   name: Nicaragua
   type: country
   status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
 - id: PA
   name: Panama
   type: country
   status: member
 membership_count: 8
 wikidata_id: Q5476121
-description: A trans-national economic region in the Americas that is recognized by the OECD and other economic and developmental
-  organizations, comprising the united economies of the seven countries in Central America – Belize, Costa Rica, El Salvador,
-  Guatemala, Honduras, Nicaragua, and Panama; plus nine south–eastern states of Mexico – Campeche, Chiapas, Guerrero, Oaxaca,
-  Puebla, Quintana Roo, Tabasco, Veracruz, and Yucatán.
+description: The Mesoamerican region (MAR) is a trans-national economic territory in the Americas recognized by the OECD and
+  other development organizations. It comprises the seven Central American countries plus Mexico; OECD coverage of Mexico is
+  limited to nine south-eastern states (Campeche, Chiapas, Guerrero, Oaxaca, Puebla, Quintana Roo, Tabasco, Veracruz, and
+  Yucatán). The OECD designation gained prominence after the 2001 Puebla–Panama Plan (PPP) for regional integration across
+  south-eastern Mexico and Central America.
 tags:
 - MAR
 - acronym
+- belize
+- central-america
+- costa-rica
+- economy
+- el-salvador
+- guatemala
+- honduras
 - mesoamerican
+- mexico
+- nicaragua
+- oecd
+- panama
+- regional_cooperation
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
+acronyms:
+- lang: en
+  value: MAR
+- lang: es
+  value: Región mesoamericana
 other_names:
-- id: zh
-  name: 美索美洲地区
 - id: en
   name: Mesoamerican region
 - id: es
   name: Región mesoamericana
+- id: eo
+  name: Mezamerika regiono
+- id: zh
+  name: 美索美洲地区
+notes: OECD economic territory, not a formal organization. Mexico is listed at country level although only nine south-eastern
+  states fall within the MAR; the broader Puebla–Panama Plan also included Colombia, which is outside the OECD Mesoamerican
+  region. The MAR loosely correlates with the pre-Columbian Mesoamerica culture area but is a modern economic label distinct
+  from geographic groupings such as CENTRALAMER and MIDAMERICA.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mesoamerican_region
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5476121
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5476121
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0

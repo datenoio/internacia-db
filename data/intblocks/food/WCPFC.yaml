@@ -1,154 +1,284 @@
 id: WCPFC
+name: Western and Central Pacific Fisheries Commission
 blocktype:
 - food
+- ocean
 status: formal
 partof: FAO
+founded: '2004-06-19'
+active_period:
+  start: '2004-06-19'
+geographic_scope: regional
+regions:
+- Asia-Pacific
+- Pacific
 languages:
 - en
 links:
-- url: http://wcpfc.int/
+- url: https://www.wcpfc.int/
+  type: website
+- url: https://www.wcpfc.int/about/who-we-are
+  type: website
+- url: https://www.wcpfc.int/about/convention-and-map
   type: website
 - url: https://en.wikipedia.org/wiki/Western_and_Central_Pacific_Fisheries_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2565027
   type: wikidata
-name: Western and Central Pacific Fisheries Commission
+acronyms:
+- lang: en
+  value: WCPFC
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the Convention on the Conservation and Management of Highly Migratory Fish Stocks in the Western and Central Pacific Ocean (WCPF Convention), opened for signature at Honolulu on 5 September 2000 and entered into force on 19 June 2004; New Zealand is depositary; secretariat headquartered in Kolonia, Pohnpei, Federated States of Micronesia
+headquarters:
+  city: Kolonia
+  country: FM
+  note: Pohnpei, Federated States of Micronesia
+  coordinates:
+    lat: 6.9666024
+    lng: 158.2128149
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '2005-12-01'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2004-12-02'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: EU
   name: European Union
   type: organization
   status: member
+  joined: '2005-01-19'
 - id: FM
-  name: Federated States of Micronesia
+  name: Micronesia, Fed. Sts.
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: FJ
   name: Fiji
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '2005-06-11'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2013-11-29'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2005-08-07'
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2004-11-25'
 - id: MH
-  name: Republic of the Marshall Islands
+  name: Marshall Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: NR
   name: Nauru
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: NU
   name: Niue
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: PW
   name: Palau
   type: country
   status: member
+  joined: '2005-12-02'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: PH
   name: Philippines
   type: country
   status: member
+  joined: '2005-07-17'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: SB
   name: Solomon Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: TW
-  name: Taiwan, Province of China
+  name: Taiwan
   type: country
   status: member
+  joined: '2004-11-02'
 - id: TO
   name: Tonga
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: TV
   name: Tuvalu
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-06-19'
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
+  joined: '2007-07-27'
 - id: VU
   name: Vanuatu
   type: country
   status: member
-founded: '2005'
-headquarters:
-  city: Kolonia
-  country: FM
-  coordinates:
-    lat: 6.9638888888889
-    lng: 158.20805555556
-acronyms:
-- lang: en
-  value: WCPFC
+  joined: '2005-11-05'
+- id: AS
+  name: American Samoa
+  type: country
+  status: participant
+  joined: '2007-06-27'
+- id: PF
+  name: French Polynesia
+  type: country
+  status: participant
+  joined: '2005-05-12'
+- id: GU
+  name: Guam
+  type: country
+  status: participant
+  joined: '2007-06-27'
+- id: NC
+  name: New Caledonia
+  type: country
+  status: participant
+  joined: '2005-05-12'
+- id: MP
+  name: Northern Mariana Islands
+  type: country
+  status: participant
+  joined: '2007-06-27'
+- id: TK
+  name: Tokelau
+  type: country
+  status: participant
+  joined: '2003-12-19'
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: participant
+  joined: '2005-05-12'
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: cooperating
+- id: CW
+  name: Curaçao
+  type: country
+  status: cooperating
+- id: EC
+  name: Ecuador
+  type: country
+  status: cooperating
+- id: SV
+  name: El Salvador
+  type: country
+  status: cooperating
+- id: LR
+  name: Liberia
+  type: country
+  status: cooperating
+- id: PA
+  name: Panama
+  type: country
+  status: cooperating
+- id: TH
+  name: Thailand
+  type: country
+  status: cooperating
+- id: VN
+  name: Vietnam
+  type: country
+  status: cooperating
+founding_members:
+- AU
+- CK
+- FM
+- FJ
+- KI
+- MH
+- NR
+- NZ
+- NU
+- PG
+- WS
+- SB
+- TO
+- TV
 membership_count: 26
-wikidata_id: Q2565027
-description: Commission established by the Convention for the Conservation and Management of Highly Migratory Fish Stocks
-  in the Western and Central Pacific Ocean (WCPF Convention).
+description: Regional fisheries management organisation for highly migratory fish stocks (especially tunas and billfish) in the western and central Pacific Ocean, established when the WCPF Convention entered into force on 19 June 2004. The Commission comprises 26 Members (25 States plus Chinese Taipei as a fishing entity), seven Participating Territories, and annually renewed Cooperating Non-Members; it adopts binding conservation and management measures, runs a vessel monitoring system and regional observer programme, and draws scientific advice from the Pacific Community and the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean.
 tags:
 - WCPFC
 - agriculture
-- central
+- commission
+- conservation
 - environment
 - farming
+- fisheries
 - food
+- intergovernmental
 - nature
+- ocean
 - pacific
+- rfmo
+- tuna
 - western
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: de
   name: Western and Central Pacific Fisheries Commission
@@ -156,22 +286,69 @@ other_names:
   name: Western and Central Pacific Fisheries Commission
 - id: es
   name: Comisión de Pesca del Pacífico Occidental y Central
+- id: fr
+  name: Commission des pêches du Pacifique occidental et central
 - id: ru
   name: Комиссия по рыболовству в западной и центральной части Тихого океана
 - id: zh
   name: 中西部太平洋渔业委员会
+wikidata_id: Q2565027
+notes: The Convention was opened for signature at Honolulu on 5 September 2000; New Zealand is depositary. Chinese Taipei participates as a Member fishing entity under the Arrangement for the Participation of Fishing Entities (bound from 2 November 2004). Participating Territories (American Samoa, French Polynesia, Guam, New Caledonia, Northern Mariana Islands, Tokelau, Wallis and Futuna) lack full voting rights. Cooperating Non-Member status is granted annually; the 2026 official roster lists Bahamas, Curaçao, Ecuador, El Salvador, Liberia, Panama, Thailand, and Vietnam. State observers include Brunei Darussalam, Mexico, Nicaragua, and the United Kingdom. The Commission’s first regular session was held in December 2004; the permanent secretariat in Pohnpei became operational in 2005.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: WCPFC official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/who-we-are
 - field: description
+  source: WCPFC; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/who-we-are
+- field: founded
+  source: WCPFC; New Zealand MFAT (depositary)
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/convention-and-map
+- field: active_period
+  source: WCPFC
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/convention-and-map
+- field: legal_status
+  source: WCPFC
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/who-we-are
+- field: recognition_status
+  source: WCPFC
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/convention-and-map
+- field: geographic_scope
+  source: WCPFC
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/convention-and-map
+- field: headquarters
+  source: WCPFC; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/who-we-are
+  license: CC0
+- field: founding_members
+  source: WCPFC Status of the Convention (depositary)
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/convention-and-map
+- field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2565027
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2565027
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://wcpfc.int/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2565027
+  license: CC0
+- field: notes
+  source: WCPFC official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wcpfc.int/about/who-we-are

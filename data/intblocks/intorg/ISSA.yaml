@@ -1,7 +1,14 @@
 id: ISSA
+name: International Social Security Association
 blocktype:
 - intorg
 status: formal
+founded: '1927-10-04'
+active_period:
+  start: '1927-10-04'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - es
@@ -10,45 +17,46 @@ languages:
 - ar
 - zh
 links:
-- url: http://www.issa.int
+- url: https://www.issa.int/
+  type: website
+- url: https://www.issa.int/about/members
   type: website
 - url: https://en.wikipedia.org/wiki/International_Social_Security_Association
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q689804
   type: wikidata
-name: International Social Security Association
-founded: '1927'
 acronyms:
-- lang: en
-  value: AISS
 - lang: en
   value: ISSA
 - lang: en
-  value: C.I.M.A.S.
+  value: AISS
 - lang: en
   value: A.I.S.S.
+- lang: en
+  value: C.I.M.A.S.
+- lang: fr
+  value: AISS
+- lang: de
+  value: IVSS
+- lang: es
+  value: AISS
+- lang: pt
+  value: AISS
+legal_status: association
+recognition_status: International association of social security institutions founded in 1927 under the auspices of the International Labour Organization; holds general consultative status with the United Nations Economic and Social Council (ECOSOC)
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.229316
+    lng: 6.134157
+  note: General Secretariat hosted at the International Labour Office
+secretariat:
+  location: Geneva
+  organization: ISSA General Secretariat
+membership_count: 165
 wikidata_id: Q689804
-description: Association of national welfare agencies.
-tags:
-- A.I.S.S.
-- AISS
-- C.I.M.A.S.
-- ISSA
-- defense
-- international
-- intorg
-- security
-- social
-topics:
-- key: security
-  name: Security
-other_names:
-- id: ar
-  name: الرابطة الدولية للضمان الاجتماعي
-- id: en
-  name: International Social Security Association
-- id: es
-  name: Asociación Internacional de Seguridad Social
+description: International association bringing together national social security administrations, government departments, and related institutions to promote excellence in social security administration worldwide. Founded on 4 October 1927 in Brussels under ILO auspices, the ISSA supports member organizations through professional guidelines, capacity building, research, regional forums, and the World Social Security Forum. As of 2025 the Association comprises more than 340 member organizations across 165 countries and territories.
 includes:
 - id: AD
   name: Andorra
@@ -58,12 +66,12 @@ includes:
   name: United Arab Emirates
   type: country
   status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: AG
   name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AI
+  name: Anguilla
   type: country
   status: member
 - id: AL
@@ -90,12 +98,12 @@ includes:
   name: Australia
   type: country
   status: member
-- id: AZ
-  name: Azerbaijan
+- id: AW
+  name: Aruba
   type: country
   status: member
-- id: BA
-  name: Bosnia and Herzegovina
+- id: AZ
+  name: Azerbaijan
   type: country
   status: member
 - id: BB
@@ -130,12 +138,12 @@ includes:
   name: Benin
   type: country
   status: member
-- id: BN
-  name: Brunei Darussalam
+- id: BM
+  name: Bermuda
   type: country
   status: member
-- id: BO
-  name: Bolivia
+- id: BN
+  name: Brunei Darussalam
   type: country
   status: member
 - id: BR
@@ -146,16 +154,8 @@ includes:
   name: Bahamas, The
   type: country
   status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
 - id: BW
   name: Botswana
-  type: country
-  status: member
-- id: BY
-  name: Belarus
   type: country
   status: member
 - id: BZ
@@ -186,10 +186,6 @@ includes:
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CK
-  name: Cook Islands
-  type: country
-  status: member
 - id: CL
   name: Chile
   type: country
@@ -210,12 +206,12 @@ includes:
   name: Costa Rica
   type: country
   status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
 - id: CV
   name: Cape Verde
+  type: country
+  status: member
+- id: CW
+  name: Curaçao
   type: country
   status: member
 - id: CY
@@ -232,10 +228,6 @@ includes:
   status: member
 - id: DJ
   name: Djibouti
-  type: country
-  status: member
-- id: DK
-  name: Denmark
   type: country
   status: member
 - id: DM
@@ -262,10 +254,6 @@ includes:
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
 - id: ES
   name: Spain
   type: country
@@ -280,10 +268,6 @@ includes:
   status: member
 - id: FJ
   name: Fiji
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
   type: country
   status: member
 - id: FR
@@ -304,6 +288,10 @@ includes:
   status: member
 - id: GE
   name: Georgia
+  type: country
+  status: member
+- id: GG
+  name: Guernsey
   type: country
   status: member
 - id: GH
@@ -342,10 +330,6 @@ includes:
   name: Honduras
   type: country
   status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
 - id: HT
   name: Haiti
   type: country
@@ -370,10 +354,6 @@ includes:
   name: India
   type: country
   status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
 - id: IR
   name: Iran, Islamic Rep.
   type: country
@@ -384,6 +364,10 @@ includes:
   status: member
 - id: IT
   name: Italy
+  type: country
+  status: member
+- id: JE
+  name: Jersey
   type: country
   status: member
 - id: JM
@@ -422,10 +406,6 @@ includes:
   name: St. Kitts and Nevis
   type: country
   status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
 - id: KR
   name: Korea, Rep.
   type: country
@@ -438,10 +418,6 @@ includes:
   name: Kazakhstan
   type: country
   status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
 - id: LB
   name: Lebanon
   type: country
@@ -450,16 +426,8 @@ includes:
   name: St. Lucia
   type: country
   status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
 - id: LR
   name: Liberia
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
   type: country
   status: member
 - id: LT
@@ -490,16 +458,8 @@ includes:
   name: Moldova
   type: country
   status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
 - id: MG
   name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
   type: country
   status: member
 - id: MK
@@ -532,10 +492,6 @@ includes:
   status: member
 - id: MV
   name: Maldives
-  type: country
-  status: member
-- id: MW
-  name: Malawi
   type: country
   status: member
 - id: MX
@@ -578,14 +534,6 @@ includes:
   name: Nepal
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
@@ -602,28 +550,20 @@ includes:
   name: Peru
   type: country
   status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
 - id: PH
   name: Philippines
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
   type: country
   status: member
 - id: PL
   name: Poland
   type: country
   status: member
-- id: PT
-  name: Portugal
+- id: PS
+  name: West Bank and Gaza
   type: country
   status: member
-- id: PW
-  name: Palau
+- id: PT
+  name: Portugal
   type: country
   status: member
 - id: PY
@@ -654,10 +594,6 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
 - id: SC
   name: Seychelles
   type: country
@@ -674,10 +610,6 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
 - id: SK
   name: Slovak Republic
   type: country
@@ -686,40 +618,24 @@ includes:
   name: Sierra Leone
   type: country
   status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
 - id: SN
   name: Senegal
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
   type: country
   status: member
 - id: SV
   name: El Salvador
   type: country
   status: member
-- id: SY
-  name: Syrian Arab Republic
+- id: SX
+  name: Sint Maarten
   type: country
   status: member
 - id: SZ
   name: Swaziland
+  type: country
+  status: member
+- id: TC
+  name: Turks and Caicos Islands
   type: country
   status: member
 - id: TD
@@ -734,24 +650,12 @@ includes:
   name: Thailand
   type: country
   status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
 - id: TL
   name: Timor-Leste
   type: country
   status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
 - id: TN
   name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -760,10 +664,6 @@ includes:
   status: member
 - id: TT
   name: Trinidad and Tobago
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
   type: country
   status: member
 - id: TZ
@@ -794,24 +694,16 @@ includes:
   name: St. Vincent and the Grenadines
   type: country
   status: member
-- id: VE
-  name: Venezuela, RB
+- id: VG
+  name: British Virgin Islands
   type: country
   status: member
 - id: VN
   name: Vietnam
   type: country
   status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
 - id: WS
   name: Samoa
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
   type: country
   status: member
 - id: ZA
@@ -826,20 +718,75 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 194
+notes: Membership is institutional (affiliate and associate member organizations), not state-based; this record maps countries and territories with at least one ISSA member organization as listed in the official member directory (https://www.issa.int/about/members). Palestine is included as published by ISSA.
+tags:
+- ISSA
+- AISS
+- A.I.S.S.
+- C.I.M.A.S.
+- association
+- international
+- intorg
+- labor
+- social
+- social_security
+- welfare
+topics:
+- key: labor
+  name: Labor
+- key: health
+  name: Health
+- key: governance
+  name: Governance
+other_names:
+- id: ar
+  name: الرابطة الدولية للضمان الاجتماعي
+- id: de
+  name: Internationale Vereinigung für Soziale Sicherheit
+- id: en
+  name: International Social Security Association
+- id: es
+  name: Asociación Internacional de Seguridad Social
+- id: fr
+  name: Association internationale de sécurité sociale
+- id: pt
+  name: Associação Internacional de Seguridade Social
+- id: ru
+  name: Международная ассоциация социального обеспечения
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.issa.int/about/members
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.issa.int/about/members
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.issa.int/
 - field: headquarters
   source: Wikidata
-  retrieved_at: '2026-07-12'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q689804
   license: CC0
-headquarters:
-  coordinates:
-    lat: 46.229316
-    lng: 6.134157
-last_verified: '2026-07-12'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q689804
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q689804
+  license: CC0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.issa.int/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.issa.int/

@@ -1,23 +1,26 @@
 id: ACMECS
+name: Ayeyawady-Chao Phraya-Mekong Economic Cooperation Strategy
 blocktype:
 - economic
 - political
 - cultural
 status: formal
+founded: '2003-11-12'
+geographic_scope: sub-regional
+regions:
+- Asia
+- Southeast Asia
 languages:
 - en
 links:
 - url: https://www.acmecs.org/
   type: website
+- url: https://www.acmecs.org/history-and-background/
+  type: website
 - url: https://en.wikipedia.org/wiki/ACMECS
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4650700
   type: wikidata
-name: ACMECS
-founded: '2003'
-geographic_scope: regional
-regions:
-- Asia
 acronyms:
 - lang: en
   value: ACMECS
@@ -26,54 +29,58 @@ includes:
   name: Cambodia
   type: country
   status: member
-  joined: '2003'
+  joined: '2003-11-12'
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
   status: member
-  joined: '2003'
+  joined: '2003-11-12'
 - id: MM
   name: Myanmar
   type: country
   status: member
-  joined: '2003'
+  joined: '2003-11-12'
 - id: TH
   name: Thailand
   type: country
   status: member
-  joined: '2003'
+  joined: '2003-11-12'
 - id: VN
-  name: Viet Nam
+  name: Vietnam
   type: country
   status: member
-  joined: '2003'
-membership_count: 5
+  joined: '2004-05-10'
 founding_members:
 - KH
 - LA
 - MM
 - TH
-- VN
+membership_count: 5
+legal_status: intergovernmental
 wikidata_id: Q4650700
-description: Political, economic, and cultural organization.
+description: >-
+  Intergovernmental cooperation framework among Cambodia, Lao PDR, Myanmar, Thailand, and Vietnam, named for the
+  Ayeyawady, Chao Phraya, and Mekong river basins. Proposed at the April 2003 ASEAN SARS summit and established at the
+  Bagan summit on 12 November 2003 by four founding members; Vietnam joined on 10 May 2004. Cooperation spans trade and
+  investment facilitation, agriculture, transport, tourism, human resources, public health, industry and energy, and
+  environmental protection, with the ACMECS Master Plan 2019–2023 organized around seamless, synchronized, and
+  sustainable connectivity.
 tags:
 - ACMECS
-- aid
 - ayeyawady
-- chao
-- commerce
+- chao_phraya
 - cooperation
 - cultural
-- culture
 - development
 - economic
-- economy
-- education
+- mekong
 - political
 - regional
 - regional_cooperation
+- southeast_asia
 - trade
-- university
+- transport
+- tourism
 topics:
 - key: culture
   name: Culture
@@ -89,18 +96,49 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
+- key: transport
+  name: Transport
+- key: tourism
+  name: Tourism
 other_names:
+- id: en
+  name: Ayeyawady-Chao Phraya-Mekong Economic Cooperation Strategy
+- id: vi
+  name: Tổ chức ACMECS
 - id: zh
   name: 伊洛瓦底江-湄南河-湄公河经济合作战略组织
-- id: en
-  name: ACMECS
+notes: >-
+  Distinct from the Greater Mekong Subregion (GMS) programme and ASEAN Mekong Basin Development Cooperation (AMBDC).
+  Australia, China, India, Japan, New Zealand, the Republic of Korea, and the United States participate as development
+  partners but are not members.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ACMECS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.acmecs.org/history-and-background/
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ACMECS
+- field: founding_members
+  source: ACMECS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.acmecs.org/history-and-background/
+- field: founded
+  source: ACMECS official website
+  retrieved_at: '2026-07-29'
+  url: https://www.acmecs.org/history-and-background/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acmecs.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.acmecs.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.acmecs.org/history-and-background/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4650700
+  license: CC0

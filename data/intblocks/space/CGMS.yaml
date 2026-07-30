@@ -1,9 +1,14 @@
 id: CGMS
+name: Coordination Group for Meteorological Satellites
 blocktype:
 - meteorology
 - intorg
 - space
 status: formal
+founded: '1972-09-19'
+active_period:
+  start: '1972-09-19'
+geographic_scope: global
 languages:
 - en
 links:
@@ -11,72 +16,117 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Coordination_Group_for_Meteorological_Satellites
   type: wikipedia
-name: Coordination Group for Meteorological Satellites
-founded: '1972'
+- url: https://www.wikidata.org/wiki/Q107710249
+  type: wikidata
+acronyms:
+- lang: en
+  value: CGMS
+legal_status: intergovernmental
+recognition_status: Informal coordination forum since September 1972; governed by a non-binding Charter; permanent secretariat hosted by EUMETSAT since January 1987
 headquarters:
   city: Darmstadt
   country: DE
   coordinates:
     lat: 49.8667
     lng: 8.65
-acronyms:
-- lang: en
-  value: CGMS
+  note: EUMETSAT headquarters hosts the CGMS permanent secretariat
+secretariat:
+  location: Darmstadt
+  organization: EUMETSAT
 includes:
 - id: CN
   name: China
   type: country
   status: member
+  joined: '1989'
+  note: CMA (1989) and CNSA (2006)
 - id: FR
   name: France
   type: country
   status: member
+  joined: '2004'
+  note: CNES
 - id: IN
   name: India
   type: country
   status: member
+  joined: '1979'
+  note: IMD (1979) and ISRO (2015)
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1972-09-19'
+  note: JMA (1972) and JAXA (2003)
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2005'
+  note: KMA
 - id: RU
-  name: Russia
+  name: Russian Federation
   type: country
   status: member
+  joined: '1973'
+  note: ROSHYDROMET (1973) and ROSCOSMOS (2003)
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1972-09-19'
+  note: NOAA (1972) and NASA (2003)
 - id: ESA
   name: European Space Agency
   type: organization
   status: member
+  joined: '2003'
 - id: EUMETSAT
   name: EUMETSAT
   type: organization
   status: member
+  joined: '1987-01'
+- id: IOC_UNESCO
+  name: Intergovernmental Oceanographic Commission of UNESCO
+  type: organization
+  status: member
+  joined: '2001'
 - id: WMO
   name: World Meteorological Organization
   type: organization
-  status: observer
-membership_count: 9
-description: International organization coordinating the operation and development of meteorological satellite systems worldwide.
+  status: member
+  joined: '1973'
+founding_members:
+- JP
+- US
+membership_count: 11
+description: International coordination forum for operators of geostationary and polar-orbiting meteorological satellites and
+  related R&D missions. CGMS harmonises mission parameters, data formats, operational continuity, and contingency planning
+  across member space and meteorological agencies from China, Europe, India, Japan, Korea, Russia, and the United States,
+  with WMO and IOC-UNESCO representing the global user community.
+notes: CGMS membership is held by 16 national and intergovernmental space agencies per its Charter Appendix 2. Country codes
+  represent the home states of those agencies; multiple agencies from the same state (e.g. NOAA and NASA for the United
+  States, JMA and JAXA for Japan) are collapsed to a single country entry with accession notes.
+last_verified: '2026-07-29'
 tags:
 - CGMS
+- coordination
+- earth_observation
+- global
+- intorg
 - meteorology
 - satellites
+- space
 - weather
-- coordination
-- intorg
 topics:
 - key: meteorology
   name: Meteorology
 - key: space
   name: Space
+- key: earth_observation
+  name: Earth Observation
+- key: capacity_building
+  name: Capacity Building
 other_names:
 - id: en
   name: Coordination Group for Meteorological Satellites
@@ -89,9 +139,29 @@ provenance:
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q107710249
   license: CC0
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://cgms-info.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cgms-info.org/wp-content/uploads/2021/10/cgms-charter.pdf
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Coordination_Group_for_Meteorological_Satellites
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cgms-info.org/wp-content/uploads/2021/10/cgms-charter.pdf
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cgms-info.org/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cgms-info.org/wp-content/uploads/2021/10/cgms-charter.pdf

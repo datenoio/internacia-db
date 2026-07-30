@@ -2,96 +2,190 @@ id: NPU
 blocktype:
 - political
 status: formal
+founded: '1954-07-01'
+geographic_scope: regional
+regions:
+- Nordic
+- Northern Europe
+- Europe
+languages:
+- da
+- en
+- fi
+- fo
+- is
+- nb
+- sv
 links:
+- url: https://www.norden.org/en/info-norden/nordic-agreements
+  type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1151921
   type: wikidata
 name: Nordic Passport Union
-founded: '1954'
 includes:
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1954-07-01'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: founding_member
+  joined: '1954-07-01'
+- id: SE
+  name: Sweden
+  type: country
+  status: founding_member
+  joined: '1954-07-01'
+- id: FI
+  name: Finland
+  type: country
+  status: founding_member
+  joined: '1954-07-01'
 - id: IS
   name: Iceland
   type: country
   status: member
-- id: GL
-  name: Greenland
-  type: country
-  status: member
+  joined: '1966-01-01'
 - id: FO
   name: Faroe Islands
   type: country
   status: member
-- id: AX
-  name: Åland Islands
-  type: country
-  status: member
-membership_count: 8
+  joined: '1966-01-01'
+founding_members:
+- DK
+- FI
+- 'NO'
+- SE
+membership_count: 6
+legal_status: treaty-based
 wikidata_id: Q1151921
-description: International arrangement that allows citizens of Iceland, Denmark, Norway,
-  Sweden, and Finland to travel and reside in another Nordic country (excluding Greenland
-  and Svalbard) without any travel documentation or a residence permit.
+description: Treaty-based Nordic free-movement arrangement allowing citizens of Denmark, Finland, Iceland,
+  Norway, and Sweden to travel and reside in another Nordic country without a passport, national identity
+  card, or residence permit. Established in stages from 1952 (passport abolition among Denmark, Finland,
+  Norway, and Sweden) and 1954 (right to reside and work); Iceland joined in 1966 and the Faroe Islands
+  in 1966. Internal passport checks at Nordic borders were removed from 1958. Since 25 March 2001 all
+  five sovereign states have also been in the Schengen Area; the Faroe Islands remain in the Nordic
+  Passport Union but outside Schengen. Greenland and Svalbard are outside the passport union, though
+  Nordic citizens retain related settlement and travel rights under separate rules.
 tags:
 - NPU
 - cooperation
+- free_movement
 - nordic
+- open_borders
 - passport
 - political
 - regional
 - regional_cooperation
+- schengen
 - union
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: migration
+  name: Migration
 other_names:
 - id: ar
   name: الاتحاد الشمالي لجوازات السفر
+- id: da
+  name: Den nordiske pasunion
 - id: de
   name: Nordische Passunion
 - id: en
   name: Nordic Passport Union
 - id: es
   name: Unión Nórdica de Pasaportes
+- id: fi
+  name: Pohjoismainen passivapaus
 - id: fr
   name: Union nordique des passeports
+- id: is
+  name: Norræna vegabréfasambandið
+- id: it
+  name: Unione nordica dei passaporti
+- id: nb
+  name: Den nordiske passunionen
 - id: ru
   name: Северный паспортный союз
+- id: sv
+  name: Nordiska passunionen
 - id: zh
   name: 北歐護照聯盟
+acronyms:
+- lang: en
+  value: NPU
+- lang: da
+  value: NPU
+- lang: de
+  value: NPU
+- lang: fi
+  value: NPU
+- lang: is
+  value: NPU
+- lang: nb
+  value: NPU
+- lang: sv
+  value: NPU
+- lang: zh
+  value: 北欧护照联盟
+notes: Protocols signed in Stockholm (1952) and Copenhagen (1954) created passport-free travel and
+  residence rights among the four founding states; Iceland implemented the arrangement on 1 January
+  1966. The 12 July 1957 Copenhagen agreement removed passport checks at internal Nordic borders from
+  1 May 1958 and was extended to the Faroe Islands on 1 January 1966. Nordic citizens enjoy extra rights
+  within the Nordic area beyond Schengen, including fewer naturalization requirements and acceptance of
+  Nordic driving licences and bank-issued ID cards at Nordic borders. Public officials of Nordic states
+  assist each other's citizens abroad under the Helsinki Treaty when a home state has no local
+  representation. Temporary intra-Nordic border controls were reintroduced by Denmark, Norway, and
+  Sweden from 2015 amid the European migrant crisis and remained in place in early 2026.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1151921
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1151921
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1151921
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1151921
   license: CC0
-acronyms:
-- lang: zh
-  value: 北欧护照联盟
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Passport_Union
+- field: links
+  source: Nordic cooperation official website
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/info-norden/nordic-agreements

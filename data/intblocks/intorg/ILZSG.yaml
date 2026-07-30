@@ -10,21 +10,27 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/International_Lead_and_Zinc_Study_Group
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q12131043
+  type: wikidata
 name: International Lead and Zinc Study Group
-founded: '1959'
+founded: '1959-05'
 headquarters:
-  city: London
-  country: GB
+  city: Lisbon
+  country: PT
 geographic_scope: global
 regions:
 - worldwide
 acronyms:
 - lang: en
   value: ILZSG
-membership_count: 30
-description: Intergovernmental organization that provides a forum for discussing issues related to lead and zinc. Aims to
-  ensure market transparency through data exchange and research. Members represent about 90% of production and consumption
-  of these metals.
+membership_count: 26
+wikidata_id: Q12131043
+legal_status: intergovernmental organization
+description: Intergovernmental organization of lead and zinc producing and consuming states that
+  serves as the international commodity board for lead and zinc. Promotes market transparency
+  through exchange of information on production, usage, stocks, trade, and prices, and provides
+  a forum for international cooperation on lead and zinc-related issues. Member states represent
+  approximately 85–90% of world lead and zinc mine production and usage.
 tags:
 - ILZSG
 - lead
@@ -42,24 +48,40 @@ includes:
   name: Australia
   type: country
   status: member
-- id: BR
-  name: Brazil
+- id: BE
+  name: Belgium
   type: country
   status: member
-- id: CA
-  name: Canada
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BR
+  name: Brazil
   type: country
   status: member
 - id: CN
   name: China
   type: country
   status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: FI
+  name: Finland
+  type: country
+  status: member
 - id: FR
   name: France
   type: country
   status: member
-- id: DE
-  name: Germany
+- id: IE
+  name: Ireland
   type: country
   status: member
 - id: IN
@@ -74,42 +96,105 @@ includes:
   name: Japan
   type: country
   status: member
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
 - id: MX
   name: Mexico
+  type: country
+  status: member
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PE
+  name: Peru
   type: country
   status: member
 - id: PL
   name: Poland
   type: country
   status: member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
 - id: RU
   name: Russian Federation
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: SE
+  name: Sweden
   type: country
   status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
+- id: TR
+  name: Turkey
   type: country
   status: member
 - id: US
   name: United States
   type: country
   status: member
-notes: Membership includes both producing and consuming countries. The organization facilitates data exchange and research
-  on lead and zinc markets. Full membership list may include additional countries.
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+- id: ES
+  name: Spain
+  type: country
+  status: former_member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: former_member
+- id: NL
+  name: Netherlands
+  type: country
+  status: former_member
+- id: ZA
+  name: South Africa
+  type: country
+  status: former_member
+notes: Established in May 1959 under the United Nations; became an independent intergovernmental
+  organization in 1977. Secretariat moved from London to Lisbon in 2006 and is co-located with
+  the International Copper Study Group (ICSG) and the International Nickel Study Group (INSG).
+  Official membership is 25 member governments plus the European Union (26).
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.ilzsg.org/
+- field: includes
+  source: ILZSG official member countries page and February 2026 press release
+  retrieved_at: '2026-07-29'
+  url: https://www.ilzsg.org/member-countries/
+- field: founded
+  source: ILZSG official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ilzsg.org/the-study-group/
 - field: headquarters
+  source: ILZSG official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ilzsg.org/the-study-group/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12131043
+- field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.ilzsg.org/

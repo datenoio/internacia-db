@@ -11,56 +11,38 @@ geographic_scope: global
 languages:
 - en
 - fr
+- ru
 links:
 - url: https://www.iso.org/
   type: website
+- url: https://www.iso.org/members.html
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Organization_for_Standardization
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q15028
+  type: wikidata
 acronyms:
 - lang: en
   value: ISO
 - lang: fr
   value: OIN
+- lang: fr
+  value: ISO
+- lang: ru
+  value: ИСО
+- lang: de
+  value: ISO
+- lang: pt
+  value: ISO
+- lang: zh
+  value: 国际标准化组织
 headquarters:
-  city: Geneva
+  city: Vernier
   country: CH
   coordinates:
     lat: 46.2044
     lng: 6.1432
-membership_count: 252
-legal_status: intergovernmental
-notes: ISO members are national standards bodies, not countries directly. Each member represents one country. ISO has 167
-  member bodies representing countries worldwide. Full member list should be verified from official ISO website.
-description: International organization that develops and publishes international standards.
-tags:
-- ISO
-- standardization
-- standards
-- technical
-- intorg
-topics:
-- key: standardization
-  name: Standardization
-- key: technology
-  name: Technology
-other_names:
-- id: ar
-  name: طب
-- id: zh
-  name: 医学
-- id: en
-  name: medicine
-- id: fr
-  name: médecine
-- id: ru
-  name: медицина
-- id: es
-  name: medicina
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
 - id: AE
   name: United Arab Emirates
   type: country
@@ -72,37 +54,21 @@ includes:
 - id: AG
   name: Antigua and Barbuda
   type: country
-  status: member
-- id: AI
-  name: Anguilla
-  type: country
-  status: member
+  status: associate_member
 - id: AL
   name: Albania
   type: country
-  status: member
+  status: observer
 - id: AM
   name: Armenia
-  type: country
-  status: member
-- id: AN
-  name: Netherlands Antilles
   type: country
   status: member
 - id: AO
   name: Angola
   type: country
-  status: member
-- id: AQ
-  name: Antarctica
-  type: country
-  status: member
+  status: observer
 - id: AR
   name: Argentina
-  type: country
-  status: member
-- id: AS
-  name: American Samoa
   type: country
   status: member
 - id: AT
@@ -111,14 +77,6 @@ includes:
   status: member
 - id: AU
   name: Australia
-  type: country
-  status: member
-- id: AW
-  name: Aruba
-  type: country
-  status: member
-- id: AX
-  name: Åland Islands
   type: country
   status: member
 - id: AZ
@@ -156,31 +114,19 @@ includes:
 - id: BI
   name: Burundi
   type: country
-  status: member
+  status: observer
 - id: BJ
   name: Benin
-  type: country
-  status: member
-- id: BL
-  name: Saint Barthélemy
-  type: country
-  status: member
-- id: BM
-  name: Bermuda
   type: country
   status: member
 - id: BN
   name: Brunei Darussalam
   type: country
-  status: member
+  status: observer
 - id: BO
   name: Bolivia
   type: country
-  status: member
-- id: BQ
-  name: Caribbean Netherlands
-  type: country
-  status: member
+  status: observer
 - id: BR
   name: Brazil
   type: country
@@ -188,15 +134,11 @@ includes:
 - id: BS
   name: Bahamas, The
   type: country
-  status: member
+  status: observer
 - id: BT
   name: Bhutan
   type: country
-  status: member
-- id: BV
-  name: Bouvet Island
-  type: country
-  status: member
+  status: observer
 - id: BW
   name: Botswana
   type: country
@@ -208,25 +150,13 @@ includes:
 - id: BZ
   name: Belize
   type: country
-  status: member
+  status: observer
 - id: CA
   name: Canada
   type: country
   status: member
-- id: CC
-  name: Cocos (Keeling) Islands
-  type: country
-  status: member
 - id: CD
   name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: CG
-  name: Congo, Rep.
   type: country
   status: member
 - id: CH
@@ -235,10 +165,6 @@ includes:
   status: member
 - id: CI
   name: Cote d'Ivoire
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
   type: country
   status: member
 - id: CL
@@ -265,18 +191,6 @@ includes:
   name: Cuba
   type: country
   status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
-- id: CW
-  name: Curaçao
-  type: country
-  status: member
-- id: CX
-  name: Christmas Island
-  type: country
-  status: member
 - id: CY
   name: Cyprus
   type: country
@@ -292,7 +206,7 @@ includes:
 - id: DJ
   name: Djibouti
   type: country
-  status: member
+  status: observer
 - id: DK
   name: Denmark
   type: country
@@ -300,7 +214,7 @@ includes:
 - id: DM
   name: Dominica
   type: country
-  status: member
+  status: observer
 - id: DO
   name: Dominican Republic
   type: country
@@ -321,14 +235,10 @@ includes:
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: EH
-  name: Western Sahara
-  type: country
-  status: member
 - id: ER
   name: Eritrea
   type: country
-  status: member
+  status: observer
 - id: ES
   name: Spain
   type: country
@@ -343,18 +253,6 @@ includes:
   status: member
 - id: FJ
   name: Fiji
-  type: country
-  status: member
-- id: FK
-  name: Falkland Islands
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
-- id: FO
-  name: Faeroe Islands
   type: country
   status: member
 - id: FR
@@ -372,83 +270,43 @@ includes:
 - id: GD
   name: Grenada
   type: country
-  status: member
+  status: associate_member
 - id: GE
   name: Georgia
   type: country
-  status: member
-- id: GF
-  name: French Guiana
-  type: country
-  status: member
-- id: GG
-  name: Guernsey
-  type: country
-  status: member
+  status: observer
 - id: GH
   name: Ghana
-  type: country
-  status: member
-- id: GI
-  name: Gibraltar
-  type: country
-  status: member
-- id: GL
-  name: Greenland
   type: country
   status: member
 - id: GM
   name: Gambia, The
   type: country
-  status: member
+  status: observer
 - id: GN
   name: Guinea
   type: country
-  status: member
-- id: GP
-  name: Guadeloupe
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
+  status: observer
 - id: GR
   name: Greece
-  type: country
-  status: member
-- id: GS
-  name: South Georgia
   type: country
   status: member
 - id: GT
   name: Guatemala
   type: country
-  status: member
-- id: GU
-  name: Guam
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
+  status: observer
 - id: GY
   name: Guyana
   type: country
-  status: member
+  status: observer
 - id: HK
   name: Hong Kong SAR, China
   type: country
-  status: member
-- id: HM
-  name: Heard Island and McDonald Islands
-  type: country
-  status: member
+  status: observer
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: observer
 - id: HR
   name: Croatia
   type: country
@@ -456,7 +314,7 @@ includes:
 - id: HT
   name: Haiti
   type: country
-  status: member
+  status: observer
 - id: HU
   name: Hungary
   type: country
@@ -473,16 +331,8 @@ includes:
   name: Israel
   type: country
   status: member
-- id: IM
-  name: Isle of Man
-  type: country
-  status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: IO
-  name: British Indian Ocean Territory
   type: country
   status: member
 - id: IQ
@@ -499,14 +349,6 @@ includes:
   status: member
 - id: IT
   name: Italy
-  type: country
-  status: member
-- id: JE
-  name: Jersey
-  type: country
-  status: member
-- id: JG
-  name: Channel Islands
   type: country
   status: member
 - id: JM
@@ -528,19 +370,11 @@ includes:
 - id: KG
   name: Kyrgyz Republic
   type: country
-  status: member
+  status: observer
 - id: KH
   name: Cambodia
   type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
+  status: observer
 - id: KN
   name: St. Kitts and Nevis
   type: country
@@ -553,16 +387,8 @@ includes:
   name: Korea, Rep.
   type: country
   status: member
-- id: KV
-  name: Kosovo
-  type: country
-  status: member
 - id: KW
   name: Kuwait
-  type: country
-  status: member
-- id: KY
-  name: Cayman Islands
   type: country
   status: member
 - id: KZ
@@ -572,7 +398,7 @@ includes:
 - id: LA
   name: Lao PDR
   type: country
-  status: member
+  status: observer
 - id: LB
   name: Lebanon
   type: country
@@ -581,22 +407,14 @@ includes:
   name: St. Lucia
   type: country
   status: member
-- id: LI
-  name: Liechtenstein
-  type: country
-  status: member
 - id: LK
   name: Sri Lanka
-  type: country
-  status: member
-- id: LR
-  name: Liberia
   type: country
   status: member
 - id: LS
   name: Lesotho
   type: country
-  status: member
+  status: observer
 - id: LT
   name: Lithuania
   type: country
@@ -624,23 +442,15 @@ includes:
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: observer
 - id: ME
   name: Montenegro
   type: country
-  status: member
-- id: MF
-  name: Saint Martin
-  type: country
-  status: member
+  status: observer
 - id: MG
   name: Madagascar
   type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
+  status: observer
 - id: MK
   name: Macedonia, FYR
   type: country
@@ -652,7 +462,7 @@ includes:
 - id: MM
   name: Myanmar
   type: country
-  status: member
+  status: observer
 - id: MN
   name: Mongolia
   type: country
@@ -660,33 +470,17 @@ includes:
 - id: MO
   name: Macao SAR, China
   type: country
-  status: member
-- id: MP
-  name: Northern Mariana Islands
-  type: country
-  status: member
-- id: MQ
-  name: Martinique
-  type: country
-  status: member
+  status: observer
 - id: MR
   name: Mauritania
   type: country
-  status: member
-- id: MS
-  name: Montserrat
-  type: country
-  status: member
+  status: observer
 - id: MT
   name: Malta
   type: country
   status: member
 - id: MU
   name: Mauritius
-  type: country
-  status: member
-- id: MV
-  name: Maldives
   type: country
   status: member
 - id: MW
@@ -704,23 +498,15 @@ includes:
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: observer
 - id: NA
   name: Namibia
-  type: country
-  status: member
-- id: NC
-  name: New Caledonia
   type: country
   status: member
 - id: NE
   name: Niger
   type: country
-  status: member
-- id: NF
-  name: Norfolk Island
-  type: country
-  status: member
+  status: observer
 - id: NG
   name: Nigeria
   type: country
@@ -728,7 +514,7 @@ includes:
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: observer
 - id: NL
   name: Netherlands
   type: country
@@ -739,14 +525,6 @@ includes:
   status: member
 - id: NP
   name: Nepal
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
   type: country
   status: member
 - id: NZ
@@ -765,14 +543,10 @@ includes:
   name: Peru
   type: country
   status: member
-- id: PF
-  name: French Polynesia
-  type: country
-  status: member
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: observer
 - id: PH
   name: Philippines
   type: country
@@ -785,40 +559,20 @@ includes:
   name: Poland
   type: country
   status: member
-- id: PM
-  name: Saint Pierre and Miquelon
-  type: country
-  status: member
-- id: PN
-  name: Pitcairn Islands
-  type: country
-  status: member
-- id: PR
-  name: Puerto Rico
-  type: country
-  status: member
 - id: PS
   name: West Bank and Gaza
   type: country
-  status: member
+  status: observer
 - id: PT
   name: Portugal
-  type: country
-  status: member
-- id: PW
-  name: Palau
   type: country
   status: member
 - id: PY
   name: Paraguay
   type: country
-  status: member
+  status: observer
 - id: QA
   name: Qatar
-  type: country
-  status: member
-- id: RE
-  name: Réunion
   type: country
   status: member
 - id: RO
@@ -841,14 +595,10 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
 - id: SC
   name: Seychelles
   type: country
-  status: member
+  status: observer
 - id: SD
   name: Sudan
   type: country
@@ -861,16 +611,8 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: SH
-  name: Saint Helena, Ascension and Tristan da Cunha
-  type: country
-  status: member
 - id: SI
   name: Slovenia
-  type: country
-  status: member
-- id: SJ
-  name: Svalbard and Jan Mayen
   type: country
   status: member
 - id: SK
@@ -880,11 +622,7 @@ includes:
 - id: SL
   name: Sierra Leone
   type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
+  status: observer
 - id: SN
   name: Senegal
   type: country
@@ -892,25 +630,17 @@ includes:
 - id: SO
   name: Somalia
   type: country
-  status: member
+  status: observer
 - id: SR
   name: Suriname
   type: country
-  status: member
+  status: observer
 - id: SS
   name: South Sudan
   type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
+  status: observer
 - id: SV
   name: El Salvador
-  type: country
-  status: member
-- id: SX
-  name: Sint Maarten
   type: country
   status: member
 - id: SY
@@ -920,19 +650,11 @@ includes:
 - id: SZ
   name: Swaziland
   type: country
-  status: member
-- id: TC
-  name: Turks and Caicos Islands
-  type: country
-  status: member
+  status: observer
 - id: TD
   name: Chad
   type: country
-  status: member
-- id: TF
-  name: French Southern and Antarctic Lands
-  type: country
-  status: member
+  status: observer
 - id: TG
   name: Togo
   type: country
@@ -944,25 +666,13 @@ includes:
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
-- id: TK
-  name: Tokelau
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
+  status: observer
 - id: TM
   name: Turkmenistan
   type: country
-  status: member
+  status: observer
 - id: TN
   name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -971,14 +681,6 @@ includes:
   status: member
 - id: TT
   name: Trinidad and Tobago
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TW
-  name: Taiwan
   type: country
   status: member
 - id: TZ
@@ -993,10 +695,6 @@ includes:
   name: Uganda
   type: country
   status: member
-- id: UM
-  name: United States Minor Outlying Islands
-  type: country
-  status: member
 - id: US
   name: United States
   type: country
@@ -1009,26 +707,14 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: VA
-  name: Vatican City
-  type: country
-  status: member
 - id: VC
   name: St. Vincent and the Grenadines
   type: country
-  status: member
+  status: associate_member
 - id: VE
   name: Venezuela, RB
   type: country
-  status: member
-- id: VG
-  name: British Virgin Islands
-  type: country
-  status: member
-- id: VI
-  name: Virgin Islands (U.S.)
-  type: country
-  status: member
+  status: observer
 - id: VN
   name: Vietnam
   type: country
@@ -1037,20 +723,8 @@ includes:
   name: Vanuatu
   type: country
   status: member
-- id: WF
-  name: Wallis and Futuna
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
 - id: YE
   name: Yemen, Rep.
-  type: country
-  status: member
-- id: YT
-  name: Mayotte
   type: country
   status: member
 - id: ZA
@@ -1060,21 +734,78 @@ includes:
 - id: ZM
   name: Zambia
   type: country
-  status: member
+  status: observer
 - id: ZW
   name: Zimbabwe
   type: country
   status: member
+membership_count: 174
+legal_status: non-governmental
+notes: ISO national members are standards bodies, not governments directly; each member body represents one country. Membership tiers are mapped as member (member body, voting rights), observer (correspondent member), and associate_member (subscriber member). List verified against ISO member roster as reflected on Wikipedia (2026); 174 countries with assigned membership class.
+description: Independent, non-governmental international standard development organization composed of representatives from national standards organizations. ISO develops and publishes international standards covering technology, manufacturing, food safety, transport, agriculture, healthcare, and related fields.
+tags:
+- ISO
+- standardization
+- standards
+- technical
+- intorg
+topics:
+- key: standardization
+  name: Standardization
+- key: technology
+  name: Technology
+other_names:
+- id: ar
+  name: المنظمة الدولية للمعايير
+- id: de
+  name: Internationale Organisation für Normung
+- id: en
+  name: International Organization for Standardization
+- id: es
+  name: Organización Internacional de Normalización
+- id: fr
+  name: Organisation internationale de normalisation
+- id: pt
+  name: Organização Internacional para Normalização
+- id: ru
+  name: Международная организация по стандартизации
+- id: zh
+  name: 國際標準化組織
+wikidata_id: Q15028
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q15028
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q15028
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q15028
+  license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q15028
+  license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://www.iso.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://www.iso.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://www.iso.org/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Countries_in_the_International_Organization_for_Standardization

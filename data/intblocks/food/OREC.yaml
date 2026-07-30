@@ -1,37 +1,37 @@
 id: OREC
+name: Organisation of Rice Exporting Countries
 blocktype:
 - food
-status: formal
+status: historical
+founded: '2008-04'
+dissolved: '2008-06'
+active_period:
+  start: '2008-04'
+  end: '2008-06'
+geographic_scope: regional
+regions:
+- Asia
+- Southeast Asia
 languages:
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
   type: wikipedia
-name: Organisation of Rice Exporting Countries
-includes:
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
-  type: country
-  status: member
+- url: https://www.wikidata.org/wiki/Q3356026
+  type: wikidata
+acronyms:
+- lang: en
+  value: OREC
+legal_status: proposed intergovernmental coordination
+recognition_status: Proposed Mekong-region rice-export coordination forum announced by Thailand on 30 April 2008; Cambodia, Laos, Myanmar, Thailand, and Vietnam agreed in principle; abandoned in June 2008 after opposition from the Philippines and the Asian Development Bank
+founding_members:
+- KH
+- LA
+- MM
+- TH
+- VN
 membership_count: 5
-description: Organisation of Rice Exporting Countries is an international food body
-  with 5 members.
+description: Proposed coordination forum of five Mekong-region rice-exporting states announced by Thai Prime Minister Samak Sundaravej in April 2008. The five countries — Cambodia, Laos, Myanmar, Thailand, and Vietnam — agreed in principle to cooperate on rice trading amid rising global prices, with leaders stressing regional food stability rather than an OPEC-style price cartel. The Philippines, the world's largest rice importer, and the Asian Development Bank opposed the plan; Thailand dropped the proposal in June 2008 and OREC was never formally established.
 tags:
 - OREC
 - agriculture
@@ -40,9 +40,12 @@ tags:
 - exporting
 - farming
 - food
+- historical
+- mekong
 - nature
 - organisation
 - rice
+- southeast-asia
 - trade
 topics:
 - key: agriculture
@@ -51,14 +54,116 @@ topics:
   name: Environment
 - key: food
   name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
+includes:
+- id: KH
+  name: Cambodia
+  type: country
+  status: founding_member
+  joined: '2008-04'
+  left: '2008-06'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: founding_member
+  joined: '2008-04'
+  left: '2008-06'
+- id: MM
+  name: Myanmar
+  type: country
+  status: founding_member
+  joined: '2008-04'
+  left: '2008-06'
+- id: TH
+  name: Thailand
+  type: country
+  status: founding_member
+  joined: '2008-04'
+  left: '2008-06'
+- id: VN
+  name: Vietnam
+  type: country
+  status: founding_member
+  joined: '2008-04'
+  left: '2008-06'
 other_names:
+- id: en
+  name: Organisation of Rice Exporting Countries
 - id: en
   name: OREC
 - id: fr
   name: Organisation des pays exportateurs de riz
+- id: vi
+  name: Tổ chức các quốc gia xuất khẩu gạo
+wikidata_id: Q3356026
+notes: Thailand floated the idea on 30 April 2008 as a five-nation Mekong grouping sometimes compared to OPEC; Cambodia's Prime Minister Hun Sen said OREC would aim to ensure food stability and not hoard rice or raise prices during shortages. Regional ASEAN partners and the ADB warned that a rice cartel would worsen food security. No treaty, secretariat, or headquarters was ever established.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3356026
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3356026
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3356026
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Organisation_of_Rice_Exporting_Countries
+  license: CC BY-SA 4.0

@@ -1,9 +1,19 @@
 id: G8
 blocktype:
 - political
-status: informal
+status: historical
+founded: '1997'
+dissolved: '2014-03'
+active_period:
+  start: '1997'
+  end: '2014-03'
 predecessor: G7
 successor: G7
+geographic_scope: global
+regions:
+- Asia
+- Europe
+- North America
 languages:
 - en
 links:
@@ -19,35 +29,61 @@ includes:
   name: Canada
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '1997'
+  left: '2014-03'
 - id: DE
   name: Germany
   type: country
   status: member
-founded: '1997'
+  joined: '1997'
+  left: '2014-03'
+membership_count: 8
+founding_members:
+- CA
+- JP
+- US
+- IT
+- FR
+- GB
+- RU
+- DE
+legal_status: informal intergovernmental forum
 acronyms:
 - lang: en
   value: G8
@@ -97,8 +133,11 @@ acronyms:
   value: G8
 - lang: pt
   value: G-8
-membership_count: 8
-description: International forum focused on political for political cooperation.
+description: Intergovernmental political forum of Canada, France, Germany, Italy, Japan,
+  Russia, the United Kingdom, and the United States, formed in 1997 when Russia joined
+  the G7. Held annual leaders' summits on global economic, security, and development
+  issues until March 2014, when Russia was suspended following the annexation of Crimea
+  and the forum reverted to the G7.
 tags:
 - G8
 - cooperation
@@ -112,6 +151,8 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: economy
+  name: Economy
 other_names:
 - id: ar
   name: مجموعة الثماني
@@ -129,13 +170,38 @@ other_names:
   name: Большая восьмёрка
 - id: zh
   name: 八大工業國組織
+notes: Boris Yeltsin attended G7 summits as a guest from 1994; Russia was included
+  from 1997 and the forum adopted the G8 name for non-financial matters. The 2005
+  Gleneagles summit launched the G8+5 outreach format with Brazil, China, India,
+  Mexico, and South Africa. After the 2008 financial crisis the G20 largely superseded
+  the G8 on economic coordination. On 24 March 2014 the other seven members cancelled
+  the planned Sochi summit and suspended Russia's membership over the annexation of
+  Crimea; Russia announced permanent withdrawal in January 2017.
 wikidata_id: Q37143
+last_verified: '2026-07-30'
 provenance:
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G8
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G8
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q37143
+  license: CC0
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G8
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -146,3 +212,11 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G8
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G8

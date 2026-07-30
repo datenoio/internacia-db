@@ -5,10 +5,16 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Micronesia
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q3359409
+  type: wikidata
 name: Micronesia
 includes:
 - id: FM
   name: Micronesia, Federated States of
+  type: country
+  status: member
+- id: GU
+  name: Guam
   type: country
   status: member
 - id: KI
@@ -19,6 +25,10 @@ includes:
   name: Marshall Islands
   type: country
   status: member
+- id: MP
+  name: Northern Mariana Islands
+  type: country
+  status: member
 - id: NR
   name: Nauru
   type: country
@@ -27,11 +37,14 @@ includes:
   name: Palau
   type: country
   status: member
-membership_count: 5
+membership_count: 7
 geographic_scope: sub-regional
 regions:
 - Oceania
-description: Micronesia is a regional grouping of 5 countries in Oceania.
+wikidata_id: Q3359409
+description: Subregion of Oceania comprising approximately 2,000 small islands in the
+  northwestern Pacific Ocean, encompassing five sovereign states and the U.S. territories
+  of Guam and the Northern Mariana Islands, per the Wikipedia regional definition.
 tags:
 - MICRONESIA
 - micronesia
@@ -55,11 +68,26 @@ other_names:
   name: Микронезия
 - id: es
   name: Micronesia
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/Micronesia
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Micronesia
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Micronesia
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Micronesia
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3359409
+  license: CC0

@@ -3,15 +3,42 @@ blocktype:
 - agreement
 - space
 status: formal
+founded: '1984-07-11'
+active_period:
+  start: '1984-07-11'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+languages:
+- ar
+- zh
+- en
+- fr
+- ru
+- es
 links:
+- url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html
+  type: website
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXIV-2&chapter=24&clang=_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Moon_Treaty
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q192588
+- url: https://www.wikidata.org/wiki/Q281140
   type: wikidata
 name: Agreement Governing the Activities of States on the Moon and Other Celestial Bodies
-founded: '1984'
-wikidata_id: Q192588
-description: International agreement focused on space law.
+legal_status: treaty
+recognition_status: United Nations multilateral space law treaty; adopted by General Assembly resolution 34/68 on 5 December
+  1979; opened for signature 18 December 1979; entered into force 11 July 1984; registered as UNTS vol. 1363, No. 23002.
+wikidata_id: Q281140
+description: Multilateral treaty establishing that the Moon and other celestial bodies shall be used exclusively for peaceful
+  purposes and that their natural resources are the common heritage of mankind. Adopted by the UN General Assembly on 5 December
+  1979 and entered into force on 11 July 1984. As of 2024, 17 states are parties; no major spacefaring nation has ratified
+  it.
 tags:
 - MOONAGREEMENT
 - agreement
@@ -31,76 +58,99 @@ includes:
   name: Armenia
   type: country
   status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
+  joined: '2018-01-19'
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '1984-06-11'
+- id: AU
+  name: Australia
+  type: country
+  status: member
+  joined: '1986-07-07'
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '2004-06-29'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '1981-11-12'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '2001-01-11'
 - id: KW
   name: Kuwait
   type: country
   status: member
+  joined: '2014-04-28'
 - id: LB
   name: Lebanon
   type: country
   status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
+  joined: '2006-04-12'
 - id: MA
   name: Morocco
   type: country
   status: member
+  joined: '1993-01-21'
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+  joined: '1991-10-11'
 - id: NL
   name: Netherlands
   type: country
   status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
+  joined: '1983-02-17'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '2005-11-23'
 - id: PH
   name: Philippines
   type: country
   status: member
-- id: SA
-  name: Saudi Arabia
+  joined: '1981-05-26'
+- id: PK
+  name: Pakistan
   type: country
   status: member
+  joined: '1986-02-27'
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
+  joined: '2012-02-29'
 - id: UY
   name: Uruguay
   type: country
   status: member
+  joined: '1981-11-09'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  joined: '2016-11-03'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: former_member
+  joined: '2012-07-18'
+  left: '2024-01-05'
 membership_count: 17
 other_names:
 - id: ar
   name: اتفاقية تنظيم أنشطة الدول على القمر والأجرام السماوية الأخرى
 - id: de
-  name: relationale Datenbank
+  name: Mondvertrag
 - id: en
   name: Agreement Governing the Activities of States on the Moon and Other Celestial Bodies
 - id: es
@@ -108,32 +158,64 @@ other_names:
 - id: fr
   name: Accord régissant les activités des États sur la Lune et les autres corps célestes
 - id: pt
-  name: base de dados relacional
+  name: Tratado da Lua
 - id: ru
   name: Соглашение о деятельности государств на Луне и других небесных телах
 - id: zh
   name: 关于各国在月球和其他天体上活动的协定
+acronyms:
+- lang: en
+  value: Moon Treaty
+- lang: en
+  value: Moon Agreement
+- lang: de
+  value: Mondvertrag
+- lang: es
+  value: Tratado de la Luna
+- lang: fr
+  value: traité sur la Lune
+- lang: pt
+  value: Tratado da Lua
+- lang: zh
+  value: 月球协定
+last_verified: '2026-07-30'
+notes: >-
+  Current parties (17) verified against the UN Treaty Collection and Wikipedia (May 2024 roster). Saudi Arabia acceded
+  on 18 July 2012 and withdrew effective 5 January 2024. France, Guatemala, India, and Romania signed but have not
+  ratified and are not listed in includes.
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q281140
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q281140
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q281140
   license: CC0
-acronyms:
-- lang: en
-  value: RDB
-- lang: zh
-  value: 关系式数据库管理系统
-- lang: zh
-  value: 关系型数据库
-- lang: zh
-  value: 關聯式資料庫
-- lang: de
-  value: RDBM
-- lang: de
-  value: RDB
+- field: includes
+  source: Wikipedia / United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Moon_Treaty
+- field: membership_count
+  source: Wikipedia / United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXIV-2&chapter=24&clang=_en
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXIV-2&chapter=24&clang=_en
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%201363/volume-1363-A-23002-English.pdf

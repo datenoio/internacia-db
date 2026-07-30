@@ -2,106 +2,274 @@ id: ARCTICC
 blocktype:
 - forum
 - ocean
+- political
 status: formal
-languages:
-- en
-links:
-- url: http://www.arctic-council.org/
-  type: website
-- url: https://en.wikipedia.org/wiki/Arctic_Council
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q674182
-  type: wikidata
-name: Arctic Council
-acronyms:
-- lang: en
-  value: AC
+founded: '1996-09-19'
 geographic_scope: regional
 regions:
 - Arctic
 - North America
 - Europe
 - Asia
+languages:
+- en
+links:
+- url: https://arctic-council.org/
+  type: website
+- url: https://en.wikipedia.org/wiki/Arctic_Council
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q674182
+  type: wikidata
+name: Arctic Council
 includes:
 - id: CA
   name: Canada
   type: country
   status: member
-- id: 'NO'
-  name: Norway
+  joined: '1996-09-19'
+- id: CN
+  name: China
   type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
+  status: observer
+  joined: '2013-05-15'
 - id: DK
   name: Denmark
   type: country
   status: member
-- id: RU
-  name: Russian Federation
+  joined: '1996-09-19'
+- id: FI
+  name: Finland
   type: country
   status: member
+  joined: '1996-09-19'
+- id: FR
+  name: France
+  type: country
+  status: observer
+  joined: '2000'
+- id: DE
+  name: Germany
+  type: country
+  status: observer
+  joined: '1998'
 - id: IS
   name: Iceland
   type: country
   status: member
-founded: '1996'
+  joined: '1996-09-19'
+- id: IN
+  name: India
+  type: country
+  status: observer
+  joined: '2013-05-15'
+- id: IT
+  name: Italy
+  type: country
+  status: observer
+  joined: '2013-05-15'
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+  joined: '2013-05-15'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: observer
+  joined: '2013-05-15'
+- id: NL
+  name: Netherlands
+  type: country
+  status: observer
+  joined: '1998'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1996-09-19'
+- id: PL
+  name: Poland
+  type: country
+  status: observer
+  joined: '1998'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '1996-09-19'
+- id: SG
+  name: Singapore
+  type: country
+  status: observer
+  joined: '2013-05-15'
+- id: ES
+  name: Spain
+  type: country
+  status: observer
+  joined: '2006'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1996-09-19'
+- id: CH
+  name: Switzerland
+  type: country
+  status: observer
+  joined: '2017'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: observer
+  joined: '1998'
+- id: US
+  name: United States
+  type: country
+  status: member
+  joined: '1996-09-19'
+founding_members:
+- CA
+- DK
+- FI
+- IS
+- 'NO'
+- RU
+- SE
+- US
+membership_count: 8
+wikidata_id: Q674182
+legal_status: intergovernmental
 headquarters:
-  city: Fram Centre
+  city: Tromsø
   country: 'NO'
   coordinates:
     lat: 69.643641
     lng: 18.948428
-membership_count: 8
-wikidata_id: Q674182
-description: Arctic Council is an international forum body with 8 members.
+acronyms:
+- lang: en
+  value: AC
+description: >-
+  High-level intergovernmental forum established by the 1996 Ottawa Declaration to promote cooperation, coordination, and
+  interaction among the eight Arctic states on sustainable development and environmental protection. Member states are
+  Canada, Denmark, Finland, Iceland, Norway, Russia, Sweden, and the United States. The Council operates through
+  ministerial meetings, Senior Arctic Officials, six working groups, and a permanent secretariat in Tromsø, Norway.
+  Thirteen non-Arctic states hold observer status. Indigenous peoples' organizations participate as Permanent Participants
+  with consultation rights but without voting power. The Council concluded the Arctic Search and Rescue Agreement in 2011,
+  its first binding treaty.
 tags:
 - AC
 - ARCTICC
 - arctic
+- canada
+- climate
 - cooperation
 - council
+- denmark
+- environment
+- finland
 - forum
+- iceland
+- norway
+- ocean
 - political
 - regional
 - regional_cooperation
+- russia
+- sweden
+- united_states
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: environment
+  name: Environment
+- key: environmental_protection
+  name: Environmental Protection
+- key: climate_change
+  name: Climate Change
+- key: sustainable_development
+  name: Sustainable Development
+- key: maritime
+  name: Maritime
 other_names:
 - id: ar
   name: المجلس القطبي
-- id: zh
-  name: 北極理事會
+- id: da
+  name: Arktisk Råd
+- id: de
+  name: Arktischer Rat
 - id: en
   name: Arctic Council
-- id: fr
-  name: Conseil de l'Arctique
-- id: ru
-  name: Арктический совет
 - id: es
   name: Consejo Ártico
+- id: fi
+  name: Arktinen neuvosto
+- id: fr
+  name: Conseil de l'Arctique
+- id: is
+  name: Norðurskautsráðið
+- id: it
+  name: Consiglio Artico
+- id: ja
+  name: 北極評議会
+- id: ko
+  name: 북극 이사회
+- id: nb
+  name: Arktisk Råd
+- id: nl
+  name: Arctische Raad
+- id: pl
+  name: Rada Arktyczna
+- id: pt
+  name: Conselho Ártico
+- id: ru
+  name: Арктический совет
+- id: sv
+  name: Arktiska rådet
+- id: zh
+  name: 北極理事會
+notes: >-
+  Six indigenous organizations hold Permanent Participant status (Aleut International Association, Arctic Athabaskan
+  Council, Gwich'in Council International, Inuit Circumpolar Council, Russian Association of Indigenous Peoples of the
+  North, and Saami Council); they are not modeled as country includes. The European Union's observer application remains
+  pending. Following Russia's 2022 invasion of Ukraine, the other seven member states paused participation under Russian
+  chairmanship and later resumed limited cooperation on previously approved projects without Russian leadership; Russia
+  remains a member state. Chairmanship rotates every two years among member states; Denmark chairs from 2025 to 2027.
+  Brazil expressed interest in observer status in 2023.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Council
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Council
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Council
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.arctic-council.org/
+  retrieved_at: '2026-07-29'
+  url: https://arctic-council.org/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.arctic-council.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Council
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Council
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q674182
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q674182
+  license: CC0

@@ -13,32 +13,40 @@ includes:
   name: Albania
   type: country
   status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: BA
   name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: HR
-  name: Croatia
   type: country
   status: member
 - id: CY
   name: Cyprus
   type: country
   status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: ES
+  name: Spain
   type: country
   status: member
 - id: FR
   name: France
   type: country
   status: member
+- id: GI
+  name: Gibraltar
+  type: country
+  status: member
 - id: GR
   name: Greece
+  type: country
+  status: member
+- id: HR
+  name: Croatia
   type: country
   status: member
 - id: IL
@@ -57,8 +65,8 @@ includes:
   name: Libya
   type: country
   status: member
-- id: MT
-  name: Malta
+- id: MA
+  name: Morocco
   type: country
   status: member
 - id: MC
@@ -69,20 +77,16 @@ includes:
   name: Montenegro
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MT
+  name: Malta
   type: country
   status: member
 - id: PS
-  name: Palestine, State of
+  name: West Bank and Gaza
   type: country
   status: member
 - id: SI
   name: Slovenia
-  type: country
-  status: member
-- id: ES
-  name: Spain
   type: country
   status: member
 - id: SY
@@ -104,7 +108,8 @@ regions:
 - Asia
 - Africa
 wikidata_id: Q4918
-description: Sea between Europe, Africa and Asia.
+description: Countries and territories with a coastline on the Mediterranean Sea, comprising 22 sovereign states from Spain
+  to Morocco plus Gibraltar, per the Wikipedia definition of Mediterranean coastal countries.
 tags:
 - MEDITERRANEAN
 - mediterranean
@@ -132,18 +137,31 @@ other_names:
   name: Средиземноморье
 - id: zh
   name: 地中海
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mediterranean_Sea
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mediterranean_Sea
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mediterranean_Sea
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mediterranean_Sea
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4918
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Mediterranean_Sea

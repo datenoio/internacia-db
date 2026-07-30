@@ -1,48 +1,164 @@
 id: EUCLID
+name: EUCLID (Euclid University)
 blocktype:
 - intorg
+- education
 status: formal
+founded: '2008'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+- Asia
+- Oceania
 languages:
 - en
+- fr
 links:
-- url: http://www.euclid.int/
+- url: https://www.euclid.int/
   type: website
 - url: https://en.wikipedia.org/wiki/EUCLID_(Euclid_University)
   type: wikipedia
-name: EUCLID (Euclid University)
+- url: https://www.wikidata.org/wiki/Q3046238
+  type: wikidata
+acronyms:
+- lang: en
+  value: EUCLID
+- lang: fr
+  value: EUCLIDE
+- lang: en
+  value: EUCLIDE
+legal_status: intergovernmental
+recognition_status: Intergovernmental university established under multilateral treaties
+  registered with the United Nations Treaty Series; maintains dual headquarters agreements
+  with the Central African Republic (2011) and The Gambia (2013)
+headquarters:
+  city: Banjul
+  country: GM
+  coordinates:
+    lat: 13.406532
+    lng: -16.727173
+wikidata_id: Q3046238
+description: Intergovernmental university established in 2008 under open memoranda
+  of understanding registered with the United Nations. EUCLID trains civil servants
+  for its participating states and offers graduate programmes in diplomacy, sustainable
+  development, international law, and related fields. Maintains dual headquarters
+  in Banjul, The Gambia, and Bangui, Central African Republic, with an executive office
+  in Washington, D.C.
 includes:
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+  joined: '2010'
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '2009'
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: KM
-  name: Comoros
+  joined: '2010'
+- id: DJ
+  name: Djibouti
   type: country
   status: member
+  joined: '2024'
+  note: Treaty registration pending as of 2024
 - id: ER
   name: Eritrea
   type: country
   status: member
+  joined: '2008'
 - id: GM
   name: Gambia
   type: country
   status: member
-- id: GW
-  name: Guinea-Bissau
+  joined: '2012'
+- id: KM
+  name: Comoros
   type: country
   status: member
+  joined: '2009'
 - id: SL
   name: Sierra Leone
   type: country
   status: member
-membership_count: 6
-description: The EUCLID (Euclid University) is an international organization that is used to promote regional cooperation in the education sector.
+  joined: '2008'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '2009'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  joined: '2011'
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+  joined: '2008'
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+  joined: '2008'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '2008'
+membership_count: 13
 tags:
 - EUCLID
 - education
 - euclid
+- intergovernmental
 - intorg
 - university
 topics:
 - key: education
   name: Education
+- key: diplomacy
+  name: Diplomacy
+other_names:
+- id: en
+  name: EUCLID
+- id: en
+  name: Euclid University
+- id: fr
+  name: Pôle Universitaire Euclide
+- id: zh
+  name: 歐幾裡得大學
+provenance:
+- field: includes
+  source: Wikipedia participating states table
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/EUCLID_(Euclid_University)
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3046238
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3046238
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/EUCLID_(Euclid_University)
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/
+  license: CC0
+last_verified: '2026-07-29'

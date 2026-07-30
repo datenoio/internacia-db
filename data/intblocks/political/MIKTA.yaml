@@ -1,8 +1,20 @@
 id: MIKTA
+name: MIKTA
 blocktype:
 - political
 status: informal
+founded: '2013-09-25'
+active_period:
+  start: '2013-09-25'
 geographic_scope: global
+regions:
+- Latin America
+- Southeast Asia
+- East Asia
+- Western Asia
+- Oceania
+languages:
+- en
 links:
 - url: http://www.mikta.org/
   type: website
@@ -10,33 +22,64 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q865479
   type: wikidata
-name: MIKTA
-founded: '2013-09-25'
+acronyms:
+- lang: en
+  value: MIKTA
+- lang: fr
+  value: MISTA
+- lang: es
+  value: MIKT
+- lang: es
+  value: MIKTA
+- lang: es
+  value: MIST
+- lang: de
+  value: MISTA
+- lang: pt
+  value: MISTA
 includes:
 - id: MX
   name: Mexico
   type: country
   status: member
+  joined: '2013-09-25'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2013-09-25'
 - id: KR
-  name: South Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2013-09-25'
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '2013-09-25'
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '2013-09-25'
 membership_count: 5
-wikidata_id: Q865479
-description: A cross-regional group of G20 member nations serving as a consultative platform which increases mutual understanding,
-  deepens bilateral ties, and helps to find common ground for cooperation.
+founding_members:
+- MX
+- ID
+- KR
+- TR
+- AU
+legal_status: informal partnership
+notes: Informal middle-power partnership created on 25 September 2013 on the sidelines of the United Nations General Assembly
+  in New York City. Led by foreign ministers, it provides a flexible consultative platform for dialogue without pressure to
+  reach consensus. The chair rotates annually among members. All five are G20 economies with similar GDP scale; the acronym
+  derives from the initial letters of each member country name.
+description: Informal cross-regional middle-power partnership of Mexico, Indonesia, South Korea, Turkey, and Australia formed
+  on 25 September 2013 at the UN General Assembly. Led by foreign ministers, it serves as a consultative platform to increase
+  mutual understanding, deepen bilateral ties, and coordinate positions on global governance, trade, sustainable development,
+  peacekeeping, and counter-terrorism. All members are G20 economies spanning Latin America, Southeast Asia, East Asia,
+  Western Asia, and Oceania.
 tags:
 - MIKTA
 - cooperation
@@ -51,6 +94,7 @@ topics:
   name: Regional Cooperation
 - key: governance
   name: Governance
+wikidata_id: Q865479
 other_names:
 - id: ar
   name: مجموعة ميكتا MIKTA
@@ -68,31 +112,44 @@ other_names:
   name: МИКТА
 - id: zh
   name: 中等强国合作体
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q865479
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q865479
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q865479
   license: CC0
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.mikta.org/
-acronyms:
-- lang: fr
-  value: MISTA
-- lang: es
-  value: MIKT
-- lang: es
-  value: MIKTA
-- lang: es
-  value: MIST
-- lang: de
-  value: MISTA
-- lang: pt
-  value: MISTA
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MIKTA

@@ -1,79 +1,183 @@
 id: HELCOM
+name: Baltic Marine Environment Protection Commission
 blocktype:
 - intorg
 - ocean
 status: formal
+founded: '1974'
+active_period:
+  start: '1974-03-22'
+geographic_scope: regional
+regions:
+- Baltic Sea region
+- Europe
 languages:
 - en
 links:
-- url: http://www.helcom.fi/
+- url: https://helcom.fi/
   type: website
 - url: https://en.wikipedia.org/wiki/Baltic_Marine_Environment_Protection_Commission
   type: wikipedia
-name: Baltic Marine Environment Protection Commission
+- url: https://www.wikidata.org/wiki/Q1563503
+  type: wikidata
+acronyms:
+- lang: en
+  value: HELCOM
+legal_status: intergovernmental
+recognition_status: Treaty-based regional sea convention established by the Convention on the Protection of the Marine Environment of the Baltic Sea Area (Helsinki Convention), originally signed on 22 March 1974 and updated on 9 April 1992; the current convention entered into force on 17 January 2000
+headquarters:
+  city: Helsinki
+  country: FI
+  coordinates:
+    lat: 60.165476
+    lng: 24.963924
+  note: HELCOM Secretariat established in 1980
+secretariat:
+  location: Helsinki
+  organization: HELCOM Secretariat
+wikidata_id: Q1563503
+description: Intergovernmental organization and regional sea convention governing the Helsinki Convention on the Protection of the Marine Environment of the Baltic Sea Area. HELCOM brings together ten Contracting Parties — Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Poland, Russia, Sweden, and the European Union — to prevent and eliminate pollution of the Baltic Sea from land, air, and sea sources, conserve habitats and biological diversity, and promote sustainable use of marine resources. The Commission meets annually at Head-of-Delegation level and holds ministerial meetings every few years; its Secretariat is headquartered in Helsinki.
 includes:
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '1995-06-08'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '1994-06-17'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '1997-04-30'
 - id: PL
   name: Poland
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1974-03-22'
 - id: EU
   name: European Union
   type: organization
   status: member
+  joined: '1994-09-20'
+founding_members:
+- DK
+- FI
+- DE
+- PL
+- RU
+- SE
 membership_count: 10
-description: The Helsinki Commission is an international organization that is used to promote regional cooperation in the
-  climate change sector.
 tags:
 - HELCOM
 - baltic
-- climate
 - environment
+- helsinki
 - intorg
 - marine
 - nature
+- pollution
 topics:
-- key: climate_change
-  name: Climate Change
 - key: environment
   name: Environment
+- key: marine
+  name: Marine Protection
+- key: biodiversity
+  name: Biodiversity
+- key: ocean
+  name: Ocean
 other_names:
 - id: en
   name: HELCOM
-- id: fr
-  name: Helcom
-- id: ru
-  name: Хельсинкская комиссия
+- id: en
+  name: Helsinki Commission
+- id: en
+  name: Baltic Marine Environment Protection Commission
+- id: da
+  name: HELCOM
+- id: de
+  name: HELCOM
 - id: es
   name: Comisión de Helsinki
+- id: et
+  name: Helsingi konventsioon
+- id: fi
+  name: Itämeren merellisen ympäristön suojelukomissio
+- id: fr
+  name: Helcom
+- id: pl
+  name: Komisja Ochrony Środowiska Morskiego Bałtyku
+- id: ru
+  name: Хельсинкская комиссия
+- id: sv
+  name: Helsingforskonventionen
+notes: Russia remains a Contracting Party under the Helsinki Convention, but HELCOM has observed a strategic pause in regular meetings involving Russia since 4 March 2022 following the full-scale invasion of Ukraine.
+provenance:
+- field: includes
+  source: HELCOM official website; Helsinki Convention (1992)
+  retrieved_at: '2026-07-29'
+  url: https://helcom.fi/about-us/
+- field: description
+  source: Wikipedia; HELCOM official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Marine_Environment_Protection_Commission
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1563503
+  license: CC0
+- field: headquarters
+  source: Wikidata; HELCOM official website
+  retrieved_at: '2026-07-29'
+  url: https://helcom.fi/about-us/organisation/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1563503
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1563503
+  license: CC0
+- field: recognition_status
+  source: HELCOM official website
+  retrieved_at: '2026-07-29'
+  url: https://helcom.fi/about-us/convention/
+- field: founded
+  source: HELCOM official website
+  retrieved_at: '2026-07-29'
+  url: https://helcom.fi/about-us/convention/
+- field: geographic_scope
+  source: HELCOM official website
+  retrieved_at: '2026-07-29'
+  url: https://helcom.fi/about-us/
+last_verified: '2026-07-29'

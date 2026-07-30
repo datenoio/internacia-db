@@ -1,8 +1,20 @@
 id: VIENNACONVENTION
+name: Vienna Convention for the Protection of the Ozone Layer
 blocktype:
 - environment
 - agreement
 status: formal
+founded: '1985-03-22'
+active_period:
+  start: '1988-09-22'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 - es
@@ -13,20 +25,46 @@ languages:
 links:
 - url: https://ozone.unep.org/treaties/vienna-convention
   type: website
+- url: https://ozone.unep.org/all-ratifications
+  type: website
+- url: https://ozone.unep.org/treaties/status-ratification
+  type: website
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Vienna_Convention_for_the_Protection_of_the_Ozone_Layer
   type: wikipedia
-name: Vienna Convention for the Protection of the Ozone Layer
-founded: '1985'
-description: International convention focused on ozone layer protection and environmental
-  protection established through an international agreement.
+- url: https://www.wikidata.org/wiki/Q686455
+  type: wikidata
+headquarters:
+  city: Nairobi
+  country: KE
+  coordinates:
+    lat: -1.2921
+    lng: 36.8219
+legal_status: treaty
+recognition_status: Framework multilateral environmental treaty adopted in Vienna on 22 March 1985; entered
+  into force on 22 September 1988; registered with the United Nations as Treaty Series vol. 1513, p. 293;
+  administered by the Ozone Secretariat of the United Nations Environment Programme; parent convention
+  of the Montreal Protocol
+secretariat:
+  location: Nairobi, Kenya
+  organization: Ozone Secretariat (United Nations Environment Programme)
+description: Framework convention that promotes international cooperation to protect the ozone layer through
+  research, systematic observation, information exchange, and adoption of measures against activities
+  that modify it. Adopted in Vienna on 22 March 1985 and entered into force on 22 September 1988; does
+  not itself phase out ozone-depleting substances (that role belongs to the Montreal Protocol). Achieved
+  universal ratification with 198 parties.
 tags:
+- UNEP
 - VIENNACONVENTION
 - agreement
 - convention
 - environment
+- framework
 - law
 - legal
 - ozone
+- treaty
 - vienna
 topics:
 - key: environment
@@ -46,6 +84,16 @@ other_names:
   name: Венская конвенция об охране озонового слоя
 - id: es
   name: Convención de Viena para la Protección de la Capa de Ozono
+acronyms:
+- lang: en
+  value: Vienna Convention
+- lang: fr
+  value: Convention de Vienne
+- lang: es
+  value: Convención de Viena
+suborganizations:
+- id: MONTREALPROTOCOL
+  name: Montreal Protocol on Substances that Deplete the Ozone Layer
 includes:
 - id: AD
   name: Andorra
@@ -78,11 +126,11 @@ includes:
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
 - id: AT
   name: Austria
   type: country
-  status: member
+  status: founding_member
 - id: AU
   name: Australia
   type: country
@@ -106,11 +154,11 @@ includes:
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
 - id: BF
   name: Burkina Faso
   type: country
-  status: member
+  status: founding_member
 - id: BG
   name: Bulgaria
   type: country
@@ -154,7 +202,7 @@ includes:
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
 - id: BZ
   name: Belize
   type: country
@@ -162,7 +210,7 @@ includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
 - id: CD
   name: Democratic Republic of the Congo
   type: country
@@ -178,7 +226,7 @@ includes:
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
 - id: CI
   name: Côte d'Ivoire
   type: country
@@ -190,7 +238,7 @@ includes:
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
 - id: CM
   name: Cameroon
   type: country
@@ -226,7 +274,7 @@ includes:
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
 - id: DJ
   name: Djibouti
   type: country
@@ -234,7 +282,7 @@ includes:
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
 - id: DM
   name: Dominica
   type: country
@@ -258,7 +306,7 @@ includes:
 - id: EG
   name: Egypt
   type: country
-  status: member
+  status: founding_member
 - id: ER
   name: Eritrea
   type: country
@@ -274,11 +322,11 @@ includes:
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
 - id: FJ
   name: Fiji
   type: country
@@ -290,7 +338,7 @@ includes:
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
 - id: GA
   name: Gabon
   type: country
@@ -298,7 +346,7 @@ includes:
 - id: GB
   name: United Kingdom of Great Britain and Northern Ireland
   type: country
-  status: member
+  status: founding_member
 - id: GD
   name: Grenada
   type: country
@@ -326,11 +374,16 @@ includes:
 - id: GR
   name: Greece
   type: country
-  status: member
+  status: founding_member
 - id: GT
   name: Guatemala
   type: country
   status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '2002-11-12'
 - id: GY
   name: Guyana
   type: country
@@ -382,7 +435,7 @@ includes:
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
 - id: JM
   name: Jamaica
   type: country
@@ -470,7 +523,7 @@ includes:
 - id: LU
   name: Luxembourg
   type: country
-  status: member
+  status: founding_member
 - id: LV
   name: Latvia
   type: country
@@ -482,7 +535,7 @@ includes:
 - id: MA
   name: Morocco
   type: country
-  status: member
+  status: founding_member
 - id: MC
   name: Monaco
   type: country
@@ -542,7 +595,7 @@ includes:
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
 - id: MY
   name: Malaysia
   type: country
@@ -570,11 +623,11 @@ includes:
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
 - id: NP
   name: Nepal
   type: country
@@ -590,7 +643,7 @@ includes:
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
 - id: OM
   name: Oman
   type: country
@@ -602,7 +655,7 @@ includes:
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
 - id: PG
   name: Papua New Guinea
   type: country
@@ -650,7 +703,7 @@ includes:
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
 - id: RW
   name: Rwanda
   type: country
@@ -674,7 +727,7 @@ includes:
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
 - id: SG
   name: Singapore
   type: country
@@ -778,7 +831,7 @@ includes:
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: founding_member
 - id: UG
   name: Uganda
   type: country
@@ -786,7 +839,7 @@ includes:
 - id: US
   name: United States of America
   type: country
-  status: member
+  status: founding_member
 - id: UY
   name: Uruguay
   type: country
@@ -835,16 +888,113 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-notes: The Vienna Convention entered into force in 1988. As of 2024, it has achieved
-  universal ratification with 198 parties, including all United Nations member states,
-  the Holy See, the State of Palestine, Niue, the Cook Islands, and the European Union.
-  The convention aims to protect the ozone layer by taking measures to control global
-  emissions of substances that deplete it.
+founding_members:
+- AR
+- AT
+- BY
+- BE
+- BF
+- CA
+- CL
+- DK
+- EG
+- FI
+- FR
+- DE
+- GR
+- IT
+- LU
+- MX
+- MA
+- NL
+- NZ
+- 'NO'
+- PE
+- RU
+- SE
+- CH
+- UA
+- GB
+- US
+notes: The Vienna Convention was adopted on 22 March 1985 and entered into force on 22 September 1988.
+  As of April 2026, it has achieved universal ratification with 198 parties, including all United Nations
+  member states, the Holy See, the State of Palestine, Niue, the Cook Islands, and the European Union.
+  Universal ratification was completed in 2009. Parties meet every three years as the Conference of the
+  Parties.
 membership_count: 198
+official_documents:
+- url: https://ozone.unep.org/treaties/vienna-convention
+  type: document
+  name: Vienna Convention for the Protection of the Ozone Layer
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (vol. 1513, p. 293)
 wikidata_id: Q686455
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/all-ratifications
+- field: membership_count
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: description
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/treaties/vienna-convention
+- field: founding_members
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: geographic_scope
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/all-ratifications
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: recognition_status
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/treaties/vienna-convention
+- field: secretariat
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/about
+- field: headquarters
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/contact
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-2&chapter=27&clang=_en
+- field: notes
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/all-ratifications
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q686455
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q686455
   license: CC0
+- field: suborganizations
+  source: Ozone Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://ozone.unep.org/treaties/montreal-protocol

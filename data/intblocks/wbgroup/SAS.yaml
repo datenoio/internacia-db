@@ -2,12 +2,19 @@ id: SAS
 blocktype:
 - wbgroup
 status: formal
+links:
+- url: https://data.worldbank.org/country/south-asia
+  type: website
+- url: https://api.worldbank.org/v2/region/SAS
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://www.worldbank.org/en/region/sar
+  type: website
+- url: https://www.wikidata.org/wiki/Q771405
+  type: wikidata
 name: South Asia
 includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: BD
   name: Bangladesh
   type: country
@@ -20,6 +27,10 @@ includes:
   name: India
   type: country
   status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
 - id: MV
   name: Maldives
   type: country
@@ -28,16 +39,13 @@ includes:
   name: Nepal
   type: country
   status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-membership_count: 8
-description: Southern region of Asia.
+membership_count: 6
+geographic_scope: regional
+regions:
+- South Asia
+description: World Bank geographic region for economies in South Asia. Since July 1,
+  2025, Afghanistan and Pakistan are classified in the Middle East and North Africa
+  region. No economies in South Asia are classified as high income.
 tags:
 - SAS
 - aid
@@ -56,13 +64,9 @@ topics:
 - key: finance
   name: Finance
 wikidata_id: Q771405
-links:
-- url: https://www.wikidata.org/wiki/Q771405
-  type: wikidata
-- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-  type: website
-- url: https://www.worldbank.org/en/region/sar
-  type: website
+acronyms:
+- lang: en
+  value: SAS
 other_names:
 - id: ar
   name: جنوب آسيا
@@ -81,26 +85,38 @@ other_names:
 - id: zh
   name: 南亚
 provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://databank.worldbank.org/metadataglossary/gender-statistics/country/SAS
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank Data API
+  retrieved_at: '2026-07-29'
+  url: https://api.worldbank.org/v2/country?region=SAS
+- field: membership_count
+  source: World Bank Data API
+  retrieved_at: '2026-07-29'
+  url: https://api.worldbank.org/v2/country?region=SAS
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q771405
   license: CC0
-- field: includes
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-- field: membership_count
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q771405
+  license: CC0
+last_verified: '2026-07-29'

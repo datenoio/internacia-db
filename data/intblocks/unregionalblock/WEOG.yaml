@@ -4,6 +4,8 @@ blocktype:
 - political
 status: informal
 links:
+- url: https://www.un.org/dgacm/en/content/regional-groups
+  type: website
 - url: https://en.wikipedia.org/wiki/Western_European_and_Others_Group
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3117820
@@ -127,8 +129,7 @@ includes:
   type: country
   status: member
 membership_count: 29
-wikidata_id: Q3117820
-description: International forum focused on political.
+description: UN regional group comprising Western European and other member states.
 tags:
 - WEOG
 - cooperation
@@ -137,13 +138,46 @@ tags:
 - political
 - regional
 - regional_cooperation
-- unregionalgroup
+- unregionalblock
 - western
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+wikidata_id: Q3117820
+founded: '1957-12'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q3117820
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q3117820
+  license: CC0
+- field: includes
+  source: United Nations
+  retrieved_at: '2026-07-30'
+  url: https://www.un.org/dgacm/en/content/regional-groups
+  license: public_domain
+- field: description
+  source: United Nations
+  retrieved_at: '2026-07-30'
+  url: https://www.un.org/dgacm/en/content/regional-groups
+  license: public_domain
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q3117820
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Western_European_and_Others_Group
+  license: CC-BY-SA
 other_names:
 - id: ar
   name: مجموعة دول أوروبا الغربية ودول أخرى
@@ -158,9 +192,3 @@ acronyms:
   value: 西歐和其他國家組
 - lang: fr
   value: GEOA
-provenance:
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0

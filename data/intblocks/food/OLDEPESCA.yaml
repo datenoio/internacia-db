@@ -1,79 +1,138 @@
 id: OLDEPESCA
+name: Latin American Organization for Fisheries Development
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1982-10-29'
+active_period:
+  start: '1984-11-02'
+geographic_scope: regional
+regions:
+- Latin America
 languages:
 - en
-name: Latin American Organization for Fisheries Development
+- es
+links:
+- url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+  type: website
+- url: https://www.fao.org/4/t8211e/t8211e07.htm
+  type: website
+acronyms:
+- lang: es
+  value: OLDEPESCA
+- lang: en
+  value: OLDEPESCA
+legal_status: intergovernmental
+recognition_status: Intergovernmental fisheries development organization established by agreement signed in Mexico City on 29 October 1982; entered into force 2 November 1984 (UN registration no. 24116, UNTS vol. 1427); Peru is depositary; secretariat headquartered in Lima
+headquarters:
+  city: Lima
+  country: PE
 includes:
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '1997-01-13'
 - id: BO
   name: Bolivia
   type: country
   status: member
+  joined: '1988-05-17'
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: former_member
+  joined: '1996-10-17'
+  left: '2016-08-08'
 - id: CU
   name: Cuba
   type: country
-  status: member
+  status: founding_member
 - id: EC
   name: Ecuador
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-07-04'
 - id: SV
   name: El Salvador
   type: country
   status: member
+  joined: '1984-11-02'
+- id: GT
+  name: Guatemala
+  type: country
+  status: former_member
+  joined: '1986-10-27'
+  left: '2008-03-16'
 - id: GY
   name: Guyana
   type: country
   status: member
+  joined: '1987-08-13'
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: founding_member
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-11-02'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-11-02'
 - id: PA
   name: Panama
   type: country
-  status: member
+  status: former_member
+  joined: '1984-11-02'
+  left: '2010-03-02'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-05-24'
+- id: UY
+  name: Uruguay
+  type: country
+  status: former_member
+  joined: '1996-04-29'
+  left: '2002-10-29'
 - id: VE
   name: Venezuela, RB
   type: country
-  status: member
-membership_count: 13
-description: Latin American Organization for Fisheries Development is an international
-  food body with 13 members.
+  status: founding_member
+  joined: '1986-08-07'
+founding_members:
+- CR
+- CU
+- EC
+- GT
+- HN
+- MX
+- NI
+- PA
+- PE
+- VE
+membership_count: 11
+description: Regional intergovernmental organization coordinating fisheries and aquaculture development policy across Latin America and the Caribbean. Established by a constitutive agreement signed in Mexico City on 29 October 1982 and in force since 2 November 1984, OLDEPESCA promotes responsible fisheries, regional cooperation on aquatic resources, and food security through technical projects often financed by external donors. The secretariat is based in Lima, Peru; membership has fluctuated through accessions and denunciations registered with Peru as depositary.
 tags:
 - OLDEPESCA
 - agriculture
-- aid
-- american
+- aquaculture
 - development
 - environment
 - farming
+- fisheries
 - food
-- latin
+- intergovernmental
+- latin-america
+- lima
 - nature
-- organization
+- regional_cooperation
 topics:
 - key: agriculture
   name: Agriculture
@@ -83,7 +142,61 @@ topics:
   name: Environment
 - key: food
   name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Latin American Organization for Fisheries Development
+- id: es
+  name: Organización Latinoamericana de Desarrollo Pesquero
+notes: UN treaty registration (no. 24116) records ratifications and denunciations for Belize, Bolivia, Costa Rica, Ecuador, El Salvador, Guatemala, Guyana, Mexico, Nicaragua, Panama, Peru, Uruguay, and Venezuela. Cuba and Honduras are listed as founding participants by FAO and in organizational sources but do not appear in the UN depositary participant table. Costa Rica, Guatemala, Panama, and Uruguay have formally denounced the agreement; eleven states remain active members as of 2026-07.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: UN Treaty Collection; FAO
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/t8211e/t8211e07.htm
+- field: founded
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: active_period
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: legal_status
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: recognition_status
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: geographic_scope
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/t8211e/t8211e07.htm
+- field: headquarters
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/t8211e/t8211e07.htm
+- field: founding_members
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/t8211e/t8211e07.htm
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: other_names
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc
+- field: notes
+  source: UN Treaty Collection; FAO
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002800d17dc

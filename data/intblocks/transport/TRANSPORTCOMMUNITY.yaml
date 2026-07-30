@@ -3,6 +3,10 @@ blocktype:
 - transport
 - intorg
 status: formal
+founded: '2017-07-12'
+geographic_scope: regional
+regions:
+- Southeast Europe
 languages:
 - en
 - sr
@@ -10,27 +14,26 @@ languages:
 - sq
 - mk
 - me
+legal_status: intergovernmental
 links:
 - url: https://www.transport-community.org/
+  type: website
+- url: https://transport.ec.europa.eu/transport-community_en
   type: website
 - url: https://en.wikipedia.org/wiki/Transport_Community
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q67881509
   type: wikidata
 name: Transport Community
-founded: '2017-07-12'
 headquarters:
   city: Belgrade
   country: RS
   coordinates:
-    lat: 44.8024
-    lng: 20.4656
+    lat: 44.8056
+    lng: 20.4633
 acronyms:
 - lang: en
   value: TC
-geographic_scope: regional
-regions:
-- Southeast Europe
 includes:
 - id: EU
   name: European Union
@@ -71,17 +74,32 @@ includes:
   name: Georgia
   type: country
   status: observer
+  joined: '2022-11-15'
 - id: MD
   name: Moldova
   type: country
   status: observer
+  joined: '2022-11-15'
 - id: UA
   name: Ukraine
   type: country
   status: observer
+  joined: '2022-11-15'
+founding_members:
+- AL
+- BA
+- KV
+- ME
+- MK
+- RS
 membership_count: 7
-description: International organisation in the field of mobility and transport, aiming to integrate Western Balkans transport
-  markets into the EU by assisting adoption and implementation of EU transport legislation.
+wikidata_id: Q67881509
+description: >-
+  Intergovernmental organisation in the field of mobility and transport, established by the Treaty establishing the
+  Transport Community signed on 12 July 2017 in Trieste. It integrates Western Balkans transport markets into the EU by
+  assisting the six South East European parties to adopt and implement EU transport acquis and by supporting regional
+  connectivity projects. EU member states participate through the European Commission; Georgia, Moldova, and Ukraine are
+  observing participants. The Permanent Secretariat is based in Belgrade.
 tags:
 - TRANSPORTCOMMUNITY
 - TC
@@ -100,16 +118,68 @@ topics:
   name: Regional Cooperation
 - key: integration
   name: Integration
-wikidata_id: Q67881509
 other_names:
 - id: en
   name: Southeast Europe Transport Community
+- id: de
+  name: Transport Community
+- id: it
+  name: Comunità dei trasporti dell'Europa sudorientale
+- id: sr
+  name: Транспортна заједница
+- id: bs
+  name: Transportna zajednica
+- id: sq
+  name: Komuniteti i Transportit
+- id: mk
+  name: Транспортна заедница
+- id: me
+  name: Transportna zajednica
+notes: >-
+  Official participant count is 36 (EU member states via the European Commission, six Western Balkan parties, and three
+  observing participants). This record lists the EU as a single organisation member rather than individual EU states.
+  The Permanent Secretariat opened in Belgrade in September 2019. The 6th Ministerial Council (15 November 2022) endorsed
+  more systematic involvement of Georgia, Moldova, and Ukraine in Transport Community bodies.
+last_verified: '2026-07-30'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.transport-community.org/
+- field: includes
+  source: Transport Community
+  retrieved_at: '2026-07-30'
+  url: https://www.transport-community.org/about-us/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Transport_Community
+  license: CC BY-SA 4.0
+- field: description
+  source: Transport Community
+  retrieved_at: '2026-07-30'
+  url: https://www.transport-community.org/about-us/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q67881509
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q67881509
+  license: CC0
+- field: other_names
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Transport_Community
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q67881509
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.transport-community.org/
+  source: Transport Community
+  retrieved_at: '2026-07-30'
+  url: https://www.transport-community.org/about-us/
+- field: geographic_scope
+  source: Transport Community
+  retrieved_at: '2026-07-30'
+  url: https://www.transport-community.org/about-us/

@@ -5,14 +5,16 @@ status: formal
 links:
 - url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
   type: website
-- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank
+- url: https://api.worldbank.org/v2/region/LAC
+  type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://www.worldbank.org/en/region/lac
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   type: website
 name: Latin America & Caribbean (developing only)
 includes:
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
 - id: AR
   name: Argentina
   type: country
@@ -29,16 +31,8 @@ includes:
   name: Belize
   type: country
   status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
 - id: CO
   name: Colombia
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
   type: country
   status: member
 - id: CU
@@ -65,10 +59,6 @@ includes:
   name: Guatemala
   type: country
   status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
 - id: HN
   name: Honduras
   type: country
@@ -81,10 +71,6 @@ includes:
   name: Jamaica
   type: country
   status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
 - id: LC
   name: St. Lucia
   type: country
@@ -95,10 +81,6 @@ includes:
   status: member
 - id: NI
   name: Nicaragua
-  type: country
-  status: member
-- id: PA
-  name: Panama
   type: country
   status: member
 - id: PE
@@ -117,21 +99,22 @@ includes:
   name: El Salvador
   type: country
   status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
 - id: VC
   name: St. Vincent and the Grenadines
   type: country
   status: member
 - id: VE
-  name: Venezuela
+  name: Venezuela, RB
   type: country
   status: member
-membership_count: 30
-description: World Bank analytical grouping for Latin America & Caribbean developing
-  economies (excluding high income).
+membership_count: 23
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
+description: World Bank geographic region for developing economies across Latin America
+  and the Caribbean. This analytical variant excludes high-income economies from the
+  regional aggregate used in World Development Indicators.
 tags:
 - LAC
 - aid
@@ -160,17 +143,31 @@ acronyms:
   value: LAC
 provenance:
 - field: description
-  source: World Bank Data
-  retrieved_at: '2026-07-13'
-  url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
-  license: All Rights Reserved
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank Data API
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?format=json&per_page=500
+- field: membership_count
+  source: World Bank Data API
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?format=json&per_page=500
 - field: other_names
   source: World Bank Data
-  retrieved_at: '2026-07-13'
+  retrieved_at: '2026-07-30'
   url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
-  license: All Rights Reserved
 - field: acronyms
   source: World Bank Data
-  retrieved_at: '2026-07-13'
+  retrieved_at: '2026-07-30'
   url: https://data.worldbank.org/country/latin-america-and-caribbean-excluding-high-income
-  license: All Rights Reserved
+last_verified: '2026-07-30'

@@ -1,99 +1,186 @@
 id: AIPA
+name: ASEAN Inter-Parliamentary Assembly
 blocktype:
 - parliamentary
 status: formal
 partof: ASEAN
+founded: '1977-09-02'
+active_period:
+  start: '1977-09-02'
+geographic_scope: regional
+regions:
+- Asia
+- Southeast Asia
 languages:
 - en
+- id
+- ms
+- th
+- vi
 links:
+- url: https://aipasecretariat.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/ASEAN_Inter-Parliamentary_Assembly
   type: wikipedia
-name: ASEAN Inter-Parliamentary Assembly
+- url: https://www.wikidata.org/wiki/Q28135536
+  type: wikidata
+acronyms:
+- lang: en
+  value: AIPA
+headquarters:
+  city: Jakarta
+  country: ID
+  coordinates:
+    lat: -6.2389375
+    lng: 106.7990625
 includes:
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
 - id: ID
   name: Indonesia
   type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
+  status: founding_member
+  joined: '1977-09-02'
 - id: MY
   name: Malaysia
   type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
+  status: founding_member
+  joined: '1977-09-02'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1977-09-02'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '1977-09-02'
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1977-09-02'
 - id: VN
   name: Vietnam
   type: country
   status: member
+  joined: '1995-09-19'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '1997'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '1999'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '2009-09-04'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '2011-09-20'
+founding_members:
+- ID
+- MY
+- PH
+- SG
+- TH
 membership_count: 10
-description: Federation of Southeast Asian parliaments.
+description: Regional inter-parliamentary body formally associated with ASEAN, established
+  on 2 September 1977 in Manila as the ASEAN Inter-Parliamentary Organization (AIPO) by
+  the parliamentary delegations of Indonesia, Malaysia, the Philippines, Singapore, and
+  Thailand. Renamed AIPA at the 27th General Assembly in Cebu on 14 September 2006 and
+  governed since 2007 by the AIPA Charter. Composed of national parliaments from all ten
+  ASEAN member states, AIPA holds an annual General Assembly hosted in rotation by the
+  presiding member parliament, maintains standing committees on political, economic,
+  social, and organizational matters, and operates a permanent Secretariat co-located with
+  the ASEAN Secretariat in Jakarta. Unlike the European Parliament, AIPA is an advisory
+  transnational parliamentary conference without legislative or oversight powers over
+  ASEAN; it promotes dialogue, disseminates ASEAN community policies, and coordinates
+  parliamentary engagement with ASEAN summits and dialogue partners.
+notes: Brunei participated as a special observer from 1993 and as a permanent observer
+  before the Legislative Council was admitted as a full member at the 30th General Assembly
+  in Pattaya on 4 September 2009. Myanmar participated as a special observer from 1997 and
+  became a full member at the 32nd General Assembly in Cambodia on 20 September 2011.
+  AIPA also maintains observer parliaments (including the European Parliament and other
+  national legislatures) that are not modeled as country includes. Timor-Leste is scheduled
+  to accede as the eleventh member parliament at the 47th General Assembly in Manila in
+  October 2026.
 tags:
 - AIPA
+- AIPO
+- ASEAN
 - assembly
 - inter
+- interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q28135536
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q28135536
-  license: CC0
 other_names:
 - id: en
   name: ASEAN Inter-Parliamentary Assembly
-acronyms:
-- lang: en
-  value: AIPA
-founded: '1977-09-02'
+- id: en
+  name: ASEAN Inter-Parliamentary Organization
+- id: id
+  name: Majelis Antar-Parlemen ASEAN
+- id: ms
+  name: Perhimpunan Antara Parlimen ASEAN
+- id: th
+  name: สมัชชารัฐสภาอาเซียน
+- id: vi
+  name: Hội đồng Liên Nghị viện ASEAN
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q28135536
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q28135536
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q28135536
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aipasecretariat.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Inter-Parliamentary_Assembly
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Inter-Parliamentary_Assembly
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aipasecretariat.org/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Inter-Parliamentary_Assembly
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Inter-Parliamentary_Assembly

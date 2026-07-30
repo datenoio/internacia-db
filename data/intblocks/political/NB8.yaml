@@ -8,56 +8,88 @@ geographic_scope: regional
 regions:
 - Northern Europe
 - Baltic Sea region
+- Europe
 languages:
 - en
-- dk
+- da
+- de
 - et
 - fi
 - is
+- lt
 - lv
 - 'no'
+- pl
 - sv
 links:
+- url: https://vm.ee/en/NB8
+  type: website
 - url: https://en.wikipedia.org/wiki/Nordic-Baltic_Eight
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7051260
+- url: https://www.wikidata.org/wiki/Q3379870
   type: wikidata
 acronyms:
 - lang: en
+  value: NB8
+- lang: da
+  value: NB8
+- lang: de
+  value: NB8
+- lang: et
+  value: NB8
+- lang: fi
+  value: NB8
+- lang: lt
+  value: NB8
+- lang: lv
+  value: NB8
+- lang: nb
+  value: NB8
+- lang: pl
+  value: NB8
+- lang: sv
   value: NB8
 includes:
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '1992'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '1992'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '1992'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '1992'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '1992'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '1992'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '1992'
 - id: SE
   name: Sweden
   type: country
   status: member
+  joined: '1992'
 membership_count: 8
 founding_members:
 - DK
@@ -68,34 +100,116 @@ founding_members:
 - LT
 - 'NO'
 - SE
-wikidata_id: Q7051260
-legal_status: intergovernmental
-notes: Informal cooperation format between the five Nordic countries (Denmark, Finland, Iceland, Norway, Sweden) and the three
-  Baltic states (Estonia, Latvia, Lithuania). The format was established to enhance regional cooperation and coordination
-  on political, economic, and security issues.
-description: Informal political cooperation format focused on regional cooperation between Nordic and Baltic countries.
+legal_status: informal cooperation
+wikidata_id: Q3379870
+description: Informal regional cooperation format bringing together Denmark, Estonia, Finland, Iceland, Latvia, Lithuania,
+  Norway, and Sweden to discuss regional and international issues. Established in 1992 as the "5+3" format (five Nordic
+  countries plus three Baltic states); renamed Nordic-Baltic Eight (NB8) on 30 August 2000. Has no permanent secretariat;
+  chairmanship rotates annually among member states. Regular meetings take place at prime-minister, foreign-minister,
+  parliamentary, and expert levels on foreign policy, security, energy, digital affairs, and other regional topics.
+notes: Nordic-Baltic cooperation began in 1992 with a cooperation agreement between the Nordic Council and the Baltic
+  Assembly. The format was initially known as 5+3 until foreign ministers adopted the NB8 name in Middelfart, Denmark in
+  August 2000. Since 2004 the Baltic states coordinate EU positions informally as NB6 within the broader NB8 framework.
+  The 2010 Birkavs–Gade (Wise Men) Report proposed 38 recommendations to deepen cooperation. e-PINE (Enhanced Partnership
+  in Northern Europe) links NB8 with the United States from 2003. Defence and security cooperation intensified after
+  Finland and Sweden joined NATO.
 tags:
 - NB8
+- 5+3
 - baltic
+- baltic_sea
 - cooperation
 - nordic
+- nordic_baltic
 - political
 - regional
 - regional_cooperation
+- security
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: security
+  name: Security
 other_names:
 - id: ar
-  name: تصنيف:شركة جاغيكس
+  name: دول الشمال والبلطيق الثمانية
+- id: da
+  name: NB8
+- id: de
+  name: Nordisch-Baltische Acht
+- id: en
+  name: Nordic-Baltic Eight
+- id: en
+  name: NB8
+- id: et
+  name: Põhja-Balti koostöö
+- id: fa
+  name: نوردیک-بالتیک هشت
+- id: fr
+  name: Nordic-Baltic Eight
+- id: id
+  name: Nordic-Baltic Eight
+- id: ja
+  name: 北欧・バルト8カ国
+- id: ko
+  name: 노르딕-발틱 에이트
+- id: lt
+  name: NB8
+- id: lv
+  name: NB8
+- id: pl
+  name: NB8
+- id: ru
+  name: Nordic-Baltic Eight
+- id: uk
+  name: Nordic-Baltic Eight
+- id: zh
+  name: 北欧波罗的海八国
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3379870
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3379870
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3379870
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic-Baltic_Eight
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3379870
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic-Baltic_Eight
+- field: notes
+  source: Estonian Ministry of Foreign Affairs
+  retrieved_at: '2026-07-29'
+  url: https://vm.ee/en/NB8
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Nordic-Baltic_Eight
+  source: Estonian Ministry of Foreign Affairs
+  retrieved_at: '2026-07-29'
+  url: https://vm.ee/en/NB8
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Nordic-Baltic_Eight
+- field: links
+  source: Estonian Ministry of Foreign Affairs
+  retrieved_at: '2026-07-29'
+  url: https://vm.ee/en/NB8

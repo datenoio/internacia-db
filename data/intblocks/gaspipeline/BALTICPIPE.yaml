@@ -1,11 +1,23 @@
 id: BALTICPIPE
+name: Baltic Pipe
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2022-09-27'
+geographic_scope: regional
+regions:
+- Europe
+languages:
+- da
+- en
+- pl
 links:
+- url: https://www.baltic-pipe.eu/
+  type: website
 - url: https://en.wikipedia.org/wiki/Baltic_Pipe
   type: wikipedia
-name: Baltic Pipe
+- url: https://www.wikidata.org/wiki/Q4852713
+  type: wikidata
 includes:
 - id: 'NO'
   name: Norway
@@ -20,15 +32,22 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: Gas pipeline between Denmark and Poland.
+wikidata_id: Q4852713
+description: Natural gas pipeline corridor from the Norwegian North Sea (branching off Europipe II)
+  through Denmark to Poland, creating a new supply route for Central European gas markets. Developed
+  jointly by Energinet and Gaz-System as an EU Project of Common Interest with up to 10 billion m³/a
+  capacity from Norway to Denmark and Poland and 3 billion m³/a reverse flow from Poland to Denmark.
+  Commissioned on 27 September 2022; full design capacity was reached on 30 November 2022.
 tags:
 - BALTICPIPE
 - baltic
-- pipe
+- denmark
 - economy
 - energy
 - gaspipeline
+- norway
 - pipeline
+- poland
 - transport
 - transportation
 topics:
@@ -38,39 +57,63 @@ topics:
   name: Energy
 - key: transport
   name: Transport
-wikidata_id: Q4852713
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q4852713
-  license: CC0
 other_names:
 - id: ar
   name: خط أنابيب البلطيق
+- id: da
+  name: Baltic Pipe
 - id: de
   name: Baltic Pipe
 - id: en
   name: Baltic Pipe
 - id: es
   name: Gasoducto Báltico
+- id: lt
+  name: Baltijos dujotiekis
+- id: pl
+  name: Baltic Pipe
 - id: ru
+  name: Baltic Pipe
+- id: sv
+  name: Baltic Pipe
+- id: tr
+  name: Baltık Boru Hattı
+- id: uk
   name: Baltic Pipe
 - id: zh
   name: 波羅的海天然氣管道
-founded: '2022'
+notes: Route crosses the Swedish exclusive economic zone in the Baltic Sea without landfall in Sweden;
+  endpoint and transit countries are listed in includes. The ~900 km system comprises a North Sea
+  offshore link, onshore Danish transmission upgrades, a Baltic Sea offshore section, and Polish
+  onshore expansion.
+provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Pipe
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4852713
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Pipe
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4852713
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Pipe
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Pipe
+last_verified: '2026-07-29'

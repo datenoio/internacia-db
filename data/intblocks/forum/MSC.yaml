@@ -5,6 +5,8 @@ blocktype:
 status: formal
 founded: '1963'
 geographic_scope: global
+regions:
+- Global
 languages:
 - en
 - de
@@ -13,20 +15,30 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Munich_Security_Conference
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q565507
+  type: wikidata
 name: Munich Security Conference
 headquarters:
   city: Munich
   country: DE
   coordinates:
-    lat: 48.1351
-    lng: 11.582
+    lat: 48.1406
+    lng: 11.5733
 acronyms:
 - lang: en
   value: MSC
 - lang: de
   value: MSK
 membership_count: 59
-description: International forum focused on security policy dialogue.
+wikidata_id: Q565507
+legal_status: non-profit foundation
+description: >-
+  Annual independent forum for debating international security policy, founded in 1963 in Munich by Ewald-Heinrich von
+  Kleist-Schmenzin as the Internationale Wehrkundebegegnung / Münchner Wehrkundetagung. Organized today by the Munich
+  Security Conference Foundation (Stiftung Münchner Sicherheitskonferenz), it convenes heads of state and government,
+  ministers, military leaders, and representatives from business, science, and civil society each February. The
+  conference has no treaty-based membership; participation is by invitation and varies by year, with a historically
+  transatlantic core that later expanded to include partners from Asia, the Middle East, Africa, and Latin America.
 tags:
 - MSC
 - cooperation
@@ -42,259 +54,330 @@ topics:
 other_names:
 - id: ar
   name: مؤتمر ميونخ للأمن
-- id: zh
-  name: 慕尼黑安全会议
+- id: de
+  name: Münchner Sicherheitskonferenz
+- id: de
+  name: Münchner Konferenz für Sicherheitspolitik
 - id: en
   name: Munich Security Conference
-- id: fr
-  name: Conférence de Munich sur la sécurité
-- id: ru
-  name: Мюнхенская конференция по безопасности
 - id: es
   name: Conferencia de Seguridad de Múnich
+- id: fr
+  name: Conférence de Munich sur la sécurité
+- id: it
+  name: Conferenza di Monaco sulla sicurezza
+- id: ja
+  name: ミュンヘン安全保障会議
+- id: pl
+  name: Monachijska Konferencja Polityki Bezpieczeństwa
+- id: pt
+  name: Conferência de Segurança de Munique
+- id: ru
+  name: Мюнхенская конференция по безопасности
+- id: uk
+  name: Мюнхенська конференція з безпеки
+- id: zh
+  name: 慕尼黑安全会议
+- id: zh
+  name: 慕安会
+previous_names:
+- id: en
+  name: Internationale Wehrkundebegegnung / Münchner Wehrkundetagung
+  period: 1963–1990s
+- id: de
+  name: Münchner Konferenz für Sicherheitspolitik
+  period: 1990s–2008
 includes:
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: EG
-  name: Egypt
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
 - id: AE
   name: United Arab Emirates
   type: country
-  status: member
-- id: IL
-  name: Israel
+  status: participant
+- id: AR
+  name: Argentina
   type: country
-  status: member
-- id: TR
-  name: Türkiye
+  status: participant
+- id: AT
+  name: Austria
   type: country
-  status: member
-- id: RU
-  name: Russian Federation
+  status: participant
+- id: AU
+  name: Australia
   type: country
-  status: member
-- id: UA
-  name: Ukraine
+  status: participant
+- id: BE
+  name: Belgium
   type: country
-  status: member
+  status: participant
+- id: BG
+  name: Bulgaria
+  type: country
+  status: participant
+- id: BR
+  name: Brazil
+  type: country
+  status: participant
 - id: BY
   name: Belarus
   type: country
-  status: member
-- id: GE
-  name: Georgia
+  status: participant
+- id: CA
+  name: Canada
   type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
+  status: participant
+- id: CH
+  name: Switzerland
   type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
+  status: participant
+- id: CN
+  name: China
   type: country
-  status: member
-- id: PK
-  name: Pakistan
+  status: participant
+- id: CZ
+  name: Czech Republic
   type: country
-  status: member
-- id: ID
-  name: Indonesia
+  status: participant
+- id: DE
+  name: Germany
   type: country
-  status: member
-- id: SG
-  name: Singapore
+  status: participant
+- id: DK
+  name: Denmark
   type: country
-  status: member
-- id: TH
-  name: Thailand
+  status: participant
+- id: EE
+  name: Estonia
   type: country
-  status: member
-- id: VN
-  name: Vietnam
+  status: participant
+- id: EG
+  name: Egypt, Arab Rep.
   type: country
-  status: member
-- id: PH
-  name: Philippines
+  status: participant
+- id: ES
+  name: Spain
   type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
+  status: participant
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: participant
+- id: FI
+  name: Finland
+  type: country
+  status: participant
+- id: FR
+  name: France
+  type: country
+  status: participant
+- id: GB
+  name: United Kingdom
+  type: country
+  status: participant
+- id: GE
+  name: Georgia
+  type: country
+  status: participant
+- id: GR
+  name: Greece
+  type: country
+  status: participant
+- id: HR
+  name: Croatia
+  type: country
+  status: participant
+- id: HU
+  name: Hungary
+  type: country
+  status: participant
+- id: ID
+  name: Indonesia
+  type: country
+  status: participant
+- id: IE
+  name: Ireland
+  type: country
+  status: participant
+- id: IL
+  name: Israel
+  type: country
+  status: participant
+- id: IN
+  name: India
+  type: country
+  status: participant
+- id: IT
+  name: Italy
+  type: country
+  status: participant
+- id: JP
+  name: Japan
+  type: country
+  status: participant
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: participant
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: participant
+- id: LT
+  name: Lithuania
+  type: country
+  status: participant
+- id: LV
+  name: Latvia
+  type: country
+  status: participant
+- id: MX
+  name: Mexico
+  type: country
+  status: participant
+- id: MY
+  name: Malaysia
+  type: country
+  status: participant
 - id: NATO
   name: North Atlantic Treaty Organization
   type: organization
-  status: member
+  status: participant
+- id: NL
+  name: Netherlands
+  type: country
+  status: participant
+- id: 'NO'
+  name: Norway
+  type: country
+  status: participant
+- id: NZ
+  name: New Zealand
+  type: country
+  status: participant
+- id: PH
+  name: Philippines
+  type: country
+  status: participant
+- id: PK
+  name: Pakistan
+  type: country
+  status: participant
+- id: PL
+  name: Poland
+  type: country
+  status: participant
+- id: PT
+  name: Portugal
+  type: country
+  status: participant
+- id: RO
+  name: Romania
+  type: country
+  status: participant
+- id: RU
+  name: Russian Federation
+  type: country
+  status: participant
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: participant
+- id: SE
+  name: Sweden
+  type: country
+  status: participant
+- id: SG
+  name: Singapore
+  type: country
+  status: participant
+- id: SI
+  name: Slovenia
+  type: country
+  status: participant
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: participant
+- id: TH
+  name: Thailand
+  type: country
+  status: participant
+- id: TR
+  name: Turkey
+  type: country
+  status: participant
+- id: UA
+  name: Ukraine
+  type: country
+  status: participant
+- id: US
+  name: United States
+  type: country
+  status: participant
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: participant
+- id: VN
+  name: Vietnam
+  type: country
+  status: participant
+- id: ZA
+  name: South Africa
+  type: country
+  status: participant
+notes: >-
+  MSC is an invitation-only conference, not a treaty organization with formal members. The `includes` list records
+  states and organizations that regularly send high-level officials; annual attendance varies and is not an exhaustive
+  or binding roster. Official Russian government participation was sharply reduced after 2022; Belarus attendance has
+  likewise been limited.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia / official MSC history
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Munich_Security_Conference
+- field: description
+  source: Wikipedia / official MSC
+  retrieved_at: '2026-07-29'
+  url: https://securityconference.org/en/about-us/history/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q565507
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q565507
+  license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://securityconference.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://securityconference.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Munich_Security_Conference
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q565507
+  license: CC0
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Munich_Security_Conference
+- field: membership_count
+  source: derived from includes
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://securityconference.org/
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Munich_Security_Conference

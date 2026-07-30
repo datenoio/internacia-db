@@ -1,155 +1,271 @@
 id: APPF
+name: Asia Pacific Parliamentary Forum
 blocktype:
 - parliamentary
 status: formal
+founded: '1993-01-13'
+active_period:
+  start: '1993-01-13'
+geographic_scope: regional
+regions:
+- Asia-Pacific
+- Asia
+- Oceania
+- Americas
 languages:
 - en
+- ja
+- ru
+- vi
+- zh
 links:
+- url: https://appfaustralia.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Asia_Pacific_Parliamentary_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4806430
   type: wikidata
-name: Asia Pacific Parliamentary Forum
+- url: https://web.parliament.go.th/view/63/Member_Countries/EN-US
+  type: website
+acronyms:
+- lang: en
+  value: APPF
+- lang: ru
+  value: АТПФ
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: BN
   name: Brunei Darussalam
   type: country
   status: member
+  joined: '2021-12'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '1995-01'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: CO
   name: Colombia
   type: country
   status: member
+  joined: '1999-01'
 - id: CR
   name: Costa Rica
   type: country
   status: member
+  joined: '2001-01'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '2001-01'
 - id: FJ
   name: Fiji
   type: country
   status: member
+  joined: '1995-01'
 - id: FM
   name: Micronesia, Federated States of
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: KH
   name: Cambodia
   type: country
   status: member
+  joined: '1995-01'
 - id: KR
   name: Korea, Republic of
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: LA
   name: Lao PDR
   type: country
   status: member
+  joined: '1995-01'
 - id: MH
   name: Marshall Islands
   type: country
   status: member
+  joined: '1996-01'
 - id: MN
   name: Mongolia
   type: country
   status: member
+  joined: '1994-01'
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1995-01'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '1994-01'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '1994-01'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-01-13'
 - id: VN
   name: Vietnam
   type: country
   status: member
+  joined: '1995-01'
+founding_members:
+- AU
+- CA
+- CN
+- FM
+- ID
+- JP
+- KR
+- MX
+- NZ
+- PG
+- PH
+- SG
+- TH
+- US
 membership_count: 28
-wikidata_id: Q4806430
-description: International forum focused on parliamentary.
+description: Regional inter-parliamentary forum established at the inaugural meeting
+  in Tokyo on 13–15 January 1993, when delegates adopted the Tokyo Declaration as the
+  founding charter. Initiated by former Japanese Prime Minister Yasuhiro Nakasone, APPF
+  brings together national parliament delegations from 28 member countries across Northeast
+  Asia, Southeast Asia, Oceania, and the Americas to discuss political, security, economic,
+  social, and cultural issues of common concern. The forum meets annually with a rotating
+  host parliament providing meeting logistics; decisions are taken by consensus. APPF
+  maintains close working relations with APEC, ASEAN, and the Pacific Islands Forum but
+  is an independent parliamentary body without legislative powers.
+notes: Brunei Darussalam participated as an observer from the inaugural meeting in 1993
+  until granted full membership at the 29th Annual Meeting in Seoul in December 2021.
+  APPF merged with the Asia-Pacific Parliamentary Leaders' Forum (APPLF) at the third
+  Annual Meeting in Acapulco in 1995. A Meeting of Women Parliamentarians has been held
+  on the occasion of each Annual Meeting since the Rules of Procedure were amended at
+  the 26th Annual Meeting in Hanoi in 2018. Pacific Island and other national parliaments
+  sometimes attend as observers and are not modeled as country includes.
 tags:
 - APPF
 - asia
 - pacific
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q4806430
 other_names:
-- id: zh
-  name: 亚太议会论坛
 - id: en
   name: Asia Pacific Parliamentary Forum
+- id: ja
+  name: アジア太平洋議員フォーラム
 - id: ru
   name: Азиатско-Тихоокеанский парламентский форум
-acronyms:
-- lang: ru
-  value: АТПФ
+- id: vi
+  name: Diễn đàn Nghị viện Châu Á - Thái Bình Dương
+- id: zh
+  name: 亚太议会论坛
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4806430
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4806430
+  license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4806430
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://appfaustralia.org/?page_id=2440
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://appfaustralia.org/?page_id=2440
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://web.parliament.go.th/view/63/Member_Countries/EN-US
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://appfaustralia.org/?page_id=2440
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://appfaustralia.org/?page_id=2440

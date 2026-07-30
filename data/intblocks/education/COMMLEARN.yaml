@@ -1,157 +1,100 @@
 id: COMMLEARN
+name: Commonwealth of Learning
 blocktype:
 - education
+- intorg
 status: formal
-partof: COMMONWEALTH
+founded: '1987'
+active_period:
+  start: '1987'
+geographic_scope: regional
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
+- Oceania
+partof:
+  id: COMMONWEALTH
+  name: Commonwealth of Nations
 languages:
 - en
 links:
 - url: https://www.col.org/
   type: website
+- url: https://www.col.org/member-countries/
+  type: website
+- url: https://www.col.org/about/about-col
+  type: website
 - url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5153892
   type: wikidata
-name: Commonwealth of Learning
+acronyms:
+- lang: en
+  value: COL
+legal_status: intergovernmental organisation
+recognition_status: >-
+  Created by Commonwealth Heads of Government at the 1987 CHOGM and inaugurated
+  in 1988; one of three Commonwealth intergovernmental agencies alongside the
+  Commonwealth Secretariat and Commonwealth Foundation
+headquarters:
+  city: Vancouver
+  country: CA
+  coordinates:
+    lat: 49.2827
+    lng: -123.1207
+secretariat:
+  location: Vancouver, British Columbia, Canada
+  organization: Commonwealth of Learning
+membership_count: 56
+wikidata_id: Q5153892
+description: >-
+  Intergovernmental organisation of the Commonwealth headquartered in Vancouver,
+  British Columbia, Canada. Founded at the 1987 Commonwealth Heads of Government
+  Meeting and inaugurated in 1988, COL promotes open learning and distance
+  education knowledge, resources, and technologies to help member states expand
+  access to education and training. Works collaboratively with governments,
+  institutions, and international development agencies across the Commonwealth.
+notes: >-
+  Membership comprises the 56 member states of the Commonwealth of Nations. Core
+  funding is provided voluntarily by Commonwealth governments on a three-year
+  cycle, with major contributors including Australia, Canada, India, New
+  Zealand, Nigeria, South Africa, and the United Kingdom. Initiatives include
+  the Virtual University for Small States of the Commonwealth (VUSSC) and the
+  Commonwealth Online Learning University (col.university). Hosts the triennial
+  Pan-Commonwealth Forum on Open Learning.
+last_verified: '2026-07-29'
+tags:
+- COL
+- COMMLEARN
+- commonwealth
+- distance_education
+- education
+- intergovernmental
+- learning
+- open_learning
+- university
+topics:
+- key: education
+  name: Education
+- key: higher_education
+  name: Higher Education
+- key: culture
+  name: Culture
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SG
-  name: Singapore
+- id: AG
+  name: Antigua and Barbuda
   type: country
   status: member
 - id: AU
   name: Australia
   type: country
   status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
+- id: BB
+  name: Barbados
   type: country
   status: member
 - id: BD
@@ -162,44 +105,112 @@ includes:
   name: Brunei Darussalam
   type: country
   status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
+- id: BS
+  name: Bahamas
   type: country
   status: member
 - id: BW
   name: Botswana
   type: country
   status: member
-- id: GA
-  name: Gabon
+- id: BZ
+  name: Belize
   type: country
   status: member
-- id: GM
-  name: Gambia
+- id: CA
+  name: Canada
   type: country
   status: member
 - id: CM
   name: Cameroon
   type: country
   status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: KN
+  name: Saint Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: Saint Lucia
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
 - id: LS
   name: Lesotho
+  type: country
+  status: member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
   type: country
   status: member
 - id: MW
   name: Malawi
   type: country
   status: member
-- id: MU
-  name: Mauritius
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MZ
@@ -214,16 +225,36 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: UG
-  name: Uganda
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
   type: country
   status: member
 - id: RW
   name: Rwanda
   type: country
   status: member
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
 - id: SC
   name: Seychelles
+  type: country
+  status: member
+- id: SG
+  name: Singapore
   type: country
   status: member
 - id: SL
@@ -234,51 +265,131 @@ includes:
   name: Eswatini
   type: country
   status: member
-founded: '1987'
-headquarters:
-  city: Metro Vancouver Regional District
-  country: CA
-  coordinates:
-    lat: 49.2494
-    lng: -122.98
-membership_count: 55
-wikidata_id: Q5153892
-description: Organization.
-tags:
-- COMMLEARN
-- commonwealth
-- cultural
-- culture
-- education
-- learning
-- university
-topics:
-- key: culture
-  name: Culture
-- key: education
-  name: Education
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania, United Republic of
+  type: country
+  status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+- id: VC
+  name: Saint Vincent and the Grenadines
+  type: country
+  status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
 other_names:
-- id: zh
-  name: 学术共同体
 - id: en
   name: Commonwealth of Learning
 - id: fr
   name: Commonwealth of Learning
+- id: zh
+  name: 学术共同体
+- id: ja
+  name: コモンウェルス・オブ・ラーニング
+- id: ca
+  name: Commonwealth of Learning
+- id: eo
+  name: Komunumo por Lernado
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5153892
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5153892
+  license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.col.org/about/about-col
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.col.org/
-acronyms:
-- lang: en
-  value: COL
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.col.org/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.col.org/member-countries/
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.col.org/member-countries/
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Learning
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5153892
+  license: CC0

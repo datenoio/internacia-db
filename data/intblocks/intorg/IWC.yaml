@@ -1,17 +1,51 @@
 id: IWC
+name: International Whaling Commission
 blocktype:
 - intorg
 status: formal
+founded: '1946-12-02'
+active_period:
+  start: '1946-12-02'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
+- Oceania
 languages:
 - en
+- es
+- fr
 links:
-- url: http://www.iwcoffice.org/
+- url: https://iwc.int/en/
+  type: website
+- url: https://iwc.int/en/members
   type: website
 - url: https://en.wikipedia.org/wiki/International_Whaling_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1053889
   type: wikidata
-name: International Whaling Commission
+acronyms:
+- lang: en
+  value: CBI
+- lang: en
+  value: IWC
+- lang: fr
+  value: CBI
+- lang: es
+  value: CBI
+legal_status: intergovernmental
+recognition_status: Specialised regional fishery management organisation established by the International Convention for the Regulation of Whaling (signed 2 December 1946 in Washington, D.C.; entered into force 10 November 1948); secretariat headquartered in Impington, Cambridgeshire, United Kingdom
+headquarters:
+  city: Impington
+  country: GB
+  coordinates:
+    lat: 52.244139
+    lng: 0.110472
+  note: The Red House, 135 Station Road, Impington, Cambridge CB24 9NP
+wikidata_id: Q1053889
+description: Intergovernmental commission established under the 1946 International Convention for the Regulation of Whaling to conserve whale stocks and regulate whaling worldwide. The IWC adopts and revises the Schedule to the Convention, setting catch limits, sanctuaries, seasons, and protected species; compiles catch and biological statistics; and funds cetacean research through its Scientific Committee. A commercial whaling moratorium has been in effect since 1986, though Norway, Iceland, and Japan (until its 2018 withdrawal) maintained objections or separate programmes. Through the 2018 Florianópolis Declaration, a majority of members affirmed whale conservation as the IWC's primary purpose. As of February 2024 the Commission has 88 member governments; Japan withdrew effective 26 December 2018.
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -21,20 +55,20 @@ includes:
   name: Argentina
   type: country
   status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
 - id: AT
   name: Austria
+  type: country
+  status: member
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: BE
   name: Belgium
   type: country
   status: member
-- id: BZ
-  name: Belize
+- id: BG
+  name: Bulgaria
   type: country
   status: member
 - id: BJ
@@ -45,20 +79,28 @@ includes:
   name: Brazil
   type: country
   status: member
-- id: BG
-  name: Bulgaria
+- id: BZ
+  name: Belize
   type: country
   status: member
-- id: KH
-  name: Cambodia
+- id: CG
+  name: Congo, Republic of
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CL
   name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CN
@@ -69,20 +111,8 @@ includes:
   name: Colombia
   type: country
   status: member
-- id: CG
-  name: Congo, Republic of
-  type: country
-  status: member
 - id: CR
   name: Costa Rica
-  type: country
-  status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
-- id: HR
-  name: Croatia
   type: country
   status: member
 - id: CY
@@ -91,6 +121,10 @@ includes:
   status: member
 - id: CZ
   name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
   type: country
   status: member
 - id: DK
@@ -109,12 +143,16 @@ includes:
   name: Ecuador
   type: country
   status: member
+- id: EE
+  name: Estonia
+  type: country
+  status: member
 - id: ER
   name: Eritrea
   type: country
   status: member
-- id: EE
-  name: Estonia
+- id: ES
+  name: Spain
   type: country
   status: member
 - id: FI
@@ -129,20 +167,20 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia, The
+- id: GB
+  name: United Kingdom
   type: country
   status: member
-- id: DE
-  name: Germany
+- id: GD
+  name: Grenada
   type: country
   status: member
 - id: GH
   name: Ghana
   type: country
   status: member
-- id: GD
-  name: Grenada
+- id: GM
+  name: Gambia, The
   type: country
   status: member
 - id: GN
@@ -153,16 +191,12 @@ includes:
   name: Guinea-Bissau
   type: country
   status: member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
 - id: HU
   name: Hungary
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IN
-  name: India
   type: country
   status: member
 - id: IE
@@ -173,6 +207,14 @@ includes:
   name: Israel
   type: country
   status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
 - id: IT
   name: Italy
   type: country
@@ -181,16 +223,28 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: KR
-  name: Korea, Republic of
+- id: KH
+  name: Cambodia
   type: country
   status: member
 - id: KI
   name: Kiribati
   type: country
   status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
 - id: LA
   name: Lao PDR
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
   type: country
   status: member
 - id: LR
@@ -205,12 +259,24 @@ includes:
   name: Luxembourg
   type: country
   status: member
-- id: ML
-  name: Mali
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+- id: MC
+  name: Monaco
   type: country
   status: member
 - id: MH
   name: Marshall Islands
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: MR
@@ -221,44 +287,28 @@ includes:
   name: Mexico
   type: country
   status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: NR
-  name: Nauru
+- id: NI
+  name: Nicaragua
   type: country
   status: member
 - id: NL
   name: Netherlands
   type: country
   status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
 - id: 'NO'
   name: Norway
   type: country
   status: member
-- id: OM
-  name: Oman
+- id: NR
+  name: Nauru
   type: country
   status: member
-- id: PW
-  name: Palau
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: OM
+  name: Oman
   type: country
   status: member
 - id: PA
@@ -277,6 +327,10 @@ includes:
   name: Portugal
   type: country
   status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
 - id: RO
   name: Romania
   type: country
@@ -285,64 +339,36 @@ includes:
   name: Russian Federation
   type: country
   status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
 - id: SB
   name: Solomon Islands
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: SR
-  name: Suriname
   type: country
   status: member
 - id: SE
   name: Sweden
   type: country
   status: member
-- id: CH
-  name: Switzerland
+- id: SI
+  name: Slovenia
   type: country
   status: member
-- id: TZ
-  name: Tanzania
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
   type: country
   status: member
 - id: TG
@@ -353,8 +379,8 @@ includes:
   name: Tuvalu
   type: country
   status: member
-- id: GB
-  name: United Kingdom
+- id: TZ
+  name: Tanzania
   type: country
   status: member
 - id: US
@@ -365,35 +391,61 @@ includes:
   name: Uruguay
   type: country
   status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  left: '1982-07-23'
+  note: Withdrew after the adoption of the 1982 commercial whaling moratorium
+- id: JP
+  name: Japan
+  type: country
+  status: former_member
+  left: '2018-12-26'
+  note: Withdrew and resumed commercial whaling in its territorial waters and EEZ from July 2019
+founding_members:
+- AR
+- AU
+- BR
+- CA
+- CL
+- DK
+- FR
+- NL
+- NZ
+- 'NO'
+- PE
+- RU
+- GB
+- US
+- ZA
 membership_count: 88
-founded: '1946'
-headquarters:
-  city: Histon and Impington
-  country: GB
-  coordinates:
-    lat: 52.25358
-    lng: 0.10429
-acronyms:
-- lang: en
-  value: CBI
-- lang: en
-  value: IWC
-- lang: fr
-  value: CBI
-- lang: es
-  value: CBI
-wikidata_id: Q1053889
-description: International entity.
 tags:
 - CBI
 - IWC
 - commission
-- international
+- conservation
+- fisheries
 - intorg
+- maritime
 - whaling
 topics:
-- key: economy
-  name: Economy
+- key: agriculture
+  name: Agriculture
+- key: conservation
+  name: Conservation
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
 other_names:
 - id: ar
   name: الوكالة الدولية لصيد الحيتان
@@ -409,18 +461,41 @@ other_names:
   name: Международная комиссия по промыслу китов
 - id: zh
   name: 国际捕鲸委员会
+notes: Denmark participates in respect of the Kingdom of Denmark, the Faroe Islands, and Greenland. Canada and Japan are listed as former members. Iceland withdrew in 1992 and rejoined in 2002 with a reservation to the moratorium.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: International Whaling Commission official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://iwc.int/en/members
+- field: description
+  source: International Whaling Commission official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Whaling_Commission
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1053889
+  license: CC0
+- field: headquarters
+  source: International Whaling Commission official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://iwc.int/en/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1053889
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1053889
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iwcoffice.org/
+- field: recognition_status
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=0800000280027f57
+- field: founding_members
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%20161/v161-2189-English.pdf

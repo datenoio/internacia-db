@@ -3,78 +3,142 @@ name: Eastern Regional Organization for Public Administration
 blocktype:
 - intorg
 status: formal
+founded: '1960-12-05'
+active_period:
+  start: '1960-12-05'
+geographic_scope: regional
+regions:
+- Asia
+- Pacific
 languages:
 - en
 links:
-- url: http://www.eropa.org.ph/
+- url: https://www.eropa.co/
   type: website
+- url: https://en.wikipedia.org/wiki/Eastern_Regional_Organization_for_Public_Administration
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q29468061
   type: wikidata
+acronyms:
+- lang: en
+  value: EROPA
+legal_status: international non-governmental organization
+recognition_status: Treaty-based organization established by international treaty signed in Manila on 19 June 1958; holds special consultative status with the United Nations Economic and Social Council (ECOSOC)
+headquarters:
+  city: UP National College of Public Administration and Governance
+  country: PH
+  coordinates:
+    lat: 14.65631
+    lng: 121.06046
+secretariat:
+  location: National College of Public Administration and Governance, University of the Philippines, Quezon City
+  head: Secretary-General
+wikidata_id: Q29468061
+description: International non-governmental organization promoting regional cooperation in public administration and governance across Asia and the Pacific. Established on 5 December 1960 following a treaty signed in Manila in 1958, EROPA provides a forum for exchanging information and innovative approaches to efficient, effective, and ethical public service. Headquarters are at the University of the Philippines in Quezon City, with regional centers in China, India, Indonesia, Japan, and South Korea. Partner of the United Nations Public Administration Network (UNPAN).
 includes:
+- id: AU
+  name: Australia
+  type: country
+  status: former_member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: former_member
+  joined: '1995'
 - id: CN
   name: China
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
+  note: Assumed state membership from the Republic of China (Taiwan)
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '1969'
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '1985'
 - id: IR
   name: Iran, Islamic Rep.
   type: country
   status: member
+  joined: '1963'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
+  joined: '1962'
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '1966'
 - id: NP
   name: Nepal
   type: country
   status: member
+  joined: '1983'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: former_member
+  joined: '1976'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+- id: PK
+  name: Pakistan
+  type: country
+  status: former_member
+  joined: '1965'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '1961'
 - id: VN
   name: Vietnam
   type: country
-  status: member
-membership_count: 10
-description: The Eastern Regional Organization for Public Administration is an international
-  organization that is used to promote regional cooperation in the public administration
-  sector.
+  status: founding_member
+founding_members:
+- PH
+- JP
+- VN
+- AU
+membership_count: 11
 tags:
 - EROPA
+- asia_pacific
 - cooperation
 - eastern
+- governance
 - intorg
 - organization
+- philippines
+- public_administration
 - regional
 - regional_cooperation
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q29468061
+- key: governance
+  name: Governance
+- key: education
+  name: Education
 other_names:
 - id: ar
   name: المنظمة الإقليمية الشرقية للإدارة العامة
 - id: en
   name: Eastern Regional Organization for Public Administration
-acronyms:
-- lang: en
-  value: EROPA
+notes: EROPA also maintains institutional and individual membership categories (100 institutional and 667 individual members as of UN ECOSOC profile). Regional centers operate in Beijing (China), New Delhi (India), Jakarta (Indonesia), Tokyo (Japan), and Gyeonggi Province (South Korea). Publishes the biannual Asian Review of Public Administration (ARPA) since 1989.
+last_verified: '2026-07-29'
 provenance:
 - field: acronyms
   source: Wikidata
@@ -86,9 +150,19 @@ provenance:
   retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q29468061
   license: CC0
-headquarters:
-  city: UP National College of Public Administration and Governance
-  coordinates:
-    lat: 14.65631
-    lng: 121.06046
-last_verified: '2026-07-12'
+- field: includes
+  source: EROPA official website; Wikipedia; UN ECOSOC NGO profile
+  retrieved_at: '2026-07-29'
+  url: https://www.eropa.co/state-members.html
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eastern_Regional_Organization_for_Public_Administration
+- field: description
+  source: EROPA official website; UN ECOSOC NGO profile
+  retrieved_at: '2026-07-29'
+  url: https://www.eropa.co/
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eastern_Regional_Organization_for_Public_Administration

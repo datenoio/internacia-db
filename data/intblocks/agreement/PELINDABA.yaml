@@ -2,14 +2,36 @@ id: PELINDABA
 blocktype:
 - agreement
 status: formal
+founded: '1996-04-11'
+active_period:
+  start: '2009-07-15'
+geographic_scope: regional
+regions:
+- Africa
+languages:
+- ar
+- en
+- fr
+- pt
 links:
+- url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+  type: website
+- url: https://www.afcone.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Nuclear-Weapon-Free_Zone_Treaty
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4691025
   type: wikidata
 name: Treaty of Pelindaba
-founded: '1996'
-geographic_scope: regional
+acronyms:
+- lang: en
+  value: ANWFZ
+- lang: en
+  value: Pelindaba Treaty
+legal_status: treaty
+headquarters:
+  city: Pretoria
+  country: ZA
 includes:
 - id: DZ
   name: Algeria
@@ -175,6 +197,10 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: EH
+  name: Western Sahara
+  type: country
+  status: member
 - id: ZM
   name: Zambia
   type: country
@@ -186,10 +212,13 @@ includes:
 membership_count: 44
 wikidata_id: Q4691025
 description: International treaty that establishes Africa as a nuclear-weapon-free zone. Also known as the African Nuclear-Weapon-Free
-  Zone Treaty, it prohibits the research, development, manufacture, stockpiling, acquisition, testing, possession, control,
-  or stationing of nuclear weapons within the territories of its member states. It also bans attacks against nuclear installations
-  in the zone.
+  Zone Treaty (ANWFZ), it prohibits the research, development, manufacture, stockpiling, acquisition, testing, possession,
+  control, or stationing of nuclear weapons within the territories of its parties. It also bans attacks against nuclear installations
+  in the zone and requires IAEA full-scope safeguards for peaceful nuclear activities. Opened for signature in Cairo on 11
+  April 1996 and entered into force on 15 July 2009. Implementation is overseen by the African Commission on Nuclear Energy
+  (AFCONE), headquartered in Pretoria.
 tags:
+- ANWFZ
 - PELINDABA
 - africa
 - african
@@ -228,8 +257,58 @@ other_names:
   name: Договор Пелиндаба
 - id: es
   name: Tratado de Pelindaba
+- id: pt
+  name: Tratado de Pelindaba
+notes: Membership lists States Parties that have deposited instruments of ratification or accession with the African Union
+  depositary (44 parties as of 2025–2026 per AFCONE). The roster includes the Sahrawi Arab Democratic Republic (Western Sahara,
+  EH), which UNODA's public party list omits. Signatories that have not yet ratified include the Central African Republic,
+  Djibouti, Egypt, Eritrea, Liberia, São Tomé and Príncipe, Sierra Leone, Somalia, Sudan, and Uganda; South Sudan has neither
+  signed nor ratified.
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+- field: includes
+  source: Wikipedia / African Union depositary status
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/African_Nuclear-Weapon-Free_Zone_Treaty
+- field: membership_count
+  source: African Commission on Nuclear Energy (AFCONE)
+  retrieved_at: '2026-07-29'
+  url: https://www.afcone.org/
+- field: founded
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+- field: active_period
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+- field: description
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+- field: headquarters
+  source: African Commission on Nuclear Energy (AFCONE)
+  retrieved_at: '2026-07-29'
+  url: https://www.afcone.org/
+- field: legal_status
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-pelindaba
+- field: notes
+  source: Wikipedia / AFCONE
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/African_Nuclear-Weapon-Free_Zone_Treaty
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4691025
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4691025
+  license: CC0

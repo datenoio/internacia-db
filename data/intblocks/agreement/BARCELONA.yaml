@@ -4,13 +4,25 @@ blocktype:
 - ocean
 - environment
 status: formal
-founded: '1976'
+founded: '1976-02-16'
+active_period:
+  start: '1978-02-12'
+geographic_scope: regional
+regions:
+- Mediterranean
+- Europe
+- Africa
+- Middle East
 languages:
 - en
 - fr
 - es
 links:
-- url: https://www.unep.org/unepmap/
+- url: https://www.unep.org/unepmap/who-we-are/barcelona-convention-and-protocols
+  type: website
+- url: https://www.unep.org/unepmap/who-we-are/contracting-parties
+  type: website
+- url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800f6a1c
   type: website
 - url: https://en.wikipedia.org/wiki/Barcelona_Convention
   type: wikipedia
@@ -18,18 +30,146 @@ name: Barcelona Convention
 acronyms:
 - lang: en
   value: UNEP/MAP
-geographic_scope: regional
-regions:
-- Mediterranean
-- Europe
-- Africa
-- Middle East
-wikidata_id: Q808430
-description: Regional convention for the protection of the Mediterranean Sea against pollution, established under the UNEP
-  Regional Seas Programme. The convention aims to prevent, reduce, and control pollution and to ensure sustainable use of
-  the Mediterranean marine environment.
 legal_status: intergovernmental
+recognition_status: Regional sea convention under the UNEP Regional Seas Programme covering the Mediterranean Sea and its coastal region
 partof: UNEP
+headquarters:
+  city: Athens
+  country: GR
+secretariat:
+  location: Athens
+  organization: UNEP/MAP Coordinating Unit
+membership_count: 22
+description: Regional convention for the protection of the marine environment and the coastal region of the Mediterranean,
+  established under the UNEP Regional Seas Programme. Adopted in Barcelona on 16 February 1976 and entered into force on
+  12 February 1978; amended in 1995 and renamed the Convention for the Protection of the Marine Environment and the Coastal
+  Region of the Mediterranean, with amendments entering into force on 9 July 2004. The convention aims to prevent, reduce,
+  and control pollution and to ensure the sustainable use of the Mediterranean marine environment.
+includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '1990-06-29'
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+  joined: '1992-03-01'
+- id: CY
+  name: Cyprus
+  type: country
+  status: founding_member
+  joined: '1979-12-19'
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+  joined: '1981-03-18'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: founding_member
+  joined: '1978-09-23'
+- id: ES
+  name: Spain
+  type: country
+  status: founding_member
+  joined: '1978-02-12'
+- id: EU
+  name: European Union
+  type: organization
+  status: founding_member
+  joined: '1978-04-15'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1978-04-10'
+- id: GR
+  name: Greece
+  type: country
+  status: founding_member
+  joined: '1979-02-02'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '1991-10-08'
+- id: IL
+  name: Israel
+  type: country
+  status: founding_member
+  joined: '1978-04-02'
+- id: IT
+  name: Italy
+  type: country
+  status: founding_member
+  joined: '1979-03-05'
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  joined: '1978-02-12'
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  joined: '1979-03-02'
+- id: MA
+  name: Morocco
+  type: country
+  status: founding_member
+  joined: '1980-02-15'
+- id: MC
+  name: Monaco
+  type: country
+  status: founding_member
+  joined: '1978-02-12'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2007-12-19'
+- id: MT
+  name: Malta
+  type: country
+  status: founding_member
+  joined: '1978-02-12'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '1994-03-15'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+  joined: '1979-01-25'
+- id: TN
+  name: Tunisia
+  type: country
+  status: founding_member
+  joined: '1978-02-12'
+- id: TR
+  name: Turkey
+  type: country
+  status: founding_member
+  joined: '1981-05-06'
+founding_members:
+- CY
+- EG
+- ES
+- FR
+- GR
+- IL
+- IT
+- MA
+- MC
+- MT
+- TN
+- TR
+wikidata_id: Q808430
 tags:
 - Barcelona
 - Mediterranean
@@ -38,6 +178,8 @@ tags:
 - UNEP
 - agreement
 - marine
+- regional_cooperation
+- convention
 topics:
 - key: ocean
   name: Ocean
@@ -45,111 +187,67 @@ topics:
   name: Environment
 - key: marine
   name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Barcelona Convention
+- id: en
+  name: Convention for the Protection of the Marine Environment and the Coastal Region of the Mediterranean
 - id: en
   name: Convention for the Protection of the Mediterranean Sea Against Pollution
 - id: fr
   name: Convention de Barcelone
 - id: es
   name: Convenio de Barcelona
-includes:
-- id: AL
-  name: Albania
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TR
-  name: Turkey
-  type: country
-  status: member
-membership_count: 22
+notes: Spain serves as depository. The Barcelona Convention and its seven protocols form the legal framework of the Mediterranean
+  Action Plan (MAP), administered by the UNEP/MAP Coordinating Unit in Athens. Fourteen coastal states and the European
+  Communities signed the original 1976 convention; the current roster comprises 21 Mediterranean countries and the European
+  Union. Bosnia and Herzegovina has not ratified the 1995 amendments. Contracting Parties meet biennially at the Conference
+  of the Parties.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/contracting-parties
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/contracting-parties/barcelona-convention-and-amendments
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/barcelona-convention-and-protocols
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800f6a1c
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/barcelona-convention-and-protocols
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/barcelona-convention-and-protocols
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/barcelona-convention-and-protocols
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://www.unep.org/unepmap/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.unep.org/unepmap/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/unepmap/who-we-are/contracting-parties

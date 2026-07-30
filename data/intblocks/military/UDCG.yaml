@@ -1,148 +1,50 @@
 id: UDCG
+name: Ukraine Defense Contact Group
 blocktype:
 - military
 - political
 status: informal
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
-  type: wikipedia
-name: Ukraine Defense Contact Group
 founded: '2022-04-26'
 geographic_scope: global
 regions:
 - Europe
 - North America
 - Asia
+- Africa
+- Oceania
+languages:
+- en
+links:
+- url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q116343904
+  type: wikidata
+- url: https://www.defense.gov/News/Releases/Release/Article/3040505/austin-hosts-ukraine-defense-contact-group-to-continue-support-for-beleaguered/
+  type: website
+acronyms:
+- lang: en
+  value: UDCG
+legal_status: intergovernmental
+wikidata_id: Q116343904
+description: Informal multinational forum coordinating military assistance to Ukraine following Russia's full-scale invasion
+  in February 2022. Also known as the Ramstein group or Ramstein format, the contact group convenes defense ministers and
+  senior officials from NATO allies and partner countries at recurring meetings—often at Ramstein Air Base or NATO headquarters—to
+  align equipment donations, training, production, and sustainment. It is not a treaty-based alliance; participation is established
+  by attendance at group meetings. Capability coalitions formed within the group coordinate specialized support in areas such
+  as air defense, armor, artillery, drones, and maritime security.
 includes:
-- id: US
-  name: United States
+- id: AL
+  name: Albania
   type: country
   status: member
   joined: '2022-04-26'
-- id: GB
-  name: United Kingdom
+- id: AR
+  name: Argentina
   type: country
   status: member
-  joined: '2022-04-26'
-- id: CA
-  name: Canada
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: DE
-  name: Germany
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: FR
-  name: France
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: IT
-  name: Italy
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: PL
-  name: Poland
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: ES
-  name: Spain
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: FI
-  name: Finland
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: CZ
-  name: Czechia
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: RO
-  name: Romania
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: GR
-  name: Greece
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-  joined: '2022-04-26'
-- id: LT
-  name: Lithuania
+  joined: '2024-06-13'
+- id: AT
+  name: Austria
   type: country
   status: member
   joined: '2022-04-26'
@@ -151,23 +53,93 @@ includes:
   type: country
   status: member
   joined: '2022-04-26'
-- id: NZ
-  name: New Zealand
+- id: BA
+  name: Bosnia and Herzegovina
   type: country
   status: member
   joined: '2022-04-26'
-- id: JP
-  name: Japan
+- id: BE
+  name: Belgium
   type: country
   status: member
   joined: '2022-04-26'
-- id: KR
-  name: Korea, Rep.
+- id: BG
+  name: Bulgaria
   type: country
   status: member
   joined: '2022-04-26'
-- id: TR
-  name: Türkiye
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: IE
+  name: Ireland
   type: country
   status: member
   joined: '2022-04-26'
@@ -176,10 +148,179 @@ includes:
   type: country
   status: member
   joined: '2022-04-26'
-membership_count: 32
-legal_status: intergovernmental
-description: International coalition of countries coordinating military aid and support for Ukraine in response to the 2022
-  Russian invasion. Also known as the Ramstein Group.
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: JP
+  name: Japan
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: KV
+  name: Kosovo
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: US
+  name: United States
+  type: country
+  status: member
+  joined: '2022-04-26'
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+  joined: '2022-04-26'
+membership_count: 48
+founding_members:
+- AL
+- AT
+- AU
+- BA
+- BE
+- BG
+- CA
+- CY
+- CZ
+- DE
+- DK
+- EE
+- ES
+- FI
+- FR
+- GB
+- GE
+- GR
+- HR
+- HU
+- IE
+- IS
+- IT
+- JP
+- KE
+- KR
+- KV
+- LR
+- LT
+- LU
+- LV
+- MD
+- ME
+- MK
+- NL
+- 'NO'
+- NZ
+- PL
+- PT
+- RO
+- SE
+- SI
+- SK
+- TN
+- TR
+- US
 tags:
 - defense
 - military
@@ -188,6 +329,9 @@ tags:
 - security
 - UDCG
 - ukraine
+- ukraine_aid
+- coalition
+- ramstein_format
 topics:
 - key: military
   name: Military
@@ -196,20 +340,62 @@ topics:
 - key: security
   name: Security
 other_names:
+- id: de
+  name: Ramstein-Format
 - id: en
   name: Ramstein Group
-wikidata_id: Q111889083
+- id: en
+  name: Ramstein format
+- id: en
+  name: Ukraine Defense Consultative Group
+- id: fr
+  name: Groupe de contact sur la défense de l'Ukraine
+- id: uk
+  name: Контактна група з питань оборони України
+notes: No official static membership roster exists; countries are treated as participants when represented at one or more
+  meetings. The inaugural session on 26 April 2022 at Ramstein Air Base drew about 39–41 countries. Argentina joined at the
+  23rd meeting on 13 June 2024. As of 2025, press reports cite roughly 50–57 participating states plus the European Union.
+  The United States chaired through early 2025; Germany and the United Kingdom co-chair from 2025. Ukraine attends as aid
+  recipient rather than a coalition member. Additional countries have provided military aid without publicly confirmed UDCG
+  attendance.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q116343904
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q116343904
   license: CC0
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q116343904
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Ukraine_Defense_Contact_Group

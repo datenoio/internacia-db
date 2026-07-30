@@ -51,6 +51,7 @@ from internacia_builder.validate.country_rules import (
     check_country_timezones,
     check_country_tld,
     check_country_whitespace,
+    check_provenance_count,
     check_provenance_freshness,
     check_provenance_integrity,
     validate_completeness,
@@ -1033,6 +1034,7 @@ ISSUE_PRIORITY_MAP = {
         "INVALID_CURRENCY_CODE",
         "INVALID_COORDINATES",
         "PROVENANCE_INTEGRITY",
+        "INSUFFICIENT_PROVENANCE",
         "TEMPLATED_DESCRIPTION",
         "COMPLETENESS_WARN",
         "MISSING_PREFERRED_FIELD",
@@ -1106,6 +1108,7 @@ RULE_DESCRIPTIONS = {
     "INVALID_CURRENCY_CODE": "A currency code is not a valid ISO 4217 uppercase code.",
     "INVALID_COORDINATES": "Latitude/longitude outside valid ranges in centroid, capital_city, or headquarters coordinates.",
     "PROVENANCE_INTEGRITY": "A provenance entry references a non-existent field or has an invalid/future retrieved_at date.",
+    "INSUFFICIENT_PROVENANCE": "The provenance list has fewer entries than the configured minimum.",
     "DEPRECATED_TOPIC_KEY": "A topic key is deprecated in topic_aliases.yaml and should use its canonical replacement.",
     "STALE_PROVENANCE": "A provenance entry is older than the configured maximum age.",
     "INCLUDE_NAME_MISMATCH": "Advisory: includes[].name differs from every known name variant of the referenced country (display-only).",
@@ -1566,8 +1569,12 @@ def analyze_quality(
 
     topic_aliases = load_topic_aliases(project_root / "data" / "schemas" / "topic_aliases.yaml")
     topic_catalog = load_topic_catalog(project_root / "data" / "schemas" / "topics.yaml")
-    countries_prov_max_age = int((completeness_cfg_countries.get("provenance") or {}).get("max_age_months") or 0)
-    intblocks_prov_max_age = int((completeness_cfg_intblocks.get("provenance") or {}).get("max_age_months") or 0)
+    countries_prov_cfg = completeness_cfg_countries.get("provenance") or {}
+    intblocks_prov_cfg = (completeness_cfg_intblocks.get("fields") or {}).get("provenance") or {}
+    countries_prov_max_age = int(countries_prov_cfg.get("max_age_months") or 0)
+    intblocks_prov_max_age = int(intblocks_prov_cfg.get("max_age_months") or 0)
+    countries_prov_min_count = int(countries_prov_cfg.get("min_count") or 0)
+    intblocks_prov_min_count = int(intblocks_prov_cfg.get("min_count") or 0)
     region_allowlist = {
         str(x) for x in ((completeness_cfg_countries.get("region_hierarchy") or {}).get("allowlist") or [])
     }
@@ -1621,6 +1628,8 @@ def analyze_quality(
             record_issues.extend(check_provenance_integrity(record))
             if countries_prov_max_age:
                 record_issues.extend(check_provenance_freshness(record, max_age_months=countries_prov_max_age))
+            if countries_prov_min_count:
+                record_issues.extend(check_provenance_count(record, min_count=countries_prov_min_count))
 
             for issue in record_issues:
                 issue["file_path"] = rel_path
@@ -1692,6 +1701,8 @@ def analyze_quality(
             record_issues.extend(check_provenance_integrity(record))
             if intblocks_prov_max_age:
                 record_issues.extend(check_provenance_freshness(record, max_age_months=intblocks_prov_max_age))
+            if intblocks_prov_min_count:
+                record_issues.extend(check_provenance_count(record, min_count=intblocks_prov_min_count))
 
             for issue in record_issues:
                 issue["file_path"] = rel_path

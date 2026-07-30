@@ -2,9 +2,17 @@ id: COMESA
 blocktype:
 - fta
 status: formal
+founded: '1994-12-08'
+active_period:
+  start: '2000-10-31'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
+- ar
+- pt
 links:
 - url: http://www.comesa.int/
   type: website
@@ -13,110 +21,173 @@ links:
 - url: https://www.wikidata.org/wiki/Q1165797
   type: wikidata
 name: Common Market for Eastern and Southern Africa
-founded: '1994'
+acronyms:
+- lang: en
+  value: COMESA
+- lang: ar
+  value: الكوميسا
+- lang: zh
+  value: 東南非共同市場法院
+- lang: fr
+  value: COMESA
+- lang: ru
+  value: КОМЕСА
+- lang: de
+  value: COMESA
+legal_status: free trade agreement
+recognition_status: Regional economic community established on 8 December 1994 by the Treaty establishing the Common Market for Eastern and Southern Africa, replacing the Preferential Trade Area for Eastern and Southern African States (PTA, 1981); the COMESA Free Trade Area was launched on 31 October 2000 and has expanded through successive accessions; one of the pillars of the African Economic Community
+headquarters:
+  city: Lusaka
+  country: ZM
+  coordinates:
+    lat: -15.3982
+    lng: 28.2937
 includes:
 - id: BI
   name: Burundi
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: KM
   name: Comoros
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: CD
   name: Congo, The Democratic Republic of the
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: DJ
   name: Djibouti
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: EG
   name: Egypt
   type: country
   status: member
+  joined: '1999-01-06'
 - id: ER
   name: Eritrea
   type: country
   status: member
+  joined: '1994'
 - id: SZ
   name: Eswatini
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: ET
   name: Ethiopia
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: LY
   name: Libya
   type: country
   status: member
+  joined: '2005-06-03'
 - id: MG
   name: Madagascar
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: MW
   name: Malawi
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: MU
   name: Mauritius
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: RW
   name: Rwanda
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: SC
   name: Seychelles
   type: country
   status: member
+  joined: '2001'
 - id: SO
   name: Somalia
   type: country
   status: member
+  joined: '2018-07-19'
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: TN
   name: Tunisia
   type: country
   status: member
+  joined: '2018-07-18'
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: ZM
   name: Zambia
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
 - id: ZW
   name: Zimbabwe
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-12-21'
+founding_members:
+- BI
+- CD
+- DJ
+- ET
+- KE
+- KM
+- MG
+- MW
+- MU
+- RW
+- SD
+- SZ
+- UG
+- ZM
+- ZW
 membership_count: 21
 wikidata_id: Q1165797
 official_documents:
 - url: http://www.comesa.int/
   type: document
-description: Free trade area.
+description: The Common Market for Eastern and Southern Africa (COMESA) is a regional economic community of 21 member states stretching from Tunisia to Eswatini. Established on 8 December 1994 under the COMESA Treaty, it succeeded the Preferential Trade Area for Eastern and Southern African States (PTA, founded 1981). The COMESA Free Trade Area was launched on 31 October 2000 with nine members and has since expanded through successive accessions, most recently Tunisia in 2018. COMESA is one of the pillars of the African Economic Community and participates in the Tripartite Free Trade Area with the East African Community and the Southern African Development Community.
 tags:
 - COMESA
+- africa
+- african
 - commerce
 - common
 - eastern
 - economy
 - fta
 - market
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
@@ -136,32 +207,58 @@ other_names:
   name: Экономическое сообщество стран Восточной и Южной Африки
 - id: zh
   name: 东部和南部非洲共同市场
+notes: Former members include Angola (left 2007), Lesotho (1997), Mozambique (1997), Namibia (2004), and Tanzania (2000). Somalia was a PTA founding member but rejoined COMESA on 19 July 2018. The COMESA FTA initially comprised Djibouti, Egypt, Kenya, Madagascar, Malawi, Mauritius, Sudan, Zambia, and Zimbabwe (2000); Rwanda and Burundi joined the FTA in 2004, Comoros and Libya in 2006, Seychelles in 2009, Uganda in 2012, and Tunisia in 2018.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Market_for_Eastern_and_Southern_Africa
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1165797
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1165797
   license: CC0
-acronyms:
-- lang: en
-  value: COMESA
-- lang: ar
-  value: الكوميسا
-- lang: zh
-  value: 東南非共同市場法院
-- lang: fr
-  value: COMESA
-- lang: ru
-  value: КОМЕСА
-- lang: de
-  value: COMESA

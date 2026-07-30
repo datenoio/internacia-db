@@ -1,101 +1,197 @@
 id: EUROFISH
+name: Eurofish International Organization
 blocktype:
 - intorg
 status: formal
+founded: '2002'
+active_period:
+  start: '2001-10-12'
+geographic_scope: regional
+regions:
+- Europe
+- Eastern Europe
+- Central Europe
 languages:
 - en
 links:
-- url: http://eurofish.int/
+- url: https://eurofish.dk/
+  type: website
+- url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+  type: website
+- url: https://www.ecolex.org/details/treaty/agreement-for-the-establishment-of-the-international-organisation-for-the-development-of-fisheries-in-eastern-and-central-europe-eurofish-tre-001383/
   type: website
 - url: https://www.wikidata.org/wiki/Q9256216
   type: wikidata
-name: Eurofish International Organization
+acronyms:
+- lang: en
+  value: EUROFISH
+legal_status: intergovernmental
+recognition_status: Treaty-based intergovernmental organization established by the Agreement for the Establishment of the International Organisation for the Development of Fisheries in Eastern and Central Europe, adopted in Copenhagen on 23 May 2000 and entered into force on 12 October 2001; the agreement is deposited with the Director-General of FAO and registered with the United Nations on 15 May 2002
+headquarters:
+  city: Copenhagen
+  country: DK
+  coordinates:
+    lat: 55.676111111111
+    lng: 12.568888888889
+  note: Seat established under Article 5 of the establishment agreement; hosted by Denmark under a host agreement
+secretariat:
+  location: Copenhagen
+  organization: Eurofish Secretariat
+wikidata_id: Q9256216
+description: Intergovernmental organization whose 13 member states — Albania, Croatia, Denmark, Estonia, Hungary, Italy, Latvia, Lithuania, Norway, Poland, Romania, Spain, and Türkiye — cooperate on the development of fisheries and aquaculture in Europe. Eurofish publishes market and industry information (including Eurofish Magazine), organizes conferences, workshops, seminars, and business-to-business meetings, and implements projects in post-harvest fisheries, aquaculture, processing, and trade. The organization evolved from the FAO EASTFISH project (1996) and was renamed in 2018 to the International Organisation for the Development of Fisheries and Aquaculture in Europe. It is a member of the FAO-coordinated FISH INFOnetwork and is governed by an annual Governing Council of all member countries.
 includes:
 - id: AL
   name: Albania
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-10-12'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2003-09-05'
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-10-12'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2006-12-21'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2018-11-14'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '2006-05-24'
 - id: LV
   name: Latvia
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-10-12'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2005-07-21'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-10-12'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2010-06-23'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-10-12'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '2006-04-25'
 - id: TR
   name: Türkiye
   type: country
   status: member
+  joined: '2002-03-05'
+founding_members:
+- AL
+- DK
+- LV
+- 'NO'
+- RO
 membership_count: 13
-description: The Eurofish International Organization is an international organization
-  that is used to promote regional cooperation in the fish sector.
 tags:
 - EUROFISH
+- aquaculture
 - eurofish
-- international
+- fisheries
+- food
 - intorg
+- international
 - organization
+- trade
 topics:
+- key: agriculture
+  name: Agriculture
 - key: economy
   name: Economy
-wikidata_id: Q9256216
+- key: food
+  name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
 other_names:
 - id: en
   name: Eurofish
+- id: en
+  name: International Organisation for the Development of Fisheries and Aquaculture in Europe
+- id: en
+  name: International Organisation for the Development of Fisheries in Eastern and Central Europe
 - id: fr
   name: Eurofish
-founded: '2002'
+- id: fr
+  name: Organisation internationale pour le développement des pêches en Europe orientale et centrale
+- id: es
+  name: Organización Internacional para el Desarrollo de la Pesca en Europa Oriental y Central
+notes: Originated as the FAO EASTFISH project in 1996. Bulgaria acceded on 20 June 2003 but withdrew on 14 December 2011 and is not a current member. The organization was renamed in 2018 to reflect its expanded geographic scope and aquaculture mandate.
 provenance:
-- field: founded
+- field: includes
+  source: Eurofish official website; ECOLEX treaty participant records
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: description
+  source: Eurofish official website
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q9256216
   license: CC0
 - field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-12'
+  source: Wikidata; Eurofish establishment agreement (Article 5)
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q9256216
+- field: other_names
+  source: Eurofish official website; ECOLEX treaty titles
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: acronyms
+  source: Eurofish official website
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: recognition_status
+  source: ECOLEX; Eurofish establishment agreement
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/agreement-for-the-establishment-of-the-international-organisation-for-the-development-of-fisheries-in-eastern-and-central-europe-eurofish-tre-001383/
+- field: founded
+  source: Wikidata; Eurofish official website
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q9256216
   license: CC0
-headquarters:
-  city: Copenhagen
-  coordinates:
-    lat: 55.676111111111
-    lng: 12.568888888889
-last_verified: '2026-07-12'
+- field: geographic_scope
+  source: Eurofish official website
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: founding_members
+  source: Eurofish official website; ECOLEX treaty participant records
+  retrieved_at: '2026-07-29'
+  url: https://eurofish.dk/about-eurofish/what-is-eurofish/
+- field: notes
+  source: ECOLEX treaty participant records; Eurofish official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/agreement-for-the-establishment-of-the-international-organisation-for-the-development-of-fisheries-in-eastern-and-central-europe-eurofish-tre-001383/
+last_verified: '2026-07-29'

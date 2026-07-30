@@ -7,6 +7,8 @@ links:
   type: website
 - url: https://api.worldbank.org/v2/region/LCN
   type: website
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Latin_America_and_the_Caribbean
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q72829598
@@ -15,10 +17,6 @@ name: Latin America & Caribbean (all income levels)
 includes:
 - id: AG
   name: Antigua and Barbuda
-  type: country
-  status: member
-- id: AN
-  name: Netherlands Antilles
   type: country
   status: member
 - id: AR
@@ -63,6 +61,10 @@ includes:
   status: member
 - id: CU
   name: Cuba
+  type: country
+  status: member
+- id: CW
+  name: Curacao
   type: country
   status: member
 - id: DM
@@ -113,6 +115,10 @@ includes:
   name: St. Lucia
   type: country
   status: member
+- id: MF
+  name: Saint Martin
+  type: country
+  status: member
 - id: MX
   name: Mexico
   type: country
@@ -145,6 +151,10 @@ includes:
   name: El Salvador
   type: country
   status: member
+- id: SX
+  name: Sint Maarten (Dutch part)
+  type: country
+  status: member
 - id: TC
   name: Turks and Caicos Islands
   type: country
@@ -165,12 +175,22 @@ includes:
   name: Venezuela, RB
   type: country
   status: member
+- id: VG
+  name: British Virgin Islands
+  type: country
+  status: member
 - id: VI
   name: Virgin Islands (U.S.)
   type: country
   status: member
-membership_count: 39
-description: World Bank regional aggregate for Latin America & Caribbean (all income levels).
+membership_count: 42
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
+description: World Bank geographic region for economies across Latin America and the
+  Caribbean. This analytical variant includes all income levels in the regional aggregate
+  used in World Development Indicators.
 tags:
 - LCN
 - aid
@@ -192,21 +212,53 @@ topics:
 wikidata_id: Q72829598
 acronyms:
 - lang: en
-  value: LAC
-- lang: en
-  value: LA&C
+  value: LCN
+other_names:
+- id: en
+  name: Latin America and the Caribbean
+- id: es
+  name: América Latina y el Caribe
+- id: fr
+  name: Amérique latino-caribéenne
+- id: pt
+  name: América Latina e Caribe
+- id: ru
+  name: Латинская Америка и Карибы
+- id: zh
+  name: 拉丁美洲和加勒比海地區
 provenance:
 - field: description
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
   source: World Bank Data API
-  retrieved_at: '2026-07-13'
-  url: https://api.worldbank.org/v2/region/LCN
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?region=LCN
+- field: membership_count
+  source: World Bank Data API
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?region=LCN
+- field: acronyms
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q72829598
+  license: CC0
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-07-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q72829598
   license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-07-13'
-  url: https://www.wikidata.org/
-  license: CC0
+last_verified: '2026-07-30'

@@ -4,10 +4,15 @@ blocktype:
 - intorg
 status: formal
 founded: '1999'
+active_period:
+  start: '1999'
 geographic_scope: global
 languages:
 - en
 - fr
+- de
+- es
+- ar
 links:
 - url: https://www.forumfed.org/
   type: website
@@ -15,18 +20,20 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5473127
   type: wikidata
+legal_status: international non-governmental organization
+recognition_status: International NGO established by the Government of Canada in 1999; ten partner governments support the organization through signed agreements and are represented on the Strategic Council and Board of Directors
 headquarters:
   city: Ottawa
   country: CA
   coordinates:
     lat: 45.4215
     lng: -75.6972
-legal_status: intergovernmental
+  note: 75 Albert Street, Suite 411
+secretariat:
+  location: Ottawa
+  organization: Forum of Federations Secretariat
 membership_count: 10
-description: International organization dedicated to developing and sharing comparative expertise on federal and decentralized
-  governance through a global network. The Forum works with partner governments to promote intergovernmental learning and
-  strengthen democratic, inclusive, and gender-responsive governance through knowledge creation, capacity development, and
-  support for inclusive policy implementation processes.
+description: International non-governmental organization dedicated to developing and sharing comparative expertise on federal and multilevel governance through a global network. Established by the Government of Canada in 1999, the Forum works with ten partner governments — Australia, Brazil, Canada, Ethiopia, Germany, India, Mexico, Nigeria, Pakistan, and Switzerland — that provide institutional support and are represented on its Board of Directors and Strategic Council. Through research, advisory services, training programs, and international conferences, the Forum promotes intergovernmental learning and strengthens democratic, inclusive, and gender-responsive governance in federal, decentralized, and transitioning countries.
 tags:
 - FORUMOFFEDERATIONS
 - federalism
@@ -53,7 +60,8 @@ includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1999'
 - id: ET
   name: Ethiopia
   type: country
@@ -82,6 +90,8 @@ includes:
   name: Switzerland
   type: country
   status: member
+founding_members:
+- CA
 wikidata_id: Q5473127
 other_names:
 - id: zh
@@ -90,16 +100,45 @@ other_names:
   name: Forum of Federations
 - id: ru
   name: Форум федераций
+notes: Argentina, Papua New Guinea, and South Africa were expected to join as partner countries following the Forum25 conference (2025), per the Forum25 post-conference report.
+last_verified: '2026-07-29'
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Forum of Federations Annual Report 2023-24; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.forumfed.org/wp-content/uploads/2024/12/Annual-Report_2023-24_final.pdf
+- field: description
+  source: Forum of Federations official website; Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://www.forumfed.org/
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.forumfed.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5473127
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_of_Federations
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_of_Federations
+- field: recognition_status
+  source: Wikipedia; Forum of Federations Annual Report 2023-24
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_of_Federations
+- field: founded
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5473127
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5473127
+  license: CC0
+- field: geographic_scope
+  source: Forum of Federations official website
+  retrieved_at: '2026-07-29'
   url: https://www.forumfed.org/

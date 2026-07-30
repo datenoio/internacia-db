@@ -1,8 +1,15 @@
 id: PIMS
 blocktype:
 - project
+- military
 status: formal
 partof: NATO
+founded: '1996'
+geographic_scope: regional
+regions:
+- Eastern Europe
+- Caucasus
+- Central Asia
 languages:
 - en
 links:
@@ -13,55 +20,120 @@ links:
 - url: https://www.wikidata.org/wiki/Q7140770
   type: wikidata
 name: Partnership for Peace Information Management System
+legal_status: bilateral cooperative development program
+secretariat:
+  location: Stuttgart, Germany
+  organization: SPAWAR Systems Center Charleston, European Division
+headquarters:
+  city: Stuttgart
+  country: DE
+  coordinates:
+    lat: 48.7758
+    lng: 9.1829
 includes:
+- id: AL
+  name: Albania
+  type: country
+  status: former_member
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: partner
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
+  status: partner
+- id: BG
+  name: Bulgaria
+  type: country
+  status: former_member
+- id: HR
+  name: Croatia
+  type: country
+  status: former_member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: former_member
+- id: EE
+  name: Estonia
+  type: country
+  status: former_member
 - id: GE
   name: Georgia
   type: country
-  status: member
+  status: partner
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: partner
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
-  status: member
+  status: partner
+- id: LV
+  name: Latvia
+  type: country
+  status: former_member
+- id: LT
+  name: Lithuania
+  type: country
+  status: former_member
 - id: MK
   name: North Macedonia
   type: country
-  status: member
+  status: partner
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: partner
+- id: RO
+  name: Romania
+  type: country
+  status: former_member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: former_member
+- id: SI
+  name: Slovenia
+  type: country
+  status: former_member
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: partner
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: former_member
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: partner
+- id: US
+  name: United States
+  type: country
+  status: contributor
 - id: UZ
   name: Uzbekistan
   type: country
-  status: member
+  status: partner
 membership_count: 10
 wikidata_id: Q7140770
-description: Partnership for Peace Information Management System is an international
-  project body with 10 members.
+description: U.S. Department of Defense bilateral cooperative development program established in 1996 to enable information
+  exchange and communications between Partnership for Peace (PfP) countries and the NATO community. Managed by SPAWAR Systems
+  Center Charleston's European Division in Stuttgart, the program provides economical connectivity and shared information access
+  through Memoranda of Agreement between the U.S. DoD and installed partner nations, supporting PfP objectives from military
+  exercises and civil-military emergency planning to defense education and environmental security activities.
 tags:
 - PIMS
+- PfP
+- NATO
 - defense
 - information
+- information_management
+- IT
 - partnership
 - peace
 - project
@@ -69,10 +141,52 @@ tags:
 topics:
 - key: security
   name: Security
+- key: military
+  name: Military
+- key: ICT
+  name: Information and Communication Technologies
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Partnership for Peace Information Management System
+notes: As of July 2010, ten PfP countries participated in PIMS — Armenia, Azerbaijan, Georgia, Kazakhstan, Kyrgyzstan,
+  North Macedonia, Moldova, Tajikistan, Ukraine, and Uzbekistan — each with an In-Country Coordinator. Former participants
+  included Albania, Bulgaria, Croatia, Czech Republic, Estonia, Latvia, Lithuania, Romania, Slovakia, Slovenia, and
+  Turkmenistan; all except Turkmenistan later joined NATO. The United States manages the program as the sponsoring DoD
+  bilateral partner.
+last_verified: '2026-07-29'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partnership_for_Peace_Information_Management_System
+  license: CC BY-SA 4.0
+acronyms:
+- lang: en
+  value: PIMS

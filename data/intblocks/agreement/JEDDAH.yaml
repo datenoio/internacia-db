@@ -4,28 +4,81 @@ blocktype:
 - ocean
 - environment
 status: formal
-founded: '1982'
-languages:
-- en
-- ar
-links:
-- url: https://www.persga.org/
-  type: website
-name: Jeddah Convention
-acronyms:
-- lang: en
-  value: PERSGA
+founded: '1982-02-14'
+active_period:
+  start: '1985-08-20'
 geographic_scope: regional
 regions:
 - Red Sea
 - Gulf of Aden
 - Middle East
 - Africa
-wikidata_id: Q7159870
-description: Regional convention for the conservation of the Red Sea and Gulf of Aden environment, establishing the Regional
-  Organization for the Conservation of the Environment of the Red Sea and Gulf of Aden (PERSGA). The convention aims to prevent,
-  reduce, and control pollution and to ensure sustainable use of marine resources.
+languages:
+- en
+- ar
+links:
+- url: https://persga.org/jeddah-convention/
+  type: website
+- url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+  type: website
+name: Jeddah Convention
+acronyms:
+- lang: en
+  value: PERSGA
 legal_status: intergovernmental
+recognition_status: Regional sea convention under the UNEP Regional Seas Programme covering Red Sea and Gulf of Aden coastal
+  states
+partof: UNEP
+headquarters:
+  city: Jeddah
+  country: SA
+membership_count: 7
+description: Regional convention for the conservation of the Red Sea and Gulf of Aden environment, signed in Jeddah on 14
+  February 1982. Establishes the Regional Organization for the Conservation of the Environment of the Red Sea and Gulf of
+  Aden (PERSGA) and provides the legal framework to prevent, reduce, and control pollution and to ensure sustainable use
+  of marine resources. Entered into force on 20 August 1985.
+includes:
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+  joined: '1998-03-02'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '1990-05-31'
+- id: JO
+  name: Jordan
+  type: country
+  status: founding_member
+  joined: '1988-09-07'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: founding_member
+  joined: '1985-05-22'
+- id: SD
+  name: Sudan
+  type: country
+  status: founding_member
+  joined: '1984-06-05'
+- id: SO
+  name: Somalia
+  type: country
+  status: founding_member
+  joined: '1988-03-01'
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: founding_member
+  joined: '1982-05-29'
+founding_members:
+- SD
+- JO
+- SA
+- SO
+- YE
 tags:
 - Jeddah
 - Red Sea
@@ -35,6 +88,9 @@ tags:
 - agreement
 - marine
 - PERSGA
+- UNEP
+- regional_cooperation
+- convention
 topics:
 - key: ocean
   name: Ocean
@@ -42,6 +98,8 @@ topics:
   name: Environment
 - key: marine
   name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Jeddah Convention
@@ -49,42 +107,54 @@ other_names:
   name: Regional Convention for the Conservation of the Red Sea and Gulf of Aden Environment
 - id: ar
   name: اتفاقية جدة
-includes:
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
-membership_count: 7
+notes: Signed at the Jeddah Regional Conference of Plenipotentiaries (13–15 February 1982) under ALECSO auspices as part
+  of the UNEP Regional Seas Programme. Original signatories included Sudan, Jordan, Saudi Arabia, Palestine (PLO), Somalia,
+  and both Yemeni states (now unified as Yemen). Egypt acceded in 1990 and Djibouti in 1998. PERSGA began operating as the
+  convention secretariat following the Cairo Declaration of September 1995. Associated protocols address oil-spill emergencies
+  and land-based pollution sources.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://archive.iwlearn.net/persga.org/Documents/Doc_62_20090211112825.pdf
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.persga.org/
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.persga.org/
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://persga.org/jeddah-convention/

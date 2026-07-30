@@ -1,119 +1,187 @@
 id: PETROCARIBE
+name: Petrocaribe
 blocktype:
 - economic
+- energy
 status: formal
+founded: '2005-06-29'
+geographic_scope: regional
+regions:
+- Caribbean
+- Central America
+- Latin America
 languages:
 - en
 - es
 links:
-- url: http://www.petrocaribe.org/
+- url: https://www.petrocaribe.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Petrocaribe
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1735573
   type: wikidata
-name: Petrocaribe
-includes:
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: VE
-  name: Venezuela
-  type: country
-  status: member
-founded: '2005'
+- url: https://www.as-coa.org/articles/explainer-what-petrocaribe
+  type: website
+acronyms:
+- lang: en
+  value: Petrocaribe
+- lang: es
+  value: Petrocaribe
+- lang: en
+  value: PetroCaribe
 headquarters:
   city: Caracas
   country: VE
   coordinates:
     lat: 10.5
     lng: -66.933333333333
-membership_count: 19
+founding_members:
+- AG
+- BS
+- BZ
+- CU
+- DM
+- DO
+- GD
+- GY
+- JM
+- KN
+- LC
+- VC
+- SR
+- VE
+includes:
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: BZ
+  name: Belize
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: CU
+  name: Cuba
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: DM
+  name: Dominica
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: GD
+  name: Grenada
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: GT
+  name: Guatemala
+  type: country
+  status: former_member
+  joined: '2008-07'
+  left: '2013-11'
+- id: GY
+  name: Guyana
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+  joined: '2007-08'
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+  joined: '2007-12'
+- id: JM
+  name: Jamaica
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '2007-08'
+- id: KN
+  name: Saint Kitts and Nevis
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: LC
+  name: Saint Lucia
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: VC
+  name: Saint Vincent and the Grenadines
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: SR
+  name: Suriname
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  joined: '2014'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: founding_member
+  joined: '2005-06-29'
+membership_count: 18
 wikidata_id: Q1735573
-description: Oil alliance of many Caribbean states with Venezuela to purchase oil.
+legal_status: intergovernmental
+description: >-
+  Venezuelan-led regional energy alliance established on 29 June 2005 in Puerto La Cruz, offering Caribbean and
+  Central American members preferential oil financing (deferred payment and concessional interest when prices exceed
+  a threshold). Built on the Caracas Energy Accord; PDVSA-linked joint ventures and social programmes accompanied
+  supply agreements. Oil deliveries largely ceased by about 2019 amid Venezuela's production collapse and sanctions;
+  Saint Vincent and the Grenadines resumed Petrocaribe-term shipments in late 2022, and Caracas stated an intent to
+  revive the programme in 2023.
+notes: >-
+  Fourteen countries signed at the founding summit. Haiti and Nicaragua joined in August 2007; Honduras in December
+  2007 (suspended after the 2009 coup, later restored); Guatemala joined in July 2008 and withdrew in November 2013;
+  El Salvador joined in 2014. Barbados and Panama have remained outside. Distinct from ALBA, though the two pursued
+  closer links from 2013. Parent company relationship: PDVSA (Petróleos de Venezuela).
 tags:
 - PETROCARIBE
 - aid
+- caribbean
 - commerce
 - development
 - economic
 - economy
+- energy
+- oil
 - petrocaribe
 - trade
+- venezuela
 topics:
 - key: development
   name: Development
 - key: economy
   name: Economy
+- key: energy
+  name: Energy
 - key: trade
   name: Trade
 other_names:
@@ -131,18 +199,52 @@ other_names:
   name: Петрокарибе
 - id: zh
   name: 石油加勒比计划
+- id: ja
+  name: ペトロカリブ
+- id: ko
+  name: 페트로카리베
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO / Petrocaribe 10-year report; Wikipedia; AS/COA
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Petrocaribe
+- field: founding_members
+  source: FAO PETROCARIBE 10 years of struggle against hunger and poverty
+  retrieved_at: '2026-07-29'
+  url: https://openknowledge.fao.org/server/api/core/bitstreams/0a07ee56-c8cb-413a-b1ff-e920de8e9c44/content
+- field: founded
+  source: Wikipedia / FAO
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Petrocaribe
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia; AS/COA Explainer
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Petrocaribe
+- field: notes
+  source: Wikipedia; AS/COA; Venezuelanalysis (El Salvador accession)
+  retrieved_at: '2026-07-29'
+  url: https://www.as-coa.org/articles/explainer-what-petrocaribe
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1735573
   license: CC0
 - field: headquarters
+  source: Wikidata / official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1735573
+  license: CC0
+- field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.petrocaribe.org/
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Petrocaribe
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.petrocaribe.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1735573
+  license: CC0

@@ -1,53 +1,62 @@
 id: IGF
+name: Intergovernmental Forum on Mining, Minerals, Metals and Sustainable Development
 blocktype:
 - intorg
 - mining
 status: formal
+founded: '2005'
+active_period:
+  start: '2005'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
+- fr
+- es
 links:
-- url: http://www.globaldialogue.info/
+- url: https://www.igfmining.org/
   type: website
-name: The Intergovernmental Forum on Mining. Minerals, Metals and Sustainable Development
+- url: https://www.igfmining.org/member/
+  type: website
+- url: https://www.igfmining.org/about-us/
+  type: website
+- url: https://www.iisd.org/projects/intergovernmental-forum-mining-minerals-metals-and-sustainable-development-igf
+  type: website
+- url: https://sdgs.un.org/partnerships/intergovernmental-forum-mining-minerals-metals-and-sustainable-development
+  type: website
+- url: https://en.wikipedia.org/wiki/International_Institute_for_Sustainable_Development#Intergovernmental_Forum_on_Mining,_Minerals,_Metals_and_Sustainable_Development_(IGF)
+  type: wikipedia
+acronyms:
+- lang: en
+  value: IGF
+legal_status: voluntary intergovernmental partnership
+recognition_status: UN Type II partnership originating from the 2002 World Summit on Sustainable Development; member-led forum for sharing best practices on mining, minerals, metals, and sustainable development governance
+headquarters:
+  city: Ottawa
+  country: 'CA'
+  coordinates:
+    lat: 45.4215
+    lng: -75.6972
+secretariat:
+  location: Ottawa
+  organization: IGF Secretariat (hosted by the International Institute for Sustainable Development)
+description: Voluntary intergovernmental partnership of 86 member governments that advances sustainable development through effective laws, policies, and regulations for the mining, minerals, and metals sector. Originating from the 2002 World Summit on Sustainable Development and formalized in 2005 with 25 founding members, the IGF provides capacity building, in-country Mining Policy Framework assessments, technical assistance, publications, and an Annual General Meeting hosted by UN Trade and Development at the Palais des Nations in Geneva. The International Institute for Sustainable Development has hosted the Secretariat since October 2015; core funding is provided by the Government of Canada.
 includes:
 - id: AF
   name: Afghanistan
-  type: country
-  status: member
-- id: AR
-  name: Argentina
   type: country
   status: member
 - id: AM
   name: Armenia
   type: country
   status: member
-- id: AU
-  name: Australia
+- id: AO
+  name: Angola
   type: country
   status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: BR
-  name: Brazil
+- id: AR
+  name: Argentina
   type: country
   status: member
 - id: BF
@@ -58,40 +67,48 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: KH
-  name: Cambodia
+- id: BO
+  name: Bolivia
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
+- id: BW
+  name: Botswana
   type: country
   status: member
 - id: CA
   name: Canada
   type: country
   status: member
-- id: TD
-  name: Chad
+- id: CG
+  name: Congo, Rep.
   type: country
   status: member
 - id: CL
   name: Chile
   type: country
   status: member
-- id: CN
-  name: China
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CO
   name: Colombia
   type: country
   status: member
-- id: KM
-  name: Comoros
+- id: CR
+  name: Costa Rica
   type: country
   status: member
-- id: CD
-  name: Congo, Dem. Rep.
+- id: DE
+  name: Germany
   type: country
   status: member
 - id: DO
@@ -106,14 +123,6 @@ includes:
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: SZ
-  name: Swaziland
-  type: country
-  status: member
 - id: ET
   name: Ethiopia
   type: country
@@ -122,8 +131,20 @@ includes:
   name: Fiji
   type: country
   status: member
+- id: FR
+  name: France
+  type: country
+  status: member
 - id: GA
   name: Gabon
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GE
+  name: Georgia
   type: country
   status: member
 - id: GH
@@ -134,6 +155,14 @@ includes:
   name: Guinea
   type: country
   status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
 - id: GY
   name: Guyana
   type: country
@@ -142,28 +171,20 @@ includes:
   name: Honduras
   type: country
   status: member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
 - id: IN
   name: India
   type: country
   status: member
-- id: ID
-  name: Indonesia
+- id: IR
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: JM
   name: Jamaica
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
   type: country
   status: member
 - id: KE
@@ -174,64 +195,72 @@ includes:
   name: Kyrgyz Republic
   type: country
   status: member
-- id: LA
-  name: Lao PDR
+- id: KH
+  name: Cambodia
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: LA
+  name: Lao PDR
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
+- id: LS
+  name: Lesotho
   type: country
   status: member
 - id: MA
   name: Morocco
   type: country
   status: member
-- id: MZ
-  name: Mozambique
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+- id: ML
+  name: Mali
   type: country
   status: member
 - id: MM
   name: Myanmar
   type: country
   status: member
-- id: NA
-  name: Namibia
+- id: MN
+  name: Mongolia
   type: country
   status: member
-- id: NP
-  name: Nepal
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+- id: NA
+  name: Namibia
   type: country
   status: member
 - id: NE
@@ -242,24 +271,36 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: PK
-  name: Pakistan
+- id: NL
+  name: Netherlands
   type: country
   status: member
-- id: PG
-  name: Papua New Guinea
+- id: PA
+  name: Panama
   type: country
   status: member
 - id: PE
   name: Peru
   type: country
   status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
 - id: PH
   name: Philippines
   type: country
   status: member
-- id: KR
-  name: Korea, Rep.
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
   type: country
   status: member
 - id: RW
@@ -270,32 +311,48 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SN
-  name: Senegal
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+- id: SE
+  name: Sweden
   type: country
   status: member
 - id: SL
   name: Sierra Leone
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: SN
+  name: Senegal
   type: country
   status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: SD
-  name: Sudan
+- id: SO
+  name: Somalia
   type: country
   status: member
 - id: SR
   name: Suriname
   type: country
   status: member
-- id: TZ
-  name: Tanzania
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
   type: country
   status: member
 - id: TH
@@ -306,40 +363,20 @@ includes:
   name: Timor-Leste
   type: country
   status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TR
-  name: Turkey
+- id: TZ
+  name: Tanzania
   type: country
   status: member
 - id: UG
   name: Uganda
   type: country
   status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
 - id: UY
   name: Uruguay
   type: country
   status: member
-- id: UZ
-  name: Uzbekistan
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -350,15 +387,57 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 85
-description: International forum focused on development.
+membership_count: 86
 tags:
 - IGF
-- aid
-- development
-- forum
+- IISD
+- UNCTAD
 - intergovernmental
 - intorg
+- mining
+- minerals
+- metals
+- sustainable_development
 topics:
-- key: development
-  name: Development
+- key: mining
+  name: Mining
+- key: environment
+  name: Environment
+- key: sustainable_development
+  name: Sustainable Development
+other_names:
+- id: en
+  name: Intergovernmental Forum on Mining, Minerals, Metals and Sustainable Development
+- id: fr
+  name: Forum intergouvernemental sur l'exploitation minière, les minéraux, les métaux et le développement durable
+notes: Distinct from the Internet Governance Forum (record UNIGF). No dedicated Wikidata item as of 2026-07; verify membership against the IGF member directory. South Africa appears in the member gallery but does not yet have a dedicated member profile page on the website.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: IGF official website
+  retrieved_at: '2026-07-29'
+  url: https://www.igfmining.org/member/
+- field: membership_count
+  source: IGF official website
+  retrieved_at: '2026-07-29'
+  url: https://www.igfmining.org/member/
+- field: description
+  source: IGF official website; IISD
+  retrieved_at: '2026-07-29'
+  url: https://www.igfmining.org/about-us/
+- field: founded
+  source: IGF official website; IISD history
+  retrieved_at: '2026-07-29'
+  url: https://www.igfmining.org/about-us/
+- field: headquarters
+  source: IISD project page
+  retrieved_at: '2026-07-29'
+  url: https://www.iisd.org/projects/intergovernmental-forum-mining-minerals-metals-and-sustainable-development-igf
+- field: recognition_status
+  source: UN DESA SDG Partnerships; IGF official website
+  retrieved_at: '2026-07-29'
+  url: https://sdgs.un.org/partnerships/intergovernmental-forum-mining-minerals-metals-and-sustainable-development
+- field: acronyms
+  source: IGF official website
+  retrieved_at: '2026-07-29'
+  url: https://www.igfmining.org/

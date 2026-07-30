@@ -1,54 +1,110 @@
 id: TELESUR
+name: teleSUR
 blocktype:
 - telecom
 status: formal
+founded: '2005-07-24'
+geographic_scope: regional
+regions:
+- Latin America
+- South America
+- Central America
 languages:
 - en
 - es
 - pt
 links:
-- url: http://www.telesurtv.net/
+- url: https://www.telesurtv.net/
   type: website
-- url: https://en.wikipedia.org/wiki/TeleSUR
+- url: https://www.telesurenglish.net/
+  type: website
+- url: https://en.wikipedia.org/wiki/Telesur
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q310659
   type: wikidata
-name: teleSUR
+acronyms:
+- lang: en
+  value: teleSUR
+- lang: es
+  value: teleSUR
+headquarters:
+  city: Caracas
+  country: VE
+founding_members:
+- AR
+- CU
+- UY
+- VE
 includes:
-- id: VE
-  name: Venezuela, RB
+- id: AR
+  name: Argentina
   type: country
-  status: member
+  status: former_member
+  joined: '2005-07-24'
+  left: '2016-03-29'
+- id: BO
+  name: Bolivia
+  type: country
+  status: former_member
+  joined: '2006-04-29'
 - id: CU
   name: Cuba
   type: country
-  status: member
+  status: founding_member
+  joined: '2005-07-24'
+- id: EC
+  name: Ecuador
+  type: country
+  status: former_member
+  joined: '2007-08-30'
+  left: '2018-03-19'
 - id: NI
   name: Nicaragua
   type: country
   status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
+  joined: '2007-03-13'
 - id: UY
   name: Uruguay
   type: country
-  status: member
-membership_count: 5
-description: Television station.
+  status: former_member
+  joined: '2009-06-02'
+  left: '2020-03-13'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: founding_member
+  joined: '2005-07-24'
+membership_count: 7
+wikidata_id: Q310659
+legal_status: intergovernmental
+description: >-
+  Latin American multilingual news television network headquartered in Caracas, launched on 24 July 2005 as a
+  state-funded alternative to corporate international news channels. La Nueva Televisora del Sur, C.A. is jointly
+  sponsored by the governments of Venezuela (majority stakeholder), Cuba, and Nicaragua; Argentina, Uruguay, Bolivia,
+  and Ecuador were former sponsoring partners.
+notes: >-
+  Founding sponsors at launch were Venezuela, Argentina, Cuba, and Uruguay; Bolivia joined in April 2006, Nicaragua in
+  March 2007, and Ecuador in August 2007. Argentina withdrew funding in March 2016; Ecuador ceased contributions in
+  March 2018; Uruguay stopped funding in March 2020. Bolivia's shareholder exit date is not publicly documented;
+  the network lists only Venezuela, Cuba, and Nicaragua as current owners.
 tags:
 - TELESUR
+- broadcasting
 - communication
+- latin_america
+- news
 - technology
 - telecom
 - telecommunications
 topics:
+- key: communication
+  name: Communication
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: technology
   name: Technology
 - key: telecommunications
   name: Telecommunications
-wikidata_id: Q310659
 other_names:
 - id: ar
   name: تيليسور
@@ -66,20 +122,47 @@ other_names:
   name: TeleSUR
 - id: zh
   name: 南方電視台
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: Wikipedia; LatAm Journalism Review; Ecuador Chequea
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: founding_members
+  source: Wikipedia; LatAm Journalism Review
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: notes
+  source: Wikipedia; LatAm Journalism Review; Ecuador Chequea
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Telesur
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q310659
   license: CC0
-founded: '2005'
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q310659
+  license: CC0

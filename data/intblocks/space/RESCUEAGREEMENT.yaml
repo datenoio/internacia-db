@@ -3,73 +3,135 @@ blocktype:
 - agreement
 - space
 status: formal
+founded: '1968-04-22'
+active_period:
+  start: '1968-12-03'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+languages:
+- ar
+- zh
+- en
+- fr
+- ru
+- es
 links:
+- url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introrescueagreement.html
+  type: website
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=080000028012504f
+  type: website
 - url: https://en.wikipedia.org/wiki/Rescue_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q742575
   type: wikidata
 name: Agreement on the Rescue of Astronauts, the Return of Astronauts and the Return of Objects Launched into Outer Space
-founded: '1968'
+legal_status: treaty
+recognition_status: United Nations multilateral space law treaty; adopted by General Assembly resolution 2345 (XXII) on 19 December 1967; opened for signature in London, Moscow, and Washington on 22 April 1968; entered into force on 3 December 1968; registered as UNTS vol. 672, No. 9574. Depositaries are the Governments of the Russian Federation, the United Kingdom, and the United States.
 wikidata_id: Q742575
+description: Multilateral treaty elaborating Outer Space Treaty Article V by requiring states to rescue astronauts in distress, return them to the launching authority, and recover and return space objects found outside the launching state. Adopted by the UN General Assembly on 19 December 1967 and entered into force on 3 December 1968; as of January 2026, 100 states are parties.
+tags:
+- RESCUEAGREEMENT
+- agreement
+- astronaut
+- law
+- legal
+- rescue
+- space
+- treaty
+topics:
+- key: law
+  name: Law
+- key: space
+  name: Space
 includes:
-- id: AR
-  name: Argentina
+- id: AE
+  name: United Arab Emirates
   type: country
   status: member
-- id: AU
-  name: Australia
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: AR
+  name: Argentina
   type: country
   status: member
 - id: AT
   name: Austria
   type: country
   status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BE
-  name: Belgium
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: BA
   name: Bosnia and Herzegovina
   type: country
   status: member
-- id: BW
-  name: Botswana
+- id: BB
+  name: Barbados
   type: country
   status: member
-- id: BR
-  name: Brazil
+- id: BD
+  name: Bangladesh
   type: country
   status: member
-- id: BN
-  name: Brunei
+- id: BE
+  name: Belgium
   type: country
   status: member
 - id: BG
   name: Bulgaria
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: BY
+  name: Belarus
   type: country
   status: member
 - id: CA
   name: Canada
   type: country
   status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
 - id: CL
   name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CN
@@ -85,35 +147,47 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
+  type: country
+  status: member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+- id: DK
+  name: Denmark
   type: country
   status: member
 - id: DM
   name: Dominica
   type: country
   status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
 - id: EC
   name: Ecuador
-  type: country
-  status: member
-- id: EG
-  name: Egypt
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
   type: country
   status: member
 - id: EE
   name: Estonia
   type: country
   status: member
-- id: ET
-  name: Ethiopia
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: ES
+  name: Spain
   type: country
   status: member
 - id: FI
   name: Finland
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
   type: country
   status: member
 - id: FR
@@ -124,20 +198,20 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: GR
-  name: Greece
+- id: GB
+  name: United Kingdom
   type: country
   status: member
 - id: GD
   name: Grenada
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+- id: GR
+  name: Greece
   type: country
   status: member
 - id: GW
@@ -152,20 +226,8 @@ includes:
   name: Hungary
   type: country
   status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: IR
-  name: Iran
-  type: country
-  status: member
-- id: IQ
-  name: Iraq
+- id: ID
+  name: Indonesia
   type: country
   status: member
 - id: IE
@@ -176,6 +238,22 @@ includes:
   name: Israel
   type: country
   status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
 - id: IT
   name: Italy
   type: country
@@ -184,52 +262,56 @@ includes:
   name: Japan
   type: country
   status: member
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
 - id: KW
   name: Kuwait
   type: country
   status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
 - id: LA
-  name: Laos
+  name: Lao PDR
   type: country
   status: member
 - id: LB
   name: Lebanon
   type: country
   status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
+- id: LT
+  name: Lithuania
   type: country
   status: member
 - id: MA
   name: Morocco
   type: country
   status: member
-- id: NP
-  name: Nepal
+- id: ME
+  name: Montenegro
   type: country
   status: member
-- id: NL
-  name: Netherlands
+- id: MG
+  name: Madagascar
   type: country
   status: member
-- id: NZ
-  name: New Zealand
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MX
+  name: Mexico
   type: country
   status: member
 - id: NE
@@ -240,20 +322,32 @@ includes:
   name: Nigeria
   type: country
   status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
 - id: 'NO'
   name: Norway
   type: country
   status: member
-- id: PK
-  name: Pakistan
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+- id: PE
+  name: Peru
   type: country
   status: member
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
-- id: PE
-  name: Peru
+- id: PK
+  name: Pakistan
   type: country
   status: member
 - id: PL
@@ -264,76 +358,80 @@ includes:
   name: Portugal
   type: country
   status: member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
 - id: RO
   name: Romania
+  type: country
+  status: member
+- id: RS
+  name: Serbia
   type: country
   status: member
 - id: RU
   name: Russian Federation
   type: country
   status: member
-- id: SM
-  name: San Marino
+- id: SB
+  name: Solomon Islands
   type: country
   status: member
 - id: SC
   name: Seychelles
   type: country
   status: member
-- id: SG
-  name: Singapore
+- id: SE
+  name: Sweden
   type: country
   status: member
-- id: SK
-  name: Slovakia
+- id: SG
+  name: Singapore
   type: country
   status: member
 - id: SI
   name: Slovenia
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
+- id: SK
+  name: Slovak Republic
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: SM
+  name: San Marino
   type: country
   status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
+- id: SV
+  name: El Salvador
   type: country
   status: member
 - id: SY
-  name: Syria
+  name: Syrian Arab Republic
+  type: country
+  status: member
+- id: SZ
+  name: Swaziland
   type: country
   status: member
 - id: TH
   name: Thailand
   type: country
   status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
 - id: TN
   name: Tunisia
   type: country
   status: member
-- id: UA
-  name: Ukraine
+- id: TO
+  name: Tonga
   type: country
   status: member
-- id: GB
-  name: United Kingdom
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
   type: country
   status: member
 - id: US
@@ -344,93 +442,14 @@ includes:
   name: Uruguay
   type: country
   status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
 - id: ZM
   name: Zambia
   type: country
   status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: VE
-  name: Venezuela
-  type: country
-  status: member
-description: International agreement focused on space law.
-tags:
-- RESCUEAGREEMENT
-- agreement
-- astronaut
-- law
-- legal
-- rescue
-- space
-- treaty
-topics:
-- key: law
-  name: Law
-- key: space
-  name: Space
 membership_count: 100
 other_names:
 - id: ar
@@ -444,5 +463,61 @@ other_names:
 - id: ru
   name: Соглашение о спасании космонавтов, возвращении космонавтов и возвращении объектов, запущенных в космическое пространство
 - id: es
-  name: Acuerdo sobre el Rescate de Astronautas, el Retorno de Astronautas y la Restitución de Objetos Lanzados al Espacio
-    Ultraterrestre
+  name: Acuerdo sobre el Rescate de Astronautas, el Retorno de Astronautas y la Restitución de Objetos Lanzados al Espacio Ultraterrestre
+acronyms:
+- lang: en
+  value: Rescue Agreement
+- lang: en
+  value: ARRA
+- lang: de
+  value: Weltraumrettungsübereinkommen
+- lang: fr
+  value: Accord sur le sauvetage
+- lang: zh
+  value: 营救协定
+notes: Party roster (100 states) verified against UNOOSA status compilation as at 1 January 2026 (A/AC.105/C.2/2026/CRP.9/Rev.1). Colombia, Costa Rica, Ethiopia, Luxembourg, the Philippines, and Venezuela have signed but not ratified and are excluded. Three intergovernmental organizations (ESA, EUMETSAT, Intersputnik) have declared acceptance of rights and obligations under the agreement but are not listed in includes.
+last_verified: '2026-07-30'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q742575
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q742575
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q742575
+  license: CC0
+- field: includes
+  source: UNOOSA / United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/status/index.html
+- field: membership_count
+  source: UNOOSA
+  retrieved_at: '2026-07-30'
+  url: https://www.unoosa.org/res/oosadoc/data/documents/2026/aac_105c_22026crp/aac_105c_22026crp_9rev_1_0_html/AC105_C2_2026_CRP09Rev01E.pdf
+- field: description
+  source: UNOOSA
+  retrieved_at: '2026-07-30'
+  url: https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introrescueagreement.html
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=080000028012504f
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=080000028012504f
+- field: languages
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=080000028012504f
+- field: notes
+  source: UNOOSA
+  retrieved_at: '2026-07-30'
+  url: https://www.unoosa.org/res/oosadoc/data/documents/2026/aac_105c_22026crp/aac_105c_22026crp_9rev_1_0_html/AC105_C2_2026_CRP09Rev01E.pdf

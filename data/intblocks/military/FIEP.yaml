@@ -1,118 +1,174 @@
 id: FIEP
+name: International Association of Gendarmeries and Police Forces with Military Status
 blocktype:
 - military
 - police
 status: formal
+founded: '1994'
+geographic_scope: global
+regions:
+- Africa
+- Europe
+- Latin America
+- Middle East
 languages:
 - en
+- es
+- fr
+- pt
 links:
-- url: http://www.fiep.org/
+- url: https://www.fiep.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Association_of_the_European_and_Mediterranean_Police_Forces_and_Gendarmeries_with_Military_Status
+- url: https://en.wikipedia.org/wiki/International_Association_of_Gendarmeries_and_Police_Forces_with_Military_Status
   type: wikipedia
-name: Association of the European and Mediterranean Police Forces and Gendarmeries
-  with Military Status
+- url: https://www.wikidata.org/wiki/Q3063229
+  type: wikidata
+acronyms:
+- lang: en
+  value: FIEP
+- lang: es
+  value: FIEP
+- lang: fr
+  value: FIEP
+- lang: pt
+  value: FIEP
+legal_status: intergovernmental
+wikidata_id: Q3063229
+description: International association of national gendarmeries and police forces with military status, founded in 1994
+  by France, Italy, and Spain and named FIEP after Portugal joined in 1996. The association provides a permanent forum for
+  cooperation and exchange among forces that combine military organization with police and public-security missions. Work
+  is organized through a Senior Council of force commanders, a rotating annual presidency, and four commissions on human
+  resources, service organization, new technologies and logistics, and international affairs. As of 2025 the association
+  comprises 21 full members and two observer forces admitted at the October 2025 summit.
 includes:
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1994'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1994'
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: founding_member
+  joined: '1994'
 - id: PT
   name: Portugal
   type: country
-  status: member
+  status: founding_member
+  joined: '1996'
 - id: TR
   name: Türkiye
   type: country
   status: member
+  joined: '1998'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1999'
 - id: MA
   name: Morocco
   type: country
   status: member
+  joined: '1999'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2002'
 - id: AR
   name: Argentina
   type: country
   status: member
+  joined: '2005'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '2005'
 - id: JO
   name: Jordan
   type: country
   status: member
+  joined: '2011'
 - id: QA
   name: Qatar
   type: country
   status: member
+  joined: '2013'
 - id: TN
   name: Tunisia
   type: country
   status: member
-- id: PS
-  name: Palestine, State of
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
+  joined: '2016'
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '2016'
+- id: PS
+  name: Palestine, State of
+  type: country
+  status: member
+  joined: '2017'
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '2017'
 - id: DJ
   name: Djibouti
   type: country
   status: member
+  joined: '2018'
 - id: KW
   name: Kuwait
   type: country
   status: member
+  joined: '2019'
 - id: SN
   name: Senegal
   type: country
   status: member
+  joined: '2019'
 - id: SM
   name: San Marino
   type: country
   status: member
+  joined: '2022'
 - id: MD
   name: Moldova, Republic of
   type: country
   status: member
+  joined: '2023'
 - id: CG
   name: Congo
   type: country
   status: observer
+  joined: '2025'
 - id: AE
   name: United Arab Emirates
   type: country
   status: observer
+  joined: '2025'
 membership_count: 21
-description: Association of the European and Mediterranean Police Forces and Gendarmeries
-  with Military Status is an international military body with 21 members.
+founding_members:
+- FR
+- IT
+- ES
+- PT
 tags:
 - FIEP
 - association
 - defense
 - european
+- gendarmerie
+- law_enforcement
 - mediterranean
 - military
 - police
@@ -126,7 +182,45 @@ topics:
   name: Science
 - key: security
   name: Security
+other_names:
+- id: en
+  name: Association of the European and Mediterranean Police Forces and Gendarmeries with Military Status
+- id: en
+  name: FIEP
+- id: fr
+  name: Association internationale de gendarmeries et forces de police à statut militaire
+- id: es
+  name: Asociación Internacional de Gendarmerías y Fuerzas Policiales con Estatuto Militar
+- id: pt
+  name: Associação Internacional de Gendarmerias e Forças Policiais com Estatuto Militar
+notes: Membership represents national gendarmerie or military-status police forces rather than states as such. The presidency
+  rotates annually among member forces; the 2025–2026 presidency is held by Argentina. Congo and the United Arab Emirates
+  were admitted as observers at the October 2025 summit and are expected to become full members in 2026.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fiep.org/about-fiep/the-association/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fiep.org/about-fiep/the-association/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Association_of_Gendarmeries_and_Police_Forces_with_Military_Status
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3063229
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3063229
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fiep.org/about-fiep/the-association/

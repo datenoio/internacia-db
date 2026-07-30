@@ -1,15 +1,35 @@
 id: PACER
+name: Pacific Agreement on Closer Economic Relations
+successor: PACERPLUS
 blocktype:
 - agreement
+- trade
 status: formal
+founded: '2001-08-18'
+active_period:
+  start: '2002-10-03'
+geographic_scope: regional
+regions:
+- Pacific
 languages:
 - en
 links:
+- url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Agreement_on_Closer_Economic_Relations
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7122280
   type: wikidata
-name: Pacific Agreement on Closer Economic Relations
+acronyms:
+- lang: en
+  value: PACER
+legal_status: treaty
+membership_count: 16
+wikidata_id: Q7122280
+description: Framework trade agreement among Pacific Islands Forum members providing a regional umbrella for step-by-step
+  trade liberalisation, trade facilitation assistance, and future Forum-wide reciprocal free trade negotiations. Signed at
+  Nauru on 18 August 2001 and entered into force on 3 October 2002. Does not itself contain substantive liberalisation
+  provisions; it foreshadows PICTA among island countries and later Forum-wide arrangements including PACER Plus.
 includes:
 - id: AU
   name: Australia
@@ -19,8 +39,24 @@ includes:
   name: Cook Islands
   type: country
   status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: FM
+  name: Federated States of Micronesia
+  type: country
+  status: member
 - id: KI
   name: Kiribati
+  type: country
+  status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+- id: NR
+  name: Nauru
   type: country
   status: member
 - id: NZ
@@ -29,6 +65,14 @@ includes:
   status: member
 - id: NU
   name: Niue
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+- id: PW
+  name: Palau
   type: country
   status: member
 - id: WS
@@ -51,20 +95,66 @@ includes:
   name: Vanuatu
   type: country
   status: member
-membership_count: 10
-wikidata_id: Q7122280
-description: International pacific focused on legal matters established through an
-  international agreement.
 tags:
 - PACER
 - agreement
-- closer
-- law
-- legal
+- framework
 - pacific
+- regional_cooperation
+- trade
+- trade_facilitation
 topics:
-- key: law
-  name: Law
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
+- key: trade_facilitation
+  name: Trade Facilitation
 other_names:
 - id: en
   name: Pacific Agreement on Closer Economic Relations
+notes: Article 19 lists sixteen eligible signatories (Australia, Cook Islands, Federated States of Micronesia, Fiji, Kiribati,
+  Marshall Islands, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Samoa, Solomon Islands, Tonga, Tuvalu, and Vanuatu).
+  French Polynesia and New Caledonia may accede under Article 20 by unanimous agreement of the Parties. PACER Plus builds
+  on this framework as a development-centred free trade agreement.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122280
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/au/other/dfat/treaties/2004/10.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Agreement_on_Closer_Economic_Relations
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/sites/default/files/2024-03/Pacific-Agreement-on-Closer-Economic-Relations-2001.pdf
+- field: successor
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/pacer/pacific-agreement-on-closer-economic-relations-plus

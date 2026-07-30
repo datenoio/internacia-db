@@ -7,6 +7,8 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7449317
   type: wikidata
+- url: https://www.jstor.org/stable/2657290
+  type: website
 name: Semi-periphery countries
 includes:
 - id: AR
@@ -17,20 +19,12 @@ includes:
   name: Brazil
   type: country
   status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
 - id: CN
   name: China
   type: country
   status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HU
-  name: Hungary
+- id: HK
+  name: Hong Kong SAR, China
   type: country
   status: member
 - id: IN
@@ -42,50 +36,34 @@ includes:
   type: country
   status: member
 - id: IR
-  name: Iran
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: IL
   name: Israel
   type: country
   status: member
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
 - id: MX
   name: Mexico
   type: country
   status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
+- id: SG
+  name: Singapore
   type: country
   status: member
 - id: ZA
   name: South Africa
   type: country
   status: member
-- id: KR
-  name: South Korea
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
 - id: TW
   name: Taiwan
   type: country
   status: member
-- id: TR
-  name: Turkey
-  type: country
-  status: member
-- id: VE
-  name: Venezuela
-  type: country
-  status: member
-membership_count: 19
+membership_count: 13
 wikidata_id: Q7449317
 description: In world-systems theory, semi-periphery countries are the industrializing, mostly capitalist countries that are
   positioned between the periphery and the core countries.
@@ -105,3 +83,26 @@ other_names:
   name: semi-periphery countries
 - id: es
   name: países semiperiféricos
+notes: 'Membership follows the semi-periphery country list in Chase-Dunn, Kawano, and Brewer (2000), "Trade Globalization since
+  1795: Waves of Integration in the World-System" (American Sociological Review 65:77–95), as reproduced on Wikipedia. World-systems
+  classifications overlap across sources and time periods; countries such as Chile, Greece, Hungary, Spain, Portugal, and
+  Turkey appear in multiple tiers in different studies.'
+last_verified: '2026-07-29'
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: includes
+  source: Chase-Dunn, Kawano, and Brewer (2000) via Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Semi-periphery_countries#List_of_semi-periphery_countries
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Semi-periphery_countries
+- field: notes
+  source: Chase-Dunn, Kawano, and Brewer (2000)
+  retrieved_at: '2026-07-29'
+  url: https://www.jstor.org/stable/2657290

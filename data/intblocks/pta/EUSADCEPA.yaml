@@ -2,15 +2,33 @@ id: EUSADCEPA
 blocktype:
 - pta
 status: formal
+founded: '2016-06-10'
+active_period:
+  start: '2016-10-10'
+geographic_scope: regional
+regions:
+- Africa
+- Europe
 languages:
 - en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
-- url: https://policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+  type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-sadc-southern-african-development-community
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-southern-african-development-community-countries.html
   type: website
 name: EU-SADC Economic Partnership Agreement
-founded: '2016'
+acronyms:
+- lang: en
+  value: EU-SADC EPA
+- lang: fr
+  value: APE UE-SADC
+legal_status: economic partnership agreement
+recognition_status: Economic Partnership Agreement signed on 10 June 2016 between the EU and the SADC EPA Group (Botswana, Lesotho, Mozambique, Namibia, South Africa, and Eswatini); provisionally applied since 10 October 2016 by five parties and since 4 February 2018 by Mozambique; first fully operational regional EPA in Africa; repealed the trade component of the EU-South Africa TDCA; Angola participated in negotiations but did not sign and has an option to accede
 includes:
 - id: EU
   name: European Union
@@ -20,24 +38,43 @@ includes:
   name: Botswana
   type: country
   status: member
+  joined: '2016-10-10'
 - id: LS
   name: Lesotho
   type: country
   status: member
+  joined: '2016-10-10'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+  joined: '2018-02-04'
 - id: NA
   name: Namibia
   type: country
   status: member
+  joined: '2016-10-10'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2016-10-10'
 - id: SZ
   name: Eswatini
   type: country
   status: member
-membership_count: 6
-description: International economic partnership agreement between the European Union and Southern African Development Community countries providing preferential trade access and development cooperation.
+  joined: '2016-10-10'
+- id: AO
+  name: Angola
+  type: country
+  status: partner
+membership_count: 7
+description: Economic Partnership Agreement signed on 10 June 2016 between the European Union and the SADC EPA Group — Botswana,
+  Lesotho, Mozambique, Namibia, South Africa, and Eswatini. The agreement provides asymmetric market access with duty-free,
+  quota-free EU entry for Botswana, Lesotho, Mozambique, Namibia, and Eswatini and enhanced access for South Africa beyond
+  the former EU-South Africa TDCA, while SADC partners liberalise around 74–86% of tariff lines on EU imports. It covers trade
+  in goods, development cooperation, sustainable development, and dispute settlement, and became the first fully operational
+  regional EPA in Africa when Mozambique began applying it in February 2018.
 tags:
 - EUSADCEPA
 - africa
@@ -47,6 +84,7 @@ tags:
 - european_union
 - pta
 - SADC
+- southern_africa
 - trade
 topics:
 - key: economy
@@ -60,3 +98,53 @@ other_names:
   name: Accord de partenariat économique UE-SADC
 - id: es
   name: Acuerdo de Asociación Económica UE-SADC
+notes: SADC EPA Group covers six Southern African states. Botswana, Lesotho, Namibia, South Africa, and Eswatini form the Southern
+  African Customs Union (SACU) and began provisional application on 10 October 2016; Mozambique joined on 4 February 2018. Angola
+  participated in negotiations but did not sign; it submitted an accession request in February 2020. Other SADC members (Comoros,
+  Democratic Republic of Congo, Madagascar, Malawi, Mauritius, Seychelles, Tanzania, Zambia, and Zimbabwe) are outside this EPA
+  configuration — Indian Ocean states trade under the EU-ESA EPA; most mainland members continue under Everything but Arms or
+  GSP pending their own EPA tracks.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-southern-african-development-community-countries.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-southern-african-development-community-countries.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-sadc-southern-african-development-community
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/economic-partnership-agreement-between-the-eu-and-the-southern-african-development-community-countries.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en

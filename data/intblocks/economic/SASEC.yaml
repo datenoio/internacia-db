@@ -5,14 +5,21 @@ blocktype:
 - intorg
 status: formal
 founded: '2001'
+active_period:
+  start: '2001'
 geographic_scope: sub-regional
 regions:
 - Asia
 - South Asia
+- Southeast Asia
 languages:
 - en
 links:
 - url: https://www.sasec.asia/
+  type: website
+- url: https://www.sasec.asia/index.php?page=what-is-sasec
+  type: website
+- url: https://www.adb.org/news/myanmar-boosts-ties-south-asia-sasecs-newest-member
   type: website
 - url: https://en.wikipedia.org/wiki/South_Asia_Subregional_Economic_Cooperation
   type: wikipedia
@@ -21,82 +28,153 @@ links:
 acronyms:
 - lang: en
   value: SASEC
+headquarters:
+  city: Manila
+  country: PH
 secretariat:
   location: Manila, Philippines
   organization: Asian Development Bank
+  note: ADB serves as the SASEC Secretariat and lead financier of regional projects
 includes:
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
   joined: '2001'
 - id: BT
   name: Bhutan
   type: country
-  status: member
+  status: founding_member
   joined: '2001'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
   joined: '2001'
 - id: NP
   name: Nepal
   type: country
-  status: member
+  status: founding_member
   joined: '2001'
 - id: MV
   name: Maldives
   type: country
   status: member
-  joined: '2014'
+  joined: '2014-05'
 - id: LK
   name: Sri Lanka
   type: country
   status: member
-  joined: '2014'
+  joined: '2014-05'
 - id: MM
   name: Myanmar
   type: country
   status: member
-  joined: '2017'
+  joined: '2017-02'
+founding_members:
+- BD
+- BT
+- IN
+- NP
 membership_count: 7
 legal_status: intergovernmental
-description: Intergovernmental program promoting regional prosperity through enhanced cross-border connectivity, trade facilitation,
-  and regional economic cooperation in South Asia.
+recognition_status: >-
+  Asian Development Bank–supported, project-based intergovernmental partnership established in 2001 by Bangladesh, Bhutan,
+  India, and Nepal to promote regional prosperity through cross-border connectivity, trade facilitation, energy
+  cooperation, and economic corridor development in South Asia.
+wikidata_id: Q17152890
+description: >-
+  Intergovernmental program bringing together seven South and Southeast Asian countries in a project-based partnership
+  to promote regional prosperity through improved cross-border connectivity, trade facilitation, energy cooperation,
+  and economic corridor development. Established in 2001 by Bangladesh, Bhutan, India, and Nepal — building on the
+  earlier South Asian Growth Quadrangle (SAGQ) — with Maldives and Sri Lanka joining in May 2014 and Myanmar becoming
+  the seventh member in February 2017. Priority sectors include transport, trade facilitation, energy, economic corridor
+  development, and ICT. The Asian Development Bank serves as secretariat and lead financier; as of 2025 members have
+  implemented more than 60 regional projects worth over $23 billion.
 tags:
 - SASEC
-- economic
-- cooperation
-- regional
-- subregional
-- south_asia
-- trade
 - connectivity
+- cooperation
 - development
+- economic
+- energy
+- regional
+- regional_cooperation
+- south_asia
+- subregional
+- trade
+- transport
 topics:
+- key: connectivity
+  name: Connectivity
+- key: development
+  name: Development
 - key: economy
   name: Economy
+- key: energy
+  name: Energy
+- key: infrastructure
+  name: Infrastructure
 - key: regional_cooperation
   name: Regional Cooperation
 - key: trade
   name: Trade
-- key: development
-  name: Development
-- key: connectivity
-  name: Connectivity
-wikidata_id: Q17152890
+- key: transport
+  name: Transport
 other_names:
+- id: bn
+  name: সাসেক
 - id: en
   name: South Asia Subregional Economic Cooperation
 - id: fr
   name: South Asia Subregional Economic Cooperation
+notes: >-
+  Evolved from the South Asian Growth Quadrangle (SAGQ), a 1996 cooperation initiative among Bangladesh, Bhutan, India,
+  and Nepal endorsed by SAARC in 1997. Myanmar participated as an active observer for several years before full
+  membership. Distinct from SAARC and from the Greater Mekong Subregion (GMS) programme. ADB-hosted secretariat is in
+  Manila; member finance ministries meet annually at Nodal Officials Meetings, often on the sidelines of ADB annual
+  meetings.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: SASEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.sasec.asia/index.php?page=what-is-sasec
+- field: founding_members
+  source: SASEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.sasec.asia/index.php?page=what-is-sasec
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Subregional_Economic_Cooperation
+- field: founded
+  source: SASEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.sasec.asia/index.php?page=what-is-sasec
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q17152890
+  license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.sasec.asia/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.sasec.asia/
+  retrieved_at: '2026-07-29'
+  url: https://www.sasec.asia/index.php?page=what-is-sasec
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Subregional_Economic_Cooperation
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q17152890
+  license: CC0
+- field: recognition_status
+  source: Asian Development Bank
+  retrieved_at: '2026-07-29'
+  url: https://www.adb.org/news/myanmar-boosts-ties-south-asia-sasecs-newest-member

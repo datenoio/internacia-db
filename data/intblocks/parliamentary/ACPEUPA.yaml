@@ -11,7 +11,11 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2867102
   type: wikidata
-name: ACP-EU JOINT PARLIAMENTARY ASSEMBLY
+name: OACPS–EU Joint Parliamentary Assembly
+founded: '2000'
+headquarters:
+  city: Brussels
+  country: BE
 includes:
 - id: AG
   name: Antigua and Barbuda
@@ -85,10 +89,6 @@ includes:
   name: Cameroon
   type: country
   status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
 - id: CV
   name: Cape Verde
   type: country
@@ -123,6 +123,10 @@ includes:
   status: member
 - id: EE
   name: Estonia
+  type: country
+  status: member
+- id: EG
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ER
@@ -429,10 +433,6 @@ includes:
   name: Samoa
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
 - id: ZM
   name: Zambia
   type: country
@@ -441,12 +441,23 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 107
+membership_count: 106
 wikidata_id: Q2867102
-description: ACP-EU JOINT PARLIAMENTARY ASSEMBLY is an international parliamentary
-  body with 107 members.
+description: Inter-parliamentary institution of the European Parliament and parliamentarians
+  from Organisation of African, Caribbean and Pacific States (OACPS) parties to the
+  Samoa Agreement; successor to the ACP–EU Joint Parliamentary Assembly established
+  under the Cotonou Agreement.
+notes: Membership covers all 27 EU member states and 79 OACPS state parties to the
+  EU–OACPS partnership. Cuba remains an OACPS member but does not participate because
+  it is not party to the Cotonou or Samoa agreements. South Africa withdrew from
+  the OACPS in September 2022.
 tags:
 - ACPEUPA
+- OACPS
+- acp
+- eu
+- interparliamentary
+- oacps
 - parliamentary
 - political
 topics:
@@ -463,25 +474,54 @@ other_names:
     der Karibik und des Pazifiks
 - id: en
   name: ACP–EU Joint Parliamentary Assembly
+- id: en
+  name: OACPS–EU Joint Parliamentary Assembly
 - id: fr
   name: Assemblée parlementaire paritaire ACP-UE
+- id: fr
+  name: Assemblée parlementaire paritaire OEACP-UE
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q2867102
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q2867102
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q2867102
   license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/ACP%E2%80%93EU_Joint_Parliamentary_Assembly
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/ACP%E2%80%93EU_Joint_Parliamentary_Assembly
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/ACP%E2%80%93EU_Joint_Parliamentary_Assembly
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.europarl.europa.eu/oacps/en/home
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.europarl.europa.eu/RegData/etudes/BRIE/2024/762333/EPRS_BRI(2024)762333_EN.pdf
 acronyms:
 - lang: en
   value: ACP-EU
+- lang: en
+  value: OACPS-EU
 - lang: de
   value: AKP-EU
 - lang: de

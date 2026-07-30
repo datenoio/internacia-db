@@ -2,18 +2,33 @@ id: CDEM
 blocktype:
 - political
 status: formal
+founded: '2000-06-27'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+- Asia
+- Europe
 languages:
 - en
+- pl
+- es
+- fr
+- pt
+- ru
+- ar
+- zh
 links:
+- url: https://www.community-democracies.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Community_of_Democracies
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q691050
   type: wikidata
 name: Community of Democracies
-founded: '2000'
 includes:
 - id: AR
-  name: Argentine Republic
+  name: Argentina
   type: country
   status: member
 - id: CA
@@ -21,23 +36,30 @@ includes:
   type: country
   status: member
 - id: CL
-  name: Republic of Chile
+  name: Chile
   type: country
   status: member
+  joined: '2000-06-27'
 - id: CR
-  name: Republic of Costa Rica
+  name: Costa Rica
   type: country
   status: member
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: former_member
+  joined: '2000-06-27'
+  note: Co-convener at the 2000 Warsaw ministerial conference; no longer on the Governing Council
 - id: SV
-  name: Republic of El Salvador
+  name: El Salvador
   type: country
   status: member
 - id: EE
-  name: Republic of Estonia
+  name: Estonia
   type: country
   status: member
 - id: FI
-  name: Republic of Finland
+  name: Finland
   type: country
   status: member
 - id: GE
@@ -45,7 +67,7 @@ includes:
   type: country
   status: member
 - id: GT
-  name: Republic of Guatemala
+  name: Guatemala
   type: country
   status: member
 - id: HU
@@ -53,27 +75,39 @@ includes:
   type: country
   status: member
 - id: IN
-  name: Republic of India
+  name: India
   type: country
   status: member
+  joined: '2000-06-27'
 - id: IT
-  name: Italian Republic
+  name: Italy
   type: country
   status: member
 - id: JP
   name: Japan
   type: country
   status: member
-- id: LT
-  name: Republic of Lithuania
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2000-06-27'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: former_member
+  joined: '2000-06-27'
+  note: Co-convener at the 2000 Warsaw ministerial conference; held the presidency 2005–2007; no longer on the Governing Council
 - id: MX
-  name: United Mexican States
+  name: Mexico
   type: country
   status: member
 - id: MD
-  name: Republic of Moldova
+  name: Moldova
   type: country
   status: member
 - id: MN
@@ -81,106 +115,176 @@ includes:
   type: country
   status: member
 - id: MA
-  name: Kingdom of Morocco
+  name: Morocco
   type: country
   status: member
 - id: NG
-  name: Federal Republic of Nigeria
-  type: country
-  status: member
-- id: 'NO'
-  name: Kingdom of Norway
+  name: Nigeria
   type: country
   status: member
 - id: MK
-  name: Republic of North Macedonia
+  name: Macedonia, FYR
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
   type: country
   status: member
 - id: PA
-  name: Republic of Panama
+  name: Panama
   type: country
   status: member
 - id: PL
-  name: Republic of Poland
+  name: Poland
   type: country
   status: member
 - id: PT
-  name: Portuguese Republic
+  name: Portugal
   type: country
   status: member
-- id: KR
-  name: Republic of Korea
-  type: country
-  status: member
+  joined: '2000-06-27'
 - id: RO
   name: Romania
   type: country
   status: member
 - id: SE
-  name: Kingdom of Sweden
+  name: Sweden
   type: country
   status: member
 - id: GB
-  name: United Kingdom of Great Britain and Northern Ireland
+  name: United Kingdom
   type: country
   status: member
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
 - id: UY
-  name: Oriental Republic of Uruguay
+  name: Uruguay
   type: country
   status: member
 membership_count: 30
+founding_members:
+- CL
+- CZ
+- IN
+- ML
+- PT
+- KR
+headquarters:
+  city: Warsaw
+  country: PL
+  coordinates:
+    lat: 52.26
+    lng: 21.02
+legal_status: intergovernmental coalition
 wikidata_id: Q691050
-description: Intergovernmental coalition of states.
+description: Intergovernmental coalition inaugurated at the June 2000 Warsaw ministerial conference
+  to promote democratic norms, expand political participation, and protect democratic freedoms worldwide.
+  The Warsaw Declaration, signed by 106 nations, defines core principles. A 30-state Governing Council
+  directs work through biennial ministerial conferences, a rotating presidency, a permanent secretariat
+  in Warsaw, and working groups on civil society, women and democracy, and democracy and technology.
 tags:
 - CDEM
 - community
 - cooperation
+- democracy
 - democracies
+- human_rights
 - political
-- regional
 - regional_cooperation
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: human_rights
+  name: Human Rights
+- key: governance
+  name: Governance
 other_names:
 - id: ar
   name: مجتمع الديمقراطيات
+- id: az
+  name: Demokratiyalar İcması
+- id: de
+  name: Community of Democracies
+- id: el
+  name: Κοινότητα των Δημοκρατιών
 - id: en
   name: Community of Democracies
 - id: es
   name: Comunidad de Democracias
 - id: fr
   name: communauté des démocraties
+- id: ja
+  name: 民主主義共同体
+- id: lt
+  name: Demokratijų bendrija
+- id: mn
+  name: Ардчилсан орнуудын хамтын нийгэмлэг
+- id: pl
+  name: Wspólnota Demokracji
 - id: pt
   name: Comunidade das Democracias
 - id: ru
   name: Сообщество демократий
+- id: sv
+  name: Community of Democracies
+- id: tr
+  name: Demokrasiler Topluluğu
+- id: vi
+  name: Cộng đồng các nước Dân chủ
 - id: zh
   name: 民主共同体
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
 - lang: en
   value: CD
 - lang: zh
   value: 民主社羣
+notes: Initiated by Polish Foreign Minister Bronisław Geremek and U.S. Secretary of State Madeleine
+  Albright with six co-conveners (Chile, Czech Republic, India, Mali, Portugal, Republic of Korea).
+  The Governing Council currently comprises 30 member states. Poland holds the presidency as of
+  January 2025. A Permanent Secretariat has operated in Warsaw since 2009; Dr. Mantas Adomėnas serves
+  as Secretary General from September 2024.
+last_verified: '2026-07-30'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q691050
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q691050
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q691050
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Community_of_Democracies

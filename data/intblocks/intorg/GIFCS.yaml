@@ -1,24 +1,84 @@
 id: GIFCS
+name: Group of International Finance Centre Supervisors
 blocktype:
 - intorg
+- financial
 status: formal
+founded: '1980-10'
+active_period:
+  start: '1980-10'
+geographic_scope: global
+regions:
+- Africa
+- Asia-Pacific
+- Caribbean
+- Europe
+- Middle East
 languages:
 - en
 links:
-- url: http://www.gifcs.org/
+- url: https://www.groupgifcs.org/
   type: website
-name: Group of International Finance Centre Supervisors
+- url: https://www.groupgifcs.org/about/members
+  type: website
+- url: https://www.groupgifcs.org/about/history
+  type: website
+- url: https://www.groupgifcs.org/about/constitution
+  type: website
+acronyms:
+- lang: en
+  value: GIFCS
+legal_status: intergovernmental cooperation forum
+recognition_status: Association of banking, securities, and fiduciary regulators from international finance centres; FATF observer since the mid-1990s; member of the FSB Regional Consultative Group for Europe and the Basel Consultative Group; contributes to BCBS, FATF, FSB, and IOSCO initiatives
+membership_count: 24
+description: Long-established cooperation forum of financial services supervisors from jurisdictions with significant cross-border banking, securities, fiduciary, and trust and company service provider (TCSP) activity. Formed in October 1980 at the instigation of the Basel Committee on Banking Supervision as the Offshore Group of Banking Supervisors (OGBS); renamed in March 2011 to reflect its expanded mandate beyond banking supervision. Holds two plenary meetings per year, promotes adoption of Basel Core Principles and FATF AML/CFT Recommendations among members, and has issued an international Standard for the Regulation of TCSPs backed by a multilateral memorandum of understanding and peer evaluations.
+tags:
+- AML
+- BCBS
+- CFT
+- FATF
+- FSRB
+- GIFCS
+- OGBS
+- TCSP
+- banking
+- finance
+- financial
+- financial_supervision
+- intorg
+- international
+- regulatory
+- standardization
+topics:
+- key: banking
+  name: Banking
+- key: counter_terrorism
+  name: Counter Terrorism
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
+- key: standardization
+  name: Standardization
 includes:
+- id: AD
+  name: Andorra
+  type: country
+  status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
-- id: AW
-  name: Aruba
+- id: AI
+  name: Anguilla
   type: country
   status: member
-- id: BS
-  name: The Bahamas
+- id: AW
+  name: Aruba
   type: country
   status: member
 - id: BB
@@ -29,12 +89,8 @@ includes:
   name: Bermuda
   type: country
   status: member
-- id: VG
-  name: British Virgin Islands
-  type: country
-  status: member
-- id: KY
-  name: Cayman Islands
+- id: BS
+  name: Bahamas, The
   type: country
   status: member
 - id: CK
@@ -45,16 +101,12 @@ includes:
   name: Curaçao
   type: country
   status: member
-- id: SX
-  name: Sint Maarten
+- id: GG
+  name: Guernsey
   type: country
   status: member
 - id: GI
   name: Gibraltar
-  type: country
-  status: member
-- id: GG
-  name: Guernsey
   type: country
   status: member
 - id: IM
@@ -65,11 +117,10 @@ includes:
   name: Jersey
   type: country
   status: member
-- id: MY
-  name: Malaysia
+- id: KY
+  name: Cayman Islands
   type: country
   status: member
-  note: Membership held by Labuan (Labuan Financial Services Authority)
 - id: MO
   name: Macao SAR, China
   type: country
@@ -78,44 +129,76 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: QA
-  name: Qatar
+  note: Joint membership held by the Bank of Mauritius and the Financial Services Commission
+- id: MY
+  name: Malaysia
   type: country
   status: member
-- id: WS
-  name: Samoa
+  note: Membership held by Labuan Financial Services Authority
+- id: QA
+  name: Qatar
   type: country
   status: member
 - id: SC
   name: Seychelles
   type: country
   status: member
+  note: Joint membership held by the Central Bank of Seychelles and the Financial Services Authority
+- id: SX
+  name: Sint Maarten
+  type: country
+  status: member
 - id: TC
   name: Turks and Caicos Islands
+  type: country
+  status: member
+- id: VG
+  name: British Virgin Islands
   type: country
   status: member
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: AD
-  name: Andorra
+- id: WS
+  name: Samoa
   type: country
   status: member
-membership_count: 23
-description: The Group of International Finance Centre Supervisors is an international organization that is used to promote regional cooperation in the financial sector.
-tags:
-- GIFCS
-- bank
-- finance
-- group
-- international
-- intorg
-- iso
-- standard
-- standardization
-topics:
-- key: finance
-  name: Finance
-- key: standardization
-  name: Standardization
+other_names:
+- id: en
+  name: Offshore Group of Banking Supervisors
+notes: GIFCS has no permanent secretariat; the chairmanship rotates among member jurisdictions. Curaçao and Sint Maarten share a single membership through the Centrale Bank van Curaçao en Sint Maarten. Mauritius and Seychelles each hold joint membership through their central bank and financial services authority. Malaysia's membership represents the Labuan International Business and Financial Centre. Andorra and Anguilla are listed on the official members page alongside the long-standing OGBS/GIFCS roster.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/members
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/history
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/history
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/history
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/constitution
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/history
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/constitution
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.groupgifcs.org/about/members

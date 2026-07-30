@@ -1,60 +1,135 @@
 id: DEPA
+name: Digital Economy Partnership Agreement
 blocktype:
 - agreement
 - digital
 - trade
 status: formal
+founded: '2020-06-12'
+active_period:
+  start: '2021-01-07'
+geographic_scope: regional
+regions:
+- Asia
+- Americas
+- Oceania
 languages:
 - en
 links:
 - url: https://www.digitalpartnership.org/
   type: website
+- url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/digital-economy-partnership-agreement-depa/overview
+  type: website
 - url: https://en.wikipedia.org/wiki/Digital_Economy_Partnership_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q104830867
   type: wikidata
-name: Digital Economy Partnership Agreement
-founded: '2020-06-12'
-geographic_scope: regional
+acronyms:
+- lang: en
+  value: DEPA
 legal_status: treaty
-membership_count: 3
+recognition_status: Standalone digital trade agreement establishing common rules on data flows, e-commerce, digital identity,
+  and emerging technologies; open to accession by economies meeting its standards
+membership_count: 4
+wikidata_id: Q104830867
+description: World's first standalone digital trade agreement, signed virtually on 12 June 2020 by Chile, New Zealand, and
+  Singapore and designed as an open plurilateral framework for digital economy cooperation. Covers modules on business and
+  trade facilitation, treatment of digital products and data, trust in the digital environment (including personal information
+  protection and consumer safeguards), and emerging trends such as artificial intelligence and financial technology. Entered
+  into force for Singapore and New Zealand on 7 January 2021 and for Chile on 23 November 2021. The Republic of Korea acceded
+  as the first new Party on 3 May 2024. A Protocol reinforcing key rules entered into force on 19 March 2024.
 includes:
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
 - id: CL
   name: Chile
   type: country
+  status: founding_member
+  joined: '2020-06-12'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: founding_member
+  joined: '2020-06-12'
+- id: SG
+  name: Singapore
+  type: country
+  status: founding_member
+  joined: '2020-06-12'
+- id: KR
+  name: Korea, Rep.
+  type: country
   status: member
-wikidata_id: Q104830867
-description: Digital trade agreement among Chile, New Zealand, and Singapore establishing rules on data flows, digital trade,
-  and e-commerce.
+  joined: '2024-05-03'
+founding_members:
+- CL
+- NZ
+- SG
 tags:
 - DEPA
+- agreement
+- data
+- digital
 - digital_trade
+- e_commerce
+- regional_cooperation
 - trade
 topics:
+- key: data
+  name: Data
 - key: digital
   name: Digital
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: en
   name: Digital Economy Partnership Agreement
-acronyms:
-- lang: en
-  value: DEPA
+notes: Original signatories Chile, New Zealand, and Singapore concluded negotiations in January 2020 and signed electronically
+  on 12 June 2020. Costa Rica was formally invited to accede in January 2025 and Peru in January 2026. Accession Working
+  Groups are underway for Canada, China, and the United Arab Emirates; El Salvador, Thailand, Ukraine, and Uruguay have also
+  lodged formal accession requests.
+last_verified: '2026-07-29'
 provenance:
-- field: legal_status
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q104830867
+  license: CC0
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.digitalpartnership.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/digital-economy-partnership-agreement-depa/overview
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/digital-economy-partnership-agreement-depa/overview
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mti.gov.sg/newsroom/joint-press-release---electronic-signing-of-digital-economy-partnership-agreement/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mti.gov.sg/newsroom/joint-press-release---electronic-signing-of-digital-economy-partnership-agreement/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mti.gov.sg/-/media/MTI/Microsites/DEAs/Digital-Economy-Partnership-Agreement/28-Dec-20020---Press-Release---Digital-Economy-Partnership-Agreement-Enters-into-Force.pdf
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.digitalpartnership.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.digitalpartnership.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/digital-economy-partnership-agreement-depa/overview
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/digital-economy-partnership-agreement-depa/overview

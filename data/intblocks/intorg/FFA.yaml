@@ -1,117 +1,221 @@
 id: FFA
+name: Pacific Islands Forum Fisheries Agency
 blocktype:
 - intorg
 status: formal
+founded: '1979'
+active_period:
+  start: '1979-08-09'
+geographic_scope: regional
+regions:
+- Pacific
+- Oceania
 languages:
 - en
 links:
-- url: http://www.ffa.int/
+- url: https://www.ffa.int/
   type: website
-name: Pacific Islands Forum Fisheries Agency
+- url: https://en.wikipedia.org/wiki/Pacific_Islands_Forum_Fisheries_Agency
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7122517
+  type: wikidata
+- url: https://www.ffa.int/about/
+  type: website
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800f0e0f
+  type: website
+acronyms:
+- lang: en
+  value: FFA
+legal_status: intergovernmental
+recognition_status: Regional fisheries agency established by the South Pacific Forum Fisheries Agency Convention (signed 10 July 1979 in Honiara; entered into force 9 August 1979); registered with the United Nations as treaty no. 27574; member of the Council of Regional Organisations in the Pacific (CROP)
+headquarters:
+  city: Honiara
+  country: SB
+  coordinates:
+    lat: -9.433328
+    lng: 159.964478
+wikidata_id: Q7122517
+description: Intergovernmental fisheries agency whose 17 members — Australia, the Cook Islands, the Federated States of Micronesia, Fiji, Kiribati, the Marshall Islands, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Samoa, the Solomon Islands, Tokelau, Tonga, Tuvalu, and Vanuatu — cooperate on conservation and sustainable use of highly migratory tuna and other offshore fishery resources in the western and central Pacific. The Secretariat in Honiara supports national capacity, regional surveillance (including Operation Kurukuru), treaty negotiations, and Forum Fisheries Committee policy coordination.
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-09-13'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: FM
   name: Micronesia, Fed. Sts.
   type: country
   status: member
+  joined: '1982-08-10'
 - id: FJ
   name: Fiji
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: MH
   name: Marshall Islands
   type: country
   status: member
+  joined: '1987-03-27'
 - id: NR
   name: Nauru
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: NU
   name: Niue
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-10-18'
 - id: PW
   name: Palau
   type: country
   status: member
+  joined: '1986-04-14'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-09-13'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: SB
   name: Solomon Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: TK
   name: Tokelau
   type: country
   status: member
+  joined: '2002-08-17'
 - id: TO
   name: Tonga
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: TV
   name: Tuvalu
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-08-09'
 - id: VU
   name: Vanuatu
   type: country
   status: member
+  joined: '1981-03-09'
+founding_members:
+- AU
+- CK
+- FJ
+- KI
+- NR
+- NZ
+- NU
+- PG
+- WS
+- SB
+- TO
+- TV
 membership_count: 17
-description: The Pacific Islands Forum Fisheries Agency is an international organization
-  that is used to promote regional cooperation in the fisheries sector.
 tags:
 - FFA
+- RFMO
 - agriculture
-- farming
+- fisheries
 - forum
 - intorg
 - islands
 - pacific
+- tuna
 topics:
 - key: agriculture
   name: Agriculture
-wikidata_id: Q7122517
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Forum Fisheries Agency
+- id: fr
+  name: Pacific Islands Forum Fisheries Agency
+- id: ja
+  name: 南太平洋フォーラム漁業機関
+- id: ko
+  name: 남태평양어업회의기구
+- id: zh
+  name: 太平洋岛国论坛渔业局
+notes: Membership is open to Pacific Islands Forum members and other regional states or territories on Forum Fisheries Committee recommendation. Tokelau acceded in August 2002; Palau in April 1986. The agency was renamed Pacific Islands Forum Fisheries Agency in practice while retaining the FFA acronym. FFA is part of the Council of Regional Organisations in the Pacific (CROP) and hosts the Regional Fisheries Surveillance Centre in Honiara.
+last_verified: '2026-07-29'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q7122517
   license: CC0
+- field: includes
+  source: FFA official website; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://www.ffa.int/about/
+- field: description
+  source: FFA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ffa.int/about/
+- field: legal_status
+  source: FFA official website; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800f0e0f
+- field: recognition_status
+  source: FFA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Islands_Forum_Fisheries_Agency
+- field: geographic_scope
+  source: FFA official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ffa.int/about/
 - field: headquarters
+  source: Wikidata; FFA official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ffa.int/about/
+- field: founding_members
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800f0e0f
+- field: founded
+  source: UN Treaty Collection; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800f0e0f
+- field: active_period
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800f0e0f
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-07-12'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q7122517
   license: CC0
-founded: '1979'
-headquarters:
-  city: Honiara
-  coordinates:
-    lat: -9.433333
-    lng: 159.95
-last_verified: '2026-07-12'
+- field: notes
+  source: FFA official website; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://www.ffa.int/about/

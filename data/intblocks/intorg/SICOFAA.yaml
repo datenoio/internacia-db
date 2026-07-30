@@ -6,6 +6,8 @@ blocktype:
 - aviation
 status: formal
 founded: '1961'
+active_period:
+  start: '1961-04-16'
 geographic_scope: regional
 regions:
 - Americas
@@ -16,6 +18,10 @@ languages:
 - es
 - pt
 links:
+- url: https://www.sicofaa.org/
+  type: website
+- url: https://www.sicofaa.org/mapa
+  type: website
 - url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3962181
@@ -33,13 +39,20 @@ headquarters:
   coordinates:
     lat: 32.1664
     lng: -110.8831
+  note: SICOFAA Permanent Secretariat (SPS) at Davis-Monthan Air Force Base
+secretariat:
+  location: Tucson
+  organization: SICOFAA Permanent Secretariat (SPS)
 legal_status: intergovernmental
-membership_count: 21
-description: Apolitical, voluntary international organization comprising the air forces of North and South America. Established
-  to promote and strengthen bonds of friendship among member nations and facilitate mutual support through cooperation, especially
-  during humanitarian assistance and disaster relief operations. Focus areas include air operations, human resources, education
-  and training, search and rescue, disaster relief, telecommunications, aerospace medicine, weather, accident prevention,
-  and scientific research.
+recognition_status: Voluntary, apolitical international organization of Western Hemisphere air forces; first conference held
+  at Randolph Air Force Base on 16 April 1961; corporate charter adopted in 1965
+membership_count: 23
+description: Apolitical, voluntary international organization comprising the air forces of North and South America. Its 23
+  member nations exchange experiences, training, and education to strengthen operational capabilities and mutual support,
+  especially during humanitarian assistance and disaster relief. Haiti and Trinidad and Tobago participate as observers without
+  having signed the constitutive charter. Focus areas include air operations, human resources, education and training, search
+  and rescue, disaster relief, telecommunications (SITFAA), aerospace medicine, weather, accident prevention, and scientific
+  research. The annual Conference of American Air Chiefs (CONJEFAMER) rotates among member nations.
 tags:
 - SICOFAA
 - air_force
@@ -73,6 +86,10 @@ includes:
   name: Brazil
   type: country
   status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
 - id: CA
   name: Canada
   type: country
@@ -83,6 +100,10 @@ includes:
   status: member
 - id: CO
   name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
   type: country
   status: member
 - id: DO
@@ -142,9 +163,17 @@ includes:
   type: country
   status: member
 - id: US
-  name: United States
+  name: United States of America
   type: country
   status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: observer
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: observer
 wikidata_id: Q3962181
 other_names:
 - id: zh
@@ -153,16 +182,42 @@ other_names:
   name: System of Cooperation Among the American Air Forces
 - id: es
   name: Sistema de Cooperación entre las Fuerzas Aéreas Americanas
+- id: pt
+  name: Sistema de Cooperação entre as Forças Aéreas Americanas
+notes: Haiti and Trinidad and Tobago are observer nations that participate in SICOFAA activities but have not signed the
+  constitutive charter.
 provenance:
+- field: includes
+  source: SICOFAA official website; Spanish Wikipedia member list
+  retrieved_at: '2026-07-29'
+  url: https://www.sicofaa.org/mapa
+- field: description
+  source: SICOFAA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3962181
+  license: CC0
+- field: headquarters
+  source: SICOFAA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.sicofaa.org/
+- field: founded
+  source: Wikipedia; SICOFAA official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: recognition_status
+  source: Wikipedia; SICOFAA official website
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/System_of_Cooperation_Among_the_American_Air_Forces
+last_verified: '2026-07-29'

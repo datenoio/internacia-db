@@ -2,43 +2,74 @@ id: INDIAEFTA
 blocktype:
 - fta
 status: formal
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/India%E2%80%93EFTA_Free_Trade_Agreement
-  type: wikipedia
-name: India-EFTA Trade and Economic Partnership Agreement
 founded: '2024-03-10'
+active_period:
+  start: '2025-10-01'
 geographic_scope: regional
 regions:
 - Asia
 - Europe
+languages:
+- en
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/india
+  type: website
+- url: https://www.commerce.gov.in/international-trade/trade-agreements/india-efta-tepa/
+  type: website
+- url: https://www.efta.int/media-resources/news/efta-and-india-sign-trade-and-economic-partnership-agreement
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=598
+  type: website
+- url: https://en.wikipedia.org/wiki/India%E2%80%93EFTA_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q136476699
+  type: wikidata
+name: India-EFTA Trade and Economic Partnership Agreement
+acronyms:
+- lang: en
+  value: TEPA
+- lang: en
+  value: India-EFTA TEPA
+legal_status: free trade agreement
+recognition_status: Comprehensive trade and economic partnership agreement signed on 10 March 2024; entered into force on 1 October
+  2025 after completion of domestic ratification procedures by all parties
 includes:
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-03-10'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-03-10'
 - id: LI
   name: Liechtenstein
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-03-10'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-03-10'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-03-10'
+founding_members:
+- IN
+- IS
+- LI
+- 'NO'
+- CH
 membership_count: 5
 description: Comprehensive trade and economic partnership agreement between India and the European Free Trade Association
-  (EFTA) states. The agreement includes provisions on trade in goods and services, investment promotion, intellectual property,
-  government procurement, sustainable development, and dispute settlement. EFTA committed to investing $100 billion in India
-  over 15 years.
+  (EFTA) states, signed on 10 March 2024 and entered into force on 1 October 2025. The agreement covers trade in goods and
+  services, investment promotion, intellectual property, government procurement, sustainable development, and dispute settlement.
+  EFTA committed to aim for USD 100 billion in investment in India over 15 years and the creation of 1 million direct jobs.
 tags:
 - INDIAEFTA
 - TEPA
@@ -55,11 +86,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: TEPA
-- lang: en
-  value: India-EFTA TEPA
+wikidata_id: Q136476699
 other_names:
 - id: en
   name: India-EFTA Trade and Economic Partnership Agreement
@@ -70,3 +97,23 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/India%E2%80%93EFTA_Free_Trade_Agreement
+- field: founded
+  source: European Free Trade Association
+  retrieved_at: '2026-07-29'
+  url: https://www.efta.int/media-resources/news/efta-and-india-sign-trade-and-economic-partnership-agreement
+- field: active_period
+  source: Press Information Bureau, Government of India
+  retrieved_at: '2026-07-29'
+  url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2173138
+- field: includes
+  source: WTO Regional Trade Agreements Information System
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=598
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.efta.int/trade-relations/free-trade-network/india
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q136476699

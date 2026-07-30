@@ -2,25 +2,38 @@ id: MRU
 blocktype:
 - political
 status: formal
+founded: '1973-10-03'
+geographic_scope: regional
+regions:
+- West Africa
 languages:
 - en
+- fr
 links:
+- url: https://www.mru.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Mano_River_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1505172
   type: wikidata
 name: Mano River Union
+headquarters:
+  city: Freetown
+  country: SL
+  coordinates:
+    lat: 8.487222222222222
+    lng: -13.235555555555555
 includes:
 - id: GN
   name: Guinea
   type: country
   status: member
-  joined: '1980'
+  joined: '1980-10-25'
 - id: CI
   name: Côte d'Ivoire
   type: country
   status: member
-  joined: '2008'
+  joined: '2008-05-15'
 - id: LR
   name: Liberia
   type: country
@@ -31,21 +44,20 @@ includes:
   type: country
   status: member
   joined: '1973-10-03'
-founded: '1973'
-headquarters:
-  city: Freetown
-  country: SL
-  coordinates:
-    lat: 8.487222222222222
-    lng: -13.235555555555555
-acronyms:
-- lang: en
-  value: MRU
-- lang: zh
-  value: 馬諾河聯盟
+founding_members:
+- LR
+- SL
 membership_count: 4
+legal_status: intergovernmental
 wikidata_id: Q1505172
-description: Association in West Africa.
+description: Regional intergovernmental organization of Côte d'Ivoire, Guinea, Liberia, and
+  Sierra Leone established by the Mano River Declaration on 3 October 1973. Named for the
+  Mano River forming part of the Liberia–Sierra Leone border, the union promotes economic
+  growth, social progress, and cultural advancement through active collaboration. Originally
+  founded by Liberia and Sierra Leone; Guinea joined in 1980 and Côte d'Ivoire in 2008.
+  Operations were disrupted by civil conflicts in the 1990s–2000s and the union was reactivated
+  at a 2004 summit. The secretariat is headquartered in Freetown with liaison offices in
+  Conakry and Monrovia.
 tags:
 - MRU
 - cooperation
@@ -55,11 +67,14 @@ tags:
 - regional_cooperation
 - river
 - union
+- west_africa
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: development
+  name: Development
 other_names:
 - id: ar
   name: اتحاد نهر مانو
@@ -75,23 +90,60 @@ other_names:
   name: Союз государств реки Мано
 - id: zh
   name: 马诺河联盟
+acronyms:
+- lang: en
+  value: MRU
+- lang: zh
+  value: 馬諾河聯盟
+notes: Reactivated on 20 May 2004 after civil wars in Liberia and Sierra Leone disrupted
+  early operations. Côte d'Ivoire joined on 15 May 2008. A 2016 proposal for a Mano River
+  Union Parliament has not been implemented.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1505172
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1505172
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1505172
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mano_River_Union
+- field: links
+  source: Mano River Union
+  retrieved_at: '2026-07-29'
+  url: https://www.mru.int/

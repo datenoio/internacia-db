@@ -1,68 +1,174 @@
 id: P5
+name: Permanent members of the United Nations Security Council
 blocktype:
 - agreement
 status: formal
+founded: '1945-10-24'
+active_period:
+  start: '1945-10-24'
+geographic_scope: global
+languages:
+- ar
+- en
+- es
+- fr
+- ru
+- zh
 links:
+- url: https://www.un.org/en/about-us/un-charter/chapter-5
+  type: website
 - url: https://en.wikipedia.org/wiki/Permanent_members_of_the_United_Nations_Security_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6688521
   type: wikidata
-name: Permanent members of the United Nations Security Council
+acronyms:
+- lang: en
+  value: P5
+- lang: ru
+  value: P5
+- lang: zh
+  value: 安理会五常
+legal_status: intergovernmental
+recognition_status: Five permanent seats on the UN Security Council established by Article 23(1) of the UN Charter, each with
+  veto power over substantive resolutions
+partof: UNSC
+headquarters:
+  city: New York
+  country: US
+  coordinates:
+    lat: 40.7489
+    lng: -73.968
+membership_count: 5
+wikidata_id: Q6688521
+description: The five permanent members of the United Nations Security Council — China, France, Russia, the United Kingdom,
+  and the United States — designated under Article 23 of the UN Charter. Each holds veto power over substantive Security
+  Council resolutions. The seats were established when the Charter entered into force on 24 October 1945; the People's Republic
+  of China has represented China since 25 October 1971, and the Russian Federation succeeded the Soviet Union's seat on
+  24 December 1991.
 includes:
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '1945-10-24'
 - id: FR
   name: France
   type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
+  status: founding_member
+  joined: '1945-10-24'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
-membership_count: 5
-wikidata_id: Q6688521
-description: Five countries influential in world affairs.
+  status: founding_member
+  joined: '1945-10-24'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: founding_member
+  joined: '1945-10-24'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1945-10-24'
+founding_members:
+- CN
+- FR
+- GB
+- RU
+- US
 tags:
 - P5
 - agreement
-- defense
-- law
-- legal
-- nations
 - permanent
 - security
-- united
+- united_nations
+- peace
 topics:
 - key: law
   name: Law
+- key: peace
+  name: Peace
 - key: security
   name: Security
 other_names:
 - id: ar
   name: عضو دائم في مجلس الأمن التابع للأمم المتحدة
-- id: zh
-  name: 聯合國安全理事會常任理事國
+- id: de
+  name: Ständiges Mitglied des UN-Sicherheitsrats
 - id: en
   name: permanent members of the United Nations Security Council
-- id: fr
-  name: membre permanent du Conseil de sécurité des Nations unies
-- id: ru
-  name: постоянный член Совета Безопасности ООН
 - id: es
   name: Miembros permanentes del Consejo de Seguridad de las Naciones Unidas
+- id: fr
+  name: membre permanent du Conseil de sécurité des Nations unies
+- id: pt
+  name: membro permanente do Conselho de Segurança das Nações Unidas
+- id: ru
+  name: постоянный член Совета Безопасности ООН
+- id: zh
+  name: 聯合國安全理事會常任理事國
+notes: Article 23(1) of the UN Charter designates China, France, the Soviet Union (now the Russian Federation), the United
+  Kingdom, and the United States as permanent Security Council members. The People's Republic of China assumed China's seat
+  on 25 October 1971; the Russian Federation succeeded the Soviet Union on 24 December 1991.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6688521
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6688521
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6688521
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/securitycouncil/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/en/about-us/un-charter/chapter-5

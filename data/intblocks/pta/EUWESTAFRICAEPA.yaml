@@ -2,16 +2,33 @@ id: EUWESTAFRICAEPA
 blocktype:
 - pta
 status: formal
+founded: '2014-06-30'
+active_period:
+  start: '2016-12-15'
+geographic_scope: regional
+regions:
+- Africa
+- Europe
 languages:
 - en
 - fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
-- url: https://policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/west-africa_en
+  type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-west-africa
+  type: website
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52014PC0576
   type: website
 name: EU-West Africa Economic Partnership Agreement
-founded: '2014'
+acronyms:
+- lang: en
+  value: EU-West Africa EPA
+- lang: fr
+  value: APE UE-Afrique de l'Ouest
+legal_status: interim economic partnership agreement
+recognition_status: Regional Economic Partnership Agreement initialled on 30 June 2014 between the EU and 16 West African states (ECOWAS members plus Mauritania), together with ECOWAS and UEMOA; not yet in force pending signature by all West African parties and ratification by two thirds of them; Nigeria has not signed. Interim stepping-stone EPAs with Côte d'Ivoire and Ghana were signed on 28 July 2016 and entered provisional application on 15 December 2016.
 includes:
 - id: EU
   name: European Union
@@ -21,12 +38,74 @@ includes:
   name: Côte d'Ivoire
   type: country
   status: member
+  joined: '2016-12-15'
 - id: GH
   name: Ghana
   type: country
   status: member
+  joined: '2016-12-15'
+- id: BJ
+  name: Benin
+  type: country
+  status: partner
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: partner
+- id: CV
+  name: Cape Verde
+  type: country
+  status: partner
+- id: GM
+  name: Gambia, The
+  type: country
+  status: partner
+- id: GN
+  name: Guinea
+  type: country
+  status: partner
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: partner
+- id: LR
+  name: Liberia
+  type: country
+  status: partner
+- id: MR
+  name: Mauritania
+  type: country
+  status: partner
+- id: ML
+  name: Mali
+  type: country
+  status: partner
+- id: NE
+  name: Niger
+  type: country
+  status: partner
+- id: NG
+  name: Nigeria
+  type: country
+  status: partner
+- id: SN
+  name: Senegal
+  type: country
+  status: partner
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: partner
+- id: TG
+  name: Togo
+  type: country
+  status: partner
 membership_count: 3
-description: International economic partnership agreement between the European Union and West African countries providing preferential trade access and development cooperation. Currently implemented as interim EPAs with Côte d'Ivoire and Ghana.
+description: Regional Economic Partnership Agreement negotiated between the European Union and 16 West African states — the
+  ECOWAS membership plus Mauritania — together with ECOWAS and UEMOA. Negotiations concluded in February 2014 and the agreement
+  was initialled in Ouagadougou on 30 June 2014. The regional EPA has not entered into force; trade is governed by interim
+  stepping-stone EPAs with Côte d'Ivoire and Ghana, which provide duty-free, quota-free EU market access and phased tariff
+  liberalisation on EU exports while preserving regional integration objectives aligned with the ECOWAS Common External Tariff.
 tags:
 - EUWESTAFRICAEPA
 - africa
@@ -49,3 +128,52 @@ other_names:
   name: Accord de partenariat économique UE-Afrique de l'Ouest
 - id: es
   name: Acuerdo de Asociación Económica UE-África Occidental
+notes: Regional EPA configuration covers Benin, Burkina Faso, Cape Verde, Côte d'Ivoire, Gambia, Ghana, Guinea, Guinea-Bissau,
+  Liberia, Mauritania, Mali, Niger, Nigeria, Senegal, Sierra Leone, and Togo. Mauritania is included in the West Africa EPA
+  configuration but is not an ECOWAS member. Nigeria is the only regional party that has not signed the regional EPA. Côte
+  d'Ivoire and Ghana apply separate interim EPAs pending full regional implementation. Most other West African LDCs continue
+  to trade with the EU under Everything but Arms until the regional EPA enters force.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/west-africa_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52014PC0576
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/west-africa_en
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-west-africa
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-west-africa
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-west-africa
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/west-africa_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/west-africa_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-west-africa

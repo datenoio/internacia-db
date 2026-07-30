@@ -5,30 +5,30 @@ blocktype:
 - intorg
 status: formal
 founded: '1972'
+active_period:
+  start: '1972'
 geographic_scope: regional
 languages:
 - en
 links:
 - url: https://www.pascnet.org/
   type: website
+- url: https://pascnet.org/pasc-members
+  type: website
+- url: https://pascnet.org/charter
+  type: website
 acronyms:
 - lang: en
   value: PASC
+legal_status: voluntary
+recognition_status: Independent and voluntary forum of Pacific Rim national standards bodies established in 1972; serves as the APEC Specialist Regional Body for Standards
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
 - id: CA
   name: Canada
-  type: country
-  status: member
-- id: CL
-  name: Chile
   type: country
   status: member
 - id: CN
@@ -39,6 +39,10 @@ includes:
   name: Colombia
   type: country
   status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
 - id: FJ
   name: Fiji
   type: country
@@ -47,12 +51,20 @@ includes:
   name: Hong Kong, China
   type: country
   status: member
+- id: IN
+  name: India
+  type: country
+  status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
 - id: JP
   name: Japan
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
   type: country
   status: member
 - id: MY
@@ -65,6 +77,10 @@ includes:
   status: member
 - id: MN
   name: Mongolia
+  type: country
+  status: member
+- id: NC
+  name: New Caledonia
   type: country
   status: member
 - id: NZ
@@ -95,40 +111,48 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: TW
-  name: Chinese Taipei
-  type: country
-  status: member
 - id: TH
   name: Thailand
+  type: country
+  status: member
+- id: TO
+  name: Tonga
   type: country
   status: member
 - id: US
   name: United States of America
   type: country
   status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
 - id: VN
   name: Vietnam
   type: country
   status: member
-membership_count: 25
-description: Independent and voluntary organization of Pacific Rim National Standards Bodies established to strengthen the
-  region's engagement in the international standardization system. PASC aims to advance economic, societal, and environmental
-  well-being through standardization activities.
+membership_count: 27
+notes: PASC has no permanent headquarters; the Secretary is appointed to a member organization for three-year terms. Membership is open to Pacific Rim countries and territories whose national standards body is a member of ISO and/or IEC, or whose standards organization PASC determines can contribute to its objectives. Membership lapses after three consecutive missed meetings.
+description: Independent and voluntary organization of Pacific Rim national standards bodies established in 1972 to strengthen the
+  region's engagement in the international standardization system. PASC provides a geographically convenient forum for exchanging
+  information, coordinating positions on ISO and IEC activities, and promoting standardization for economic, societal, and
+  environmental well-being across the Asia-Pacific.
 tags:
 - PASC
 - pacific
+- asia-pacific
 - standards
 - standardization
 - regional
+- regional_cooperation
 - intorg
 topics:
 - key: standardization
   name: Standardization
+- key: trade
+  name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
 regions:
 - Asia-Pacific
 - Pacific Rim
@@ -136,7 +160,27 @@ other_names:
 - id: en
   name: Pacific Area Standards Congress
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://pascnet.org/pasc-members
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.pascnet.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://pascnet.org/charter
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://www.pascnet.org/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.pascnet.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://pascnet.org/charter

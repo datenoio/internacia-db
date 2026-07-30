@@ -1,94 +1,199 @@
 id: IACIS
+name: CIS Interparliamentary Assembly
 blocktype:
 - parliamentary
 status: formal
 partof: CIS
+founded: '1992-03-27'
+active_period:
+  start: '1992-03-27'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
+- Eastern Europe
 languages:
 - en
 - ru
 links:
+- url: https://iacis.ru/
+  type: website
+- url: https://en.wikipedia.org/wiki/CIS_Interparliamentary_Assembly
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4288851
   type: wikidata
-name: CIS Interparliamentary Assembly
+- url: http://duma.gov.ru/en/international/orgs/
+  type: website
+acronyms:
+- lang: en
+  value: IPA CIS
+- lang: en
+  value: IACIS
+- lang: ru
+  value: МПА СНГ
+headquarters:
+  city: Saint Petersburg
+  country: RU
+  coordinates:
+    lat: 59.9456
+    lng: 30.3819
 includes:
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '1993'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
-  status: member
-- id: MD
-  name: Moldova, Republic of
-  type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-03-27'
 - id: UZ
   name: Uzbekistan
   type: country
-  status: member
-membership_count: 9
-description: Consultative parliamentary body.
+  status: founding_member
+  joined: '1992-03-27'
+- id: MD
+  name: Moldova
+  type: country
+  status: former_member
+  joined: '1998-06-02'
+  left: '2024-02-08'
+- id: GE
+  name: Georgia
+  type: country
+  status: former_member
+  joined: '1993'
+  left: '2010'
+- id: UA
+  name: Ukraine
+  type: country
+  status: former_member
+  joined: '1999'
+  left: '2023-05-03'
+founding_members:
+- AM
+- BY
+- KZ
+- KG
+- RU
+- TJ
+- UZ
+membership_count: 8
+description: Consultative inter-parliamentary body of the Commonwealth of Independent
+  States, established on 27 March 1992 in Almaty by agreement among the parliaments
+  of Armenia, Belarus, Kazakhstan, Kyrgyzstan, Russia, Tajikistan, and Uzbekistan.
+  Regulated by the Convention on the Interparliamentary Assembly signed on 26 May
+  1995 and in force from 16 January 1996, the Assembly develops model legislation
+  for voluntary adoption by member parliaments, harmonises national laws with CIS
+  treaties, and coordinates parliamentary cooperation across the CIS. The Council of
+  the Assembly, comprising parliamentary speakers, meets twice yearly; the permanent
+  Secretariat is housed in the Tauride Palace in Saint Petersburg. The Assembly also
+  conducts election observation through the International Institute for Monitoring of
+  Democratic Development, Parliamentarism and Suffrage Protection (IIMDD IPA CIS).
+notes: Azerbaijan, Georgia, and Moldova joined the 1992 agreement in 1993; Moldova
+  became a full convention member on 2 June 1998 and formally withdrew on 8 February
+  2024 after denouncing the convention in July 2023. The Verkhovna Rada of Ukraine
+  acceded to the 1992 agreement in 1999 but never ratified the 1995 convention; Ukraine
+  ceased cooperation in 2014 and formally withdrew from the 1992 agreement on 3 May
+  2023. The Georgian parliament left the Assembly in 2010 following the 2008 war with
+  Russia. Turkmenistan is not a member. The National Assembly of Afghanistan held
+  observer status from 2006 until 2021.
 tags:
 - IACIS
 - assembly
+- cis
 - interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q4288851
 other_names:
-- id: zh
-  name: 獨聯體議會間大會
 - id: en
   name: CIS Interparliamentary Assembly
+- id: en
+  name: Interparliamentary Assembly of Member Nations of the Commonwealth of Independent States
 - id: fr
   name: assemblée interparlementaire de la CEI
 - id: ru
   name: Межпарламентская ассамблея СНГ
+- id: ru
+  name: Межпарламентская ассамблея государств — участников СНГ
 - id: es
   name: Asamblea Interparlamentaria de la CEI
+- id: zh
+  name: 獨聯體議會間大會
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q4288851
   license: CC0
-acronyms:
-- lang: zh
-  value: 獨聯體聯盟議會大廈
-founded: '1992'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4288851
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iacis.ru/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iacis.ru/upload/iblock/641/sogl_ipa.pdf
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iacis.ru/ob_organizatcii/gosudarstva-uchastniki
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iacis.ru/ob_organizatcii/gosudarstva-uchastniki
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iacis.ru/upload/iblock/641/sogl_ipa.pdf
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://duma.gov.ru/en/international/orgs/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/CIS_Interparliamentary_Assembly

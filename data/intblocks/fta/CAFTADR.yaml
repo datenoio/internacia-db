@@ -2,61 +2,131 @@ id: CAFTADR
 blocktype:
 - fta
 status: formal
+founded: '2004-08-05'
+active_period:
+  start: '2006-03-01'
+geographic_scope: regional
+regions:
+- North America
+- Central America
+- Caribbean
 languages:
 - en
+- es
 links:
-- url: http://www.ustr.gov/trade-agreements/free-trade-agreements/cafta-dr-dominican-republic-central-america-fta
+- url: https://www.trade.gov/us-cafta-dr-free-trade-agreement
+  type: website
+- url: https://ustr.gov/trade-agreements/free-trade-agreements/cafta-dr-dominican-republic-central-america-fta
+  type: website
+- url: http://www.sice.oas.org/tpd/usa_cafta/usa_cafta_e.asp
+  type: website
+- url: https://sice.oas.org/Trade/CAFTA/CAFTADR_e/CAFTADRin_e.asp
   type: website
 - url: https://en.wikipedia.org/wiki/Central_America_Free_Trade_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1155342
   type: wikidata
 name: Dominican Republic–Central America Free Trade Agreement
+acronyms:
+- lang: en
+  value: CAFTA-DR
+- lang: en
+  value: CAFTA
+- lang: en
+  value: DR-CAFTA
+- lang: zh
+  value: DR-CAFTA-US
+- lang: zh
+  value: 中美洲自由貿易協議
+- lang: fr
+  value: ALÉAC
+- lang: es
+  value: CAFTA
+- lang: es
+  value: CAFTA-RD
+- lang: es
+  value: DR-CAFTA
+- lang: de
+  value: CAFTA
+- lang: pt
+  value: CAFTA-DR
+legal_status: free trade agreement
+recognition_status: Regional free trade agreement signed on 28 May 2004 by the United States and five Central American countries,
+  with the Dominican Republic joining in a second signing on 5 August 2004; entered into force on staggered dates from March
+  2006 through January 2009 as each party completed domestic ratification
 includes:
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
 - id: SV
   name: El Salvador
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
 - id: GT
   name: Guatemala
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
 - id: DO
   name: Dominican Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-08-05'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-05-28'
+founding_members:
+- CR
+- SV
+- GT
+- HN
+- NI
+- DO
+- US
 membership_count: 7
-description: International dominican focused on economic cooperation.
+suborganizations:
+- id: USCR
+  name: United States-Costa Rica Free Trade Agreement
+description: Regional free trade agreement among the United States, five Central American countries, and the Dominican Republic.
+  The United States and Costa Rica, El Salvador, Guatemala, Honduras, and Nicaragua signed the agreement on 28 May 2004; the
+  Dominican Republic joined in a second signing on 5 August 2004. Parties implemented the agreement on staggered dates from
+  March 2006 (El Salvador) through January 2009 (Costa Rica). CAFTA-DR liberalizes trade in goods and services and establishes
+  disciplines on customs administration, technical barriers to trade, government procurement, investment, telecommunications,
+  e-commerce, intellectual property, transparency, labor, and environmental protection.
 tags:
 - CAFTADR
-- central
+- CAFTA-DR
+- cafta
+- central america
 - commerce
-- dominican
+- dominican republic
 - economy
 - fta
-- republic
+- free
 - trade
+- united states
 topics:
 - key: economy
   name: Economy
 - key: trade
   name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q1155342
 other_names:
 - id: de
@@ -77,29 +147,44 @@ provenance:
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1155342
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1155342
   license: CC0
-acronyms:
-- lang: en
-  value: CAFTA
-- lang: zh
-  value: DR-CAFTA-US
-- lang: zh
-  value: 中美洲自由貿易協議
-- lang: fr
-  value: ALÉAC
-- lang: es
-  value: CAFTA
-- lang: es
-  value: CAFTA-RD
-- lang: es
-  value: DR-CAFTA
-- lang: de
-  value: CAFTA
-- lang: pt
-  value: CAFTA-DR
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1155342
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.trade.gov/us-cafta-dr-free-trade-agreement
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1155342
+  license: CC0
+- field: active_period
+  source: Organization of American States SICE
+  retrieved_at: '2026-07-29'
+  url: http://www.sice.oas.org/tpd/usa_cafta/usa_cafta_e.asp
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/Trade/CAFTA/CAFTADR_e/CAFTADRin_e.asp
+- field: description
+  source: International Trade Administration
+  retrieved_at: '2026-07-29'
+  url: https://www.trade.gov/us-cafta-dr-free-trade-agreement
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/cafta-dr-dominican-republic-central-america-fta
+- field: suborganizations
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/Trade/CAFTA/CAFTADR_e/CAFTADRin_e.asp

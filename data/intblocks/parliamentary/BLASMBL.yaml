@@ -1,21 +1,35 @@
 id: BLASMBL
+name: Baltic Assembly
 blocktype:
 - parliamentary
 status: formal
+founded: '1990-12-01'
+active_period:
+  start: '1990-12-01'
+geographic_scope: regional
+regions:
+- Europe
+- Northern Europe
 languages:
-- en
 - et
 - lv
 - lt
 links:
-- url: http://www.baltasam.org/
+- url: https://www.baltasam.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Baltic_Assembly
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q670356
   type: wikidata
-name: Baltic Assembly
-founded: '1990'
+acronyms:
+- lang: en
+  value: BA
+- lang: et
+  value: Balti Assamblee
+- lang: lv
+  value: Baltijas Asambleja
+- lang: lt
+  value: Baltijos Asamblėja
 headquarters:
   city: Riga
   country: LV
@@ -26,23 +40,44 @@ includes:
 - id: EE
   name: Estonia
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-12-01'
 - id: LV
   name: Latvia
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-12-01'
 - id: LT
   name: Lithuania
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-12-01'
+founding_members:
+- EE
+- LV
+- LT
 membership_count: 3
-wikidata_id: Q670356
-description: Regional parliamentary assembly promoting inter-parliamentary cooperation
-  between Estonia, Latvia, and Lithuania.
+description: Inter-parliamentary organization of Estonia, Latvia, and Lithuania established
+  on 1 December 1990 in Vilnius to promote cooperation among the three Baltic national
+  parliaments on economic, political, and cultural issues. Each parliament appoints
+  twenty members (sixty total); decisions are advisory. Operational regulations were
+  approved in Tallinn on 8 November 1991, and the organizational structure and rules
+  were agreed on 13 June 1994. The Secretariat is based in Riga; working languages
+  are Estonian, Latvian, and Lithuanian. Annual sessions rotate among the three capitals.
+notes: Distinct from but cooperates with the Nordic Council, which holds periodic joint
+  meetings with the Baltic Assembly. Helped establish the Baltic Council of Ministers as
+  a governmental cooperation body. Maintains standing committees on budget and audit,
+  economics, education, natural resources, and security and defence, and awards Baltic
+  Assembly Prizes for Literature, the Arts, and Science.
 tags:
 - BLASMBL
 - BA
+- assembly
 - baltic
+- estonia
+- interparliamentary
+- latvia
+- lithuania
 - parliamentary
 - political
 - regional
@@ -54,44 +89,88 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+wikidata_id: Q670356
 other_names:
+- id: ar
+  name: مجلس البلطيق
+- id: be
+  name: Балтыйская ассамблея
+- id: ca
+  name: Assemblea Bàltica
+- id: cs
+  name: Baltské shromáždění
 - id: de
   name: Baltische Versammlung
 - id: en
   name: Baltic Assembly
+- id: eo
+  name: Balta Asembleo
+- id: es
+  name: Asamblea Báltica
 - id: et
   name: Balti Assamblee
 - id: fr
   name: Assemblée balte
+- id: hu
+  name: Balti Közgyűlés
+- id: it
+  name: Assemblea baltica
 - id: lt
   name: Baltijos Asamblėja
 - id: lv
   name: Baltijas Asambleja
+- id: nb
+  name: Baltisk forsamling
+- id: nl
+  name: Baltische Assemblee
+- id: pl
+  name: Rada Bałtycka
 - id: ru
   name: Балтийская ассамблея
-acronyms:
-- lang: en
-  value: BA
+- id: sv
+  name: Baltiska rådet
+- id: uk
+  name: Балтійська асамблея
+- id: zh
+  name: 波罗的海议会
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-16'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q670356
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-16'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q670356
   license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.baltasam.org/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Assembly
 - field: founded
-  source: Wikipedia
-  retrieved_at: '2026-06-16'
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Baltic_Assembly
 - field: headquarters
-  source: Wikipedia
-  retrieved_at: '2026-06-16'
-  url: https://en.wikipedia.org/wiki/Baltic_Assembly
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q670356
+  license: CC0
 - field: includes
-  source: Wikipedia
-  retrieved_at: '2026-06-16'
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Baltic_Assembly
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Assembly
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.baltasam.org/

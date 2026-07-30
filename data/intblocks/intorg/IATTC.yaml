@@ -1,31 +1,72 @@
 id: IATTC
+name: Inter-American Tropical Tuna Commission
 blocktype:
 - intorg
 status: formal
+founded: '1949-05-31'
+active_period:
+  start: '1950'
+geographic_scope: regional
+regions:
+- Americas
+- Eastern Pacific
+- Pacific
 languages:
 - en
 - es
 links:
-- url: http://www.iattc.org/
+- url: https://www.iattc.org/
+  type: website
+- url: https://www.iattc.org/en-US/About/Role
+  type: website
+- url: https://www.iattc.org/en-US/About/Antigua-Convention
+  type: website
+- url: https://www.state.gov/inter-american-tropical-tuna-commission-antigua-convention
   type: website
 - url: https://en.wikipedia.org/wiki/Inter-American_Tropical_Tuna_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3153044
   type: wikidata
-name: Inter-American Tropical Tuna Commission
+acronyms:
+- lang: en
+  value: IATTC
+- lang: es
+  value: CIAT
+- lang: fr
+  value: IATTC
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation for tuna and tuna-like species in the eastern Pacific Ocean, originally established by the 1949 Convention between the United States and Costa Rica; transformed into a full RFMO when the Antigua Convention entered into force on 27 August 2010; United States is depositary; secretariat headquartered in La Jolla, California; also provides the secretariat for the Agreement on the International Dolphin Conservation Program (AIDCP)
+headquarters:
+  city: La Jolla
+  country: US
+  note: San Diego, California
+  coordinates:
+    lat: 32.858045
+    lng: -117.256891
 includes:
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '2007-06-12'
+- id: BO
+  name: Bolivia
+  type: country
+  status: cooperating
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '2009-06-03'
+- id: CL
+  name: Chile
+  type: country
+  status: cooperating
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2009-10-30'
 - id: CO
   name: Colombia
   type: country
@@ -33,63 +74,95 @@ includes:
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '2021-05-07'
 - id: SV
   name: El Salvador
   type: country
   status: member
+  joined: '2005-03-10'
 - id: EU
   name: European Union
   type: organization
   status: member
+  joined: '2006-06-07'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '2007-07-20'
 - id: GT
   name: Guatemala
   type: country
   status: member
+  joined: '2009-09-30'
+- id: HN
+  name: Honduras
+  type: country
+  status: cooperating
+- id: ID
+  name: Indonesia
+  type: country
+  status: cooperating
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2008-07-11'
 - id: KI
   name: Kiribati
   type: country
   status: member
+  joined: '2011-06-29'
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
+  joined: '2005-12-13'
+- id: LR
+  name: Liberia
+  type: country
+  status: cooperating
 - id: MX
   name: Mexico
   type: country
   status: member
+  joined: '2005-01-14'
 - id: NI
   name: Nicaragua
   type: country
   status: member
+  joined: '2006-12-13'
 - id: PA
   name: Panama
   type: country
   status: member
+  joined: '2007-07-10'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '2018-10-22'
+- id: ES
+  name: Spain
+  type: country
+  status: former_member
+  left: '2010-08-27'
 - id: TW
-  name: Taiwan, Province of China
+  name: Taiwan
   type: country
   status: member
+  joined: '2010-08-17'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1950'
 - id: VE
   name: Venezuela, RB
   type: country
@@ -98,28 +171,40 @@ includes:
   name: Vanuatu
   type: country
   status: member
-founded: '1950'
-acronyms:
-- lang: en
-  value: IATTC
-- lang: es
-  value: CIAT
-- lang: fr
-  value: IATTC
+founding_members:
+- CR
+- US
 membership_count: 21
-wikidata_id: Q3153044
-description: The Inter-American Tropical Tuna Commission is an international organization that is used to promote regional
-  cooperation in the tuna sector.
+description: Regional fisheries management organisation — the oldest of the five global tuna RFMOs — responsible for the conservation and sustainable management of tuna, tuna-like species, associated species, and their ecosystems throughout the eastern Pacific Ocean. Established by the 1949 Convention between the United States and Costa Rica and transformed into a full RFMO when the Antigua Convention entered into force on 27 August 2010. The Commission comprises 21 Members (16 Antigua Convention parties, Chinese Taipei as a fishing entity, and three legacy 1949 Convention parties), plus Cooperating Non-Members bound by the same compliance obligations; it adopts binding conservation and management measures, maintains a regional vessel register, and hosts its own scientific staff and the Achotines Laboratory in Panama.
 tags:
 - CIAT
 - IATTC
 - american
+- commission
+- conservation
+- eastern-pacific
+- environment
+- fisheries
 - inter
+- intergovernmental
 - intorg
+- ocean
+- rfmo
 - tropical
+- tuna
 topics:
-- key: economy
-  name: Economy
+- key: agriculture
+  name: Agriculture
+- key: conservation
+  name: Conservation
+- key: environment
+  name: Environment
+- key: food
+  name: Food
+- key: ocean
+  name: Ocean
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: لجنة البلدان الأمريكية لسمك التون المداري
@@ -128,12 +213,67 @@ other_names:
 - id: en
   name: Inter-American Tropical Tuna Commission
 - id: fr
-  name: Inter-American Tropical Tuna Commission
+  name: Commission interaméricaine du thon tropical
 - id: es
   name: Comisión Interamericana del Atún Tropical
+- id: ko
+  name: 전미열대참치위원회
+wikidata_id: Q3153044
+notes: The 1949 Convention was signed on 31 May 1949 and the Commission began operating in 1950 with a research-only mandate; the Antigua Convention (adopted 2003, EIF 27 August 2010) expanded IATTC into a full RFMO. Members fall into three categories under the Antigua framework — Antigua Convention parties, the Chinese Taipei fishing entity (written commitment 17 August 2010), and legacy 1949 Convention parties that remained after EIF without withdrawing (Colombia, Vanuatu, Venezuela; Venezuela signed the Antigua Convention in 2004 and ratified domestically in 2009 but has not deposited an instrument). Spain ceased to be a member when the European Union acceded in 2010. Cooperating Non-Members (Bolivia, Chile, Honduras, Indonesia, Liberia) are renewed annually and must comply with conservation measures but cannot vote. France participates in respect of Clipperton Island and French Polynesia. The United States deposited its Antigua ratification on 24 February 2016 after implementing legislation was enacted.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: IATTC Antigua Convention status; IATTC Role and characteristics
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Antigua-Convention
+- field: description
+  source: IATTC; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Role
+- field: founded
+  source: IATTC; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Antigua-Convention
+- field: active_period
+  source: IATTC Annual Report 2010
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Antigua-Convention
+- field: legal_status
+  source: IATTC
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Role
+- field: recognition_status
+  source: IATTC; US Department of State
+  retrieved_at: '2026-07-29'
+  url: https://www.state.gov/inter-american-tropical-tuna-commission-antigua-convention
+- field: geographic_scope
+  source: IATTC
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Role
+- field: headquarters
+  source: IATTC Contact; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-us/Contact
+- field: founding_members
+  source: IATTC; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-American_Tropical_Tuna_Commission
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3153044
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3153044
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3153044
+  license: CC0
+- field: notes
+  source: IATTC official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.iattc.org/en-US/About/Antigua-Convention

@@ -1,14 +1,32 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Country Code: TW
-Total Records with Issues: 24
-Total Issues Found: 27
+Total Records with Issues: 26
+Total Issues Found: 29
 
 === ISSUES BY TYPE ===
 
+[DUPLICATE_ACRONYM]
+Count: 2
+Priority: LOW
+
+File: data/intblocks/space/IAF_ASTRO.yaml
+Record ID: IAF_ASTRO
+Issue: DUPLICATE_ACRONYM
+Field: acronyms
+Current Value: IAF
+Suggested Action: English acronym 'IAF' is shared by same-blocktype records ['IAF', 'IAF_ASTRO']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/intorg/IAF.yaml
+Record ID: IAF
+Issue: DUPLICATE_ACRONYM
+Field: acronyms
+Current Value: IAF
+Suggested Action: English acronym 'IAF' is shared by same-blocktype records ['IAF', 'IAF_ASTRO']; merge duplicates or allowlist the acronym
+
 [DUPLICATE_LINK]
-Count: 3
+Count: 4
 Priority: LOW
 
 File: data/intblocks/bank/IFC.yaml
@@ -18,47 +36,54 @@ Field: links
 Current Value: worldbank.org/en/about/leadership/members
 Suggested Action: Website 'worldbank.org/en/about/leadership/members' is shared by unrelated records: ['IBRD', 'IDA', 'IFC', 'MIGA', 'WB']
 
+File: data/intblocks/acronym/SEMIPERIPH.yaml
+Record ID: SEMIPERIPH
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: jstor.org/stable/2657290
+Suggested Action: Website 'jstor.org/stable/2657290' is shared by unrelated records: ['CORECOUNT', 'PERIPHCOUNT', 'SEMIPERIPH']
+
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
-[HISTORICAL_ENTITY_ACTIVE_MEMBER]
+[INSUFFICIENT_PROVENANCE]
 Count: 3
 Priority: MEDIUM
 
-File: data/intblocks/wbgroup/WLD.yaml
-Record ID: WLD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/dvdregion/DVD_3.yaml
+Record ID: DVD_3
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-File: data/intblocks/intorg/IAIS.yaml
-Record ID: IAIS
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/teleregion/DVBT.yaml
+Record ID: DVBT
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
 
-File: data/intblocks/standards/ISO.yaml
-Record ID: ISO
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
 
 [MEMBERSHIP_COUNT_MISMATCH]
-Count: 21
+Count: 20
 Priority: MEDIUM
 
 File: data/intblocks/bank/IFC.yaml
@@ -74,13 +99,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 19
 Suggested Action: membership_count 19 matches neither total includes (35) nor member-class includes (28)
-
-File: data/intblocks/economic/PECC.yaml
-Record ID: PECC
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 23
-Suggested Action: membership_count 23 matches neither total includes (24) nor member-class includes (24)
 
 File: data/intblocks/energy/JODI.yaml
 Record ID: JODI
@@ -102,6 +120,13 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 40
 Suggested Action: membership_count 40 matches neither total includes (39) nor member-class includes (39)
+
+File: data/intblocks/intorg/SPRFMO.yaml
+Record ID: SPRFMO
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 17
+Suggested Action: membership_count 17 matches neither total includes (19) nor member-class includes (16)
 
 File: data/intblocks/military/MNNA.yaml
 Record ID: MNNA
@@ -130,13 +155,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 33
 Suggested Action: membership_count 33 matches neither total includes (32) nor member-class includes (32)
-
-File: data/intblocks/space/APRSAF.yaml
-Record ID: APRSAF
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 52
-Suggested Action: membership_count 52 matches neither total includes (50) nor member-class includes (50)
 
 File: data/intblocks/space/IAF_ASTRO.yaml
 Record ID: IAF_ASTRO
@@ -211,16 +229,7 @@ Suggested Action: membership_count 214 matches neither total includes (217) nor 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 3 issues
-HISTORICAL_ENTITY_ACTIVE_MEMBER: 3 issues
-MEMBERSHIP_COUNT_MISMATCH: 21 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: WLD
-File: data/intblocks/wbgroup/WLD.yaml
-Issue Count: 3
-Issues:
-  - DUPLICATE_LINK: links
-  - DUPLICATE_LINK: links
-  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[7].status
+DUPLICATE_ACRONYM: 2 issues
+DUPLICATE_LINK: 4 issues
+INSUFFICIENT_PROVENANCE: 3 issues
+MEMBERSHIP_COUNT_MISMATCH: 20 issues

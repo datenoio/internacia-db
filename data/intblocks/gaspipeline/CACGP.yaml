@@ -1,11 +1,17 @@
 id: CACGP
+name: Central Asia–China Gas Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2009-12-14'
+geographic_scope: regional
+regions:
+- Asia
 links:
 - url: https://en.wikipedia.org/wiki/Central_Asia%E2%80%93China_gas_pipeline
   type: wikipedia
-name: Central Asia–China Gas Pipeline
+- url: https://www.wikidata.org/wiki/Q250141
+  type: wikidata
 acronyms:
 - lang: en
   value: CACGP
@@ -27,18 +33,26 @@ includes:
   type: country
   status: member
 membership_count: 4
-description: Gas pipeline.
+wikidata_id: Q250141
+description: Natural gas pipeline system from Turkmen gas fields on the Amu Darya via Uzbekistan and Kazakhstan to
+  Khorgos on the China border, where it connects to the West–East Gas Pipeline. Lines A, B, and C run about 1,833 km
+  with a combined capacity of 55 billion m³/a; construction began in 2007 and the system was inaugurated on 14 December
+  2009. Operated through joint ventures of CNPC with Türkmengaz, Uzbekneftegas, and KazMunayGas; more than half of
+  Turkmen gas exports reach China through this route.
 tags:
 - CACGP
-- central
-- asia
+- central-asia
 - china
+- cnpc
 - economy
 - energy
 - gaspipeline
+- kazakhstan
 - pipeline
 - transport
 - transportation
+- turkmenistan
+- uzbekistan
 topics:
 - key: economy
   name: Economy
@@ -46,33 +60,70 @@ topics:
   name: Energy
 - key: transport
   name: Transport
-wikidata_id: Q250141
-provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 other_names:
+- id: bg
+  name: Туркменистан - Китай
 - id: de
   name: China-Zentralasien-Erdgaspipeline
 - id: en
   name: Central Asia–China gas pipeline
+- id: en
+  name: Turkmenistan–China gas pipeline
+- id: eo
+  name: Centrazia-Ĉinia Gazodukto
 - id: es
   name: Gasoducto China-Asia Central
+- id: fa
+  name: خط لوله گاز آسیای مرکزی چین
 - id: fr
   name: gazoduc d'Asie centrale - Chine
+- id: hu
+  name: Közép-Ázsia–Kína-gázvezeték
+- id: ja
+  name: 中央アジア・中国パイプライン
 - id: ru
   name: Газопровод Туркменистан — Китай
+- id: vi
+  name: Đường ống dẫn khí Trung Á - Trung Quốc
 - id: zh
   name: 中國-中亞天然氣管道
+notes: Lines A, B, and C follow a parallel route from Saman-Depe through Olot and Shymkent to Khorgos. A planned Line D
+  (966 km) would add a southern route via Kyrgyzstan and Tajikistan to western China; construction resumed in stages but
+  remained incomplete as of 2024. A Kazakhstan branch from Beyneu (commissioned 2014) feeds western Kazakh gas into the
+  system at Shymkent.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q250141
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q250141
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia%E2%80%93China_gas_pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q250141
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia%E2%80%93China_gas_pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia%E2%80%93China_gas_pipeline
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia%E2%80%93China_gas_pipeline

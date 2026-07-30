@@ -1,10 +1,22 @@
 id: BDFORUM
 blocktype:
 - forum
-status: formal
+- political
+status: historical
+founded: '1998'
+dissolved: '2018-07-31'
+active_period:
+  start: '1998'
+  end: '2018-07-31'
+geographic_scope: regional
+regions:
+- Baltic Sea region
+- Northern Europe
 languages:
 - en
 links:
+- url: http://www.bdforum.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4852699
@@ -14,69 +26,159 @@ includes:
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: EE
   name: Estonia
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: LV
   name: Latvia
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: LT
   name: Lithuania
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: PL
   name: Poland
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: participant
+  joined: '1998'
+  left: '2018-07-31'
 membership_count: 11
 wikidata_id: Q4852699
-description: International forum focused on development.
+headquarters:
+  city: Copenhagen
+  country: DK
+  coordinates:
+    lat: 55.6761
+    lng: 12.5683
+acronyms:
+- lang: en
+  value: BDF
+legal_status: nongovernmental
+recognition_status: >-
+  Independent think-tank and nonprofit networking organization with strategic partners from business, cities, institutional
+  investors, business associations, and academia across the Baltic Sea Region
+description: >-
+  Baltic Development Forum (BDF) was an independent think-tank and nonprofit networking organization co-founded in 1998
+  to promote the Baltic Sea Region as an integrated, prosperous, and internationally competitive growth region. It
+  convened annual summits rotating among regional capitals, published the State of the Region Report on regional
+  competitiveness, and was a key supporter of the EU Strategy for the Baltic Sea Region adopted in 2009. The
+  Copenhagen-hosted secretariat ceased activities on 31 July 2018 after the organization's 20th-anniversary summit in
+  Tallinn.
 tags:
+- BDF
 - BDFORUM
 - aid
 - baltic
+- baltic_sea
 - cooperation
 - development
 - forum
+- historical
 - political
 - regional
 - regional_cooperation
+- think_tank
 topics:
 - key: development
   name: Development
+- key: economy
+  name: Economy
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
+- id: et
+  name: Baltic Development Forum
 - id: zh
   name: 波羅的海發展論壇
 - id: en
   name: Baltic Development Forum
+notes: >-
+  Distinct from the Council of the Baltic Sea States (CBSS), although co-founder Uffe Ellemann-Jensen also helped establish
+  CBSS in 1992. The eleven countries listed reflect BDF's defined Baltic Sea Region (Baltic states, Nordics, northern
+  Germany, northern Poland, and Russia's Northwestern Federal District), not formal treaty membership. Kaliningrad was
+  added to the regional definition after 2006.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.bdforum.org/
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Development_Forum
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4852699
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4852699
+  license: CC0

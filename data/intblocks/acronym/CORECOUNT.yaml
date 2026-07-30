@@ -7,66 +7,64 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5170193
   type: wikidata
-name: Core Countries
+- url: https://www.jstor.org/stable/2657290
+  type: website
+name: Core countries
 includes:
-- id: US
-  name: United States
+- id: AT
+  name: Austria
   type: country
   status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
+- id: AU
+  name: Australia
   type: country
   status: member
 - id: BE
   name: Belgium
   type: country
   status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
+- id: CA
+  name: Canada
   type: country
   status: member
 - id: CH
   name: Switzerland
   type: country
   status: member
-- id: AT
-  name: Austria
+- id: DE
+  name: Germany
   type: country
   status: member
 - id: DK
   name: Denmark
   type: country
   status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: SE
-  name: Sweden
+- id: ES
+  name: Spain
   type: country
   status: member
 - id: FI
   name: Finland
+  type: country
+  status: member
+- id: FR
+  name: France
+  type: country
+  status: member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+- id: HK
+  name: Hong Kong SAR, China
+  type: country
+  status: member
+- id: IE
+  name: Ireland
   type: country
   status: member
 - id: IS
@@ -77,27 +75,43 @@ includes:
   name: Italy
   type: country
   status: member
-- id: ES
-  name: Spain
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+- id: MO
+  name: Macao SAR, China
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
   type: country
   status: member
 - id: PT
   name: Portugal
   type: country
   status: member
-- id: JP
-  name: Japan
+- id: SE
+  name: Sweden
   type: country
   status: member
-- id: AU
-  name: Australia
+- id: SG
+  name: Singapore
   type: country
   status: member
-- id: NZ
-  name: New Zealand
+- id: US
+  name: United States
   type: country
   status: member
-membership_count: 22
+membership_count: 25
 wikidata_id: Q5170193
 description: In world-systems theory, core countries (or the imperial core) are the industrialized capitalist and/or imperialist
   countries.
@@ -110,6 +124,8 @@ topics:
 - key: economy
   name: Economy
 other_names:
+- id: ar
+  name: دول جوهرية
 - id: zh
   name: 核心國家
 - id: en
@@ -118,3 +134,28 @@ other_names:
   name: pays centraux
 - id: es
   name: países centrales
+- id: pt
+  name: países centrais
+notes: 'Membership follows the core-country list in Chase-Dunn, Kawano, and Brewer (2000), "Trade Globalization since 1795:
+  Waves of Integration in the World-System" (American Sociological Review 65:77–95), as reproduced on Wikipedia. World-systems
+  classifications overlap across sources and time periods; countries such as Chile, Greece, Hungary, Spain, Portugal, and
+  Turkey appear in multiple tiers in different studies.'
+last_verified: '2026-07-29'
+provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: includes
+  source: Chase-Dunn, Kawano, and Brewer (2000) via Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Core_countries#List_of_current_core_countries
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Core_countries
+- field: notes
+  source: Chase-Dunn, Kawano, and Brewer (2000)
+  retrieved_at: '2026-07-29'
+  url: https://www.jstor.org/stable/2657290

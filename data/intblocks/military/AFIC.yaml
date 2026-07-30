@@ -1,50 +1,74 @@
 id: AFIC
+name: Five Eyes Air Force Interoperability Council
 blocktype:
 - military
 status: formal
+founded: '1948'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
   type: wikipedia
-name: Five Eyes Air Force Interoperability Council
-founded: '1948'
-geographic_scope: global
+- url: https://www.wikidata.org/wiki/Q4426267
+  type: wikidata
+- url: https://www.airstandards.org/
+  type: website
+acronyms:
+- lang: en
+  value: AFIC
+- lang: en
+  value: ASIC
+- lang: en
+  value: ASCC
+legal_status: intergovernmental
+wikidata_id: Q4426267
+description: Formal military organization comprising the air forces of Australia, Canada, New Zealand, the United Kingdom,
+  and the United States. AFIC enhances interoperability among these Five Eyes nations' air forces by standardizing doctrine,
+  operational procedures, materiel, and equipment across various air power functions. Originally established as the Air Standards
+  Coordinating Committee (ASCC) in 1948, it was restructured as the Air and Space Interoperability Council (ASIC) in 2005
+  and renamed AFIC in 2017.
 includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1948'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1948'
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '1948'
+- id: AU
+  name: Australia
+  type: country
+  status: member
+  joined: '1964'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '1965'
 membership_count: 5
-legal_status: intergovernmental
-description: Formal military organization comprising the air forces of Australia, Canada, New Zealand, the United Kingdom,
-  and the United States. AFIC enhances interoperability among these Five Eyes nations' air forces by standardizing doctrine,
-  operational procedures, materiel, and equipment across various air power functions. Originally established as the Air Standardization
-  Coordinating Committee (ASCC) in 1948, it was restructured as the Air and Space Interoperability Council (ASIC) in 2005
-  and renamed AFIC in 2017.
+founding_members:
+- GB
+- US
+- CA
 tags:
 - AFIC
-- air_force
-- ASIC
 - ASCC
+- ASIC
+- air_force
 - cooperation
 - defense
+- five_eyes
 - interoperability
 - military
 - security
@@ -54,28 +78,80 @@ topics:
 - key: security
   name: Security
 other_names:
+- id: ca
+  name: Consell d'Interoperabilitat Aèria i Espacial
+- id: cs
+  name: Rada pro interoperabilitu letectva
 - id: en
   name: AFIC
 - id: en
   name: Air and Space Interoperability Council
 - id: en
-  name: ASIC
+  name: Air Force Interoperability Council
 - id: en
   name: Air Standardization Coordinating Committee
 - id: en
+  name: Air Standards Coordinating Committee
+- id: en
   name: ASCC
-wikidata_id: Q4426267
+- id: en
+  name: ASIC
+- id: eo
+  name: Aerarmea Interfunkciebliga Konsilio
+- id: eu
+  name: Aire Armadaren Elkarreragingarritasun Kontseilua
+- id: he
+  name: המועצה לפעילות הדדית של חיל האוויר
+- id: ru
+  name: Совет по интероперабельности воздушных и космических войск
+- id: sl
+  name: Svet za interoperabilnost zračnih sil
+- id: uk
+  name: Five Eyes Air Force Interoperability Council
+notes: Formed in 1948 as the Air Standards Coordinating Committee (ASCC) by Canada, the United Kingdom, and the United
+  States; the Royal Australian Air Force joined in 1964 and the Royal New Zealand Air Force in 1965. Restructured and
+  renamed the Air and Space Interoperability Council (ASIC) in 2005; realigned as the Five Eyes Air Force Interoperability
+  Council (AFIC) in 2017. Notable for maintaining NATO-style reporting names for Soviet, Russian, and Chinese aircraft.
+  Pentagon-based Management Committee coordinates day-to-day operations. Part of the Washington-based Five Eyes defence
+  interoperability community alongside ABCANZ Armies, AUSCANNZUKUS, the Combined Communications Electronics Board, and TTCP.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4426267
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4426267
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4426267
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Five_Eyes_Air_Force_Interoperability_Council

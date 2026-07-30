@@ -1,54 +1,105 @@
 id: IPHC
+name: International Pacific Halibut Commission
 blocktype:
 - intorg
 status: formal
+founded: '1923'
+active_period:
+  start: '1923-03-02'
+geographic_scope: regional
+regions:
+- North America
+- Pacific
 languages:
 - en
 links:
-- url: http://www.iphc.int/
+- url: https://www.iphc.int/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Pacific_Halibut_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6052294
   type: wikidata
-name: International Pacific Halibut Commission
-founded: '1923'
+acronyms:
+- lang: en
+  value: IPHC
+legal_status: intergovernmental
+recognition_status: Bilateral treaty organization established by the Convention for the Preservation of the Halibut Fishery of the Northern Pacific Ocean (2 March 1923); revised in 1953, 1976, and 1979, with the 1979 Protocol clarifying management authority under the U.S. Northern Pacific Halibut Act of 1982
 headquarters:
   city: Seattle
   country: US
   coordinates:
     lat: 47.605
     lng: -122.33
+  note: Interbay neighborhood since November 2010; previously on the University of Washington campus
+wikidata_id: Q6052294
+description: Intergovernmental fisheries organization whose two member states — Canada and the United States — jointly manage Pacific halibut (Hippoglossus stenolepis) stocks in the North Pacific and Bering Sea under the 1923 Halibut Convention and its subsequent revisions. The IPHC sets catch limits, conducts scientific stock assessments and research (including chartered vessel surveys, tagging, and port sampling), and holds annual and special commission meetings. The Secretariat is headquartered in Seattle.
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1923-03-02'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1923-03-02'
+founding_members:
+- CA
+- US
 membership_count: 2
-wikidata_id: Q6052294
-description: International entity.
 tags:
 - IPHC
+- agriculture
 - farming
 - fisheries
 - halibut
-- international
 - intorg
 - pacific
 topics:
-- key: economy
-  name: Economy
+- key: agriculture
+  name: Agriculture
 other_names:
-- id: zh
-  name: 国际太平洋比目鱼委员会
 - id: en
   name: International Pacific Halibut Commission
+- id: eo
+  name: Internacia Pacifika Hipoglosa Komisio
+- id: ja
+  name: 国際太平洋オヒョウ委員会
+- id: ko
+  name: 국제 태평양 넙치 위원회
+- id: zh
+  name: 国际太平洋比目鱼委员会
 provenance:
+- field: includes
+  source: Wikipedia; Wikidata member countries (P17)
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Pacific_Halibut_Commission
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Pacific_Halibut_Commission
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6052294
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iphc.int/
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6052294
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6052294
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6052294
+  license: CC0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Pacific_Halibut_Commission
+last_verified: '2026-07-29'

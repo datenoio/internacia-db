@@ -5,6 +5,8 @@ blocktype:
 - economic
 status: formal
 founded: '2011-04-28'
+active_period:
+  start: '2012-06-06'
 geographic_scope: regional
 regions:
 - Latin America
@@ -13,10 +15,14 @@ languages:
 - en
 - pt
 links:
-- url: https://alianzapacifico.net/
+- url: https://alianzapacifico.net/en/
+  type: website
+- url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
   type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Alliance
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7122288
+  type: wikidata
 acronyms:
 - lang: en
   value: PA
@@ -28,46 +34,70 @@ headquarters:
   coordinates:
     lat: -12.0464
     lng: -77.0428
+legal_status: regional integration initiative
+recognition_status: Regional integration initiative established by the Lima Declaration on 28 April 2011; Framework Agreement
+  signed on 6 June 2012; four member states (Chile, Colombia, Mexico and Peru); Singapore is the first associated state after
+  its free trade agreement entered into force on 3 May 2025; Costa Rica admitted as a membership candidate in December 2024;
+  Panama is an official membership candidate
 includes:
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
   joined: '2011-04-28'
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: founding_member
   joined: '2011-04-28'
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
   joined: '2011-04-28'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
   joined: '2011-04-28'
-membership_count: 4
+- id: CR
+  name: Costa Rica
+  type: country
+  status: associate_member
+  joined: '2024-12-14'
+- id: PA
+  name: Panama
+  type: country
+  status: associate_member
+- id: SG
+  name: Singapore
+  type: country
+  status: associated
+  joined: '2025-05-03'
+membership_count: 7
 founding_members:
 - CL
 - CO
 - MX
 - PE
-legal_status: intergovernmental
-notes: Latin American trade bloc formed to promote regional integration and free trade. The alliance aims to move towards
-  the free movement of goods, services, capital and people.
-description: Regional trade bloc focused on economic integration and free trade.
+wikidata_id: Q7122288
+description: Latin American regional integration initiative and trade bloc comprising Chile, Colombia, Mexico and Peru, established
+  by the Lima Declaration on 28 April 2011 and consolidated through the Framework Agreement signed on 6 June 2012. Aims at
+  deep integration toward free movement of goods, services, capital and people, with strategic orientation toward the Asia-Pacific
+  region. Singapore became the first associated state when the Pacific Alliance–Singapore free trade agreement entered into
+  force on 3 May 2025. Costa Rica and Panama are official candidates for full membership.
+notes: Full member count is four. membership_count reflects founding members plus associated state (Singapore) and membership
+  candidates (Costa Rica, Panama). Observer states are tracked in the trade-bloc record PACALL.
+last_verified: '2026-07-29'
 tags:
 - Pacific Alliance
 - Alianza del Pacífico
 - economic
 - fta
-- trade
 - latin america
 - regional
 - regional_cooperation
+- trade
 topics:
 - key: economy
   name: Economy
@@ -76,26 +106,69 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
-- id: zh
-  name: 涅槃宫
+- id: ar
+  name: تحالف المحيط الهادئ
+- id: de
+  name: Pazifik-Allianz
 - id: en
-  name: Neak Pean
-- id: fr
-  name: Neak Pean
-- id: ru
-  name: Неакпеан
+  name: Pacific Alliance
+- id: en
+  name: Alliance of the Pacific
 - id: es
-  name: Neak Pean
+  name: Alianza del Pacífico
+- id: fr
+  name: Alliance du Pacifique
+- id: pt
+  name: Aliança do Pacífico
+- id: ru
+  name: Тихоокеанский альянс
+- id: zh
+  name: 太平洋联盟
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://alianzapacifico.net/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122288
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122288
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122288
+  license: CC0
+- field: founded
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Alliance
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://alianzapacifico.net/
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://alianzapacifico.net/
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/
+- field: includes
+  source: Colombia Ministry of Foreign Affairs
+  retrieved_at: '2026-07-29'
+  url: https://www.cancilleria.gov.co/international/consensus/pacific-alliance
+- field: legal_status
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: description
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: links
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/

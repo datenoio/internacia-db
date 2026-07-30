@@ -7,7 +7,7 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5484
   type: wikidata
-name: Caspian sea region
+name: Caspian Sea region
 includes:
 - id: AZ
   name: Azerbaijan
@@ -30,8 +30,14 @@ includes:
   type: country
   status: member
 membership_count: 5
+geographic_scope: sub-regional
+regions:
+- Asia
+- Europe
 wikidata_id: Q5484
-description: Caspian sea region is a regional grouping of 5 countries.
+description: The world's largest inland body of water, situated between Europe and Asia. Its coastlines are shared by five
+  littoral states — Azerbaijan, Iran, Kazakhstan, Russia, and Turkmenistan — which cooperate on legal status, environmental
+  protection, and energy resources under the Caspian Sea legal framework.
 tags:
 - CASPSREG
 - caspian
@@ -39,23 +45,52 @@ tags:
 - geographic
 - regional
 - regional_cooperation
+- sea
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
 - id: ar
   name: بحر قزوين
-- id: zh
-  name: 裏海
+- id: de
+  name: Kaspisches Meer
 - id: en
   name: Caspian Sea
-- id: fr
-  name: mer Caspienne
-- id: ru
-  name: Каспийское море
 - id: es
   name: mar Caspio
+- id: fr
+  name: mer Caspienne
+- id: pt
+  name: Mar Caspio
+- id: ru
+  name: Каспийское море
+- id: zh
+  name: 裏海
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caspian_Sea
 - field: description
-  source: inferred grouping
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caspian_Sea
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caspian_Sea
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caspian_Sea
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5484
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0

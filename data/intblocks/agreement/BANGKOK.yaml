@@ -2,62 +2,108 @@ id: BANGKOK
 blocktype:
 - agreement
 status: formal
+founded: '1995-12-15'
+active_period:
+  start: '1997-03-27'
+geographic_scope: regional
+regions:
+- Southeast Asia
+- Asia
+languages:
+- en
 links:
+- url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
+  type: website
+- url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800a38cd
+  type: website
 - url: https://en.wikipedia.org/wiki/Southeast_Asian_Nuclear-Weapon-Free_Zone_Treaty
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7707000
   type: wikidata
 name: Treaty of Bangkok
-founded: '1995'
-geographic_scope: regional
+acronyms:
+- lang: en
+  value: SEANWFZ
+legal_status: treaty
+recognition_status: Regional nuclear-weapon-free zone treaty concluded under ASEAN auspices; Thailand serves as depositary
+partof: ASEAN
+membership_count: 11
+description: International treaty that establishes Southeast Asia as a nuclear-weapon-free zone. Also known as the Treaty
+  on the Southeast Asia Nuclear Weapon-Free Zone (SEANWFZ), it obligates signatory states not to develop, manufacture, acquire,
+  possess, or control nuclear weapons, and not to allow the stationing or testing of nuclear weapons within their territories,
+  continental shelves, or exclusive economic zones. Signed in Bangkok on 15 December 1995 by ten Southeast Asian states and
+  entered into force on 27 March 1997. Timor-Leste acceded in October 2025.
 includes:
 - id: BN
   name: Brunei Darussalam
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-11-22'
 - id: KH
   name: Cambodia
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-03-27'
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-04-10'
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-07-16'
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-10-11'
 - id: MM
   name: Myanmar
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-07-17'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-06-21'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-03-27'
 - id: TH
   name: Thailand
   type: country
-  status: member
-- id: VN
-  name: Viet Nam
+  status: founding_member
+  joined: '1997-03-20'
+- id: TL
+  name: Timor-Leste
   type: country
   status: member
-membership_count: 10
+  joined: '2025-10-25'
+- id: VN
+  name: Vietnam
+  type: country
+  status: founding_member
+  joined: '1996-11-26'
+founding_members:
+- BN
+- KH
+- ID
+- LA
+- MY
+- MM
+- PH
+- SG
+- TH
+- VN
 wikidata_id: Q7707000
-description: International treaty that establishes Southeast Asia as a nuclear-weapon-free zone. Also known as the Treaty
-  on the Southeast Asia Nuclear Weapon-Free Zone (SEANWFZ), it obligates signatory states not to develop, manufacture, acquire,
-  possess, or control nuclear weapons, and not to allow the stationing or testing of nuclear weapons within their territories.
 tags:
 - BANGKOK
+- SEANWFZ
 - agreement
 - arms
 - arms_control
@@ -95,8 +141,52 @@ other_names:
   name: Бангкокский договор
 - id: es
   name: Tratado de Bangkok
+notes: All ten Southeast Asian states listed in Article 15 signed the treaty in Bangkok on 15 December 1995. The treaty
+  entered into force on 27 March 1997 after the seventh instrument of ratification was deposited. A protocol open to the
+  five NPT nuclear-weapon states (China, France, Russia, the United Kingdom, and the United States) commits them not to use
+  or threaten to use nuclear weapons against treaty parties; as of 2025 none have signed the protocol. Timor-Leste acceded
+  on 25 October 2025 following its ASEAN membership.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7707000
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7707000
+  license: CC0
+- field: includes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800a38cd
+- field: founding_members
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800a38cd
+- field: founded
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
+- field: active_period
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
+- field: description
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
+- field: legal_status
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Southeast_Asian_Nuclear-Weapon-Free_Zone_Treaty
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok
+- field: notes
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-bangkok

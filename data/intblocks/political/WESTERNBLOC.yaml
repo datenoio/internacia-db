@@ -4,7 +4,18 @@ blocktype:
 status: historical
 founded: '1947'
 dissolved: '1991'
+active_period:
+  start: '1947'
+  end: '1991'
 geographic_scope: global
+regions:
+- Europe
+- North America
+- Asia
+- Oceania
+- South America
+- Middle East
+- Africa
 languages:
 - en
 links:
@@ -21,9 +32,10 @@ acronyms:
 - lang: en
   value: Free World
 membership_count: 45
-wikidata_id: Q153045
-description: Informal coalition of countries aligned with the United States during the Cold War, characterized by commitment
-  to capitalism, liberal democracy, and anti-communism. Opposed the Eastern Bloc led by the Soviet Union.
+legal_status: informal coalition
+description: Informal coalition of countries aligned with the United States during the
+  Cold War, characterized by commitment to capitalism, liberal democracy, and anti-communism.
+  Opposed the Eastern Bloc led by the Soviet Union until the revolutions of 1989–1991.
 tags:
 - WESTERNBLOC
 - cold_war
@@ -41,7 +53,7 @@ other_names:
 - id: ar
   name: الكتلة الغربية
 - id: de
-  name: (4225) Hobart
+  name: Westblock
 - id: en
   name: Capitalist Bloc
 - id: en
@@ -51,7 +63,7 @@ other_names:
 - id: fr
   name: Bloc de l'Ouest
 - id: pt
-  name: (4225) Hobart
+  name: Bloco Ocidental
 - id: ru
   name: Западный блок
 - id: zh
@@ -60,190 +72,356 @@ includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Leading power of the Western Bloc; architect of NATO and the Truman Doctrine
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: FR
   name: France
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member; withdrew from integrated military command 1966–2009
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: former_member
+  joined: '1955'
+  left: '1990'
+  note: West Germany (FRG) during the Cold War; joined NATO in 1955
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: LU
   name: Luxembourg
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: PT
   name: Portugal
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: NATO founding member
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: former_member
+  joined: '1982'
+  left: '1991'
+  note: Joined NATO in 1982 after transition to democracy
 - id: GR
   name: Greece
   type: country
-  status: member
+  status: former_member
+  joined: '1952'
+  left: '1991'
+  note: Joined NATO in 1952
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: former_member
+  joined: '1952'
+  left: '1991'
+  note: Joined NATO in 1952; also a CENTO member until 1979
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: former_member
+  joined: '1952'
+  left: '1991'
+  note: Aligned via U.S.–Japan Security Treaty (1951)
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: former_member
+  joined: '1951'
+  left: '1991'
+  note: ANZUS treaty signatory
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: former_member
+  joined: '1951'
+  left: '1991'
+  note: ANZUS treaty signatory
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Officially neutral but culturally and economically Western-oriented
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Officially neutral (Finlandization) but Western market economy
 - id: IE
   name: Ireland
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Officially neutral; not a NATO member
 - id: AT
   name: Austria
   type: country
-  status: member
+  status: former_member
+  joined: '1955'
+  left: '1991'
+  note: Neutral under 1955 State Treaty; Western market democracy
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Permanently neutral; Western liberal democracy
 - id: KR
   name: Korea, Rep.
   type: country
-  status: member
+  status: former_member
+  joined: '1948'
+  left: '1991'
+  note: South Korea; aligned via U.S. security guarantees
 - id: TW
   name: Taiwan
   type: country
-  status: member
+  status: former_member
+  joined: '1949'
+  left: '1991'
+  note: Republic of China on Taiwan; U.S. security partner
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: former_member
+  joined: '1954'
+  left: '1991'
+  note: SEATO founding member (1954–1977)
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: former_member
+  joined: '1954'
+  left: '1991'
+  note: SEATO founding member; U.S. treaty ally
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: former_member
+  joined: '1957'
+  left: '1991'
+  note: Commonwealth member; anti-communist alignment during Cold War
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: former_member
+  joined: '1965'
+  left: '1991'
+  note: Independent from 1965; capitalist market economy aligned with the West
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: former_member
+  joined: '1967'
+  left: '1991'
+  note: Anti-communist alignment after 1965; formally non-aligned
 - id: SA
   name: Saudi Arabia
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: U.S. security partner in the Middle East
 - id: IL
   name: Israel
   type: country
-  status: member
+  status: former_member
+  joined: '1948'
+  left: '1991'
+  note: Western-aligned democracy; U.S. strategic partner
 - id: ZA
   name: South Africa
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Anti-communist alignment during apartheid era
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Anti-communist military regime 1964–1985; Western-oriented market economy
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Latin American state with anti-communist alignment during Cold War
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Western-oriented market democracy
 - id: VE
   name: Venezuela, RB
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Democratic two-party system until 1990s; oil-exporting U.S. partner
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: U.S. ally in Latin America during Cold War
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Pinochet regime (1973–1990) aligned with U.S. anti-communist policy
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Western-oriented market economy; anti-communist alignment varied by regime
 - id: EC
   name: Ecuador
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Latin American democracy aligned with Western institutions
 - id: UY
   name: Uruguay
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Longstanding Latin American democracy
 - id: PA
   name: Panama
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: U.S. canal zone presence; strategic Western ally in Central America
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: former_member
+  joined: '1947'
+  left: '1991'
+  note: Stable democracy; Western-oriented development model
+notes: Informal geopolitical label rather than a treaty organization. Core European
+  membership overlapped NATO; Asian and Pacific alignment rested on bilateral security
+  treaties (ANZUS, U.S.–Japan, U.S.–Korea). Neutral states (Sweden, Finland, Austria,
+  Switzerland, Ireland) are included as Western-oriented market democracies though
+  not all were NATO members. Yugoslavia pursued non-alignment and is excluded. Pakistan,
+  Iran (until 1979), and Egypt (from 1974) had periods of Western alignment but are
+  not listed separately because alignment depth varied and successor states postdate
+  key realignments.
+wikidata_id: Q153045
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q153045
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Western_Bloc
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Western_Bloc
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q153045
   license: CC0
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Western_Bloc
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Western_Bloc
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/Western_Bloc

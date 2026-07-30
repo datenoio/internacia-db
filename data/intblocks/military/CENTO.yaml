@@ -1,72 +1,177 @@
 id: CENTO
+name: Central Treaty Organization
 blocktype:
 - military
 - political
 status: historical
+founded: '1955-02-24'
+dissolved: '1979-03-16'
+geographic_scope: regional
+regions:
+- Asia
+- Europe
+- Middle East
 languages:
 - en
 links:
-- url: https://en.wikipedia.org/wiki/CENTO
+- url: https://en.wikipedia.org/wiki/Central_Treaty_Organization
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q849092
+- url: https://www.wikidata.org/wiki/Q379850
   type: wikidata
-name: Central Treaty Organization
-founded: '1955'
-dissolved: '1979'
+acronyms:
+- lang: en
+  value: CENTO
+- lang: en
+  value: METO
+- lang: en
+  value: Baghdad Pact
+legal_status: treaty_organization
 headquarters:
   city: Ankara
   country: TR
-geographic_scope: regional
-regions:
-- Middle East
-- Asia
-- Europe
+wikidata_id: Q379850
+description: Cold War mutual defense alliance formed as the Baghdad Pact on 24 February 1955 by Iran, Iraq, Pakistan,
+  Turkey, and the United Kingdom. Renamed the Central Treaty Organization (CENTO) in August 1959 after Iraq withdrew following
+  the 1958 revolution; headquarters moved from Baghdad to Ankara in 1958. Modeled partly on NATO but without a unified military
+  command; the United States participated in CENTO military committees from 1958 without full treaty membership. Dissolved
+  on 16 March 1979 after Iran and Pakistan withdrew during the Iranian Revolution.
 includes:
 - id: IR
-  name: Iran, Islamic Republic of
+  name: Iran, Islamic Rep.
   type: country
   status: former_member
+  joined: '1955-11-03'
+  left: '1979-03-11'
 - id: IQ
   name: Iraq
   type: country
   status: former_member
+  joined: '1955-02-24'
+  left: '1959-03-24'
 - id: PK
   name: Pakistan
   type: country
   status: former_member
+  joined: '1955-09-23'
+  left: '1979-03-12'
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: former_member
+  joined: '1955-02-24'
+  left: '1979-03-16'
 - id: GB
   name: United Kingdom
   type: country
   status: former_member
+  joined: '1955-04-05'
+  left: '1979-03-16'
 membership_count: 5
-wikidata_id: Q849092
-legal_status: treaty_organization
-acronyms:
-- lang: en
-  value: CENTO
-description: Cold War alliance originally formed as the Baghdad Pact.
+founding_members:
+- TR
+- IQ
+- GB
+- PK
+- IR
 tags:
 - Baghdad-Pact
 - CENTO
 - Cold-War
+- historical
+- METO
+- middle_east
 - military
+- political
 topics:
 - key: military
   name: Military
+- key: political
+  name: Political
+other_names:
+- id: ar
+  name: حلف بغداد
+- id: az
+  name: SENTO
+- id: cs
+  name: Bagdádský pakt
+- id: de
+  name: Central Treaty Organization
+- id: de
+  name: Bagdadpakt
+- id: en
+  name: Central Treaty Organization
+- id: en
+  name: Baghdad Pact
+- id: en
+  name: Middle East Treaty Organization
+- id: es
+  name: Organización del Tratado Central
+- id: es
+  name: Pacto de Bagdad
+- id: fa
+  name: سازمان پیمان مرکزی
+- id: fa
+  name: پیمان بغداد
+- id: fr
+  name: pacte de Bagdad
+- id: pl
+  name: Pakt Bagdadzki
+- id: pt
+  name: Organização do Tratado Central
+- id: ru
+  name: Организация Центрального Договора
+- id: ru
+  name: Багдадский пакт
+- id: tr
+  name: Merkezi Antlaşma Teşkilatı
+- id: tr
+  name: Bağdat Paktı
+- id: zh
+  name: 中部公約組織
+notes: Originally the Middle East Treaty Organization (METO); Iraq and Turkey signed the Baghdad Pact on 24 February 1955,
+  with the United Kingdom (5 April), Pakistan (23 September), and Iran (3 November) acceding the same year. Iraq withdrew
+  on 24 March 1959 after the 14 July 1958 revolution; the pact was renamed CENTO on 19 August 1959. Iran withdrew on 11
+  March 1979, Pakistan on 12 March 1979, and the United Kingdom and Turkey on 16 March 1979 when the alliance was formally
+  disbanded.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Treaty_Organization
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q379850
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Treaty_Organization
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q379850
+  license: CC0
+- field: dissolved
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q379850
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q379850
+  license: CC0
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/CENTO
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Treaty_Organization
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/CENTO
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Treaty_Organization
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/CENTO
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Treaty_Organization

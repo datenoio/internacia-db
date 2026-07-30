@@ -18,7 +18,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: HU
@@ -33,12 +33,12 @@ includes:
   name: Serbia
   type: country
   status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
 - id: BG
   name: Bulgaria
+  type: country
+  status: member
+- id: RO
+  name: Romania
   type: country
   status: member
 - id: MD
@@ -50,8 +50,15 @@ includes:
   type: country
   status: member
 membership_count: 10
+geographic_scope: sub-regional
+regions:
+- Europe
 wikidata_id: Q1653
-description: Second-longest river in Europe.
+description: Second-longest river in Europe, flowing from the Black Forest of Germany
+  through Central and Southeastern Europe to the Black Sea. In the 21st century it
+  connects ten countries — Germany, Austria, Slovakia, Hungary, Croatia, Serbia, Bulgaria,
+  Romania, Moldova, and Ukraine — running through their territories or marking a border,
+  per the Wikipedia definition of Danube littoral states.
 tags:
 - DANUC
 - cooperation
@@ -79,14 +86,40 @@ other_names:
   name: Дунай
 - id: zh
   name: 多瑙河
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Danube
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Danube
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Danube
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Danube
 - field: other_names
   source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1653
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1653
+  license: CC0
+headquarters:
+  coordinates:
+    lat: 45.221944444444446
+    lng: 29.743333333333332

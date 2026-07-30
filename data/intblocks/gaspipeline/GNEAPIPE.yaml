@@ -2,12 +2,21 @@ id: GNEAPIPE
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2007'
+geographic_scope: bilateral
+regions:
+- South America
+languages:
+- es
 links:
 - url: https://en.wikipedia.org/wiki/Gasoducto_del_Noreste_Argentino
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5526501
   type: wikidata
 name: Gasoducto del Noreste Argentino
+acronyms:
+- lang: en
+  value: GNEA
 includes:
 - id: AR
   name: Argentina
@@ -19,18 +28,20 @@ includes:
   status: member
 membership_count: 2
 wikidata_id: Q5526501
-description: Gasoducto del Noreste Argentino is an international gaspipeline body
-  with 2 members.
+description: Natural gas pipeline from Bolivia to Santa Fe, Argentina, via northeastern provinces. The 1,465 km GNEA
+  line (Gasoducto del Noreste Argentino) was agreed in 2007 between Bolivia and Argentina; construction started in 2015
+  under Enarsa with Techint as contractor. Partial sections in Formosa, Chaco, and Santa Fe are in service, while the
+  northern Salta–Formosa segment and planned Corrientes–Misiones extension remain unfinished.
 tags:
 - GNEAPIPE
-- argentino
-- aviation
+- argentina
+- bolivia
 - economy
 - energy
+- gnea
 - gasoducto
 - gaspipeline
-- noreste
-- oil
+- pipeline
 - transport
 - transportation
 topics:
@@ -42,8 +53,39 @@ topics:
   name: Transport
 other_names:
 - id: en
+  name: Argentine Northwest Gas Pipeline
+- id: es
   name: Gasoducto del Noreste Argentino
+- id: uk
+  name: GNEA
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gasoducto_del_Noreste_Argentino
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5526501
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gasoducto_del_Noreste_Argentino
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5526501
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gasoducto_del_Noreste_Argentino
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gasoducto_del_Noreste_Argentino
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+last_verified: '2026-07-29'

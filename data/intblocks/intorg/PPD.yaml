@@ -1,17 +1,75 @@
 id: PPD
+name: Partners in Population and Development
 blocktype:
 - intorg
 status: formal
+founded: '1994'
+active_period:
+  start: '1994'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Latin America
+- Middle East
 languages:
 - en
 links:
 - url: http://www.partners-popdev.org/
   type: website
+- url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+  type: website
 - url: https://en.wikipedia.org/wiki/Partners_in_Population_and_Development
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q333612
   type: wikidata
-name: Partners in Population and Development
+acronyms:
+- lang: en
+  value: PPD
+legal_status: intergovernmental
+recognition_status: Intergovernmental alliance of developing countries launched at the 1994 International Conference on Population and Development (ICPD); holds Permanent Observer Status at the United Nations and diplomatic status in Bangladesh
+headquarters:
+  city: Dhaka
+  country: BD
+  coordinates:
+    lat: 23.8103
+    lng: 90.4125
+secretariat:
+  location: Dhaka, Bangladesh
+  head: Executive Director
+membership_count: 28
+founding_members:
+- BD
+- CO
+- EG
+- ID
+- KE
+- MX
+- MA
+- TH
+- TN
+- ZW
+description: Southern-led intergovernmental alliance of 28 developing countries promoting South-South cooperation in reproductive health, family planning, population, and development. Launched at the 1994 ICPD in Cairo by ten founding members to support implementation of the Cairo Programme of Action; membership now spans Asia, the Middle East and North Africa, Sub-Saharan Africa, and Latin America, representing about 59% of the world population. Holds UN Permanent Observer status; the Secretariat is headquartered in Dhaka, Bangladesh, with regional offices in Kampala (Africa), Taicang (China), and New York (UN observer).
+tags:
+- PPD
+- aid
+- development
+- family_planning
+- health
+- intorg
+- partners
+- population
+- reproductive_health
+- south_south_cooperation
+topics:
+- key: development
+  name: Development
+- key: health
+  name: Health
+- key: population
+  name: Population
+- key: sustainable_development
+  name: Sustainable Development
 includes:
 - id: BD
   name: Bangladesh
@@ -89,6 +147,10 @@ includes:
   name: Kenya
   type: country
   status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
 - id: ML
   name: Mali
   type: country
@@ -121,20 +183,7 @@ includes:
   name: Mexico
   type: country
   status: member
-membership_count: 27
 wikidata_id: Q333612
-description: International intergovernmental organization for "southern" countries
-  worldwide.
-tags:
-- PPD
-- aid
-- development
-- intorg
-- partners
-- population
-topics:
-- key: development
-  name: Development
 other_names:
 - id: ar
   name: شركاء في السكان والتنمية
@@ -142,19 +191,51 @@ other_names:
   name: 人口與發展夥伴關係
 - id: en
   name: Partners in Population and Development
+notes: Regional offices include the Africa Regional Office (Kampala, Uganda), Programme Office (Taicang, China), and UN Permanent Observer Office (New York, USA). Each member country designates a Partner Country Coordinator (PCC) and a board representative, typically the minister responsible for health or population.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-12'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q333612
   license: CC0
-headquarters:
-  coordinates:
-    lat: 0.31581363121044115
-    lng: 32.584418808153934
-last_verified: '2026-07-12'
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Partners_in_Population_and_Development
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://partners-popdev.org/docs/PPD%20Handbook_EN.pdf
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.partners-popdev.org/about-ppd/frequently-asked-questions-faqs/

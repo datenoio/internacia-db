@@ -5,10 +5,20 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Andes
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q490417
+  type: wikidata
 name: Andean countries
 includes:
+- id: AR
+  name: Argentina
+  type: country
+  status: member
 - id: BO
-  name: Bolivia, Plurinational State of
+  name: Bolivia
+  type: country
+  status: member
+- id: CL
+  name: Chile
   type: country
   status: member
 - id: CO
@@ -23,19 +33,17 @@ includes:
   name: Peru
   type: country
   status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
 - id: VE
-  name: Venezuela, Bolivarian Republic of
+  name: Venezuela, RB
   type: country
   status: member
-membership_count: 6
+membership_count: 7
 geographic_scope: sub-regional
 regions:
 - Americas
-description: Andean countries is a regional grouping of 6 countries in Americas.
+wikidata_id: Q490417
+description: Geographical region of South America comprising the seven countries traversed by the Andes mountain range —
+  Argentina, Bolivia, Chile, Colombia, Ecuador, Peru, and Venezuela — per the Wikipedia and Wikidata regional definition.
 tags:
 - ANDEAN
 - andean
@@ -49,28 +57,50 @@ topics:
   name: Regional Cooperation
 other_names:
 - id: ar
-  name: الأنديز
-- id: zh
-  name: 安第斯
+  name: دول الأنديز
+- id: de
+  name: Andenländer
 - id: en
   name: Andean countries
-- id: fr
-  name: pays andins
-- id: ru
-  name: Андские страны
 - id: es
   name: países andinos
+- id: fr
+  name: pays andins
+- id: it
+  name: Stati andini
+- id: pt
+  name: América Andina
+- id: ru
+  name: Андские страны
+- id: zh
+  name: 安第斯地区
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490417
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Andes
+- field: membership_count
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490417
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Andes
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q490417
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q490417
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q490417

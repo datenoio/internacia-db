@@ -1,54 +1,157 @@
 id: IPAEURASEC
+name: Interparliamentary Assembly of EurAsEC
 blocktype:
 - parliamentary
-status: formal
-partof: EAEU
+status: historical
+founded: '2000-10-10'
+dissolved: '2015-01-01'
+active_period:
+  start: '2000-10-10'
+  end: '2015-01-01'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
 languages:
 - ru
 links:
-- url: http://www.ipaeurasec.org/
+- url: https://en.wikipedia.org/wiki/Eurasian_Economic_Community#The_Interparliamentary_Assembly
+  type: wikipedia
+- url: https://evrazes.com/docs/view/104
   type: website
-name: Interparliamentary Assembly of EurAsEC
+- url: http://en.kremlin.ru/events/president/news/46766
+  type: website
+acronyms:
+- lang: en
+  value: IPA
+- lang: ru
+  value: МПА
+headquarters:
+  city: Saint Petersburg
+  country: RU
+  coordinates:
+    lat: 59.9343
+    lng: 30.3351
 includes:
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-10-10'
+  left: '2015-01-01'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-10-10'
+  left: '2015-01-01'
 - id: KG
   name: Kyrgyzstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-10-10'
+  left: '2015-01-01'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-10-10'
+  left: '2015-01-01'
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-10-10'
+  left: '2015-01-01'
 - id: UZ
   name: Uzbekistan
   type: country
-  status: member
-membership_count: 6
-description: Interparliamentary Assembly of EurAsEC is an international parliamentary
-  body with 6 members.
+  status: former_member
+  joined: '2006-01-25'
+  left: '2008-10-16'
+founding_members:
+- BY
+- KZ
+- KG
+- RU
+- TJ
+membership_count: 5
+description: Inter-parliamentary organ of the Eurasian Economic Community (EurAsEC), established
+  by the Treaty on the Establishment of the EurAsEC signed on 10 October 2000 in Astana as the
+  legal successor to the Interparliamentary Committee of Belarus, Kazakhstan, Kyrgyzstan, and
+  Russia. Composed of parliamentarians delegated by member-state parliaments, the Assembly
+  harmonised national legislation with EurAsEC treaties, adopted model laws, and issued
+  recommendations to the Interstate Council and Integration Committee. The Secretariat was
+  based in Saint Petersburg. Uzbekistan participated after acceding to EurAsEC in January 2006
+  but suspended membership in October 2008. The Assembly ceased operations on 1 January 2015
+  when EurAsEC was dissolved upon the launch of the Eurasian Economic Union; the EAEU Treaty
+  did not establish a successor parliamentary body.
+notes: Uzbekistan joined EurAsEC on 25 January 2006 following merger with the Central Asian
+  Cooperation Organisation and withdrew from EurAsEC bodies on 16 October 2008. Tajikistan
+  remained a EurAsEC member but did not join the EAEU. Armenia and Kyrgyzstan joined the EAEU
+  in 2015 but were never members of the EurAsEC Interparliamentary Assembly.
 tags:
 - IPAEURASEC
 - assembly
+- eurasian
+- historical
 - interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Interparliamentary Assembly of the Eurasian Economic Community
+- id: en
+  name: EurAsEC Interparliamentary Assembly
+- id: ru
+  name: Межпарламентская ассамблея Евразийского экономического сообщества
+- id: ru
+  name: МПА ЕврАзЭС
+last_verified: '2026-07-29'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://evrazes.com/docs/view/104
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://evrazes.com/docs/view/96
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://en.kremlin.ru/events/president/news/46766
+- field: status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://en.kremlin.ru/events/president/news/46766
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Economic_Community
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://evrazes.com/docs/view/96
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://evrazes.com/docs/view/96
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Economic_Community
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://evrazes.com/docs/view/104

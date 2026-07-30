@@ -18,14 +18,15 @@ import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.validate import cross_rules, intblock_rules
-from internacia_builder.validate.output import emit_validation_result
 from internacia_builder.validate.completeness import (
     load_includes_status_catalog,
     validate_completeness,
     validate_includes_status,
     validate_membership_applicability,
 )
+from internacia_builder.validate.country_rules import check_provenance_count
 from internacia_builder.validate.intblock_rules import TEMPLATED_DESC_RE as TEMPLATED_DESC
+from internacia_builder.validate.output import emit_validation_result
 
 app = typer.Typer(help="Validate internacia-db intblock data")
 
@@ -458,6 +459,15 @@ def run_validation(
     desc_errors, desc_warnings, description_report = validate_description_quality(all_records, completeness_cfg)
     errors.extend(desc_errors)
     warnings.extend(desc_warnings)
+
+    prov_cfg = (completeness_cfg.get("fields") or {}).get("provenance") or {}
+    prov_min_count = int(prov_cfg.get("min_count") or 0)
+    if prov_min_count > 0:
+        for rel, record in records:
+            warnings.extend(
+                f"{rel}: {issue['suggested_action']}"
+                for issue in check_provenance_count(record, min_count=prov_min_count)
+            )
 
     if report:
         summary = {

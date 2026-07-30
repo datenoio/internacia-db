@@ -2,6 +2,7 @@ id: FASRB
 blocktype:
 - water
 - intorg
+- transport
 status: formal
 languages:
 - en
@@ -9,7 +10,7 @@ languages:
 - hr
 - sr
 links:
-- url: http://www.savacommission.org/
+- url: https://www.savacommission.org/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Sava_River_Basin_Commission
   type: wikipedia
@@ -23,45 +24,73 @@ headquarters:
   coordinates:
     lat: 45.81305555555556
     lng: 15.977222222222222
+geographic_scope: regional
+regions:
+- Europe
 includes:
 - id: BA
   name: Bosnia and Herzegovina
   type: country
   status: member
+  joined: '2004-12-29'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2004-12-29'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2004-12-29'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2004-12-29'
 - id: ME
   name: Montenegro
   type: country
-  status: associated
+  status: cooperating
+  joined: '2013-12-09'
+  note: Cooperates under a 2013 memorandum of understanding; not a party to the Framework Agreement on the Sava River Basin
 membership_count: 4
 wikidata_id: Q3297537
-description: The International Sava River Basin Commission is an international organization that is used to promote regional
-  cooperation in the water sector.
+legal_status: intergovernmental
+acronyms:
+- lang: en
+  value: ISRBC
+description: Intergovernmental commission implementing the Framework Agreement on the Sava River Basin for navigation, sustainable
+  water management, and flood prevention among riparian states.
 tags:
 - FASRB
+- ISRBC
+- Sava
+- basin
 - international
 - intorg
+- navigation
 - river
-- sava
+- transboundary
+- water
 topics:
 - key: water
   name: Water
+- key: transport
+  name: Transport
 other_names:
+- id: bs
+  name: Međunarodna komisija za sliv rijeke Save
 - id: de
   name: Savakommission
 - id: en
   name: International Sava River Basin Commission
+- id: hr
+  name: Međunarodna komisija za sliv rijeke Save
+- id: sl
+  name: Mednarodna komisija za savski bazen
+- id: sr
+  name: Међународна комисија за слив реке Саве
 provenance:
 - field: other_names
   source: Wikidata
@@ -71,4 +100,24 @@ provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.savacommission.org/
+  url: https://www.savacommission.org/
+- field: includes
+  source: Framework Agreement on the Sava River Basin
+  retrieved_at: '2026-07-29'
+  url: https://www.savacommission.org/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.savacommission.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.savacommission.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.savacommission.org/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.savacommission.org/

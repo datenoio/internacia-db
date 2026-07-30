@@ -1,109 +1,223 @@
 id: NAFO
+name: Northwest Atlantic Fisheries Organization
 blocktype:
 - intorg
+- fisheries
+- ocean
 status: formal
+founded: '1979-01-01'
+active_period:
+  start: '1979-01-01'
+geographic_scope: regional
+regions:
+- North Atlantic
+- Northwest Atlantic
 languages:
 - en
+- fr
 links:
-- url: http://www.nafo.int/
+- url: https://www.nafo.int/
+  type: website
+- url: https://www.nafo.int/Home/NAFO-Governance
+  type: website
+- url: https://www.nafo.int/About-us/Contracting-Parties
+  type: website
+- url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf
   type: website
 - url: https://en.wikipedia.org/wiki/Northwest_Atlantic_Fisheries_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q580933
   type: wikidata
-name: Northwest Atlantic Fisheries Organization
-founded: '1979'
+acronyms:
+- lang: en
+  value: NAFO
+- lang: fr
+  value: OPANO
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the Convention on Cooperation in the Northwest Atlantic Fisheries, signed at Ottawa on 24 October 1978 and in force from 1 January 1979; successor to ICNAF (1949–1978); Canada is depositary; secretariat headquartered in Halifax, Nova Scotia; convention comprehensively amended in 2017 to incorporate an ecosystem approach to fisheries management
 headquarters:
   city: Halifax
   country: CA
+  note: Summit Place, 1601 Lower Water Street, Suite 401, Halifax, Nova Scotia
   coordinates:
     lat: 44.647777777778
     lng: -63.571388888889
+founding_members:
+- CA
+- CU
+- IS
+- 'NO'
+- RU
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
 - id: CU
   name: Cuba
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '1979-05-30'
   note: Membership in respect of the Faroe Islands and Greenland
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1996-08-14'
   note: Membership in respect of Saint Pierre and Miquelon
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '1980-01-04'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '1993-12-21'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1979-01-01'
+  note: Continued membership from the former USSR from 1 January 1992
 - id: UA
   name: Ukraine
   type: country
   status: member
+  joined: '1999-08-30'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '2020-09-18'
 - id: US
   name: United States of America
   type: country
   status: member
+  joined: '1995-11-29'
 membership_count: 13
-wikidata_id: Q580933
-description: International fisheries management organization.
+description: Intergovernmental regional fisheries management organisation for the Northwest Atlantic, established when the Convention on Cooperation in the Northwest Atlantic Fisheries entered into force on 1 January 1979 as successor to ICNAF. NAFO's 13 Contracting Parties adopt conservation and enforcement measures for fishery resources in the Convention Area outside coastal 200-mile zones, excluding salmon, tunas, whales, and sedentary species managed under other treaties. The Commission, Scientific Council, and Secretariat are based in Halifax; the 2017 convention amendments modernised decision-making and incorporated an ecosystem approach.
 tags:
 - NAFO
 - agriculture
 - atlantic
+- conservation
 - farming
 - fisheries
 - intorg
+- intergovernmental
 - northwest
+- rfmo
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
+- key: environment
+  name: Environment
+- key: food
+  name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: ar
-  name: منظمة مصائد أسماك شمال غرب الأطلسي
-- id: zh
-  name: 西北大西洋渔业组织
 - id: en
   name: Northwest Atlantic Fisheries Organization
 - id: fr
   name: Organisation des pêches de l'Atlantique nord-ouest
+- id: de
+  name: Nordwestatlantische Fischereiorganisation
+- id: es
+  name: Organización de Pesquerías del Atlántico Noroeste
+- id: nl
+  name: Northwest Atlantic Fisheries Organisation
+- id: ar
+  name: منظمة مصائد أسماك شمال غرب الأطلسي
+- id: zh
+  name: 西北大西洋渔业组织
+- id: ko
+  name: 북서대서양수산기구
+- id: pl
+  name: Organizacja Rybołówstwa Północno-Zachodniego Atlantyku
+- id: ru
+  name: Организация по рыболовству в северо-западной части Атлантики
+wikidata_id: Q580933
+notes: NAFO succeeded ICNAF (International Commission for the Northwest Atlantic Fisheries, 1949–1978). The original seven signatories at entry into force were Canada, Cuba, the European Economic Community (now the European Union), the German Democratic Republic (whose membership transferred to the EU at German reunification), Iceland, Norway, and the USSR (continued by the Russian Federation from 1992). Denmark accepted the Convention in May 1979; France, Japan, the Republic of Korea, Ukraine, the United Kingdom, and the United States acceded later. Former Contracting Parties include Bulgaria, Estonia, Latvia, Lithuania, Poland, Portugal, Romania, and Spain, most of which later acceded to the EU.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.nafo.int/
+- field: includes
+  source: NAFO Convention; NAFO Governance page
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf
+- field: founding_members
+  source: NAFO Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf
 - field: description
+  source: NAFO; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Home/NAFO-Governance
+- field: founded
+  source: NAFO Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf
+- field: active_period
+  source: NAFO Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf
+- field: legal_status
+  source: NAFO Governance page
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Home/NAFO-Governance
+- field: recognition_status
+  source: NAFO Governance page; UN LOS submission
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Home/NAFO-Governance
+- field: geographic_scope
+  source: NAFO Governance page
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Home/NAFO-Governance
+- field: headquarters
+  source: NAFO official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/
+- field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q580933
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q580933
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q580933
+  license: CC0
+- field: notes
+  source: NAFO Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.nafo.int/Portals/0/PDFs/key-publications/NAFOConvention.pdf

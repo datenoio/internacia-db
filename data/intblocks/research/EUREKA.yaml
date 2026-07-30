@@ -7,7 +7,7 @@ languages:
 - en
 - fr
 links:
-- url: http://www.eurekanetwork.org
+- url: https://www.eurekanetwork.org
   type: website
 - url: https://en.wikipedia.org/wiki/Eureka_(organisation)
   type: wikipedia
@@ -30,9 +30,9 @@ acronyms:
   value: Σ!
 - lang: zh
   value: 尤里卡计划
-membership_count: 42
+membership_count: 49
 wikidata_id: Q1276297
-description: Intergovernmental organisation for research and development funding and coordination.
+description: Intergovernmental organisation for market-oriented research and development funding and coordination among ministries and funding agencies.
 tags:
 - Eureka
 - E!
@@ -55,190 +55,251 @@ topics:
 - key: innovation
   name: Innovation
 includes:
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czechia
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: MK
-  name: North Macedonia
-  type: country
-  status: member
 - id: AL
   name: Albania
   type: country
   status: member
-- id: ME
-  name: Montenegro
+  joined: '1991'
+- id: AT
+  name: Austria
   type: country
   status: member
-- id: UA
-  name: Ukraine
+  joined: '1985'
+- id: BA
+  name: Bosnia and Herzegovina
   type: country
   status: member
-- id: MD
-  name: Moldova
+  joined: '2009'
+- id: BE
+  name: Belgium
   type: country
   status: member
+  joined: '1985'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2010'
 - id: CA
   name: Canada
   type: country
   status: member
-- id: KR
-  name: Korea, Republic of
+  joined: '2012'
+- id: CH
+  name: Switzerland
   type: country
   status: member
+  joined: '1985'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '2002'
+- id: CZ
+  name: Czechia
+  type: country
+  status: member
+  joined: '1995'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '1985'
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '1985'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2001'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '1985'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1985'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '1985'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '1985'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '1985'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2000'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '1992'
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+  joined: '1985'
 - id: IL
   name: Israel
   type: country
   status: member
+  joined: '2000'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '1986'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '1985'
+- id: KR
+  name: Korea, Republic of
+  type: country
+  status: member
+  joined: '2009'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '1999'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '1985'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2000'
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+  joined: '2005'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2012'
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
+  joined: '2008'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2006'
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '1985'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1985'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '1995'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '1985'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '1997'
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  joined: '2002'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1985'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '1994'
+- id: SK
+  name: Slovakia
+  type: country
+  status: member
+  joined: '2001'
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+  joined: '2005'
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+  joined: '1985'
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '2006'
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+  joined: '1985'
 - id: AR
   name: Argentina
   type: country
   status: associated
+  joined: '2019'
+- id: BR
+  name: Brazil
+  type: country
+  status: associated
+  joined: '2024-12-02'
 - id: CL
   name: Chile
   type: country
   status: associated
-- id: ZA
-  name: South Africa
-  type: country
-  status: associated
+  joined: '2017'
 - id: SG
   name: Singapore
   type: country
   status: associated
+  joined: '2021'
+- id: ZA
+  name: South Africa
+  type: country
+  status: associated
+  joined: '2014'
 other_names:
 - id: de
   name: EUREKA
@@ -254,18 +315,43 @@ other_names:
   name: EUREKA
 - id: zh
   name: 尤里卡計劃
+notes: >-
+  As of December 2024 the Eureka network comprises 48 countries and the European Commission (represented as EU).
+  Full members include 43 European and partner countries plus the European Commission; five associated countries
+  participate under four-year association terms (Argentina, Brazil, Chile, Singapore, and South Africa). Canada and
+  South Korea upgraded from associated to full membership on 2022-06-22. Brazil joined as the 48th country on
+  2024-12-02. The Russian Federation withdrew in 2023 and is not listed.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: Eureka Network official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.eurekanetwork.org/about-us/eurekas-network/
+  note: 43 full members plus EU; five associated countries including Brazil (2024-12-02)
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eureka_(organisation)
+  note: Membership table join years; Russia excluded (withdrew 2023)
+- field: membership_count
+  source: Eureka Network official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.eurekanetwork.org/brazil-joins-eurekas-network/
+- field: description
+  source: Eureka Network; Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://www.eurekanetwork.org/about-us/eurekas-network/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1276297
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1276297
   license: CC0
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.eurekanetwork.org
+  url: https://www.eurekanetwork.org

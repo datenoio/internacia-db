@@ -1,167 +1,241 @@
 id: DAC
+name: Development Assistance Committee
 blocktype:
 - agreement
 status: formal
 partof: OECD
+founded: '1960-01-13'
+active_period:
+  start: '1960-01-13'
+geographic_scope: global
+regions:
+- worldwide
+languages:
+- en
+- fr
 links:
 - url: https://www.oecd.org/dac/
+  type: website
+- url: https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=869&Lang=en
   type: website
 - url: https://en.wikipedia.org/wiki/Development_Assistance_Committee
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1206712
   type: wikidata
-name: Development Assistance Committee
-founded: '1960'
+headquarters:
+  city: Paris
+  country: FR
+legal_status: committee
+recognition_status: OECD committee and forum for major bilateral aid donors to coordinate development co-operation policy, set ODA standards, collect aid statistics, and conduct peer reviews; predecessor Development Assistance Group (DAG) created in January 1960 and reconstituted as the DAC when integrated into the OECD in September 1961; secretariat provided by the OECD Development Co-operation Directorate (DCD)
+secretariat:
+  location: Paris, France
+  organization: OECD Development Co-operation Directorate
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1966'
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '1965'
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: CZ
   name: Czech Republic
   type: country
   status: member
+  joined: '2013'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '1963'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2023-07-04'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '1975'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1999'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2016'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '2013'
 - id: IE
   name: Ireland
   type: country
   status: member
+  joined: '1985'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2010'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2025-03-19'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2022-11-17'
 - id: LU
   name: Luxembourg
   type: country
   status: member
+  joined: '1992'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-07'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1973'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '1962'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2013'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1991'
+- id: RO
+  name: Romania
+  type: country
+  status: associate
+  joined: '2025-12-17'
 - id: SK
   name: Slovak Republic
   type: country
   status: member
+  joined: '2013'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2013'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1991'
 - id: SE
   name: Sweden
   type: country
   status: member
+  joined: '1965'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '1968'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: US
   name: United States of America
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-01-13'
 - id: EU
   name: European Union
   type: organization
-  status: member
-membership_count: 33
+  status: founding_member
+  joined: '1960-01-13'
+founding_members:
+- BE
+- CA
+- FR
+- DE
+- IT
+- JP
+- NL
+- PT
+- GB
+- US
+membership_count: 34
 wikidata_id: Q1206712
-description: OECD committee.
+description: OECD committee that coordinates development co-operation policy among the world's major bilateral aid donors.
+  Established in January 1960 as the Development Assistance Group and reconstituted as the Development Assistance Committee
+  when integrated into the OECD in 1961, the DAC defines and safeguards official development assistance (ODA), publishes
+  aid statistics, sets effectiveness standards, and conducts peer reviews of member development programmes. As of 2025 it
+  comprises 32 OECD member states and the European Union as full members, with Romania as associate member.
 tags:
 - DAC
 - agreement
 - aid
 - assistance
 - committee
+- cooperation
 - development
-- law
-- legal
+- ODA
+- OECD
 topics:
 - key: development
   name: Development
-- key: law
-  name: Law
+- key: finance
+  name: Finance
+- key: sustainable_development
+  name: Sustainable Development
 other_names:
 - id: ar
   name: لجنة المساعدة الإنمائية
@@ -171,30 +245,87 @@ other_names:
   name: Development Assistance Committee
 - id: es
   name: Comité de Ayuda al Desarrollo
+- id: fr
+  name: Comité d'aide au développement
 - id: pt
   name: Comitê de Ajuda ao Desenvolvimento
 - id: ru
   name: Комитет содействия развитию
 - id: zh
   name: 發展援助委員會
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
+- lang: en
+  value: DAC
 - lang: zh
   value: 开发援助委员会
 - lang: zh
   value: 发展援助委员会
+notes: Portugal was a founding DAG member in 1960, withdrew in 1974, and rejoined in 1991. The Netherlands joined the DAG
+  in July 1960. Eight international organisations participate as observers (African Development Bank, Asian Development Bank,
+  European Investment Bank, Inter-American Development Bank, IMF, UNDP, World Bank, WHO). Non-DAC OECD members may participate
+  in DAC meetings in areas of mutual interest. Chair since March 2023 is Carsten Staur (Denmark).
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1206712
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=869&Lang=en
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=869&Lang=en
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/development-assistance-committee/dac-history.htm
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=869&Lang=en
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oecdgroups.oecd.org/Bodies/ShowBodyView.aspx?BodyID=869&Lang=en
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/dac/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oecd.org/content/dam/oecd/en/about/participation-plans/PP-DAC-PUBLIC-ENG.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1206712
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1206712
+  license: CC0

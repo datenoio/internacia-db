@@ -1,54 +1,88 @@
 id: GCCPO
+name: GCC Patent Office
 blocktype:
 - patent
 status: formal
+founded: '1992-09-22'
+geographic_scope: regional
+regions:
+- Middle East
 languages:
 - ar
 - en
 links:
+- url: https://www.gccpo.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council_Patent_Office
   type: wikipedia
-name: GCC Patent Office
-includes:
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: KW
-  name: Kuwait
-  type: country
-  status: member
-- id: OM
-  name: Oman
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-founded: '1992'
+- url: https://www.wikidata.org/wiki/Q13233696
+  type: wikidata
+acronyms:
+- lang: en
+  value: GCCPO
+- lang: en
+  value: GCC Patent Office
 headquarters:
   city: Riyadh
   country: SA
   coordinates:
     lat: 24.71
     lng: 46.68
-acronyms:
-- lang: en
-  value: GCCPO
-- lang: en
-  value: GCC Patent Office
+partof:
+  id: CCASG
+  name: Cooperation Council for the Arab States of the Gulf
+includes:
+- id: BH
+  name: Bahrain
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+- id: KW
+  name: Kuwait
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+- id: OM
+  name: Oman
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+- id: QA
+  name: Qatar
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: founding_member
+  joined: '1992-09-22'
+founding_members:
+- BH
+- KW
+- OM
+- QA
+- SA
+- AE
 membership_count: 6
-description: Regional patent authority established to serve GCC member states. As of January 2021, no longer accepts new patent
-  applications for unified regional patents, but continues to process pending applications and manage granted patents.
+legal_status: intergovernmental
+wikidata_id: Q13233696
+description: >-
+  Regional patent office of the Cooperation Council for the Arab States of the Gulf (GCC), established under the GCC Patent
+  Regulation approved at the Supreme Council's 13th session in September 1992. A single GCC patent application, once granted,
+  provides protection across all six member states. Based at the GCC Secretariat General in Riyadh. Since 5 January 2021,
+  the office no longer accepts general filing of new applications pending amendment of the Patent Regulation, but continues
+  to process pending applications and grants patents upon request from a member state.
+notes: >-
+  The GCC Patent Office began accepting applications on 3 October 1998; the first patent was granted in 2002. The patent
+  system was amended in November 1999 to align with TRIPS. The GCC is not a party to the Patent Cooperation Treaty (PCT) or
+  the Paris Convention, though member states have individually adopted the regulation into national law. The GCCPO is
+  distinct from national patent offices such as the Saudi Patent Office despite sharing Riyadh as its location.
 tags:
 - GCCPO
 - GCC Patent Office
@@ -72,8 +106,45 @@ other_names:
   name: Office des brevets du Conseil de coopération des États arabes du Golfe
 - id: zh
   name: 海湾阿拉伯国家合作委员会专利局
-wikidata_id: Q13233696
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/legislation/details/14915
+- field: founding_members
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/legislation/details/14915
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/GCC_Patent_Office
+- field: founded
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/legislation/details/14915
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council_Patent_Office
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13233696
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gccpo.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/GCC_Patent_Office
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/GCC_Patent_Office
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -84,7 +155,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council_Patent_Office

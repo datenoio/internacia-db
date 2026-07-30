@@ -1,10 +1,23 @@
 id: CVF
 blocktype:
 - forum
+- political
+- climate
 status: formal
+founded: '2009-11-10'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Caribbean
+- Latin America
+- Middle East
+- Pacific
 languages:
 - en
 links:
+- url: https://cvfv20.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Climate_Vulnerable_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5133453
@@ -15,12 +28,16 @@ includes:
   name: Afghanistan
   type: country
   status: member
+- id: BB
+  name: Barbados
+  type: country
+  status: member
 - id: BD
   name: Bangladesh
   type: country
   status: member
-- id: BB
-  name: Barbados
+- id: BF
+  name: Burkina Faso
   type: country
   status: member
 - id: BJ
@@ -31,36 +48,24 @@ includes:
   name: Bhutan
   type: country
   status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
+- id: CD
+  name: Democratic Republic of the Congo
   type: country
   status: member
 - id: CI
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CD
-  name: Democratic Republic of the Congo
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+- id: CV
+  name: Cabo Verde
   type: country
   status: member
 - id: DM
@@ -71,10 +76,6 @@ includes:
   name: Dominican Republic
   type: country
   status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
 - id: ET
   name: Ethiopia
   type: country
@@ -83,36 +84,40 @@ includes:
   name: Fiji
   type: country
   status: member
-- id: GM
-  name: The Gambia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
+- id: GA
+  name: Gabon
   type: country
   status: member
 - id: GD
   name: Grenada
   type: country
   status: member
-- id: GT
-  name: Guatemala
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: The Gambia
   type: country
   status: member
 - id: GN
   name: Guinea
   type: country
   status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
 - id: GY
   name: Guyana
   type: country
   status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
 - id: HN
   name: Honduras
+  type: country
+  status: member
+- id: HT
+  name: Haiti
   type: country
   status: member
 - id: JO
@@ -123,32 +128,44 @@ includes:
   name: Kenya
   type: country
   status: member
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: member
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
 - id: KI
   name: Kiribati
   type: country
   status: member
-- id: KG
-  name: Kyrgyzstan
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: LB
   name: Lebanon
   type: country
   status: member
+- id: LC
+  name: Saint Lucia
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
 - id: MG
   name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MV
-  name: Maldives
   type: country
   status: member
 - id: MH
@@ -159,8 +176,12 @@ includes:
   name: Mongolia
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MW
+  name: Malawi
   type: country
   status: member
 - id: MZ
@@ -171,84 +192,96 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NP
-  name: Nepal
+- id: NE
+  name: Niger
   type: country
   status: member
 - id: NI
   name: Nicaragua
   type: country
   status: member
-- id: NE
-  name: Niger
+- id: NP
+  name: Nepal
   type: country
   status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PS
-  name: State of Palestine
+- id: NR
+  name: Nauru
   type: country
   status: member
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
 - id: PH
   name: Philippines
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: PS
+  name: State of Palestine
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
   type: country
   status: member
 - id: RW
   name: Rwanda
   type: country
   status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
+- id: SB
+  name: Solomon Islands
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
-- id: TZ
-  name: Tanzania
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
   type: country
   status: member
 - id: TL
   name: Timor-Leste
   type: country
   status: member
-- id: TG
-  name: Togo
+- id: TN
+  name: Tunisia
   type: country
   status: member
 - id: TO
@@ -259,49 +292,92 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
 - id: TV
   name: Tuvalu
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania
   type: country
   status: member
 - id: UG
   name: Uganda
   type: country
   status: member
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: VN
-  name: Vietnam
+- id: WS
+  name: Samoa
   type: country
   status: member
 - id: YE
   name: Yemen
   type: country
   status: member
-membership_count: 68
-founded: '2009'
+founding_members:
+- BD
+- BB
+- BT
+- GH
+- KE
+- KI
+- MV
+- NP
+- RW
+- TZ
+- VN
+membership_count: 74
+headquarters:
+  city: Accra
+  country: GH
+  coordinates:
+    lat: 5.6037
+    lng: -0.187
+  note: >-
+    Independent CVF-V20 Secretariat headquartered in Accra following the May 2024 charter in Ghana;
+    New York and Washington liaison offices also operate
 wikidata_id: Q5133453
-description: International forum focused on climate change.
+legal_status: intergovernmental
+suborganizations:
+- id: V20
+  name: Vulnerable Twenty Group
+acronyms:
+- lang: en
+  value: CVF
+- lang: de
+  value: CVF
+description: >-
+  Global partnership of climate-vulnerable developing countries established by the Malé
+  Declaration of 10 November 2009 to amplify their collective voice in international climate
+  negotiations and to promote ambitious domestic and international climate action. Operating
+  jointly with the Vulnerable Twenty (V20) Finance Ministers as CVF-V20, the forum now comprises
+  74 member states spanning Africa, Asia, the Caribbean, Latin America, the Middle East, and the
+  Pacific. Barbados holds the 2024–2026 presidency; the independent secretariat is headquartered
+  in Accra, Ghana.
 tags:
 - CVF
+- V20
 - climate
 - cooperation
 - environment
 - forum
 - political
-- regional
-- regional_cooperation
 - vulnerable
 topics:
 - key: climate_change
   name: Climate Change
+- key: environment
+  name: Environment
 - key: political
   name: Political
+- key: finance
+  name: Finance
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
@@ -317,19 +393,52 @@ other_names:
   name: Forum de la Vulnérabilité Climatique
 - id: zh
   name: 氣候脆弱性論壇
+notes: >-
+  The V20 Finance Ministers platform was launched in Lima in October 2015 as the finance-ministers
+  arm of the CVF; CVF and V20 now share the same 74-country membership and operate jointly as
+  CVF-V20. Four members (Cabo Verde, Gabon, Solomon Islands, and Somalia) joined in April 2025,
+  raising membership from 70 to 74. Eleven founding governments adopted the 2009 Malé Declaration.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Climate_Vulnerable_Forum
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/history/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/history/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cvfv20.org/history/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Climate_Vulnerable_Forum
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5133453
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5133453
   license: CC0
-acronyms:
-- lang: en
-  value: CVF
-- lang: de
-  value: CVF

@@ -1,7 +1,12 @@
 id: ACGF
+name: Arctic Coast Guard Forum
 blocktype:
 - military
 status: formal
+founded: '2015-10-30'
+geographic_scope: regional
+regions:
+- Arctic
 languages:
 - en
 links:
@@ -9,60 +14,90 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Arctic_Coast_Guard_Forum
   type: wikipedia
-name: Arctic Coast Guard Forum
-founded: '2015'
-geographic_scope: regional
-regions:
-- Arctic
+- url: https://www.wikidata.org/wiki/Q113903964
+  type: wikidata
+acronyms:
+- lang: en
+  value: ACGF
+legal_status: informal
+wikidata_id: Q113903964
+description: Independent, informal, operationally driven forum that unites the coast guard agencies of the eight Arctic states
+  to foster safe, secure, and environmentally responsible maritime activity in the Arctic. Established on 30 October 2015
+  and modeled on the North Atlantic and North Pacific Coast Guard Forums, the ACGF coordinates search and rescue, environmental
+  protection, and maritime safety among member coast guards without treaty obligations. Membership mirrors the Arctic Council
+  states; the rotating two-year chairmanship also follows Arctic Council chairmanship cycles. The forum is separate from
+  the Arctic Council but maintains a statement of cooperation with it.
 includes:
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '2015-10-30'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '2015-10-30'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '2015-10-30'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '2015-10-30'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '2015-10-30'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2015-10-30'
 - id: SE
   name: Sweden
   type: country
   status: member
+  joined: '2015-10-30'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '2015-10-30'
 membership_count: 8
-legal_status: intergovernmental
-description: Independent, informal, operationally-driven organization that fosters safe, secure, and environmentally responsible
-  maritime activity in the Arctic. Comprises the coast guard agencies of the eight Arctic states.
+founding_members:
+- CA
+- DK
+- FI
+- IS
+- 'NO'
+- RU
+- SE
+- US
 tags:
 - ACGF
 - arctic
+- canada
 - coast_guard
 - cooperation
 - defense
+- denmark
+- finland
+- iceland
 - maritime
 - military
 - naval
+- norway
 - regional
 - regional_cooperation
+- russia
 - security
+- sweden
+- united_states
 topics:
 - key: maritime
   name: Maritime
@@ -77,18 +112,36 @@ other_names:
   name: Arctic Coast Guard Forum
 - id: en
   name: ACGF
-wikidata_id: Q113903964
+notes: Eight Arctic states participate through their coast guard or equivalent maritime safety agencies (Canada — Canadian
+  Coast Guard; Denmark — Joint Arctic Command; Finland — Finnish Border Guard; Iceland — Icelandic Coast Guard; Norway —
+  Norwegian Coast Guard; Russian Federation — Russian Coast Guard (FSB); Sweden — Swedish Coast Guard; United States — U.S.
+  Coast Guard). Chairmanship rotates among members every two years in parallel with Arctic Council chair cycles. Live exercises
+  include Arctic Guardian 2017 (Iceland) and Polaris 2019 (Finland); a 2018 simulator exercise was held in Turku, Finland.
+  The forum builds on earlier Arctic SAR (2011) and oil-spill preparedness (2013) agreements among the same states.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Coast_Guard_Forum
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q113903964
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.arcticcoastguardforum.com
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Coast_Guard_Forum
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arctic_Coast_Guard_Forum
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://www.arcticcoastguardforum.com
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://www.arcticcoastguardforum.com

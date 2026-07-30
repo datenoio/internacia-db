@@ -1,281 +1,429 @@
 id: ICCAT
+name: International Commission for the Conservation of Atlantic Tunas
 blocktype:
 - intorg
 status: formal
+founded: '1966'
+active_period:
+  start: '1969-03-21'
+geographic_scope: regional
+regions:
+- Atlantic
+- Caribbean
+- Mediterranean
+- Africa
+- Europe
+- North America
+- South America
 languages:
 - en
 - es
 - fr
 links:
-- url: http://www.iccat.int
+- url: https://www.iccat.int/
+  type: website
+- url: https://www.iccat.int/en/contracting.html
   type: website
 - url: https://en.wikipedia.org/wiki/International_Commission_for_the_Conservation_of_Atlantic_Tunas
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q840267
   type: wikidata
-name: International Commission for the Conservation of Atlantic Tunas
+acronyms:
+- lang: en
+  value: ICCAT
+- lang: fr
+  value: CICTA
+- lang: es
+  value: CICAA
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the International Convention for the Conservation of Atlantic Tunas (signed 14 May 1966 in Rio de Janeiro; entered into force 21 March 1969); secretariat headquartered in Madrid since 1976
 headquarters:
   city: Madrid
   country: ES
   coordinates:
     lat: 40.41694444444445
     lng: -3.703333333333333
-acronyms:
-- lang: en
-  value: ICCAT
-- lang: en
-  value: CICTA
-- lang: en
-  value: CICAA
+wikidata_id: Q840267
+description: Regional fisheries management organisation whose Contracting Parties cooperate to conserve and manage tuna and tuna-like species — including Atlantic bluefin, yellowfin, albacore, and bigeye tuna, swordfish, billfishes, and mackerels — across the Atlantic Ocean and adjacent seas. ICCAT sets catch limits and conservation measures, conducts scientific stock assessments through its Standing Committee on Research and Statistics (SCRS), and coordinates compliance monitoring. Four Cooperating Non-Contracting Parties (Bolivia, Chinese Taipei, Guyana, and Suriname) participate under Recommendation 21-24. The Secretariat is headquartered in Madrid.
 includes:
 - id: AL
   name: Albania
   type: country
   status: member
+  joined: '2008-03-31'
 - id: DZ
   name: Algeria
   type: country
   status: member
+  joined: '2001-02-16'
 - id: AO
   name: Angola
   type: country
   status: member
+  joined: '1976-07-29'
 - id: BB
   name: Barbados
   type: country
   status: member
+  joined: '2000-12-13'
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '2005-07-19'
+- id: BO
+  name: Bolivia
+  type: country
+  status: cooperating
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '1969-04-01'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1968-08-20'
 - id: CV
   name: Cape Verde
   type: country
   status: member
+  joined: '1979-10-11'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '1996-10-24'
 - id: CI
   name: Cote d'Ivoire
   type: country
   status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: EU
-  name: European Union
-  type: organization
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia, The
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
-- id: NG
-  name: Nigeria
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
+  joined: '1972-12-06'
 - id: CR
   name: Costa Rica
   type: country
   status: member
-membership_count: 55
-wikidata_id: Q840267
-description: The International Commission for the Conservation of Atlantic Tunas is an international organization that is
-  used to promote regional cooperation in the environmental protection sector.
+  joined: '2024-06-07'
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  joined: '2025-01-06'
+- id: CW
+  name: Curaçao
+  type: country
+  status: member
+  joined: '2014-02-06'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '2007-10-03'
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  joined: '2014-12-05'
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+  joined: '1987-05-13'
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+  joined: '1997-11-14'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1968-11-07'
+  note: Membership in respect of Saint Pierre and Miquelon
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+  joined: '1977-09-19'
+- id: GH
+  name: Ghana
+  type: country
+  status: founding_member
+  joined: '1968-04-17'
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+  joined: '2017-10-05'
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+  joined: '2004-11-12'
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  joined: '1991-06-05'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '2016-05-13'
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+  joined: '2019-02-11'
+- id: GY
+  name: Guyana
+  type: country
+  status: cooperating
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+  joined: '2001-01-30'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '2002-10-30'
+- id: JP
+  name: Japan
+  type: country
+  status: founding_member
+  joined: '1967-08-24'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '1970-08-28'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '2014-02-14'
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  joined: '1995-11-27'
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+  joined: '2008-12-04'
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+  joined: '2002-05-24'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2025-10-02'
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+  joined: '1969-09-26'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '1999-11-10'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '2004-03-11'
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+  joined: '2007-08-02'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '2004-03-05'
+- id: PA
+  name: Panama
+  type: country
+  status: member
+  joined: '1998-12-28'
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '2004-01-09'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '1977-01-07'
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+  joined: '1983-09-15'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '2004-12-21'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+  joined: '2008-10-13'
+- id: SR
+  name: Suriname
+  type: country
+  status: cooperating
+- id: ZA
+  name: South Africa
+  type: country
+  status: founding_member
+  joined: '1967-10-07'
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+  joined: '2006-11-20'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+  joined: '2005-09-02'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '2026-02-03'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '1999-03-30'
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  joined: '1997-12-16'
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+  joined: '2003-07-04'
+- id: TW
+  name: Chinese Taipei
+  type: country
+  status: cooperating
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2020-10-21'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1967-05-18'
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  joined: '1983-03-16'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '2002-10-25'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  joined: '1983-11-17'
+founding_members:
+- US
+- JP
+- ZA
+- GH
+- CA
+- FR
+membership_count: 57
 tags:
 - CICAA
 - CICTA
 - ICCAT
-- commission
-- conservation
-- environment
-- international
+- agriculture
+- atlantic
+- farming
+- fisheries
 - intorg
-- nature
+- rfmo
+- tuna
 topics:
+- key: agriculture
+  name: Agriculture
 - key: environment
   name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 大西洋鮪類保育委員會
 - id: en
   name: International Commission for the Conservation of Atlantic Tunas
-- id: fr
-  name: Commission internationale pour la conservation des thonidés de l'Atlantique
 - id: es
   name: Comisión Internacional para la Conservación del Atún Atlántico
+- id: fr
+  name: Commission internationale pour la conservation des thonidés de l'Atlantique
+- id: ja
+  name: 大西洋まぐろ類保存国際委員会
+- id: ko
+  name: 대서양참치보존위원회
+- id: zh
+  name: 大西洋鮪類保育委員會
+notes: Bolivia, Chinese Taipei, Guyana, and Suriname hold Cooperating Non-Contracting Party status under ICCAT Recommendation 21-24. France participates in respect of Saint Pierre and Miquelon. The United Kingdom acceded as an independent Contracting Party on 21 October 2020 after EU withdrawal.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ICCAT official website
+  retrieved_at: '2026-07-29'
+  url: https://www.iccat.int/en/contracting.html
+- field: description
+  source: ICCAT official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iccat.int/en/contracting.html
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q840267
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iccat.int
+  source: ICCAT official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.iccat.int/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q840267
+  license: CC0
+- field: acronyms
+  source: Wikidata; ICCAT official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q840267
+  license: CC0
+- field: recognition_status
+  source: United Nations Treaty Series; FAO
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=0800000280124e44
+- field: founding_members
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%20673/volume-673-I-9587-English.pdf

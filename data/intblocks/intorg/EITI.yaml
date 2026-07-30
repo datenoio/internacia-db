@@ -1,30 +1,44 @@
 id: EITI
+name: Extractive Industries Transparency Initiative
 blocktype:
 - intorg
 - mining
 status: formal
+founded: '2003'
+active_period:
+  start: '2003-06-17'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
 - ru
 links:
-- url: http://eiti.org
+- url: https://eiti.org
+  type: website
+- url: https://eiti.org/countries
   type: website
 - url: https://en.wikipedia.org/wiki/Extractive_Industries_Transparency_Initiative
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1385172
   type: wikidata
-name: Extractive Industries Transparency Initiative
-founded: '2003'
+acronyms:
+- lang: en
+  value: EITI
+legal_status: multi-stakeholder initiative
+recognition_status: Global standard for transparency and accountability in oil, gas, and mineral resource governance; launched at the London conference of 17 June 2003 and overseen by an international multi-stakeholder EITI Board
 headquarters:
   city: Oslo
   country: 'NO'
   coordinates:
     lat: 59.913333333333334
     lng: 10.738888888888889
-acronyms:
-- lang: en
-  value: EITI
+secretariat:
+  location: Oslo
+  organization: EITI International Secretariat
+wikidata_id: Q1385172
+description: Multi-stakeholder global initiative that sets the EITI Standard for disclosure and verification of information along the extractive-industry value chain — from licensing and contract allocation through production, revenue collection, and social spending. Fifty-five implementing countries publish annual EITI reports and undergo Validation, a quality-assurance review of compliance with the Standard. Each country maintains a national multi-stakeholder group of government, industry, and civil-society representatives; governance of the initiative internationally is carried out by the EITI Board and the International Secretariat in Oslo.
 includes:
 - id: AL
   name: Albania
@@ -67,11 +81,11 @@ includes:
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CD
-  name: Democratic Republic of the Congo
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: DO
@@ -187,7 +201,7 @@ includes:
   type: country
   status: member
 - id: CG
-  name: Republic of the Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: SN
@@ -207,7 +221,7 @@ includes:
   type: country
   status: member
 - id: ST
-  name: São Tomé and Príncipe
+  name: Sao Tome and Principe
   type: country
   status: member
 - id: TJ
@@ -247,18 +261,21 @@ includes:
   type: country
   status: member
 membership_count: 55
-wikidata_id: Q1385172
-description: The Extractive Industries Transparency Initiative is an international organization that is used to promote regional
-  cooperation in the extractive industries transparency sector.
 tags:
 - EITI
 - extractive
+- governance
 - industries
 - intorg
+- mining
 - transparency
 topics:
 - key: economy
   name: Economy
+- key: governance
+  name: Governance
+- key: mining
+  name: Mining
 other_names:
 - id: ar
   name: مبادرة الشفافية في مجال الصناعات الاستخراجية
@@ -274,13 +291,42 @@ other_names:
   name: Extractive Industries Transparency Initiative
 - id: ru
   name: Инициатива прозрачности добывающих отраслей
+notes: As of July 2026 the EITI website lists 55 implementing countries. Countries may be suspended or delisted by the EITI Board for inadequate progress, missed reporting deadlines, or stakeholder-engagement failures; suspended or former implementers are not included in this roster unless listed on the official countries page.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: EITI official website
+  retrieved_at: '2026-07-29'
+  url: https://eiti.org/countries
+- field: description
+  source: EITI official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://eiti.org/countries
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1385172
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1385172
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1385172
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://eiti.org
+  source: EITI official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://eiti.org
+- field: recognition_status
+  source: EITI Standard; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Extractive_Industries_Transparency_Initiative
+- field: active_period
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1385172
+  license: CC0

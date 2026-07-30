@@ -2,6 +2,12 @@ id: GASANDESPIPE
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '1997'
+geographic_scope: bilateral
+regions:
+- South America
+languages:
+- es
 links:
 - url: https://en.wikipedia.org/wiki/GasAndes_Pipeline
   type: wikipedia
@@ -19,14 +25,17 @@ includes:
   status: member
 membership_count: 2
 wikidata_id: Q5526274
-description: Natural gas pipeline in South America.
+description: Natural gas pipeline from La Mora, Mendoza Province, Argentina, to San Bernardo on the outskirts of Santiago,
+  Chile. Commissioned in 1997 by a consortium of NOVA Corporation, Gasco, Gener, Compañía General de Combustibles, and
+  Techint; the 463 km line has 3.3 billion m³/a capacity and is supplied mainly from the Neuquén gas fields.
 tags:
 - GASANDESPIPE
-- aviation
+- andes
+- argentina
+- chile
 - economy
 - energy
 - gaspipeline
-- oil
 - pipeline
 - transport
 - transportation
@@ -42,9 +51,33 @@ other_names:
   name: GasAndes Pipeline
 - id: es
   name: Gasoducto GasAndes
+- id: uk
+  name: GasAndes
 provenance:
-- field: description
+- field: includes
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5526274
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5526274
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/GasAndes_Pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5526274
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/GasAndes_Pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+last_verified: '2026-07-29'

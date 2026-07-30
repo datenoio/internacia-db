@@ -3,10 +3,19 @@ blocktype:
 - political
 - ocean
 status: formal
+founded: '1990'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Caribbean
+- Pacific
 languages:
 - en
 links:
-- url: http://aosis.info/
+- url: https://www.aosis.org/
+  type: website
+- url: https://www.aosis.org/member-states/
   type: website
 - url: https://en.wikipedia.org/wiki/Alliance_of_Small_Island_States
   type: wikipedia
@@ -14,112 +23,32 @@ links:
   type: wikidata
 name: Alliance of Small Island States
 includes:
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: BZ
-  name: Belize
+- id: AG
+  name: Antigua and Barbuda
   type: country
   status: member
 - id: BB
   name: Barbados
   type: country
   status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Federated States of
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
 - id: BS
-  name: Bahamas
+  name: Bahamas, The
   type: country
   status: member
-- id: AG
-  name: Antigua and Barbuda
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DM
@@ -130,54 +59,144 @@ includes:
   name: Dominican Republic
   type: country
   status: member
-- id: HT
-  name: Haiti
+- id: FJ
+  name: Fiji
   type: country
   status: member
-- id: MV
-  name: Maldives
+- id: FM
+  name: Micronesia, Fed. Sts.
   type: country
   status: member
-- id: KM
-  name: Comoros
+- id: GD
+  name: Grenada
   type: country
   status: member
 - id: GW
   name: Guinea-Bissau
   type: country
   status: member
-- id: CV
-  name: Cabo Verde
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: MH
+  name: Marshall Islands
   type: country
   status: member
 - id: MU
   name: Mauritius
   type: country
   status: member
-- id: ST
-  name: Sao Tome and Principe
+- id: MV
+  name: Maldives
   type: country
   status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
+- id: NR
+  name: Nauru
   type: country
   status: member
 - id: NU
   name: Niue
   type: country
   status: member
-founded: '1990'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+headquarters:
+  city: New York
+  country: US
 membership_count: 39
 wikidata_id: Q496967
-description: Intergovernmental organization of low-lying coastal and small island
-  countries.
+legal_status: intergovernmental
+acronyms:
+- lang: en
+  value: AOSIS
+- lang: fr
+  value: AOSIS
+- lang: de
+  value: AOSIS
+description: Intergovernmental organization of low-lying coastal and small island countries established in 1990 to consolidate the voices of Small Island Developing States in international climate change and sustainable development negotiations.
 tags:
 - AOSIS
 - alliance
+- climate
 - cooperation
 - island
 - political
@@ -189,6 +208,10 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: climate_change
+  name: Climate Change
+- key: ocean
+  name: Ocean
 other_names:
 - id: ar
   name: تحالف الدول الجزرية الصغيرة
@@ -206,7 +229,33 @@ other_names:
   name: Альянс малых островных государств
 - id: zh
   name: 小岛屿国家联盟
+notes: >-
+  AOSIS has 39 members grouped in three regions: Caribbean (16), Pacific (14), and Africa, Indian Ocean
+  and South China Sea (9). Cook Islands and Niue participate within UN agencies but are not UN member
+  states. The secretariat is hosted at the Permanent Mission of the rotating chair at United Nations
+  Headquarters in New York.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aosis.org/member-states/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aosis.org/member-states/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Small_Island_States
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aosis.org/member-states/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Small_Island_States
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -222,10 +271,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: en
-  value: AOSIS
-- lang: fr
-  value: AOSIS
-- lang: de
-  value: AOSIS

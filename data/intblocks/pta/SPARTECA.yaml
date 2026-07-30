@@ -2,78 +2,127 @@ id: SPARTECA
 blocktype:
 - pta
 status: formal
+founded: '1980-07-14'
+active_period:
+  start: '1981-01-01'
+geographic_scope: regional
+regions:
+- Pacific
+languages:
+- en
 links:
 - url: https://en.wikipedia.org/wiki/South_Pacific_Regional_Trade_and_Economic_Cooperation_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1413357
   type: wikidata
+- url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800e6910
+  type: website
+- url: https://www.wto.org/gatt_docs/English/SULPDF/90980233.pdf
+  type: website
+- url: https://www.dfat.gov.au/trade/agreements/in-force/pacer/fact-sheets/rules-of-origin
+  type: website
+- url: https://www.wipo.int/wipolex/en/treaties/textdetails/12674
+  type: website
 name: South Pacific Regional Trade and Economic Cooperation Agreement
+acronyms:
+- lang: en
+  value: SPARTECA
+- lang: fr
+  value: SPARTECA
+- lang: ru
+  value: SPARTECA
+- lang: de
+  value: SPARTEC
+legal_status: non-reciprocal preferential trade arrangement
+recognition_status: Non-reciprocal regional trade arrangement signed in Tarawa on 14 July 1980 under which Australia and New Zealand grant duty-free and concessional market access to products originating from Pacific Islands Forum island countries; entered into force on 1 January 1981; remains in force alongside PACER Plus, which prevails in the event of inconsistency
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: FJ
   name: Fiji
   type: country
   status: member
+  joined: '1981-01-01'
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: MH
   name: Marshall Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: FM
   name: Federated States of Micronesia
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: NR
   name: Nauru
   type: country
   status: member
+  joined: '1982-09-07'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: NU
   name: Niue
   type: country
   status: member
+  joined: '1981-02-21'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: SB
   name: Solomon Islands
   type: country
   status: member
+  joined: '1981-05-15'
 - id: TO
   name: Tonga
   type: country
-  status: member
+  status: founding_member
+  joined: '1980-07-14'
 - id: TV
   name: Tuvalu
   type: country
   status: member
+  joined: '1981-06-03'
 - id: VU
   name: Vanuatu
   type: country
   status: member
+  joined: '1981-12-17'
+founding_members:
+- AU
+- CK
+- KI
+- MH
+- FM
+- NZ
+- PG
+- WS
+- TO
 membership_count: 15
-description: The South Pacific Regional Trade and Economic Cooperation Agreement (SPARTECA)
-  is a non-reciprocal trade agreement signed in 1980 under which Australia and New
-  Zealand grant duty-free and concessional access to products originating from the
-  Forum Island Countries of the Pacific.
+description: The South Pacific Regional Trade and Economic Cooperation Agreement (SPARTECA) is a non-reciprocal preferential trade arrangement signed in Tarawa on 14 July 1980 among Australia, New Zealand, and Pacific Islands Forum island countries. Australia and New Zealand grant duty-free and concessional access to products originating from participating island economies, subject to rules of origin requiring substantial manufacture in a beneficiary country. The agreement entered into force on 1 January 1981 and was registered with the United Nations on 14 July 1981. SPARTECA addressed unequal trade relationships in the South Pacific and has been particularly significant for textiles, clothing, and footwear exports. It remains in force alongside later Pacific regional arrangements including PACER and PACER Plus, with PACER Plus prevailing where provisions are inconsistent.
 tags:
 - SPARTECA
 - commerce
@@ -104,29 +153,58 @@ other_names:
   name: Accord de coopération économique et commerciale régionale du Pacifique Sud
 - id: ru
   name: Южнотихоокеанское соглашение о региональной торговле и экономическом сотрудничестве
+notes: Fiji acceded in December 1980; Nauru acceded in August 1982; Vanuatu joined after independence in November 1981. The Federated States of Micronesia and the Marshall Islands ratified in 1988 and 1989 respectively. Australia ratified in 1982, later than several island parties. SPARTECA predates the 2001 PACER framework agreement and the 2017 PACER Plus free trade agreement but has not been superseded; PACER Plus preserves existing SPARTECA duty-free access while providing modernised rules of origin.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800e6910
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.wipo.int/wipolex/en/treaties/parties/422
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800e6910
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.wipo.int/wipolex/en/treaties/textdetails/12674
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/pacer/fact-sheets/rules-of-origin
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.wto.org/gatt_docs/English/SULPDF/90980233.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/pacer/fact-sheets/institutional-arrangements-and-forward-agenda
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q1413357
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q1413357
-  license: CC0
-acronyms:
-- lang: en
-  value: SPARTECA
-- lang: fr
-  value: SPARTECA
-- lang: ru
-  value: SPARTECA
-- lang: de
-  value: SPARTEC
-founded: '1981-01-01'
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002800e6910
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.wipo.int/wipolex/en/treaties/textdetails/12674

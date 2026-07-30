@@ -1,13 +1,26 @@
 id: NIGALPIPE
+name: Trans-Saharan gas pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2009-07-03'
+geographic_scope: regional
+regions:
+- Africa
+languages:
+- ar
+- en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2584545
   type: wikidata
-name: Trans-Saharan gas pipeline
+acronyms:
+- lang: en
+  value: NIGAL
+- lang: en
+  value: TSGP
 includes:
 - id: DZ
   name: Algeria
@@ -23,18 +36,28 @@ includes:
   status: member
 membership_count: 3
 wikidata_id: Q2584545
-description: Natural gas pipeline from Nigeria to Algeria.
+description: 4,128 km natural gas pipeline under construction from Warri in southern Nigeria
+  through Niger to the Hassi R'Mel gas hub in Algeria. Also known as the NIGAL or Trans-Saharan
+  Gas Pipeline (TSGP), it is designed to carry up to 30 billion m³/a and connect at Hassi R'Mel
+  to existing export lines (Trans-Mediterranean, Maghreb–Europe, Medgaz, and Galsi) toward Europe.
+  Intergovernmental agreement signed on 3 July 2009; construction on the Algerian section began
+  in June 2026 with commissioning estimated around 2027. Operated by Sonatrach, NNPC, and the
+  Government of Niger.
 tags:
 - NIGALPIPE
-- aviation
+- algeria
 - economy
 - energy
 - gaspipeline
-- oil
+- nigal
+- niger
+- nigeria
+- pipeline
 - saharan
-- trans
+- trans-saharan
 - transport
 - transportation
+- tsgp
 topics:
 - key: economy
   name: Economy
@@ -45,17 +68,59 @@ topics:
 other_names:
 - id: ar
   name: خط أنابيب الغاز العابر للصحراء
+- id: bg
+  name: Транссахарски газопровод
 - id: en
-  name: Trans-Saharan gas pipeline
-- id: fr
-  name: Gazoduc trans-saharien
-- id: ru
-  name: Транссахарский газопровод
+  name: NIGAL Pipeline
+- id: en
+  name: Trans-Saharan Gas Pipeline
+- id: en
+  name: Trans-African Gas Pipeline
 - id: es
   name: Gasoducto transahariano
+- id: fr
+  name: Gazoduc trans-saharien
+- id: it
+  name: Gasdotto Trans-Sahariano
+- id: ru
+  name: Транссахарский газопровод
+- id: uk
+  name: Транссахарський газопровод
+notes: Route spans 1,037 km in Nigeria, 841 km in Niger, and 2,310 km in Algeria. Competes with
+  the planned Nigeria–Morocco (African Atlantic) pipeline, which follows the Atlantic coast and
+  avoids Sahel security risks. Niger holds a planned 10% stake in the operating company.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2584545
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2584545
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Saharan_gas_pipeline

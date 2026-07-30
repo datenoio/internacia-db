@@ -4,31 +4,813 @@ blocktype:
 - transport
 - economic
 status: formal
+founded: '2013'
+active_period:
+  start: '2013'
+geographic_scope: global
+regions:
+- Africa
+- Central Asia
+- East Asia
+- Europe
+- Latin America
+- Middle East
+- Pacific
+- South Asia
+- Southeast Asia
 languages:
 - en
 - zh
 links:
 - url: https://www.yidaiyilu.gov.cn/
   type: website
+- url: https://greenfdc.org/countries-of-the-belt-and-road-initiative-bri/
+  type: website
 - url: https://en.wikipedia.org/wiki/Belt_and_Road_Initiative
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q19692715
   type: wikidata
 name: Belt and Road Initiative
-founded: '2013'
+legal_status: initiative
+recognition_status: Chinese government-led infrastructure and connectivity initiative announced by President Xi Jinping in
+  2013; countries join by signing bilateral Memoranda of Understanding with China
+headquarters:
+  city: Beijing
+  country: CN
+  coordinates:
+    lat: 39.9042
+    lng: 116.4074
+suborganizations:
+- id: CELSE
+  name: China-Europe Land-Sea Express Line
+- id: CKURAILWAY
+  name: China-Kyrgyzstan-Uzbekistan Railway
 includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+  joined: '2023-05'
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '2017-05'
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+  joined: '2018-07'
+- id: AO
+  name: Angola
+  type: country
+  status: member
+  joined: '2018-09'
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+  joined: '2018-06'
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '2022-02'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '2015-12'
+- id: AT
+  name: Austria
+  type: country
+  status: member
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+  joined: '2015-12'
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+  joined: '2018-07'
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+  joined: '2019-03'
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+  joined: '2019-02'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '2013-12'
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '2018-09'
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+  joined: '2018-06'
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+  joined: '2017-05'
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+  joined: '2021-01'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '2018-11'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2015-11'
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+  joined: '2018-09'
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
+  joined: '2018-09'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2013-12'
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+  joined: '2015-08'
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+  joined: '2021-11'
+- id: TD
+  name: Chad
+  type: country
+  status: member
+  joined: '2018-09'
+- id: CL
+  name: Chile
+  type: country
+  status: member
+  joined: '2018-11'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2013-12'
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+  joined: '2025-05'
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+  joined: '2015-12'
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+  joined: '2021-01'
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+  joined: '2018-11'
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+  joined: '2018-09'
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+  joined: '2017-05'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2017-05'
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  joined: '2019-06'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '2019-04'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '2015-11'
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+  joined: '2018-09'
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '2018-07'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+  joined: '2019-12'
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+  joined: '2018-12'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '2016-01'
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  joined: '2018-11'
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+  joined: '2019-04'
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+  joined: '2021-11'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2017-11'
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  joined: '2018-09'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '2018-11'
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+  joined: '2018-09'
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+  joined: '2018-09'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '2016-12'
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+  joined: '2018-09'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '2018-08'
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+  joined: '2018-09'
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  joined: '2018-09'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '2021-11'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '2018-07'
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+  joined: '2023-10'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '2015-06'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '2015-03'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '2018-11'
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+  joined: '2015-12'
+- id: IT
+  name: Italy
+  type: country
+  status: former_member
+  joined: '2019-03'
+  left: '2023-12'
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+  joined: '2019-04'
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+  joined: '2023-12'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '2015-08'
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  joined: '2017-06'
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+  joined: '2020-01'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '2018-05'
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+  joined: '2018-05'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '2013-12'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '2018-09'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2016-11'
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  joined: '2017-09'
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+  joined: '2019-06'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '2019-04'
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  joined: '2018-07'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2017-11'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '2019-03'
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+  joined: '2017-03'
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+  joined: '2022-03'
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '2017-05'
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+  joined: '2017-08'
+- id: ML
+  name: Mali
+  type: country
+  status: member
+  joined: '2019-07'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2018-11'
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+  joined: '2018-09'
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+  joined: '2018-11'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '2013-12'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '2013-12'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2017-05'
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+  joined: '2017-11'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+  joined: '2018-09'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '2016-08'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '2018-09'
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+  joined: '2017-05'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '2017-03'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '2022-01'
+- id: NE
+  name: Niger
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+  joined: '2018-09'
+- id: NU
+  name: Niue
+  type: country
+  status: member
+  joined: '2018-07'
+- id: MK
+  name: Macedonia, FYR
+  type: country
+  status: member
+  joined: '2013-12'
+- id: OM
+  name: Oman
+  type: country
+  status: member
+  joined: '2018-05'
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+  joined: '2013-12'
+- id: PA
+  name: Panama
+  type: country
+  status: former_member
+  joined: '2017-06'
+  left: '2025-02'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '2016-07'
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  joined: '2019-05'
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '2017-11'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2015-11'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '2018-12'
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+  joined: '2019-01'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '2015-06'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  joined: '2018-07'
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  joined: '2018-10'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '2018-08'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '2018-07'
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  joined: '2015-11'
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+  joined: '2018-09'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+  joined: '2018-08'
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+  joined: '2018-04'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+  joined: '2015-11'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2017-11'
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '2019-10'
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+  joined: '2015-08'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '2015-12'
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  joined: '2018-09'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  joined: '2017-04'
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  joined: '2018-09'
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+  joined: '2018-07'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+  joined: '2022-01'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '2018-10'
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+  joined: '2018-09'
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+  joined: '2014-12'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  joined: '2017-04'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '2018-09'
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '2018-03'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '2018-05'
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  joined: '2018-07'
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+  joined: '2015-11'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+  joined: '2017-06'
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+  joined: '2018-09'
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '2017-12'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+  joined: '2018-07'
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  joined: '2018-02'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '2015-06'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '2018-11'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  joined: '2018-09'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '2017-11'
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+  joined: '2017-11'
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+  joined: '2018-09'
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+  joined: '2018-09'
 membership_count: 150
 wikidata_id: Q19692715
 description: Major infrastructure and economic development initiative launched by China in 2013, focusing on connectivity
   and cooperation between countries along the ancient Silk Road routes and beyond. The initiative encompasses transport infrastructure
   projects including railways, roads, ports, and pipelines, as well as energy, telecommunications, and economic cooperation.
-  As of 2025, approximately 146-150 countries have joined the BRI by signing Memorandums of Understanding. The initiative
-  spans multiple regions including Africa, Central Asia, East Asia, Europe, Latin America and the Caribbean, the Middle East,
-  the Pacific, South Asia, and Southeast Asia.
+  Countries join by signing bilateral Memoranda of Understanding with China. As of May 2025, 150 countries maintain active
+  BRI cooperation agreements; Italy exited in December 2023 and Panama in February 2025.
 tags:
 - BRI
 - Belt
@@ -50,6 +832,8 @@ topics:
   name: Economy
 - key: infrastructure
   name: Infrastructure
+- key: connectivity
+  name: Connectivity
 other_names:
 - id: ar
   name: حزام واحد، طريق واحد
@@ -69,7 +853,43 @@ other_names:
   name: Инициатива «Один пояс — один путь»
 - id: zh
   name: 一带一路
+notes: Membership is tracked via bilateral MoU signatures rather than a single treaty instrument. MoU dates and membership
+  status are compiled from official Chinese sources, press releases, and independent research; Austria, Niger, and the Russian
+  Federation appear on some BRI country lists but independent confirmation of a full bilateral MoU is limited or disputed.
+  Italy (joined 2019-03) did not renew its MoU and exited in December 2023; Panama (joined 2017-06) exited in February 2025.
+  Some MoUs may have expired after initial five-year terms without public renewal.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: Green Finance & Development Center
+  retrieved_at: '2026-07-30'
+  url: https://greenfdc.org/countries-of-the-belt-and-road-initiative-bri/
+  license: CC BY 4.0
+- field: membership_count
+  source: Green Finance & Development Center
+  retrieved_at: '2026-07-30'
+  url: https://greenfdc.org/countries-of-the-belt-and-road-initiative-bri/
+  license: CC BY 4.0
+- field: description
+  source: Green Finance & Development Center
+  retrieved_at: '2026-07-30'
+  url: https://greenfdc.org/countries-of-the-belt-and-road-initiative-bri/
+  license: CC BY 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.yidaiyilu.gov.cn/
+  license: CC BY 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.yidaiyilu.gov.cn/
+  license: CC BY 4.0
+- field: notes
+  source: Green Finance & Development Center
+  retrieved_at: '2026-07-30'
+  url: https://greenfdc.org/countries-of-the-belt-and-road-initiative-bri/
+  license: CC BY 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

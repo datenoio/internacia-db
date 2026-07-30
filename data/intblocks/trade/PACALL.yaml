@@ -1,46 +1,350 @@
 id: PACALL
+name: Pacific Alliance
 blocktype:
 - trade
 status: formal
+founded: '2011-04-28'
+active_period:
+  start: '2012-06-06'
+geographic_scope: regional
+regions:
+- Latin America
+languages:
+- es
 links:
 - url: https://alianzapacifico.net/en/
+  type: website
+- url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+  type: website
+- url: https://alianzapacifico.net/en/observant-countries/
+  type: website
+- url: https://alianzapacifico.net/en/associated-state/
   type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Alliance
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7122288
   type: wikidata
-name: Pacific Alliance
+acronyms:
+- lang: en
+  value: PA
+- lang: es
+  value: AP
+legal_status: trade bloc
+recognition_status: Regional integration initiative established by the Lima Declaration on 28 April 2011; Framework Agreement
+  signed on 6 June 2012; four member states (Chile, Colombia, Mexico and Peru); Singapore is the first associated state after
+  its free trade agreement entered into force on 3 May 2025; Costa Rica admitted as a membership candidate in December 2024;
+  Panama is an official membership candidate; 64 observer states as of January 2025
+founding_members:
+- CL
+- CO
+- MX
+- PE
 includes:
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
+  joined: '2011-04-28'
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: founding_member
+  joined: '2011-04-28'
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
+  joined: '2011-04-28'
 - id: PE
   name: Peru
   type: country
-  status: member
-founded: '2011'
-membership_count: 4
+  status: founding_member
+  joined: '2011-04-28'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: observer
+- id: AM
+  name: Armenia
+  type: country
+  status: observer
+- id: AR
+  name: Argentina
+  type: country
+  status: observer
+- id: AT
+  name: Austria
+  type: country
+  status: observer
+- id: AU
+  name: Australia
+  type: country
+  status: observer
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: observer
+- id: BE
+  name: Belgium
+  type: country
+  status: observer
+- id: BY
+  name: Belarus
+  type: country
+  status: observer
+- id: CA
+  name: Canada
+  type: country
+  status: observer
+- id: CH
+  name: Switzerland
+  type: country
+  status: observer
+- id: CN
+  name: China
+  type: country
+  status: observer
+- id: CR
+  name: Costa Rica
+  type: country
+  status: associate_member
+  joined: '2024-12-14'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: observer
+- id: DE
+  name: Germany
+  type: country
+  status: observer
+- id: DK
+  name: Denmark
+  type: country
+  status: observer
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: observer
+- id: EC
+  name: Ecuador
+  type: country
+  status: observer
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: observer
+- id: EE
+  name: Estonia
+  type: country
+  status: observer
+- id: ES
+  name: Spain
+  type: country
+  status: observer
+- id: FI
+  name: Finland
+  type: country
+  status: observer
+- id: FR
+  name: France
+  type: country
+  status: observer
+- id: GB
+  name: United Kingdom
+  type: country
+  status: observer
+- id: GE
+  name: Georgia
+  type: country
+  status: observer
+- id: GR
+  name: Greece
+  type: country
+  status: observer
+- id: GT
+  name: Guatemala
+  type: country
+  status: observer
+- id: HN
+  name: Honduras
+  type: country
+  status: observer
+- id: HR
+  name: Croatia
+  type: country
+  status: observer
+- id: HT
+  name: Haiti
+  type: country
+  status: observer
+- id: HU
+  name: Hungary
+  type: country
+  status: observer
+- id: ID
+  name: Indonesia
+  type: country
+  status: observer
+- id: IE
+  name: Ireland
+  type: country
+  status: observer
+- id: IL
+  name: Israel
+  type: country
+  status: observer
+- id: IN
+  name: India
+  type: country
+  status: observer
+- id: IT
+  name: Italy
+  type: country
+  status: observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: observer
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: observer
+- id: LT
+  name: Lithuania
+  type: country
+  status: observer
+- id: MA
+  name: Morocco
+  type: country
+  status: observer
+- id: MT
+  name: Malta
+  type: country
+  status: observer
+- id: NL
+  name: Netherlands
+  type: country
+  status: observer
+- id: 'NO'
+  name: Norway
+  type: country
+  status: observer
+- id: NZ
+  name: New Zealand
+  type: country
+  status: observer
+- id: PA
+  name: Panama
+  type: country
+  status: associate_member
+- id: PH
+  name: Philippines
+  type: country
+  status: observer
+- id: PK
+  name: Pakistan
+  type: country
+  status: observer
+- id: PL
+  name: Poland
+  type: country
+  status: observer
+- id: PT
+  name: Portugal
+  type: country
+  status: observer
+- id: PY
+  name: Paraguay
+  type: country
+  status: observer
+- id: RO
+  name: Romania
+  type: country
+  status: observer
+- id: RS
+  name: Serbia
+  type: country
+  status: observer
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: observer
+- id: SE
+  name: Sweden
+  type: country
+  status: observer
+- id: SG
+  name: Singapore
+  type: country
+  status: associated
+  joined: '2025-05-03'
+- id: SI
+  name: Slovenia
+  type: country
+  status: observer
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: observer
+- id: SV
+  name: El Salvador
+  type: country
+  status: observer
+- id: TH
+  name: Thailand
+  type: country
+  status: observer
+- id: TR
+  name: Turkey
+  type: country
+  status: observer
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: observer
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+- id: UY
+  name: Uruguay
+  type: country
+  status: observer
+membership_count: 7
 wikidata_id: Q7122288
-description: Latin American trade bloc formed by Chile, Colombia, Mexico and Peru.
+description: Latin American regional integration initiative and trade bloc comprising Chile, Colombia, Mexico and Peru, established
+  by the Lima Declaration on 28 April 2011 and consolidated through the Framework Agreement signed on 6 June 2012. Aims at
+  deep integration toward free movement of goods, services, capital and people, with strategic orientation toward the Asia-Pacific
+  region. Singapore became the first associated state when the Pacific Alliance–Singapore free trade agreement entered into
+  force on 3 May 2025. Costa Rica and Panama are official candidates for full membership. As of January 2025 the bloc recognized
+  64 observer states.
+notes: Full member count is four. membership_count reflects founding members plus associated state (Singapore) and membership
+  candidates (Costa Rica, Panama). Observer roster sourced from member-state foreign ministry listings; the Pacific Alliance
+  published an updated list of 64 observer states in January 2025.
+last_verified: '2026-07-29'
 tags:
 - PACALL
 - alliance
 - commerce
 - economy
+- latin_america
 - pacific
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
@@ -50,6 +354,8 @@ other_names:
   name: Pazifik-Allianz
 - id: en
   name: Pacific Alliance
+- id: en
+  name: Alliance of the Pacific
 - id: es
   name: Alianza del Pacífico
 - id: fr
@@ -64,18 +370,39 @@ provenance:
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q7122288
   license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q7122288
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q7122288
   license: CC0
-acronyms:
-- lang: es
-  value: AP
+- field: founded
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Alliance
+- field: geographic_scope
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: includes
+  source: Colombia Ministry of Foreign Affairs
+  retrieved_at: '2026-07-29'
+  url: https://www.cancilleria.gov.co/international/consensus/pacific-alliance
+- field: legal_status
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- field: links
+  source: Pacific Alliance
+  retrieved_at: '2026-07-29'
+  url: https://alianzapacifico.net/en/

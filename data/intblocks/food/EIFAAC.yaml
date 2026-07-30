@@ -1,16 +1,43 @@
 id: EIFAAC
+name: European Inland Fisheries and Aquaculture Advisory Commission
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1957'
+active_period:
+  start: '1957'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
 links:
-- url: http://www.fao.org/fishery/rfb/eifaac/en
+- url: https://www.fao.org/eifaac/
+  type: website
+- url: https://www.fao.org/eifaac/about/membership/en
+  type: website
+- url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
+  type: website
+- url: https://www.fao.org/eifaac/news/news-detail/ukraine-joins-eifaac--strengthening-regional-cooperation-on-inland-fisheries-and-aquaculture/en
   type: website
 - url: https://www.wikidata.org/wiki/Q114965341
   type: wikidata
-name: European Inland Fisheries and Aquaculture Advisory Commission
+acronyms:
+- lang: en
+  value: EIFAAC
+- lang: en
+  value: EIFAC
+legal_status: intergovernmental
+recognition_status: FAO Article VI.1 statutory body established by FAO Council Resolution 2/26 (26th Session, 1957) as the European Inland Fisheries Advisory Commission (EIFAC); renamed and statutes revised by Council Resolution 3/140 (2010); secretariat provided by FAO Fisheries and Aquaculture Division at FAO Headquarters in Rome
+headquarters:
+  city: Rome
+  country: IT
+  note: Secretariat at FAO Headquarters (Fisheries and Aquaculture Division)
+  coordinates:
+    lat: 41.9028
+    lng: 12.4964
 includes:
 - id: AL
   name: Albania
@@ -36,8 +63,12 @@ includes:
   name: Croatia
   type: country
   status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: DK
@@ -47,6 +78,10 @@ includes:
 - id: EE
   name: Estonia
   type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
   status: member
 - id: FI
   name: Finland
@@ -117,7 +152,7 @@ includes:
   type: country
   status: member
 - id: MD
-  name: Republic of Moldova
+  name: Moldova
   type: country
   status: member
 - id: RO
@@ -136,6 +171,7 @@ includes:
   name: Slovenia
   type: country
   status: member
+  joined: '2024-01'
 - id: ES
   name: Spain
   type: country
@@ -149,58 +185,112 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '2026-02-27'
 - id: GB
   name: United Kingdom
   type: country
   status: member
-membership_count: 36
-description: Regional fishery advisory commission around Europe.
+membership_count: 39
+description: FAO Article VI regional fishery body promoting the long-term sustainable development, utilization, conservation, restoration, and responsible management of European inland fisheries and aquaculture. Established in 1957 as the European Inland Fisheries Advisory Commission (EIFAC) and renamed EIFAAC in 2010 to reflect aquaculture's importance; it provides scientific advice, guidelines, and a forum for European members including the European Union as a Member Organization.
 tags:
 - EIFAAC
+- EIFAC
 - agriculture
-- cultural
-- culture
+- aquaculture
 - environment
 - european
 - farming
 - fisheries
 - food
 - inland
-- iso
+- intergovernmental
 - nature
-- standard
-- standardization
+- regional_cooperation
 topics:
 - key: agriculture
   name: Agriculture
-- key: culture
-  name: Culture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-- key: standardization
-  name: Standardization
-wikidata_id: Q114965341
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 欧洲内陆渔业与水产养殖咨询委员会
 - id: en
   name: European Inland Fisheries and Aquaculture Advisory Commission
+- id: en
+  name: European Inland Fisheries Advisory Commission
+- id: zh
+  name: 欧洲内陆渔业与水产养殖咨询委员会
+wikidata_id: Q114965341
+notes: Established by FAO Council Resolution 2/26 (1957); first session held in Dublin in April 1960. Renamed from EIFAC to EIFAAC and statutes revised by FAO Council Resolution 3/140 (2010) after the 25th Session in Antalya (2008) proposed adding aquaculture to the name. Slovenia joined in January 2024 (38 members); Ukraine became the 39th member on 27 February 2026. Membership is open to FAO Members in the European Region and FAO Member Organizations.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO EIFAAC; FAO Governing and Statutory Bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: FAO EIFAAC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/about/en
+- field: founded
+  source: FAO Governing and Statutory Bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
+- field: active_period
+  source: FAO EIFAAC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/about/en
+- field: legal_status
+  source: FAO Governing and Statutory Bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
+- field: recognition_status
+  source: FAO Governing and Statutory Bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
+- field: geographic_scope
+  source: FAO EIFAAC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/about/en
+- field: headquarters
+  source: FAO EIFAAC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/about/en
+- field: languages
+  source: FAO Governing and Statutory Bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/125/
 - field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  source: FAO EIFAAC; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q114965341
   license: CC0
-acronyms:
-- lang: en
-  value: EIFAAC
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q114965341
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q114965341
+  license: CC0
+- field: notes
+  source: FAO EIFAAC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/news/news-detail/ukraine-joins-eifaac--strengthening-regional-cooperation-on-inland-fisheries-and-aquaculture/en
+- field: partof
+  source: FAO EIFAAC; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/eifaac/about/en

@@ -1,16 +1,43 @@
 id: CECAF
+name: Fishery Committee for the Eastern Central Atlantic
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1967-06'
+active_period:
+  start: '1967-09-19'
+geographic_scope: regional
+regions:
+- West Africa
+- Central Africa
+- Africa
 languages:
 - en
+- fr
+- es
 links:
-- url: http://www.fao.org/fishery/rfb/cecaf/en
+- url: https://www.fao.org/cecaf/en/
+  type: website
+- url: https://www.fao.org/cecaf/overview/en/
+  type: website
+- url: https://www.fao.org/4/y4455e/y4455e04.htm
   type: website
 - url: https://www.wikidata.org/wiki/Q12617572
   type: wikidata
-name: Fishery Committee for the Eastern Central Atlantic
+acronyms:
+- lang: en
+  value: CECAF
+- lang: fr
+  value: COPACE
+- lang: es
+  value: CPACO
+legal_status: intergovernmental
+recognition_status: FAO Article VI(2) advisory statutory body established by FAO Council Resolution 1/48 at the Forty-eighth Session (Rome, June 1967); statutes promulgated by the Director-General on 19 September 1967; statutes amended by FAO Council in 1992 and 2003; secretariat housed at the FAO Regional Office for Africa in Accra
+headquarters:
+  city: Accra
+  country: GH
+  note: Secretariat housed at the FAO Regional Office for Africa; no independent premises
 includes:
 - id: AO
   name: Angola
@@ -25,23 +52,35 @@ includes:
   type: country
   status: member
 - id: CV
-  name: Cabo Verde
-  type: country
-  status: member
-- id: CG
-  name: Congo
+  name: Cape Verde
   type: country
   status: member
 - id: CD
-  name: Congo, The Democratic Republic of the
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+- id: CG
+  name: Congo, Rep.
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CU
+  name: Cuba
   type: country
   status: member
 - id: GQ
   name: Equatorial Guinea
+  type: country
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: FR
+  name: France
   type: country
   status: member
 - id: GA
@@ -49,11 +88,15 @@ includes:
   type: country
   status: member
 - id: GM
-  name: Gambia
+  name: Gambia, The
   type: country
   status: member
 - id: GH
   name: Ghana
+  type: country
+  status: member
+- id: GR
+  name: Greece
   type: country
   status: member
 - id: GN
@@ -62,6 +105,18 @@ includes:
   status: member
 - id: GW
   name: Guinea-Bissau
+  type: country
+  status: member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
 - id: LR
@@ -76,8 +131,24 @@ includes:
   name: Morocco
   type: country
   status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
 - id: NG
   name: Nigeria
+  type: country
+  status: member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+- id: RO
+  name: Romania
   type: country
   status: member
 - id: ST
@@ -100,89 +171,100 @@ includes:
   name: Togo
   type: country
   status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
 - id: US
   name: United States
   type: country
   status: member
-- id: EU
-  name: European Union
-  type: organization
-  status: member
 membership_count: 34
-description: Fishery Committee for the Eastern Central Atlantic is an international
-  food body with 34 members.
+description: FAO Article VI advisory fishery committee promoting sustainable utilization of living marine resources in the eastern central Atlantic (largely FAO Statistical Area 34), from Cape Spartel on the Moroccan coast to near the Congo River mouth, including high seas and national waters. Established by FAO Council Resolution 1/48 in June 1967, CECAF reviews stock status, promotes collection and exchange of fishery data, establishes the scientific basis for conservation measures, and issues management recommendations without binding regulatory powers. Membership comprises coastal African FAO members bordering the Atlantic from Cape Spartel to the Congo, plus other FAO members and the European Union selected by the Director-General for fishing, research, or related interest in the area.
 tags:
 - CECAF
+- COPACE
+- CPACO
 - agriculture
+- atlantic
 - committee
-- eastern
 - environment
 - farming
-- fishery
+- fao
+- fisheries
 - food
+- intergovernmental
 - nature
+- regional_cooperation
+- west-africa
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q12617572
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 中东部大西洋渔业委员会
 - id: en
   name: Fishery Committee for the Eastern Central Atlantic
-acronyms:
-- lang: en
-  value: CECAF
+- id: fr
+  name: Comité des Pêches pour l'Atlantique Centre-Est
+- id: es
+  name: Comité de Pesca para el Atlántico Centro-Oriental
+- id: zh
+  name: 中东部大西洋渔业委员会
+- id: ko
+  name: 중동대서양 수산 위원회
+wikidata_id: Q12617572
+notes: CECAF replaced the inactive Regional Fisheries Commission for Western Africa. A Scientific Sub-Committee was established in 1998 to provide science-based advice; working groups cover small pelagic, demersal, and artisanal fisheries. Ordinary sessions are normally biennial (22nd session, Libreville, September 2019). Membership is by Director-General selection rather than open accession; Angola later joined the coastal roster after independence-era exclusion from the original southern limit at the Congo mouth.
+last_verified: '2026-07-29'
 provenance:
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: FAO CECAF; FAO regional fishery bodies overview
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO CECAF
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/en/
+- field: founded
+  source: FAO Council Resolution 1/48; FAO CECAF overview
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/
+- field: active_period
+  source: FAO; FAO Council documentation on CECAF statutes
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/y4455e/y4455e04.htm
+- field: legal_status
+  source: FAO CECAF overview
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/
+- field: recognition_status
+  source: FAO CECAF overview; FAO Council documentation
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/
+- field: geographic_scope
+  source: FAO CECAF overview
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/
+- field: headquarters
+  source: FAO CECAF performance review; FAO Regional Office for Africa
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/en/
+- field: acronyms
+  source: FAO (CECAF/COPACE/CPACO)
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/fr/
+- field: other_names
+  source: FAO multilingual CECAF sites
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/fr/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12617572
+  license: CC0
+- field: notes
+  source: FAO CECAF overview; FAO regional fishery bodies review
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/cecaf/overview/en/

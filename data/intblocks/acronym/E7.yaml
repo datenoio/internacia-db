@@ -2,54 +2,105 @@ id: E7
 blocktype:
 - acronym
 status: informal
+founded: '2006'
 links:
-- url: https://en.wikipedia.org/wiki/E7_(countries)
+- url: https://www.pwc.com/gx/en/research-insights/economy/the-world-in-2050.html
+  type: website
+- url: https://de.wikipedia.org/wiki/E7-Staaten
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5322445
   type: wikidata
 name: E7
 includes:
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
 - id: BR
   name: Brazil
+  type: country
+  status: member
+- id: CN
+  name: China
   type: country
   status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
+- id: IN
+  name: India
+  type: country
+  status: member
 - id: MX
   name: Mexico
   type: country
   status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 membership_count: 7
 wikidata_id: Q5322445
-description: E7 – major emerging markets (countries)
+description: E7 (Emerging 7) is an acronym for Brazil, China, India, Indonesia, Mexico, Russia, and Turkey — the seven
+  largest emerging-market economies grouped by PricewaterhouseCoopers economists John Hawksworth and Gordon Cookson in 2006
+  as an emerging-market counterpart to the advanced-economy G7. The term is widely used in long-term growth forecasting
+  and macroeconomic research; the World Bank uses the closely related EM7 label for the same seven countries.
 tags:
 - E7
 - acronym
+- brazil
+- china
+- emerging
+- india
+- indonesia
+- mexico
+- russia
+- turkey
 topics:
 - key: economy
   name: Economy
+acronyms:
+- lang: en
+  value: E7
 other_names:
-- id: zh
-  name: 新興七國
+- id: de
+  name: E7-Staaten
 - id: en
   name: E7
+- id: en
+  name: Emerging 7
+- id: fa
+  name: هفت کشور در حال ظهور
 - id: ru
   name: Е7
+- id: vi
+  name: E7
+- id: zh
+  name: 新兴七国
+notes: Coined at PwC in 2006 as the emerging-market mirror of the G7. Membership matches the World Bank EM7 grouping
+  (China, India, Brazil, Russia, Mexico, Indonesia, Turkey). Distinct from BRICS (which excludes Mexico and Turkey),
+  TIMBI, MINT, and VISTA acronyms that overlap partially with the E7 roster.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: PricewaterhouseCoopers
+  retrieved_at: '2026-07-29'
+  url: https://www.pwc.com/gx/en/research-insights/economy/the-world-in-2050.html
+- field: description
+  source: PricewaterhouseCoopers
+  retrieved_at: '2026-07-29'
+  url: https://www.pwc.com/gx/en/research-insights/economy/the-world-in-2050.html
+- field: founded
+  source: Wikipedia (vi)
+  retrieved_at: '2026-07-29'
+  url: https://vi.wikipedia.org/wiki/E7_(qu%E1%BB%91c_gia)
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5322445
+  license: CC0
+- field: notes
+  source: World Bank
+  retrieved_at: '2026-07-29'
+  url: https://documents1.worldbank.org/curated/en/786391496863791206/pdf/WPS8093.pdf

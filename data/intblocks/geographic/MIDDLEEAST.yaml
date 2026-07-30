@@ -50,7 +50,7 @@ includes:
   type: country
   status: member
 - id: PS
-  name: Palestine, State of
+  name: Palestine
   type: country
   status: member
 - id: QA
@@ -78,12 +78,13 @@ includes:
   type: country
   status: member
 membership_count: 17
-geographic_scope: regional
+geographic_scope: sub-regional
 regions:
 - Asia
 - Africa
 wikidata_id: Q7204
-description: Middle East is a regional grouping of 17 countries in Asia.
+description: Geopolitical region generally defined as encompassing all of Egypt and all of West Asia except the Caucasus,
+  comprising 17 UN-recognized countries from Bahrain to Yemen, per the Wikipedia regional definition.
 tags:
 - MIDDLEEAST
 - middle
@@ -98,21 +99,45 @@ topics:
 other_names:
 - id: ar
   name: الشرق الأوسط
-- id: zh
-  name: 中东
+- id: de
+  name: Middle East
 - id: en
   name: Middle East
+- id: es
+  name: Medio Oriente
 - id: fr
   name: Moyen-Orient
+- id: pt
+  name: Médio Oriente
 - id: ru
-  name: Ближний Восток
-- id: es
-  name: Oriente Medio
+  name: Средний Восток
+- id: zh
+  name: 中东
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Middle_East
 - field: description
-  source: inferred grouping
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Middle_East
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7204
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0

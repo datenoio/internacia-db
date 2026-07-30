@@ -2,25 +2,46 @@ id: TPNW
 blocktype:
 - agreement
 status: formal
+founded: '2017-09-20'
+active_period:
+  start: '2021-01-22'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
+languages:
+- ar
+- zh
+- en
+- fr
+- ru
+- es
 links:
+- url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
+  type: website
+- url: https://treaties.unoda.org/t/tpnw
+  type: website
 - url: https://en.wikipedia.org/wiki/Treaty_on_the_Prohibition_of_Nuclear_Weapons
+  type: wikipedia
+- url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Prohibition_of_Nuclear_Weapons
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q27961877
   type: wikidata
-- url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
-  type: website
 name: Treaty on the Prohibition of Nuclear Weapons
-founded: '2017'
-geographic_scope: global
+legal_status: treaty
+recognition_status: >-
+  Multilateral nuclear disarmament treaty negotiated under UN auspices; opened for signature 20 September
+  2017; entered into force 22 January 2021 after the 50th ratification.
+wikidata_id: Q27961877
+description: >-
+  International treaty that prohibits the development, testing, production, stockpiling, stationing, transfer,
+  use, and threat of use of nuclear weapons. It also prohibits assistance and encouragement of these prohibited
+  activities. Opened for signature on 20 September 2017 and entered into force on 22 January 2021.
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
@@ -29,20 +50,8 @@ includes:
   name: Austria
   type: country
   status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: member
 - id: BD
   name: Bangladesh
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BZ
-  name: Belize
   type: country
   status: member
 - id: BJ
@@ -50,71 +59,47 @@ includes:
   type: country
   status: member
 - id: BO
-  name: Bolivia, Plurinational State of
+  name: Bolivia
   type: country
   status: member
 - id: BW
   name: Botswana
   type: country
   status: member
-- id: BR
-  name: Brazil
+- id: BZ
+  name: Belize
   type: country
   status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: CV
-  name: Cabo Verde
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: KM
-  name: Comoros
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CG
-  name: Congo
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CK
   name: Cook Islands
   type: country
   status: member
-- id: CR
-  name: Costa Rica
+- id: CL
+  name: Chile
   type: country
   status: member
-- id: CI
-  name: Côte d'Ivoire
+- id: CR
+  name: Costa Rica
   type: country
   status: member
 - id: CU
   name: Cuba
   type: country
   status: member
-- id: CD
-  name: Congo, The Democratic Republic of the
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DM
@@ -129,24 +114,20 @@ includes:
   name: Ecuador
   type: country
   status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
 - id: FJ
   name: Fiji
   type: country
   status: member
-- id: GM
-  name: Gambia
+- id: GD
+  name: Grenada
   type: country
   status: member
 - id: GH
   name: Ghana
   type: country
   status: member
-- id: GD
-  name: Grenada
+- id: GM
+  name: Gambia, The
   type: country
   status: member
 - id: GT
@@ -159,10 +140,6 @@ includes:
   status: member
 - id: GY
   name: Guyana
-  type: country
-  status: member
-- id: VA
-  name: Holy See
   type: country
   status: member
 - id: HN
@@ -181,104 +158,92 @@ includes:
   name: Jamaica
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
+- id: KH
+  name: Cambodia
   type: country
   status: member
 - id: KI
   name: Kiribati
   type: country
   status: member
-- id: KG
-  name: Kyrgyzstan
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
   type: country
   status: member
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
 - id: LS
   name: Lesotho
   type: country
   status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: MT
   name: Malta
   type: country
   status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
 - id: MX
   name: Mexico
   type: country
   status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: NA
   name: Namibia
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
+- id: NG
+  name: Nigeria
   type: country
   status: member
 - id: NI
   name: Nicaragua
   type: country
   status: member
-- id: NE
-  name: Niger
+- id: NR
+  name: Nauru
   type: country
   status: member
-- id: NG
-  name: Nigeria
+- id: NU
+  name: Niue
   type: country
   status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PS
-  name: Palestine
+- id: NZ
+  name: New Zealand
   type: country
   status: member
 - id: PA
   name: Panama
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
   type: country
   status: member
 - id: PE
@@ -289,28 +254,20 @@ includes:
   name: Philippines
   type: country
   status: member
-- id: KN
-  name: Saint Kitts and Nevis
+- id: PS
+  name: Palestine
   type: country
   status: member
-- id: LC
-  name: Saint Lucia
+- id: PW
+  name: Palau
   type: country
   status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
+- id: PY
+  name: Paraguay
   type: country
   status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
+- id: SB
+  name: Solomon Islands
   type: country
   status: member
 - id: SC
@@ -321,20 +278,16 @@ includes:
   name: Sierra Leone
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
+- id: SM
+  name: San Marino
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: ST
+  name: Sao Tome and Principe
   type: country
   status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
+- id: SV
+  name: El Salvador
   type: country
   status: member
 - id: TH
@@ -345,8 +298,8 @@ includes:
   name: Timor-Leste
   type: country
   status: member
-- id: TG
-  name: Togo
+- id: TO
+  name: Tonga
   type: country
   status: member
 - id: TT
@@ -361,39 +314,35 @@ includes:
   name: Uruguay
   type: country
   status: member
+- id: VA
+  name: Holy See
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
+- id: WS
+  name: Samoa
   type: country
   status: member
-- id: VN
-  name: Viet Nam
+- id: ZA
+  name: South Africa
   type: country
   status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-membership_count: 95
-wikidata_id: Q27961877
-description: International treaty that prohibits the development, testing, production, stockpiling, stationing, transfer,
-  use, and threat of use of nuclear weapons. The treaty also prohibits assistance and encouragement of these prohibited activities.
-  It entered into force on January 22, 2021.
+membership_count: 75
 tags:
 - TPNW
 - agreement
@@ -430,8 +379,55 @@ other_names:
   name: Договор о запрещении ядерного оружия
 - id: es
   name: Tratado sobre la Prohibición de las Armas Nucleares
+acronyms:
+- lang: en
+  value: TPNW
+- lang: fr
+  value: TIAN
+- lang: es
+  value: TPAN
+notes: >-
+  Membership lists current States parties (75 as of July 2026): states that have ratified or acceded to
+  the treaty per UNODA / Wikipedia party lists. About 25 additional states have signed but not yet ratified
+  and are not listed as members. Nuclear-weapon States and most NATO members have neither signed nor ratified.
+  Most recently Tonga acceded on 7 July 2026.
+last_verified: '2026-07-29'
 provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q27961877
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q27961877
+  license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
+- field: includes
+  source: Wikipedia / United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Prohibition_of_Nuclear_Weapons
+- field: membership_count
+  source: Wikipedia / United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Prohibition_of_Nuclear_Weapons
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/disarmament/wmd/nuclear/tpnw/
+- field: notes
+  source: Wikipedia / United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Prohibition_of_Nuclear_Weapons

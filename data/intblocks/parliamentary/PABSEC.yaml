@@ -1,78 +1,166 @@
 id: PABSEC
+name: Parliamentary Assembly of the Black Sea Economic Cooperation
 blocktype:
 - parliamentary
 status: formal
+founded: '1993-02-26'
+active_period:
+  start: '1993-02-26'
+geographic_scope: regional
+regions:
+- Black Sea
+- Europe
+- Western Asia
 partof: BSEC
 languages:
 - en
+- fr
 - ru
+- tr
 links:
-- url: http://www.pabsec.org/
+- url: https://www.pabsec.org/
   type: website
+- url: https://en.wikipedia.org/wiki/Organization_of_the_Black_Sea_Economic_Cooperation#Parliamentary_Assembly_of_the_Black_Sea_Economic_Cooperation_(PABSEC)
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q116884966
   type: wikidata
-name: Parliamentary Assembly of the Black Sea Economic Cooperation
+acronyms:
+- lang: en
+  value: PABSEC
+- lang: ru
+  value: ПАЧЭС
+- lang: ru
+  value: ПАОЧЭС
+headquarters:
+  city: Istanbul
+  country: TR
+  coordinates:
+    lat: 41.059444444444445
+    lng: 28.986944444444443
 includes:
 - id: AL
   name: Albania
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '1997'
 - id: GE
   name: Georgia
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1995'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
+  joined: '2021'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2004'
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-26'
+- id: BY
+  name: Belarus
+  type: country
+  status: observer
+  joined: '2005-11-23'
+- id: DE
+  name: Germany
+  type: country
+  status: observer
+  joined: '2001-06-20'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: observer
+  joined: '1995-06-06'
+- id: FR
+  name: France
+  type: country
+  status: observer
+  joined: '2002-11-26'
+- id: IL
+  name: Israel
+  type: country
+  status: observer
+  joined: '1996-12-11'
+- id: SK
+  name: Slovakia
+  type: country
+  status: observer
+  joined: '2000-11-29'
+founding_members:
+- AL
+- AM
+- AZ
+- GE
+- MD
+- RO
+- RU
+- TR
+- UA
 membership_count: 13
-description: Parliamentary Assembly of the Black Sea Economic Cooperation is an international
-  parliamentary body with 13 members.
+description: Inter-parliamentary consultative body of the Organization of the Black Sea Economic Cooperation (BSEC),
+  established on 26 February 1993 by the Declaration on the Establishment of the Parliamentary Assembly signed by
+  nine founding parliaments. PABSEC promotes parliamentary understanding of BSEC objectives, supports legislative
+  frameworks for regional economic and humanitarian cooperation, and strengthens parliamentary democracy. The General
+  Assembly comprises 81 parliamentarians from thirteen member states; working languages are English, French, Russian,
+  and Turkish. The International Secretariat is based in Istanbul.
+notes: Greece joined in 1995, Bulgaria in 1997, Serbia and Montenegro in 2004 (membership inherited by Serbia after
+  2006), and North Macedonia in 2021. Belarus, France, and other observer parliaments have had observer status
+  temporarily suspended at various times. Russia suspended budget contributions in December 2022; published sources
+  also report suspended participation from 2023. PABSEC also grants observer status to inter-parliamentary organizations
+  including the IPU, NATO PA, OSCE PA, and TURKPA, which are not modeled as country includes.
 tags:
 - PABSEC
 - assembly
 - black
 - cooperation
+- interparliamentary
 - parliamentary
 - political
 - regional
@@ -90,25 +178,50 @@ other_names:
   name: Parliamentary Assembly of the Black Sea Economic Cooperation
 - id: ru
   name: Парламентская ассамблея Черноморского экономического сотрудничества
-acronyms:
-- lang: en
-  value: PABSEC
-- lang: ru
-  value: ПАЧЭС
-- lang: ru
-  value: ПАОЧЭС
+- id: tr
+  name: Karadeniz Ekonomik İşbirliği Parlamenter Asamblesi
+- id: uk
+  name: Парламентська асамблея Організації Чорноморського економічного співробітництва
+last_verified: '2026-07-30'
 provenance:
-- field: acronyms
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://www.wikidata.org/wiki/Q116884966
   license: CC0
-founded: '1993-02-26'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q116884966
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q116884966
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.pabsec.org/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q116884966
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q116884966
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.pabsec.org/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Organization_of_the_Black_Sea_Economic_Cooperation#Parliamentary_Assembly_of_the_Black_Sea_Economic_Cooperation_(PABSEC)
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D1%81%D1%81%D0%B0%D0%BC%D0%B1%D0%BB%D0%B5%D1%8F_%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0

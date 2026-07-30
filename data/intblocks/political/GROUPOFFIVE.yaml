@@ -1,7 +1,13 @@
 id: GROUPOFFIVE
 blocktype:
 - political
-status: formal
+status: informal
+founded: '2005'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Latin America
 languages:
 - en
 links:
@@ -17,31 +23,49 @@ includes:
   name: Brazil
   type: country
   status: member
+  joined: '2005'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2005'
 - id: IN
   name: India
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
+  joined: '2005'
 - id: MX
   name: Mexico
   type: country
   status: member
-founded: '2005'
+  joined: '2005'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '2005'
 membership_count: 5
+founding_members:
+- BR
+- CN
+- IN
+- MX
+- ZA
 wikidata_id: Q2720495
-description: International forum focused on political for political cooperation.
+description: Informal forum of Brazil, China, India, Mexico, and South Africa (also
+  called the Outreach Five, O5) that emerged from G8 outreach dialogues starting at
+  the 2005 Gleneagles summit. The five largest emerging economies coordinate common
+  positions on global issues and promote dialogue between developing and developed
+  countries. Active in G8+5 summit format through 2009; largely superseded by BRICS
+  (2009) and rendered obsolete by Russia's 2014 exclusion from the G8.
 tags:
+- G5
 - GROUPOFFIVE
 - cooperation
+- emerging_economies
 - five
 - group
+- outreach_five
 - political
 - regional
 - regional_cooperation
@@ -50,6 +74,8 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: economy
+  name: Economy
 other_names:
 - id: ar
   name: مجموعة الخمسة
@@ -57,29 +83,73 @@ other_names:
   name: G5
 - id: en
   name: Group of Five
+- id: en
+  name: Outreach Five
+- id: en
+  name: O5
 - id: es
   name: G-5
+- id: es
+  name: Grupo de los Cinco
 - id: fr
   name: G5
 - id: pt
   name: G5
+- id: pt
+  name: Grupo dos Cinco
 - id: ru
   name: Группа пяти
 - id: zh
   name: 五国集团
+acronyms:
+- lang: en
+  value: G5
+- lang: es
+  value: G-5
+- lang: pt
+  value: G-5
+- lang: ru
+  value: G5
+notes: UK host of the 2005 G8 summit invited Brazil, China, India, Mexico, and South
+  Africa as the "Outreach Five." The Heiligendamm Process (2007) institutionalized
+  G8–G5 dialogue at the OECD; the 2009 L'Aquila summit produced a final report.
+  BRICS (same five minus Mexico plus Russia) held its first summit in 2009. Russia's
+  2014 exclusion from the G8 ended the G8+5 format.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2720495
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Five
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Five
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2720495
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2720495
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2720495
   license: CC0
-acronyms:
-- lang: ru
-  value: G5
-- lang: pt
-  value: G-5
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Five
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Five

@@ -1,51 +1,108 @@
 id: PARLACEN
+name: Central American Parliament
 blocktype:
 - parliamentary
 status: formal
+partof: SICA
+founded: '1991-10-28'
+active_period:
+  start: '1991-10-28'
+geographic_scope: regional
+regions:
+- Central America
 languages:
 - es
 links:
+- url: https://www.parlacen.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_American_Parliament
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q190023
   type: wikidata
-name: Central American Parliament
+acronyms:
+- lang: en
+  value: PARLACEN
+- lang: fr
+  value: PARLACEN
+- lang: es
+  value: PARLACEN
+- lang: pt
+  value: PARLACEN
+headquarters:
+  city: Guatemala City
+  country: GT
+  coordinates:
+    lat: 14.615833
+    lng: -90.510587
+legal_status: treaty_organization
+recognition_status: Regional parliamentary organ of the Central American Integration System established by the Esquipulas
+  II agreement; first formal session held on 28 October 1991 in Guatemala City
+founding_members:
+- GT
+- SV
+- HN
+- NI
 includes:
 - id: GT
   name: Guatemala
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-05-01'
+- id: SV
+  name: El Salvador
+  type: country
+  status: founding_member
+  joined: '1990-05-01'
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: founding_member
+  joined: '1990-05-01'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '1991-10-28'
 - id: PA
   name: Panama
   type: country
   status: member
+  joined: '1994'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
-membership_count: 5
+  joined: '2010'
+membership_count: 6
 wikidata_id: Q190023
-description: Legislature of the Central American Integration System.
+description: Regional parliamentary organ of the Central American Integration System (SICA), composed of 20
+  directly elected deputies from each member state plus ex officio former presidents and vice-presidents.
+  Established by the Esquipulas II agreement; first formal session on 28 October 1991 in Guatemala City.
+  Exercises political oversight and proposes integration legislation without supranational lawmaking power.
+notes: Costa Rica signed the 1987 constitutive treaty but never ratified Esquipulas II and is not represented
+  in PARLACEN despite participating in SICA. Panama ratified membership in 1994; a 2009 withdrawal law was
+  declared unconstitutional and Panama returned in 2012. The Dominican Republic was an observer from 1996
+  and became a full member with elected delegates in 2010. El Salvador's Legislative Assembly passed a
+  constitutional reform on 31 July 2025 to withdraw; the country will stop electing representatives starting
+  with the 2027 legislative elections but remains a member until then.
 tags:
 - PARLACEN
 - american
 - central
+- central_america
+- integration
 - parliament
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: برلمان أمريكا الوسطى
@@ -63,34 +120,60 @@ other_names:
   name: Центральноамериканский парламент
 - id: zh
   name: 中美洲议会
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q190023
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q190023
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q190023
   license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q190023
   license: CC0
-acronyms:
-- lang: en
-  value: PARLACEN
-- lang: fr
-  value: PARLACEN
-- lang: es
-  value: PARLACEN
-- lang: pt
-  value: PARLACEN
-founded: '1991'
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_American_Parliament
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_American_Parliament
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.europarl.europa.eu/meetdocs/2009_2014/documents/dcam/dv/6_1_parlacen_info_/6_1_parlacen_info_en.pdf
+  license: public domain
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q190023
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_American_Parliament
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_American_Parliament
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_American_Parliament
+  license: CC BY-SA 4.0

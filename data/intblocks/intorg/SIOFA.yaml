@@ -1,68 +1,104 @@
 id: SIOFA
+name: Southern Indian Ocean Fisheries Agreement
 blocktype:
 - intorg
 status: formal
+founded: '2012'
+active_period:
+  start: '2012-06-21'
+geographic_scope: regional
+regions:
+- Africa
+- East Asia
+- Indian Ocean
+- Oceania
 languages:
 - en
+- fr
 links:
 - url: https://siofa.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Southern_Indian_Ocean_Fisheries_Agreement
   type: wikipedia
-name: Southern Indian Ocean Fisheries Agreement
-founded: '2012'
+- url: https://www.wikidata.org/wiki/Q29641305
+  type: wikidata
+- url: https://siofa.org/about-siofa/parties-participants
+  type: website
+- url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002803296a6
+  type: website
+acronyms:
+- lang: en
+  value: SIOFA
+- lang: fr
+  value: APSOI
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the Southern Indian Ocean Fisheries Agreement (signed 7 July 2006 in Rome; entered into force 21 June 2012); registered with the United Nations as treaty no. 49647; FAO is depositary
 headquarters:
-  city: Saint-Denis
+  city: Le Port
   country: RE
   coordinates:
-    lat: -20.8789
-    lng: 55.4481
+    lat: -20.9373
+    lng: 55.2944
+  note: Secretariat at 13 Rue de Marseille, Le Port, Réunion
+wikidata_id: Q29641305
+description: Regional fisheries management organisation whose ten Contracting Parties — Australia, China, the Cook Islands, the European Union, France (for its Indian Ocean territories), Japan, the Republic of Korea, Mauritius, Seychelles, and Thailand — cooperate with one Participating Fishing Entity (Chinese Taipei) and two Cooperating non-Contracting Parties (Comoros and India) to conserve and sustainably use fishery resources in the high seas of the southern Indian Ocean. The Agreement covers fish, molluscs, crustaceans, and other sedentary species, excluding highly migratory species and sedentary stocks under coastal-state jurisdiction. The Secretariat is headquartered in Le Port, Réunion.
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-21'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2019-10-23'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-21'
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2012-06-21'
 - id: FR
   name: France
   type: country
   status: member
-  note: Membership on behalf of its Indian Ocean territories
+  joined: '2013-02-24'
+  note: Contracting Party on behalf of its Indian Ocean overseas territories
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2014-07-17'
 - id: KR
   name: Republic of Korea
   type: country
   status: member
+  joined: '2014-11-28'
 - id: MU
   name: Mauritius
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-21'
 - id: SC
   name: Seychelles
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-21'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '2017-05-21'
 - id: TW
   name: Chinese Taipei
   type: country
   status: participant
+  joined: '2019-07'
 - id: KM
   name: Comoros
   type: country
@@ -71,32 +107,86 @@ includes:
   name: India
   type: country
   status: cooperating
-acronyms:
-- lang: en
-  value: SIOFA
+founding_members:
+- AU
+- CK
+- MU
+- SC
 membership_count: 10
-description: Southern Indian Ocean Fisheries Agreement is an international intorg
-  body with 10 members.
 tags:
 - SIOFA
+- RFMO
 - agriculture
-- farming
 - fisheries
+- high seas
 - indian
+- indian ocean
 - intorg
 - ocean
 - southern
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Southern Indian Ocean Fisheries Agreement
+- id: fr
+  name: Accord sur la pêcherie de l'océan Indien sud
+notes: Kenya, Madagascar, Mozambique, and New Zealand signed the Agreement in 2006–2007 but have not ratified. The SIOFA convention area adjoins CCAMLR to the south, SPRFMO to the east, and SEAFO to the west. As of July 2026, the official website lists ten Contracting Parties, one Participating Fishing Entity (Chinese Taipei), and two Cooperating non-Contracting Parties (Comoros and India).
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://siofa.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q29641305
+  license: CC0
+- field: includes
+  source: SIOFA official website; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/about-siofa/parties-participants
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: SIOFA official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/
+- field: legal_status
+  source: SIOFA official website; FAO treaty text
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/035s-e.pdf
+- field: recognition_status
+  source: UN Treaty Collection; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002803296a6
+- field: geographic_scope
+  source: SIOFA official website
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/
+- field: headquarters
+  source: SIOFA official website
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/about-siofa/contacts
+- field: founding_members
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002803296a6
+- field: founded
+  source: UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002803296a6
+- field: active_period
+  source: UN Treaty Collection; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=08000002803296a6
+- field: other_names
+  source: SIOFA official website
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/about-siofa/contacts
+- field: notes
+  source: SIOFA official website; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://siofa.org/about-siofa/parties-participants

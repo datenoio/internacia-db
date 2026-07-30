@@ -5,14 +5,32 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Pacific_Islands
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q844857
+  type: wikidata
 name: Pacific Islands
 includes:
+- id: AS
+  name: American Samoa
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
 - id: FJ
   name: Fiji
   type: country
   status: member
 - id: FM
   name: Micronesia, Federated States of
+  type: country
+  status: member
+- id: GU
+  name: Guam
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
   type: country
   status: member
 - id: KI
@@ -23,32 +41,48 @@ includes:
   name: Marshall Islands
   type: country
   status: member
-- id: NR
-  name: Nauru
+- id: MP
+  name: Northern Mariana Islands
   type: country
   status: member
 - id: NC
   name: New Caledonia
   type: country
   status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
 - id: NZ
   name: New Zealand
   type: country
   status: member
-- id: PW
-  name: Palau
+- id: PF
+  name: French Polynesia
   type: country
   status: member
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
-- id: WS
-  name: Samoa
+- id: PN
+  name: Pitcairn Islands
+  type: country
+  status: member
+- id: PW
+  name: Palau
   type: country
   status: member
 - id: SB
   name: Solomon Islands
+  type: country
+  status: member
+- id: TK
+  name: Tokelau
   type: country
   status: member
 - id: TO
@@ -63,11 +97,22 @@ includes:
   name: Vanuatu
   type: country
   status: member
-membership_count: 14
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+membership_count: 24
 geographic_scope: regional
 regions:
 - Oceania
-description: Pacific Islands is a regional grouping of 14 countries in Oceania.
+wikidata_id: Q844857
+description: Geographic region of Oceania comprising the island countries and territories
+  of Melanesia, Micronesia, and Polynesia in the Pacific Ocean, per the Wikipedia regional
+  definition.
 tags:
 - PACIFICISLANDS
 - pacific
@@ -92,11 +137,26 @@ other_names:
   name: Тихоокеанские острова
 - id: es
   name: islas del Pacífico
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/Pacific_Islands
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Islands
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Islands
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Islands
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q844857
+  license: CC0

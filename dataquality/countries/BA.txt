@@ -1,22 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: BA
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Country Code: BA
-Total Records with Issues: 54
-Total Issues Found: 69
+Total Records with Issues: 49
+Total Issues Found: 61
 
 === ISSUES BY TYPE ===
 
 [DUPLICATE_LINK]
-Count: 24
+Count: 26
 Priority: LOW
-
-File: data/intblocks/agreement/CTBT.yaml
-Record ID: CTBT
-Issue: DUPLICATE_LINK
-Field: links
-Current Value: ctbto.org
-Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
 
 File: data/intblocks/bank/IDA.yaml
 Record ID: IDA
@@ -46,12 +39,33 @@ Field: links
 Current Value: ctbto.org
 Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
 
-File: data/intblocks/agreement/BARCELONA.yaml
-Record ID: BARCELONA
+File: data/intblocks/acronym/PERIPHCOUNT.yaml
+Record ID: PERIPHCOUNT
 Issue: DUPLICATE_LINK
 Field: links
-Current Value: unep.org/unepmap
-Suggested Action: Website 'unep.org/unepmap' is shared by unrelated records: ['ABIDJAN', 'BARCELONA', 'NAIROBI']
+Current Value: jstor.org/stable/2657290
+Suggested Action: Website 'jstor.org/stable/2657290' is shared by unrelated records: ['CORECOUNT', 'PERIPHCOUNT', 'SEMIPERIPH']
+
+File: data/intblocks/agreement/CTBT.yaml
+Record ID: CTBT
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: ctbto.org
+Suggested Action: Website 'ctbto.org' is shared by unrelated records: ['CTBT', 'CTBTO']
+
+File: data/intblocks/agreement/UNCLOS.yaml
+Record ID: UNCLOS
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en
+Suggested Action: Website 'treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en' is shared by unrelated records: ['ITLOS', 'UNCLOS']
+
+File: data/intblocks/intorg/ITLOS.yaml
+Record ID: ITLOS
+Issue: DUPLICATE_LINK
+Field: links
+Current Value: treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en
+Suggested Action: Website 'treaties.un.org/pages/viewdetailsiii.aspx?src=treaty&mtdsg_no=xxi-6&chapter=21&clang=_en' is shared by unrelated records: ['ITLOS', 'UNCLOS']
 
 File: data/intblocks/audit/EUROSAI.yaml
 Record ID: EUROSAI
@@ -100,7 +114,7 @@ Record ID: ECA
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/ECA.yaml
 Record ID: ECA
@@ -114,7 +128,7 @@ Record ID: ECS
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/ECS.yaml
 Record ID: ECS
@@ -128,117 +142,99 @@ Record ID: LMY
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/LMY.yaml
 Record ID: LMY
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LMC', 'LMY']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups' is shared by unrelated records: ['LAC', 'LMY']
 
 File: data/intblocks/wbgroup/MIC.yaml
 Record ID: MIC
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/MIC.yaml
 Record ID: MIC
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/UMC.yaml
 Record ID: UMC
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/UMC.yaml
 Record ID: UMC
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
-Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LIC', 'LMY', 'MEA', 'MIC', 'MNA', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html' is shared by unrelated records: ['EAS', 'ECA', 'ECS', 'EMU', 'EUU', 'HIC', 'LAC', 'LCN', 'LIC', 'LMC', 'LMY', 'MEA', 'MIC', 'MNA', 'NAC', 'NOC', 'OEC', 'SAS', 'SSA', 'SSF', 'UMC', 'WLD']
 
 File: data/intblocks/wbgroup/WLD.yaml
 Record ID: WLD
 Issue: DUPLICATE_LINK
 Field: links
 Current Value: datahelpdesk.worldbank.org/knowledgebase/articles/378834
-Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
+Suggested Action: Website 'datahelpdesk.worldbank.org/knowledgebase/articles/378834' is shared by unrelated records: ['HIC', 'LIC', 'LMC', 'MEA', 'MIC', 'NOC', 'OEC', 'SSA', 'SSF', 'UMC', 'WLD']
 
-[FOUNDING_MEMBER_NOT_INCLUDED]
-Count: 1
+[INSUFFICIENT_PROVENANCE]
+Count: 4
 Priority: MEDIUM
 
-File: data/intblocks/bank/IDA.yaml
-Record ID: IDA
-Issue: FOUNDING_MEMBER_NOT_INCLUDED
-Field: founding_members[8]
-Current Value: PK
-Suggested Action: founding member 'PK' is absent from includes; add it (e.g. with status former_member) or remove the founder entry
+File: data/intblocks/dvdregion/DVD_2.yaml
+Record ID: DVD_2
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 1
+Suggested Action: provenance has 1 entry; expected at least 4
 
-[HISTORICAL_ENTITY_ACTIVE_MEMBER]
-Count: 5
-Priority: MEDIUM
+File: data/intblocks/teleregion/DVBT.yaml
+Record ID: DVBT
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 3
+Suggested Action: provenance has 3 entries; expected at least 4
 
-File: data/intblocks/bank/WB.yaml
-Record ID: WB
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[6].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/traffichand/RHTRAFFIC.yaml
+Record ID: RHTRAFFIC
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
 
-File: data/intblocks/wbgroup/WLD.yaml
-Record ID: WLD
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/intorg/IAIS.yaml
-Record ID: IAIS
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/standards/ISO.yaml
-Record ID: ISO
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[7].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
-
-File: data/intblocks/writingdirection/WDLTR.yaml
-Record ID: WDLTR
-Issue: HISTORICAL_ENTITY_ACTIVE_MEMBER
-Field: includes[5].status
-Current Value: member
-Suggested Action: 'AN' is a historical entity but is listed with active status 'member'; use former_member or remove the entry
+File: data/intblocks/travel/VISAFGE.yaml
+Record ID: VISAFGE
+Issue: INSUFFICIENT_PROVENANCE
+Field: provenance
+Current Value: 2
+Suggested Action: provenance has 2 entries; expected at least 4
 
 [MEMBERSHIP_COUNT_MISMATCH]
-Count: 39
+Count: 31
 Priority: MEDIUM
 
-File: data/intblocks/agreement/CTBT.yaml
-Record ID: CTBT
+File: data/intblocks/agreement/GRECO.yaml
+Record ID: GRECO
 Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
-Current Value: 187
-Suggested Action: membership_count 187 matches neither total includes (195) nor member-class includes (195)
+Current Value: 48
+Suggested Action: membership_count 48 matches neither total includes (51) nor member-class includes (49)
 
 File: data/intblocks/armscontrol/GICNT.yaml
 Record ID: GICNT
@@ -261,6 +257,13 @@ Field: membership_count
 Current Value: 63
 Suggested Action: membership_count 63 matches neither total includes (62) nor member-class includes (62)
 
+File: data/intblocks/bank/IDA.yaml
+Record ID: IDA
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 172
+Suggested Action: membership_count 172 matches neither total includes (173) nor member-class includes (173)
+
 File: data/intblocks/bank/IFC.yaml
 Record ID: IFC
 Issue: MEMBERSHIP_COUNT_MISMATCH
@@ -274,6 +277,13 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 53
 Suggested Action: membership_count 53 matches neither total includes (57) nor member-class includes (54)
+
+File: data/intblocks/education/IAU_UNIV.yaml
+Record ID: IAU_UNIV
+Issue: MEMBERSHIP_COUNT_MISMATCH
+Field: membership_count
+Current Value: 118
+Suggested Action: membership_count 118 matches neither total includes (116) nor member-class includes (116)
 
 File: data/intblocks/energy/ERRA.yaml
 Record ID: ERRA
@@ -324,34 +334,6 @@ Field: membership_count
 Current Value: 194
 Suggested Action: membership_count 194 matches neither total includes (190) nor member-class includes (190)
 
-File: data/intblocks/environment/UNCCD.yaml
-Record ID: UNCCD
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 197
-Suggested Action: membership_count 197 matches neither total includes (196) nor member-class includes (196)
-
-File: data/intblocks/environment/VIENNACONVENTION.yaml
-Record ID: VIENNACONVENTION
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 198
-Suggested Action: membership_count 198 matches neither total includes (197) nor member-class includes (197)
-
-File: data/intblocks/food/GFCM.yaml
-Record ID: GFCM
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 24
-Suggested Action: membership_count 24 matches neither total includes (29) nor member-class includes (29)
-
-File: data/intblocks/geographic/MEDITERRANEAN.yaml
-Record ID: MEDITERRANEAN
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 23
-Suggested Action: membership_count 23 matches neither total includes (22) nor member-class includes (22)
-
 File: data/intblocks/intorg/CTBTO.yaml
 Record ID: CTBTO
 Issue: MEMBERSHIP_COUNT_MISMATCH
@@ -366,13 +348,6 @@ Field: membership_count
 Current Value: 130
 Suggested Action: membership_count 130 matches neither total includes (121) nor member-class includes (0)
 
-File: data/intblocks/research/EUREKA.yaml
-Record ID: EUREKA
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 42
-Suggested Action: membership_count 42 matches neither total includes (46) nor member-class includes (46)
-
 File: data/intblocks/scientific/EMS.yaml
 Record ID: EMS
 Issue: MEMBERSHIP_COUNT_MISMATCH
@@ -386,27 +361,6 @@ Issue: MEMBERSHIP_COUNT_MISMATCH
 Field: membership_count
 Current Value: 50
 Suggested Action: membership_count 50 matches neither total includes (35) nor member-class includes (35)
-
-File: data/intblocks/space/COPUOS.yaml
-Record ID: COPUOS
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 104
-Suggested Action: membership_count 104 matches neither total includes (109) nor member-class includes (109)
-
-File: data/intblocks/space/EUTELSAT.yaml
-Record ID: EUTELSAT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 49
-Suggested Action: membership_count 49 matches neither total includes (46) nor member-class includes (46)
-
-File: data/intblocks/space/RESCUEAGREEMENT.yaml
-Record ID: RESCUEAGREEMENT
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 100
-Suggested Action: membership_count 100 matches neither total includes (101) nor member-class includes (101)
 
 File: data/intblocks/sports/FIFA.yaml
 Record ID: FIFA
@@ -478,13 +432,6 @@ Field: membership_count
 Current Value: 900
 Suggested Action: membership_count 900 matches neither total includes (46) nor member-class includes (0)
 
-File: data/intblocks/transport/OTIF.yaml
-Record ID: OTIF
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 51
-Suggested Action: membership_count 51 matches neither total includes (52) nor member-class includes (52)
-
 File: data/intblocks/unagency/FAO.yaml
 Record ID: FAO
 Issue: MEMBERSHIP_COUNT_MISMATCH
@@ -499,20 +446,12 @@ Field: membership_count
 Current Value: 195
 Suggested Action: membership_count 195 matches neither total includes (193) nor member-class includes (193)
 
-File: data/intblocks/water/FASRB.yaml
-Record ID: FASRB
-Issue: MEMBERSHIP_COUNT_MISMATCH
-Field: membership_count
-Current Value: 4
-Suggested Action: membership_count 4 matches neither total includes (5) nor member-class includes (5)
-
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 24 issues
-FOUNDING_MEMBER_NOT_INCLUDED: 1 issue
-HISTORICAL_ENTITY_ACTIVE_MEMBER: 5 issues
-MEMBERSHIP_COUNT_MISMATCH: 39 issues
+DUPLICATE_LINK: 26 issues
+INSUFFICIENT_PROVENANCE: 4 issues
+MEMBERSHIP_COUNT_MISMATCH: 31 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
@@ -520,22 +459,6 @@ Record ID: IDA
 File: data/intblocks/bank/IDA.yaml
 Issue Count: 3
 Issues:
-  - FOUNDING_MEMBER_NOT_INCLUDED: founding_members[8]
+  - MEMBERSHIP_COUNT_MISMATCH: membership_count
   - DUPLICATE_LINK: links
   - DUPLICATE_LINK: links
-
-Record ID: WB
-File: data/intblocks/bank/WB.yaml
-Issue Count: 3
-Issues:
-  - DUPLICATE_LINK: links
-  - DUPLICATE_LINK: links
-  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[6].status
-
-Record ID: WLD
-File: data/intblocks/wbgroup/WLD.yaml
-Issue Count: 3
-Issues:
-  - DUPLICATE_LINK: links
-  - DUPLICATE_LINK: links
-  - HISTORICAL_ENTITY_ACTIVE_MEMBER: includes[7].status

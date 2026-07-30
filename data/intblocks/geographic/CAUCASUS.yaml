@@ -5,6 +5,8 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Caucasus
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q18869
+  type: wikidata
 name: Caucasus
 includes:
 - id: AM
@@ -19,12 +21,20 @@ includes:
   name: Georgia
   type: country
   status: member
-membership_count: 3
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+membership_count: 4
 geographic_scope: sub-regional
 regions:
 - Asia
 - Europe
-description: Caucasus is a regional grouping of 3 countries in Asia.
+wikidata_id: Q18869
+description: Transcontinental region between the Black Sea and the Caspian Sea, spanning
+  Eastern Europe and Western Asia. It comprises the South Caucasus (Armenia, Azerbaijan,
+  and Georgia) and the North Caucasus (southern Russia), divided by the Greater and
+  Lesser Caucasus mountain ranges, per the Wikipedia regional definition.
 tags:
 - CAUCASUS
 - caucasus
@@ -38,27 +48,54 @@ topics:
 other_names:
 - id: ar
   name: القوقاز
-- id: zh
-  name: 高加索
+- id: de
+  name: Kaukasus
 - id: en
   name: Caucasus
-- id: fr
-  name: Caucase
-- id: ru
-  name: Кавказ
 - id: es
   name: Cáucaso
+- id: fr
+  name: Caucase
+- id: pt
+  name: Cáucaso
+- id: ru
+  name: Кавказ
+- id: zh
+  name: 高加索
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Caucasus
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caucasus
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caucasus
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caucasus
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18869
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q18869
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18869
+  license: CC0
+headquarters:
+  coordinates:
+    lat: 42.75
+    lng: 44.5

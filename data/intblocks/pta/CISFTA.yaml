@@ -2,66 +2,117 @@ id: CISFTA
 blocktype:
 - pta
 status: formal
+founded: '2011-10-18'
+active_period:
+  start: '2012-09-20'
+geographic_scope: regional
+regions:
+- Asia
+- Europe
 languages:
 - en
 - ru
+partof: CIS
 links:
 - url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1702783
+  type: wikidata
+- url: http://cis.minsk.by/upload/eng/treaty_on_a_free-trade_area.pdf
+  type: website
+- url: https://eccis.org/document/3183
+  type: website
 name: Commonwealth of Independent States Free Trade Area
-founded: '2011'
+acronyms:
+- lang: en
+  value: CISFTA
+- lang: ru
+  value: ЗСТ СНГ
+- lang: zh
+  value: 獨立國家國協自由貿易區
+legal_status: free trade agreement
+recognition_status: Free trade agreement signed in Saint Petersburg on 18 October 2011 by eight Commonwealth of Independent States governments; entered into force on 20 September 2012 for the first ratifying parties; replaces the 1994 CIS free trade agreement and numerous bilateral arrangements among participants; Uzbekistan acceded via a separate protocol signed on 13 December 2013 that entered into force on 12 January 2014
 includes:
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-10-17'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-09-20'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-12-08'
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '2013-12-13'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-12-09'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-09-20'
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: founding_member
+  joined: '2016-03-19'
+- id: UA
+  name: Ukraine
+  type: country
+  status: founding_member
+  joined: '2012-09-20'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-membership_count: 8
-description: International free trade area among Commonwealth of Independent States
-  members focused on economic cooperation and trade liberalization.
+  joined: '2014-01-12'
+founding_members:
+- AM
+- BY
+- KZ
+- KG
+- MD
+- RU
+- TJ
+- UA
+membership_count: 9
+wikidata_id: Q1702783
+description: The Commonwealth of Independent States Free Trade Area (CIS FTA) is a multilateral free trade agreement in goods signed in Saint Petersburg on 18 October 2011 by eight CIS governments and entered into force on 20 September 2012 for the first ratifying parties. It establishes a comprehensive free trade regime among participants, replacing the 1994 CIS free trade agreement and over one hundred prior bilateral and multilateral arrangements. Goods must carry a preferential certificate CT-1 or a declaration of origin to qualify for duty-free treatment under the 2009 CIS rules of origin. The treaty permits members to maintain other trade agreements and customs unions, and Eurasian Economic Union members apply a grandfather clause for pre-2015 third-country FTAs. Uzbekistan joined through a separate protocol signed in December 2013 rather than as an original signatory. Azerbaijan is the only full CIS member state that does not participate.
 tags:
 - CISFTA
 - CIS
 - commerce
 - economy
 - free_trade
+- post_soviet
 - pta
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: en
   name: Commonwealth of Independent States Free Trade Area
+- id: en
+  name: Treaty on Free Trade Area
 - id: es
   name: Tratado de Libre Comercio de la Comunidad de Estados Independientes
 - id: fr
@@ -70,27 +121,63 @@ other_names:
   name: Зона свободной торговли СНГ
 - id: zh
   name: 独联体自贸区
-wikidata_id: Q1702783
+notes: Russia suspended application of the CIS FTA with respect to Ukraine from 1 January 2016; Ukraine responded with reciprocal trade restrictions on Russia from 2 January 2016, but bilateral FTA provisions with other CIS FTA parties remain in effect. Uzbekistan applies the agreement under a separate protocol and, as of 2024, had not yet acceded to the 2009 rules of origin, continuing to apply the 1993 rules instead. A draft bill to denounce the treaty was introduced in the Verkhovna Rada in November 2022 but had not completed the denunciation process as of mid-2026. Azerbaijan is the only full CIS member that is not a party to the agreement.
+last_verified: '2026-07-29'
 provenance:
-- field: wikidata_id
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://cis.minsk.by/upload/eng/treaty_on_a_free-trade_area.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://cis.minsk.by/upload/eng/treaty_on_a_free-trade_area.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://cis.minsk.by/upload/eng/treaty_on_a_free-trade_area.pdf
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://cis.minsk.by/upload/eng/treaty_on_a_free-trade_area.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eccis.org/document/3183
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1702783
   license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1702783
   license: CC0
-- field: acronyms
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1702783
   license: CC0
-acronyms:
-- lang: en
-  value: CISFTA
-- lang: zh
-  value: 獨立國家國協自由貿易區
-- lang: ru
-  value: CISFTA
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eccis.org/document/3183

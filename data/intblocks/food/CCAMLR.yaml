@@ -1,55 +1,122 @@
 id: CCAMLR
+name: Commission for the Conservation of Antarctic Marine Living Resources
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1982-04-07'
+active_period:
+  start: '1982-04-07'
+geographic_scope: regional
+regions:
+- Antarctica
+- Southern Ocean
 languages:
 - en
+- fr
+- ru
+- es
 links:
-- url: http://www.ccamlr.org/
+- url: https://www.ccamlr.org/
   type: website
-name: Commission on the Conservation of Antarctic Marine Living Resources
+- url: https://www.ccamlr.org/en/organisation/members
+  type: website
+- url: https://www.ccamlr.org/en/organisation/acceding-states
+  type: website
+- url: https://en.wikipedia.org/wiki/Convention_on_the_Conservation_of_Antarctic_Marine_Living_Resources
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q97382426
+  type: wikidata
+acronyms:
+- lang: en
+  value: CCAMLR
+- lang: ru
+  value: АНТКОМ
+legal_status: intergovernmental
+recognition_status: Intergovernmental commission established by the Convention on the Conservation of Antarctic Marine Living Resources (CAMLR Convention), adopted in Canberra on 20 May 1980 and in force from 7 April 1982; part of the Antarctic Treaty System; Australia is depositary; secretariat headquartered in Hobart, Tasmania
+headquarters:
+  city: Hobart
+  country: AU
+  coordinates:
+    lat: -42.886667
+    lng: 147.324167
+founding_members:
+- AR
+- AU
+- BE
+- CL
+- DE
+- FR
+- GB
+- JP
+- 'NO'
+- NZ
+- PL
+- RU
+- US
+- ZA
 includes:
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
 - id: BR
   name: Brazil
   type: country
   status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: cooperating
+- id: CA
+  name: Canada
+  type: country
+  status: cooperating
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
 - id: CN
   name: China
   type: country
   status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: cooperating
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '2022-10-19'
 - id: EU
   name: European Union
   type: organization
   status: member
+- id: FI
+  name: Finland
+  type: country
+  status: cooperating
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+- id: GR
+  name: Greece
+  type: country
+  status: cooperating
 - id: IN
   name: India
   type: country
@@ -61,11 +128,15 @@ includes:
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: cooperating
 - id: NA
   name: Namibia
   type: country
@@ -77,23 +148,35 @@ includes:
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+- id: PK
+  name: Pakistan
+  type: country
+  status: cooperating
+- id: PA
+  name: Panama
+  type: country
+  status: cooperating
+- id: PE
+  name: Peru
+  type: country
+  status: cooperating
 - id: PL
   name: Poland
   type: country
-  status: member
+  status: founding_member
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
 - id: ZA
   name: South Africa
   type: country
-  status: member
+  status: founding_member
 - id: ES
   name: Spain
   type: country
@@ -109,36 +192,117 @@ includes:
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
 - id: UY
   name: Uruguay
   type: country
   status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: cooperating
 membership_count: 27
-description: Commission on the Conservation of Antarctic Marine Living Resources is
-  an international food body with 27 members.
+description: Intergovernmental commission for the conservation of Antarctic marine living resources in the Southern Ocean, established when the CAMLR Convention entered into force on 7 April 1982. Part of the Antarctic Treaty System, CCAMLR uses an ecosystem-based management approach covering krill and other marine living resources south of the Antarctic Convergence. The Commission has 27 Members (26 states and the European Union) that set conservation measures by consensus, plus 10 Acceding States that are Contracting Parties but do not participate in decision-making or the budget. The secretariat is based in Hobart, Tasmania.
 tags:
 - CCAMLR
+- Antarctica
+- Southern-Ocean
 - agriculture
 - antarctic
 - commission
 - conservation
 - environment
-- farming
+- fisheries
 - food
+- intergovernmental
+- krill
 - nature
+- rfmo
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Commission for the Conservation of Antarctic Marine Living Resources
+- id: de
+  name: Kommission zur Erhaltung der lebenden Meeresschätze der Antarktis
+- id: es
+  name: Comisión para la Conservación de los Recursos Vivos Marinos Antárticos
+- id: fr
+  name: Commission pour la conservation de la faune et la flore marines de l'Antarctique
+- id: ru
+  name: Комиссия по сохранению морских живых ресурсов Антарктики
+- id: zh
+  name: 南极海洋生物资源养护委员会
+wikidata_id: Q97382426
+notes: The CAMLR Convention was adopted in Canberra on 20 May 1980 and opened for signature from 1 August to 31 December 1980 by States participating in the Canberra conference; original signatories (founding Members) include Argentina, Australia, Belgium, Chile, France, Germany (FRG and GDR), Japan, New Zealand, Norway, Poland, South Africa, the Soviet Union (succeeded by the Russian Federation), the United Kingdom, and the United States. Acceding States (Bulgaria, Canada, Cook Islands, Finland, Greece, Mauritius, Pakistan, Panama, Peru, and Vanuatu) have acceded to the Convention but are not Commission Members. Ecuador became a Commission Member on 19 October 2022. The Netherlands previously held Acceding State status before becoming a Member.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: CCAMLR Members and Acceding States pages
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation/members
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: CCAMLR; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: founded
+  source: CCAMLR; CAMLR Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: active_period
+  source: CCAMLR
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: founding_members
+  source: CAMLR Convention; UK Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/node/74528
+- field: legal_status
+  source: CCAMLR
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: recognition_status
+  source: CCAMLR
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: geographic_scope
+  source: CCAMLR
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q97382426
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q97382426
+  license: CC0
+- field: other_names
+  source: Wikidata; official CCAMLR languages
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q97382426
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q97382426
+  license: CC0
+- field: notes
+  source: CCAMLR official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ccamlr.org/en/organisation/acceding-states

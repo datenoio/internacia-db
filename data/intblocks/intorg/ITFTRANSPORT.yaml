@@ -1,31 +1,49 @@
 id: ITFTRANSPORT
+name: International Transport Workers' Federation
 blocktype:
 - intorg
 - transport
 status: formal
+founded: '1896-06-30'
+geographic_scope: global
 languages:
+- ar
+- de
 - en
+- es
+- fr
+- ru
 links:
 - url: https://www.itfglobal.org/
   type: website
+- url: https://www.itfglobal.org/en/about-us/our-affiliates
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Transport_Workers%27_Federation
   type: wikipedia
-name: International Transport Workers' Federation
-founded: '1896'
+- url: https://www.wikidata.org/wiki/Q1665560
+  type: wikidata
+- url: https://uia.org/s/or/en/1100011942
+  type: website
+acronyms:
+- lang: en
+  value: ITF
+- lang: en
+  value: ITWF
+legal_status: global union federation
+recognition_status: Democratic affiliate-led global union federation for transport workers; trade secretariat of the International
+  Trade Union Confederation (ITUC); consultative status with IMO and other UN agencies
 headquarters:
   city: London
   country: GB
   coordinates:
-    lat: 51.5074
-    lng: -0.1278
-acronyms:
-- lang: en
-  value: ITF
-geographic_scope: global
-description: Global union federation representing transport workers across various sectors including rail, maritime, aviation,
-  and road transport. The ITF works to protect and advance the interests of transport workers worldwide, promoting safe working
-  conditions, fair wages, and workers' rights. The federation comprises numerous member organizations from various countries,
-  representing millions of transport workers globally.
+    lat: 51.49929183021543
+    lng: -0.09876140352115553
+wikidata_id: Q1665560
+description: Global union federation representing transport workers in aviation, dockers, fisheries, inland navigation, railways,
+  road transport, seafarers, tourism, urban transport, and warehousing. Founded in June 1896 and headquartered in London,
+  the ITF connects more than 760 affiliated trade unions in about 150 countries, representing over 16.6 million workers. Membership
+  is held by trade unions, not states; the country roster below lists states and territories with at least one ITF affiliate
+  in the official affiliates directory.
 tags:
 - ITF
 - ITFTRANSPORT
@@ -43,43 +61,27 @@ topics:
 - key: labor
   name: Labor
 other_names:
-- id: zh
-  name: 国际运输工人联合会
+- id: ar
+  name: الاتحاد الدولي لعمال النقل
+- id: de
+  name: Internationale Transportarbeiter-Föderation
 - id: en
   name: International Transport Workers' Federation
-- id: fr
-  name: Fédération internationale des ouvriers du transport
 - id: es
   name: Federación Internacional de los Trabajadores del Transporte
+- id: fr
+  name: Fédération internationale des ouvriers du transport
 - id: ru
-  name: Международная федерация транспортников
+  name: Международная федерация транспортных рабочих
+- id: zh
+  name: 国际运输工人联合会
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
 - id: AL
   name: Albania
-  type: country
-  status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AO
-  name: Angola
   type: country
   status: member
 - id: AR
@@ -134,8 +136,8 @@ includes:
   name: Benin
   type: country
   status: member
-- id: BN
-  name: Brunei Darussalam
+- id: BM
+  name: Bermuda
   type: country
   status: member
 - id: BO
@@ -150,20 +152,12 @@ includes:
   name: Bahamas, The
   type: country
   status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
 - id: BW
   name: Botswana
   type: country
   status: member
 - id: BY
   name: Belarus
-  type: country
-  status: member
-- id: BZ
-  name: Belize
   type: country
   status: member
 - id: CA
@@ -190,10 +184,6 @@ includes:
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CK
-  name: Cook Islands
-  type: country
-  status: member
 - id: CL
   name: Chile
   type: country
@@ -212,10 +202,6 @@ includes:
   status: member
 - id: CR
   name: Costa Rica
-  type: country
-  status: member
-- id: CU
-  name: Cuba
   type: country
   status: member
 - id: CV
@@ -240,10 +226,6 @@ includes:
   status: member
 - id: DK
   name: Denmark
-  type: country
-  status: member
-- id: DM
-  name: Dominica
   type: country
   status: member
 - id: DO
@@ -286,8 +268,8 @@ includes:
   name: Fiji
   type: country
   status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
+- id: FO
+  name: Faeroe Islands
   type: country
   status: member
 - id: FR
@@ -322,10 +304,6 @@ includes:
   name: Guinea
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
 - id: GR
   name: Greece
   type: country
@@ -342,16 +320,16 @@ includes:
   name: Guyana
   type: country
   status: member
+- id: HK
+  name: Hong Kong SAR, China
+  type: country
+  status: member
 - id: HN
   name: Honduras
   type: country
   status: member
 - id: HR
   name: Croatia
-  type: country
-  status: member
-- id: HT
-  name: Haiti
   type: country
   status: member
 - id: HU
@@ -370,8 +348,8 @@ includes:
   name: Israel
   type: country
   status: member
-- id: IN
-  name: India
+- id: IO
+  name: British Indian Ocean Territory
   type: country
   status: member
 - id: IQ
@@ -422,14 +400,6 @@ includes:
   name: Comoros
   type: country
   status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
 - id: KR
   name: Korea, Rep.
   type: country
@@ -440,10 +410,6 @@ includes:
   status: member
 - id: KZ
   name: Kazakhstan
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
   type: country
   status: member
 - id: LB
@@ -486,24 +452,12 @@ includes:
   name: Morocco
   type: country
   status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
 - id: ME
   name: Montenegro
   type: country
   status: member
 - id: MG
   name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
   type: country
   status: member
 - id: MK
@@ -534,10 +488,6 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
 - id: MW
   name: Malawi
   type: country
@@ -558,10 +508,6 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
 - id: NG
   name: Nigeria
   type: country
@@ -580,14 +526,6 @@ includes:
   status: member
 - id: NP
   name: Nepal
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
   type: country
   status: member
 - id: NZ
@@ -622,20 +560,16 @@ includes:
   name: Poland
   type: country
   status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
 - id: PT
   name: Portugal
   type: country
   status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
 - id: PY
   name: Paraguay
-  type: country
-  status: member
-- id: QA
-  name: Qatar
   type: country
   status: member
 - id: RO
@@ -646,28 +580,12 @@ includes:
   name: Serbia
   type: country
   status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
 - id: RW
   name: Rwanda
   type: country
   status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
 - id: SB
   name: Solomon Islands
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SD
-  name: Sudan
   type: country
   status: member
 - id: SE
@@ -682,16 +600,8 @@ includes:
   name: Slovenia
   type: country
   status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
 - id: SL
   name: Sierra Leone
-  type: country
-  status: member
-- id: SM
-  name: San Marino
   type: country
   status: member
 - id: SN
@@ -710,16 +620,8 @@ includes:
   name: South Sudan
   type: country
   status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
 - id: SV
   name: El Salvador
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
   type: country
   status: member
 - id: SZ
@@ -738,24 +640,12 @@ includes:
   name: Thailand
   type: country
   status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
 - id: TL
   name: Timor-Leste
   type: country
   status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
 - id: TN
   name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -768,6 +658,10 @@ includes:
   status: member
 - id: TV
   name: Tuvalu
+  type: country
+  status: member
+- id: TW
+  name: Taiwan
   type: country
   status: member
 - id: TZ
@@ -794,20 +688,8 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
 - id: VE
   name: Venezuela, RB
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
   type: country
   status: member
 - id: WS
@@ -830,13 +712,40 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 194
+membership_count: 159
+notes: Membership is union-based (~760 affiliates as of 2026); includes lists 159 countries and territories with at least
+  one affiliate in the official ITF affiliates directory. The 'America' filter label on the ITF site is omitted as it is not
+  a country code. Duplicate Bahrain and Oman entries on the ITF site are deduplicated.
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: ITF affiliates directory
+  retrieved_at: '2026-07-29'
+  url: https://www.itfglobal.org/en/about-us/our-affiliates
+- field: description
+  source: ITF official website; Wikidata
+  retrieved_at: '2026-07-29'
   url: https://www.itfglobal.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1665560
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.itfglobal.org/
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1665560
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1665560
+  license: CC0
+- field: recognition_status
+  source: UIA Yearbook; ITF official website
+  retrieved_at: '2026-07-29'
+  url: https://uia.org/s/or/en/1100011942
+- field: membership_count
+  source: ITF affiliates directory
+  retrieved_at: '2026-07-29'
+  url: https://www.itfglobal.org/en/about-us/our-affiliates

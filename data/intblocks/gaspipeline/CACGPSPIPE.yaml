@@ -1,11 +1,20 @@
 id: CACGPSPIPE
+name: Central Asia–Center gas pipeline system
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '1969'
+geographic_scope: regional
+regions:
+- Asia
 links:
 - url: https://en.wikipedia.org/wiki/Central_Asia_%E2%80%93_Center_gas_pipeline_system
   type: wikipedia
-name: Central Asia – Center gas pipeline system
+- url: https://www.wikidata.org/wiki/Q727880
+  type: wikidata
+acronyms:
+- lang: en
+  value: CAC
 includes:
 - id: TM
   name: Turkmenistan
@@ -24,20 +33,27 @@ includes:
   type: country
   status: member
 membership_count: 4
-description: Central Asia – Center gas pipeline system is an international gaspipeline
-  body with 4 members.
+wikidata_id: Q727880
+description: Gazprom-controlled system of natural gas pipelines from Turkmenistan via Uzbekistan
+  and Kazakhstan to Russia. The eastern branch (CAC-1, 2, 4, and 5) originates at Turkmen gas
+  fields such as Dauletabad and Shatlyk; the western branch (CAC-3) runs from the Caspian coast.
+  Built between 1960 and 1988, with the first section completed in 1960 and main lines commissioned
+  from 1969; it carries most Uzbek and Turkmen gas exports to Russia via Alexandrov Gay.
 tags:
 - CACGPSPIPE
 - asia
-- aviation
-- center
-- central
+- central-asia
 - economy
 - energy
+- gazprom
 - gaspipeline
-- oil
+- kazakhstan
+- pipeline
+- russia
 - transport
 - transportation
+- turkmenistan
+- uzbekistan
 topics:
 - key: economy
   name: Economy
@@ -45,7 +61,64 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: az
+  name: Mərkəzi Asiya - Mərkəzi qaz kəməri sistemi
+- id: bg
+  name: Централна Азия - Център
+- id: en
+  name: Central Asia–Center gas pipeline system
+- id: eo
+  name: Centrazia-Rusia gasodukto
+- id: fa
+  name: خط لوله گاز آسیای مرکزی-مرکز
+- id: hu
+  name: Közép-Ázsia–Központ-gázvezetékrendszer
+- id: ru
+  name: Средняя Азия — Центр
+- id: tr
+  name: Orta Asya-Merkez boru hattı sistemi
+- id: uk
+  name: Газопровід Центральна Азія — Центр
+- id: uz
+  name: Oʻrta osiyo markaz magistral gaz yoʻli
+- id: zh
+  name: 中亚细亚－中央区输气管道系统
+notes: Also known as the Central Asia–Center (CAC) pipeline system. The eastern and western branches
+  meet in western Kazakhstan before connecting to the Russian gas network at Alexandrov Gay.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q727880
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q727880
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_%E2%80%93_Center_gas_pipeline_system
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q727880
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_%E2%80%93_Center_gas_pipeline_system
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_%E2%80%93_Center_gas_pipeline_system
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_%E2%80%93_Center_gas_pipeline_system

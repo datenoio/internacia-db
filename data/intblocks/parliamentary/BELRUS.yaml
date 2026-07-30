@@ -1,37 +1,77 @@
 id: BELRUS
+name: Parliamentary Assembly of Union of Belarus and Russia
 blocktype:
 - parliamentary
 status: formal
 partof: BRU
+founded: '1996-04-29'
+active_period:
+  start: '1996-04-29'
+geographic_scope: regional
+regions:
+- Europe
+- Eastern Europe
 languages:
+- be
 - ru
 links:
-- url: http://www.belrus.ru/
+- url: https://belrus.ru/
   type: website
-- url: https://en.wikipedia.org/wiki/Union_State
+- url: https://xn--c1anggbdpdf.xn--p1ai/en/higher_authorities/parliamentary_assembly.php
+  type: website
+- url: https://en.wikipedia.org/wiki/Union_State_of_Russia_and_Belarus#Parliament
   type: wikipedia
-name: Parliamentary Assembly of Union of Belarus and Russia
+acronyms:
+- lang: en
+  value: BELRUS
+- lang: ru
+  value: ПС СБР
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7629
+    lng: 37.6342
 includes:
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-04-29'
 - id: BY
   name: Belarus
   type: country
-  status: member
-founded: '1996'
+  status: founding_member
+  joined: '1996-04-29'
+founding_members:
+- RU
+- BY
 membership_count: 2
-description: Parliamentary Assembly of Union of Belarus and Russia is an international
-  parliamentary body with 2 members.
+description: Representative and legislative body of the Union State of Russia and Belarus,
+  established by agreement of the heads of the parliaments of Russia and Belarus signed
+  on 29 April 1996 in Saint Petersburg. Transformed from the Parliamentary Assembly
+  of the Community of Russia and Belarus following the 1997 Union Charter. Under Article
+  70 of the 1999 Treaty on the Establishment of the Union State, it performs the functions
+  of the Union State Parliament pending elections to a permanent House of Representatives.
+  Comprises 72 deputies in equal delegations of 36 from each state's national parliament
+  (Council of the Republic and House of Representatives of Belarus; Federation Council
+  and State Duma of Russia). Drafts model legislation, harmonizes national laws, and
+  holds plenary sessions twice yearly.
+notes: Individual deputies are delegated by national parliamentary chambers and are
+  not modeled as separate includes. Holds observer status in the CSTO Parliamentary
+  Assembly (PA CSTO) since 2010. Maintains standing commissions, a scientific advisory
+  council, and a Youth Chamber. Secretariat is based in Moscow with a representation
+  office in Minsk.
 tags:
 - BELRUS
 - assembly
-- cooperation
+- belarus
+- interparliamentary
 - parliamentary
 - political
 - regional
 - regional_cooperation
+- russia
 - union
 topics:
 - key: parliamentary
@@ -41,19 +81,43 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
-- id: ar
-  name: دولة الاتحاد
-- id: zh
-  name: 俄白联盟国
+- id: be
+  name: Парламенцкая Асамблея Саюза Беларусі і Расіі
 - id: en
-  name: Union State
-- id: fr
-  name: Union de la Russie et de la Biélorussie
+  name: Parliamentary Assembly of the Union of Belarus and Russia
 - id: ru
-  name: Союзное государство
-- id: es
-  name: Unión de Rusia y Bielorrusia
+  name: Парламентское Собрание Союза Беларуси и России
+last_verified: '2026-07-29'
 provenance:
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/content/o-parlamentskom-sobranii/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://xn--c1anggbdpdf.xn--p1ai/en/higher_authorities/parliamentary_assembly.php
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://xn--c1anggbdpdf.xn--p1ai/en/higher_authorities/parliamentary_assembly.php
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/info/kontakty/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/content/o-parlamentskom-sobranii/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/content/o-parlamentskom-sobranii/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://belrus.ru/content/o-parlamentskom-sobranii/

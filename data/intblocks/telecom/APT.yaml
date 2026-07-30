@@ -1,172 +1,59 @@
 id: APT
+name: Asia-Pacific Telecommunity
 blocktype:
 - telecom
 status: formal
+founded: '1979-07-01'
+active_period:
+  start: '1979-07-01'
+geographic_scope: regional
+regions:
+- Asia
+- Asia-Pacific
+- Oceania
 languages:
 - en
 links:
+- url: https://www.apt.int/
+  type: website
+- url: https://www.apt.int/aptmembers
+  type: website
+- url: https://www.apt.int/aptassociatemember
+  type: website
 - url: https://en.wikipedia.org/wiki/Asia-Pacific_Telecommunity
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4806261
   type: wikidata
-name: Asia-Pacific Telecommunity
-founded: '1979'
-includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
+acronyms:
+- lang: en
+  value: APT
+- lang: zh
+  value: 亚洲—太平洋地区电信组织
+headquarters:
+  city: Bangkok
+  country: TH
+  coordinates:
+    lat: 13.8852767
+    lng: 100.5768847
+legal_status: intergovernmental organization established by treaty
 membership_count: 38
-wikidata_id: Q4806261
-description: Telecommunications union.
+founding_members:
+- AF
+- AU
+- BD
+- CN
+- IN
+- JP
+- KR
+- MY
+- MM
+- NR
+- NP
+- PK
+- PH
+- SG
+- TH
+description: Intergovernmental organization for telecommunications and ICT in the Asia-Pacific region. Established by the Constitution of the Asia-Pacific Telecommunity (adopted 27 March 1976, in force 25 February 1979) with joint initiatives of UNESCAP and the ITU, APT coordinates regional harmonization of telecom policy, spectrum management, standardization, and capacity building. Full membership comprises 38 ESCAP member states; Cook Islands, Hong Kong, Macao, and Niue participate as associate members.
 tags:
 - APT
 - asia
@@ -193,17 +80,256 @@ other_names:
   name: 亚太电信组织
 - id: en
   name: Asia-Pacific Telecommunity
+notes: >-
+  APT has three membership categories: 38 full member states (membership_count), 4 associate members (Cook Islands,
+  Hong Kong, Macao, Niue), and affiliate members (private-sector entities; not listed in includes).
+last_verified: '2026-07-30'
+includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: AU
+  name: Australia
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: BD
+  name: Bangladesh
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
+  joined: '1998-07-22'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '1986-03-18'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2007-05-05'
+- id: CN
+  name: China
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
+  joined: '1994-03-24'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '1999-12-29'
+- id: IN
+  name: India
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '1985-05-29'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '1980-04-01'
+- id: JP
+  name: Japan
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+  joined: '2011-11-06'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '1989-11-19'
+- id: MY
+  name: Malaysia
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+  joined: '1980-04-16'
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+  joined: '2005-02-24'
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+  joined: '1994-01-27'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '1991-09-13'
+- id: MM
+  name: Myanmar
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: NR
+  name: Nauru
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: NP
+  name: Nepal
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '1993-02-12'
+- id: PK
+  name: Pakistan
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: PW
+  name: Palau
+  type: country
+  status: member
+  joined: '1996-07-19'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '1993-01-16'
+- id: PH
+  name: Philippines
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  joined: '2000-12-06'
+- id: SG
+  name: Singapore
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '2010-06-16'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  joined: '1979-11-01'
+- id: TH
+  name: Thailand
+  type: country
+  status: founding_member
+  joined: '1979-07-01'
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '1992-03-15'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+  joined: '2011-10-13'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '2010-11-10'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '1979-10-10'
+- id: CK
+  name: Cook Islands
+  type: territory
+  status: associate_member
+  joined: '1987-08-20'
+- id: HK
+  name: Hong Kong, China
+  type: territory
+  status: associate_member
+  joined: '1979-07-01'
+- id: MO
+  name: Macao, China
+  type: territory
+  status: associate_member
+  joined: '1993-03-11'
+- id: NU
+  name: Niue
+  type: territory
+  status: associate_member
+  joined: '2002-07-16'
+wikidata_id: Q4806261
 provenance:
+- field: includes
+  source: APT official website
+  retrieved_at: '2026-07-30'
+  url: https://www.apt.int/aptmembers
+- field: includes
+  source: APT official website
+  retrieved_at: '2026-07-30'
+  url: https://www.apt.int/aptassociatemember
 - field: description
+  source: APT official website and Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Asia-Pacific_Telecommunity
+  license: CC BY-SA 4.0
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4806261
   license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4806261
+  license: CC0
+- field: membership_count
+  source: APT official website
+  retrieved_at: '2026-07-30'
+  url: https://www.apt.int/aptmembers
+- field: founding_members
+  source: APT official website
+  retrieved_at: '2026-07-30'
+  url: https://www.apt.int/aptmembers
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: 亚洲—太平洋地区电信组织

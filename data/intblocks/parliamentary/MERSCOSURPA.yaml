@@ -1,71 +1,105 @@
 id: MERSCOSURPA
+name: Mercosur Parliament
 blocktype:
 - parliamentary
 status: formal
 partof: MERCOSUR
+founded: '2005-12-09'
+active_period:
+  start: '2007-05-07'
+geographic_scope: regional
+regions:
+- South America
 languages:
 - es
 - pt
 links:
-- url: http://www.parlamentodelmercosur.org/
+- url: https://www.parlamentomercosur.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Mercosur_Parliament
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2723083
   type: wikidata
-name: Mercosur Parliament
+acronyms:
+- lang: es
+  value: Parlasur
+- lang: pt
+  value: Parlasul
 headquarters:
   city: Montevideo
   country: UY
   coordinates:
     lat: -34.90591666666667
     lng: -56.19131111111111
-acronyms:
-- lang: en
-  value: Parlasul
-- lang: en
-  value: Parlasur
 includes:
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
+  joined: '2005-12-09'
+- id: BR
+  name: Brazil
+  type: country
+  status: founding_member
+  joined: '2005-12-09'
+- id: PY
+  name: Paraguay
+  type: country
+  status: founding_member
+  joined: '2005-12-09'
+- id: UY
+  name: Uruguay
+  type: country
+  status: founding_member
+  joined: '2005-12-09'
 - id: BO
   name: Bolivia
   type: country
   status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
+  joined: '2024-07-08'
 - id: VE
   name: Venezuela
   type: country
   status: member
+  joined: '2012-07-31'
+founding_members:
+- AR
+- BR
+- PY
+- UY
 membership_count: 6
-wikidata_id: Q2723083
-description: Consultive legislature for Mercosur.
+description: Consultative parliamentary institution of the Southern Common Market (Mercosur),
+  established by the Constitutive Protocol signed on 9 December 2005 at Montevideo by the
+  presidents of Argentina, Brazil, Paraguay, and Uruguay. Held its first session on 7 May 2007,
+  replacing the Joint Parliamentary Commission. Composed of national parliamentarians delegated
+  by member-state legislatures; direct elections were introduced in Paraguay from 2008 with
+  other states adopting them on a staggered schedule. Issues recommendations on Mercosur
+  integration legislation without supranational lawmaking power. Headquarters in Montevideo.
+notes: Venezuela acceded to Mercosur in July 2012 and holds a reduced delegation as an applying
+  member; Mercosur suspended Venezuela from bloc decisions in December 2016 but Parlasur
+  continues to seat Venezuelan parliamentarians. Bolivia became a full Mercosur member in
+  July 2024. Chile, Colombia, Ecuador, and Peru participate as Mercosur associate states and
+  may hold non-voting seats in the Parliament.
 tags:
 - MERSCOSURPA
 - PARLASUL
 - PARLASUR
+- integration
 - mercosur
 - parliament
 - parliamentary
 - political
+- regional
+- regional_cooperation
+- south_america
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q2723083
 other_names:
 - id: de
   name: Parlament des Mercosur
@@ -79,6 +113,7 @@ other_names:
   name: Parlamento do Mercosul
 - id: zh
   name: 南方共同市場議會
+last_verified: '2026-07-29'
 provenance:
 - field: description
   source: Wikidata
@@ -93,4 +128,29 @@ provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.parlamentodelmercosur.org/
+  url: https://www.parlamentomercosur.org/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mercosur_Parliament
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mercosur_Parliament
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mercosur_Parliament
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mercosur_Parliament
+  license: CC BY-SA 4.0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2723083
+  license: CC0

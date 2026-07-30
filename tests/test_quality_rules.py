@@ -212,6 +212,31 @@ def test_provenance_invalid_date_reported():
     assert _types(issues) == ["PROVENANCE_INTEGRITY"]
 
 
+def test_insufficient_provenance_reported():
+    record = {"name": "X", "provenance": [{"field": "name", "retrieved_at": "2026-01-01"}]}
+    issues = country_rules.check_provenance_count(record, min_count=4)
+    assert _types(issues) == ["INSUFFICIENT_PROVENANCE"]
+    assert issues[0]["current_value"] == "1"
+
+
+def test_provenance_count_at_minimum_passes():
+    record = {
+        "name": "X",
+        "provenance": [
+            {"field": "name", "retrieved_at": "2026-01-01"},
+            {"field": "name", "retrieved_at": "2026-01-02"},
+            {"field": "name", "retrieved_at": "2026-01-03"},
+            {"field": "name", "retrieved_at": "2026-01-04"},
+        ],
+    }
+    assert country_rules.check_provenance_count(record, min_count=4) == []
+
+
+def test_provenance_count_disabled_when_min_zero():
+    record = {"name": "X"}
+    assert country_rules.check_provenance_count(record, min_count=0) == []
+
+
 # --- Coordinates and currencies ------------------------------------------------------
 
 def test_capital_city_out_of_range_lat_reported():

@@ -1,15 +1,20 @@
 id: MINT
-name: MINT countries
 blocktype:
 - economic
 - acronym
 status: informal
+founded: '2011'
 geographic_scope: global
 links:
+- url: https://www.wealthbriefing.com/html/article.php/Move-Over-BRICs%2C-Here-Come-The-MINTs-_dash_-Fidelity-
+  type: website
+- url: https://www.reuters.com/article/business/bric-or-mint-investors-suffer-acronym-anxiety-idUSBREA0J0V6/
+  type: website
 - url: https://en.wikipedia.org/wiki/MINT_(economics)
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q16512047
   type: wikidata
+name: MINT countries
 includes:
 - id: MX
   name: Mexico
@@ -24,14 +29,23 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 membership_count: 4
-description: Economies of Mexico, Indonesia, Nigeria and Turkey.
+wikidata_id: Q16512047
+description: MINT is an acronym for Mexico, Indonesia, Nigeria, and Turkey — four emerging-market economies grouped for
+  their favorable demographics, large populations, and long-term growth potential. Fidelity International coined the term
+  in May 2011 as a successor investment theme to the BRICs; former Goldman Sachs economist Jim O'Neill popularized the
+  grouping in a November 2013 BBC radio series, framing MINT as an economic concept rather than a formal alliance.
 tags:
 - MINT
 - acronym
+- emerging
+- indonesia
+- mexico
+- nigeria
+- turkey
 - aid
 - commerce
 - development
@@ -45,7 +59,11 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-wikidata_id: Q16512047
+acronyms:
+- lang: en
+  value: MINT
+- lang: zh
+  value: 薄荷四国
 other_names:
 - id: de
   name: MINT-Länder
@@ -59,12 +77,28 @@ other_names:
   name: МИНТ
 - id: zh
   name: 薄荷四國
+notes: Coined by Fidelity International in May 2011 as an emerging-market investment theme; popularized by Jim O'Neill
+  (creator of BRIC) in November 2013 via BBC Radio 4's MINT series. Three members (Mexico, Indonesia, Turkey) also appear
+  in MIST and overlap with CIVETS, TIMBI, VISTA, and E7 groupings; Nigeria provides African representation absent from
+  many peer acronyms. Related but distinct from BRICS, CIVETS, TIMBI, and VISTA.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Fidelity International
+  retrieved_at: '2026-07-29'
+  url: https://www.wealthbriefing.com/html/article.php/Move-Over-BRICs%2C-Here-Come-The-MINTs-_dash_-Fidelity-
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/MINT_(economics)
+- field: founded
+  source: Library of Congress Research Guide
+  retrieved_at: '2026-07-29'
+  url: https://guides.loc.gov/mexico-indonesia-nigeria-turkey/introduction
+- field: notes
+  source: Reuters
+  retrieved_at: '2026-07-29'
+  url: https://www.reuters.com/article/business/bric-or-mint-investors-suffer-acronym-anxiety-idUSBREA0J0V6/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -79,6 +113,3 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/MINT_(economics)
-acronyms:
-- lang: zh
-  value: 薄荷四国

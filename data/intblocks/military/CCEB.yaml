@@ -1,7 +1,12 @@
 id: CCEB
+name: Combined Communications Electronics Board
 blocktype:
 - military
 status: formal
+founded: '1942'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
@@ -9,38 +14,60 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5150848
   type: wikidata
-name: Combined Communications Electronics Board
+acronyms:
+- lang: en
+  value: CCEB
+legal_status: intergovernmental
+wikidata_id: Q5150848
+description: Five-nation joint military communications-electronics (C-E) organization coordinating
+  coalition C-E matters referred by member nations. The CCEB is the sponsoring authority for Allied
+  Communications Publications (ACPs) and directs working groups on operational, procedural, and
+  technical interoperability among Australia, Canada, New Zealand, the United Kingdom, and the United
+  States. Evolved from the wartime Combined Communications Board (1942); renamed the Combined
+  Communications-Electronics Board in 1972 when New Zealand became a full member. Part of the
+  Washington-based Multifora alongside ABCANZ Armies, AUSCANNZUKUS, and the Technical Cooperation
+  Program.
 includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1942'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1942'
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '1951'
+- id: AU
+  name: Australia
+  type: country
+  status: member
+  joined: '1969'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '1972'
 membership_count: 5
-description: Military communications-electronics organization established among Australia,
-  Canada, New Zealand, United Kingdom, and the United States.
+founding_members:
+- GB
+- US
 tags:
 - CCEB
+- C4
+- coalition
 - combined
 - communication
 - communications
 - defense
 - electronics
+- five_eyes
+- interoperability
 - military
 - security
 - telecom
@@ -52,10 +79,29 @@ topics:
   name: Security
 - key: telecommunications
   name: Telecommunications
-wikidata_id: Q5150848
+- key: technology
+  name: Technology
 other_names:
 - id: en
   name: Combined Communications-Electronics Board
+- id: en
+  name: Combined Communications Board
+- id: eo
+  name: Kunigita Komunikad-Elektronika Komitato
+- id: eu
+  name: Komunikazio eta Elektronika Batzorde Konbinatua
+- id: he
+  name: מועצת התקשורת משולבת האלקטרוניקה
+- id: sl
+  name: Združeni odbor za komunikacije in elektroniko
+notes: Established as the Combined Communications Board (CCB) in 1942 among the United Kingdom
+  and United States during World War II; Canada became a full member in 1951, Australia in 1969,
+  and New Zealand in 1972 when the body was renamed the Combined Communications-Electronics Board.
+  The CCB was reduced after October 1949 with NATO's formation but UK–US coordination continued;
+  CCEB interoperability activities are coordinated with NATO and the U.S. Military Communications
+  Electronics Board. The U.S. representative is the Joint Chiefs of Staff Director for C4 Systems
+  (J-6).
+last_verified: '2026-07-29'
 provenance:
 - field: description
   source: Wikidata
@@ -67,6 +113,37 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: en
-  value: CCEB
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5150848
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5150848
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Combined_Communications_Electronics_Board

@@ -1,49 +1,72 @@
 id: NPAFC
+name: North Pacific Anadromous Fish Commission
 blocktype:
 - intorg
 status: formal
+founded: '1992'
+active_period:
+  start: '1993-02-16'
+geographic_scope: regional
+regions:
+- North America
+- Pacific
 languages:
 - en
+- ja
+- ko
 links:
 - url: https://www.npafc.org/
   type: website
 - url: https://en.wikipedia.org/wiki/North_Pacific_Anadromous_Fish_Commission
   type: wikipedia
-name: North Pacific Anadromous Fish Commission
-founded: '1993'
+- url: https://www.wikidata.org/wiki/Q12599115
+  type: wikidata
+acronyms:
+- lang: en
+  value: NPAFC
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established by the Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean (signed 11 February 1992; entered into force 16 February 1993); successor to the dissolved International North Pacific Fisheries Commission (INPFC)
 headquarters:
   city: Vancouver
   country: CA
   coordinates:
     lat: 49.2827
     lng: -123.1207
+  note: Secretariat hosted at the University of British Columbia from 1993; later relocated within Vancouver
+wikidata_id: Q12599115
+description: Intergovernmental fisheries organization whose five member states — Canada, Japan, Korea, the Russian Federation, and the United States — cooperate to conserve anadromous fish stocks (Pacific salmon and steelhead trout) in international waters of the North Pacific Ocean and adjacent seas north of 33°N under the 1992 Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean. The Commission prohibits directed catch of anadromous fish in the Convention Area, coordinates scientific research and enforcement, and publishes catch and hatchery statistics. The Secretariat is headquartered in Vancouver.
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-16'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-16'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
+  joined: '2003-05-27'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-16'
 - id: US
-  name: United States of America
+  name: United States
   type: country
-  status: member
-acronyms:
-- lang: en
-  value: NPAFC
+  status: founding_member
+  joined: '1993-02-16'
+founding_members:
+- CA
+- JP
+- RU
+- US
 membership_count: 5
-description: North Pacific Anadromous Fish Commission is an international intorg body
-  with 5 members.
 tags:
 - NPAFC
 - agriculture
@@ -53,17 +76,49 @@ tags:
 - intorg
 - north
 - pacific
+- salmon
 topics:
 - key: agriculture
   name: Agriculture
 other_names:
 - id: en
   name: North Pacific Anadromous Fish Commission
+- id: ja
+  name: 北太平洋溯河性魚類委員会
+- id: ko
+  name: 북태평양소하성어류위원회
+- id: zh
+  name: 北太平洋溯河性鱼类类委员会
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.npafc.org/
+- field: includes
+  source: Wikipedia; NPAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/North_Pacific_Anadromous_Fish_Commission
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/North_Pacific_Anadromous_Fish_Commission
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12599115
+  license: CC0
+- field: headquarters
+  source: Wikipedia; NPAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.npafc.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12599115
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12599115
+  license: CC0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/North_Pacific_Anadromous_Fish_Commission
+last_verified: '2026-07-29'

@@ -1,7 +1,19 @@
 id: IPPC
+name: The International Plant Protection Convention
 blocktype:
 - intorg
 status: formal
+founded: '1951-12-06'
+active_period:
+  start: '1952-04-03'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - ar
 - en
@@ -12,11 +24,39 @@ languages:
 links:
 - url: https://www.ippc.int/
   type: website
+- url: https://www.ippc.int/en/countries/
+  type: website
+- url: https://treaties.un.org/pages/showDetails.aspx?objid=0800000280066b19
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Plant_Protection_Convention
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1374375
   type: wikidata
-name: The International Plant Protection Convention
+acronyms:
+- lang: en
+  value: IPPC
+legal_status: treaty
+recognition_status: Multilateral treaty on plant health and phytosanitary measures adopted at an FAO conference
+  in Rome on 6 December 1951; entered into force on 3 April 1952; FAO Director-General is depositary; IPPC
+  Secretariat hosted at FAO headquarters in Rome; recognized by the WTO SPS Agreement as the international
+  standard-setting body for plant health
+partof: FAO
+headquarters:
+  city: Rome
+  country: IT
+  coordinates:
+    lat: 41.879444
+    lng: 12.489167
+secretariat:
+  location: Rome
+  organization: IPPC Secretariat (hosted by FAO)
+wikidata_id: Q1374375
+description: Multilateral treaty overseen by the Food and Agriculture Organization that aims to secure coordinated,
+  effective action to prevent and control the introduction and spread of pests of plants and plant products.
+  Extends beyond cultivated plants to natural flora and plant products, including weeds. Contracting parties
+  adopt International Standards for Phytosanitary Measures (ISPMs) through the Commission on Phytosanitary
+  Measures (CPM). As of July 2026 the Convention has 218 contracting parties, including UN member states,
+  the European Union, and certain territories with separate NPPO reporting.
 includes:
 - id: AF
   name: Afghanistan
@@ -891,16 +931,21 @@ includes:
   type: country
   status: member
 membership_count: 218
-wikidata_id: Q1374375
-description: International the.
 tags:
 - IPPC
+- agriculture
 - international
 - intorg
+- phytosanitary
 - plant
+- trade
 topics:
-- key: economy
-  name: Economy
+- key: agriculture
+  name: Agriculture
+- key: trade
+  name: Trade
+- key: environment
+  name: Environment
 other_names:
 - id: ar
   name: اتفاقية وقاية النباتات الدولية
@@ -916,17 +961,45 @@ other_names:
   name: Convenção Internacional de Proteção das Plantas
 - id: zh
   name: 國際植物保護公約
+notes: membership_count includes 217 countries and territories plus the European Union as a contracting party;
+  Canary Islands appears on the IPPC website under Spain's NPPO structure but has no separate ISO country code
+  in Internacia. The Commission on Phytosanitary Measures (CPM) is the governing body of contracting parties.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: IPPC official countries list
+  retrieved_at: '2026-07-29'
+  url: https://www.ippc.int/en/countries/
+- field: description
+  source: Wikipedia; IPPC official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Plant_Protection_Convention
+- field: founded
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374375
+  license: CC0
+- field: recognition_status
+  source: IPPC official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ippc.int/
+- field: headquarters
+  source: IPPC official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374375
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374375
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1374375
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1374375
   license: CC0
-acronyms:
-- lang: en
-  value: IPPC

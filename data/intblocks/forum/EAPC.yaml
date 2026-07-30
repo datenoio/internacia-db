@@ -1,10 +1,19 @@
 id: EAPC
 blocktype:
 - forum
+- political
+- security
 status: formal
 partof: NATO
+founded: '1997-05-29'
+geographic_scope: regional
+regions:
+- Europe
+- Asia
+- North America
 languages:
 - en
+- fr
 links:
 - url: https://www.nato.int/cps/en/natohq/topics_49276.htm
   type: website
@@ -55,7 +64,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: DE
@@ -115,7 +124,7 @@ includes:
   type: country
   status: member
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
   status: member
 - id: KZ
@@ -143,7 +152,7 @@ includes:
   type: country
   status: member
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
 - id: MT
@@ -187,7 +196,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: TJ
@@ -199,7 +208,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 - id: UA
@@ -214,24 +223,39 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-founded: '1997'
-acronyms:
-- lang: en
-  value: EAPR
-- lang: zh
-  value: 北大西洋合作委员会
-- lang: zh
-  value: 北大西洋合作理事會
-- lang: ru
-  value: СЕАП
-- lang: de
-  value: EAPR
 membership_count: 50
 wikidata_id: Q1374456
-description: Organization.
+legal_status: intergovernmental
+headquarters:
+  city: City of Brussels
+  country: BE
+  coordinates:
+    lat: 50.846666666666664
+    lng: 4.351666666666667
+acronyms:
+- lang: en
+  value: EAPC
+- lang: de
+  value: EAPR
+- lang: ru
+  value: СЕАП
+- lang: zh
+  value: 歐洲-大西洋合作委員會
+- lang: zh
+  value: 欧洲－大西洋伙伴关系委员会
+description: >-
+  Multilateral NATO forum for dialogue and consultation on political and security-related issues among Allies and
+  partner countries in the Euro-Atlantic area. Established on 29 May 1997 at Sintra, Portugal, as the successor to the
+  North Atlantic Cooperation Council (NACC, 1991–1997), it provides the overall political framework for NATO’s
+  Partnership for Peace (PfP) programme. The council brings together all 32 NATO Allies and 18 PfP partners (50 members
+  in total). Ambassadors meet monthly at NATO Headquarters in Brussels; foreign and defence ministers meet annually.
+  Work covers crisis management, arms control and non-proliferation, counter-terrorism, regional security, and civil
+  emergency planning.
 tags:
 - EAPC
 - EAPR
+- NATO
+- PfP
 - atlantic
 - cooperation
 - euro
@@ -240,11 +264,22 @@ tags:
 - political
 - regional
 - regional_cooperation
+- security
 topics:
 - key: political
   name: Political
+- key: security
+  name: Security
 - key: regional_cooperation
   name: Regional Cooperation
+- key: arms_control
+  name: Arms Control
+- key: counter_terrorism
+  name: Counter Terrorism
+- key: military
+  name: Military
+- key: peace
+  name: Peace
 other_names:
 - id: ar
   name: مجلس الشراكة الأوروبية الأطلسية
@@ -252,27 +287,84 @@ other_names:
   name: Euro-Atlantischer Partnerschaftsrat
 - id: en
   name: Euro-Atlantic Partnership Council
+- id: es
+  name: Consejo de Asociación Euroatlántica
 - id: fr
   name: Conseil de partenariat euro-atlantique
+- id: it
+  name: Consiglio di partenariato euro-atlantico
+- id: ja
+  name: 欧州・大西洋パートナーシップ理事会
+- id: nl
+  name: Euro-Atlantische Partnerschapsraad
+- id: pl
+  name: Rada Partnerstwa Euroatlantyckiego
 - id: pt
   name: Conselho de Parceria Euroatlântica
 - id: ru
   name: Совет евро-атлантического партнёрства
+- id: tr
+  name: Avrupa-Atlantik Ortaklık Konseyi
+- id: uk
+  name: Рада євроатлантичного партнерства
 - id: zh
   name: 歐洲-大西洋合作委員會
+previous_names:
+- id: en
+  name: North Atlantic Cooperation Council
+  period: 1991-1997
+- id: en
+  name: NACC
+  period: 1991-1997
+notes: >-
+  Roster matches NATO’s stated composition of 32 Allies plus 18 Partnership for Peace partners (50 members).
+  Partnerships with Russia and Belarus remain suspended following North Atlantic Council decisions after the 2022
+  Russian invasion of Ukraine; both countries are retained in includes as members per the official 50-nation count.
+  Finland and Sweden are recorded as Allies after NATO accession (2023 and 2024). Malta rejoined PfP/EAPC in 2008 after
+  suspending participation in 1996. The EAPC succeeded the North Atlantic Cooperation Council (NACC), which has no
+  separate Internacia intblock record.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/cps/en/natohq/topics_49276.htm
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/cps/en/natohq/topics_49276.htm
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/cps/en/natohq/topics_49276.htm
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Euro-Atlantic_Partnership_Council
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/cps/en/natohq/topics_49276.htm
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Euro-Atlantic_Partnership_Council
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/cps/en/natohq/topics_49276.htm
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374456
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374456
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1374456
   license: CC0

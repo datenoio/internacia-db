@@ -4,12 +4,22 @@ blocktype:
 - ocean
 - environment
 status: formal
-founded: '1992'
+founded: '1992-09-22'
+active_period:
+  start: '1998-03-25'
+geographic_scope: regional
+regions:
+- North-East Atlantic
+- Europe
 languages:
 - en
 - fr
 links:
 - url: https://www.ospar.org/
+  type: website
+- url: https://www.ospar.org/organisation/contracting-parties
+  type: website
+- url: https://www.ospar.org/convention
   type: website
 - url: https://en.wikipedia.org/wiki/OSPAR_Commission
   type: wikipedia
@@ -19,15 +29,107 @@ name: OSPAR Commission
 acronyms:
 - lang: en
   value: OSPAR
-geographic_scope: regional
-regions:
-- North-East Atlantic
-- Europe
-wikidata_id: Q7076363
-description: Intergovernmental organization established by the Convention for the Protection of the Marine Environment of
-  the North-East Atlantic. OSPAR works to prevent and eliminate pollution and to protect the maritime area against the adverse
-  effects of human activities.
 legal_status: intergovernmental
+recognition_status: Regional sea convention for the North-East Atlantic, successor to the 1972 Oslo Convention and 1974 Paris
+  Convention; administered by the OSPAR Commission with a secretariat in London
+headquarters:
+  city: London
+  country: GB
+  coordinates:
+    lat: 51.5208
+    lng: -0.0865
+  note: Secretariat at The Aspect, 12 Finsbury Square, London EC2A 1AS
+secretariat:
+  location: London, United Kingdom
+  organization: OSPAR Commission Secretariat
+membership_count: 16
+description: Intergovernmental organization established by the Convention for the Protection of the Marine Environment of
+  the North-East Atlantic (the OSPAR Convention). Opened for signature in Paris on 22 September 1992 and entered into force
+  on 25 March 1998, replacing the 1972 Oslo Convention on dumping and the 1974 Paris Convention on land-based sources of marine
+  pollution. OSPAR works to prevent and eliminate pollution and to protect the maritime area against the adverse effects of
+  human activities, including biodiversity and ecosystems under Annex V.
+includes:
+- id: BE
+  name: Belgium
+  type: country
+  status: founding_member
+- id: CH
+  name: Switzerland
+  type: country
+  status: founding_member
+- id: DE
+  name: Germany
+  type: country
+  status: founding_member
+- id: DK
+  name: Denmark
+  type: country
+  status: founding_member
+- id: ES
+  name: Spain
+  type: country
+  status: founding_member
+- id: EU
+  name: European Union
+  type: organization
+  status: founding_member
+- id: FI
+  name: Finland
+  type: country
+  status: founding_member
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+- id: IE
+  name: Ireland
+  type: country
+  status: founding_member
+- id: IS
+  name: Iceland
+  type: country
+  status: founding_member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: founding_member
+- id: NL
+  name: Netherlands
+  type: country
+  status: founding_member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: founding_member
+- id: PT
+  name: Portugal
+  type: country
+  status: founding_member
+- id: SE
+  name: Sweden
+  type: country
+  status: founding_member
+founding_members:
+- BE
+- CH
+- DE
+- DK
+- ES
+- FI
+- FR
+- GB
+- IE
+- IS
+- LU
+- NL
+- 'NO'
+- PT
+- SE
+wikidata_id: Q7076363
 tags:
 - OSPAR
 - ocean
@@ -36,6 +138,8 @@ tags:
 - marine
 - protection
 - agreement
+- regional_cooperation
+- convention
 topics:
 - key: ocean
   name: Ocean
@@ -43,81 +147,62 @@ topics:
   name: Environment
 - key: marine
   name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: OSPAR Commission
 - id: en
   name: Convention for the Protection of the Marine Environment of the North-East Atlantic
+- id: en
+  name: OSPAR Convention
 - id: fr
   name: Commission OSPAR
-includes:
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-membership_count: 15
+- id: fr
+  name: Convention pour la protection du milieu marin de l'Atlantique du Nord-Est
+notes: The name OSPAR combines Oslo and Paris, reflecting the predecessor 1972 Oslo and 1974 Paris Conventions. France is
+  the depositary. Finland is a Contracting Party because some of its rivers drain to the Barents Sea; Luxembourg and Switzerland
+  participate as upstream states in the Rhine catchment. Working languages are English and French. The Commission comprises
+  15 governments and the European Union (16 Contracting Parties).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/organisation/contracting-parties
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/convention
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/convention
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/convention
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/contact
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/convention
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.ospar.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/convention
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.ospar.org/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ospar.org/organisation/contracting-parties

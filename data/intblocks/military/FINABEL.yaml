@@ -1,129 +1,188 @@
 id: FINABEL
+name: Finabel
 blocktype:
 - military
 status: formal
+founded: '1953'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
 links:
+- url: https://www.finabel.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Finabel
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3072338
   type: wikidata
-name: Finabel
-founded: '1953'
+acronyms:
+- lang: en
+  value: FINABEL
+- lang: en
+  value: FINBEL
+legal_status: informal
+wikidata_id: Q3072338
+description: European land-forces organisation promoting cooperation and interoperability
+  among member states' armies through harmonisation of concepts, doctrines, and procedures.
+  Founded in 1953 as FINBEL by France, Italy, Belgium, Luxembourg, and the Netherlands
+  (renamed FINABEL when West Germany joined in 1956), Finabel is governed by member
+  states' army chiefs of staff and produces studies, equipment agreements, and procedural
+  conventions via working groups. Membership is open to EU member states; the permanent
+  secretariat is in Brussels. Finabel complements NATO and EU military structures
+  and operates by consensus among equal member states.
 includes:
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1953'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1953'
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '1953'
 - id: LU
   name: Luxembourg
   type: country
   status: member
+  joined: '1953'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1953'
 - id: DE
   name: Germany
   type: country
   status: member
+  joined: '1956'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1973'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1990'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1996'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1996'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2006'
 - id: SK
   name: Slovakia
   type: country
   status: member
+  joined: '2006'
 - id: CY
   name: Cyprus
   type: country
   status: member
+  joined: '2008'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '2008'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2008'
 - id: MT
   name: Malta
   type: country
   status: member
+  joined: '2010'
 - id: CZ
   name: Czechia
   type: country
   status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
+  joined: '2012'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2015'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '2015'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2016'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2016'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2016'
 - id: ME
   name: Montenegro
   type: country
   status: member
+  joined: '2021'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '2021'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '2024'
 membership_count: 25
-wikidata_id: Q3072338
-description: Organization.
+founding_members:
+- FR
+- IT
+- BE
+- LU
+- NL
 tags:
 - FINABEL
+- cooperation
 - defense
+- europe
+- european
 - finabel
+- interoperability
+- land_forces
 - military
+- regional
+- regional_cooperation
 - security
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
@@ -131,20 +190,67 @@ other_names:
   name: Finabel
 - id: en
   name: Finabel
+- id: fi
+  name: Finabel
 - id: fr
+  name: Finabel
+- id: it
+  name: Finabel
+- id: nl
   name: Finabel
 - id: pt
   name: Finabel
 - id: ru
   name: Finabel
+- id: uk
+  name: FINABEL
+previous_names:
+- id: en
+  name: FINBEL
+  period: 1953-1956
+notes: Originally FINBEL (France, Italy, Belgium, Luxembourg, Netherlands); renamed
+  FINABEL after West Germany joined in 1956. French was the official language until
+  English became the working language across all levels in 2011.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Finabel
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Finabel
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3072338
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3072338
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3072338
   license: CC0
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Finabel
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Finabel
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Finabel
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8503
+    lng: 4.3517

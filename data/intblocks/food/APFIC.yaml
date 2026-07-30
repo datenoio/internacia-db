@@ -1,147 +1,286 @@
 id: APFIC
+name: Asia-Pacific Fishery Commission
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1948-11-09'
+active_period:
+  start: '1948-11-09'
+geographic_scope: regional
+regions:
+- Asia-Pacific
 languages:
 - en
 links:
-- url: http://www.apfic.org/
+- url: https://www.fao.org/apfic/en/
   type: website
-- url: https://en.wikipedia.org/wiki/APFIC
+- url: https://www.fao.org/apfic/about/membership/en
+  type: website
+- url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/gsb-fisheries/detail/en/c/107/
+  type: website
+- url: https://www.fao.org/fileadmin/user_upload/legal/docs/001s-e.pdf
+  type: website
+- url: https://en.wikipedia.org/wiki/Asia-Pacific_Fishery_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4806252
   type: wikidata
-name: Asia-Pacific Fishery Commission
+acronyms:
+- lang: en
+  value: APFIC
+- lang: en
+  value: IPFC
+legal_status: intergovernmental
+recognition_status: FAO Article XIV Regional Fishery Body established by Agreement drawn up at Baguio (February 1948) as the Indo-Pacific Fisheries Council; entered into force 9 November 1948; renamed Asia-Pacific Fishery Commission in 1993–1994; secretariat hosted by the FAO Regional Office for Asia and the Pacific in Bangkok; Commission activities suspended by consensus resolution of the 37th Session (June 2023) for five years until 2028
+headquarters:
+  city: Bangkok
+  country: TH
+  note: Seat at FAO Regional Office for Asia and the Pacific (RAP)
+  coordinates:
+    lat: 13.7624277
+    lng: 100.4936739
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1949-03-10'
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '1974-07-17'
 - id: KH
   name: Cambodia
   type: country
   status: member
+  joined: '1951-01-19'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '1993-07-23'
+  note: People's Republic of China accepted the Agreement on 23 July 1993; Republic of China was among the eight Baguio drafters in 1948.
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-06-30'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-11-09'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '1950-03-23'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '1952-10-03'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '1950-01-19'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1958-09-15'
 - id: MM
   name: Myanmar
   type: country
-  status: member
+  status: founding_member
+  joined: '1949-01-07'
 - id: NP
   name: Nepal
   type: country
   status: member
+  joined: '1978-03-23'
+- id: NL
+  name: Netherlands
+  type: country
+  status: former_member
+  joined: '1948-11-12'
+  left: '1974-06-01'
+  note: Withdrawal notified 1 March 1974; effective three months later under Article XII (now XIII).
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1966-09-06'
 - id: PK
   name: Pakistan
   type: country
   status: member
+  joined: '1949-08-01'
 - id: PH
   name: Philippines
   type: country
-  status: member
-- id: KR
-  name: Korea, Republic of
-  type: country
-  status: member
+  status: founding_member
+  joined: '1948-07-23'
 - id: LK
   name: Sri Lanka
   type: country
   status: member
+  joined: '1949-02-21'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '1948-10-06'
 - id: TL
   name: Timor-Leste
   type: country
   status: member
+  joined: '2011-05-09'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1949-02-28'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-09-03'
 - id: VN
   name: Vietnam
   type: country
   status: member
+  joined: '1951-01-03'
+founding_members:
+- MM
+- CN
+- FR
+- IN
+- NL
+- PH
+- GB
+- US
 membership_count: 21
-description: Intergovernmental organization.
+description: FAO Article XIV Regional Fishery Body promoting sustainable development and management of fisheries and aquaculture in the Asia-Pacific region. Originally established as the Indo-Pacific Fisheries Council in 1948, it was renamed the Indo-Pacific Fishery Commission in 1976 and the Asia-Pacific Fishery Commission in 1993–1994. APFIC functions primarily as a regional consultative forum; the Secretariat is hosted by the FAO Regional Office for Asia and the Pacific in Bangkok. The Commission has 21 current member states; the Netherlands withdrew in 1974. At its 37th Session (Qingdao, June 2023) members adopted a resolution suspending Commission activities for five years until 2028, while officers remain incumbent and the Secretariat continues correspondence.
 tags:
 - APFIC
+- IPFC
 - agriculture
+- aquaculture
 - asia
+- asia-pacific
+- commission
+- cooperation
 - environment
 - farming
+- fao
+- fisheries
 - fishery
 - food
+- intergovernmental
 - nature
 - pacific
+- regional
+- regional_cooperation
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q4806252
+- key: marine
+  name: Marine
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 亚洲太平洋渔业委员会
 - id: en
   name: Asia-Pacific Fishery Commission
+- id: zh
+  name: 亚洲太平洋渔业委员会
 - id: fr
   name: Asia-Pacific Fishery Commission
+- id: ja
+  name: アジア太平洋漁業委員会
+- id: ko
+  name: 아시아 태평양 수산위원회
+previous_names:
+- id: en
+  name: Indo-Pacific Fisheries Council
+  period: 1948-1976
+- id: en
+  name: Indo-Pacific Fishery Commission
+  period: 1976-1994
+- id: en
+  name: IPFC
+wikidata_id: Q4806252
+official_documents:
+- url: https://www.fao.org/fileadmin/user_upload/legal/docs/001s-e.pdf
+  type: document
+  name: Agreement for the Establishment of the Asia-Pacific Fishery Commission
+notes: Drawn up at Baguio City, Philippines, in February 1948 by accredited delegates of eight nations (Burma/Myanmar, China, France, India, the Netherlands, the Philippines, the United Kingdom, and the United States). The Agreement entered into force on 9 November 1948 upon receipt of the fifth instrument of acceptance and was approved by the FAO Conference at its Fourth Session. Acceptance dates for current and former parties are taken from the FAO Legal Office parties list; China's listed acceptance is the 1993 PRC deposit. The 37th Session resolved to suspend Commission activities until 2028 without altering membership.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO APFIC membership; FAO Legal Office parties list
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/membership/en
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: FAO APFIC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/en
 - field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
+  source: FAO Legal Office; FAO APFIC history
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/001s-e.pdf
+- field: active_period
+  source: FAO Legal Office
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/001s-e.pdf
+- field: legal_status
+  source: FAO statutory bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/gsb-fisheries/detail/en/c/107/
+- field: recognition_status
+  source: FAO APFIC; FAO statutory bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/en
+- field: geographic_scope
+  source: FAO APFIC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/en
+- field: headquarters
+  source: FAO APFIC; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/en/
+- field: founding_members
+  source: FAO APFIC history
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/en
+- field: previous_names
+  source: FAO Legal Office; FAO APFIC history
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/001s-e.pdf
+- field: acronyms
+  source: Wikidata; FAO
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q4806252
   license: CC0
-acronyms:
-- lang: en
-  value: APFIC
-founded: '1948'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4806252
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4806252
+  license: CC0
+- field: notes
+  source: FAO APFIC; FAO Legal Office
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/apfic/about/en

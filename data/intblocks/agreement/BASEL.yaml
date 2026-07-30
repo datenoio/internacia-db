@@ -1,17 +1,55 @@
 id: BASEL
 blocktype:
 - agreement
+- environment
 status: formal
+founded: '1989-03-22'
+active_period:
+  start: '1992-05-05'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
+- ar
+- zh
+- fr
+- ru
+- es
 links:
-- url: http://www.basel.int/
+- url: https://www.basel.int/
+  type: website
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
   type: website
 - url: https://en.wikipedia.org/wiki/Basel_Convention
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q775865
   type: wikidata
 name: Basel Convention
+legal_status: treaty
+recognition_status: United Nations multilateral environmental treaty on the control of transboundary movements of hazardous
+  wastes and their disposal; registered as Treaty Series vol. 1673, p. 57; administered by the Basel, Rotterdam and Stockholm
+  Conventions Secretariat
+partof: UNEP
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.2044
+    lng: 6.1432
+secretariat:
+  location: Geneva, Switzerland
+  organization: Basel, Rotterdam and Stockholm Conventions Secretariat (United Nations Environment Programme)
+membership_count: 191
+description: Global treaty to reduce transboundary movements of hazardous wastes, ensure their environmentally sound management
+  as close as possible to the source of generation, and minimize hazardous waste generation. Adopted in Basel on 22 March
+  1989 and entered into force on 5 May 1992. As of 2026, 191 parties have ratified or acceded; Haiti and the United States
+  signed but have not ratified.
 includes:
 - id: AD
   name: Andorra
@@ -29,10 +67,6 @@ includes:
   name: Antigua and Barbuda
   type: country
   status: member
-- id: AI
-  name: Anguilla
-  type: country
-  status: member
 - id: AL
   name: Albania
   type: country
@@ -45,16 +79,8 @@ includes:
   name: Angola
   type: country
   status: member
-- id: AQ
-  name: Antarctica
-  type: country
-  status: member
 - id: AR
   name: Argentina
-  type: country
-  status: member
-- id: AS
-  name: American Samoa
   type: country
   status: member
 - id: AT
@@ -63,14 +89,6 @@ includes:
   status: member
 - id: AU
   name: Australia
-  type: country
-  status: member
-- id: AW
-  name: Aruba
-  type: country
-  status: member
-- id: AX
-  name: Åland Islands
   type: country
   status: member
 - id: AZ
@@ -113,24 +131,12 @@ includes:
   name: Benin
   type: country
   status: member
-- id: BL
-  name: Saint Barthélemy
-  type: country
-  status: member
-- id: BM
-  name: Bermuda
-  type: country
-  status: member
 - id: BN
   name: Brunei Darussalam
   type: country
   status: member
 - id: BO
   name: Bolivia, Plurinational State of
-  type: country
-  status: member
-- id: BQ
-  name: Bonaire, Sint Eustatius and Saba
   type: country
   status: member
 - id: BR
@@ -143,10 +149,6 @@ includes:
   status: member
 - id: BT
   name: Bhutan
-  type: country
-  status: member
-- id: BV
-  name: Bouvet Island
   type: country
   status: member
 - id: BW
@@ -165,12 +167,8 @@ includes:
   name: Canada
   type: country
   status: member
-- id: CC
-  name: Cocos (Keeling) Islands
-  type: country
-  status: member
 - id: CD
-  name: Congo, The Democratic Republic of the
+  name: Congo, Democratic Republic of the
   type: country
   status: member
 - id: CF
@@ -186,7 +184,7 @@ includes:
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Côte d’Ivoire
   type: country
   status: member
 - id: CK
@@ -221,20 +219,12 @@ includes:
   name: Cabo Verde
   type: country
   status: member
-- id: CW
-  name: Curaçao
-  type: country
-  status: member
-- id: CX
-  name: Christmas Island
-  type: country
-  status: member
 - id: CY
   name: Cyprus
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: DE
@@ -273,10 +263,6 @@ includes:
   name: Egypt
   type: country
   status: member
-- id: EH
-  name: Western Sahara
-  type: country
-  status: member
 - id: ER
   name: Eritrea
   type: country
@@ -289,24 +275,16 @@ includes:
   name: Ethiopia
   type: country
   status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
 - id: FI
   name: Finland
   type: country
   status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: FK
-  name: Falkland Islands (Malvinas)
-  type: country
-  status: member
 - id: FM
   name: Micronesia, Federated States of
-  type: country
-  status: member
-- id: FO
-  name: Faroe Islands
   type: country
   status: member
 - id: FR
@@ -329,24 +307,8 @@ includes:
   name: Georgia
   type: country
   status: member
-- id: GF
-  name: French Guiana
-  type: country
-  status: member
-- id: GG
-  name: Guernsey
-  type: country
-  status: member
 - id: GH
   name: Ghana
-  type: country
-  status: member
-- id: GI
-  name: Gibraltar
-  type: country
-  status: member
-- id: GL
-  name: Greenland
   type: country
   status: member
 - id: GM
@@ -357,10 +319,6 @@ includes:
   name: Guinea
   type: country
   status: member
-- id: GP
-  name: Guadeloupe
-  type: country
-  status: member
 - id: GQ
   name: Equatorial Guinea
   type: country
@@ -369,16 +327,8 @@ includes:
   name: Greece
   type: country
   status: member
-- id: GS
-  name: South Georgia and the South Sandwich Islands
-  type: country
-  status: member
 - id: GT
   name: Guatemala
-  type: country
-  status: member
-- id: GU
-  name: Guam
   type: country
   status: member
 - id: GW
@@ -387,14 +337,6 @@ includes:
   status: member
 - id: GY
   name: Guyana
-  type: country
-  status: member
-- id: HK
-  name: Hong Kong
-  type: country
-  status: member
-- id: HM
-  name: Heard Island and McDonald Islands
   type: country
   status: member
 - id: HN
@@ -421,16 +363,8 @@ includes:
   name: Israel
   type: country
   status: member
-- id: IM
-  name: Isle of Man
-  type: country
-  status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: IO
-  name: British Indian Ocean Territory
   type: country
   status: member
 - id: IQ
@@ -447,10 +381,6 @@ includes:
   status: member
 - id: IT
   name: Italy
-  type: country
-  status: member
-- id: JE
-  name: Jersey
   type: country
   status: member
 - id: JM
@@ -490,7 +420,7 @@ includes:
   type: country
   status: member
 - id: KP
-  name: Korea, Democratic People's Republic of
+  name: Korea, Dem. Rep.
   type: country
   status: member
 - id: KR
@@ -499,10 +429,6 @@ includes:
   status: member
 - id: KW
   name: Kuwait
-  type: country
-  status: member
-- id: KY
-  name: Cayman Islands
   type: country
   status: member
 - id: KZ
@@ -569,10 +495,6 @@ includes:
   name: Montenegro
   type: country
   status: member
-- id: MF
-  name: Saint Martin (French part)
-  type: country
-  status: member
 - id: MG
   name: Madagascar
   type: country
@@ -597,24 +519,8 @@ includes:
   name: Mongolia
   type: country
   status: member
-- id: MO
-  name: Macao
-  type: country
-  status: member
-- id: MP
-  name: Northern Mariana Islands
-  type: country
-  status: member
-- id: MQ
-  name: Martinique
-  type: country
-  status: member
 - id: MR
   name: Mauritania
-  type: country
-  status: member
-- id: MS
-  name: Montserrat
   type: country
   status: member
 - id: MT
@@ -649,16 +555,8 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NC
-  name: New Caledonia
-  type: country
-  status: member
 - id: NE
   name: Niger
-  type: country
-  status: member
-- id: NF
-  name: Norfolk Island
   type: country
   status: member
 - id: NG
@@ -685,10 +583,6 @@ includes:
   name: Nauru
   type: country
   status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
@@ -705,10 +599,6 @@ includes:
   name: Peru
   type: country
   status: member
-- id: PF
-  name: French Polynesia
-  type: country
-  status: member
 - id: PG
   name: Papua New Guinea
   type: country
@@ -723,18 +613,6 @@ includes:
   status: member
 - id: PL
   name: Poland
-  type: country
-  status: member
-- id: PM
-  name: Saint Pierre and Miquelon
-  type: country
-  status: member
-- id: PN
-  name: Pitcairn
-  type: country
-  status: member
-- id: PR
-  name: Puerto Rico
   type: country
   status: member
 - id: PS
@@ -755,10 +633,6 @@ includes:
   status: member
 - id: QA
   name: Qatar
-  type: country
-  status: member
-- id: RE
-  name: Réunion
   type: country
   status: member
 - id: RO
@@ -801,20 +675,12 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: SH
-  name: Saint Helena, Ascension and Tristan da Cunha
-  type: country
-  status: member
 - id: SI
   name: Slovenia
   type: country
   status: member
-- id: SJ
-  name: Svalbard and Jan Mayen
-  type: country
-  status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SL
@@ -837,20 +703,12 @@ includes:
   name: Suriname
   type: country
   status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
 - id: ST
   name: Sao Tome and Principe
   type: country
   status: member
 - id: SV
   name: El Salvador
-  type: country
-  status: member
-- id: SX
-  name: Sint Maarten (Dutch part)
   type: country
   status: member
 - id: SY
@@ -861,16 +719,8 @@ includes:
   name: Eswatini
   type: country
   status: member
-- id: TC
-  name: Turks and Caicos Islands
-  type: country
-  status: member
 - id: TD
   name: Chad
-  type: country
-  status: member
-- id: TF
-  name: French Southern Territories
   type: country
   status: member
 - id: TG
@@ -883,14 +733,6 @@ includes:
   status: member
 - id: TJ
   name: Tajikistan
-  type: country
-  status: member
-- id: TK
-  name: Tokelau
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
   type: country
   status: member
 - id: TM
@@ -917,10 +759,6 @@ includes:
   name: Tuvalu
   type: country
   status: member
-- id: TW
-  name: Taiwan, Province of China
-  type: country
-  status: member
 - id: TZ
   name: Tanzania, United Republic of
   type: country
@@ -933,24 +771,12 @@ includes:
   name: Uganda
   type: country
   status: member
-- id: UM
-  name: United States Minor Outlying Islands
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
 - id: UY
   name: Uruguay
   type: country
   status: member
 - id: UZ
   name: Uzbekistan
-  type: country
-  status: member
-- id: VA
-  name: Holy See (Vatican City State)
   type: country
   status: member
 - id: VC
@@ -961,14 +787,6 @@ includes:
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
-- id: VG
-  name: Virgin Islands, British
-  type: country
-  status: member
-- id: VI
-  name: Virgin Islands, U.S.
-  type: country
-  status: member
 - id: VN
   name: Viet Nam
   type: country
@@ -977,20 +795,12 @@ includes:
   name: Vanuatu
   type: country
   status: member
-- id: WF
-  name: Wallis and Futuna
-  type: country
-  status: member
 - id: WS
   name: Samoa
   type: country
   status: member
 - id: YE
   name: Yemen
-  type: country
-  status: member
-- id: YT
-  name: Mayotte
   type: country
   status: member
 - id: ZA
@@ -1005,35 +815,96 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 248
-founded: '1989'
 wikidata_id: Q775865
-description: International basel focused on environmental protection established through
-  an international agreement.
 tags:
 - BASEL
 - agreement
 - basel
+- BRS
 - convention
 - environment
+- hazardous_waste
 - law
 - legal
-- nature
+- treaty
+- UNEP
+- waste
 topics:
 - key: environment
   name: Environment
+- key: environmental_protection
+  name: Environmental Protection
 - key: law
   name: Law
 other_names:
 - id: ar
   name: اتفاقية بازل
-- id: zh
-  name: 巴塞爾公約
+- id: de
+  name: Baseler Übereinkommen über die Kontrolle der grenzüberschreitenden Verbringung gefährlicher Abfälle und ihrer Entsorgung
 - id: en
   name: Basel Convention
+- id: en
+  name: Basel Convention on the Control of Transboundary Movements of Hazardous Wastes and Their Disposal
+- id: es
+  name: Convención de Basilea
 - id: fr
   name: Convention de Bâle
 - id: ru
   name: Базельская конвенция
-- id: es
-  name: Convención de Basilea
+- id: zh
+  name: 巴塞尔公约
+notes: Parties comprise 188 UN member states, the Cook Islands, the European Union, and the State of Palestine. Fiji, Haiti,
+  South Sudan, Timor-Leste, and the United States are not parties as of 2026; Haiti and the United States remain signatories
+  that have not ratified. The secretariat is jointly administered with the Rotterdam and Stockholm conventions under the BRS
+  Conventions Secretariat in Geneva.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: membership_count
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: description
+  source: Basel Convention Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.basel.int/
+- field: headquarters
+  source: Basel Convention Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.basel.int/
+- field: partof
+  source: Basel Convention Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.basel.int/
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: recognition_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: secretariat
+  source: Basel Convention Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.basel.int/
+- field: notes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-3&chapter=27&clang=_en
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q775865
+  license: CC0

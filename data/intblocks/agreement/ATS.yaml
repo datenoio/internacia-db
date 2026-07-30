@@ -5,17 +5,29 @@ status: formal
 languages:
 - en
 - es
-- fr
 - ru
 links:
-- url: http://www.ats.aq
+- url: https://www.ats.aq
   type: website
 - url: https://en.wikipedia.org/wiki/Antarctic_Treaty_System
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q182814
   type: wikidata
+- url: https://www.ats.aq/devAS/Info_meeting_parties_list.aspx
+  type: website
 name: Antarctic Treaty System
+founded: '1959-12-01'
+geographic_scope: global
+regions:
+- Antarctica
+headquarters:
+  city: Buenos Aires
+  country: AR
 includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
 - id: AR
   name: Argentina
   type: country
@@ -64,6 +76,10 @@ includes:
   name: Colombia
   type: country
   status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
 - id: CU
   name: Cuba
   type: country
@@ -82,6 +98,10 @@ includes:
   status: member
 - id: EC
   name: Ecuador
+  type: country
+  status: member
+- id: EE
+  name: Estonia
   type: country
   status: member
 - id: ES
@@ -128,12 +148,20 @@ includes:
   name: Japan
   type: country
   status: member
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
 - id: KR
   name: Korea, Republic of
   type: country
   status: member
 - id: KZ
   name: Kazakhstan
+  type: country
+  status: member
+- id: MC
+  name: Monaco
   type: country
   status: member
 - id: MN
@@ -160,6 +188,10 @@ includes:
   name: Peru
   type: country
   status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
 - id: PK
   name: Pakistan
   type: country
@@ -180,12 +212,24 @@ includes:
   name: Russian Federation
   type: country
   status: member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
 - id: SE
   name: Sweden
   type: country
   status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
 - id: SK
   name: Slovakia
+  type: country
+  status: member
+- id: SM
+  name: San Marino
   type: country
   status: member
 - id: TR
@@ -212,11 +256,25 @@ includes:
   name: South Africa
   type: country
   status: member
-founded: '1959'
-membership_count: 49
+membership_count: 58
+founding_members:
+- AR
+- AU
+- BE
+- CL
+- FR
+- JP
+- NZ
+- 'NO'
+- RU
+- GB
+- US
+- ZA
 wikidata_id: Q182814
-description: International antarctic focused on legal matters established through
-  an international agreement.
+description: Multilateral treaty system governing Antarctica south of 60°S latitude. Opened for signature on 1 December 1959
+  and entered into force on 23 June 1961. Demilitarizes the continent, guarantees freedom of scientific investigation, and
+  freezes territorial claims; related agreements cover environmental protection, marine living resources, and other Antarctic
+  governance.
 tags:
 - ATS
 - agreement
@@ -226,6 +284,10 @@ tags:
 - system
 - treaty
 topics:
+- key: arms_control
+  name: Arms Control
+- key: environment
+  name: Environment
 - key: law
   name: Law
 other_names:
@@ -245,6 +307,7 @@ other_names:
   name: Договор об Антарктике
 - id: zh
   name: 南极条约体系
+last_verified: '2026-07-29'
 provenance:
 - field: other_names
   source: Wikidata
@@ -256,6 +319,39 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q182814
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Antarctic_Treaty
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Antarctic_Treaty
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.state.gov/t-isn-4794.htm
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Antarctic_Treaty
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.state.gov/t-isn-4794.htm
+- field: languages
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.state.gov/t-isn-4794.htm
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ats.aq/devAS/Info_meeting_parties_list.aspx
 acronyms:
 - lang: en
   value: ATS

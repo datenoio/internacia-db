@@ -1,10 +1,18 @@
 id: EALA
+name: East African Legislative Assembly
 blocktype:
 - parliamentary
 status: formal
 partof: EAC
+founded: '2001-11-30'
+active_period:
+  start: '2001-11-30'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
+- sw
 links:
 - url: http://www.eala.org/
   type: website
@@ -12,86 +20,159 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5327657
   type: wikidata
-name: East African Legislative Assembly
-founded: '2001'
+- url: https://www.eac.int/
+  type: website
+acronyms:
+- lang: en
+  value: EALA
+- lang: fr
+  value: EALA
+- lang: sw
+  value: Bunge la Afrika Mashariki
 headquarters:
   city: Arusha
   country: TZ
   coordinates:
     lat: -3.3666666666667
     lng: 36.683333333333
+legal_status: treaty_organization
+recognition_status: Legislative organ of the East African Community established under Article 49 of the EAC Treaty; inaugurated
+  on 30 November 2001 in Arusha, Tanzania
+founding_members:
+- KE
+- TZ
+- UG
 includes:
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-11-30'
 - id: TZ
-  name: Tanzania, United Republic of
+  name: Tanzania
   type: country
-  status: member
-- id: RW
-  name: Rwanda
-  type: country
-  status: member
+  status: founding_member
+  joined: '2001-11-30'
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-11-30'
 - id: BI
   name: Burundi
   type: country
   status: member
+  joined: '2009-07-06'
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  joined: '2009-07-06'
 - id: SS
   name: South Sudan
   type: country
   status: member
+  joined: '2016-09-05'
 - id: CD
   name: Congo, Dem. Rep.
   type: country
   status: member
+  joined: '2022-07-11'
 - id: SO
   name: Somalia
   type: country
   status: member
+  joined: '2024-03-04'
 membership_count: 8
 wikidata_id: Q5327657
-description: Legislative organ of the East African Community.
+description: Legislative organ of the East African Community established under Article 49 of the EAC Treaty. Composed of
+  elected members nominated by each partner state's national parliament plus ex-officio members including ministers for
+  East African Community affairs, the Secretary General, and the Counsel to the Community. Inaugurated on 30 November 2001
+  in Arusha, Tanzania; membership follows EAC partner states.
+notes: Each partner state nominates nine elected members. As of the Fifth Assembly (2022–2027), the body comprises 63 elected
+  members plus nine ex-officio members. Burundi and Rwanda joined when they acceded to the EAC in 2009; South Sudan in 2016;
+  the Democratic Republic of the Congo in 2022; and Somalia in 2024.
 tags:
 - EALA
 - african
+- community
 - east
 - legislative
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 東非議會
 - id: en
   name: East African Legislative Assembly
 - id: fr
   name: Assemblée législative est-africaine
+- id: sw
+  name: Bunge la Afrika Mashariki
+- id: zh
+  name: 东非议会
+- id: ja
+  name: 东アフリカ立法議会
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5327657
+  license: CC0
+- field: description
+  source: East African Community
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/East_African_Legislative_Assembly
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5327657
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5327657
   license: CC0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/East_African_Legislative_Assembly
+  license: CC BY-SA 4.0
+- field: includes
+  source: East African Community
+  retrieved_at: '2026-07-29'
+  url: https://www.eac.int/
+  license: public domain
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/East_African_Legislative_Assembly
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/East_African_Legislative_Assembly
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: http://www.eala.org/
-acronyms:
-- lang: en
-  value: EALA
-- lang: fr
-  value: EALA
+- field: legal_status
+  source: East African Community
+  retrieved_at: '2026-07-29'
+  url: https://www.eac.int/
+  license: public domain
+- field: recognition_status
+  source: East African Community
+  retrieved_at: '2026-07-29'
+  url: https://www.eac.int/
+  license: public domain

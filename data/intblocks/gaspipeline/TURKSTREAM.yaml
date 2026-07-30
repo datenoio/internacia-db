@@ -1,11 +1,20 @@
 id: TURKSTREAM
+name: TurkStream
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2020-01-08'
+geographic_scope: bilateral
+regions:
+- Europe
+- Asia
 links:
+- url: http://turkstream.info/
+  type: website
 - url: https://en.wikipedia.org/wiki/TurkStream
   type: wikipedia
-name: TurkStream
+- url: https://www.wikidata.org/wiki/Q18810087
+  type: wikidata
 includes:
 - id: RU
   name: Russian Federation
@@ -16,17 +25,25 @@ includes:
   type: country
   status: member
 membership_count: 2
-description: Natural gas pipeline running from Russia to Turkey.
+wikidata_id: Q18810087
+description: Twin-line offshore natural gas pipeline from the Russkaya compressor station near Anapa, Russia, to Kıyıköy,
+  Turkey, crossing the Black Sea. Successor to the cancelled South Stream project; operated by Gazprom (Russian and offshore
+  sections) and BOTAŞ (Turkish onshore section). Commissioned on 8 January 2020 with 31.5 billion m³/a total design capacity;
+  the second line feeds Southeast and Central Europe via Bulgaria (Balkan Stream).
 tags:
 - TURKSTREAM
-- turk
-- stream
+- black-sea
 - economy
 - energy
+- gazprom
 - gaspipeline
 - pipeline
+- russia
+- stream
 - transport
 - transportation
+- turkey
+- turk
 topics:
 - key: economy
   name: Economy
@@ -34,15 +51,59 @@ topics:
   name: Energy
 - key: transport
   name: Transport
-wikidata_id: Q18810087
+other_names:
+- id: de
+  name: Turkish Stream
+- id: en
+  name: TurkStream
+- id: en
+  name: Turkish Stream
+- id: en
+  name: Turk Stream
+- id: es
+  name: TurkStream
+- id: fr
+  name: Turkish Stream
+- id: ru
+  name: Турецкий поток
+- id: tr
+  name: Türk Akımı
+- id: uk
+  name: Турецький потік
+- id: zh
+  name: 土耳其溪
+notes: Route crosses the Black Sea exclusive economic zones of Russia and Turkey; endpoint countries are listed in includes.
+  Most gas transits onward to Bulgaria and other Southeast European markets via the Malkoçlar–Provadia link (Balkan Stream).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18810087
+  license: CC0
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18810087
   license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TurkStream
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18810087
   license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q18810087
+  license: CC0
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TurkStream

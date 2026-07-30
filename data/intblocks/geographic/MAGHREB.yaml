@@ -5,6 +5,8 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Maghreb
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q28227
+  type: wikidata
 name: Maghreb
 includes:
 - id: DZ
@@ -27,11 +29,17 @@ includes:
   name: Tunisia
   type: country
   status: member
-membership_count: 5
+- id: EH
+  name: Western Sahara
+  type: country
+  status: member
+membership_count: 6
 geographic_scope: sub-regional
 regions:
 - Africa
-description: Maghreb is a regional grouping of 5 countries in Africa.
+wikidata_id: Q28227
+description: Western part of the Arab world in northwest Africa, comprising Algeria, Libya, Mauritania, Morocco, Tunisia,
+  and the disputed territory of Western Sahara, per the Wikipedia regional definition.
 tags:
 - MAGHREB
 - maghreb
@@ -44,28 +52,46 @@ topics:
   name: Regional Cooperation
 other_names:
 - id: ar
-  name: المغرب
-- id: zh
-  name: 马格里布
+  name: المغرب العربي
+- id: de
+  name: Maghreb
 - id: en
   name: Maghreb
-- id: fr
-  name: Maghreb
-- id: ru
-  name: Магриб
 - id: es
   name: Magreb
+- id: fr
+  name: Maghreb
+- id: pt
+  name: Magrebe
+- id: ru
+  name: Магриб
+- id: zh
+  name: 马格里布
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Maghreb
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q28227
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q28227

@@ -1,10 +1,11 @@
 id: CCASG
+name: Cooperation Council for the Arab States of the Gulf
 blocktype:
 - economic
 - customs
 - political
 status: formal
-founded: '1981'
+founded: '1981-05-25'
 geographic_scope: regional
 regions:
 - Middle East
@@ -14,40 +15,95 @@ languages:
 links:
 - url: https://www.gcc-sg.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Gulf_Co-operation_Council
+- url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q217172
   type: wikidata
-name: Cooperation Council for the Arab States of the Gulf
+acronyms:
+- lang: en
+  value: GCC
+- lang: ar
+  value: مجلس التعاون الخليجي
+- lang: zh
+  value: 海湾合作委员会
+- lang: zh
+  value: 海合會
+- lang: zh
+  value: 海灣合作委員會
+- lang: fr
+  value: GCC
+- lang: fr
+  value: CCG
+- lang: ru
+  value: ССАГПЗ
+- lang: es
+  value: CCEAGP
+- lang: de
+  value: GCC
+- lang: pt
+  value: CCG
+headquarters:
+  city: Riyadh
+  country: SA
+  coordinates:
+    lat: 24.7136
+    lng: 46.6753
 includes:
 - id: BH
   name: Bahrain
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-05-25'
 - id: KW
   name: Kuwait
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-05-25'
 - id: OM
   name: Oman
   type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
+  status: founding_member
+  joined: '1981-05-25'
 - id: QA
   name: Qatar
   type: country
-  status: member
+  status: founding_member
+  joined: '1981-05-25'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: founding_member
+  joined: '1981-05-25'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: founding_member
+  joined: '1981-05-25'
+founding_members:
+- BH
+- KW
+- OM
+- QA
+- SA
+- AE
 membership_count: 6
-description: Regional intergovernmental political and economic union comprising six Middle Eastern countries. The GCC has
-  established a customs union that eliminates tariffs and adopts common external tariffs, facilitating trade and economic
-  integration among member states.
+legal_status: intergovernmental
+suborganizations:
+- id: PSF
+  name: Peninsula Shield Force
+- id: GCCPO
+  name: GCC Patent Office
+wikidata_id: Q217172
+description: >-
+  Regional intergovernmental political and economic union of Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, and the United
+  Arab Emirates. The GCC Charter was signed in Abu Dhabi on 25 May 1981; the Secretariat is headquartered in Riyadh.
+  Members operate a customs union (completed 2015) and common market arrangements, and coordinate defence through the
+  Unified Military Command (Peninsula Shield Force).
+notes: >-
+  Membership has been unchanged since founding. Jordan, Morocco, and Yemen have been discussed as possible future
+  members but have not joined; Iraq is the only Gulf Arab state outside the council. Qatar remained a member during the
+  2017–2021 diplomatic crisis with Saudi Arabia, UAE, Bahrain, and Egypt. Oman and the UAE withdrew from the proposed
+  monetary union project; four members continue related coordination.
 tags:
 - CCASG
 - aid
@@ -77,7 +133,6 @@ topics:
   name: Regional Cooperation
 - key: trade
   name: Trade
-wikidata_id: Q217172
 other_names:
 - id: ar
   name: مجلس التعاون لدول الخليج العربي
@@ -85,6 +140,8 @@ other_names:
   name: Golf-Kooperationsrat
 - id: en
   name: Cooperation Council for the Arab States of the Persian Gulf
+- id: en
+  name: Gulf Cooperation Council
 - id: es
   name: Consejo de Cooperación para los Estados Árabes del Golfo
 - id: fr
@@ -95,39 +152,52 @@ other_names:
   name: Совет сотрудничества арабских государств Персидского залива
 - id: zh
   name: 海湾阿拉伯国家合作委员会
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q217172
+  license: CC0
+- field: suborganizations
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gcc-sg.org/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q217172
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q217172
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.gcc-sg.org/
-acronyms:
-- lang: en
-  value: GCC
-- lang: zh
-  value: 海湾合作委员会
-- lang: zh
-  value: 海合會
-- lang: zh
-  value: 海灣合作委員會
-- lang: fr
-  value: GCC
-- lang: fr
-  value: CCG
-- lang: ru
-  value: ССАГПЗ
-- lang: es
-  value: CCEAGP
-- lang: de
-  value: GCC
-- lang: pt
-  value: CCG

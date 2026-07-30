@@ -2,95 +2,188 @@ id: ICPDR
 blocktype:
 - water
 - intorg
+- environment
 status: formal
 languages:
 - en
+- de
 links:
-- url: http://www.icpdr.org/
+- url: https://www.icpdr.org/
+  type: website
+- url: https://www.icpdr.org/about-icpdr/organisation/contracting-parties
+  type: website
+- url: https://www.icpdr.org/about-icpdr/framework/convention
   type: website
 - url: https://en.wikipedia.org/wiki/International_Commission_for_the_Protection_of_the_Danube_River
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q699466
   type: wikidata
 name: International Commission for the Protection of the Danube River
+founded: '1998-10-22'
+headquarters:
+  city: Vienna
+  country: AT
+geographic_scope: regional
+regions:
+- Europe
+founding_members:
+- AT
+- BG
+- HR
+- CZ
+- DE
+- HU
+- MD
+- RO
+- SK
+- SI
+- UA
 includes:
-- id: DE
-  name: Germany
-  type: country
-  status: member
 - id: AT
   name: Austria
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: BA
   name: Bosnia and Herzegovina
   type: country
   status: member
+  joined: '2005-07-11'
 - id: BG
   name: Bulgaria
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-08-02'
 - id: HR
   name: Croatia
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: CZ
   name: Czech Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
+- id: DE
+  name: Germany
+  type: country
+  status: founding_member
+  joined: '1998-10-22'
 - id: HU
   name: Hungary
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-08-29'
 - id: ME
   name: Montenegro
   type: country
   status: member
+  joined: '2008-10-28'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2003-08-19'
 - id: SK
   name: Slovakia
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: SI
   name: Slovenia
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-10-22'
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: founding_member
+  joined: '2003-03-13'
 - id: EU
   name: European Union
   type: organization
-  status: member
-founded: '1998'
+  status: founding_member
+  joined: '1998-10-22'
 membership_count: 15
 wikidata_id: Q699466
-description: International entity.
+legal_status: intergovernmental
+acronyms:
+- lang: en
+  value: ICPDR
+description: Intergovernmental river basin commission implementing the Danube River Protection Convention among fifteen contracting parties, coordinating sustainable water management, pollution control, and flood protection across the Danube River Basin.
 tags:
+- Danube
 - ICPDR
+- basin
 - commission
-- international
 - intorg
-- protection
+- transboundary
+- water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
 other_names:
-- id: zh
-  name: 國際多瑙河保護委員會
+- id: de
+  name: Internationale Kommission zum Schutz der Donau
 - id: en
   name: International Commission for the Protection of the Danube River
 - id: es
   name: Comisión Internacional para la Protección del Río Danubio
+- id: hr
+  name: Međunarodna komisija za zaštitu Dunava
+- id: ro
+  name: Comisia Internațională pentru Protecția Dunării
+- id: uk
+  name: Міжнародна комісія з охорони річки Дунай
+- id: zh
+  name: 國際多瑙河保護委員會
+provenance:
+- field: includes
+  source: ICPDR contracting parties page
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/about-icpdr/organisation/contracting-parties
+- field: founding_members
+  source: Danube River Protection Convention
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/about-icpdr/framework/convention
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/
+- field: founded
+  source: ICPDR contracting parties page
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/about-icpdr/organisation/contracting-parties
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q699466
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.icpdr.org/

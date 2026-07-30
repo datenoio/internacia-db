@@ -5,6 +5,8 @@ blocktype:
 - environment
 status: formal
 founded: '1997'
+active_period:
+  start: '1997-11-06'
 geographic_scope: global
 languages:
 - en
@@ -13,6 +15,8 @@ languages:
 - zh
 links:
 - url: https://www.inbar.int
+  type: website
+- url: https://www.inbar.int/inbar-member-states/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Bamboo_and_Rattan_Organization
   type: wikipedia
@@ -25,10 +29,10 @@ headquarters:
   city: Beijing
   country: CN
 legal_status: intergovernmental
-membership_count: 50
+recognition_status: Independent intergovernmental organization open to UN member states and intergovernmental organizations; UN General Assembly observer status since 2017; also observer to ECOSOC and UNCTAD
+membership_count: 52
 wikidata_id: Q6052145
-description: Independent intergovernmental organization established to develop and promote innovative solutions to poverty
-  and environmental sustainability using bamboo and rattan.
+description: Independent intergovernmental organization established in 1997 to develop and promote innovative solutions to poverty and environmental sustainability using bamboo and rattan. INBAR's Council of Member States is the supreme governing body; the Secretariat is headquartered in Beijing with regional offices in Cameroon, Ecuador, Ethiopia, Ghana, and India. Membership is open to UN member states and intergovernmental organizations.
 tags:
 - INBAR
 - bamboo
@@ -51,7 +55,7 @@ includes:
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
 - id: BJ
   name: Benin
   type: country
@@ -79,7 +83,7 @@ includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
 - id: CF
   name: Central African Republic
   type: country
@@ -91,7 +95,7 @@ includes:
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
 - id: CL
   name: Chile
   type: country
@@ -106,6 +110,10 @@ includes:
   status: member
 - id: CU
   name: Cuba
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
   type: country
   status: member
 - id: CD
@@ -139,7 +147,7 @@ includes:
 - id: ID
   name: Indonesia
   type: country
-  status: member
+  status: founding_member
 - id: JM
   name: Jamaica
   type: country
@@ -171,11 +179,11 @@ includes:
 - id: MM
   name: Myanmar
   type: country
-  status: member
+  status: founding_member
 - id: NP
   name: Nepal
   type: country
-  status: member
+  status: founding_member
 - id: NG
   name: Nigeria
   type: country
@@ -191,11 +199,11 @@ includes:
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
 - id: RW
   name: Rwanda
   type: country
@@ -219,7 +227,7 @@ includes:
 - id: TZ
   name: Tanzania
   type: country
-  status: member
+  status: founding_member
 - id: TH
   name: Thailand
   type: country
@@ -236,6 +244,10 @@ includes:
   name: Uganda
   type: country
   status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
 - id: VE
   name: Venezuela, Bolivarian Republic of
   type: country
@@ -244,6 +256,17 @@ includes:
   name: Viet Nam
   type: country
   status: member
+founding_members:
+- BD
+- CA
+- CN
+- ID
+- MM
+- NP
+- PE
+- PH
+- TZ
+last_verified: '2026-07-29'
 other_names:
 - id: ar
   name: الشبكة الدولية للخيزران والروطان
@@ -254,15 +277,43 @@ other_names:
 - id: fr
   name: Réseau international de recherche sur le bambou et le rotin
 provenance:
+- field: includes
+  source: INBAR official Member States directory
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/inbar-member-states/
+- field: membership_count
+  source: INBAR official Member States directory
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/inbar-member-states/
+- field: description
+  source: INBAR official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/about/
+- field: recognition_status
+  source: Wikipedia; INBAR official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Bamboo_and_Rattan_Organization
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Bamboo_and_Rattan_Organization
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.inbar.int
+  source: INBAR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/about/
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.inbar.int
+  source: INBAR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/about/
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.inbar.int
+  source: INBAR official website
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/contact/
+- field: founded
+  source: Wikipedia; INBAR official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Bamboo_and_Rattan_Organization
+- field: active_period
+  source: INBAR official news archive
+  retrieved_at: '2026-07-29'
+  url: https://www.inbar.int/membership-progress-strengthens-ties-with-africa/

@@ -1,49 +1,94 @@
 id: FPDA
+name: Five Power Defence Arrangements
 blocktype:
 - military
 status: formal
+founded: '1971-11-01'
+geographic_scope: regional
+regions:
+- Oceania
+- Pacific
+- Southeast Asia
+languages:
+- en
+- ms
 links:
 - url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3045582
   type: wikidata
-name: Five Power Defence Arrangements
+- url: https://www.fivepowerdefencearrangements.org/
+  type: website
+acronyms:
+- lang: en
+  value: FPDA
+legal_status: treaty
+wikidata_id: Q3045582
+description: Consultative defence arrangement established in 1971 among Australia, Malaysia, New Zealand, Singapore, and the
+  United Kingdom following the UK's withdrawal of forces east of Suez. The five powers agree to consult immediately in the event
+  of external armed attack or threat against Malaysia or Singapore, but the arrangement carries no binding commitment to intervene
+  militarily. Headquarters Integrated Area Defence System (HQIADS) at RMAF Butterworth coordinates joint air, land, and maritime
+  exercises including the annual Exercise Bersama Lima. Unlike integrated alliances such as NATO, the FPDA has no standing
+  combined forces or mutual-defence treaty obligation.
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1971-11-01'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1971-11-01'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1971-11-01'
 - id: SG
   name: Singapore
   type: country
   status: member
+  joined: '1971-11-01'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1971-11-01'
 membership_count: 5
-wikidata_id: Q3045582
-description: Series of defence relationships established by a series of multi-lateral
-  agreements between the United Kingdom, Australia, New Zealand, Malaysia and Singapore.
+founding_members:
+- AU
+- MY
+- NZ
+- SG
+- GB
+headquarters:
+  city: Butterworth
+  country: MY
+  coordinates:
+    lat: 5.4658
+    lng: 100.3913
 tags:
 - FPDA
-- defence
+- australia
+- collective_security
+- commonwealth
 - defense
-- five
+- malaysia
 - military
-- power
+- new_zealand
+- pacific
 - security
+- singapore
+- southeast_asia
+- treaty
+- united_kingdom
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
@@ -51,20 +96,61 @@ other_names:
   name: Five Power Defence Arrangements
 - id: en
   name: Five Power Defence Arrangements
+- id: eo
+  name: Kvinlanda Defenda Alianco
 - id: fr
   name: Five Power Defence Arrangements
+- id: he
+  name: הסדרי ההגנה של חמש המעצמות
+- id: id
+  name: Five Power Defence Arrangements
+- id: ja
+  name: 5か国防衛取極
+- id: ko
+  name: 5개국 방위 협정
+- id: ms
+  name: Perjanjian Pertahanan Lima Negara
 - id: pt
   name: Cinco Acordos de Força de Defesa
 - id: zh
   name: 五国联防
+notes: Established after termination of the Anglo-Malayan Defence Agreement when the United Kingdom completed its east-of-Suez
+  withdrawal on 1 November 1971. The 16 April 1971 Joint Communiqué set the consultative framework; HQIADS at RMAF Butterworth
+  (command rotates among member states) also supports UK personnel at Sembawang, Singapore. Annual FPDA Defence Ministers'
+  Meeting and Defence Chiefs' Conference coordinate policy; official website launched at the 12th FDMM in May 2024.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3045582
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3045582
   license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Power_Defence_Arrangements

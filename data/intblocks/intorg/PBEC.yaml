@@ -1,22 +1,53 @@
 id: PBEC
+name: Pacific Basin Economic Council
 blocktype:
 - intorg
 status: formal
+founded: '1967'
+active_period:
+  start: '1967'
+geographic_scope: regional
+regions:
+- Asia-Pacific
+- Oceania
+- North America
+- South America
 languages:
 - en
 links:
-- url: http://www.pbec.org/
+- url: https://www.pbec.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Pacific_Basin_Economic_Council_(PBEC)
+- url: https://www.pbec.org/introduction-to-pbec/
+  type: website
+- url: https://www.pbec.org/pbec-fast-facts/
+  type: website
+- url: https://en.wikipedia.org/wiki/Pacific_Basin_Economic_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7122303
   type: wikidata
-name: Pacific Basin Economic Council
+acronyms:
+- lang: en
+  value: PBEC
+- lang: zh
+  value: 太平洋盆地經濟理事會
+- lang: ja
+  value: 太平洋経済委員会
+legal_status: independent business association
+recognition_status: Invitation-only international business association of senior corporate leaders and subject-matter experts; institutional member of PECC (without voting power) and frequent reference source for APEC and ABAC
+headquarters:
+  city: Hong Kong
+  country: HK
+  note: International Secretariat based in Hong Kong since 2003
+secretariat:
+  location: Hong Kong
+  organization: PBEC International Secretariat
+partof: PECC
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1967'
 - id: BN
   name: Brunei Darussalam
   type: country
@@ -24,7 +55,8 @@ includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1967'
 - id: CL
   name: Chile
   type: country
@@ -33,12 +65,8 @@ includes:
   name: China
   type: country
   status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
 - id: HK
-  name: Hong Kong
+  name: Hong Kong SAR, China
   type: country
   status: member
 - id: ID
@@ -48,7 +76,8 @@ includes:
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1967'
 - id: KR
   name: Korea, Republic of
   type: country
@@ -64,6 +93,11 @@ includes:
 - id: NZ
   name: New Zealand
   type: country
+  status: founding_member
+  joined: '1967'
+- id: PG
+  name: Papua New Guinea
+  type: country
   status: member
 - id: PE
   name: Peru
@@ -71,6 +105,10 @@ includes:
   status: member
 - id: PH
   name: Philippines
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
   type: country
   status: member
 - id: SG
@@ -88,23 +126,62 @@ includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1967'
 - id: VN
   name: Vietnam
   type: country
   status: member
-membership_count: 20
-description: International entity.
+- id: CO
+  name: Colombia
+  type: country
+  status: former_member
+  note: Historical national member committee; PBEC now lists Colombia among LATAM affiliate hubs rather than the 21-economy APEC footprint
+- id: EC
+  name: Ecuador
+  type: country
+  status: former_member
+  note: Listed on PBEC member-committee roster through the 1990s; absent from current APEC-economy footprint
+- id: FJ
+  name: Fiji
+  type: country
+  status: former_member
+  note: Listed on PBEC member-committee roster through the 1990s; absent from current APEC-economy footprint
+founding_members:
+- AU
+- CA
+- JP
+- NZ
+- US
+membership_count: 21
+wikidata_id: Q7122303
+description: >-
+  Oldest independent business association linking Asia-Pacific economies, founded in 1967 by business leaders from Australia,
+  Canada, Japan, New Zealand, and the United States. PBEC convenes invitation-only roundtable dialogues among CEOs, entrepreneurs,
+  and subject-matter experts — representing major corporations across the region — and advocates for cross-border trade,
+  regulatory standardisation, and sustainable economic development. It helped nurture both PECC and APEC and remains an
+  institutional member of PECC (without voting power); its policy positions are frequently referenced by APEC and ABAC.
+  As of 2026 its member footprint spans the 21 APEC economies through national member committees, with the International
+  Secretariat in Hong Kong since 2003 and business hubs in Kansai, Tokyo, Singapore, and Shanghai.
 tags:
 - PBEC
+- apec
+- asia_pacific
 - basin
+- business
+- commerce
 - economic
 - intorg
 - pacific
+- regional
+- trade
 topics:
 - key: economy
   name: Economy
-wikidata_id: Q7122303
+- key: trade
+  name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: المجلس الاقتصادي لحوض المحيط الهادىء
@@ -114,10 +191,54 @@ other_names:
   name: Pacific Basin Economic Council
 - id: fr
   name: Pacific Basin Economic Council
-founded: '1967'
+- id: ja
+  name: 太平洋経済委員会
+notes: >-
+  Membership is by invitation only and organised through national member committees rather than classic intergovernmental
+  accession. South Korea, Mexico, Hong Kong, Malaysia, and the Philippines joined after the five founding economies. Colombia,
+  Ecuador, and Fiji maintained historical member committees but are not part of PBEC's published 21-economy APEC footprint;
+  Colombia remains a LATAM affiliate hub alongside Peru, Chile, and Mexico.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/pbec-fast-facts/
+- field: description
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/introduction-to-pbec/
 - field: founded
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/pbec-fast-facts/
+- field: headquarters
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/introduction-to-pbec/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Basin_Economic_Council
+- field: legal_status
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/introduction-to-pbec/
+- field: geographic_scope
+  source: PBEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/pbec-fast-facts/
+- field: notes
+  source: PBEC official website / historical member roster
+  retrieved_at: '2026-07-29'
+  url: https://www.pbec.org/archive/member/core.htm
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122303
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q7122303
   license: CC0

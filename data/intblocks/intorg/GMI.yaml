@@ -5,33 +5,42 @@ blocktype:
 - waste
 status: formal
 founded: '2004-11-16'
+active_period:
+  start: '2004-11-16'
 geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: https://www.globalmethane.org/
+- url: https://gmidev.org/web/about-gmi/about-gmi
+  type: website
+- url: https://gmidev.org/web/partner-countries-and-year-joined
+  type: website
+- url: https://www.epa.gov/gmi
   type: website
 - url: https://en.wikipedia.org/wiki/Global_Methane_Initiative
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q6823568
+  type: wikidata
 acronyms:
 - lang: en
   value: GMI
+legal_status: public-private partnership
+recognition_status: Voluntary international public-private partnership launched on 16 November 2004 as the Methane to Markets Partnership; re-chartered as the Global Methane Initiative in 2010 with an expanded mission covering methane abatement and municipal wastewater; current charter set to expire in 2031
 headquarters:
   city: Washington, D.C.
   country: US
   coordinates:
     lat: 38.895
     lng: -77.0367
-membership_count: 64
-legal_status: intergovernmental
-notes: 'Originally established as "Methane to Market Partnership" in 2004, renamed to Global Methane Initiative in 2010. GMI
-  is a voluntary, international public-private partnership that brings together national governments, private sector entities,
-  development banks, NGOs and other interested stakeholders to reduce methane emissions and advance methane recovery and use
-  as a clean energy source. The partnership focuses on three key sectors: biogas (including agriculture, municipal solid waste,
-  and wastewater), coal mines, and oil and gas systems. Full membership list should be verified from official GMI website.'
-description: International public-private partnership dedicated to reducing global methane emissions and promoting the recovery
-  and utilization of methane as a clean energy source. GMI focuses on methane abatement, recovery and use across key sectors
-  including agriculture, coal mining, municipal solid waste, municipal wastewater, and oil and gas systems.
+secretariat:
+  location: Washington, D.C.
+  organization: GMI Secretariat (hosted by U.S. EPA)
+membership_count: 49
+wikidata_id: Q6823568
+notes: 'Originally established as "Methane to Markets Partnership" in 2004, renamed to Global Methane Initiative in 2010. GMI is a voluntary, international public-private partnership that brings together national governments, private sector entities, development banks, NGOs and other interested stakeholders to reduce methane emissions and advance methane recovery and use as a clean energy source. The partnership focuses on three key sectors: biogas (including agriculture, municipal solid waste, and wastewater), coal mines, and oil and gas systems.'
+description: International public-private partnership dedicated to reducing global methane emissions and promoting the recovery and utilization of methane as a clean energy source. As of 2025, GMI comprises 49 Partner Countries plus a Project Network of more than 1,000 organizations. GMI focuses on methane abatement, recovery and use across key sectors including agriculture, coal mining, municipal solid waste, municipal wastewater, and oil and gas systems.
 tags:
 - GMI
 - methane
@@ -49,275 +58,288 @@ topics:
 - key: energy
   name: Energy
 includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '2013'
 - id: AR
   name: Argentina
   type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: AU
   name: Australia
   type: country
-  status: member
-- id: BE
-  name: Belgium
+  status: founding_member
+  joined: '2004-11-16'
+- id: BR
+  name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: BG
   name: Bulgaria
   type: country
   status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
+  joined: '2009'
 - id: CA
   name: Canada
   type: country
   status: member
-- id: CH
-  name: Switzerland
+  joined: '2005'
+- id: CF
+  name: Central African Republic
   type: country
   status: member
+  joined: '2025'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '2009'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: CO
   name: Colombia
   type: country
-  status: member
-- id: CY
-  name: Cyprus
+  status: founding_member
+  joined: '2004-11-16'
+- id: CI
+  name: Cote d'Ivoire
   type: country
   status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
+  joined: '2018'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '2022'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+  joined: '2009'
 - id: EC
   name: Ecuador
   type: country
   status: member
-- id: EE
-  name: Estonia
+  joined: '2006'
+- id: ET
+  name: Ethiopia
   type: country
   status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
+  joined: '2010'
 - id: FI
   name: Finland
   type: country
   status: member
-- id: FR
-  name: France
+  joined: '2008'
+- id: GE
+  name: Georgia
   type: country
   status: member
-- id: GB
-  name: United Kingdom
+  joined: '2009'
+- id: DE
+  name: Germany
   type: country
   status: member
+  joined: '2006'
 - id: GH
   name: Ghana
   type: country
   status: member
-- id: GR
-  name: Greece
+  joined: '2010'
+- id: IN
+  name: India
   type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: ID
   name: Indonesia
   type: country
   status: member
-- id: IE
-  name: Ireland
+  joined: '2010'
+- id: IL
+  name: Israel
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
+  joined: '2018'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: JP
   name: Japan
   type: country
-  status: member
-- id: KE
-  name: Kenya
+  status: founding_member
+  joined: '2004-11-16'
+- id: JO
+  name: Jordan
   type: country
   status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
+  joined: '2011'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
-- id: LT
-  name: Lithuania
+  joined: '2008'
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
-- id: LU
-  name: Luxembourg
+  joined: '2005'
+- id: MK
+  name: Macedonia, FYR
   type: country
   status: member
-- id: LV
-  name: Latvia
+  joined: '2024'
+- id: MG
+  name: Madagascar
   type: country
   status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
+  joined: '2024'
 - id: MX
   name: Mexico
   type: country
-  status: member
-- id: MY
-  name: Malaysia
+  status: founding_member
+  joined: '2004-11-16'
+- id: MN
+  name: Mongolia
   type: country
   status: member
+  joined: '2008'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2023'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '2010'
 - id: NG
   name: Nigeria
   type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: 'NO'
   name: Norway
   type: country
   status: member
-- id: NZ
-  name: New Zealand
+  joined: '2011'
+- id: PK
+  name: Pakistan
   type: country
   status: member
+  joined: '2008'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '2010'
 - id: PH
   name: Philippines
   type: country
   status: member
+  joined: '2008'
 - id: PL
   name: Poland
   type: country
   status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
+  joined: '2007'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
-- id: SE
-  name: Sweden
+  status: founding_member
+  joined: '2004-11-16'
+- id: SA
+  name: Saudi Arabia
   type: country
   status: member
-- id: SG
-  name: Singapore
+  joined: '2014'
+- id: RS
+  name: Serbia
   type: country
   status: member
-- id: SI
-  name: Slovenia
+  joined: '2010'
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
+  joined: '2011'
 - id: TH
   name: Thailand
   type: country
   status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
+  joined: '2008'
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '2010'
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+  joined: '2004-11-16'
 - id: US
   name: United States
   type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
+  status: founding_member
+  joined: '2004-11-16'
 - id: VN
   name: Vietnam
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
+  joined: '2017'
+founding_members:
+- AR
+- AU
+- BR
+- CN
+- CO
+- GB
+- IN
+- IT
+- JP
+- MX
+- NG
+- RU
+- UA
+- US
 other_names:
 - id: en
   name: Methane to Markets Partnership
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.globalmethane.org/
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.globalmethane.org/
+- field: includes
+  source: GMI official website
+  retrieved_at: '2026-07-29'
+  url: https://gmidev.org/web/partner-countries-and-year-joined
+- field: description
+  source: GMI official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://gmidev.org/web/about-gmi/about-gmi
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6823568
+  license: CC0
+- field: founding_members
+  source: U.S. EPA; U.S. Department of State
+  retrieved_at: '2026-07-29'
+  url: https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/7a9a36b36ff3a84b85256f4e006d47d8.html
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.globalmethane.org/
+  source: GMI official website; U.S. EPA
+  retrieved_at: '2026-07-29'
+  url: https://www.epa.gov/gmi

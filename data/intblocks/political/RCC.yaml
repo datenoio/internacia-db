@@ -2,21 +2,40 @@ id: RCC
 blocktype:
 - political
 status: formal
+founded: '2008-02-27'
+geographic_scope: regional
+regions:
+- Europe
+- Southeast Europe
 languages:
 - en
 links:
-- url: http://www.rcc.int/
+- url: https://www.rcc.int/
+  type: website
+- url: https://www.rcc.int/pages/96/participants
   type: website
 - url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2447642
   type: wikidata
 name: Regional Cooperation Council
+partof: SEECP
+headquarters:
+  city: Sarajevo
+  country: BA
+  coordinates:
+    lat: 43.8607
+    lng: 18.4214
+legal_status: intergovernmental
 includes:
 - id: AL
   name: Albania
   type: country
   status: member
+- id: AT
+  name: Austria
+  type: country
+  status: participant
 - id: BA
   name: Bosnia and Herzegovina
   type: country
@@ -25,26 +44,126 @@ includes:
   name: Bulgaria
   type: country
   status: member
-- id: HR
-  name: Croatia
+- id: CA
+  name: Canada
   type: country
-  status: member
+  status: participant
+- id: CEB
+  name: Council of Europe Development Bank
+  type: organization
+  status: participant
+- id: CH
+  name: Switzerland
+  type: country
+  status: participant
+- id: COE
+  name: Council of Europe
+  type: organization
+  status: participant
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: participant
+- id: DE
+  name: Germany
+  type: country
+  status: participant
+- id: DK
+  name: Denmark
+  type: country
+  status: participant
+- id: EBRD
+  name: European Bank for Reconstruction and Development
+  type: organization
+  status: participant
+- id: EIB
+  name: European Investment Bank
+  type: organization
+  status: participant
+- id: ES
+  name: Spain
+  type: country
+  status: participant
+- id: EU
+  name: European Union
+  type: organization
+  status: participant
+- id: FI
+  name: Finland
+  type: country
+  status: participant
+- id: FR
+  name: France
+  type: country
+  status: participant
+- id: GB
+  name: United Kingdom
+  type: country
+  status: participant
 - id: GR
   name: Greece
   type: country
   status: member
-- id: SI
-  name: Slovenia
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+- id: HU
+  name: Hungary
+  type: country
+  status: participant
+- id: IE
+  name: Ireland
+  type: country
+  status: participant
+- id: IOM
+  name: International Organization for Migration
+  type: organization
+  status: participant
+- id: IT
+  name: Italy
+  type: country
+  status: participant
+- id: KV
+  name: Kosovo
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: participant
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+- id: ME
+  name: Montenegro
   type: country
   status: member
 - id: MK
   name: Macedonia, FYR
   type: country
   status: member
-- id: MD
-  name: Moldova
+- id: NATO
+  name: North Atlantic Treaty Organization
+  type: organization
+  status: participant
+- id: 'NO'
+  name: Norway
   type: country
-  status: member
+  status: participant
+- id: OECD
+  name: Organisation for Economic Co-operation and Development
+  type: organization
+  status: participant
+- id: OSCE
+  name: Organization for Security and Co-operation in Europe
+  type: organization
+  status: participant
+- id: PL
+  name: Poland
+  type: country
+  status: participant
 - id: RO
   name: Romania
   type: country
@@ -53,47 +172,134 @@ includes:
   name: Serbia
   type: country
   status: member
+- id: SECI
+  name: Southeast European Cooperative Initiative
+  type: organization
+  status: participant
+- id: SE
+  name: Sweden
+  type: country
+  status: participant
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: participant
 - id: TR
   name: Turkey
   type: country
   status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: KV
-  name: Kosovo
-  type: country
-  status: member
-membership_count: 13
+- id: UN
+  name: United Nations
+  type: organization
+  status: participant
+- id: UNDP
+  name: United Nations Development Programme
+  type: organization
+  status: participant
+- id: UNECE
+  name: United Nations Economic Commission for Europe
+  type: organization
+  status: participant
+- id: WB
+  name: World Bank
+  type: organization
+  status: participant
+membership_count: 45
 wikidata_id: Q2447642
-description: Southeastern European intergovernmental organization.
+description: Regionally owned intergovernmental framework for cooperation and European
+  integration in South East Europe, launched on 27 February 2008 at the SEECP foreign
+  ministers meeting in Sofia as the successor to the Stability Pact for South Eastern
+  Europe. The Secretariat is based in Sarajevo with a Liaison Office in Brussels.
+  Thirteen SEECP states are core members; additional states and international organizations
+  participate as board contributors. Major programmes include the Regional Economic Area
+  (REA) and Roma integration initiatives.
 tags:
 - RCC
+- balkans
 - cooperation
 - council
+- europe
 - political
 - regional
 - regional_cooperation
+- see
+- southeast
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: integration
+  name: Integration
+- key: development
+  name: Development
 other_names:
+- id: el
+  name: Συμβούλιο Περιφερειακής Συνεργασίας
 - id: en
   name: Regional Cooperation Council
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- id: id
+  name: Dewan Kerja Sama Regional
+- id: it
+  name: Consiglio di Cooperazione Regionale
+- id: ja
+  name: 地域協力会議
+- id: ro
+  name: Consiliul Regional de Cooperare
 acronyms:
 - lang: en
   value: RCC
+- lang: it
+  value: RCC
+notes: Operates under SEECP auspices. The United States withdrew as a participant in
+  January 2026, reducing the roster from 46 to 45. Kosovo designation follows UNSCR
+  1244 and the ICJ advisory opinion, per RCC statute.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2447642
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council
+- field: includes
+  source: Regional Cooperation Council
+  retrieved_at: '2026-07-29'
+  url: https://www.rcc.int/pages/96/participants
+- field: founded
+  source: Regional Cooperation Council
+  retrieved_at: '2026-07-29'
+  url: https://www.rcc.int/pages/2/about-us
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2447642
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2447642
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Cooperation_Council

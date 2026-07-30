@@ -1,28 +1,80 @@
 id: ICARDA
+name: International Center for Agricultural Research in the Dry Areas
 blocktype:
 - research
 - intorg
 status: formal
 partof: CGIAR
-languages:
-- en
-links:
-- url: http://www.icarda.org
-  type: website
-- url: https://en.wikipedia.org/wiki/International_Center_for_Agricultural_Research_in_the_Dry_Areas
-  type: wikipedia
-name: International Center for Agricultural Research in the Dry Areas
-founded: '1977'
+founded: '1975'
+active_period:
+  start: '1975'
 geographic_scope: global
 regions:
 - Africa
 - Asia
+- Central Asia
+- Middle East
+languages:
+- en
+- ar
+links:
+- url: https://icarda.org/
+  type: website
+- url: https://en.wikipedia.org/wiki/International_Center_for_Agricultural_Research_in_the_Dry_Areas
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q601277
+  type: wikidata
+acronyms:
+- lang: en
+  value: ICARDA
+- lang: ar
+  value: إكارد
+- lang: zh
+  value: 國際乾旱地區農業研究中心
+legal_status: nonprofit
+recognition_status: >-
+  CGIAR research center established in 1975 to conduct research-for-development for non-tropical dryland agriculture;
+  headquarters relocated from Tel Hadya, Syria, to Beirut, Lebanon, in 2012; geographic mandate covers Central and West
+  Asia and North Africa (CWANA), expanded in 1997 to include Central Asia and the Caucasus
 headquarters:
   city: Beirut
   country: LB
+  coordinates:
+    lat: 33.8938
+    lng: 35.5018
+wikidata_id: Q601277
+description: >-
+  International nonprofit CGIAR research center undertaking research-for-development to improve livelihood resilience
+  of rural communities in non-tropical dry areas. ICARDA develops science-based solutions for crop improvement, water
+  management, and dryland farming systems across Central and West Asia, North Africa, and the Middle East (CWANA), with
+  global mandates for barley, lentil, and faba bean improvement.
 includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
 - id: AF
   name: Afghanistan
+  type: country
+  status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
   type: country
   status: member
 - id: DZ
@@ -30,27 +82,79 @@ includes:
   type: country
   status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ET
   name: Ethiopia
   type: country
   status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
 - id: IN
   name: India
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: IR
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: JO
   name: Jordan
   type: country
   status: member
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
 - id: LB
   name: Lebanon
   type: country
   status: member
+- id: LY
+  name: Libya
+  type: country
+  status: member
 - id: MA
   name: Morocco
+  type: country
+  status: member
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
   type: country
   status: member
 - id: SD
@@ -58,7 +162,15 @@ includes:
   type: country
   status: member
 - id: SY
-  name: Syria
+  name: Syrian Arab Republic
+  type: country
+  status: member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+- id: TM
+  name: Turkmenistan
   type: country
   status: member
 - id: TN
@@ -73,36 +185,93 @@ includes:
   name: United States
   type: country
   status: member
-- id: YE
-  name: Yemen
+- id: UZ
+  name: Uzbekistan
   type: country
   status: member
-membership_count: 14
-description: International Center for Agricultural Research in the Dry Areas is an
-  international research body with 14 members.
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+membership_count: 36
 tags:
 - ICARDA
-- agricultural
 - agriculture
-- integrated
-- intorg
-- production
-- research
 - cgiar
+- dryland
+- dry-areas
+- intorg
+- nonprofit
+- research
+- CWANA
 topics:
 - key: agriculture
   name: Agriculture
 - key: research
   name: Research
+other_names:
+- id: ar
+  name: المركز الدولي للبحوث الزراعية في المناطق الجافة
+- id: de
+  name: International Center for Agricultural Research in the Dry Areas
+- id: en
+  name: International Center for Agricultural Research in the Dry Areas
+- id: en
+  name: ICARDA
+- id: fr
+  name: centre international de recherche agricole dans les zones arides
+- id: zh
+  name: 国际干旱地区农业研究中心
+notes: >-
+  ICARDA has no formal intergovernmental membership; includes lists CWANA mandate and primary research-partnership
+  countries where ICARDA conducts regional programs through national agricultural research systems. The mandate was
+  expanded from West Asia and North Africa (WANA) to Central and West Asia and North Africa (CWANA) in 1997 to include
+  Central Asia and the Caucasus. The United States appears as a major CGIAR trust-fund contributor rather than a
+  CWANA mandate country.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cgiar.org/research/center/icarda
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://icarda.org/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cgiar.org/research/center/icarda
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Center_for_Agricultural_Research_in_the_Dry_Areas
+  license: CC BY-SA 4.0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.icarda.org
-- field: headquarters
+  retrieved_at: '2026-07-29'
+  url: https://icarda.org/
+- field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.icarda.org
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://icarda.org/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q601277
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q601277
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q601277
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q601277
+  license: CC0

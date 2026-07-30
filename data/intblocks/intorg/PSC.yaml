@@ -1,55 +1,132 @@
 id: PSC
+name: Pacific Salmon Commission
 blocktype:
 - intorg
 status: formal
+founded: '1985-03-18'
+active_period:
+  start: '1985-03-18'
+geographic_scope: bilateral
+regions:
+- North America
+- Pacific
 languages:
 - en
 links:
 - url: https://www.psc.org/
   type: website
+- url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+  type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Salmon_Commission
   type: wikipedia
-name: Pacific Salmon Commission
-founded: '1985'
+- url: https://www.wikidata.org/wiki/Q7122672
+  type: wikidata
+acronyms:
+- lang: en
+  value: PSC
+legal_status: treaty-based international organization
+recognition_status: Regional fishery management organization (RFMO) established under the Pacific Salmon Treaty to implement cooperative salmon conservation and harvest-sharing between Canada and the United States
 headquarters:
   city: Vancouver
   country: CA
   coordinates:
     lat: 49.2827
     lng: -123.1207
-includes:
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: US
-  name: United States of America
-  type: country
-  status: member
-acronyms:
-- lang: en
-  value: PSC
 membership_count: 2
-description: Pacific Salmon Commission is an international intorg body with 2 members.
+description: Bilateral treaty-based regional fishery management organization (RFMO) established by Canada and the United States to implement the 1985 Pacific Salmon Treaty, which entered into force on 18 March 1985. The Commission administers cooperative management of Pacific salmon stocks, setting harvest quotas and conservation measures for fisheries in Alaska, British Columbia, the Fraser River, the Columbia River, the Yukon River, and transboundary rivers. Each country appoints four Commissioners and four alternates representing commercial and recreational fisheries as well as federal, state, and tribal governments; decisions require consensus between the two national sections. The Secretariat is headquartered in Vancouver, British Columbia.
 tags:
 - PSC
+- RFMO
 - agriculture
+- bilateral
 - farming
 - fisheries
 - intorg
 - pacific
 - salmon
+- salmon_treaty
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+includes:
+- id: CA
+  name: Canada
+  type: country
+  status: founding_member
+  joined: '1985-03-18'
+- id: US
+  name: United States of America
+  type: country
+  status: founding_member
+  joined: '1985-03-18'
+founding_members:
+- CA
+- US
+wikidata_id: Q7122672
 other_names:
 - id: en
   name: Pacific Salmon Commission
+- id: fr
+  name: Pacific Salmon Commission
+- id: zh
+  name: 太平洋鲑鱼委员会
+notes: The PSC succeeded the International Pacific Salmon Fisheries Commission (1937–1985), which focused primarily on Fraser River sockeye restoration including fishways at Hells Gate. The 1985 Pacific Salmon Treaty was amended by the 1999 Agreement, which established Northern and Southern Restoration and Enhancement funds. Five regional Panels (Northern, Fraser River, Southern, Yukon, and Transboundary) provide technical recommendations to the sixteen-person Commission.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122672
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122672
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7122672
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.psc.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.psc.org/about-us/the-pacific-salmon-commission/

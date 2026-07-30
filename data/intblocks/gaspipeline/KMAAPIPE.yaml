@@ -2,32 +2,48 @@ id: KMAAPIPE
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '1970'
+geographic_scope: bilateral
+regions:
+- Asia
 links:
 - url: https://en.wikipedia.org/wiki/Kazi_Magomed_%E2%80%93_Astara_%E2%80%93_Abadan_pipeline
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q6381091
+  type: wikidata
 name: Kazi Magomed – Astara – Abadan pipeline
+acronyms:
+- lang: en
+  value: KMAAPIPE
 includes:
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
 - id: IR
-  name: Iran (Islamic Republic of)
+  name: Iran
   type: country
   status: member
 membership_count: 2
-description: Kazi Magomed – Astara – Abadan pipeline is an international gaspipeline
-  body with 2 members.
+wikidata_id: Q6381091
+description: Natural gas pipeline from Kazi Magomed (Hajiqabul), Azerbaijan, through Astara to Abadan (Bid-Boland), Iran.
+  Commissioned in 1970 and operated by SOCAR and the National Iranian Gas Company; 1,474.5 km total length with the Iranian
+  section known as IGAT1. Originally supplied Soviet Caucasus republics with Iranian gas; used since 2006 for Azerbaijan–Iran
+  gas swap arrangements.
 tags:
 - KMAAPIPE
+- abadan
 - astara
-- aviation
+- azerbaijan
 - economy
 - energy
 - gaspipeline
-- kazi
-- magomed
-- oil
+- hajiqabul
+- igat1
+- iran
+- kazi-magomed
+- pipeline
+- socar
 - transport
 - transportation
 topics:
@@ -37,7 +53,46 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: az
+  name: Hacıqabul-Astara-Abadan qaz kəməri
+- id: en
+  name: Hajiqabul–Astara–Abadan pipeline
+- id: en
+  name: Kazi Magomed–Astara–Abadan pipeline
+- id: fa
+  name: خط لوله اول سراسری گاز ایران
+- id: lt
+  name: Dujotiekis Hadžikabulas–Abadanas
+- id: ru
+  name: Газопровод Аджикабул — Астара — Абадан
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6381091
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Kazi_Magomed_%E2%80%93_Astara_%E2%80%93_Abadan_pipeline
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Kazi_Magomed_%E2%80%93_Astara_%E2%80%93_Abadan_pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6381091
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Kazi_Magomed_%E2%80%93_Astara_%E2%80%93_Abadan_pipeline
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: inferred grouping
+  retrieved_at: '2026-07-29'

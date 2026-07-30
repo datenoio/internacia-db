@@ -2,17 +2,20 @@ id: VISTA
 blocktype:
 - acronym
 status: informal
+founded: '2006'
 links:
-- url: https://www.wikidata.org/wiki/Q37440896
-  type: wikidata
+- url: https://www.nri.com/content/900013129.pdf
+  type: website
+- url: https://www.hitachi-hri.com/research/researchreport/short/k026.html
+  type: website
+- url: https://handwiki.org/wiki/Finance:VISTA_(economics)
+  type: wikipedia
+- url: https://www.businessinsider.com/forget-bric-etfs-look-to-vista-nations-for-better-opportunities-2011-10
+  type: website
 name: VISTA
 includes:
 - id: VN
-  name: Viet Nam
-  type: country
-  status: member
-- id: AR
-  name: Argentina
+  name: Vietnam
   type: country
   status: member
 - id: ID
@@ -24,34 +27,61 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
+  type: country
+  status: member
+- id: AR
+  name: Argentina
   type: country
   status: member
 membership_count: 5
-description: 'The VISTA countries are an economic grouping of five emerging markets: Vietnam, Indonesia, South Africa, Turkey,
-  and Argentina. The acronym was proposed in 2006 by the BRICs Economic Research Institute of Japan to highlight a new wave
-  of developing economies with strong potential for trade, sourcing, and investment.'
+description: VISTA is an acronym for Vietnam, Indonesia, South Africa, Turkey, and Argentina — five emerging-market economies
+  proposed in November 2006 by economist Takafumi Kadokura of the BRICs Economic Research Institute as a post-BRICs investment
+  grouping. The term (a pun on the word "vista") highlights countries with strong trade, sourcing, and investment potential
+  but has not achieved the same global recognition as BRICs, CIVETS, or the Next Eleven.
 tags:
 - VISTA
 - acronym
+- argentina
+- emerging
+- indonesia
+- south-africa
+- turkey
+- vietnam
 topics:
 - key: economy
   name: Economy
-wikidata_id: Q37440896
+acronyms:
+- lang: en
+  value: VISTA
 other_names:
-- id: de
-  name: Vista
 - id: en
-  name: Vista
-- id: es
-  name: Vista
-- id: fr
-  name: Vista
-- id: pt
-  name: Vista
+  name: VISTA
+- id: en
+  name: Vietnam, Indonesia, South Africa, Turkey, and Argentina
+- id: ja
+  name: ビスタ
+- id: ru
+  name: ВИСТА
+notes: Coined by Takafumi Kadokura (BRICs Economic Research Institute) on 6 November 2006 in Nikkei BP Online as a post-BRICs
+  emerging-market framework. Chooses Argentina over Mexico (OECD member) and South Africa over Nigeria for Africa representation.
+  Three members (Vietnam, Indonesia, Turkey) overlap with CIVETS; Indonesia also appears in MINT and TIMBI; South Africa
+  joined BRICS in 2010. Related but distinct from N-11, CIVETS, MINT, TIMBI, and E7 groupings.
+last_verified: '2026-07-29'
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: Nomura Research Institute
+  retrieved_at: '2026-07-29'
+  url: https://www.nri.com/content/900013129.pdf
+- field: description
+  source: HandWiki
+  retrieved_at: '2026-07-29'
+  url: https://handwiki.org/wiki/Finance:VISTA_(economics)
+- field: founded
+  source: Hitachi Research Institute
+  retrieved_at: '2026-07-29'
+  url: https://www.hitachi-hri.com/research/researchreport/short/k026.html
+- field: notes
+  source: Hitachi Research Institute
+  retrieved_at: '2026-07-29'
+  url: https://www.hitachi-hri.com/research/researchreport/short/k026.html

@@ -1,77 +1,212 @@
 id: CCSDS
+name: Consultative Committee for Space Data Systems
 blocktype:
 - intorg
 - space
 status: formal
+founded: '1982'
+active_period:
+  start: '1982'
+geographic_scope: global
 languages:
 - en
 links:
-- url: http://public.ccsds.org/default.aspx
+- url: https://ccsds.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Consultative_Committee_for_Space_Data_Systems
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q126379
   type: wikidata
-name: Consultative Committee for Space Data Systems
+acronyms:
+- lang: en
+  value: CCSDS
+legal_status: intergovernmental
+recognition_status: Multinational consultative forum founded in 1982 for governmental and quasi-governmental space agencies; governed by the CCSDS Charter; also serves as ISO Technical Committee 20 Subcommittee 13 (Space Data and Information Transfer Systems)
+headquarters:
+  city: Washington
+  country: US
+  coordinates:
+    lat: 38.883
+    lng: -77.0163
+  note: CCSDS Secretariat, NASA Space Communications and Navigation Office
+secretariat:
+  location: Washington
+  organization: CCSDS Secretariat (NASA SCaN Office)
 includes:
+- id: AT
+  name: Austria
+  type: country
+  status: observer
+  note: ASA
+- id: AU
+  name: Australia
+  type: country
+  status: observer
+  note: CSIRO
+- id: BE
+  name: Belgium
+  type: country
+  status: observer
+  note: BFSPO
 - id: BR
   name: Brazil
   type: country
   status: member
+  note: INPE
 - id: CA
   name: Canada
   type: country
   status: member
+  note: CSA
+- id: CH
+  name: Switzerland
+  type: country
+  status: observer
+  note: SSO
 - id: CN
   name: China
   type: country
   status: member
+  note: CNSA
 - id: DE
   name: Germany
   type: country
   status: member
+  note: DLR
+- id: DK
+  name: Denmark
+  type: country
+  status: observer
+  note: DNSC
+- id: ESA
+  name: European Space Agency
+  type: organization
+  status: member
+  note: ESA
+- id: EUMETSAT
+  name: EUMETSAT
+  type: organization
+  status: observer
+- id: EUTELSAT
+  name: EUTELSAT
+  type: organization
+  status: observer
 - id: FR
   name: France
   type: country
   status: member
+  note: CNES
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  note: UKSA
+- id: GR
+  name: Greece
+  type: country
+  status: observer
+  note: HNSC
+- id: HU
+  name: Hungary
+  type: country
+  status: observer
+  note: KFKI
+- id: IL
+  name: Israel
+  type: country
+  status: observer
+  note: MOC
+- id: IN
+  name: India
+  type: country
+  status: observer
+  note: ISRO
 - id: IT
   name: Italy
   type: country
   status: member
+  note: ASI
 - id: JP
   name: Japan
   type: country
   status: member
+  note: JAXA
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: observer
+  note: KARI
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: observer
+  note: NSARK
+- id: PK
+  name: Pakistan
+  type: country
+  status: observer
+  note: SUPARCO
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  note: ROSCOSMOS
+- id: SE
+  name: Sweden
+  type: country
+  status: observer
+  note: SSC
+- id: TH
+  name: Thailand
+  type: country
+  status: observer
+  note: GISTDA
+- id: TR
+  name: Turkey
+  type: country
+  status: observer
+  note: TUBITAK
+- id: TW
+  name: Taiwan
+  type: country
+  status: observer
+  note: NSPO
 - id: US
   name: United States
   type: country
   status: member
-founded: '1982'
-acronyms:
-- lang: en
-  value: CCSDS
-membership_count: 10
+  note: NASA
+- id: ZA
+  name: South Africa
+  type: country
+  status: observer
+  note: SANSA
+membership_count: 30
 wikidata_id: Q126379
-description: The Consultative Committee for Space Data Systems is an international organization that is used to promote regional
-  cooperation in the space data systems sector.
+description: Multinational forum of governmental and quasi-governmental space agencies that develops communications and
+  data-system standards for spaceflight, promoting interoperability and cross-support across missions. Eleven member agencies
+  hold voting rights on the CCSDS Management Council; observer agencies participate at reduced support levels. CCSDS also
+  serves as ISO Technical Committee 20 Subcommittee 13 (Space Data and Information Transfer Systems).
+notes: CCSDS membership is agency-based; only one member agency per country or multinational organization may hold full member
+  status. As of the CCSDS 2025 brochure and 2024 overview, there are 11 member agencies and about 28–33 observer agencies
+  plus over 140 commercial associates. Country codes represent the home states of member or observer agencies; additional
+  observer agencies from member states (e.g. NOAA and USGS for the United States, ISRO for India) are collapsed to a single
+  country entry with agency notes where the state already has a member agency, or listed separately where no member agency
+  exists for that state.
+last_verified: '2026-07-29'
 tags:
 - CCSDS
-- astronaut
 - committee
 - consultative
 - intorg
 - space
+- standardization
+- standards
 topics:
 - key: space
   name: Space
+- key: standardization
+  name: Standardization
 other_names:
 - id: ar
   name: اللجنة الاستشارية لأنظمة بيانات الفضاء
@@ -96,3 +231,23 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ccsds.org/wp-content/uploads/2025/01/CCSDS-Brochure.pdf
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ccsds.org/wp-content/uploads/2025/01/CCSDS-Brochure.pdf
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ccsds.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ccsds.org/Pubs/A02x1y4c2.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ccsds.org/

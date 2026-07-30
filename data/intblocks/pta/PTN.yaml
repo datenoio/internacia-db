@@ -2,83 +2,160 @@ id: PTN
 blocktype:
 - pta
 status: formal
+founded: '1971-12-08'
+active_period:
+  start: '1973-02-11'
+geographic_scope: global
+regions:
+- Global
+languages:
+- en
+- es
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Protocol_on_Trade_Negotiations
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7251941
   type: wikidata
+- url: https://www.wto.org/gatt_docs/English/SULPDF/91650212.pdf
+  type: website
+- url: https://www.wipo.int/wipolex/en/treaties/details/438
+  type: website
 name: Protocol on Trade Negotiations
+acronyms:
+- lang: en
+  value: PTN
+legal_status: preferential trade agreement
+recognition_status: Preferential trade agreement signed in Geneva on 8 December 1971 among developing countries under the GATT Enabling Clause framework; entered into force on 11 February 1973; notified to the GATT/WTO on 9 November 1971
 includes:
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '1976'
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
+- id: ES
+  name: Spain
+  type: country
+  status: former_member
+  joined: '1973-01-12'
+  left: '1987-02-06'
+- id: GR
+  name: Greece
+  type: country
+  status: former_member
+  joined: '1971-12-08'
+  left: '1980-06-28'
 - id: IL
   name: Israel
   type: country
-  status: member
-- id: KR
-  name: South Korea
+  status: founding_member
+  joined: '1971-12-08'
+- id: IN
+  name: India
   type: country
-  status: member
+  status: former_member
+  joined: '1971-12-08'
+  left: '1993-03-29'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: founding_member
+  joined: '1971-12-08'
 - id: MX
   name: Mexico
   type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
+- id: PK
+  name: Pakistan
+  type: country
+  status: founding_member
+  joined: '1971-12-08'
+- id: PY
+  name: Paraguay
+  type: country
+  status: founding_member
+  joined: '1971-12-08'
+- id: RO
+  name: Romania
+  type: country
+  status: former_member
+  joined: '1978'
+  left: '2006'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '1971-12-08'
 - id: TN
   name: Tunisia
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
 - id: UY
   name: Uruguay
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-12-08'
+founding_members:
+- BR
+- CL
+- EG
+- GR
+- IL
+- IN
+- KR
+- MX
+- PK
+- PE
+- PH
+- PY
+- TN
+- TR
+- UY
 membership_count: 15
 wikidata_id: Q7251941
-description: The Protocol on Trade Negotiations (PTN) is a 1971 agreement among developing countries that exchanges reciprocal tariff preferences, established under the GATT framework as one of the earliest preferential trade arrangements among developing nations.
+description: Preferential trade agreement signed in Geneva on 8 December 1971 among developing countries to exchange reciprocal tariff concessions under the GATT Enabling Clause. One of the earliest South–South preferential trade arrangements; entered into force on 11 February 1973. Fifteen developing countries currently apply the agreement; four former participants (Greece, India, Romania, and Spain) have withdrawn.
 tags:
 - PTN
 - commerce
+- developing_countries
 - economy
+- gatt
 - negotiations
 - protocol
 - pta
+- south_south
 - trade
 topics:
 - key: economy
@@ -88,3 +165,50 @@ topics:
 other_names:
 - id: en
   name: Protocol on Trade Negotiations
+- id: es
+  name: Protocolo Relativo a las Negociaciones Comerciales entre Países en Desarrollo
+- id: fr
+  name: Protocole concernant les négociations commerciales entre pays en voie de développement
+notes: Serbia continues application as successor to the Socialist Federal Republic of Yugoslavia, an original signatory. Bangladesh acceded in 1976; Romania acceded in 1978 and withdrew in 2006. Greece withdrew effective 28 June 1980 upon accession to the European Economic Community. Spain ratified on 12 January 1973 and withdrew effective 6 February 1987. India notified withdrawal effective 29 March 1993.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: WTO GATT documents; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Protocol_on_Trade_Negotiations
+- field: founding_members
+  source: WTO GATT documents
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/gatt_docs/English/SULPDF/91650212.pdf
+- field: founded
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/details/438
+- field: active_period
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/details/438
+- field: description
+  source: Wikipedia; WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Protocol_on_Trade_Negotiations
+- field: legal_status
+  source: WTO GATT documents
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/gatt_docs/English/SULPDF/91650212.pdf
+- field: recognition_status
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/details/438
+- field: other_names
+  source: WIPO Lex
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/details/438
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Protocol_on_Trade_Negotiations
+- field: notes
+  source: WTO GATT documents
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/gatt_docs/English/HTM/1790.RFT.HTM

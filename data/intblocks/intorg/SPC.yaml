@@ -1,174 +1,270 @@
 id: SPC
+name: Pacific Community
 blocktype:
 - intorg
 status: formal
+founded: '1947-02-06'
+active_period:
+  start: '1947-02-06'
+geographic_scope: regional
+regions:
+- Pacific
+- Oceania
 languages:
 - en
+- fr
 links:
-- url: http://www.spc.int/
+- url: https://www.spc.int/
   type: website
-- url: https://en.wikipedia.org/wiki/Secretariat_of_the_Pacific_Community
+- url: https://www.spc.int/about-us
+  type: website
+- url: https://en.wikipedia.org/wiki/Pacific_Community
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q871511
   type: wikidata
-name: Secretariat of the Pacific Community
+- url: https://www.dfat.gov.au/sites/default/files/canberra-agreement.pdf
+  type: website
+acronyms:
+- lang: en
+  value: SPC
+- lang: en
+  value: PC
+legal_status: intergovernmental
+recognition_status: Established by the Canberra Agreement (signed 6 February 1947) as the South Pacific Commission; renamed Secretariat of the Pacific Community in 1997 and Pacific Community in 2016; founding member of the Council of Regional Organisations in the Pacific (CROP, 1988)
+headquarters:
+  city: Nouméa
+  country: NC
+  coordinates:
+    lat: -22.266666666667
+    lng: 166.45
+wikidata_id: Q871511
+description: Intergovernmental development organisation owned and governed by 27 Pacific countries and territories, providing scientific and technical advice across more than 20 sectors including fisheries, public health, geoscience, statistics, education, and climate resilience. Founded in 1947 as the South Pacific Commission under the Canberra Agreement; headquarters in Nouméa, New Caledonia, with regional offices in Suva, Pohnpei, and Port Vila. Works in English and French and is a founding member of the Council of Regional Organisations in the Pacific (CROP).
 includes:
+- id: AU
+  name: Australia
+  type: country
+  status: founding_member
+  joined: '1947-02-06'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1947-02-06'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+  joined: '1947-02-06'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: founding_member
+  joined: '1947-02-06'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1947-02-06'
 - id: AS
   name: American Samoa
   type: country
   status: member
+  joined: '1983'
 - id: CK
   name: Cook Islands
   type: country
   status: member
-- id: FM
-  name: Federated States of Micronesia
-  type: country
-  status: member
+  joined: '1980'
 - id: FJ
   name: Fiji
   type: country
   status: member
-- id: PF
-  name: French Polynesia
+  joined: '1971'
+- id: FM
+  name: Micronesia, Fed. Sts.
   type: country
   status: member
+  joined: '1983'
 - id: GU
   name: Guam
   type: country
   status: member
+  joined: '1983'
 - id: KI
   name: Kiribati
   type: country
   status: member
+  joined: '1983'
 - id: MH
   name: Marshall Islands
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
+  joined: '1983'
 - id: NC
   name: New Caledonia
   type: country
   status: member
+  joined: '1983'
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+  joined: '1969'
 - id: NU
   name: Niue
   type: country
   status: member
+  joined: '1980'
 - id: MP
   name: Northern Mariana Islands
   type: country
   status: member
-- id: PW
-  name: Palau
+  joined: '1983'
+- id: PF
+  name: French Polynesia
   type: country
   status: member
+  joined: '1983'
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: TK
-  name: Tokelau
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: WF
-  name: Wallis and Futuna
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States of America
-  type: country
-  status: member
+  joined: '1975'
 - id: PN
   name: Pitcairn Islands
   type: country
   status: member
+  joined: '1983'
+- id: PW
+  name: Palau
+  type: country
+  status: member
+  joined: '1983'
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '1978'
+- id: TK
+  name: Tokelau
+  type: country
+  status: member
+  joined: '1983'
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '1983'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+  joined: '1978'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '1983'
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: member
+  joined: '1983'
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  joined: '1965'
+founding_members:
+- AU
+- FR
+- GB
+- NZ
+- US
 membership_count: 27
-description: Principal scientific and technical organization in the Pacific region.
 tags:
 - SPC
 - community
 - cooperation
 - intorg
+- intergovernmental
 - pacific
 - regional
 - regional_cooperation
+- science
 - secretariat
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q871511
+- key: science
+  name: Science
+- key: development
+  name: Development
+- key: health
+  name: Health
+- key: sustainable_development
+  name: Sustainable Development
 other_names:
 - id: ar
   name: جماعة المحيط الهادي
 - id: zh
   name: 太平洋共同体
 - id: en
-  name: Pacific Community
+  name: Secretariat of the Pacific Community
+- id: en
+  name: South Pacific Commission
 - id: fr
   name: Communauté du Pacifique
 - id: ru
   name: Тихоокеанское сообщество
 - id: es
   name: Comunidad del Pacífico
+notes: The Netherlands was a founding signatory of the 1947 Canberra Agreement but withdrew in 1962 after Dutch New Guinea was transferred. The United Kingdom withdrew on 1 January 1996, rejoined on 1 January 1998, withdrew again on 1 January 2005, and rejoined on 2 December 2021. Samoa joined as Western Samoa in 1965. SOPAC (South Pacific Applied Geoscience Commission) was integrated into SPC as the Applied Geoscience and Technology Division from 1 January 2011. Also known by the PC acronym since the 2016 rebrand.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q871511
+  license: CC0
+- field: includes
+  source: Pacific Community official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.spc.int/about-us
+- field: description
+  source: Pacific Community official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.spc.int/about-us
+- field: legal_status
+  source: Pacific Community official website; Canberra Agreement
+  retrieved_at: '2026-07-29'
+  url: https://www.spc.int/about-us
+- field: recognition_status
+  source: Wikipedia; Pacific Community official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Community
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Pacific Community official website
+  retrieved_at: '2026-07-29'
+  url: https://www.spc.int/about-us
+- field: headquarters
+  source: Wikidata; Pacific Community official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q871511
   license: CC0
 - field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q871511
-  license: CC0
-- field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-12'
-  url: https://www.wikidata.org/wiki/Q871511
-  license: CC0
-founded: '1947-01-01'
-headquarters:
-  city: Nouméa
-  coordinates:
-    lat: -22.266666666667
-    lng: 166.45
-last_verified: '2026-07-12'
+  source: Wikipedia; Canberra Agreement
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Community
+  license: CC BY-SA 4.0
+- field: founding_members
+  source: Wikipedia; Canberra Agreement
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Community
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia; Pacific Community official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Pacific_Community
+  license: CC BY-SA 4.0

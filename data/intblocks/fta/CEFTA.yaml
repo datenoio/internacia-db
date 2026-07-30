@@ -2,59 +2,164 @@ id: CEFTA
 blocktype:
 - fta
 status: formal
+founded: '1992-12-21'
+active_period:
+  start: '2007-07-26'
+geographic_scope: regional
+regions:
+- Southeast Europe
 languages:
 - en
 links:
+- url: https://cefta.int/
+  type: website
 - url: http://www.cefta2006.com/
   type: website
-- url: https://en.wikipedia.org/wiki/CEFTA
+- url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q319014
   type: wikidata
 name: Central European Free Trade Agreement
+acronyms:
+- lang: en
+  value: CEFTA
+- lang: zh
+  value: CEFTA
+- lang: fr
+  value: ALECE
+- lang: fr
+  value: CEFTA
+- lang: ru
+  value: CEFTA
+- lang: es
+  value: CEFTA
+- lang: de
+  value: CEFTA
+- lang: pt
+  value: CEFTA
+legal_status: free trade agreement
+recognition_status: Multilateral free trade agreement originally signed in Kraków on 21 December 1992 by Poland, Hungary, and Czechoslovakia; the current CEFTA 2006 framework was signed on 19 December 2006 in Bucharest after Central European members acceded to the European Union, extending the agreement to Western Balkan and Moldovan parties
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8503
+    lng: 4.3517
+secretariat:
+  location: Brussels, Belgium
+  organization: CEFTA Secretariat
 includes:
 - id: AL
   name: Albania
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-07-26'
 - id: BA
   name: Bosnia and Herzegovina
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-11-22'
 - id: KV
   name: Kosovo
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-07-26'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-07-26'
 - id: ME
   name: Montenegro
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-07-26'
 - id: MK
   name: Macedonia, FYR
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-01-01'
 - id: RS
   name: Serbia
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-10-24'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: former_member
+  joined: '1999-01-01'
+  left: '2006-12-31'
+- id: HR
+  name: Croatia
+  type: country
+  status: former_member
+  joined: '2003-03-01'
+  left: '2013-06-30'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: former_member
+  joined: '1993-03-01'
+  left: '2004-04-30'
+- id: HU
+  name: Hungary
+  type: country
+  status: former_member
+  joined: '1993-03-01'
+  left: '2004-04-30'
+- id: PL
+  name: Poland
+  type: country
+  status: former_member
+  joined: '1993-03-01'
+  left: '2004-04-30'
+- id: RO
+  name: Romania
+  type: country
+  status: former_member
+  joined: '1997-07-01'
+  left: '2006-12-31'
+- id: SK
+  name: Slovakia
+  type: country
+  status: former_member
+  joined: '1993-03-01'
+  left: '2004-04-30'
+- id: SI
+  name: Slovenia
+  type: country
+  status: former_member
+  joined: '1996-01-01'
+  left: '2004-04-30'
+founding_members:
+- AL
+- BA
+- KV
+- MD
+- ME
+- MK
+- RS
 membership_count: 7
-description: International central focused on economic cooperation.
+description: The Central European Free Trade Agreement (CEFTA) is a multilateral free trade agreement linking countries in Southeastern Europe. Originally signed in Kraków on 21 December 1992 by Poland, Hungary, and Czechoslovakia, it expanded to include Slovenia, Romania, Bulgaria, Croatia, and North Macedonia before Central European members left upon joining the European Union. The CEFTA 2006 agreement, signed on 19 December 2006 in Bucharest, re-established the pact for Albania, Bosnia and Herzegovina, Kosovo, Moldova, Montenegro, North Macedonia, and Serbia, creating a regional free trade zone aligned with WTO rules and EU legislation. The agreement liberalises trade in goods and services, harmonises customs and trade-related policies, and supports the participating economies' European integration agendas.
 tags:
 - CEFTA
+- balkans
 - central
 - commerce
 - economy
 - european
 - free
 - fta
+- regional
+- regional_cooperation
+- southeastern
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 wikidata_id: Q319014
@@ -75,7 +180,51 @@ other_names:
   name: Центрально-европейская ассоциация свободной торговли
 - id: zh
   name: 中歐自由貿易協定
+notes: The original 1992 agreement entered into force on 1 March 1993 for Poland and Hungary and on 1 July 1994 overall. Slovenia joined in 1996, Romania in 1997, Bulgaria in 1999, Croatia in 2003, and North Macedonia in 2006. Bulgaria, Croatia, the Czech Republic, Hungary, Poland, Romania, Slovakia, and Slovenia left CEFTA upon acceding to the European Union. Kosovo was represented by UNMIK until October 2024, when it began representing itself directly at CEFTA meetings. The CEFTA 2006 agreement entered into force on 26 July 2007 for Albania, Kosovo, Moldova, Montenegro, and North Macedonia; on 24 October 2007 for Serbia; and on 22 November 2007 for Bosnia and Herzegovina.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cefta.int/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://cefta.int/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -91,19 +240,3 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q319014
   license: CC0
-acronyms:
-- lang: zh
-  value: CEFTA
-- lang: fr
-  value: ALECE
-- lang: fr
-  value: CEFTA
-- lang: ru
-  value: CEFTA
-- lang: es
-  value: CEFTA
-- lang: de
-  value: CEFTA
-- lang: pt
-  value: CEFTA
-founded: '1992-12-21'

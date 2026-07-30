@@ -1,10 +1,22 @@
 id: CAIRNSGROUP
 blocktype:
 - forum
+- trade
 status: formal
+founded: '1986-08'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 links:
+- url: https://www.cairnsgroup.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Cairns_Group
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1025959
@@ -15,26 +27,32 @@ includes:
   name: Argentina
   type: country
   status: member
+  joined: '1986-08'
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1986-08'
 - id: BR
   name: Brazil
   type: country
   status: member
+  joined: '1986-08'
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '1986-08'
 - id: CL
   name: Chile
   type: country
   status: member
+  joined: '1986-08'
 - id: CO
   name: Colombia
   type: country
   status: member
+  joined: '1986-08'
 - id: CR
   name: Costa Rica
   type: country
@@ -47,14 +65,17 @@ includes:
   name: Indonesia
   type: country
   status: member
+  joined: '1986-08'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1986-08'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1986-08'
 - id: PK
   name: Pakistan
   type: country
@@ -63,6 +84,7 @@ includes:
   name: Paraguay
   type: country
   status: member
+  joined: '1997'
 - id: PE
   name: Peru
   type: country
@@ -71,40 +93,88 @@ includes:
   name: Philippines
   type: country
   status: member
+  joined: '1986-08'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '1998-04'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '1986-08'
 - id: UA
   name: Ukraine
   type: country
   status: member
+  joined: '2024-02-25'
 - id: UY
   name: Uruguay
   type: country
   status: member
+  joined: '1986-08'
 - id: VN
   name: Vietnam
   type: country
   status: member
-founded: '1986'
+  joined: '2013-11'
+- id: FJ
+  name: Fiji
+  type: country
+  status: former_member
+  joined: '1986-08'
+  note: Founding member; no longer listed among the group's current members
+- id: HU
+  name: Hungary
+  type: country
+  status: former_member
+  joined: '1986-08'
+  left: '1998'
+  note: Withdrew after agreement to begin EU accession negotiations
+founding_members:
+- AR
+- AU
+- BR
+- CA
+- CL
+- CO
+- FJ
+- HU
+- ID
+- MY
+- NZ
+- PH
+- TH
+- UY
 membership_count: 20
 wikidata_id: Q1025959
-description: International forum focused on political.
+legal_status: coalition
+acronyms:
+- lang: zh
+  value: 凯恩斯集团
+description: >-
+  Coalition of agricultural exporting countries formed in Cairns, Australia, in August 1986 to push for
+  liberalization of global farm trade in multilateral negotiations. Members coordinate positions at the WTO
+  on eliminating export subsidies and trade-distorting domestic support and improving market access for
+  agricultural exports; the group currently has 20 members spanning the Americas, Asia-Pacific, Africa, and Europe.
 tags:
 - CAIRNSGROUP
+- agriculture
 - cairns
+- coalition
 - cooperation
 - forum
-- group
-- political
-- regional
-- regional_cooperation
+- trade
+- trade_liberalization
+- wto
 topics:
+- key: trade
+  name: Trade
+- key: agriculture
+  name: Agriculture
+- key: economy
+  name: Economy
 - key: political
   name: Political
 - key: regional_cooperation
@@ -126,17 +196,39 @@ other_names:
   name: Кернская группа
 - id: zh
   name: 凱恩斯集團
+notes: >-
+  Also known as the Cairns Group of Fair Trading Nations. Founded with 14 members; Fiji and Hungary later left
+  (Hungary around 1998 ahead of EU accession). Vietnam joined in November 2013; Ukraine was welcomed as a member
+  at the 43rd Ministerial Meeting in Abu Dhabi on 25 February 2024.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Cairns_Group
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Cairns_Group
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Cairns_Group
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Cairns_Group
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cairnsgroup.org/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1025959
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1025959
   license: CC0
-acronyms:
-- lang: zh
-  value: 凯恩斯集团

@@ -4,108 +4,206 @@ blocktype:
 - transport
 status: formal
 partof: EU
+founded: '1993-05'
+geographic_scope: regional
+regions:
+- Eastern Europe
+- Caucasus
+- Central Asia
+- Black Sea
 languages:
 - en
 - ru
 links:
-- url: http://www.traceca-org.org/
+- url: https://www.traceca-org.org/
   type: website
 - url: https://en.wikipedia.org/wiki/TRACECA
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q453562
   type: wikidata
 name: TRACECA (Transport Corridor Europe-Caucasus-Asia)
-founded: '1993'
+legal_status: intergovernmental
+secretariat:
+  location: Baku, Azerbaijan
+  organization: Permanent Secretariat of the Intergovernmental Commission TRACECA
+  note: Established in March 2000; regional office in Odesa, Ukraine
+headquarters:
+  city: Baku
+  country: AZ
+  coordinates:
+    lat: 40.4093
+    lng: 49.8671
 includes:
 - id: AM
   name: Armenia
   type: country
   status: member
+  joined: '1993-05'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '1993-05'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '2000-03'
 - id: GE
   name: Georgia
   type: country
   status: member
+  joined: '1993-05'
 - id: IR
   name: Iran, Islamic Rep.
   type: country
   status: member
+  joined: '2009-06'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '1993-05'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '1993-05'
 - id: MD
   name: Moldova
   type: country
   status: member
+  joined: '1998'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2000-03'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1993-05'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
+  joined: '1993-05'
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '2000-03'
 - id: UA
   name: Ukraine
   type: country
   status: member
+  joined: '1998'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  joined: '1993-05'
+- id: GR
+  name: Greece
+  type: country
+  status: observer
+  joined: '2018-03'
+- id: LT
+  name: Lithuania
+  type: country
+  status: observer
+  joined: '2009-06-16'
+- id: MN
+  name: Mongolia
+  type: country
+  status: observer
+  joined: '1996'
 membership_count: 14
 wikidata_id: Q453562
-description: Economic co-operation organisation.
+description: EU-backed intergovernmental transport programme linking Europe, the Black Sea basin, the South Caucasus, and
+  Central Asia through road, rail, maritime, and aviation corridors. Launched at a Brussels conference in May 1993, its
+  cornerstone is the Basic Multilateral Agreement on International Transport for Development of the Europe-the
+  Caucasus-Asia Corridor (MLA), signed in Baku on 8 September 1998 by twelve states. The Intergovernmental Commission
+  coordinates corridor development, customs harmonisation, infrastructure investment, and working groups on maritime
+  transport, aviation, road and rail, transport security, and transport infrastructure.
 tags:
 - TRACECA
 - aviation
+- connectivity
 - corridor
 - europe
 - project
+- regional_cooperation
 - transport
 - transportation
 topics:
 - key: transport
   name: Transport
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: connectivity
+  name: Connectivity
+- key: aviation
+  name: Aviation
 other_names:
+- id: az
+  name: TRASEKA
 - id: de
   name: TRACECA
 - id: en
   name: TRACECA
 - id: fr
   name: TRACECA
+- id: ka
+  name: ევროპა-კავკასია-აზიის სატრანსპორტო დერეფანი
 - id: pt
   name: TRACECA
 - id: ru
   name: ТРАСЕКА
+- id: tr
+  name: Avrupa-Kafkasya-Asya Ulaşım Koridoru
+- id: uz
+  name: Yevropa-Kavkaz-Osiyo transport yo'lagi
 - id: zh
   name: 歐洲–高加索–亞洲運輸走廊計劃
+notes: Fourteen states are parties to the MLA TRACECA; Bulgaria and Romania remain participants after joining the EU in
+  2007 under a dedicated Protocol. Iran acceded in 2009; EU technical assistance to Iran was suspended after 2010 due to
+  sanctions. Greece, Lithuania, and Mongolia hold observer status in the Intergovernmental Commission. The programme was
+  originally financed by the European Commission through Tacis and later ENPI instruments; the Permanent Secretariat in
+  Baku has been hosted by Azerbaijan since its inauguration in February 2001.
+last_verified: '2026-07-29'
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://traceca-org.org/en/about-traceca/history-of-traceca
+  license: CC BY 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://traceca-org.org/en/countries/
+  license: CC BY 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://traceca-org.org/en/about-traceca/history-of-traceca
+  license: CC BY 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TRACECA
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TRACECA
+  license: CC BY-SA 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://traceca-org.org/en/about-traceca/history-of-traceca
+  license: CC BY 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -119,3 +217,7 @@ provenance:
 acronyms:
 - lang: de
   value: TRASECA
+- lang: en
+  value: TRACECA
+- lang: ru
+  value: ТРАСЕКА

@@ -2,47 +2,82 @@ id: SAFTA
 blocktype:
 - fta
 status: formal
+founded: '2004-01-06'
+active_period:
+  start: '2006-01-01'
+geographic_scope: regional
+regions:
+- South Asia
+languages:
+- en
+partof: SAARC
+predecessor: SAPTA
 links:
+- url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+  type: website
+- url: https://aric.adb.org/fta/south-asian-free-trade-area
+  type: website
 - url: https://en.wikipedia.org/wiki/South_Asia_Free_Trade_Agreement#South_Asian_Free_Trade_Area
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7566035
   type: wikidata
 name: South Asian Free Trade Area
+acronyms:
+- lang: en
+  value: SAFTA
+legal_status: free trade agreement
+recognition_status: Free trade agreement signed at the 12th SAARC summit in Islamabad on 6 January 2004; entered into force on 1 January 2006 after ratification by all seven original SAARC contracting states; notified to the WTO on 21 April 2008 under the Enabling Clause; superseded the SAARC Preferential Trading Arrangement (SAPTA)
 includes:
+- id: BD
+  name: Bangladesh
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: BT
+  name: Bhutan
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: IN
+  name: India
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: MV
+  name: Maldives
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: NP
+  name: Nepal
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: PK
+  name: Pakistan
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: founding_member
+  joined: '2004-01-06'
 - id: AF
   name: Afghanistan
   type: country
   status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
+  joined: '2011-05-04'
+founding_members:
+- BD
+- BT
+- IN
+- MV
+- NP
+- PK
+- LK
 membership_count: 8
-description: South Asian Free Trade Area is an international fta body with 8 members.
+description: The South Asian Free Trade Area (SAFTA) is a framework agreement among SAARC member states to promote and sustain mutual trade and economic cooperation through progressive tariff liberalization. Signed at the 12th SAARC summit in Islamabad on 6 January 2004, it entered into force on 1 January 2006 after ratification by all seven original contracting states, superseding the SAARC Preferential Trading Arrangement (SAPTA). The agreement established a staged trade liberalization programme with differentiated timelines for least developed and non-least developed countries, sensitive lists, rules of origin, and institutional arrangements including the SAFTA Ministerial Council. Afghanistan joined SAARC in April 2007 and ratified the SAFTA protocol on 4 May 2011, becoming the eighth participating state.
 tags:
 - SAFTA
 - asian
@@ -50,11 +85,16 @@ tags:
 - economy
 - free
 - fta
+- regional
+- regional_cooperation
+- saarc
 - south
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 wikidata_id: Q7566035
@@ -69,7 +109,61 @@ other_names:
   name: Accord de libre-échange de l'Asie du Sud
 - id: es
   name: Área de Libre Comercio de Asia del Sur
+notes: Afghanistan was not a SAARC member when SAFTA was signed in January 2004 and joined the agreement after acceding to SAARC in April 2007 and ratifying the SAFTA protocol on 4 May 2011. India and Pakistan completed ratification in 2009. SAFTA was notified to the WTO on 21 April 2008.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/south-asian-free-trade-area
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/south-asian-free-trade-area
+- field: predecessor
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asian_Free_Trade_Area
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/south-asian-free-trade-area
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q7566035
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asian_Free_Trade_Area
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/south-asian-free-trade-area

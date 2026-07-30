@@ -2,6 +2,10 @@ id: CRUZDELSUR
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2002'
+geographic_scope: bilateral
+regions:
+- South America
 languages:
 - es
 links:
@@ -12,6 +16,12 @@ links:
 - url: https://www.wikidata.org/wiki/Q5190326
   type: wikidata
 name: Cruz del Sur
+headquarters:
+  city: Montevideo
+  country: UY
+  coordinates:
+    lat: -34.90591666666667
+    lng: -56.19131111111111
 includes:
 - id: AR
   name: Argentina
@@ -21,27 +31,24 @@ includes:
   name: Uruguay
   type: country
   status: member
-founded: '2002'
-headquarters:
-  city: Montevideo
-  country: UY
-  coordinates:
-    lat: -34.90591666666667
-    lng: -56.19131111111111
 membership_count: 2
 wikidata_id: Q5190326
-description: Natural gas pipeline linking Buenos Aires, Argentina with Montevideo,
-  Uruguay.
+description: Natural gas pipeline linking Buenos Aires, Argentina with Colonia del Sacramento and Montevideo, Uruguay.
+  The 215 km line has 1.8 billion m³/a capacity; construction started in March 2001 and the pipeline was inaugurated
+  on 29 November 2002. Operated by Gasoducto Cruz del Sur S.A., owned by BG Group (40%), Pan American Energy (30%),
+  ANCAP (20%), and Wintershall Dea (10%); includes a 57 km offshore section across the Río de la Plata supplied from
+  Neuquén Basin gas fields.
 tags:
 - CRUZDELSUR
-- aviation
-- cruz
+- argentina
 - economy
 - energy
 - gaspipeline
-- oil
+- pipeline
+- south-america
 - transport
 - transportation
+- uruguay
 topics:
 - key: economy
   name: Economy
@@ -50,17 +57,45 @@ topics:
 - key: transport
   name: Transport
 other_names:
+- id: de
+  name: Gasoducto Cruz del Sur
 - id: en
   name: Cruz del Sur pipeline
 - id: es
   name: Gasoducto Cruz del Sur
+- id: uk
+  name: Cruz del Sur
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.gasoductocruzdelsur.com.uy/
-- field: description
+- field: includes
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5190326
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5190326
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Cruz_del_Sur_pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5190326
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5190326
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5190326
+  license: CC0
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+last_verified: '2026-07-29'

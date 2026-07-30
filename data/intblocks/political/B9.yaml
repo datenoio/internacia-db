@@ -6,10 +6,21 @@ blocktype:
 status: formal
 founded: '2015-11-04'
 geographic_scope: regional
+regions:
+- Central Europe
+- Eastern Europe
+- Europe
 languages:
+- bg
+- cs
 - en
-- ro
+- et
+- hu
+- lt
+- lv
 - pl
+- ro
+- sk
 links:
 - url: https://en.wikipedia.org/wiki/Bucharest_Nine
   type: wikipedia
@@ -33,42 +44,71 @@ includes:
   name: Bulgaria
   type: country
   status: member
+  joined: '2015-11-04'
 - id: CZ
   name: Czech Republic
   type: country
   status: member
+  joined: '2015-11-04'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2015-11-04'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2015-11-04'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2015-11-04'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2015-11-04'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2015-11-04'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2015-11-04'
 - id: SK
   name: Slovakia
   type: country
   status: member
+  joined: '2015-11-04'
 membership_count: 9
-description: Diplomatic organization of Central and Eastern European countries, also known as NATO's Eastern Flank. Founded
-  in response to Russia's annexation of Crimea and intervention in eastern Ukraine in 2014. All members are NATO members and
-  coordinate on security and defense matters.
+founding_members:
+- BG
+- CZ
+- EE
+- HU
+- LV
+- LT
+- PL
+- RO
+- SK
+legal_status: informal cooperation
+wikidata_id: Q96053693
+description: Diplomatic cooperation format of nine Central and Eastern European countries
+  — Bulgaria, the Czech Republic, Estonia, Hungary, Latvia, Lithuania, Poland, Romania,
+  and Slovakia — also known as the Bucharest Format (B9) or NATO's Eastern Flank.
+  Founded on 4 November 2015 in Bucharest at the initiative of the presidents of
+  Romania and Poland in response to Russia's 2014 annexation of Crimea and intervention
+  in eastern Ukraine. All members are NATO and EU members; meetings are held at presidential,
+  foreign-minister, and defence-minister levels to coordinate security policy.
+notes: The format has no permanent secretariat; summits rotate among member capitals.
+  Finland is not a member despite its NATO membership and geographic location on the
+  alliance's eastern flank. Often described as NATO's Eastern Flank, though B9 is not
+  a formal NATO subsidiary body.
 tags:
 - B9
 - B-9
@@ -92,32 +132,80 @@ topics:
 partof:
   id: NATO
   name: North Atlantic Treaty Organization
-wikidata_id: Q96053693
 other_names:
 - id: ar
   name: بوخارست تسعة
+- id: bg
+  name: Букурещ-9
+- id: cs
+  name: Bukurešťská devítka
 - id: de
   name: Bukarest Neun
 - id: en
   name: Bucharest Nine
+- id: en
+  name: Bucharest Format
+- id: et
+  name: Bukaresti Üheksa
 - id: fr
   name: Neuf de Bucarest
+- id: hu
+  name: Bukaresti Kilencek
+- id: it
+  name: Nove di Bucarest
+- id: lt
+  name: Bukarešto devintukas
+- id: pl
+  name: Bukaresztańska Dziewiątka
+- id: ro
+  name: Formatul București
 - id: ru
   name: Бухарестская девятка
+- id: sk
+  name: Bukureštská deviatka
+- id: uk
+  name: Бухарестська дев'ятка
 - id: zh
   name: 布加勒斯特9国
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96053693
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96053693
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96053693
   license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96053693
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Bucharest_Nine
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Bucharest_Nine
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Bucharest_Nine
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Bucharest_Nine
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/Bucharest_Nine

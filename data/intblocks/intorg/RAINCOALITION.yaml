@@ -1,18 +1,68 @@
 id: RAINCOALITION
+name: Coalition for Rainforest Nations
 blocktype:
 - intorg
+- environment
 status: formal
+founded: '2005-05-10'
+active_period:
+  start: '2005-05-10'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Caribbean
+- Central America
+- Oceania
+- South America
 languages:
 - en
 links:
-- url: http://www.rainforestcoalition.org/
+- url: https://www.rainforestcoalition.org/
+  type: website
+- url: https://www.rainforestcoalition.org/all-our-countries/
   type: website
 - url: https://en.wikipedia.org/wiki/Coalition_for_Rainforest_Nations
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5137951
   type: wikidata
-name: Coalition for Rainforest Nations
-founded: '2005'
+acronyms:
+- lang: en
+  value: CfRN
+legal_status: intergovernmental organization
+recognition_status: Intergovernmental coalition of tropical forest countries formed on 10 May 2005 at Columbia University at the initiative of Papua New Guinea; secretariat hosted at Columbia University in New York; instrumental in launching the REDD+ framework under the UNFCCC and advancing forest-climate finance mechanisms including the World Bank Forest Carbon Partnership Facility and UN-REDD
+headquarters:
+  city: New York
+  country: US
+  coordinates:
+    lat: 40.753
+    lng: -73.9772
+secretariat:
+  location: New York, United States
+  organization: Coalition for Rainforest Nations Secretariat
+membership_count: 56
+description: Intergovernmental coalition of tropical forest countries that advances sustainable rainforest stewardship and climate action. Formed in May 2005 at Columbia University, CfRN unites developing rainforest nations to negotiate forest-related climate finance and capacity building, and was central to establishing REDD+ under the UNFCCC and Article 5 of the Paris Agreement.
+tags:
+- RAINCOALITION
+- CfRN
+- climate
+- coalition
+- conservation
+- deforestation
+- environment
+- forest
+- intorg
+- rainforest
+- REDD+
+topics:
+- key: climate_change
+  name: Climate Change
+- key: environment
+  name: Environment
+- key: conservation
+  name: Conservation
+- key: capacity_building
+  name: Capacity Building
 includes:
 - id: BW
   name: Botswana
@@ -27,7 +77,7 @@ includes:
   type: country
   status: member
 - id: CD
-  name: Democratic Republic of the Congo
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: GQ
@@ -79,7 +129,7 @@ includes:
   type: country
   status: member
 - id: CG
-  name: Republic of the Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: SL
@@ -151,7 +201,7 @@ includes:
   type: country
   status: member
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
   status: member
 - id: MY
@@ -175,7 +225,7 @@ includes:
   type: country
   status: member
 - id: VN
-  name: Viet Nam
+  name: Vietnam
   type: country
   status: member
 - id: DM
@@ -191,7 +241,7 @@ includes:
   type: country
   status: member
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
 - id: BZ
@@ -225,7 +275,8 @@ includes:
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '2005-05-10'
 - id: WS
   name: Samoa
   type: country
@@ -238,18 +289,53 @@ includes:
   name: Vanuatu
   type: country
   status: member
-membership_count: 56
+founding_members:
+- PG
 wikidata_id: Q5137951
-description: International entity.
-tags:
-- RAINCOALITION
-- coalition
-- intorg
-- nations
-- rainforest
-topics:
-- key: economy
-  name: Economy
 other_names:
+- id: az
+  name: Tropik meşə Dövlətlərinin Birliyi
 - id: en
   name: Coalition for Rainforest Nations
+- id: id
+  name: Koalisi untuk Negara-Negara Hutan Hujan
+- id: ig
+  name: Njikọ Maka Mba Ndị Dị n'Oké Osimiri
+- id: nl
+  name: Coalition for Rainforest Nations
+notes: Voluntary coalition of tropical forest countries; membership is not treaty-based. The secretariat was established at Columbia University in New York at the request of Papua New Guinea. CfRN provides technical assistance for national REDD+ readiness, greenhouse-gas inventories, and forest reference levels under the UNFCCC.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: CfRN official website
+  retrieved_at: '2026-07-29'
+  url: https://www.rainforestcoalition.org/all-our-countries/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Rainforest_Nations
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Rainforest_Nations
+- field: headquarters
+  source: CfRN official website
+  retrieved_at: '2026-07-29'
+  url: https://www.rainforestcoalition.org/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Rainforest_Nations
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5137951
+  license: CC0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Coalition_for_Rainforest_Nations
+- field: notes
+  source: CfRN official website
+  retrieved_at: '2026-07-29'
+  url: https://www.rainforestcoalition.org/all-our-countries/

@@ -2,30 +2,51 @@ id: EUNZ
 blocktype:
 - fta
 status: formal
+founded: '2023-07-09'
+active_period:
+  start: '2024-05-01'
+geographic_scope: bilateral
+regions:
+- Europe
+- Oceania
 languages:
 - en
 links:
 - url: https://www.customs.govt.nz/business/tariffs/free-trade-agreements/new-zealand-european-union-free-trade-agreement
   type: website
+- url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/new-zealand-european-union-free-trade-agreement
+  type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-new-zealand-free-trade-agreement
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=995
+  type: website
+- url: https://en.wikipedia.org/wiki/New_Zealand%E2%80%93European_Union_relations
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q112841590
+  type: wikidata
 name: EU-New Zealand Free Trade Agreement
-founded: '2023-07-09'
-geographic_scope: regional
-regions:
-- Europe
-- Oceania
+acronyms:
+- lang: en
+  value: EU-NZ FTA
+legal_status: free trade agreement
+recognition_status: Comprehensive bilateral free trade agreement signed on 9 July 2023; entered into force on 1 May 2024 after
+  completion of domestic ratification procedures by both parties
 includes:
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2023-07-09'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-07-09'
 membership_count: 2
-description: Comprehensive free trade agreement between the European Union and New Zealand. Upon entry into force, 91% of
-  New Zealand's goods exports to the EU had their duties removed, with this figure set to rise to 97% after seven years. The
-  agreement includes enforceable commitments to the Paris Climate Agreement and core ILO standards, and protects EU geographical
+description: Comprehensive free trade agreement between the European Union and New Zealand, signed on 9 July 2023 and entered
+  into force on 1 May 2024. Upon entry into force, 91% of New Zealand's goods exports to the EU had their duties removed, with
+  this figure set to rise to 97% after seven years. All tariffs on EU exports to New Zealand were eliminated. The agreement
+  includes enforceable commitments to the Paris Climate Agreement and core ILO standards, and protects EU geographical
   indications for wines, spirits, and traditional food products.
 tags:
 - EUNZ
@@ -43,9 +64,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: EU-NZ FTA
+wikidata_id: Q112841590
 other_names:
 - id: en
   name: EU-New Zealand FTA
@@ -56,3 +75,23 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.customs.govt.nz/business/tariffs/free-trade-agreements/new-zealand-european-union-free-trade-agreement
+- field: founded
+  source: New Zealand Ministry of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/new-zealand-european-union-free-trade-agreement
+- field: active_period
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-new-zealand-free-trade-agreement
+- field: includes
+  source: WTO Regional Trade Agreements Information System
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=995
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/new-zealand-european-union-free-trade-agreement
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q112841590

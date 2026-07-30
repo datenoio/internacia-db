@@ -2,18 +2,38 @@ id: GSTP
 blocktype:
 - pta
 status: formal
+founded: '1988-04-13'
+active_period:
+  start: '1989-04-19'
+geographic_scope: global
+regions:
+- Global
+languages:
+- ar
+- en
+- es
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Global_System_of_Trade_Preferences_among_Developing_Countries
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5570670
   type: wikidata
+- url: https://unctad.org/topic/trade-agreements/global-system-of-trade-preferences
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=146
+  type: website
+- url: https://unctad.org/system/files/official-document/ditcmisc57_en.pdf
+  type: website
 name: Global System of Trade Preferences among Developing Countries
-founded: '1989'
 acronyms:
 - lang: en
+  value: GSTP
+- lang: es
   value: SGPC
 - lang: pt
   value: SGPC
+legal_status: preferential trade agreement
+recognition_status: Preferential trade agreement signed in Belgrade on 13 April 1988 among developing countries under the UNCTAD and Group of 77 framework; entered into force on 19 April 1989; notified to the GATT/WTO on 25 September 1989 under the Enabling Clause; UNCTAD serves as the agreement secretariat
 includes:
 - id: DZ
   name: Algeria
@@ -50,7 +70,9 @@ includes:
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: former_member
+  joined: '1989-04-19'
+  left: '2017'
 - id: CU
   name: Cuba
   type: country
@@ -135,6 +157,10 @@ includes:
   name: Pakistan
   type: country
   status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
 - id: PE
   name: Peru
   type: country
@@ -150,7 +176,9 @@ includes:
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: former_member
+  joined: '1989-04-19'
+  left: '2007-01-01'
 - id: SG
   name: Singapore
   type: country
@@ -179,6 +207,10 @@ includes:
   name: United Republic of Tanzania
   type: country
   status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
 - id: VE
   name: Venezuela
   type: country
@@ -193,16 +225,20 @@ includes:
   status: member
 membership_count: 44
 wikidata_id: Q5570670
-description: Preferential trade agreement signed in 1988 by 42 developing countries.
+description: The Global System of Trade Preferences among Developing Countries (GSTP) is an inter-regional preferential trade agreement negotiated within the UNCTAD framework by members of the Group of 77 to increase South-South trade through reciprocal tariff reductions. Signed in Belgrade on 13 April 1988, it entered into force on 19 April 1989 and was notified to the GATT/WTO under the Enabling Clause. As of 2026, 43 countries and Mercosur participate as contracting parties. UNCTAD serves as the agreement secretariat and supports the Committee of Participants, which oversees negotiation rounds including the São Paulo Round concluded in 2010.
 tags:
 - GSTP
 - SGPC
 - commerce
+- developing_countries
 - economy
 - global
+- preferential
 - pta
+- south_south
 - system
 - trade
+- unctad
 topics:
 - key: economy
   name: Economy
@@ -217,12 +253,43 @@ other_names:
   name: Système global de préférences commerciales entre pays en développement
 - id: pt
   name: Sistema Global de Preferências Comerciais entre Países em Desenvolvimento
+notes: Former participants include Colombia (withdrew 2017), Romania (withdrew upon EU accession in 2007), and Yugoslavia (until dissolution). Mercosur participates as a single contracting party alongside its member states Argentina, Brazil, Paraguay, and Uruguay. The São Paulo Round Protocol of December 2010 envisaged an across-the-board 20% tariff reduction but requires ratification by at least four signatories before entering into force; as of 2026 Argentina, Brazil, Cuba, India, Malaysia, and Uruguay have ratified.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://unctad.org/topic/trade-agreements/global-system-of-trade-preferences
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=146
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=146
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://unctad.org/topic/trade-agreements/global-system-of-trade-preferences
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=146
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=146
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://unctad.org/topic/trade-agreements/global-system-of-trade-preferences
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

@@ -1,25 +1,86 @@
 id: MENAFATF
+name: Middle East and North Africa Financial Action Task Force
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '2004-11-30'
+active_period:
+  start: '2004-11-30'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
 - en
-name: Money Laundering and Terrorist Financing to countries in the Middle East and North Africa Region
+- ar
+links:
+- url: https://www.menafatf.org/
+  type: website
+- url: https://www.menafatf.org/about
+  type: website
+- url: https://www.menafatf.org/about/members-observers/members
+  type: website
+acronyms:
+- lang: en
+  value: MENAFATF
+- lang: ar
+  value: مينافاتف
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering, counter-terrorist financing, and counter-proliferation financing; associate member of the Financial Action Task Force
+partof:
+  id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Manama
+  country: BH
+  coordinates:
+    lat: 26.1921
+    lng: 50.5354
+membership_count: 21
+description: Intergovernmental FATF-style regional body (FSRB) whose 21 member jurisdictions in the Middle East and North Africa commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Established at an inaugural Ministerial Meeting in Manama, Bahrain on 30 November 2004 by 14 founding governments; the Secretariat is hosted in the Kingdom of Bahrain. Voluntary and cooperative in nature, not based on an international treaty; conducts mutual evaluations, typology research, training and technical assistance, and coordinates regional AML/CFT cooperation within the FATF Global Network.
+tags:
+- AML
+- CFT
+- FATF
+- FSRB
+- MENAFATF
+- financial
+- intorg
+- legal
+- mena
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
-- id: DZ
-  name: Algeria
+- id: AE
+  name: United Arab Emirates
   type: country
   status: member
 - id: BH
   name: Bahrain
   type: country
   status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
 - id: DJ
   name: Djibouti
+  type: country
+  status: member
+- id: DZ
+  name: Algeria
   type: country
   status: member
 - id: EG
@@ -46,12 +107,12 @@ includes:
   name: Libya
   type: country
   status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
 - id: MA
   name: Morocco
+  type: country
+  status: member
+- id: MR
+  name: Mauritania
   type: country
   status: member
 - id: OM
@@ -70,12 +131,12 @@ includes:
   name: Saudi Arabia
   type: country
   status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
 - id: SD
   name: Sudan
+  type: country
+  status: member
+- id: SO
+  name: Somalia
   type: country
   status: member
 - id: SY
@@ -86,22 +147,82 @@ includes:
   name: Tunisia
   type: country
   status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
 - id: YE
   name: Yemen
   type: country
   status: member
-membership_count: 22
-description: International entity.
-tags:
-- MENAFATF
-- intorg
-- laundering
-- money
-- terrorist
-topics:
-- key: economy
-  name: Economy
+founding_members:
+- AE
+- BH
+- DZ
+- EG
+- JO
+- KW
+- LB
+- MA
+- OM
+- QA
+- SA
+- SY
+- TN
+- YE
+other_names:
+- id: ar
+  name: مجموعة العمل المالي لمنطقة الشرق الأوسط وشمال أفريقيا
+- id: en
+  name: Middle East and North Africa Financial Action Task Force
+notes: Established by agreement between member governments at the 30 November 2004 Manama Ministerial Meeting; not based on an international treaty. No dedicated Wikidata item as of 2026-07; verify membership against the MENAFATF website for current status.
+last_verified: '2026-07-29'
+provenance:
+- field: name
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about/members-observers/members
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/ar/about
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.menafatf.org/about

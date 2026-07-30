@@ -1,44 +1,125 @@
 id: ANZUS
+name: Australia, New Zealand, United States Security Treaty
 blocktype:
 - military
 status: formal
+founded: '1951-09-01'
+geographic_scope: regional
+regions:
+- North America
+- Oceania
+- Pacific
+languages:
+- en
 links:
 - url: https://en.wikipedia.org/wiki/ANZUS
   type: wikipedia
-name: Australia, New Zealand, United States Security Treaty
+- url: https://www.wikidata.org/wiki/Q295875
+  type: wikidata
+- url: https://www.austlii.edu.au/au/other/dfat/treaties/1952/2.html
+  type: website
+acronyms:
+- lang: en
+  value: ANZUS
+legal_status: treaty
+wikidata_id: Q295875
+description: Collective security treaty signed in San Francisco on 1 September 1951 and in force from 29 April 1952 among Australia,
+  New Zealand, and the United States. The parties commit to maintaining capacity to resist armed attack, consulting on Pacific
+  security matters, and acting to meet common danger in accordance with constitutional processes. Unlike NATO, ANZUS has no
+  integrated command structure or standing forces; Australia and the United States conduct extensive bilateral exercises and
+  operate joint facilities. New Zealand remains a treaty party but US treaty obligations toward New Zealand were suspended in
+  1986 over nuclear ship access; bilateral AU–US and AU–NZ cooperation continues under the treaty framework.
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1952-04-29'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1952-04-29'
 - id: US
   name: United States
   type: country
   status: member
-founded: '1951'
+  joined: '1952-04-29'
 membership_count: 3
-description: International australia, focused on military cooperation for military
-  cooperation.
+founding_members:
+- AU
+- NZ
+- US
 tags:
 - ANZUS
 - australia
+- collective_security
 - defense
 - military
+- new_zealand
+- pacific
 - security
-- zealand
+- treaty
+- united_states
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
-wikidata_id: Q295875
+other_names:
+- id: de
+  name: ANZUS-Abkommen
+- id: en
+  name: ANZUS
+- id: en
+  name: ANZUS Treaty
+- id: en
+  name: Pacific Security Treaty
+- id: es
+  name: Tratado de ANZUS
+- id: fr
+  name: ANZUS
+- id: ja
+  name: 太平洋安全保障条約
+- id: ko
+  name: 태평양 안전 보장 조약
+- id: pl
+  name: Pakt Bezpieczeństwa Pacyfiku
+- id: pt
+  name: ANZUS
+- id: ru
+  name: АНЗЮС
+- id: zh
+  name: 太平洋安全保障条约
+notes: Signed at San Francisco on 1 September 1951; entered into force 29 April 1952 ([1952] ATS 2). New Zealand's anti-nuclear
+  port policy led the United States to suspend its ANZUS obligations toward New Zealand in 1986; the treaty remains in force
+  between Australia and the United States and between Australia and New Zealand. Annual Australia–US Ministerial (AUSMIN) consultations
+  replaced trilateral ANZUS Council meetings after 1985.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ANZUS
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q295875
+  license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q295875
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q295875
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/
   license: CC0

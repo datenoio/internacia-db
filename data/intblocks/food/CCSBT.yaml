@@ -1,51 +1,88 @@
 id: CCSBT
+name: Commission for the Conservation of Southern Bluefin Tuna
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1994-05-20'
+active_period:
+  start: '1994-05-20'
+geographic_scope: regional
+regions:
+- Southern Ocean
+- Asia-Pacific
 languages:
 - en
+- ja
 links:
 - url: https://www.ccsbt.org/
   type: website
+- url: https://www.ccsbt.org/en/content/origins-convention
+  type: website
+- url: https://en.wikipedia.org/wiki/Commission_for_the_Conservation_of_Southern_Bluefin_Tuna
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q22032253
   type: wikidata
-name: Commission for the Conservation of Southern Bluefin Tuna
+acronyms:
+- lang: en
+  value: CCSBT
+- lang: ar
+  value: CCSBT
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the Convention for the Conservation of Southern Bluefin Tuna, signed in Canberra on 10 May 1993 and in force from 20 May 1994; Australia is depositary; secretariat headquartered in Canberra
+headquarters:
+  city: Canberra
+  country: AU
+  coordinates:
+    lat: -35.310261
+    lng: 149.1285203
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
-- id: EU
-  name: European Union
-  type: organization
-  status: member
-- id: TW
-  name: Taiwan, Province of China
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
+  status: founding_member
+  joined: '1994-05-20'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-05-20'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: founding_member
+  joined: '1994-05-20'
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
-- id: NZ
-  name: New Zealand
+  joined: '2001-10-17'
+- id: TW
+  name: Taiwan, Province of China
   type: country
   status: member
+  joined: '2002-08-30'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '2008-04-08'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2016-02-15'
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+  joined: '2015-10-13'
+founding_members:
+- AU
+- JP
+- NZ
 membership_count: 8
-description: Regional fisheries management organisation.
+description: Regional fisheries management organisation for the critically endangered southern bluefin tuna (Thunnus maccoyii), established when the Convention for the Conservation of Southern Bluefin Tuna entered into force on 20 May 1994. Australia, Japan, and New Zealand — the main historical fishing nations — were founding members; the Republic of Korea, Indonesia, and South Africa later acceded, while the Fishing Entity of Taiwan and the European Union participate through the Extended Commission. The CCSBT sets total allowable catches, monitors compliance, and coordinates scientific stock assessment for one of the world's most depleted tuna stocks.
 tags:
 - CCSBT
 - agriculture
@@ -53,43 +90,92 @@ tags:
 - conservation
 - environment
 - farming
+- fisheries
 - food
+- intergovernmental
 - nature
+- rfmo
 - southern
+- tuna
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q22032253
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: ar
-  name: لجنة حفظ التونة زرقاء الزعانف الجنوبية
-- id: zh
-  name: 南方蓝鳍金枪鱼养护委员会
 - id: en
   name: Commission for the Conservation of Southern Bluefin Tuna
+- id: ar
+  name: لجنة حفظ التونة زرقاء الزعانف الجنوبية
+- id: ca
+  name: Comissió per a la Conservació de la Tonyina Roja del Sud
+- id: ko
+  name: 남방 참다랑어 보전 위원회
+- id: zh
+  name: 南方蓝鳍金枪鱼养护委员会
+wikidata_id: Q22032253
+notes: The Convention was signed on 10 May 1993 and entered into force on 20 May 1994, formalising voluntary quota arrangements among Australia, Japan, and New Zealand from 1985. Taiwan joined the Extended Commission on 30 August 2002; the European Union was a Cooperating Non-Member from 13 October 2006 before becoming an Extended Commission member on 13 October 2015; South Africa followed a similar path, joining as Cooperating Non-Member on 24 August 2006 and acceding to full Commission membership on 15 February 2016. The Philippines held Cooperating Non-Member status from 2 August 2004 until 12 October 2017.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: CCSBT official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: CCSBT; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
 - field: founded
+  source: CCSBT; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
+- field: active_period
+  source: CCSBT
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
+- field: legal_status
+  source: CCSBT
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/becoming-member-ccsbt
+- field: recognition_status
+  source: CCSBT
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
+- field: geographic_scope
+  source: CCSBT
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/
+- field: headquarters
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q22032253
   license: CC0
-acronyms:
-- lang: en
-  value: CCSBT
-- lang: ar
-  value: CCSBT
-founded: '1994-05-20'
+- field: founding_members
+  source: CCSBT; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q22032253
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q22032253
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q22032253
+  license: CC0
+- field: notes
+  source: CCSBT official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ccsbt.org/en/content/origins-convention

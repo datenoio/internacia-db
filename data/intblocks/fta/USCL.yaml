@@ -2,31 +2,51 @@ id: USCL
 blocktype:
 - fta
 status: formal
+founded: '2003-06-06'
+active_period:
+  start: '2004-01-01'
+geographic_scope: bilateral
+regions:
+- North America
+- South America
 languages:
 - en
 - es
 links:
 - url: https://www.trade.gov/us-chile-free-trade-agreement
   type: website
+- url: http://www.sice.oas.org/TPD/CHL_USA/CHL_USA_e.ASP
+  type: website
+- url: https://en.wikipedia.org/wiki/Chile%E2%80%93United_States_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q3536933
+  type: wikidata
 name: United States-Chile Free Trade Agreement
-founded: '2004-01-01'
-geographic_scope: bilateral
-regions:
-- North America
-- South America
+acronyms:
+- lang: en
+  value: US-Chile FTA
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 6 June 2003; entered into force on 1 January 2004 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2003-06-06'
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
+  joined: '2003-06-06'
+founding_members:
+- US
+- CL
 membership_count: 2
-description: Bilateral trade agreement between the United States and Chile, signed on June 6, 2003, and implemented on January
-  1, 2004. Upon implementation, tariffs on 90% of U.S. exports to Chile and 95% of Chilean exports to the U.S. were eliminated.
-  All tariffs were phased out by 2015, resulting in duty-free trade for all qualifying products.
+description: Bilateral trade agreement between the United States and Chile, signed on 6 June 2003 and implemented on 1 January
+  2004. The first U.S. free trade agreement with a South American country, it eliminated tariffs on 90% of U.S. exports to
+  Chile and 95% of Chilean exports to the U.S. upon entry into force, with all tariffs phased out by 2015 for qualifying
+  products.
 tags:
 - USCL
 - chile
@@ -42,9 +62,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: US-Chile FTA
+wikidata_id: Q3536933
 other_names:
 - id: en
   name: US-Chile FTA
@@ -54,4 +72,20 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.trade.gov/us-chile-free-trade-agreement
+- field: founded
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/about-us/policy-offices/press-office/press-releases/archives/2003/june/united-states-and-chile-sign-historic-freetr
+- field: active_period
+  source: Organization of American States SICE
+  retrieved_at: '2026-07-29'
+  url: http://www.sice.oas.org/TPD/CHL_USA/CHL_USA_e.ASP
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: http://www.sice.oas.org/TPD/CHL_USA/CHL_USA_e.ASP
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://www.trade.gov/us-chile-free-trade-agreement

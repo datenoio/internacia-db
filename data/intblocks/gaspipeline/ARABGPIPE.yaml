@@ -1,16 +1,20 @@
 id: ARABGPIPE
+name: Arab Gas Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2003'
+geographic_scope: regional
+regions:
+- Middle East
+languages:
+- ar
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Arab_Gas_Pipeline
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2302730
   type: wikidata
-name: Arab Gas Pipeline
-geographic_scope: regional
-regions:
-- Middle East
 includes:
 - id: EG
   name: Egypt
@@ -28,20 +32,38 @@ includes:
   name: Lebanon
   type: country
   status: member
-membership_count: 4
+- id: IL
+  name: Israel
+  type: country
+  status: member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+membership_count: 6
 wikidata_id: Q2302730
-description: Natural gas pipeline.
+description: 1,200 km natural gas pipeline from Arish in Egypt's Sinai Peninsula through Jordan and Syria to Lebanon,
+  with branches to Israel and a Syria–Turkey link at Kilis. Built to export Egyptian gas to Jordan, Syria, and Lebanon;
+  the Arish–Aqaba section (250 km overland plus subsea link) was commissioned in July 2003. Design capacity is
+  10.3 billion m³/a via 36-inch pipe with compressor stations roughly every 200 km. Exports were disrupted from 2011
+  by Sinai sabotage and Egyptian domestic shortages; flow reversed intermittently for LNG imports via Jordan. From 2020,
+  Israeli gas reached Jordan and Egypt through pipeline branches and reverse-flow links.
 tags:
 - ARABGPIPE
 - arab
-- aviation
 - economy
+- egypt
 - energy
 - gaspipeline
-- oil
+- israel
+- jordan
+- lebanon
+- middle-east
 - pipeline
+- syria
 - transport
 - transportation
+- turkey
 topics:
 - key: economy
   name: Economy
@@ -52,19 +74,56 @@ topics:
 other_names:
 - id: ar
   name: خط الغاز العربي
-- id: zh
-  name: 阿拉伯天然气管道
+- id: bg
+  name: Арабски газопровод
+- id: cs
+  name: Arabský plynovod
 - id: en
   name: Arab Gas Pipeline
+- id: fa
+  name: خط لوله گاز عرب
 - id: fr
   name: Gazoduc arabe
+- id: he
+  name: צינור הגז הערבי
+- id: tr
+  name: Arap Boru Hattı
+- id: uk
+  name: Арабський газопровод
+- id: zh
+  name: 阿拉伯天然气管道
+notes: Main line runs Arish → Aqaba → Amman → El Rehab → Damascus → Homs → Tripoli; the Syria–Turkey segment
+  (Aleppo–Kilis, 63 km) was completed in 2011 and opened in August 2025. Israel connects via the Arish–Ashkelon
+  submarine branch and a northern Jordan link near Mafraq (commissioned 2020). Iraq connection was agreed in 2004
+  but is not operational. Endpoint and transit countries along the built route are listed in includes.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Gas_Pipeline
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2302730
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Gas_Pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2302730
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Gas_Pipeline
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Arab_Gas_Pipeline

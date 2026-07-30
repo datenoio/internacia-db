@@ -2,74 +2,128 @@ id: CPTPP
 blocktype:
 - fta
 status: formal
-languages:
-- en
-links:
-- url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/cptpp/
-  type: website
-- url: https://en.wikipedia.org/wiki/Comprehensive_and_Progressive_Agreement_for_Trans-Pacific_Partnership
-  type: wikipedia
-name: Comprehensive and Progressive Agreement for Trans-Pacific Partnership
-founded: '2018'
+founded: '2018-03-08'
+active_period:
+  start: '2018-12-30'
 geographic_scope: regional
 regions:
 - Asia
 - Pacific
+- Europe
+languages:
+- en
+- fr
+- es
+links:
+- url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/cptpp/
+  type: website
+- url: https://www.dfat.gov.au/trade/agreements/in-force/cptpp/comprehensive-and-progressive-agreement-for-trans-pacific-partnership
+  type: website
+- url: https://www.gov.uk/government/collections/comprehensive-and-progressive-agreement-for-trans-pacific-partnership-cptpp
+  type: website
+- url: https://en.wikipedia.org/wiki/Comprehensive_and_Progressive_Agreement_for_Trans-Pacific_Partnership
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q48852287
+  type: wikidata
+name: Comprehensive and Progressive Agreement for Trans-Pacific Partnership
 acronyms:
 - lang: en
   value: CPTPP
+- lang: en
+  value: TPP11
+- lang: en
+  value: TPP-11
+- lang: fr
+  value: PTPGP
+legal_status: free trade agreement
+predecessor: TPP
+recognition_status: Multilateral free trade agreement signed on 8 March 2018 in Santiago, Chile; entered into force on 30 December
+  2018 for the first six ratifying parties, evolving from the Trans-Pacific Partnership after the United States withdrew.
+  The United Kingdom acceded in July 2023 and entered into force as the twelfth member on 15 December 2024.
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: BN
   name: Brunei Darussalam
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: CL
   name: Chile
   type: country
+  status: founding_member
+  joined: '2018-03-08'
+- id: GB
+  name: United Kingdom
+  type: country
   status: member
+  joined: '2024-12-15'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-03-08'
 - id: VN
-  name: Viet Nam
+  name: Vietnam
   type: country
-  status: member
-membership_count: 11
-description: Comprehensive and Progressive Agreement for Trans-Pacific Partnership
-  is an international fta body with 11 members.
+  status: founding_member
+  joined: '2018-03-08'
+founding_members:
+- AU
+- BN
+- CA
+- CL
+- JP
+- MY
+- MX
+- NZ
+- PE
+- SG
+- VN
+membership_count: 12
+description: Multilateral free trade agreement among twelve Asia-Pacific economies, signed on 8 March 2018 in Santiago, Chile,
+  and entered into force on 30 December 2018 for the first six ratifying parties. Evolved from the Trans-Pacific Partnership
+  after the United States withdrew; retains most TPP provisions with suspended US-favored clauses. The United Kingdom acceded
+  in July 2023 and entered into force as the twelfth member on 15 December 2024.
 tags:
 - CPTPP
-- comprehensive
+- TPP11
+- asia
 - commerce
+- comprehensive
 - economy
 - fta
 - pacific
@@ -81,16 +135,68 @@ topics:
   name: Economy
 - key: trade
   name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q48852287
 other_names:
+- id: ar
+  name: اتفاق الشراكة الشاملة والتقدمية عبر المحيط الهادئ
+- id: de
+  name: Comprehensive and Progressive Agreement for Trans-Pacific Partnership
 - id: en
-  name: Sleepline
+  name: Comprehensive and Progressive Agreement for Trans-Pacific Partnership
 - id: es
-  name: Sleepline
+  name: Acuerdo Amplio y Progresista de Asociación Transpacífico
+- id: fr
+  name: Partenariat transpacifique global et progressiste
+- id: pt
+  name: Acordo Abrangente e Progressivo para a Parceria Transpacífica
+- id: ru
+  name: Всеобъемлющее и прогрессивное соглашение о Транстихоокеанском партнёрстве
+- id: zh
+  name: 跨太平洋夥伴全面進展協定
 provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q48852287
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q48852287
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q48852287
+  license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/cptpp/
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/cptpp/comprehensive-and-progressive-agreement-for-trans-pacific-partnership
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/cptpp/comprehensive-and-progressive-agreement-for-trans-pacific-partnership
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.gov.uk/government/publications/cptpp-joint-ministerial-statement-from-the-10th-commission-meeting-26-june-2026/comprehensive-and-progressive-agreement-for-trans-pacific-partnership-cptpp-joint-ministerial-statement-on-expansion-implementation-and-co-operatio
+- field: predecessor
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q48852287
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/cptpp/comprehensive-and-progressive-agreement-for-trans-pacific-partnership
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/cptpp/comprehensive-and-progressive-agreement-for-trans-pacific-partnership

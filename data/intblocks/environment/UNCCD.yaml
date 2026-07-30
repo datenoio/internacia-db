@@ -1,8 +1,20 @@
 id: UNCCD
+name: United Nations Convention to Combat Desertification
 blocktype:
 - environment
 - agreement
 status: formal
+founded: '1994-06-17'
+active_period:
+  start: '1996-12-26'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 - es
@@ -13,40 +25,65 @@ languages:
 links:
 - url: https://www.unccd.int/
   type: website
+- url: https://www.unccd.int/convention/overview
+  type: website
+- url: https://www.unccd.int/convention/secretariat
+  type: website
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+  type: website
 - url: https://en.wikipedia.org/wiki/United_Nations_Convention_to_Combat_Desertification
   type: wikipedia
-name: United Nations Convention to Combat Desertification
-founded: '1994'
-description: International convention focused on desertification prevention and environmental
-  protection established through an international agreement.
+- url: https://www.wikidata.org/wiki/Q331520
+  type: wikidata
+headquarters:
+  city: Bonn
+  country: DE
+  coordinates:
+    lat: 50.7186
+    lng: 7.1275
+legal_status: treaty
+recognition_status: Multilateral environmental treaty adopted in Paris on 17 June 1994 by the Intergovernmental Negotiating Committee; opened for signature in Paris on 14–15 October 1994 and at United Nations Headquarters until 13 October 1995; entered into force on 26 December 1996 (United Nations Treaty Series vol. 1954, p. 3, registration No. 33480); one of the three Rio Conventions; administered by the UNCCD Secretariat in Bonn
+secretariat:
+  location: Bonn, Germany
+  organization: Secretariat of the United Nations Convention to Combat Desertification
+description: Sole legally binding multilateral framework addressing desertification, land degradation, and drought, with particular focus on Africa. Adopted in Paris on 17 June 1994, opened for signature on 14 October 1994, and entered into force on 26 December 1996; promotes sustainable land management through national, sub-regional, and regional action programmes under the Conference of the Parties.
 tags:
 - UNCCD
 - agreement
 - convention
 - desertification
+- drought
 - environment
+- land_degradation
 - law
 - legal
-- nations
-- united
+- rio_conventions
+- treaty
 topics:
 - key: environment
   name: Environment
+- key: environmental_protection
+  name: Environmental Protection
 - key: law
   name: Law
 other_names:
 - id: ar
   name: اتفاقية الأمم المتحدة لمكافحة التصحر
-- id: zh
-  name: 联合国防治荒漠化公约
+- id: de
+  name: Übereinkommen der Vereinten Nationen zur Bekämpfung der Wüstenbildung
 - id: en
   name: United Nations Convention to Combat Desertification
+- id: es
+  name: Convención de las Naciones Unidas de Lucha contra la Desertificación
 - id: fr
   name: Convention des Nations unies sur la lutte contre la désertification
 - id: ru
   name: Конвенция ООН по борьбе с опустыниванием
-- id: es
-  name: Convención de las Naciones Unidas de Lucha contra la Desertificación
+- id: zh
+  name: 联合国防治荒漠化公约
+acronyms:
+- lang: en
+  value: UNCCD
 includes:
 - id: AD
   name: Andorra
@@ -330,6 +367,10 @@ includes:
   status: member
 - id: GT
   name: Guatemala
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
   type: country
   status: member
 - id: GY
@@ -832,16 +873,79 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-notes: The UNCCD entered into force in 1996. As of 2025, it comprises 197 parties
-  (196 countries and the European Union), encompassing all 193 United Nations member
-  states, along with the Cook Islands, Niue, and the State of Palestine. The convention
-  aims to combat desertification and mitigate the effects of drought through sustainable
-  land management.
+official_documents:
+- url: https://www.unccd.int/convention/overview
+  type: document
+  name: United Nations Convention to Combat Desertification (overview)
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (vol. 1954, p. 3, No. 33480)
+notes: The UNCCD was adopted on 17 June 1994 and entered into force on 26 December 1996.
+  As of July 2026, it has 197 parties (196 country Parties and the European Union),
+  including all 193 UN member states plus the Cook Islands, Niue, and the State of
+  Palestine. Canada withdrew effective 28 March 2014 and re-acceded on 21 December 2016
+  (party again from 21 March 2017). The Holy See is eligible to accede but is not a party.
+  The permanent Secretariat has been based in Bonn since January 1999.
 membership_count: 197
 wikidata_id: Q331520
+last_verified: '2026-07-29'
 provenance:
+- field: description
+  source: UNCCD Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.unccd.int/convention/overview
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: geographic_scope
+  source: UNCCD Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.unccd.int/convention/overview
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: recognition_status
+  source: UNCCD Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.unccd.int/convention/overview
+- field: secretariat
+  source: UNCCD Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.unccd.int/convention/secretariat
+- field: headquarters
+  source: UNCCD Secretariat
+  retrieved_at: '2026-07-29'
+  url: https://www.unccd.int/about-us/contacts
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: membership_count
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: notes
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-10&chapter=27&clang=_en
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q331520
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q331520
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q331520
   license: CC0

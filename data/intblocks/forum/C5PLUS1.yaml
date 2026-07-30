@@ -2,77 +2,142 @@ id: C5PLUS1
 blocktype:
 - forum
 - political
+- security
 status: informal
+founded: '2015-09-26'
+geographic_scope: regional
+regions:
+- Asia
+- North America
 languages:
 - en
+- kk
+- ky
+- ru
+- tg
+- tk
+- uz
 links:
 - url: https://www.state.gov/c5-plus-1/
   type: website
 - url: https://en.wikipedia.org/wiki/C5%2B1
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q28158938
+- url: https://www.wikidata.org/wiki/Q108315279
   type: wikidata
 name: C5+1 Diplomatic Platform
-founded: '2015'
-geographic_scope: regional
-regions:
-- Asia
-- North America
 includes:
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '2015-09-26'
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
   status: member
+  joined: '2015-09-26'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '2015-09-26'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
+  joined: '2015-09-26'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  joined: '2015-09-26'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '2015-09-26'
+founding_members:
+- KZ
+- KG
+- TJ
+- TM
+- UZ
+- US
 membership_count: 6
-wikidata_id: Q28158938
+wikidata_id: Q108315279
 legal_status: diplomatic_platform
 acronyms:
 - lang: en
   value: C5+1
-description: Diplomatic platform for cooperation between the United States and five Central Asian states.
+description: >-
+  Diplomatic platform bringing together the United States and the five Central Asian states (Kazakhstan, Kyrgyzstan,
+  Tajikistan, Turkmenistan, and Uzbekistan) for annual foreign-minister summits since 2015. Established on 26 September
+  2015 during the UN General Assembly, the format addresses regional security, Afghanistan, counterterrorism, trade and
+  transport connectivity, energy, and environmental cooperation; working groups cover economics, environment and energy,
+  and security.
 tags:
 - C5+1
 - C5PLUS1
 - Central-Asia
+- United-States
+- cooperation
 - diplomacy
+- forum
 - political
+- regional
+- regional_cooperation
+- security
 topics:
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 other_names:
 - id: en
-  name: 'Hepatic artery embolization for hepatocellular carcinoma: technique, patient selection, and outcomes'
+  name: C5+1
+- id: fr
+  name: C5+1
+- id: kk
+  name: С5+1
+- id: ru
+  name: Центральная Азия плюс США
+- id: ru
+  name: С5+1
+- id: uz
+  name: C5+1
+notes: >-
+  Distinct from Central Asia plus Japan (CENAPJ). The first ministerial summit was held in Samarkand on 1 November 2015;
+  leaders met at the White House on 6 November 2025 for the first presidential-level C5+1 gathering.
+last_verified: '2026-07-29'
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.state.gov/c5-plus-1/
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/C5%2B1
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/C5%2B1
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/C5%2B1
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.state.gov/c5-plus-1/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.state.gov/c5-plus-1/
+- field: wikidata_id
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/C5%2B1
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q108315279
+  license: CC0

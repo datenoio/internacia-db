@@ -2,16 +2,30 @@ id: HCCN
 blocktype:
 - legal
 status: formal
+founded: '1893'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
 links:
 - url: http://www.hcch.net
   type: website
+- url: https://www.hcch.net/en/states/hcch-members
+  type: website
+- url: https://www.hcch.net/en/instruments/conventions/status-table/?csid=60&disp=table
+  type: website
 - url: https://en.wikipedia.org/wiki/Hague_Conference_on_Private_International_Law
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4130823
   type: wikidata
+acronyms:
+- lang: en
+  value: HCCH
+- lang: fr
+  value: HCCH
+legal_status: intergovernmental
 name: Hague Conference on Private International Law
 includes:
 - id: AL
@@ -142,6 +156,11 @@ includes:
   name: Greece
   type: country
   status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+  joined: '2026-03-04'
 - id: HN
   name: Honduras
   type: country
@@ -382,16 +401,17 @@ includes:
   name: Zambia
   type: country
   status: member
-membership_count: 92
-founded: '1893'
+membership_count: 93
 headquarters:
   city: The Hague
+  country: NL
   coordinates:
     lat: 52.08
     lng: 4.31
 wikidata_id: Q4130823
-description: The Hague Conference on Private International Law is an international intergovernmental organization that promotes
-  the unification of private international law.
+description: Intergovernmental organisation that develops and monitors multilateral legal instruments in private international
+  law. As of 2026 the HCCH comprises 93 Members — 92 States and the European Union — representing all regions of the globe;
+  its conventions also bind over 150 non-Member jurisdictions as Contracting Parties.
 tags:
 - HCCN
 - conference
@@ -419,18 +439,37 @@ other_names:
   name: Гаагская конференция по международному частному праву
 - id: zh
   name: 海牙国际私法会议
+notes: Guatemala acceded to the Statute on 4 March 2026, becoming the 92nd State member (93 Members overall including the
+  European Union).
 provenance:
+- field: includes
+  source: HCCH official website
+  retrieved_at: '2026-07-29'
+  url: https://www.hcch.net/en/instruments/conventions/status-table/?csid=60&disp=table
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: HCCH official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.hcch.net/en/about
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikidata; HCCH official website
+  retrieved_at: '2026-07-29'
   url: http://www.hcch.net
+- field: geographic_scope
+  source: HCCH official website
+  retrieved_at: '2026-07-29'
+  url: https://www.hcch.net/en/about
+- field: acronyms
+  source: HCCH official website
+  retrieved_at: '2026-07-29'
+  url: https://www.hcch.net/en/about
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q4130823
+  license: CC0
+last_verified: '2026-07-29'

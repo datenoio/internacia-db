@@ -3,12 +3,22 @@ blocktype:
 - wbgroup
 status: formal
 links:
-- url: https://www.worldbank.org/en/region/mena
+- url: https://data.worldbank.org/country/middle-east-and-north-africa
+  type: website
+- url: https://api.worldbank.org/v2/region/MEA
   type: website
 - url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
   type: website
+- url: https://www.worldbank.org/en/region/mena
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
 name: Middle East & North Africa (all income levels)
 includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
 - id: AE
   name: United Arab Emirates
   type: country
@@ -69,6 +79,10 @@ includes:
   name: Oman
   type: country
   status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
 - id: PS
   name: West Bank and Gaza
   type: country
@@ -93,9 +107,15 @@ includes:
   name: Yemen, Rep.
   type: country
   status: member
-membership_count: 21
-description: Middle East & North Africa (all income levels) is an international wbgroup
-  body with 21 members.
+membership_count: 23
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
+description: World Bank geographic region for economies across the Middle East and
+  North Africa. Since July 1, 2025, Afghanistan and Pakistan are classified in this
+  region. This analytical variant includes all income levels in the regional aggregate
+  used in World Development Indicators.
 tags:
 - MEA
 - aid
@@ -114,16 +134,55 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: MEA
+other_names:
+- id: en
+  name: Middle East and North Africa
+- id: en
+  name: Middle East, North Africa, Afghanistan & Pakistan
+- id: ar
+  name: الشرق الأوسط وشمال أفريقيا
+- id: de
+  name: Naher Osten und Nordafrika
+- id: es
+  name: Oriente Medio y Norte de África
+- id: fr
+  name: Moyen-Orient et Afrique du Nord
+- id: pt
+  name: Oriente Médio e Norte da África
+- id: ru
+  name: Ближний Восток и Северная Африка
+- id: zh
+  name: 中东与北非
 provenance:
 - field: description
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: regions
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: includes
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  source: World Bank Data API
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?region=MEA
 - field: membership_count
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  source: World Bank Data API
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?region=MEA
+- field: acronyms
+  source: World Bank Data
+  retrieved_at: '2026-07-30'
+  url: https://data.worldbank.org/country/middle-east-and-north-africa
+- field: other_names
+  source: World Bank Data
+  retrieved_at: '2026-07-30'
+  url: https://data.worldbank.org/country/middle-east-and-north-africa
+last_verified: '2026-07-30'

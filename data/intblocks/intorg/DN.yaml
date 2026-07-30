@@ -35,6 +35,7 @@ acronyms:
   value: D9
 - lang: es
   value: D7
+legal_status: intergovernmental
 membership_count: 10
 founding_members:
 - EE
@@ -75,11 +76,13 @@ includes:
 - id: EE
   name: Estonia
   type: country
-  status: member
+  status: founding_member
+  joined: 2014-12
 - id: IL
   name: Israel
   type: country
-  status: member
+  status: founding_member
+  joined: 2014-12
 - id: MX
   name: Mexico
   type: country
@@ -88,7 +91,8 @@ includes:
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: 2014-12
 - id: PT
   name: Portugal
   type: country
@@ -97,11 +101,13 @@ includes:
 - id: KR
   name: Republic of Korea
   type: country
-  status: member
+  status: founding_member
+  joined: 2014-12
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: 2014-12
 - id: UY
   name: Uruguay
   type: country
@@ -124,18 +130,48 @@ other_names:
   name: Digital 9
 - id: fr
   name: Digital 5
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Digital_Nations
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1224678
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1224678
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1224678
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.digital-nations.org/

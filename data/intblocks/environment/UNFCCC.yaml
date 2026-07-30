@@ -1,9 +1,21 @@
 id: UNFCCC
+name: United Nations Framework Convention on Climate Change
 blocktype:
 - environment
 - agreement
 - climate
 status: formal
+founded: '1992-05-09'
+active_period:
+  start: '1994-03-21'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- North America
+- Oceania
+- South America
 languages:
 - en
 - es
@@ -14,21 +26,41 @@ languages:
 links:
 - url: https://unfccc.int/
   type: website
+- url: https://unfccc.int/process-and-meetings/the-convention/status-of-ratification-of-the-convention
+  type: website
+- url: https://unfccc.int/process/parties-non-party-stakeholders/parties-convention-and-observer-states
+  type: website
+- url: https://unfccc.int/resource/docs/convkp/conveng.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/United_Nations_Framework_Convention_on_Climate_Change
   type: wikipedia
-name: United Nations Framework Convention on Climate Change
-founded: '1992'
-description: International framework convention focused on climate change and environmental protection established through
-  an international agreement.
+- url: https://www.wikidata.org/wiki/Q208645
+  type: wikidata
+headquarters:
+  city: Bonn
+  country: DE
+  coordinates:
+    lat: 50.7186
+    lng: 7.1275
+legal_status: treaty
+recognition_status: Multilateral environmental treaty adopted at United Nations Headquarters in New York on 9 May 1992; opened for signature at the Earth Summit in Rio de Janeiro on 4 June 1992; entered into force on 21 March 1994 (United Nations Treaty Series vol. 1771, p. 107, registration No. 30822); parent framework for the Kyoto Protocol and the Paris Agreement; administered by the UNFCCC Secretariat in Bonn
+secretariat:
+  location: Bonn, Germany
+  organization: UNFCCC Secretariat
+description: Parent multilateral framework treaty stabilizing greenhouse gas concentrations to prevent dangerous anthropogenic interference with the climate system. Adopted on 9 May 1992, opened for signature at the Rio Earth Summit, and entered into force on 21 March 1994; establishes the Conference of the Parties, Annex I/non-Annex I differentiation, national inventories and communications, and the institutional base for the Kyoto Protocol and Paris Agreement.
 tags:
 - UNFCCC
 - agreement
 - climate
+- climate_change
 - convention
 - environment
 - framework
+- greenhouse_gases
 - law
 - legal
+- rio_conventions
+- treaty
 topics:
 - key: climate_change
   name: Climate Change
@@ -39,16 +71,29 @@ topics:
 other_names:
 - id: ar
   name: اتفاقية الأمم المتحدة الإطارية بشأن تغير المناخ
-- id: zh
-  name: 联合国气候变化框架公约
+- id: de
+  name: Rahmenübereinkommen der Vereinten Nationen über Klimaänderungen
 - id: en
   name: United Nations Framework Convention on Climate Change
-- id: fr
-  name: Convention-cadre des Nations unies sur les changements climatiques
-- id: ru
-  name: Рамочная конвенция ООН об изменении климата
 - id: es
   name: Convención Marco de las Naciones Unidas sobre el Cambio Climático
+- id: fr
+  name: Convention-cadre des Nations unies sur les changements climatiques
+- id: pt
+  name: Convenção-Quadro das Nações Unidas sobre a Mudança do Clima
+- id: ru
+  name: Рамочная конвенция ООН об изменении климата
+- id: zh
+  name: 联合国气候变化框架公约
+acronyms:
+- lang: en
+  value: UNFCCC
+- lang: fr
+  value: CCNUCC
+- lang: es
+  value: CMNUCC
+- lang: de
+  value: UNFCCC
 includes:
 - id: AD
   name: Andorra
@@ -378,6 +423,10 @@ includes:
   name: Iran (Islamic Republic of)
   type: country
   status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
 - id: IS
   name: Iceland
   type: country
@@ -580,6 +629,10 @@ includes:
   status: member
 - id: NP
   name: Nepal
+  type: country
+  status: member
+- id: NR
+  name: Nauru
   type: country
   status: member
 - id: NU
@@ -834,10 +887,76 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+official_documents:
+- url: https://unfccc.int/resource/docs/convkp/conveng.pdf
+  type: document
+  name: United Nations Framework Convention on Climate Change
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7&chapter=27&clang=_en
+  type: document
+  name: United Nations Treaty Series registration (vol. 1771, p. 107, No. 30822)
+notes: The UNFCCC was adopted on 9 May 1992 and entered into force on 21 March 1994. As of July 2026, it has 198 parties
+  (197 states and the European Union), including the Cook Islands, Niue, the State of Palestine, and the Holy See. It is
+  the parent framework for the Kyoto Protocol and the Paris Agreement and is administered by the UNFCCC Secretariat in Bonn.
+membership_count: 198
 wikidata_id: Q208645
+last_verified: '2026-07-29'
 provenance:
+- field: description
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/
+- field: active_period
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7&chapter=27&clang=_en
+- field: founded
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7&chapter=27&clang=_en
+- field: geographic_scope
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/process/parties-non-party-stakeholders/parties-convention-and-observer-states
+- field: legal_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7&chapter=27&clang=_en
+- field: recognition_status
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/
+- field: secretariat
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/about-us/secretariat
+- field: headquarters
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/about-us/secretariat
+- field: official_documents
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7&chapter=27&clang=_en
+- field: membership_count
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/process/parties-non-party-stakeholders/parties-convention-and-observer-states
+- field: notes
+  source: UNFCCC
+  retrieved_at: '2026-07-29'
+  url: https://unfccc.int/process/parties-non-party-stakeholders/parties-convention-and-observer-states
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q208645
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q208645
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q208645
   license: CC0

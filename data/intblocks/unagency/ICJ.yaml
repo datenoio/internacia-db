@@ -19,7 +19,8 @@ links:
 name: International Court of Justice
 founded: '1945'
 headquarters:
-  city: Peace Palace
+  city: The Hague
+  country: NL
   coordinates:
     lat: 52.0866
     lng: 4.2955
@@ -46,9 +47,7 @@ acronyms:
   value: CIJ
 - lang: de
   value: IGH
-partof:
-  id: UN
-  name: United Nations
+partof: UN
 includes:
 - id: HU
   name: Hungary
@@ -414,10 +413,6 @@ includes:
   name: Tajikistan
   type: country
   status: member
-- id: TW
-  name: Taiwan, Province of China
-  type: country
-  status: member
 - id: TH
   name: Thailand
   type: country
@@ -524,6 +519,10 @@ includes:
   status: member
 - id: DJ
   name: Djibouti
+  type: country
+  status: member
+- id: DK
+  name: Denmark
   type: country
   status: member
 - id: GQ
@@ -824,7 +823,15 @@ includes:
   status: member
 membership_count: 193
 wikidata_id: Q7801
-description: International court focused on legal matters.
+geographic_scope: global
+legal_status: intergovernmental
+recognition_status: UN principal organ
+notes: Principal judicial organ of the United Nations. All UN member states are parties to the ICJ Statute under Article 93(1) of the UN Charter; non-member states may become parties under Article 93(2).
+official_documents:
+- url: https://www.icj-cij.org/en/statute
+  type: document
+  name: Statute of the International Court of Justice
+description: Principal judicial organ of the United Nations, settling legal disputes between states and issuing advisory opinions.
 tags:
 - CIJ
 - ICJ
@@ -857,6 +864,10 @@ other_names:
 - id: zh
   name: 国际法院
 provenance:
+- field: includes
+  source: UN Charter and ICJ Statute
+  retrieved_at: '2026-07-30'
+  url: https://www.icj-cij.org/en/principal-members
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -867,7 +878,20 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q7801
+  license: CC0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.icj-cij.org/en/court
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.icj-cij.org/en/court
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.icj-cij.org/
+  url: https://www.icj-cij.org/

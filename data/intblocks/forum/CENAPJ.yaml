@@ -1,8 +1,18 @@
 id: CENAPJ
 blocktype:
 - forum
+- political
 status: formal
+founded: '2004-08-28'
+geographic_scope: regional
+regions:
+- Asia
+languages:
+- en
+- ja
 links:
+- url: https://www.mofa.go.jp/region/europe/cad/index.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Central_Asia_plus_Japan
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4262186
@@ -13,31 +23,47 @@ includes:
   name: Kazakhstan
   type: country
   status: member
+  joined: '2004-08-28'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '2004-08-28'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '2004-08-28'
 - id: TM
   name: Turkmenistan
   type: country
-  status: member
+  status: observer
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  joined: '2004-08-28'
 - id: JP
   name: Japan
   type: country
   status: member
-membership_count: 6
+  joined: '2004-08-28'
+membership_count: 5
 wikidata_id: Q4262186
-description: Political initiative of Japan and Central Asian countries.
+legal_status: diplomatic_platform
+acronyms:
+- lang: en
+  value: CA+J
+- lang: en
+  value: CENAPJ
+description: >-
+  Political dialogue between Japan and the five Central Asian states (Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan,
+  and Uzbekistan) to strengthen peace, democracy, and economic development in the region and promote intra-regional
+  cooperation. Formally launched at a foreign ministers' meeting in Astana on 28 August 2004; Turkmenistan participates
+  as an observer in line with its policy of neutrality.
 tags:
 - CENAPJ
+- CA+J
 - asia
 - central
 - cooperation
@@ -56,13 +82,45 @@ other_names:
   name: آسيا الوسطى واليابان
 - id: en
   name: Central Asia plus Japan
+- id: en
+  name: Central Asia plus Japan dialogue
 - id: fr
   name: Asie centrale plus Japon
+- id: ja
+  name: 「中央アジア+日本」対話
+- id: kk
+  name: Орталық Азия мен Жапония
 - id: ru
   name: Центральная Азия плюс Япония
+- id: uz
+  name: Markaziy Osiyo va Yaponiya
+notes: >-
+  Distinct from the C5+1 (United States–Central Asia) diplomatic platform. Foreign ministers meet periodically; the first
+  leaders' summit was held in Tokyo on 20 December 2025.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_plus_Japan
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_plus_Japan
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_plus_Japan
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_Asia_plus_Japan
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mofa.go.jp/region/europe/cad/index.html
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4262186
   license: CC0

@@ -74,10 +74,6 @@ includes:
   name: Denmark
   type: country
   status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
 - id: FI
   name: Finland
   type: country
@@ -114,6 +110,10 @@ includes:
   name: Italy
   type: country
   status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
 - id: LV
   name: Latvia
   type: country
@@ -138,6 +138,10 @@ includes:
   name: Monaco
   type: country
   status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
 - id: ME
   name: Montenegro
   type: country
@@ -150,6 +154,10 @@ includes:
   name: Norway
   type: country
   status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
 - id: PL
   name: Poland
   type: country
@@ -160,6 +168,10 @@ includes:
   status: member
 - id: RO
   name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
   type: country
   status: member
 - id: SM
@@ -208,8 +220,9 @@ includes:
   status: member
 membership_count: 49
 wikidata_id: Q47537350
-description: The European Telecommunications Satellite Organization is an international organization that is used to promote
-  regional cooperation in the space and telecommunications sector.
+description: Intergovernmental organization of 49 European ITU member states that holds collective ITU frequency and orbital
+  rights and supervises Eutelsat S.A. under the EUTELSAT Amended Convention.
+last_verified: '2026-07-30'
 tags:
 - EUTELSAT
 - european
@@ -234,12 +247,30 @@ other_names:
 - id: ru
   name: Европейская телекоммуникационная спутниковая организация
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q47537350
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q47537350
+  license: CC0
+- field: includes
+  source: EUTELSAT IGO
+  retrieved_at: '2026-07-30'
+  url: https://www.eutelsatigo.int/member-states/
+- field: description
+  source: EUTELSAT IGO
+  retrieved_at: '2026-07-30'
+  url: https://www.eutelsatigo.int/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q47537350
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: EUTELSAT IGO
+  retrieved_at: '2026-07-30'
   url: https://www.eutelsatigo.int/

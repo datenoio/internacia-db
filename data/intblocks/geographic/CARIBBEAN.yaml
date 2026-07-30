@@ -13,12 +13,28 @@ includes:
   name: Antigua and Barbuda
   type: country
   status: member
-- id: BS
-  name: Bahamas
+- id: AI
+  name: Anguilla
+  type: country
+  status: member
+- id: AW
+  name: Aruba
   type: country
   status: member
 - id: BB
   name: Barbados
+  type: country
+  status: member
+- id: BL
+  name: Saint Barthélemy
+  type: country
+  status: member
+- id: BQ
+  name: Bonaire, Sint Eustatius and Saba
+  type: country
+  status: member
+- id: BS
+  name: Bahamas
   type: country
   status: member
 - id: BZ
@@ -27,6 +43,10 @@ includes:
   status: member
 - id: CU
   name: Cuba
+  type: country
+  status: member
+- id: CW
+  name: Curaçao
   type: country
   status: member
 - id: DM
@@ -41,6 +61,18 @@ includes:
   name: Grenada
   type: country
   status: member
+- id: GF
+  name: French Guiana
+  type: country
+  status: member
+- id: GP
+  name: Guadeloupe
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
 - id: HT
   name: Haiti
   type: country
@@ -53,48 +85,20 @@ includes:
   name: Saint Kitts and Nevis
   type: country
   status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: AI
-  name: Anguilla
-  type: country
-  status: member
-- id: AW
-  name: Aruba
-  type: country
-  status: member
-- id: BM
-  name: Bermuda
-  type: country
-  status: member
-- id: BQ
-  name: Bonaire, Sint Eustatius and Saba
-  type: country
-  status: member
-- id: VG
-  name: Virgin Islands, British
-  type: country
-  status: member
 - id: KY
   name: Cayman Islands
   type: country
   status: member
-- id: CW
-  name: Curaçao
+- id: LC
+  name: Saint Lucia
   type: country
   status: member
-- id: GP
-  name: Guadeloupe
+- id: MF
+  name: Saint Martin (French part)
+  type: country
+  status: member
+- id: MQ
+  name: Martinique
   type: country
   status: member
 - id: MS
@@ -105,12 +109,8 @@ includes:
   name: Puerto Rico
   type: country
   status: member
-- id: BL
-  name: Saint Barthélemy
-  type: country
-  status: member
-- id: MF
-  name: Saint Martin (French part)
+- id: SR
+  name: Suriname
   type: country
   status: member
 - id: SX
@@ -121,16 +121,30 @@ includes:
   name: Turks and Caicos Islands
   type: country
   status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: VC
+  name: Saint Vincent and the Grenadines
+  type: country
+  status: member
+- id: VG
+  name: Virgin Islands, British
+  type: country
+  status: member
 - id: VI
   name: Virgin Islands, U.S.
   type: country
   status: member
-membership_count: 28
+membership_count: 32
 geographic_scope: regional
 regions:
 - Americas
 wikidata_id: Q664609
-description: Caribbean is a regional grouping of 28 countries in Americas.
+description: Geopolitical region centered on the Caribbean Sea and West Indies, comprising
+  island sovereign states, dependent territories, and mainland states with strong Caribbean
+  ties (Belize, Guyana, Suriname, and French Guiana), per the Wikipedia regional definition.
 tags:
 - CARIBBEAN
 - caribbean
@@ -144,21 +158,50 @@ topics:
 other_names:
 - id: ar
   name: الكاريبي
-- id: zh
-  name: 加勒比
+- id: de
+  name: Karibik
 - id: en
   name: Caribbean
-- id: fr
-  name: Caraïbes
-- id: ru
-  name: Карибский бассейн
 - id: es
   name: Caribe
+- id: fr
+  name: Caraïbes
+- id: pt
+  name: Caribe
+- id: ru
+  name: Карибский бассейн
+- id: zh
+  name: 加勒比
+notes: Informal geographic label, not an organization. Bermuda is excluded because it
+  lies in the Sargasso Sea and is not part of the Caribbean geographically (though it
+  is a CARICOM associate member). Mainland Caribbean coasts of Mexico, Central America,
+  Colombia, and Venezuela are omitted because Internacia membership uses country-level
+  codes only.
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Caribbean
 - field: description
-  source: inferred grouping
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caribbean
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caribbean
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Caribbean
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q664609
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/wiki/Q664609
+  license: CC0

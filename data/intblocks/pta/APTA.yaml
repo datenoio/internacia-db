@@ -2,6 +2,13 @@ id: APTA
 blocktype:
 - pta
 status: formal
+founded: '1975-07-31'
+active_period:
+  start: '1976-06-17'
+geographic_scope: regional
+regions:
+- East Asia
+- South Asia
 languages:
 - en
 links:
@@ -9,60 +16,90 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4806265
   type: wikidata
+- url: https://www.unescap.org/tid/apta/
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+  type: website
+- url: https://aric.adb.org/fta/asia-pacific-trade-agreement
+  type: website
 name: Asia-Pacific Trade Agreement
 acronyms:
 - lang: en
   value: APTA
 - lang: zh
   value: 亚洲-太平洋贸易协定
+legal_status: preferential trade agreement
+recognition_status: Preferential trade agreement signed in Bangkok on 31 July 1975 as the First Agreement on Trade Negotiations among Developing Member Countries of ESCAP (Bangkok Agreement); entered into force on 17 June 1976; notified to the GATT/WTO under the Enabling Clause on 2 November 1976; renamed Asia-Pacific Trade Agreement (APTA) on 2 November 2005; amended agreement entered into force on 1 September 2006
 includes:
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-07-31'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2001-04'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-07-31'
 - id: KR
-  name: Korea, Republic of
+  name: Korea, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-07-31'
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
-  status: member
+  status: founding_member
+  joined: '1975-07-31'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: founding_member
+  joined: '1975-07-31'
 - id: MN
   name: Mongolia
   type: country
   status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
+  joined: '2020-09-29'
+founding_members:
+- BD
+- IN
+- KR
+- LA
+- LK
 membership_count: 7
 wikidata_id: Q4806265
-description: International asia-pacific focused on economic cooperation.
+description: The Asia-Pacific Trade Agreement (APTA), formerly known as the Bangkok Agreement, is the oldest preferential regional trade agreement among developing countries in the Asia-Pacific. Signed in Bangkok on 31 July 1975 under the auspices of the United Nations Economic and Social Commission for Asia and the Pacific (ESCAP), it entered into force on 17 June 1976 and was renamed APTA on 2 November 2005. Seven participating states — Bangladesh, China, India, the Republic of Korea, Lao PDR, Mongolia, and Sri Lanka — exchange reciprocal tariff concessions through successive negotiation rounds covering goods, with framework agreements on trade facilitation, services, and investment. ESCAP's Trade, Investment and Innovation Division serves as the agreement secretariat.
 tags:
 - APTA
 - asia
+- bangkok_agreement
 - commerce
+- developing_countries
 - economy
 - pacific
+- preferential
 - pta
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: en
   name: Asia-Pacific Trade Agreement
+- id: en
+  name: Bangkok Agreement
 - id: es
   name: Acuerdo comercial Asia-Pacífico
 - id: fr
@@ -71,7 +108,43 @@ other_names:
   name: Acordo Comercial Ásia-Pacífico
 - id: zh
   name: 亚太贸易协定
+notes: China acceded in April 2001, the first expansion since the original five participating states. Mongolia's accession terms were finalized in October 2013; it deposited its instrument of accession on 29 September 2020, becoming the seventh participating state. The third round of tariff concessions entered into force on 1 September 2006. Participating states are negotiating a fourth round to widen product coverage and deepen cooperation on trade facilitation, services, and investment.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.unescap.org/tid/apta/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=140
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -82,9 +155,7 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q4806265
-  license: CC0
-founded: '1975-07-31'
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://unescap.org/news/mongolia-accedes-asia-pacific-trade-agreement-its-seventh-member

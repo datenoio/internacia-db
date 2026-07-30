@@ -2,16 +2,31 @@ id: EUCENTRALAFRICAEPA
 blocktype:
 - pta
 status: formal
+founded: '2009-01-15'
+active_period:
+  start: '2014-08-04'
+geographic_scope: regional
+regions:
+- Africa
+- Europe
 languages:
 - en
 - fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
-- url: https://policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-the-central-africa-party.html
   type: website
 name: EU-Central Africa Economic Partnership Agreement
-founded: '2009'
+acronyms:
+- lang: en
+  value: EU-Central Africa EPA
+- lang: fr
+  value: APE UE-Afrique centrale
+legal_status: interim economic partnership agreement
+recognition_status: Interim Economic Partnership Agreement signed on 15 January 2009 between the EU and the Central Africa Party (Cameroon); European Parliament approved June 2013; ratified by Cameroon in July 2014; entered provisional application on 4 August 2014; open to accession by other Central African regional configuration countries (Central African Republic, Chad, Congo, Democratic Republic of Congo, Equatorial Guinea, Gabon, São Tomé and Príncipe)
 includes:
 - id: EU
   name: European Union
@@ -21,8 +36,42 @@ includes:
   name: Cameroon
   type: country
   status: member
+  joined: '2014-08-04'
+- id: CF
+  name: Central African Republic
+  type: country
+  status: partner
+- id: TD
+  name: Chad
+  type: country
+  status: partner
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: partner
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: partner
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: partner
+- id: GA
+  name: Gabon
+  type: country
+  status: partner
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: partner
 membership_count: 2
-description: International economic partnership agreement between the European Union and Central African countries providing preferential trade access and development cooperation. Currently implemented as an interim EPA with Cameroon.
+description: Interim Economic Partnership Agreement signed on 15 January 2009 between the European Union and the Central Africa
+  Party, initially implemented with Cameroon. Negotiations for a comprehensive regional EPA with Central African countries were
+  launched in 2003. The agreement provides duty-free, quota-free EU market access for Cameroon and a phased 15-year reduction
+  of tariffs on approximately 80% of EU exports to Cameroon, covering trade in goods, aid for trade, institutional issues, and
+  dispute settlement. Cameroon is currently the only Central African country that has signed and ratified the interim EPA; the
+  agreement remains open to accession by other countries in the regional configuration.
 tags:
 - EUCENTRALAFRICAEPA
 - africa
@@ -45,3 +94,51 @@ other_names:
   name: Accord de partenariat économique UE-Afrique centrale
 - id: es
   name: Acuerdo de Asociación Económica UE-África Central
+notes: Regional EPA negotiations cover Cameroon, Central African Republic, Chad, Congo (Brazzaville), Democratic Republic of Congo,
+  Equatorial Guinea, Gabon, and São Tomé and Príncipe. Angola, Burundi, and Rwanda are ECCAS members but not part of this EPA
+  configuration. Chad, Central African Republic, DRC, and São Tomé and Príncipe currently trade with the EU under Everything
+  but Arms; Congo (Brazzaville) under the GSP; Gabon and Equatorial Guinea are ineligible for GSP as upper-middle-income countries.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-the-central-africa-party.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-the-central-africa-party.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-africa_en

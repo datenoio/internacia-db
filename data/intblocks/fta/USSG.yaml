@@ -2,31 +2,53 @@ id: USSG
 blocktype:
 - fta
 status: formal
-languages:
-- en
-links:
-- url: https://www.trade.gov/us-singapore-free-trade-agreement
-  type: website
-name: United States-Singapore Free Trade Agreement
-founded: '2004-01-01'
+founded: '2003-05-06'
+active_period:
+  start: '2004-01-01'
 geographic_scope: bilateral
 regions:
 - North America
 - Asia
+languages:
+- en
+- zh
+links:
+- url: https://www.trade.gov/us-singapore-free-trade-agreement
+  type: website
+- url: https://sice.oas.org/TPD/USA_SGP/USA_SGP_e.ASP
+  type: website
+- url: https://en.wikipedia.org/wiki/Singapore%E2%80%93United_States_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7523325
+  type: wikidata
+name: United States-Singapore Free Trade Agreement
+acronyms:
+- lang: en
+  value: USSFTA
+- lang: en
+  value: US-Singapore FTA
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 6 May 2003; entered into force on 1 January 2004 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2003-05-06'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '2003-05-06'
+founding_members:
+- US
+- SG
 membership_count: 2
-description: The first U.S. free trade agreement with an Asian nation, which took effect on January 1, 2004. Singapore immediately
-  eliminated tariffs on all U.S. goods, while the U.S. phased out tariffs on Singaporean goods over a period of up to 10 years.
-  The agreement provides substantial access to services and investment markets and includes provisions on intellectual property,
-  government procurement, and e-commerce.
+description: Bilateral trade agreement between the United States and Singapore, signed on 6 May 2003 and implemented on 1 January
+  2004. The first U.S. free trade agreement with an Asian nation, it eliminated tariffs on all U.S. goods immediately while
+  the U.S. phased out tariffs on Singaporean goods over up to 10 years. The agreement provides substantial access to services
+  and investment markets and includes provisions on intellectual property, government procurement, and e-commerce.
 tags:
 - USSFTA
 - asia
@@ -43,18 +65,32 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: USSFTA
-- lang: en
-  value: US-Singapore FTA
+wikidata_id: Q7523325
 other_names:
 - id: en
   name: USSFTA
 - id: en
   name: US-Singapore FTA
+- id: zh
+  name: 美新自由贸易协定
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.trade.gov/us-singapore-free-trade-agreement
+- field: founded
+  source: White House archives
+  retrieved_at: '2026-07-29'
+  url: https://georgewbush-whitehouse.archives.gov/news/releases/2003/05/20030506-11.html
+- field: active_period
+  source: Organization of American States SICE
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/TPD/USA_SGP/USA_SGP_e.ASP
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/TPD/USA_SGP/USA_SGP_e.ASP
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://www.trade.gov/us-singapore-free-trade-agreement

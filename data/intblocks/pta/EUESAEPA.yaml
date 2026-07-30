@@ -2,46 +2,107 @@ id: EUESAEPA
 blocktype:
 - pta
 status: formal
+founded: '2009-08-29'
+active_period:
+  start: '2012-05-14'
+geographic_scope: regional
+regions:
+- Africa
+- Europe
 languages:
 - en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
-- url: https://policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en
+  type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-eastern-and-southern-africa
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-eastern-and-southern-africa-states.html
   type: website
 name: EU-Eastern and Southern Africa Economic Partnership Agreement
-founded: '2009'
+acronyms:
+- lang: en
+  value: EU-ESA EPA
+- lang: fr
+  value: APE UE-AES
+legal_status: interim economic partnership agreement
+recognition_status: Interim Economic Partnership Agreement signed on 29 August 2009 in Grand Baie, Mauritius between the EU and Eastern and Southern Africa states; Madagascar, Mauritius, Seychelles, and Zimbabwe have provisionally applied it since 14 May 2012; Comoros signed in July 2017 and began provisional application on 7 February 2019; European Parliament consent in January 2013; open to accession by other ESA regional configuration countries; on 10 June 2026 the EU and four ESA states (Comoros, Madagascar, Mauritius, and Seychelles) concluded negotiations on an enhanced EPA, with Zimbabwe negotiations ongoing
 includes:
 - id: EU
   name: European Union
   type: organization
   status: member
-- id: MU
-  name: Mauritius
+- id: KM
+  name: Comoros
   type: country
   status: member
+  joined: '2019-02-07'
 - id: MG
   name: Madagascar
   type: country
   status: member
+  joined: '2012-05-14'
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+  joined: '2012-05-14'
 - id: SC
   name: Seychelles
   type: country
   status: member
+  joined: '2012-05-14'
 - id: ZW
   name: Zimbabwe
   type: country
   status: member
-membership_count: 5
-description: International economic partnership agreement between the European Union and Eastern and Southern African countries providing preferential trade access and development cooperation.
+  joined: '2012-05-14'
+- id: DJ
+  name: Djibouti
+  type: country
+  status: partner
+- id: ER
+  name: Eritrea
+  type: country
+  status: partner
+- id: ET
+  name: Ethiopia
+  type: country
+  status: partner
+- id: MW
+  name: Malawi
+  type: country
+  status: partner
+- id: SD
+  name: Sudan
+  type: country
+  status: partner
+- id: ZM
+  name: Zambia
+  type: country
+  status: partner
+membership_count: 6
+description: Interim Economic Partnership Agreement signed on 29 August 2009 between the European Union and Eastern and Southern
+  Africa states. Madagascar, Mauritius, Seychelles, and Zimbabwe began provisional application on 14 May 2012; Comoros joined
+  on 7 February 2019. The agreement provides duty-free, quota-free EU market access for ESA partners, phased liberalisation of
+  tariffs on EU imports (around 80–98% depending on the partner), rules of origin, fisheries, development cooperation, and dispute
+  settlement, with a rendez-vous clause to deepen coverage to services, investment, and sustainable development. Negotiations
+  to deepen the EPA launched in October 2019; on 10 June 2026 the EU and four ESA states concluded an enhanced comprehensive
+  agreement, with Zimbabwe accession still under negotiation.
 tags:
 - EUESAEPA
 - africa
 - commerce
 - economy
 - EPA
+- ESA
+- eastern_africa
 - european_union
+- indian_ocean
 - pta
+- southern_africa
 - trade
 topics:
 - key: economy
@@ -55,3 +116,52 @@ other_names:
   name: Accord de partenariat économique UE-Afrique orientale et australe
 - id: es
   name: Acuerdo de Asociación Económica UE-África Oriental y Meridional
+notes: ESA regional configuration covers Comoros, Djibouti, Eritrea, Ethiopia, Madagascar, Malawi, Mauritius, Seychelles, Sudan,
+  Zambia, and Zimbabwe. Six states concluded the interim EPA at the end of 2007; Zambia did not sign. Djibouti, Eritrea, Ethiopia,
+  Malawi, and Sudan are Horn of Africa or mainland members outside the current applying group. On 10 June 2026 the EU concluded
+  an enhanced EPA with Comoros, Madagascar, Mauritius, and Seychelles; Zimbabwe negotiations continue. Non-applying ESA LDCs
+  trade with the EU under Everything but Arms pending accession.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-eastern-and-southern-africa-states.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-eastern-and-southern-africa-states.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-eastern-and-southern-africa
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/interim-economic-partnership-agreement-between-the-eu-and-eastern-and-southern-africa-states.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/eastern-and-southern-africa-esa_en

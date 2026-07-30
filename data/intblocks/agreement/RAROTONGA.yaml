@@ -2,75 +2,127 @@ id: RAROTONGA
 blocktype:
 - agreement
 status: formal
+founded: '1985-08-06'
+active_period:
+  start: '1986-12-11'
+geographic_scope: regional
+regions:
+- South Pacific
+- Pacific
+- Oceania
+languages:
+- en
 links:
+- url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+  type: website
+- url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800cea40
+  type: website
 - url: https://en.wikipedia.org/wiki/Treaty_of_Rarotonga
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7835003
   type: wikidata
 name: Treaty of Rarotonga
-founded: '1985'
-geographic_scope: regional
+acronyms:
+- lang: en
+  value: SPNFZ
+- lang: en
+  value: Rarotonga Treaty
+legal_status: treaty
+recognition_status: Regional nuclear-weapon-free zone treaty concluded under Pacific Islands Forum auspices; the PIF Secretary
+  General serves as depositary
+partof: PIF
+headquarters:
+  city: Suva
+  country: FJ
+secretariat:
+  location: Suva
+  organization: Pacific Islands Forum Secretariat
+membership_count: 13
+description: International treaty that establishes a nuclear-weapon-free zone in the South Pacific. Also known as the South
+  Pacific Nuclear Free Zone Treaty (SPNFZ), it prohibits the manufacture, possession, stationing, and testing of nuclear
+  weapons within the zone and commits parties to prevent environmental pollution by radioactive waste. Opened for signature
+  at Rarotonga on 6 August 1985 and entered into force on 11 December 1986. The Pacific Islands Forum Secretariat in Suva
+  acts as focal point and depositary; three protocols are open to the NPT nuclear-weapon states.
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-12-11'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-10-28'
 - id: FJ
   name: Fiji
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-10-04'
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-10-28'
 - id: NR
   name: Nauru
   type: country
   status: member
+  joined: '1987-04-13'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-11-13'
 - id: NU
   name: Niue
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-05-08'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1989-09-15'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-10-20'
 - id: SB
   name: Solomon Islands
   type: country
   status: member
+  joined: '1989-01-27'
 - id: TO
   name: Tonga
   type: country
   status: member
+  joined: '2000-12-18'
 - id: TV
   name: Tuvalu
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-01-10'
 - id: VU
   name: Vanuatu
   type: country
   status: member
-membership_count: 13
+  joined: '1996-02-09'
+founding_members:
+- AU
+- CK
+- FJ
+- KI
+- NZ
+- NU
+- PG
+- WS
+- TV
 wikidata_id: Q7835003
-description: International treaty that establishes a nuclear-weapon-free zone in the South Pacific. Also known as the South
-  Pacific Nuclear Free Zone Treaty, it prohibits the use, testing, and possession of nuclear weapons within the region. The
-  treaty includes protocols for nuclear-weapon states to commit to not using or threatening to use nuclear weapons against
-  parties to the treaty.
 tags:
 - RAROTONGA
+- SPNFZ
 - agreement
 - arms
 - arms_control
@@ -108,8 +160,61 @@ other_names:
   name: Договор Раротонга
 - id: es
   name: Tratado de Rarotonga
+notes: Thirteen States Parties as listed by UNODA (Australia, Cook Islands, Fiji, Kiribati, Nauru, New Zealand, Niue, Papua
+  New Guinea, Samoa, Solomon Islands, Tonga, Tuvalu, Vanuatu). Join dates are deposit of ratification per the UN Treaty Collection.
+  The Marshall Islands signed the treaty on 3 March 2025 but had not ratified as of mid-2026 and is not counted among parties.
+  Federated States of Micronesia and Palau remain outside the original geographic scope and have not become parties. Protocols
+  1–3 are open to nuclear-weapon states; France, the United Kingdom, China, and Russia have ratified (protocols vary); the
+  United States signed in 1996 but has not ratified.
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Treaty_of_Rarotonga
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: includes
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: membership_count
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: founding_members
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800cea40
+- field: founded
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: active_period
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: description
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: headquarters
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: legal_status
+  source: United Nations Office for Disarmament Affairs
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: notes
+  source: United Nations Office for Disarmament Affairs / Pacific Islands Forum
+  retrieved_at: '2026-07-29'
+  url: https://disarmament.unoda.org/en/nwfz/treaty-rarotonga
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7835003
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7835003
+  license: CC0

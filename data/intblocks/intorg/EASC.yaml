@@ -1,73 +1,119 @@
 id: EASC
+name: Interstate Council for Standardization, Metrology and Certification
 blocktype:
 - intorg
 status: formal
+partof: CIS
 founded: '1992-03-13'
+active_period:
+  start: '1992-03-13'
 geographic_scope: regional
+regions:
+- Eurasia
 languages:
 - en
 - ru
 links:
 - url: https://easc.by
   type: website
-name: Interstate Council for Standardization, Metrology and Certification
-includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-membership_count: 10
-headquarters:
-  city: Minsk
-  country: BY
-  coordinates:
-    lat: 53.9045
-    lng: 27.5615
+- url: http://easc.by/en/easc/council-membership
+  type: website
+- url: https://www.gost.ru/portal/eng/home/cooperation/eacs
+  type: website
+- url: https://en.wikipedia.org/wiki/Common_Economic_Space_of_the_Commonwealth_of_Independent_States
+  type: wikipedia
 acronyms:
 - lang: en
   value: EASC
 - lang: ru
   value: МГС
 legal_status: intergovernmental
-description: Intergovernmental body responsible for developing and implementing a harmonized policy in the fields of standardization,
-  metrology, and certification among CIS member states. Recognized by ISO as a Regional Organization for Standardization since
-  1996.
+recognition_status: Recognized by the International Organization for Standardization (ISO) as the Euro-Asian Council for Standardization, Metrology and Certification (EASC), a regional standards organization, under ISO Council Resolution 26/1996
+headquarters:
+  city: Minsk
+  country: BY
+  coordinates:
+    lat: 53.9045
+    lng: 27.5615
+secretariat:
+  location: Minsk, Belarus
+  organization: Bureau of Standards (EASC Bureau)
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+  joined: '1995-05-31'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '1995-05-22'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '1992-03-13'
+- id: MD
+  name: Moldova
+  type: country
+  status: former_member
+  joined: '1992-03-13'
+  left: '2024-09-04'
+- id: UA
+  name: Ukraine
+  type: country
+  status: former_member
+  joined: '1992-03-13'
+  left: '2023-06-02'
+founding_members:
+- AM
+- BY
+- KZ
+- KG
+- MD
+- RU
+- TJ
+- TM
+- UZ
+- UA
+membership_count: 10
+description: Intergovernmental body of the Commonwealth of Independent States responsible for developing and implementing a harmonized policy in standardization, metrology, and certification. Administers the interstate GOST standards system and is recognized by ISO as the Euro-Asian Council for Standardization, Metrology and Certification (EASC).
 tags:
 - EASC
 - council
@@ -78,6 +124,7 @@ tags:
 - metrology
 - certification
 - standard
+- GOST
 topics:
 - key: standardization
   name: Standardization
@@ -88,18 +135,52 @@ topics:
 other_names:
 - id: en
   name: Interstate Council for Standardization, Metrology and Certification
+- id: en
+  name: Euro-Asian Council for Standardization, Metrology and Certification
 - id: ru
   name: Межгосударственный совет по стандартизации, метрологии и сертификации
+- id: ru
+  name: Евро-Азиатский совет по стандартизации, метрологии и сертификации
+notes: Established by the CIS Agreement on a Coordinated Policy in the Field of Standardization, Metrology and Certification (Moscow, 13 March 1992). Azerbaijan acceded on 31 May 1995 and Georgia on 22 May 1995. Ukraine withdrew on 2 June 2023 and Moldova on 4 September 2024.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: EASC official website
+  retrieved_at: '2026-07-29'
+  url: http://easc.by/en/easc/council-membership
+- field: founding_members
+  source: CIS Legislation; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://cis-legislation.com/document.fwx?rgn=4664
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://easc.by
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://easc.by
+- field: recognition_status
+  source: EASC official website; ISO
+  retrieved_at: '2026-07-29'
   url: https://easc.by
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://easc.by
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://easc.by
+- field: secretariat
+  source: EASC official website
+  retrieved_at: '2026-07-29'
+  url: http://easc.by/en/easc/council-membership
+- field: founded
+  source: CIS Legislation; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://cis-legislation.com/document.fwx?rgn=4664
+- field: notes
+  source: Wikipedia; official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Common_Economic_Space_of_the_Commonwealth_of_Independent_States

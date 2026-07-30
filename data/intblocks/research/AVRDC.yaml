@@ -1,86 +1,170 @@
 id: AVRDC
+name: World Vegetable Center
 blocktype:
 - research
 - intorg
 status: formal
+founded: '1971'
+active_period:
+  start: '1971'
+geographic_scope: global
+regions:
+- Asia
+- Africa
+- Latin America
 languages:
 - en
 links:
-- url: http://www.avrdc.org
+- url: https://www.worldveg.org/
   type: website
 - url: https://en.wikipedia.org/wiki/World_Vegetable_Center
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q8036391
   type: wikidata
-name: World Vegetable Center
-founded: '1971'
+acronyms:
+- lang: en
+  value: AVRDC
+- lang: en
+  value: WorldVeg
+legal_status: nonprofit
+recognition_status: >-
+  International nonprofit agricultural research institute established in 1971 as the Asian Vegetable Research and
+  Development Center (AVRDC) through an agreement between the Asian Development Bank and seven sponsoring countries;
+  headquarters campus opened in Shanhua, Taiwan, on 17 October 1973; rebranded as the World Vegetable Center in 2008
 headquarters:
   city: Shanhua District
   country: TW
   coordinates:
     lat: 23.133333333333
     lng: 120.3
+wikidata_id: Q8036391
+description: >-
+  International nonprofit institute for vegetable research and development, originally founded in 1971 as the Asian
+  Vegetable Research and Development Center (AVRDC). WorldVeg maintains the world's largest public vegetable germplasm
+  collection and conducts research across Asia, Africa, and the Americas to improve vegetable production, diversify
+  diets, and reduce malnutrition and poverty in developing countries. The Center is governed by a Board of Directors
+  comprising representatives of founding countries and elected members.
 includes:
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: KR
-  name: Korea, Republic of
-  type: country
-  status: member
 - id: JP
   name: Japan
   type: country
-  status: member
-- id: US
-  name: United States
+  status: founding_member
+  joined: '1971'
+- id: KR
+  name: Korea, Rep.
   type: country
-  status: member
-- id: VN
-  name: Vietnam
+  status: founding_member
+  joined: '1971'
+- id: PH
+  name: Philippines
   type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
+  status: founding_member
+  joined: '1971'
 - id: TW
   name: Taiwan
   type: country
-  status: member
-- id: DE
-  name: Germany
+  status: founding_member
+  joined: '1971'
+- id: TH
+  name: Thailand
   type: country
-  status: member
-membership_count: 8
-wikidata_id: Q8036391
-description: The World Vegetable Center is an international organization that is used to promote regional cooperation in the
-  vegetable sector.
+  status: founding_member
+  joined: '1971'
+- id: VN
+  name: Vietnam
+  type: country
+  status: founding_member
+  joined: '1971'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1971'
+founding_members:
+- JP
+- KR
+- PH
+- TW
+- TH
+- VN
+- US
+membership_count: 7
 tags:
 - AVRDC
+- WorldVeg
+- agriculture
 - center
 - intorg
+- nonprofit
+- research
 - vegetable
 - world
-- agriculture
-- research
 topics:
 - key: agriculture
   name: Agriculture
+- key: nutrition
+  name: Nutrition
 - key: research
   name: Research
 other_names:
-- id: zh
-  name: 亞蔬—世界蔬菜中心
+- id: en
+  name: Asian Vegetable Research and Development Center
+- id: en
+  name: AVRDC
 - id: en
   name: World Vegetable Center
+- id: en
+  name: WorldVeg
+- id: zh
+  name: 亞蔬—世界蔬菜中心
+- id: zh
+  name: 亞洲蔬菜研究發展中心
+- id: zh
+  name: 亞蔬中心
 - id: fr
   name: World Vegetable Center
 - id: ru
   name: Всемирный центр овощеводства
+notes: >-
+  The seven founding sponsor countries established AVRDC in 1971 with support from the Asian Development Bank; Vietnam
+  was represented at founding as the Republic of Vietnam (South Vietnam). The Board of Directors also includes elected
+  members from non-founding countries (e.g. Australia, Germany, Ghana, India, Nigeria) who provide strategic oversight
+  but are not listed as member states. Germany and other donors provide strategic funding without formal country
+  membership.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/World_Vegetable_Center
+- field: description
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8036391
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8036391
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8036391
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.worldveg.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.avrdc.org
+  retrieved_at: '2026-07-29'
+  url: https://www.worldveg.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.worldveg.org/
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/World_Vegetable_Center

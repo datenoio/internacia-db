@@ -1,72 +1,180 @@
 id: PLG
+name: Polynesian Leaders Group
 blocktype:
 - intorg
 status: formal
+founded: '2011-11-17'
+active_period:
+  start: '2011-11-17'
+geographic_scope: regional
+regions:
+- Oceania
+- Pacific
+- Polynesia
+languages:
+- en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3117794
   type: wikidata
-name: Polynesian Leaders Group
-founded: '2011'
-includes:
-- id: AS
-  name: American Samoa
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
-  type: country
-  status: member
-- id: PF
-  name: French Polynesia
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: TK
-  name: Tokelau
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-membership_count: 8
-wikidata_id: Q3117794
-description: International forum.
+- url: https://www.rnz.co.nz/international/pacific-news/1918938/new-polynesian-leaders-group-formed-in-samoa
+  type: website
+- url: https://www.rnz.co.nz/international/pacific-news/337891/wallis-and-futuna-join-polynesia-leaders-group
+  type: website
+- url: https://www.rnz.co.nz/international/pacific-news/361042/nz-hawaii-and-rapa-nui-admitted-to-polynesian-leaders-group
+  type: website
+acronyms:
+- lang: en
+  value: PLG
+legal_status: intergovernmental cooperation forum
+recognition_status: Regional forum of Polynesian leaders and territories established by memorandum of understanding signed in Apia on 17 November 2011; membership is open to Polynesian societies and is not restricted to sovereign states; the Group meets on the margins of Pacific Islands Forum summits and has no fixed permanent secretariat
+membership_count: 10
+description: Regional intergovernmental cooperation forum bringing together Polynesian leaders from independent states and self-governing territories to advance shared interests in culture and language, education, transport, environmental conservation, climate change adaptation, health, agriculture and fisheries, tourism, trade, and investment. Established at Apia on 17 November 2011 when Samoa, Tonga, Tuvalu, the Cook Islands, Niue, American Samoa, French Polynesia, and Tokelau signed a memorandum of understanding; Wallis and Futuna joined in September 2017 and New Zealand in June 2018. The chair rotates among members; as of September 2025 Tonga holds the chairmanship for 2025–2026.
 tags:
 - PLG
+- climate
+- cooperation
+- culture
 - group
 - intorg
 - leaders
-- polynesian
+- oceania
+- pacific
+- polynesia
+- regional
+- regional_cooperation
 topics:
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: culture
+  name: Culture
+- key: climate_change
+  name: Climate Change
+- key: governance
+  name: Governance
 - key: economy
   name: Economy
+includes:
+- id: WS
+  name: Samoa
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: TO
+  name: Tonga
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: CK
+  name: Cook Islands
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: NU
+  name: Niue
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: AS
+  name: American Samoa
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: PF
+  name: French Polynesia
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: TK
+  name: Tokelau
+  type: country
+  status: founding_member
+  joined: '2011-11-17'
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: member
+  joined: '2017-09-04'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '2018-06-28'
+founding_members:
+- WS
+- TO
+- TV
+- CK
+- NU
+- AS
+- PF
+- TK
+wikidata_id: Q3117794
 other_names:
-- id: zh
-  name: 玻里尼西亞領導人小組
 - id: en
   name: Polynesian Leaders Group
 - id: fr
   name: Groupe des dirigeants polynésiens
-acronyms:
-- lang: en
-  value: PLG
+- id: zh
+  name: 玻里尼西亞領導人小組
+notes: The PLG was conceived partly in response to the Melanesian Spearhead Group (MSG). Initial talks took place on the margins of the 2011 Pacific Islands Forum summit in Auckland before the founding MOU was signed in Apia. In June 2018 the Group also admitted the U.S. state of Hawaii and the Chilean territory of Easter Island (Rapa Nui) as Polynesian members; they are not listed separately in includes because they lack distinct ISO 3166-1 alpha-2 codes. A PLG Charter and terms of reference were under development as of 2024–2025. The Secretariat of the Pacific Community (SPC) attends PLG meetings as an observer and partner.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3117794
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3117794
+  license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3117794
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Polynesian_Leaders_Group

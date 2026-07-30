@@ -1,19 +1,22 @@
 id: IAPH
+name: International Association of Ports and Harbors
 blocktype:
 - intorg
 - transport
 status: formal
+founded: '1955'
+geographic_scope: global
 languages:
 - en
 links:
-- url: https://www.worldports.org/
+- url: https://www.iaphworldports.org/
+  type: website
+- url: https://www.iaphworldports.org/memberports/
   type: website
 - url: https://en.wikipedia.org/wiki/International_Association_of_Ports_and_Harbors
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6048000
   type: wikidata
-name: International Association of Ports and Harbors
-founded: '1955'
 headquarters:
   city: Tokyo
   country: JP
@@ -23,12 +26,11 @@ headquarters:
 acronyms:
 - lang: en
   value: IAPH
-geographic_scope: global
-description: Global alliance of ports established in 1955, comprising over 200 port authorities and 173 port-related businesses
-  across 94 nationalities. Member ports collectively handle more than one-third of the world's seaborne trade and over 60%
-  of global container traffic. IAPH promotes the interests of ports worldwide, fosters cooperation among them, and works on
-  issues including environmental sustainability, safety, and security in port operations. The association holds consultative
-  status with several United Nations agencies, including UNCTAD and IMO.
+description: Global non-governmental alliance of port authorities and port-related businesses, founded in 1955 and headquartered
+  in Tokyo. As of December 2024, IAPH represents some 190 regular member ports and 165 port-related associate members across
+  89 countries; member ports collectively handle well over 60% of world seaborne trade and over 60% of global container traffic.
+  IAPH advocates for ports at the International Maritime Organization, World Customs Organization, and International Organization
+  for Standardization, and leads industry initiatives on decarbonization, digitalization, and port risk and resilience.
 tags:
 - IAPH
 - ports
@@ -60,56 +62,28 @@ other_names:
 - id: ja
   name: 国際港湾協会
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
 - id: AE
   name: United Arab Emirates
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
   type: country
   status: member
 - id: AL
   name: Albania
   type: country
   status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
 - id: AR
   name: Argentina
-  type: country
-  status: member
-- id: AT
-  name: Austria
   type: country
   status: member
 - id: AU
   name: Australia
   type: country
   status: member
+- id: AW
+  name: Aruba
+  type: country
+  status: member
 - id: AZ
   name: Azerbaijan
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BB
-  name: Barbados
   type: country
   status: member
 - id: BD
@@ -120,20 +94,8 @@ includes:
   name: Belgium
   type: country
   status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
 - id: BG
   name: Bulgaria
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: BI
-  name: Burundi
   type: country
   status: member
 - id: BJ
@@ -144,10 +106,6 @@ includes:
   name: Brunei Darussalam
   type: country
   status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
 - id: BR
   name: Brazil
   type: country
@@ -156,32 +114,8 @@ includes:
   name: Bahamas, The
   type: country
   status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
 - id: CA
   name: Canada
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
   type: country
   status: member
 - id: CG
@@ -196,14 +130,6 @@ includes:
   name: Cote d'Ivoire
   type: country
   status: member
-- id: CK
-  name: Cook Islands
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
 - id: CM
   name: Cameroon
   type: country
@@ -216,24 +142,12 @@ includes:
   name: Colombia
   type: country
   status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
 - id: CV
   name: Cape Verde
   type: country
   status: member
 - id: CY
   name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
   type: country
   status: member
 - id: DE
@@ -248,40 +162,12 @@ includes:
   name: Denmark
   type: country
   status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
 - id: EG
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
 - id: ES
   name: Spain
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
   type: country
   status: member
 - id: FI
@@ -292,32 +178,20 @@ includes:
   name: Fiji
   type: country
   status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
 - id: FR
   name: France
-  type: country
-  status: member
-- id: GA
-  name: Gabon
   type: country
   status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
 - id: GH
   name: Ghana
+  type: country
+  status: member
+- id: GI
+  name: Gibraltar
   type: country
   status: member
 - id: GM
@@ -328,60 +202,20 @@ includes:
   name: Guinea
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
 - id: GR
   name: Greece
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: GY
-  name: Guyana
   type: country
   status: member
 - id: HN
   name: Honduras
   type: country
   status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
 - id: IN
   name: India
-  type: country
-  status: member
-- id: IQ
-  name: Iraq
   type: country
   status: member
 - id: IR
@@ -400,40 +234,12 @@ includes:
   name: Jamaica
   type: country
   status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: member
 - id: JP
   name: Japan
   type: country
   status: member
 - id: KE
   name: Kenya
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
   type: country
   status: member
 - id: KR
@@ -444,88 +250,24 @@ includes:
   name: Kuwait
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
+- id: KY
+  name: Cayman Islands
   type: country
   status: member
 - id: LB
   name: Lebanon
   type: country
   status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
 - id: LK
   name: Sri Lanka
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
   type: country
   status: member
 - id: LV
   name: Latvia
   type: country
   status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
 - id: MA
   name: Morocco
-  type: country
-  status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
-- id: MK
-  name: Macedonia, FYR
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
   type: country
   status: member
 - id: MR
@@ -544,36 +286,16 @@ includes:
   name: Maldives
   type: country
   status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
 - id: MY
   name: Malaysia
-  type: country
-  status: member
-- id: MZ
-  name: Mozambique
   type: country
   status: member
 - id: NA
   name: Namibia
   type: country
   status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
 - id: NG
   name: Nigeria
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
   type: country
   status: member
 - id: NL
@@ -582,18 +304,6 @@ includes:
   status: member
 - id: 'NO'
   name: Norway
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
   type: country
   status: member
 - id: NZ
@@ -632,32 +342,8 @@ includes:
   name: Portugal
   type: country
   status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
 - id: QA
   name: Qatar
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: RW
-  name: Rwanda
   type: country
   status: member
 - id: SA
@@ -668,14 +354,6 @@ includes:
   name: Solomon Islands
   type: country
   status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
 - id: SE
   name: Sweden
   type: country
@@ -684,84 +362,16 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
 - id: SL
   name: Sierra Leone
-  type: country
-  status: member
-- id: SM
-  name: San Marino
   type: country
   status: member
 - id: SN
   name: Senegal
   type: country
   status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: SZ
-  name: Swaziland
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
 - id: TG
   name: Togo
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TO
-  name: Tonga
   type: country
   status: member
 - id: TR
@@ -772,20 +382,8 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
-  type: country
-  status: member
 - id: UA
   name: Ukraine
-  type: country
-  status: member
-- id: UG
-  name: Uganda
   type: country
   status: member
 - id: US
@@ -796,14 +394,6 @@ includes:
   name: Uruguay
   type: country
   status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
 - id: VE
   name: Venezuela, RB
   type: country
@@ -812,37 +402,49 @@ includes:
   name: Vietnam
   type: country
   status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
 - id: ZA
   name: South Africa
   type: country
   status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-membership_count: 194
+membership_count: 86
+notes: Membership is held by individual port authorities and port-related businesses (regular and associate categories), not
+  by states. Includes lists economies hosting at least one IAPH member organization as published on the official member-ports
+  directory (86 economies, July 2026). IAPH headline statistics count 89 countries, likely treating Hong Kong, Macau, and
+  Taiwan separately from mainland China while this dataset maps all to CN.
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldports.org/
+- field: includes
+  source: IAPH official website
+  retrieved_at: '2026-07-29'
+  url: https://www.iaphworldports.org/memberports/
+- field: description
+  source: IAPH official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iaphworldports.org/about-iaph/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6048000
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6048000
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6048000
+  license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.worldports.org/
+  source: IAPH official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iaphworldports.org/
+- field: founded
+  source: IAPH official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.iaphworldports.org/about-iaph/
+- field: geographic_scope
+  source: IAPH official website
+  retrieved_at: '2026-07-29'
+  url: https://www.iaphworldports.org/

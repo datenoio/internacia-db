@@ -5,18 +5,16 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Amazon_basin
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q244451
+  type: wikidata
 name: Amazon Basin
 includes:
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
 - id: BR
   name: Brazil
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: BO
-  name: Bolivia, Plurinational State of
   type: country
   status: member
 - id: CO
@@ -27,23 +25,33 @@ includes:
   name: Ecuador
   type: country
   status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
+- id: GF
+  name: French Guiana
   type: country
   status: member
 - id: GY
   name: Guyana
   type: country
   status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
 - id: SR
   name: Suriname
   type: country
   status: member
-membership_count: 8
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+membership_count: 9
 geographic_scope: sub-regional
 regions:
 - Americas
-description: Amazon Basin is a regional grouping of 8 countries in Americas.
+wikidata_id: Q244451
+description: Drainage basin of the Amazon River and its tributaries in South America, covering parts of Bolivia, Brazil,
+  Colombia, Ecuador, Guyana, Peru, Suriname, Venezuela, and French Guiana, per the Wikipedia regional definition.
 tags:
 - AMAZONBASIN
 - amazon
@@ -58,27 +66,45 @@ topics:
 other_names:
 - id: ar
   name: حوض الأمازون
-- id: zh
-  name: 亚马逊盆地
+- id: de
+  name: Amazonasbecken
 - id: en
   name: Amazon Basin
+- id: es
+  name: cuenca hidrográfica del Amazonas
 - id: fr
   name: bassin amazonien
+- id: pt
+  name: Bacia do rio Amazonas
 - id: ru
   name: бассейн Амазонки
-- id: es
-  name: cuenca del Amazonas
+- id: zh
+  name: 亚马孙盆地
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Amazon_basin
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Amazon_basin
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Amazon_basin
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Amazon_basin
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q244451
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q244451
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q244451

@@ -1,7 +1,12 @@
 id: TTCP
+name: Technical Cooperation Program
 blocktype:
 - military
 status: formal
+founded: '1957'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
@@ -9,58 +14,119 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7768229
   type: wikidata
-name: Technical Cooperation Program
+acronyms:
+- lang: en
+  value: TTCP
+legal_status: intergovernmental
+wikidata_id: Q7768229
+description: Long-standing intergovernmental program for cooperation on defence science and technology among Australia,
+  Canada, New Zealand, the United Kingdom, and the United States. Established bilaterally between the UK and US in 1957 following
+  the Declaration of Common Purpose; Canada joined immediately to form the Tripartite Technical Cooperation Program, Australia
+  in 1965, and New Zealand in 1969. TTCP coordinates multilateral technical panels on aerospace, land, maritime, C3I,
+  sensors, and related priority areas among Five Eyes defence research communities.
 includes:
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1957'
+- id: US
+  name: United States
+  type: country
+  status: member
+  joined: '1957'
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '1957'
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1965'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1969'
 membership_count: 5
-wikidata_id: Q7768229
-description: Organization concerned with cooperation on defence science and technology
-  matters involving Australia, Canada, New Zealand, the United Kingdom and the United
-  States.
+founding_members:
+- GB
+- US
+- CA
 tags:
 - TTCP
 - cooperation
 - defense
+- five_eyes
 - military
 - program
 - regional
 - regional_cooperation
+- research
+- science
 - security
 - technical
+- technology
 topics:
 - key: military
   name: Military
 - key: regional_cooperation
   name: Regional Cooperation
+- key: research
+  name: Research
+- key: science
+  name: Science
 - key: security
   name: Security
+- key: technology
+  name: Technology
 other_names:
 - id: ar
   name: برنامج التعاون التقني
+- id: de
+  name: The Technical Cooperation Program
 - id: en
   name: The Technical Cooperation Program
+- id: en
+  name: Technical Cooperation Program
+notes: Began as UK–US bilateral cooperation in 1957; expanded to Canada (Tripartite), then Australia (1965) and New Zealand
+  (1969). TTCP Principals are supported by deputies based in Washington. Part of the broader Five Eyes defence science and
+  technology community alongside ABCANZ Armies, AUSCANNZUKUS, and the Combined Communications Electronics Board.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7768229
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7768229
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/The_Technical_Cooperation_Program

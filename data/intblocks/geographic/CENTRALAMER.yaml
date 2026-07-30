@@ -5,6 +5,8 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Central_America
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q27611
+  type: wikidata
 name: Central America
 includes:
 - id: BZ
@@ -39,7 +41,10 @@ membership_count: 7
 geographic_scope: sub-regional
 regions:
 - Americas
-description: Central America is a regional grouping of 7 countries in Americas.
+wikidata_id: Q27611
+description: Subregion of North America on the isthmus between Mexico and Colombia, comprising Belize, Costa Rica,
+  El Salvador, Guatemala, Honduras, Nicaragua, and Panama — the seven sovereign states of the region — per the
+  Wikipedia regional definition.
 tags:
 - CENTRALAMER
 - central
@@ -54,27 +59,47 @@ topics:
 other_names:
 - id: ar
   name: أمريكا الوسطى
-- id: zh
-  name: 中美洲
+- id: de
+  name: Zentralamerika
 - id: en
   name: Central America
-- id: fr
-  name: Amérique centrale
-- id: ru
-  name: Центральная Америка
 - id: es
   name: América Central
+- id: fr
+  name: Amérique centrale
+- id: it
+  name: America centrale
+- id: pt
+  name: América Central
+- id: ru
+  name: Центральная Америка
+- id: zh
+  name: 中美洲
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Central_America
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_America
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_America
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Central_America
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q27611
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q27611
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q27611

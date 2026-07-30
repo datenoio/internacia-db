@@ -5,7 +5,11 @@ blocktype:
 - economic
 status: formal
 founded: '1984'
+active_period:
+  start: '1984'
 geographic_scope: regional
+legal_status: intergovernmental
+recognition_status: Subsidiary organ of the Organisation of Islamic Cooperation established by resolution of the Third Extraordinary Session of the Islamic Summit Conference (Mecca, 1981) and formally launched in Casablanca in 1984; one of seven OIC subsidiary organs entrusted with trade promotion and economic cooperation among member states
 regions:
 - Middle East
 - Asia
@@ -32,17 +36,16 @@ headquarters:
   coordinates:
     lat: 33.5731
     lng: -7.5898
+  note: Tour Des Habous, Avenue des F.A.R
 partof:
   id: OIC
   name: Organisation of the Islamic Conference
 secretariat:
   location: Casablanca, Morocco
+  organization: ICDT Secretariat
   head: Director General
 membership_count: 57
-description: Intergovernmental organization established as a subsidiary organ of the Organisation of Islamic Cooperation (OIC)
-  to promote trade and economic development among OIC member states. Facilitates trade exchanges, enhances investment mechanisms,
-  organizes trade fairs and exhibitions, conducts sector-based studies, and provides technical assistance in economic and
-  trade fields.
+description: Intergovernmental organization and one of seven subsidiary organs of the Organisation of Islamic Cooperation (OIC) entrusted with promoting trade, economic development, and commercial cooperation across OIC member states. ICDT facilitates trade exchanges, enhances investment mechanisms, organizes trade fairs and exhibitions, conducts sector-based studies, and provides technical assistance in economic and trade fields. Membership comprises all 57 OIC member states; the Board of Directors has nine members elected for three-year terms with equitable geographical distribution.
 tags:
 - ICDT
 - CIDC
@@ -301,12 +304,44 @@ other_names:
   name: Islamic Centre for Development of Trade
 - id: fr
   name: Centre islamique pour le développement du commerce
+notes: membership_count reflects all 57 OIC member states; ICDT membership mirrors OIC membership without separate accession procedures
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: OIC member states roster; ICDT official website
+  retrieved_at: '2026-07-29'
   url: https://icdt-cidc.org/
+- field: membership_count
+  source: ICDT official website; OIC member states roster
+  retrieved_at: '2026-07-29'
+  url: https://icdt-cidc.org/
+- field: description
+  source: ICDT official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Islamic_Centre_for_Development_of_Trade
+- field: recognition_status
+  source: Wikipedia; OIC subsidiary organs documentation
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Islamic_Centre_for_Development_of_Trade
+- field: founded
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q111168489
+  license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Islamic_Centre_for_Development_of_Trade
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia; ICDT official website
+  retrieved_at: '2026-07-29'
   url: https://icdt-cidc.org/
+- field: geographic_scope
+  source: ICDT official website
+  retrieved_at: '2026-07-29'
+  url: https://icdt-cidc.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q111168489
+  license: CC0

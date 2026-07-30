@@ -2,9 +2,19 @@ id: NAM
 blocktype:
 - political
 status: formal
+founded: '1961-09-01'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- Latin America
+- Oceania
 languages:
 - en
 links:
+- url: https://nam.go.ug/
+  type: website
 - url: https://en.wikipedia.org/wiki/Non-Aligned_Movement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q83201
@@ -495,11 +505,14 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-founded: '1955'
+membership_count: 121
+headquarters:
+  city: New York
+  country: US
+  coordinates:
+    lat: 40.749629166666665
+    lng: -73.96739
+legal_status: intergovernmental
 acronyms:
 - lang: en
   value: NAM
@@ -529,10 +542,16 @@ acronyms:
   value: MPNA
 - lang: es
   value: NAM
-membership_count: 122
 wikidata_id: Q83201
-description: Group of states which are not formally aligned with or against any major
-  power bloc.
+description: Forum of states not formally aligned with or against any major power bloc,
+  founded at the 1961 Belgrade conference to advance the interests of developing countries
+  during the Cold War. Membership spans Africa, Asia, Latin America, Europe, and the
+  Pacific; the Coordinating Bureau is based at United Nations Headquarters in New York.
+notes: Mexico and 16 other states hold observer status. Chairmanship rotates at each
+  summit; Uganda holds the 2024–2027 chairmanship. South Sudan was admitted as a full
+  member at the XIX Summit (Kampala, January 2024), bringing membership to 121 states.
+  The NAM Centre for South-South Technical Cooperation (NAM-CSSTC) is headquartered
+  in Jakarta, Indonesia.
 tags:
 - BOL
 - LGHM
@@ -570,12 +589,37 @@ other_names:
   name: Движение неприсоединения
 - id: zh
   name: 不结盟运动
+last_verified: '2026-07-30'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q83201
   license: CC0
+- field: description
+  source: Non-Aligned Movement
+  retrieved_at: '2026-07-30'
+  url: https://nam.go.ug/
+- field: includes
+  source: India Ministry of External Affairs
+  retrieved_at: '2026-07-30'
+  url: https://www.mea.gov.in/images/pdf/Members-and-other-participants.pdf
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Non-Aligned_Movement
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Non-Aligned_Movement
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Non-Aligned_Movement
+- field: notes
+  source: Non-Aligned Movement
+  retrieved_at: '2026-07-30'
+  url: https://www.tralac.org/documents/resources/africa/5202-kampala-declaration-non-aligned-movement-summit-january-2024/file.html
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

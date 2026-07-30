@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: DUPLICATE_ACRONYM
 ================================================================================
-Generated: 2026-07-16 17:10:26
+Generated: 2026-07-30 10:34:14
 Issue Type: DUPLICATE_ACRONYM
 Priority: LOW
-Total Issues Found: 2
+Total Issues Found: 10
 
 Description: Advisory: unrelated same-blocktype records share an English acronym (possible duplicate entity).
 
@@ -22,3 +22,59 @@ Country: CA
 Field: acronyms
 Current Value: COL
 Suggested Action: English acronym 'COL' is shared by same-blocktype records ['COL', 'COMMLEARN']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/intorg/IAF.yaml
+Record ID: IAF
+Country: CA
+Field: acronyms
+Current Value: IAF
+Suggested Action: English acronym 'IAF' is shared by same-blocktype records ['IAF', 'IAF_ASTRO']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/space/IAF_ASTRO.yaml
+Record ID: IAF_ASTRO
+Country: FR
+Field: acronyms
+Current Value: IAF
+Suggested Action: English acronym 'IAF' is shared by same-blocktype records ['IAF', 'IAF_ASTRO']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/military/ABCANZ.yaml
+Record ID: ABCANZ
+Country: AU
+Field: acronyms
+Current Value: ABCANZ
+Suggested Action: English acronym 'ABCANZ' is shared by same-blocktype records ['ABCANZ', 'ABCZNZ']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/military/ABCZNZ.yaml
+Record ID: ABCZNZ
+Country: AU
+Field: acronyms
+Current Value: ABCANZ
+Suggested Action: English acronym 'ABCANZ' is shared by same-blocktype records ['ABCANZ', 'ABCZNZ']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/military/ABCANZ.yaml
+Record ID: ABCANZ
+Country: AU
+Field: acronyms
+Current Value: ABCA
+Suggested Action: English acronym 'ABCA' is shared by same-blocktype records ['ABCANZ', 'ABCZNZ']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/military/ABCZNZ.yaml
+Record ID: ABCZNZ
+Country: AU
+Field: acronyms
+Current Value: ABCA
+Suggested Action: English acronym 'ABCA' is shared by same-blocktype records ['ABCANZ', 'ABCZNZ']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/military/G5SAHEL.yaml
+Record ID: G5SAHEL
+Country: MR
+Field: acronyms
+Current Value: G5
+Suggested Action: English acronym 'G5' is shared by same-blocktype records ['G5SAHEL', 'GROUPOFFIVE']; merge duplicates or allowlist the acronym
+
+File: data/intblocks/political/GROUPOFFIVE.yaml
+Record ID: GROUPOFFIVE
+Country: BR
+Field: acronyms
+Current Value: G5
+Suggested Action: English acronym 'G5' is shared by same-blocktype records ['G5SAHEL', 'GROUPOFFIVE']; merge duplicates or allowlist the acronym

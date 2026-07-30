@@ -1,23 +1,58 @@
 id: SOUTHCENTRE
+name: South Centre
 blocktype:
 - intorg
 status: formal
+founded: '1995-07-31'
+geographic_scope: global
+regions:
+- Global South
 languages:
+- ar
 - en
+- es
 - fr
+- pt
+- zh
 links:
-- url: http://www.southcentre.org/
+- url: https://www.southcentre.int/
   type: website
 - url: https://en.wikipedia.org/wiki/South_Centre_(organization)
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q498517
   type: wikidata
-name: South Centre
+legal_status: intergovernmental organization established by treaty
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.2
+    lng: 6.15
+membership_count: 55
+wikidata_id: Q498517
+description: >-
+  Intergovernmental organization of developing countries established by treaty on 31 July 1995 and headquartered in Geneva.
+  It functions as an independent policy research think tank supporting Global South positions in United Nations and other
+  international fora, and holds observer status at the United Nations, WTO, WIPO, UNFCCC, and other development agencies.
+tags:
+- SOUTHCENTRE
+- centre
+- developing_countries
+- global_south
+- intorg
+- policy_research
+- south
+- think_tank
+topics:
+- key: developing_countries
+  name: Developing Countries
+- key: economy
+  name: Economy
+- key: policy
+  name: Policy
+- key: research
+  name: Research
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AO
   name: Angola
   type: country
@@ -28,6 +63,10 @@ includes:
   status: member
 - id: BB
   name: Barbados
+  type: country
+  status: member
+- id: BI
+  name: Burundi
   type: country
   status: member
 - id: BJ
@@ -42,16 +81,8 @@ includes:
   name: Brazil
   type: country
   status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
+- id: CI
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CN
@@ -62,20 +93,20 @@ includes:
   name: Colombia
   type: country
   status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
 - id: CU
   name: Cuba
   type: country
   status: member
-- id: KP
-  name: Korea, Dem. People's Rep.
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DO
   name: Dominican Republic
+  type: country
+  status: member
+- id: DZ
+  name: Algeria
   type: country
   status: member
 - id: EC
@@ -84,6 +115,10 @@ includes:
   status: member
 - id: EG
   name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
   type: country
   status: member
 - id: GA
@@ -102,20 +137,20 @@ includes:
   name: Honduras
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
-- id: IR
-  name: Iran, Islamic Rep.
+- id: IN
+  name: India
   type: country
   status: member
 - id: IQ
   name: Iraq
+  type: country
+  status: member
+- id: IR
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: JM
@@ -126,6 +161,18 @@ includes:
   name: Jordan
   type: country
   status: member
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
 - id: LR
   name: Liberia
   type: country
@@ -134,12 +181,8 @@ includes:
   name: Libya
   type: country
   status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
+- id: MA
+  name: Morocco
   type: country
   status: member
 - id: ML
@@ -150,12 +193,12 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
+- id: MW
+  name: Malawi
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MZ
@@ -166,16 +209,12 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
 - id: NG
   name: Nigeria
   type: country
   status: member
-- id: PK
-  name: Pakistan
+- id: NI
+  name: Nicaragua
   type: country
   status: member
 - id: PA
@@ -186,40 +225,36 @@ includes:
   name: Philippines
   type: country
   status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
+- id: PK
+  name: Pakistan
   type: country
   status: member
 - id: PS
   name: West Bank and Gaza
   type: country
   status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
 - id: SD
   name: Sudan
+  type: country
+  status: member
+- id: SL
+  name: Sierra Leone
   type: country
   status: member
 - id: SR
   name: Suriname
   type: country
   status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
 - id: TZ
   name: Tanzania
+  type: country
+  status: member
+- id: UG
+  name: Uganda
   type: country
   status: member
 - id: VE
@@ -230,28 +265,14 @@ includes:
   name: Vietnam
   type: country
   status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
 - id: ZW
   name: Zimbabwe
   type: country
   status: member
-founded: '1995'
-headquarters:
-  city: Geneva
-  country: CH
-  coordinates:
-    lat: 46.2
-    lng: 6.15
-membership_count: 55
-wikidata_id: Q498517
-description: International entity.
-tags:
-- SOUTHCENTRE
-- centre
-- intorg
-- south
-topics:
-- key: economy
-  name: Economy
 other_names:
 - id: ar
   name: منظمة مركز الجنوب
@@ -263,13 +284,46 @@ other_names:
   name: South Centre
 - id: zh
   name: 南方中心
+notes: >-
+  Membership comprises states that have signed, ratified, or acceded to the South Centre intergovernmental agreement. Serbia
+  and Montenegro was a founding signatory in 1994 but is no longer a member following the state's dissolution.
+last_verified: '2026-07-29'
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Centre_(organization)
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Centre_(organization)
+  license: CC BY-SA 4.0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Centre_(organization)
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Centre_(organization)
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.southcentre.int/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.southcentre.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.southcentre.int/
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Centre_(organization)
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q498517
+  license: CC0

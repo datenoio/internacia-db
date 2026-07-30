@@ -2,81 +2,126 @@ id: GSP
 blocktype:
 - pta
 status: formal
+founded: '1971'
+active_period:
+  start: '1979'
+geographic_scope: global
+regions:
+- Global
+languages:
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Generalized_System_of_Preferences
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1187364
   type: wikidata
+- url: https://unctad.org/topic/trade-agreements/generalized-system-of-preferences
+  type: website
+- url: https://www.wto.org/english/docs_e/legal_e/enabling_e.htm
+  type: website
+- url: https://policy.trade.ec.europa.eu/development-and-sustainability/generalised-scheme-preferences-gsp_en
+  type: website
+- url: https://ustr.gov/issue-areas/trade-development/preference-programs/generalized-system-preferences-gsp
+  type: website
 name: Generalized System of Preferences
+acronyms:
+- lang: en
+  value: GSP
+legal_status: preferential tariff framework
+recognition_status: Non-reciprocal preferential tariff framework established under UNCTAD in the 1960s; GATT Decision on Generalized System of Preferences adopted on 25 June 1971; made permanent through the 1979 GATT Enabling Clause (Decision of 28 November 1979), which permits WTO members to grant generalized, non-discriminatory, non-reciprocal tariff preferences to developing countries
 includes:
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: participant
+  joined: '2016'
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: participant
+  joined: '1974'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: participant
+  joined: '2016'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: participant
+  joined: '1974'
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: participant
+  joined: '1971'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: participant
+  joined: '2002'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: participant
+  joined: '1971'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: participant
+  joined: '2016'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: participant
+  joined: '1972'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: participant
+  joined: '1971'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: participant
+  joined: '2016'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: participant
+  joined: '1972'
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: participant
+  joined: '2002'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
-membership_count: 14
+  status: participant
+  joined: '2023-06-19'
+- id: US
+  name: United States
+  type: country
+  status: participant
+  joined: '1974'
+membership_count: 15
 wikidata_id: Q1187364
-description: Preferential tariff system.
+description: The Generalized System of Preferences (GSP) is a WTO-authorized framework under which developed economies grant unilateral, non-reciprocal preferential tariff treatment to imports from designated developing and least developed countries. Conceived within UNCTAD in the 1960s and codified through the 1971 GATT waivers and the permanent 1979 Enabling Clause, GSP allows preference-granting countries to reduce import duties below most-favoured-nation rates for eligible products without requiring reciprocal concessions from beneficiaries. Each preference-granting economy operates its own national scheme with distinct product coverage, rules of origin, graduation thresholds, and beneficiary lists. Fifteen economies currently maintain GSP or GSP-equivalent schemes, including the European Union, Japan, Canada, Australia, Norway, Switzerland, New Zealand, Iceland, Turkey, the United Kingdom, the United States, and the Eurasian Economic Union members Armenia, Belarus, Kazakhstan, and the Russian Federation.
 tags:
 - GSP
 - commerce
+- developing_countries
 - economy
+- enabling_clause
 - generalized
 - preferences
 - pta
 - system
+- tariff_preferences
 - trade
+- unctad
+- unilateral
 topics:
 - key: economy
   name: Economy
@@ -85,22 +130,73 @@ topics:
 other_names:
 - id: ar
   name: نظام الافضليات المعمم
+- id: bg
+  name: Обща система за преференции
+- id: ca
+  name: Sistema Generalitzat de Preferències
 - id: de
   name: Generalized System of Preferences
+- id: el
+  name: Γενικευμένο Σύστημα Προτιμήσεων
 - id: en
   name: Generalized System of Preferences
 - id: es
   name: Sistema Generalizado de Preferencias
+- id: fi
+  name: yleinen tullietuusjärjestelmä
 - id: fr
   name: système généralisé de préférences
+- id: he
+  name: שיטת ההעדפות הכללית
+- id: ja
+  name: 一般特恵関税制度
+- id: ko
+  name: 일반특혜관세제도
+- id: ro
+  name: sistem generalizat de preferințe
+- id: th
+  name: ระบบการให้สิทธิพิเศษทางภาษีศุลกากรเป็นการทั่วไป
+- id: uk
+  name: Загальна система преференцій
 - id: zh
   name: 普及特惠稅制度
+notes: Includes lists preference-granting economies operating national GSP schemes, not beneficiary developing countries. Armenia, Belarus, Kazakhstan, and the Russian Federation grant preferences through the Eurasian Economic Union Common System of Tariff Preferences (in force 2016). The United Kingdom replaced EU GSP coverage with the Developing Countries Trading Scheme (DCTS), which entered into force on 19 June 2023. The United States GSP authorization expired on 31 December 2020 and remained lapsed as of mid-2026, though the statutory framework persists and past lapses have been followed by retroactive renewals. Product coverage, graduation rules, and beneficiary eligibility differ across national schemes.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: UNCTAD; USTR
+  retrieved_at: '2026-07-29'
+  url: https://unctad.org/topic/trade-agreements/generalized-system-of-preferences
+- field: founded
+  source: WTO Enabling Clause; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/docs_e/legal_e/enabling_e.htm
+- field: active_period
+  source: WTO Enabling Clause
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/docs_e/legal_e/enabling_e.htm
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: UNCTAD; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://unctad.org/topic/trade-agreements/generalized-system-of-preferences
+- field: legal_status
+  source: WTO Enabling Clause
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/docs_e/legal_e/enabling_e.htm
+- field: recognition_status
+  source: WTO Enabling Clause; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/english/docs_e/legal_e/enabling_e.htm
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: UNCTAD Trade Preferences Outlook 2025; USTR
+  retrieved_at: '2026-07-29'
+  url: https://unctad.org/publication/trade-preferences-outlook-2025
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -111,6 +207,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: en
-  value: GSP

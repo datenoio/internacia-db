@@ -1,25 +1,28 @@
 id: EPPO
+name: European and Mediterranean Plant Protection Organisation
 blocktype:
 - intorg
 status: formal
 partof: IPPC
+founded: '1951-04-18'
+active_period:
+  start: '1951-04-18'
+geographic_scope: regional
+regions:
+- Europe
+- Mediterranean
+- Central Asia
 languages:
 - en
 links:
-- url: http://www.eppo.org
+- url: https://www.eppo.int/
   type: website
 - url: https://en.wikipedia.org/wiki/European_and_Mediterranean_Plant_Protection_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1967903
   type: wikidata
-name: European and Mediterranean Plant Protection Organisation
-founded: '1955'
-headquarters:
-  city: Paris
-  country: FR
-  coordinates:
-    lat: 48.85666666666667
-    lng: 2.352222222222222
+- url: https://www.ippc.int/ippc-community/regional-plant-protection-organizations/eppo/
+  type: website
 acronyms:
 - lang: en
   value: OEPP
@@ -31,6 +34,19 @@ acronyms:
   value: OEPP
 - lang: de
   value: EPPO
+legal_status: intergovernmental
+recognition_status: Regional Plant Protection Organization (RPPO) for Europe under Article IX of the International Plant Protection Convention (IPPC); established by the Convention for the establishment of the European and Mediterranean Plant Protection Organisation, signed in Paris on 18 April 1951 and amended on 27 April 1955
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.85666666666667
+    lng: 2.352222222222222
+secretariat:
+  location: Paris
+  organization: EPPO Secretariat
+wikidata_id: Q1967903
+description: Intergovernmental organization responsible for cooperation and harmonization in plant protection across the European and Mediterranean region and Central Asia. Founded on 18 April 1951 by 15 European governments and now comprising 52 member governments, EPPO develops regional phytosanitary standards, coordinates pest risk analysis, maintains the EPPO Global Database and EPPO coding system for organisms relevant to agriculture, and reports phytosanitary events of concern. As the IPPC Regional Plant Protection Organization for Europe, it participates in global plant-health discussions organized by FAO and the IPPC Secretariat.
 includes:
 - id: AL
   name: Albania
@@ -241,21 +257,24 @@ includes:
   type: country
   status: member
 membership_count: 52
-wikidata_id: Q1967903
-description: The European and Mediterranean Plant Protection Organization is an international organization that is used to
-  promote regional cooperation in the plant protection sector.
 tags:
 - EPPO
 - OEPP
+- agriculture
 - european
 - intorg
 - mediterranean
 - plant
+- phytosanitary
 - research
 - science
 topics:
+- key: agriculture
+  name: Agriculture
 - key: science
   name: Science
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: منظمة حماية النباتات الأوروبية والمتوسطية
@@ -264,7 +283,7 @@ other_names:
 - id: en
   name: European and Mediterranean Plant Protection Organization
 - id: es
-  name: European and Mediterranean Plant Protection Organization
+  name: Organización europea y mediterránea para la protección vegetal
 - id: fr
   name: Organisation européenne et méditerranéenne pour la protection des plantes
 - id: pt
@@ -273,18 +292,46 @@ other_names:
   name: Европейско-средиземноморская организация по защите растений
 - id: zh
   name: 欧洲和地中海植物保护组织
+notes: EPPO publishes the EPPO Bulletin and maintains the EPPO Global Database, EPPO coding system (formerly Bayer codes), and pest datasheets. It collaborates with Euphresco (research funders) and the EU Minor Uses Coordination Facility (MUCF).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: EPPO official website; IPPC RPPO profile
+  retrieved_at: '2026-07-29'
+  url: https://www.eppo.int/media/uploaded_images/ABOUT_EPPO/EPPO_leaflet_2026.pdf
+- field: description
+  source: EPPO official website; Wikipedia; IPPC
+  retrieved_at: '2026-07-29'
+  url: https://www.ippc.int/ippc-community/regional-plant-protection-organizations/eppo/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1967903
+  license: CC0
+- field: founded
+  source: Wikipedia; EPPO founding convention
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_and_Mediterranean_Plant_Protection_Organization
+- field: recognition_status
+  source: IPPC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ippc.int/ippc-community/regional-plant-protection-organizations/eppo/
+- field: geographic_scope
+  source: EPPO official website
+  retrieved_at: '2026-07-29'
+  url: https://www.eppo.int/
+- field: headquarters
+  source: Wikidata; EPPO official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1967903
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1967903
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q1967903
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.eppo.org

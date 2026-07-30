@@ -9,12 +9,24 @@ links:
   type: wikidata
 name: Nordic countries
 includes:
+- id: AX
+  name: Åland Islands
+  type: country
+  status: member
 - id: DK
   name: Denmark
   type: country
   status: member
 - id: FI
   name: Finland
+  type: country
+  status: member
+- id: FO
+  name: Faroe Islands
+  type: country
+  status: member
+- id: GL
+  name: Greenland
   type: country
   status: member
 - id: IS
@@ -29,9 +41,15 @@ includes:
   name: Sweden
   type: country
   status: member
-membership_count: 5
+membership_count: 8
+geographic_scope: sub-regional
+regions:
+- Europe
 wikidata_id: Q52062
-description: Nordic countries is a regional grouping of 5 countries.
+description: Geographical and cultural region in Northern Europe and the North Atlantic
+  comprising five sovereign states (Denmark, Finland, Iceland, Norway, and Sweden)
+  plus the autonomous territories of the Faroe Islands and Greenland and the autonomous
+  region of Åland, per the Wikipedia regional definition.
 tags:
 - NORDICC
 - cooperation
@@ -45,17 +63,51 @@ topics:
 other_names:
 - id: ar
   name: دول الشمال
-- id: zh
-  name: 北歐五國
+- id: de
+  name: Nordische Länder
 - id: en
   name: Nordic countries
-- id: fr
-  name: pays nordiques
-- id: ru
-  name: страны Северной Европы
 - id: es
   name: países nórdicos
+- id: fi
+  name: Pohjoismaat
+- id: fr
+  name: pays nordiques
+- id: is
+  name: Norðurlöndin
+- id: pt
+  name: Países nórdicos
+- id: ru
+  name: страны Северной Европы
+- id: sv
+  name: Norden
+- id: zh
+  name: 北歐五國
+last_verified: '2026-07-29'
 provenance:
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_countries
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_countries
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_countries
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_countries
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q52062
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q52062
+  license: CC0

@@ -1,0 +1,245 @@
+id: IPSOS
+blocktype:
+- project
+status: formal
+predecessor: EPSOS
+founded: '2015'
+geographic_scope: global
+languages:
+- en
+links:
+- url: https://international-patient-summary.net/
+  type: website
+- url: https://hl7.org/fhir/uv/ips/
+  type: website
+- url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1045268/G7-international-patient-summary-roadmap.pdf
+  type: website
+- url: https://en.wikipedia.org/wiki/IPS
+  type: wikipedia
+name: International Patient Summary
+legal_status: Global health informatics standards initiative coordinated through the Joint Initiative Council
+includes:
+- id: AU
+  name: Australia
+  type: country
+  status: participant
+- id: AT
+  name: Austria
+  type: country
+  status: participant
+- id: BE
+  name: Belgium
+  type: country
+  status: participant
+- id: BR
+  name: Brazil
+  type: country
+  status: participant
+- id: CA
+  name: Canada
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: HR
+  name: Croatia
+  type: country
+  status: participant
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: participant
+- id: DK
+  name: Denmark
+  type: country
+  status: participant
+- id: EE
+  name: Estonia
+  type: country
+  status: participant
+- id: FI
+  name: Finland
+  type: country
+  status: participant
+- id: FR
+  name: France
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: DE
+  name: Germany
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: GR
+  name: Greece
+  type: country
+  status: participant
+- id: HT
+  name: Haiti
+  type: country
+  status: participant
+- id: HU
+  name: Hungary
+  type: country
+  status: participant
+- id: ID
+  name: Indonesia
+  type: country
+  status: participant
+- id: IT
+  name: Italy
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: JP
+  name: Japan
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: participant
+- id: MY
+  name: Malaysia
+  type: country
+  status: participant
+- id: MT
+  name: Malta
+  type: country
+  status: participant
+- id: NL
+  name: Netherlands
+  type: country
+  status: participant
+- id: NZ
+  name: New Zealand
+  type: country
+  status: participant
+- id: 'NO'
+  name: Norway
+  type: country
+  status: participant
+- id: OM
+  name: Oman
+  type: country
+  status: participant
+- id: PL
+  name: Poland
+  type: country
+  status: participant
+- id: PT
+  name: Portugal
+  type: country
+  status: participant
+- id: SK
+  name: Slovakia
+  type: country
+  status: participant
+- id: SI
+  name: Slovenia
+  type: country
+  status: participant
+- id: ES
+  name: Spain
+  type: country
+  status: participant
+- id: SE
+  name: Sweden
+  type: country
+  status: participant
+- id: CH
+  name: Switzerland
+  type: country
+  status: participant
+- id: TR
+  name: Turkey
+  type: country
+  status: participant
+- id: GB
+  name: United Kingdom
+  type: country
+  status: participant
+  joined: '2021-12'
+- id: US
+  name: United States
+  type: country
+  status: participant
+  joined: '2021-12'
+membership_count: 35
+description: Global health informatics initiative developing a minimal, non-exhaustive, specialty-agnostic clinical
+  dataset for unplanned and cross-border patient care. Coordinated through the Joint Initiative Council on Global Health
+  Informatics Standardisation (JIC) among HL7, CEN/TC 251, ISO/TC 215, IHE, and SNOMED International, the International
+  Patient Summary (IPS) is specified in ISO 27269 and implemented through HL7 FHIR and CDA implementation guides. The
+  work evolved from the European Patient Summary and the epSOS large-scale pilot, and is adopted nationally through
+  programmes such as the G7 International Patient Summary Roadmap, MyHealth@EU cross-border services, and national patient
+  summary deployments in Australia, Brazil, Canada, New Zealand, and the United States.
+tags:
+- IPSOS
+- IPS
+- ehealth
+- health
+- interoperability
+- patient_summary
+- project
+- standards
+topics:
+- key: health
+  name: Health
+- key: ICT
+  name: Information and Communication Technologies
+other_names:
+- id: de
+  name: Internationaler Patientenzusammenfassung
+- id: en
+  name: International Patient Summary
+- id: es
+  name: Resumen Internacional del Paciente
+- id: fr
+  name: Résumé international du patient
+- id: pt
+  name: Resumo Internacional do Paciente
+notes: IPS is a standards ecosystem rather than a treaty-based organization; includes lists countries with documented
+  national or cross-border IPS implementation initiatives per the G7-IPS roadmap (December 2021), the IPS Implementation
+  Registry, and European eHealth Network patient-summary programmes building on epSOS. G7 adopters (Canada, France,
+  Germany, Italy, Japan, United Kingdom, United States) committed to open, interoperable patient-summary standards in
+  2021. Additional documented deployments include Australia, Brazil, Haiti, Indonesia, Malaysia, New Zealand, and Oman.
+  European participants reflect continuing cross-border patient-summary infrastructure aligned with MyHealth@EU and CEN
+  TS 17288. Major EHR vendors including Epic and MEDITECH announced IPS support from 2024.
+last_verified: '2026-07-29'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://international-patient-summary.net/
+  license: CC BY 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1045268/G7-international-patient-summary-roadmap.pdf
+  license: Open Government Licence v3.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://blog.hl7.org/advancing-the-international-patient-summary-ips
+  license: CC BY 4.0
+- field: predecessor
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://digital-strategy.ec.europa.eu/en/news/cross-border-health-project-epsos-what-has-it-achieved
+  license: CC BY 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://international-patient-summary.net/content-all-ips/ips-implementation-registry/
+  license: CC BY 4.0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://hl7.org/fhir/uv/ips/
+  license: CC BY 4.0
+acronyms:
+- lang: en
+  value: IPS
+- lang: en
+  value: IPSOS

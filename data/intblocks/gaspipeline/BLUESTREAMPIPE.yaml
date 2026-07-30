@@ -1,13 +1,20 @@
 id: BLUESTREAMPIPE
+name: Blue Stream
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2003-02'
+geographic_scope: bilateral
+regions:
+- Europe
+- Asia
 links:
+- url: https://www.gazprom.com/projects/blue-stream/
+  type: website
 - url: https://en.wikipedia.org/wiki/Blue_Stream
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q519472
   type: wikidata
-name: Blue stream
 includes:
 - id: RU
   name: Russian Federation
@@ -19,17 +26,24 @@ includes:
   status: member
 membership_count: 2
 wikidata_id: Q519472
-description: Trans-Black Sea gas pipeline from Russia to Turkey.
+description: Trans-Black Sea natural gas pipeline from Izobilnoye (Stavropol Krai), Russia, to Ankara, Turkey.
+  1,213 km total length (373 km Russian land, 396 km offshore, 444 km Turkish land); 16 billion m³/a design
+  capacity. Built 2001–02 by Blue Stream Pipeline B.V. (Gazprom–Eni joint venture); gas flows began in
+  February 2003. Offshore section operated by Blue Stream Pipeline B.V.; Russian land section by Gazprom;
+  Turkish land section by BOTAŞ.
 tags:
 - BLUESTREAMPIPE
-- aviation
-- blue
+- black-sea
 - economy
 - energy
+- gazprom
 - gaspipeline
-- oil
+- pipeline
+- russia
+- stream
 - transport
 - transportation
+- turkey
 topics:
 - key: economy
   name: Economy
@@ -38,17 +52,63 @@ topics:
 - key: transport
   name: Transport
 other_names:
+- id: bg
+  name: Син поток
+- id: cs
+  name: Blue Stream
+- id: de
+  name: Blauer Strom
 - id: en
+  name: Blue Stream
+- id: es
   name: Blue Stream
 - id: fr
   name: Blue Stream
+- id: hu
+  name: Kék Áramlat
+- id: nl
+  name: Blauwe Stroom
+- id: pl
+  name: Błękitny potok
 - id: ru
   name: Голубой поток
-- id: es
-  name: Blue Stream
+- id: tr
+  name: Mavi Akım
+- id: uk
+  name: Блакитний потік
+notes: Route crosses the Black Sea exclusive economic zones of Russia and Turkey; endpoint countries are
+  listed in includes. The 396 km offshore section is among the deepest subsea pipelines of its diameter,
+  laid at depths up to 2.2 km. Official inauguration at Durusu was on 17 November 2005; TurkStream later
+  succeeded planned Blue Stream 2 / South Stream expansions on a similar route.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q519472
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q519472
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Blue_Stream
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q519472
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Blue_Stream
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Blue_Stream

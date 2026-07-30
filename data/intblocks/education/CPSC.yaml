@@ -4,11 +4,18 @@ blocktype:
 - education
 - intorg
 status: formal
-founded: '1973'
+founded: '1973-12-05'
 geographic_scope: regional
+regions:
+- Asia
+- Oceania
 languages:
 - en
 links:
+- url: https://www.cpsctech.org/
+  type: website
+- url: https://www.cpsctech.org/1973/12/about-cpsc.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Colombo_Plan_Staff_College
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5148032
@@ -16,20 +23,50 @@ links:
 acronyms:
 - lang: en
   value: CPSC
-- lang: de
-  value: CPSC
 partof:
   id: CP
   name: Colombo Plan
+legal_status: intergovernmental
 headquarters:
-  city: Manila
+  city: Pasig
   country: PH
   coordinates:
-    lat: 14.5995
-    lng: 120.9842
+    lat: 14.5734
+    lng: 121.061
 membership_count: 16
-description: Regional inter-governmental organization focused on enhancing Vocational Education and Training (TVET) in Asia
-  Pacific region. Specialized agency of the Colombo Plan.
+founding_members:
+- AF
+- AU
+- BD
+- BT
+- CA
+- FJ
+- GB
+- ID
+- IN
+- IR
+- JP
+- KH
+- KR
+- LA
+- LK
+- MM
+- MV
+- MY
+- NP
+- NZ
+- PH
+- PK
+- SG
+- TH
+- US
+- VN
+description: >-
+  Autonomous specialized agency of the Colombo Plan established on 5 December 1973 at the 23rd Consultative Committee
+  Meeting in Wellington, New Zealand, to strengthen technician education and TVET systems among Colombo Plan member
+  countries. Became operational in 1974 with Singapore as the first host government; headquarters moved to Pasig City
+  (Metro Manila), Philippines, in January 1987. Delivers capacity-building programmes, research, and quality assurance
+  (including APACC accreditation) for TVET professionals across Asia and the Pacific.
 tags:
 - CPSC
 - colombo
@@ -43,88 +80,212 @@ tags:
 topics:
 - key: education
   name: Education
+- key: capacity_building
+  name: Capacity Building
+- key: human_resource_development
+  name: Human Resource Development
 - key: regional_cooperation
   name: Regional Cooperation
 includes:
 - id: AF
   name: Afghanistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: BT
   name: Bhutan
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: FJ
   name: Fiji
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: IN
   name: India
   type: country
-  status: member
-- id: MY
-  name: Malaysia
+  status: founding_member
+  joined: '1973-12-05'
+- id: LK
+  name: Sri Lanka
   type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: MM
   name: Myanmar
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: MN
   name: Mongolia
   type: country
   status: member
+  joined: '2005'
+- id: MV
+  name: Maldives
+  type: country
+  status: founding_member
+  joined: '1973-12-05'
+- id: MY
+  name: Malaysia
+  type: country
+  status: founding_member
+  joined: '1973-12-05'
 - id: NP
   name: Nepal
   type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
+  joined: '1974'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
+- id: PK
+  name: Pakistan
+  type: country
+  status: founding_member
+  joined: '1973-12-05'
 - id: SG
   name: Singapore
   type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1973-12-05'
+- id: AU
+  name: Australia
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: ID
+  name: Indonesia
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: JP
+  name: Japan
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: KH
+  name: Cambodia
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: US
+  name: United States
+  type: country
+  status: former_member
+  joined: '1973-12-05'
+- id: VN
+  name: Vietnam
+  type: country
+  status: former_member
+  joined: '1973-12-05'
 wikidata_id: Q5148032
 other_names:
 - id: en
   name: Colombo Plan Staff College
+- id: en
+  name: Colombo Plan Staff College for Technician Education
+notes: >-
+  Official materials distinguish 16 active member countries from 12 charter (founding) members that no longer participate
+  as active members, for 28 countries overall when counting both categories (26 founders plus later joiners Mongolia and
+  Papua New Guinea). membership_count reflects the 16 active members. Founding MOU participants included the Khmer
+  Republic (Cambodia), Burma (Myanmar), Laos, and the Republic of Vietnam; Socialist Republic of Vietnam is recorded as
+  the successor former member. Exact withdrawal dates for charter members that became inactive are not published; donor
+  countries such as Australia, Canada, Japan, New Zealand, the United Kingdom, and the United States shifted support toward
+  bilateral and project-based cooperation over time.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cpsctech.org/1973/12/about-cpsc.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pub.cpsctech.org/cpsc50/pdf.pdf
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5148032
+  license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Colombo_Plan_Staff_College
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Colombo_Plan_Staff_College

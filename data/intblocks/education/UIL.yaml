@@ -1,53 +1,42 @@
 id: UIL
+name: UNESCO Institute for Lifelong Learning
 blocktype:
 - education
 - unagency
 status: formal
-founded: '1951'
+founded: '1952'
 partof: UNESCO
+geographic_scope: global
+regions:
+- worldwide
+legal_status: unesco_category_1_institute
+recognition_status: UNESCO Category 1 Institute dedicated to lifelong learning, literacy, and adult education
 languages:
 - en
 - fr
 - es
 links:
+- url: https://www.uil.unesco.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/UNESCO_Institute_for_Lifelong_Learning
   type: wikipedia
-name: UNESCO Institute for Lifelong Learning
+- url: https://www.wikidata.org/wiki/Q2467481
+  type: wikidata
 headquarters:
   city: Hamburg
   country: DE
   coordinates:
-    lat: 53.5511
-    lng: 9.9937
+    lat: 53.56857
+    lng: 9.97677
 acronyms:
 - lang: en
   value: UIL
-membership_count: 193
-description: One of six educational institutes of UNESCO, focusing on literacy, non-formal education, adult education, and
-  lifelong learning. UIL provides research, training, information, documentation, and publishing services to UNESCO Member
-  States and partners worldwide.
-tags:
-- UIL
-- education
-- unesco
-- lifelong_learning
-- literacy
-- adult_education
-- unagency
-topics:
-- key: education
-  name: Education
-- key: lifelong_learning
-  name: Lifelong Learning
-other_names:
-- id: en
-  name: UNESCO Institute for Lifelong Learning
-- id: fr
-  name: Institut de l'UNESCO pour l'apprentissage tout au long de la vie
-- id: es
-  name: Instituto de la UNESCO para el Aprendizaje a lo Largo de Toda la Vida
-- id: de
-  name: UNESCO-Institut für Lebenslanges Lernen
+- lang: en
+  value: UIL-UNESCO
+- lang: fr
+  value: UIL
+- lang: de
+  value: UIL
 includes:
 - id: HU
   name: Hungary
@@ -821,8 +810,96 @@ includes:
   name: Denmark
   type: country
   status: member
+membership_count: 193
+wikidata_id: Q2467481
+description: UNESCO Category 1 institute in Hamburg specializing in literacy, adult education, non-formal
+  education, and lifelong learning. Founded in 1952 as the UNESCO Institute for Education (UIE) and renamed
+  in 2006 when it became a fully-fledged international UNESCO institute. UIL provides research, capacity
+  development, and policy support to UNESCO Member States and partners worldwide in line with Sustainable
+  Development Goal 4.
+notes: 'Membership mirrors current UNESCO Member States (193): UIL is a UNESCO institute serving all Member
+  States rather than a separate treaty organization. Its Governing Board comprises members appointed in
+  a personal capacity, not a country membership roster. Formerly the UNESCO Institute for Education (UIE,
+  1952–2006); host-country agreement with Germany and the Free and Hanseatic City of Hamburg provides
+  premises at Feldbrunnenstrasse 58, Hamburg.'
+tags:
+- UIL
+- UIL-UNESCO
+- education
+- unesco
+- lifelong_learning
+- literacy
+- adult_education
+- unagency
+topics:
+- key: education
+  name: Education
+- key: lifelong_learning
+  name: Lifelong Learning
+other_names:
+- id: en
+  name: UNESCO Institute for Lifelong Learning
+- id: fr
+  name: Institut de l'UNESCO pour l'apprentissage tout au long de la vie
+- id: es
+  name: Instituto de la UNESCO para el Aprendizaje a lo Largo de Toda la Vida
+- id: de
+  name: UNESCO-Institut für Lebenslanges Lernen
+- id: zh
+  name: 聯合國教科文組織終身學習研究所
+- id: eo
+  name: Instituto de Unesko por Dumviva Lernado
+- id: ro
+  name: Institutul UNESCO pentru Învățare pe Parcursul Vieții
+- id: sq
+  name: Instituti i UNESCO-s për të mësuarit gjatë gjithë jetës
+- id: cs
+  name: UNESCO Institute for Lifelong Learning
+previous_names:
+- id: en
+  name: UNESCO Institute for Education
+  period: 1952-2006
+- id: en
+  name: UIE
+  period: 1952-2006
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: UNESCO Member States roster (UIL serves all UNESCO Member States as Category 1 institute)
+  retrieved_at: '2026-07-29'
+  url: https://www.unesco.org/en/countries
+- field: wikidata_id
+  source: Wikidata Q2467481
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2467481
+  license: CC0
+- field: founded
+  source: Wikidata / UIL official history (founded 1952 as UIE)
+  retrieved_at: '2026-07-29'
+  url: https://www.uil.unesco.org/en/unesco-institute/history
+- field: description
+  source: UIL official site
+  retrieved_at: '2026-07-29'
+  url: https://www.uil.unesco.org/
+- field: notes
+  source: UIL history / host country agreement (2006 transition)
+  retrieved_at: '2026-07-29'
+  url: https://www.uil.unesco.org/en/virtual-exhibition-2006-2010-transition-fully-fledged-unesco-institute
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/UNESCO_Institute_for_Lifelong_Learning
+  source: UIL official site / Wikidata coordinates
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2467481
+  license: CC0
+- field: other_names
+  source: Wikidata labels
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2467481
+  license: CC0
+- field: previous_names
+  source: UIL official history (UIE renamed UIL in 2006)
+  retrieved_at: '2026-07-29'
+  url: https://www.uil.unesco.org/en/virtual-exhibition-2006-2010-transition-fully-fledged-unesco-institute
+- field: partof
+  source: UNESCO Category 1 institute structure
+  retrieved_at: '2026-07-29'
+  url: https://www.uil.unesco.org/

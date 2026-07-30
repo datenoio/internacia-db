@@ -1,36 +1,48 @@
 id: AFRICACDC
+name: Africa Centres for Disease Control and Prevention
 blocktype:
 - health
 - intorg
 - humanitarian
 status: formal
-languages:
-- en
-links:
-- url: https://africacdc.org/
-  type: website
-- url: https://en.wikipedia.org/wiki/Africa_Centres_for_Disease_Control_and_Prevention
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q55384745
-  type: wikidata
-name: Africa Centres for Disease Control and Prevention
-founded: '2017'
-headquarters:
-  city: Addis Ababa
-  country: ET
+founded: '2016-01-31'
+active_period:
+  start: '2017-01-31'
 geographic_scope: regional
 regions:
 - Africa
+languages:
+- en
+- fr
+- ar
+- pt
+links:
+- url: https://africacdc.org/
+  type: website
+- url: https://africacdc.org/about-us/
+  type: website
+- url: https://en.wikipedia.org/wiki/Africa_Centres_for_Disease_Control_and_Prevention
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q88234914
+  type: wikidata
+headquarters:
+  city: Addis Ababa
+  country: ET
+  coordinates:
+    lat: 9.017777777777779
+    lng: 38.80583333333333
+legal_status: intergovernmental
+recognition_status: Continental autonomous health agency of the African Union established to support public health initiatives
+  of Member States and strengthen the capacity of their public health institutions
 partof:
 - id: AFUNION
   name: African Union
 membership_count: 54
-wikidata_id: Q55384745
-legal_status: intergovernmental
-acronyms:
-- lang: en
-  value: Africa CDC
-description: African Union public health agency coordinating disease surveillance and outbreak response across member states.
+wikidata_id: Q88234914
+description: Continental autonomous health agency of the African Union, headquartered in Addis Ababa. Established by the 26th
+  Ordinary Assembly of Heads of State and Government in January 2016 and officially launched in January 2017, Africa CDC supports
+  AU member states in disease surveillance, laboratory diagnostics, emergency preparedness and response, and public health
+  capacity-building across the continent.
 tags:
 - AFRICACDC
 - Africa CDC
@@ -39,9 +51,33 @@ tags:
 - disease-control
 - health
 - public-health
+- african_union
+- regional
 topics:
 - key: health
   name: Health
+acronyms:
+- lang: en
+  value: Africa CDC
+- lang: fr
+  value: CDC Afrique
+- lang: fr
+  value: CDC Africa
+other_names:
+- id: ar
+  name: المراكز الإفريقية لمكافحة الأمراض والوقاية منها
+- id: de
+  name: Africa CDC
+- id: en
+  name: Africa Centres for Disease Control and Prevention
+- id: fr
+  name: Centre africain pour la surveillance et la prévention des maladies
+- id: zh
+  name: 非洲疾病预防控制中心
+notes: Established in January 2016 by the 26th Ordinary Assembly of Heads of State and Government and officially launched
+  in January 2017. Serves all African Union member states except Western Sahara; membership mirrors AU roster (54 states).
+  Guided by principles of leadership, credibility, ownership, delegated authority, timely dissemination of information, and
+  transparency.
 includes:
 - id: AO
   name: Angola
@@ -64,7 +100,7 @@ includes:
   type: country
   status: member
 - id: CD
-  name: Congo, Dem. Rep.
+  name: Congo, The Democratic Republic of the
   type: country
   status: member
 - id: CF
@@ -72,11 +108,11 @@ includes:
   type: country
   status: member
 - id: CG
-  name: Congo, Rep.
+  name: Congo
   type: country
   status: member
 - id: CI
-  name: Cote d'Ivoire
+  name: "Côte d'Ivoire"
   type: country
   status: member
 - id: CM
@@ -84,7 +120,7 @@ includes:
   type: country
   status: member
 - id: CV
-  name: Cape Verde
+  name: Cabo Verde
   type: country
   status: member
 - id: DJ
@@ -96,7 +132,7 @@ includes:
   type: country
   status: member
 - id: EG
-  name: Egypt, Arab Rep.
+  name: Egypt
   type: country
   status: member
 - id: ER
@@ -116,7 +152,7 @@ includes:
   type: country
   status: member
 - id: GM
-  name: Gambia, The
+  name: Gambia
   type: country
   status: member
 - id: GN
@@ -224,7 +260,7 @@ includes:
   type: country
   status: member
 - id: SZ
-  name: Swaziland
+  name: Eswatini
   type: country
   status: member
 - id: TD
@@ -240,7 +276,7 @@ includes:
   type: country
   status: member
 - id: TZ
-  name: Tanzania
+  name: Tanzania, United Republic of
   type: country
   status: member
 - id: UG
@@ -259,7 +295,43 @@ includes:
   name: Zimbabwe
   type: country
   status: member
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: African Union member states
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/member_states/countryprofiles2
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q88234914
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q88234914
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/about-us/
+- field: founded
+  source: Wikidata; official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q88234914
+  license: CC0
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/about-us/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'
@@ -268,7 +340,15 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://africacdc.org/
-- field: headquarters
+- field: partof
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://africacdc.org/
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/about-us/
+- field: membership_count
+  source: African Union member states
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/member_states/countryprofiles2
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://africacdc.org/about-us/

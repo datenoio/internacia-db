@@ -6,65 +6,110 @@ blocktype:
 status: formal
 languages:
 - en
+- de
+- fr
+- ru
 links:
 - url: https://www.danubecommission.org/
   type: website
+- url: https://www.danubecommission.org/dc/en/danube-commission/
+  type: website
+- url: https://www.danubecommission.org/dc/en/danube-commission/convention-regarding-the-regime-of-navigation-on-the-danube/
+  type: website
 - url: https://en.wikipedia.org/wiki/Danube_Commission
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1194391
+- url: https://www.wikidata.org/wiki/Q911204
   type: wikidata
 name: Danube Commission
-founded: '1948'
+founded: '1949-05-11'
 headquarters:
   city: Budapest
   country: HU
 geographic_scope: regional
 regions:
 - Europe
+founding_members:
+- BG
+- HU
+- RO
+- UA
+- CZ
 includes:
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '1960-01-07'
 - id: BG
   name: Bulgaria
   type: country
+  status: founding_member
+  joined: '1949-05-11'
+- id: CZ
+  name: Czechoslovakia
+  type: historical-country
+  status: former_member
+  joined: '1949-05-11'
+  left: '1992-12-31'
+- id: DE
+  name: Germany
+  type: country
   status: member
+  joined: '1998-03-26'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '1998-03-26'
 - id: HU
   name: Hungary
   type: country
-  status: member
+  status: founding_member
+  joined: '1949-05-11'
 - id: MD
   name: Moldova
   type: country
   status: member
+  joined: '1998-03-26'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '1949-05-11'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2003-02-04'
+- id: RU
+  name: Russia
+  type: country
+  status: former_member
+  joined: '1991-12-25'
+  left: '2024-03-01'
 - id: SK
   name: Slovakia
   type: country
   status: member
+  joined: '1993-01-01'
+- id: SU
+  name: Soviet Union
+  type: historical-country
+  status: former_member
+  joined: '1949-05-11'
+  left: '1991-12-25'
 - id: UA
   name: Ukraine
   type: country
-  status: member
-membership_count: 9
-wikidata_id: Q1194391
+  status: founding_member
+  joined: '1949-05-11'
+membership_count: 10
+wikidata_id: Q911204
 legal_status: intergovernmental
 acronyms:
 - lang: en
   value: DC
-description: Intergovernmental body for Danube navigation and related transport cooperation.
+description: Intergovernmental organization established by the 1948 Belgrade Convention to ensure and develop free navigation on the Danube River for commercial vessels, harmonize traffic regulations, and coordinate hydro-meteorological services among ten Danube states.
 tags:
 - DANUBECOM
 - DC
@@ -80,26 +125,60 @@ topics:
   name: Water
 other_names:
 - id: de
-  name: Der Hofrat Geiger
+  name: Donaukommission
 - id: en
-  name: Der Hofrat Geiger
+  name: Danube Commission
 - id: fr
-  name: Der Hofrat Geiger
+  name: Commission du Danube
+- id: hr
+  name: Dunavska komisija
+- id: ro
+  name: Comisia Dunării
+- id: ru
+  name: Дунайская комиссия
+- id: uk
+  name: Дунайська комісія
+- id: zh
+  name: 多瑙河委员会
+notes: The Belgrade Convention was signed on 18 August 1948 and entered into force on 11 May 1949. Yugoslavia was an original signatory; Serbia continues membership as successor to Serbia and Montenegro (from 4 February 2003) and the Socialist Federal Republic of Yugoslavia. Slovakia succeeded Czechoslovakia on 1 January 1993. Russia succeeded the Soviet Union in 1991 and was expelled effective 1 March 2024 after the Danube Commission decision of 14 December 2023 (DC/SES 100/11).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Danube Commission official website and Wikipedia membership table
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/
+- field: founding_members
+  source: Belgrade Convention (1948)
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/convention-regarding-the-regime-of-navigation-on-the-danube/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q911204
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q911204
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q911204
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.danubecommission.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.danubecommission.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.danubecommission.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.danubecommission.org/dc/en/danube-commission/

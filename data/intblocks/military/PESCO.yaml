@@ -6,14 +6,26 @@ status: formal
 languages:
 - en
 links:
+- url: https://pesco.europa.eu/
+  type: website
+- url: https://www.consilium.europa.eu/en/policies/pesco/
+  type: website
 - url: https://en.wikipedia.org/wiki/Permanent_Structured_Cooperation
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2360193
+  type: wikidata
 name: Permanent Structured Cooperation
 partof: EU
 founded: '2017-12-11'
 geographic_scope: regional
 regions:
 - Europe
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8503
+    lng: 4.3517
 includes:
 - id: AT
   name: Austria
@@ -45,6 +57,11 @@ includes:
   type: country
   status: member
   joined: '2017-12-11'
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '2023-05-23'
 - id: EE
   name: Estonia
   type: country
@@ -100,11 +117,6 @@ includes:
   type: country
   status: member
   joined: '2017-12-11'
-- id: MT
-  name: Malta
-  type: country
-  status: member
-  joined: '2017-12-11'
 - id: NL
   name: Netherlands
   type: country
@@ -147,8 +159,15 @@ includes:
   joined: '2017-12-11'
 membership_count: 26
 legal_status: intergovernmental
-description: EU framework for deeper defense cooperation among participating member states, including joint defense projects
-  and capability development.
+acronyms:
+- lang: en
+  value: PESCO
+wikidata_id: Q2360193
+description: Voluntary EU framework established by Council Decision (CFSP) 2017/2315
+  on 11 December 2017 for willing member states to jointly plan, develop, and invest
+  in shared defence capabilities. Twenty-five states activated PESCO in December 2017;
+  Denmark became the 26th participant on 23 May 2023. Malta remains the only EU member
+  state outside PESCO, citing constitutional neutrality.
 tags:
 - PESCO
 - cooperation
@@ -169,12 +188,70 @@ topics:
   name: Regional Cooperation
 - key: security
   name: Security
+other_names:
+- id: cs
+  name: Stálá strukturovaná spolupráce
+- id: da
+  name: Det permanente strukturerede samarbejde
+- id: de
+  name: Ständige Strukturierte Zusammenarbeit
+- id: en
+  name: PESCO
+- id: en
+  name: Permanent Structured Cooperation
+- id: es
+  name: Cooperación estructurada permanente
+- id: fr
+  name: Coopération structurée permanente
+- id: it
+  name: Cooperazione strutturata permanente
+- id: nl
+  name: Permanent Structured Cooperation
+- id: pl
+  name: Stała współpraca strukturalna
+- id: pt
+  name: Cooperação Estruturada Permanente
+- id: ru
+  name: Постоянное структурированное сотрудничество
+- id: zh
+  name: 永久合作架構
+notes: Malta is the sole EU member state not participating in PESCO. Denmark joined
+  after abolishing its CSDP opt-out in a 2022 referendum; Council Decision (CFSP)
+  2023/1015 confirmed Danish participation on 23 May 2023.
+last_verified: '2026-07-29'
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Permanent_Structured_Cooperation
+- field: includes
+  source: Council of the European Union
+  retrieved_at: '2026-07-29'
+  url: https://www.consilium.europa.eu/en/press/press-releases/2023/05/23/eu-defence-cooperation-council-welcomes-denmark-into-pesco-and-launches-the-5th-wave-of-new-pesco-projects/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2360193
+  license: CC0
+- field: description
+  source: Council of the European Union
+  retrieved_at: '2026-07-29'
+  url: https://www.consilium.europa.eu/en/policies/pesco/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2360193
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2360193
+  license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Permanent_Structured_Cooperation
+  retrieved_at: '2026-07-29'
+  url: https://pesco.europa.eu/about/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pesco.europa.eu/about/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.consilium.europa.eu/en/policies/pesco/

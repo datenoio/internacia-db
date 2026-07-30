@@ -1,7 +1,14 @@
 id: WFTU
+name: World Federation of Trade Unions
 blocktype:
 - intorg
 status: formal
+founded: '1945-10-03'
+active_period:
+  start: '1945-10-03'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - ar
 - en
@@ -9,65 +16,101 @@ languages:
 - fr
 - pt
 - ru
+- zh
 links:
 - url: http://www.wftucentral.org/
+  type: website
+- url: https://www.wftucentral.org/presidential-council/
+  type: website
+- url: https://esango.un.org/civilsociety/showProfileDetail.do?method=showProfileDetails&profileCode=462
   type: website
 - url: https://en.wikipedia.org/wiki/World_Federation_of_Trade_Unions
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q748999
   type: wikidata
-name: World Federation of Trade Unions
+acronyms:
+- lang: en
+  value: WFTU
+- lang: fr
+  value: FSM
+- lang: es
+  value: FSM
+- lang: ru
+  value: ВФП
+- lang: de
+  value: WGB
+- lang: pt
+  value: FSM
+legal_status: international federation
+recognition_status: International federation of trade unions founded on 3 October 1945 at the World Trade Union Conference in Paris; holds general consultative status with the United Nations Economic and Social Council (ECOSOC) since 1946 (UN ECOSOC profile code 462)
+secretariat:
+  location: Athens, Greece
+  organization: WFTU Central Offices
+headquarters:
+  city: Athens
+  country: GR
+  coordinates:
+    lat: 37.98416666666667
+    lng: 23.728055555555557
+  note: Central Offices at 6 Florinis Street, Mosxato
+membership_count: 134
+wikidata_id: Q748999
+description: International federation of national and sectoral trade unions founded on 3 October 1945 in Paris as a successor to the pre-war International Federation of Trade Unions. Headquartered in Athens since 2006, the WFTU coordinates class-oriented trade union affiliates and Trade Union Internationals (TUIs) across five continents. It holds ECOSOC consultative status and participates in ILO, UNESCO, and FAO forums. As of 2026 the federation reports representing more than 105 million workers through affiliates in 134 countries.
 includes:
 - id: AF
   name: Afghanistan
-  type: country
-  status: member
-- id: AL
-  name: Albania
-  type: country
-  status: member
-- id: AO
-  name: Angola
   type: country
   status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
-- id: AR
-  name: Argentina
+- id: AL
+  name: Albania
   type: country
   status: member
 - id: AM
   name: Armenia
   type: country
   status: member
-- id: AU
-  name: Australia
+- id: AO
+  name: Angola
+  type: country
+  status: member
+- id: AR
+  name: Argentina
   type: country
   status: member
 - id: AT
   name: Austria
   type: country
   status: member
+- id: AU
+  name: Australia
+  type: country
+  status: member
 - id: AZ
   name: Azerbaijan
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
   type: country
   status: member
 - id: BB
   name: Barbados
   type: country
   status: member
-- id: BY
-  name: Belarus
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+- id: BH
+  name: Bahrain
   type: country
   status: member
 - id: BJ
@@ -78,40 +121,20 @@ includes:
   name: Bolivia
   type: country
   status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
 - id: BR
   name: Brazil
   type: country
   status: member
-- id: BG
-  name: Bulgaria
+- id: BW
+  name: Botswana
   type: country
   status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CM
-  name: Cameroon
+- id: BY
+  name: Belarus
   type: country
   status: member
 - id: CA
   name: Canada
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
-- id: CO
-  name: Colombia
   type: country
   status: member
 - id: CD
@@ -122,12 +145,28 @@ includes:
   name: Congo
   type: country
   status: member
-- id: CR
-  name: Costa Rica
+- id: CI
+  name: 'Côte d''Ivoire'
   type: country
   status: member
-- id: CI
-  name: Côte d'Ivoire
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
   type: country
   status: member
 - id: CU
@@ -146,6 +185,10 @@ includes:
   name: Djibouti
   type: country
   status: member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
 - id: DO
   name: Dominican Republic
   type: country
@@ -158,10 +201,6 @@ includes:
   name: Egypt
   type: country
   status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
 - id: ER
   name: Eritrea
   type: country
@@ -170,44 +209,52 @@ includes:
   name: Ethiopia
   type: country
   status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
 - id: FI
   name: Finland
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
   type: country
   status: member
 - id: FR
   name: France
   type: country
   status: member
-- id: GF
-  name: French Guiana
+- id: GA
+  name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+- id: GF
+  name: French Guiana
   type: country
   status: member
 - id: GH
   name: Ghana
   type: country
   status: member
-- id: GR
-  name: Greece
+- id: GM
+  name: Gambia
+  type: country
+  status: member
+- id: GN
+  name: Guinea
   type: country
   status: member
 - id: GP
   name: Guadeloupe
   type: country
   status: member
-- id: GT
-  name: Guatemala
+- id: GR
+  name: Greece
   type: country
   status: member
-- id: GN
-  name: Guinea
+- id: GT
+  name: Guatemala
   type: country
   status: member
 - id: GW
@@ -218,60 +265,64 @@ includes:
   name: Guyana
   type: country
   status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
 - id: HN
   name: Honduras
+  type: country
+  status: member
+- id: HT
+  name: Haiti
   type: country
   status: member
 - id: HU
   name: Hungary
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
-- id: IR
-  name: Iran, Islamic Republic of
+- id: IN
+  name: India
   type: country
   status: member
 - id: IQ
   name: Iraq
   type: country
   status: member
-- id: JM
-  name: Jamaica
+- id: IR
+  name: Iran, Islamic Republic of
   type: country
   status: member
-- id: JP
-  name: Japan
+- id: JM
+  name: Jamaica
   type: country
   status: member
 - id: JO
   name: Jordan
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
+- id: JP
+  name: Japan
+  type: country
+  status: member
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: member
+- id: KH
+  name: Cambodia
   type: country
   status: member
 - id: KP
-  name: Korea, Democratic People's Republic of
+  name: 'Korea, Democratic People''s Republic of'
   type: country
   status: member
 - id: KW
   name: Kuwait
   type: country
   status: member
-- id: KG
-  name: Kyrgyzstan
+- id: KZ
+  name: Kazakhstan
   type: country
   status: member
 - id: LA
@@ -282,28 +333,32 @@ includes:
   name: Lebanon
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: LC
+  name: Saint Lucia
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
   type: country
   status: member
+- id: MC
+  name: Monaco
+  type: country
+  status: member
 - id: MG
   name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
   type: country
   status: member
 - id: ML
@@ -318,24 +373,24 @@ includes:
   name: Mauritius
   type: country
   status: member
+- id: MW
+  name: Malawi
+  type: country
+  status: member
 - id: MX
   name: Mexico
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MZ
   name: Mozambique
   type: country
   status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
 - id: NC
   name: New Caledonia
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
   type: country
   status: member
 - id: NE
@@ -346,44 +401,60 @@ includes:
   name: Nigeria
   type: country
   status: member
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
 - id: OM
   name: Oman
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PS
-  name: Palestine
   type: country
   status: member
 - id: PA
   name: Panama
   type: country
   status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
 - id: PE
   name: Peru
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
   type: country
   status: member
 - id: PH
   name: Philippines
   type: country
   status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
 - id: PL
   name: Poland
   type: country
   status: member
-- id: PT
-  name: Portugal
+- id: PM
+  name: Saint Pierre and Miquelon
   type: country
   status: member
 - id: PR
   name: Puerto Rico
+  type: country
+  status: member
+- id: PS
+  name: Palestine
+  type: country
+  status: member
+- id: PT
+  name: Portugal
   type: country
   status: member
 - id: RE
@@ -394,52 +465,20 @@ includes:
   name: Romania
   type: country
   status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
 - id: RU
   name: Russian Federation
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: PM
-  name: Saint Pierre and Miquelon
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
   type: country
   status: member
 - id: SA
   name: Saudi Arabia
   type: country
   status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
 - id: SB
   name: Solomon Islands
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
   type: country
   status: member
 - id: SD
@@ -450,28 +489,44 @@ includes:
   name: Sweden
   type: country
   status: member
+- id: SK
+  name: Slovakia
+  type: country
+  status: member
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
 - id: SY
   name: Syrian Arab Republic
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: TH
-  name: Thailand
   type: country
   status: member
 - id: TG
   name: Togo
   type: country
   status: member
-- id: TT
-  name: Trinidad and Tobago
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+- id: TM
+  name: Turkmenistan
   type: country
   status: member
 - id: TN
@@ -482,16 +537,24 @@ includes:
   name: Turkey
   type: country
   status: member
-- id: TM
-  name: Turkmenistan
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania, United Republic of
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
   type: country
   status: member
 - id: UG
   name: Uganda
   type: country
   status: member
-- id: UA
-  name: Ukraine
+- id: US
+  name: United States
   type: country
   status: member
 - id: UY
@@ -502,8 +565,8 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: VU
-  name: Vanuatu
+- id: VC
+  name: Saint Vincent and the Grenadines
   type: country
   status: member
 - id: VE
@@ -514,59 +577,80 @@ includes:
   name: Vietnam
   type: country
   status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
 - id: YE
   name: Yemen
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZW
   name: Zimbabwe
   type: country
   status: member
-founded: '1945'
-headquarters:
-  city: Athens
-  country: GR
-  coordinates:
-    lat: 37.98416666666667
-    lng: 23.728055555555557
-membership_count: 126
-wikidata_id: Q748999
-description: International organization.
+notes: Membership is institutional (national and sectoral trade union affiliates), not state-based; this record maps countries and territories with at least one WFTU-affiliated organization as identified from the official Presidential Council roster and published affiliate examples. French overseas departments and territories with CGT federations (GF, GP, MQ, NC, PM, RE) are listed separately where the WFTU source material references distinct affiliate bodies.
 tags:
 - WFTU
-- commerce
-- cooperation
+- FSM
+- class-oriented
 - federation
+- international
 - intorg
-- regional
-- regional_cooperation
-- trade
-- world
+- labor
+- trade_union
+- workers
 topics:
-- key: regional_cooperation
-  name: Regional Cooperation
-- key: trade
-  name: Trade
+- key: labor
+  name: Labor
+- key: governance
+  name: Governance
 other_names:
 - id: ar
   name: الاتحاد العالمي لنقابات العمال
-- id: zh
-  name: 世界工会联合会
+- id: de
+  name: Weltgewerkschaftsbund
 - id: en
   name: World Federation of Trade Unions
-- id: fr
-  name: Fédération syndicale mondiale
-- id: ru
-  name: Всемирная федерация профсоюзов
 - id: es
   name: Federación Sindical Mundial
+- id: fr
+  name: Fédération syndicale mondiale
+- id: pt
+  name: Federação Sindical Mundial
+- id: ru
+  name: Всемирная федерация профсоюзов
+- id: zh
+  name: 世界工会联合会
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wftucentral.org/presidential-council/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wftucentral.org/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/World_Federation_of_Trade_Unions
+  license: CC BY-SA 4.0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: http://www.wftucentral.org/
-- field: description
+- field: recognition_status
+  source: United Nations ECOSOC
+  retrieved_at: '2026-07-29'
+  url: https://esango.un.org/civilsociety/showProfileDetail.do?method=showProfileDetails&profileCode=462
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q748999
   license: CC0

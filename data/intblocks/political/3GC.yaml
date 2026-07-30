@@ -1,7 +1,13 @@
 id: 3GC
 blocktype:
 - political
+- economic
 status: informal
+founded: '2011-02'
+geographic_scope: global
+regions:
+- Africa
+- Asia
 languages:
 - en
 links:
@@ -11,26 +17,65 @@ links:
   type: wikidata
 name: 3G Countries
 includes:
-- id: BR
-  name: Brazil
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
   type: country
   status: member
 - id: IN
   name: India
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: IQ
+  name: Iraq
   type: country
   status: member
-membership_count: 3
-description: Informal grouping of three major developing countries (Brazil, India,
-  and South Africa) focused on political cooperation and coordination on international
-  issues.
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+membership_count: 11
+wikidata_id: Q4636342
+description: Informal Citigroup classification of eleven Global Growth Generating (3G)
+  economies identified in February 2011 as having the strongest long-run growth potential
+  and investment prospects. Membership spans Bangladesh, China, Egypt, India, Indonesia,
+  Iraq, Mongolia, Nigeria, the Philippines, Sri Lanka, and Vietnam. China and India
+  overlap with BRIC membership; Brazil and Russia are not included. Not a formal intergovernmental
+  organization.
 tags:
 - 3GC
+- citigroup
 - cooperation
 - countries
+- economic
+- growth
 - political
 - regional
 - regional_cooperation
@@ -39,9 +84,65 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q4636342
+- key: economy
+  name: Economy
+- key: development
+  name: Development
 other_names:
-- id: zh
-  name: 3G指數
+- id: bn
+  name: থ্রিজি
 - id: en
   name: 3G
+- id: en
+  name: 3G countries
+- id: en
+  name: Global Growth Generating countries
+- id: eo
+  name: Tutteraj Kresko-Generantaj landoj
+- id: ja
+  name: 3G (国)
+- id: zh
+  name: 3G指數
+- id: zh
+  name: 全球增长生成国家
+notes: Introduced in a February 2011 Citigroup Global Economics View report by Willem
+  Buiter and Ebrahim Rahbari as a successor framing to BRICS and other emerging-market
+  labels. Selection is based on a weighted index of domestic saving and investment,
+  demographics, health, education, institutional quality, and trade openness.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4636342
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4636342
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/3G_(countries)
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/3G_(countries)
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/3G_(countries)
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/3G_(countries)
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/3G_(countries)
+acronyms:
+- lang: en
+  value: 3G
+- lang: en
+  value: 3GC

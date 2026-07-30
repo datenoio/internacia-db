@@ -1,7 +1,17 @@
 id: G-77
+name: Group of 77
 blocktype:
 - political
 status: formal
+partof: UN
+founded: '1964-06-15'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Latin America
+- Middle East
+- Oceania
 languages:
 - en
 links:
@@ -11,22 +21,21 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q477328
   type: wikidata
-name: Group of 77
 includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
 - id: AF
   name: Afghanistan
   type: country
   status: member
-- id: DZ
-  name: Algeria
+- id: AG
+  name: Antigua and Barbuda
   type: country
   status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
   type: country
   status: member
 - id: AR
@@ -37,80 +46,80 @@ includes:
   name: Azerbaijan
   type: country
   status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
+- id: BB
+  name: Barbados
   type: country
   status: member
 - id: BD
   name: Bangladesh
   type: country
   status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
 - id: BF
   name: Burkina Faso
+  type: country
+  status: member
+- id: BH
+  name: Bahrain
   type: country
   status: member
 - id: BI
   name: Burundi
   type: country
   status: member
-- id: CV
-  name: Cabo Verde
+- id: BJ
+  name: Benin
   type: country
   status: member
-- id: KH
-  name: Cambodia
+- id: BN
+  name: Brunei Darussalam
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: TD
-  name: Chad
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+- id: CI
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CL
   name: Chile
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: CN
@@ -121,28 +130,16 @@ includes:
   name: Colombia
   type: country
   status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: CD
-  name: Congo, Democratic Republic of the
-  type: country
-  status: member
-- id: CG
-  name: Congo, Republic of the
-  type: country
-  status: member
 - id: CR
   name: Costa Rica
   type: country
   status: member
-- id: CI
-  name: Côte d'Ivoire
-  type: country
-  status: member
 - id: CU
   name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DJ
@@ -157,28 +154,20 @@ includes:
   name: Dominican Republic
   type: country
   status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
 - id: EC
   name: Ecuador
   type: country
   status: member
 - id: EG
-  name: Egypt
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ER
   name: Eritrea
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
   type: country
   status: member
 - id: ET
@@ -189,28 +178,36 @@ includes:
   name: Fiji
   type: country
   status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
 - id: GA
   name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
   type: country
   status: member
 - id: GD
   name: Grenada
   type: country
   status: member
-- id: GT
-  name: Guatemala
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
   type: country
   status: member
 - id: GN
   name: Guinea
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
   type: country
   status: member
 - id: GW
@@ -221,28 +218,28 @@ includes:
   name: Guyana
   type: country
   status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
 - id: HN
   name: Honduras
   type: country
   status: member
-- id: IN
-  name: India
+- id: HT
+  name: Haiti
   type: country
   status: member
 - id: ID
   name: Indonesia
   type: country
   status: member
-- id: IR
-  name: Iran, Islamic Republic of
+- id: IN
+  name: India
   type: country
   status: member
 - id: IQ
   name: Iraq
+  type: country
+  status: member
+- id: IR
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: JM
@@ -257,12 +254,24 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: KP
-  name: Korea, Democratic People's Republic of
+- id: KH
+  name: Cambodia
   type: country
   status: member
 - id: KI
   name: Kiribati
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: KP
+  name: Korea, Dem. Rep.
   type: country
   status: member
 - id: KW
@@ -270,47 +279,55 @@ includes:
   type: country
   status: member
 - id: LA
-  name: Lao People's Democratic Republic
+  name: Lao PDR
   type: country
   status: member
 - id: LB
   name: Lebanon
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
+  type: country
+  status: member
+- id: MA
+  name: Morocco
   type: country
   status: member
 - id: MG
   name: Madagascar
   type: country
   status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
+- id: MH
+  name: Marshall Islands
   type: country
   status: member
 - id: ML
   name: Mali
   type: country
   status: member
-- id: MH
-  name: Marshall Islands
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: MR
@@ -321,40 +338,24 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: FM
-  name: Micronesia, Federated States of
+- id: MV
+  name: Maldives
   type: country
   status: member
-- id: MN
-  name: Mongolia
+- id: MW
+  name: Malawi
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MY
+  name: Malaysia
   type: country
   status: member
 - id: MZ
   name: Mozambique
   type: country
   status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
 - id: NA
   name: Namibia
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
   type: country
   status: member
 - id: NE
@@ -365,8 +366,36 @@ includes:
   name: Nigeria
   type: country
   status: member
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
 - id: OM
   name: Oman
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+- id: PH
+  name: Philippines
   type: country
   status: member
 - id: PK
@@ -374,27 +403,11 @@ includes:
   type: country
   status: member
 - id: PS
-  name: Palestine
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
+  name: West Bank and Gaza
   type: country
   status: member
 - id: PY
   name: Paraguay
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: PH
-  name: Philippines
   type: country
   status: member
 - id: QA
@@ -405,96 +418,88 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: ST
-  name: São Tomé and Príncipe
-  type: country
-  status: member
 - id: SA
   name: Saudi Arabia
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SG
-  name: Singapore
   type: country
   status: member
 - id: SB
   name: Solomon Islands
   type: country
   status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
+- id: SC
+  name: Seychelles
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
 - id: SR
   name: Suriname
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
   type: country
   status: member
 - id: SY
   name: Syrian Arab Republic
   type: country
   status: member
-- id: TJ
-  name: Tajikistan
+- id: SZ
+  name: Swaziland
   type: country
   status: member
-- id: TZ
-  name: Tanzania, United Republic of
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: TG
+  name: Togo
   type: country
   status: member
 - id: TH
   name: Thailand
   type: country
   status: member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
 - id: TL
   name: Timor-Leste
   type: country
   status: member
-- id: TG
-  name: Togo
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
   type: country
   status: member
 - id: TO
@@ -505,40 +510,44 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
+- id: TZ
+  name: Tanzania
   type: country
   status: member
 - id: UG
   name: Uganda
   type: country
   status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
 - id: UY
   name: Uruguay
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+- id: VN
+  name: Vietnam
   type: country
   status: member
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: VE
-  name: Venezuela, Bolivarian Republic of
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
+- id: WS
+  name: Samoa
   type: country
   status: member
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -549,16 +558,25 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-founded: '1964'
+membership_count: 134
 headquarters:
-  city: Headquarters of the United Nations
+  city: New York
   country: US
   coordinates:
     lat: 40.749629166666665
     lng: -73.96739
-membership_count: 134
-wikidata_id: Q477328
-description: International forum focused on political for political cooperation.
+legal_status: intergovernmental coalition
+description: Coalition of developing countries at the United Nations that promotes collective economic
+  interests and joint negotiating capacity on international economic issues within the UN system, and
+  fosters South-South cooperation for development. Founded on 15 June 1964 by 77 signatories of the
+  Joint Declaration of the Seventy-Seven Countries at UNCTAD in Geneva; membership has since grown to
+  134 states while retaining the historic G-77 name.
+notes: China is listed as a member by the Group of 77 but does not consider itself a member; official
+  statements are often issued in the name of the Group of 77 and China (G77+China). Mexico left after
+  joining the OECD in 1994; re-entry was approved in September 2023 but Mexico is not listed on the
+  official member roster as of 2026. Chapters operate in Geneva (UNCTAD), Nairobi (UNEP), Paris
+  (UNESCO), Rome (FAO/IFAD), Vienna (UNIDO), and Washington, D.C. (Group of 24). Uruguay holds the
+  2026 chairmanship in New York.
 tags:
 - G-77
 - cooperation
@@ -571,6 +589,7 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+wikidata_id: Q477328
 other_names:
 - id: ar
   name: مجموعة ال77
@@ -588,21 +607,6 @@ other_names:
   name: Группа 77
 - id: zh
   name: 七十七国集团
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.g77.org/
 acronyms:
 - lang: en
   value: G77
@@ -628,3 +632,50 @@ acronyms:
   value: G-77
 - lang: pt
   value: G77
+last_verified: '2026-07-30'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q477328
+  license: CC0
+- field: description
+  source: Group of 77
+  retrieved_at: '2026-07-30'
+  url: https://www.g77.org/doc/
+- field: includes
+  source: Group of 77
+  retrieved_at: '2026-07-30'
+  url: https://www.g77.org/doc/members.html
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q477328
+  license: CC0
+- field: membership_count
+  source: Group of 77
+  retrieved_at: '2026-07-30'
+  url: https://www.g77.org/doc/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q477328
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Group_of_77
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Group_of_77

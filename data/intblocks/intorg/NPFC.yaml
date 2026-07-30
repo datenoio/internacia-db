@@ -1,88 +1,144 @@
 id: NPFC
+name: North Pacific Fisheries Commission
 blocktype:
 - intorg
 status: formal
+founded: '2015'
+active_period:
+  start: '2015-07-19'
+geographic_scope: regional
+regions:
+- North America
+- Pacific
+- East Asia
 languages:
 - en
+- ja
+- zh
 links:
 - url: https://www.npfc.int/
   type: website
-name: North Pacific Fisheries Commission
-founded: '2015'
+- url: https://zh.wikipedia.org/wiki/%E5%8C%97%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%BC%81%E6%A5%AD%E5%A7%94%E5%93%A1%E6%9C%83
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q24834021
+  type: wikidata
+acronyms:
+- lang: en
+  value: NPFC
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organization established by the Convention on the Conservation and Management of High Seas Fisheries Resources in the North Pacific Ocean (signed 24 February 2012; entered into force 19 July 2015)
 headquarters:
   city: Tokyo
   country: JP
   coordinates:
-    lat: 35.6762
-    lng: 139.6503
+    lat: 35.6361
+    lng: 139.7383
+  note: Secretariat at Tokyo University of Marine Science and Technology (Konan campus), Minato-ku
+wikidata_id: Q24834021
+description: Intergovernmental fisheries organization whose nine member states and regional economic integration organization — Canada, China, Japan, Korea, the Russian Federation, Chinese Taipei, the United States, Vanuatu, and the European Union — cooperate to conserve and manage high seas fishery resources in the North Pacific Ocean under the 2012 Convention. The Commission sets conservation and management measures for pelagic and bottom fisheries (including Pacific saury, chub mackerel, sablefish, and squid), coordinates scientific research, vessel monitoring, and high-seas boarding and inspection, and protects vulnerable marine ecosystems. The Secretariat is headquartered in Tokyo.
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-07-19'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-07-19'
 - id: EU
   name: European Union
   type: organization
   status: member
+  joined: '2022-03-23'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-07-19'
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-07-19'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2015-07-19'
 - id: TW
   name: Chinese Taipei
   type: country
   status: member
+  joined: '2015-07-27'
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
+  joined: '2017-02-18'
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: PA
-  name: Panama
-  type: country
-  status: cooperating
-acronyms:
-- lang: en
-  value: NPFC
+  joined: '2017-03-16'
+founding_members:
+- CA
+- CN
+- JP
+- KR
+- RU
 membership_count: 9
-description: North Pacific Fisheries Commission is an international intorg body with
-  9 members.
 tags:
 - NPFC
 - agriculture
 - farming
 - fisheries
+- high seas
 - intorg
 - north
 - pacific
+- rfmo
 topics:
 - key: agriculture
   name: Agriculture
 other_names:
 - id: en
   name: North Pacific Fisheries Commission
+- id: ja
+  name: 北太平洋漁業委員会
 - id: zh
   name: 北太平洋渔业委员会
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.npfc.int/
+- field: includes
+  source: NPFC official website; COM07 and COM08 final reports
+  retrieved_at: '2026-07-29'
+  url: https://www.npfc.int/about_npfc
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: NPFC official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.npfc.int/about_npfc
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q24834021
+  license: CC0
+- field: headquarters
+  source: NPFC official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.npfc.int/about_npfc
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q24834021
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q24834021
+  license: CC0
+- field: recognition_status
+  source: NPFC official website; Convention text
+  retrieved_at: '2026-07-29'
+  url: https://www.npfc.int/system/files/2017-01/Convention%20Text.pdf
+last_verified: '2026-07-29'

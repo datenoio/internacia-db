@@ -1,6 +1,7 @@
 id: UNITAID
 blocktype:
 - intorg
+- health
 status: formal
 languages:
 - en
@@ -9,10 +10,18 @@ languages:
 links:
 - url: https://unitaid.org/
   type: website
+- url: https://unitaid.org/about-us/governance/
+  type: website
+- url: https://unitaid.org/how-we-work/donors/
+  type: website
 - url: https://en.wikipedia.org/wiki/Unitaid
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q671399
+  type: wikidata
 name: Unitaid
 founded: '2006-09-19'
+active_period:
+  start: '2006-09-19'
 geographic_scope: global
 headquarters:
   city: Geneva
@@ -25,9 +34,12 @@ acronyms:
   value: UNITAID
 - lang: en
   value: Unitaid
+membership_count: 21
+wikidata_id: Q671399
 legal_status: international health initiative
-description: Global health initiative that accelerates the development and accessibility of innovative health solutions to
-  prevent, diagnose, and treat major diseases such as HIV/AIDS, tuberculosis, and malaria in low- and middle-income countries.
+recognition_status: Global health initiative hosted by the World Health Organization in Geneva; established in September 2006 by Brazil, Chile, France, Norway, and the United Kingdom to accelerate access to innovations against HIV/AIDS, tuberculosis, and malaria. Governed by a 13-member Executive Board of donor countries, the African Union constituency, civil society, foundations, and WHO.
+partof: WHO
+description: Global health initiative hosted by WHO that accelerates the development and accessibility of innovative health products to prevent, diagnose, and treat HIV/AIDS, tuberculosis, and malaria in low- and middle-income countries. Funded primarily through voluntary contributions from sovereign donors and innovative solidarity levies on airline tickets.
 tags:
 - AIDS
 - health
@@ -54,24 +66,37 @@ includes:
   name: Brazil
   type: country
   status: founding_member
+  joined: '2006-09-19'
 - id: CL
   name: Chile
   type: country
   status: founding_member
+  joined: '2006-09-19'
 - id: FR
   name: France
   type: country
   status: founding_member
+  joined: '2006-09-19'
 - id: 'NO'
   name: Norway
   type: country
   status: founding_member
+  joined: '2006-09-19'
 - id: GB
   name: United Kingdom
   type: country
   status: founding_member
+  joined: '2006-09-19'
 - id: CA
   name: Canada
+  type: country
+  status: funder
+- id: DE
+  name: Germany
+  type: country
+  status: funder
+- id: IT
+  name: Italy
   type: country
   status: funder
 - id: JP
@@ -90,128 +115,89 @@ includes:
   name: Spain
   type: country
   status: funder
-- id: AO
-  name: Angola
+- id: CM
+  name: Cameroon
   type: country
-  status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
+  status: contributor
 - id: CG
   name: Congo
   type: country
-  status: member
-- id: CI
-  name: Côte d'Ivoire
+  status: contributor
+- id: CY
+  name: Cyprus
   type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: CD
-  name: Congo, The Democratic Republic of the
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
+  status: contributor
 - id: GN
   name: Guinea
   type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
+  status: contributor
+- id: LU
+  name: Luxembourg
   type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
+  status: contributor
 - id: MG
   name: Madagascar
   type: country
-  status: member
+  status: contributor
 - id: ML
   name: Mali
   type: country
-  status: member
-- id: MR
-  name: Mauritania
+  status: contributor
+- id: MU
+  name: Mauritius
   type: country
-  status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
+  status: contributor
 - id: NE
   name: Niger
   type: country
-  status: member
-- id: NG
-  name: Nigeria
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
+  status: contributor
+founding_members:
+- BR
+- CL
+- FR
+- 'NO'
+- GB
+notes: Not a treaty-based membership organization. Sovereign participation is through the Executive Board and voluntary funding. Core donors listed on the official donors page include Brazil, Chile, France, Japan, Norway, the Republic of Korea, Spain, and the United Kingdom; ACT-A pandemic-response donors included Canada, Germany, Italy, and Portugal. Ten countries have implemented solidarity levies on airline tickets (Cameroon, Chile, Congo, France, Guinea, Madagascar, Mali, Mauritius, Niger, and the Republic of Korea); Chile, France, and Korea are counted under founding or funder status above. The Bill & Melinda Gates Foundation is a major non-state funder but is not mapped in country includes.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q671399
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://unitaid.org/how-we-work/donors/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://unitaid.org/uploads/UNITAID_EB46_2025_12_2024-Financial-Statements-with-Audit-Opinion.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://unitaid.org/about-us/governance/
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Unitaid
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://unitaid.org/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://unitaid.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://unitaid.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://unitaid.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Unitaid

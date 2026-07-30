@@ -2,9 +2,20 @@ id: G-12
 blocktype:
 - agreement
 status: formal
+founded: '1962'
+geographic_scope: global
+regions:
+- Europe
+- North America
+- Asia
+- Oceania
 languages:
 - en
 links:
+- url: https://www.imf.org/en/About/Factsheets/A-Guide-to-Committees-Groups-and-Clubs
+  type: website
+- url: https://www.bis.org/about/history_4global.htm
+  type: website
 - url: https://en.wikipedia.org/wiki/Group_of_Twelve
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1627559
@@ -14,97 +25,186 @@ includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: founding_member
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '1984'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 membership_count: 13
+founding_members:
+- AU
+- BE
+- CA
+- FR
+- DE
+- IT
+- JP
+- NL
+- ES
+- SE
+- GB
+- US
 acronyms:
 - lang: en
   value: G12
 - lang: en
   value: G-12
+- lang: de
+  value: G12
 - lang: fr
   value: G12
 - lang: es
   value: G12
-description: Intergovernmental organization comprising industrially advanced countries whose central banks collaborate to
-  regulate international finance. Despite its name, the G12 consists of thirteen member countries, including the original
-  ten members of the Group of Ten (G10) plus Australia and Spain, with Switzerland joining in 1984.
+- lang: it
+  value: G12
+legal_status: arrangement
+recognition_status: Informal group of central bank governors from thirteen industrially advanced countries whose central
+  banks cooperate on international financial regulation; despite its name, the group comprises thirteen members after
+  Switzerland joined in 1984
+description: Informal grouping of central bank governors from thirteen industrially advanced economies whose central banks
+  cooperate on international financial regulation and stability. The G12 extends the Group of Ten (G10) framework established
+  in 1962 through the IMF General Arrangements to Borrow, adding Australia and Spain to the original ten IMF participants.
+  Despite the name, the group comprises thirteen members; Switzerland joined the G10 and G12 in 1984 without the group's
+  name being changed. Governors meet regularly at the Bank for International Settlements in Basel to exchange information
+  on monetary policy, reserves, and financial stability.
 tags:
 - G-12
 - G12
 - agreement
+- banking
 - central_banking
+- cooperation
 - finance
 - group
-- banking
-- cooperation
+- imf
 topics:
 - key: finance
   name: Finance
 - key: banking
   name: Banking
+- key: economy
+  name: Economy
 - key: regional_cooperation
   name: Regional Cooperation
 wikidata_id: Q1627559
 other_names:
 - id: ar
   name: مجموعة الإثني عشر
+- id: ca
+  name: grup delas G-12
+- id: de
+  name: G12
 - id: en
   name: Group of Twelve
-- id: fr
-  name: G-12
+- id: eo
+  name: Grupo de Dekduo
 - id: es
   name: Grupo de los doce
+- id: fr
+  name: Groupe des douze
+- id: it
+  name: Gruppo dei dodici
+notes: The G12 name refers to the original twelve participants (the G10 plus Australia and Spain) before Switzerland joined
+  in 1984. The Bank for International Settlements hosts regular governor meetings. The group lacks a formal charter or
+  secretariat and operates alongside, but separately from, the G10 IMF General Arrangements to Borrow.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1627559
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Twelve
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Twelve
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Twelve
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1627559
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1627559
+  license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1627559
   license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Twelve
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Twelve
+- field: notes
+  source: BIS
+  retrieved_at: '2026-07-29'
+  url: https://www.bis.org/about/history_4global.htm

@@ -1,48 +1,73 @@
 id: NORTHSEAL
+name: NorthSeal
 blocktype:
 - military
 status: formal
+founded: '2025-01-15'
+geographic_scope: regional
+regions:
+- North Sea
+- Europe
 languages:
 - en
 links:
 - url: https://en.wikipedia.org/wiki/NorthSeal
   type: wikipedia
-name: NorthSeal
-founded: '2025'
-geographic_scope: regional
-regions:
-- North Sea
-- Europe
+- url: https://www.wikidata.org/wiki/Q137701924
+  type: wikidata
+- url: https://www.regjeringen.no/contentassets/03b6ba0be17e4ea0a57517a771ab5d8b/20240409_press-release_six-north-sea-countries-join-forces-to-secure-critical-infrastructure.pdf
+  type: website
+- url: https://www.bluecluster.be/news/northseal-increases-security-in-the-north-sea
+  type: website
+acronyms:
+- lang: en
+  value: NorthSeal
+legal_status: intergovernmental
+wikidata_id: Q137701924
+description: Joint security platform established following the Joint Declaration on cooperation regarding protection of infrastructure
+  in the North Sea, signed on 9 April 2024 by six North Sea countries. Led by Belgium, NorthSeal enables maritime information
+  bodies to monitor suspicious ship movements in real time, exchange threat data, and coordinate responses to sabotage, espionage,
+  and other hybrid threats against critical underwater infrastructure such as pipelines, data cables, and offshore energy
+  installations. NATO participates as an optional partner with access to shared information.
 includes:
 - id: BE
   name: Belgium
   type: country
   status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
+  joined: '2024-04-09'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '2024-04-09'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '2024-04-09'
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '2024-04-09'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '2024-04-09'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2024-04-09'
 membership_count: 6
-legal_status: intergovernmental
-description: Security platform established to enhance the protection of critical maritime infrastructure in the North Sea.
-  Member countries collaborate to monitor suspicious maritime activities, facilitate rapid information exchange, and coordinate
-  responses to threats such as sabotage and espionage.
+founding_members:
+- BE
+- DK
+- DE
+- NL
+- 'NO'
+- GB
 tags:
 - NORTHSEAL
 - cooperation
@@ -68,18 +93,43 @@ other_names:
   name: NorthSeal
 - id: en
   name: North Sea Security Platform
-wikidata_id: Q137701924
+- id: en
+  name: North Sea Security Pact
+notes: Originated at the North Sea Summit in Ostend on 24 April 2023; joint declaration signed 9 April 2024. Belgium invested
+  €1 million and developed the platform through Belgian Secure Communications (BSC). Operational launch followed a brief test
+  phase on 15 January 2025. France, which has North Sea coastline, has not yet joined. NATO is included as an optional partner
+  in the information exchange.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/NorthSeal
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q137701924
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/NorthSeal
+- field: founded
+  source: Blue Cluster
+  retrieved_at: '2026-07-29'
+  url: https://www.bluecluster.be/news/northseal-increases-security-in-the-north-sea
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/NorthSeal
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/NorthSeal
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/NorthSeal
+headquarters:
+  city: Brussels
+  country: BE

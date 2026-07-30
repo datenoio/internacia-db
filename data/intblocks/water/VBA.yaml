@@ -11,76 +11,125 @@ languages:
 links:
 - url: https://abv.int/en/
   type: website
+- url: https://abv.int/en/member-countries/
+  type: website
+- url: https://abv.int/en/historical/
+  type: website
+- url: https://fr.wikipedia.org/wiki/Autorit%C3%A9_du_bassin_de_la_Volta
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2872802
+  type: wikidata
 name: Volta Basin Authority
-founded: '2007'
+founded: '2007-01-19'
 headquarters:
   city: Ouagadougou
   country: BF
 geographic_scope: regional
 regions:
 - Africa
+founding_members:
+- BJ
+- BF
+- CI
+- GH
+- ML
+- TG
 includes:
 - id: BJ
   name: Benin
   type: country
   status: member
+  joined: '2009-06-09'
 - id: BF
   name: Burkina Faso
   type: country
   status: member
+  joined: '2009-07-14'
 - id: CI
   name: Côte d'Ivoire
   type: country
   status: member
+  joined: '2011-12-29'
 - id: GH
   name: Ghana
   type: country
   status: member
+  joined: '2008-11-05'
 - id: ML
   name: Mali
   type: country
   status: member
+  joined: '2008-04-24'
 - id: TG
   name: Togo
   type: country
   status: member
+  joined: '2009-04-30'
 membership_count: 6
+wikidata_id: Q2872802
 legal_status: intergovernmental
 acronyms:
 - lang: en
   value: VBA
 - lang: fr
   value: ABV
-description: Intergovernmental authority for integrated water resources management and socio-economic development in the Volta
-  River basin.
+description: Intergovernmental authority for integrated water resources management and socio-economic development in the Volta River basin among six riparian states.
 tags:
 - VBA
 - Volta
 - West-Africa
+- basin
+- intorg
+- transboundary
 - water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
+- key: development
+  name: Development
 other_names:
 - id: en
   name: Volta Basin Authority
 - id: fr
   name: Autorité du Bassin de la Volta
 provenance:
+- field: includes
+  source: VBA historical timeline
+  retrieved_at: '2026-07-29'
+  url: https://abv.int/en/historical/
+- field: founding_members
+  source: VBA historical timeline
+  retrieved_at: '2026-07-29'
+  url: https://abv.int/en/historical/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2872802
+  license: CC0
 - field: other_names
   source: Volta Basin Authority
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://abv.int/en/
   license: public domain
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://abv.int/en/
+- field: founded
+  source: VBA historical timeline
+  retrieved_at: '2026-07-29'
+  url: https://abv.int/en/historical/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://abv.int/en/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://abv.int/en/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://abv.int/en/

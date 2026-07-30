@@ -58,7 +58,10 @@ geographic_scope: sub-regional
 regions:
 - Asia
 wikidata_id: Q11708
-description: South-eastern region of Asia.
+description: Geographical southeastern region of Asia, situated south of China, east
+  of the Indian subcontinent, and northwest of mainland Australia. It comprises eleven
+  sovereign states — Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, the Philippines,
+  Singapore, Thailand, Timor-Leste, and Vietnam — per the Wikipedia regional definition.
 tags:
 - SOUTHEASTASIA
 - southeast
@@ -87,26 +90,43 @@ other_names:
   name: Юго-Восточная Азия
 - id: zh
   name: 东南亚
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southeast_Asia
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southeast_Asia
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southeast_Asia
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southeast_Asia
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q11708
   license: CC0
-- field: acronyms
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Southeast_Asia
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q11708
+  license: CC0
 acronyms:
 - lang: en
   value: SEA
+headquarters:
+  coordinates:
+    lat: 12.0
+    lng: 105.1

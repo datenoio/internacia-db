@@ -2,51 +2,87 @@ id: EUCENTRALAMERICA
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- es
-links:
-- url: https://en.wikipedia.org/wiki/Central_America%E2%80%93European_Union_Association_Agreement
-  type: wikipedia
-name: Central America-European Union Association Agreement
-founded: '2024-05-01'
+founded: '2012-06-29'
+active_period:
+  start: '2024-05-01'
 geographic_scope: regional
 regions:
 - Europe
 - Central America
+languages:
+- en
+- es
+- fr
+links:
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+  type: website
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-america_en
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/association-agreement-between-the-eu-and-central-america.html
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=676
+  type: website
+- url: https://en.wikipedia.org/wiki/Central_America%E2%80%93European_Union_Association_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q5413331
+  type: wikidata
+name: Central America-European Union Association Agreement
+acronyms:
+- lang: en
+  value: EU-Central America AA
+- lang: en
+  value: EU-Central America FTA
+- lang: es
+  value: Acuerdo UE-Centroamérica
+- lang: fr
+  value: Accord UE-Centroamérique
+legal_status: association agreement
+recognition_status: Comprehensive association agreement signed on 29 June 2012 in Tegucigalpa between the European Union and six Central American countries; the trade pillar was provisionally applied from August–December 2013; entered fully into force on 1 May 2024 after completion of ratification by all EU member states and Central American parties
 includes:
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: SV
   name: El Salvador
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: GT
   name: Guatemala
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: HN
   name: Honduras
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
 - id: PA
   name: Panama
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-06-29'
+founding_members:
+- CR
+- SV
+- GT
+- HN
+- NI
+- PA
 membership_count: 7
-description: Association agreement between the European Union and six Central American countries, creating a free trade area.
-  The agreement aims to strengthen relations through political dialogue, cooperation, and trade, promoting economic integration
-  and sustainable development in the region.
+description: Comprehensive association agreement between the European Union and six Central American countries, signed on 29 June 2012 in Tegucigalpa and entered fully into force on 1 May 2024. The agreement establishes political dialogue, cooperation, and a WTO-consistent free trade area. The trade pillar was provisionally applied from August–December 2013, eliminating most tariffs on industrial goods and fisheries and liberalising agricultural trade with asymmetric treatment favouring Central America. Upon entry into force, the EU removed 99% of tariff lines on industrial products and fisheries; Central America committed to duty-free access on all industrial products and fisheries by 2025.
 tags:
 - EUCENTRALAMERICA
 - america
@@ -62,16 +98,68 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: EU-Central America AA
+wikidata_id: Q5413331
 other_names:
 - id: en
   name: Central America-EU Association Agreement
+- id: en
+  name: EU-Central America Association Agreement
 - id: es
   name: Acuerdo de Asociación entre Centroamérica y la Unión Europea
+- id: fr
+  name: Accord d'association entre le Système d'intégration centraméricain et l'Union européenne
+notes: Negotiations were launched in October 2007 and concluded in May 2010. The European Parliament gave its consent on 11 December 2012. The trade pillar was provisionally applied from 1 August 2013 (Honduras, Nicaragua, Panama), 1 October 2013 (Costa Rica, El Salvador), and 1 December 2013 (Guatemala). Belgium was the last EU member state to ratify, on 17 January 2024, enabling full entry into force on 1 May 2024. Belize and the Dominican Republic are SICA members but are not parties to this agreement. Following Brexit, the United Kingdom and the six Central American parties signed a continuity agreement on 18 July 2019, which entered into force on 1 January 2021.
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/Central_America%E2%80%93European_Union_Association_Agreement
+- field: founded
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+- field: active_period
+  source: EUR-Lex
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/eli/opin/2024/2157/oj/eng
+- field: includes
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+- field: founding_members
+  source: WTO Regional Trade Agreements Information System
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=676
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5413331
+- field: description
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+- field: legal_status
+  source: EUR-Lex
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/association-agreement-between-the-eu-and-central-america.html
+- field: recognition_status
+  source: European Parliament
+  retrieved_at: '2026-07-29'
+  url: https://www.europarl.europa.eu/RegData/etudes/ATAG/2024/762327/EPRS_ATA(2024)762327_EN.pdf
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-central-america-association-agreement
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5413331
+- field: notes
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/central-america_en

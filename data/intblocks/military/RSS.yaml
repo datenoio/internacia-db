@@ -1,60 +1,97 @@
 id: RSS
+name: Regional Security System
 blocktype:
 - military
 status: formal
+founded: '1982-10-29'
+geographic_scope: regional
+regions:
+- Caribbean
+- South America
 languages:
 - en
 links:
-- url: http://www.rss.org.bb/
+- url: https://www.rss.org.bb/
   type: website
 - url: https://en.wikipedia.org/wiki/Regional_Security_System
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2530294
   type: wikidata
-name: Regional Security System
-founded: '1982'
-headquarters:
-  city: Barbados
-  country: BB
-  coordinates:
-    lat: 13.17
-    lng: -59.5525
+acronyms:
+- lang: en
+  value: RSS
+legal_status: treaty
+wikidata_id: Q2530294
+description: International defence and security arrangement for the Eastern Caribbean, established when Antigua and Barbuda,
+  Barbados, Dominica, Saint Lucia, and Saint Vincent and the Grenadines signed a memorandum of understanding on 29 October 1982
+  to provide mutual assistance on request in national emergencies, maritime policing, search and rescue, and threats to national
+  security. Saint Kitts and Nevis joined after independence in 1983 and Grenada in 1985; juridical status was conferred by a
+  treaty signed at St. George's, Grenada, on 5 March 1996. Headquartered at the Paragon Centre adjacent to Grantley Adams
+  International Airport in Barbados, the RSS conducts counter-narcotics operations, disaster relief, and regional security
+  coordination; Guyana acceded in September 2022, extending the system's reach to mainland South America.
 includes:
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
+  joined: '1982-10-29'
 - id: BB
   name: Barbados
   type: country
   status: member
+  joined: '1982-10-29'
 - id: DM
   name: Dominica
   type: country
   status: member
+  joined: '1982-10-29'
 - id: GD
   name: Grenada
   type: country
   status: member
+  joined: '1985'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '2022-09-14'
 - id: KN
   name: Saint Kitts and Nevis
   type: country
   status: member
+  joined: '1983'
 - id: LC
   name: Saint Lucia
   type: country
   status: member
+  joined: '1982-10-29'
 - id: VC
   name: Saint Vincent and the Grenadines
   type: country
   status: member
-membership_count: 7
-wikidata_id: Q2530294
-description: Agreement between several countries in the Eastern Caribbean region.
+  joined: '1982-10-29'
+membership_count: 8
+founding_members:
+- AG
+- BB
+- DM
+- LC
+- VC
+headquarters:
+  city: Christ Church
+  country: BB
+  coordinates:
+    lat: 13.0747
+    lng: -59.4925
 tags:
 - RSS
+- barbados
+- caribbean
+- collective_security
 - cooperation
 - defense
+- eastern_caribbean
+- guyana
 - military
 - regional
 - regional_cooperation
@@ -70,30 +107,79 @@ topics:
 other_names:
 - id: ar
   name: نظام الأمن الإقليمي
+- id: az
+  name: Regional Təhlükəsizlik Sistemi
+- id: cs
+  name: Regionální bezpečnostní systém
 - id: en
   name: Regional Security System
 - id: es
   name: Sistema Regional de Seguridad
+- id: fa
+  name: سیستم امنیتی منطقه‌ای
 - id: fr
   name: Regional Security System
+- id: id
+  name: Sistem Keamanan Regional
+- id: it
+  name: sistema di sicurezza regionale
+- id: ja
+  name: 地域安全保障システム
+- id: lt
+  name: Regioninė saugumo sistema
+- id: nl
+  name: Regionaal Veiligheidssysteem
+- id: pl
+  name: Regionalny System Obronny
 - id: pt
   name: Sistema Regional de Segurança
 - id: ru
   name: Региональная система обороны
+- id: sr
+  name: Регионални систем сигурности
+- id: tr
+  name: Bölgesel Güvenlik Sistemi
+- id: uz
+  name: Mintaqaviy mudofaa tizimi
 - id: zh
   name: 地區安全體系
+notes: The 1982 MOU was signed by four OECS members together with Barbados; the system acquired treaty status on 5 March 1996.
+  The RSS participated in the 1983 Grenada intervention (Operation Urgent Fury) alongside US forces. Since 2001 it cooperates
+  with the CARICOM Regional Task Force on Crime and Security; the United States and Canada provide training and equipment support
+  under the Caribbean Basin Security Initiative. Guyana signed the Instrument of Accession on 14 September 2022.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2530294
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2530294
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.rss.org.bb/
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Security_System

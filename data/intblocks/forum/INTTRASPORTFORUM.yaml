@@ -4,16 +4,36 @@ blocktype:
 - transport
 status: formal
 partof: OECD
+founded: '1953-10-17'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
+- fr
 links:
 - url: https://www.itf-oecd.org/
+  type: website
+- url: https://www.itf-oecd.org/member-countries
+  type: website
+- url: https://www.itf-oecd.org/history-itf
   type: website
 - url: https://en.wikipedia.org/wiki/International_Transport_Forum
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1337904
   type: wikidata
 name: International Transport Forum
+legal_status: intergovernmental
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.853611
+    lng: 2.294722
+secretariat:
+  location: Paris, France
+  organization: International Transport Forum
+  head: Secretary-General
 includes:
 - id: AE
   name: United Arab Emirates
@@ -27,6 +47,11 @@ includes:
   name: Armenia
   type: country
   status: member
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '2015'
 - id: AT
   name: Austria
   type: country
@@ -51,6 +76,11 @@ includes:
   name: Bulgaria
   type: country
   status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '2023-05-25'
 - id: BY
   name: Belarus
   type: country
@@ -75,6 +105,11 @@ includes:
   name: Colombia
   type: country
   status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+  joined: '2023-05-25'
 - id: CZ
   name: Czech Republic
   type: country
@@ -115,6 +150,11 @@ includes:
   name: Georgia
   type: country
   status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+  joined: '2026-05-07'
 - id: GR
   name: Greece
   type: country
@@ -135,6 +175,7 @@ includes:
   name: Israel
   type: country
   status: member
+  joined: '2015'
 - id: IN
   name: India
   type: country
@@ -151,6 +192,16 @@ includes:
   name: Japan
   type: country
   status: member
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2023-05-19'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '2006-05-31'
 - id: KZ
   name: Kazakhstan
   type: country
@@ -175,8 +226,9 @@ includes:
   name: Morocco
   type: country
   status: member
+  joined: '2015'
 - id: MD
-  name: Moldova, Republic of
+  name: Moldova
   type: country
   status: member
 - id: ME
@@ -215,6 +267,16 @@ includes:
   name: Oman
   type: country
   status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+  joined: '2026-05-07'
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  joined: '2026-05-07'
 - id: PL
   name: Poland
   type: country
@@ -271,49 +333,126 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-membership_count: 64
+membership_count: 72
 wikidata_id: Q1337904
-description: International forum focused on political.
+description: >-
+  Intergovernmental organisation within the OECD system and the only global body with a mandate for all modes of
+  transport. Acts as a transport-policy think tank and organises the annual Summit of transport ministers in Leipzig.
+  Established on 17 October 1953 in Brussels as the European Conference of Ministers of Transport (ECMT); transformed
+  into the global International Transport Forum by the Dublin Declaration of 31 May 2006. Politically autonomous with
+  its own Council of Ministers of Transport, while administratively integrated with the OECD and headquartered in Paris.
+  Motto: "Global dialogue for better transport". Maintains the International Road Traffic and Accident Database (IRTAD).
 tags:
 - INTTRASPORTFORUM
+- ITF
+- CEMT
+- ECMT
+- OECD
 - aviation
 - cooperation
 - forum
+- infrastructure
 - international
 - political
-- regional
 - regional_cooperation
 - transport
 - transportation
 topics:
+- key: transport
+  name: Transport
+- key: infrastructure
+  name: Infrastructure
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-- key: transport
-  name: Transport
+- key: economy
+  name: Economy
 other_names:
+- id: be
+  name: Міжнародны транспартны форум
+- id: ca
+  name: Fòrum Internacional de Transport
 - id: de
   name: International Transport Forum
 - id: en
   name: International Transport Forum
+- id: fa
+  name: مجمع جهانی ترابری
 - id: fr
   name: Forum international des transports
+- id: it
+  name: Forum internazionale dei trasporti
 - id: zh
   name: 國際交通運輸論壇
-provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+previous_names:
+- id: en
+  name: European Conference of Ministers of Transport
+  period: 1953-2006
+- id: en
+  name: ECMT
+  period: 1953-2006
+- id: fr
+  name: Conférence européenne des ministres des Transports
+  period: 1953-2006
+- id: fr
+  name: CEMT
+  period: 1953-2006
 acronyms:
 - lang: en
   value: ITF
+- lang: fr
+  value: FIT
+- lang: en
+  value: ECMT
+- lang: fr
+  value: CEMT
 - lang: zh
   value: 國際運輸論壇
+notes: >-
+  Membership synced to the ITF official member-countries roster plus Wikipedia, updated for Ghana, Panama, and Peru
+  admitted at the May 2026 Leipzig Summit (72 members). Korea and other former ECMT associate members became full ITF
+  members under the Dublin Declaration (2006-05-31). Argentina, Israel, and Morocco joined in 2015; Cambodia on
+  2023-05-19; Brazil and Costa Rica on 2023-05-25. Russia and Belarus remain members but face restricted participation
+  in ITF research, the annual Summit, and other operational activities following Russia's 2022 invasion of Ukraine.
+  Record id retains the historical spelling INTTRASPORTFORUM.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: ITF member countries; Wikipedia; Yonhap (Ghana/Panama/Peru accession)
+  retrieved_at: '2026-07-29'
+  url: https://www.itf-oecd.org/member-countries
+- field: description
+  source: Wikipedia; ITF About/History
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Transport_Forum
+- field: founded
+  source: Wikipedia; ITF History
+  retrieved_at: '2026-07-29'
+  url: https://www.itf-oecd.org/history-itf
+- field: geographic_scope
+  source: ITF official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.itf-oecd.org/
+- field: headquarters
+  source: Wikipedia; ITF (OECD Paris secretariat)
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Transport_Forum
+- field: legal_status
+  source: Wikipedia; ITF
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Transport_Forum
+- field: previous_names
+  source: Wikipedia; ITF History
+  retrieved_at: '2026-07-29'
+  url: https://www.itf-oecd.org/history-itf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1337904
+  license: CC0
+- field: acronyms
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1337904
+  license: CC0

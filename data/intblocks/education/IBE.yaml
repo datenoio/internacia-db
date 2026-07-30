@@ -1,18 +1,26 @@
 id: IBE
+name: International Bureau of Education
 blocktype:
 - education
 - unagency
 status: formal
 founded: '1925'
 partof: UNESCO
+geographic_scope: global
+legal_status: intergovernmental
+recognition_status: >-
+  UNESCO Category 1 Institute and Centre of Excellence in curriculum and related matters
 languages:
 - en
 - fr
 - es
 links:
+- url: https://www.ibe.unesco.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Bureau_of_Education
   type: wikipedia
-name: International Bureau of Education
+- url: https://www.wikidata.org/wiki/Q1047672
+  type: wikidata
 headquarters:
   city: Geneva
   country: CH
@@ -22,29 +30,12 @@ headquarters:
 acronyms:
 - lang: en
   value: IBE
-membership_count: 193
-description: UNESCO institute specializing in curriculum development, learning, and teaching. IBE provides research, training,
-  and technical assistance to help countries improve the quality and relevance of their education systems.
-tags:
-- IBE
-- education
-- unesco
-- curriculum
-- teaching
-- learning
-- unagency
-topics:
-- key: education
-  name: Education
-- key: curriculum
-  name: Curriculum
-other_names:
-- id: en
-  name: International Bureau of Education
-- id: fr
-  name: Bureau international d'éducation
-- id: es
-  name: Oficina Internacional de Educación
+- lang: en
+  value: IBE-UNESCO
+- lang: fr
+  value: BIE
+- lang: es
+  value: OIE
 includes:
 - id: HU
   name: Hungary
@@ -818,8 +809,84 @@ includes:
   name: Denmark
   type: country
   status: member
+membership_count: 193
+wikidata_id: Q1047672
+description: >-
+  UNESCO Category 1 institute and Centre of Excellence in curriculum and related matters, based in Geneva.
+  Founded in 1925 as a private body and reconstituted as an intergovernmental organization in 1929 under
+  Jean Piaget, it joined UNESCO in 1969 while retaining intellectual and functional autonomy. IBE provides
+  research, training, and technical assistance on curriculum, learning, teaching, and assessment to all
+  UNESCO Member States under the Education 2030 Agenda.
+notes: >-
+  Membership mirrors current UNESCO Member States (193): IBE is a UNESCO institute serving all Member
+  States rather than a separate treaty organization. Its governing IBE Council comprises a small number
+  of experts elected or appointed in a personal capacity (not a country membership roster). Became an
+  intergovernmental organization in 1929; integrated into UNESCO in 1969.
+tags:
+- IBE
+- IBE-UNESCO
+- education
+- unesco
+- curriculum
+- teaching
+- learning
+- assessment
+- unagency
+topics:
+- key: education
+  name: Education
+- key: curriculum
+  name: Curriculum
+other_names:
+- id: en
+  name: International Bureau of Education
+- id: fr
+  name: Bureau international d'éducation
+- id: es
+  name: Oficina Internacional de Educación
+- id: de
+  name: Internationales Büro für Bildung
+- id: ar
+  name: المكتب الدولي للتربية
+- id: zh
+  name: 國際教育局
+- id: ja
+  name: ユネスコ国際教育局
+- id: ca
+  name: Oficina internacional d'educació
+- id: ro
+  name: Biroul Internațional al Educației
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: UNESCO Member States roster (IBE serves all UNESCO Member States as Category 1 institute)
+  retrieved_at: '2026-07-29'
+  url: https://www.unesco.org/en/countries
+- field: wikidata_id
+  source: Wikidata Q1047672
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1047672
+- field: founded
+  source: Wikipedia / IBE official history
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/International_Bureau_of_Education
+- field: description
+  source: IBE official site; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.ibe.unesco.org/
+- field: notes
+  source: IBE statutes / UNESCO General Conference; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Bureau_of_Education
+- field: headquarters
+  source: IBE official site / Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.ibe.unesco.org/
+- field: other_names
+  source: Wikidata labels
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1047672
+- field: partof
+  source: UNESCO Category 1 institute structure (integrated 1969)
+  retrieved_at: '2026-07-29'
+  url: https://www.ibe.unesco.org/

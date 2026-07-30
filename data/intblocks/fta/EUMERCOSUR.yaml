@@ -2,45 +2,73 @@ id: EUMERCOSUR
 blocktype:
 - fta
 status: formal
+founded: '2026-01-17'
+active_period:
+  start: '2026-05-01'
+geographic_scope: regional
+regions:
+- Europe
+- South America
 languages:
 - en
 - es
 - pt
 links:
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+  type: website
+- url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/mercosur/eu-mercosur-agreement/text-agreement_en
+  type: website
+- url: https://commission.europa.eu/topics/trade/eu-mercosur-trade-agreement_en
+  type: website
 - url: https://en.wikipedia.org/wiki/EU%E2%80%93Mercosur_Association_Agreement
   type: wikipedia
-name: EU-Mercosur Association Agreement
-founded: 2024-12
-geographic_scope: regional
-regions:
-- Europe
-- South America
+- url: https://www.wikidata.org/wiki/Q49627146
+  type: wikidata
+name: EU-Mercosur Partnership Agreement
+acronyms:
+- lang: en
+  value: EU-Mercosur FTA
+- lang: en
+  value: EMPA
+- lang: es
+  value: Acuerdo UE-Mercosur
+- lang: pt
+  value: Acordo UE-Mercosul
+legal_status: free trade agreement
+recognition_status: Comprehensive partnership agreement between the European Union and the four founding Mercosur member states (Argentina, Brazil, Paraguay, and Uruguay), signed on 17 January 2026; the interim Trade Agreement (iTA) entered provisional application on 1 May 2026 after Mercosur parties completed domestic ratification; full Partnership Agreement (EMPA) awaits consent of the European Parliament and ratification by all EU member states
 includes:
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2026-01-17'
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
+  joined: '2026-01-17'
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '2026-01-17'
 - id: PY
   name: Paraguay
   type: country
-  status: member
+  status: founding_member
+  joined: '2026-01-17'
 - id: UY
   name: Uruguay
   type: country
-  status: member
+  status: founding_member
+  joined: '2026-01-17'
+founding_members:
+- AR
+- BR
+- PY
+- UY
 membership_count: 5
-description: Comprehensive free trade agreement between the European Union and Mercosur, aiming to eliminate tariffs on 93%
-  of Mercosur's exports to the EU and 91% of EU exports to Mercosur. The agreement includes strong sustainability commitments,
-  notably adherence to the Paris Agreement and measures to combat deforestation. Awaits ratification by European Parliament
-  and EU member states.
+description: Comprehensive partnership agreement between the European Union and the four founding Mercosur member states, signed on 17 January 2026 in Paraguay. The interim Trade Agreement (iTA) entered provisional application on 1 May 2026, establishing a WTO-consistent free trade area while the full Partnership Agreement (EMPA) undergoes ratification. Upon full implementation, the agreement will eliminate tariffs on approximately 91% of EU exports to Mercosur and 92% of Mercosur exports to the EU, with tariff dismantling over up to 15 years for sensitive products. The agreement includes enforceable commitments on the Paris Climate Agreement, labour standards, and deforestation, and protects EU geographical indications.
 tags:
 - EUMERCOSUR
 - commerce
@@ -56,18 +84,70 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: EU-Mercosur FTA
+wikidata_id: Q49627146
 other_names:
 - id: en
+  name: EU-Mercosur Association Agreement
+- id: en
   name: EU-Mercosur Free Trade Agreement
+- id: en
+  name: EU-Mercosur Interim Trade Agreement
 - id: es
   name: Acuerdo de Asociación UE-Mercosur
 - id: pt
   name: Acordo de Associação UE-Mercosul
+notes: Negotiations began in 2000; a first agreement in principle on the trade pillar was reached on 28 June 2019 and an improved political agreement on 6 December 2024. The signed package comprises the EU-Mercosur Partnership Agreement (EMPA, including political, cooperation, and trade pillars) and a separate interim Trade Agreement (iTA) covering trade matters only; the iTA will be repealed once the EMPA enters fully into force. Bolivia, which became a full Mercosur member in 2024, is not a party to this agreement. Venezuela remains suspended from Mercosur and is not a party.
+last_verified: '2026-07-29'
 provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/EU%E2%80%93Mercosur_Association_Agreement
+- field: founded
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+- field: active_period
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/news/application-eu-mercosur-interim-trade-agreement-1-may-2026
+- field: includes
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/mercosur/eu-mercosur-agreement/text-agreement_en
+- field: founding_members
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q49627146
+- field: description
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://commission.europa.eu/topics/trade/eu-mercosur-trade-agreement_en
+- field: legal_status
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/mercosur/eu-mercosur-agreement/text-agreement_en
+- field: recognition_status
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/eu-mercosur-partnership-agreement-and-interim-trade-agreement
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/mercosur/eu-mercosur-agreement/text-agreement_en
+- field: notes
+  source: European Commission
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/mercosur/eu-mercosur-agreement/text-agreement_en

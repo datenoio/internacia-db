@@ -6,47 +6,68 @@ blocktype:
 status: formal
 languages:
 - en
+- pt
 links:
 - url: https://www.okacom.org/
   type: website
+- url: https://www.okacom.org/what-okacom
+  type: website
+- url: https://www.okacom.org/permanent-okavango-river-basin-water-commission-okacom
+  type: website
+- url: https://de.wikipedia.org/wiki/Permanent_Okavango_River_Basin_Water_Commission
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q96097566
   type: wikidata
 name: Permanent Okavango River Basin Water Commission
-founded: '1994'
+founded: '1994-09-15'
 headquarters:
-  city: Maun
+  city: Gaborone
   country: BW
 geographic_scope: regional
 regions:
 - Africa
+founding_members:
+- AO
+- BW
+- NA
 includes:
 - id: AO
   name: Angola
   type: country
   status: member
+  joined: '1994-09-15'
 - id: BW
   name: Botswana
   type: country
   status: member
+  joined: '1994-09-15'
 - id: NA
   name: Namibia
   type: country
   status: member
+  joined: '1994-09-15'
 membership_count: 3
 wikidata_id: Q96097566
 legal_status: intergovernmental
 acronyms:
 - lang: en
   value: OKACOM
-description: Commission for sustainable management of the Okavango River basin water resources.
+description: Intergovernmental river basin commission advising Angola, Botswana, and Namibia on the conservation, development,
+  and sustainable use of Cubango-Okavango River Basin water resources under the 1994 OKACOM Agreement.
 tags:
+- Cubango-Okavango
 - OKACOM
 - Okavango
 - Southern-Africa
+- basin
+- intorg
+- transboundary
 - water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
 other_names:
 - id: de
   name: Permanent Okavango River Basin Water Commission
@@ -55,6 +76,14 @@ other_names:
 - id: pt
   name: Comissão Permanente da Água da Bacia Hidrográfica do Okavango
 provenance:
+- field: includes
+  source: OKACOM Agreement (1994)
+  retrieved_at: '2026-07-29'
+  url: https://www.okacom.org/what-okacom
+- field: founding_members
+  source: OKACOM Agreement (1994)
+  retrieved_at: '2026-07-29'
+  url: https://www.okacom.org/what-okacom
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -65,6 +94,14 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.okacom.org/permanent-okavango-river-basin-water-commission-okacom
+- field: founded
+  source: OKACOM Agreement (1994)
+  retrieved_at: '2026-07-29'
+  url: https://www.okacom.org/what-okacom
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'
@@ -75,5 +112,5 @@ provenance:
   url: https://www.okacom.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.okacom.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.okacom.org/okacom-secretariat-okasec

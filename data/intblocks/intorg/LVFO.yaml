@@ -1,64 +1,149 @@
 id: LVFO
+name: Lake Victoria Fisheries Organization
 blocktype:
 - intorg
 status: formal
+founded: '1994'
+active_period:
+  start: '1994-06-30'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
+- sw
 links:
 - url: https://www.lvfo.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Lake_Victoria_Fisheries_Organization
   type: wikipedia
-name: Lake Victoria Fisheries Organization
-founded: '1994'
+- url: https://www.wikidata.org/wiki/Q6478263
+  type: wikidata
+- url: https://www.fao.org/fileadmin/user_upload/legal/docs/027s-e.pdf
+  type: website
+acronyms:
+- lang: en
+  value: LVFO
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organization (RFMO) established by the Convention for the Establishment of the Lake Victoria Fisheries Organization (signed 30 June 1994 in Kisumu, Kenya; entered into force 24 May 1996); registered with the United Nations on 30 July 1996 (registration no. 32987); specialized institution of the East African Community under Article 9(3) of the EAC Treaty since the Community entered into force on 30 November 1999
+partof:
+  id: EAC
+  name: East African Community
 headquarters:
   city: Jinja
   country: UG
   coordinates:
     lat: 0.4244
     lng: 33.2042
+wikidata_id: Q6478263
+description: Regional intergovernmental fisheries organization and specialized institution of the East African Community that coordinates the management and development of fisheries and aquaculture resources in EAC water bodies, with primary competence over Lake Victoria. Established by a convention adopted at Kisumu on 30 June 1994 by Kenya, Uganda, and Tanzania (the three riparian states); Burundi acceded in October 2017 after 2016 amendments opened membership to all EAC partner states. LVFO harmonises national conservation and management measures, collects fisheries statistics, and fosters cooperation among partner states; the Secretariat is headquartered in Jinja, Uganda.
 includes:
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-05-24'
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-01-05'
 - id: TZ
-  name: Tanzania, United Republic of
+  name: Tanzania
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-05-23'
 - id: BI
   name: Burundi
   type: country
   status: member
-acronyms:
-- lang: en
-  value: LVFO
+  joined: '2017-10-04'
+founding_members:
+- KE
+- UG
+- TZ
 membership_count: 4
-description: Lake Victoria Fisheries Organization is an international intorg body
-  with 4 members.
 tags:
 - LVFO
+- RFMO
+- EAC
+- africa
 - agriculture
+- east_africa
 - farming
 - fisheries
 - intorg
 - lake
+- lake_victoria
 - victoria
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Lake Victoria Fisheries Organization
+- id: lg
+  name: Lake Victoria Fisheries Organisation
+- id: zh
+  name: 维多利亚湖渔业组织
+notes: Membership is open to all EAC partner states but requires separate ratification of the LVFO Convention and deposit of instruments with the FAO; Rwanda, South Sudan, and the Democratic Republic of the Congo are EAC members that have not acceded. The 2016 convention amendments extended LVFO competence from Lake Victoria alone to fisheries and aquaculture resources of all EAC water bodies.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.lvfo.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6478263
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6478263
+  license: CC0
+- field: includes
+  source: official sources; FAO treaty depositary records
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/027s-e.pdf
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: recognition_status
+  source: official sources; FAO treaty depositary records
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/027s-e.pdf
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: headquarters
+  source: official sources; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: founding_members
+  source: FAO treaty depositary records
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fileadmin/user_upload/legal/docs/027s-e.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/
+- field: partof
+  source: Wikidata; official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6478263
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.lvfo.org/

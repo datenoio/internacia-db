@@ -1,92 +1,205 @@
 id: NCM
+name: Nordic Council of Ministers
 blocktype:
 - intorg
 status: formal
+founded: '1971'
+active_period:
+  start: '1971-07'
+geographic_scope: regional
+regions:
+- Nordic
+- Europe
 languages:
+- da
 - en
+- fi
+- fo
+- is
 - 'no'
 - sv
 links:
-- url: http://www.norden.org/
+- url: https://www.norden.org/en/nordic-council-ministers
   type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Council_of_Ministers
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q182379
   type: wikidata
-name: Nordic council of Ministers
-includes:
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: GL
-  name: Greenland
-  type: country
-  status: member
-- id: FO
-  name: Faroe Islands
-  type: country
-  status: member
-- id: AX
-  name: Åland Islands
-  type: country
-  status: member
-founded: '1971'
+acronyms:
+- lang: en
+  value: NCM
+- lang: da
+  value: NMR
+- lang: 'no'
+  value: NMR
+- lang: sv
+  value: NMR
+legal_status: intergovernmental
+recognition_status: Official intergovernmental forum for Nordic government cooperation established
+  by amendment to the Helsinki Treaty (13 February 1971, entered into force July 1971); complements
+  the Nordic Council and operates under the treaty framework among Denmark, Finland, Iceland, Norway,
+  and Sweden
 headquarters:
-  city: Ved Stranden 18
+  city: Copenhagen
   country: DK
   coordinates:
     lat: 55.6778
     lng: 12.581
-membership_count: 8
+  note: Ved Stranden 18
+secretariat:
+  location: Copenhagen
+  organization: Nordic Council of Ministers' Secretariat
 wikidata_id: Q182379
-description: International entity.
+description: Official intergovernmental body for cooperation among Nordic governments, established
+  in July 1971 to complement the Nordic Council. Ministers for Nordic Cooperation delegate sectoral
+  ministerial councils (labour, culture, environment, health, education, and others) that coordinate
+  policy and programmes across the region. The presidency rotates annually among members; the Secretariat
+  is headquartered in Copenhagen. Denmark, Finland, Iceland, Norway, and Sweden are High Contracting
+  Parties to the Helsinki Treaty; the Faroe Islands, Greenland, and Åland participate in Nordic
+  cooperation alongside the sovereign states.
+includes:
+- id: DK
+  name: Denmark
+  type: country
+  status: founding_member
+  joined: '1971-07'
+- id: FI
+  name: Finland
+  type: country
+  status: founding_member
+  joined: '1971-07'
+- id: IS
+  name: Iceland
+  type: country
+  status: founding_member
+  joined: '1971-07'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: founding_member
+  joined: '1971-07'
+- id: SE
+  name: Sweden
+  type: country
+  status: founding_member
+  joined: '1971-07'
+- id: FO
+  name: Faroe Islands
+  type: country
+  status: member
+  joined: '1971'
+- id: AX
+  name: Åland Islands
+  type: country
+  status: member
+  joined: '1971'
+- id: GL
+  name: Greenland
+  type: country
+  status: member
+  joined: '1984'
+founding_members:
+- DK
+- FI
+- IS
+- 'NO'
+- SE
+membership_count: 8
 tags:
 - NCM
+- cooperation
+- governance
 - intorg
 - ministers
 - nordic
+- regional
+- regional_cooperation
 topics:
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: governance
+  name: Governance
 - key: economy
   name: Economy
 other_names:
+- id: ca
+  name: Consell Nòrdic de Ministres
+- id: da
+  name: Nordisk Ministerråd
 - id: de
   name: Nordischer Ministerrat
 - id: en
   name: Nordic Council of Ministers
 - id: es
   name: Consejo Nórdico de Ministros
+- id: fi
+  name: Pohjoismaiden ministerineuvosto
+- id: fo
+  name: Norðurlendska ráðharraráðið
 - id: fr
   name: Conseil nordique des ministres
+- id: is
+  name: Norræna ráðherranefndin
+- id: it
+  name: Consiglio nordico dei ministri
+- id: nb
+  name: Nordisk ministerråd
 - id: pt
   name: Conselho de Ministros Nórdicos
 - id: ru
   name: Совет Министров северных стран
+- id: sv
+  name: Nordiska ministerrådet
 - id: zh
   name: 北歐部長理事會
+notes: Complements the Nordic Council (NORDEN); both institutions share the Copenhagen secretariat
+  complex. The Faroe Islands and Åland were included in Nordic ministerial cooperation via the 1971
+  Helsinki Treaty amendment; Greenland joined in 1984. In March 2026 the Nordic Ministers for
+  Cooperation established a commission to revise the Helsinki Treaty to enable equal participation
+  for the three autonomous territories.
+last_verified: '2026-07-29'
 provenance:
-- field: other_names
+- field: includes
+  source: Nordic cooperation official website; Helsinki Treaty; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/information/helsinki-treaty
+- field: description
+  source: Nordic cooperation official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council-ministers
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q182379
   license: CC0
 - field: headquarters
+  source: Wikidata; Nordic cooperation official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q182379
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q182379
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q182379
+  license: CC0
+- field: recognition_status
+  source: Nordic cooperation official website
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/information/helsinki-treaty
+- field: founded
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Council_of_Ministers
+- field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.norden.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council-ministers
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council-ministers

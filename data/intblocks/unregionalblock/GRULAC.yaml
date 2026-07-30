@@ -4,6 +4,8 @@ blocktype:
 - political
 status: informal
 links:
+- url: https://en.wikipedia.org/wiki/Latin_American_and_Caribbean_Group
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q18346327
   type: wikidata
 name: Group of Latin American and Caribbean Countries
@@ -17,7 +19,7 @@ includes:
   type: country
   status: member
 - id: BS
-  name: Bahamas
+  name: Bahamas, The
   type: country
   status: member
 - id: BB
@@ -29,7 +31,7 @@ includes:
   type: country
   status: member
 - id: BO
-  name: Bolivia, Plurinational State of
+  name: Bolivia
   type: country
   status: member
 - id: BR
@@ -113,15 +115,15 @@ includes:
   type: country
   status: member
 - id: KN
-  name: Saint Kitts and Nevis
+  name: St. Kitts and Nevis
   type: country
   status: member
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
 - id: VC
-  name: Saint Vincent and the Grenadines
+  name: St. Vincent and the Grenadines
   type: country
   status: member
 - id: SR
@@ -137,11 +139,20 @@ includes:
   type: country
   status: member
 - id: VE
-  name: Venezuela, Bolivarian Republic of
+  name: Venezuela, RB
   type: country
   status: member
 membership_count: 33
-description: UN regional group comprising 33 Latin American and Caribbean member states.
+founded: '1945'
+geographic_scope: regional
+regions:
+- Latin America and the Caribbean
+description: >-
+  One of the five United Nations regional groups, GRULAC comprises 33 UN member
+  states from Central and South America and the Caribbean. The non-binding dialogue
+  group coordinates regional positions in UN bodies, nominates candidates for elected
+  seats, and has existed since the UN's founding in 1945; the Latin American and
+  Caribbean Group name was adopted in 1986.
 tags:
 - GRULAC
 - cooperation
@@ -155,21 +166,42 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 wikidata_id: Q18346327
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Latin_American_and_Caribbean_Group
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Latin_American_and_Caribbean_Group
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Latin_American_and_Caribbean_Group
+- field: geographic_scope
+  source: United Nations
+  retrieved_at: '2026-07-30'
+  url: https://www.un.org/dgacm/en/content/regional-groups
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Latin_American_and_Caribbean_Group
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q18346327
   license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q18346327
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q18346327
   license: CC0
 other_names:
 - id: ar

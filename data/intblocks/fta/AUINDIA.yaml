@@ -2,28 +2,50 @@ id: AUINDIA
 blocktype:
 - fta
 status: formal
-languages:
-- en
-name: Australia-India Economic Cooperation and Trade Agreement
 founded: '2022-04-02'
+active_period:
+  start: '2022-12-29'
 geographic_scope: bilateral
 regions:
 - Oceania
 - Asia
+languages:
+- en
+links:
+- url: https://www.dfat.gov.au/trade/agreements/in-force/australia-india-ecta
+  type: website
+- url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2022/8.html
+  type: website
+- url: https://www.dfat.gov.au/trade/agreements/in-force/australia-india-ecta/outcomes
+  type: website
+name: Australia-India Economic Cooperation and Trade Agreement
+acronyms:
+- lang: en
+  value: ECTA
+- lang: en
+  value: A-India ECTA
+legal_status: free trade agreement
+recognition_status: Interim bilateral economic cooperation and trade agreement signed on 2 April 2022; entered into force on
+  29 December 2022 after completion of domestic ratification procedures by both parties
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2022-04-02'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '2022-04-02'
+founding_members:
+- AU
+- IN
 membership_count: 2
-description: Landmark trade agreement between Australia and India, marking India's first trade agreement with a developed
-  country in over a decade. The agreement eliminates tariffs on over 85% of Australian goods exports to India by value, with
-  plans to increase this to 90% by 2026. It includes provisions for services, professional mobility, and critical minerals
-  trade.
+description: Interim bilateral trade agreement between Australia and India, signed on 2 April 2022 and entered into force on
+  29 December 2022. The agreement eliminates tariffs on over 85% of Australian goods exports to India by value, with plans
+  to increase this to 90% by 2026. It includes provisions for services, professional mobility, and critical minerals trade.
+  Negotiations continue toward a comprehensive Australia-India Comprehensive Economic Cooperation Agreement (CECA).
 tags:
 - AUINDIA
 - australia
@@ -40,11 +62,6 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: ECTA
-- lang: en
-  value: A-India ECTA
 other_names:
 - id: en
   name: Australia-India ECTA
@@ -54,3 +71,20 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-india-ecta
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2022/8.html
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-india-ecta
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2022/8.html
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-india-ecta

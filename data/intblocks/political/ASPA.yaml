@@ -1,15 +1,32 @@
 id: ASPA
+name: Summit of South American-Arab Countries
 blocktype:
 - political
 status: informal
+founded: '2005-05-10'
+geographic_scope: regional
+regions:
+- South America
+- Middle East
+- North Africa
 languages:
 - en
+- ar
+- es
+- pt
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2836400
   type: wikidata
-name: Summit of South American-Arab Countries
+acronyms:
+- lang: en
+  value: ASPA
+- lang: es
+  value: ASPA
+- lang: pt
+  value: ASPA
 includes:
 - id: AR
   name: Argentina
@@ -56,7 +73,7 @@ includes:
   type: country
   status: member
 - id: VE
-  name: Venezuela
+  name: Venezuela, RB
   type: country
   status: member
 - id: DZ
@@ -76,7 +93,7 @@ includes:
   type: country
   status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: IQ
@@ -132,7 +149,7 @@ includes:
   type: country
   status: member
 - id: SY
-  name: Syria
+  name: Syrian Arab Republic
   type: country
   status: member
 - id: TN
@@ -144,16 +161,25 @@ includes:
   type: country
   status: member
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
   type: country
   status: member
 membership_count: 34
-wikidata_id: Q2836400
-description: Summit of South American-Arab Countries is an international political
-  body with 34 members.
+founding_members:
+- BR
+legal_status: bi-regional cooperation mechanism
+notes: >-
+  ASPA gathers the 22 member states of the League of Arab States and the 12 countries of South America.
+  The general secretariats of the League of Arab States (LAS) and the Union of South American Nations (UNASUR)
+  also participate as coordinating bodies but are not listed in `includes` (country codes only). Created on
+  the initiative of Brazilian President Luiz Inácio Lula da Silva at the first summit in Brasília, Brazil,
+  on 10–11 May 2005.
+description: Bi-regional cooperation and political coordination forum of the 22 League of Arab States member
+  states and the 12 South American countries. Established at the first ASPA summit in Brasília on 10–11 May 2005.
 tags:
 - ASPA
 - american
+- arab
 - cooperation
 - political
 - regional
@@ -165,18 +191,33 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+wikidata_id: Q2836400
 other_names:
 - id: ar
   name: قمة الدول العربية ودول أمريكا الجنوبية
+- id: de
+  name: Gipfel der südamerikanisch-arabischen Staaten
 - id: en
   name: Summit of South American-Arab Countries
 - id: es
   name: Cumbre América del Sur-Países Árabes
 - id: fr
   name: Sommet Amérique du Sud-pays arabes
+- id: ja
+  name: 南米・アラブ諸国首脳会議
 - id: pt
   name: Cúpula América do Sul - Países Árabes
+- id: ru
+  name: Саммит стран Южной Америки и арабских стран
+- id: zh
+  name: 南美-阿拉伯国家峰会
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q2836400
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -187,9 +228,27 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-acronyms:
-- lang: pt
-  value: ASPA
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Summit_of_South_American-Arab_Countries

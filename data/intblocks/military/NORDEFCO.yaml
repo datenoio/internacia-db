@@ -1,7 +1,13 @@
 id: NORDEFCO
+name: Nordic Defence Cooperation
 blocktype:
 - military
 status: formal
+founded: '2009-11-04'
+geographic_scope: regional
+regions:
+- Nordic
+- Europe
 languages:
 - en
 - da
@@ -14,12 +20,22 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Defence_Cooperation
   type: wikipedia
-name: Nordic Defence Cooperation
-founded: '2009-11-04'
-geographic_scope: regional
-regions:
-- Nordic
-- Europe
+- url: https://www.wikidata.org/wiki/Q10601978
+  type: wikidata
+acronyms:
+- lang: en
+  value: NORDEFCO
+legal_status: intergovernmental
+wikidata_id: Q10601978
+description: Voluntary intergovernmental defence cooperation framework among Denmark,
+  Finland, Iceland, Norway, and Sweden, established by memorandum of understanding
+  signed in Helsinki on 4 November 2009. NORDEFCO succeeded parallel Nordic arrangements
+  NORDSUP, NORDAC, and NORDCAPS and coordinates policy through Nordic ministers of
+  defence and joint committees on strategic development, capabilities, training and
+  exercises, operations, and human resources. Participation is voluntary and members
+  may cooperate bilaterally or among all five; the organization is not a mutual-defence
+  pact or integrated command structure, though members have added enhanced operational
+  coordination agreements since 2021.
 includes:
 - id: DK
   name: Denmark
@@ -47,18 +63,26 @@ includes:
   status: member
   joined: '2009-11-04'
 membership_count: 5
-legal_status: intergovernmental
-description: Military cooperation framework among the five Nordic countries for defense coordination, joint exercises, and
-  capability development.
+founding_members:
+- DK
+- 'NO'
+- SE
+- FI
+- IS
 tags:
 - NORDEFCO
 - cooperation
 - defense
+- denmark
+- finland
+- iceland
 - military
 - nordic
+- norway
 - regional
 - regional_cooperation
 - security
+- sweden
 topics:
 - key: military
   name: Military
@@ -66,18 +90,76 @@ topics:
   name: Regional Cooperation
 - key: security
   name: Security
-wikidata_id: Q10601978
+other_names:
+- id: bg
+  name: Северно отбранително сътрудничество
+- id: de
+  name: Nordische Verteidigungskooperation
+- id: el
+  name: Σκανδιναβική Αμυντική Συνεργασία
+- id: en
+  name: NORDEFCO
+- id: en
+  name: Nordic Defence Cooperation
+- id: es
+  name: Cooperación de Defensa Nordica
+- id: fi
+  name: Nordefco
+- id: fr
+  name: Nordefco
+- id: nb
+  name: Nordisk Forsvarssamarbeid
+- id: ru
+  name: Северное оборонное сотрудничество
+- id: zh
+  name: 北歐防衛合作組織
+notes: Helsinki Declaration signed 4 November 2009; presidency rotates among member
+  states while Nordic ministers of defence meet twice yearly. Five cooperation areas
+  (COPAs) cover strategic development, capabilities, human resources and education,
+  training and exercises, and operations, with Acquisition & Life Cycle Support (ALCS)
+  screening armaments cooperation. Enhanced operational cooperation statements were
+  signed for southern Nordic states (Denmark, Norway, Sweden, 2021) and northern Nordic
+  states (Finland, Norway, Sweden, updated 2022); Denmark, Iceland, and Norway issued
+  security assurances to Finland and Sweden during their 2022 NATO accession process.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Defence_Cooperation
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q10601978
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.nordefco.org/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Defence_Cooperation
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q10601978
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q10601978
+  license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.nordefco.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.nordefco.org/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q10601978
+  license: CC0
+headquarters:
+  coordinates:
+    lat: 55.677781
+    lng: 12.5810087

@@ -1,29 +1,91 @@
 id: IIMSAM
+name: The Intergovernmental Institution for the use of Micro‐algae Spirulina Against Malnutrition
 blocktype:
 - intorg
+- food
+- health
 status: formal
+founded: '2001-06-12'
+active_period:
+  start: '2001-06-12'
+geographic_scope: global
+regions:
+- Africa
+- Americas
+partof: CISRI
 languages:
 - en
 links:
-- url: http://iimsam.org/
+- url: https://iimsam.org/en/
+  type: website
+- url: https://iimsam.org/what-is-iimsam/
+  type: website
+- url: https://iimsam.org/purpose/
+  type: website
+- url: https://treaties.un.org/doc/Publication/UNTS/Volume%202151/v2151.pdf
   type: website
 - url: https://www.wikidata.org/wiki/Q4273407
   type: wikidata
-name: The Intergovernmental Institution for the use of Micro‐algae Spirulina Against Malnutrition
-founded: '2001'
+acronyms:
+- lang: en
+  value: IIMSAM
+legal_status: intergovernmental
+recognition_status: Autonomous treaty-based intergovernmental organization established under Article 5 of the Collaborative Inter-Governmental Scientific Research Institute (CISRI) convention; registered with the United Nations Treaty Series (I-37542/37543, 12 June 2001); accredited as an intergovernmental observer to the United Nations Economic and Social Council under ECOSOC decision 2003/212 (5 March 2003)
 headquarters:
   city: New York
   country: US
   coordinates:
     lat: 40.7489
     lng: -73.968
-acronyms:
-- lang: en
-  value: IIMSAM
+secretariat:
+  location: United Nations Headquarters, New York
+  head: Secretary-General
 membership_count: 9
+founding_members:
+- CD
+- GN
 wikidata_id: Q4273407
-description: The Intergovernmental Institution for the use of Micro‐algae Spirulina Against Malnutrition is an international
-  organization that is used to promote regional cooperation in the malnutrition sector.
+description: Intergovernmental organization mandated to promote the humanitarian use of micro-algae spirulina to combat severe malnutrition, achieve food security, and bridge health divides, with priority for developing countries, small island developing states, and least developed countries. Established as an autonomous entity under Article 5 of the CISRI convention and registered with the United Nations in 2001; holds continuing intergovernmental observer status with ECOSOC. Governed by a General Council of Member States and a Secretary-General-led Secretariat.
+includes:
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+  joined: '2000-11-20'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  joined: '2000-11-20'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: LY
+  name: Libya
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+notes: Member roster reflects the IIMSAM Council of Member States as published in January 2020. The Democratic Republic of the Congo and Guinea were founding parties to the parent CISRI treaty (November 2000); additional states acceded via ministerial diplomatic adhesion letters and/or signature of the IIMSAM treaty. Liberland is listed on the official website but is excluded here as an unrecognized entity. No Wikipedia article exists as of verification.
 tags:
 - IIMSAM
 - communication
@@ -40,45 +102,61 @@ topics:
   name: Health
 - key: food
   name: Food
-includes:
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
+- key: nutrition
+  name: Nutrition
+- key: humanitarian
+  name: Humanitarian
+other_names:
+- id: en
+  name: Intergovernmental Institution for the use of micro algae Spirulina against malnutrition (IIMSAM)
+- id: en
+  name: Intergovernmental Institution for the Use of Micro-Algae Spirulina Against Malnutrition
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/purpose/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/what-is-iimsam/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/what-is-iimsam/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/what-is-iimsam/
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/what-is-iimsam/
+- field: founding_members
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%202151/v2151.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/what-is-iimsam/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://iimsam.org/
+  retrieved_at: '2026-07-29'
+  url: https://iimsam.org/en/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4273407
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4273407
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4273407
+  license: CC0

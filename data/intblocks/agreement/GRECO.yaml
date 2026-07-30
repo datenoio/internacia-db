@@ -2,16 +2,47 @@ id: GRECO
 blocktype:
 - agreement
 status: formal
+partof: COE
+founded: '1999-05-01'
+active_period:
+  start: '1999-05-01'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
+- fr
 links:
 - url: https://www.coe.int/en/web/greco/home
+  type: website
+- url: https://www.coe.int/en/web/greco/about-greco
+  type: website
+- url: https://rm.coe.int/16805e301c
   type: website
 - url: https://en.wikipedia.org/wiki/Group_of_States_Against_Corruption
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q866996
   type: wikidata
 name: Group of States against Corruption
+acronyms:
+- lang: en
+  value: GRECO
+- lang: fr
+  value: GRECO
+legal_status: enlarged partial agreement
+recognition_status: Council of Europe enlarged partial agreement established by Resolution (99) 5 on 1 May 1999 to monitor
+  compliance with the organisation's anti-corruption standards through mutual evaluation and peer pressure
+headquarters:
+  city: Strasbourg
+  country: FR
+secretariat:
+  location: Strasbourg, France
+  organization: GRECO Secretariat (Council of Europe)
+membership_count: 48
+description: Council of Europe anti-corruption monitoring body established on 1 May 1999 as an enlarged partial agreement.
+  GRECO evaluates member compliance with Council of Europe anti-corruption standards through mutual evaluation, on-site visits,
+  and peer pressure, covering themes such as parliamentary integrity, judicial independence, party funding, and central government
+  corruption prevention.
 includes:
 - id: AD
   name: Andorra
@@ -40,15 +71,17 @@ includes:
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: BG
   name: Bulgaria
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: associate
 - id: CH
   name: Switzerland
   type: country
@@ -56,7 +89,8 @@ includes:
 - id: CY
   name: Cyprus
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: CZ
   name: Czech Republic
   type: country
@@ -64,7 +98,8 @@ includes:
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: DK
   name: Denmark
   type: country
@@ -72,31 +107,41 @@ includes:
 - id: EE
   name: Estonia
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+  joined: '2019-07'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: FR
   name: France
+  type: country
+  status: founding_member
+  joined: '1999-05-01'
+- id: GB
+  name: United Kingdom
   type: country
   status: member
 - id: GE
   name: Georgia
   type: country
   status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
 - id: GR
   name: Greece
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: HR
   name: Croatia
   type: country
@@ -108,11 +153,13 @@ includes:
 - id: IE
   name: Ireland
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: IT
   name: Italy
   type: country
@@ -128,11 +175,13 @@ includes:
 - id: LT
   name: Lithuania
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: LU
   name: Luxembourg
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: LV
   name: Latvia
   type: country
@@ -169,6 +218,7 @@ includes:
   name: Poland
   type: country
   status: member
+  joined: '1999-05-19'
 - id: PT
   name: Portugal
   type: country
@@ -176,23 +226,33 @@ includes:
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: RS
   name: Serbia
   type: country
   status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: former_member
+  joined: '2006'
+  left: '2023-07-01'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: SI
   name: Slovenia
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '1999-05-01'
 - id: SM
   name: San Marino
   type: country
@@ -209,36 +269,107 @@ includes:
   name: United States
   type: country
   status: member
-membership_count: 49
-description: International forum focused on legal matters established through an international
-  agreement.
+founding_members:
+- BE
+- BG
+- CY
+- DE
+- EE
+- ES
+- FI
+- FR
+- GR
+- IE
+- IS
+- LT
+- LU
+- RO
+- SE
+- SI
+- SK
 tags:
 - GRECO
 - agreement
 - corruption
-- group
+- council_of_europe
+- governance
 - law
-- legal
-- states
+- monitoring
+- regional_cooperation
 topics:
+- key: governance
+  name: Governance
 - key: law
   name: Law
+- key: crime
+  name: Crime
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q866996
 other_names:
 - id: ar
   name: مجموعة الدول لمكافحة الفساد
-- id: zh
-  name: 反腐败国家集团
+- id: de
+  name: Gruppe Staaten gegen Korruption
 - id: en
   name: Group of States Against Corruption
-- id: fr
-  name: GRECO
-- id: ru
-  name: Группа государств по борьбе с коррупцией
 - id: es
   name: Grupo de Estados contra la Corrupción
-founded: '1999-05-01'
+- id: fr
+  name: Groupe d'États contre la corruption
+- id: ru
+  name: Группа государств по борьбе с коррупцией
+- id: zh
+  name: 反腐败国家集团
+notes: Established by 17 founding states under Resolution (99) 5; Poland joined on 19 May 1999. Since August 2010 all Council
+  of Europe member states have been GRECO members. The Russian Federation joined in 2006 but ceased membership on 1 July 2023
+  after denouncing the Criminal Law Convention on Corruption. Belarus participates with limited representation. The European
+  Union has observer status since July 2019.
+last_verified: '2026-07-29'
 provenance:
+- field: description
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://www.coe.int/en/web/greco/about-greco
+- field: includes
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://www.coe.int/en/web/greco/about-greco
+- field: founding_members
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://rm.coe.int/16805e301c
+- field: membership_count
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://www.coe.int/en/web/greco/about-greco
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_States_Against_Corruption
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://rm.coe.int/16805e301c
+- field: recognition_status
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://rm.coe.int/16805e301c
+- field: notes
+  source: Council of Europe
+  retrieved_at: '2026-07-29'
+  url: https://rm.coe.int/general-activity-report-2023-greco-060424-gbrweb/1680afd7f2
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q866996
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/wiki/Q866996
+  license: CC0
 - field: founded
   source: Wikidata
   retrieved_at: '2026-06-15'

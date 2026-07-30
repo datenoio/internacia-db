@@ -2,44 +2,116 @@ id: EUPACIFICEPA
 blocktype:
 - pta
 status: formal
+founded: '2009-07-30'
+active_period:
+  start: '2009-12-20'
+geographic_scope: regional
+regions:
+- Europe
+- Oceania
 languages:
 - en
+- fr
 links:
 - url: https://en.wikipedia.org/wiki/Economic_Partnership_Agreements
   type: wikipedia
 - url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en
   type: website
+- url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-pacific
+  type: website
+- url: https://eur-lex.europa.eu/EN/legal-content/summary/agreement-between-the-european-community-and-the-pacific-states.html
+  type: website
 name: EU-Pacific Economic Partnership Agreement
-founded: '2009'
+acronyms:
+- lang: en
+  value: EU-Pacific EPA
+- lang: fr
+  value: APE UE-Pacifique
+legal_status: interim economic partnership agreement
+recognition_status: Interim Economic Partnership Agreement signed on 30 July 2009 in London between the EU and Pacific ACP states; not yet formally in force but provisionally applied by Papua New Guinea since 20 December 2009, Fiji since 28 July 2014, Samoa since 31 December 2018, and Solomon Islands since 17 May 2020; open to accession by other ACP Pacific states
 includes:
 - id: EU
   name: European Union
   type: organization
   status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
 - id: PG
   name: Papua New Guinea
   type: country
   status: member
+  joined: '2009-12-20'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '2014-07-28'
 - id: WS
   name: Samoa
   type: country
   status: member
+  joined: '2018-12-31'
 - id: SB
   name: Solomon Islands
   type: country
   status: member
+  joined: '2020-05-17'
+- id: CK
+  name: Cook Islands
+  type: country
+  status: partner
+- id: KI
+  name: Kiribati
+  type: country
+  status: partner
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: partner
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: partner
+- id: NR
+  name: Nauru
+  type: country
+  status: partner
+- id: NU
+  name: Niue
+  type: country
+  status: partner
+- id: PW
+  name: Palau
+  type: country
+  status: partner
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: partner
+- id: TO
+  name: Tonga
+  type: country
+  status: partner
+- id: TV
+  name: Tuvalu
+  type: country
+  status: partner
+- id: VU
+  name: Vanuatu
+  type: country
+  status: partner
 membership_count: 5
-description: International economic partnership agreement between the European Union and Pacific countries providing preferential trade access and development cooperation.
+description: Interim Economic Partnership Agreement signed on 30 July 2009 between the European Union and Pacific ACP states.
+  The agreement establishes a framework for reciprocal trade in goods with asymmetric liberalisation favouring Pacific partners,
+  including duty-free and quota-free EU market access, phased tariff reduction on EU imports, rules of origin with global sourcing
+  provisions for fisheries, and technical and sanitary cooperation. It has not formally entered into force but is provisionally
+  applied by Papua New Guinea, Fiji, Samoa, and Solomon Islands; accession remains open to the other Pacific ACP states in the
+  regional configuration.
 tags:
 - EUPACIFICEPA
 - commerce
 - economy
 - EPA
 - european_union
+- oceania
 - pacific
 - pta
 - trade
@@ -55,3 +127,52 @@ other_names:
   name: Accord de partenariat économique UE-Pacifique
 - id: es
   name: Acuerdo de Asociación Económica UE-Pacífico
+notes: Regional EPA configuration covers 15 ACP Pacific states — Cook Islands, Fiji, Kiribati, Marshall Islands, Micronesia,
+  Nauru, Niue, Palau, Papua New Guinea, Samoa, Solomon Islands, Timor-Leste, Tonga, Tuvalu, and Vanuatu. Niue, Tonga, and
+  Tuvalu have EU Council approval for accession (January 2025); Vanuatu, the Federated States of Micronesia, the Marshall Islands,
+  and Timor-Leste are in active accession processes. Cook Islands, Kiribati, Nauru, and Palau are in earlier stages of joining.
+  Pacific LDCs not yet applying the EPA continue to trade with the EU under Everything but Arms.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/agreement-between-the-european-community-and-the-pacific-states.html
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/agreement-between-the-european-community-and-the-pacific-states.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://trade.ec.europa.eu/access-to-markets/en/content/epa-pacific
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eur-lex.europa.eu/EN/legal-content/summary/agreement-between-the-european-community-and-the-pacific-states.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pacific_en

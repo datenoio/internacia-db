@@ -3,19 +3,42 @@ blocktype:
 - project
 status: formal
 partof: FAO
+founded: '2002'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- Latin America
+- Middle East
 languages:
+- ar
 - en
+- es
+- fr
+- ru
+- zh
 links:
+- url: https://www.fao.org/giahs/en
+  type: website
+- url: https://www.fao.org/giahs/around-the-world/en
+  type: website
+- url: https://en.wikipedia.org/wiki/Globally_Important_Agricultural_Heritage_Systems
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3509559
   type: wikidata
 name: Globally Important Agricultural Heritage Systems
+headquarters:
+  city: Rome
+  country: IT
+  note: Administered by FAO at headquarters
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AD
   name: Andorra
+  type: country
+  status: member
+- id: AE
+  name: United Arab Emirates
   type: country
   status: member
 - id: AT
@@ -38,6 +61,10 @@ includes:
   name: China
   type: country
   status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
 - id: EC
   name: Ecuador
   type: country
@@ -46,12 +73,16 @@ includes:
   name: Egypt
   type: country
   status: member
-- id: IN
-  name: India
+- id: ES
+  name: Spain
   type: country
   status: member
 - id: ID
   name: Indonesia
+  type: country
+  status: member
+- id: IN
+  name: India
   type: country
   status: member
 - id: IR
@@ -70,12 +101,20 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: MX
-  name: Mexico
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
 - id: MA
   name: Morocco
+  type: country
+  status: member
+- id: MX
+  name: Mexico
   type: country
   status: member
 - id: PE
@@ -90,36 +129,20 @@ includes:
   name: Portugal
   type: country
   status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
 - id: ST
   name: Sao Tome and Principe
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
   type: country
   status: member
 - id: TH
   name: Thailand
   type: country
   status: member
-- id: TN
-  name: Tunisia
+- id: TJ
+  name: Tajikistan
   type: country
   status: member
-- id: AE
-  name: United Arab Emirates
+- id: TN
+  name: Tunisia
   type: country
   status: member
 - id: TZ
@@ -127,22 +150,29 @@ includes:
   type: country
   status: member
 membership_count: 29
-description: Globally Important Agricultural Heritage Systems (GIAHS).
+description: FAO programme recognizing living agricultural landscapes where communities sustain agrobiodiversity, traditional
+  knowledge, cultural heritage, and resilient ecosystems through dynamic conservation. Countries listed have at least one FAO-designated
+  GIAHS site; as of 2026 the programme comprises 104 designated systems across 29 countries.
 tags:
 - GIAHS
-- agricultural
-- commerce
+- FAO
+- agriculture
+- agrobiodiversity
+- conservation
 - cultural
 - culture
-- globally
-- important
+- heritage
 - project
-- trade
+- traditional_knowledge
 topics:
+- key: agriculture
+  name: Agriculture
+- key: conservation
+  name: Conservation
 - key: culture
   name: Culture
-- key: trade
-  name: Trade
+- key: heritage
+  name: Heritage
 wikidata_id: Q3509559
 other_names:
 - id: de
@@ -157,12 +187,26 @@ other_names:
   name: Системы сельскохозяйственного наследия мирового значения (ГИАХС)
 - id: zh
   name: 全球重要农业文化遗产
+notes: Includes lists countries with at least one FAO-designated GIAHS site, not formal treaty membership. First sites were
+  designated in 2005; the programme was initiated by FAO in 2002.
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: FAO GIAHS
+  retrieved_at: '2026-07-30'
+  url: https://www.fao.org/giahs/around-the-world/en
+- field: membership_count
+  source: FAO GIAHS
+  retrieved_at: '2026-07-30'
+  url: https://www.fao.org/giahs/en
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: FAO GIAHS
+  retrieved_at: '2026-07-30'
+  url: https://www.fao.org/giahs/en
+- field: founded
+  source: FAO GIAHS
+  retrieved_at: '2026-07-30'
+  url: https://www.fao.org/giahs/en
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

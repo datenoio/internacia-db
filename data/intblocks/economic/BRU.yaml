@@ -1,37 +1,88 @@
 id: BRU
+name: Union State of Russia and Belarus
 blocktype:
 - economic
+- political
 status: formal
+founded: '1996-04-02'
+active_period:
+  start: '1996-04-02'
+geographic_scope: regional
+regions:
+- Europe
+- Eastern Europe
 languages:
+- be
 - ru
 links:
-- url: http://www.soyuz.by/
+- url: https://soyuz.by/
   type: website
-- url: https://en.wikipedia.org/wiki/Union_State_of_Russia_and_Belarus
+- url: https://soyuz.by/en
+  type: website
+- url: https://en.wikipedia.org/wiki/Union_State
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q166110
   type: wikidata
-name: Union State of Russia and Belarus
+acronyms:
+- lang: en
+  value: Union State
+- lang: zh
+  value: 俄白联盟
+- lang: ru
+  value: СРБ
+- lang: ru
+  value: СГРБ
+- lang: de
+  value: SGBR
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.755
+    lng: 37.632
 includes:
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-04-02'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-04-02'
+founding_members:
+- RU
+- BY
 membership_count: 2
-description: Supranational entity consisting of the Russian Federation and the Republic
-  of Belarus.
+legal_status: supranational union
+wikidata_id: Q166110
+suborganizations:
+- id: BELRUS
+  name: Parliamentary Assembly of Union of Belarus and Russia
+description: Supranational union of the Russian Federation and the Republic of Belarus,
+  established through treaties signed in 1996–1999 to deepen political, economic, and
+  defence integration while both states remain sovereign. The 2 April 1996 treaty created
+  the Community of Belarus and Russia; the 8 December 1999 Treaty on the Creation of
+  a Union State (in force 26 January 2000) defines the current institutional framework,
+  including the Supreme State Council, Council of Ministers, and Parliamentary Assembly.
+  Integration covers a single economic space, coordinated foreign and defence policy,
+  and freedom of movement and residence for citizens of both states.
+notes: Distinct from the Eurasian Economic Union (EAEU) and broader Eurasian Union (EAU)
+  projects. Other countries may accede under treaty provisions, but only Russia and Belarus
+  are members. The Parliamentary Assembly (BELRUS) performs interim legislative functions
+  pending elections to a permanent Union State parliament. Headquarters at 8/5 Staraya
+  Square, Moscow.
 tags:
 - BRU
 - aid
+- belarus
 - commerce
 - cooperation
 - development
 - economic
 - economy
+- political
 - regional
 - regional_cooperation
 - russia
@@ -43,14 +94,17 @@ topics:
   name: Development
 - key: economy
   name: Economy
+- key: political
+  name: Political
 - key: regional_cooperation
   name: Regional Cooperation
 - key: trade
   name: Trade
-wikidata_id: Q166110
 other_names:
 - id: ar
   name: دولة الاتحاد
+- id: be
+  name: Саюзная дзяржава
 - id: de
   name: Russisch-Belarussische Union
 - id: en
@@ -65,12 +119,45 @@ other_names:
   name: Союзное государство
 - id: zh
   name: 俄白联盟国
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: legal_status
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q166110
   license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
+- field: suborganizations
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Union_State
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -81,18 +168,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q166110
-  license: CC0
-acronyms:
-- lang: zh
-  value: 俄白联盟
-- lang: ru
-  value: СРБ
-- lang: ru
-  value: СГРБ
-- lang: de
-  value: SGBR
-founded: '1996-01-01'

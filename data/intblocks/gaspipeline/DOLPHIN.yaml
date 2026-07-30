@@ -2,9 +2,17 @@ id: DOLPHIN
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2006'
+geographic_scope: regional
+regions:
+- Middle East
 links:
+- url: https://www.dolphinenergy.com/
+  type: website
 - url: https://en.wikipedia.org/wiki/Dolphin_Gas_Project
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q5289627
+  type: wikidata
 name: Dolphin Gas Project
 includes:
 - id: QA
@@ -20,16 +28,24 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: Dolphin Gas Project is an international gaspipeline body with 3 members.
+wikidata_id: Q5289627
+description: Cross-border natural gas project linking Qatar's North Field to the United Arab Emirates and Oman. Operated
+  by Dolphin Energy Limited, it includes a 364 km subsea export pipeline from Ras Laffan, Qatar, to Taweelah, Abu Dhabi,
+  plus onshore distribution lines to Oman. The Gulf Cooperation Council's first cross-border refined gas transmission network,
+  commissioned in 2006–2007.
 tags:
 - DOLPHIN
 - dolphin
 - economy
 - energy
 - gaspipeline
+- gcc
+- oman
 - pipeline
+- qatar
 - transport
 - transportation
+- uae
 topics:
 - key: economy
   name: Economy
@@ -37,7 +53,40 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: ar
+  name: مشروع غاز الدولفين
+- id: en
+  name: Dolphin Gas Project
+- id: ja
+  name: ドルフィン・ガス・プロジェクト
+- id: ml
+  name: ഡോൾഫിൻ വാതക പ്രൊജക്റ്റ്
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5289627
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Dolphin_Gas_Project
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5289627
+  license: CC0
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5289627
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Dolphin_Gas_Project
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+last_verified: '2026-07-29'

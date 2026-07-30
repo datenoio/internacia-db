@@ -1,88 +1,182 @@
 id: RECOFI
+name: Regional Commission for Fisheries
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1999-11-11'
+active_period:
+  start: '2001-02-26'
+geographic_scope: regional
+regions:
+- Middle East
 languages:
 - en
+- ar
 links:
-- url: http://www.fao.org/fishery/rfb/recofi/en
+- url: https://www.fao.org/neareast/about/regional-commissions/regional-commission-for-fisheries-recofi/en
+  type: website
+- url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/133/
+  type: website
+- url: https://faolex.fao.org/treaty/docs/tre000021E.pdf
   type: website
 - url: https://www.wikidata.org/wiki/Q134724812
   type: wikidata
-name: Regional Commission for Fisheries
+acronyms:
+- lang: en
+  value: RECOFI
+legal_status: intergovernmental
+recognition_status: FAO Article XIV statutory body established by Agreement adopted at Rome on 11 November 1999 (FAO Council Resolution 1/117); agreement entered into force 26 February 2001; secretariat provided by FAO with seat at the FAO Regional Office for the Near East in Cairo
+headquarters:
+  city: Cairo
+  country: EG
+  note: Seat at FAO Regional Office for the Near East and North Africa
 includes:
 - id: BH
   name: Bahrain
   type: country
   status: member
+  joined: '2008-10-17'
 - id: IR
   name: Iran, Islamic Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-12-06'
 - id: IQ
   name: Iraq
   type: country
   status: member
+  joined: '2008-08-20'
 - id: KW
   name: Kuwait
   type: country
   status: member
+  joined: '2006-05-19'
 - id: OM
   name: Oman
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-12-19'
 - id: QA
   name: Qatar
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-07-12'
 - id: SA
   name: Saudi Arabia
   type: country
-  status: member
+  status: founding_member
+  joined: '2000-11-03'
 - id: AE
   name: United Arab Emirates
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-02-26'
+founding_members:
+- BH
+- IR
+- IQ
+- KW
+- OM
+- QA
+- SA
+- AE
 membership_count: 8
-description: Regional Commission for Fisheries is an international food body with
-  8 members.
+description: Regional fishery commission under FAO Article XIV coordinating conservation and management of living marine resources and aquaculture development in the Persian Gulf and Sea of Oman. The eight coastal member states — Bahrain, Iran, Iraq, Kuwait, Oman, Qatar, Saudi Arabia, and the United Arab Emirates — adopt management recommendations on catch limits, gear rules, and closed seasons through a precautionary approach. RECOFI replaced the former Gulf fisheries committee of the Indian Ocean Fishery Commission and maintains working groups on fisheries management and aquaculture.
 tags:
 - RECOFI
 - agriculture
+- aquaculture
 - commission
 - cooperation
 - environment
 - farming
 - fisheries
 - food
+- fao
+- gulf
+- intergovernmental
 - nature
+- persian-gulf
 - regional
 - regional_cooperation
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q134724812
 other_names:
-- id: zh
-  name: 区域渔业委员会
 - id: en
   name: Regional Commission for Fisheries
-acronyms:
-- lang: en
-  value: RECOFI
+- id: ar
+  name: اللجنة الإقليمية للمصايد
+- id: fr
+  name: Commission régionale des pêches
+- id: es
+  name: Comisión Regional de Pesca
+- id: zh
+  name: 区域渔业委员会
+wikidata_id: Q134724812
+notes: All eight Gulf and Sea of Oman coastal states signed the 1999 agreement; acceptance instruments were deposited between July 2000 and October 2008, with Qatar, Saudi Arabia, and the United Arab Emirates triggering entry into force on 26 February 2001. Bahrain and Iraq were the last to accept; Kuwait participated in the first session in October 2001 before depositing acceptance in 2006. Subsidiary bodies include the Working Group on Fisheries Management and the Working Group on Aquaculture.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO; ECOLEX treaty status
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/133/
+- field: description
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/neareast/about/regional-commissions/regional-commission-for-fisheries-recofi/en
+- field: founded
+  source: FAO Agreement; ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/treaty/docs/tre000021E.pdf
+- field: active_period
+  source: FAO Fisheries Report No. 713; ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/agreement-for-the-establishment-of-the-regional-commission-for-fisheries-recofi-tre-001333/
+- field: legal_status
+  source: FAO statutory bodies
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/133/
+- field: recognition_status
+  source: FAO statutory bodies; FAO Agreement
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/unfao/govbodies/gsb-subject-matter/statutory-bodies-details/en/c/133/
+- field: geographic_scope
+  source: FAO
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/neareast/about/regional-commissions/regional-commission-for-fisheries-recofi/en
+- field: headquarters
+  source: FAO Agreement
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/treaty/docs/tre000021E.pdf
+- field: founding_members
+  source: FAO Agreement
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/treaty/docs/tre000021E.pdf
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724812
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+- field: other_names
+  source: ECOLEX; FAO Agreement
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/agreement-for-the-establishment-of-the-regional-commission-for-fisheries-recofi-tre-001333/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134724812
+  license: CC0
+- field: notes
+  source: FAO Fisheries Report No. 713; ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://openknowledge.fao.org/server/api/core/bitstreams/306fd64f-0a33-440f-ad46-dd77ebef9f2a/content

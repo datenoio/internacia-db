@@ -72,6 +72,7 @@ fields:
   provenance:
     priority: low
     requirement: mandatory
+    min_count: 4
     # 2026-07: 51/1071 missing (4.8%).
     max_null_rate: 0.05
     mode: warn
@@ -127,6 +128,7 @@ references:
     - Q458      # European Union: EUU is the World Bank grouping mirror of EU
     - Q4230     # UNASUR/USAN: duplicate records pending maintainer merge
     - Q1197115  # UKUSA Agreement: NINEEYES extension has no separate item
+    - Q7122288  # Pacific Alliance: PACALL trade roster vs PACIFICALLIANCE fta/economic record
     - Q816706   # SADC: SADCFTA free trade area has no separate item
     - Q5153892  # Commonwealth of Learning: COMMLEARN/COL pending maintainer merge
     - Q2863003  # ABCANZ Armies: ABCANZ/ABCZNZ pending maintainer merge

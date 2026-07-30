@@ -1,14 +1,29 @@
 id: CAEU
+name: Council of Arab Economic Unity
 blocktype:
 - economic
 status: formal
+founded: '1957-06-03'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
+languages:
+- ar
 links:
+- url: https://www.ca-eu.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q12239049
   type: wikidata
-name: Council of Arab Economic Unity
-founded: '1957'
+acronyms:
+- lang: en
+  value: CAEU
+- lang: ar
+  value: مجلس الوحدة الاقتصادية العربية
+- lang: fr
+  value: CUEA
 headquarters:
   city: Cairo
   country: EG
@@ -27,19 +42,23 @@ includes:
 - id: EG
   name: Egypt
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-04-30'
 - id: IQ
   name: Iraq
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-04-30'
 - id: JO
   name: Jordan
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-04-30'
 - id: KW
   name: Kuwait
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-04-30'
 - id: LB
   name: Lebanon
   type: country
@@ -75,7 +94,8 @@ includes:
 - id: SY
   name: Syrian Arab Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-04-30'
 - id: TN
   name: Tunisia
   type: country
@@ -88,42 +108,109 @@ includes:
   name: Yemen
   type: country
   status: member
+founding_members:
+- EG
+- IQ
+- JO
+- KW
+- SY
 membership_count: 18
+legal_status: intergovernmental
+partof:
+  id: LAS
+  name: League of Arab States
 wikidata_id: Q12239049
-description: Organization.
+description: >-
+  Arab League–affiliated intergovernmental body established under the Economic Unity Agreement among Arab League
+  states (drawn up 3 June 1957; entered into force 30 April 1964 for the first ratifying parties). Headquartered in
+  Cairo, it works to organize and consolidate economic relations among member states, including freer movement of
+  persons, capital, and goods, and progressive customs and policy coordination toward Arab economic unity.
+notes: >-
+  The permanent Council was constituted in 1964 after the 1957 Economic Unity Agreement entered into force for
+  Jordan, Iraq, Syria, Egypt (then the United Arab Republic), and Kuwait. Wikipedia lists Comoros, Djibouti,
+  Mauritania, and Somalia as candidates; they are not recorded here as members. Distinct from the Greater Arab Free
+  Trade Area (GAFTA), which is supervised by the Arab League Economic and Social Council.
 tags:
 - CAEU
-- aid
 - arab
+- arab-league
 - commerce
 - council
 - development
 - economic
 - economy
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: development
   name: Development
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: ar
   name: مجلس الوحدة الاقتصادية العربية
-- id: zh
-  name: 阿拉伯經濟統一委員會
+- id: ca
+  name: Consell per a la Unió Econòmica Àrab
 - id: en
   name: Council of Arab Economic Unity
 - id: es
-  name: GAFTA
+  name: Consejo de la Unidad Económica Árabe
+- id: fa
+  name: شورای وحدت اقتصادی عرب
+- id: fr
+  name: Conseil de l'unité économique arabe
+- id: it
+  name: Consiglio dell'Unità Economica Araba
+- id: uk
+  name: Рада арабської економічної єдності
+- id: zh
+  name: 阿拉伯經濟統一委員會
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: founding_members
+  source: WTO/GATT historical deposit (Economic Unity Agreement)
+  retrieved_at: '2026-07-29'
+  url: https://www.wto.org/gatt_docs/english/sulpdf/90780034.pdf
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12239049
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ca-eu.org/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12239049
+  license: CC0
+- field: acronyms
+  source: UIA Yearbook / Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://uia.org/s/or/en/1100045925
+- field: partof
+  source: official website
+  retrieved_at: '2026-07-29'
+  url: https://www.ca-eu.org/

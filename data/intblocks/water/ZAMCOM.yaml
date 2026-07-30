@@ -6,69 +6,95 @@ blocktype:
 status: formal
 languages:
 - en
+- pt
 links:
 - url: https://www.zambezicommission.org/
+  type: website
+- url: https://www.zambezicommission.org/about-us/
+  type: website
+- url: https://africanlii.org/en/akn/aa-sadc/act/agreement/2004/establishment-of-the-zambezi-watercourse-commission/eng@2004-07-13
   type: website
 - url: https://en.wikipedia.org/wiki/Zambezi_Watercourse_Commission
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q8065663
   type: wikidata
 name: Zambezi Watercourse Commission
-founded: '2004'
+founded: '2004-07-13'
 headquarters:
   city: Harare
   country: ZW
 geographic_scope: regional
 regions:
 - Africa
+founding_members:
+- AO
+- BW
+- MW
+- MZ
+- NA
+- TZ
+- ZW
 includes:
 - id: AO
   name: Angola
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: BW
   name: Botswana
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: MW
   name: Malawi
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: NA
   name: Namibia
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: TZ
   name: Tanzania
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 - id: ZM
   name: Zambia
   type: country
   status: member
+  joined: '2013'
 - id: ZW
   name: Zimbabwe
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-07-13'
 membership_count: 8
 wikidata_id: Q8065663
 legal_status: intergovernmental
 acronyms:
 - lang: en
   value: ZAMCOM
-description: Commission for cooperative management and development of the Zambezi watercourse.
+description: Intergovernmental river basin commission for equitable and sustainable management and development of the Zambezi watercourse among eight riparian states under the 2004 ZAMCOM Agreement.
 tags:
 - Southern-Africa
 - ZAMCOM
 - Zambezi
+- basin
+- intorg
+- transboundary
 - water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
 other_names:
 - id: ar
   name: لجنة مجرى نهر زمبيزي المائي
@@ -79,6 +105,22 @@ other_names:
 - id: fr
   name: Zambezi Watercourse Commission
 provenance:
+- field: includes
+  source: ZAMCOM Agreement (2004)
+  retrieved_at: '2026-07-29'
+  url: https://africanlii.org/en/akn/aa-sadc/act/agreement/2004/establishment-of-the-zambezi-watercourse-commission/eng@2004-07-13
+- field: founding_members
+  source: ZAMCOM Agreement (2004)
+  retrieved_at: '2026-07-29'
+  url: https://africanlii.org/en/akn/aa-sadc/act/agreement/2004/establishment-of-the-zambezi-watercourse-commission/eng@2004-07-13
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.zambezicommission.org/about-us/
+- field: founded
+  source: ZAMCOM Agreement (2004)
+  retrieved_at: '2026-07-29'
+  url: https://africanlii.org/en/akn/aa-sadc/act/agreement/2004/establishment-of-the-zambezi-watercourse-commission/eng@2004-07-13
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -91,13 +133,13 @@ provenance:
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.zambezicommission.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.zambezicommission.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.zambezicommission.org/

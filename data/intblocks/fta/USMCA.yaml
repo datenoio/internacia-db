@@ -2,6 +2,12 @@ id: USMCA
 blocktype:
 - fta
 status: formal
+founded: '2018-11-30'
+active_period:
+  start: '2020-07-01'
+geographic_scope: regional
+regions:
+- North America
 languages:
 - en
 - es
@@ -9,47 +15,70 @@ languages:
 links:
 - url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement
   type: website
+- url: https://international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/cusma-aceum/index.aspx?lang=eng
+  type: website
+- url: https://www.gob.mx/t-mec
+  type: website
+- url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement/united-states-mexico-canada-agreement-text
+  type: website
 - url: https://en.wikipedia.org/wiki/United_States%E2%80%93Mexico%E2%80%93Canada_Agreement
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q56839716
   type: wikidata
 name: United States-Mexico-Canada Agreement
-founded: '2020'
-geographic_scope: regional
-regions:
-- North America
 acronyms:
 - lang: en
   value: USMCA
+- lang: en-ca
+  value: CUSMA
 - lang: es
   value: T-MEC
+- lang: es
+  value: AEUMC
 - lang: fr
   value: ACEUM
+legal_status: free trade agreement
+predecessor: NAFTA
+recognition_status: Trilateral free trade agreement signed on 30 November 2018; entered into force on 1 July 2020 after completion
+  of domestic ratification procedures by all three parties, replacing the North American Free Trade Agreement (NAFTA)
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-11-30'
 - id: MX
   name: Mexico
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-11-30'
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2018-11-30'
+founding_members:
+- CA
+- MX
+- US
 membership_count: 3
-description: United States-Mexico-Canada Agreement is an international fta body with
-  3 members.
+description: Regional free trade agreement among Canada, Mexico, and the United States, signed on 30 November 2018 and entered
+  into force on 1 July 2020, replacing the North American Free Trade Agreement (NAFTA). The agreement modernizes rules of
+  origin for automobiles, strengthens labor and environmental standards, adds chapters on digital trade and anticorruption,
+  and creates a more level playing field for North American workers, farmers, and businesses.
 tags:
 - USMCA
+- CUSMA
+- T-MEC
+- ACEUM
 - america
 - canada
 - commerce
 - economy
 - fta
+- free
 - mexico
-- north
+- north america
 - trade
 - united
 - states
@@ -58,23 +87,63 @@ topics:
   name: Economy
 - key: trade
   name: Trade
+- key: regional_cooperation
+  name: Regional Cooperation
 wikidata_id: Q56839716
 other_names:
 - id: ar
   name: الاتفاقية بين الولايات المتحدة والمكسيك وكندا
-- id: zh
-  name: 美國-墨西哥-加拿大協定
+- id: de
+  name: USA-Mexiko-Kanada-Abkommen
 - id: en
   name: United States–Mexico–Canada Agreement
-- id: fr
-  name: accord Canada–États-Unis–Mexique
+- id: en-ca
+  name: Canada–United States–Mexico Agreement
 - id: es
   name: Tratado entre México, Estados Unidos y Canadá
+- id: fr
+  name: accord Canada–États-Unis–Mexique
+- id: pt
+  name: Acordo Estados Unidos-México-Canadá
+- id: zh
+  name: 美國-墨西哥-加拿大協定
 provenance:
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement
+- field: founded
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q56839716
+- field: active_period
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement/united-states-mexico-canada-agreement-text
+- field: predecessor
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q56839716
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/cusma-aceum/index.aspx?lang=eng

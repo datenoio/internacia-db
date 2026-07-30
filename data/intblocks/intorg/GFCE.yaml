@@ -1,68 +1,47 @@
 id: GFCE
+name: Global Forum on Cyber Expertise
 blocktype:
 - intorg
 - forum
 - cybersecurity
 status: formal
+founded: '2015'
+active_period:
+  start: '2015-04-16'
+geographic_scope: global
+regions:
+- Global
 languages:
 - en
 links:
 - url: https://thegfce.org/
   type: website
+- url: https://thegfce.org/member-and-partner/
+  type: website
 - url: https://en.wikipedia.org/wiki/Global_Forum_on_Cyber_Expertise
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q30337375
   type: wikidata
-name: Global Forum on Cyber Expertise
-founded: '2015'
-headquarters:
-  city: The Hague
-  country: NL
-geographic_scope: global
-regions:
-- Global
-membership_count: 194
-wikidata_id: Q30337375
-legal_status: partnership
 acronyms:
 - lang: en
   value: GFCE
-description: Global platform for cyber capacity building, bringing together governments, international organizations, and
-  private sector partners.
-tags:
-- GFCE
-- capacity-building
-- cybersecurity
-topics:
-- key: cybersecurity
-  name: Cybersecurity
+legal_status: partnership
+recognition_status: Voluntary multi-stakeholder platform for cyber capacity building launched on 16 April 2015 at the Global Conference on Cyberspace in The Hague by the Netherlands and 41 high-level representatives from governments, business, and international organizations; GFCE Members comprise governments, territories, intergovernmental organizations, and private companies, while GFCE Partners are endorsed experts from NGOs, civil society, academia, and the technical community
+headquarters:
+  city: The Hague
+  country: NL
+  coordinates:
+    lat: 52.0892
+    lng: 4.3297
+  note: Wilhelmina van Pruisenweg 104, 8th floor
+secretariat:
+  location: The Hague, Netherlands
+  organization: GFCE Secretariat
+wikidata_id: Q30337375
+description: Global multi-stakeholder platform for international cooperation on cyber capacity building, bringing together governments, intergovernmental organizations, private companies, and endorsed partners from civil society, academia, and the technical community. Established in The Hague in April 2015, the GFCE coordinates working groups on cybersecurity policy, incident management, cybercrime, skills and culture, and critical infrastructure protection, and hosts the Cybil Knowledge Portal. As of August 2025 the community exceeds 260 members and partners worldwide; includes lists 86 governments and territories plus 19 mapped intergovernmental members from the official directory.
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
 - id: AL
   name: Albania
-  type: country
-  status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AO
-  name: Angola
   type: country
   status: member
 - id: AR
@@ -77,16 +56,8 @@ includes:
   name: Australia
   type: country
   status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BB
-  name: Barbados
+- id: AW
+  name: Aruba
   type: country
   status: member
 - id: BD
@@ -97,40 +68,8 @@ includes:
   name: Belgium
   type: country
   status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
 - id: BJ
   name: Benin
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: BS
-  name: Bahamas, The
   type: country
   status: member
 - id: BT
@@ -141,24 +80,8 @@ includes:
   name: Botswana
   type: country
   status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
 - id: CA
   name: Canada
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
   type: country
   status: member
 - id: CG
@@ -185,28 +108,12 @@ includes:
   name: Cameroon
   type: country
   status: member
-- id: CN
-  name: China
-  type: country
-  status: member
 - id: CO
   name: Colombia
   type: country
   status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
+- id: CW
+  name: Curaçao
   type: country
   status: member
 - id: CZ
@@ -217,14 +124,6 @@ includes:
   name: Germany
   type: country
   status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
 - id: DM
   name: Dominica
   type: country
@@ -233,24 +132,12 @@ includes:
   name: Dominican Republic
   type: country
   status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: EC
   name: Ecuador
   type: country
   status: member
 - id: EE
   name: Estonia
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
   type: country
   status: member
 - id: ES
@@ -265,14 +152,6 @@ includes:
   name: Finland
   type: country
   status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
 - id: FR
   name: France
   type: country
@@ -285,14 +164,6 @@ includes:
   name: United Kingdom
   type: country
   status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
 - id: GH
   name: Ghana
   type: country
@@ -301,40 +172,8 @@ includes:
   name: Gambia, The
   type: country
   status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
 - id: GT
   name: Guatemala
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: HT
-  name: Haiti
   type: country
   status: member
 - id: HU
@@ -345,10 +184,6 @@ includes:
   name: Indonesia
   type: country
   status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
 - id: IL
   name: Israel
   type: country
@@ -357,28 +192,8 @@ includes:
   name: India
   type: country
   status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
 - id: IT
   name: Italy
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: JO
-  name: Jordan
   type: country
   status: member
 - id: JP
@@ -389,56 +204,12 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
-- id: KW
-  name: Kuwait
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
+- id: KV
+  name: Kosovo
   type: country
   status: member
 - id: LR
@@ -449,10 +220,6 @@ includes:
   name: Lesotho
   type: country
   status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
 - id: LU
   name: Luxembourg
   type: country
@@ -461,68 +228,20 @@ includes:
   name: Latvia
   type: country
   status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
 - id: MA
   name: Morocco
-  type: country
-  status: member
-- id: MC
-  name: Monaco
   type: country
   status: member
 - id: MD
   name: Moldova
   type: country
   status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
 - id: MK
   name: Macedonia, FYR
   type: country
   status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
 - id: MU
   name: Mauritius
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MW
-  name: Malawi
   type: country
   status: member
 - id: MX
@@ -541,48 +260,20 @@ includes:
   name: Namibia
   type: country
   status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
 - id: NG
   name: Nigeria
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
   type: country
   status: member
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
 - id: 'NO'
   name: Norway
   type: country
   status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
-  type: country
-  status: member
-- id: OM
-  name: Oman
-  type: country
-  status: member
-- id: PA
-  name: Panama
   type: country
   status: member
 - id: PE
@@ -601,26 +292,6 @@ includes:
   name: Pakistan
   type: country
   status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
 - id: RO
   name: Romania
   type: country
@@ -629,28 +300,12 @@ includes:
   name: Serbia
   type: country
   status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
 - id: RW
   name: Rwanda
   type: country
   status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
 - id: SC
   name: Seychelles
-  type: country
-  status: member
-- id: SD
-  name: Sudan
   type: country
   status: member
 - id: SE
@@ -661,20 +316,8 @@ includes:
   name: Singapore
   type: country
   status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
 - id: SL
   name: Sierra Leone
-  type: country
-  status: member
-- id: SM
-  name: San Marino
   type: country
   status: member
 - id: SN
@@ -689,48 +332,16 @@ includes:
   name: Suriname
   type: country
   status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: SZ
-  name: Swaziland
+- id: SX
+  name: Sint Maarten
   type: country
   status: member
 - id: TD
   name: Chad
   type: country
   status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
 - id: TH
   name: Thailand
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
   type: country
   status: member
 - id: TN
@@ -745,12 +356,8 @@ includes:
   name: Turkey
   type: country
   status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
+- id: TW
+  name: Taiwan
   type: country
   status: member
 - id: TZ
@@ -761,10 +368,6 @@ includes:
   name: Ukraine
   type: country
   status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
 - id: US
   name: United States
   type: country
@@ -773,56 +376,133 @@ includes:
   name: Uruguay
   type: country
   status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
 - id: VN
   name: Vietnam
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
   type: country
   status: member
 - id: WS
   name: Samoa
   type: country
   status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
+- id: AFRIPOL
+  name: African Union Mechanism for Police Cooperation
+  type: organization
   status: member
-- id: ZA
-  name: South Africa
-  type: country
+- id: AFUNION
+  name: African Union
+  type: organization
   status: member
-- id: ZM
-  name: Zambia
-  type: country
+- id: ATT
+  name: Arms Trade Treaty
+  type: organization
   status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
+- id: COE
+  name: Council of Europe
+  type: organization
   status: member
+- id: CTO
+  name: Caribbean Tourism Organization
+  type: organization
+  status: member
+- id: ECCAS
+  name: Economic Community of Central African States
+  type: organization
+  status: member
+- id: ECOWAS
+  name: Economic Community of West African States
+  type: organization
+  status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
+- id: EUROPOL
+  name: European Police Office
+  type: organization
+  status: member
+- id: ICC
+  name: International Cricket Council
+  type: organization
+  status: member
+- id: INTERPOL
+  name: International Criminal Police Organization
+  type: organization
+  status: member
+- id: ITU
+  name: International Telecommunication Union
+  type: organization
+  status: member
+- id: NEPAD
+  name: New Partnership for Africa's Development
+  type: organization
+  status: member
+- id: OAS
+  name: Organization of American States
+  type: organization
+  status: member
+- id: OSCE
+  name: Organization for Security and Co-operation in Europe
+  type: organization
+  status: member
+- id: RCC
+  name: Regional Cooperation Council
+  type: organization
+  status: member
+- id: UNDP
+  name: United Nations Development Programme
+  type: organization
+  status: member
+- id: UNODC
+  name: United Nations Office on Drugs and Crime
+  type: organization
+  status: member
+- id: WB
+  name: World Bank
+  type: organization
+  status: member
+founding_members:
+- NL
+membership_count: 105
+tags:
+- GFCE
+- capacity-building
+- cybersecurity
+- cyber-capacity-building
+topics:
+- key: cybersecurity
+  name: Cybersecurity
+notes: membership_count reflects governments, territories, and intergovernmental organizations mapped from the GFCE member directory (August 2025 sitemap); private-sector members, academic institutions, and endorsed NGO partners are not individually listed in includes because they lack stable Internacia entity identifiers.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: GFCE official member and partner directory
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/member-and-partner/
+- field: membership_count
+  source: GFCE official member and partner directory
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/member-and-partner/
+- field: description
+  source: GFCE official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/about-gfce/our-story/
+- field: recognition_status
+  source: GFCE official website
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/become-a-member-or-partner/
+- field: headquarters
+  source: GFCE official website
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/become-a-member-or-partner/
+- field: founded
+  source: Wikipedia; GFCE official website
+  retrieved_at: '2026-07-29'
+  url: https://thegfce.org/about-gfce/our-story/
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: GFCE official website
+  retrieved_at: '2026-07-29'
   url: https://thegfce.org/
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://thegfce.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: GFCE official website
+  retrieved_at: '2026-07-29'
   url: https://thegfce.org/

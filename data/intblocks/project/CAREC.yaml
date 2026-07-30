@@ -3,16 +3,35 @@ blocktype:
 - project
 - transport
 status: formal
+partof: ADB
+founded: '1997'
+geographic_scope: regional
+regions:
+- Central Asia
+- Caucasus
+- South Asia
+- East Asia
 languages:
 - en
+- ru
+- zh
 links:
 - url: https://carecprogram.org/
+  type: website
+- url: https://carecprogram.org/?page_id=2
+  type: website
+- url: https://www.adb.org/what-we-do/topics/regional-cooperation/carec
   type: website
 - url: https://en.wikipedia.org/wiki/Central_Asia_Regional_Economic_Cooperation_Program
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q5060362
   type: wikidata
 name: Central Asia Regional Economic Cooperation Program
+legal_status: multilateral development partnership
+secretariat:
+  location: Mandaluyong, Metro Manila, Philippines
+  organization: CAREC Secretariat, Asian Development Bank
+  note: Established at ADB headquarters in 2000
 headquarters:
   city: Mandaluyong
   country: PH
@@ -24,60 +43,97 @@ includes:
   name: Afghanistan
   type: country
   status: member
+  joined: '2005'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '2003'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '1997'
 - id: GE
   name: Georgia
   type: country
   status: member
+  joined: '2016'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '1997'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '1997'
 - id: MN
   name: Mongolia
   type: country
   status: member
+  joined: '2003'
 - id: PK
   name: Pakistan
   type: country
   status: member
+  joined: '2010'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1998'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
+  joined: '2010'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  joined: '1997'
+founding_members:
+- CN
+- KZ
+- KG
+- UZ
 membership_count: 11
 wikidata_id: Q5060362
-description: Asian Development Bank program.
+description: Asian Development Bank–hosted regional cooperation program linking eleven countries across Central
+  Asia, the Caucasus, South Asia, and adjoining parts of East Asia through coordinated infrastructure investment
+  and policy dialogue. Launched in 1997 among Kazakhstan, the Kyrgyz Republic, Uzbekistan, and the Xinjiang
+  region of China, it has expanded through successive accessions to cover Afghanistan, Azerbaijan, Georgia,
+  Mongolia, Pakistan, Tajikistan, and Turkmenistan. CAREC prioritises six multimodal transport corridors,
+  energy connectivity, trade facilitation, and customs harmonisation under the CAREC 2030 strategic framework,
+  mobilising development finance from ADB and partner institutions including AIIB, EBRD, IMF, IsDB, UNDP, and
+  the World Bank.
 tags:
 - CAREC
 - asia
 - central
+- connectivity
 - cooperation
+- energy
 - project
 - regional
 - regional_cooperation
+- trade
+- transport
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+- key: transport
+  name: Transport
+- key: energy
+  name: Energy
+- key: trade
+  name: Trade
+- key: connectivity
+  name: Connectivity
+- key: development
+  name: Development
 other_names:
 - id: ar
   name: برنامج التعاون الاقتصادي الإقليمي لآسيا الوسطى
@@ -89,8 +145,44 @@ other_names:
   name: Central Asia Regional Economic Cooperation Program
 - id: ru
   name: Центральноазиатское региональное экономическое сотрудничество
+notes: Georgia participated as an observer at the 14th Ministerial Conference in 2015 before becoming the
+  eleventh member in 2016. ADB placed its regular assistance to Afghanistan on hold effective 15 August 2021
+  and has supported the Afghan people through a special financing arrangement with the United Nations since
+  2022. The CAREC Institute, owned and managed by member countries, provides knowledge and capacity-building
+  services; its physical base opened in Urumqi, Xinjiang, in 2015.
+last_verified: '2026-07-30'
 provenance:
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://carecprogram.org/?page_id=31
+  license: CC BY 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://carecprogram.org/?page_id=22017
+  license: CC BY 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://carecprogram.org/?page_id=22017
+  license: CC BY 4.0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://carecprogram.org/?page_id=22017
+  license: CC BY 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.adb.org/what-we-do/topics/regional-cooperation/carec
+  license: CC BY 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://carecprogram.org/?page_id=2
+  license: CC BY 4.0
+- field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
@@ -100,10 +192,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://carecprogram.org/
 acronyms:
 - lang: en
   value: CAREC

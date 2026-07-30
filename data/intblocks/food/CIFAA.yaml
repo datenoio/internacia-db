@@ -1,16 +1,44 @@
 id: CIFAA
+name: Committee for Inland Fisheries and Aquaculture of Africa
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1971-06'
+active_period:
+  start: '1971-06'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
+- fr
 links:
-- url: http://www.fao.org/fishery/rfb/cifaa/en
+- url: https://www.fao.org/fishery/en/organization/rfb/cifaa
+  type: website
+- url: https://www.fao.org/africa/events/events-detail/17th-session-of-the-Committee-for-Inland-Fisheries-and-Aquaculture-for-Africa-(CIFAA)-/en
+  type: website
+- url: https://www.fao.org/4/i1493e/i1493e03.pdf
   type: website
 - url: https://www.wikidata.org/wiki/Q134723795
   type: wikidata
-name: Committee for Inland Fisheries and Aquaculture of Africa
+- url: https://uia.org/s/or/en/1100047283/
+  type: website
+acronyms:
+- lang: en
+  value: CIFAA
+- lang: en
+  value: CIFA
+- lang: fr
+  value: CPCAA
+- lang: fr
+  value: CPCA
+legal_status: intergovernmental
+recognition_status: FAO Article VI-2 statutory body established by the FAO Council at its 56th session (Rome, 7–18 June 1971, Resolution 1/56) as the Committee for Inland Fisheries of Africa (CIFA); renamed Committee for Inland Fisheries and Aquaculture of Africa (CIFAA) by the FAO Council in 2007 following the Committee’s 14th session recommendation; secretariat provided by the FAO Regional Office for Africa
+headquarters:
+  city: Accra
+  country: GH
+  note: Secretariat at FAO Regional Office for Africa (RAF)
 includes:
 - id: BJ
   name: Benin
@@ -161,44 +189,97 @@ includes:
   type: country
   status: member
 membership_count: 37
-description: Committee for Inland Fisheries and Aquaculture of Africa is an international
-  food body with 37 members.
+description: FAO regional fishery advisory body under Article VI-2 promoting sustainable development, management, utilization, and conservation of inland fisheries and aquaculture across Africa. Established in June 1971 as the Committee for Inland Fisheries of Africa (CIFA) and renamed in 2007 to reflect its aquaculture mandate, CIFAA convenes biennial sessions of its 37 African member states and links national programmes with continental partners such as NEPAD and the Aquaculture Network for Africa (ANAF). The secretariat is hosted by the FAO Regional Office for Africa in Accra.
 tags:
 - CIFAA
+- CIFA
+- CPCAA
+- africa
 - agriculture
+- aquaculture
 - committee
-- cultural
-- culture
 - environment
+- fao
 - farming
 - fisheries
 - food
 - inland
+- intergovernmental
 - nature
+- regional_cooperation
 topics:
 - key: agriculture
   name: Agriculture
-- key: culture
-  name: Culture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q134723795
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 非洲内陆渔业和水产养殖委员会
 - id: en
   name: Committee for Inland Fisheries and Aquaculture of Africa
-acronyms:
-- lang: en
-  value: CIFAA
+- id: en
+  name: Committee for Inland Fisheries of Africa
+- id: fr
+  name: Comité des pêches continentales et de l'aquaculture pour l'Afrique
+- id: fr
+  name: Comité des pêches continentales pour l'Afrique
+- id: zh
+  name: 非洲内陆渔业和水产养殖委员会
+wikidata_id: Q134723795
+notes: Created by FAO Council Resolution 1/56 (56th session, June 1971); first session held November/December 1972. The 14th session (Accra, November 2006) unanimously recommended adding aquaculture to the title; the FAO Council endorsed the rename to CIFAA at its 133rd session in November 2007. Membership is open to African FAO member nations selected for active interest in inland fishery development. Ordinary sessions are normally biennial (e.g. 17th session Banjul 2017; 18th Bamako 2019; 20th Dakar 2024).
+last_verified: '2026-07-29'
 provenance:
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: FAO Fisheries and Aquaculture technical paper / RFB directory
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/i1493e/i1493e03.pdf
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO Regional Office for Africa
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/africa/events/events-detail/17th-session-of-the-Committee-for-Inland-Fisheries-and-Aquaculture-for-Africa-(CIFAA)-/en
+- field: founded
+  source: FAO Council document CL 133/7
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf
+- field: active_period
+  source: FAO Council document CL 133/7
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf
+- field: legal_status
+  source: FAO Council document CL 133/7
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf
+- field: recognition_status
+  source: FAO Council document CL 133/7; FAO Regional Office for Africa
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf
+- field: geographic_scope
+  source: FAO Regional Office for Africa
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/africa/events/events-detail/17th-session-of-the-Committee-for-Inland-Fisheries-and-Aquaculture-for-Africa-(CIFAA)-/en
+- field: headquarters
+  source: FAO COFI statutory bodies report
+  retrieved_at: '2026-07-29'
+  url: https://openknowledge.fao.org/server/api/core/bitstreams/a75df05f-298a-4f38-84e7-9bcd9fad1f1a/content
+- field: acronyms
+  source: Wikidata; FAO Council document CL 133/7
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134723795
+  license: CC0
+- field: other_names
+  source: Wikidata; FAO Council document CL 133/7
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q134723795
+  license: CC0
+- field: notes
+  source: FAO Council document CL 133/7; FAO Regional Office for Africa
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/4/k0650/k0650.pdf

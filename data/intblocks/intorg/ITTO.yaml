@@ -1,18 +1,68 @@
 id: ITTO
+name: International Tropical Timber Organization
 blocktype:
 - intorg
+- environment
 status: formal
+founded: '1986'
+active_period:
+  start: '1986'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
+- es
+- ja
 links:
-- url: http://www.itto.int/
+- url: https://www.itto.int/
   type: website
-- url: https://en.wikipedia.org/wiki/International_Tropical_Timber_Agreement,_1994
+- url: https://www.itto.int/about_itto/
+  type: website
+- url: https://www.itto.int/about_itto/members/
+  type: website
+- url: https://en.wikipedia.org/wiki/International_Tropical_Timber_Organization
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q1667842
+- url: https://www.wikidata.org/wiki/Q869610
   type: wikidata
-name: International Tropical Timber Organization
+acronyms:
+- lang: en
+  value: ITTO
+- lang: es
+  value: OIMT
+- lang: fr
+  value: OIBT
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established under the International Tropical Timber Agreement (ITTA), originally negotiated under UNCTAD auspices; the ITTA 2006 entered into force on 7 December 2011 and governs current ITTO activities
+secretariat:
+  location: Yokohama, Japan
+  organization: ITTO Secretariat
+headquarters:
+  city: Yokohama
+  country: JP
+  coordinates:
+    lat: 35.4437
+    lng: 139.638
+membership_count: 76
+description: Intergovernmental organization that promotes the sustainable management and conservation of tropical forests and the expansion and diversification of international trade in tropical timber from sustainably managed and legally harvested forests. ITTO develops policy guidelines on sustainable forest management, funds field projects, collects and disseminates trade statistics, and assists members in implementing forest governance reforms. The International Tropical Timber Council (ITTC) is the governing body, with votes split equally between producer and consumer members. As of 2026 ITTO has 76 parties — 37 tropical timber-producing countries and 39 consumer members including the European Union — together accounting for about 80% of the world's tropical forests and 90% of global tropical timber trade.
+tags:
+- ITTO
+- forest
+- forestry
+- intorg
+- international
+- sustainable_development
+- timber
+- trade
+- tropical
+topics:
+- key: environment
+  name: Environment
+- key: trade
+  name: Trade
+- key: sustainable_development
+  name: Sustainable Development
 includes:
 - id: AO
   name: Angola
@@ -31,15 +81,15 @@ includes:
   type: country
   status: member
 - id: CG
-  name: Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
   type: country
   status: member
 - id: CD
-  name: Democratic Republic of the Congo
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: GA
@@ -107,7 +157,7 @@ includes:
   type: country
   status: member
 - id: VN
-  name: Viet Nam
+  name: Vietnam
   type: country
   status: member
 - id: BR
@@ -159,7 +209,7 @@ includes:
   type: country
   status: member
 - id: VE
-  name: Venezuela, Bolivarian Republic of
+  name: Venezuela, RB
   type: country
   status: member
 - id: AL
@@ -191,7 +241,7 @@ includes:
   type: country
   status: member
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
 - id: CH
@@ -227,7 +277,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: DK
@@ -299,7 +349,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -318,28 +368,62 @@ includes:
   name: European Union
   type: organization
   status: member
-membership_count: 76
-wikidata_id: Q1667842
-description: International organization.
-tags:
-- ITTO
-- international
-- intorg
-- timber
-- tropical
-topics:
-- key: economy
-  name: Economy
+wikidata_id: Q869610
 other_names:
 - id: ar
-  name: اتفاقية الأخشاب الاستوائية الدولية 1994
+  name: المنظمة الدولية للأخشاب الاستوائية
 - id: de
-  name: Internationales Tropenholz-Übereinkommen
+  name: International Tropical Timber Organization
 - id: en
-  name: International Tropical Timber Agreement, 1994
+  name: International Tropical Timber Organization
+- id: es
+  name: Organización Internacional de las Maderas Tropicales
+- id: fr
+  name: Organisation Internationale pour les Bois Tropicaux
+- id: it
+  name: Organizzazione internazionale per il legname tropicale
+- id: ja
+  name: 国際熱帯木材機関
+- id: zh
+  name: 国际热带木材组织
+notes: ITTO operates under the International Tropical Timber Agreement, 2006 (ITTA 2006), which entered into force on 7 December 2011. Membership comprises 37 producer countries (tropical timber exporters) and 39 consumer members (including the European Union as a distinct party alongside its 27 member states). Canada re-acceded to ITTA 2006 in November 2023.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ITTO official members directory
+  retrieved_at: '2026-07-29'
+  url: https://www.itto.int/about_itto/members/
+- field: membership_count
+  source: ITTO official members directory
+  retrieved_at: '2026-07-29'
+  url: https://www.itto.int/about_itto/members/
+- field: description
+  source: ITTO official website
+  retrieved_at: '2026-07-29'
+  url: https://www.itto.int/about_itto/
+- field: recognition_status
+  source: ITTO official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.itto.int/about_itto/
+- field: founded
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Tropical_Timber_Organization
+- field: headquarters
+  source: Wikipedia; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q869610
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q869610
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q869610
+  license: CC0
+- field: notes
+  source: ITTO International Tropical Timber Council documents
+  retrieved_at: '2026-07-29'
+  url: https://www.itto.int/direct/topics/topics_pdf_download/topics_id=8563&no=1&disp=inline

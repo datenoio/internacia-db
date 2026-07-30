@@ -1,13 +1,37 @@
 id: GBEP
+name: Global Bioenergy Partnership
 blocktype:
 - intorg
 status: formal
+founded: '2006-05-11'
+active_period:
+  start: '2006-05-11'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: http://www.globalbioenergy.org/
+- url: https://www.globalbioenergy.org/
   type: website
-name: Global Bioenergy Partnership
+- url: https://www.fao.org/in-action/global-bioenergy-partnership/en
+  type: website
+- url: https://www.fao.org/in-action/global-bioenergy-partnership/about/partners-and-observers/en
+  type: website
+- url: https://www.fao.org/in-action/global-bioenergy-partnership/about/history/en
+  type: website
+acronyms:
+- lang: en
+  value: GBEP
+legal_status: voluntary
+recognition_status: Voluntary international partnership launched on 11 May 2006 at the 14th session of the UN Commission on Sustainable Development in New York to implement G8+5 Gleneagles Plan of Action commitments on sustainable bioenergy deployment; hosted by the Food and Agriculture Organization (FAO) since inception; partnership status requires consensus of the GBEP Steering Committee and signature of the GBEP Terms of Reference
+headquarters:
+  city: Rome
+  country: IT
+secretariat:
+  location: Rome, Italy
+  organization: GBEP Secretariat (hosted by FAO)
+description: Voluntary global partnership hosted by FAO that brings together governments, international organizations, and civil society to promote sustainable bioenergy for climate change mitigation, energy access, and food security. Established in response to the 2005 Gleneagles Plan of Action, GBEP develops sustainability indicators, a common methodological framework for bioenergy lifecycle GHG analysis, and policy tools to support wider deployment of biomass and biofuels, particularly in developing countries. As of 2026, GBEP comprises 39 partners (23 national governments and 16 international organizations) and 56 observers (36 national governments and 19 international organizations).
 includes:
 - id: AR
   name: Argentina
@@ -101,22 +125,331 @@ includes:
   name: United States of America
   type: country
   status: member
-membership_count: 23
-description: Global Bioenergy Partnership is an international intorg body with 23
-  members.
+- id: AFREC
+  name: African Energy Commission
+  type: organization
+  status: partner
+- id: ECOWAS
+  name: Economic Community of West African States
+  type: organization
+  status: partner
+- id: EUBIA
+  name: European Biomass Industry Association
+  type: organization
+  status: partner
+- id: EU
+  name: European Commission
+  type: organization
+  status: partner
+- id: FAO
+  name: Food and Agriculture Organization
+  type: organization
+  status: partner
+- id: IADB
+  name: Inter-American Development Bank
+  type: organization
+  status: partner
+- id: IEA
+  name: International Energy Agency
+  type: organization
+  status: partner
+- id: IICA
+  name: Inter-American Institute for Cooperation on Agriculture
+  type: organization
+  status: partner
+- id: IRENA
+  name: International Renewable Energy Agency
+  type: organization
+  status: partner
+- id: UNCTAD
+  name: United Nations Conference on Trade and Development
+  type: organization
+  status: partner
+- id: UNDESA
+  name: United Nations Department of Economic and Social Affairs
+  type: organization
+  status: partner
+- id: UNDP
+  name: United Nations Development Programme
+  type: organization
+  status: partner
+- id: UNEP
+  name: United Nations Environment Programme
+  type: organization
+  status: partner
+- id: UNF
+  name: United Nations Foundation
+  type: organization
+  status: partner
+- id: UNIDO
+  name: United Nations Industrial Development Organization
+  type: organization
+  status: partner
+- id: WCRE
+  name: World Council for Renewable Energy
+  type: organization
+  status: partner
+- id: AO
+  name: Angola
+  type: country
+  status: observer
+- id: AU
+  name: Australia
+  type: country
+  status: observer
+- id: AT
+  name: Austria
+  type: country
+  status: observer
+- id: KH
+  name: Cambodia
+  type: country
+  status: observer
+- id: CL
+  name: Chile
+  type: country
+  status: observer
+- id: DK
+  name: Denmark
+  type: country
+  status: observer
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: observer
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: observer
+- id: SV
+  name: El Salvador
+  type: country
+  status: observer
+- id: ET
+  name: Ethiopia
+  type: country
+  status: observer
+- id: GM
+  name: Gambia, The
+  type: country
+  status: observer
+- id: GT
+  name: Guatemala
+  type: country
+  status: observer
+- id: IN
+  name: India
+  type: country
+  status: observer
+- id: ID
+  name: Indonesia
+  type: country
+  status: observer
+- id: JM
+  name: Jamaica
+  type: country
+  status: observer
+- id: KE
+  name: Kenya
+  type: country
+  status: observer
+- id: LA
+  name: Lao PDR
+  type: country
+  status: observer
+- id: MG
+  name: Madagascar
+  type: country
+  status: observer
+- id: MY
+  name: Malaysia
+  type: country
+  status: observer
+- id: MD
+  name: Moldova
+  type: country
+  status: observer
+- id: MA
+  name: Morocco
+  type: country
+  status: observer
+- id: MZ
+  name: Mozambique
+  type: country
+  status: observer
+- id: NG
+  name: Nigeria
+  type: country
+  status: observer
+- id: 'NO'
+  name: Norway
+  type: country
+  status: observer
+- id: PA
+  name: Panama
+  type: country
+  status: observer
+- id: PE
+  name: Peru
+  type: country
+  status: observer
+- id: PH
+  name: Philippines
+  type: country
+  status: observer
+- id: RW
+  name: Rwanda
+  type: country
+  status: observer
+- id: ZA
+  name: South Africa
+  type: country
+  status: observer
+- id: TH
+  name: Thailand
+  type: country
+  status: observer
+- id: TN
+  name: Tunisia
+  type: country
+  status: observer
+- id: TG
+  name: Togo
+  type: country
+  status: observer
+- id: UG
+  name: Uganda
+  type: country
+  status: observer
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+- id: UY
+  name: Uruguay
+  type: country
+  status: observer
+- id: VN
+  name: Vietnam
+  type: country
+  status: observer
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: observer
+- id: AFDB
+  name: African Development Bank
+  type: organization
+  status: observer
+- id: ADB
+  name: Asian Development Bank
+  type: organization
+  status: observer
+- id: BIOFUTURE
+  name: Biofuture Platform
+  type: organization
+  status: observer
+- id: ECLAC
+  name: Economic Commission for Latin America and the Caribbean
+  type: organization
+  status: observer
+- id: EEA
+  name: European Environment Agency
+  type: organization
+  status: observer
+- id: GEF
+  name: Global Environment Facility
+  type: organization
+  status: observer
+- id: ICAO
+  name: International Civil Aviation Organization
+  type: organization
+  status: observer
+- id: IFAD
+  name: International Fund for Agricultural Development
+  type: organization
+  status: observer
+- id: ICRAF
+  name: World Agroforestry Centre
+  type: organization
+  status: observer
+- id: IUCN
+  name: International Union for Conservation of Nature
+  type: organization
+  status: observer
+- id: OAS
+  name: Organization of American States
+  type: organization
+  status: observer
+- id: UEMOA
+  name: West African Economic and Monetary Union
+  type: organization
+  status: observer
+- id: UNECE
+  name: United Nations Economic Commission for Europe
+  type: organization
+  status: observer
+- id: UNESCAP
+  name: United Nations Economic and Social Commission for Asia and the Pacific
+  type: organization
+  status: observer
+- id: UNSD
+  name: United Nations Statistics Division
+  type: organization
+  status: observer
+- id: WB
+  name: World Bank
+  type: organization
+  status: observer
+- id: WBA
+  name: World Bioenergy Association
+  type: organization
+  status: observer
+- id: WBOGA
+  name: World Biogas Association
+  type: organization
+  status: observer
+- id: WBCSD
+  name: World Business Council for Sustainable Development
+  type: organization
+  status: observer
+membership_count: 39
 tags:
 - GBEP
 - bioenergy
+- biomass
 - energy
 - global
 - intorg
-- oil
 - partnership
-- energy_policy
+- sustainability
 topics:
 - key: energy
   name: Energy
+- key: renewable
+  name: Renewable Energy
+- key: climate_change
+  name: Climate Change
+notes: membership_count reflects GBEP partners only (23 national governments and 16 international organizations); 56 additional observers (36 countries and 19 international organizations) are listed in includes with status observer. Argentina and Italy serve as co-chairs alongside FAO, which hosts the Secretariat in Rome.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO GBEP partners and observers page
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/in-action/global-bioenergy-partnership/about/partners-and-observers/en
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO GBEP about pages
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/in-action/global-bioenergy-partnership/about/gbep-at-a-glance/en
+- field: founded
+  source: FAO GBEP history page
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/in-action/global-bioenergy-partnership/about/history/en
+- field: recognition_status
+  source: FAO GBEP about pages
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/in-action/global-bioenergy-partnership/about/gbep-at-a-glance/en
+- field: headquarters
+  source: FAO GBEP partners and observers page
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/in-action/global-bioenergy-partnership/about/partners-and-observers/en

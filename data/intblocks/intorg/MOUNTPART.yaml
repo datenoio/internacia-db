@@ -1,15 +1,79 @@
 id: MOUNTPART
+name: International Partnership for Sustainable Development in Mountain Regions
 blocktype:
 - intorg
+- environment
 status: formal
+founded: '2002'
+active_period:
+  start: '2002-09-04'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - es
 - fr
 links:
-- url: http://www.mountainpartnership.org/
+- url: https://www.fao.org/mountain-partnership/en/
   type: website
-name: International Partnership for Sustainable Development in Mountain Regions
+- url: https://www.fao.org/mountain-partnership/members/members-by-categories/en
+  type: website
+- url: https://en.wikipedia.org/wiki/Mountain_Partnership
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q17149473
+  type: wikidata
+acronyms:
+- lang: en
+  value: MP
+legal_status: voluntary alliance
+recognition_status: >-
+  United Nations Type II partnership launched at the World Summit on Sustainable Development (Johannesburg, 2002);
+  Secretariat hosted by the Food and Agriculture Organization (FAO) in Rome
+headquarters:
+  city: Rome
+  country: IT
+  coordinates:
+    lat: 41.8825
+    lng: 12.4878
+  note: Mountain Partnership Secretariat hosted at FAO Headquarters
+secretariat:
+  location: Rome, Italy
+  organization: Mountain Partnership Secretariat (hosted by FAO)
+wikidata_id: Q17149473
+description: >-
+  United Nations voluntary alliance of governments, intergovernmental organizations, subnational authorities,
+  and major groups dedicated to improving the lives of mountain peoples and protecting mountain environments
+  worldwide. Launched in 2002 as a Type II outcome of the World Summit on Sustainable Development, it facilitates
+  advocacy, communications, capacity development, and joint initiatives on sustainable mountain development.
+  The Secretariat is hosted by FAO in Rome.
+tags:
+- MOUNTPART
+- agriculture
+- development
+- environment
+- international
+- intorg
+- mountains
+- partnership
+- sustainable
+- sustainable_development
+topics:
+- key: development
+  name: Development
+- key: environment
+  name: Environment
+- key: sustainable_development
+  name: Sustainable Development
+- key: agriculture
+  name: Agriculture
+other_names:
+- id: en
+  name: Mountain Partnership
+- id: es
+  name: Alianza para las Montañas
+- id: fr
+  name: Partenariat pour les montagnes
 includes:
 - id: AF
   name: Afghanistan
@@ -171,6 +235,10 @@ includes:
   name: Guinea
   type: country
   status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
 - id: HU
   name: Hungary
   type: country
@@ -194,7 +262,7 @@ includes:
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
 - id: JM
   name: Jamaica
   type: country
@@ -382,7 +450,7 @@ includes:
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
 - id: TJ
   name: Tajikistan
   type: country
@@ -443,21 +511,58 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 108
-description: International Partnership for Sustainable Development in Mountain Regions
-  is an international intorg body with 108 members.
-tags:
-- MOUNTPART
-- aid
-- development
-- international
-- intorg
-- partnership
-- sustainable
-topics:
-- key: development
-  name: Development
+founding_members:
+- IT
+- CH
+membership_count: 109
+notes: >-
+  FAO reports 707 total alliance members as of March 2026 (75 governments, 25 intergovernmental organizations,
+  19 subnational authorities, and major groups). Includes lists government members from the FAO Mountain
+  Partnership members directory; Haiti joined in 2026 as the alliance's 700th member overall.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: FAO Mountain Partnership members directory
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/members/members-by-categories/en
+- field: membership_count
+  source: FAO Mountain Partnership members directory
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/members/members-by-categories/en
+- field: founding_members
+  source: FAO Mountain Partnership vision and mission
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/about/vision-and-mission/en
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO Mountain Partnership; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/about/vision-and-mission/en
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q17149473
+  license: CC0
+- field: headquarters
+  source: FAO Mountain Partnership; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Mountain_Partnership
+- field: founded
+  source: FAO Mountain Partnership; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/about/vision-and-mission/en
+- field: legal_status
+  source: FAO Mountain Partnership
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/about/vision-and-mission/en
+- field: recognition_status
+  source: FAO Mountain Partnership; UN DESA partnerships registry
+  retrieved_at: '2026-07-29'
+  url: https://sdgs.un.org/partnerships/international-partnership-sustainable-development-mountain-regions-mountain
+- field: other_names
+  source: FAO Mountain Partnership
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/en/
+- field: notes
+  source: FAO Mountain Partnership newsroom
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/mountain-partnership/news/newsroom/news-detail/the-mountain-partnership-reaches-700-members--a-global-community-united-for-mountains/en

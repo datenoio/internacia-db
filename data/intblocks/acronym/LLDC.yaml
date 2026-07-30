@@ -2,7 +2,15 @@ id: LLDC
 blocktype:
 - acronym
 status: informal
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- South America
 links:
+- url: https://www.un.org/ohrlls/
+  type: website
 - url: https://en.wikipedia.org/wiki/Landlocked_developing_countries
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q355497
@@ -139,14 +147,35 @@ includes:
   status: member
 membership_count: 32
 wikidata_id: Q355497
-description: The landlocked developing countries (LLDC) are developing countries that are landlocked.
+description: Landlocked developing countries (LLDCs) are developing countries without direct access to the sea. The United
+  Nations recognizes 32 LLDCs — 16 in Africa, 12 in Asia, 2 in Europe, and 2 in South America — out of the world's 44
+  landlocked countries. UN-OHRLLS coordinates international support for the group; the Awaza Programme of Action (2024–2034)
+  sets priorities on trade integration, transport connectivity, and structural transformation.
 tags:
 - LLDC
 - acronym
+- africa
+- asia
+- development
+- europe
 - landlocked
+- south-america
+- transport
+- un
 topics:
 - key: development
   name: Development
+- key: trade
+  name: Trade
+- key: transport
+  name: Transport
+acronyms:
+- lang: en
+  value: LLDC
+- lang: de
+  value: LLDC
+- lang: zh
+  value: 内陆发展中国家
 other_names:
 - id: ar
   name: دول نامية غير ساحلية
@@ -158,19 +187,49 @@ other_names:
   name: pays en développement sans littoral
 - id: zh
   name: 內陸發展中國家
+notes: UN classification maintained by UN-OHRLLS. Membership overlaps substantially with the Least Developed Countries
+  (LDC) list but is not identical — several LLDCs are middle-income countries (e.g. Kazakhstan, Mongolia). European LLDCs
+  (Moldova, North Macedonia) are generally more developed than African, Asian, and South American members due to regional
+  market integration. Distinct from the broader set of all landlocked countries, which includes developed European states
+  such as Austria and Switzerland.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: UN-OHRLLS
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/ohrlls/
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Landlocked_developing_countries
+- field: membership_count
+  source: UN-OHRLLS
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/ohrlls/
+- field: geographic_scope
+  source: UN-OHRLLS
+  retrieved_at: '2026-07-29'
+  url: https://www.un.org/ohrlls/
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Landlocked_developing_countries
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Landlocked_developing_countries
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q355497
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q355497
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: 内陆发展中国家
-- lang: de
-  value: LLDC

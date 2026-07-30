@@ -5,6 +5,8 @@ status: informal
 links:
 - url: https://en.wikipedia.org/wiki/Horn_of_Africa
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q40556
+  type: wikidata
 name: Horn of Africa
 includes:
 - id: DJ
@@ -27,11 +29,13 @@ membership_count: 4
 geographic_scope: sub-regional
 regions:
 - Africa
-description: Horn of Africa is a regional grouping of 4 countries in Africa.
+wikidata_id: Q40556
+description: Large peninsula and geopolitical region at the easternmost part of mainland Africa,
+  also known as the Somali Peninsula. It comprises Djibouti, Eritrea, Ethiopia, and Somalia,
+  per the Wikipedia regional definition.
 tags:
 - HORNOFAFRICA
 - horn
-- africa
 - cooperation
 - geographic
 - regional
@@ -42,27 +46,45 @@ topics:
 other_names:
 - id: ar
   name: القرن الأفريقي
-- id: zh
-  name: 非洲之角
+- id: de
+  name: Horn von Afrika
 - id: en
   name: Horn of Africa
-- id: fr
-  name: Corne de l'Afrique
-- id: ru
-  name: Африканский Рог
 - id: es
   name: Cuerno de África
+- id: fr
+  name: Corne de l'Afrique
+- id: pt
+  name: Corno de África
+- id: ru
+  name: Африканский Рог
+- id: zh
+  name: 非洲之角
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Horn_of_Africa
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Horn_of_Africa
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Horn_of_Africa
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Horn_of_Africa
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q40556
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
-wikidata_id: Q40556

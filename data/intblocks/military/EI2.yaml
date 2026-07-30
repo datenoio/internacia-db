@@ -5,17 +5,27 @@ status: formal
 languages:
 - en
 - fr
+- de
 links:
 - url: https://en.wikipedia.org/wiki/European_Intervention_Initiative
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q55235422
+  type: wikidata
+- url: https://www.defense.gouv.fr/actualites/international/l-initiative-europeenne-d-intervention
+  type: website
 name: European Intervention Initiative
 founded: '2018-06-25'
 geographic_scope: regional
 regions:
 - Europe
+acronyms:
+- lang: en
+  value: EI2
+- lang: fr
+  value: IEI
 includes:
-- id: FR
-  name: France
+- id: BE
+  name: Belgium
   type: country
   status: member
   joined: '2018-06-25'
@@ -24,23 +34,8 @@ includes:
   type: country
   status: member
   joined: '2018-06-25'
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-  joined: '2018-06-25'
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-  joined: '2018-06-25'
 - id: DK
   name: Denmark
-  type: country
-  status: member
-  joined: '2018-06-25'
-- id: ES
-  name: Spain
   type: country
   status: member
   joined: '2018-06-25'
@@ -49,8 +44,23 @@ includes:
   type: country
   status: member
   joined: '2018-06-25'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '2018-06-25'
 - id: FI
   name: Finland
+  type: country
+  status: member
+  joined: '2018-11-07'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '2018-06-25'
+- id: GB
+  name: United Kingdom
   type: country
   status: member
   joined: '2018-06-25'
@@ -58,14 +68,9 @@ includes:
   name: Italy
   type: country
   status: member
-  joined: '2018-06-25'
+  joined: '2019-09-20'
 - id: NL
   name: Netherlands
-  type: country
-  status: member
-  joined: '2018-06-25'
-- id: PT
-  name: Portugal
   type: country
   status: member
   joined: '2018-06-25'
@@ -73,11 +78,35 @@ includes:
   name: Norway
   type: country
   status: member
+  joined: '2019-09-20'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
   joined: '2018-06-25'
-membership_count: 12
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '2019-09-20'
+membership_count: 13
+founding_members:
+- BE
+- DE
+- DK
+- EE
+- ES
+- FR
+- GB
+- NL
+- PT
 legal_status: intergovernmental
-description: European defense initiative aimed at developing a shared strategic culture and improving rapid military intervention
-  capabilities.
+wikidata_id: Q55235422
+description: Joint military initiative among 13 European countries operating outside NATO and EU institutional frameworks,
+  launched with a letter of intent signed in Paris on 25 June 2018. EII aims to develop a shared strategic culture through
+  strategic foresight, intelligence sharing, scenario planning, operational support, and lessons learned, with a light permanent
+  secretariat hosted by France. Participation is voluntary and not all members need join every operation; the United Kingdom
+  and Denmark participate despite not being in EU CSDP.
 tags:
 - EI2
 - cooperation
@@ -95,18 +124,72 @@ topics:
   name: Regional Cooperation
 - key: security
   name: Security
-wikidata_id: Q55235422
+other_names:
+- id: af
+  name: Europese Intervensie-Inisiatief
+- id: ar
+  name: مبادرة التدخل الأوروبية
+- id: de
+  name: Europäische Interventionsinitiative
+- id: en
+  name: European Intervention Initiative
+- id: en
+  name: EI2
+- id: fr
+  name: Initiative européenne d'intervention
+- id: fr
+  name: IEI
+- id: it
+  name: Iniziativa europea d'intervento
+- id: nb
+  name: European Intervention Initiative
+- id: sv
+  name: European Intervention Initiative
+notes: Proposed by Emmanuel Macron in September 2017; first ministerial meeting in Paris November 2018. Finland joined November
+  2018; Norway, Sweden, and Italy joined at the Hilversum ministerial meeting on 20 September 2019 when Terms of Reference
+  were signed. Operates alongside but outside CSDP and PESCO; eight participants launched the EMASoH maritime security operation
+  in the Strait of Hormuz from late 2019.
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.8566
+    lng: 2.35097
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Intervention_Initiative
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q55235422
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/European_Intervention_Initiative
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q55235422
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q55235422
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q55235422
+  license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Intervention_Initiative
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/European_Intervention_Initiative

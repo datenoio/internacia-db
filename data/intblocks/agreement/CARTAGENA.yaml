@@ -4,33 +4,196 @@ blocktype:
 - ocean
 - environment
 status: formal
-founded: '1983'
+founded: '1983-03-24'
+active_period:
+  start: '1986-10-11'
+geographic_scope: regional
+regions:
+- Caribbean
+- Central America
+- North America
+- South America
 languages:
 - en
 - es
 - fr
 links:
-- url: https://www.unep.org/cep/
+- url: https://www.unep.org/cep/who-we-are/cartagena-convention
   type: website
-- url: https://en.wikipedia.org/wiki/Cartagena_Convention
+- url: https://www.unep.org/cep/status-ratification
+  type: website
+- url: https://www.ecolex.org/details/treaty/convention-for-the-protection-and-development-of-the-marine-environment-of-the-wider-caribbean-region-tre-000763/
+  type: website
+- url: https://en.wikipedia.org/wiki/Convention_for_the_Protection_and_Development_of_the_Marine_Environment_of_the_Wider_Caribbean_Region
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q130243912
+  type: wikidata
 name: Cartagena Convention
 acronyms:
 - lang: en
   value: CEP
 - lang: en
   value: UNEP-CEP
-geographic_scope: regional
-regions:
-- Caribbean
-- Central America
-- South America
-wikidata_id: Q5047370
-description: Regional convention for the protection and development of the marine environment of the Wider Caribbean Region,
-  established under the UNEP Regional Seas Programme. The convention aims to prevent, reduce, and control pollution and to
-  ensure sound environmental management of the Caribbean Sea.
 legal_status: intergovernmental
+recognition_status: Regional sea convention under the UNEP Regional Seas Programme covering the Gulf of Mexico, the Caribbean
+  Sea, and adjacent Atlantic areas south of 30°N latitude; Colombia serves as depositary
 partof: UNEP
+headquarters:
+  city: Kingston
+  country: JM
+membership_count: 26
+description: Regional convention for the protection and development of the marine environment of the Wider Caribbean Region,
+  established under the UNEP Regional Seas Programme. Adopted in Cartagena de Indias on 24 March 1983 and entered into force
+  on 11 October 1986 after the ninth ratification. The convention aims to prevent, reduce, and control pollution and to ensure
+  sound environmental management of the Caribbean Sea, the Gulf of Mexico, and adjacent areas of the Atlantic Ocean.
+includes:
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+  joined: '1986-10-11'
+- id: BB
+  name: Barbados
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+  joined: '2010-07-24'
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+  joined: '1999-10-22'
+- id: CO
+  name: Colombia
+  type: country
+  status: founding_member
+  joined: '1988-04-02'
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+  joined: '1991-09-01'
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  joined: '1988-10-15'
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '1990-11-05'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+  joined: '1999-12-24'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: GD
+  name: Grenada
+  type: country
+  status: founding_member
+  joined: '1987-09-16'
+- id: GT
+  name: Guatemala
+  type: country
+  status: founding_member
+  joined: '1990-01-19'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '2010-08-14'
+- id: HN
+  name: Honduras
+  type: country
+  status: founding_member
+  joined: '2018-11-12'
+- id: JM
+  name: Jamaica
+  type: country
+  status: founding_member
+  joined: '1987-05-01'
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+  joined: '1999-07-15'
+- id: LC
+  name: St. Lucia
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: MX
+  name: Mexico
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: NL
+  name: Netherlands
+  type: country
+  status: founding_member
+  joined: '1986-10-11'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: founding_member
+  joined: '2005-09-24'
+- id: PA
+  name: Panama
+  type: country
+  status: founding_member
+  joined: '1987-12-06'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '1986-10-11'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1988-06-11'
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+  joined: '1990-08-09'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: founding_member
+  joined: '1987-01-17'
+founding_members:
+- BB
+- CO
+- FR
+- GB
+- GD
+- GT
+- HN
+- JM
+- LC
+- MX
+- NL
+- NI
+- PA
+- US
+- VE
+wikidata_id: Q130243912
 tags:
 - Cartagena
 - Caribbean
@@ -40,6 +203,7 @@ tags:
 - CEP
 - agreement
 - marine
+- regional_cooperation
 topics:
 - key: ocean
   name: Ocean
@@ -47,6 +211,8 @@ topics:
   name: Environment
 - key: marine
   name: Marine Protection
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Cartagena Convention
@@ -56,122 +222,59 @@ other_names:
   name: Convenio de Cartagena
 - id: fr
   name: Convention de Carthagène
-includes:
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: BS
-  name: Bahamas, The
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
-membership_count: 27
+notes: Adopted at the Conference of Plenipotentiaries in Cartagena de Indias on 24 March 1983 alongside the Oil Spills Protocol.
+  Colombia serves as depositary; UNEP administers the Caribbean Environment Programme (CEP), with the Regional Coordinating
+  Unit (UNEP-CAR/RCU) based in Kingston, Jamaica since 1986. Three protocols supplement the convention — Oil Spills (1983,
+  in force 1986), SPAW on specially protected areas and wildlife (1990, in force 2000), and LBS on land-based pollution (1999,
+  in force 2010). Brazil, Haiti, and Suriname lie in the Wider Caribbean Region but are not contracting parties as of 2026.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: IUCN ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/convention-for-the-protection-and-development-of-the-marine-environment-of-the-wider-caribbean-region-tre-000763/participants/
+- field: founding_members
+  source: IUCN ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/convention-for-the-protection-and-development-of-the-marine-environment-of-the-wider-caribbean-region-tre-000763/participants/
+- field: founded
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention
+- field: active_period
+  source: IUCN ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/treaty/convention-for-the-protection-and-development-of-the-marine-environment-of-the-wider-caribbean-region-tre-000763/
+- field: headquarters
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention
+- field: partof
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/
+- field: description
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.unep.org/cep/
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention
+- field: recognition_status
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.unep.org/cep/
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/status-ratification
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q130243912
+  license: CC0
+- field: notes
+  source: UNEP Caribbean Environment Programme
+  retrieved_at: '2026-07-29'
+  url: https://www.unep.org/cep/who-we-are/cartagena-convention

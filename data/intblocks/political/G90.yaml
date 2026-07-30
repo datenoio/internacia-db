@@ -2,13 +2,28 @@ id: G90
 blocktype:
 - political
 status: formal
+founded: '2003-09'
+geographic_scope: global
+regions:
+- Africa
+- Caribbean
+- Pacific
+languages:
+- en
+- fr
 links:
+- url: https://www.wto.org/english/tratop_e/dda_e/negotiating_groups_e.htm
+  type: website
 - url: https://en.wikipedia.org/wiki/G90
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3117793
   type: wikidata
 name: Group of 90
 includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
 - id: AO
   name: Angola
   type: country
@@ -53,12 +68,24 @@ includes:
   name: Cameroon
   type: country
   status: member
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
 - id: TD
   name: Chad
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CG
@@ -71,10 +98,6 @@ includes:
   status: member
 - id: CU
   name: Cuba
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: DJ
@@ -137,8 +160,16 @@ includes:
   name: Kenya
   type: country
   status: member
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
 - id: LS
   name: Lesotho
+  type: country
+  status: member
+- id: LR
+  name: Liberia
   type: country
   status: member
 - id: MG
@@ -201,20 +232,16 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
+- id: WS
+  name: Samoa
   type: country
   status: member
 - id: SN
   name: Senegal
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
   type: country
   status: member
 - id: SL
@@ -229,6 +256,18 @@ includes:
   name: South Africa
   type: country
   status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
 - id: SR
   name: Suriname
   type: country
@@ -239,6 +278,10 @@ includes:
   status: member
 - id: TZ
   name: Tanzania
+  type: country
+  status: member
+- id: TL
+  name: Timor-Leste
   type: country
   status: member
 - id: TG
@@ -257,6 +300,14 @@ includes:
   name: Uganda
   type: country
   status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
 - id: ZM
   name: Zambia
   type: country
@@ -265,8 +316,81 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 64
-description: International forum focused on political for political cooperation.
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: observer
+- id: BT
+  name: Bhutan
+  type: country
+  status: observer
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: observer
+- id: ET
+  name: Ethiopia
+  type: country
+  status: observer
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: observer
+- id: SO
+  name: Somalia
+  type: country
+  status: observer
+- id: SS
+  name: South Sudan
+  type: country
+  status: observer
+- id: SD
+  name: Sudan
+  type: country
+  status: observer
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+membership_count: 91
+wikidata_id: Q3117793
+description: Coalition of developing countries formed at the WTO Ministerial Conference in Cancún in September
+  2003 to coordinate positions in multilateral trade negotiations. The G90 brings together the African
+  Group, the African, Caribbean and Pacific (ACP) states, and least-developed countries (LDCs), representing
+  the largest number of countries in any WTO negotiating group. It advocates for special and differential
+  treatment, development-oriented trade rules, and removal of agricultural subsidies by developed economies.
 tags:
 - G90
 - cooperation
@@ -274,37 +398,68 @@ tags:
 - political
 - regional
 - regional_cooperation
+- trade
+- wto
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: trade
+  name: Trade
 other_names:
 - id: de
   name: G 90
 - id: en
   name: G90
+- id: en
+  name: Group of 90
 - id: fr
   name: Groupe des 90
-wikidata_id: Q3117793
+acronyms:
+- lang: de
+  value: G90
+- lang: en
+  value: G90
+- lang: fr
+  value: G90
+notes: 'Membership per WTO Doha Development Agenda negotiating groups (2026): 74 WTO members, 8 WTO observers
+  negotiating accession (listed as observer), and 9 states not in the WTO. The group name reflects its
+  origins as roughly 90 countries; the WTO roster totals 91 entities.'
+last_verified: '2026-07-30'
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3117793
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3117793
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3117793
   license: CC0
-acronyms:
-- lang: fr
-  value: G90
-- lang: de
-  value: G90
+- field: includes
+  source: WTO
+  retrieved_at: '2026-07-30'
+  url: https://www.wto.org/english/tratop_e/dda_e/negotiating_groups_e.htm
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G90
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/G90
+- field: links
+  source: WTO
+  retrieved_at: '2026-07-30'
+  url: https://www.wto.org/english/tratop_e/dda_e/negotiating_groups_e.htm
+- field: notes
+  source: WTO
+  retrieved_at: '2026-07-30'
+  url: https://www.wto.org/english/tratop_e/dda_e/negotiating_groups_e.htm

@@ -1,49 +1,70 @@
 id: APSCO
+name: Asia-Pacific Space Cooperation Organization
 blocktype:
 - intorg
 - space
 status: formal
+founded: '2005'
+active_period:
+  start: '2006-10-12'
+geographic_scope: regional
+regions:
+- Asia-Pacific
 languages:
 - en
+- zh
 links:
-- url: http://apsco.int
+- url: https://www.apsco.int/
   type: website
 - url: https://en.wikipedia.org/wiki/Asia-Pacific_Space_Cooperation_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q726808
   type: wikidata
-name: The Asia-Pacific Space Cooperation Organization
+acronyms:
+- lang: en
+  value: APSCO
+legal_status: intergovernmental
+recognition_status: Established by the Convention of the Asia-Pacific Space Cooperation Organization, signed in Beijing on 28 October 2005 and entered into force on 12 October 2006 (UNTS vol. 2423, registration no. 43736, registered 10 April 2007); depositary is the Government of China
 headquarters:
   city: Beijing
   country: CN
   coordinates:
-    lat: 39.90403
-    lng: 116.407526
+    lat: 39.82266
+    lng: 116.27919
+  note: Fengtai District headquarters campus
+secretariat:
+  location: Beijing
+  organization: APSCO Secretariat
 includes:
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-10-12'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-10-12'
 - id: IR
-  name: Iran
+  name: Iran, Islamic Rep.
   type: country
   status: member
 - id: MN
   name: Mongolia
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-10-12'
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-10-12'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-10-12'
 - id: TH
   name: Thailand
   type: country
@@ -52,14 +73,28 @@ includes:
   name: Turkey
   type: country
   status: member
+  joined: '2010-11-11'
+founding_members:
+- BD
+- CN
+- MN
+- PK
+- PE
 membership_count: 8
 wikidata_id: Q726808
-description: The Asia-Pacific Space Cooperation Organization is an international organization that is used to promote regional
-  cooperation in the space sector.
+description: Intergovernmental organization headquartered in Beijing that promotes multilateral cooperation in space science,
+  space technology, and peaceful applications among Asia-Pacific member states through shared networks, training, and joint
+  programmes.
+notes: The APSCO Convention was signed on 28 October 2005 in Beijing by Bangladesh, China, Indonesia, Iran, Mongolia, Pakistan,
+  Peru, and Thailand; Turkey signed in July 2006. The convention entered into force on 12 October 2006 when five states deposited
+  instruments of ratification (Bangladesh, China, Mongolia, Pakistan, and Peru). Operational activities began following the
+  first Council meeting in December 2008. As of the APSCO member states listing and UN COPUOS statements (2023–2024), eight
+  countries are full members; Indonesia remains a signatory (ratification pending), Egypt an associate member (ratification
+  pending), and Mexico an observer. APSCO has been an International Astronautical Federation member since 2021.
+last_verified: '2026-07-29'
 tags:
 - APSCO
 - asia
-- astronaut
 - cooperation
 - intorg
 - pacific
@@ -72,16 +107,55 @@ topics:
 - key: space
   name: Space
 other_names:
-- id: zh
-  name: 亞太空間合作組織
 - id: en
   name: Asia-Pacific Space Cooperation Organization
+- id: zh
+  name: 亚太空间合作组织
+- id: ja
+  name: アジア太平洋宇宙協力機構
 - id: fr
   name: Asia-Pacific Space Cooperation Organization
 - id: ru
   name: Азиатско-Тихоокеанская организация по космическому сотрудничеству
+- id: de
+  name: Asia-Pacific Space Cooperation Organization
+- id: fa
+  name: سازمان همکاری‌های فضایی آسیا و اقیانوسیه
+- id: ko
+  name: 아시아 태평양 우주 협력 기구
 provenance:
-- field: headquarters
-  source: official sources
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-15'
-  url: http://apsco.int
+  url: https://www.wikidata.org/wiki/Q726808
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/wiki/Q726808
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q726808
+  license: CC0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280060899
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280060899
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.apsco.int/html/comp1/channel/Member_States/25.shtml
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.apsco.int/html/comp1/channel/Member_States/25.shtml
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.apsco.int/

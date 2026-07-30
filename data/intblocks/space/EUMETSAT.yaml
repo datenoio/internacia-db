@@ -1,154 +1,225 @@
 id: EUMETSAT
+name: European Organisation for the Exploitation of Meteorological Satellites
 blocktype:
 - intorg
 - meteorology
 - space
 status: formal
+founded: '1986-06-19'
+active_period:
+  start: '1986-06-19'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 - fr
+- de
 links:
-- url: http://www.eumetsat.int/
+- url: https://www.eumetsat.int/
   type: website
-- url: https://en.wikipedia.org/wiki/European_Organisation_for_the_Exploitation_of_Meteorological_Satellites
+- url: https://en.wikipedia.org/wiki/EUMETSAT
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q692163
   type: wikidata
-name: EUMETSAT
+acronyms:
+- lang: en
+  value: EUMETSAT
+legal_status: intergovernmental
+recognition_status: Intergovernmental organisation established by the EUMETSAT Convention, which entered into force on 19 June 1986; operates European operational meteorological satellite systems independently of the European Union
+headquarters:
+  city: Darmstadt
+  country: DE
+  coordinates:
+    lat: 49.865436
+    lng: 8.629148
 includes:
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '1993-12'
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-10'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '2014-04'
 - id: HR
   name: Croatia
   type: country
   status: member
+  joined: '2006-12'
 - id: CZ
   name: Czech Republic
   type: country
   status: member
+  joined: '2010-05'
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-01'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2013-06'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-12'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-02'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-03'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1988-06'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '2008-10'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '2014-01'
 - id: IE
   name: Ireland
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-06'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1986-06'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2009-05'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2014-01'
 - id: LU
   name: Luxembourg
   type: country
   status: member
+  joined: '2002-07'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-03'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-04'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2009-06'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1989-05'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2010-11'
 - id: SK
   name: Slovakia
   type: country
   status: member
+  joined: '2006-01'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2008-02'
 - id: ES
   name: Spain
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-02'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-01'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-07'
 - id: TR
   name: Turkey
   type: country
-  status: member
+  status: founding_member
+  joined: '1984-08'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1985-05'
+founding_members:
+- BE
+- DK
+- FI
+- FR
+- DE
+- IE
+- IT
+- NL
+- 'NO'
+- ES
+- SE
+- CH
+- TR
+- GB
 membership_count: 30
-description: The European Organisation for the Exploitation of Meteorological Satellites is an international organization
-  that is used to promote regional cooperation in the meteorology sector.
+description: Intergovernmental organisation operating Europe's geostationary Meteosat and polar-orbiting Metop meteorological
+  satellite systems. EUMETSAT delivers satellite data to national weather services across 30 Member States, coordinates
+  with WMO and NOAA on the International Joint Polar System, and hosts the permanent secretariat of the Coordination Group
+  for Meteorological Satellites (CGMS) at its Darmstadt headquarters.
+last_verified: '2026-07-30'
 tags:
 - EUMETSAT
+- earth_observation
 - intorg
+- meteorology
 - satellite
 - space
+- weather
 topics:
 - key: space
   name: Space
 - key: meteorology
   name: Meteorology
+- key: earth_observation
+  name: Earth Observation
 wikidata_id: Q692163
 other_names:
 - id: ar
@@ -163,10 +234,29 @@ other_names:
   name: Европейская организация спутниковой метеорологии
 - id: es
   name: Organización Europea para la Explotación de Satélites Meteorológicos
-founded: '1986'
 provenance:
-- field: founded
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q692163
   license: CC0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www-cdn.eumetsat.int/files/2026-02/44253%20-%20Basic%20Documents.pdf
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.eumetsat.int/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/EUMETSAT
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.eumetsat.int/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.eumetsat.int/who-we-are/eumetsat-member-states

@@ -2,23 +2,151 @@ id: FAILEDS
 blocktype:
 - acronym
 status: informal
+founded: '2005'
 languages:
 - en
 links:
-- url: http://www.fundforpeace.org/global/?q=fsi
+- url: https://fragilestatesindex.org/
+  type: website
+- url: https://fragilestatesindex.org/frequently-asked-questions/what-do-the-colors-and-categories-in-the-index-and-on-the-map-signify/
   type: website
 - url: https://en.wikipedia.org/wiki/Failed_state
+  type: wikipedia
+- url: https://en.wikipedia.org/wiki/List_of_countries_by_Fragile_States_Index
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q392160
   type: wikidata
 name: Failed States
+includes:
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: TD
+  name: Chad
+  type: country
+  status: member
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: LY
+  name: Libya
+  type: country
+  status: member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+membership_count: 29
 wikidata_id: Q392160
-description: A failed state is a state that has lost its ability to fulfill fundamental security and development functions,
-  lacking effective control over its territory and borders.
+description: Failed States (FAILEDS) maps to the "Alert" tier of the Fund for Peace Fragile States Index (FSI; formerly
+  the Failed States Index) — countries scoring 90.0–120.0 on the 12-indicator composite, indicating the highest measured
+  vulnerability to state collapse or conflict. A failed state is a state that has lost its ability to fulfill fundamental
+  security and development functions, lacking effective control over its territory and borders. As of the 2024 FSI, 29
+  countries fall in the Alert category, led by Somalia, Sudan, and South Sudan.
 tags:
 - FAILEDS
 - acronym
 - failed
+- fragile
+- fsi
 - states
 topics:
 - key: economy
@@ -30,6 +158,8 @@ other_names:
   name: Gescheiterter Staat
 - id: en
   name: failed state
+- id: en
+  name: Fragile States Index Alert category
 - id: es
   name: estado fallido
 - id: fr
@@ -40,7 +170,34 @@ other_names:
   name: Несостоявшееся государство
 - id: zh
   name: 失敗國家
+acronyms:
+- lang: en
+  value: FSI
+- lang: zh
+  value: 国家崩溃
+notes: >-
+  The Fund for Peace has published the Fragile States Index annually since 2005 (as the Failed States Index until 2014).
+  Alert-tier membership (scores 90.0–120.0) changes each year as country scores shift; this roster reflects the 2024 edition.
+  The index measures vulnerability, not an official designation — Alert countries are not necessarily experiencing active
+  collapse. Distinct from the FSI Warning (60.0–89.9), Stable (30.0–59.9), and Sustainable (0.0–29.9) tiers.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Fund for Peace
+  retrieved_at: '2026-07-29'
+  url: https://fragilestatesindex.org/frequently-asked-questions/what-do-the-colors-and-categories-in-the-index-and-on-the-map-signify/
+- field: description
+  source: Fund for Peace
+  retrieved_at: '2026-07-29'
+  url: https://fragilestatesindex.org/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/List_of_countries_by_Fragile_States_Index
+- field: notes
+  source: Fund for Peace
+  retrieved_at: '2026-07-29'
+  url: https://fragilestatesindex.org/frequently-asked-questions/what-do-the-colors-and-categories-in-the-index-and-on-the-map-signify/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -51,6 +208,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: 国家崩溃

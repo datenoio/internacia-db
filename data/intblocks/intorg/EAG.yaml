@@ -1,57 +1,192 @@
 id: EAG
+name: Eurasian Group on Combating Money Laundering and Financing of Terrorism
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '2004'
+active_period:
+  start: '2004'
+geographic_scope: regional
+regions:
+- Central Asia
+- Eurasia
 languages:
 - en
+- ru
 links:
-- url: http://www.eurasiangroup.org/
+- url: https://eurasiangroup.org/
   type: website
-name: The Eurasian group on combating money laundering and financing of terrorism
+- url: https://eurasiangroup.org/en/about-eag
+  type: website
+- url: https://eurasiangroup.org/en/members
+  type: website
+- url: https://www.fatf-gafi.org/en/countries/global-network/eurasian-group--eag-.html
+  type: website
+- url: https://www.wikidata.org/wiki/Q4173072
+  type: wikidata
+acronyms:
+- lang: en
+  value: EAG
+- lang: ru
+  value: ЕАГ
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering and counter-terrorist financing; associate member of the Financial Action Task Force
+partof:
+  id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Moscow
+  country: RU
+membership_count: 9
+description: Intergovernmental FATF-style regional body (FSRB) whose nine member jurisdictions in the Eurasian region commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Established at a founding conference in Moscow on 6 October 2004 at the initiative of the Russian Federation, with support from the FATF, IMF, World Bank, and partner countries; the Agreement on the Eurasian Group signed in June 2011 granted the EAG status as a regional intergovernmental organization. The EAG became an associate member of the FATF in June 2010. The Secretariat is hosted in Moscow and conducts mutual evaluations, typology research, technical assistance and training, and coordinates regional AML/CFT cooperation within the FATF Global Network.
+tags:
+- AML
+- CFT
+- EAG
+- FATF
+- FSRB
+- eurasian
+- financial
+- intorg
+- legal
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-10-06'
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-10-06'
 - id: IN
   name: India
   type: country
   status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
+  joined: '2010'
 - id: KG
   name: Kyrgyz Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-10-06'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: founding_member
+  joined: '2004-10-06'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-10-06'
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-10-06'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
+  joined: '2010'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-membership_count: 9
-description: The Eurasian Group on Combating Money Laundering and Financing of Terrorism is an international organization
-  that is used to promote regional cooperation in the money laundering and financing of terrorism sector.
-tags:
-- EAG
-- eurasian
-- intorg
-topics:
-- key: economy
-  name: Economy
+  joined: '2005'
+founding_members:
+- BY
+- CN
+- KG
+- KZ
+- RU
+- TJ
+wikidata_id: Q4173072
+other_names:
+- id: be
+  name: Еўразійская група па супраціўленні легалізаванню злачынных даходаў і фінансаванні тэрарызму
+- id: en
+  name: Eurasian Group on Combating Money Laundering and Financing of Terrorism
+- id: ru
+  name: Евразийская группа по противодействию легализации преступных доходов и финансированию терроризма
+notes: The initiative to establish the EAG was announced by the Russian Federation at the FATF Plenary in October 2003. Six states founded the group at the Moscow conference of 6 October 2004; Uzbekistan joined in 2005, and Turkmenistan and India joined in 2010 after previously holding observer status. The EAG Agreement (amended 16 February 2024) defines the organization as a regional intergovernmental body. Seventeen states and twenty-eight international organizations hold observer status with the EAG.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4173072
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4173072
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4173072
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network/eurasian-group--eag-.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/contacts
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/members
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/members
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network/eurasian-group--eag-.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://eurasiangroup.org/en/about-eag

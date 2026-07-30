@@ -1,9 +1,24 @@
 id: ASWEU
+name: Assembly of the Western European Union
 blocktype:
 - parliamentary
-status: formal
+status: historical
+founded: '1955-07-05'
+dissolved: '2011-05-10'
+active_period:
+  start: '1955-07-05'
+  end: '2011-05-10'
+geographic_scope: regional
+regions:
+- Europe
 languages:
+- de
 - en
+- fr
+- nl
+- es
+- pt
+- el
 links:
 - url: http://www.assembly-weu.org/en/index.php
   type: website
@@ -11,62 +26,122 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2867039
   type: wikidata
-name: European Security and Defence Assembly. Assembly of the Western European Union
+- url: https://www.cvce.eu/en/collections/unit-content/-/unit/d5906df5-4f83-4603-85f7-0cabc24b9fe1
+  type: website
+acronyms:
+- lang: en
+  value: ASWEU
+- lang: en
+  value: ESDA
+- lang: fr
+  value: AUEO
+headquarters:
+  city: Paris
+  country: FR
+  coordinates:
+    lat: 48.8647
+    lng: 2.2947
 includes:
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-03-17'
+  left: '2011-05-10'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-03-17'
+  left: '2011-05-10'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1955-05-06'
+  left: '2011-05-10'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1995-03-06'
+  left: '2011-05-10'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1955-05-06'
+  left: '2011-05-10'
 - id: LU
   name: Luxembourg
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-03-17'
+  left: '2011-05-10'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-03-17'
+  left: '2011-05-10'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1990-03-27'
+  left: '2011-05-10'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1990-03-27'
+  left: '2011-05-10'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1948-03-17'
+  left: '2011-05-10'
+founding_members:
+- BE
+- FR
+- DE
+- IT
+- LU
+- NL
+- GB
 membership_count: 10
-wikidata_id: Q2867039
-description: Organization.
+description: Parliamentary assembly of the Western European Union (WEU), also known
+  as the European Security and Defence Assembly. Established when the Modified Brussels
+  Treaty entered into force in 1955, the Assembly held its first session on 5 July
+  1955 in Paris. Composed of delegations appointed by the national parliaments of
+  WEU member states, it scrutinized security and defence cooperation under the treaty,
+  issued recommendations to the WEU Council of Ministers, and monitored implementation
+  of the mutual-defence commitment in Article V. After WEU operational tasks transferred
+  to the European Union, the Assembly continued interparliamentary oversight of the
+  Common Security and Defence Policy and briefly renamed itself the Interim European
+  Security and Defence Assembly. Its final plenary session was held on 10 May 2011,
+  following the collective decision to abolish the WEU.
+notes: By the 2000s, delegations from 39 European countries — including WEU associate
+  members, observers, and associate partners — had the right to send parliamentary
+  delegations; only the ten full WEU treaty members are modeled here as includes.
+  The Western European Union parent organization ceased to exist on 30 June 2011.
 tags:
 - ASWEU
+- ESDA
+- assembly
 - cooperation
 - defence
 - defense
 - european
+- historical
+- interparliamentary
 - parliamentary
 - political
 - regional
 - regional_cooperation
 - security
+- weu
 topics:
 - key: parliamentary
   name: Parliamentary
@@ -76,18 +151,67 @@ topics:
   name: Regional Cooperation
 - key: security
   name: Security
+wikidata_id: Q2867039
 other_names:
 - id: ar
   name: جمعية اتحاد أوروبا الغربية
-- id: zh
-  name: 西歐聯盟大會
+- id: de
+  name: Versammlung der Westeuropäischen Union
 - id: en
-  name: Assembly of the Western European Union
+  name: European Security and Defence Assembly
+- id: en
+  name: Interim European Security and Defence Assembly
 - id: fr
   name: Assemblée de l'Union de l'Europe occidentale
+- id: nl
+  name: Raadgevende Vergadering West-Europese Unie
+- id: zh
+  name: 西歐聯盟大會
+last_verified: '2026-07-29'
 provenance:
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2867039
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union
+- field: status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cvce.eu/content/publication/2010/3/29/40af1213-292e-4299-a07a-13df31c8e798/publishable_en.pdf
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cvce.eu/en/collections/unit-content/-/unit/d5906df5-4f83-4603-85f7-0cabc24b9fe1
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.cvce.eu/content/publication/2010/3/29/40af1213-292e-4299-a07a-13df31c8e798/publishable_en.pdf
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Assembly_of_the_Western_European_Union

@@ -1,218 +1,254 @@
 id: APRSAF
+name: Asia-Pacific Regional Space Agency Forum
 blocktype:
 - forum
 - space
 status: formal
+founded: '1993'
+active_period:
+  start: '1993-09-09'
+geographic_scope: regional
+regions:
+- Asia-Pacific
 languages:
 - en
+- ja
 links:
 - url: https://www.aprsaf.org/
   type: website
-name: Asia-Pacific Regional Space Agency Forum
-founded: '1993'
+- url: https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%B8%E3%82%A2%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%9C%B0%E5%9F%9F%E5%AE%87%E5%AE%99%E6%A9%9F%E9%96%A2%E4%BC%9A%E8%AD%B0
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q11283349
+  type: wikidata
+acronyms:
+- lang: en
+  value: APRSAF
+legal_status: informal forum
+recognition_status: Established in 1993 following the 1992 Asia-Pacific International Space Year Conference (APIC) declaration; co-organized annually by Japan's Ministry of Education, Culture, Sports, Science and Technology (MEXT), the Japan Aerospace Exploration Agency (JAXA), and host-country space agencies
+headquarters:
+  city: Tokyo
+  country: JP
+  coordinates:
+    lat: 35.6992
+    lng: 139.7649
+  note: APRSAF Secretariat hosted by JAXA at Ochanomizu Sola City, Chiyoda-ku
+secretariat:
+  location: Tokyo
+  organization: Japan Aerospace Exploration Agency (JAXA)
 includes:
-- id: AU
-  name: Australia
+- id: AE
+  name: United Arab Emirates
   type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BN
-  name: Brunei
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: LA
-  name: Laos
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
+  status: participant
 - id: AF
   name: Afghanistan
   type: country
-  status: member
-- id: IR
-  name: Iran
+  status: participant
+- id: AU
+  name: Australia
   type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
+  status: participant
+- id: BD
+  name: Bangladesh
   type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
+  status: participant
+- id: BN
+  name: Brunei Darussalam
   type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
+  status: participant
+- id: BT
+  name: Bhutan
   type: country
-  status: member
-- id: TJ
-  name: Tajikistan
+  status: participant
+- id: CA
+  name: Canada
   type: country
-  status: member
-- id: TM
-  name: Turkmenistan
+  status: participant
+- id: CN
+  name: China
   type: country
-  status: member
-- id: TW
-  name: Taiwan
+  status: participant
+- id: DE
+  name: Germany
   type: country
-  status: member
-- id: HK
-  name: Hong Kong
+  status: participant
+- id: FJ
+  name: Fiji
   type: country
-  status: member
-- id: MO
-  name: Macao
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
+  status: participant
 - id: FM
-  name: Micronesia
+  name: Micronesia, Fed. Sts.
   type: country
-  status: member
-- id: MH
-  name: Marshall Islands
+  status: participant
+- id: FR
+  name: France
   type: country
-  status: member
+  status: participant
+- id: GB
+  name: United Kingdom
+  type: country
+  status: participant
+- id: HK
+  name: Hong Kong SAR, China
+  type: country
+  status: participant
+- id: ID
+  name: Indonesia
+  type: country
+  status: participant
+- id: IN
+  name: India
+  type: country
+  status: participant
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: participant
+- id: IT
+  name: Italy
+  type: country
+  status: participant
+- id: JP
+  name: Japan
+  type: country
+  status: participant
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: participant
+- id: KH
+  name: Cambodia
+  type: country
+  status: participant
 - id: KI
   name: Kiribati
   type: country
-  status: member
+  status: participant
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: participant
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: participant
+- id: LA
+  name: Lao PDR
+  type: country
+  status: participant
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: participant
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: participant
+- id: MM
+  name: Myanmar
+  type: country
+  status: participant
+- id: MN
+  name: Mongolia
+  type: country
+  status: participant
+- id: MO
+  name: Macao SAR, China
+  type: country
+  status: participant
+- id: MV
+  name: Maldives
+  type: country
+  status: participant
+- id: MY
+  name: Malaysia
+  type: country
+  status: participant
+- id: NP
+  name: Nepal
+  type: country
+  status: participant
+- id: NZ
+  name: New Zealand
+  type: country
+  status: participant
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: participant
+- id: PH
+  name: Philippines
+  type: country
+  status: participant
+- id: PK
+  name: Pakistan
+  type: country
+  status: participant
+- id: PW
+  name: Palau
+  type: country
+  status: participant
+- id: RU
+  name: Russian Federation
+  type: country
+  status: participant
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: participant
+- id: SG
+  name: Singapore
+  type: country
+  status: participant
+- id: TH
+  name: Thailand
+  type: country
+  status: participant
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: participant
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: participant
+- id: TO
+  name: Tonga
+  type: country
+  status: participant
+- id: TR
+  name: Turkey
+  type: country
+  status: participant
+- id: TW
+  name: Taiwan
+  type: country
+  status: participant
+- id: US
+  name: United States
+  type: country
+  status: participant
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: participant
+- id: VN
+  name: Vietnam
+  type: country
+  status: participant
+- id: VU
+  name: Vanuatu
+  type: country
+  status: participant
+- id: WS
+  name: Samoa
+  type: country
+  status: participant
 membership_count: 52
-description: International forum focused on space.
+wikidata_id: Q11283349
+description: Annual regional forum co-organized by Japan's MEXT and JAXA with host-country space agencies, bringing together space agencies, governments, international organizations, industry, and academia from across the Asia-Pacific to share space policy and technology plans and launch cooperative initiatives such as Sentinel Asia, SAFE, Kibo-ABC, and the National Space Legislation Initiative. APRSAF operates through five working groups and has no treaty-based membership; participation is open and voluntary.
+notes: APRSAF is a conference forum, not a treaty organization with formal members. The `includes` list records countries and regions that regularly send space-agency or government delegations; annual attendance varies (40 countries/regions at APRSAF-31 in 2025, 36 at APRSAF-30 in 2024) and is not an exhaustive or binding roster. Hong Kong, Macao, and Taiwan are listed separately where delegations participate under distinct space-agency arrangements.
+last_verified: '2026-07-30'
 tags:
 - APRSAF
 - asia
@@ -220,6 +256,7 @@ tags:
 - international
 - pacific
 - regional
+- regional_cooperation
 - space
 topics:
 - key: space
@@ -233,3 +270,39 @@ other_names:
   name: アジア太平洋地域宇宙機関フォーラム
 - id: zh
   name: 亚太区域空间机构论坛
+- id: ko
+  name: 아시아·태평양 지역 우주기관 포럼
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q11283349
+  license: CC0
+- field: other_names
+  source: Wikidata / official website
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q11283349
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aprsaf.org/about/
+- field: membership_count
+  source: derived from includes
+  retrieved_at: '2026-07-30'
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aprsaf.org/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aprsaf.org/about/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aprsaf.org/annual_meetings/aprsaf32/meeting_details.php
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.aprsaf.org/about/

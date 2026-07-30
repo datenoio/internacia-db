@@ -26,6 +26,14 @@ links:
 acronyms:
 - lang: en
   value: F4
+- lang: de
+  value: F4
+- lang: da
+  value: F4
+- lang: nl
+  value: F4
+- lang: sv
+  value: F4
 includes:
 - id: AT
   name: Austria
@@ -39,6 +47,7 @@ includes:
   status: member
   joined: '2020'
   left: '2025-06-03'
+  note: Withdrew on 3 June 2025 to focus on European defence, triggering the group's disbandment
 - id: NL
   name: Netherlands
   type: country
@@ -57,13 +66,17 @@ founding_members:
 - DK
 - NL
 - SE
-legal_status: intergovernmental
+legal_status: informal partnership
 notes: Informal coalition of four fiscally conservative European Union member states that emerged as a successor to the New
-  Hanseatic League after the United Kingdom's departure from the EU. The group advocated for maintaining EU budget contributions
-  at a maximum of 1% of the EU's gross national income and opposed mechanisms like Eurobonds and mutualized EU debt. Denmark
-  withdrew on June 3, 2025 to prioritize European defense initiatives, leading to the group's disbandment.
-description: Informal coalition of fiscally conservative EU member states focused on advocating for strict fiscal policies
-  and opposing large distributive budgets and collective EU debt within the European Union.
+  Hanseatic League after the United Kingdom's departure from the EU. The group was never founded as a transnational organisation.
+  It advocated for EU budget contributions at a maximum of 1% of gross national income, opposed Eurobonds and mutualised EU
+  debt, and gained prominence during COVID-19 recovery negotiations. Germany was sometimes grouped with the four as the "Frugal
+  Five" until it joined France's recovery-fund proposal in May 2020. Denmark withdrew on 3 June 2025 to prioritise European
+  defence initiatives, leading to the group's disbandment.
+description: Informal coalition of fiscally conservative EU member states — Austria, Denmark, the Netherlands, and Sweden —
+  focused on advocating for strict fiscal policies, EU budget rebates, and opposing large distributive budgets and collective
+  EU debt. Partly evolved after Brexit as a successor to the New Hanseatic League; disbanded when Denmark withdrew on
+  3 June 2025.
 tags:
 - Frugal Four
 - F4
@@ -73,6 +86,7 @@ tags:
 - political
 - economic
 - europe
+- historical
 topics:
 - key: political
   name: Political
@@ -80,19 +94,58 @@ topics:
   name: Economy
 - key: fiscal_policy
   name: Fiscal Policy
+- key: historical
+  name: Historical
 partof:
   id: EU
   name: European Union
 wikidata_id: Q96378788
 other_names:
+- id: de
+  name: Frugal Four
+- id: da
+  name: Frugal Four
 - id: en
   name: Frugal Four
+- id: nl
+  name: Frugal Four
+- id: sv
+  name: Frugal Four
+- id: lmo
+  name: Quatter frugaj
+last_verified: '2026-07-30'
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96378788
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/Frugal_Four
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Frugal_Four
+- field: dissolved
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Frugal_Four
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q96378788
+  license: CC0
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Frugal_Four
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Frugal_Four
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/Frugal_Four

@@ -1,30 +1,92 @@
 id: ESAAMLG
+name: Eastern and Southern Africa Anti-Money Laundering Group
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '1999-08-26'
+active_period:
+  start: '1999-08-26'
+geographic_scope: regional
+regions:
+- Eastern Africa
+- Southern Africa
+- Africa
+languages:
+- en
 links:
-- url: http://www.esaamlg.org/
+- url: https://www.esaamlg.org/
   type: website
-name: The Eastern and South African Anti Money Laundering Group
+- url: https://www.esaamlg.org/index.php/about
+  type: website
+- url: https://www.esaamlg.org/index.php/about_esaamlg_history
+  type: website
+- url: https://www.fatf-gafi.org/en/countries/global-network/eastern-and-southern-africa-anti-money-laundering-group--esaamlg.html
+  type: website
+acronyms:
+- lang: en
+  value: ESAAMLG
+legal_status: intergovernmental
+recognition_status: FATF-style regional body (FSRB) for anti-money laundering, counter-terrorist financing, and counter-proliferation financing; associate member of the Financial Action Task Force since June 2010
+partof:
+  id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Dar es Salaam
+  country: TZ
+  coordinates:
+    lat: -6.7924
+    lng: 39.2083
+membership_count: 22
+description: Intergovernmental FATF-style regional body (FSRB) whose 22 member jurisdictions in Eastern and Southern Africa commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Launched at a ministerial meeting in Arusha, Tanzania on 26–27 August 1999 through a Memorandum of Understanding; the Secretariat is hosted in Dar es Salaam, Tanzania. Conducts mutual evaluations and follow-up, typology research, technical assistance and training, and regional AML/CFT cooperation within the FATF Global Network.
+tags:
+- AML
+- CFT
+- ESAAMLG
+- FATF
+- FSRB
+- africa
+- eastern_africa
+- financial
+- intorg
+- legal
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- southern_africa
+- terrorist_financing
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: BW
-  name: Botswana
   type: country
   status: member
 - id: BI
   name: Burundi
   type: country
   status: member
-- id: ER
-  name: Eritrea
+- id: BW
+  name: Botswana
   type: country
   status: member
-- id: SZ
-  name: Eswatini
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+- id: ER
+  name: Eritrea
   type: country
   status: member
 - id: ET
@@ -67,12 +129,12 @@ includes:
   name: Seychelles
   type: country
   status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
 - id: SS
   name: South Sudan
+  type: country
+  status: member
+- id: SZ
+  name: Eswatini
   type: country
   status: member
 - id: TZ
@@ -83,6 +145,10 @@ includes:
   name: Uganda
   type: country
   status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
 - id: ZM
   name: Zambia
   type: country
@@ -91,14 +157,56 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 21
-description: The Eastern and South African Anti Money Laundering Group is an international organization that is used to promote
-  regional cooperation in the money laundering sector.
-tags:
-- ESAAMLG
-- eastern
-- intorg
-- south
-topics:
-- key: economy
-  name: Economy
+other_names:
+- id: en
+  name: The Eastern and South African Anti Money Laundering Group
+notes: ESAAMLG came into formal existence when seven of fourteen initial jurisdictions signed the 1999 MoU; the first Task Force meeting was held in Dar es Salaam on 21 April 2000. The Democratic Republic of the Congo joined as a full member after previously holding regional observer status. No dedicated Wikidata item as of 2026-07; verify membership against the ESAAMLG website for current status.
+last_verified: '2026-07-29'
+provenance:
+- field: name
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network/eastern-and-southern-africa-anti-money-laundering-group--esaamlg.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about_esaamlg_history
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about_esaamlg_history
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about_esaamlg_history
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about
+- field: partof
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network/eastern-and-southern-africa-anti-money-laundering-group--esaamlg.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.esaamlg.org/index.php/about_esaamlg_history
+- field: other_names
+  source: legacy record
+  retrieved_at: '2026-07-29'

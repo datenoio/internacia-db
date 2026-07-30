@@ -1,19 +1,39 @@
 id: PARISCLUB
+name: Paris Club
 blocktype:
 - political
+- financial
 status: formal
+founded: '1956'
+active_period:
+  start: '1956'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 - fr
 links:
-- url: http://www.clubdeparis.org/
+- url: https://www.clubdeparis.org/
+  type: website
+- url: https://clubdeparis.org/en/frequently-asked-questions
+  type: website
+- url: https://clubdeparis.org/en/who-are-the-members-of-the-paris-club
   type: website
 - url: https://en.wikipedia.org/wiki/Paris_Club
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q461736
   type: wikidata
-name: Paris Club
-founded: '1956'
+acronyms:
+- lang: en
+  value: Paris Club
+- lang: fr
+  value: Club de Paris
+legal_status: informal
+recognition_status: Informal group of official bilateral creditors that coordinates sovereign debt restructuring for debtor countries; chaired by the Director General of the French Treasury with a secretariat hosted at the French Ministry of Finance; no formal statutes
+secretariat:
+  location: Paris, France
+  organization: Paris Club Secretariat (French Directorate General of the Treasury)
 headquarters:
   city: Paris
   country: FR
@@ -74,7 +94,7 @@ includes:
   type: country
   status: member
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
 - id: NL
@@ -106,29 +126,30 @@ includes:
   type: country
   status: member
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
 membership_count: 22
 wikidata_id: Q461736
-description: International organization.
+description: Informal group of 22 permanent official creditor countries that coordinates sovereign debt restructuring for debtor nations facing payment difficulties. Created in 1956 when Argentina agreed to meet its public creditors in Paris, the Club meets roughly ten times per year for Tour d'Horizon sessions and negotiation meetings. Debt treatments require an IMF-supported programme and follow principles of solidarity, consensus, case-by-case treatment, conditionality, and comparability of treatment. The French Treasury provides the secretariat and the Director General of the French Treasury serves as chair. Other official bilateral creditors may participate on an ad hoc basis; South Africa has held prospective-member status since July 2022.
 tags:
 - PARISCLUB
-- climate
 - club
 - cooperation
-- environment
-- paris
+- debt
+- finance
+- financial
 - political
-- regional
-- regional_cooperation
+- sovereign_debt
 topics:
-- key: climate_change
-  name: Climate Change
+- key: development
+  name: Development
+- key: diplomacy
+  name: Diplomacy
+- key: finance
+  name: Finance
 - key: political
   name: Political
-- key: regional_cooperation
-  name: Regional Cooperation
 other_names:
 - id: ar
   name: نادي باريس
@@ -146,18 +167,36 @@ other_names:
   name: Парижский клуб
 - id: zh
   name: 巴黎俱樂部
+notes: >-
+  South Africa has held prospective-member status since 8 July 2022. Ad hoc participants include China (since 2013), India (since 2019), and Hungary (since 2024), plus Argentina, Czech Republic, Kuwait, Mexico, Morocco, New Zealand, Portugal, Saudi Arabia, Trinidad and Tobago, Türkiye, and the United Arab Emirates on a case-by-case basis. Brazil and Korea became full permanent members in 2006 and 1997 respectively; Russia joined in 1997.
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q461736
   license: CC0
+- field: description
+  source: Paris Club official website
+  retrieved_at: '2026-07-30'
+  url: https://clubdeparis.org/en/frequently-asked-questions
+  license: public domain
+- field: includes
+  source: Paris Club official website
+  retrieved_at: '2026-07-30'
+  url: https://clubdeparis.org/en/frequently-asked-questions
+  license: public domain
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q461736
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.clubdeparis.org/
+  source: Paris Club official website
+  retrieved_at: '2026-07-30'
+  url: https://www.clubdeparis.org/
+  license: public domain
+- field: founded
+  source: Paris Club official website
+  retrieved_at: '2026-07-30'
+  url: https://clubdeparis.org/en/frequently-asked-questions
+  license: public domain

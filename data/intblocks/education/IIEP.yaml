@@ -1,46 +1,42 @@
 id: IIEP
+name: UNESCO International Institute for Educational Planning
 blocktype:
 - education
 - unagency
 status: formal
-founded: '1963'
+founded: '1963-07'
 partof: UNESCO
+geographic_scope: global
+regions:
+- worldwide
+legal_status: unesco_category_1_institute
+recognition_status: UNESCO Category 1 Institute dedicated to educational planning and management
 languages:
 - en
 - fr
 - es
-name: International Institute for Educational Planning
+links:
+- url: https://www.iiep.unesco.org/en
+  type: website
+- url: https://en.wikipedia.org/wiki/UNESCO_International_Institute_for_Educational_Planning
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q3152335
+  type: wikidata
 headquarters:
   city: Paris
   country: FR
   coordinates:
-    lat: 48.8566
-    lng: 2.3522
+    lat: 48.8629
+    lng: 2.2782
 acronyms:
 - lang: en
   value: IIEP
-membership_count: 193
-description: UNESCO institute specializing in educational planning, management, and policy. IIEP provides training, research,
-  and technical assistance to help countries develop and implement effective education policies and plans.
-tags:
-- IIEP
-- education
-- unesco
-- educational_planning
-- policy
-- unagency
-topics:
-- key: education
-  name: Education
-- key: policy
-  name: Policy
-other_names:
-- id: en
-  name: International Institute for Educational Planning
-- id: fr
-  name: Institut international de planification de l'éducation
-- id: es
-  name: Instituto Internacional de Planeamiento de la Educación
+- lang: en
+  value: IIEP-UNESCO
+- lang: fr
+  value: IIPE
+- lang: es
+  value: IIPE
 includes:
 - id: HU
   name: Hungary
@@ -814,7 +810,80 @@ includes:
   name: Denmark
   type: country
   status: member
+membership_count: 193
+wikidata_id: Q3152335
+description: UNESCO Category 1 institute and the only United Nations entity dedicated to educational planning
+  and management. Founded in July 1963 in Paris with support from UNESCO, the World Bank, the French government,
+  and the Ford Foundation. IIEP strengthens Member States' capacity to design and implement education
+  policies and plans through training, research, technical cooperation, and knowledge mobilisation, with
+  headquarters in Paris and regional offices in Dakar and Buenos Aires.
+notes: 'Membership mirrors current UNESCO Member States (193): IIEP is a UNESCO institute serving all
+  Member States rather than a separate treaty organization. Its Governing Board comprises twelve members
+  (eight specialists and four designated by the UN, World Bank, a UN agency, and a UN economic commission)
+  appointed in a personal capacity, not a country membership roster. IIEP has intellectual and functional
+  autonomy within UNESCO under its own statutes and Medium-Term Strategy.'
+tags:
+- IIEP
+- IIEP-UNESCO
+- education
+- unesco
+- educational_planning
+- policy
+- capacity_development
+- unagency
+topics:
+- key: education
+  name: Education
+- key: policy
+  name: Policy
+other_names:
+- id: en
+  name: UNESCO International Institute for Educational Planning
+- id: en
+  name: International Institute for Educational Planning
+- id: fr
+  name: Institut international de planification de l'éducation
+- id: es
+  name: Instituto Internacional de Planeamiento de la Educación de la UNESCO
+- id: de
+  name: Internationales Institut für Bildungsplanung der UNESCO
+- id: ar
+  name: المعهد الدولي للتخطيط التربوي
+- id: zh
+  name: 國際教育規劃研究所
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: UNESCO Member States roster (IIEP serves all UNESCO Member States as Category 1 institute)
+  retrieved_at: '2026-07-29'
+  url: https://www.unesco.org/en/countries
+- field: wikidata_id
+  source: Wikidata Q3152335
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3152335
+  license: CC0
+- field: founded
+  source: IIEP official who-we-are / history (created July 1963)
+  retrieved_at: '2026-07-29'
+  url: https://www.iiep.unesco.org/en/who-we-are
+- field: description
+  source: IIEP official site
+  retrieved_at: '2026-07-29'
+  url: https://www.iiep.unesco.org/en/who-we-are
+- field: notes
+  source: IIEP Governing Board page / statutes
+  retrieved_at: '2026-07-29'
+  url: https://www.iiep.unesco.org/en/governing-board
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: IIEP official site / Wikidata coordinates
+  retrieved_at: '2026-07-29'
+  url: https://www.iiep.unesco.org/en/who-we-are
+- field: other_names
+  source: Wikidata labels
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3152335
+  license: CC0
+- field: partof
+  source: UNESCO Category 1 institute structure
+  retrieved_at: '2026-07-29'
+  url: https://www.iiep.unesco.org/en/who-we-are

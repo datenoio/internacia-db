@@ -2,6 +2,10 @@ id: BALTICSTATES
 blocktype:
 - acronym
 status: informal
+geographic_scope: sub-regional
+regions:
+- Europe
+- Northern Europe
 languages:
 - en
 - et
@@ -11,11 +15,9 @@ languages:
 links:
 - url: https://en.wikipedia.org/wiki/Baltic_States
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q39731
+  type: wikidata
 name: Baltic States
-geographic_scope: sub-regional
-regions:
-- Europe
-- Northern Europe
 includes:
 - id: EE
   name: Estonia
@@ -30,15 +32,32 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: A geopolitical term encompassing Estonia, Latvia, and Lithuania.
+wikidata_id: Q39731
+description: The Baltic states or Baltic countries is a geopolitical term for the three sovereign states on the eastern coast
+  of the Baltic Sea — Estonia, Latvia, and Lithuania. All three are members of NATO, the European Union, the Eurozone, the
+  Baltic Assembly, and the OECD. Since regaining independence in 1991, they cooperate closely in foreign, security, energy,
+  and transport policy.
 tags:
 - BALTICSTATES
 - acronym
 - baltic
+- estonia
+- latvia
+- lithuania
+- regional_cooperation
 - states
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+acronyms:
+- lang: zh
+  value: 波罗的海三国
+- lang: zh
+  value: 波罗的国家
+- lang: zh
+  value: 波羅的國家
+- lang: zh
+  value: 波羅的海三小國
 other_names:
 - id: ar
   name: دول البلطيق
@@ -62,33 +81,47 @@ other_names:
   name: Прибалтика
 - id: zh
   name: 波罗的海国家
-wikidata_id: Q39731
+notes: Informal geopolitical label, not an organization. After World War I the term sometimes also included Finland; since
+  World War II it is generally limited to Estonia, Latvia, and Lithuania. It is distinct from broader "Baltic Sea countries"
+  or "Baltic region" labels that may include other littoral states.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_States
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q39731
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q39731
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Baltic_States
-acronyms:
-- lang: zh
-  value: 波罗的海三国
-- lang: zh
-  value: 波罗的国家
-- lang: zh
-  value: 波羅的國家
-- lang: zh
-  value: 波羅的海三小國

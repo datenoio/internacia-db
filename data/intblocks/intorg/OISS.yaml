@@ -1,14 +1,49 @@
 id: OISS
+name: Organización Iberoamericana de Seguridad Social
 blocktype:
 - intorg
 status: formal
+founded: '1954'
+active_period:
+  start: '1954'
+geographic_scope: regional
+regions:
+- Americas
+- Europe
+- Latin America
 languages:
 - es
 - pt
 links:
-- url: http://www.oiss.org/
+- url: https://www.oiss.org/
   type: website
-name: Organización Iberoamericana de Seguridad Social
+- url: https://oiss.org/que-es-la-oiss/instituciones/
+  type: website
+- url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q6047726
+  type: wikidata
+acronyms:
+- lang: en
+  value: OISS
+- lang: es
+  value: OISS
+- lang: pt
+  value: OISS
+legal_status: intergovernmental
+recognition_status: Intergovernmental technical organization established by the founding charter adopted at the Second Ibero-American Social Security Congress in Lima, Peru (1954); member states are Ibero-American governments whose social security institutions participate as titular or associate members
+secretariat:
+  location: Madrid, Spain
+  organization: Organización Iberoamericana de Seguridad Social
+headquarters:
+  city: Madrid
+  country: ES
+  coordinates:
+    lat: 40.431569
+    lng: -3.683575
+  note: General Secretariat at Calle de Velázquez 105
+wikidata_id: Q6047726
+description: Intergovernmental technical organization that promotes economic and social welfare among Ibero-American countries by coordinating and exchanging social security experiences. Constituted in 1954 at the Second Ibero-American Social Security Congress in Lima, Peru. Its 22 member states are Ibero-American governments; titular members include national social security administrations and mandatory social insurance institutions. The General Secretariat is headquartered in Madrid, Spain.
 includes:
 - id: AR
   name: Argentina
@@ -46,6 +81,10 @@ includes:
   name: Ecuador
   type: country
   status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
 - id: SV
   name: El Salvador
   type: country
@@ -74,20 +113,16 @@ includes:
   name: Panama
   type: country
   status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
 - id: PE
   name: Peru
   type: country
   status: member
-- id: PT
-  name: Portugal
+- id: PY
+  name: Paraguay
   type: country
   status: member
-- id: ES
-  name: Spain
+- id: PT
+  name: Portugal
   type: country
   status: member
 - id: UY
@@ -99,18 +134,103 @@ includes:
   type: country
   status: member
 membership_count: 22
-description: International entity.
 tags:
 - OISS
+- ibero
 - iberoamericana
+- intergovernmental
 - intorg
+- labor
+- regional
+- regional_cooperation
 - seguridad
 - social
+- social_security
 topics:
-- key: economy
-  name: Economy
+- key: health
+  name: Health
+- key: labor
+  name: Labor
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: Iberoamerican Social Security Organization
 - id: es
   name: Organización Iberoamericana de Seguridad Social
+- id: pt
+  name: Organização Ibero-Americana de Segurança Social
+notes: Predecessor bodies include the Ibero-American Social Security Commission created at the First Ibero-American Social Security Congress; the present organization was established by charter at the 1954 Lima congress. Also affiliated with the Council of Ibero-American Organisms (Consejo de Organismos Iberoamericanos). Operating languages are Spanish and Portuguese.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6047726
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6047726
+  license: CC0
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6047726
+  license: CC0
+- field: secretariat
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oiss.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oiss.org/que-es-la-oiss/instituciones/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://oiss.org/que-es-la-oiss/instituciones/
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.oiss.org/
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Iberoamericana_de_Seguridad_Social
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6047726
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6047726
+  license: CC0

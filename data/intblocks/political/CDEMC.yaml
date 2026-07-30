@@ -2,59 +2,133 @@ id: CDEMC
 blocktype:
 - political
 status: formal
+founded: '2005-12-02'
+geographic_scope: regional
+regions:
+- Europe
+- Baltic Sea region
+- Black Sea region
+languages:
+- en
+- uk
+- ru
 links:
 - url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1500982
   type: wikidata
 name: Community of Democratic Choice
-founded: '2005'
 includes:
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2005-12-02'
 - id: GE
   name: Georgia
   type: country
   status: member
+  joined: '2005-12-02'
 - id: LT
   name: Lithuania
   type: country
   status: member
+  joined: '2005-12-02'
 - id: LV
   name: Latvia
   type: country
   status: member
+  joined: '2005-12-02'
 - id: MD
-  name: Republic of Moldova
+  name: Moldova
   type: country
   status: member
+  joined: '2005-12-02'
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
+  joined: '2005-12-02'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2005-12-02'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2005-12-02'
 - id: UA
   name: Ukraine
   type: country
   status: member
+  joined: '2005-12-02'
+- id: AM
+  name: Armenia
+  type: country
+  status: observer
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: observer
+- id: BG
+  name: Bulgaria
+  type: country
+  status: observer
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: observer
+- id: HU
+  name: Hungary
+  type: country
+  status: observer
+- id: PL
+  name: Poland
+  type: country
+  status: observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+- id: OSCE
+  name: Organization for Security and Co-operation in Europe
+  type: organization
+  status: observer
+founding_members:
+- EE
+- GE
+- LT
+- LV
+- MD
+- MK
+- RO
+- SI
+- UA
+headquarters:
+  city: Kyiv
+  country: UA
 membership_count: 9
+legal_status: intergovernmental
 wikidata_id: Q1500982
-description: Intergovernmental organization.
+description: Intergovernmental organization established on 2 December 2005 in Kyiv, Ukraine,
+  by nine states spanning the Baltic–Black–Caspian Sea region. Promotes democracy, human
+  rights, and the rule of law. Preceded by the August 2005 Borjomi Declaration between
+  Georgia and Ukraine.
 tags:
 - CDEMC
+- CDC
 - choice
 - community
 - cooperation
+- democracy
 - democratic
+- human_rights
 - political
 - regional
 - regional_cooperation
@@ -63,6 +137,8 @@ topics:
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: human_rights
+  name: Human Rights
 other_names:
 - id: ar
   name: جمعية الخيار الديمقراطي
@@ -70,20 +146,79 @@ other_names:
   name: Gemeinschaft für demokratische Wahl
 - id: en
   name: Community of Democratic Choice
+- id: et
+  name: Demokraatliku Valiku Ühendus
+- id: fi
+  name: Demokraattisen valinnan yhteisö
 - id: fr
   name: communauté du choix démocratique
+- id: hr
+  name: Udruženje za demokratski izbor
+- id: it
+  name: Comunità di Scelta Democratica
+- id: pl
+  name: Wspólnota Demokratycznego Wyboru
 - id: ru
   name: Содружество демократического выбора
+- id: sl
+  name: Skupnost za demokratično izbiro
+- id: uk
+  name: Співдружність демократичного вибору
 - id: zh
   name: 民主選擇共同體
+acronyms:
+- lang: en
+  value: CDC
+- lang: en
+  value: CDEMC
+- lang: pl
+  value: WDW
+- lang: uk
+  value: СДВ
+notes: Founded at a two-day forum in Kyiv (1–2 December 2005) following the Borjomi Declaration
+  signed by the presidents of Georgia and Ukraine in August 2005. Subsequent summits were held
+  in Tbilisi (2006), Vilnius (2006), Tallinn (2007), Lviv (2007), and Nottingham (2008). The
+  Community of Democratic Choice Youth Forum was institutionalized in Tallinn in March 2007.
+  Membership expansion beyond the nine founders remained informal; Sweden expressed interest
+  in joining at the 2006 Vilnius conference.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1500982
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1500982
   license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1500982
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Community_of_Democratic_Choice

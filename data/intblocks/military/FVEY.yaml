@@ -1,43 +1,64 @@
 id: FVEY
+name: Five Eyes
 blocktype:
 - military
 status: formal
+founded: '1946'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
 - url: https://en.wikipedia.org/wiki/Five_Eyes
   type: wikipedia
-name: Five Eyes
-founded: '1946'
-geographic_scope: global
+- url: https://www.wikidata.org/wiki/Q15978258
+  type: wikidata
+acronyms:
+- lang: en
+  value: FVEY
+- lang: en
+  value: 5 Eyes
+- lang: zh
+  value: 五只眼
+legal_status: intergovernmental
+wikidata_id: Q15978258
+description: Multinational intelligence and military alliance comprising Australia,
+  Canada, New Zealand, the United Kingdom, and the United States. Rooted in the 1946
+  UKUSA Agreement for signals intelligence (SIGINT) cooperation, the Five Eyes community
+  expanded over time to include significant military cooperation, joint exercises,
+  technology sharing, and interoperability initiatives across air, land, and naval
+  forces.
 includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1946-03-05'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1946-03-05'
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '1948'
+- id: AU
+  name: Australia
+  type: country
+  status: member
+  joined: '1956'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '1956'
 membership_count: 5
-legal_status: intergovernmental
-description: Multinational intelligence and military alliance comprising Australia,
-  Canada, New Zealand, the United Kingdom, and the United States. Originally established
-  for signals intelligence cooperation, the alliance has expanded to include significant
-  military cooperation, joint exercises, technology sharing, and interoperability
-  initiatives across air, land, and naval forces.
+founding_members:
+- GB
+- US
 tags:
 - FVEY
 - cooperation
@@ -55,18 +76,70 @@ topics:
   name: Military
 - key: security
   name: Security
+other_names:
+- id: ar
+  name: خمس أعين
+- id: de
+  name: Five Eyes
+- id: en
+  name: Five Eyes
+- id: en
+  name: 5 Eyes
+- id: es
+  name: Cinco Ojos
+- id: es
+  name: Five Eyes
+- id: fr
+  name: Five Eyes
+- id: pt
+  name: Grupo Cinco Olhos
+- id: ru
+  name: Пять глаз (FVEY)
+- id: zh
+  name: 五眼聯盟
+notes: The Five Eyes label describes the core anglosphere intelligence community
+  underpinned by the UKUSA Agreement (1946). Canada joined in 1948; Australia and
+  New Zealand in 1956, completing the five-member core. Related Five Eyes defence
+  bodies include TTCP, AUSCANNZUKUS, ABCANZ Armies, and AFIC. Extended intelligence
+  sharing groups include Nine Eyes and Fourteen Eyes.
+last_verified: '2026-07-29'
 provenance:
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Five_Eyes
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Five_Eyes
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15978258
   license: CC0
-wikidata_id: Q15978258
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15978258
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15978258
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Five_Eyes

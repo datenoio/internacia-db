@@ -2,110 +2,184 @@ id: G-10
 blocktype:
 - agreement
 status: formal
+founded: '1962'
+geographic_scope: global
+regions:
+- Europe
+- North America
+- Asia
 languages:
 - en
 links:
-- url: https://en.wikipedia.org/wiki/Group_of_Ten_(economic)
+- url: https://www.imf.org/en/About/Factsheets/A-Guide-to-Committees-Groups-and-Clubs#G10
+  type: website
+- url: https://en.wikipedia.org/wiki/Group_of_Ten_(IMF)
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q2643280
+- url: https://www.wikidata.org/wiki/Q1411881
   type: wikidata
-name: Group of 10
+name: Group of Ten
 includes:
 - id: BE
   name: Belgium
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: DE
   name: Germany
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: IT
   name: Italy
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: NL
   name: Netherlands
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1962'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+  joined: '1962'
+- id: US
+  name: United States
+  type: country
+  status: founding_member
+  joined: '1962'
 - id: CH
   name: Switzerland
   type: country
   status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
+  joined: '1983'
 membership_count: 11
-description: International forum focused on legal matters established through an international
-  agreement.
+founding_members:
+- BE
+- CA
+- FR
+- DE
+- IT
+- JP
+- NL
+- SE
+- GB
+- US
+acronyms:
+- lang: en
+  value: G10
+- lang: en
+  value: G-10
+- lang: de
+  value: G10
+- lang: fr
+  value: G10
+- lang: es
+  value: G10
+- lang: it
+  value: G10
+legal_status: arrangement
+recognition_status: Informal group of finance ministers and central bank governors from eleven industrialized countries participating
+  in the IMF General Arrangements to Borrow (GAB); despite its name, the group has eleven members after Switzerland joined
+  in 1983
+description: Group of eleven industrialized countries established in 1962 through the IMF General Arrangements to Borrow (GAB),
+  enabling the Fund to borrow specified currencies to supplement its lending resources. Finance ministers and central bank
+  governors from member countries meet to consult on international monetary and financial policy. Despite the name, the group
+  comprises eleven members; Switzerland associated in 1964 and became a full participant in January 1983.
 tags:
 - G-10
+- G10
 - agreement
+- banking
+- central_banking
+- cooperation
+- finance
 - group
-- law
-- legal
+- imf
 topics:
-- key: law
-  name: Law
-wikidata_id: Q2643280
+- key: finance
+  name: Finance
+- key: banking
+  name: Banking
+- key: economy
+  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q1411881
 other_names:
 - id: ar
-  name: مجموعة عُشارية
+  name: مجموعة العشرة
 - id: de
-  name: Dekade
+  name: G10
 - id: en
-  name: decad
+  name: Group of Ten
 - id: es
-  name: década
+  name: Grupo de los Diez
 - id: fr
-  name: décade
+  name: Groupe des dix
+- id: it
+  name: G10
 - id: pt
-  name: deceto
+  name: G10
 - id: ru
-  name: декада
+  name: Группа десяти
 - id: zh
-  name: 十者並稱
+  name: 十国集团
+notes: The GAB was established in 1962 by ten countries; Switzerland joined as an associate in 1964 and as a full member in
+  January 1983. The Bank for International Settlements hosts publications for the group. Official observers include the BIS,
+  European Commission, IMF, and OECD; Luxembourg is an associate member.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1411881
+  license: CC0
+- field: description
+  source: IMF
+  retrieved_at: '2026-07-29'
+  url: https://www.imf.org/en/About/Factsheets/A-Guide-to-Committees-Groups-and-Clubs#G10
+- field: includes
+  source: IMF
+  retrieved_at: '2026-07-29'
+  url: https://www.imf.org/en/About/Factsheets/A-Guide-to-Committees-Groups-and-Clubs#G10
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Group_of_Ten_(IMF)
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1411881
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1411881
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1411881
   license: CC0
-acronyms:
-- lang: zh
-  value: 名数10
-- lang: zh
-  value: 中国名数10
-- lang: zh
-  value: 日本名數10
-- lang: zh
-  value: 佛教名數10
-- lang: zh
-  value: 十个一组
-- lang: zh
-  value: 十者并称

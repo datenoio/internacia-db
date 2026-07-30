@@ -1,59 +1,166 @@
 id: CPAR
+name: Conference of Parliamentarians of the Arctic Region
 blocktype:
 - parliamentary
 status: formal
+founded: '1993'
+active_period:
+  start: '1993'
+geographic_scope: regional
+regions:
+- Arctic
+- North America
+- Europe
+- Asia
 languages:
+- da
 - en
-name: Conference of Arctic Parlamentarians
+- fi
+- is
+- 'no'
+- ru
+- sv
+links:
+- url: https://arcticparl.org/
+  type: website
+- url: https://en.wikipedia.org/wiki/Arctic_cooperation_and_politics#Conference_of_Parliamentarians_of_the_Arctic_Region
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q137795681
+  type: wikidata
+- url: https://www.europarl.europa.eu/delegations/en/conference-of-parliamentarians-of-the-ar/product-details/20200117DPU24024
+  type: website
+acronyms:
+- lang: en
+  value: CPAR
 includes:
 - id: CA
   name: Canada
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: SE
   name: Sweden
   type: country
-  status: member
+  status: founding_member
+  joined: '1993'
 - id: US
   name: United States
   type: country
+  status: founding_member
+  joined: '1993'
+- id: EU
+  name: European Union
+  type: organization
   status: member
-membership_count: 8
-description: Conference of Arctic Parlamentarians is an international parliamentary
-  body with 8 members.
+  joined: '1993'
+founding_members:
+- CA
+- DK
+- FI
+- IS
+- 'NO'
+- RU
+- SE
+- US
+membership_count: 9
+description: Biennial inter-parliamentary forum established at the first Arctic parliamentary
+  conference in Reykjavik in 1993. Delegations are appointed by the national parliaments
+  of the eight Arctic states and by the European Parliament. Indigenous peoples organizations
+  with Arctic Council Permanent Participant status also take part, along with additional
+  observers. Between conferences, cooperation is carried on by the Standing Committee
+  of Parliamentarians of the Arctic Region (SCPAR), which began work in 1994 and meets
+  several times each year. CPAR acts as a parliamentary forum for Arctic issues and
+  participates in Arctic Council work as an observer.
+notes: Indigenous peoples organizations participate as Permanent Participants mirroring
+  Arctic Council Permanent Participant status; individual organizations are not modeled
+  as country includes. Russian Federation delegates remain listed members but were not
+  invited to SCPAR or CPAR meetings held after 2022 amid wider Arctic cooperation
+  suspensions following Russia's full-scale invasion of Ukraine.
 tags:
 - CPAR
+- SCPAR
 - arctic
 - conference
-- parlamentarians
+- interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q137795681
+other_names:
+- id: en
+  name: Conference of Parliamentarians of the Arctic Region
+- id: en
+  name: Conference of Arctic Parliamentarians
+- id: en
+  name: The Conference of Parliamentarians of the Arctic Region
+- id: en
+  name: Standing Committee of Parliamentarians in the Arctic Region
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q137795681
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q137795681
+  license: CC0
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arcticparl.org/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arcticparl.org/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arcticparl.org/about/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arcticparl.org/wp-content/uploads/2024/06/Report-CPAR-conference-in-Kiruna-Sweden.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arcticparl.org/about/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.parl.ca/DocumentViewer/en/IIA/visit-report/12743608/page-9

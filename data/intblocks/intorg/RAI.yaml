@@ -3,7 +3,9 @@ name: Regional Anti-Corruption Initiative
 blocktype:
 - intorg
 status: formal
-founded: '2000'
+founded: '2000-02'
+active_period:
+  start: '2000-02'
 geographic_scope: regional
 regions:
 - Southeast Europe
@@ -11,6 +13,10 @@ languages:
 - en
 links:
 - url: https://rai-see.org/
+  type: website
+- url: https://rai-see.org/about-us/
+  type: website
+- url: https://rai-see.org/about-us/observers/
   type: website
 - url: https://en.wikipedia.org/wiki/Regional_Anti-Corruption_Initiative
   type: wikipedia
@@ -27,14 +33,14 @@ headquarters:
     lng: 18.4131
 membership_count: 9
 legal_status: intergovernmental
-description: Intergovernmental organization established to support anti-corruption efforts in South Eastern Europe. Provides
+description: Intergovernmental regional organization supporting anti-corruption efforts in South Eastern Europe. Provides
   a common platform for discussions among governments and civil society, sharing knowledge and best practices in combating
   corruption. Focuses on regional cooperation in asset disclosure, strengthening public institutions' resilience against corruption,
   promoting a culture of integrity, and improving asset recovery practices.
-notes: Founded in 2000. The organization's Secretariat is based in Sarajevo, Bosnia and Herzegovina. RAI focuses on implementing
-  evidence-based anti-corruption reforms aligned with international standards, such as the UN Convention against Corruption
-  and the Council of Europe's Criminal Law Convention on Corruption. Strategic objectives include gender mainstreaming, public
-  awareness, and the digitization of anti-corruption efforts.
+notes: Established in Sarajevo in February 2000 as the Stability Pact Anti-Corruption Initiative (SPAI); institutionalized
+  by a Memorandum of Understanding signed by all nine member states in 2007 and renamed RAI by a 2013 protocol. The Secretariat
+  is based in Sarajevo, Bosnia and Herzegovina. Five countries participate as observers in the Steering Group (Poland, Georgia,
+  Slovenia, Ukraine, and Greece).
 tags:
 - RAI
 - anti-corruption
@@ -74,7 +80,7 @@ includes:
   type: country
   status: member
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
 - id: RO
@@ -85,20 +91,90 @@ includes:
   name: Serbia
   type: country
   status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: observer
+- id: GR
+  name: Greece
+  type: country
+  status: observer
+- id: PL
+  name: Poland
+  type: country
+  status: observer
+- id: SI
+  name: Slovenia
+  type: country
+  status: observer
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+founding_members:
+- AL
+- BA
+- BG
+- HR
+- MD
+- ME
+- MK
+- RO
+- RS
 wikidata_id: Q117306347
 other_names:
 - id: en
   name: Regional Anti-Corruption Initiative
+- id: en
+  name: Stability Pact Anti-Corruption Initiative
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q117306347
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://rai-see.org/
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://rai-see.org/
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://rai-see.org/
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Anti-Corruption_Initiative
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Anti-Corruption_Initiative
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/observers/
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Regional_Anti-Corruption_Initiative
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rai-see.org/about-us/observers/

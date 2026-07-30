@@ -1,37 +1,64 @@
 id: EHEA
+name: European Higher Education Area
 blocktype:
 - education
 status: formal
-partof: EU
+founded: '2010-03'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
-- url: http://www.ehea.info/
+- url: https://www.ehea.info/
+  type: website
+- url: https://ehea.info/about-ehea/ehea-membership-and-criteria/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Higher_Education_Area
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1377863
   type: wikidata
-name: European Higher Education Area
-founded: '2010'
 acronyms:
 - lang: en
-  value: EEES
-- lang: en
   value: EHEA
-- lang: en
-  value: EVP
 - lang: fr
   value: EEES
 - lang: es
   value: EEES
+- lang: sl
+  value: EVP
+membership_count: 49
+description: >-
+  Intergovernmental higher-education area launched in March 2010 at the
+  Budapest-Vienna Ministerial Conference, the tenth anniversary of the Bologna
+  Process. Members adopt comparable degree structures (bachelor–master–doctorate),
+  ECTS credit frameworks, and shared quality-assurance standards to support
+  student and staff mobility across Europe. Membership is open to parties to the
+  European Cultural Convention that commit to Bologna Process objectives; the
+  European Commission is also a member alongside the 49 country members.
+tags:
+- EHEA
+- EEES
+- bologna
+- education
+- higher_education
+- europe
+- european
+- university
+topics:
+- key: education
+  name: Education
+- key: higher_education
+  name: Higher Education
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
-- id: AD
-  name: Andorra
-  type: country
-  status: member
 - id: AL
   name: Albania
+  type: country
+  status: member
+- id: AD
+  name: Andorra
   type: country
   status: member
 - id: AM
@@ -46,24 +73,24 @@ includes:
   name: Azerbaijan
   type: country
   status: member
-- id: BA
-  name: Bosnia and Herzegovina
+- id: BY
+  name: Belarus
   type: country
   status: member
 - id: BE
   name: Belgium
   type: country
   status: member
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
 - id: BG
   name: Bulgaria
   type: country
   status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
+- id: HR
+  name: Croatia
   type: country
   status: member
 - id: CY
@@ -74,20 +101,12 @@ includes:
   name: Czech Republic
   type: country
   status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
 - id: DK
   name: Denmark
   type: country
   status: member
 - id: EE
   name: Estonia
-  type: country
-  status: member
-- id: ES
-  name: Spain
   type: country
   status: member
 - id: FI
@@ -98,32 +117,32 @@ includes:
   name: France
   type: country
   status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
 - id: GE
   name: Georgia
+  type: country
+  status: member
+- id: DE
+  name: Germany
   type: country
   status: member
 - id: GR
   name: Greece
   type: country
   status: member
-- id: HR
-  name: Croatia
+- id: VA
+  name: Holy See
   type: country
   status: member
 - id: HU
   name: Hungary
   type: country
   status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
 - id: IS
   name: Iceland
+  type: country
+  status: member
+- id: IE
+  name: Ireland
   type: country
   status: member
 - id: IT
@@ -132,6 +151,10 @@ includes:
   status: member
 - id: KZ
   name: Kazakhstan
+  type: country
+  status: member
+- id: LV
+  name: Latvia
   type: country
   status: member
 - id: LI
@@ -146,28 +169,24 @@ includes:
   name: Luxembourg
   type: country
   status: member
-- id: LV
-  name: Latvia
+- id: MT
+  name: Malta
   type: country
   status: member
 - id: MD
-  name: Moldova, Republic of
+  name: Moldova
   type: country
   status: member
 - id: ME
   name: Montenegro
   type: country
   status: member
-- id: MK
-  name: North Macedonia
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
 - id: NL
   name: Netherlands
+  type: country
+  status: member
+- id: MK
+  name: North Macedonia
   type: country
   status: member
 - id: 'NO'
@@ -186,60 +205,51 @@ includes:
   name: Romania
   type: country
   status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
 - id: RU
   name: Russian Federation
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
   type: country
   status: member
 - id: SM
   name: San Marino
   type: country
   status: member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 - id: UA
   name: Ukraine
   type: country
   status: member
-- id: VA
-  name: Holy See (Vatican City State)
+- id: GB
+  name: United Kingdom
   type: country
   status: member
-membership_count: 49
 wikidata_id: Q1377863
-description: Organization.
-tags:
-- EEES
-- EHEA
-- EVP
-- cultural
-- culture
-- education
-- european
-- higher
-- university
-topics:
-- key: culture
-  name: Culture
-- key: education
-  name: Education
 other_names:
 - id: ar
   name: منطقة التعليم العالي الأوروبية
@@ -251,23 +261,66 @@ other_names:
   name: Espacio Europeo de Educación Superior
 - id: fr
   name: Espace européen d'enseignement supérieur
+- id: it
+  name: Spazio Europeo dell'Istruzione Superiore
 - id: pt
   name: Espaço Europeu de Ensino Superior
 - id: ru
   name: Европейское пространство высшего образования
+- id: sl
+  name: evropski visokošolski prostor
+recognition_status: >-
+  Intergovernmental higher-education area of 49 country members plus the European
+  Commission; membership is sovereign-state (and EC) level via the Bologna Process,
+  not institutional affiliation.
+notes: >-
+  Roster matches the official EHEA membership list (49 country members). The
+  European Commission is also an EHEA member but is not listed in includes (no
+  country code). Russian Federation and Belarus remain members but have been
+  suspended from all EHEA structures and activities since the BFUG decision of
+  April 2022, reaffirmed at the 2024 Tirana Ministerial Conference. Belgium
+  participates through its Flemish and French Communities; the United Kingdom
+  includes Scotland in BFUG representation — both are recorded as single country
+  entries.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ehea.info/about-ehea/ehea-membership-and-criteria/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ehea.info/about-ehea/ehea-membership-and-criteria/
+- field: founded
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1377863
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1377863
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ehea.info/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ehea.info/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.ehea.info/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1377863
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1377863
   license: CC0

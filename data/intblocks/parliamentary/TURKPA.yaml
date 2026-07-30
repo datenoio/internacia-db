@@ -1,48 +1,154 @@
 id: TURKPA
+name: Parliamentary Assembly of Turkic States
 blocktype:
 - parliamentary
 status: formal
+founded: '2008-11-21'
+active_period:
+  start: '2008-11-21'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
 languages:
+- az
 - en
 - ru
 - tr
 links:
-- url: http://www.turk-pa.org/
+- url: https://turkpa.org/
   type: website
-name: Turkic Countries Parliamentarian Assembly
+- url: https://en.wikipedia.org/wiki/TURKPA
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q4345435
+  type: wikidata
+- url: https://turkicstates.org/en/partners-detail/turkpa
+  type: website
+acronyms:
+- lang: az
+  value: TÜRKPA
+- lang: en
+  value: TURKPA
+- lang: ru
+  value: ТЮРКПА
+- lang: tr
+  value: TÜRKPA
+headquarters:
+  city: Baku
+  country: AZ
+  coordinates:
+    lat: 40.3834
+    lng: 49.8932
 includes:
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
+  status: founding_member
+  joined: '2008-11-21'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2008-11-21'
 - id: KG
   name: Kyrgyzstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2008-11-21'
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
-  status: member
+  status: founding_member
+  joined: '2008-11-21'
+- id: HU
+  name: Hungary
+  type: country
+  status: observer
+founding_members:
+- AZ
+- KZ
+- KG
+- TR
 membership_count: 4
-description: Turkic Countries Parliamentarian Assembly is an international parliamentary
-  body with 4 members.
+description: Inter-parliamentary organization established on 21 November 2008 in Istanbul
+  by agreement among the national assemblies of Azerbaijan, Kazakhstan, Kyrgyzstan, and
+  Türkiye to develop inter-parliamentary cooperation, political dialogue, and legislative
+  harmonization among Turkic states. The General Secretariat is permanently based in Baku.
+  Hungary holds observer status. TURKPA holds annual plenary sessions (the first in Baku on
+  29 September 2009), maintains four permanent specialized commissions, and conducts
+  election observation missions in member states. Partner organization of the Organization
+  of Turkic States.
+notes: Northern Cyprus also holds observer status per published membership tables but is
+  not modeled as a country entity in this dataset. Turkmenistan and Uzbekistan participate
+  in plenary sessions as guests or honorary participants without formal membership.
 tags:
 - TURKPA
-- countries
-- parliamentarian
+- assembly
+- interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
 - turkic
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q4345435
+other_names:
+- id: az
+  name: Türk Dövlətləri Parlament Assambleyası
+- id: en
+  name: Parliamentary Assembly of Turkic States
+- id: en
+  name: Turkic Countries Parliamentarian Assembly
+- id: ru
+  name: Парламентская ассамблея тюркских государств
+- id: tr
+  name: Türk Devletleri Parlamenter Asamblesi
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4345435
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4345435
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4345435
+  license: CC0
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://turkicstates.org/en/partners-detail/turkpa
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://turkicstates.org/en/partners-detail/turkpa
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q4345435
+  license: CC0
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TURKPA
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://turkicstates.org/en/partners-detail/turkpa
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://turkpa.org/en

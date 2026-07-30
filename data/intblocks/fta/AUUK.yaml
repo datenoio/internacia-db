@@ -2,31 +2,55 @@ id: AUUK
 blocktype:
 - fta
 status: formal
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/Australia%E2%80%93United_Kingdom_Free_Trade_Agreement
-  type: wikipedia
-name: Australia-United Kingdom Free Trade Agreement
 founded: '2021-12-17'
+active_period:
+  start: '2023-05-31'
 geographic_scope: bilateral
 regions:
 - Oceania
 - Europe
+languages:
+- en
+links:
+- url: https://www.dfat.gov.au/trade/agreements/in-force/aukfta
+  type: website
+- url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2023/3.html
+  type: website
+- url: https://www.gov.uk/government/collections/free-trade-agreement-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-australia
+  type: website
+- url: https://en.wikipedia.org/wiki/Australia%E2%80%93United_Kingdom_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q107271797
+  type: wikidata
+name: Australia-United Kingdom Free Trade Agreement
+acronyms:
+- lang: en
+  value: A-UKFTA
+- lang: en
+  value: UKFTA
+legal_status: free trade agreement
+recognition_status: Comprehensive bilateral free trade agreement signed on 17 December 2021; entered into force on 31 May
+  2023 after completion of domestic ratification procedures by both parties
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2021-12-17'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '2021-12-17'
+founding_members:
+- AU
+- GB
 membership_count: 2
-description: Comprehensive free trade agreement between Australia and the United Kingdom. The agreement eliminates tariffs
-  on over 99% of Australian goods exported to the UK, creates significant opportunities for Australian businesses, and facilitates
-  mutual recognition of professional qualifications. It also includes provisions for digital trade, innovation, and youth
-  mobility.
+description: Comprehensive free trade agreement between Australia and the United Kingdom, signed on 17 December 2021 and
+  entered into force on 31 May 2023. The first trade agreement negotiated entirely anew by the UK since leaving the European
+  Union, it eliminates tariffs on over 99% of Australian goods exported to the UK and creates significant opportunities for
+  services, digital trade, innovation, and youth mobility. It also includes provisions for mutual recognition of professional
+  qualifications.
 tags:
 - AUUK
 - australia
@@ -43,11 +67,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: A-UKFTA
-- lang: en
-  value: UKFTA
+wikidata_id: Q107271797
 other_names:
 - id: en
   name: Australia-UK FTA
@@ -57,4 +77,20 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Australia%E2%80%93United_Kingdom_Free_Trade_Agreement
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aukfta
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2023/3.html
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aukfta/outcomes/steps-conclusion-entry-into-force
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATS/2023/3.html
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/aukfta

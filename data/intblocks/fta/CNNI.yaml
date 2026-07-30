@@ -2,29 +2,55 @@ id: CNNI
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- es
-name: China-Nicaragua Free Trade Agreement
-founded: 2023-08
+founded: '2023-08-31'
+active_period:
+  start: '2024-01-01'
 geographic_scope: bilateral
 regions:
 - Asia
 - Central America
+languages:
+- en
+- es
+- zh
+links:
+- url: https://fta.mofcom.gov.cn/topic/ennicaragua.shtml
+  type: website
+- url: https://aric.adb.org/fta/peoples-republic-of-china-nicaragua-free-trade-agreement
+  type: website
+- url: https://investmentpolicy.unctad.org/international-investment-agreements/treaties/otheriia/5078/china---nicaragua-fta-2023-
+  type: website
+name: China-Nicaragua Free Trade Agreement
+acronyms:
+- lang: en
+  value: China-Nicaragua FTA
+- lang: es
+  value: TLC China-Nicaragua
+- lang: zh
+  value: 中尼自贸协定
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 31 August 2023; entered into force on 1 January 2024 after completion
+  of domestic ratification procedures by both parties
 includes:
 - id: CN
   name: China
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-08-31'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '2023-08-31'
+founding_members:
+- CN
+- NI
 membership_count: 2
-description: Free trade agreement between China and Nicaragua that entered into force on January 1, 2024. Approximately 60%
-  of goods in bilateral trade became exempt from tariffs upon implementation, with tariffs on more than 95% of goods set to
-  be gradually reduced to zero. The agreement includes provisions on service trade, investment, digital economy, and environmental
-  standards.
+description: Bilateral free trade agreement between China and Nicaragua, signed on 31 August 2023 and entered into force on
+  1 January 2024. Approximately 60% of goods in bilateral trade became exempt from tariffs upon implementation, with tariffs
+  on more than 95% of goods set to be gradually reduced to zero. The agreement includes provisions on service trade, investment,
+  digital economy, and environmental standards. It is China's first FTA to open cross-border service trade and investment
+  through a negative list.
 tags:
 - CNNI
 - china
@@ -39,9 +65,6 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: China-Nicaragua FTA
 other_names:
 - id: en
   name: China-Nicaragua FTA
@@ -53,3 +76,16 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://fta.mofcom.gov.cn/topic/ennicaragua.shtml
+- field: founded
+  source: Ministry of Commerce of the People's Republic of China
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/ennicaragua.shtml
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://investmentpolicy.unctad.org/international-investment-agreements/treaties/otheriia/5078/china---nicaragua-fta-2023-
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://fta.mofcom.gov.cn/topic/ennicaragua.shtml

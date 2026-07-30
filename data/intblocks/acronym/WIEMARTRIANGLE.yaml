@@ -2,17 +2,21 @@ id: WIEMARTRIANGLE
 blocktype:
 - acronym
 status: informal
+founded: '1991-08-28'
+geographic_scope: sub-regional
+regions:
+- Europe
+languages:
+- de
+- fr
+- pl
 links:
-- url: https://en.wikipedia.org/wiki/Weimar_triangle
+- url: https://en.wikipedia.org/wiki/Weimar_Triangle
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q566397
   type: wikidata
 name: Weimar Triangle
 includes:
-- id: PL
-  name: Poland
-  type: country
-  status: member
 - id: FR
   name: France
   type: country
@@ -21,18 +25,34 @@ includes:
   name: Germany
   type: country
   status: member
+- id: PL
+  name: Poland
+  type: country
+  status: member
 membership_count: 3
-description: International entity.The Weimar Triangle is a regional alliance of France,
-  Germany, and Poland created in 1991 in the German city of Weimar.
+wikidata_id: Q566397
+description: The Weimar Triangle is a regional alliance of France, Germany, and Poland established on 28–29 August 1991 in
+  Weimar, Germany, by their foreign ministers. The format promotes cooperation on European and cross-border issues through
+  summit meetings of leaders and ministers, parliamentary contacts, and military, scientific, and cultural exchanges. It was
+  created to support Poland's transition from Communist rule and integration into Western European structures.
 tags:
 - WIEMARTRIANGLE
 - acronym
+- france
+- germany
+- poland
 - triangle
 - weimar
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q566397
+acronyms:
+- lang: de
+  value: Weimarer Dreieck
+- lang: fr
+  value: Triangle de Weimar
+- lang: pl
+  value: Trójkąt Weimarski
 other_names:
 - id: zh
   name: 威瑪三角
@@ -40,14 +60,38 @@ other_names:
   name: Weimar Triangle
 - id: fr
   name: Triangle de Weimar
+- id: de
+  name: Weimarer Dreieck
+- id: pl
+  name: Trójkąt Weimarski
 - id: ru
   name: Веймарский треугольник
 - id: es
   name: Triángulo de Weimar
-founded: '1991-08-28'
+notes: Informal trilateral format without a permanent secretariat. Activity has fluctuated since the 1990s, with renewed
+  summits after Brexit and Russia's 2022 invasion of Ukraine. The Weimar Battlegroup (EU battlegroup under Polish command,
+  agreed 2011) is a related but distinct military cooperation project.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Weimar_Triangle
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Weimar_Triangle
 - field: founded
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q566397
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q566397
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Weimar_Triangle

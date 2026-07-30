@@ -1,50 +1,83 @@
 id: CANTO
+name: Caribbean Association of National Telecommunication Organizations
 blocktype:
 - telecom
 status: formal
+founded: '1985'
+active_period:
+  start: '1985'
+geographic_scope: regional
+regions:
+- Americas
+- Caribbean
+- Latin America
 languages:
 - en
 - es
 links:
-- url: http://www.canto.org/
+- url: https://canto.org/
   type: website
-name: Caribbean Association of National Telecommunication Organizations
-founded: '1985'
+- url: https://canto.org/membership/
+  type: website
+- url: https://www.linkedin.com/company/canto-caribbean/
+  type: website
+acronyms:
+- lang: en
+  value: CANTO
+legal_status: non-profit trade association
+recognition_status: Caribbean-focused ICT trade association whose members are telecommunications operators, regulators, vendors, and service providers; membership is organization-level, not intergovernmental
+secretariat:
+  location: Port of Spain, Trinidad and Tobago
+  organization: CANTO Secretariat
+headquarters:
+  city: Port of Spain
+  country: TT
+  coordinates:
+    lat: 10.6667
+    lng: -61.5167
 includes:
-- id: AI
-  name: Anguilla
-  type: country
-  status: member
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
+- id: AI
+  name: Anguilla
+  type: territory
+  status: member
 - id: AW
   name: Aruba
+  type: territory
+  status: member
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+- id: BM
+  name: Bermuda
+  type: territory
+  status: member
+- id: BQ
+  name: Caribbean Netherlands
+  type: territory
+  status: member
+- id: BR
+  name: Brazil
   type: country
   status: member
 - id: BS
   name: Bahamas, The
   type: country
   status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
 - id: BZ
   name: Belize
   type: country
   status: member
-- id: BM
-  name: Bermuda
+- id: CA
+  name: Canada
   type: country
   status: member
-- id: KY
-  name: Cayman Islands
+- id: CO
+  name: Colombia
   type: country
   status: member
 - id: CR
@@ -57,22 +90,38 @@ includes:
   status: member
 - id: CW
   name: Curaçao
-  type: country
+  type: territory
   status: member
 - id: DM
   name: Dominica
   type: country
   status: member
-- id: GF
-  name: French Guiana
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
   type: country
   status: member
 - id: GD
   name: Grenada
   type: country
   status: member
+- id: GF
+  name: French Guiana
+  type: territory
+  status: member
+- id: GP
+  name: Guadeloupe
+  type: territory
+  status: member
 - id: GY
   name: Guyana
+  type: country
+  status: member
+- id: HN
+  name: Honduras
   type: country
   status: member
 - id: HT
@@ -87,52 +136,133 @@ includes:
   name: St. Kitts and Nevis
   type: country
   status: member
+- id: KY
+  name: Cayman Islands
+  type: territory
+  status: member
 - id: LC
   name: St. Lucia
   type: country
   status: member
+- id: MQ
+  name: Martinique
+  type: territory
+  status: member
+- id: MS
+  name: Montserrat
+  type: territory
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PR
+  name: Puerto Rico
+  type: territory
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
 - id: SX
   name: Sint Maarten
+  type: territory
+  status: member
+- id: TC
+  name: Turks and Caicos Islands
+  type: territory
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: US
+  name: United States
   type: country
   status: member
 - id: VC
   name: St. Vincent and the Grenadines
   type: country
   status: member
-- id: SR
-  name: Suriname
+- id: VE
+  name: Venezuela, RB
   type: country
   status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
+- id: VG
+  name: British Virgin Islands
+  type: territory
   status: member
-- id: TC
-  name: Turks and Caicos Islands
-  type: country
+- id: VI
+  name: Virgin Islands (U.S.)
+  type: territory
   status: member
-membership_count: 25
-description: CANTO is a non-profit trade association of telecommunications and ICT operators, regulators, and service providers in the Caribbean and the Americas. Founded in 1985 by a group of telephone operating companies, it provides a platform for collaboration, advocacy, and information sharing to drive regional digital development.
+membership_count: 44
+description: CANTO is a non-profit trade association of telecommunications and ICT operators, regulators, vendors, and service providers in the Caribbean, Latin America, and the wider Americas. Founded in 1985 by Caribbean telephone operating companies, it provides a forum for collaboration, advocacy, training, and information sharing to advance regional digital development.
 tags:
 - CANTO
 - association
 - caribbean
 - communication
+- ict
 - national
+- nonprofit
+- regional_cooperation
 - technology
 - telecom
 - telecommunications
+- trade_association
 topics:
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: technology
   name: Technology
 - key: telecommunications
   name: Telecommunications
+other_names:
+- id: en
+  name: Caribbean Association of National Telecommunication Organizations
+- id: es
+  name: Asociación Caribeña de Organizaciones Nacionales de Telecomunicaciones
+notes: Membership is organization-level (operators, regulators, vendors); includes lists countries and territories where CANTO member organizations operate, per the official placemark directory.
+last_verified: '2026-07-30'
 provenance:
 - field: description
   source: CANTO
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-30'
   url: https://canto.org/
 - field: founded
   source: CANTO
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-30'
+  url: https://canto.org/membership/
+- field: includes
+  source: CANTO
+  retrieved_at: '2026-07-30'
+  url: https://www.canto.org/placemarks/
+- field: membership_count
+  source: CANTO
+  retrieved_at: '2026-07-30'
+  url: https://www.canto.org/placemarks/
+- field: headquarters
+  source: CANTO
+  retrieved_at: '2026-07-30'
+  url: https://canto.org/membership/
+- field: other_names
+  source: CANTO
+  retrieved_at: '2026-07-30'
   url: https://canto.org/

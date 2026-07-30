@@ -1,7 +1,15 @@
 id: MSG
+name: Melanesian Spearhead Group
 blocktype:
 - intorg
 status: formal
+founded: '1986'
+geographic_scope: sub-regional
+regions:
+- Oceania
+languages:
+- en
+- fr
 links:
 - url: http://www.msgsec.info/
   type: website
@@ -9,41 +17,88 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1918937
   type: wikidata
-name: Melanesian Spearhead Group
-founded: '1983'
+acronyms:
+- lang: en
+  value: MSG
+- lang: fr
+  value: GFL
+- lang: de
+  value: GFLM
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization formalized under the Agreement Establishing
+  the Melanesian Spearhead Group (signed 23 March 2007); operates a permanent secretariat
+  in Port Vila, Vanuatu
+headquarters:
+  city: Port Vila
+  country: VU
+  coordinates:
+    lat: -17.7404
+    lng: 168.321
+wikidata_id: Q1918937
+description: Intergovernmental organization of Melanesian states promoting regional
+  trade, economic cooperation, and political coordination. Founded in 1986 by Papua
+  New Guinea, Solomon Islands, and Vanuatu; Fiji joined in 1998. The Kanak and Socialist
+  National Liberation Front (FLNKS) represents New Caledonia. Indonesia has associate
+  membership; Timor-Leste holds observer status. Administers the Melanesian Spearhead
+  Group Trade Agreement, a sub-regional preferential trade arrangement.
 includes:
 - id: FJ
   name: Fiji
   type: country
   status: member
+  joined: '1998-04-14'
 - id: PG
   name: Papua New Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1986'
 - id: SB
   name: Solomon Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1986'
 - id: VU
   name: Vanuatu
   type: country
+  status: founding_member
+  joined: '1986'
+- id: NC
+  name: New Caledonia
+  type: country
   status: member
+  note: Represented by the Kanak and Socialist National Liberation Front (FLNKS)
 - id: ID
   name: Indonesia
   type: country
   status: associated
-membership_count: 4
-wikidata_id: Q1918937
-description: International forum.
+  joined: '2015-06-26'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: observer
+  joined: '2011'
+founding_members:
+- PG
+- SB
+- VU
+membership_count: 6
 tags:
 - MSG
+- cooperation
 - group
 - intorg
 - melanesian
+- pacific
+- regional
+- regional_cooperation
 - spearhead
 topics:
-- key: economy
-  name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: trade
+  name: Trade
+- key: political
+  name: Political
 other_names:
 - id: de
   name: Melanesian Spearhead Group
@@ -57,19 +112,51 @@ other_names:
   name: Меланезийская инициативная группа
 - id: zh
   name: 美拉尼西亚先锋集团
+notes: The United Liberation Movement for West Papua (ULMWP) holds MSG observer status
+  but is not listed in includes because it has no ISO 3166-1 alpha-2 code or standalone
+  intblock record.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1918937
+  license: CC0
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Melanesian_Spearhead_Group
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1918937
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1918937
   license: CC0
-acronyms:
-- lang: fr
-  value: GFL
-- lang: de
-  value: GFLM

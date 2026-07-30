@@ -1,183 +1,228 @@
 id: IFDC
+name: International Fertilizer Development Center
 blocktype:
 - intorg
 status: formal
+founded: '1974-10'
+active_period:
+  start: '1974-10'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Latin America
 languages:
 - en
 - fr
 links:
 - url: https://ifdc.org/
   type: website
+- url: https://ifdc.org/about-us/
+  type: website
+- url: https://ifdc.org/wp-content/uploads/2025/06/2024-Annual-Report-1-compressed.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Fertilizer_Development_Center
   type: wikipedia
-name: International Fertilizer Development Center
-founded: '1974'
-geographic_scope: global
-regions:
-- Africa
-- Asia
-- Latin America
+- url: https://www.wikidata.org/wiki/Q17087797
+  type: wikidata
+acronyms:
+- lang: en
+  value: IFDC
+legal_status: public international organization
+recognition_status: Independent non-profit public international organization designated by U.S. President Jimmy Carter in 1977 under the International Organizations Immunities Act; conceived at the urging of the U.S. Department of State following Henry Kissinger's 1974 UN General Assembly address and building on the Tennessee Valley Authority's National Fertilizer Development Center legacy
 headquarters:
   city: Muscle Shoals
   country: US
+  coordinates:
+    lat: 34.7448
+    lng: -87.6675
+secretariat:
+  location: Muscle Shoals, Alabama, United States
+membership_count: 31
+description: Science-based public international organization that develops and disseminates fertilizer technologies, soil fertility management practices, and market-system approaches to improve smallholder farmer productivity and food security. Founded in October 1974 and headquartered in Muscle Shoals, Alabama, with a Washington, D.C. office. Governed by an international board of individual experts rather than country delegates; as of 2024 maintains an operational presence in 31 countries across Africa and Asia while working with partners in over 100 developing countries historically.
 includes:
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: participant
 - id: BJ
   name: Benin
   type: country
-  status: member
+  status: participant
 - id: BF
   name: Burkina Faso
   type: country
-  status: member
+  status: participant
 - id: BI
   name: Burundi
   type: country
-  status: member
+  status: participant
 - id: CV
   name: Cabo Verde
   type: country
-  status: member
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
+  status: participant
 - id: TD
   name: Chad
   type: country
-  status: member
-- id: CD
-  name: Democratic Republic of the Congo
-  type: country
-  status: member
+  status: participant
 - id: CI
   name: Côte d'Ivoire
   type: country
-  status: member
+  status: participant
 - id: EG
   name: Egypt
   type: country
-  status: member
+  status: participant
 - id: ET
   name: Ethiopia
   type: country
-  status: member
+  status: participant
 - id: GM
   name: The Gambia
   type: country
-  status: member
+  status: participant
 - id: GH
   name: Ghana
   type: country
-  status: member
+  status: participant
 - id: GN
   name: Guinea
   type: country
-  status: member
+  status: participant
 - id: GW
   name: Guinea-Bissau
   type: country
-  status: member
+  status: participant
+- id: IN
+  name: India
+  type: country
+  status: participant
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: participant
 - id: LR
   name: Liberia
   type: country
-  status: member
+  status: participant
+- id: MW
+  name: Malawi
+  type: country
+  status: participant
 - id: ML
   name: Mali
   type: country
-  status: member
+  status: participant
 - id: MR
   name: Mauritania
   type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
+  status: participant
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: participant
 - id: NE
   name: Niger
   type: country
-  status: member
+  status: participant
 - id: NG
   name: Nigeria
   type: country
-  status: member
+  status: participant
 - id: RW
   name: Rwanda
   type: country
-  status: member
+  status: participant
 - id: SN
   name: Senegal
   type: country
-  status: member
+  status: participant
 - id: SL
   name: Sierra Leone
   type: country
-  status: member
+  status: participant
 - id: SS
   name: South Sudan
   type: country
-  status: member
+  status: participant
 - id: TZ
   name: Tanzania
   type: country
-  status: member
+  status: participant
 - id: TG
   name: Togo
   type: country
-  status: member
+  status: participant
 - id: UG
   name: Uganda
   type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
+  status: participant
 - id: ZM
   name: Zambia
   type: country
-  status: member
-membership_count: 33
-description: International Fertilizer Development Center is an international intorg
-  body with 33 members.
+  status: participant
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: participant
+notes: IFDC is not a treaty-based membership organization; governance rests with an international board of individual experts. The includes roster lists countries where IFDC maintained an operational presence as of 2024 (annual report "Our Reach" section), not formal member states. Headquarters country (US) is excluded because it hosts the secretariat rather than being a programme country.
 tags:
 - IFDC
 - agriculture
 - fertilizer
 - development
 - intorg
+- soil_health
+- food_security
 topics:
 - key: agriculture
   name: Agriculture
-acronyms:
-- lang: en
-  value: IFDC
+- key: food
+  name: Food
 other_names:
 - id: en
   name: International Fertilizer Development Center
 - id: fr
   name: Centre international de développement des engrais
+wikidata_id: Q17087797
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
+- field: includes
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://ifdc.org/
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/wp-content/uploads/2025/06/2024-Annual-Report-1-compressed.pdf
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/wp-content/uploads/2025/06/2024-Annual-Report-1-compressed.pdf
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/about-us/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/about-us/
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/International_Fertilizer_Development_Center
+  license: CC-BY-SA
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q17087797
+  license: CC0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://ifdc.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/about-us/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q17087797
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://ifdc.org/about-us/

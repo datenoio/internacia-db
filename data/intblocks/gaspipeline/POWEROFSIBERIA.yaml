@@ -2,9 +2,17 @@ id: POWEROFSIBERIA
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2019-12-02'
+geographic_scope: bilateral
+regions:
+- Asia
 links:
+- url: https://www.gazprom.com/projects/power-of-siberia/
+  type: website
 - url: https://en.wikipedia.org/wiki/Power_of_Siberia
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2898164
+  type: wikidata
 name: Power of Siberia
 includes:
 - id: RU
@@ -16,15 +24,22 @@ includes:
   type: country
   status: member
 membership_count: 2
-description: Power of Siberia is an international gaspipeline body with 2 members.
+wikidata_id: Q2898164
+description: Gazprom-operated natural gas pipeline in Eastern Siberia from the Chayanda and Kovykta
+  fields to Blagoveshchensk on the Russia–China border, continuing as the China–Russia East-Route
+  pipeline. The eastern route for Russian gas exports to China under a 30-year supply contract signed
+  in May 2014; commissioned on 2 December 2019 with deliveries ramping to 38 billion m³ per year.
 tags:
 - POWEROFSIBERIA
-- power
-- siberia
+- china
 - economy
 - energy
+- gazprom
 - gaspipeline
 - pipeline
+- power
+- russia
+- siberia
 - transport
 - transportation
 topics:
@@ -34,7 +49,56 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: en
+  name: Power of Siberia
+- id: en
+  name: Yakutia–Khabarovsk–Vladivostok pipeline
+- id: en
+  name: China–Russia East-Route Natural Gas pipeline
+- id: ru
+  name: Сила Сибири
+- id: zh
+  name: 中俄东线天然气管道
+- id: zh
+  name: 西伯利亚力量
+- id: de
+  name: Kraft Sibiriens
+- id: fr
+  name: Force de Sibérie
+- id: es
+  name: Poder de Siberia
+- id: ja
+  name: シベリアの力
+- id: ko
+  name: 시베리아의 힘
+- id: pt
+  name: Força da Sibéria
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2898164
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Power_of_Siberia
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2898164
+  license: CC0
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2898164
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Power_of_Siberia
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'

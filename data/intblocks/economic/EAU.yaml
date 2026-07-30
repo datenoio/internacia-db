@@ -1,8 +1,15 @@
 id: EAU
+name: Eurasian Union
 blocktype:
 - economic
 - political
 status: formal
+founded: '1994-06-03'
+geographic_scope: regional
+regions:
+- Europe
+- Asia
+- Central Asia
 languages:
 - ru
 - am
@@ -11,41 +18,72 @@ languages:
 - ky
 - en
 links:
-- url: http://www.eaeunion.org
-  type: website
 - url: https://en.wikipedia.org/wiki/Eurasian_Union
+  type: wikipedia
+- url: https://simple.wikipedia.org/wiki/Eurasian_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q474548
   type: wikidata
-name: Eurasian Union
+- url: https://iz.ru/news/502761
+  type: website
+acronyms:
+- lang: en
+  value: EAU
+- lang: ru
+  value: ЕАС
 includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2015-01-01'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '2015-01-01'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '2015-01-01'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '2015-01-01'
+- id: KG
+  name: Kyrgyzstan
+  type: country
+  status: member
+  joined: '2015-08-12'
 - id: MD
   name: Moldova, Republic of
   type: country
   status: observer
+  joined: '2018-05-14'
+founding_members:
+- RU
+- BY
+- KZ
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7558
+    lng: 37.6173
 membership_count: 5
+legal_status: proposed intergovernmental union
 wikidata_id: Q474548
-description: Project of political union in post-soviet area.
+suborganizations:
+- id: EAEU
+  name: Eurasian Economic Union
+description: >-
+  Proposed political and economic union of post-Soviet states, first outlined by Kazakhstan's President Nursultan
+  Nazarbayev in Moscow in 1994 and revived by Vladimir Putin in October 2011. The 18 November 2011 agreement among
+  Belarus, Kazakhstan, and Russia set a target of establishing the union by 2015; the Eurasian Economic Union (EAEU)
+  became the primary institutional vehicle for integration. Membership reflects states participating in the EAEU
+  integration framework that advances the broader Eurasian union project.
 tags:
 - EAU
 - aid
@@ -88,12 +126,41 @@ other_names:
   name: Евразийский Союз
 - id: zh
   name: 欧亚联盟
+notes: >-
+  Distinct from the Eurasian Economic Union (EAEU), which is the treaty-based economic union established on 1 January
+  2015. Tajikistan is often cited as a prospective member of the broader union but has not acceded to the EAEU. Moldova
+  holds EAEU observer status. Do not conflate with EAEU (Q4173083).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: EAEU official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eaeunion.org/
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Union
+- field: founded
+  source: Simple English Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://simple.wikipedia.org/wiki/Eurasian_Union
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eurasian_Union
+- field: legal_status
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q474548
   license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://simple.wikipedia.org/wiki/Eurasian_Union
+- field: headquarters
+  source: Simple English Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://simple.wikipedia.org/wiki/Eurasian_Union
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -104,6 +171,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: ru
-  value: ЕАС

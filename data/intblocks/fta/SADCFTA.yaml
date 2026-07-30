@@ -3,108 +3,126 @@ blocktype:
 - fta
 status: formal
 partof: SADC
+founded: '1996-08-24'
+active_period:
+  start: '2008-08'
+geographic_scope: regional
+regions:
+- Africa
 languages:
 - en
 - fr
 - pt
 links:
+- url: https://www.sadc.int/integration-milestones/free-trade-area
+  type: website
 - url: https://en.wikipedia.org/wiki/Southern_African_Development_Community
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q816706
   type: wikidata
 name: Southern African Development Community Free Trade Area
-includes:
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
-  type: country
-  status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-founded: '1992'
+acronyms:
+- lang: en
+  value: SADCFTA
+- lang: en
+  value: SADC FTA
+legal_status: free trade agreement
+recognition_status: Regional free trade area established under the SADC Protocol on Trade, signed on 24 August 1996 in Maseru and in force from 1 September 2000; tariff phase-down began in 2001 and minimum FTA conditions (85% of intra-regional trade at zero duty) were met in August 2008, with maximum tariff liberalisation on sensitive products completed by January 2012 for most members
 headquarters:
   city: Gaborone
   country: BW
   coordinates:
     lat: -24.656944444444
     lng: 25.908611111111
-acronyms:
-- lang: en
-  value: SADC
-- lang: en
-  value: CDAA
-- lang: zh
-  value: 南共體
-- lang: zh
-  value: 南共体
-- lang: ru
-  value: САДК
-- lang: en
-  value: SAOG
-- lang: ru
-  value: СРПА
-membership_count: 14
+includes:
+- id: BW
+  name: Botswana
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: LS
+  name: Lesotho
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+  joined: '2006'
+- id: MW
+  name: Malawi
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: MU
+  name: Mauritius
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: NA
+  name: Namibia
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+  joined: '2015-05-25'
+- id: SZ
+  name: Eswatini
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: TZ
+  name: Tanzania, United Republic of
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: ZA
+  name: South Africa
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: ZM
+  name: Zambia
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: founding_member
+  joined: '1996-08-24'
+founding_members:
+- BW
+- LS
+- MW
+- MU
+- MZ
+- NA
+- SZ
+- TZ
+- ZA
+- ZM
+- ZW
+membership_count: 13
 wikidata_id: Q816706
-description: Southern African Development Community Free Trade Area is an international
-  fta body with 14 members.
+official_documents:
+- url: https://www.sadc.int/document/consolidated-text-treaty-southern-african-development-community
+  type: document
+description: The Southern African Development Community Free Trade Area (SADC FTA) is the intra-regional trade liberalisation framework of the Southern African Development Community. Established under the SADC Protocol on Trade signed in August 1996, it entered into force in September 2000 and achieved minimum free trade area conditions in August 2008 when 85% of intra-regional trade reached zero duty. Thirteen of sixteen SADC member states currently implement the FTA; Angola, the Democratic Republic of the Congo, and Comoros remain outside pending accession.
 tags:
-- CDAA
-- SADC
 - SADCFTA
-- SAOG
+- africa
 - african
-- aid
 - commerce
-- cooperation
 - development
 - economy
 - fta
@@ -112,10 +130,6 @@ tags:
 - regional_cooperation
 - southern
 - trade
-- САДК
-- СРПА
-- 南共体
-- 南共體
 topics:
 - key: development
   name: Development
@@ -126,23 +140,61 @@ topics:
 - key: trade
   name: Trade
 other_names:
-- id: ar
-  name: مجموعة التنمية لإفريقيا الجنوبية
-- id: zh
-  name: 南部非洲发展共同体
 - id: en
-  name: Southern African Development Community
+  name: SADC Free Trade Area
 - id: fr
-  name: Communauté de développement d'Afrique australe
-- id: ru
-  name: Сообщество развития Юга Африки
-- id: es
-  name: Comunidad de Desarrollo de África Austral
+  name: Zone de libre-échange de la Communauté de développement de l'Afrique australe
+- id: pt
+  name: Área de Livre Comércio da Comunidade para o Desenvolvimento da África Austral
+notes: Angola submitted an updated tariff offer in February 2021 but has not yet acceded to the FTA. The Democratic Republic of the Congo and Comoros are SADC members that have not yet implemented the Protocol on Trade in Goods. Seychelles acceded to the trade protocol on 25 May 2015. Madagascar acceded in 2006 with an extended tariff phase-down schedule. SACU members completed tariff liberalisation in January 2007; most other members completed sensitive-product phase-downs by January 2012.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/integration-milestones/free-trade-area
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=45
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=45
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/integration-milestones/free-trade-area
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/integration-milestones/free-trade-area
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/integration-milestones/free-trade-area
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=45
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Southern_African_Development_Community
-- field: description
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/latest-news/sadc-making-progress-implementing-fta
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sadc.int/integration-milestones/free-trade-area
+- field: other_names
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'

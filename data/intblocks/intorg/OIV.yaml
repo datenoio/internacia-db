@@ -1,28 +1,48 @@
 id: OIV
+name: International Organisation of Vine and Wine
 blocktype:
 - intorg
 status: formal
+founded: '2001'
+active_period:
+  start: '2004-01-01'
+geographic_scope: global
+legal_status: intergovernmental
+recognition_status: Intergovernmental organisation established by the Agreement of 3 April 2001 (replacing the International
+  Vine and Wine Office); entered into force 1 January 2004; headquartered in Dijon since 2024
 languages:
 - de
 - en
 - es
 - fr
 - it
+- ru
 links:
-- url: http://www.oiv.int/
+- url: https://www.oiv.int/
+  type: website
+- url: https://www.oiv.int/who-we-are/member-states-and-observers
   type: website
 - url: https://en.wikipedia.org/wiki/International_Organisation_of_Vine_and_Wine
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1317185
   type: wikidata
-name: International Organisation of Vine and Wine
-founded: '2001'
+acronyms:
+- lang: en
+  value: OIV
+- lang: fr
+  value: OIV
 headquarters:
-  city: Hôtel d'Esterno
+  city: Dijon
   country: FR
   coordinates:
     lat: 47.3199
     lng: 5.036
+wikidata_id: Q1317185
+description: Intergovernmental scientific and technical reference organisation for viticulture, winemaking, table grapes,
+  raisins, and wine-based beverages. The OIV sets international standards and compiles global statistics for the vine and
+  wine sector, coordinates expert committees on viticulture, oenology, law, economics, and consumer health, and hosts an annual
+  World Congress of Vine and Wine. Established in 2004 under the Agreement of 3 April 2001, succeeding the International Vine
+  and Wine Office (1924). As of 2024 the Organisation has 51 Member States accounting for roughly 90% of global vineyard area.
 includes:
 - id: DZ
   name: Algeria
@@ -120,10 +140,6 @@ includes:
   name: Czech Republic
   type: country
   status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
 - id: FR
   name: France
   type: country
@@ -157,7 +173,7 @@ includes:
   type: country
   status: member
 - id: MD
-  name: Moldova, Republic of
+  name: Moldova
   type: country
   status: member
 - id: ME
@@ -169,7 +185,7 @@ includes:
   type: country
   status: member
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
 - id: 'NO'
@@ -193,7 +209,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -213,7 +229,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 - id: UA
@@ -232,16 +248,19 @@ includes:
   name: New Zealand
   type: country
   status: member
-membership_count: 52
-wikidata_id: Q1317185
-description: International organization.
+membership_count: 51
 tags:
 - OIV
+- agriculture
 - international
 - intorg
 - organisation
 - vine
+- wine
+- viticulture
 topics:
+- key: agriculture
+  name: Agriculture
 - key: economy
   name: Economy
 other_names:
@@ -259,7 +278,27 @@ other_names:
   name: Международная организация виноградарства и виноделия
 - id: zh
   name: 国际葡萄与葡萄酒组织
+notes: China joined as the 51st Member State in May 2024. Ukraine rejoined in October 2022 after a 14-year absence. Finland
+  is not a Member State.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: OIV official website
+  retrieved_at: '2026-07-29'
+  url: https://www.oiv.int/who-we-are/member-states-and-observers
+- field: description
+  source: OIV official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.oiv.int/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1317185
+  license: CC0
+- field: headquarters
+  source: OIV official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.oiv.int/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -270,12 +309,7 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.oiv.int/
-acronyms:
-- lang: en
-  value: OIV
-- lang: fr
-  value: OIV
+- field: recognition_status
+  source: OIV official website; United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://www.oiv.int/who-we-are/member-states-and-observers

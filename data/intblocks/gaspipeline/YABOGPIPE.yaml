@@ -2,12 +2,19 @@ id: YABOGPIPE
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '1972'
+geographic_scope: bilateral
+regions:
+- South America
 links:
 - url: https://en.wikipedia.org/wiki/Yabog_pipeline
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q8046382
   type: wikidata
 name: Yabog pipeline
+acronyms:
+- lang: en
+  value: YABOG
 includes:
 - id: AR
   name: Argentina
@@ -19,14 +26,18 @@ includes:
   status: member
 membership_count: 2
 wikidata_id: Q8046382
-description: Natural gas pipeline in Latin America.
+description: Natural gas pipeline from Río Grande in Santa Cruz de la Sierra, Bolivia, to Campo
+  Durán in Salta Province, Argentina. Also known as the Yacimientos-Bolivian Gulf (YABOG) pipeline;
+  commissioned in 1972 under a 1968 contract between Bolivia, YPFB, and Gulf Oil. The 441 km line
+  is operated by Transredes in Bolivia and Transportadora de Gas del Norte in Argentina.
 tags:
 - YABOGPIPE
-- aviation
+- argentina
+- bolivia
 - economy
 - energy
 - gaspipeline
-- oil
+- pipeline
 - transport
 - transportation
 - yabog
@@ -40,9 +51,38 @@ topics:
 other_names:
 - id: en
   name: Yabog pipeline
+- id: es
+  name: Gasoducto Yabog
+- id: uk
+  name: Yabog
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Yabog_pipeline
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8046382
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Yabog_pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8046382
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Yabog_pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Yabog_pipeline
+last_verified: '2026-07-29'

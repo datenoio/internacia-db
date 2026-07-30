@@ -1,101 +1,199 @@
 id: SEAFDEC
+name: Southeast Asian Fisheries Development Center
 blocktype:
 - intorg
 status: formal
+founded: '1967-12-28'
+active_period:
+  start: '1967-12-28'
+geographic_scope: regional
+regions:
+- Southeast Asia
+- Asia
 languages:
 - en
 links:
-- url: http://www.seafdec.org
+- url: https://www.seafdec.org/
+  type: website
+- url: https://www.seafdec.org/about/
+  type: website
+- url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+  type: website
+- url: https://www.ecolex.org/details/agreement-establishing-the-southeast-asian-fisheries-development-center-tre-000587/
   type: website
 - url: https://en.wikipedia.org/wiki/Southeast_Asian_Fisheries_Development_Center
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6632254
   type: wikidata
-name: Southeast Asian Fisheries Development Center
-founded: '1967'
+acronyms:
+- lang: en
+  value: SEAFDEC
+legal_status: intergovernmental
+recognition_status: Autonomous intergovernmental fisheries body established by the Agreement Establishing the Southeast Asian Fisheries Development Center (signed Bangkok, 28 December 1967; entered into force upon signature by Japan, Singapore, and Thailand); registered with the United Nations (UNTS vol. 651); membership expanded to all ASEAN member states and Japan by the Protocol Amending the Agreement (signed 18 November 1994)
 headquarters:
   city: Bangkok
   country: TH
   coordinates:
     lat: 13.75
     lng: 100.51666666667
+wikidata_id: Q6632254
+description: Autonomous intergovernmental fisheries body whose 11 member countries — Brunei Darussalam, Cambodia, Indonesia, Japan, Lao PDR, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Vietnam — cooperate on sustainable fisheries and aquaculture in Southeast Asia. The Secretariat in Bangkok coordinates policy through the Council of Directors; five technical departments (Training Department in Thailand, Marine Fisheries Research Department in Singapore, Aquaculture Department in the Philippines, Marine Fishery Resources Development and Management Department in Malaysia, and Inland Fishery Resources Development and Management Department in Indonesia) conduct research, training, and information services.
 includes:
 - id: BN
   name: Brunei Darussalam
   type: country
   status: member
+  joined: '1995-06-06'
 - id: KH
   name: Cambodia
   type: country
   status: member
+  joined: '2002-01-17'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2000-08-02'
 - id: JP
   name: Japan
   type: country
-  status: member
+  status: founding_member
+  joined: '1967-12-28'
 - id: LA
   name: Lao PDR
   type: country
   status: member
+  joined: '2003-02-03'
 - id: MY
   name: Malaysia
   type: country
-  status: member
+  status: founding_member
+  joined: '1968-01-26'
 - id: MM
   name: Myanmar
   type: country
   status: member
+  joined: '1999-10-25'
 - id: PH
   name: Philippines
   type: country
-  status: member
+  status: founding_member
+  joined: '1968-01-16'
 - id: SG
   name: Singapore
   type: country
-  status: member
+  status: founding_member
+  joined: '1967-12-28'
 - id: TH
   name: Thailand
   type: country
-  status: member
+  status: founding_member
+  joined: '1967-12-28'
 - id: VN
   name: Vietnam
   type: country
-  status: member
+  status: founding_member
+  joined: '1968-01-26'
+  note: Reaffirmed membership by accession on 13 April 1995 following the 1994 Protocol Amending the Agreement.
+founding_members:
+- JP
+- MY
+- PH
+- SG
+- TH
+- VN
 membership_count: 11
-wikidata_id: Q6632254
-description: Organization in Bankok, Thailand.
 tags:
 - SEAFDEC
 - agriculture
-- aid
-- asian
+- aquaculture
+- asia
 - development
 - farming
 - fisheries
 - intorg
+- regional
 - southeast
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: development
   name: Development
+- key: environment
+  name: Environment
+- key: food
+  name: Food
+- key: marine
+  name: Marine
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 东南亚渔业发展中心
 - id: en
   name: Southeast Asian Fisheries Development Center
 - id: fr
   name: Southeast Asian Fisheries Development Center
+- id: ja
+  name: 東南アジア水産開発センター
+- id: ko
+  name: 동남아시아 수산개발센터
+- id: zh
+  name: 东南亚渔业发展中心
+official_documents:
+- url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+  type: document
+  name: Agreement Establishing the Southeast Asian Fisheries Development Center
+notes: Original members at establishment in December 1967 were Japan, Malaysia, the Philippines, Singapore, Thailand, and Vietnam. Brunei Darussalam, Cambodia, Indonesia, Lao PDR, and Myanmar acceded after the 1994 Protocol Amending the Agreement opened membership to all Southeast Asian countries and Japan. Vietnam reaffirmed membership in 1995. Accession dates are from the ECOLEX parties list; Vietnam's original signature date is retained as joined with a note on reaffirmation.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.seafdec.org
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6632254
   license: CC0
+- field: includes
+  source: SEAFDEC official website; ECOLEX parties list
+  retrieved_at: '2026-07-29'
+  url: https://www.seafdec.org/about/
+- field: description
+  source: SEAFDEC official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.seafdec.org/about/
+- field: legal_status
+  source: FAO Legal Office; ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+- field: recognition_status
+  source: SEAFDEC official website; FAO Legal Office
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+- field: geographic_scope
+  source: SEAFDEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.seafdec.org/about/
+- field: headquarters
+  source: Wikidata; SEAFDEC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.seafdec.org/about/
+- field: founding_members
+  source: FAO Legal Office; SEAFDEC repository
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+- field: founded
+  source: FAO Legal Office; ECOLEX
+  retrieved_at: '2026-07-29'
+  url: https://www.ecolex.org/details/agreement-establishing-the-southeast-asian-fisheries-development-center-tre-000587/
+- field: active_period
+  source: FAO Legal Office
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fishery/docs/DOCUMENT/seafdec/AgreementEstablishingSEAFDEC.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6632254
+  license: CC0
+- field: notes
+  source: SEAFDEC official website; ECOLEX; SEAFDEC repository
+  retrieved_at: '2026-07-29'
+  url: https://repository.seafdec.org/handle/20.500.12066/950

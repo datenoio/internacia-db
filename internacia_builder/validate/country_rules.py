@@ -656,6 +656,29 @@ def check_provenance_integrity(record: dict[str, Any]) -> list[dict[str, Any]]:
     return issues
 
 
+def check_provenance_count(
+    record: dict[str, Any],
+    *,
+    min_count: int,
+) -> list[dict[str, Any]]:
+    """Report records whose provenance list has fewer than min_count entries."""
+    if min_count <= 0:
+        return []
+    provenance = record.get("provenance") or []
+    count = len(provenance) if isinstance(provenance, list) else 0
+    if count >= min_count:
+        return []
+    return [{
+        "issue_type": "INSUFFICIENT_PROVENANCE",
+        "field": "provenance",
+        "current_value": str(count),
+        "suggested_action": (
+            f"provenance has {count} entr{'y' if count == 1 else 'ies'}; "
+            f"expected at least {min_count}"
+        ),
+    }]
+
+
 def check_provenance_freshness(record: dict[str, Any], *, max_age_months: int) -> list[dict[str, Any]]:
     issues: list[dict[str, Any]] = []
     today = date.today()

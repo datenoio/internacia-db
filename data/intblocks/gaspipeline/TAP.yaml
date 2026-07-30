@@ -1,15 +1,24 @@
 id: TAP
+name: Trans Adriatic Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2020-11-15'
+geographic_scope: regional
+regions:
+- Europe
+languages:
+- el
+- en
+- it
+- sq
 links:
-- url: http://www.trans-adriatic-pipeline.com/
+- url: https://www.tap-ag.com/
   type: website
-- url: https://en.wikipedia.org/wiki/Trans_Adriatic_Pipeline#Route
+- url: https://en.wikipedia.org/wiki/Trans_Adriatic_Pipeline
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q505615
   type: wikidata
-name: Trans Adriatic Pipeline
 headquarters:
   city: Baar
   country: CH
@@ -34,16 +43,23 @@ includes:
   status: member
 membership_count: 3
 wikidata_id: Q505615
-description: Gas pipeline.
+description: 878 km natural gas pipeline and western terminus of the Southern Gas Corridor, carrying Shah Deniz gas from
+  Azerbaijan to European markets via Greece, Albania, and the Adriatic Sea to Italy. The route starts at Kipoi on the
+  Greek–Turkish border (connection to TANAP), crosses Albania, and lands at San Foca/Melendugno in Apulia with an
+  initial capacity of 10 billion m³/a. Commissioned on 15 November 2020; operated by Trans Adriatic Pipeline AG (BP,
+  SOCAR, Snam, Fluxys, and Enagás, each 20%).
 tags:
 - TAP
 - adriatic
-- aviation
+- albania
 - economy
 - energy
 - gaspipeline
-- oil
+- greece
+- italy
 - pipeline
+- shah-deniz
+- southern-gas-corridor
 - trans
 - transport
 - transportation
@@ -57,30 +73,76 @@ topics:
 other_names:
 - id: ar
   name: عبر خط أدرياتيك
+- id: az
+  name: Trans-Adriatik boru xətti
 - id: de
   name: Transadriatische Pipeline
+- id: el
+  name: Διαδριατικός Αγωγός Φυσικού Αερίου
 - id: en
   name: Trans Adriatic Pipeline
 - id: es
   name: Gasoducto Trans Adriático
 - id: fr
   name: Trans Adriatic Pipeline
+- id: hu
+  name: Adria-gázvezeték
+- id: it
+  name: gasdotto trans-adriatico
+- id: pl
+  name: Gazociąg Transadriatycki
 - id: ru
   name: Трансадриатический газопровод
+- id: sq
+  name: Trans Adriatic Pipeline
+- id: tr
+  name: Trans Adriyatik doğalgaz boru hattı
+- id: uk
+  name: Трансадріатичний газопровід
 - id: zh
   name: 跨亚得里亚海管道
+notes: Upstream gas enters at Kipoi from TANAP on the Turkish–Greek border; Turkey is not a transit country on the TAP
+  route. The offshore section crosses the Adriatic without landfall in Croatia or other states. Greece and Italy each
+  receive 1 billion m³/a offtake capacity; Bulgaria is supplied via the IGB interconnector from the Greek section.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q505615
   license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q505615
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans_Adriatic_Pipeline
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q505615
   license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans_Adriatic_Pipeline
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.trans-adriatic-pipeline.com/
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q505615
+  license: CC0
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans_Adriatic_Pipeline
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q505615
+  license: CC0

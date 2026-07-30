@@ -2,6 +2,13 @@ id: INDIAMERCOSURPTA
 blocktype:
 - pta
 status: formal
+founded: '2004-01-25'
+active_period:
+  start: '2009-06-01'
+geographic_scope: bilateral
+regions:
+- Asia
+- South America
 languages:
 - en
 - es
@@ -9,31 +16,60 @@ languages:
 links:
 - url: https://www.commerce.gov.in/international-trade/trade-agreements/india-mercosur-pta/
   type: website
+- url: http://sice.oas.org/Trade/MRCSRIndia/Index_e.asp
+  type: website
+- url: https://aric.adb.org/fta/india-mercosur-preferential-trade-agreement
+  type: website
+- url: https://en.wikipedia.org/wiki/Free_trade_agreements_of_India
+  type: wikipedia
 name: India-MERCOSUR Preferential Trade Agreement
-founded: '2004'
+acronyms:
+- lang: en
+  value: India-MERCOSUR PTA
+- lang: es
+  value: Acuerdo Preferencial de Comercio India-MERCOSUR
+- lang: pt
+  value: Acordo Preferencial de Comércio Índia-MERCOSUL
+legal_status: preferential trade agreement
+recognition_status: Preferential trade agreement between India and the four founding MERCOSUR member states, signed in New Delhi on 25 January 2004; annexes added 19 March 2005; entered into force 1 June 2009; notified to the WTO under the Enabling Clause on 23 February 2010
 includes:
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-01-25'
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-01-25'
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-01-25'
 - id: PY
   name: Paraguay
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-01-25'
 - id: UY
   name: Uruguay
   type: country
-  status: member
+  status: founding_member
+  joined: '2004-01-25'
+founding_members:
+- IN
+- AR
+- BR
+- PY
+- UY
 membership_count: 5
-description: International preferential trade agreement between India and MERCOSUR member countries focused on economic cooperation and trade liberalization.
+description: Preferential trade agreement signed in New Delhi on 25 January 2004 between India and the four founding MERCOSUR
+  member states (Argentina, Brazil, Paraguay, and Uruguay). Annexes incorporating tariff concession lists and rules of origin
+  were added on 19 March 2005; the agreement entered into force on 1 June 2009. Provides reciprocal preferential tariffs on
+  approximately 450 product lines from each side, notified to the WTO under the Enabling Clause in February 2010. Parties have
+  held ongoing negotiations to expand product coverage beyond the original lists.
 tags:
 - INDIAMERCOSURPTA
 - commerce
@@ -41,6 +77,7 @@ tags:
 - india
 - mercosur
 - pta
+- south_america
 - trade
 topics:
 - key: economy
@@ -54,3 +91,54 @@ other_names:
   name: Acuerdo Preferencial de Comercio India-MERCOSUR
 - id: pt
   name: Acordo Preferencial de Comércio Índia-MERCOSUL
+notes: A Framework Agreement was signed on 17 June 2003. Annexes I–V (tariff offer lists, rules of origin, safeguard measures,
+  and dispute settlement) were incorporated on 19 March 2005. Bolivia, which joined MERCOSUR as a full member in 2024, is not
+  a party to this agreement. Expansion negotiations to broaden product coverage have been under discussion since 2009.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://sice.oas.org/Trade/MRCSRIndia/Index_e.asp
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/india-mercosur.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://sice.oas.org/Trade/MRCSRIndia/Index_e.asp
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://sice.oas.org/Trade/MRCSRIndia/Index_e.asp
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.commerce.gov.in/international-trade/trade-agreements/india-mercosur-pta/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://sice.oas.org/Trade/MRCSRIndia/Index_e.asp
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/india-mercosur-preferential-trade-agreement
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.commerce.gov.in/international-trade/trade-agreements/india-mercosur-pta/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.commerce.gov.in/international-trade/trade-agreements/india-mercosur-pta/
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://sice.oas.org/TPD/MER_IND/MER_IND_e.asp

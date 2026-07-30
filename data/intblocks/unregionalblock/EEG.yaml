@@ -3,6 +3,15 @@ blocktype:
 - unregionalblock
 - political
 status: informal
+founded: '1964'
+geographic_scope: regional
+regions:
+- Europe
+links:
+- url: https://en.wikipedia.org/wiki/Eastern_European_Group
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q5330133
+  type: wikidata
 name: Eastern European Group
 includes:
 - id: AL
@@ -66,7 +75,7 @@ includes:
   type: country
   status: member
 - id: MD
-  name: Moldova, Republic of
+  name: Moldova
   type: country
   status: member
 - id: PL
@@ -98,10 +107,15 @@ includes:
   type: country
   status: member
 membership_count: 23
-description: UN regional group comprising 23 Eastern European member states.
+description: >-
+  One of five United Nations regional groups, comprising 23 member states from Eastern, Central and Southern Europe.
+  The group coordinates nominations for UN Security Council, Economic and Social Council, and Human Rights Council
+  seats allocated to the region.
 tags:
 - EEG
 - cooperation
+- eastern
+- european
 - political
 - regional
 - regional_cooperation
@@ -112,27 +126,58 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 wikidata_id: Q5330133
+other_names:
+- id: az
+  name: Şərqi Avropa qrupu
+- id: en
+  name: Eastern European Group
+- id: eo
+  name: Grupo de Orient-Eŭropaj Ŝtatoj
+- id: fr
+  name: Groupe des États d'Europe orientale
+- id: ja
+  name: 東ヨーロッパグループ
+- id: ko
+  name: 동유럽 지역 그룹
+- id: zh
+  name: 東歐國家組
+acronyms:
+- lang: en
+  value: EEG
+- lang: be
+  value: УЕГ
+- lang: be-tarask
+  value: УЭГ
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_European_Group
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_European_Group
+- field: links
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_European_Group
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Eastern_European_Group
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q5330133
   license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q5330133
   license: CC0
-other_names:
-- id: en
-  name: Eastern European Group
-- id: fr
-  name: Groupe des États d’Europe orientale
-- id: zh
-  name: 東歐國家組
-founded: '1961'
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q5330133
+  license: CC0

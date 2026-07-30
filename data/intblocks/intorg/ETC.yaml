@@ -1,22 +1,45 @@
 id: ETC
+name: European Travel Commission
 blocktype:
 - intorg
 status: formal
+founded: '1948'
+active_period:
+  start: '1948'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
 - url: https://etc-corporate.org/
   type: website
+- url: https://etc-corporate.org/who-we-are/
+  type: website
+- url: https://etc-corporate.org/organisation/
+  type: website
+- url: https://etc-corporate.org/our-members/
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Travel_Commission
   type: wikipedia
-name: European Travel Commission
-founded: '1948'
+- url: https://www.wikidata.org/wiki/Q1148601
+  type: wikidata
+acronyms:
+- lang: en
+  value: ETC
+legal_status: non-profit international association
+recognition_status: Registered in Belgium as a non-profit international association (association internationale sans but lucratif); strategic partner of the European Commission for promoting Destination Europe in third-country markets
 headquarters:
   city: Brussels
   country: BE
   coordinates:
     lat: 50.8467
     lng: 4.3534
+secretariat:
+  location: Brussels
+  organization: ETC Executive Unit
+wikidata_id: Q1148601
+description: Non-profit international association representing 36 European national tourism organisations (NTOs) from 35 countries. Established in 1948 at Stalheim, Norway, to promote Europe as a tourist destination in long-haul markets outside Europe, ETC supports members through market intelligence, cooperative promotion programmes in overseas chapters, and advocacy on competitiveness, sustainability, connectivity, and destination management. Belgium is represented by Visit Flanders and Visit Wallonia; permanent Board seats are held by Austria, Belgium, France, Germany, Italy, and Spain.
 includes:
 - id: AT
   name: Austria
@@ -158,9 +181,7 @@ includes:
   name: Ukraine
   type: country
   status: member
-membership_count: 34
-description: International organization representing national tourism organizations of Europe, promoting Europe as a tourist
-  destination to markets outside of Europe.
+membership_count: 35
 tags:
 - ETC
 - europe
@@ -172,6 +193,8 @@ tags:
 topics:
 - key: tourism
   name: Tourism
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: European Travel Commission
@@ -181,14 +204,58 @@ other_names:
   name: Europäische Reisekommission
 - id: es
   name: Comisión Europea de Turismo
-wikidata_id: Q1148601
+notes: Full membership comprises 36 NTOs from 35 European countries; Belgium is represented by Visit Flanders and Visit Wallonia. Go Türkiye rejoined as a full member in 2024. An associate membership programme for private-sector organizations has operated since 2015. Overseas chapters promote Destination Europe in the United States, Canada, Brazil, China, Japan, and Australia.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: ETC official website; ETC Annual Report 2025
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/our-members/
+- field: membership_count
+  source: ETC Annual Report 2025
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/annualreport2025/
+- field: description
+  source: ETC official website
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/who-we-are/
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1148601
   license: CC0
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: ETC official website; Wikidata
+  retrieved_at: '2026-07-29'
   url: https://etc-corporate.org/
+- field: legal_status
+  source: ETC official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Travel_Commission
+- field: recognition_status
+  source: ETC official website
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/cooperation-with-the-eu/
+- field: geographic_scope
+  source: ETC official website
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/who-we-are/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1148601
+  license: CC0
+- field: acronyms
+  source: ETC official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1148601
+  license: CC0
+- field: notes
+  source: ETC official website; ETC press release (General Meeting #106, November 2023)
+  retrieved_at: '2026-07-29'
+  url: https://etc-corporate.org/our-members/
+- field: founded
+  source: Wikidata; ETC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1148601
+  license: CC0

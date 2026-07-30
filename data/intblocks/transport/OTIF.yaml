@@ -15,15 +15,24 @@ links:
 - url: https://www.wikidata.org/wiki/Q2333216
   type: wikidata
 name: Intergovernmental Organisation for International Carriage by Rail
-founded: '1985'
+founded: '1985-05-01'
 headquarters:
   city: Bern
   country: CH
   coordinates:
     lat: 46.94798
     lng: 7.44743
+geographic_scope: regional
+regions:
+- Europe
+- Africa
+- Middle East
 acronyms:
 - lang: en
+  value: OTIF
+- lang: de
+  value: OTIF
+- lang: fr
   value: OTIF
 - lang: zh
   value: 國際鐵路運輸政府間組織
@@ -82,6 +91,10 @@ includes:
   name: Estonia
   type: country
   status: member
+- id: EU
+  name: European Union
+  type: organization
+  status: member
 - id: FI
   name: Finland
   type: country
@@ -107,7 +120,11 @@ includes:
   type: country
   status: member
 - id: IR
-  name: Iran
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
   type: country
   status: member
 - id: IE
@@ -118,6 +135,11 @@ includes:
   name: Italy
   type: country
   status: member
+- id: JO
+  name: Jordan
+  type: country
+  status: associate_member
+  joined: '2010-08-01'
 - id: LV
   name: Latvia
   type: country
@@ -175,7 +197,7 @@ includes:
   type: country
   status: member
 - id: RU
-  name: Russia
+  name: Russian Federation
   type: country
   status: member
 - id: RS
@@ -183,7 +205,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -218,10 +240,6 @@ includes:
   name: United Kingdom
   type: country
   status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
 - id: LB
   name: Lebanon
   type: country
@@ -230,26 +248,35 @@ includes:
   name: Syria
   type: country
   status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: associated
-- id: EU
-  name: European Union
-  type: organization
-  status: member
-membership_count: 51
+membership_count: 52
 wikidata_id: Q2333216
-description: International organization.
+legal_status: intergovernmental
+description: Intergovernmental organization governing international rail transport under the Convention concerning International
+  Carriage by Rail (COTIF), headquartered in Bern. Established on 1 May 1985 to succeed the Central Office for International
+  Carriage by Rail (OCTI, 1893); administers uniform legal regimes for international freight (CIM) and passenger (CIV) carriage
+  by rail. As of 2026 comprises 50 member states, one associate member (Jordan), and the European Union; working languages
+  are English, French, and German.
+notes: Membership of Iraq, Lebanon, and Syria is suspended until international railway traffic with those countries is restored.
+  Afghanistan's voting rights were suspended effective 1 January 2026 for non-payment of contributions. Jordan holds associate
+  membership (observer status, no vote) since 1 August 2010. COTIF was modified by the Vilnius Protocol (3 June 1999).
+  Cooperates with CIT, UNECE, ERA, DG MOVE, and OSJD. Secretary General Alexander Kuzmenko (from 2024).
 tags:
 - OTIF
+- COTIF
+- CIM
+- CIV
+- cooperation
 - intergovernmental
-- international
 - intorg
-- organisation
+- railways
+- regional
+- transport
+- transportation
 topics:
 - key: transport
   name: Transport
+- key: standards
+  name: Standards
 other_names:
 - id: ar
   name: الاتفاقية المتعلقة بالنقل الدولي بالسكك الحديدية
@@ -266,6 +293,21 @@ other_names:
 - id: zh
   name: 国际铁路货物运输政府间组织
 provenance:
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Intergovernmental_Organisation_for_International_Carriage_by_Rail
+  license: CC BY-SA 4.0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Intergovernmental_Organisation_for_International_Carriage_by_Rail
+  license: CC BY-SA 4.0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Intergovernmental_Organisation_for_International_Carriage_by_Rail
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -280,3 +322,17 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: http://www.otif.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: http://www.otif.org/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: http://www.otif.org/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q2333216
+  license: CC0
+last_verified: '2026-07-30'

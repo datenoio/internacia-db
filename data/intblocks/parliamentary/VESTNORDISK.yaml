@@ -1,78 +1,173 @@
 id: VESTNORDISK
+name: West Nordic Council
 blocktype:
 - parliamentary
 status: formal
+founded: '1985-09-24'
+active_period:
+  start: '1985-09-24'
+geographic_scope: regional
+regions:
+- North Atlantic
+- Europe
+- Arctic
 languages:
-- dk
+- da
 - en
+- fo
 - is
+- kl
 - 'no'
 - sv
-- fi
 links:
-- url: http://www.vestnordisk.is/
+- url: https://www.vestnordisk.is/english/
   type: website
 - url: https://en.wikipedia.org/wiki/West_Nordic_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1642145
   type: wikidata
-name: West Nordic Council
-includes:
-- id: GL
-  name: Greenland
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: FO
-  name: Faroe Islands
-  type: country
-  status: member
-founded: '1985'
+acronyms:
+- lang: da
+  value: Vestnordisk Råd
+- lang: en
+  value: West Nordic Council
+- lang: fo
+  value: Útnorðurráðið
+- lang: is
+  value: Vestnorræna ráðið
+- lang: kl
+  value: Nunat Avannarliit Killiit Siunnersuisoqatigiiffiat
+- lang: sv
+  value: Västnordiska rådet
 headquarters:
   city: Reykjavík
   country: IS
   coordinates:
     lat: 64.1475
     lng: -21.935
+includes:
+- id: GL
+  name: Greenland
+  type: country
+  status: founding_member
+  joined: '1985-09-24'
+- id: FO
+  name: Faroe Islands
+  type: country
+  status: founding_member
+  joined: '1985-09-24'
+- id: IS
+  name: Iceland
+  type: country
+  status: founding_member
+  joined: '1985-09-24'
+founding_members:
+- GL
+- FO
+- IS
 membership_count: 3
-wikidata_id: Q1642145
-description: Cooperation forum between Greenland, the Faroe Islands and Iceland, founded in 1985.
+description: Cooperative inter-parliamentary forum for Greenland, the Faroe Islands,
+  and Iceland, established on 24 September 1985 in Nuuk as the West Nordic Parliamentarian
+  Council of Cooperation (renamed in 1997). Each national parliament appoints six
+  members; the annual general meeting rotates among the three territories and is the
+  council's highest authority. Promotes West Nordic and North Atlantic interests,
+  resource stewardship, and coordination with the Nordic Council and Arctic parliamentary
+  cooperation.
+notes: Distinct from the Nordic Council (NORDEN), although all West Nordic Council
+  members are also Nordic Council members and the two bodies cooperate on selected
+  issues. Greenland and the Faroe Islands participate as autonomous territories within
+  the Danish Realm; Iceland is a sovereign state and former Danish possession.
 tags:
 - VESTNORDISK
 - council
 - nordic
 - parliamentary
 - political
+- regional
+- regional_cooperation
 - west
+- west_nordic
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q1642145
 other_names:
+- id: ca
+  name: Consell Nòrdic Occidental
+- id: da
+  name: Vestnordisk Råd
 - id: de
   name: Westnordischer Rat
 - id: en
   name: West Nordic Council
+- id: en
+  name: West Nordic Parliamentarian Council of Cooperation
+- id: eo
+  name: Okcidenta Nordia Konsilio
+- id: et
+  name: Lääne-Põhjamaade Nõukogu
+- id: fo
+  name: Útnorðurráðið
 - id: fr
   name: Conseil nordique occidental
+- id: gl
+  name: Consello Nórdico Occidental
+- id: is
+  name: Vestnorræna ráðið
+- id: kl
+  name: Nunat Avannarliit Killiit Siunnersuisoqatigiiffiat
+- id: nb
+  name: Vestnordisk Råd
+- id: nl
+  name: West-Noordse Raad
+- id: sv
+  name: Västnordiska rådet
 - id: zh
   name: 西北海理事会
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1642145
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1642145
   license: CC0
-- field: headquarters
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1642145
+  license: CC0
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.vestnordisk.is/
+  retrieved_at: '2026-07-29'
+  url: https://www.vestnordisk.is/english/
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1642145
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_Nordic_Council
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_Nordic_Council
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1642145
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/West_Nordic_Council

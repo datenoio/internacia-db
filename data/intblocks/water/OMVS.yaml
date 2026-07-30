@@ -2,6 +2,8 @@ id: OMVS
 blocktype:
 - water
 - intorg
+- environment
+- development
 status: formal
 languages:
 - en
@@ -9,35 +11,45 @@ languages:
 links:
 - url: https://www.omvs.org/
   type: website
-- url: https://en.wikipedia.org/wiki/Senegal_River_Basin_Development_Authority
+- url: https://www.omvs.org/a-propos/
+  type: website
+- url: https://en.wikipedia.org/wiki/Organisation_pour_la_mise_en_valeur_du_fleuve_S%C3%A9n%C3%A9gal
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2029890
   type: wikidata
 name: Organisation for the Development of the Senegal River
-founded: '1972'
+founded: '1972-03-11'
 headquarters:
   city: Dakar
   country: SN
 geographic_scope: regional
 regions:
 - Africa
+founding_members:
+- ML
+- MR
+- SN
 includes:
 - id: GN
   name: Guinea
   type: country
   status: member
+  joined: '2006-03-17'
 - id: ML
   name: Mali
   type: country
-  status: member
+  status: founding_member
+  joined: '1972-03-11'
 - id: MR
   name: Mauritania
   type: country
-  status: member
+  status: founding_member
+  joined: '1972-03-11'
 - id: SN
   name: Senegal
   type: country
-  status: member
+  status: founding_member
+  joined: '1972-03-11'
 membership_count: 4
 wikidata_id: Q2029890
 legal_status: intergovernmental
@@ -46,46 +58,65 @@ acronyms:
   value: OMVS
 - lang: fr
   value: OMVS
-description: Intergovernmental development organization for joint management and integrated development of the Senegal River
-  basin.
+description: Intergovernmental river basin organization for joint management and integrated development of the Senegal River among four riparian states, coordinating water resources, energy, agriculture, transport, and environmental protection under the 1972 OMVS Convention.
 tags:
 - OMVS
 - Senegal-River
 - West-Africa
+- basin
+- intorg
+- transboundary
 - water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
+- key: development
+  name: Development
 other_names:
+- id: de
+  name: Organisation pour la mise en valeur du fleuve Sénégal
 - id: en
   name: Senegal River Basin Development Authority
 - id: fr
   name: Organisation pour la mise en valeur du fleuve Sénégal
 provenance:
+- field: includes
+  source: OMVS about page
+  retrieved_at: '2026-07-29'
+  url: https://www.omvs.org/a-propos/
+- field: founding_members
+  source: OMVS Convention (1972)
+  retrieved_at: '2026-07-29'
+  url: https://www.omvs.org/a-propos/
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.omvs.org/a-propos/
+- field: founded
+  source: OMVS Convention (1972)
+  retrieved_at: '2026-07-29'
+  url: https://www.omvs.org/a-propos/
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q2029890
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: includes
-  source: OMVS
-  retrieved_at: '2026-06-15'
-  url: https://www.omvs.org/a-propos/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2029890
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvs.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvs.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvs.org/

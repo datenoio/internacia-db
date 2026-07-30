@@ -2,102 +2,194 @@ id: AFTA
 blocktype:
 - fta
 status: formal
-partof: ASEAN
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/AFTA
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q292179
-  type: wikidata
-name: AFTA
-founded: '1992'
+founded: '1992-01-28'
+active_period:
+  start: '1993-01-01'
 geographic_scope: regional
 regions:
 - Asia
+languages:
+- en
+partof: ASEAN
+links:
+- url: https://asean.org/our-communities/economic-community/
+  type: website
+- url: https://aric.adb.org/fta/asean-free-trade-area
+  type: website
+- url: https://en.wikipedia.org/wiki/ASEAN_Free_Trade_Area
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q297472
+  type: wikidata
+name: ASEAN Free Trade Area
 acronyms:
 - lang: en
   value: AFTA
+legal_status: free trade agreement
+recognition_status: Agreement on the Common Effective Preferential Tariff (CEPT) Scheme for the ASEAN Free Trade Area signed in Singapore on 28 January 1992; tariff-reduction schedules under CEPT began on 1 January 1993; notified to the WTO on 30 October 1992 under the Enabling Clause; superseded in part by the ASEAN Trade in Goods Agreement (ATIGA) in 2010 while the AFTA framework remains the basis for intra-ASEAN trade liberalization
 includes:
 - id: BN
   name: Brunei Darussalam
   type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
+  status: founding_member
+  joined: '1992-01-28'
 - id: ID
   name: Indonesia
   type: country
-  status: member
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
+  status: founding_member
+  joined: '1992-01-28'
 - id: MY
   name: Malaysia
   type: country
+  status: founding_member
+  joined: '1992-01-28'
+- id: PH
+  name: Philippines
+  type: country
+  status: founding_member
+  joined: '1992-01-28'
+- id: SG
+  name: Singapore
+  type: country
+  status: founding_member
+  joined: '1992-01-28'
+- id: TH
+  name: Thailand
+  type: country
+  status: founding_member
+  joined: '1992-01-28'
+- id: VN
+  name: Vietnam
+  type: country
   status: member
+  joined: '1995-07-28'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '1997-07-23'
 - id: MM
   name: Myanmar
   type: country
   status: member
-- id: PH
-  name: Philippines
+  joined: '1997-07-23'
+- id: KH
+  name: Cambodia
   type: country
   status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
-  type: country
-  status: member
+  joined: '1999-04-30'
+founding_members:
+- BN
+- ID
+- MY
+- PH
+- SG
+- TH
 membership_count: 10
-wikidata_id: Q292179
-description: Wikimedia disambiguation page.
+description: The ASEAN Free Trade Area (AFTA) is a regional free trade agreement among ASEAN member states to promote intra-regional trade and manufacturing through progressive tariff liberalization. The Agreement on the Common Effective Preferential Tariff (CEPT) Scheme for AFTA was signed in Singapore on 28 January 1992 by the six original ASEAN members, with tariff-reduction schedules beginning on 1 January 1993 under the CEPT mechanism. Vietnam, Laos, and Myanmar acceded as they joined ASEAN in 1995 and 1997, and Cambodia completed accession in 1999. AFTA applies preferential tariff rates of 0–5% on qualifying goods originating within ASEAN, with differentiated timelines for the CLMV countries. The agreement was notified to the WTO in 1992 and was largely superseded by the ASEAN Trade in Goods Agreement (ATIGA) in 2010, though the AFTA framework remains central to ASEAN economic integration.
 tags:
 - AFTA
-- area
+- asean
+- asian
 - commerce
+- cept
 - economy
 - free
 - fta
+- regional
+- regional_cooperation
+- southeast
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
+wikidata_id: Q297472
 other_names:
+- id: ar
+  name: منطقة التجارة الحرة الآسيان
 - id: de
-  name: AFTA
+  name: ASEAN-Freihandelszone
 - id: en
-  name: AFTA
+  name: ASEAN Free Trade Area
 - id: es
-  name: AFTA
+  name: Área de Libre Comercio de la ASEAN
 - id: fr
-  name: AFTA
+  name: Zone de libre-échange de l'ASEAN
+- id: id
+  name: Kawasan Perdagangan Bebas ASEAN
+- id: ja
+  name: ASEAN自由貿易地域
+- id: ko
+  name: 아세안 자유 무역 지대
+- id: ms
+  name: Kawasan Perdagangan Bebas ASEAN
 - id: pt
-  name: AFTA
+  name: Área de Livre Comércio da ASEAN
+- id: th
+  name: เขตการค้าเสรีอาเซียน
+- id: vi
+  name: Khu vực Mậu dịch Tự do ASEAN
+- id: zh
+  name: 东盟自由贸易区
+notes: The six founding signatories (Brunei, Indonesia, Malaysia, Philippines, Singapore, and Thailand) signed the CEPT agreement on 28 January 1992. Vietnam, Laos, and Myanmar were required to accede to AFTA as a condition of ASEAN membership in 1995 and 1997; Cambodia acceded in 1999. CLMV countries received extended tariff-reduction timelines. AFTA was notified to the WTO on 30 October 1992 under the Enabling Clause. The ASEAN Trade in Goods Agreement (ATIGA), signed in 2010, largely superseded the CEPT framework while building on AFTA's tariff liberalization achievements.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Free_Trade_Area
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Free_Trade_Area
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Free_Trade_Area
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q297472
   license: CC0
-- field: geographic_scope
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q297472
+  license: CC0
+- field: notes
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/AFTA
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/ASEAN_Free_Trade_Area
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://aric.adb.org/fta/asean-free-trade-area

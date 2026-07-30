@@ -1,93 +1,148 @@
 id: ASCG
+name: Arab Space Cooperation Group
 blocktype:
 - intorg
 - space
 status: formal
+founded: '2019'
+active_period:
+  start: '2019-03-19'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
 - en
 - ar
 links:
-- url: https://space.gov.ae/en/arabs-space-cooperation-group
+- url: https://arabspacegroup.org/
   type: website
-name: Arab Space Cooperation Group
-founded: '2019'
+- url: https://www.mofa.gov.ae/en/MediaHub/News/2019/2019/3/20/20-03-2019-UAE-Abu-Dhabi
+  type: website
+acronyms:
+- lang: en
+  value: ASCG
+- lang: ar
+  value: مجموعة التعاون الفضائي العربي
+legal_status: intergovernmental
+recognition_status: Established at the Global Space Congress in Abu Dhabi on 19 March 2019 when 11 Arab states signed the founding charter; the basic charter was adopted by 14 member states at the sixth meeting in November 2019; chaired by the UAE Space Agency
 headquarters:
   city: Abu Dhabi
   country: AE
   coordinates:
     lat: 24.4539
     lng: 54.3773
+  note: UAE Space Agency hosts the group secretariat
+secretariat:
+  location: Abu Dhabi
+  organization: UAE Space Agency
 includes:
 - id: DZ
   name: Algeria
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: BH
   name: Bahrain
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: IQ
   name: Iraq
   type: country
   status: member
+  joined: '2019-11'
 - id: JO
   name: Jordan
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: KW
   name: Kuwait
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: LB
   name: Lebanon
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: MR
   name: Mauritania
   type: country
   status: member
+  joined: '2019-11'
 - id: MA
   name: Morocco
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: OM
   name: Oman
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: SA
   name: Saudi Arabia
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: founding_member
+  joined: '2019-03-19'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: observer
+  joined: '2026-01-27'
 - id: TN
   name: Tunisia
   type: country
   status: member
+  joined: '2019-11'
 - id: AE
   name: United Arab Emirates
   type: country
-  status: member
-- id: YE
-  name: Yemen
-  type: country
-  status: member
-membership_count: 15
-description: The Arab Space Cooperation Group is an international organization that is used to promote regional cooperation
-  in the space sector.
+  status: founding_member
+  joined: '2019-03-19'
+founding_members:
+- AE
+- SA
+- BH
+- OM
+- EG
+- DZ
+- MA
+- JO
+- LB
+- SD
+- KW
+membership_count: 14
+description: Intergovernmental regional body chaired by the UAE Space Agency that coordinates Arab space cooperation, harmonises
+  national regulations, and guides joint programmes including the Arab Satellite 813 climate-monitoring mission. Eleven states
+  signed the founding charter in Abu Dhabi on 19 March 2019; the basic charter was adopted by 14 member states in November
+  2019.
+notes: Originally launched as the Arab Group for Space Collaboration at the 2019 Global Space Congress. Tunisia, Iraq, and
+  Mauritania joined the 11 founding signatories before the basic charter was adopted in November 2019. Syria was recognised
+  as an observer at the 12th member meeting on 27 January 2026 in Muscat. Yemen is not listed among official member states
+  in UAE Space Agency and Saudi government communiqués.
+last_verified: '2026-07-29'
 tags:
 - ASCG
 - arab
 - cooperation
-- international
 - intorg
+- middle_east
+- north_africa
 - regional
+- regional_cooperation
 - space
 topics:
 - key: space
@@ -106,3 +161,23 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://space.gov.ae/en/arabs-space-cooperation-group
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mofa.gov.ae/en/MediaHub/News/2019/2019/3/20/20-03-2019-UAE-Abu-Dhabi
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.mofa.gov.ae/en/MediaHub/News/2019/2019/3/20/20-03-2019-UAE-Abu-Dhabi
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://my.gov.sa/en/news/8487
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://my.gov.sa/en/news/8487
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://arabspacegroup.org/

@@ -1,17 +1,30 @@
 id: ACU
+name: Association of Commonwealth Universities
 blocktype:
 - education
 - intorg
 status: formal
 founded: '1913'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Europe
+- Americas
+- Oceania
 languages:
 - en
 links:
 - url: https://www.acu.ac.uk/
   type: website
+- url: https://www.acu.ac.uk/members/
+  type: website
+- url: https://www.acu.ac.uk/home-regions/
+  type: website
 - url: https://en.wikipedia.org/wiki/Association_of_Commonwealth_Universities
   type: wikipedia
-name: Association of Commonwealth Universities
+- url: https://www.wikidata.org/wiki/Q593768
+  type: wikidata
 headquarters:
   city: London
   country: GB
@@ -22,8 +35,12 @@ acronyms:
 - lang: en
   value: ACU
 membership_count: 56
-description: International organization representing universities and higher education institutions across the Commonwealth.
-  ACU promotes collaboration, facilitates academic exchange, and supports higher education development in Commonwealth countries.
+description: >-
+  Charitable organisation and the world's oldest international network of universities, established in 1913 as the
+  Universities Bureau of the British Empire (renamed Association of Universities of the British Commonwealth in 1948
+  and Association of Commonwealth Universities in 1963). ACU represents over 400 member universities across more than
+  40 Commonwealth countries and territories, promoting collaboration, academic exchange, and higher education
+  development.
 tags:
 - ACU
 - education
@@ -39,181 +56,113 @@ topics:
 other_names:
 - id: en
   name: Association of Commonwealth Universities
+- id: en
+  name: The Association of Commonwealth Universities
+- id: fr
+  name: Association des universités du Commonwealth
+- id: de
+  name: Association of Commonwealth Universities
+- id: zh
+  name: 大英國協大學協會
+- id: ar
+  name: رابطة جامعات الكومنولث
+- id: ru
+  name: Ассоциация университетов Содружества
+- id: pl
+  name: Związek Uniwersytetów Wspólnoty Narodów
+- id: it
+  name: Associazione delle Università del Commonwealth
 includes:
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SG
-  name: Singapore
+- id: AG
+  name: Antigua and Barbuda
   type: country
   status: member
 - id: AU
   name: Australia
   type: country
   status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: VC
-  name: Saint Vincent and the Grenadines
-  type: country
-  status: member
-- id: LC
-  name: Saint Lucia
-  type: country
-  status: member
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
 - id: BS
   name: Bahamas
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
   type: country
   status: member
 - id: BD
   name: Bangladesh
   type: country
   status: member
-- id: BN
-  name: Brunei Darussalam
+- id: BB
+  name: Barbados
   type: country
   status: member
-- id: TZ
-  name: Tanzania, United Republic of
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
+- id: BZ
+  name: Belize
   type: country
   status: member
 - id: BW
   name: Botswana
   type: country
   status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia
+- id: BN
+  name: Brunei Darussalam
   type: country
   status: member
 - id: CM
   name: Cameroon
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+- id: GI
+  name: Gibraltar
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HK
+  name: Hong Kong SAR, China
+  type: country
+  status: member
+- id: IN
+  name: India
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
   type: country
   status: member
 - id: LS
@@ -222,6 +171,18 @@ includes:
   status: member
 - id: MW
   name: Malawi
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: MT
+  name: Malta
   type: country
   status: member
 - id: MU
@@ -236,16 +197,44 @@ includes:
   name: Namibia
   type: country
   status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
 - id: NG
   name: Nigeria
   type: country
   status: member
-- id: UG
-  name: Uganda
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
   type: country
   status: member
 - id: RW
   name: Rwanda
+  type: country
+  status: member
+- id: KN
+  name: Saint Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: Saint Lucia
+  type: country
+  status: member
+- id: VC
+  name: Saint Vincent and the Grenadines
+  type: country
+  status: member
+- id: WS
+  name: Samoa
   type: country
   status: member
 - id: SC
@@ -256,16 +245,106 @@ includes:
   name: Sierra Leone
   type: country
   status: member
-- id: SZ
-  name: Eswatini
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+- id: TZ
+  name: Tanzania, United Republic of
+  type: country
+  status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+- id: UG
+  name: Uganda
   type: country
   status: member
 - id: GB
   name: United Kingdom
   type: country
   status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+wikidata_id: Q593768
+recognition_status: >-
+  Association of individual universities; membership is at institution level, not sovereign-state level. Includes
+  lists countries and territories with ACU member presence per the official home-regions roster.
+notes: >-
+  Includes follows ACU home regions (56 countries/territories). Institutional membership exceeds 400 universities;
+  ACU reports representation in more than 40 countries. Gabon, Gambia, and Togo are Commonwealth members but are not
+  listed on ACU home regions; Gibraltar, Hong Kong, and Zimbabwe are listed despite not being (or not solely being)
+  Commonwealth member states. Predecessor names: Universities Bureau of the British Empire (1913); Association of
+  Universities of the British Commonwealth (1948).
+last_verified: '2026-07-29'
 provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.acu.ac.uk/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q593768
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q593768
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acu.ac.uk/home-regions/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acu.ac.uk/home-regions/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acu.ac.uk/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acu.ac.uk/home-regions/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q593768
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.acu.ac.uk/members/

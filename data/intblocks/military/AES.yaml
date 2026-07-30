@@ -1,80 +1,171 @@
 id: AES
+name: Alliance of Sahel States
 blocktype:
 - military
+- political
 status: formal
+founded: '2023-09-16'
+geographic_scope: regional
+regions:
+- West Africa
+- Sahel
 languages:
 - en
 - fr
 links:
 - url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
   type: wikipedia
-name: Alliance of Sahel States
-founded: '2023-09-16'
-geographic_scope: regional
-regions:
-- West Africa
-- Sahel
-headquarters:
-  city: Niamey
-  country: NE
+- url: https://www.wikidata.org/wiki/Q122624387
+  type: wikidata
+acronyms:
+- lang: en
+  value: AES
+- lang: fr
+  value: AES
+legal_status: intergovernmental
+wikidata_id: Q122624387
+description: Confederation and mutual defence alliance of Burkina Faso, Mali, and Niger in the Sahel.
+  The Liptako-Gourma Charter, signed on 16 September 2023 during the Nigerien crisis, established
+  a mutual defence pact after ECOWAS threatened military intervention following Niger's 2023 coup;
+  Mali and Burkina Faso pledged to defend Niger, averting an ECOWAS intervention. Leaders signed
+  a confederation treaty on 6 July 2024 in Niamey to deepen political and economic integration,
+  including a rotating presidency, joint infrastructure, and a proposed monetary union. The United
+  Force of the Alliance of Sahel States (FU-AES), a 5,000-strong joint military unit integrating
+  air, land, and intelligence capabilities, was inaugurated in December 2025 with headquarters
+  in Niamey. All three members withdrew from ECOWAS on 29 January 2025 after serving the required
+  one-year notice. The bloc succeeded the Mali–Niger–Burkina track of the dissolved G5 Sahel.
 includes:
 - id: BF
   name: Burkina Faso
   type: country
   status: member
+  joined: '2023-09-16'
 - id: ML
   name: Mali
   type: country
   status: member
+  joined: '2023-09-16'
 - id: NE
   name: Niger
   type: country
   status: member
+  joined: '2023-09-16'
 membership_count: 3
-legal_status: intergovernmental
-description: Confederation and military alliance formed by Mali, Niger, and Burkina Faso to enhance regional security and
-  cooperation. Established through the Liptako-Gourma Charter in 2023, the alliance includes a mutual defense pact and a joint
-  military force of 5,000 troops with air, land, and intelligence capabilities to combat jihadist insurgencies in the Sahel
-  region.
+founding_members:
+- BF
+- ML
+- NE
+predecessor: G5SAHEL
+headquarters:
+  city: Niamey
+  country: NE
 tags:
 - AES
+- confederation
 - cooperation
 - defense
 - military
+- political
 - regional
 - regional_cooperation
 - sahel
 - security
+- west_africa
 topics:
 - key: military
   name: Military
+- key: political
+  name: Political
 - key: regional_cooperation
   name: Regional Cooperation
 - key: security
   name: Security
 other_names:
+- id: ar
+  name: تحالف دول الساحل الأفريقي
+- id: de
+  name: Allianz der Sahelstaaten
 - id: en
   name: Alliance of Sahel States
-- id: fr
-  name: Alliance des États du Sahel
 - id: en
   name: AES
-wikidata_id: Q122624387
+- id: en
+  name: Confederation of Sahel States
+- id: es
+  name: Alianza de Estados del Sahel
+- id: es
+  name: Confederación de Estados del Sahel
+- id: fr
+  name: Alliance des États du Sahel
+- id: id
+  name: Aliansi Negara-Negara Sahil
+- id: ja
+  name: サヘル諸国同盟
+- id: ko
+  name: 사헬 국가 동맹
+- id: pl
+  name: Sojusz Państw Sahelu
+- id: pt
+  name: Aliança dos Estados do Sahel
+- id: ru
+  name: Альянс государств Сахеля
+- id: uk
+  name: Альянс держав Сахеля
+- id: zh
+  name: 萨赫勒国家联盟
+notes: Mutual defence pact signed 16 September 2023 (Liptako-Gourma Charter); confederation treaty
+  signed 6 July 2024 in Niamey. Rotating one-year presidency; Assimi Goïta (Mali) held the first
+  term from July 2024, succeeded by Ibrahim Traoré (Burkina Faso) in December 2025. Members
+  announced ECOWAS withdrawal on 28 January 2024 and completed exit on 29 January 2025. Joint
+  AES passports circulated from January 2025. FU-AES joint force headquarters in Niamey; inaugural
+  ceremony in Bamako, December 2025. All three states are military juntas that expelled Western
+  military forces and deepened security cooperation with Russia from 2024 onward.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q122624387
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q122624387
+  license: CC0
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q122624387
   license: CC0
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
 - field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States
+- field: predecessor
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/G5_Sahel
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Alliance_of_Sahel_States

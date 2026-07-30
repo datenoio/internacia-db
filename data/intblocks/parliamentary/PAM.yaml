@@ -1,17 +1,39 @@
 id: PAM
+name: Parliamentary Assembly of the Mediterranean
 blocktype:
 - parliamentary
 status: formal
+founded: '2005'
+active_period:
+  start: '2005'
+geographic_scope: regional
+regions:
+- Europe
+- Mediterranean
+- Middle East
+- North Africa
 languages:
+- ar
 - en
 - fr
 links:
+- url: https://pam.int/
+  type: website
 - url: https://en.wikipedia.org/wiki/Parliamentary_Assembly_of_the_Mediterranean
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q3369689
   type: wikidata
-name: Parliamentary Assembly of the Mediterranean
-founded: '2005'
+acronyms:
+- lang: en
+  value: PAM
+- lang: fr
+  value: APM
+headquarters:
+  city: San Marino
+  country: SM
+  coordinates:
+    lat: 43.9322
+    lng: 12.4486
 includes:
 - id: AL
   name: Albania
@@ -38,7 +60,7 @@ includes:
   type: country
   status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: FR
@@ -90,11 +112,11 @@ includes:
   type: country
   status: member
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
 - id: PS
-  name: State of Palestine
+  name: West Bank and Gaza
   type: country
   status: member
 - id: PT
@@ -130,7 +152,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 - id: AE
@@ -138,23 +160,39 @@ includes:
   type: country
   status: member
 membership_count: 31
-wikidata_id: Q3369689
-description: International organization of Euro-Mediterranean and Gulf region parliaments.
+description: Inter-parliamentary organization established in 2005 by national parliaments
+  of Euro-Mediterranean and Gulf countries, succeeding the Conference on Security and
+  Cooperation in the Mediterranean (CSCM). Headquartered in San Marino (previously Malta),
+  with additional offices in Naples. Comprises 31 member parliaments represented on equal
+  footing, each with up to five delegates. Conducts regional parliamentary diplomacy
+  through three standing committees and annual plenary sessions on political, economic,
+  social, and human-rights issues. Holds UN observer status (General Assembly resolution
+  A/RES/64/124, 2009) and permanent representations to LAS and UN agencies in Geneva,
+  New York, and Vienna.
+notes: Associate members include the Holy See and the Sovereign Order of Malta (neither
+  modeled in includes — Order of Malta has no ISO country code). Partner states include
+  Bahrain, Bulgaria, Georgia,
+  Kuwait, Moldova, Saudi Arabia, Slovakia, Switzerland, Ukraine, the United Kingdom,
+  and the United States. Observer states include Armenia and Azerbaijan. The Russian
+  Federation is listed as a candidate member. Bahrain's parliament reported full membership
+  in February 2025; PAM's published member list still classifies Bahrain among partner
+  states as of mid-2026.
 tags:
 - PAM
 - assembly
 - mediterranean
 - parliamentary
 - political
-- research
-- science
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
-- key: science
-  name: Science
+- key: regional_cooperation
+  name: Regional Cooperation
+wikidata_id: Q3369689
 other_names:
 - id: ar
   name: برلمان البحر الأبيض المتوسط
@@ -170,22 +208,37 @@ other_names:
   name: Парламентская ассамблея Средиземноморья
 - id: zh
   name: 地中海议会大会
+last_verified: '2026-07-30'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3369689
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3369689
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3369689
   license: CC0
-acronyms:
-- lang: fr
-  value: APM
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://pam.int/en/the-assembly
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q3369689
+  license: CC0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Assembly_of_the_Mediterranean
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://pam.int/en/the-assembly

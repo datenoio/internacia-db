@@ -10,16 +10,23 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/South_Asia_Co-operative_Environment_Programme
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7402525
+- url: https://www.wikidata.org/wiki/Q7566017
   type: wikidata
 name: South Asia Co-operative Environment Programme
 founded: '1982'
-headquarters:
-  city: Colombo
-  country: LK
+active_period:
+  start: '1982'
 geographic_scope: regional
 regions:
 - Asia
+- South Asia
+headquarters:
+  city: Colombo
+  country: LK
+secretariat:
+  location: Colombo
+  organization: SACEP Secretariat
+  note: Secretariat operates under the patronage of the Government of Sri Lanka
 includes:
 - id: AF
   name: Afghanistan
@@ -54,12 +61,13 @@ includes:
   type: country
   status: member
 membership_count: 8
-wikidata_id: Q7402525
+wikidata_id: Q7566017
 legal_status: intergovernmental
+recognition_status: Intergovernmental organisation established in 1982 by the governments of South Asian states to promote and support the protection, management and enhancement of the environment in the region
 acronyms:
 - lang: en
   value: SACEP
-description: Intergovernmental environmental cooperation programme for South Asian states.
+description: Intergovernmental environmental cooperation programme established in 1982 by South Asian governments. SACEP brings together eight member states to promote and support the protection, management and enhancement of the environment in the region through its Governing Council, Consultative Committee, National Focal Points and Colombo-based Secretariat.
 tags:
 - SACEP
 - South-Asia
@@ -67,7 +75,45 @@ tags:
 topics:
 - key: environment
   name: Environment
+other_names:
+- id: en
+  name: SACEP
+- id: hi
+  name: दक्षिण एशिया सहकारी पर्यावरण कार्यक्रम
+- id: bn
+  name: সাসেপ
 provenance:
+- field: includes
+  source: Wikipedia; SACEP official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Co-operative_Environment_Programme
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7566017
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7566017
+  license: CC0
+- field: description
+  source: Wikipedia; SACEP official website
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Co-operative_Environment_Programme
+- field: founded
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7566017
+  license: CC0
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Co-operative_Environment_Programme
+- field: secretariat
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asia_Co-operative_Environment_Programme
 - field: legal_status
   source: official sources
   retrieved_at: '2026-06-15'
@@ -80,3 +126,4 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.sacep.org/
+last_verified: '2026-07-29'

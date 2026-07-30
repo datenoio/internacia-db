@@ -1,153 +1,343 @@
 id: IOTC
+name: Indian Ocean Tuna Commission
 blocktype:
 - food
 - ocean
 status: formal
 partof: FAO
+founded: '1993-11-25'
+active_period:
+  start: '1996-03-27'
+geographic_scope: regional
+regions:
+- Indian Ocean
+- Africa
+- Asia
+- Middle East
 languages:
 - en
 - fr
 links:
-- url: http://www.iotc.org/English/index.php
+- url: https://iotc.org/
   type: website
-name: The Indian Ocean Tuna Commission
+- url: https://iotc.org/about-iotc/structure-commission
+  type: website
+- url: https://iotc.org/about-iotc/basic-texts
+  type: website
+- url: https://en.wikipedia.org/wiki/Indian_Ocean_Tuna_Commission
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q12613354
+  type: wikidata
+acronyms:
+- lang: en
+  value: IOTC
+- lang: fr
+  value: CTOI
+legal_status: intergovernmental
+recognition_status: FAO Article XIV regional fisheries management organisation established by the Agreement for the Establishment of the Indian Ocean Tuna Commission, approved by the FAO Council on 25 November 1993; agreement entered into force 27 March 1996 upon the tenth instrument of acceptance; secretariat headquartered in Victoria, Seychelles, since 1998
+headquarters:
+  city: Victoria
+  country: SC
+  coordinates:
+    lat: -4.6269564
+    lng: 55.4539976
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1996-11-13'
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '2018-04-24'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '1998-10-14'
 - id: KM
   name: Comoros
   type: country
   status: member
+  joined: '2001-08-14'
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '1995-10-27'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1996-12-03'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-03-13'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2007-06-20'
 - id: IR
-  name: Iran (Islamic Republic of)
+  name: Iran, Islamic Rep.
   type: country
   status: member
+  joined: '2002-01-28'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '1996-06-26'
 - id: KE
   name: Kenya
   type: country
   status: member
+  joined: '2004-09-29'
 - id: KR
   name: Korea, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-03-27'
 - id: MG
   name: Madagascar
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-01-10'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '1998-05-22'
 - id: MV
   name: Maldives
   type: country
   status: member
+  joined: '2011-07-13'
 - id: MU
   name: Mauritius
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-12-27'
 - id: MZ
   name: Mozambique
   type: country
   status: member
+  joined: '2012-02-13'
 - id: OM
   name: Oman
   type: country
   status: member
+  joined: '2000-04-05'
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-04-27'
 - id: PH
   name: Philippines
   type: country
   status: member
+  joined: '2004-01-09'
 - id: SC
   name: Seychelles
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-07-26'
 - id: SO
   name: Somalia
   type: country
   status: member
+  joined: '2014-05-22'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2016-02-16'
 - id: LK
   name: Sri Lanka
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-06-13'
 - id: SD
   name: Sudan
   type: country
   status: member
+  joined: '1996-12-03'
 - id: TZ
-  name: Tanzania, United Republic of
+  name: Tanzania
   type: country
   status: member
+  joined: '2007-04-18'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '1997-03-17'
 - id: GB
   name: United Kingdom
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-03-31'
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
   type: country
   status: member
+  joined: '2012-07-20'
+- id: LR
+  name: Liberia
+  type: country
+  status: cooperating
+  joined: '2015'
+- id: PA
+  name: Panama
+  type: country
+  status: cooperating
+  joined: '2025'
+- id: BZ
+  name: Belize
+  type: country
+  status: former_member
+  joined: '2007-05-16'
+  left: '2016-12-31'
+- id: ER
+  name: Eritrea
+  type: country
+  status: former_member
+  joined: '1994-08-09'
+  left: '2023-12-31'
+- id: GN
+  name: Guinea
+  type: country
+  status: former_member
+  joined: '2005-01-31'
+  left: '2017-12-31'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: former_member
+  joined: '2008-07-01'
+  left: '2021-02-05'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: former_member
+  joined: '2002-10-25'
+  left: '2015-12-31'
+founding_members:
+- LK
+- ER
+- MU
+- IN
+- GB
+- PK
+- SC
+- MG
+- KR
 membership_count: 29
-description: The Indian Ocean Tuna Commission is an international food body with 29
-  members.
+description: Regional fisheries management organisation under FAO Article XIV responsible for the conservation and management of tuna and tuna-like species in the Indian Ocean and adjacent seas. The Agreement establishing the Commission was approved by the FAO Council on 25 November 1993 and entered into force on 27 March 1996 upon the tenth instrument of acceptance. The Commission comprises 29 Contracting Parties — including the European Union and France in respect of its Indian Ocean territories — plus Cooperating Non-Contracting Parties; it adopts binding conservation and management measures, monitors compliance, and coordinates scientific stock assessment through its Scientific Committee and species working parties.
 tags:
 - IOTC
 - agriculture
+- commission
+- conservation
+- CTOI
 - environment
 - farming
+- fisheries
 - food
-- indian
+- indian-ocean
+- intergovernmental
 - nature
 - ocean
+- rfmo
+- tuna
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
+- key: ocean
+  name: Ocean
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: en
+  name: Indian Ocean Tuna Commission
+- id: fr
+  name: Commission des thons de l'océan Indien
+- id: ar
+  name: لجنة مصائد أسماك التونة في المحيط الهندي
+- id: zh
+  name: 印度洋金枪鱼委员会
+- id: ko
+  name: 인도양 참치 위원회
+- id: eo
+  name: Hindoceana Tinusa Komisiono
+wikidata_id: Q12613354
+notes: The ten original acceptances that brought the Agreement into force were Sri Lanka, Eritrea, Mauritius, India, the United Kingdom, Pakistan, Seychelles, the European Community, Madagascar, and the Republic of Korea (Korea deposited the tenth instrument on 27 March 1996). France participates as France (OT) in respect of its Indian Ocean overseas territories. The United Kingdom originally accepted in 1995 (including for British Indian Ocean Territory) and deposited a successor instrument as the United Kingdom of Great Britain and Northern Ireland on 22 December 2020 following Brexit-related membership changes. Former Contracting Parties are Belize (left end-2016), Vanuatu (left end-2015), Guinea (left end-2017), Sierra Leone (left early 2021), and founding member Eritrea (left end-2023). Liberia (since 2015) and Panama (since 2025) hold Cooperating Non-Contracting Party status. The Secretariat has operated in Victoria, Seychelles, since January 1998.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: IOTC Structure of the Commission; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/structure-commission
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: IOTC; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/
+- field: founded
+  source: IOTC Basic Texts; FAO Council
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/basic-texts
+- field: active_period
+  source: IOTC Basic Texts; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/basic-texts
+- field: legal_status
+  source: IOTC Basic Texts
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/basic-texts
+- field: recognition_status
+  source: IOTC Basic Texts
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/basic-texts
+- field: geographic_scope
+  source: IOTC
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/
+- field: headquarters
+  source: Wikidata; IOTC
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12613354
+  license: CC0
+- field: founding_members
+  source: UN Treaty Collection; IOTC
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800a7f47
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12613354
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12613354
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12613354
+  license: CC0
+- field: notes
+  source: IOTC; UN Treaty Collection
+  retrieved_at: '2026-07-29'
+  url: https://iotc.org/about-iotc/structure-commission

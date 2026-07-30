@@ -1,20 +1,44 @@
 id: EUMETNET
+name: European Meteorological Network
 blocktype:
 - meteorology
 - intorg
 status: formal
+founded: '1995'
+active_period:
+  start: '1995'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
 - url: https://www.eumetnet.eu/
   type: website
+- url: https://www.eumetnet.eu/about-us-2/
+  type: website
+- url: https://www.eumetnet.eu/about-us-2/members-partners/
+  type: website
 - url: https://en.wikipedia.org/wiki/EUMETNET
   type: wikipedia
-name: European Meteorological Network
-founded: '1995'
+- url: https://www.wikidata.org/wiki/Q3046245
+  type: wikidata
 acronyms:
 - lang: en
   value: EUMETNET
+legal_status: partnership
+recognition_status: Cooperative network of European national meteorological and hydrological services; established as an informal network in 1995, registered as a Belgian economic interest grouping (GIE) on 31 December 2009 with 31 founding members, and reconstituted as EUMETNET SNC (société en nom collectif) on 1 January 2024
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.798821
+    lng: 4.357989
+  note: Secretariat hosted at the Royal Meteorological Institute of Belgium, Avenue Circulaire 3, 1180 Brussels
+secretariat:
+  location: Brussels
+  head: Executive Director
+  organization: EUMETNET Secretariat
 includes:
 - id: AT
   name: Austria
@@ -84,6 +108,7 @@ includes:
   name: Lithuania
   type: country
   status: member
+  joined: '2024-01-01'
 - id: LU
   name: Luxembourg
   type: country
@@ -120,6 +145,7 @@ includes:
   name: Romania
   type: country
   status: member
+  joined: '2024-01-01'
 - id: RS
   name: Serbia
   type: country
@@ -149,7 +175,7 @@ includes:
   type: country
   status: member
 membership_count: 33
-description: Network of European National Meteorological Services collaborating on meteorology, data processing, and forecasting products.
+description: Cooperative network of 33 European national meteorological and hydrological services headquartered in Brussels. EUMETNET coordinates joint programmes in observations, forecasting, climate, aviation meteorology, training, and European policy support — including shared observing systems (EUCOS), radar composites (OPERA), multi-hazard warnings (MeteoAlarm), and data-exchange infrastructure (MeteoGate). Governed by an Assembly of Members meeting twice yearly, with advisory committees overseeing some twenty operational programmes delivered by coordinating members and the Secretariat.
 tags:
 - EUMETNET
 - meteorology
@@ -157,10 +183,17 @@ tags:
 - network
 - weather
 - forecasting
+- climate
+- observations
+- regional_cooperation
 - intorg
 topics:
 - key: meteorology
   name: Meteorology
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: environment
+  name: Environment
 other_names:
 - id: en
   name: European Meteorological Network
@@ -168,3 +201,40 @@ other_names:
   name: Réseau météorologique européen
 - id: de
   name: Europäisches Meteorologisches Netzwerk
+wikidata_id: Q3046245
+notes: Seven European national meteorological services participate as cooperating non-members in optional EUMETNET programmes without full membership — Andorra, Bosnia and Herzegovina, Bulgaria, Georgia, Israel, Moldova, and Türkiye.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: EUMETNET official website
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/members-partners/
+- field: description
+  source: EUMETNET official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3046245
+  license: CC0
+- field: headquarters
+  source: EUMETNET official website; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/
+- field: recognition_status
+  source: EUMETNET official website
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/
+- field: founded
+  source: EUMETNET official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/
+- field: legal_status
+  source: EUMETNET official website
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/
+- field: geographic_scope
+  source: EUMETNET official website
+  retrieved_at: '2026-07-29'
+  url: https://www.eumetnet.eu/about-us-2/

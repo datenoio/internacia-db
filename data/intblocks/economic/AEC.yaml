@@ -1,251 +1,362 @@
 id: AEC
+name: African Economic Community
 blocktype:
 - economic
 status: formal
+founded: '1991-06-03'
+active_period:
+  start: '1994-05-12'
+geographic_scope: regional
+regions:
+- Africa
+languages:
+- ar
+- en
+- fr
+- pt
 links:
+- url: https://au.int/en/treaties/treaty-establishing-african-economic-community
+  type: website
+- url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Economic_Community
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q386881
   type: wikidata
-name: African Economic Community
-founded: '1991'
+headquarters:
+  city: Addis Ababa
+  country: ET
+  coordinates:
+    lat: 9.0092
+    lng: 38.7445
+legal_status: treaty
+recognition_status: Continental economic integration framework established by the Abuja Treaty as an integral
+  part of the Organisation of African Unity and continued under the African Union; headquarters identical
+  to the AU Commission in Addis Ababa
+partof:
+  id: AFUNION
+  name: African Union
+founding_members:
+- AO
+- BF
+- BI
+- BW
+- CD
+- CF
+- CG
+- CI
+- CM
+- CV
+- DZ
+- EG
+- EH
+- ET
+- GA
+- GH
+- GM
+- GN
+- GQ
+- GW
+- KE
+- KM
+- LR
+- LS
+- LY
+- ML
+- MR
+- MU
+- MW
+- MZ
+- NA
+- NE
+- NG
+- RW
+- SC
+- SD
+- SL
+- SN
+- ST
+- TD
+- TG
+- TN
+- TZ
+- UG
+- ZM
+- ZW
 includes:
 - id: AO
   name: Angola
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-04-11'
 - id: BF
   name: Burkina Faso
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-05-19'
 - id: BI
   name: Burundi
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-08-05'
 - id: BJ
   name: Benin
   type: country
   status: member
+  joined: '1999-05-10'
 - id: BW
   name: Botswana
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-06-27'
 - id: CD
   name: Congo, Dem. Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-19'
 - id: CF
   name: Central African Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-18'
 - id: CG
   name: Congo, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1996-07-30'
 - id: CI
   name: Cote d'Ivoire
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-22'
 - id: CM
   name: Cameroon
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-12-20'
 - id: CV
   name: Cape Verde
   type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-12'
 - id: DZ
   name: Algeria
   type: country
-  status: member
+  status: founding_member
+  joined: '1995-06-21'
 - id: EG
   name: Egypt, Arab Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-12-18'
 - id: EH
   name: Western Sahara
   type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
+  status: founding_member
+  joined: '1992-08-25'
 - id: ET
   name: Ethiopia
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-11-05'
 - id: GA
   name: Gabon
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-11-06'
 - id: GH
   name: Ghana
   type: country
-  status: member
+  status: founding_member
+  joined: '1991-09-25'
 - id: GM
   name: Gambia, The
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-20'
 - id: GN
   name: Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-07-17'
 - id: GQ
   name: Equatorial Guinea
   type: country
-  status: member
+  status: founding_member
+  joined: '2002-12-20'
 - id: GW
   name: Guinea-Bissau
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-06-24'
 - id: KE
   name: Kenya
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-18'
 - id: KM
   name: Comoros
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-06-06'
 - id: LR
   name: Liberia
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-23'
 - id: LS
   name: Lesotho
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-08-12'
 - id: LY
   name: Libya
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-11-02'
 - id: MA
   name: Morocco
   type: country
   status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
+  joined: '2017-04-13'
 - id: ML
   name: Mali
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-11-13'
 - id: MR
   name: Mauritania
   type: country
-  status: member
+  status: founding_member
+  joined: '2001-11-20'
 - id: MU
   name: Mauritius
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-02-14'
 - id: MW
   name: Malawi
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-26'
 - id: MZ
   name: Mozambique
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-05-14'
 - id: NA
   name: Namibia
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-06-28'
 - id: NE
   name: Niger
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-06-22'
 - id: NG
   name: Nigeria
   type: country
-  status: member
+  status: founding_member
+  joined: '1991-12-31'
 - id: RW
   name: Rwanda
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-10-01'
 - id: SC
   name: Seychelles
   type: country
-  status: member
+  status: founding_member
+  joined: '1991-10-11'
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-02-08'
 - id: SL
   name: Sierra Leone
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-03-15'
 - id: SN
   name: Senegal
   type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
+  status: founding_member
+  joined: '1992-02-26'
 - id: ST
   name: Sao Tome and Principe
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-02'
 - id: SZ
   name: Swaziland
   type: country
   status: member
+  joined: '2001-06-06'
 - id: TD
   name: Chad
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-06-26'
 - id: TG
   name: Togo
   type: country
-  status: member
+  status: founding_member
+  joined: '1998-05-05'
 - id: TN
   name: Tunisia
   type: country
-  status: member
+  status: founding_member
+  joined: '1994-05-03'
 - id: TZ
   name: Tanzania
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-01-10'
 - id: UG
   name: Uganda
   type: country
-  status: member
+  status: founding_member
+  joined: '1991-12-31'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2001-05-31'
 - id: ZM
   name: Zambia
   type: country
-  status: member
+  status: founding_member
+  joined: '1992-10-26'
 - id: ZW
   name: Zimbabwe
   type: country
-  status: member
-membership_count: 55
+  status: founding_member
+  joined: '1991-11-06'
+membership_count: 50
 wikidata_id: Q386881
-description: International organization.
+description: Continental economic community of African states established by the Treaty Establishing the
+  African Economic Community (Abuja Treaty), adopted on 3 June 1991 and entered into force on 12 May 1994.
+  It provides a staged roadmap toward African free trade areas, customs unions, a common market, and eventually
+  an economic and monetary union, implemented primarily through the African Union's recognised Regional
+  Economic Communities. As of the African Union status list of 24 January 2023, 50 states have ratified
+  or acceded; Djibouti, Eritrea, Madagascar, Somalia, and South Sudan have signed but not ratified.
 tags:
 - AEC
+- Abuja
 - african
-- aid
 - commerce
 - community
 - cooperation
 - development
 - economic
 - economy
+- integration
 - regional
 - regional_cooperation
 - trade
+- treaty
 topics:
 - key: development
   name: Development
@@ -272,24 +383,78 @@ other_names:
   name: Африканское экономическое сообщество
 - id: zh
   name: 非洲经济共同体
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 acronyms:
 - lang: en
   value: AEC
+- lang: en
+  value: Abuja Treaty
 - lang: zh
   value: 非洲經濟共同體
+notes: >-
+  Membership follows the African Union depositary status list for the Treaty Establishing the African
+  Economic Community (updated 24 January 2023): 54 signatures and 50 ratifications/accessions among 55
+  listed countries. Join dates are ratification or accession dates. Original signatories of 3 June 1991
+  that have ratified are marked founding_member. Morocco acceded in 2017 without prior signature. Signatories
+  that have not ratified (Djibouti, Eritrea, Madagascar, Somalia, South Sudan) are omitted from includes
+  pending deposit of instruments of ratification. Community headquarters are the same as those of the
+  OAU/AU (Article 96).
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: African Union treaty status list (Abuja Treaty)
+  retrieved_at: '2026-07-29'
+  url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+- field: membership_count
+  source: African Union treaty status list (Abuja Treaty)
+  retrieved_at: '2026-07-29'
+  url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+- field: founded
+  source: African Union / Abuja Treaty
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/treaties/treaty-establishing-african-economic-community
+- field: active_period
+  source: African Union / Abuja Treaty
+  retrieved_at: '2026-07-29'
+  url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+- field: founding_members
+  source: African Union treaty status list (Abuja Treaty)
+  retrieved_at: '2026-07-29'
+  url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+- field: description
+  source: African Union / Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/African_Economic_Community
+- field: headquarters
+  source: Abuja Treaty Article 96 / African Union Commission
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/commission
+- field: partof
+  source: Abuja Treaty / African Union
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/treaties/treaty-establishing-african-economic-community
+- field: legal_status
+  source: African Union / Abuja Treaty
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/treaties/treaty-establishing-african-economic-community
+- field: recognition_status
+  source: African Union / Abuja Treaty
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/treaties/treaty-establishing-african-economic-community
+- field: notes
+  source: African Union treaty status list (Abuja Treaty)
+  retrieved_at: '2026-07-29'
+  url: https://www.au.int/sites/default/files/treaties/37636-sl-TREATY_ESTABLISHING_THE_AFRICAN_ECONOMIC_COMMUNITY.pdf
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q386881
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q386881
+  license: CC0
+- field: geographic_scope
+  source: African Union / Abuja Treaty
+  retrieved_at: '2026-07-29'
+  url: https://au.int/en/treaties/treaty-establishing-african-economic-community

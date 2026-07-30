@@ -2,34 +2,53 @@ id: USKR
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- ko
-links:
-- url: https://en.wikipedia.org/wiki/United_States%E2%80%93Korea_Free_Trade_Agreement
-  type: wikipedia
-- url: https://www.trade.gov/index.php/us-korea-free-trade-agreement
-  type: website
-name: United States-Korea Free Trade Agreement
-founded: '2012-03-15'
+founded: '2007-06-30'
+active_period:
+  start: '2012-03-15'
 geographic_scope: bilateral
 regions:
 - North America
 - Asia
+languages:
+- en
+- ko
+links:
+- url: https://ustr.gov/trade-agreements/free-trade-agreements/korus-fta
+  type: website
+- url: https://www.trade.gov/us-korea-free-trade-agreement
+  type: website
+- url: https://www.wipo.int/wipolex/en/treaties/textdetails/12580
+  type: website
+- url: https://en.wikipedia.org/wiki/United_States%E2%80%93Korea_Free_Trade_Agreement
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q483514
+  type: wikidata
+name: United States-Korea Free Trade Agreement
+acronyms:
+- lang: en
+  value: KORUS
+- lang: en
+  value: KORUS FTA
+- lang: en
+  value: US-Korea FTA
+legal_status: free trade agreement
+recognition_status: Bilateral free trade agreement signed on 30 June 2007, renegotiated and signed in December 2010; entered into force on 15 March 2012 after completion of domestic ratification procedures by both parties
 includes:
 - id: US
   name: United States
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-06-30'
 - id: KR
-  name: Korea, Republic of
+  name: Korea, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2007-06-30'
+founding_members:
+- US
+- KR
 membership_count: 2
-description: Comprehensive trade pact between the U.S. and South Korea that entered into force on March 15, 2012. The agreement
-  has led to the elimination of tariffs on over 95% of bilateral trade in consumer and industrial products within five years.
-  It encompasses various sectors including manufactured goods, agricultural products, services, investment, intellectual property
-  rights, and includes commitments to maintain worker and environmental standards.
+description: Bilateral trade agreement between the United States and the Republic of Korea, signed on 30 June 2007 and entered into force on 15 March 2012 after renegotiation and ratification by both legislatures. The agreement eliminated tariffs on over 95% of bilateral trade in consumer and industrial products within five years and covers manufactured goods, agriculture, services, investment, intellectual property, and labor and environmental standards.
 tags:
 - KORUS
 - asia
@@ -46,13 +65,7 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: KORUS
-- lang: en
-  value: KORUS FTA
-- lang: en
-  value: US-Korea FTA
+wikidata_id: Q483514
 other_names:
 - id: en
   name: KORUS FTA
@@ -64,4 +77,24 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
-  url: https://www.trade.gov/index.php/us-korea-free-trade-agreement
+  url: https://www.trade.gov/us-korea-free-trade-agreement
+- field: founded
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/korus-fta
+- field: active_period
+  source: United States Trade Representative
+  retrieved_at: '2026-07-29'
+  url: https://ustr.gov/trade-agreements/free-trade-agreements/korus-fta
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://www.wipo.int/wipolex/en/treaties/textdetails/12580
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.trade.gov/us-korea-free-trade-agreement
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q483514

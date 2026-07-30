@@ -1,51 +1,166 @@
 id: PAODKB
+name: Interparliamentary Assembly of CSTO
 blocktype:
 - parliamentary
 status: formal
 partof: CSTO
+founded: '2006-11-16'
+active_period:
+  start: '2006-11-16'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
+- Eastern Europe
+- Caucasus
 languages:
+- en
 - ru
-name: Interparliamentary Assembly of CSTO
+links:
+- url: https://pacsto.org/
+  type: website
+- url: https://en.odkb-csto.org/authorized_organs/parliamentary_assembly/
+  type: website
+- url: https://en.wikipedia.org/wiki/Collective_Security_Treaty_Organization
+  type: wikipedia
+acronyms:
+- lang: en
+  value: CSTO PA
+- lang: en
+  value: PA CSTO
+- lang: ru
+  value: ПА ОДКБ
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.7539
+    lng: 37.6208
 includes:
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
 - id: BY
   name: Belarus
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
 - id: KG
-  name: Kyrgyzstan
+  name: Kyrgyz Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
 - id: TJ
   name: Tajikistan
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-11-16'
+- id: RS
+  name: Serbia
+  type: country
+  status: observer
+  joined: '2013-04'
+- id: BELRUS
+  name: Parliamentary Assembly of Union of Belarus and Russia
+  type: organization
+  status: observer
+  joined: '2010'
+- id: AF
+  name: Afghanistan
+  type: country
+  status: observer
+  joined: '2013-04'
+  left: '2021'
+founding_members:
+- AM
+- BY
+- KZ
+- KG
+- RU
+- TJ
 membership_count: 6
-description: Interparliamentary Assembly of CSTO is an international parliamentary
-  body with 6 members.
+description: Inter-parliamentary body established on 16 November 2006 by the chairpersons
+  of the parliaments of Armenia, Belarus, Kazakhstan, Kyrgyzstan, Russia, and Tajikistan
+  to harmonize national legislation, develop model laws for CSTO charter tasks, and
+  coordinate cooperation on international and regional security issues. Included in
+  the CSTO Charter in December 2010 as the organization's statutory inter-parliamentary
+  cooperation body. Holds annual plenary sessions and three permanent commissions on
+  political issues and international cooperation, defense and security, and socio-economic
+  and legal issues.
+notes: Serbia and the Parliamentary Assembly of the Union of Belarus and Russia hold
+  observer status. Afghanistan held observer status from April 2013 until the collapse
+  of the Islamic Republic in 2021.
 tags:
 - PAODKB
+- CSTO
 - assembly
 - interparliamentary
 - parliamentary
 - political
+- regional
+- regional_cooperation
+- security
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
+other_names:
+- id: en
+  name: Parliamentary Assembly of the Collective Security Treaty Organization
+- id: en
+  name: Parliamentary Assembly of CSTO
+- id: ru
+  name: Парламентская ассамблея Организации Договора о коллективной безопасности
+last_verified: '2026-07-29'
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pacsto.org/about
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.odkb-csto.org/authorized_organs/parliamentary_assembly/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pacsto.org/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.odkb-csto.org/25years/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.odkb-csto.org/authorized_organs/parliamentary_assembly/
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pacsto.org/
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://pacsto.org/
+- field: notes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Collective_Security_Treaty_Organization
+  license: CC-BY-SA

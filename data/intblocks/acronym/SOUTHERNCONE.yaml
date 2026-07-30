@@ -2,6 +2,14 @@ id: SOUTHERNCONE
 blocktype:
 - acronym
 status: informal
+geographic_scope: sub-regional
+regions:
+- South America
+- Americas
+languages:
+- es
+- pt
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Southern_Cone
   type: wikipedia
@@ -31,16 +39,30 @@ includes:
   status: member
 membership_count: 5
 wikidata_id: Q236118
-description: The Southern Cone is a geographical and cultural subregion composed of the southernmost areas of South America,
-  mostly south of the Tropic of Capricorn.
+description: The Southern Cone (Spanish Cono Sur, Portuguese Cone Sul) is a geographical and cultural subregion of the southernmost
+  areas of South America, mostly south of the Tropic of Capricorn. The core countries are Argentina, Chile, and Uruguay; broader
+  definitions also include Paraguay and Brazil's southern states (Paraná, Rio Grande do Sul, Santa Catarina, and São Paulo).
 tags:
 - SOUTHERNCONE
 - acronym
+- argentina
+- brazil
+- chile
 - cone
+- paraguay
+- regional_cooperation
 - southern
+- uruguay
 topics:
 - key: regional_cooperation
   name: Regional Cooperation
+acronyms:
+- lang: es
+  value: Cono Sur
+- lang: pt
+  value: Cone Sul
+- lang: zh
+  value: 南锥地区
 other_names:
 - id: ar
   name: المخروط الجنوبي
@@ -58,17 +80,47 @@ other_names:
   name: Южный конус
 - id: zh
   name: 南錐體
+notes: Informal geographic and cultural label, not an organization. Narrow definitions cover only Argentina, Chile, and Uruguay;
+  Wikipedia and Wikidata also list Paraguay and Brazil at country level, while many geographic accounts treat only Brazil's four
+  southernmost states as part of the cone.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
+- field: regions
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Southern_Cone
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q236118
   license: CC0
 - field: acronyms
   source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q236118
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: 南锥地区

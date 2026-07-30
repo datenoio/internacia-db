@@ -1,11 +1,22 @@
 id: NORDSTREAM1
+name: Nord Stream 1
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '2011-11-08'
+geographic_scope: bilateral
+regions:
+- Europe
 links:
-- url: https://en.wikipedia.org/wiki/Nord_Stream
+- url: https://www.nord-stream.com/
+  type: website
+- url: https://en.wikipedia.org/wiki/Nord_Stream_1
   type: wikipedia
-name: Nord Stream
+- url: https://www.wikidata.org/wiki/Q154125
+  type: wikidata
+acronyms:
+- lang: en
+  value: NS1
 includes:
 - id: RU
   name: Russian Federation
@@ -16,15 +27,23 @@ includes:
   type: country
   status: member
 membership_count: 2
-description: Nord Stream is an international gaspipeline body with 2 members.
+wikidata_id: Q154125
+description: Offshore natural gas pipeline from Vyborg, Russia, to Lubmin near Greifswald,
+  Germany, through the Baltic Sea. Twin-line system (NS1 A and B) with 55 billion m³/a design
+  capacity per line, operated by Nord Stream AG. First line commissioned in November 2011; gas
+  deliveries were halted indefinitely by Gazprom on 31 August 2022. Both lines were damaged in
+  the September 2022 Baltic Sea sabotage incident and remain inoperable.
 tags:
 - NORDSTREAM1
-- nord
-- stream
+- baltic
 - economy
 - energy
 - gaspipeline
+- germany
+- nord
 - pipeline
+- russia
+- stream
 - transport
 - transportation
 topics:
@@ -34,7 +53,55 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: de
+  name: Nord Stream 1
+- id: en
+  name: Nord Stream 1
+- id: es
+  name: Nord Stream 1
+- id: fr
+  name: Nord Stream 1
+- id: ru
+  name: Северный поток
+- id: zh
+  name: 北溪1號
+notes: Route also crosses the exclusive economic zones of Finland, Sweden, and Denmark without
+  landfall in those states; endpoint countries are listed in includes. The pipeline consists of
+  twin lines (A and B); both were damaged in the September 2022 sabotage.
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nord_Stream_1
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q154125
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nord_Stream_1
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nord_Stream_1
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nord_Stream_1
+last_verified: '2026-07-29'

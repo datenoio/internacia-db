@@ -1,76 +1,177 @@
 id: IPAP
+name: Individual Partnership Action Plan
 blocktype:
 - military
 status: formal
+founded: '2002-11-21'
 partof: NATO
+geographic_scope: regional
+regions:
+- Europe
+- Caucasus
+- Central Asia
 languages:
 - en
+- fr
 links:
-- url: http://www.nato.int/cps/en/natolive/topics_49290.htm
+- url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023
   type: website
 - url: https://en.wikipedia.org/wiki/Individual_Partnership_Action_Plan
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6025242
   type: wikidata
-name: Individual Partnership Action Plans (NATO)
-founded: '2002'
+acronyms:
+- lang: en
+  value: IPAP
+legal_status: partnership programme
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8796
+    lng: 4.4257
+wikidata_id: Q6025242
+description: NATO bilateral cooperation framework launched at the Prague Summit in November 2002, providing partner countries with
+  country-specific plans covering political and security dialogue, defence and military reform, public diplomacy, civil preparedness,
+  and administrative issues. IPAPs coordinated bilateral assistance from Allies and international institutions and were periodically
+  reviewed with NATO. Eight countries concluded IPAPs between 2004 and 2015. In March 2021 the North Atlantic Council adopted
+  the "One Partner, One Plan" concept, progressively replacing IPAPs with Individually Tailored Partnership Programmes (ITPPs)
+  as NATO's primary tool for deepening bilateral partner cooperation; the IPAP framework was phased out by 2023.
 includes:
 - id: GE
   name: Georgia
   type: country
-  status: member
+  status: former_member
+  joined: '2004-10-29'
+  left: '2023'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '2005-05-27'
 - id: AM
   name: Armenia
   type: country
   status: member
+  joined: '2005-12-16'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: former_member
+  joined: '2006-01-31'
+  left: '2023'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: former_member
+  joined: '2006-05-19'
+  left: '2024'
 - id: BA
   name: Bosnia and Herzegovina
   type: country
-  status: member
+  status: former_member
+  joined: '2008-02'
+  left: '2023'
+- id: ME
+  name: Montenegro
+  type: country
+  status: former_member
+  joined: '2008-06'
+  left: '2017-06-05'
 - id: RS
   name: Serbia
   type: country
   status: member
-membership_count: 7
-wikidata_id: Q6025242
-description: Intergovernmental relations between countries and NATO.
+  joined: '2015-01-15'
+membership_count: 3
 tags:
 - IPAP
-- action
+- NATO
+- action_plan
+- armenia
+- azerbaijan
+- balkans
+- caucasus
+- central_asia
+- cooperation
 - defense
+- georgia
 - individual
 - military
+- moldova
 - partnership
+- regional_cooperation
 - security
+- serbia
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
-- id: zh
-  name: 独立合作伙伴行动计划
+- id: az
+  name: Fərdi Tərəfdaşlıq üzrə Əməliyyat Planı
 - id: en
   name: Individual Partnership Action Plan
-- id: ru
-  name: Индивидуальный план партнёрства с НАТО
+- id: en
+  name: Individual Partnership Action Plans
+- id: en
+  name: Individual Partnership Programme
 - id: es
   name: Plan de acción individual para la asociación
+- id: fr
+  name: Plan d'action individuel de partenariat
+- id: ro
+  name: Planul de acțiuni individuale cu partenerii
+- id: ru
+  name: Индивидуальный план партнёрства с НАТО
+- id: sl
+  name: Individualni partnerski program
+- id: tr
+  name: Bireysel Ortaklık Eylem Planı
+- id: uk
+  name: Індивідуальний план партнерства з НАТО
+- id: zh
+  name: 独立合作伙伴行动计划
+notes: Georgia was the first country to agree an IPAP (29 October 2004). Montenegro's IPAP ended upon NATO accession on 5 June
+  2017. Moldova extended its IPAP through 2024 before transitioning to an ITPP from 2025. Armenia, Azerbaijan, and Serbia
+  remain the last countries with IPAPs still in implementation as NATO partners complete the shift to ITPPs. Ukraine uses a
+  separate NATO–Ukraine Action Plan rather than an IPAP.
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6025242
   license: CC0
+- field: description
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023
+- field: founded
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023
+- field: headquarters
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6025242
+  license: CC0
+- field: geographic_scope
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023
+- field: legal_status
+  source: NATO
+  retrieved_at: '2026-07-29'
+  url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/individual-partnership-action-plans-2002-2023

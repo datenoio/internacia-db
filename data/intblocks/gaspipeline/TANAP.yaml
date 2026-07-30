@@ -1,8 +1,26 @@
 id: TANAP
+name: Trans-Anatolian Natural Gas Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
-name: Trans-Anatolian Natural Gas Pipeline
+founded: '2018-06-12'
+geographic_scope: regional
+regions:
+- Asia
+- Europe
+languages:
+- az
+- tr
+links:
+- url: http://www.tanap.com/
+  type: website
+- url: https://en.wikipedia.org/wiki/Trans-Anatolian_gas_pipeline
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q2645428
+  type: wikidata
+headquarters:
+  city: Ankara
+  country: TR
 acronyms:
 - lang: en
   value: TANAP
@@ -11,22 +29,36 @@ includes:
   name: Azerbaijan
   type: country
   status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
 - id: TR
   name: Turkey
   type: country
   status: member
-membership_count: 2
-description: Natural gas pipeline in from Azerbaijan to Europe.
+membership_count: 3
+wikidata_id: Q2645428
+description: 1,841 km natural gas pipeline and central link of the Southern Gas Corridor, carrying Shah Deniz gas from
+  Azerbaijan to Europe via the South Caucasus Pipeline and Trans Adriatic Pipeline. The route includes SCPx expansion
+  from the Sangachal terminal through Georgia to Erzurum, then crosses 20 Turkish provinces to the Greek border at
+  the Maritsa River. Commissioned on 12 June 2018 with 16 billion m³/a initial capacity; operated by SOCAR (58%),
+  BOTAŞ (30%), and BP (12%).
 tags:
 - TANAP
-- trans
-- anatolian
+- anatolia
+- azerbaijan
 - economy
 - energy
 - gaspipeline
+- georgia
 - pipeline
+- shah-deniz
+- southern-gas-corridor
+- trans
 - transport
 - transportation
+- turkey
 topics:
 - key: economy
   name: Economy
@@ -34,21 +66,73 @@ topics:
   name: Energy
 - key: transport
   name: Transport
-wikidata_id: Q2645428
+other_names:
+- id: ar
+  name: خط أنابيب الغاز عبر الأناضول
+- id: az
+  name: Trans Anadolu qaz boru kəməri
+- id: de
+  name: Transanatolische Pipeline
+- id: en
+  name: Trans-Anatolian Gas Pipeline
+- id: en
+  name: Trans Anatolian Pipeline
+- id: es
+  name: Gasoducto Transanatoliano
+- id: fr
+  name: Gazoduc transanatolien
+- id: it
+  name: gasdotto Trans-Anatolico
+- id: ru
+  name: Трансанатолийский газопровод
+- id: tr
+  name: Trans Anadolu doğalgaz boru hattı
+- id: uk
+  name: Трансанатолійський газогін
+- id: zh
+  name: 跨安纳托利亚天然气管道
+notes: Includes upstream SCPx in Azerbaijan and transit through Georgia to Erzurum; the main TANAP line runs entirely
+  within Turkey and connects to TAP at the Turkish–Greek border (November 2018). Turkey receives 6 billion m³/a from
+  the line at Eskişehir; remaining capacity flows onward to Southeast Europe.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2645428
+  license: CC0
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2645428
   license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Anatolian_gas_pipeline
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2645428
   license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q2645428
   license: CC0
-founded: '2018-06-12'
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Anatolian_gas_pipeline
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Trans-Anatolian_gas_pipeline
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q2645428
+  license: CC0

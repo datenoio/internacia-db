@@ -2,28 +2,50 @@ id: AUUAE
 blocktype:
 - fta
 status: formal
-languages:
-- en
-- ar
-name: Australia-United Arab Emirates Comprehensive Economic Partnership Agreement
-founded: '2025-10-01'
+founded: '2024-11-06'
+active_period:
+  start: '2025-10-01'
 geographic_scope: bilateral
 regions:
 - Oceania
 - Middle East
+languages:
+- en
+- ar
+links:
+- url: https://www.dfat.gov.au/trade/agreements/in-force/australia-uae-comprehensive-economic-partnership-agreement-cepa
+  type: website
+- url: https://www.moet.gov.ae/en/uae-australia-comprehensive-economic-partnership-agreement
+  type: website
+name: Australia-United Arab Emirates Comprehensive Economic Partnership Agreement
+acronyms:
+- lang: en
+  value: CEPA
+- lang: en
+  value: A-UAE CEPA
+legal_status: free trade agreement
+recognition_status: Comprehensive economic partnership agreement signed on 6 November 2024; entered into force on 1 October
+  2025 after completion of domestic ratification procedures by both parties
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-11-06'
 - id: AE
   name: United Arab Emirates
   type: country
-  status: member
+  status: founding_member
+  joined: '2024-11-06'
+founding_members:
+- AU
+- AE
 membership_count: 2
-description: Australia's first free trade agreement in the Middle East region. The agreement eliminates tariffs on over 99%
-  of Australian exports to the UAE, including key agricultural products, industrial goods, and services. It includes Australia's
-  first-ever free trade agreement chapter dedicated to First Nations trade and investment.
+description: Comprehensive economic partnership agreement between Australia and the United Arab Emirates, signed on 6 November
+  2024 and entered into force on 1 October 2025. Australia's first free trade agreement in the Middle East region, it eliminates
+  tariffs on over 99% of Australian exports to the UAE, including key agricultural products, industrial goods, and services.
+  It includes Australia's first-ever free trade agreement chapter dedicated to First Nations trade and investment, alongside
+  a separate investment protection agreement and five investment cooperation memoranda of understanding.
 tags:
 - AUUAE
 - arab
@@ -42,11 +64,6 @@ topics:
   name: Economy
 - key: trade
   name: Trade
-acronyms:
-- lang: en
-  value: CEPA
-- lang: en
-  value: A-UAE CEPA
 other_names:
 - id: en
   name: Australia-UAE CEPA
@@ -56,3 +73,20 @@ provenance:
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-uae-comprehensive-economic-partnership-agreement-cepa
+- field: founded
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-uae-comprehensive-economic-partnership-agreement-cepa
+- field: active_period
+  source: Australian Government Department of Foreign Affairs and Trade
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-uae-comprehensive-economic-partnership-agreement-cepa
+- field: includes
+  source: official treaty text
+  retrieved_at: '2026-07-29'
+  url: https://www.moet.gov.ae/documents/20121/1347101/UAE-AUS+CEPA.pdf/d7eb2ebd-985f-8ce2-efe2-b2a2f012dafb
+- field: links
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.dfat.gov.au/trade/agreements/in-force/australia-uae-comprehensive-economic-partnership-agreement-cepa

@@ -1,11 +1,23 @@
 id: MEGP
+name: Maghreb–Europe Gas Pipeline
 blocktype:
 - gaspipeline
 status: de-facto
+founded: '1996-11-01'
+geographic_scope: regional
+regions:
+- Africa
+- Europe
 links:
 - url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
   type: wikipedia
-name: Maghreb–Europe Gas Pipeline
+- url: https://www.wikidata.org/wiki/Q734096
+  type: wikidata
+acronyms:
+- lang: en
+  value: MEG
+- lang: fr
+  value: GME
 includes:
 - id: DZ
   name: Algeria
@@ -19,13 +31,25 @@ includes:
   name: Spain
   type: country
   status: member
-membership_count: 3
-description: Maghreb–Europe Gas Pipeline is an international gaspipeline body with
-  3 members.
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+membership_count: 4
+wikidata_id: Q734096
+description: Natural gas pipeline linking the Hassi R'Mel gas field in Algeria through
+  Morocco and across the Strait of Gibraltar to Córdoba, Spain, where it connects to the
+  Spanish and Portuguese gas grids. Commissioned on 1 November 1996; Algeria halted
+  supplies on 31 October 2021 after the 25-year operating contract expired, and since
+  June 2022 part of the pipeline operates in reverse to deliver gas from Spain to Morocco.
 tags:
 - MEGP
 - maghreb
 - europe
+- algeria
+- morocco
+- spain
+- portugal
 - economy
 - energy
 - gaspipeline
@@ -39,7 +63,54 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: ar
+  name: أنبوب الغاز المغاربي الأوروبي
+- id: ca
+  name: gasoducte Magreb-Europa
+- id: en
+  name: Maghreb–Europe Gas Pipeline
+- id: es
+  name: Gasoducto Magreb-Europa
+- id: fr
+  name: Gazoduc Maghreb-Europe
+- id: ru
+  name: Газопровод Магриб — Европа
+notes: Also known as the Pere (Pedro) Duran Farell pipeline. Portugal is listed because the
+  pipeline system includes the Extremadura link and a Portuguese section connecting it to
+  the Portuguese grid; Transgas of Portugal joined the project in 1994.
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q734096
+  license: CC0
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Maghreb%E2%80%93Europe_Gas_Pipeline
+last_verified: '2026-07-29'

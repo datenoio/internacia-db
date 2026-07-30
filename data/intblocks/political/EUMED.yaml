@@ -32,50 +32,66 @@ acronyms:
 - lang: en
   value: Med 9
 includes:
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-  joined: '2021'
 - id: CY
   name: Cyprus
   type: country
   status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-  joined: '2021'
+  joined: '2013-12-17'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '2013-12-17'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '2013-12-17'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '2013-12-17'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2021-09-17'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '2013-12-17'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2013-12-17'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '2013-12-17'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2021-09-17'
 membership_count: 9
+founding_members:
+- CY
+- ES
+- FR
+- GR
+- IT
+- MT
+- PT
 legal_status: intergovernmental
-notes: Informal alliance of nine Mediterranean and Southern European Union member states. Established on 17 December 2013
-  in Brussels at the initiative of the Foreign Ministers of Cyprus and Spain. All member countries are part of the European
-  Union and the eurozone. The group coordinates on issues of common interest within the EU, including security, stability
-  in North Africa and the Middle East, and migration.
+notes: Informal alliance of nine Mediterranean and Southern European Union member states, also known as EuroMed 9 or Med 9
+  (formerly Med 7). Established on 17 December 2013 in Brussels at the initiative of the Foreign Ministers of Cyprus and
+  Spain. Croatia and Slovenia joined in 2021, expanding the group from seven to nine members. All member countries are part
+  of the European Union and the eurozone. The group coordinates on issues of common interest within the EU, including security,
+  stability in North Africa and the Middle East, and migration. Holds annual summits of Southern EU country leaders.
 description: Informal political cooperation format of Mediterranean and Southern European EU member states focused on coordinating
   positions on common interests within the European Union.
 tags:
@@ -102,29 +118,63 @@ wikidata_id: Q28134858
 other_names:
 - id: de
   name: EU-Südstaaten
+- id: el
+  name: EuroMed 7
 - id: en
   name: EU Med Group
 - id: es
   name: Cumbre Mediterránea
 - id: fr
   name: Med 7
+- id: it
+  name: EuroMed
+- id: nl
+  name: Club Med-landen
+- id: pl
+  name: EU Med Group
 - id: pt
   name: Sete do Sul
+- id: ro
+  name: Grupul EU Med
 - id: ru
   name: EU Med
+- id: sl
+  name: Skupina MED 7
 - id: zh
   name: 南欧七国
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q28134858
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q28134858
   license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/EU_Med_Group
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/EU_Med_Group
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/EU_Med_Group
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/EU_Med_Group
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/EU_Med_Group
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/EU_Med_Group

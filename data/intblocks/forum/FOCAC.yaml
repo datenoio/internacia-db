@@ -3,6 +3,11 @@ blocktype:
 - forum
 - political
 status: formal
+founded: '2000-10-10'
+geographic_scope: regional
+regions:
+- Africa
+- Asia
 languages:
 - en
 - fr
@@ -10,30 +15,21 @@ languages:
 links:
 - url: http://www.focac.org/eng/
   type: website
+- url: http://www.focac.org/chn/
+  type: website
+- url: http://www.focac.org/fra/
+  type: website
 - url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q947379
   type: wikidata
 name: Forum on China–Africa Cooperation
+headquarters:
+  city: Beijing
+  country: CN
 includes:
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BW
-  name: Botswana
   type: country
   status: member
 - id: BF
@@ -44,44 +40,52 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: CV
-  name: Cabo Verde
+- id: BJ
+  name: Benin
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
 - id: CG
-  name: Congo
+  name: Congo, Rep.
   type: country
   status: member
-- id: CD
-  name: Democratic Republic of the Congo
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CN
+  name: China
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
   type: country
   status: member
 - id: DJ
   name: Djibouti
   type: country
   status: member
-- id: EG
-  name: Egypt
+- id: DZ
+  name: Algeria
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
+- id: EG
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ER
@@ -96,48 +100,52 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
 - id: GH
   name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
   type: country
   status: member
 - id: GN
   name: Guinea
   type: country
   status: member
-- id: GW
-  name: Guinea-Bissau
+- id: GQ
+  name: Equatorial Guinea
   type: country
   status: member
-- id: CI
-  name: Ivory Coast
+- id: GW
+  name: Guinea-Bissau
   type: country
   status: member
 - id: KE
   name: Kenya
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
   type: country
   status: member
-- id: MG
-  name: Madagascar
+- id: MA
+  name: Morocco
   type: country
   status: member
-- id: MW
-  name: Malawi
+- id: MG
+  name: Madagascar
   type: country
   status: member
 - id: ML
@@ -152,8 +160,8 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MW
+  name: Malawi
   type: country
   status: member
 - id: MZ
@@ -176,40 +184,36 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
 - id: SC
   name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
-- id: TZ
-  name: Tanzania
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: TD
+  name: Chad
   type: country
   status: member
 - id: TG
@@ -220,8 +224,16 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
 - id: UG
   name: Uganda
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -233,39 +245,114 @@ includes:
   type: country
   status: member
 membership_count: 54
-description: International forum focused on political.
+wikidata_id: Q947379
+legal_status: intergovernmental
+acronyms:
+- lang: en
+  value: FOCAC
+- lang: fr
+  value: FCSA
+- lang: zh
+  value: 中非合作论坛
+description: >-
+  Official intergovernmental forum between the People's Republic of China and African states that recognize the PRC,
+  launched at the first Ministerial Conference in Beijing on 10–12 October 2000. FOCAC is the primary multilateral
+  coordination mechanism for China–Africa political, economic, and development cooperation; ministerial conferences and
+  summits meet every three years (alternating between China and an African host) and adopt three-year action plans with
+  pledges on trade, investment, infrastructure, agriculture, health, education, and peace and security. Since 2018,
+  participants have framed FOCAC as a cooperation platform within the Belt and Road Initiative.
 tags:
 - FOCAC
 - africa
+- belt_and_road
 - china
 - cooperation
+- development
 - forum
 - political
 - regional
 - regional_cooperation
+- trade
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q947379
+- key: development
+  name: Development
+- key: trade
+  name: Trade
+- key: economy
+  name: Economy
+- key: diplomacy
+  name: Diplomacy
 other_names:
+- id: af
+  name: Forum vir China-Afrika-Samewerking
 - id: ar
   name: منتدى التعاون الصيني الإفريقي
-- id: zh
-  name: 中非合作论坛
+- id: de
+  name: Forum on China–Africa Cooperation
 - id: en
   name: Forum on China–Africa Cooperation
-- id: fr
-  name: Forum sur la coopération sino-africaine
-- id: ru
-  name: Форум сотрудничества Китай-Африка
 - id: es
   name: Foro para la Cooperación entre China y África
-founded: '2000'
+- id: fr
+  name: Forum sur la coopération sino-africaine
+- id: ja
+  name: 中国・アフリカ協力フォーラム
+- id: ko
+  name: 중국-아프리카 협력 포럼
+- id: nl
+  name: Forum voor Chinees-Afrikaanse Samenwerking
+- id: pt
+  name: Fórum de Cooperação China-África
+- id: ru
+  name: Форум сотрудничества Китай-Африка
+- id: zh
+  name: 中非合作论坛
+notes: >-
+  Country membership is China plus the 53 African UN member states that recognize the PRC; Eswatini (SZ) is excluded
+  because it maintains diplomatic relations with Taiwan. The African Union Commission also participates in FOCAC but is
+  not listed in `includes` (country codes only). Western Sahara (EH) is not a FOCAC member state. Dual CASCF/FOCAC
+  membership among North African states is common (e.g. Algeria, Egypt, Morocco, Tunisia).
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
 - field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q947379
   license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q947379
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Forum_on_China-Africa_Cooperation

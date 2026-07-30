@@ -1,7 +1,12 @@
 id: EPO
+name: European Patent Organisation
 blocktype:
 - patent
 status: formal
+founded: '1977-10-07'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 - de
@@ -13,195 +18,6 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q685547
   type: wikidata
-name: European Patent Organisation
-includes:
-- id: AL
-  name: Albania
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: LI
-  name: Liechtenstein
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MK
-  name: North Macedonia
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: extension
-- id: MA
-  name: Morocco
-  type: country
-  status: validation
-- id: MD
-  name: Republic of Moldova
-  type: country
-  status: validation
-- id: TN
-  name: Tunisia
-  type: country
-  status: validation
-- id: KH
-  name: Cambodia
-  type: country
-  status: validation
-- id: GE
-  name: Georgia
-  type: country
-  status: validation
-founded: '1977'
-headquarters:
-  city: Munich
-  country: DE
-  coordinates:
-    lat: 48.14
-    lng: 11.52
 acronyms:
 - lang: en
   value: EPO
@@ -215,10 +31,267 @@ acronyms:
   value: OEP
 - lang: de
   value: EPO
-membership_count: 39
+headquarters:
+  city: Munich
+  country: DE
+  coordinates:
+    lat: 48.14
+    lng: 11.52
+includes:
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '2010-05-01'
+- id: AT
+  name: Austria
+  type: country
+  status: member
+  joined: '1979-05-01'
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: extension
+  joined: '2004-12-01'
+- id: BE
+  name: Belgium
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2002-07-01'
+- id: CH
+  name: Switzerland
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '1998-04-01'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '2002-07-01'
+- id: DE
+  name: Germany
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '1990-01-01'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2002-07-01'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '1986-10-01'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1996-03-01'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: GE
+  name: Georgia
+  type: country
+  status: validation
+  joined: '2024-01-15'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '1986-10-01'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2008-01-01'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '2003-01-01'
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+  joined: '1992-08-01'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '2004-11-01'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '1978-12-01'
+- id: KH
+  name: Cambodia
+  type: country
+  status: validation
+  joined: '2018-03-01'
+- id: LA
+  name: Lao People's Democratic Republic
+  type: country
+  status: validation
+  joined: '2025-04-01'
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+  joined: '1980-04-01'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2004-12-01'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2005-07-01'
+- id: MA
+  name: Morocco
+  type: country
+  status: validation
+  joined: '2015-03-01'
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+  joined: '1991-12-01'
+- id: MD
+  name: Republic of Moldova
+  type: country
+  status: member
+  joined: '2026-06-01'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2022-10-01'
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
+  joined: '2009-01-01'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2007-03-01'
+- id: NL
+  name: Netherlands
+  type: country
+  status: founding_member
+  joined: '1977-10-07'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '2008-01-01'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2004-03-01'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '1992-01-01'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '2003-03-01'
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  joined: '2010-10-01'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1978-05-01'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2002-12-01'
+- id: SK
+  name: Slovakia
+  type: country
+  status: member
+  joined: '2002-07-01'
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+  joined: '2009-07-01'
+- id: TN
+  name: Tunisia
+  type: country
+  status: validation
+  joined: '2017-12-01'
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+  joined: '2000-11-01'
+founding_members:
+- BE
+- CH
+- DE
+- FR
+- GB
+- LU
+- NL
+membership_count: 40
+legal_status: intergovernmental
 wikidata_id: Q685547
-description: Regional patent organization enabling patent protection across European countries through a centralized application
-  process.
+description: >-
+  Intergovernmental organization established by the European Patent Convention (signed 5 October 1973, in force 7 October
+  1977) to grant European patents valid across its contracting states. A single European patent application filed at the
+  European Patent Office in Munich can designate all member states; the office also handles PCT international applications
+  entering the European regional phase. Non-member states may participate through extension agreements (Bosnia and
+  Herzegovina) or validation agreements (Morocco, Tunisia, Cambodia, Georgia, Laos).
+notes: >-
+  The Organisation comprises the European Patent Office (executive body) and the Administrative Council. Seven states were
+  founding members when the EPC entered into force on 7 October 1977. Bosnia and Herzegovina is the sole remaining
+  extension state. Moldova was a validation state from 2015 until acceding as a full member on 1 June 2026; the validation
+  regime continues for applications filed before that date. Validation agreements with Costa Rica (signed December 2024)
+  and Angola (signed June 2026) are not yet in force. Distinct from the EU unitary patent system administered by the EPO
+  under EU law but separate from EPO membership.
 tags:
 - EPO
 - EPA
@@ -246,7 +319,46 @@ other_names:
   name: Европейская патентная организация
 - id: zh
   name: 欧洲专利组织
+last_verified: '2026-07-30'
 provenance:
+- field: includes
+  source: European Patent Office
+  retrieved_at: '2026-07-30'
+  url: https://www.epo.org/en/about-us/foundation/member-states
+- field: founding_members
+  source: European Patent Office
+  retrieved_at: '2026-07-30'
+  url: https://www.epo.org/en/about-us/foundation/member-states/date
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/European_Patent_Organisation
+- field: founded
+  source: European Patent Office
+  retrieved_at: '2026-07-30'
+  url: https://www.epo.org/en/about-us/foundation/member-states/date
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-06-15'
+  url: https://www.epo.org/
+- field: legal_status
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q685547
+  license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.epo.org/en/about-us/foundation/member-states
+- field: notes
+  source: European Patent Office
+  retrieved_at: '2026-07-30'
+  url: https://www.epo.org/en/about-us/foundation/validation-states
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/
+  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -257,7 +369,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.epo.org/

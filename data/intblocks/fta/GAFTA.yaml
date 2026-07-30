@@ -2,11 +2,33 @@ id: GAFTA
 blocktype:
 - fta
 status: formal
+founded: '1997-02-19'
+active_period:
+  start: '1998-01-01'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
+languages:
+- ar
+partof:
+  id: LAS
+  name: League of Arab States
 links:
 - url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1544421
+  type: wikidata
+- url: http://www.bilaterals.org/?-gafta-
+  type: website
 name: Greater Arab Free Trade Area
-founded: '1957'
+acronyms:
+- lang: en
+  value: GAFTA
+- lang: ar
+  value: منطقة التجارة الحرة العربية الكبرى
+legal_status: free trade agreement
+recognition_status: Pan-Arab free trade agreement adopted at the Arab League summit in Amman on 19 February 1997 following the 1981 Agreement to Facilitate and Develop Trade Among Arab Countries; entered into force on 1 January 1998; member states agreed in March 2001 to accelerate tariff reduction and eliminated most customs duties among participants by 1 January 2005; supervised by the Arab League Economic and Social Council
 headquarters:
   city: Cairo
   country: EG
@@ -18,18 +40,22 @@ includes:
   name: Algeria
   type: country
   status: member
+  joined: '2009'
 - id: BH
   name: Bahrain
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: EG
   name: Egypt, Arab Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: IQ
   name: Iraq
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: JO
   name: Jordan
   type: country
@@ -37,23 +63,28 @@ includes:
 - id: KW
   name: Kuwait
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: LB
   name: Lebanon
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: LY
   name: Libya
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: MA
   name: Morocco
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: OM
   name: Oman
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: PS
   name: West Bank and Gaza
   type: country
@@ -61,61 +92,174 @@ includes:
 - id: QA
   name: Qatar
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: SA
   name: Saudi Arabia
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: SD
   name: Sudan
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: SY
   name: Syrian Arab Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: TN
   name: Tunisia
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: AE
   name: United Arab Emirates
   type: country
-  status: member
+  status: founding_member
+  joined: '1997-02-19'
 - id: YE
   name: Yemen, Rep.
   type: country
   status: member
+founding_members:
+- BH
+- EG
+- IQ
+- KW
+- LB
+- LY
+- MA
+- OM
+- QA
+- SA
+- SD
+- SY
+- TN
+- AE
 membership_count: 18
-description: Greater Arab Free Trade Area is an international fta body with 18 members.
+wikidata_id: Q1544421
+official_documents:
+- url: http://www.bilaterals.org/article.php3?id_article=2309
+  type: agreement
+description: >-
+  The Greater Arab Free Trade Area (GAFTA), also known as the Pan-Arab Free Trade Area (PAFTA), is a regional free
+  trade agreement among Arab League states to reduce and eliminate customs duties and trade barriers on intra-Arab
+  commerce. Adopted at the Amman Arab League summit on 19 February 1997 and building on the 1981 Agreement to
+  Facilitate and Develop Trade Among Arab Countries, the pact entered into force on 1 January 1998. Member states
+  originally agreed to cut customs duties by 10% annually; in March 2001 they accelerated liberalization, and most
+  tariffs among participants were eliminated by 1 January 2005. GAFTA is supervised by the Arab League Economic and
+  Social Council and covers 18 of the League's 22 member states.
 tags:
 - GAFTA
+- PAFTA
 - arab
+- arab-league
 - commerce
 - economy
 - free
 - fta
-- greater
+- pan-arab
+- regional
+- regional_cooperation
 - trade
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: ar
-  name: مجلس الوحدة الاقتصادية العربية
-- id: zh
-  name: 阿拉伯經濟統一委員會
+  name: منطقة التجارة الحرة العربية الكبرى
+- id: az
+  name: Böyük Ərəb Azad Ticarət Bölgəsi
+- id: de
+  name: Greater Arab Free Trade Area
 - id: en
-  name: Council of Arab Economic Unity
+  name: Greater Arab Free Trade Area
+- id: eo
+  name: Granda Araba Liberkomerca Areo
 - id: es
-  name: GAFTA
+  name: Área Árabe de Libre Comercio Ampliada
+- id: fr
+  name: grande zone arabe de libre-échange
+- id: it
+  name: Area Araba Allargata di Libero Scambio
+- id: zh
+  name: 大阿拉伯自由贸易区
+notes: >-
+  Fourteen states founded GAFTA on 19 February 1997: Bahrain, Egypt, Iraq, Kuwait, Lebanon, Libya, Morocco, Oman,
+  Qatar, Saudi Arabia, Sudan, Syria, Tunisia, and the United Arab Emirates. Jordan, Palestine, and Yemen are current
+  members but are not listed among those fourteen founders in the agreement's primary historical accounts; Algeria
+  acceded in 2009 as the eighteenth member. Comoros, Djibouti, Mauritania, and Somalia remain candidates. Distinct
+  from the Council of Arab Economic Unity (CAEU), though both operate under the Arab League umbrella.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1544421
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1544421
+  license: CC0
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Council_of_Arab_Economic_Unity#Greater_Arab_Free_Trade_Area
+- field: links
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1544421
+  license: CC0

@@ -1,14 +1,84 @@
 id: GIABA
+name: Inter-Governmental Action Group against Money Laundering in West Africa
 blocktype:
 - intorg
+- legal
+- financial
 status: formal
+founded: '2000'
+active_period:
+  start: '2000'
+geographic_scope: regional
+regions:
+- West Africa
+- Africa
+languages:
+- en
+- fr
 links:
-- url: http://www.giaba.org/
+- url: https://www.giaba.org/
   type: website
+- url: https://www.giaba.org/member-states/index.html
+  type: website
+- url: https://www.giaba.org/about-giaba/647__statutes.html
+  type: website
+- url: https://www.fatf-gafi.org/en/countries/global-network/inter-governmental-action-group-against-money-laundering-in-west.html
+  type: website
+- url: https://en.wikipedia.org/wiki/Inter-Governmental_Action_Group_against_Money_Laundering_in_West_Africa
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q6044623
   type: wikidata
-name: Inter Governmental Action Group against Money Laundering in West Africa
+acronyms:
+- lang: en
+  value: GIABA
+legal_status: intergovernmental
+recognition_status: Specialized ECOWAS institution and FATF-style regional body (FSRB) for anti-money laundering, counter-terrorist financing, and counter-proliferation financing; associate member of the Financial Action Task Force
+partof:
+- id: ECOWAS
+  name: Economic Community of West African States
+- id: FATF
+  name: Financial Action Task Force
+headquarters:
+  city: Dakar
+  country: SN
+  coordinates:
+    lat: 14.6937
+    lng: -17.4441
+membership_count: 17
+description: Intergovernmental FATF-style regional body (FSRB) and specialized institution of ECOWAS whose 17 member jurisdictions in West Africa commit to implementing the FATF Recommendations on anti-money laundering (AML), countering the financing of terrorism (CFT), and proliferation financing. Established in 2000 under ECOWAS auspices; the Secretariat has been hosted in Dakar, Senegal since March 2005. Conducts mutual evaluations and follow-up, typology and conventional research, technical assistance to financial intelligence units and national AML/CFT agencies, and regional and international cooperation within the FATF Global Network.
+tags:
+- AML
+- CFT
+- ECOWAS
+- FATF
+- FSRB
+- GIABA
+- africa
+- financial
+- intorg
+- legal
+- money_laundering
+- regional
+- regional_cooperation
+- security
+- terrorist_financing
+- west_africa
+topics:
+- key: economy
+  name: Economy
+- key: finance
+  name: Finance
+- key: law
+  name: Law
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: security
+  name: Security
 includes:
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
 - id: BJ
   name: Benin
   type: country
@@ -19,6 +89,10 @@ includes:
   status: member
 - id: CI
   name: Côte d'Ivoire
+  type: country
+  status: member
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: GM
@@ -41,8 +115,20 @@ includes:
   name: Liberia
   type: country
   status: member
+- id: ML
+  name: Mali
+  type: country
+  status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
 - id: NG
   name: Nigeria
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
   type: country
   status: member
 - id: SN
@@ -57,26 +143,57 @@ includes:
   name: Togo
   type: country
   status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-membership_count: 14
-description: International forum. It is used to promote regional cooperation in the money laundering sector.
-tags:
-- GIABA
-- action
-- governmental
-- inter
-- intorg
-topics:
-- key: economy
-  name: Economy
 wikidata_id: Q6044623
 other_names:
 - id: en
   name: Inter-Governmental Action Group against Money Laundering in West Africa
+- id: fr
+  name: Groupe d'action intergouvernemental de lutte contre le blanchiment d'argent en Afrique de l'Ouest
+notes: GIABA membership includes ECOWAS member states plus eligible non-ECOWAS African states under its Statutes. As of December 2025, Burkina Faso, Mali, and Niger were admitted as non-ECOWAS members following their withdrawal from ECOWAS; São Tomé and Príncipe and the Union of Comoros are also non-ECOWAS members. Observer status is available to eligible states and intergovernmental organizations supporting GIABA objectives.
+last_verified: '2026-07-29'
+provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6044623
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.giaba.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.giaba.org/about-giaba/647__statutes.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.fatf-gafi.org/en/countries/global-network/inter-governmental-action-group-against-money-laundering-in-west.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.giaba.org/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-Governmental_Action_Group_against_Money_Laundering_in_West_Africa
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-Governmental_Action_Group_against_Money_Laundering_in_West_Africa
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-Governmental_Action_Group_against_Money_Laundering_in_West_Africa
+- field: partof
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-Governmental_Action_Group_against_Money_Laundering_in_West_Africa
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.giaba.org/member-states/index.html
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.giaba.org/pressreleases/3613__ecowas-authority-admits-burkina-faso,-mali-and-niger-as-non-ecowas-members-of-giaba.html

@@ -1,26 +1,50 @@
 id: CMO
+name: Caribbean Meteorological Organization
 blocktype:
 - meteorology
 - intorg
 status: formal
+partof: CARICOM
+founded: '1973'
+active_period:
+  start: '1973'
+geographic_scope: regional
+regions:
+- Americas
+- Caribbean
 languages:
 - en
 links:
 - url: https://www.cmo.org.tt/
   type: website
+- url: http://www.cmo.org.tt/organization.html
+  type: website
+- url: http://www.cmo.org.tt/members.html
+  type: website
+- url: https://caricom.org/world-meteorological-day-2024-caribbean-meteorological-organization-on-frontline-of-climate-action/
+  type: website
 - url: https://en.wikipedia.org/wiki/Caribbean_Meteorological_Organisation
   type: wikipedia
-name: Caribbean Meteorological Organization
-founded: '1973'
+- url: https://www.wikidata.org/wiki/Q5039400
+  type: wikidata
+acronyms:
+- lang: en
+  value: CMO
+legal_status: intergovernmental
+recognition_status: Specialized agency of the Caribbean Community (CARICOM) coordinating regional meteorological, hydrological, and climate activities; successor to the Caribbean Meteorological Service (1963) and the British Caribbean Meteorological Service (1951)
 headquarters:
   city: Port of Spain
   country: TT
   coordinates:
     lat: 10.6667
     lng: -61.5167
-acronyms:
-- lang: en
-  value: CMO
+secretariat:
+  location: Port of Spain, Trinidad and Tobago
+  head: Coordinating Director
+  organization: CMO Headquarters Unit
+suborganizations:
+- id: CIMH
+  name: Caribbean Institute for Meteorology and Hydrology
 includes:
 - id: AI
   name: Anguilla
@@ -87,24 +111,62 @@ includes:
   type: territory
   status: member
 membership_count: 16
-description: Specialized agency of CARICOM coordinating regional activities in meteorology and related sciences across English-speaking
-  Caribbean countries.
+description: Specialized agency of CARICOM coordinating joint scientific and technical activities in weather, climate, and water-related sciences across sixteen English-speaking Caribbean countries and territories. The CMO governs regional meteorological services through the Caribbean Meteorological Council, operates a headquarters unit in Trinidad and Tobago, and oversees the Caribbean Institute for Meteorology and Hydrology (CIMH) in Barbados as its training, research, and climate centre.
 tags:
 - CMO
 - meteorology
 - caribbean
 - caricom
 - weather
+- climate
+- hydrology
 - regional
+- regional_cooperation
 - intorg
 topics:
 - key: meteorology
   name: Meteorology
+- key: environment
+  name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: capacity_building
+  name: Capacity Building
 other_names:
 - id: en
   name: Caribbean Meteorological Organization
+wikidata_id: Q5039400
 provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.cmo.org.tt/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5039400
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/members.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/organization.html
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/organization.html
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/organization.html
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/organization.html
+- field: suborganizations
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/organization.html

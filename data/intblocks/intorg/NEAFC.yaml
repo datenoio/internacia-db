@@ -1,7 +1,16 @@
 id: NEAFC
+name: North-East Atlantic Fisheries Commission
 blocktype:
 - intorg
 status: formal
+founded: '1980'
+active_period:
+  start: '1982-03-17'
+geographic_scope: regional
+regions:
+- Arctic
+- Europe
+- North Atlantic
 languages:
 - en
 links:
@@ -9,66 +18,67 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/North_East_Atlantic_Fisheries_Commission
   type: wikipedia
-name: North-East Atlantic Fisheries Commission
-founded: '1982'
+- url: https://www.wikidata.org/wiki/Q15106130
+  type: wikidata
+- url: https://www.neafc.org/contracting-parties
+  type: website
+acronyms:
+- lang: en
+  value: NEAFC
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation (RFMO) established by the Convention on Future Multilateral Cooperation in North-East Atlantic Fisheries (signed 18 November 1980 in London; entered into force 17 March 1982); successor to the 1959 North-East Atlantic Fisheries Convention
 headquarters:
   city: London
   country: GB
   coordinates:
-    lat: 51.5208
-    lng: -0.1556
+    lat: 51.5131
+    lng: -0.084
+  note: Secretariat at Eastcheap Court, 11 Philpot Lane, EC3M 8AA
+wikidata_id: Q15106130
+description: Regional fisheries management organisation whose six Contracting Parties — Denmark (in respect of the Faroe Islands and Greenland), the European Union, Iceland, Norway, the Russian Federation, and the United Kingdom — cooperate to conserve and manage fishery resources in the North-East Atlantic from Greenland to Portugal under the 1980 NEAFC Convention. The Commission sets catch limits and area closures for key pelagic stocks (mackerel, herring, and blue whiting), coordinates monitoring, control, and surveillance, and adopts ecosystem protection measures including bottom-fishing restrictions in most high-seas regulatory areas. Canada participates as a Cooperating Non-Contracting Party. The Secretariat is headquartered in London.
 includes:
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '1982-03-17'
   note: Membership in respect of the Faroe Islands and Greenland
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '1982-03-17'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '1982-03-17'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1982-03-17'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1982-03-17'
 - id: GB
   name: United Kingdom
   type: country
   status: member
-- id: BS
-  name: Bahamas
-  type: country
-  status: cooperating
+  joined: '2020-10-07'
+  note: Acceded as an independent Contracting Party after UK withdrawal from the European Union
 - id: CA
   name: Canada
   type: country
   status: cooperating
-- id: LR
-  name: Liberia
-  type: country
-  status: cooperating
-- id: NZ
-  name: New Zealand
-  type: country
-  status: cooperating
-- id: KN
-  name: Saint Kitts and Nevis
-  type: country
-  status: cooperating
-acronyms:
-- lang: en
-  value: NEAFC
+founding_members:
+- DK
+- IS
+- 'NO'
+- RU
 membership_count: 6
-description: North-East Atlantic Fisheries Commission is an international intorg body
-  with 6 members.
 tags:
 - NEAFC
 - agriculture
@@ -78,19 +88,70 @@ tags:
 - intorg
 - northeast
 - north-east
+- rfmo
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
   name: North-East Atlantic Fisheries Commission
 - id: fr
-  name: Commission des pêches de l'Atlantique du Nord-Est
+  name: Commission des pêches de l'Atlantique Nord-Est
+- id: ja
+  name: 北東大西洋漁業委員会
+- id: nb
+  name: Den nordøst-atlantiske fiskerikommisjon
+- id: zh
+  name: 东北大西洋渔业委员会
+notes: The Baltic Sea and Danish Straits are excluded from the NEAFC Convention Area. Canada is the sole Cooperating Non-Contracting Party listed on the official website as of July 2026.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.neafc.org/
+- field: includes
+  source: NEAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.neafc.org/contracting-parties
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: NEAFC official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.neafc.org/about
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15106130
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15106130
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q15106130
+  license: CC0
+- field: recognition_status
+  source: NEAFC Convention; NEAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.neafc.org/about
+- field: headquarters
+  source: NEAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://www.neafc.org/
+- field: founding_members
+  source: United Nations Treaty Series; NEAFC official website
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%201285/volume-1285-A-21173-English.pdf
+- field: active_period
+  source: United Nations Treaty Series
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/doc/Publication/UNTS/Volume%201285/volume-1285-A-21173-English.pdf
+- field: notes
+  source: NEAFC official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.neafc.org/contracting-parties

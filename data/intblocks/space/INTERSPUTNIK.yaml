@@ -1,126 +1,196 @@
 id: INTERSPUTNIK
+name: International Organization and System of Space Communications
 blocktype:
 - intorg
 - space
 status: formal
+founded: '1971-11-15'
+active_period:
+  start: '1972-07-12'
+geographic_scope: global
+regions:
+- Asia
+- Africa
+- Middle East
+- Europe
+- Latin America
 languages:
 - en
 - ru
 links:
-- url: http://www.intersputnik.com/
+- url: https://intersputnik.int/
+  type: website
+- url: https://www.intersputnik.int/members-signatories-en/
   type: website
 - url: https://en.wikipedia.org/wiki/Intersputnik
   type: wikipedia
-name: International Organization and System of Space Communications
+- url: https://www.wikidata.org/wiki/Q1548793
+  type: wikidata
+acronyms:
+- lang: en
+  value: Intersputnik
+- lang: en
+  value: INTERSPUTNIK
+- lang: ru
+  value: Интерспутник
+legal_status: intergovernmental
+recognition_status: Established by the Agreement of 15 November 1971 on the Establishment of the Intersputnik International System and Organization of Space Communications; registered with the United Nations Secretariat on 27 March 1973 under registration number 12343 (UNTS vol. 862); entered into force on 12 July 1972
+secretariat:
+  location: Moscow, Russian Federation
+  organization: Intersputnik International Organization of Space Communications
+headquarters:
+  city: Moscow
+  country: RU
+  coordinates:
+    lat: 55.75055555555556
+    lng: 37.6175
+founding_members:
+- RU
+- PL
+- CZ
+- DE
+- HU
+- RO
+- BG
+- MN
+- CU
 includes:
 - id: AF
   name: Afghanistan
   type: country
   status: member
+  joined: '1981'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '2004'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: founding_member
+  joined: '1972'
 - id: BY
   name: Belarus
   type: country
   status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
+  joined: '1993'
 - id: CU
   name: Cuba
   type: country
-  status: member
+  status: founding_member
+  joined: '1972'
 - id: CZ
   name: Czech Republic
   type: country
-  status: member
-- id: KP
-  name: North Korea
+  status: founding_member
+  joined: '1972'
+- id: DE
+  name: Germany
   type: country
-  status: member
+  status: former_member
+  joined: '1972'
+  left: '2023-07-24'
+  note: Withdrew in succession of East Germany, a founding party to the 1971 Agreement.
 - id: GE
   name: Georgia
   type: country
   status: member
+  joined: '1993'
 - id: HU
   name: Hungary
   type: country
-  status: member
+  status: founding_member
+  joined: '1972'
 - id: IN
   name: India
   type: country
   status: member
+  joined: '2000'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '1994'
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
+  joined: '1983'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
+  joined: '1992'
 - id: LA
-  name: Laos
+  name: Lao PDR
   type: country
   status: member
+  joined: '1981'
 - id: MN
   name: Mongolia
   type: country
-  status: member
+  status: founding_member
+  joined: '1972'
 - id: NI
   name: Nicaragua
   type: country
   status: member
+  joined: '1987'
 - id: PL
   name: Poland
   type: country
-  status: member
+  status: former_member
+  joined: '1972'
+  left: '2025-08-12'
 - id: RO
   name: Romania
   type: country
-  status: member
+  status: founding_member
+  joined: '1972'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '1972'
 - id: SO
   name: Somalia
   type: country
   status: member
+  joined: '2012'
 - id: SY
-  name: Syria
+  name: Syrian Arab Republic
   type: country
   status: member
+  joined: '1991'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1994'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
+  joined: '1993'
 - id: UA
   name: Ukraine
   type: country
   status: member
+  joined: '1993'
 - id: VN
   name: Vietnam
   type: country
   status: member
+  joined: '1979'
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
   type: country
   status: member
-membership_count: 25
-founded: '1971'
-headquarters:
-  city: Moscow
-  coordinates:
-    lat: 55.75055555555556
-    lng: 37.6175
-description: International Organization and System of Space Communications is an international intorg body with 25 members.
+  joined: '1980'
+membership_count: 24
+wikidata_id: Q1548793
+description: Intergovernmental satellite communications organization founded in Moscow on 15 November 1971 to develop and operate a shared international space communications system; created as the Eastern Bloc counterpart to Intelsat. The 1971 Agreement entered into force on 12 July 1972 and was registered with the United Nations on 27 March 1973. Headquartered in Moscow, Intersputnik coordinates satellite capacity among member states and their designated national signatory operators. As of 2026 the organization lists 24 member countries across Asia, Africa, the Middle East, Europe, and Latin America.
 tags:
 - INTERSPUTNIK
 - astronaut
@@ -128,6 +198,7 @@ tags:
 - international
 - intorg
 - organization
+- satellite
 - space
 - system
 - telecom
@@ -140,21 +211,58 @@ topics:
 other_names:
 - id: ar
   name: انترسبوتنيك
-- id: zh
-  name: 國際太空通訊組織
+- id: de
+  name: Intersputnik
 - id: en
+  name: Intersputnik
+- id: en
+  name: International System and Organization of Space Communications
+- id: es
   name: Intersputnik
 - id: fr
   name: Interspoutnik
 - id: ru
   name: Интерспутник
-- id: es
-  name: Intersputnik
+- id: zh
+  name: 國際太空通訊組織
+notes: >-
+  Poland completed withdrawal on 12 August 2025; Germany withdrew on 24 July 2023 as successor to East Germany.
+  Bulgaria (December 2025), the Czech Republic (February 2025), and Ukraine have announced withdrawal but remain
+  listed on the official member roster as of July 2026.
+last_verified: '2026-07-30'
 provenance:
-- field: headquarters
+- field: includes
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.intersputnik.com/
+  retrieved_at: '2026-07-30'
+  url: https://www.intersputnik.int/members-signatories-en/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://intersputnik.int/
+- field: recognition_status
+  source: United Nations Treaty Collection
+  retrieved_at: '2026-07-30'
+  url: https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280112656
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://intersputnik.int/
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q1548793
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q1548793
+  license: CC0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.intersputnik.int/members-signatories-en/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q1548793
+  license: CC0

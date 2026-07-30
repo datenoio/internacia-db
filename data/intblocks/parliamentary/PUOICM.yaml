@@ -1,20 +1,48 @@
 id: PUOICM
+name: Parliamentary Union of the OIC Member States
 blocktype:
 - parliamentary
 status: formal
+founded: '1999-06-17'
+active_period:
+  start: '1999-06-17'
+geographic_scope: global
+regions:
+- Africa
+- Asia
+- Latin America
+- Middle East
+partof: OIC
 languages:
 - ar
 - en
 - fr
 links:
-- url: http://www.puic.org/
+- url: https://en.puic.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4004922
   type: wikidata
-name: Parliamentary Union of the OIC Member States
-founded: '1999'
+acronyms:
+- lang: en
+  value: PUIC
+- lang: en
+  value: PUOICM
+- lang: ar
+  value: PUIC
+- lang: tr
+  value: PUIC
+headquarters:
+  city: Tehran
+  country: IR
+  coordinates:
+    lat: 35.6892
+    lng: 51.389
+legal_status: intergovernmental
+recognition_status: Inter-parliamentary body linking the national parliaments of Organisation
+  of Islamic Cooperation member states; established at a conference in Tehran on 17 June
+  1999 with its permanent secretariat in Tehran
 includes:
 - id: AF
   name: Afghanistan
@@ -246,12 +274,22 @@ includes:
   status: member
 membership_count: 57
 wikidata_id: Q4004922
-description: Organisation composed of the parliaments of the Organisation of Islamic
-  Cooperation members states.
+description: Inter-parliamentary body composed of the national parliaments of Organisation
+  of Islamic Cooperation member states. Established at a conference in Tehran on 17 June
+  1999, it promotes parliamentary cooperation, dialogue among civilizations, and coordination
+  on political, economic, cultural, and human-rights issues within the OIC framework.
+  The permanent secretariat is in Tehran; standing specialized committees cover political
+  and foreign relations, economic affairs and environment, human rights and family affairs,
+  and cultural and legal affairs.
 tags:
 - PUOICM
+- PUIC
 - cooperation
+- global
+- intergovernmental
+- islamic
 - member
+- oic
 - parliamentary
 - political
 - regional
@@ -267,15 +305,72 @@ topics:
 other_names:
 - id: ar
   name: اتحاد برلمانات الدول الأعضاء في منظمة التعاون الإسلامي
-- id: zh
-  name: 伊斯兰合作组织成员国议会联盟
 - id: en
   name: Parliamentary Union of the OIC Member States
+- id: id
+  name: Uni Parlemen Negara OKI
+- id: it
+  name: Unione Parlamentare degli Stati membri della OIC
 - id: ru
   name: Парламентский союз государств — членов ОИК
+- id: tr
+  name: İslam İşbirliği Teşkilatı Parlamento Birliği
+- id: uk
+  name: Парламентський союз країн членів Організації Ісламська конференція
+- id: ur
+  name: تنظیم تعاون اسلامی ارکین ممالک کا پارلیمانی اتحاد
+- id: zh
+  name: 伊斯兰合作组织成员国议会联盟
+notes: Membership mirrors the 57 OIC member states. The Inter-Parliamentary Union (IPU),
+  Arab Parliamentary Union, African Parliamentary Union, Asian Parliamentary Assembly,
+  and other regional parliamentary bodies hold observer status with PUIC.
+last_verified: '2026-07-30'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4004922
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4004922
+  license: CC0
+- field: includes
+  source: OIC membership
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
+  license: CC BY-SA 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
+  license: CC BY-SA 4.0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.puic.org/
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
+  license: CC BY-SA 4.0
+- field: partof
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: OIC membership
+  retrieved_at: '2026-07-30'
+  url: https://www.oic-oci.org/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4004922
+  license: CC0
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Parliamentary_Union_of_the_OIC_Member_States
+  license: CC BY-SA 4.0

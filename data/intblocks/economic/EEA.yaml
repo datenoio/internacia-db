@@ -1,203 +1,361 @@
 id: EEA
+name: European Economic Area
 blocktype:
 - economic
+- agreement
 status: formal
+founded: '1992-05-02'
+active_period:
+  start: '1994-01-01'
+geographic_scope: regional
+regions:
+- Europe
+languages:
+- en
+- fr
+- de
 links:
+- url: https://www.efta.int/eea
+  type: website
 - url: https://en.wikipedia.org/wiki/European_Economic_Area
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q8932
   type: wikidata
-name: European Economic Area
-includes:
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czechia
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: LI
-  name: Liechtenstein
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: SK
-  name: Slovakia
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-founded: '1994'
 acronyms:
 - lang: en
   value: EEA
 - lang: fr
   value: EEE
-- lang: ru
-  value: EEA
-- lang: ru
-  value: ЕЭЗ
 - lang: de
   value: EWR
+- lang: nl
+  value: EER
 - lang: pt
   value: EEE
-membership_count: 31
+- lang: ru
+  value: ЕЭЗ
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8467
+    lng: 4.3725
+  note: EFTA Secretariat in Brussels supports administration of the EEA Agreement for the EEA EFTA States; EEA Joint Committee and EEA Council also meet in Brussels
+secretariat:
+  location: Brussels, Belgium
+  organization: EFTA Secretariat
+includes:
+- id: AT
+  name: Austria
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: BE
+  name: Belgium
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2011-11-09'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2025-02-19'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: DK
+  name: Denmark
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: FI
+  name: Finland
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: FR
+  name: France
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: DE
+  name: Germany
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: GR
+  name: Greece
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: IS
+  name: Iceland
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: IE
+  name: Ireland
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: IT
+  name: Italy
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+  joined: '1995-05-01'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: NL
+  name: Netherlands
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: PT
+  name: Portugal
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '2011-11-09'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2005-12-06'
+- id: ES
+  name: Spain
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: SE
+  name: Sweden
+  type: country
+  status: founding_member
+  joined: '1994-01-01'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  joined: '1994-01-01'
+  left: '2020-01-31'
+founding_members:
+- AT
+- BE
+- DK
+- FI
+- FR
+- DE
+- GR
+- IS
+- IE
+- IT
+- LU
+- NL
+- 'NO'
+- PT
+- ES
+- SE
+- GB
+membership_count: 30
+legal_status: treaty
 wikidata_id: Q8932
-description: Area of the European Union's internal market and some of EFTA states
-  established in 1994.
+description: >-
+  International agreement that extends the European Union's internal market to three EFTA states — Iceland,
+  Liechtenstein, and Norway — enabling free movement of persons, goods, services, and capital. Signed in Porto on
+  2 May 1992 and entered into force on 1 January 1994. As of 2025 the EEA comprises the 27 EU member states plus the
+  three EEA EFTA states (30 parties); Switzerland signed but never ratified after a 1992 referendum, and the United
+  Kingdom left with Brexit.
+notes: >-
+  New EU members must conclude a separate EEA accession agreement; Croatia's protocol entered into force on
+  19 February 2025. The UK formally left on 31 January 2020, with the EEA Agreement remaining applicable during the
+  transition period until 31 December 2020. EFTA member Switzerland participates in the internal market through
+  bilateral EU agreements rather than EEA membership. The EEA Agreement excludes the Common Agricultural Policy and
+  Common Fisheries Policy.
 tags:
 - EEA
-- aid
-- area
+- agreement
 - commerce
-- development
 - economic
 - economy
 - european
+- integration
+- regional
+- regional_cooperation
 - trade
 topics:
-- key: development
-  name: Development
 - key: economy
   name: Economy
+- key: integration
+  name: Integration
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
 other_names:
 - id: ar
   name: المنطقة الاقتصادية الأوروبية
+- id: bg
+  name: Европейска икономическа зона
+- id: cs
+  name: Evropský hospodářský prostor
 - id: de
   name: Europäischer Wirtschaftsraum
+- id: el
+  name: Ευρωπαϊκός Οικονομικός Χώρος
 - id: en
   name: European Economic Area
 - id: es
   name: Espacio Económico Europeo
+- id: et
+  name: Euroopa Majanduspiirkond
+- id: fi
+  name: Euroopan talousalue
 - id: fr
   name: Espace économique européen
+- id: hr
+  name: Europski gospodarski prostor
+- id: hu
+  name: Európai Gazdasági Térség
+- id: is
+  name: Evrópska efnahagssvæðið
+- id: it
+  name: Spazio economico europeo
+- id: lt
+  name: Europos ekonominės erdvės
+- id: lv
+  name: Eiropas Ekonomikas zona
+- id: nl
+  name: Europese Economische Ruimte
+- id: 'no'
+  name: Det europeiske økonomiske samarbeidsområde
+- id: pl
+  name: Europejski Obszar Gospodarczy
 - id: pt
   name: Espaço Económico Europeu
+- id: ro
+  name: Spațiul Economic European
 - id: ru
   name: Европейская экономическая зона
+- id: sk
+  name: Európsky hospodársky priestor
+- id: sl
+  name: Evropski gospodarski prostor
+- id: sv
+  name: Europeiska ekonomiska samarbetsområdet
 - id: zh
   name: 歐洲經濟區
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: active_period
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: headquarters
+  source: EFTA
+  retrieved_at: '2026-07-29'
+  url: https://www.efta.int/eea
+- field: secretariat
+  source: EFTA
+  retrieved_at: '2026-07-29'
+  url: https://www.efta.int/eea
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
+- field: legal_status
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q8932
   license: CC0
+- field: geographic_scope
+  source: EFTA
+  retrieved_at: '2026-07-29'
+  url: https://www.efta.int/eea
 - field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/European_Economic_Area
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q8932
   license: CC0

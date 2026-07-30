@@ -1,46 +1,78 @@
 id: SAPTA
 blocktype:
 - pta
-status: formal
+status: historical
+founded: '1993-04-11'
+dissolved: '2006-01-01'
+active_period:
+  start: '1995-12-07'
+  end: '2006-01-01'
+geographic_scope: regional
+regions:
+- South Asia
+languages:
+- en
+partof: SAARC
+successor: SAFTA
 links:
 - url: https://en.wikipedia.org/wiki/South_Asian_Preferential_Trade_Arrangement#SAARC_Preferential_Trading_Arrangement
   type: wikipedia
+- url: https://nepal.saarc-sec.org/index.php/resources/agreements-conventions/35-agreement-on-saarc-preferential-trading-arrangement-sapta/file
+  type: website
+- url: https://rtais.wto.org/UI/PublicShowRTA.aspx?Lang=en&Exp=1&Panel=1&RTA=124
+  type: website
 name: SAARC Preferential Trading Arrangement
+acronyms:
+- lang: en
+  value: SAPTA
+legal_status: preferential trade arrangement
+recognition_status: Preferential trade arrangement signed in Dhaka on 11 April 1993 by the seven SAARC member states; entered into force on 7 December 1995 after ratification by all contracting states; superseded by the South Asian Free Trade Area (SAFTA) on 1 January 2006
 includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: BD
   name: Bangladesh
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: BT
   name: Bhutan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: IN
   name: India
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: MV
   name: Maldives
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: NP
   name: Nepal
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: PK
   name: Pakistan
   type: country
-  status: member
+  status: founding_member
+  joined: '1993-04-11'
 - id: LK
   name: Sri Lanka
   type: country
-  status: member
-membership_count: 8
-description: The SAARC Preferential Trading Arrangement (SAPTA) was a framework agreement signed in 1993 by the members of the South Asian Association for Regional Cooperation to promote intra-regional trade through reciprocal tariff concessions. It entered into force in 1995 and was later superseded by the South Asian Free Trade Area (SAFTA).
+  status: founding_member
+  joined: '1993-04-11'
+founding_members:
+- BD
+- BT
+- IN
+- MV
+- NP
+- PK
+- LK
+membership_count: 7
+description: The SAARC Preferential Trading Arrangement (SAPTA) was a framework agreement signed in Dhaka on 11 April 1993 by the seven SAARC member states to promote intra-regional trade through reciprocal tariff concessions under a positive-list approach. It entered into force on 7 December 1995 after all contracting states completed ratification formalities. Four rounds of negotiations expanded product coverage to more than 6,500 tariff lines. SAPTA was envisaged as the first step toward deeper South Asian economic integration and was superseded by the South Asian Free Trade Area (SAFTA) on 1 January 2006, although SAPTA concessions remained available until completion of the SAFTA trade liberalization programme.
 tags:
 - SAPTA
 - arrangement
@@ -48,10 +80,76 @@ tags:
 - economy
 - preferential
 - pta
+- regional
+- south
 - trade
 - trading
 topics:
 - key: economy
   name: Economy
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: trade
   name: Trade
+other_names:
+- id: en
+  name: SAARC Preferential Trading Arrangement
+- id: fr
+  name: Arrangement commercial préférentiel de l'ASACR
+notes: Afghanistan joined SAARC in April 2007, after SAPTA had already been superseded by SAFTA, and was therefore not a contracting party to SAPTA. The agreement was signed at the seventh SAARC summit in Dhaka; Sri Lanka had first proposed a preferential trading arrangement at the sixth summit in Colombo in December 1991.
+last_verified: '2026-07-29'
+provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/SAPTA.pdf
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/SAPTA.pdf
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/SAPTA.pdf
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTA.aspx?Lang=en&Exp=1&Panel=1&RTA=124
+- field: dissolved
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: successor
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://commerce.gov.in/wp-content/uploads/2020/05/safta.pdf
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.doc.gov.lk/index.php?Itemid=156&id=31&lang=en&option=com_content&view=article
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/SAPTA.pdf
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://rtais.wto.org/UI/PublicShowRTA.aspx?Lang=en&Exp=1&Panel=1&RTA=124
+- field: geographic_scope
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: regions
+  source: inferred grouping
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://wits.worldbank.org/GPTAD/PDF/archive/SAPTA.pdf
+- field: other_names
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://nepal.saarc-sec.org/index.php/resources/agreements-conventions/35-agreement-on-saarc-preferential-trading-arrangement-sapta/file
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Asian_Free_Trade_Area

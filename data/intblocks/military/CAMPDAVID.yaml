@@ -1,47 +1,71 @@
 id: CAMPDAVID
+name: Camp David Principles
 blocktype:
 - military
 status: formal
-languages:
-- en
-links:
-- url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
-  type: wikipedia
-name: Camp David Principles
 founded: '2023-08-18'
 geographic_scope: regional
 regions:
 - East Asia
 - Indo-Pacific
+- North America
+languages:
+- en
+- ja
+- ko
+links:
+- url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q121921323
+  type: wikidata
+- url: https://www.presidency.ucsb.edu/documents/joint-statement-president-biden-president-yoon-suk-yeol-south-korea-and-prime-minister-0
+  type: website
+acronyms:
+- lang: en
+  value: JAROKUS
+legal_status: intergovernmental
+wikidata_id: Q121921323
+description: Trilateral security partnership announced at Camp David, Maryland, on 18 August 2023 among Japan, the Republic of
+  Korea, and the United States. The Camp David Principles establish a framework for enhanced collective security in the Indo-Pacific,
+  including a commitment to consult on regional challenges, annual joint military exercises, real-time ballistic missile
+  defence information sharing, and a trilateral security cooperation framework. The pact implements a formal casus foederis
+  in which a threat to one member constitutes a threat against all, but does not mirror NATO Article 5—collective response
+  must be discussed. Related US-led Indo-Pacific security bodies include AUKUS and the Quad.
 includes:
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2023-08-18'
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
+  joined: '2023-08-18'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '2023-08-18'
 membership_count: 3
-legal_status: intergovernmental
-description: Trilateral security alliance between the United States, Japan, and South Korea, announced at Camp David in August
-  2023. The pact establishes a framework for enhanced collective security, including commitment to consult on regional challenges,
-  annual joint military exercises, real-time information sharing on missile threats, and a trilateral security cooperation
-  framework to coordinate defense responses.
+founding_members:
+- JP
+- KR
+- US
 tags:
 - CAMPDAVID
 - cooperation
 - defense
+- east_asia
 - indo_pacific
+- japan
 - military
 - regional
 - regional_cooperation
 - security
+- south_korea
 - trilateral
+- united_states
 topics:
 - key: military
   name: Military
@@ -50,18 +74,63 @@ topics:
 - key: security
   name: Security
 other_names:
+- id: de
+  name: JAROKUS
 - id: en
   name: American-Japanese-Korean Trilateral Pact
 - id: en
-  name: US-Japan-ROK Trilateral Pact
-- id: en
   name: Camp David Principles
+- id: en
+  name: JAROKUS
+- id: en
+  name: US-Japan-ROK Trilateral Pact
+- id: fr
+  name: Pacte trilatéral américano-nippo-coréen
+- id: ja
+  name: 日米韓3か国協力
+- id: ko
+  name: 한미일 안보협력 체제
+- id: zh
+  name: 美日韩三边条约
+notes: Announced jointly by US president Joe Biden, Japanese prime minister Fumio Kishida, and South Korean president Yoon
+  Suk Yeol at Camp David on 18 August 2023—the first trilateral leaders' summit hosted at the presidential retreat since 2015.
+  The summit produced the Camp David Principles, a joint leaders' statement, and a Commitment to Consult. The first Indo-Pacific
+  Dialogue under the framework was held in Washington, D.C., on 5 January 2024. No permanent headquarters; coordination occurs
+  through annual trilateral meetings and working-level dialogues.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q121921323
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q121921323
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q121921323
+  license: CC0
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/American%E2%80%93Japanese%E2%80%93Korean_trilateral_pact

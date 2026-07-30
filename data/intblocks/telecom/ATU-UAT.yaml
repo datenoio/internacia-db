@@ -1,33 +1,48 @@
 id: ATU-UAT
+name: African Telecommunications Union
 blocktype:
 - telecom
 status: formal
+partof: AFUNION
+founded: '1999-12-07'
+active_period:
+  start: '1977'
+geographic_scope: regional
+regions:
+- Africa
 languages:
+- ar
 - en
 - fr
 links:
-- url: http://www.atu-uat.org/
+- url: https://atuuat.africa/
   type: website
 - url: https://en.wikipedia.org/wiki/African_Telecommunications_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q4689935
   type: wikidata
-name: African Telecommunications Union
+- url: https://atuuat.africa/wp-content/uploads/2026/01/4-Status-of-Ratification-and-Accession-by-Member-states-_Jan-2026.pdf
+  type: website
+acronyms:
+- lang: en
+  value: ATU
+- lang: fr
+  value: UAT
+legal_status: intergovernmental
+recognition_status: Specialized agency of the African Union in telecommunications, ICT, and digital policy; successor to the Pan-African Telecommunications Union (PATU) established by the OAU in 1977; also serves as the ITU regional telecommunications organization for Africa
+headquarters:
+  city: Nairobi
+  country: KE
+  coordinates:
+    lat: -1.286389
+    lng: 36.817223
+  note: Constitutional seat is Kinshasa, Democratic Republic of Congo; General Secretariat currently hosted in Nairobi
+secretariat:
+  location: Nairobi, Kenya
+  organization: ATU General Secretariat
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BW
-  name: Botswana
   type: country
   status: member
 - id: BF
@@ -38,48 +53,48 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BJ
+  name: Benin
   type: country
   status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: CG
-  name: Congo
+- id: BW
+  name: Botswana
   type: country
   status: member
 - id: CD
   name: Congo, The Democratic Republic of the
   type: country
   status: member
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+- id: CG
+  name: Congo
+  type: country
+  status: member
 - id: CI
   name: Côte d'Ivoire
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+- id: CV
+  name: Cabo Verde
   type: country
   status: member
 - id: DJ
   name: Djibouti
   type: country
   status: member
-- id: EG
-  name: Egypt
+- id: DZ
+  name: Algeria
   type: country
   status: member
-- id: GQ
-  name: Equatorial Guinea
+- id: EG
+  name: Egypt
   type: country
   status: member
 - id: ET
@@ -90,16 +105,20 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
 - id: GH
   name: Ghana
   type: country
   status: member
+- id: GM
+  name: Gambia
+  type: country
+  status: member
 - id: GN
   name: Guinea
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
   type: country
   status: member
 - id: GW
@@ -110,24 +129,28 @@ includes:
   name: Kenya
   type: country
   status: member
-- id: LS
-  name: Lesotho
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: LR
   name: Liberia
   type: country
   status: member
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
 - id: LY
   name: Libya
   type: country
   status: member
-- id: MG
-  name: Madagascar
+- id: MA
+  name: Morocco
   type: country
   status: member
-- id: MW
-  name: Malawi
+- id: MG
+  name: Madagascar
   type: country
   status: member
 - id: ML
@@ -142,8 +165,8 @@ includes:
   name: Mauritius
   type: country
   status: member
-- id: MA
-  name: Morocco
+- id: MW
+  name: Malawi
   type: country
   status: member
 - id: MZ
@@ -166,44 +189,36 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
+- id: SD
+  name: Sudan
   type: country
   status: member
 - id: SL
   name: Sierra Leone
   type: country
   status: member
-- id: SO
-  name: Somalia
+- id: SN
+  name: Senegal
   type: country
   status: member
-- id: ZA
-  name: South Africa
+- id: SO
+  name: Somalia
   type: country
   status: member
 - id: SS
   name: South Sudan
   type: country
   status: member
-- id: SD
-  name: Sudan
+- id: ST
+  name: Sao Tome and Principe
   type: country
   status: member
 - id: SZ
   name: Eswatini
   type: country
   status: member
-- id: TZ
-  name: Tanzania, United Republic of
+- id: TD
+  name: Chad
   type: country
   status: member
 - id: TG
@@ -214,8 +229,16 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: TZ
+  name: Tanzania, United Republic of
+  type: country
+  status: member
 - id: UG
   name: Uganda
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
   type: country
   status: member
 - id: ZM
@@ -226,14 +249,21 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 53
+membership_count: 52
 wikidata_id: Q4689935
-description: African intergovernmental organization.
+description: Specialized agency of the African Union and the ITU regional telecommunications organization for Africa, promoting
+  the development of telecommunications, ICT infrastructure, and digital policy across the continent. Founded in 1977 as the
+  Pan-African Telecommunications Union under the OAU and re-established as ATU in December 1999, the Union coordinates African
+  positions at global ICT fora and supports policy harmonization, capacity building, and infrastructure investment.
 tags:
+- ATU
 - ATU-UAT
+- UAT
 - african
+- african_union
 - communication
 - cooperation
+- ict
 - regional
 - regional_cooperation
 - technology
@@ -248,13 +278,50 @@ topics:
 - key: telecommunications
   name: Telecommunications
 other_names:
-- id: zh
-  name: 非洲电信联盟
+- id: ar
+  name: الاتحاد الأفريقي للاتصالات
 - id: en
   name: African Telecommunications Union
+- id: fr
+  name: Union africaine des télécommunications
+- id: zh
+  name: 非洲电信联盟
+notes: Member states are African governments that have signed, ratified, or acceded to the ATU Constitution and Convention;
+  the Union also has associate members from the private ICT sector, which are not listed here.
+last_verified: '2026-07-30'
 provenance:
 - field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://atuuat.africa/about/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://atuuat.africa/wp-content/uploads/2026/01/4-Status-of-Ratification-and-Accession-by-Member-states-_Jan-2026.pdf
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://atuuat.africa/about/
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://atuuat.africa/about/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/African_Telecommunications_Union
+  license: CC BY-SA 4.0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://atuuat.africa/about/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q4689935
+  license: CC0
+- field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q4689935
   license: CC0

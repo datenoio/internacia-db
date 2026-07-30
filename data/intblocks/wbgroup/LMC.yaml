@@ -3,20 +3,24 @@ blocktype:
 - wbgroup
 status: formal
 links:
+- url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  type: website
+- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  type: website
 - url: https://api.worldbank.org/v2/incomelevel/LMC
-  type: website
-- url: https://api.worldbank.org/v2/country?incomelevel=LMC
-  type: website
-- url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   type: website
 name: Lower middle income
 includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
 - id: AO
   name: Angola
+  type: country
+  status: member
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+- id: BJ
+  name: Benin
   type: country
   status: member
 - id: BO
@@ -25,10 +29,6 @@ includes:
   status: member
 - id: BT
   name: Bhutan
-  type: country
-  status: member
-- id: BZ
-  name: Belize
   type: country
   status: member
 - id: CG
@@ -43,72 +43,60 @@ includes:
   name: Cameroon
   type: country
   status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: CV
-  name: Cape Verde
-  type: country
-  status: member
 - id: DJ
   name: Djibouti
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
   type: country
   status: member
 - id: EG
   name: Egypt, Arab Rep.
   type: country
   status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
+- id: GH
+  name: Ghana
   type: country
   status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GY
-  name: Guyana
+- id: GN
+  name: Guinea
   type: country
   status: member
 - id: HN
   name: Honduras
   type: country
   status: member
-- id: ID
-  name: Indonesia
+- id: HT
+  name: Haiti
   type: country
   status: member
 - id: IN
   name: India
   type: country
   status: member
-- id: IQ
-  name: Iraq
+- id: KE
+  name: Kenya
   type: country
   status: member
-- id: JO
-  name: Jordan
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+- id: KH
+  name: Cambodia
   type: country
   status: member
 - id: KI
   name: Kiribati
   type: country
   status: member
-- id: KV
-  name: Kosovo
+- id: KM
+  name: Comoros
   type: country
   status: member
-- id: LK
-  name: Sri Lanka
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+- id: LB
+  name: Lebanon
   type: country
   status: member
 - id: LS
@@ -119,20 +107,16 @@ includes:
   name: Morocco
   type: country
   status: member
-- id: MD
-  name: Moldova
+- id: MM
+  name: Myanmar
   type: country
   status: member
-- id: MH
-  name: Marshall Islands
+- id: MR
+  name: Mauritania
   type: country
   status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
+- id: NA
+  name: Namibia
   type: country
   status: member
 - id: NG
@@ -143,12 +127,12 @@ includes:
   name: Nicaragua
   type: country
   status: member
-- id: PG
-  name: Papua New Guinea
+- id: NP
+  name: Nepal
   type: country
   status: member
-- id: PH
-  name: Philippines
+- id: PG
+  name: Papua New Guinea
   type: country
   status: member
 - id: PK
@@ -159,12 +143,8 @@ includes:
   name: West Bank and Gaza
   type: country
   status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: SD
-  name: Sudan
+- id: SB
+  name: Solomon Islands
   type: country
   status: member
 - id: SN
@@ -175,73 +155,58 @@ includes:
   name: Sao Tome and Principe
   type: country
   status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
 - id: SZ
   name: Swaziland
   type: country
   status: member
-- id: TH
-  name: Thailand
+- id: TG
+  name: Togo
+  type: country
+  status: member
+- id: TJ
+  name: Tajikistan
   type: country
   status: member
 - id: TL
   name: Timor-Leste
   type: country
   status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
 - id: TN
   name: Tunisia
   type: country
   status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
+- id: TZ
+  name: Tanzania
   type: country
   status: member
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-- id: VN
-  name: Vietnam
+- id: VE
+  name: Venezuela, RB
   type: country
   status: member
 - id: VU
   name: Vanuatu
   type: country
   status: member
-- id: WS
-  name: Samoa
+- id: ZM
+  name: Zambia
   type: country
   status: member
-- id: YE
-  name: Yemen, Rep.
+- id: ZW
+  name: Zimbabwe
   type: country
   status: member
-membership_count: 56
-description: World Bank income group aggregate for lower middle income economies.
+membership_count: 47
+geographic_scope: global
+description: World Bank analytical grouping for lower-middle-income economies, used
+  in World Development Indicators.
 tags:
 - LMC
 - aid
 - bank
-- income
 - development
 - economy
 - finance
@@ -254,8 +219,35 @@ topics:
   name: Economy
 - key: finance
   name: Finance
+acronyms:
+- lang: en
+  value: LMC
+other_names:
+- id: en
+  name: Lower middle income
 provenance:
 - field: description
-  source: World Bank Data API
-  retrieved_at: '2026-07-13'
-  url: https://api.worldbank.org/v2/incomelevel/LMC
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: geographic_scope
+  source: World Bank
+  retrieved_at: '2026-07-30'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?incomelevel=LMC
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://api.worldbank.org/v2/country?incomelevel=LMC
+- field: acronyms
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+- field: other_names
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-07-30'
+  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+last_verified: '2026-07-30'

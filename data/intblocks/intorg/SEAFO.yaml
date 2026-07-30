@@ -1,7 +1,15 @@
 id: SEAFO
+name: South-East Atlantic Fisheries Organisation
 blocktype:
 - intorg
 status: formal
+founded: '2001'
+active_period:
+  start: '2003-04-13'
+geographic_scope: regional
+regions:
+- Africa
+- Atlantic
 languages:
 - en
 links:
@@ -9,51 +17,67 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/South_East_Atlantic_Fisheries_Organisation
   type: wikipedia
-name: South-East Atlantic Fisheries Organisation
-founded: '2001'
+- url: https://www.wikidata.org/wiki/Q3492244
+  type: wikidata
+- url: http://www.seafo.org/About/Contracting-Parties
+  type: website
+acronyms:
+- lang: en
+  value: SEAFO
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation (RFMO) established by the Convention on the Conservation and Management of Fishery Resources in the South East Atlantic Ocean (signed 20 April 2001 in Windhoek; entered into force 13 April 2003); successor to the International Commission for South East Atlantic Fisheries (ICSEAF)
 headquarters:
   city: Swakopmund
   country: NA
   coordinates:
     lat: -22.6833
     lng: 14.5333
+wikidata_id: Q3492244
+description: Regional fisheries management organisation responsible for the long-term conservation and sustainable use of living marine resources (excluding highly migratory stocks) in the high seas of the southeast Atlantic Ocean, outside the exclusive economic zones of Angola, Namibia, and South Africa and UK overseas territories in the region. The Secretariat is based in Swakopmund, Namibia.
 includes:
 - id: AO
   name: Angola
   type: country
   status: member
+  joined: '2006-03-07'
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2002-08-08'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2010-01-10'
 - id: NA
   name: Namibia
   type: country
-  status: member
+  status: founding_member
+  joined: '2002-02-26'
 - id: KR
   name: Republic of Korea
   type: country
   status: member
+  joined: '2011-03-10'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2008-06-18'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
-acronyms:
-- lang: en
-  value: SEAFO
-membership_count: 7
-description: South-East Atlantic Fisheries Organisation is an international intorg
-  body with 7 members.
+  status: former_member
+  joined: '2002-02-12'
+  left: '2021-10'
+founding_members:
+- NA
+- 'NO'
+membership_count: 6
 tags:
 - SEAFO
+- RFMO
 - agriculture
 - atlantic
 - farming
@@ -64,16 +88,73 @@ tags:
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: en
-  name: South-East Atlantic Fisheries Organisation
+  name: South East Atlantic Fisheries Organisation
 - id: fr
   name: Organisation des pêches de l'Atlantique du Sud-Est
+- id: ar
+  name: منظمة مصايد الأسماك في جنوب شرق الأطلسي
+- id: ko
+  name: 남동대서양수산기구
+- id: zh
+  name: 东南大西洋渔业组织
+notes: Iceland, Norway, and the United Kingdom signed the Convention in 2001. Namibia, Norway, and the European Union were the initial ratifiers that brought it into force in 2003; Norway withdrew in October 2021. Iceland and the United Kingdom never ratified. Japan acceded in 2010. As of December 2025, six Contracting Parties are listed on the official website.
+last_verified: '2026-07-29'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3492244
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3492244
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.seafo.org/About/Contracting-Parties
+- field: description
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.seafo.org/
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seafo.org/
+- field: recognition_status
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_East_Atlantic_Fisheries_Organisation
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seafo.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.seafo.org/
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.seafo.org/About/Contracting-Parties
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seafo.org/
+- field: active_period
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_East_Atlantic_Fisheries_Organisation
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.seafo.org/About/Contracting-Parties

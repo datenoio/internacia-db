@@ -1,55 +1,93 @@
 id: EAP
 blocktype:
 - project
+- political
 status: formal
+partof: EU
+founded: '2009-05-07'
+geographic_scope: regional
+regions:
+- Eastern Europe
+- Caucasus
 languages:
 - en
 - fr
 links:
+- url: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+  type: website
 - url: https://en.wikipedia.org/wiki/Eastern_Partnership
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q208019
   type: wikidata
 name: Eastern Partnership
+legal_status: European External Action Service initiative
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.8503
+    lng: 4.3517
 includes:
-- id: BY
-  name: Belarus
-  type: country
-  status: member
 - id: AM
   name: Armenia
   type: country
-  status: member
+  status: partner
+  joined: '2009-05-07'
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
+  status: partner
+  joined: '2009-05-07'
+- id: BY
+  name: Belarus
+  type: country
+  status: former_member
+  joined: '2009-05-07'
+  left: '2021-06-28'
 - id: GE
   name: Georgia
   type: country
-  status: member
+  status: partner
+  joined: '2009-05-07'
 - id: MD
   name: Moldova
   type: country
-  status: member
+  status: partner
+  joined: '2009-05-07'
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: partner
+  joined: '2009-05-07'
 membership_count: 6
 wikidata_id: Q208019
-description: European Union project with Armenia, Azerbaijan, Belarus, Georgia, Moldova
-  and Ukraine.
+description: Joint EU initiative launched at the Prague summit on 7 May 2009 as the Eastern dimension of the European
+  Neighbourhood Policy, bringing the European Union and its member states together with six post-Soviet Eastern European
+  countries to deepen political association, economic integration, and sectoral cooperation. The partnership promotes
+  shared values of democracy, rule of law, and human rights while supporting reforms, connectivity, trade, mobility, and
+  civil-society engagement through bilateral and multilateral tracks, including association agreements, the EaP Civil
+  Society Forum, and EURONEST.
 tags:
 - EAP
+- EaP
+- ENP
 - eastern
+- neighbourhood
 - partnership
+- political
 - project
+- regional_cooperation
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: integration
+  name: Integration
+- key: democracy
+  name: Democracy
+- key: development
+  name: Development
 other_names:
 - id: ar
   name: الشراكة الشرقية
@@ -67,12 +105,38 @@ other_names:
   name: Восточное партнёрство
 - id: zh
   name: 东部伙伴关系
+notes: Belarus joined as a full partner at the 2009 Prague launch but suspended its participation on 28 June 2021;
+  the EU continues limited engagement with Belarusian civil society. Five partner countries — Armenia, Azerbaijan,
+  Georgia, Moldova, and Ukraine — remain active participants. Ukraine and Moldova are on EU accession paths; Georgia's
+  EU trajectory depends on democratic reforms. Regional cooperation platforms include EURONEST, CORLEAP, and the EaP
+  Civil Society Forum. Poland and Sweden co-authored the 2008 proposal that led to the initiative.
+last_verified: '2026-07-29'
 provenance:
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+  license: CC BY 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+  license: CC BY 4.0
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Eastern_Partnership
+  license: CC BY-SA 4.0
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+  license: CC BY 4.0
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+  license: CC BY 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -86,3 +150,5 @@ provenance:
 acronyms:
 - lang: de
   value: ÖP
+- lang: en
+  value: EaP

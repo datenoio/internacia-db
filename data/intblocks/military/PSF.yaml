@@ -1,61 +1,115 @@
 id: PSF
+name: Peninsula Shield Force
 blocktype:
 - military
 status: formal
+founded: '1984'
 partof: CCASG
+geographic_scope: regional
+regions:
+- Middle East
+languages:
+- ar
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1187518
   type: wikidata
-name: Peninsula Shield Force
+- url: https://www.gcc-sg.org/
+  type: website
+acronyms:
+- lang: ar
+  value: درع الجزيرة
+- lang: en
+  value: PSF
+- lang: en
+  value: UMC
+legal_status: intergovernmental
+headquarters:
+  city: Hafar al Batin
+  country: SA
+  coordinates:
+    lat: 28.4344
+    lng: 45.9636
+wikidata_id: Q1187518
+description: Joint military force of the Gulf Cooperation Council (GCC), established in 1984 and permanently based at King
+  Khalid Military City near Hafar al Batin in Saudi Arabia. The force integrates infantry, armour, artillery, and combat
+  support contingents contributed by all six GCC member states for collective defence and crisis intervention in the Arabian
+  Peninsula. Renamed the Unified Military Command of the GCC at the Al-Ula summit on 5 January 2021 to reflect deeper military
+  integration; the legacy name Peninsula Shield Force remains widely used. Deployments include the 1991 liberation of Kuwait,
+  the 2003 Kuwait defence build-up, and the 2011 Bahrain intervention.
 includes:
 - id: BH
   name: Bahrain
   type: country
   status: member
+  joined: '1984'
 - id: KW
   name: Kuwait
   type: country
   status: member
+  joined: '1984'
 - id: OM
   name: Oman
   type: country
   status: member
+  joined: '1984'
 - id: QA
   name: Qatar
   type: country
   status: member
+  joined: '1984'
 - id: SA
   name: Saudi Arabia
   type: country
   status: member
+  joined: '1984'
 - id: AE
   name: United Arab Emirates
   type: country
   status: member
-founded: '1982'
+  joined: '1984'
 membership_count: 6
-wikidata_id: Q1187518
-description: Military arm of the Gulf Cooperation Council.
+founding_members:
+- BH
+- KW
+- OM
+- QA
+- SA
+- AE
 tags:
+- CCASG
 - PSF
+- arabian_peninsula
+- collective_security
 - defense
 - force
+- gcc
+- gulf
 - military
 - peninsula
+- regional_cooperation
 - security
 - shield
 topics:
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
 - id: ar
   name: درع الجزيرة
+- id: ar
+  name: القيادة العسكرية الموحدة
 - id: en
   name: Peninsula Shield Force
+- id: en
+  name: Unified Military Command
+- id: en
+  name: Unified Military Command of the Gulf Cooperation Council
 - id: es
   name: Fuerza del Escudo de la Península
 - id: fr
@@ -64,14 +118,44 @@ other_names:
   name: Escudo da Península
 - id: zh
   name: 半岛盾牌部队
+notes: Created by the GCC in 1984 as a joint intervention force of initially 10,000 troops; permanent base at King Khalid
+  Military City near Hafar al Batin. Renamed Unified Military Command at the GCC summit in Al-Ula on 5 January 2021. Any
+  PSF deployment requires participation from all GCC member states per force doctrine. Notable operations include Kuwait
+  liberation (1991), pre-Iraq War Kuwait defence (2003), and the March 2011 Bahrain deployment (Saudi Arabia and UAE troops;
+  Kuwait and Oman did not send forces).
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1187518
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1187518
   license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Peninsula_Shield_Force

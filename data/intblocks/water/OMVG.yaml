@@ -2,6 +2,8 @@ id: OMVG
 blocktype:
 - water
 - intorg
+- environment
+- development
 status: formal
 languages:
 - en
@@ -9,35 +11,44 @@ languages:
 links:
 - url: https://www.omvg.org/
   type: website
+- url: https://faolex.fao.org/docs/pdf/gam15879.pdf
+  type: website
 - url: https://fr.wikipedia.org/wiki/Organisation_pour_la_mise_en_valeur_du_fleuve_Gambie
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q31341020
   type: wikidata
 name: Gambia River Basin Development Organization
-founded: '1978'
+founded: '1978-06-30'
 headquarters:
   city: Dakar
   country: SN
 geographic_scope: regional
 regions:
 - Africa
+founding_members:
+- GM
+- SN
 includes:
 - id: GM
   name: Gambia
   type: country
-  status: member
+  status: founding_member
+  joined: '1978-06-30'
 - id: GN
   name: Guinea
   type: country
   status: member
+  joined: '1981-06-06'
 - id: GW
   name: Guinea-Bissau
   type: country
   status: member
+  joined: '1983-07-28'
 - id: SN
   name: Senegal
   type: country
-  status: member
+  status: founding_member
+  joined: '1978-06-30'
 membership_count: 4
 wikidata_id: Q31341020
 legal_status: intergovernmental
@@ -46,16 +57,22 @@ acronyms:
   value: OMVG
 - lang: fr
   value: OMVG
-description: Intergovernmental development organization for joint management and integrated development of the Gambia River
-  basin.
+description: Intergovernmental river basin organization for joint management and integrated development of the Gambia, Kayanga-Geba, and Koliba-Corubal river basins among four West African states, coordinating water resources, energy, agriculture, transport, and environmental protection under the 1978 OMVG Convention.
 tags:
 - Gambia-River
 - OMVG
 - West-Africa
+- basin
+- intorg
+- transboundary
 - water
 topics:
 - key: water
   name: Water
+- key: environment
+  name: Environment
+- key: development
+  name: Development
 other_names:
 - id: de
   name: Gambia River Development Organization
@@ -64,30 +81,41 @@ other_names:
 - id: fr
   name: Organisation pour la mise en valeur du fleuve Gambie
 provenance:
+- field: includes
+  source: OMVG Convention (1978)
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/docs/pdf/gam15879.pdf
+- field: founding_members
+  source: OMVG Convention (1978)
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/docs/pdf/gam15879.pdf
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.omvg.org/
+- field: founded
+  source: OMVG Convention (1978)
+  retrieved_at: '2026-07-29'
+  url: https://faolex.fao.org/docs/pdf/gam15879.pdf
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q31341020
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: includes
-  source: OMVG
-  retrieved_at: '2026-06-15'
-  url: https://www.omvg.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q31341020
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvg.org/
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvg.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.omvg.org/

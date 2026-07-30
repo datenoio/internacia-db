@@ -1,18 +1,37 @@
 id: ARABPARLIAMENT
+name: Arab Parliament
 blocktype:
 - parliamentary
 status: formal
+partof: LAS
+founded: '2002-12-27'
+active_period:
+  start: '2002-12-27'
+geographic_scope: regional
+regions:
+- Middle East
+- North Africa
 languages:
+- ar
 - en
 links:
-- url: https://en.wikipedia.org/wiki/Transitional_Arab_Parliament
+- url: https://www.ar-pr.org/
+  type: website
+- url: https://en.wikipedia.org/wiki/Arab_Parliament
   type: wikipedia
-name: Transnational Arab Parliament
+- url: https://www.wikidata.org/wiki/Q624390
+  type: wikidata
+legal_status: intergovernmental
+recognition_status: Inter-parliamentary body established within the League of Arab States
+  framework; each of the 22 Arab League member states appoints four representatives
+  to promote joint Arab action and democratic development
+headquarters:
+  city: Cairo
+  country: EG
+  coordinates:
+    lat: 30.044167
+    lng: 31.234722
 includes:
-- id: EG
-  name: Egypt
-  type: country
-  status: member
 - id: DZ
   name: Algeria
   type: country
@@ -21,12 +40,20 @@ includes:
   name: Bahrain
   type: country
   status: member
-- id: IQ
-  name: Iraq
+- id: KM
+  name: Comoros
   type: country
   status: member
-- id: YE
-  name: Yemen
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+- id: EG
+  name: Egypt
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
   type: country
   status: member
 - id: JO
@@ -41,38 +68,6 @@ includes:
   name: Lebanon
   type: country
   status: member
-- id: OM
-  name: Oman
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
 - id: LY
   name: Libya
   type: country
@@ -85,6 +80,22 @@ includes:
   name: Morocco
   type: country
   status: member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+- id: PS
+  name: Palestine
+  type: country
+  status: member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
 - id: SO
   name: Somalia
   type: country
@@ -93,34 +104,107 @@ includes:
   name: Sudan
   type: country
   status: member
-- id: PS
-  name: Palestine, State of
+- id: SY
+  name: Syria
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+- id: YE
+  name: Yemen
   type: country
   status: member
 membership_count: 22
-geographic_scope: regional
-regions:
-- Middle East
-- North Africa
-description: Transnational Arab Parliament is an international parliamentary body
-  with 22 members.
+wikidata_id: Q624390
+description: Legislative and consultative body of the League of Arab States comprising
+  four representatives from each of the 22 Arab League member states (88 seats total).
+  Agreed at the 2001 Amman summit and formally established on 27 December 2002; inaugural
+  sessions began at the League headquarters in Cairo in 2004. A permanent seat in
+  Damascus was planned but sessions were suspended there in May 2012 and relocated
+  to Cairo. Member states elect or appoint their representatives through national
+  parliaments or direct suffrage according to each country's constitutional system.
+notes: Membership mirrors the 22 Arab League member states (DZ, BH, KM, DJ, EG, IQ,
+  JO, KW, LB, LY, MR, MA, OM, PS, QA, SA, SO, SD, SY, TN, AE, YE). Syria's Arab
+  League membership has been suspended since November 2011 but remains listed as
+  a member state. Turkey holds observer status in the Arab Parliament.
 tags:
 - ARABPARLIAMENT
+- AP
 - arab
 - parliament
 - parliamentary
 - political
-- transnational
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
+other_names:
+- id: ar
+  name: البرلمان العربي
+- id: de
+  name: Arabisches Parlament
+- id: en
+  name: Arab Parliament
+- id: es
+  name: Parlamento árabe
+- id: fr
+  name: Parlement arabe
+- id: pt
+  name: Parlamento Árabe
+- id: ru
+  name: Арабский парламент
+- id: zh
+  name: 阿拉伯议会联盟
+acronyms:
+- lang: en
+  value: AP
+- lang: ar
+  value: البرلمان العربي
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q624390
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q624390
+  license: CC0
+- field: includes
+  source: Arab League membership
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Arab_Parliament
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Arab_Parliament
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://www.ar-pr.org/
+- field: headquarters
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Arab_Parliament
+- field: partof
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q624390
+  license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Transitional_Arab_Parliament
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  url: https://en.wikipedia.org/wiki/Arab_Parliament

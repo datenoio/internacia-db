@@ -1,129 +1,210 @@
 id: PARLATINO
+name: Latin American and Caribbean Parliament
 blocktype:
 - parliamentary
 status: formal
+founded: '1964-12-10'
+active_period:
+  start: '1964-12-10'
+geographic_scope: regional
+regions:
+- Latin America
+- Caribbean
 languages:
 - es
+- pt
 links:
+- url: https://www.parlatino.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Latin_American_Parliament
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q499151
   type: wikidata
-name: Latin American Parliament
+acronyms:
+- lang: en
+  value: PARLATINO
+- lang: es
+  value: PARLATINO
+- lang: pt
+  value: PARLATINO
+headquarters:
+  city: Panama City
+  country: PA
+  coordinates:
+    lat: 8.944185
+    lng: -79.553225
+legal_status: treaty_organization
+recognition_status: Regional permanent unicameral inter-parliamentary body founded in Lima on
+  10 December 1964; institutionalized by the Treaty of Institutionalization signed in Lima on
+  16 November 1987; permanent headquarters inaugurated in Panama City on 18 October 2013
+founding_members:
+- AR
+- BR
+- CL
+- CO
+- CR
+- SV
+- GT
+- NI
+- PA
+- PY
+- PE
+- UY
+- VE
 includes:
 - id: AR
   name: Argentina
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: AW
   name: Aruba
   type: country
   status: member
+  joined: '1988'
 - id: BO
   name: Bolivia
   type: country
   status: member
+  joined: '1987-11-16'
 - id: BR
   name: Brazil
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: CO
   name: Colombia
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: CR
   name: Costa Rica
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: CU
   name: Cuba
   type: country
   status: member
+  joined: '1985'
 - id: CW
   name: Curaçao
   type: country
   status: member
+  joined: '2010'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
+  joined: '1972'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '1987-11-16'
 - id: SV
   name: El Salvador
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: GT
   name: Guatemala
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: HN
   name: Honduras
   type: country
   status: member
+  joined: '1965'
 - id: MX
   name: Mexico
   type: country
   status: member
+  joined: '1972'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: PA
   name: Panama
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: PY
   name: Paraguay
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: PE
   name: Peru
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: SX
   name: Sint Maarten
   type: country
   status: member
+  joined: '2010'
 - id: SR
   name: Suriname
   type: country
   status: member
+  joined: '1988'
 - id: UY
   name: Uruguay
   type: country
-  status: member
+  status: founding_member
+  joined: '1964-12-10'
 - id: VE
   name: Venezuela
   type: country
-  status: member
-acronyms:
-- lang: en
-  value: PARLATINO
+  status: founding_member
+  joined: '1964-12-10'
 membership_count: 23
 wikidata_id: Q499151
-description: International parliament.
+description: Regional permanent unicameral inter-parliamentary assembly bringing together
+  the national legislatures of Latin America and the Caribbean. Founded in Lima on 10 December
+  1964 by thirteen parliaments; institutionalized by the Treaty of Institutionalization
+  ratified on 16 November 1987. Each member parliament sends twelve plenipotentiaries to
+  the consultative assembly, which promotes democracy, integration, and human rights without
+  supranational lawmaking power. Renamed Parlamento Latinoamericano y Caribeño in 2015.
+notes: Thirteen parliaments founded PARLATINO at the Lima Constitutive Assembly (7–11 December
+  1964); Honduras joined in July 1965, Mexico and the Dominican Republic in December 1972,
+  Cuba in June 1985, and Aruba and Suriname in August 1988. Bolivia and Ecuador are among
+  the eighteen states that signed the 1987 institutionalization treaty. Curaçao and Sint
+  Maarten represent the Dutch Caribbean after the 2010 dissolution of the Netherlands Antilles.
+  The permanent headquarters in Panama City opened on 18 October 2013.
 tags:
 - PARLATINO
 - american
+- caribbean
+- integration
 - latin
+- latin_america
 - parliament
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: البرلمان الأمريكي اللاتيني
+- id: ca
+  name: Parlament Llatinoamericà
 - id: de
   name: Lateinamerika-Parlament
 - id: en
@@ -132,18 +213,70 @@ other_names:
   name: Parlamento Latinoamericano y Caribeño
 - id: fr
   name: Parlement latino-américain
+- id: gl
+  name: Parlamento Latinoamericano e Caribeño
+- id: it
+  name: Parlamento Latinoamericano
+- id: nl
+  name: Latijns-Amerikaans Parlement
 - id: pt
   name: Parlamento Latino-americano
 - id: zh
   name: 拉丁美洲议会
+last_verified: '2026-07-30'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q499151
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q499151
   license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q499151
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q499151
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q499151
+  license: CC0
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/Latin_American_Parliament
+  license: CC BY-SA 4.0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://parlatino.org/informacion-paises-miembros/
+  license: public domain
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://parlatino.org/wp-content/uploads/2024/06/60-ANIVERSARIO.pdf
+  license: public domain
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://parlatino.org/wp-content/uploads/2024/06/60-ANIVERSARIO.pdf
+  license: public domain
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://parlatino.org/historia-y-objetivos/
+  license: public domain
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-30'
+  url: https://parlatino.org/historia-y-objetivos/
+  license: public domain

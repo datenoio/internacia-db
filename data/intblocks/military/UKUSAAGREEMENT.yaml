@@ -1,7 +1,12 @@
 id: UKUSAAGREEMENT
+name: UKUSA Agreement
 blocktype:
 - military
 status: formal
+founded: '1946-03-05'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
@@ -9,39 +14,69 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1197115
   type: wikidata
-name: UKUSA Agreement
-founded: '1946'
+- url: https://www.nationalarchives.gov.uk/news/newly-released-gchq-files-ukusa-agreement/
+  type: website
+acronyms:
+- lang: en
+  value: UKUSA
+- lang: zh
+  value: UKUSA協定
+- lang: ru
+  value: UKUSA
+- lang: pt
+  value: UKUSA
+legal_status: treaty
+wikidata_id: Q1197115
+description: Multilateral treaty for cooperation in signals intelligence (SIGINT) among Australia, Canada, New Zealand,
+  the United Kingdom, and the United States. Signed on 5 March 1946 by the United Kingdom and the United States, it formalized
+  wartime BRUSA intelligence sharing and became the legal foundation of the Five Eyes alliance. Canada joined in 1948;
+  Australia and New Zealand in 1956. The agreement governs exchange of intercepted communications, cryptanalysis, traffic
+  analysis, and related intelligence products among participating signals-intelligence agencies.
 includes:
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1946-03-05'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '1946-03-05'
 - id: CA
   name: Canada
   type: country
   status: member
+  joined: '1948'
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '1956'
 - id: NZ
   name: New Zealand
   type: country
   status: member
+  joined: '1956'
 membership_count: 5
-wikidata_id: Q1197115
-description: International ukusa focused on military cooperation for military cooperation.
+founding_members:
+- GB
+- US
 tags:
 - UKUSAAGREEMENT
 - agreement
+- BRUSA
+- cooperation
 - defense
+- five_eyes
+- intelligence
 - military
 - security
+- signals_intelligence
+- treaty
 topics:
+- key: intelligence
+  name: Intelligence
 - key: military
   name: Military
 - key: security
@@ -53,6 +88,10 @@ other_names:
   name: UKUSA
 - id: en
   name: UKUSA Agreement
+- id: en
+  name: BRUSA Agreement
+- id: en
+  name: United Kingdom – United States of America Agreement
 - id: es
   name: UKUSA
 - id: fr
@@ -63,21 +102,48 @@ other_names:
   name: UKUS SIGINT
 - id: zh
   name: 英美協定
+notes: Evolved from the 1943 BRUSA Agreement and signed in Washington on 5 March 1946. Extended to Canada (1948), Australia
+  and New Zealand (1956). Full treaty text was declassified and published jointly by GCHQ and the NSA on 25 June 2010.
+  Underpins the Five Eyes (FVEY) intelligence community; related Five Eyes defence bodies include TTCP, AUSCANNZUKUS, and
+  ABCANZ Armies.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1197115
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/
   license: CC0
-acronyms:
-- lang: zh
-  value: UKUSA協定
-- lang: ru
-  value: UKUSA
-- lang: pt
-  value: UKUSA
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/UKUSA_Agreement

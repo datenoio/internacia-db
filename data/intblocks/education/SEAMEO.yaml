@@ -1,62 +1,25 @@
 id: SEAMEO
+name: Southeast Asian Ministers of Education Organization
 blocktype:
 - education
 - intorg
 status: formal
-founded: '1965'
+founded: '1965-11-30'
+geographic_scope: regional
+regions:
+- Asia
+- Southeast Asia
 languages:
 - en
 links:
 - url: https://www.seameo.org/
   type: website
+- url: https://www.seameo.org/Main_about/415
+  type: website
 - url: https://en.wikipedia.org/wiki/Southeast_Asian_Ministers_of_Education_Organization
   type: wikipedia
-name: Southeast Asian Ministers of Education Organization
-includes:
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
+- url: https://www.wikidata.org/wiki/Q12510105
+  type: wikidata
 headquarters:
   city: Bangkok
   country: TH
@@ -67,8 +30,17 @@ acronyms:
 - lang: en
   value: SEAMEO
 membership_count: 11
-description: Intergovernmental organization established by Southeast Asian countries to promote regional cooperation in education,
-  science, and culture. SEAMEO works to enhance regional understanding and cooperation among member countries through education.
+founding_members:
+- ID
+- LA
+- MY
+- PH
+- SG
+- TH
+description: >-
+  Regional intergovernmental organization established in November 1965 by Southeast Asian governments to promote
+  cooperation in education, science, and culture. The SEAMEO Council comprises the ministers of education of member
+  countries; the Bangkok-based Secretariat executes Council decisions and coordinates regional centres and networks.
 tags:
 - SEAMEO
 - education
@@ -79,8 +51,116 @@ tags:
 topics:
 - key: education
   name: Education
+- key: higher_education
+  name: Higher Education
+- key: science
+  name: Science
+- key: culture
+  name: Culture
 - key: regional_cooperation
   name: Regional Cooperation
+includes:
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '1984-02-16'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '1971'
+- id: ID
+  name: Indonesia
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: MY
+  name: Malaysia
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '1998-02-16'
+- id: PH
+  name: Philippines
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: SG
+  name: Singapore
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: TH
+  name: Thailand
+  type: country
+  status: founding_member
+  joined: '1965-11-30'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  joined: '2006-03-22'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '1992-02-10'
+- id: AU
+  name: Australia
+  type: country
+  status: associate_member
+  joined: '1973-11-01'
+- id: CA
+  name: Canada
+  type: country
+  status: associate_member
+  joined: '1988-02-04'
+- id: FR
+  name: France
+  type: country
+  status: associate_member
+  joined: '1973-07-25'
+- id: DE
+  name: Germany
+  type: country
+  status: associate_member
+  joined: '1990-02-05'
+- id: MA
+  name: Morocco
+  type: country
+  status: associate_member
+  joined: '2021-06-17'
+- id: NL
+  name: Netherlands
+  type: country
+  status: associate_member
+  joined: '1993-02-16'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: associate_member
+  joined: '1973-11-12'
+- id: ES
+  name: Spain
+  type: country
+  status: associate_member
+  joined: '2007-03-14'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: associate_member
+  joined: '2013-03-20'
+wikidata_id: Q12510105
 other_names:
 - id: en
   name: Southeast Asian Ministers of Education Organization
@@ -88,8 +168,43 @@ other_names:
   name: องค์การรัฐมนตรีศึกษาแห่งเอเชียตะวันออกเฉียงใต้
 - id: id
   name: Organisasi Menteri-Menteri Pendidikan Asia Tenggara
+- id: ms
+  name: SEAMEO
+- id: vi
+  name: Tổ chức Bộ trưởng Giáo dục Đông Nam Á
+notes: >-
+  SEAMEO has three membership categories: 11 member countries (listed with membership_count), 9 associate member
+  countries, and affiliate institutional members (not listed in includes). The Socialist Republic of Vietnam joined
+  in 1992 following the termination of the Republic of Vietnam; charter signatories also included the Republic of
+  Vietnam at establishment.
+last_verified: '2026-07-29'
 provenance:
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.seameo.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q12510105
+  license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seameo.org/Main_about/415
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seameo.org/Main_about/415
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seameo.org/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seameo.org/
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.seameo.org/img/SEAMEO_General/About_SEAMEO/History_HTML/seameomc/mcindex.htm

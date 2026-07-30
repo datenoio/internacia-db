@@ -1,111 +1,226 @@
 id: NORDEN
+name: Nordic Council
 blocktype:
 - parliamentary
 status: formal
+founded: '1952-03-16'
+active_period:
+  start: '1953-02-13'
+geographic_scope: regional
+regions:
+- Nordic
+- Europe
+- Arctic
 languages:
-- dk
+- da
 - en
+- fi
+- fo
 - is
+- kl
 - 'no'
 - sv
-- fi
 links:
+- url: https://www.norden.org/en/nordic-council
+  type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q146165
   type: wikidata
-name: Nordic Council
-includes:
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: GL
-  name: Greenland
-  type: country
-  status: member
-- id: FO
-  name: Faroe Islands
-  type: country
-  status: member
-- id: AX
-  name: Åland Islands
-  type: country
-  status: member
-founded: '1952'
+acronyms:
+- lang: da
+  value: Nordisk Råd
+- lang: en
+  value: Nordic Council
+- lang: fi
+  value: Pohjoismaiden neuvosto
+- lang: fo
+  value: Norðurlandaráðið
+- lang: is
+  value: Norðurlandaráð
+- lang: kl
+  value: Nunat Avannarliit Siunnersuisoqatigiit
+- lang: sv
+  value: Nordiska rådet
+- lang: zh
+  value: 北欧理事会
 headquarters:
   city: Copenhagen
   country: DK
   coordinates:
     lat: 55.676111111111
     lng: 12.568888888889
+  note: Ved Stranden 18; shared secretariat complex with the Nordic Council of Ministers
+legal_status: inter-parliamentary
+recognition_status: Official inter-parliamentary body for Nordic cooperation established
+  at Copenhagen on 16 March 1952; inaugural session held on 13 February 1953. Operates
+  under the Helsinki Treaty framework (1962) among Denmark, Finland, Iceland, Norway,
+  and Sweden; the Faroe Islands, Greenland, and Åland participate as associate members
+  with parliamentary representation alongside the sovereign states.
+includes:
+- id: DK
+  name: Denmark
+  type: country
+  status: founding_member
+  joined: '1953-02-13'
+- id: IS
+  name: Iceland
+  type: country
+  status: founding_member
+  joined: '1953-02-13'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: founding_member
+  joined: '1953-02-13'
+- id: SE
+  name: Sweden
+  type: country
+  status: founding_member
+  joined: '1953-02-13'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1955-12-23'
+- id: FO
+  name: Faroe Islands
+  type: country
+  status: associated
+  joined: '1970'
+- id: AX
+  name: Åland Islands
+  type: country
+  status: associated
+  joined: '1970'
+- id: GL
+  name: Greenland
+  type: country
+  status: associated
+  joined: '1984'
+founding_members:
+- DK
+- IS
+- 'NO'
+- SE
 membership_count: 8
 wikidata_id: Q146165
-description: Geo-political inter-parliamentary forum for co-operation between the Nordic countries.
+description: Official inter-parliamentary body for formal Nordic cooperation among
+  the national and territorial parliaments of the region. Comprises 87 representatives
+  elected by the member parliaments; sovereign states hold full membership and the
+  autonomous territories of the Faroe Islands, Greenland, and Åland participate as
+  associate members with their own delegations. Holds an ordinary session each autumn
+  and a thematic session in spring. Complements the intergovernmental Nordic Council
+  of Ministers (NCM), with which it shares the Copenhagen secretariat.
+notes: Finland joined in December 1955 after parliamentary approval in October 1955.
+  Representatives from the Faroe Islands and Åland were first included in 1970; Greenland
+  joined in 1984. Working languages of the secretariat are Danish, Norwegian, and
+  Swedish; Danish, Finnish, Icelandic, Norwegian, and Swedish are official languages.
+  Distinct from the West Nordic Council (VESTNORDISK), although members overlap and
+  the bodies cooperate on selected issues.
 tags:
 - NORDEN
 - council
 - nordic
 - parliamentary
 - political
+- regional
+- regional_cooperation
 topics:
 - key: parliamentary
   name: Parliamentary
 - key: political
   name: Political
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: المجلس الشمالي
+- id: ca
+  name: Consell Nòrdic
+- id: da
+  name: Nordisk Råd
 - id: de
   name: Nordischer Rat
 - id: en
   name: Nordic Council
 - id: es
   name: Consejo Nórdico
+- id: et
+  name: Põhjamaade Nõukogu
+- id: fi
+  name: Pohjoismaiden neuvosto
+- id: fo
+  name: Norðurlandaráðið
 - id: fr
   name: Conseil nordique
+- id: is
+  name: Norðurlandaráð
+- id: kl
+  name: Nunat Avannarliit Siunnersuisoqatigiit
+- id: nb
+  name: Nordisk råd
+- id: nl
+  name: Noordse Raad
 - id: pt
   name: Conselho Nórdico
 - id: ru
   name: Северный совет
+- id: sv
+  name: Nordiska rådet
 - id: zh
   name: 北歐理事會
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q146165
   license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q146165
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q146165
   license: CC0
-- field: headquarters
+- field: description
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council
+- field: founded
+  source: Wikidata; Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Nordic_Council
-acronyms:
-- lang: zh
-  value: 北欧理事会
+- field: includes
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Council
+- field: founding_members
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Council
+- field: headquarters
+  source: Wikidata; official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q146165
+  license: CC0
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/information/helsinki-treaty
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.norden.org/en/nordic-council
+- field: notes
+  source: official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Nordic_Council

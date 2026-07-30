@@ -3,14 +3,25 @@ blocktype:
 - parliamentary
 status: formal
 languages:
+- ar
 - en
 - fr
+- pt
 links:
+- url: https://www.apunion.org/english.html
+  type: website
 - url: https://en.wikipedia.org/wiki/African_Parliamentary_Union
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q2828190
+- url: https://www.wikidata.org/wiki/Q25098864
   type: wikidata
 name: African Parliamentary Union
+founded: '1976-02-13'
+headquarters:
+  city: Abidjan
+  country: CI
+  coordinates:
+    lat: 5.3363888888889
+    lng: -4.0266666666667
 acronyms:
 - lang: en
   value: APU
@@ -21,16 +32,8 @@ regions:
 - Africa
 membership_count: 41
 includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
 - id: AO
   name: Angola
-  type: country
-  status: member
-- id: BJ
-  name: Benin
   type: country
   status: member
 - id: BF
@@ -41,32 +44,40 @@ includes:
   name: Burundi
   type: country
   status: member
-- id: CM
-  name: Cameroon
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+- id: CD
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CF
   name: Central African Republic
   type: country
   status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
 - id: CG
-  name: Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
+  type: country
+  status: member
+- id: CM
+  name: Cameroon
   type: country
   status: member
 - id: DJ
   name: Djibouti
   type: country
   status: member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
 - id: EG
-  name: Egypt
+  name: Egypt, Arab Rep.
   type: country
   status: member
 - id: ET
@@ -77,28 +88,32 @@ includes:
   name: Gabon
   type: country
   status: member
-- id: GM
-  name: Gambia
-  type: country
-  status: member
 - id: GH
   name: Ghana
+  type: country
+  status: member
+- id: GM
+  name: Gambia, The
   type: country
   status: member
 - id: GN
   name: Guinea
   type: country
   status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
 - id: GQ
   name: Equatorial Guinea
   type: country
   status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
 - id: KE
   name: Kenya
+  type: country
+  status: member
+- id: KM
+  name: Comoros
   type: country
   status: member
 - id: LR
@@ -109,16 +124,16 @@ includes:
   name: Libya
   type: country
   status: member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
 - id: MG
   name: Madagascar
   type: country
   status: member
 - id: ML
   name: Mali
-  type: country
-  status: member
-- id: MA
-  name: Morocco
   type: country
   status: member
 - id: MR
@@ -133,40 +148,32 @@ includes:
   name: Nigeria
   type: country
   status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: CD
-  name: Democratic Republic of Congo
-  type: country
-  status: member
 - id: RW
   name: Rwanda
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
   type: country
   status: member
 - id: SD
   name: Sudan
   type: country
   status: member
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
 - id: SS
   name: South Sudan
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
   type: country
   status: member
 - id: TD
@@ -181,18 +188,25 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: UG
+  name: Uganda
+  type: country
+  status: member
 - id: ZW
   name: Zimbabwe
   type: country
   status: member
-wikidata_id: Q2828190
-description: African Parliamentary Union is an international parliamentary body with
-  41 members.
+wikidata_id: Q25098864
+description: Continental interparliamentary organization bringing together national
+  parliaments of Africa to promote democracy, peace, and parliamentary cooperation.
+  Formerly the Union of African Parliaments.
 tags:
 - APU
 - UPA
+- africa
 - african
 - cooperation
+- parliament
 - parliamentary
 - political
 - regional
@@ -206,18 +220,58 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
+- id: ar
+  name: الاتحاد البرلماني الإفريقي
+- id: de
+  name: Afrikanische Parlamentarische Union
+- id: en
+  name: African Parliamentary Union
+- id: es
+  name: Unión Parlamentaria Africana
 - id: fr
-  name: Air Expresso
+  name: Union parlementaire africaine
+- id: it
+  name: Unione parlamentare africana
+- id: pt
+  name: União dos Parlamentos Africanos
+- id: ru
+  name: Африканский парламентский союз
+last_verified: '2026-07-30'
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25098864
+  license: CC0
+- field: description
+  source: African Parliamentary Union
+  retrieved_at: '2026-07-30'
+  url: https://www.apunion.org/in-brief.html
+- field: includes
+  source: African Parliamentary Union
+  retrieved_at: '2026-07-30'
+  url: https://www.apunion.org/english.html
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25098864
+  license: CC0
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25098864
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25098864
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-30'
+  url: https://www.wikidata.org/wiki/Q25098864
   license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/African_Parliamentary_Union
-- field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'

@@ -67,6 +67,7 @@ ACRONYM_TOPICS: dict[str, tuple[str, str]] = {
     "BRICS": ("economy", "Economy"),
     "CIVETS": ("economy", "Economy"),
     "FATFBLACKLIST": ("finance", "Finance"),
+    "FATFGREYLIST": ("finance", "Finance"),
     "FAILEDS": ("economy", "Economy"),
     "BALTICSTATES": ("regional_cooperation", "Regional Cooperation"),
     "CORECOUNT": ("economy", "Economy"),

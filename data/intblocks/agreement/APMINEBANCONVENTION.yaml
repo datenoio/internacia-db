@@ -2,6 +2,10 @@ id: APMINEBANCONVENTION
 blocktype:
 - agreement
 status: formal
+founded: '1997-09-18'
+active_period:
+  start: '1999-03-01'
+geographic_scope: global
 languages:
 - en
 - es
@@ -13,13 +17,20 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q570224
   type: wikidata
-name: The Convention on the Prohibition of the Use, Stockpiling, Production and Transfer
-  of Anti-Personnel Mines and on Their Destruction
+- url: https://treaties.unoda.org/t/apminebanconvention
+  type: website
+name: The Convention on the Prohibition of the Use, Stockpiling, Production and Transfer of Anti-Personnel Mines and on Their
+  Destruction
 acronyms:
 - lang: en
   value: Anti-Personnel Mine Ban Convention
 - lang: en
   value: Ottawa Convention
+legal_status: treaty
+official_documents:
+- url: https://treaties.unoda.org/t/apminebanconvention
+  type: document
+  name: Convention on the Prohibition of Anti-Personnel Mines (UN Office for Disarmament Affairs)
 includes:
 - id: AD
   name: Andorra
@@ -90,7 +101,7 @@ includes:
   type: country
   status: member
 - id: BO
-  name: Bolivia, Plurinational State of
+  name: Bolivia
   type: country
   status: member
 - id: BR
@@ -98,7 +109,7 @@ includes:
   type: country
   status: member
 - id: BS
-  name: Bahamas
+  name: Bahamas, The
   type: country
   status: member
 - id: BT
@@ -122,7 +133,7 @@ includes:
   type: country
   status: member
 - id: CD
-  name: Congo, The Democratic Republic of the
+  name: Congo, Dem. Rep.
   type: country
   status: member
 - id: CF
@@ -130,7 +141,7 @@ includes:
   type: country
   status: member
 - id: CG
-  name: Congo
+  name: Congo, Rep.
   type: country
   status: member
 - id: CH
@@ -138,9 +149,14 @@ includes:
   type: country
   status: member
 - id: CI
-  name: Côte d'Ivoire
+  name: Cote d'Ivoire
   type: country
   status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+  joined: '2006-03-15'
 - id: CL
   name: Chile
   type: country
@@ -158,7 +174,7 @@ includes:
   type: country
   status: member
 - id: CV
-  name: Cabo Verde
+  name: Cape Verde
   type: country
   status: member
 - id: CY
@@ -166,7 +182,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: DE
@@ -197,10 +213,6 @@ includes:
   name: Ecuador
   type: country
   status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
 - id: ER
   name: Eritrea
   type: country
@@ -211,10 +223,6 @@ includes:
   status: member
 - id: ET
   name: Ethiopia
-  type: country
-  status: member
-- id: FI
-  name: Finland
   type: country
   status: member
 - id: FJ
@@ -242,7 +250,7 @@ includes:
   type: country
   status: member
 - id: GM
-  name: Gambia
+  name: Gambia, The
   type: country
   status: member
 - id: GN
@@ -334,15 +342,20 @@ includes:
   type: country
   status: member
 - id: KN
-  name: Saint Kitts and Nevis
+  name: St. Kitts and Nevis
   type: country
   status: member
 - id: KW
   name: Kuwait
   type: country
   status: member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  joined: '2026-05-01'
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
 - id: LI
@@ -361,16 +374,8 @@ includes:
   name: Lesotho
   type: country
   status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
 - id: LU
   name: Luxembourg
-  type: country
-  status: member
-- id: LV
-  name: Latvia
   type: country
   status: member
 - id: MC
@@ -378,7 +383,7 @@ includes:
   type: country
   status: member
 - id: MD
-  name: Moldova, Republic of
+  name: Moldova
   type: country
   status: member
 - id: ME
@@ -389,8 +394,13 @@ includes:
   name: Madagascar
   type: country
   status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+  joined: '2025-03-12'
 - id: MK
-  name: North Macedonia
+  name: Macedonia, FYR
   type: country
   status: member
 - id: ML
@@ -433,6 +443,11 @@ includes:
   name: Namibia
   type: country
   status: member
+- id: NE
+  name: Niger
+  type: country
+  status: member
+  joined: '1999-03-23'
 - id: NG
   name: Nigeria
   type: country
@@ -461,6 +476,11 @@ includes:
   name: New Zealand
   type: country
   status: member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+  joined: '2014-08-20'
 - id: PA
   name: Panama
   type: country
@@ -477,10 +497,11 @@ includes:
   name: Philippines
   type: country
   status: member
-- id: PL
-  name: Poland
+- id: PS
+  name: West Bank and Gaza
   type: country
   status: member
+  joined: '2017-12-29'
 - id: PT
   name: Portugal
   type: country
@@ -530,7 +551,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SL
@@ -545,6 +566,11 @@ includes:
   name: Senegal
   type: country
   status: member
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+  joined: '2012-04-16'
 - id: SR
   name: Suriname
   type: country
@@ -562,7 +588,7 @@ includes:
   type: country
   status: member
 - id: SZ
-  name: Eswatini
+  name: Swaziland
   type: country
   status: member
 - id: TD
@@ -593,8 +619,13 @@ includes:
   name: Tunisia
   type: country
   status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '2025-06-25'
 - id: TR
-  name: Türkiye
+  name: Turkey
   type: country
   status: member
 - id: TT
@@ -606,7 +637,7 @@ includes:
   type: country
   status: member
 - id: TZ
-  name: Tanzania, United Republic of
+  name: Tanzania
   type: country
   status: member
 - id: UA
@@ -622,15 +653,15 @@ includes:
   type: country
   status: member
 - id: VA
-  name: Holy See (Vatican City State)
+  name: Vatican City
   type: country
   status: member
 - id: VC
-  name: Saint Vincent and the Grenadines
+  name: St. Vincent and the Grenadines
   type: country
   status: member
 - id: VE
-  name: Venezuela, Bolivarian Republic of
+  name: Venezuela, RB
   type: country
   status: member
 - id: VU
@@ -642,7 +673,7 @@ includes:
   type: country
   status: member
 - id: YE
-  name: Yemen
+  name: Yemen, Rep.
   type: country
   status: member
 - id: ZA
@@ -657,22 +688,58 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 159
+- id: EE
+  name: Estonia
+  type: country
+  status: former_member
+  left: '2025-12-27'
+- id: FI
+  name: Finland
+  type: country
+  status: former_member
+  left: '2026-01-10'
+- id: LT
+  name: Lithuania
+  type: country
+  status: former_member
+  left: '2025-12-27'
+- id: LV
+  name: Latvia
+  type: country
+  status: former_member
+  left: '2025-12-27'
+- id: PL
+  name: Poland
+  type: country
+  status: former_member
+  left: '2026-02-20'
+membership_count: 162
 wikidata_id: Q570224
-description: International the focused on legal matters established through an international
-  agreement.
+description: Multilateral disarmament treaty comprehensively banning the use, stockpiling, production, and transfer of anti-personnel
+  mines and requiring destruction of stockpiles. Adopted in Oslo on 18 September 1997, opened for signature in Ottawa on 3
+  December 1997, and entered into force on 1 March 1999 after 40 ratifications. Deposited with the United Nations Secretary-General;
+  implemented through annual Meetings of States Parties.
 tags:
-- ANTI-PERSONNEL MINE BAN CONVENTION
 - APMINEBANCONVENTION
 - OTTAWA CONVENTION
+- ANTI-PERSONNEL MINE BAN CONVENTION
+- MINE BAN TREATY
 - agreement
+- arms_control
 - convention
+- disarmament
+- humanitarian
+- landmines
 - law
-- legal
-- prohibition
 topics:
+- key: arms_control
+  name: Arms Control
+- key: humanitarian
+  name: Humanitarian
 - key: law
   name: Law
+- key: security
+  name: Security
 other_names:
 - id: ar
   name: معاهدة أوتوا
@@ -686,3 +753,42 @@ other_names:
   name: Оттавский договор
 - id: es
   name: Convención sobre la prohibición de minas antipersonales
+notes: As of July 2026, 162 states are parties per the UN treaty database. Estonia, Latvia, and Lithuania withdrew effective
+  27 December 2025; Finland effective 10 January 2026; Poland effective 20 February 2026. Lebanon acceded on 1 May 2026 (entry
+  into force 1 November 2026). Recent accessions also include Marshall Islands (2025) and Tonga (2025). Ukraine remains listed
+  as a party at the UN but announced withdrawal in June 2025.
+last_verified: '2026-07-29'
+provenance:
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.apminebanconvention.org/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.unoda.org/t/apminebanconvention
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.unoda.org/t/apminebanconvention
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.unoda.org/t/apminebanconvention
+- field: active_period
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.unoda.org/t/apminebanconvention
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.unoda.org/t/apminebanconvention
+- field: notes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?chapter=26&clang=_en&mtdsg_no=XXVI-5&src=TREATY
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q570224
+  license: CC0

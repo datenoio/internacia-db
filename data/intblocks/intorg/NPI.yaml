@@ -1,74 +1,131 @@
 id: NPI
+name: Nordic Patent Institute
 blocktype:
 - intorg
 - patent
 status: formal
+founded: '2006'
+active_period:
+  start: '2007-12-28'
+geographic_scope: regional
+regions:
+- Nordic countries
+- Europe
 languages:
 - en
+- da
+- nb
 links:
-- url: http://www.npi.int/
+- url: https://npi.int/
   type: website
 - url: https://en.wikipedia.org/wiki/Nordic_Patent_Institute
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q7050720
   type: wikidata
-name: Nordic Patent Institute
-founded: '2006'
+acronyms:
+- lang: en
+  value: NPI
+- lang: da
+  value: NPI
+- lang: nb
+  value: NPI
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established by the Agreement on the Establishing of the Nordic Patent Institute (signed 5 July 2006, entered into force 28 December 2007); appointed as International Searching Authority and International Preliminary Examining Authority under the Patent Cooperation Treaty
 headquarters:
   city: Taastrup
   country: DK
   coordinates:
-    lat: 55.65
-    lng: 12.3
-acronyms:
-- lang: en
-  value: NPI
+    lat: 55.6447
+    lng: 12.3022
+  note: Helgeshøj Allé 81, 2630 Taastrup
+wikidata_id: Q7050720
+description: Intergovernmental patent organization established by Denmark, Iceland, and Norway to cooperate on patent search, examination, and information services. NPI acts as an International Searching Authority and International Preliminary Examining Authority under the Patent Cooperation Treaty (PCT) and provides commercial prior-art search services, drawing on examiners from the Danish and Norwegian patent offices. The Board consists of the directors of the three member countries' national patent offices; the Institute is headquartered in Taastrup, Denmark.
 includes:
 - id: DK
   name: Denmark
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-07-05'
 - id: IS
   name: Iceland
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-07-05'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '2006-07-05'
+founding_members:
+- DK
+- IS
+- 'NO'
 membership_count: 3
-wikidata_id: Q7050720
-description: Nordic Patent Institute is an international intorg body with 3 members.
 tags:
 - NPI
-- communication
-- institute
 - intellectual property
 - intellectual_property
 - intorg
 - nordic
 - patent
-- telecom
-- telecommunications
+- pct
 topics:
 - key: intellectual_property
   name: Intellectual Property
-- key: telecommunications
-  name: Telecommunications
 other_names:
 - id: ar
   name: المعهد الشمالي لبراءات الاختراع
-- id: zh
-  name: 北欧专利局
+- id: da
+  name: Nordisk Patent Institut
 - id: en
   name: Nordic Patent Institute
+- id: eo
+  name: Nordia Patenta Instituto
 - id: fr
   name: Nordic Patent Institute
+- id: nb
+  name: Nordisk Patentinstitutt
+- id: zh
+  name: 北欧专利局
+notes: NPI also serves as PCT International Searching Authority and International Preliminary Examining Authority for applicants filing through the receiving offices of Denmark, Iceland, Norway, and Sweden; Sweden is not a Contracting Party to the establishing agreement.
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.npi.int/
+- field: includes
+  source: Agreement on the Establishing of the Nordic Patent Institute; NPI official website
+  retrieved_at: '2026-07-29'
+  url: https://npi.int/about/organisation/
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: NPI official website; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://npi.int/about/organisation/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7050720
+  license: CC0
+- field: headquarters
+  source: Wikidata; NPI official website
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7050720
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7050720
+  license: CC0
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7050720
+  license: CC0
+- field: recognition_status
+  source: Agreement on the Establishing of the Nordic Patent Institute (Lovdata)
+  retrieved_at: '2026-07-29'
+  url: https://lovdata.no/dokument/TRAKTATEN/traktat/2006-07-05-9
+- field: founded
+  source: Wikidata; establishing agreement
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7050720
+- field: geographic_scope
+  source: NPI official website
+  retrieved_at: '2026-07-29'
+  url: https://npi.int/about/organisation/
+last_verified: '2026-07-29'

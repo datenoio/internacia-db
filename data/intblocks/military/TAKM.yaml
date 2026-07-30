@@ -1,69 +1,151 @@
 id: TAKM
+name: Organization of the Eurasian Law Enforcement Agencies with Military Status
 blocktype:
 - military
 status: formal
+founded: '2013-01-25'
+geographic_scope: regional
+regions:
+- Asia
+- Central Asia
+- Europe
+languages:
+- az
+- en
+- ky
+- mn
+- tr
 links:
 - url: https://en.wikipedia.org/wiki/TAKM
   type: wikipedia
-name: Organization of the Eurasian Law Enforcement Agencies with Military Status
-founded: '2013'
+- url: https://www.wikidata.org/wiki/Q3935730
+  type: wikidata
+acronyms:
+- lang: en
+  value: TAKM
+- lang: tr
+  value: TAKM
+legal_status: intergovernmental
 headquarters:
   city: Ankara
   country: TR
   coordinates:
     lat: 39.93576
     lng: 32.83869
+wikidata_id: Q3935730
+description: Intergovernmental cooperation organization of gendarmerie and other military-status law enforcement agencies from
+  Turkic states, established in Ankara on 25 January 2013. The acronym TAKM derives from the founding participants Turkey,
+  Azerbaijan, Kyrgyzstan, and Mongolia. Member agencies coordinate training, operations, and institutional exchange; the
+  organization is often described as a Eurasian counterpart to FIEP (Association of European and Mediterranean Police Forces
+  and Gendarmeries with Military Status). Mongolia declined to sign the foundation agreement and withdrew in 2014; Kazakhstan
+  subsequently applied for membership amid plans to reorganize the body on a new basis.
 includes:
 - id: TR
   name: Turkey
   type: country
   status: member
+  joined: '2013-01-25'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '2013-01-25'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '2013-01-25'
+- id: MN
+  name: Mongolia
+  type: country
+  status: former_member
+  joined: '2013-01-25'
+  left: '2014'
 membership_count: 3
-description: Organization.
+founding_members:
+- TR
+- AZ
+- KG
+- MN
 tags:
 - TAKM
+- azerbaijan
 - defense
 - eurasian
-- law
-- legal
+- gendarmerie
+- kyrgyzstan
+- law_enforcement
 - military
-- organization
+- mongolia
+- regional_cooperation
 - security
+- turkey
+- turkic
 topics:
 - key: law
   name: Law
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
 other_names:
 - id: ar
   name: تاكم
+- id: az
+  name: TAKM
+- id: de
+  name: TAKM
 - id: en
   name: TAKM
+- id: en
+  name: Organization of the Eurasian Law Enforcement Agencies with Military Status
+- id: fa
+  name: سازمان اجرای قانون و وضعیت نظامی اوراسیا
 - id: fr
   name: TAKM
-wikidata_id: Q3935730
+- id: tr
+  name: Avrasya Askeri Statülü Kolluk Kuvvetleri Teşkilatı
+- id: tr
+  name: TAKM
+notes: Established at a founding ceremony in Ankara on 25 January 2013 with Turkey, Azerbaijan, Kyrgyzstan, and Mongolia as
+  initial participants. In 2014 Mongolia refused to sign the foundation agreement and quit; Kazakhstan applied for membership,
+  leading to plans to reestablish the organization on a new basis. Headquarters hosted by the Turkish Gendarmerie General
+  Command in Ankara.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3935730
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/TAKM
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM
+- field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q3935730
   license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/TAKM

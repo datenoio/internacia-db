@@ -15,12 +15,27 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/Shangri-La_Dialogue
   type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7488585
+  type: wikidata
 name: Shangri-La Dialogue
+headquarters:
+  city: Singapore
+  country: SG
+  coordinates:
+    lat: 1.3112
+    lng: 103.8268
 acronyms:
 - lang: en
   value: SLD
-membership_count: 29
-description: International forum focused on security dialogue in the Asia-Pacific region.
+membership_count: 31
+wikidata_id: Q7488585
+legal_status: independent think-tank forum
+description: >-
+  Annual Track One intergovernmental security summit organized by the International Institute for Strategic Studies
+  (IISS) at the Shangri-La Hotel in Singapore since 2002. Conceived by IISS Director-General John Chipman after the
+  2001 Munich Security Conference, it was initially modelled on MSC but focused on Asia-Pacific defence ministers and
+  senior military officials. The forum has no treaty-based membership; participation is by invitation and varies by
+  year, with a core drawn from ASEAN Regional Forum participants plus partner states from Europe and the Americas.
 tags:
 - SLD
 - asia
@@ -39,135 +54,197 @@ topics:
 other_names:
 - id: ar
   name: حوار شانغريلا
-- id: zh
-  name: 香格里拉对话
+- id: de
+  name: Shangri-La-Dialog
 - id: en
   name: Shangri-La Dialogue
-- id: fr
-  name: Dialogue de Shangri-La
-- id: ru
-  name: Диалог Шангри-Ла
+- id: en
+  name: IISS Asia Security Summit
 - id: es
   name: Diálogo de Shangri-La
+- id: fr
+  name: Dialogue de Shangri-La
+- id: ja
+  name: シャングリラ・ダイアローグ
+- id: ru
+  name: Диалог Шангри-Ла
+- id: zh
+  name: 香格里拉对话
+previous_names:
+- id: en
+  name: Asia Security Conference
+  period: '2002'
 includes:
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
 - id: AU
   name: Australia
   type: country
-  status: member
-- id: CN
-  name: China
+  status: participant
+- id: BN
+  name: Brunei Darussalam
   type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
+  status: participant
 - id: CA
   name: Canada
   type: country
-  status: member
-- id: BD
-  name: Bangladesh
+  status: participant
+- id: CL
+  name: Chile
   type: country
-  status: member
-- id: FJ
-  name: Fiji
+  status: participant
+- id: CN
+  name: China
   type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
+  status: participant
+- id: DE
+  name: Germany
   type: country
-  status: member
-- id: PK
-  name: Pakistan
+  status: participant
+- id: FR
+  name: France
   type: country
-  status: member
+  status: participant
+- id: GB
+  name: United Kingdom
+  type: country
+  status: participant
+- id: ID
+  name: Indonesia
+  type: country
+  status: participant
+- id: IN
+  name: India
+  type: country
+  status: participant
+- id: JP
+  name: Japan
+  type: country
+  status: participant
+- id: KH
+  name: Cambodia
+  type: country
+  status: participant
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: participant
+- id: LA
+  name: Lao PDR
+  type: country
+  status: participant
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: participant
 - id: MN
   name: Mongolia
   type: country
-  status: member
+  status: participant
+- id: MM
+  name: Myanmar
+  type: country
+  status: participant
+- id: MY
+  name: Malaysia
+  type: country
+  status: participant
+- id: NZ
+  name: New Zealand
+  type: country
+  status: participant
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: participant
+- id: PH
+  name: Philippines
+  type: country
+  status: participant
+- id: PK
+  name: Pakistan
+  type: country
+  status: participant
+- id: RU
+  name: Russian Federation
+  type: country
+  status: participant
+- id: SE
+  name: Sweden
+  type: country
+  status: participant
+- id: SG
+  name: Singapore
+  type: country
+  status: participant
+- id: CH
+  name: Switzerland
+  type: country
+  status: participant
+- id: TH
+  name: Thailand
+  type: country
+  status: participant
 - id: TL
   name: Timor-Leste
   type: country
-  status: member
-- id: VU
-  name: Vanuatu
+  status: participant
+- id: UA
+  name: Ukraine
   type: country
-  status: member
+  status: participant
+- id: US
+  name: United States
+  type: country
+  status: participant
+- id: VN
+  name: Vietnam
+  type: country
+  status: participant
+notes: >-
+  SLD is an invitation-only conference, not a treaty organization with formal members. The `includes` list records
+  states that regularly send defence ministers or senior military officials; annual attendance varies (45 countries in
+  2024, 54 delegations in 2025) and is not an exhaustive or binding roster.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia / IISS SLD 2025 report
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Shangri-La_Dialogue
+- field: description
+  source: Wikipedia / IISS
+  retrieved_at: '2026-07-29'
+  url: https://www.iiss.org/events/shangri-la-dialogue
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7488585
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7488585
+  license: CC0
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.iiss.org/events/shangri-la-dialogue
+- field: headquarters
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q6146488
+  license: CC0
+- field: membership_count
+  source: derived from includes
+  retrieved_at: '2026-07-29'
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q7488585
+  license: CC0
+- field: previous_names
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Shangri-La_Dialogue
+- field: legal_status
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Shangri-La_Dialogue

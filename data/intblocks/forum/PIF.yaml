@@ -4,11 +4,21 @@ blocktype:
 - political
 - ocean
 status: formal
+founded: '1971-08-05'
+geographic_scope: regional
+regions:
+- Oceania
 languages:
 - en
+- fr
 - pt
+legal_status: intergovernmental
 links:
-- url: http://www.forumsec.org/
+- url: https://www.forumsec.org/
+  type: website
+- url: https://forumsec.org/pacific-islands-forum
+  type: website
+- url: https://forumsec.org/timeline-major-forum-events
   type: website
 - url: https://en.wikipedia.org/wiki/Pacific_Islands_Forum
   type: wikipedia
@@ -19,76 +29,121 @@ includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-08-05'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-08-05'
+- id: FJ
+  name: Fiji
+  type: country
+  status: founding_member
+  joined: '1971-08-05'
 - id: FM
   name: Federated States of Micronesia
   type: country
   status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: PF
-  name: French Polynesia
-  type: country
-  status: member
+  joined: '1987'
 - id: KI
   name: Kiribati
   type: country
   status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NC
-  name: New Caledonia
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
+  joined: '1977'
 - id: MH
   name: Marshall Islands
   type: country
   status: member
+  joined: '1987'
+- id: NR
+  name: Nauru
+  type: country
+  status: founding_member
+  joined: '1971-08-05'
+- id: NC
+  name: New Caledonia
+  type: country
+  status: member
+  joined: '2016-09'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: founding_member
+  joined: '1971-08-05'
+- id: NU
+  name: Niue
+  type: country
+  status: member
+  joined: '1975'
+- id: PW
+  name: Palau
+  type: country
+  status: member
+  joined: '1995'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '1974'
+- id: PF
+  name: French Polynesia
+  type: country
+  status: member
+  joined: '2016-09'
 - id: WS
   name: Samoa
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-08-05'
 - id: SB
   name: Solomon Islands
   type: country
   status: member
+  joined: '1978'
 - id: TO
   name: Tonga
   type: country
-  status: member
+  status: founding_member
+  joined: '1971-08-05'
 - id: TV
   name: Tuvalu
   type: country
   status: member
+  joined: '1978'
 - id: VU
   name: Vanuatu
   type: country
   status: member
-founded: '1971'
+  joined: '1980'
+- id: AS
+  name: American Samoa
+  type: country
+  status: associate_member
+  joined: '2024-08'
+- id: GU
+  name: Guam
+  type: country
+  status: associate_member
+  joined: '2024-08'
+- id: TK
+  name: Tokelau
+  type: country
+  status: associate_member
+  joined: '2014'
+- id: WF
+  name: Wallis and Futuna
+  type: country
+  status: associate_member
+  joined: '2018-09'
+founding_members:
+- AU
+- CK
+- FJ
+- NR
+- NZ
+- WS
+- TO
 headquarters:
   city: Suva
   country: FJ
@@ -99,43 +154,119 @@ acronyms:
 - lang: en
   value: PIF
 - lang: en
+  value: SPF
+- lang: en
   value: FIP
 - lang: ru
   value: ФТО
 membership_count: 18
 wikidata_id: Q757276
-description: International forum focused on political.
+description: >-
+  Intergovernmental organisation founded in August 1971 as the South Pacific Forum and renamed the Pacific Islands
+  Forum in 1999. Its 18 full members — Australia, New Zealand, and 16 Pacific island countries and territories —
+  coordinate regional policy on trade, climate change, fisheries, security, and development through annual leaders'
+  meetings and the Suva-based Pacific Islands Forum Secretariat. Four non-sovereign Pacific territories hold associate
+  membership (American Samoa, Guam, Tokelau, and Wallis and Futuna).
 tags:
 - FIP
 - PIF
+- SPF
+- climate_change
 - cooperation
 - forum
 - islands
+- ocean
+- oceania
 - pacific
 - political
 - regional
 - regional_cooperation
+- security
+- trade
 - ФТО
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: climate_change
+  name: Climate Change
+- key: development
+  name: Development
+- key: trade
+  name: Trade
+- key: ocean
+  name: Ocean
+- key: security
+  name: Security
 other_names:
 - id: ar
   name: منتدى جزر المحيط الهادئ
-- id: zh
-  name: 太平洋岛国论坛
 - id: en
   name: Pacific Islands Forum
+- id: en
+  name: South Pacific Forum
+- id: es
+  name: Foro de las Islas del Pacífico
+- id: fi
+  name: Bose ni Yatu Pasifika
 - id: fr
   name: Forum des îles du Pacifique
 - id: ru
   name: Форум тихоокеанских островов
-- id: es
-  name: Foro de las Islas del Pacífico
+- id: sm
+  name: Fono a Atumotu o le Pasefika
+- id: ty
+  name: Te mau motu no Patitifa
+- id: zh
+  name: 太平洋岛国论坛
+notes: >-
+  Founded as the South Pacific Forum at Wellington on 5–7 August 1971; renamed Pacific Islands Forum in 1999. French
+  Polynesia and New Caledonia became full members in September 2016. Fiji was suspended from May 2009 until October 2014.
+  Five Micronesian members briefly initiated withdrawal in February 2021; Kiribati withdrew in July 2022 and rejoined in
+  February 2023. Associate members (American Samoa, Guam, Tokelau, Wallis and Futuna) participate under the 2005 Leaders
+  Policy on Associate Membership; membership_count counts the 18 full members only.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/pacific-islands-forum
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/partnerships
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/timeline-major-forum-events
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/pacific-islands-forum
+- field: founded
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/timeline-major-forum-events
+- field: founding_members
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATNIF/2005/28.html
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.forumsec.org/
+  retrieved_at: '2026-07-29'
+  url: https://forumsec.org/pacific-islands-forum
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q757276
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q757276
+  license: CC0
+- field: legal_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/ATNIF/2005/28.html

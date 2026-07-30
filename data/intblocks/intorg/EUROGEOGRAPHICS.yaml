@@ -1,15 +1,43 @@
 id: EUROGEOGRAPHICS
+name: EuroGeographics
 blocktype:
 - intorg
 status: formal
+founded: '2000'
+active_period:
+  start: '2000'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - en
 links:
-- url: http://www.eurogeographics.org
+- url: https://eurogeographics.org/
+  type: website
+- url: https://eurogeographics.org/about-us/
+  type: website
+- url: https://eurogeographics.org/about-us/history/
+  type: website
+- url: https://eurogeographics.org/app/uploads/2025/06/EuroGeographics-Annual-Review-2024.pdf
   type: website
 - url: https://www.wikidata.org/wiki/Q108665182
   type: wikidata
-name: EuroGeographics
+acronyms:
+- lang: en
+  value: EuroGeographics
+legal_status: international non-profit association
+recognition_status: International not-for-profit membership association (AISBL under Belgian law) representing European National Mapping, Cadastral and Land Registry Authorities; created in 2000 by merger of the Comité Européen des Responsables de la Cartographie Officielle (CERCO) and the Multi-purpose European Ground Related Information Network (MEGRIN); incorporated as an AISBL in 2010 and moved its head office to Brussels
+headquarters:
+  city: Brussels
+  country: BE
+  coordinates:
+    lat: 50.846666666666664
+    lng: 4.351666666666667
+secretariat:
+  location: Brussels
+  organization: EuroGeographics Head Office
+wikidata_id: Q108665182
+description: Not-for-profit membership association for the European National Mapping, Cadastral and Land Registry Authorities (NMCAs). EuroGeographics brings together authoritative geospatial data and collective expertise across national boundaries, harmonising and edge-matching members' national datasets into pan-European products such as EuroBoundaryMap, EuroGlobalMap, and EuroDEM. The association represents members' interests in EU and global geospatial policy, provides knowledge exchange and capacity building, and serves as the European secretariat for the UN Committee of Experts on Global Geospatial Information Management (UN-GGIM). Full, Associate, and Observer membership categories are open to national bodies in geographic Europe responsible for geodetic surveying, topographic mapping, cadastral surveys, and land registration.
 includes:
 - id: AL
   name: Albania
@@ -52,7 +80,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czech Republic
+  name: Czechia
   type: country
   status: member
 - id: DK
@@ -99,6 +127,10 @@ includes:
   name: Italy
   type: country
   status: member
+- id: KV
+  name: Kosovo
+  type: country
+  status: member
 - id: LV
   name: Latvia
   type: country
@@ -123,12 +155,12 @@ includes:
   name: Montenegro
   type: country
   status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
 - id: MK
   name: North Macedonia
+  type: country
+  status: member
+- id: NL
+  name: Netherlands
   type: country
   status: member
 - id: 'NO'
@@ -145,10 +177,6 @@ includes:
   status: member
 - id: RO
   name: Romania
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
   type: country
   status: member
 - id: RS
@@ -176,7 +204,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
 - id: UA
@@ -188,35 +216,62 @@ includes:
   type: country
   status: member
 membership_count: 44
-description: The EuroGeographics is an international organization that is used to
-  promote regional cooperation in the geography sector.
 tags:
 - EUROGEOGRAPHICS
+- cadastre
+- cartography
+- geospatial
 - intorg
+- mapping
+- nmca
+- regional
 topics:
-- key: economy
-  name: Economy
-wikidata_id: Q108665182
+- key: geospatial
+  name: Geospatial
+- key: spatial_information
+  name: Spatial Information
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: standardization
+  name: Standardization
 other_names:
 - id: en
   name: EuroGeographics
+- id: en
+  name: EuroGeographics AISBL
 - id: fr
   name: EuroGeographics
-founded: '2011-02-09'
+notes: Participation of the Federal Service for State Registration, Cadastre and Cartography (Rosreestr, Russia) and the State Committee on Property of the Republic of Belarus was suspended on 8 March 2022 following Russia's military offensive in Ukraine; Belarus remains listed in the 2024 member roster but Russia is omitted from the 2024 Annual Review member list. Kosovo designation follows UNSCR 1244 and the ICJ Opinion on the Kosovo Declaration of Independence.
 provenance:
-- field: founded
+- field: includes
+  source: EuroGeographics Annual Review 2024
+  retrieved_at: '2026-07-29'
+  url: https://eurogeographics.org/app/uploads/2025/06/EuroGeographics-Annual-Review-2024.pdf
+- field: description
+  source: EuroGeographics official website
+  retrieved_at: '2026-07-29'
+  url: https://eurogeographics.org/about-us/
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q108665182
   license: CC0
 - field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-12'
+  source: Wikidata; EuroGeographics official website
+  retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q108665182
   license: CC0
-headquarters:
-  city: Brussels
-  coordinates:
-    lat: 50.846666666666664
-    lng: 4.351666666666667
-last_verified: '2026-07-12'
+- field: founded
+  source: EuroGeographics official website
+  retrieved_at: '2026-07-29'
+  url: https://eurogeographics.org/about-us/history/
+- field: recognition_status
+  source: EuroGeographics official website
+  retrieved_at: '2026-07-29'
+  url: https://eurogeographics.org/about-us/history/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q108665182
+  license: CC0
+last_verified: '2026-07-29'

@@ -19,7 +19,6 @@ import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.validate import country_rules, cross_rules
-from internacia_builder.validate.output import emit_validation_result
 from internacia_builder.validate.country_rules import (  # noqa: F401 (re-exported API)
     CODE_STATUSES,
     ENTITY_TYPES,
@@ -27,6 +26,7 @@ from internacia_builder.validate.country_rules import (  # noqa: F401 (re-export
     NON_ISO_ALPHA2,
     is_null_field,
 )
+from internacia_builder.validate.output import emit_validation_result
 
 app = typer.Typer(help="Validate internacia-db country data")
 
@@ -85,6 +85,18 @@ def validate_provenance_freshness(
 
 def validate_provenance_integrity(record: dict[str, Any], rel_path: str) -> list[str]:
     return _messages(country_rules.check_provenance_integrity(record), rel_path)
+
+
+def validate_provenance_count(
+    record: dict[str, Any],
+    rel_path: str,
+    *,
+    min_count: int,
+) -> list[str]:
+    return _messages(
+        country_rules.check_provenance_count(record, min_count=min_count),
+        rel_path,
+    )
 
 
 def validate_centroid_coords(record: dict[str, Any], rel_path: str) -> list[str]:
@@ -305,6 +317,8 @@ def run_validation(
     region_allowlist = {
         str(x) for x in ((completeness_cfg.get("region_hierarchy") or {}).get("allowlist") or [])
     }
+    prov_cfg = completeness_cfg.get("provenance") or {}
+    prov_min_count = int(prov_cfg.get("min_count") or 0)
 
     yaml_files = sorted(countries_dir.glob("*.yaml"))
     if not yaml_files:
@@ -333,6 +347,8 @@ def run_validation(
         warnings.extend(validate_centroid_coords(record, rel))
         warnings.extend(validate_currency_codes(record, rel))
         warnings.extend(validate_provenance_integrity(record, rel))
+        if prov_min_count > 0:
+            warnings.extend(validate_provenance_count(record, rel, min_count=prov_min_count))
         warnings.extend(validate_locale_fields(record, rel))
         warnings.extend(validate_region_hierarchy(record, rel, region_allowlist))
         warnings.extend(validate_capital_distance(record, rel, completeness_cfg))

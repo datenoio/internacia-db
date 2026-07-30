@@ -1,133 +1,190 @@
 id: RIOPACT
+name: Inter-American Treaty of Reciprocal Assistance
 blocktype:
 - military
 - political
 status: formal
-languages:
-- en
-- es
-- pt
-links:
-- url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance
-  type: wikipedia
-name: Inter-American Treaty of Reciprocal Assistance
 founded: '1947-09-02'
 geographic_scope: regional
 regions:
 - Americas
+languages:
+- en
+- es
+- fr
+- pt
+links:
+- url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q1410645
+  type: wikidata
+- url: https://www.oas.org/en/sla/english/treaty_B-29_Inter-American_Treaty_of_Reciprocal_Assistance.asp
+  type: website
+acronyms:
+- lang: en
+  value: TIAR
+- lang: en
+  value: Rio Pact
+- lang: en
+  value: Rio Treaty
+- lang: es
+  value: TIAR
+legal_status: treaty
+wikidata_id: Q1410645
+description: Hemispheric collective security treaty signed in Rio de Janeiro on 2 September 1947 and in force from 3 December
+  1948, establishing that an armed attack against any American state shall be considered an attack against all parties. Known
+  as the Rio Pact or TIAR (Tratado Interamericano de Asistencia Recíproca), it was the first post-war mutual security agreement
+  in the Americas and provided the regional defense framework alongside the OAS. Invoked during the Cuban Missile Crisis (1962)
+  and after the September 11 attacks (2001). Several Latin American states withdrew in the 2000s and 2010s; as of 2024 eighteen
+  parties remain.
 includes:
 - id: AR
   name: Argentina
   type: country
   status: member
-  joined: '1947-09-02'
-- id: BO
-  name: Bolivia
+  joined: '1948-12-03'
+- id: BS
+  name: Bahamas, The
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1982'
+- id: BO
+  name: Bolivia, Plurinational State of
+  type: country
+  status: former_member
+  joined: '1948-12-03'
+  left: '2012-10-17'
 - id: BR
   name: Brazil
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: CL
   name: Chile
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: CO
   name: Colombia
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: CR
   name: Costa Rica
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: CU
   name: Cuba
   type: country
-  status: member
-  joined: '1947-09-02'
+  status: former_member
+  joined: '1948-12-03'
   left: '1962'
 - id: DO
   name: Dominican Republic
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: EC
   name: Ecuador
   type: country
-  status: member
-  joined: '1947-09-02'
+  status: former_member
+  joined: '1948-12-03'
+  left: '2014-02-19'
 - id: SV
   name: El Salvador
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: GT
   name: Guatemala
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: HT
   name: Haiti
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: HN
   name: Honduras
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: MX
   name: Mexico
   type: country
-  status: member
-  joined: '1947-09-02'
+  status: former_member
+  joined: '1948-12-03'
+  left: '2004-09'
 - id: NI
   name: Nicaragua
   type: country
-  status: member
-  joined: '1947-09-02'
+  status: former_member
+  joined: '1948-12-03'
+  left: '2012-09-20'
 - id: PA
   name: Panama
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: PY
   name: Paraguay
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: PE
   name: Peru
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '1967'
 - id: US
   name: United States
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: UY
   name: Uruguay
   type: country
   status: member
-  joined: '1947-09-02'
+  joined: '1948-12-03'
 - id: VE
-  name: Venezuela
+  name: Venezuela, RB
   type: country
   status: member
-  joined: '1947-09-02'
-membership_count: 21
-legal_status: intergovernmental
-description: Mutual defense treaty among countries in the Americas, establishing that an attack against one is considered
-  an attack against all signatories.
+  joined: '1948-12-03'
+membership_count: 18
+founding_members:
+- AR
+- BO
+- BR
+- CL
+- CO
+- CR
+- CU
+- DO
+- EC
+- SV
+- GT
+- HT
+- HN
+- MX
+- NI
+- PA
+- PY
+- PE
+- US
+- UY
+- VE
 tags:
+- TIAR
 - defense
+- hemispheric_defense
 - military
 - political
 - reciprocal
@@ -145,18 +202,67 @@ topics:
   name: Regional Cooperation
 - key: security
   name: Security
-wikidata_id: Q1410645
+other_names:
+- id: de
+  name: Interamerikanischer Vertrag über gegenseitigen Beistand
+- id: en
+  name: Inter-American Treaty of Reciprocal Assistance
+- id: en
+  name: Rio Pact
+- id: en
+  name: Rio Treaty
+- id: en
+  name: Treaty of Reciprocal Assistance
+- id: es
+  name: Tratado Interamericano de Asistencia Recíproca
+- id: fr
+  name: traité interaméricain d'assistance réciproque
+- id: ja
+  name: 米州共同防衛条約
+- id: ko
+  name: 미주상호원조조약
+- id: pt
+  name: Tratado Interamericano de Assistência Recíproca
+- id: ru
+  name: Межамериканский договор о взаимной помощи
+- id: zh
+  name: 美洲国家间互助条约
+notes: Signed at Rio de Janeiro on 2 September 1947; entered into force 3 December 1948 after ratification by two-thirds of
+  signatories (23 total signatories, 18 current parties). Cuba was suspended from treaty rights and obligations in 1962. Mexico
+  denounced the treaty in September 2002 and ceased to be a party in September 2004. Bolivia, Ecuador, and Nicaragua withdrew
+  in 2012–2014. Venezuela denounced the treaty in May 2013; the opposition-led National Assembly approved reincorporation in
+  2019 amid the presidential crisis. Uruguay briefly denounced the treaty in 2019 but withdrew its denunciation in March 2020.
+  Trinidad and Tobago acceded in 1967 and The Bahamas in 1982. Canada is not a party.
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1410645
+  license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1410645
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q1410645
   license: CC0
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance
+  source: Organization of American States
+  retrieved_at: '2026-07-29'
+  url: https://www.oas.org/en/sla/english/treaty_B-29_Inter-American_Treaty_of_Reciprocal_Assistance.asp
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Inter-American_Treaty_of_Reciprocal_Assistance

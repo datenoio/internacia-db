@@ -1,27 +1,46 @@
 id: CIMH
+name: Caribbean Institute for Meteorology and Hydrology
 blocktype:
 - meteorology
 - intorg
 - research
 status: formal
+partof: CMO
+founded: '1967'
+active_period:
+  start: '1967'
+geographic_scope: regional
+regions:
+- Americas
+- Caribbean
 languages:
 - en
 links:
 - url: https://www.cimh.edu.bb/
   type: website
+- url: https://caricom.org/institutions/caribbean-institute-for-meteorology-and-hydrology-cimh/
+  type: website
+- url: http://www.cmo.org.tt/members.html
+  type: website
 - url: https://en.wikipedia.org/wiki/Caribbean_Institute_for_Meteorology_and_Hydrology
   type: wikipedia
-name: Caribbean Institute for Meteorology and Hydrology
-founded: '1967'
-headquarters:
-  city: Bridgetown
-  country: BB
-  coordinates:
-    lat: 13.0975
-    lng: -59.6167
+- url: https://www.wikidata.org/wiki/Q5039397
+  type: wikidata
 acronyms:
 - lang: en
   value: CIMH
+legal_status: intergovernmental
+recognition_status: CARICOM institution and technical organ of the Caribbean Meteorological Organization (CMO); established in 1967 as the Caribbean Meteorological Institute and renamed in September 1999 after amalgamation with the Caribbean Operational Hydrological Institute
+headquarters:
+  city: Husbands
+  country: BB
+  coordinates:
+    lat: 13.187
+    lng: -59.637
+secretariat:
+  location: Husbands, St. James, Barbados
+  head: Principal
+  organization: Caribbean Institute for Meteorology and Hydrology
 includes:
 - id: AI
   name: Anguilla
@@ -88,16 +107,19 @@ includes:
   type: territory
   status: member
 membership_count: 16
-description: Technical arm of the Caribbean Meteorological Organization providing training, research, and climate services
-  for weather observers, forecasters, and hydrology specialists.
+description: Regional meteorological and hydrological institute in Barbados serving the sixteen English-speaking Caribbean countries and territories that comprise the Caribbean Meteorological Organization. CIMH provides degree-level and professional training, research, climate services, instrument calibration, and operational support—including the Caribbean Drought and Precipitation Monitoring Network and Caribbean Precipitation Outlook—as the CMO's research and climate centre.
 tags:
 - CIMH
 - meteorology
 - caribbean
+- caricom
 - research
 - training
 - hydrology
 - climate
+- weather
+- regional
+- regional_cooperation
 - intorg
 topics:
 - key: meteorology
@@ -106,17 +128,45 @@ topics:
   name: Research
 - key: education
   name: Education
+- key: environment
+  name: Environment
+- key: regional_cooperation
+  name: Regional Cooperation
+- key: capacity_building
+  name: Capacity Building
 other_names:
 - id: en
   name: Caribbean Institute for Meteorology and Hydrology
+- id: en
+  name: Caribbean Meteorological Institute
 wikidata_id: Q5039397
 provenance:
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-14'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q5039397
   license: CC0
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
   url: https://www.cimh.edu.bb/
+- field: includes
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: http://www.cmo.org.tt/members.html
+- field: description
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://caricom.org/institutions/caribbean-institute-for-meteorology-and-hydrology-cimh/
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://caricom.org/institutions/caribbean-institute-for-meteorology-and-hydrology-cimh/
+- field: regions
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://caricom.org/institutions/caribbean-institute-for-meteorology-and-hydrology-cimh/
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://caricom.org/institutions/caribbean-institute-for-meteorology-and-hydrology-cimh/

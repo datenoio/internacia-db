@@ -2,10 +2,22 @@ id: BTE
 blocktype:
 - gaspipeline
 status: de-facto
+links:
+- url: https://www.bp.com/en/global/corporate/what-we-do/bp-worldwide/bp-in-azerbaijan/south-caucasus-pipeline.html
+  type: website
+- url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q572699
+  type: wikidata
 name: Baku–Tbilisi–Erzurum pipeline
 acronyms:
 - lang: en
   value: BTE
+- lang: en
+  value: SCP
+geographic_scope: regional
+regions:
+- Asia
 includes:
 - id: AZ
   name: Azerbaijan
@@ -20,19 +32,30 @@ includes:
   type: country
   status: member
 membership_count: 3
-description: Baku–Tbilisi–Erzurum pipeline is an international gaspipeline body with
-  3 members.
+wikidata_id: Q572699
+description: Natural gas pipeline from the Shah Deniz gas field in the Azerbaijan sector
+  of the Caspian Sea to Erzurum, Turkey, via Georgia. Also known as the South Caucasus
+  Pipeline (SCP); runs parallel to the Baku–Tbilisi–Ceyhan oil pipeline. Commissioned in
+  2006 and operated by a BP-led consortium, it is the first link of the Southern Gas Corridor
+  and connects to TANAP at the Turkish border.
+founded: '2006'
 tags:
 - BTE
+- azerbaijan
 - baku
-- tbilisi
-- erzurum
+- caucasus
 - economy
 - energy
 - gaspipeline
+- georgia
 - pipeline
+- shah-deniz
+- southern-gas-corridor
+- tbilisi
+- erzurum
 - transport
 - transportation
+- turkey
 topics:
 - key: economy
   name: Economy
@@ -40,7 +63,73 @@ topics:
   name: Energy
 - key: transport
   name: Transport
+other_names:
+- id: ar
+  name: خط انابيب الغاز باكو - تبيليسي- ارضروم
+- id: az
+  name: Bakı-Tbilisi-Ərzurum qaz kəməri
+- id: ca
+  name: gasoducte Bakú–Tbilisi–Erzurum
+- id: cs
+  name: Jihokavkazský plynovod
+- id: de
+  name: Südkaukasus-Pipeline
+- id: en
+  name: South Caucasus Pipeline
+- id: es
+  name: Gasoducto del Cáucaso del Sur
+- id: fr
+  name: Gazoduc Bakou-Tbilissi-Erzurum
+- id: it
+  name: Gasdotto Baku-Tbilisi-Erzurum
+- id: nl
+  name: Zuid-Kaukasus-pijplijn
+- id: pl
+  name: Gazociąg Południowokaukaski
+- id: ru
+  name: Южнокавказский газопровод
+- id: tr
+  name: Bakü-Tiflis-Erzurum Doğalgaz Boru Hattı
+- id: uk
+  name: Південно-Кавказький газогін
+- id: zh
+  name: 南高加索天然氣管線
+notes: The 692 km line runs from the Sangachal terminal near Baku through Georgia to
+  Erzurum in eastern Turkey. Gas is sourced from the Shah Deniz field; capacity was expanded
+  via SCPx to feed TANAP and the Southern Gas Corridor.
 provenance:
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q572699
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q572699
+  license: CC0
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
+- field: geographic_scope
   source: inferred grouping
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-07-29'
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q572699
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-30'
+  url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
+last_verified: '2026-07-30'

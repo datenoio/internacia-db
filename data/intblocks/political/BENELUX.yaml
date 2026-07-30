@@ -2,11 +2,15 @@ id: BENELUX
 blocktype:
 - political
 status: formal
+founded: '1944-09-05'
+geographic_scope: regional
+regions:
+- Europe
 languages:
 - fr
 - nl
 links:
-- url: http://www.benelux.int/
+- url: https://www.benelux.int/
   type: website
 - url: https://en.wikipedia.org/wiki/Benelux
   type: wikipedia
@@ -18,15 +22,21 @@ includes:
   name: Belgium
   type: country
   status: member
+  joined: '1944-09-05'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1944-09-05'
 - id: LU
   name: Luxembourg
   type: country
   status: member
-founded: '1944'
+  joined: '1944-09-05'
+founding_members:
+- BE
+- NL
+- LU
 headquarters:
   city: City of Brussels
   country: BE
@@ -34,57 +44,122 @@ headquarters:
     lat: 50.846666666666664
     lng: 4.351666666666667
 membership_count: 3
+legal_status: intergovernmental
 wikidata_id: Q13116
-description: Politico-economic union between Belgium, the Netherlands and Luxembourg.
+description: Politico-economic union and formal intergovernmental cooperation of Belgium,
+  the Netherlands, and Luxembourg in Western Europe. The name is a syllabic abbreviation
+  of the three member states. Originated with the London Customs Convention signed on
+  5 September 1944; the Benelux Economic Union treaty entered into force in 1960 and
+  was renewed as the Benelux Union in 2008. Often regarded as a precursor to European
+  integration and a pilot for cross-border EU cooperation.
 tags:
 - BENELUX
 - benelux
 - cooperation
+- customs
+- low_countries
 - political
 - regional
 - regional_cooperation
+- union
+- western_europe
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
+- key: economy
+  name: Economy
 other_names:
 - id: ar
   name: بنلوكس
 - id: de
   name: Benelux
+- id: de
+  name: Benelux-Wirtschaftsunion
 - id: en
   name: Benelux
+- id: en
+  name: Benelux Union
+- id: en
+  name: Benelux Economic Union
+- id: en
+  name: Benelux Customs Union
 - id: es
   name: Benelux
 - id: fr
   name: Benelux
+- id: fr
+  name: Union Benelux
+- id: fr
+  name: Union Économique Benelux
+- id: nl
+  name: Benelux Unie
+- id: nl
+  name: Benelux Economische Unie
 - id: pt
   name: Benelux
+- id: pt
+  name: União Econômica Benelux
 - id: ru
   name: Бенилюкс
 - id: zh
   name: 比荷盧聯盟
+acronyms:
+- lang: en
+  value: BENELUX
+- lang: zh
+  value: 比荷盧三國關稅同盟
+notes: The London Customs Convention (1944) established the Benelux Customs Union, ratified
+  in 1947 and in force from 1948. The Benelux Economic Union treaty was signed in 1958
+  and entered into force in 1960. A renewed treaty signed in 2008 renamed the arrangement
+  the Benelux Union. Institutions include the Committee of Ministers, Benelux Council,
+  Interparliamentary Assembly, Court of Justice, and General Secretariat in Brussels.
+  The Benelux also helped launch the Schengen process (1985).
+last_verified: '2026-07-29'
 provenance:
-- field: description
+- field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13116
   license: CC0
+- field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Benelux
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13116
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13116
   license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Benelux
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13116
+  license: CC0
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Benelux
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
-  url: http://www.benelux.int/
-acronyms:
-- lang: zh
-  value: 比荷盧三國關稅同盟
+  url: https://www.benelux.int/
+- field: links
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q13116
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Benelux

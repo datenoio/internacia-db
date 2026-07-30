@@ -1,55 +1,116 @@
 id: BALTRON
+name: Baltic Naval Squadron
 blocktype:
 - military
 status: formal
-founded: '1998'
+founded: '1998-08-28'
 geographic_scope: regional
+regions:
+- Baltic
+- Europe
 languages:
 - en
+- et
+- lv
+- lt
 links:
-- url: https://en.wikipedia.org/wiki/BALTRON
+- url: https://en.wikipedia.org/wiki/Baltic_Naval_Squadron
   type: wikipedia
-name: The Baltic Naval Squadron - BALTRON
+- url: https://www2.mfa.gov.lv/en/security-policy/co-operation-with-nato-member-states-and-candidate-countries/baltic-defence-co-operation-main-joint-projects
+  type: website
+acronyms:
+- lang: en
+  value: BALTRON
+legal_status: intergovernmental
+headquarters:
+  city: Tallinn
+  country: EE
+description: Trilateral Baltic naval cooperation project among Estonia, Latvia, and Lithuania, inaugurated in August 1998 to
+  improve interoperability, mine countermeasures capability, and readiness for NATO-led operations. Each state contributes
+  ships on rotation and staff for one-year assignments; Estonia hosts the BALTRON staff and communications training centre.
+  Supporting nations signed a 1998 memorandum of understanding to assist development of the squadron as a mine countermeasures
+  force aligned with NATO standards.
 includes:
 - id: EE
   name: Estonia
   type: country
   status: member
-  joined: '1998'
+  joined: '1998-08-28'
 - id: LV
   name: Latvia
   type: country
   status: member
-  joined: '1998'
+  joined: '1998-08-28'
 - id: LT
   name: Lithuania
   type: country
   status: member
-  joined: '1998'
+  joined: '1998-08-28'
 membership_count: 3
 founding_members:
 - EE
 - LV
 - LT
-description: The Baltic Naval Squadron - BALTRON is an international military body
-  with 3 members.
 tags:
 - BALTRON
 - baltic
+- cooperation
 - defense
+- maritime
 - military
+- mine_countermeasures
 - naval
+- regional
+- regional_cooperation
 - security
 topics:
+- key: maritime
+  name: Maritime
 - key: military
   name: Military
+- key: regional_cooperation
+  name: Regional Cooperation
 - key: security
   name: Security
+other_names:
+- id: en
+  name: BALTRON
+- id: en
+  name: Baltic Naval Squadron
+- id: et
+  name: Balti mereväeeskadrill
+- id: lv
+  name: Baltijas jūras eskadriļa
+- id: lt
+  name: Baltijos jūrų eskadra
+notes: Intergovernmental agreement on establishment signed in Riga on 16 April 1998; inauguration ceremony held at Tallinn Naval
+  Base on 28 August 1998. Twelve supporting nations signed a June 1998 memorandum of understanding to assist development of
+  BALTRON. In 2015 Estonia withdrew its permanent ship contribution while remaining in the framework; Latvia and Lithuania
+  continue rotating mine countermeasures units. Related Baltic defence cooperation projects include BALTBAT, BALTNET, and
+  BALTDEFCOL.
+last_verified: '2026-07-29'
 provenance:
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://en.wikipedia.org/wiki/BALTRON
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Naval_Squadron
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Naval_Squadron
+- field: founded
+  source: Estonian Ministry of Defence
+  retrieved_at: '2026-07-29'
+  url: https://www.digar.ee/arhiiv/en/download/116368
+- field: headquarters
+  source: Ministry of Foreign Affairs of Latvia
+  retrieved_at: '2026-07-29'
+  url: https://www2.mfa.gov.lv/en/security-policy/co-operation-with-nato-member-states-and-candidate-countries/baltic-defence-co-operation-main-joint-projects
+- field: legal_status
+  source: Estonian Ministry of Defence
+  retrieved_at: '2026-07-29'
+  url: https://www.digar.ee/arhiiv/en/download/116368
+- field: geographic_scope
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Baltic_Naval_Squadron

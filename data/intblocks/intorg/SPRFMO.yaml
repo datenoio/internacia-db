@@ -1,91 +1,131 @@
 id: SPRFMO
+name: South Pacific Regional Fisheries Management Organisation
 blocktype:
 - intorg
 status: formal
+founded: '2012-08-24'
+active_period:
+  start: '2012-08-24'
+geographic_scope: regional
+regions:
+- Asia-Pacific
+- Pacific
+- South America
 languages:
 - en
 links:
 - url: https://www.sprfmo.int/
   type: website
+- url: https://sprfmo.int/about/participation
+  type: website
+- url: https://www.sprfmo.int/about/docs/article-38-entry-into-force
+  type: website
 - url: https://en.wikipedia.org/wiki/South_Pacific_Regional_Fisheries_Management_Organisation
   type: wikipedia
-name: South Pacific Regional Fisheries Management Organisation
-founded: '2012'
+- url: https://www.wikidata.org/wiki/Q21663305
+  type: wikidata
+acronyms:
+- lang: en
+  value: SPRFMO
+legal_status: intergovernmental
+recognition_status: Regional fisheries management organisation established by the Convention on the Conservation and Management of High Seas Fishery Resources in the South Pacific Ocean (signed 14 November 2009 in Auckland; entered into force 24 August 2012); New Zealand is depositary
 headquarters:
   city: Wellington
   country: NZ
   coordinates:
-    lat: -41.2865
-    lng: 174.7762
+    lat: -41.2858901
+    lng: 174.7726154
+wikidata_id: Q21663305
+description: Regional fisheries management organisation for the conservation and sustainable use of high-seas fishery resources in the South Pacific Ocean, established when the SPRFMO Convention entered into force on 24 August 2012. The Commission comprises 17 Members (16 States plus the European Union, with Chinese Taipei participating as a fishing entity under Annex IV) and two Cooperating non-Contracting Parties (Curaçao and Liberia). Main commercial targets include jack mackerel and jumbo flying squid in the Southeast Pacific and deep-sea species associated with seamounts in the Southwest Pacific. The Secretariat is headquartered in Wellington, New Zealand.
 includes:
 - id: AU
   name: Australia
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: BZ
   name: Belize
   type: country
   status: member
+  joined: '2023-02-22'
+  note: Previously acceded 10 May 2011; withdrew effective 1 May 2016; re-acceded 23 January 2023
 - id: CL
   name: Chile
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2013-07-06'
 - id: CK
   name: Cook Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: CU
   name: Cuba
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: EC
   name: Ecuador
   type: country
   status: member
+  joined: '2015-06-10'
 - id: EU
   name: European Union
   type: organization
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: FO
   name: Faroe Islands
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
+  note: Contracting Party on behalf of the Faroe Islands (Kingdom of Denmark)
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: NZ
   name: New Zealand
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: PA
   name: Panama
   type: country
   status: member
+  joined: '2022-07-07'
 - id: PE
   name: Peru
   type: country
   status: member
+  joined: '2016-01-21'
 - id: RU
   name: Russian Federation
   type: country
-  status: member
+  status: founding_member
+  joined: '2012-08-24'
 - id: TW
   name: Chinese Taipei
   type: country
-  status: member
+  status: participant
+  joined: '2012-09-23'
+  note: Participating fishing entity under Annex IV of the Convention
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
+  joined: '2017-02-18'
 - id: VU
   name: Vanuatu
   type: country
   status: member
+  joined: '2013-12-04'
 - id: CW
   name: Curaçao
   type: country
@@ -94,32 +134,102 @@ includes:
   name: Liberia
   type: country
   status: cooperating
-acronyms:
-- lang: en
-  value: SPRFMO
+founding_members:
+- AU
+- BZ
+- CL
+- CK
+- CU
+- FO
+- KR
+- NZ
+- RU
 membership_count: 17
-description: South Pacific Regional Fisheries Management Organisation is an international
-  intorg body with 17 members.
 tags:
 - SPRFMO
+- RFMO
 - agriculture
+- conservation
+- environment
 - farming
 - fisheries
 - intorg
+- intergovernmental
+- ocean
 - pacific
 - regional
 - south
 topics:
 - key: agriculture
   name: Agriculture
+- key: environment
+  name: Environment
+- key: maritime
+  name: Maritime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
+- id: de
+  name: SPRFMO
 - id: en
   name: South Pacific Regional Fisheries Management Organisation
+- id: ko
+  name: 남태평양지역수산관리기구
+- id: ru
+  name: СПРФМО
+- id: zh
+  name: 南太平洋区域渔业管理组织
+notes: The Convention was adopted on 14 November 2009 at Auckland and signed by Australia, Belize, Chile, China, the Cook Islands, the European Community, France, the Faroe Islands, Korea, New Zealand, Peru, the Russian Federation, the United States, and Chinese Taipei. France participates as an observer for its Oceanian territories; other state observers include Angola, Colombia, Japan, and Tonga. Cooperating non-Contracting Party status is governed by Decision 2-2018; as of March 2026, Curaçao and Liberia hold renewed CNCP status.
+last_verified: '2026-07-29'
 provenance:
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.sprfmo.int/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q21663305
+  license: CC0
+- field: includes
+  source: SPRFMO official sources; New Zealand MFAT (depositary)
+  retrieved_at: '2026-07-29'
+  url: https://sprfmo.int/about/participation
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: SPRFMO official sources; Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/
+- field: legal_status
+  source: SPRFMO official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/about/docs/article-38-entry-into-force
+- field: recognition_status
+  source: SPRFMO official sources; New Zealand MFAT
+  retrieved_at: '2026-07-29'
+  url: https://www.mfat.govt.nz/en/about-us/who-we-are/treaties/convention-on-the-conservation-and-management-of-high-seas-fishery-resources-in-the-south-pacific-ocean-sprfmo
+- field: geographic_scope
+  source: SPRFMO official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/
+- field: headquarters
+  source: SPRFMO official sources; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/
+  license: CC0
+- field: founding_members
+  source: SPRFMO official sources; New Zealand MFAT (depositary)
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/about/docs/article-38-entry-into-force
+- field: founded
+  source: SPRFMO official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/about/docs/article-38-entry-into-force
+- field: active_period
+  source: SPRFMO official sources
+  retrieved_at: '2026-07-29'
+  url: https://www.sprfmo.int/about/docs/article-38-entry-into-force
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q21663305
+  license: CC0
+- field: notes
+  source: SPRFMO official sources
+  retrieved_at: '2026-07-29'
+  url: https://sprfmo.int/about/participation

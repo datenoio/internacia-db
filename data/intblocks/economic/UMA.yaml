@@ -1,50 +1,87 @@
 id: UMA
+name: Arab Maghreb Union
 blocktype:
 - economic
 - political
 status: formal
+founded: '1989-02-17'
+geographic_scope: sub-regional
+regions:
+- Africa
 languages:
 - ar
 - en
 - fr
 links:
+- url: https://www.maghrebarabe.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q370862
   type: wikidata
-name: Arab Maghreb Union
-includes:
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-founded: '1989'
 acronyms:
 - lang: ar
   value: الاتحاد المغاربي
 - lang: en
   value: AMU
+- lang: en
+  value: UMA
+- lang: fr
+  value: UMA
 - lang: ru
   value: САМ
+headquarters:
+  city: Rabat
+  country: MA
+  coordinates:
+    lat: 34.0209
+    lng: -6.8416
+includes:
+- id: DZ
+  name: Algeria
+  type: country
+  status: founding_member
+  joined: '1989-02-17'
+- id: LY
+  name: Libya
+  type: country
+  status: founding_member
+  joined: '1989-02-17'
+- id: MA
+  name: Morocco
+  type: country
+  status: founding_member
+  joined: '1989-02-17'
+- id: MR
+  name: Mauritania
+  type: country
+  status: founding_member
+  joined: '1989-02-17'
+- id: TN
+  name: Tunisia
+  type: country
+  status: founding_member
+  joined: '1989-02-17'
+founding_members:
+- DZ
+- LY
+- MA
+- MR
+- TN
 membership_count: 5
+legal_status: intergovernmental
 wikidata_id: Q370862
-description: Trade agreement among Arab countries.
+description: >-
+  Intergovernmental political and economic union among Algeria, Libya, Mauritania, Morocco, and Tunisia, established
+  by treaty in Marrakech on 17 February 1989 to promote cooperation, economic integration, and eventual political unity
+  in the Maghreb. The Constitutive Act provides for a rotating presidency and a permanent secretariat in Rabat. Despite
+  formal membership remaining unchanged, summit-level activity has been largely suspended since 2008 because of deep
+  bilateral tensions, notably between Morocco and Algeria over Western Sahara.
+notes: >-
+  Egypt applied for membership in 1994 but was not admitted. No high-level AMU meetings have taken place since 3 July
+  2008; commentators widely regard the union as dormant. Algeria, Libya, and Tunisia have discussed alternative
+  North African cooperation formats without Morocco. Distinct from the geographic Maghreb region (MAGHREB) and from
+  broader Arab League (LAS) frameworks.
 tags:
 - UMA
 - aid
@@ -89,12 +126,41 @@ other_names:
   name: Союз арабского Магриба
 - id: zh
   name: 阿拉伯马格里布联盟
+last_verified: '2026-07-29'
 provenance:
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
+- field: founding_members
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
 - field: description
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
+- field: headquarters
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
+- field: legal_status
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q370862
   license: CC0
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-07-29'
+  url: https://en.wikipedia.org/wiki/Arab_Maghreb_Union
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

@@ -1,23 +1,53 @@
 id: WECAFC
+name: Western Central Atlantic Fishery Commission
 blocktype:
 - food
 status: formal
 partof: FAO
+founded: '1973'
+active_period:
+  start: '1973'
+geographic_scope: regional
+regions:
+- Caribbean
+- Latin America
+- Central America
 languages:
 - en
+- es
+- fr
 links:
-- url: http://www.fao.org/fishery/rfb/wecafc/en
+- url: https://www.fao.org/wecafc/en/
   type: website
-- url: https://www.wikidata.org/wiki/Q134724817
+- url: https://www.fao.org/fishery/en/organization/wecafc
+  type: website
+- url: https://www.fao.org/fi/static-media/MeetingDocuments/WECAFC/WECAFC2019/17/2e.pdf
+  type: website
+- url: https://www.wikidata.org/wiki/Q16189708
   type: wikidata
-name: Western Central Atlantic Fishery Commission
+acronyms:
+- lang: en
+  value: WECAFC
+- lang: es
+  value: COPACO
+- lang: fr
+  value: COPACO
+legal_status: intergovernmental
+recognition_status: FAO Article VI (1) statutory body established by FAO Council Resolution 4/61 (1973); statutes amended by the FAO Council at its 74th Session (December 1978) and 131st Session (November 2006); membership open to coastal States in the area of competence and to States whose vessels fish there that notify the FAO Director-General; secretariat provided by FAO
+headquarters:
+  city: Bridgetown
+  country: BB
+  coordinates:
+    lat: 13.0935
+    lng: -59.6105
+  note: Secretariat provided by FAO at the Subregional Office for the Caribbean (SLC)
 includes:
 - id: AG
   name: Antigua and Barbuda
   type: country
   status: member
 - id: BS
-  name: Bahamas
+  name: Bahamas, The
   type: country
   status: member
 - id: BB
@@ -28,16 +58,16 @@ includes:
   name: Belize
   type: country
   status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
 - id: BR
   name: Brazil
   type: country
   status: member
 - id: CO
   name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
   type: country
   status: member
 - id: CU
@@ -109,19 +139,19 @@ includes:
   type: country
   status: member
 - id: KR
-  name: Republic of Korea
+  name: Korea, Rep.
   type: country
   status: member
 - id: KN
-  name: Saint Kitts and Nevis
+  name: St. Kitts and Nevis
   type: country
   status: member
 - id: LC
-  name: Saint Lucia
+  name: St. Lucia
   type: country
   status: member
 - id: VC
-  name: Saint Vincent and the Grenadines
+  name: St. Vincent and the Grenadines
   type: country
   status: member
 - id: ES
@@ -141,48 +171,106 @@ includes:
   type: country
   status: member
 - id: US
-  name: United States of America
+  name: United States
   type: country
   status: member
 - id: VE
-  name: Venezuela
+  name: Venezuela, RB
   type: country
   status: member
 membership_count: 34
-description: Western Central Atlantic Fishery Commission is an international food
-  body with 34 members.
+description: FAO regional fishery body for the Western Central Atlantic (FAO Statistical Area 31 and the northern part of Area 41), established in 1973 under Article VI of the FAO Constitution. WECAFC promotes conservation, management, and development of living marine resources and addresses shared fisheries problems among its 34 members — coastal States of the Wider Caribbean and distant-water fishing States and the European Union that notify FAO of membership. It is an advisory body (not an RFMO with binding measures) that coordinates with CRFM and OSPESCA; its secretariat is hosted at FAO's Subregional Office for the Caribbean in Bridgetown.
 tags:
 - WECAFC
+- COPACO
 - agriculture
 - atlantic
-- central
+- caribbean
+- commission
+- conservation
 - environment
 - farming
+- fao
+- fisheries
 - food
+- intergovernmental
 - nature
+- regional
 - western
 topics:
 - key: agriculture
   name: Agriculture
+- key: conservation
+  name: Conservation
 - key: environment
   name: Environment
 - key: food
   name: Food
-wikidata_id: Q134724817
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: zh
-  name: 中西部大西洋渔业委员会
 - id: en
   name: Western Central Atlantic Fishery Commission
-acronyms:
-- lang: en
-  value: WECAFC
+- id: es
+  name: Comisión de Pesca del Atlántico Centro-Occidental
+- id: fr
+  name: Commission des pêches pour l'Atlantique Centre-Ouest
+- id: zh
+  name: 中西部大西洋渔业委员会
+- id: ko
+  name: 중서대서양 수산 위원회
+wikidata_id: Q16189708
+notes: Membership lists from FAO WECAFC session documents consistently report 34 members including Costa Rica, Nicaragua, and the European Union; Bolivia does not appear on official WECAFC rosters. Distant-water members include Guinea, Japan, the Republic of Korea, and Spain. France, the Netherlands, and the United Kingdom participate in respect of their Caribbean territories and dependencies. Statutes were last amended by the FAO Council in November 2006.
+last_verified: '2026-07-29'
 provenance:
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: FAO WECAFC session documents
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fi/static-media/MeetingDocuments/WECAFC/WECAFC2019/17/2e.pdf
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: FAO WECAFC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: founded
+  source: FAO WECAFC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: active_period
+  source: FAO WECAFC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: legal_status
+  source: FAO WECAFC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: recognition_status
+  source: FAO WECAFC; FAO Council Resolution 4/61
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: geographic_scope
+  source: FAO WECAFC
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/wecafc/en/
+- field: headquarters
+  source: FAO WECAFC session documents
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fi/static-media/MeetingDocuments/WECAFC16/13e.pdf
+- field: acronyms
+  source: FAO; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q16189708
+  license: CC0
+- field: other_names
+  source: FAO; Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q16189708
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-07-29'
+  url: https://www.wikidata.org/wiki/Q16189708
+  license: CC0
+- field: notes
+  source: FAO WECAFC session documents
+  retrieved_at: '2026-07-29'
+  url: https://www.fao.org/fi/static-media/MeetingDocuments/WECAFC/WECAFC2019/17/2e.pdf
