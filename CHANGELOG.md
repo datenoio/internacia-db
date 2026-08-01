@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-08-01
+
+Correct Guinea-Bissau UN membership and expand the verified DuckDB query cookbook.
+
 ### Fixed
 
 - Country **GW** (Guinea-Bissau): set `un_member: true` (was incorrectly `false`). The country-level flag now matches the `UN` intblock roster at **193** members; independent non-UN states shrink to Vatican City (`VA`) alone.
