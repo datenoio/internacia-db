@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Country **GW** (Guinea-Bissau): set `un_member: true` (was incorrectly `false`). The country-level flag now matches the `UN` intblock roster at **193** members; independent non-UN states shrink to Vatican City (`VA`) alone.
+
+### Changed
+
+- Expanded [docs/query-examples.md](docs/query-examples.md) with verified DuckDB recipes for near-universal org coverage (CN/US absences), former memberships and departure dates (via `intblocks.jsonl.zst`), roster density, observer seats, border/income patterns, `partof` hierarchy, and related cross-joins; expected counts updated for the GW fix. Covered by `tests/test_documented_queries.py`.
+- Rebuilt `data/datasets/` exports so consumers pick up the corrected `un_member` flag.
+
 ## [1.8.0] - 2026-07-30
 
 Membership and provenance enrichment: ~500 intblock records refreshed with sourced rosters, metadata, and provenance; intblocks row count **1076 → 1078** (three added, one duplicate merged).

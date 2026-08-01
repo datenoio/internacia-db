@@ -27,7 +27,7 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/agents/contribute.md](docs/agents/contribute.md) — YAML editing workflow
 - [docs/query-examples.zh.md](docs/query-examples.zh.md) — 已验证中文 DuckDB 示例
 - [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, scope boundaries
-- [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook
+- [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
 - [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
@@ -218,8 +218,8 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 | `official_name` | String | Official full name |
 | `languages` | List[Struct] | `{code, name, official}` |
 | `currencies` | List[Struct] | `{code, name, symbol}` |
-| `un_member` | Boolean | UN member |
-| `independent` | Boolean | Independent state |
+| `un_member` | Boolean | UN member (**193** `true`; aligns with the `UN` intblock roster) |
+| `independent` | Boolean | Independent state (non-UN independents: `VA` only) |
 | `subregion` | String | UN subregion |
 | `continents` | List[String] | Continents |
 | `borders` | List[String] | Land borders as ISO **alpha-3** codes |
