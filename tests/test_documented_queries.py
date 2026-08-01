@@ -1,11 +1,13 @@
 """Smoke tests for SQL examples documented in docs/query-examples.md."""
 
+import re
 from pathlib import Path
 
 import duckdb
 import pytest
 
 DUCKDB_PATH = Path(__file__).resolve().parents[1] / "data" / "datasets" / "internacia.duckdb"
+INTBLOCKS_JSONL_ZST = Path(__file__).resolve().parents[1] / "data" / "datasets" / "intblocks.jsonl.zst"
 
 pytestmark = pytest.mark.skipif(
     not DUCKDB_PATH.is_file(),
@@ -25,8 +27,8 @@ def con():
     [
         (
             "SELECT code FROM countries WHERE un_member = true",
-            190,
-            {"US", "FR", "TH"},
+            193,
+            {"US", "FR", "TH", "GW"},
         ),
         (
             "SELECT code FROM countries WHERE code_status = 'official_iso3166_1'",
@@ -108,3 +110,406 @@ def test_documented_query(con, sql, min_rows, expected_codes):
     assert len(rows) >= min_rows
     if expected_codes:
         assert expected_codes <= codes
+
+
+@pytest.mark.skipif(
+    not INTBLOCKS_JSONL_ZST.is_file(),
+    reason="intblocks.jsonl.zst not built",
+)
+def test_ru_former_member_march_2022(con):
+    jsonl_path = INTBLOCKS_JSONL_ZST.as_posix()
+    rows = con.execute(
+        f"""
+        SELECT i.id
+        FROM read_json('{jsonl_path}', format='newline_delimited') i,
+             UNNEST(CAST(i.includes AS JSON[])) AS t(m)
+        WHERE json_extract_string(m, '$.id') = 'RU'
+          AND json_extract_string(m, '$.type') = 'country'
+          AND json_extract_string(m, '$.status') = 'former_member'
+          AND (
+            json_extract_string(m, '$.left') LIKE '2022-03%'
+            OR json_extract_string(m, '$.note') ILIKE '%March 2022%'
+          )
+        ORDER BY i.id
+        """
+    ).fetchall()
+    assert [row[0] for row in rows] == ["ECHR", "EUA", "ICES"]
+
+
+def test_ru_former_members_only(con):
+    rows = con.execute(
+        """
+        SELECT i.id
+        FROM intblocks i, UNNEST(i.includes) AS t(m)
+        WHERE m.id = 'RU'
+          AND m.type = 'country'
+          AND m.status = 'former_member'
+        ORDER BY i.id
+        """
+    ).fetchall()
+    assert len(rows) == 11
+    assert {row[0] for row in rows} == {
+        "BEACST",
+        "DANUBECOM",
+        "EASTERNBLOC",
+        "ECHR",
+        "EUA",
+        "GRECO",
+        "ICES",
+        "JCPOA",
+        "NSS",
+        "OPENSKY",
+        "RAMSAR",
+    }
+
+
+MAJORITY_UN_MISSING_MAJOR_SQL = """
+WITH un AS (
+  SELECT code FROM countries WHERE un_member = true
+),
+un_count AS (
+  SELECT COUNT(*)::DOUBLE AS n FROM un
+),
+block_rosters AS (
+  SELECT
+    i.id,
+    COUNT(DISTINCT m.id) FILTER (
+      WHERE m.id IN (SELECT code FROM un)
+        AND COALESCE(m.status, 'member') != 'former_member'
+    ) AS un_members_in_roster,
+    bool_or(m.id = 'CN' AND COALESCE(m.status, 'member') != 'former_member') AS has_china,
+    bool_or(m.id = 'US' AND COALESCE(m.status, 'member') != 'former_member') AS has_usa
+  FROM intblocks i, UNNEST(i.includes) AS t(m)
+  WHERE m.type = 'country'
+  GROUP BY i.id
+)
+SELECT b.id
+FROM block_rosters b
+CROSS JOIN un_count u
+WHERE b.un_members_in_roster > u.n * 0.5
+  AND {condition}
+ORDER BY b.id
+"""
+
+
+@pytest.mark.parametrize(
+    "condition,expected_count,expected_ids",
+    [
+        (
+            "(NOT b.has_china OR NOT b.has_usa)",
+            28,
+            {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
+        ),
+        (
+            "NOT b.has_china AND b.has_usa",
+            2,
+            {"EGMONTGROUP", "IAU_UNIV"},
+        ),
+        (
+            "b.has_china AND NOT b.has_usa",
+            18,
+            {"CBD", "UNCLOS", "BASEL"},
+        ),
+        (
+            "NOT b.has_china AND NOT b.has_usa",
+            8,
+            {"NAM", "ICW", "APMINEBANCONVENTION"},
+        ),
+    ],
+    ids=[
+        "missing_cn_or_us",
+        "missing_china_only",
+        "missing_usa_only",
+        "missing_both",
+    ],
+)
+def test_majority_un_missing_major_powers(con, condition, expected_count, expected_ids):
+    rows = con.execute(MAJORITY_UN_MISSING_MAJOR_SQL.format(condition=condition)).fetchall()
+    ids = {row[0] for row in rows}
+    assert len(rows) == expected_count
+    assert expected_ids <= ids
+
+
+ADDITIONAL_RECIPES = [
+    (
+        """
+        SELECT c.code FROM countries c
+        WHERE c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='NATO' AND m.type='country')
+          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country')
+        ORDER BY c.code
+        """,
+        9,
+        {"US", "GB", "TR", "CA"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        WHERE c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country')
+          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EMU' AND m.type='country')
+        ORDER BY c.code
+        """,
+        7,
+        {"SE", "PL", "DK"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        WHERE c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country')
+          AND c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='BSEC' AND m.type='country' AND m.status='observer')
+        ORDER BY c.code
+        """,
+        9,
+        {"DE", "FR", "IT"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        WHERE c.un_member GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) DESC LIMIT 1
+        """,
+        1,
+        {"FR"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        WHERE c.un_member GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) ASC LIMIT 1
+        """,
+        1,
+        {"KP"},
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM (
+          SELECT m.id, COUNT(DISTINCT i.id) org_count FROM intblocks i, UNNEST(i.includes) t(m)
+          WHERE m.type='country' GROUP BY 1 HAVING org_count >= 100
+        ) d JOIN countries c ON c.code=d.id
+        WHERE c.un_member AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='OECD')
+        """,
+        155,
+        set(),
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
+        """,
+        13,
+        {"IN", "TH", "UA"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        WHERE c.landlocked AND c.un_member
+          AND c.code NOT IN (
+            SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m)
+            WHERE list_contains(i.blocktype,'trade') AND m.type='country'
+              AND COALESCE(m.status,'member') != 'former_member'
+          ) ORDER BY c.code
+        """,
+        5,
+        {"BT", "UZ", "AD"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c WHERE c.landlocked AND len(c.borders)=1 ORDER BY c.code
+        """,
+        3,
+        {"LS", "SM", "VA"},
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM countries c
+        WHERE c.incomeLevel.value IS NOT NULL AND len(c.borders) >= 2
+          AND NOT EXISTS (
+            SELECT 1 FROM UNNEST(c.borders) b(iso3) JOIN countries n ON n.iso3code=b.iso3
+            WHERE n.incomeLevel.value IS DISTINCT FROM c.incomeLevel.value)
+        """,
+        20,
+        set(),
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        WHERE len(c.borders) > 0 AND NOT EXISTS (
+          SELECT 1 FROM UNNEST(c.borders) b(iso3) JOIN countries n ON n.iso3code=b.iso3
+          WHERE n.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU')
+        ) ORDER BY c.code
+        """,
+        13,
+        {"BE", "VA", "AD"},
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks WHERE predecessor IS NOT NULL OR successor IS NOT NULL
+        """,
+        24,
+        set(),
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
+        """,
+        33,
+        set(),
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks child
+        JOIN intblocks parent ON list_contains(child.partof, parent.id)
+        JOIN intblocks grand ON list_contains(parent.partof, grand.id)
+        WHERE grand.id = 'UN'
+        """,
+        25,
+        set(),
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        WHERE c.entity_type='disputed_territory' GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) DESC LIMIT 1
+        """,
+        1,
+        {"KV"},
+    ),
+    (
+        """
+        SELECT c.code FROM countries c
+        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        WHERE c.independent=true AND c.un_member=false GROUP BY c.code ORDER BY c.code
+        """,
+        1,
+        {"VA"},
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks
+        WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
+        """,
+        200,
+        set(),
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks i, UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code=m.id
+        WHERE m.type='country' AND m.name IS NOT NULL AND m.name != c.name
+          AND NOT list_contains(c.common_names, m.name)
+        """,
+        1826,
+        set(),
+    ),
+    (
+        """
+        SELECT id FROM intblocks ORDER BY len(blocktype) DESC, id LIMIT 1
+        """,
+        1,
+        {"PICES"},
+    ),
+    (
+        """
+        SELECT headquarters.city FROM intblocks
+        WHERE status='formal' AND headquarters.city IN ('Geneva','New York','Vienna')
+        GROUP BY headquarters.city ORDER BY COUNT(*) DESC LIMIT 1
+        """,
+        1,
+        {"Geneva"},
+    ),
+    (
+        """
+        SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
+        WHERE topic.key = 'human_rights'
+        """,
+        15,
+        set(),
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM (
+          SELECT c.code FROM countries c
+          JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+          WHERE c.wikidata_id IS NOT NULL AND c.un_member
+          GROUP BY c.code HAVING COUNT(DISTINCT i.id) <= 130
+        )
+        """,
+        6,
+        set(),
+    ),
+]
+
+
+@pytest.mark.parametrize(
+    "sql,expected_count,expected_codes",
+    ADDITIONAL_RECIPES,
+    ids=[
+        "nato_not_eu",
+        "eu_not_emu",
+        "eu_member_bsec_observer",
+        "org_density_top",
+        "org_density_bottom",
+        "dense_not_oecd",
+        "observer_5plus",
+        "landlocked_no_trade",
+        "landlocked_enclave",
+        "border_income_homogeneous",
+        "all_neighbors_eu",
+        "successor_chains",
+        "dissolved_with_roster",
+        "un_grandchildren",
+        "disputed_top",
+        "non_un_independent",
+        "membership_count_mismatch",
+        "include_name_mismatch",
+        "most_blocktypes",
+        "hq_geneva_ny_vienna",
+        "human_rights_topics",
+        "wikidata_sparse",
+    ],
+)
+def test_additional_recipes(con, sql, expected_count, expected_codes):
+    rows = con.execute(sql).fetchall()
+    if re.match(r"\s*SELECT\s+COUNT\s*\(", sql, re.IGNORECASE | re.DOTALL):
+        assert len(rows) == 1
+        assert rows[0][0] == expected_count
+        return
+    codes = {row[0] for row in rows}
+    assert len(rows) == expected_count
+    if expected_codes:
+        assert expected_codes <= codes
+
+
+@pytest.mark.skipif(
+    not INTBLOCKS_JSONL_ZST.is_file(),
+    reason="intblocks.jsonl.zst not built",
+)
+def test_former_members_with_join_and_left(con):
+    jsonl_path = INTBLOCKS_JSONL_ZST.as_posix()
+    count = con.execute(
+        f"""
+        SELECT COUNT(*)
+        FROM read_json('{jsonl_path}', format='newline_delimited') i,
+             UNNEST(CAST(i.includes AS JSON[])) AS t(m)
+        WHERE json_extract_string(m, '$.status') = 'former_member'
+          AND json_extract_string(m, '$.joined') IS NOT NULL
+        """
+    ).fetchone()[0]
+    assert count == 199
+
+
+def test_jaccard_value(con):
+    value = con.execute(
+        """
+        WITH a AS (
+          SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='NATO' AND m.type='country'
+        ), b AS (
+          SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country'
+        )
+        SELECT ROUND(
+          (SELECT COUNT(*) FROM (SELECT id FROM a INTERSECT SELECT id FROM b)) * 1.0
+          / NULLIF((SELECT COUNT(*) FROM (SELECT id FROM a UNION SELECT id FROM b)), 0), 2
+        )
+        """
+    ).fetchone()[0]
+    assert value == 0.64
