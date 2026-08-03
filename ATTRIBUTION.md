@@ -55,3 +55,11 @@ Replace `<X.Y.Z>` with the release version you used (see the `version` field in
 `data/datasets/countries.manifest.json`). The DOI `10.5281/zenodo.21452328` is
 the Zenodo concept DOI and always resolves to the latest deposited version.
 Machine-readable citation metadata is in [`CITATION.cff`](CITATION.cff).
+
+## Distribution channels
+
+| Channel | Notes |
+|---------|-------|
+| GitHub Releases | Primary; Parquet/JSONL/DuckDB assets on each `v*` tag |
+| Zenodo | Concept DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328) |
+| Hugging Face Datasets | Optional mirror when `HF_TOKEN` is configured (see [docs/release-distribution.md](docs/release-distribution.md)) |

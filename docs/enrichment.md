@@ -66,4 +66,30 @@ Socioeconomic profile fields (HDI, GDP per capita, government type, internet pen
 
 ## Automation
 
-`.github/workflows/enrichment-check.yml` runs monthly (and on manual dispatch) to execute `enrich_countries.py check` and upload a report artifact. It does not modify data or open PRs automatically.
+`.github/workflows/enrichment-check.yml` runs monthly (and on `workflow_dispatch`):
+
+1. Freshness `check` + validation report (artifact always uploaded)
+2. `enrich_countries.py enrich` and `enrich_intblocks.py enrich`
+3. If YAML under `data/countries` / `data/intblocks` changed, opens a PR labeled
+   `enrichment` on branch `chore/monthly-enrichment`
+
+**Maintainer review expectations:** spot-check provenance dates and unexpected
+roster/value swings before merge. The workflow never pushes directly to `main`.
+
+Optional one-off seeds: `scripts/seed_country_crosswalks.py`,
+`scripts/label_scope_category.py`.
+
+## Intblock Wikidata completeness
+
+Every intblock must have `wikidata_id` **or** appear in
+[`data/schemas/wikidata_exclusions.yaml`](../data/schemas/wikidata_exclusions.yaml).
+
+Exclusion entries require: `id`, `reason`, `verified_at`, `source`.
+
+**Criteria for exclusion:** no Wikidata item exists after search; regional
+sub-bodies without distinct Q-ids; ephemeral enumerations; pending enrichment
+backfill after a documented audit.
+
+**Review cadence:** re-run `python scripts/enrich_intblocks.py enrich` (or the
+monthly enrichment workflow) and remove ids from the exclusion list when a
+Q-id is found. Validation fails (`MISSING_WIKIDATA_ID`) for records missing both.

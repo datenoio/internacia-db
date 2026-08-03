@@ -21,7 +21,7 @@ The countries dataset includes **256** records: **249** with current ISO 3166-1-
 |------|------|---------------|-------|
 | `AN` | Netherlands Antilles | `obsolete` | Dissolved; successors include `CW`, `SX`, `BQ` |
 | `JG` | Channel Islands | `user_assigned` | Collective grouping; **`GG` (Guernsey) and `JE` (Jersey) are canonical territory codes** for constituents |
-| `KV` | Kosovo | `user_assigned` | Commonly used code; not ISO 3166-1 official |
+| `XK` | Kosovo | `user_assigned` | De facto standard (EU, IMF, SWIFT, CLDR); not ISO 3166-1 official. Former codes `KV`/`KSV` in `countries_aliases.json` |
 | `XA` | Abkhazia | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
 | `XS` | South Ossetia | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
 | `XT` | Transnistria | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
@@ -33,8 +33,8 @@ All seven non-standard records carry **explicit** `un_member`, `un_status`, `ind
 ### Disputed-territory inclusion rule
 
 User-assigned records for de facto states exist **only where an intblock in this repository
-references the entity as a member** and a join target is therefore required (currently the
-CIS2 references to `XA`, `XS`, `XT`, `XN`, and the widely used `KV` for Kosovo). De facto
+references the entity as a member** and a join target is therefore required (currently
+CIS2 references to `XA`, `XS`, `XT`, `XN`, and Kosovo (`XK`, formerly `KV`)). De facto
 states that no intblock references — for example **Somaliland** and **Northern Cyprus** — do
 not receive records, regardless of their degree of de facto autonomy. If a future intblock
 addition references such an entity, a user-assigned record (e.g. `XL`, `XC`) is added in the
@@ -108,10 +108,26 @@ Four intblock references in `data/intblocks/political/CIS2.yaml` use `type: coun
 Consumers excluding non-standard codes:
 
 ```python
-df[~df["code"].isin(["AN", "JG", "KV", "XA", "XS", "XT", "XN"])]
+df[~df["code"].isin(["AN", "JG", "XK", "XA", "XS", "XT", "XN"])]
 ```
 
 Or filter on `code_status == "official_iso3166_1"` for the 249 ISO records only.
+
+## Country code aliases
+
+Retired or renamed country codes are mapped in `data/datasets/countries_aliases.json`
+(source: `data/countries_aliases.yaml`). When upgrading across releases, remap legacy
+codes before joining on `countries.code`:
+
+```python
+aliases = {a["alias"]: a["target"] for a in json.load(open("data/datasets/countries_aliases.json"))}
+code = aliases.get(raw_code, raw_code)
+```
+
+Current entries: `KV` → `XK`, `KSV` → `XKX` (Unreleased).
+
+Entity classification edge cases (Taiwan, Palestine, Kosovo, Western Sahara, etc.) are
+documented in [entity-classification-policy.md](entity-classification-policy.md).
 
 ## Borders convention
 

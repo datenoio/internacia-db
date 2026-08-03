@@ -30,6 +30,10 @@ to "**operate a dependable data product**." The next wins are less about interna
 and more about the **contract with consumers** — stable identifiers, versioning, licensing,
 crosswalks, and distribution.
 
+**Normative companion docs:** [intblock-inclusion-policy.md](intblock-inclusion-policy.md),
+[entity-classification-policy.md](entity-classification-policy.md),
+[getting-started.md](getting-started.md). Do not use `data/_legacy/` (see its README).
+
 ---
 
 ## 2. Users & Their Needs
@@ -47,7 +51,7 @@ crosswalks, and distribution.
 ## 3. What the Product Does Well Today (feature review)
 
 - **Multi-format export** (JSONL/YAML/Parquet/DuckDB, zstd-22) from a single `scripts/builder.py`.
-- **Two governed datasets**: countries (256) and intblocks (1,078) now both have schema +
+- **Two governed datasets**: countries (256) and intblocks (1,037) now both have schema +
   completeness + manifest + CI validation (intblocks reached parity in v1.3.0).
 - **Rich query surface via SDK**: lookup by code/iso3/numeric; filter by region, income,
   continent, currency, language, blocktype, member, acronym, tag, topic, founded year; and
@@ -128,9 +132,9 @@ change proposals before implementation.
 
 ### Track A — Consumer contract (do first; highest leverage, lowest effort)
 
-> **Status update (2026-08-02):** A1 (CC-BY-4.0 data license + `ATTRIBUTION.md` + SPDX fields in
-> manifests), A2 (ID-stability policy + `intblocks_aliases.{json,parquet}` validated in CI), and
-> A3 (`_meta` table in DuckDB + `*.meta.json` sidecars) are **shipped**. A4 (release diff) remains open.
+> **Status update (2026-08-03):** A1–A3 **shipped**. A4 (release diff) remains open.
+> Unreleased work also ships B4 crosswalks, C1 datapackage + data dictionary, E1 bbox
+> (centroids already present), and E2 GitHub issue templates. C2 DOI is shipped; HF listing optional.
 
 - **A1. ✅ Shipped — Re-license data** *(Critical, openspec)*: adopt a data license (recommend **CC-BY-4.0**, or
   **CC0** for the original compilation) alongside MIT for the code; add an `ATTRIBUTION.md` / `DATA_LICENSE`
@@ -138,11 +142,12 @@ change proposals before implementation.
   fields to manifests.
 - **A2. ✅ Shipped — ID-stability policy + alias map** *(Critical, openspec)*: publish a policy (when IDs may change),
   and ship `data/datasets/intblocks_aliases.{json,parquet}` mapping retired/renamed ids → current id,
-  generated from CHANGELOG history; validate it in CI.
+  generated from CHANGELOG history; validate it in CI. Country code aliases (`countries_aliases.json`) added for KV→XK.
 - **A3. ✅ Shipped — Self-describing datasets** *(High)*: embed a `_meta` table (version, build_date, git_commit,
   schema_hash, row_count) into `internacia.duckdb`; emit the same as `*.meta.json` next to Parquet.
 - **A4. Machine-readable release diff** *(High)*: emit `diff-vX.Y.Z.json` (added/removed/renamed/changed)
   as a release asset; reuse `diff_countries_baseline.py` logic generalized to both datasets.
+  Partial: `migration.vUnreleased.json` covers schema field add/remove; full release-content diff still open.
 
 ### Track B — Enrichment value (serves Dateno directly)
 - **B1. Wikidata backfill for intblocks** *(High)* — already scoped in `add-intblocks-gap-backlog`.
@@ -150,12 +155,13 @@ change proposals before implementation.
   (provenance required); track via a completeness metric.
 - **B3. Multilingual alias expansion** *(Medium)*: measure per-record alias/translation coverage; set a
   warn-gate and backfill from Wikidata labels to raise fuzzy-search recall.
-- **B4. Identifier crosswalks** *(Medium, openspec)*: add a vetted set of country crosswalk columns
-  (GeoNames, UN/LOCODE prefix, FIPS, IOC, FIFA) with provenance; document in the schema.
+- **B4. ✅ Shipped — Identifier crosswalks** *(Medium, openspec)*: optional `geonames_id`, `ioc_code`,
+  `fifa_code`, `fips_code`, `bbox` with provenance; documented in schema and consumer docs.
 
 ### Track C — Distribution & adoption (open-data growth)
-- **C1. `datapackage.json` (Frictionless)** *(Medium)* + generated **data dictionary** page from JSON Schemas.
-- **C2. ✅ Shipped (DOI) — Publish to a data hub** *(Medium)*: Zenodo DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328) published and referenced in `CITATION.cff` / README badge. Hugging Face Datasets listing remains open.
+- **C1. ✅ Shipped — `datapackage.json` (Frictionless)** *(Medium)* + generated **data dictionary**
+  (`docs/data-dictionary.md`) from JSON Schemas.
+- **C2. ✅ Shipped (DOI) — Publish to a data hub** *(Medium)*: Zenodo DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328) published and referenced in `CITATION.cff` / README badge. Hugging Face Datasets listing remains optional.
 - **C3. README/marketing**: "How consumers depend on this" section — versioning, license, stability promise.
 
 ### Track D — Access surface (only if HTTP is a real path)
@@ -163,8 +169,8 @@ change proposals before implementation.
 - **D2. If hosted**: add pagination, filter combinators, caching, basic rate limiting; publish OpenAPI examples.
 
 ### Track E — Optional / deferred (guard against scope creep)
-- **E1. Country centroids + bounding boxes** *(Medium)* — bounded geospatial, not full geometry.
-- **E2. Correction workflow** *(Low–Medium)*: issue templates + structured data-error reports.
+- **E1. ✅ Shipped — Country centroids + bounding boxes** *(Medium)* — `centroid` and optional `bbox`; not full geometry.
+- **E2. ✅ Shipped — Correction workflow** *(Low–Medium)*: GitHub issue templates for bugs, data errors, and data requests.
 - **E3. Time-series indicators / historical snapshots** — explicitly **deferred** (bloat risk).
 
 ---

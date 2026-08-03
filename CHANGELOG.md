@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** countries,
+**1037** intblocks (**1078 → 1037**), **78** blocktypes (**86 → 78**).
+
+### Changed
+
+- **BREAKING:** Attribute-partition intblocks retired (`dvdregion`, `govform`, `lawsystem`, `railgauge`, `teleregion`, `traffichand`, `writingdirection`, `writingsystem`). Values now live on country records (except government form, which is vocab-only and out of countries scope). Remap retired ids via `attribute_intblock_migrations.json`.
+  - Before: `SELECT … FROM intblocks, UNNEST(includes) … WHERE id = 'RHTRAFFIC'`
+  - After: `SELECT code, name FROM countries WHERE car_side = 'right'`
+- **BREAKING:** Kosovo country code renamed `KV` → `XK`, alpha-3 `KSV` → `XKX`; legacy codes in `countries_aliases.json`.
+- New export formats: zstd-compressed `countries.csv.zst` / `intblocks.csv.zst` / `memberships.csv.zst`, lite CSV/Parquet variants, `countries.json.zst` / `intblocks.json.zst`, `datapackage.json`, `countries_aliases.json`.
+- Documentation refreshed for new counts, exports, Kosovo `XK`, attribute-field migrations, and citation/DOI.
+
+### Fixed
+
+- Intblock factual corrections: African Union HQ (Addis Ababa), OAS HQ/roster (Nicaragua former member), EU `partof: EEA` removed, ASEAN description (eleven members), UN agency `partof` standardized to `UN` (ILO, FAO, ICAO).
+
+### Added
+
+- Country attribute fields: `writing_directions`, `writing_systems`, `dvd_region`, `broadcast_systems`, `legal_systems`, `rail_gauges` (plus existing `car_side`); vocab catalogs under `data/vocabs/`; optional `government_forms.yaml` without country assignment.
+- `docs/entity-classification-policy.md` — TW, PS, XK, EH, VA, CK, NU edge-case guidance.
+- Validation: `partof` hierarchy check (no treaty/agreement parents); Wikidata completeness gate with `data/schemas/wikidata_exclusions.yaml`.
+- Contributor onboarding: `docs/getting-started.md`, `docs/architecture.md`, generated `docs/data-dictionary.md`, GitHub issue templates, `dev/research`/`dev/scripts`/`data/_legacy` READMEs.
+- LLM ergonomics: OpenAI tool schemas, token-budget tables, RAG/policy-researcher recipes.
+- Optional `scope_category` on intblocks (~872 labeled) + `docs/intblock-inclusion-policy.md`.
+- Optional country crosswalks: `geonames_id`, `ioc_code`, `fifa_code`, `fips_code`, `bbox`.
+- Citation: `CITATION.cff`, Zenodo concept DOI badge, ODbL note for mledoze/countries centroids in `ATTRIBUTION.md`.
+- pytest-cov gate (fail-under 45%, measured baseline ~48%), schema migration emitter (`migration.vUnreleased.json`), monthly enrichment auto-PR, optional HF/Zenodo release steps (dataset card + draft deposit).
+- Wikidata id backfill for TIMBI, VISTA, SAPP (110 remain on exclusion list).
+
 ## [1.9.0] - 2026-08-01
 
 Correct Guinea-Bissau UN membership and expand the verified DuckDB query cookbook.

@@ -5,6 +5,12 @@
 
 Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
 
+## Distribution
+
+- **GitHub Releases** — primary Parquet/JSONL/DuckDB assets on each `v*` tag
+- **Zenodo** — concept DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328)
+- **Hugging Face Datasets** — optional mirror `datenoio/internacia` when `HF_TOKEN` is set ([docs/release-distribution.md](docs/release-distribution.md))
+
 ## Features
 
 - **Multi-format export**: JSONL, YAML, Parquet, and DuckDB (Zstandard compression, level 22)
@@ -28,6 +34,12 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/agents/contribute.md](docs/agents/contribute.md) — YAML editing workflow
 - [docs/query-examples.zh.md](docs/query-examples.zh.md) — 已验证中文 DuckDB 示例
 - [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, scope boundaries
+- [docs/getting-started.md](docs/getting-started.md) — spreadsheet / DuckDB quick start
+- [docs/data-dictionary.md](docs/data-dictionary.md) — generated field reference
+- [docs/architecture.md](docs/architecture.md) — pipeline diagram
+- [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md) — scope_category taxonomy
+- [docs/entity-classification-policy.md](docs/entity-classification-policy.md) — TW / PS / XK / EH edge cases
+- [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
@@ -71,6 +83,9 @@ Each build writes to `data/datasets/`:
 | File | Description |
 |------|-------------|
 | `countries.jsonl` | Countries (plain JSONL) |
+| `countries.json.zst` | Countries (JSON array, zstd) |
+| `countries.csv.zst` | Countries (flattened CSV, zstd) |
+| `countries-lite.csv.zst` / `countries-lite.parquet` | Countries lite (identifier + classification columns only) |
 | `countries.jsonl.zst` | Countries (JSONL, zstd) |
 | `countries.yaml.zst` | Countries (YAML, zstd) |
 | `countries.parquet` | Countries (Parquet, zstd) |
@@ -79,10 +94,16 @@ Each build writes to `data/datasets/`:
 | `intblocks.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `intblocks.meta.json` | Version metadata sidecar for Parquet consumers |
 | `intblocks.jsonl` | International blocks (plain JSONL) |
+| `intblocks.json.zst` | International blocks (JSON array, zstd) |
+| `intblocks.csv.zst` | International blocks (flattened CSV, zstd) |
+| `intblocks-lite.csv.zst` / `intblocks-lite.parquet` | Intblocks lite (identifier + scope columns only) |
 | `intblocks.jsonl.zst` | International blocks (JSONL, zstd) |
 | `intblocks.yaml.zst` | International blocks (YAML, zstd) |
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
 | `intblocks_aliases.json` | Retired/renamed intblock id → current id map |
+| `countries_aliases.json` | Retired/renamed country code → current code map |
+| `attribute_intblock_migrations.json` | Retired attribute-partition intblock → country field predicate |
+| `datapackage.json` | Frictionless Data Package descriptor listing all resources |
 | `intblocks_aliases.parquet` | Alias map (Parquet, zstd) |
 | `blocktypes.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `blocktypes.yaml` | Block types (plain YAML copy of source, regenerated on build) |
@@ -92,16 +113,17 @@ Each build writes to `data/datasets/`:
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
 | `memberships.parquet` | Flattened country↔intblock membership edges (`intblock_id`, `country_code`, `include_type`, `status`, `joined`, `left`) |
-| `memberships.csv` | Membership edge table (CSV) |
+| `memberships.csv.zst` | Membership edge table (CSV, zstd) |
 | `memberships.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1085** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1037** intblocks, **78** blocktypes.
 
 Format policy: JSONL is shipped both plain and zstd-compressed; YAML exports are
 zstd-only (the plain `blocktypes.yaml` is a regenerated copy of the small source
-taxonomy, kept for convenience). Use Parquet or DuckDB for analytics.
+taxonomy, kept for convenience). Flattened CSV and JSON-array exports are
+**zstd-only** (`.csv.zst`, `.json.zst`). Use Parquet or DuckDB for analytics.
 
 ## Validation and quality
 
@@ -156,6 +178,8 @@ Breaking and semantic changes in the latest countries schema (see [CHANGELOG.md]
 - **Population / area / gini**: structured as `{value, year, source, source_id}` — use `.value` for the numeric field. `year` is **null** when the source year is unknown (never `0`).
 - **Borders**: land neighbors as ISO **alpha-3** codes (e.g. `CAN`, `MEX`), not alpha-2.
 - **Entity filter**: `code_status == 'official_iso3166_1'` returns **249** current ISO-style records.
+- **Kosovo**: code is `XK` / `XKX` (not `KV` / `KSV`); remap via `countries_aliases.json`.
+- **Attribute partitions**: traffic hand, DVD region, scripts, etc. are country fields — not intblocks; see `attribute_intblock_migrations.json`.
 - **Build metadata**: compare `countries.manifest.json` `schema_hash` when upgrading downstream pipelines.
 
 **Pandas example** (structured population — `.struct` requires the Arrow dtype backend):
@@ -208,6 +232,10 @@ current_id = aliases.get("ASF", "ASF")  # -> "FSA"
 A `reason` of `disambiguated` means the old id still exists but now refers to a **different** entity
 (e.g. `ASF` is now the African Standby Force; the African Solidarity Fund moved to `FSA`).
 
+Attribute-partition intblocks (traffic hand, DVD region, scripts, etc.) were retired in favor of
+country fields. Remap those ids with `attribute_intblock_migrations.json` (e.g. `RHTRAFFIC` →
+`car_side = 'right'`), not `intblocks_aliases.json`.
+
 ## Countries schema
 
 256 country and territory records. Key fields:
@@ -242,7 +270,13 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 | `tld` | String | Top-level domain |
 | `calling_codes` | List[String] | Telephone codes |
 | `flag_emoji` | String | Flag emoji |
-| `car_side` | String | Driving side |
+| `car_side` | String | Driving side (`left` / `right`) |
+| `writing_directions` | List | Writing direction ids (`ltr`, `rtl`, `ttb`) |
+| `writing_systems` | List | Script ids (e.g. `latin`, `arabic`) |
+| `dvd_region` | Integer | DVD region 1–6 when assigned |
+| `broadcast_systems` | List | TV/broadcast standard ids (e.g. `atsc`, `dvbt`) |
+| `legal_systems` | List | Legal tradition ids (e.g. `common_law`) |
+| `rail_gauges` | List | Rail gauge ids with optional `gauge_mm` |
 | `start_of_week` | String | Start of week |
 | `demonyms` | Struct | `{female, male}` |
 | `m49_code` | String | UN M49 code |
@@ -256,7 +290,7 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 | `common_names` | List[String] | Aliases and common names |
 | `provenance` | List[Struct] | Field sourcing `{field, source, retrieved_at, url, license}` |
 
-Seven non-standard codes are retained with explicit status (see [docs/country-code-policy.md](docs/country-code-policy.md)): `AN` (obsolete, Netherlands Antilles), `JG` (user-assigned grouping, Channel Islands), `KV` (user-assigned, Kosovo), `XA` (user-assigned, Abkhazia), `XS` (user-assigned, South Ossetia), `XT` (user-assigned, Transnistria), `XN` (user-assigned, Nagorno-Karabakh). All carry explicit `un_member`, `un_status`, `independent`, and `landlocked` values.
+Seven non-standard codes are retained with explicit status (see [docs/country-code-policy.md](docs/country-code-policy.md)): `AN` (obsolete, Netherlands Antilles), `JG` (user-assigned grouping, Channel Islands), `XK` (user-assigned, Kosovo; former `KV` in `countries_aliases.json`), `XA` (user-assigned, Abkhazia), `XS` (user-assigned, South Ossetia), `XT` (user-assigned, Transnistria), `XN` (user-assigned, Nagorno-Karabakh). All carry explicit `un_member`, `un_status`, `independent`, and `landlocked` values.
 
 ## International blocks schema
 
@@ -297,7 +331,7 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1085 international block records across 62 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — international block records across domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 
@@ -341,8 +375,9 @@ Tagged releases (`vX.Y.Z`) automatically rebuild all formats and attach them as 
   Creative Commons Attribution 4.0 (CC BY 4.0), see [DATA_LICENSE](DATA_LICENSE).
 
 Upstream sources (World Bank, Wikidata, IANA tzdata) and citation guidance are documented in
-[ATTRIBUTION.md](ATTRIBUTION.md). The data license SPDX identifier is recorded in each build manifest
-and in the `_meta`/`*.meta.json` metadata.
+[ATTRIBUTION.md](ATTRIBUTION.md). Machine-readable citation metadata is in [CITATION.cff](CITATION.cff);
+concept DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328). The data license
+SPDX identifier is recorded in each build manifest and in the `_meta`/`*.meta.json` metadata.
 
 ## Contributing
 

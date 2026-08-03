@@ -41,7 +41,7 @@ Top five priorities, in order:
 - **Provenance and enrichment** — World Bank, Wikidata, and IANA tzdata enrichment with field-level `provenance` entries; 256/256 countries have provenance and `wikidata_id`.
 - **Release traceability** — `countries.manifest.json` with version, commit, row count, schema hash; `diff_countries_baseline.py` compares against the main-branch baseline in CI.
 - **Working CI** — `.github/workflows/validate.yml` runs validation, a Parquet build, baseline diff, and an include-name audit on every relevant PR.
-- **Documented entity policy** — `docs/country-code-policy.md` cleanly explains the 249 + 3 non-standard codes (`AN`, `JG`, `KV`) and filtering recipes.
+- **Documented entity policy** — `docs/country-code-policy.md` cleanly explains the 249 + 7 non-standard codes (`AN`, `JG`, `XK`, `XA`, `XS`, `XT`, `XN`) and filtering recipes.
 - **Research-driven growth** — gap analyses under `dev/research/` drove the 1,021 → 1,065 intblocks expansion with a documented merge process.
 
 ### 1.2 Dataset scale
@@ -49,8 +49,8 @@ Top five priorities, in order:
 | Dataset | Records | Source path | Governance |
 |---------|--------:|-------------|------------|
 | Countries | 256 | `data/countries/*.yaml` | Schema + completeness + CI + manifest |
-| Intblocks | 1,085 (62 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
-| Blocktypes | 86 | `data/blocktypes/blocktypes.yaml` | Taxonomy source; copied to output on build |
+| Intblocks | 1,037 (54 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
+| Blocktypes | 78 | `data/blocktypes/blocktypes.yaml` | Taxonomy source; copied to output on build |
 
 ### 1.3 Verified defects (found during this analysis)
 
@@ -67,7 +67,7 @@ Top five priorities, in order:
 
 7. **`data/countries/AN.yaml`** (Netherlands Antilles, obsolete) — `native_names.en.official` says "Anguilla" and `common_names` includes "Anguilla"; copy-paste bleed from the AI code.
 8. **`data/countries/JG.yaml`** (Channel Islands grouping) — `native_names` and `common_names` reference "Urdoma", an unrelated Wikidata entity; bad import.
-9. **72 occurrences of `year: 0`** in country `population`/`area` structs (mostly Wikidata-sourced records such as AN, KV) — consumers filtering by year will get garbage.
+9. **72 occurrences of `year: 0`** in country `population`/`area` structs (mostly Wikidata-sourced records such as AN, XK) — consumers filtering by year will get garbage.
 10. **Intblocks schema/data drift** — `data/schemas/intblocks.schema.json` allows `status: formal|informal|de-facto` but 4 records use `historical` (GATT, CENTO, SEATO, WARSAWPACT); the `includes[].status` enum allows 4 values but 18+ are in use (`former_member`, `founding_member`, `recipient`, `participant`, ...); end-of-life is expressed three ways (`dissolved` × 8, `ended` × 1, `active_period` × 1).
 
 **Governance drift**

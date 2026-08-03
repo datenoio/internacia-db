@@ -15,7 +15,7 @@ duckdb data/datasets/internacia.duckdb
 SELECT dataset, version, schema_hash, build_date FROM _meta;
 ```
 
-**预期：** 3 行（countries、intblocks、blocktypes）。
+**预期：** 4 行（countries、intblocks、blocktypes、memberships）。
 
 ## 按中文官方名查中国
 
@@ -38,7 +38,7 @@ WHERE code_status = 'official_iso3166_1'
 ORDER BY code;
 ```
 
-**预期：** 249 行。7 个非标准 code（AN、JG、KV 等）被排除。
+**预期：** 249 行。7 个非标准 code（AN、JG、XK、XA、XS、XT、XN）被排除。
 
 ## 泰国的陆地邻国
 

@@ -21,15 +21,25 @@ pre-commit install   # optional but recommended
 - `population`/`area`/`gini` are structs: `{value, year, source, source_id}`. **Never use `year: 0`** — omit the year if unknown.
 - Add a `provenance` entry whenever you set or update an enriched field. Validation warns when a record has fewer than four provenance entries (`INSUFFICIENT_PROVENANCE`; threshold in `data/schemas/*_completeness.yaml`).
 - See [docs/enrichment.md](docs/enrichment.md) for refresh cadence and maintainer commands.
+- Crosswalks (`geonames_id`, `ioc_code`, `fifa_code`, `fips_code`) are optional reference ids — not socioeconomic fields.
 
 ### Intblocks (`data/intblocks/<category>/*.yaml`)
 
 - One file per organization; the filename should match the record `id`, which must be **unique across all categories**.
 - Required fields: `id`, `name`, `blocktype`, `status` (see `data/schemas/intblocks.schema.json`).
+- Set `scope_category` on formal records when known (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`) — see [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md).
 - Every `blocktype` value must exist in `data/blocktypes/blocktypes.yaml`.
 - `includes[].id` is authoritative (ISO alpha-2 for countries); `name` is a display label.
 - Dissolved organizations: set `status: historical` and a `dissolved` date. Do not invent membership lists — leave `includes` empty for records that still need research.
 - **Quote YAML-boolean lookalikes**: write `'NO'` (Norway) and `'no'` (Norwegian), otherwise YAML parses them as `false`.
+
+## Docs for newcomers
+
+- [docs/getting-started.md](docs/getting-started.md)
+- [docs/data-dictionary.md](docs/data-dictionary.md) (regenerate with `python scripts/generate_data_dictionary.py`)
+- [docs/architecture.md](docs/architecture.md)
+
+Monthly enrichment may open a review PR labeled `enrichment` — see [docs/enrichment.md](docs/enrichment.md).
 
 ## Validating your changes
 

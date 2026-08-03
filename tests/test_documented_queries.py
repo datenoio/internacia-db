@@ -92,8 +92,8 @@ def con():
         ),
         (
             "SELECT dataset FROM _meta",
-            3,
-            {"countries", "intblocks", "blocktypes"},
+            4,
+            {"countries", "intblocks", "blocktypes", "memberships"},
         ),
     ],
     ids=[
@@ -365,7 +365,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        26,
+        40,
         set(),
     ),
     (
@@ -375,7 +375,7 @@ ADDITIONAL_RECIPES = [
         WHERE c.entity_type='disputed_territory' GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) DESC LIMIT 1
         """,
         1,
-        {"KV"},
+        {"XK"},
     ),
     (
         """
@@ -391,7 +391,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        204,
+        205,
         set(),
     ),
     (
@@ -401,7 +401,7 @@ ADDITIONAL_RECIPES = [
         WHERE m.type='country' AND m.name IS NOT NULL AND m.name != c.name
           AND NOT list_contains(c.common_names, m.name)
         """,
-        1791,
+        1772,
         set(),
     ),
     (
@@ -437,7 +437,28 @@ ADDITIONAL_RECIPES = [
           GROUP BY c.code HAVING COUNT(DISTINCT i.id) <= 130
         )
         """,
-        6,
+        8,
+        set(),
+    ),
+    (
+        """
+        SELECT n.country_code AS code
+        FROM memberships n
+        JOIN memberships e ON e.country_code = n.country_code
+        WHERE n.intblock_id = 'NATO' AND e.intblock_id = 'EU'
+          AND COALESCE(n.status, 'member') != 'former_member'
+          AND COALESCE(e.status, 'member') != 'former_member'
+        ORDER BY 1
+        """,
+        23,
+        {"DE", "FR", "PL"},
+    ),
+    (
+        """
+        SELECT COUNT(*) FROM intblocks
+        WHERE predecessor IS NOT NULL OR successor IS NOT NULL
+        """,
+        24,
         set(),
     ),
 ]
@@ -469,6 +490,8 @@ ADDITIONAL_RECIPES = [
         "hq_geneva_ny_vienna",
         "human_rights_topics",
         "wikidata_sparse",
+        "nato_intersect_eu",
+        "succession_chains_count",
     ],
 )
 def test_additional_recipes(con, sql, expected_count, expected_codes):

@@ -37,8 +37,8 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1085 | `id` | `data/datasets/intblocks.manifest.json` |
-| `blocktypes` | 86 | `id` | `data/datasets/blocktypes.manifest.json` |
+| `intblocks` | 1037 | `id` | `data/datasets/intblocks.manifest.json` |
+| `blocktypes` | 78 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
 over reading individual YAML source files under `data/countries/` and `data/intblocks/`.
@@ -49,6 +49,20 @@ and row count per dataset, that these match the YAML source, and that all manife
 `*.meta.json` sidecars, and the DuckDB `_meta` table share one build identity
 (`version`, `git_commit`, `build_date`). You can rely on any format being complete
 and interchangeable.
+
+### Tabular and lite exports
+
+For spreadsheet tools and context-constrained agents, each build also publishes:
+
+| Artifact | Use |
+|----------|-----|
+| `countries.csv.zst` / `intblocks.csv.zst` | Flattened scalar columns (structs expanded to `population_value`, `hq_city`, etc.); decompress with `zstd -d` |
+| `countries-lite.parquet` | ~12 columns: `code`, `name`, `iso3code`, `wikidata_id`, `entity_type`, `code_status`, `un_status`, `independent`, `region_id`, `subregion`, `ioc_code`, `fifa_code` |
+| `intblocks-lite.parquet` | ~9 columns: `id`, `name`, `status`, `wikidata_id`, `geographic_scope`, `scope_category`, `blocktype`, `membership_count`, `legal_status` |
+| `countries.json.zst` / `intblocks.json.zst` | Single JSON arrays (same records as JSONL), zstd-compressed |
+| `datapackage.json` | Frictionless Data Package resource index |
+
+Lite variants share primary keys with full exports — join on `code` or `id` to hydrate heavy fields.
 
 ## Versioning and stability
 
@@ -69,6 +83,7 @@ Before upgrading:
 1. Compare `schema_hash` in your cached manifest vs the new release
 2. Read [CHANGELOG.md](../CHANGELOG.md) for migration notes
 3. Apply intblock alias remaps from `intblocks_aliases.json` if joining on intblock `id`
+4. Apply country code remaps from `countries_aliases.json` if joining on country `code` (e.g. legacy `KV` → `XK`)
 
 **Stable join keys:** country `code` and intblock `id`. When an intblock id is renamed,
 the old id appears in `intblocks_aliases.json`:
@@ -122,6 +137,72 @@ Organizations, treaties, alliances, federations, and similar groupings. Each rec
 
 Member entry shape: `{id, name, type, status, joined, role, note}`.
 Use `id` for joins; `name` is a source label and may not match the canonical country name.
+
+### Membership status (`includes[].status`)
+
+Canonical catalog: [`data/schemas/includes_status.yaml`](../data/schemas/includes_status.yaml).
+
+| Status | Meaning |
+|--------|---------|
+| `member` / `founding_member` | Current (or founding) full member |
+| `observer` / `associated_observer` | Observer seat |
+| `associate` / `associate_member` / `associated` | Associate-tier participation |
+| `former_member` | Left; prefer `left` date when known |
+| `participant` / `partner` / `cooperating` | Non-member participation |
+| `recipient` / `contributor` / `funder` | Program / funding roles |
+| `represented` / `validation` / `extension` | Special coverage statuses |
+
+Filter current members with `status NOT IN ('former_member')` (and usually exclude
+observers unless the question asks for them).
+
+### Intblock `scope_category`
+
+Optional inclusion taxonomy (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`).
+`reference_enumeration` covers named geographic/set groupings (e.g. SIDS), **not** country
+attribute partitions (those live on countries — see below).
+See [intblock-inclusion-policy.md](intblock-inclusion-policy.md).
+
+```sql
+SELECT id, name FROM intblocks WHERE scope_category = 'igo' ORDER BY id;
+```
+
+### Country attribute fields (former attribute intblocks)
+
+Driving side, scripts, DVD region, broadcast standards, legal traditions, and rail gauges
+are country columns. Remap retired intblock ids with
+`data/datasets/attribute_intblock_migrations.json`.
+
+```sql
+-- Was: members of RHTRAFFIC / LHTRAFFIC
+SELECT code, name FROM countries WHERE car_side = 'left' ORDER BY code;
+
+SELECT code, name, dvd_region FROM countries WHERE dvd_region = 1;
+```
+
+Vocab catalogs: `data/vocabs/`. Government-form typology is vocab-only
+(`government_forms.yaml`) and is **not** assigned on country records.
+
+### Country crosswalk ids
+
+Optional join aids: `geonames_id`, `ioc_code`, `fifa_code`, `fips_code`, and `bbox`.
+
+```sql
+SELECT code, name, ioc_code, fifa_code FROM countries
+WHERE code_status = 'official_iso3166_1' AND ioc_code IS NOT NULL;
+```
+
+### OpenAI-style tool schemas
+
+Copy-ready function definitions for tool-calling agents:
+
+- [`data/schemas/country_lookup.openai.json`](../data/schemas/country_lookup.openai.json)
+- [`data/schemas/intblock_lookup.openai.json`](../data/schemas/intblock_lookup.openai.json)
+
+### Schema migration files
+
+When a release changes JSON Schema properties, `data/datasets/migration.vX.Y.Z.json`
+lists added/removed/type-changed fields per dataset. Compare against your cached
+`schema_hash` before upgrading.
 
 ### Blocktypes
 

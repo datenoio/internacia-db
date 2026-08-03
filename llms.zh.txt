@@ -5,16 +5,16 @@
 
 ## 数据集概览
 
-- **Countries（256）**：ISO 代码、地理、人口/面积、世界银行分类、Wikidata、多语言名称
-- **Intblocks（1085）**：联合国机构、贸易集团、区域组织、条约、体育联合会等
-- **Blocktypes（86）**：intblock 分类 taxonomy
+- **Countries（256）**：ISO 代码、地理、人口/面积、世界银行分类、Wikidata、多语言名称、稳定属性（`car_side`、书写系统/方向、DVD 区、广播/法律体系、轨距）
+- **Intblocks（1037）**：联合国机构、贸易集团、区域组织、条约、体育联合会、具名地理分组等
+- **Blocktypes（78）**：intblock 分类 taxonomy
 
 这是**用于关联与 enrichment 的参考数据**，不是社会经济画像数据集。
 **不要**在此期望 HDI、GDP、政体、互联网普及率等指标。
 
 ## 推荐访问方式（编辑以外勿解析源 YAML）
 
-- DuckDB：data/datasets/internacia.duckdb（表 countries, intblocks, blocktypes, _meta）
+- DuckDB：data/datasets/internacia.duckdb（表 countries, intblocks, blocktypes, memberships, _meta）
 - Parquet：data/datasets/{countries,intblocks,blocktypes}.parquet
 - Python SDK：https://github.com/datenoio/internacia-python
 - REST API：https://github.com/datenoio/internacia-api
@@ -31,8 +31,9 @@
 - borders 是 ISO alpha-3，不是 alpha-2
 - population、area、gini 为结构体 {value, year, source, source_id}，数值取 .value
 - 当前正式 ISO 国家（249）：code_status == 'official_iso3166_1'
-- 7 个非标准 code：AN, JG, KV, XA, XS, XT, XN
+- 7 个非标准 code：AN, JG, XK, XA, XS, XT, XN（科索沃为 XK；旧码 KV 见 countries_aliases.json）
 - intblock id 变更：查 intblocks_aliases.json
+- 属性分区（行驶方向、DVD 区、文字系统等）为国家字段，不是 intblocks；旧 id 见 attribute_intblock_migrations.json
 - 中文名称：other_names（id=zh）或 native_names，勿与 includes[].name 混淆
 
 ## 示例 SQL（DuckDB）
@@ -40,6 +41,8 @@
 SELECT dataset, version, schema_hash FROM _meta;
 
 SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+
+SELECT code, name FROM countries WHERE car_side = 'left' ORDER BY code;
 
 SELECT c.code, oname.name FROM countries c, UNNEST(c.other_names) AS t(oname) WHERE oname.id = 'zh' AND c.code = 'CN';
 

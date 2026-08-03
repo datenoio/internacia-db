@@ -36,8 +36,20 @@ WHERE code_status = 'official_iso3166_1'
 ORDER BY code;
 ```
 
-**Expected:** 249 rows. Seven non-standard codes (`AN`, `JG`, `KV`, `XA`, `XS`, `XT`, `XN`)
+**Expected:** 249 rows. Seven non-standard codes (`AN`, `JG`, `XK`, `XA`, `XS`, `XT`, `XN`)
 are excluded. See [country-code-policy.md](country-code-policy.md).
+
+### Left-hand traffic (driving side)
+
+```sql
+SELECT code, name
+FROM countries
+WHERE car_side = 'left'
+ORDER BY code;
+```
+
+**Gotcha:** Driving side is a country property (`car_side`). Former `LHTRAFFIC` /
+`RHTRAFFIC` intblocks were retired; see `attribute_intblock_migrations.json`.
 
 ### Sovereign states
 
@@ -69,7 +81,7 @@ WHERE landlocked
 ORDER BY name;
 ```
 
-**Expected:** 48 rows (including landlocked non-ISO entities such as `KV`, `XS`, `XT`, `XN`).
+**Expected:** 48 rows (including landlocked non-ISO entities such as `XK`, `XS`, `XT`, `XN`).
 
 ### By World Bank region
 
@@ -780,7 +792,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 25 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN).
+**Expected:** 40 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -817,7 +829,7 @@ GROUP BY c.code, c.name
 ORDER BY org_count DESC;
 ```
 
-**Expected:** 5 rows — `KV` Kosovo (48), `EH` Western Sahara (14); `XA`, `XS`, `XT` with
+**Expected:** 5 rows — `XK` Kosovo (47), `EH` Western Sahara (12); `XA`, `XS`, `XT` with
 fewer affiliations.
 
 ### Independent but not UN members — org counts
@@ -855,7 +867,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 204 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 205 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -881,7 +893,7 @@ ORDER BY i.id, m.id
 LIMIT 20;
 ```
 
-**Expected:** 1791 mismatches total (advisory); examples include `CD` labeled
+**Expected:** 1772 mismatches total (advisory); examples include `CD` labeled
 "Congo, The Democratic Republic of the" vs canonical "Congo, Dem. Rep.".
 
 **Gotcha:** Mismatches are **not errors** — always join on `includes[].id`, never on
@@ -942,7 +954,7 @@ HAVING org_count <= 130
 ORDER BY org_count ASC, c.name;
 ```
 
-**Expected:** 6 rows — `KP`, `FM`, `PW`, `MH`, `LI`, `NR` (117–129 org affiliations).
+**Expected:** 8 rows — `KP`, `FM`, `PW`, `MH`, `LI`, `AD`, `NR`, `SM` (≤130 org affiliations).
 
 ## Pandas and Polars
 
@@ -976,7 +988,7 @@ members = pd.read_parquet("data/datasets/memberships.parquet")
 nato = members[(members["intblock_id"] == "NATO") & (members["status"] == "member")]
 ```
 
-The same table is available as `data/datasets/memberships.csv` and as the `memberships`
+The same table is available as `data/datasets/memberships.csv.zst` and as the `memberships`
 table in DuckDB. To derive it manually from `intblocks.parquet`:
 
 ```python
@@ -1009,8 +1021,85 @@ blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 - **[internacia-api](https://github.com/datenoio/internacia-api)** — HTTP access without
   local dataset files.
 
+## Embedding / RAG recipes
+
+Prefer **lite** exports for retrieval corpora; hydrate full records by primary key.
+
+```python
+import duckdb
+con = duckdb.connect("data/datasets/internacia.duckdb")
+# Chunk text for embedding: id + name + short description
+rows = con.execute(
+    """
+    SELECT id, name,
+           COALESCE(description, '') AS text
+    FROM intblocks
+    WHERE status = 'formal' AND scope_category = 'igo'
+    """
+).fetchall()
+# Embed `f"{id}: {name}. {text[:500]}"` then retrieve; join full row on id.
+```
+
+Countries lite path for entity linking:
+
+```sql
+SELECT code, name, iso3code, wikidata_id, entity_type, code_status
+FROM countries WHERE code_status = 'official_iso3166_1';
+```
+
+## Policy-researcher recipes
+
+### NATO ∩ EU members
+
+```sql
+SELECT n.country_code AS code
+FROM memberships n
+JOIN memberships e ON e.country_code = n.country_code
+WHERE n.intblock_id = 'NATO' AND e.intblock_id = 'EU'
+  AND COALESCE(n.status, 'member') != 'former_member'
+  AND COALESCE(e.status, 'member') != 'former_member'
+ORDER BY 1;
+```
+
+**Expected:** 23 codes (as of current rosters).
+
+### Former members with departure year
+
+```sql
+SELECT intblock_id, country_code, joined, left
+FROM memberships
+WHERE status = 'former_member' AND left IS NOT NULL
+ORDER BY left DESC, intblock_id
+LIMIT 20;
+```
+
+### Regional economic communities overlapping a country
+
+```sql
+SELECT m.intblock_id, i.name
+FROM memberships m
+JOIN intblocks i ON i.id = m.intblock_id
+WHERE m.country_code = 'KE'
+  AND list_contains(i.blocktype, 'economic')
+  AND COALESCE(m.status, 'member') != 'former_member'
+ORDER BY 1;
+```
+
+### Succession chains
+
+```sql
+SELECT id, predecessor, successor, dissolved
+FROM intblocks
+WHERE predecessor IS NOT NULL OR successor IS NOT NULL
+ORDER BY id;
+```
+
+**Expected:** 24 rows.
+
 ## Related documentation
 
 - [ai-consumers.md](ai-consumers.md) — consumption contract and common mistakes
 - [country-code-policy.md](country-code-policy.md) — entity status and code filtering
+- [intblock-inclusion-policy.md](intblock-inclusion-policy.md) — scope_category taxonomy
+- [getting-started.md](getting-started.md) — non-programmer path
 - [llms.txt](../llms.txt) — compact index for LLM context windows

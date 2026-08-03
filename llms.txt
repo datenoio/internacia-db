@@ -7,9 +7,9 @@
 
 ## What this is
 
-- **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names
-- **Intblocks** (1085 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, etc.
-- **Blocktypes** (86 records): taxonomy for intblock categories
+- **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names, stable attributes (`car_side`, writing systems/directions, DVD region, broadcast/legal systems, rail gauges)
+- **Intblocks** (1037 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, named geographic groupings, etc.
+- **Blocktypes** (78 records): taxonomy for intblock categories
 
 This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
 Do NOT expect HDI, GDP, government type, internet penetration, or similar indicators here.
@@ -19,7 +19,7 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 - DuckDB: data/datasets/internacia.duckdb
   - Tables: countries, intblocks, blocktypes, memberships, _meta
 - Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
-- Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv / DuckDB table memberships
+- Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
   - Columns: intblock_id, country_code, include_type, status, joined, left
 - Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
@@ -36,6 +36,23 @@ Do NOT read data/_legacy/ — obsolete pre-1.0 snapshots kept for historical ref
   - Fields: version, build_date, git_commit, row_count, schema_hash, data_license
 - Parquet sidecars: data/datasets/{countries,intblocks,blocktypes}.meta.json
 - ID remaps: data/datasets/intblocks_aliases.json (and .parquet)
+- Country code remaps: data/datasets/countries_aliases.json
+- Attribute intblock retirements → country fields: data/datasets/attribute_intblock_migrations.json
+- Tool schemas: data/schemas/country_lookup.openai.json, intblock_lookup.openai.json
+- Data dictionary: docs/data-dictionary.md
+- Getting started: docs/getting-started.md
+
+## Token budgets (approximate)
+
+| Artifact | ~Tokens | Use |
+|----------|--------:|-----|
+| llms.txt (this file) | ~1.5k | Always load first |
+| countries-lite.parquet (~12 cols × 256) | ~8–15k | Entity linking |
+| intblocks-lite.parquet | ~40–80k | Org discovery |
+| Full countries.jsonl | large | Avoid in-context; query DuckDB |
+| Full intblocks with includes | very large | Prefer memberships table + filters |
+
+Prefer DuckDB SQL or lite Parquet over stuffing full JSONL into the prompt.
 
 Check schema_hash before upgrading downstream pipelines. Breaking changes are in CHANGELOG.md.
 
@@ -52,10 +69,14 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - borders uses ISO alpha-3 codes, NOT alpha-2
 - population, area, gini are structs: {value, year, source, source_id} — use .value for the number
 - Current ISO countries only (249): filter code_status == 'official_iso3166_1'
-- 7 non-standard country codes retained with explicit status: AN, JG, KV, XA, XS, XT, XN
+- 7 non-standard country codes retained with explicit status: AN, JG, XK, XA, XS, XT, XN (Kosovo is XK; legacy KV in countries_aliases.json)
+- Country code remaps: data/datasets/countries_aliases.json
 - World Bank region/incomeLevel/lendingType missing for 8 entities (territories WB does not classify); adminregion missing for 39 high-income economies by design
 - Filter World Bank region on region.id (e.g. 'ECS'), not region.value: labels vary upstream ('(all income levels)' suffix)
 - Intblock id renames: consult intblocks_aliases.json; reason=disambiguated means old id now refers to a different entity
+- Attribute partitions (traffic hand, DVD region, scripts, legal/broadcast systems, rail gauges) are country fields — not intblocks; remap retired ids via attribute_intblock_migrations.json
+- Driving side: filter countries.car_side ('left'|'right'); do not join traffichand intblocks (retired)
+- scope_category filters entity kind: igo | treaty_body | policy_forum | reference_enumeration (geographic/set groupings only; see docs/intblock-inclusion-policy.md)
 - timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
 
 ## Example queries (DuckDB)
@@ -65,6 +86,8 @@ SELECT dataset, version, schema_hash FROM _meta;
 SELECT code, name FROM countries WHERE un_member = true;
 
 SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+
+SELECT code, name FROM countries WHERE car_side = 'left' ORDER BY code;
 
 SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
 

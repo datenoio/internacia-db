@@ -1,7 +1,7 @@
 # Internacia DB — AI agent guide
 
-Structured reference data: **256 countries**, **1085 intblocks** (organizations/groups),
-**86 blocktypes**. Licensed CC-BY-4.0 (data); code is MIT.
+Structured reference data: **256 countries**, **1037 intblocks** (organizations/groups),
+**78 blocktypes**. Licensed CC-BY-4.0 (data); code is MIT.
 
 中文指南：[AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt)
 
