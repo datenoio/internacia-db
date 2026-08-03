@@ -2,6 +2,7 @@
 
 Verified DuckDB recipes against `data/datasets/internacia.duckdb`. For scope, join keys,
 and field semantics see [ai-consumers.md](ai-consumers.md).
+Polars / Parquet twin: [query-examples-polars.md](query-examples-polars.md).
 
 **DuckDB struct lists:** use `UNNEST(column) AS t(row)` and reference `row.field` (e.g.
 `UNNEST(i.includes) AS t(m)` then `m.id`, `m.type`).
@@ -958,6 +959,8 @@ ORDER BY org_count ASC, c.name;
 
 ## Pandas and Polars
 
+Full Polars cookbook (same scenarios as this file): [query-examples-polars.md](query-examples-polars.md).
+
 ### Structured metric fields
 
 ```python
@@ -975,6 +978,7 @@ df["pop"] = df["population"].apply(lambda v: v["value"] if v is not None else No
 
 **Gotcha:** without `dtype_backend="pyarrow"`, `df["population"].struct` raises
 `AttributeError` — the column is loaded as plain Python dicts, not Arrow structs.
+Polars loads structs natively: `pl.col("population").struct.field("value")`.
 
 ### Membership table from intblocks
 

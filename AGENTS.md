@@ -50,6 +50,7 @@ pytest tests/
 ## Query examples
 
 Verified DuckDB recipes: [docs/query-examples.md](docs/query-examples.md) (backed by `tests/test_documented_queries.py`).
+Polars / Parquet: [docs/query-examples-polars.md](docs/query-examples-polars.md) (backed by `tests/test_documented_queries_polars.py`).
 Chinese: [docs/query-examples.zh.md](docs/query-examples.zh.md).
 
 ## Platform shims

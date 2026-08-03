@@ -388,6 +388,7 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 - [llms.zh.txt](../llms.zh.txt) — 中文紧凑索引
 - [AGENTS.zh.md](../AGENTS.zh.md) — 中文智能体入口
 - [query-examples.md](query-examples.md) — verified DuckDB and Pandas query cookbook
+- [query-examples-polars.md](query-examples-polars.md) — verified Polars / Parquet query cookbook
 - [llms.txt](../llms.txt) — compact index for LLM context windows
 - [llms-full.txt](../llms-full.txt) — extended index for crawlers
 - [AGENTS.md](../AGENTS.md) — root routing hub

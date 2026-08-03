@@ -14,5 +14,6 @@ Read the platform-neutral guide: **[docs/agents/query.md](../../../docs/agents/q
 Also useful:
 - [llms.txt](../../../llms.txt) — compact index
 - [docs/ai-consumers.md](../../../docs/ai-consumers.md) — consumption contract
-- [docs/query-examples.md](../../../docs/query-examples.md) — verified recipes
+- [docs/query-examples.md](../../../docs/query-examples.md) — verified DuckDB recipes
+- [docs/query-examples-polars.md](../../../docs/query-examples-polars.md) — verified Polars recipes
 - `.agent/workflows/query-org-members.md` — org membership workflow

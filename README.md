@@ -41,6 +41,7 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/entity-classification-policy.md](docs/entity-classification-policy.md) — TW / PS / XK / EH edge cases
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
+- [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
 - [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
@@ -190,6 +191,17 @@ import pandas as pd
 df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 pop = df["population"].struct.field("value")
 ```
+
+**Polars example** (same struct field; structs load natively from Parquet):
+
+```python
+import polars as pl
+
+countries = pl.read_parquet("data/datasets/countries.parquet")
+pop = countries.select(pl.col("population").struct.field("value").alias("pop"))
+```
+
+Full Polars recipes: [docs/query-examples-polars.md](docs/query-examples-polars.md).
 
 **DuckDB example** (nested intblock multilingual names):
 

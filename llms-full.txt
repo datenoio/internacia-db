@@ -104,7 +104,8 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - docs/agents/contribute.md — YAML editing workflow (all platforms)
 - docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
 - docs/agents/openspec-quickstart.md — schema change proposals
-- docs/query-examples.md — verified query cookbook (countries, borders, intblocks, joins)
+- docs/query-examples.md — verified DuckDB query cookbook (countries, borders, intblocks, joins)
+- docs/query-examples-polars.md — verified Polars / Parquet query cookbook
 - docs/query-examples.zh.md — 已验证中文场景查询
 - docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
 - llms.zh.txt — 中文紧凑索引

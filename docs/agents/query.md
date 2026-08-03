@@ -8,14 +8,15 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 1. Read [llms.txt](../../llms.txt) for join keys and gotchas (compact index).
 2. Use exported datasets — **do not parse** `data/countries/*.yaml` or `data/intblocks/**/*.yaml` unless authoring.
 3. Full consumption contract: [ai-consumers.md](../ai-consumers.md).
-4. Verified recipes: [query-examples.md](../query-examples.md).
+4. Verified recipes: [query-examples.md](../query-examples.md) (DuckDB),
+   [query-examples-polars.md](../query-examples-polars.md) (Polars / Parquet).
 
 ## Access paths
 
 | Method | Path / URL |
 |--------|------------|
 | DuckDB (preferred, in-repo) | `data/datasets/internacia.duckdb` |
-| Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet` |
+| Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet`, `memberships.parquet` |
 | Version check | `SELECT * FROM _meta;` or `data/datasets/*.manifest.json` |
 | Python SDK (no full checkout) | https://github.com/datenoio/internacia-python |
 | HTTP API (no local files) | https://github.com/datenoio/internacia-api |
@@ -110,7 +111,7 @@ pop = df["population"].struct.field("value")
 | Join borders on alpha-2 | Use alpha-3; join `borders` → `iso3code` |
 | Join intblocks on `includes[].name` | Use `includes[].id` (country code) |
 | Assume 256 codes are all ISO official | Filter `code_status = 'official_iso3166_1'` |
-| Read plain number from `population` | Use struct field `.value` (pandas: load with `dtype_backend="pyarrow"` for `.struct`) |
+| Read plain number from `population` | Use struct field `.value` (pandas: `dtype_backend="pyarrow"`; Polars: `.struct.field("value")`) |
 | Expect HDI/GDP in this dataset | Out of scope; enrich downstream |
 | Ignore alias remaps | Load `intblocks_aliases.json` before joining on intblock `id` |
 

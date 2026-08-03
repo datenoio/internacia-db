@@ -48,6 +48,7 @@ Version: read `data/datasets/countries.manifest.json` or
 |------|-----|
 | Join keys & gotchas | [ai-consumers.md](ai-consumers.md) |
 | Verified SQL recipes | [query-examples.md](query-examples.md) |
+| Verified Polars recipes | [query-examples-polars.md](query-examples-polars.md) |
 | Edit YAML | [CONTRIBUTING.md](../CONTRIBUTING.md), [agents/contribute.md](agents/contribute.md) |
 | Field reference | [data-dictionary.md](data-dictionary.md) |
 | Country / entity policy | [country-code-policy.md](country-code-policy.md), [entity-classification-policy.md](entity-classification-policy.md) |

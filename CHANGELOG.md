@@ -17,7 +17,7 @@ Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** 
   - After: `SELECT code, name FROM countries WHERE car_side = 'right'`
 - **BREAKING:** Kosovo country code renamed `KV` → `XK`, alpha-3 `KSV` → `XKX`; legacy codes in `countries_aliases.json`.
 - New export formats: zstd-compressed `countries.csv.zst` / `intblocks.csv.zst` / `memberships.csv.zst`, lite CSV/Parquet variants, `countries.json.zst` / `intblocks.json.zst`, `datapackage.json`, `countries_aliases.json`.
-- Documentation refreshed for new counts, exports, Kosovo `XK`, attribute-field migrations, and citation/DOI.
+- Documentation refreshed for new counts, exports, Kosovo `XK`, attribute-field migrations, citation/DOI, and Polars consumer recipes.
 
 ### Fixed
 
@@ -35,6 +35,7 @@ Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** 
 - Citation: `CITATION.cff`, Zenodo concept DOI badge, ODbL note for mledoze/countries centroids in `ATTRIBUTION.md`.
 - pytest-cov gate (fail-under 45%, measured baseline ~48%), schema migration emitter (`migration.vUnreleased.json`), monthly enrichment auto-PR, optional HF/Zenodo release steps (dataset card + draft deposit).
 - Wikidata id backfill for TIMBI, VISTA, SAPP (110 remain on exclusion list).
+- [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook (country filters, borders, memberships, overlap, former members); covered by `tests/test_documented_queries_polars.py`. `polars` added to `requirements-dev.txt`.
 
 ## [1.9.0] - 2026-08-01
 
