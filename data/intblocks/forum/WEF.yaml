@@ -38,6 +38,7 @@ acronyms:
 - lang: pt
   value: FEM
 membership_count: 1000
+membership_count_type: companies
 wikidata_id: Q170418
 legal_status: foundation
 regions:
@@ -123,8 +124,8 @@ description: Swiss foundation convening leaders from business, government, and c
   society to address global economic and political challenges. Hosts the annual meeting
   in Davos and operates the Centre for the Fourth Industrial Revolution network of
   government partnerships.
-notes: membership_count reflects institutional Partner companies; includes lists
-  governments hosting Centres for the Fourth Industrial Revolution in the WEF network.
+notes: membership_count reflects institutional Partner companies; includes lists governments
+  hosting Centres for the Fourth Industrial Revolution in the WEF network.
 tags:
 - WEF
 - davos
@@ -193,4 +194,10 @@ provenance:
   source: World Economic Forum
   retrieved_at: '2026-07-15'
   url: https://www.weforum.org/press/2026/01/world-economic-forum-to-launch-five-new-centres-for-the-fourth-industrial-revolution/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.weforum.org/
+  note: membership_count counts member companies; unit classified 2026-08, count value
+    from earlier enrichment
 last_verified: '2026-07-15'

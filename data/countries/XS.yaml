@@ -13,7 +13,8 @@ borders: []
 recognition_status:
   status: disputed_or_partially_recognized
   un_member: false
-  notes: User-assigned alpha-2 code XS for CIS2 membership references; not an official ISO 3166-1 assignment.
+  notes: User-assigned alpha-2 code XS for CIS2 membership references; not an official
+    ISO 3166-1 assignment.
 centroid:
   lat: 42.233
   lng: 43.967
@@ -25,10 +26,6 @@ provenance:
   source: country-code-policy
   retrieved_at: '2026-06-15'
   url: https://github.com/datenoio/internacia-db/blob/main/docs/country-code-policy.md
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
 - field: area
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -42,10 +39,17 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-08-02'
+  url: https://www.wikidata.org/wiki/Q23427
+  license: CC0
+  note: Preferred P1082 value with point-in-time qualifier
 population:
-  value: 53532
+  value: 56520
   source: Wikidata
   source_id: P1082
+  year: 2022
 area:
   value: 3900.0
   source: Wikidata
@@ -63,3 +67,7 @@ capital_city:
   name: Tskhinvali
   lng: 43.9645
   lat: 42.2211
+un_member: false
+un_status: non_member
+independent: false
+landlocked: true

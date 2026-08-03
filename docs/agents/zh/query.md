@@ -17,8 +17,8 @@ English: [../query.md](../query.md)
 | DuckDB（推荐） | `data/datasets/internacia.duckdb` |
 | Parquet | `data/datasets/countries.parquet` 等 |
 | 版本检查 | `SELECT * FROM _meta;` 或 `data/datasets/*.manifest.json` |
-| Python SDK | https://github.com/commondataio/internacia-python |
-| HTTP API | https://github.com/commondataio/internacia-api |
+| Python SDK | https://github.com/datenoio/internacia-python |
+| HTTP API | https://github.com/datenoio/internacia-api |
 
 ## 关联键
 

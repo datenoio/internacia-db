@@ -790,6 +790,19 @@ includes:
   name: Denmark
   type: country
   status: member
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: observer
+  joined: '2012'
+  note: Non-member permanent observer state since 29 November 2012 (UNGA resolution
+    67/19)
+- id: VA
+  name: Vatican City
+  type: country
+  status: observer
+  joined: '1964'
+  note: Holy See; non-member permanent observer state since 1964
 membership_count: 193
 founded: '1945'
 headquarters:
@@ -849,17 +862,89 @@ acronyms:
   value: UN
 - lang: de
   value: VN
-geographic_scope: regional
+geographic_scope: global
 regions:
 - worldwide
 suborganizations:
-- id: WIPO
-  name: World Intellectual Property Organization
+- id: ECOSOC
+  name: United Nations Economic and Social Council
+- id: FAO
+  name: Food and Agriculture Organization
+- id: IAEA
+  name: International Atomic Energy Agency
+- id: ICAO
+  name: International Civil Aviation Organization
+- id: ICJ
+  name: International Court of Justice
+- id: IFAD
+  name: International Fund for Agricultural Development
+- id: ILO
+  name: International Labour Organization
 - id: IMF
   name: International Monetary Fund
+- id: IMO
+  name: International Maritime Organization
+- id: ITC
+  name: International Trade Centre
+- id: ITU
+  name: International Telecommunication Union
+- id: OHCHR
+  name: Office of the High Commissioner for Human Rights
+- id: UNAIDS
+  name: Joint United Nations Programme on HIV/AIDS
+- id: UNCITRAL
+  name: United Nations Commission on International Trade Law
+- id: UNCTAD
+  name: United Nations Conference on Trade and Development
+- id: UNDP
+  name: United Nations Development Programme
+- id: UNEP
+  name: United Nations Environment Programme
+- id: UNESCO
+  name: United Nations Educational, Scientific and Cultural Organization
+- id: UNFPA
+  name: United Nations Population Fund
+- id: UNHABITAT
+  name: United Nations Human Settlements Programme
+- id: UNHCR
+  name: Office of the United Nations High Commissioner for Refugees
+- id: UNHRC
+  name: United Nations Human Rights Council
+- id: UNICEF
+  name: United Nations Children's Fund
+- id: UNIDO
+  name: United Nations Industrial Development Organization
+- id: UNOCEANS
+  name: UN-Oceans
+- id: UNODC
+  name: United Nations Office on Drugs and Crime
+- id: UNOHRLLS
+  name: United Nations Office of the High Representative for the Least Developed Countries,
+    Landlocked Developing Countries and Small Island Developing States
+- id: UNOPS
+  name: United Nations Office for Project Services
+- id: UNRWA
+  name: United Nations Relief and Works Agency for Palestine Refugees in the Near
+    East
+- id: UNWOMEN
+  name: United Nations Entity for Gender Equality and the Empowerment of Women
+- id: UNWTO
+  name: World Tourism Organization
+- id: UPU
+  name: Universal Postal Union
+- id: WFP
+  name: World Food Programme
+- id: WHO
+  name: World Health Organization
+- id: WIPO
+  name: World Intellectual Property Organization
+- id: WMO
+  name: World Meteorological Organization
 wikidata_id: Q1065
 legal_status: intergovernmental
-recognition_status: UN agency
+recognition_status: Intergovernmental organization established by the Charter of the
+  United Nations, signed 26 June 1945 in San Francisco and in force since 24 October
+  1945
 official_documents:
 - url: https://www.un.org/
   type: document
@@ -868,7 +953,14 @@ social_media:
   facebook: https://www.facebook.com/unitednations
   linkedin: https://www.linkedin.com/company/united-nations
   youtube: https://www.youtube.com/channel/UC5O114-PQNYkurlTg6hekZw
-description: Global international and intergovernmental organization.
+description: The United Nations is a global intergovernmental organization founded
+  in 1945 to maintain international peace and security, develop friendly relations
+  among nations, and promote social progress, better living standards and human rights.
+  It has 193 member states and two permanent observer states (the Holy See and the
+  State of Palestine), and operates through six principal organs — the General Assembly,
+  the Security Council, the Economic and Social Council, the Trusteeship Council,
+  the International Court of Justice and the Secretariat — together with a wide system
+  of specialized agencies, funds and programmes.
 tags:
 - ANO
 - BM
@@ -916,11 +1008,6 @@ other_names:
 - id: zh
   name: 联合国
 provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -935,11 +1022,27 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: http://www.un.org
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.un.org
 - field: headquarters
   source: official sources
   retrieved_at: '2026-06-15'
   url: http://www.un.org
+- field: includes
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us
+- field: geographic_scope
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us
+- field: description
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us
+- field: recognition_status
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us
+- field: suborganizations
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us

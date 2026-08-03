@@ -294,8 +294,22 @@ def check_country_entity_status(record: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def check_country_entity_flags(record: dict[str, Any]) -> list[dict[str, Any]]:
-    """Boolean status flags must be consistent with entity_type."""
+    """Boolean status flags must be consistent with entity_type and un_status."""
     issues: list[dict[str, Any]] = []
+    un_status = record.get("un_status")
+    un_member = record.get("un_member")
+    if un_status is not None:
+        expected_member = un_status == "member"
+        if un_member is not None and un_member is not expected_member:
+            issues.append({
+                "issue_type": "INCONSISTENT_ENTITY_FLAGS",
+                "field": "un_status",
+                "current_value": str(un_status),
+                "suggested_action": (
+                    f"un_status '{un_status}' contradicts un_member {un_member}; "
+                    "member requires un_member true, observer/non_member require false"
+                ),
+            })
     entity_type = record.get("entity_type")
     if entity_type not in NON_SOVEREIGN_ENTITY_TYPES:
         return issues
@@ -438,6 +452,11 @@ def check_country_flag_emoji(record: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def check_country_landlocked(record: dict[str, Any]) -> list[dict[str, Any]]:
+    # borders holds ISO 3166-1 alpha-3 codes only, so non-ISO records
+    # (user-assigned, obsolete) legitimately have empty borders even when
+    # the entity is landlocked (e.g. XS, XT, XN).
+    if record.get("code_status") != "official_iso3166_1":
+        return []
     if record.get("landlocked") is True and not record.get("borders"):
         return [{
             "issue_type": "LANDLOCKED_INCONSISTENCY",

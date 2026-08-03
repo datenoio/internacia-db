@@ -3,17 +3,25 @@
   "title": "Intblocks YAML schema (core subset)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "blocktype", "status"],
+  "required": [
+    "id",
+    "name",
+    "blocktype",
+    "status"
+  ],
   "properties": {
     "id": {
+      "description": "Stable uppercase identifier (primary key), e.g. EU, NATO, UN. Renames are tracked in data/datasets/intblocks_aliases.json.",
       "type": "string",
       "minLength": 1
     },
     "name": {
+      "description": "Official English name of the organization, group, or agreement.",
       "type": "string",
       "minLength": 1
     },
     "blocktype": {
+      "description": "Taxonomy keys from the blocktypes dataset (list). The record's directory under data/intblocks/ matches the primary blocktype.",
       "type": "array",
       "items": {
         "type": "string"
@@ -21,20 +29,31 @@
       "minItems": 1
     },
     "status": {
+      "description": "Formality of the entity: e.g. 'formal' (treaty-based organization) or informal grouping.",
       "type": "string",
-      "enum": ["formal", "informal", "de-facto", "historical"]
+      "enum": [
+        "formal",
+        "informal",
+        "de-facto",
+        "historical"
+      ]
     },
     "languages": {
+      "description": "Official/working languages as ISO 639-1 codes.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "links": {
+      "description": "Related URLs as {url, type} where type is website, wikipedia, or wikidata.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["url", "type"],
+        "required": [
+          "url",
+          "type"
+        ],
         "properties": {
           "url": {
             "type": "string",
@@ -42,17 +61,27 @@
           },
           "type": {
             "type": "string",
-            "enum": ["website", "wikipedia", "wikidata"]
+            "enum": [
+              "website",
+              "wikipedia",
+              "wikidata"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
     "includes": {
+      "description": "Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only. status captures member/observer/former_member etc.; joined/left are ISO dates.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "type", "status"],
+        "required": [
+          "id",
+          "name",
+          "type",
+          "status"
+        ],
         "properties": {
           "id": {
             "type": "string"
@@ -62,7 +91,12 @@
           },
           "type": {
             "type": "string",
-            "enum": ["country", "organization", "territory", "historical-country"]
+            "enum": [
+              "country",
+              "organization",
+              "territory",
+              "historical-country"
+            ]
           },
           "status": {
             "type": "string",
@@ -87,11 +121,17 @@
             ]
           },
           "joined": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
           },
           "left": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
           }
         },
@@ -104,25 +144,33 @@
       "description": "Foundation date (YYYY, YYYY-MM, YYYY-MM-DD) or decade (e.g. 1950s) when only decade precision is known"
     },
     "dissolved": {
+      "description": "Dissolution date (ISO string) for defunct entities.",
       "type": "string",
       "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
     },
     "active_period": {
+      "description": "Operational period as {start, end} ISO date strings; end is absent for active entities.",
       "type": "object",
-      "required": ["start"],
+      "required": [
+        "start"
+      ],
       "properties": {
         "start": {
           "type": "string",
           "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
         },
         "end": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
         }
       },
       "additionalProperties": true
     },
     "headquarters": {
+      "description": "Seat of the organization as {city, country, coordinates{lat,lng}} with an alpha-2 country code.",
       "type": "object",
       "properties": {
         "city": {
@@ -149,23 +197,37 @@
       "additionalProperties": true
     },
     "geographic_scope": {
+      "description": "Coverage of the membership: 'global' or 'regional'.",
       "type": "string",
-      "enum": ["global", "regional", "sub-regional", "bilateral"]
+      "enum": [
+        "global",
+        "regional",
+        "sub-regional",
+        "bilateral"
+      ]
     },
     "regions": {
+      "description": "Region labels covered by the entity (e.g. 'worldwide', 'europe', 'africa').",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "partof": {
+      "description": "Parent organization id(s) for suborganizations (string or list in source; normalized to a list in exports).",
       "oneOf": [
         {
           "type": "object",
-          "required": ["id"],
+          "required": [
+            "id"
+          ],
           "properties": {
-            "id": { "type": "string" },
-            "name": { "type": "string" }
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
           },
           "additionalProperties": true
         },
@@ -175,10 +237,16 @@
             "oneOf": [
               {
                 "type": "object",
-                "required": ["id"],
+                "required": [
+                  "id"
+                ],
                 "properties": {
-                  "id": { "type": "string" },
-                  "name": { "type": "string" }
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
                 },
                 "additionalProperties": true
               },
@@ -197,47 +265,82 @@
       ]
     },
     "suborganizations": {
+      "description": "Child entities as {id, name} references to other intblock records.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name"],
+        "required": [
+          "id",
+          "name"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "name": { "type": "string" }
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "acronyms": {
+      "description": "Known acronyms as {lang, value} pairs.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["lang", "value"],
+        "required": [
+          "lang",
+          "value"
+        ],
         "properties": {
-          "lang": { "type": "string" },
-          "value": { "type": "string" }
+          "lang": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "wikidata_id": {
+      "description": "Wikidata entity id (Q-number) for cross-referencing and entity linking.",
       "type": "string",
       "pattern": "^Q[1-9][0-9]*$"
     },
     "membership_count": {
+      "description": "Officially stated member count. Interpreted as country members unless membership_count_type says otherwise; compared against the includes roster by validation.",
       "type": "integer",
       "minimum": 0
     },
+    "membership_count_type": {
+      "type": "string",
+      "enum": [
+        "countries",
+        "organizations",
+        "companies",
+        "individuals",
+        "mixed"
+      ],
+      "description": "Unit of membership_count. When absent, the count is interpreted as country members and is compared against the includes roster. Non-country counts (companies, individual experts, national governing bodies, etc.) are exempt from roster comparison but require provenance for membership_count."
+    },
     "membership_applicability": {
       "type": "string",
-      "enum": ["not_applicable"],
+      "enum": [
+        "not_applicable"
+      ],
       "description": "When not_applicable, an empty includes list is intentional (conceptual entities, acronyms, etc.)"
     },
     "founding_members": {
+      "description": "Country codes of founding members (list).",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "last_verified": {
+      "description": "Date (YYYY-MM-DD) the record was last checked against official sources.",
       "type": "string",
       "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     },
@@ -256,7 +359,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["key", "name"],
+        "required": [
+          "key",
+          "name"
+        ],
         "properties": {
           "key": {
             "type": "string",
@@ -275,10 +381,19 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name"],
+        "required": [
+          "id",
+          "name"
+        ],
         "properties": {
-          "id": { "type": "string", "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')" },
-          "name": { "type": "string", "description": "Name in the specified language" }
+          "id": {
+            "type": "string",
+            "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name in the specified language"
+          }
         },
         "additionalProperties": true
       },
@@ -292,13 +407,28 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["field", "source", "retrieved_at"],
+        "required": [
+          "field",
+          "source",
+          "retrieved_at"
+        ],
         "properties": {
-          "field": { "type": "string" },
-          "source": { "type": "string" },
-          "url": { "type": "string" },
-          "retrieved_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "license": { "type": "string" }
+          "field": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "license": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       },
@@ -324,11 +454,20 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name"],
+        "required": [
+          "id",
+          "name"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "name": { "type": "string" },
-          "period": { "type": "string" }
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       },
@@ -338,10 +477,17 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["url"],
+        "required": [
+          "url"
+        ],
         "properties": {
-          "url": { "type": "string", "format": "uri" },
-          "type": { "type": "string" }
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       },
@@ -349,19 +495,23 @@
     },
     "social_media": {
       "type": "object",
-      "additionalProperties": { "type": "string" },
+      "additionalProperties": {
+        "type": "string"
+      },
       "description": "Social media handles keyed by platform"
     },
     "secretariat": {
       "type": "object",
       "properties": {
-        "location": { "type": "string" },
-        "organization": { "type": "string" }
+        "location": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        }
       },
       "additionalProperties": true,
       "description": "Secretariat location and host organization"
     }
   }
 }
-
-

@@ -31,10 +31,12 @@ headquarters:
 legal_status: non-governmental
 partof: NTO
 membership_count: 30
-description: Francophone non-profit association founded in Yaoundé in 1982 that facilitates dialogue and exchange among senior
-  officials of tax administrations from 30 French-speaking member countries across four continents. Promotes multilateral
-  international cooperation through annual conferences, director seminars, working groups, and thematic meetings, and develops
-  practical tax guidance through peer learning and best-practice sharing.
+membership_count_type: organizations
+description: Francophone non-profit association founded in Yaoundé in 1982 that facilitates
+  dialogue and exchange among senior officials of tax administrations from 30 French-speaking
+  member countries across four continents. Promotes multilateral international cooperation
+  through annual conferences, director seminars, working groups, and thematic meetings,
+  and develops practical tax guidance through peer learning and best-practice sharing.
 tags:
 - CREDAF
 - tax
@@ -178,13 +180,15 @@ includes:
   type: organization
   status: associate_member
   joined: '2020'
-notes: CREDAF was initially named "Centre de Rencontres et d'Études des Dirigeants des Administrations fiscales" and adopted
-  its current name in 2018 during the general assembly in Haiti. The organization was created in Yaoundé in 1982; founding
-  members were Benin, Burkina Faso, Cameroon, Chad, Djibouti, France, Côte d'Ivoire, Lebanon, Mali, Morocco, Niger, Senegal,
-  Togo, and Tunisia. CREDAF groups senior officials from 30 French-speaking member countries across four continents, plus
-  Revenu Québec as associate member since 2020. CREDAF is a founding member of the Network of Tax Organizations (NTO) and
-  an Addis Tax Initiative (ATI) supporting organisation. It has cooperation agreements with CIAT, OECD, UNDP, OIF, FERDI,
-  and other partners.
+notes: CREDAF was initially named "Centre de Rencontres et d'Études des Dirigeants
+  des Administrations fiscales" and adopted its current name in 2018 during the general
+  assembly in Haiti. The organization was created in Yaoundé in 1982; founding members
+  were Benin, Burkina Faso, Cameroon, Chad, Djibouti, France, Côte d'Ivoire, Lebanon,
+  Mali, Morocco, Niger, Senegal, Togo, and Tunisia. CREDAF groups senior officials
+  from 30 French-speaking member countries across four continents, plus Revenu Québec
+  as associate member since 2020. CREDAF is a founding member of the Network of Tax
+  Organizations (NTO) and an Addis Tax Initiative (ATI) supporting organisation. It
+  has cooperation agreements with CIAT, OECD, UNDP, OIF, FERDI, and other partners.
 other_names:
 - id: fr
   name: Cercle de Réflexion et d'Échange des Dirigeants des Administrations Fiscales
@@ -215,3 +219,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://credaf.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://credaf.org/
+  note: membership_count counts national tax administrations; unit classified 2026-08,
+    count value from earlier enrichment

@@ -3,114 +3,204 @@
   "title": "Countries YAML schema",
   "type": "object",
   "additionalProperties": true,
-  "required": ["code", "name", "iso3code", "numeric_code", "entity_type", "code_status"],
+  "required": [
+    "code",
+    "name",
+    "iso3code",
+    "numeric_code",
+    "entity_type",
+    "code_status"
+  ],
   "properties": {
     "code": {
+      "description": "ISO 3166-1 alpha-2 country code (primary key). Seven non-standard codes exist; filter code_status = 'official_iso3166_1' for current ISO entries only.",
       "type": "string",
       "minLength": 2,
       "maxLength": 2
     },
     "name": {
+      "description": "Country name in World Bank style (e.g. 'Egypt, Arab Rep.'). English common names are in other_names (id 'en') and common_names.",
       "type": "string"
     },
     "iso3code": {
+      "description": "ISO 3166-1 alpha-3 code. Join key for the borders field, which stores alpha-3 neighbor codes.",
       "type": "string",
       "minLength": 3,
       "maxLength": 3
     },
     "numeric_code": {
+      "description": "ISO 3166-1 numeric code as a zero-padded string (e.g. '004').",
       "type": "string",
       "pattern": "^\\d{3}$"
     },
     "capital_city": {
+      "description": "Capital or de facto seat of government with name and optional lat/lng coordinates. Absent by design for uninhabited territories and groupings.",
       "type": "object",
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
-        "name": { "type": "string" },
-        "lat": { "type": ["string", "number"] },
-        "lng": { "type": ["string", "number"] }
+        "name": {
+          "type": "string"
+        },
+        "lat": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "lng": {
+          "type": [
+            "string",
+            "number"
+          ]
+        }
       },
       "additionalProperties": true
     },
     "region": {
+      "description": "World Bank region as {id, value} (e.g. id 'ECS'). Filter on id: value labels are inconsistent upstream (some carry an '(all income levels)' suffix). Absent for 8 entities the World Bank does not classify.",
       "type": "object",
-      "required": ["id", "value"],
+      "required": [
+        "id",
+        "value"
+      ],
       "properties": {
-        "id": { "type": "string" },
-        "value": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "adminregion": {
+      "description": "World Bank administrative region as {id, value}. Only covers low- and middle-income economies; absence for high-income economies is expected.",
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "value": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "incomeLevel": {
+      "description": "World Bank income classification as {id, value} (e.g. id 'HIC', value 'High income'). Absent for 8 unclassified entities.",
       "type": "object",
-      "required": ["id", "value"],
+      "required": [
+        "id",
+        "value"
+      ],
       "properties": {
-        "id": { "type": "string" },
-        "value": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "lendingType": {
+      "description": "World Bank lending category as {id, value} (e.g. IBRD, IDA, Blend). Absent for 8 unclassified entities.",
       "type": "object",
-      "required": ["id", "value"],
+      "required": [
+        "id",
+        "value"
+      ],
       "properties": {
-        "id": { "type": "string" },
-        "value": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "wikidata_id": {
+      "description": "Wikidata entity id (Q-number) for cross-referencing and entity linking.",
       "type": "string",
       "pattern": "^Q[1-9][0-9]*$"
     },
     "official_name": {
+      "description": "Official long-form state name (e.g. 'Arab Republic of Egypt').",
       "type": "string"
     },
     "languages": {
+      "description": "Spoken/official languages as a list of {code, name, official} objects.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code", "name"],
+        "required": [
+          "code",
+          "name"
+        ],
         "properties": {
-          "code": { "type": "string" },
-          "name": { "type": "string" }
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "currencies": {
+      "description": "Circulating currencies as a list of {code, name, symbol} objects with ISO 4217 codes.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code", "name"],
+        "required": [
+          "code",
+          "name"
+        ],
         "properties": {
-          "code": { "type": "string" },
-          "name": { "type": "string" },
-          "symbol": { "type": "string" }
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "un_member": {
+      "description": "True when the entity is a United Nations member state. See un_status for the three-way member/observer/non_member distinction.",
       "type": "boolean"
     },
+    "un_status": {
+      "type": "string",
+      "enum": [
+        "member",
+        "observer",
+        "non_member"
+      ],
+      "description": "United Nations participation status: member (UN member state), observer (permanent observer state: PS, VA), or non_member. Must be consistent with un_member (member <=> un_member: true)."
+    },
     "independent": {
+      "description": "True when the entity is a widely recognized sovereign state. Explicitly false on non-standard-code records (disputed territories, groupings).",
       "type": "boolean"
     },
     "subregion": {
+      "description": "UN M49 subregion label (e.g. 'South-Eastern Asia'). Statistical convenience only; implies no political affiliation.",
       "type": "string"
     },
     "continents": {
+      "description": "Continent names the entity belongs to (list; transcontinental states list several).",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "borders": {
       "type": "array",
@@ -121,57 +211,108 @@
       }
     },
     "population": {
-      "type": ["object", "null"],
+      "description": "Population indicator struct {value, year, source, source_id}. Use .value for the number; year is null when the reference year is unknown (never 0).",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "value": { "type": "integer" },
-        "year": { "type": "integer" },
-        "source": { "type": "string" },
-        "source_id": { "type": "string" }
+        "value": {
+          "type": "integer"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "source": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "area": {
-      "type": ["object", "null"],
+      "description": "Land area indicator struct {value, year, source, source_id} in square kilometres. Use .value for the number.",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "value": { "type": "number" },
-        "year": { "type": "integer" },
-        "source": { "type": "string" }
+        "value": {
+          "type": "number"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "source": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "gini": {
-      "type": ["object", "null"],
+      "description": "Gini income-inequality index struct {value, year, source, source_id}. Sparse: roughly a third of records have no value.",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "value": { "type": "number" },
-        "year": { "type": "integer" },
-        "source": { "type": "string" }
+        "value": {
+          "type": "number"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "source": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "centroid": {
+      "description": "Geographic centroid as {lat, lng}.",
       "type": "object",
-      "required": ["lat", "lng"],
+      "required": [
+        "lat",
+        "lng"
+      ],
       "properties": {
-        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
-        "lng": { "type": "number", "minimum": -180, "maximum": 180 }
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
       },
       "additionalProperties": false
     },
     "native_names": {
+      "description": "Native-language names keyed by language code, each with official and common variants.",
       "type": "object",
       "additionalProperties": {
         "type": "object",
         "properties": {
-          "official": { "type": "string" },
-          "common": { "type": "string" }
+          "official": {
+            "type": "string"
+          },
+          "common": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "landlocked": {
+      "description": "True when the entity has no coastline. Non-ISO records may be landlocked with an empty borders list (borders holds alpha-3 codes only).",
       "type": "boolean"
     },
     "timezones": {
+      "description": "IANA/UTC timezone offsets covering the territory. Empty for uninhabited territories (see timezone_status).",
       "type": "array",
       "items": {
         "type": "string",
@@ -179,13 +320,18 @@
       }
     },
     "timezone_status": {
+      "description": "Marker explaining an empty timezones list, e.g. 'not_applicable' for uninhabited territories.",
       "type": "string",
-      "enum": ["not_applicable"]
+      "enum": [
+        "not_applicable"
+      ]
     },
     "tld": {
+      "description": "Country-code top-level internet domain (e.g. '.th').",
       "type": "string"
     },
     "calling_codes": {
+      "description": "International telephone calling codes (list of strings).",
       "type": "array",
       "items": {
         "type": "string",
@@ -193,21 +339,36 @@
       }
     },
     "flag_emoji": {
+      "description": "Unicode flag emoji for the country code.",
       "type": "string"
     },
     "car_side": {
+      "description": "Driving side: 'left' or 'right'.",
       "type": "string",
-      "enum": ["left", "right"]
+      "enum": [
+        "left",
+        "right"
+      ]
     },
     "start_of_week": {
+      "description": "First day of the working week (e.g. 'monday', 'sunday').",
       "type": "string",
-      "enum": ["monday", "saturday", "sunday"]
+      "enum": [
+        "monday",
+        "saturday",
+        "sunday"
+      ]
     },
     "demonyms": {
+      "description": "Demonyms as {female, male} strings in English.",
       "type": "object",
       "properties": {
-        "female": { "type": "string" },
-        "male": { "type": "string" }
+        "female": {
+          "type": "string"
+        },
+        "male": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
@@ -215,10 +376,19 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name"],
+        "required": [
+          "id",
+          "name"
+        ],
         "properties": {
-          "id": { "type": "string", "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')" },
-          "name": { "type": "string", "description": "Name in the specified language" }
+          "id": {
+            "type": "string",
+            "description": "Language code (e.g., 'ar', 'zh', 'en', 'fr', 'ru', 'es')"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name in the specified language"
+          }
         },
         "additionalProperties": true
       },
@@ -226,7 +396,9 @@
     },
     "common_names": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Common English names and alternative names for the country"
     },
     "m49_code": {
@@ -235,6 +407,7 @@
       "description": "UN M49 numeric code (3-digit code for countries)"
     },
     "entity_type": {
+      "description": "Entity classification: sovereign_state, dependent_territory, special_administrative_region, disputed_territory, historical_entity, supranational_grouping, or statistical_area.",
       "type": "string",
       "enum": [
         "sovereign_state",
@@ -247,6 +420,7 @@
       ]
     },
     "code_status": {
+      "description": "Code assignment status: official_iso3166_1 (249 records), user_assigned, obsolete, or exceptionally_reserved. See docs/country-code-policy.md.",
       "type": "string",
       "enum": [
         "official_iso3166_1",
@@ -256,38 +430,65 @@
       ]
     },
     "recognition_status": {
+      "description": "Recognition metadata for non-standard entities: {status, un_member, notes} explaining disputed, dissolved, or collective-grouping records.",
       "type": "object",
       "properties": {
-        "status": { "type": "string" },
-        "un_member": { "type": "boolean" },
-        "notes": { "type": "string" }
+        "status": {
+          "type": "string"
+        },
+        "un_member": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "parent_entity": {
+      "description": "Parent state {code, name} for dependent territories and special administrative regions.",
       "type": "object",
       "properties": {
-        "code": { "type": "string", "minLength": 2, "maxLength": 2 },
-        "name": { "type": "string" }
+        "code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "name": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "provenance": {
+      "description": "Field-level sourcing entries {field, source, url, retrieved_at, license} documenting where enriched values came from.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["field", "source", "retrieved_at"],
+        "required": [
+          "field",
+          "source",
+          "retrieved_at"
+        ],
         "properties": {
-          "field": { "type": "string" },
-          "source": { "type": "string" },
-          "url": { "type": "string" },
-          "retrieved_at": { "type": "string" },
-          "license": { "type": "string" }
+          "field": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     }
   }
 }
-
-

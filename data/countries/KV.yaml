@@ -21,9 +21,10 @@ lendingType:
 m49_code: '383'
 wikidata_id: Q1246
 population:
-  value: 1883018
+  value: 1586659
   source: Wikidata
   source_id: P1082
+  year: 2024
 area:
   value: 10909.0
   source: Wikidata
@@ -56,10 +57,6 @@ provenance:
   source: mledoze/countries
   url: https://github.com/mledoze/countries
   retrieved_at: '2026-06-15'
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
 - field: area
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -90,6 +87,16 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-08-02'
+  url: https://www.wikidata.org/wiki/Q1246
+  license: CC0
+  note: Preferred P1082 value with point-in-time qualifier
 centroid:
   lat: 42.6026
   lng: 20.903
+un_member: false
+un_status: non_member
+independent: false
+landlocked: true

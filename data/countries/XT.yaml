@@ -13,14 +13,16 @@ borders: []
 recognition_status:
   status: disputed_or_partially_recognized
   un_member: false
-  notes: User-assigned alpha-2 code XT for CIS2 membership references; not an official ISO 3166-1 assignment.
+  notes: User-assigned alpha-2 code XT for CIS2 membership references; not an official
+    ISO 3166-1 assignment.
 centroid:
   lat: 46.848
   lng: 29.633
 population:
-  value: 360000
+  value: 367776
   source: Wikidata
   source_id: P1082
+  year: 2024
 area:
   value: 4163.0
   source: Wikidata
@@ -73,10 +75,6 @@ provenance:
   source: UN M49 inference
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q907112
 - field: area
   source: Wikidata
   retrieved_at: '2026-06-15'
@@ -90,7 +88,17 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-08-02'
+  url: https://www.wikidata.org/wiki/Q907112
+  license: CC0
+  note: Preferred P1082 value with point-in-time qualifier
 capital_city:
   name: Tiraspol
   lng: 29.6433
   lat: 46.8403
+un_member: false
+un_status: non_member
+independent: false
+landlocked: true

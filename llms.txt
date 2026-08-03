@@ -8,7 +8,7 @@
 ## What this is
 
 - **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names
-- **Intblocks** (1078 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, etc.
+- **Intblocks** (1085 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, etc.
 - **Blocktypes** (86 records): taxonomy for intblock categories
 
 This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
@@ -17,11 +17,16 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 ## Preferred access (do not parse source YAML unless editing)
 
 - DuckDB: data/datasets/internacia.duckdb
-  - Tables: countries, intblocks, blocktypes, _meta
+  - Tables: countries, intblocks, blocktypes, memberships, _meta
 - Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+- Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv / DuckDB table memberships
+  - Columns: intblock_id, country_code, include_type, status, joined, left
+- Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
-- Python SDK: https://github.com/commondataio/internacia-python
-- REST API: https://github.com/commondataio/internacia-api
+- Python SDK: https://github.com/datenoio/internacia-python
+- REST API: https://github.com/datenoio/internacia-api
+
+Do NOT read data/_legacy/ — obsolete pre-1.0 snapshots kept for historical reference only.
 
 ## Schemas and metadata
 
@@ -48,7 +53,8 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - population, area, gini are structs: {value, year, source, source_id} — use .value for the number
 - Current ISO countries only (249): filter code_status == 'official_iso3166_1'
 - 7 non-standard country codes retained with explicit status: AN, JG, KV, XA, XS, XT, XN
-- World Bank region/incomeLevel/lendingType missing for ~33 entities (territories WB does not classify)
+- World Bank region/incomeLevel/lendingType missing for 8 entities (territories WB does not classify); adminregion missing for 39 high-income economies by design
+- Filter World Bank region on region.id (e.g. 'ECS'), not region.value: labels vary upstream ('(all income levels)' suffix)
 - Intblock id renames: consult intblocks_aliases.json; reason=disambiguated means old id now refers to a different entity
 - timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
 
@@ -63,6 +69,8 @@ SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
 SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
 
 SELECT i.id, i.name FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE m.id = 'LA' AND m.type = 'country' LIMIT 10;
+
+SELECT intblock_id FROM memberships WHERE country_code = 'LA' AND status = 'member' LIMIT 10;
 
 SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10;
 

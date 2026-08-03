@@ -41,10 +41,11 @@ acronyms:
 - lang: pt
   value: ITF
 legal_status: non-governmental
-description: The ITF is the global governing body for tennis, wheelchair tennis, and beach tennis. It maintains and enforces
-  the rules of tennis, regulates international team competitions including the Davis Cup and Billie Jean King Cup, promotes
-  the game, and preserves the sport's integrity through anti-doping and anti-corruption programs. The ITF comprises 211 national
-  and six regional associations.
+description: The ITF is the global governing body for tennis, wheelchair tennis, and
+  beach tennis. It maintains and enforces the rules of tennis, regulates international
+  team competitions including the Davis Cup and Billie Jean King Cup, promotes the
+  game, and preserves the sport's integrity through anti-doping and anti-corruption
+  programs. The ITF comprises 211 national and six regional associations.
 tags:
 - ITF
 - tennis
@@ -75,6 +76,7 @@ previous_names:
   name: International Lawn Tennis Federation
   period: 1913-1977
 membership_count: 211
+membership_count_type: organizations
 includes:
 - id: AD
   name: Andorra
@@ -974,3 +976,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.itftennis.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.itftennis.com
+  note: membership_count counts national tennis associations; unit classified 2026-08,
+    count value from earlier enrichment

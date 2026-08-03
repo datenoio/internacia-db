@@ -27,6 +27,34 @@ The countries dataset includes **256** records: **249** with current ISO 3166-1-
 | `XT` | Transnistria | `user_assigned` | CIS2 membership reference; `entity_type: disputed_territory` |
 | `XN` | Artsakh | `user_assigned` | CIS2 historical reference; `entity_type: historical_entity` (dissolved 2023) |
 
+All seven non-standard records carry **explicit** `un_member`, `un_status`, `independent`, and
+`landlocked` values so that consumers never need to interpret a missing field.
+
+### Disputed-territory inclusion rule
+
+User-assigned records for de facto states exist **only where an intblock in this repository
+references the entity as a member** and a join target is therefore required (currently the
+CIS2 references to `XA`, `XS`, `XT`, `XN`, and the widely used `KV` for Kosovo). De facto
+states that no intblock references — for example **Somaliland** and **Northern Cyprus** — do
+not receive records, regardless of their degree of de facto autonomy. If a future intblock
+addition references such an entity, a user-assigned record (e.g. `XL`, `XC`) is added in the
+same change. This rule is deliberately mechanical: inclusion signals join-resolution need,
+not any position on recognition.
+
+### `JG` aggregation warning
+
+`JG` (Channel Islands) is a **collective grouping** whose World Bank population figure is not
+the exact sum of `GG` (Guernsey) and `JE` (Jersey), which are sourced separately. Consumers
+summing populations over all records will **double-count** the Channel Islands if they
+include `JG` together with `GG`/`JE` — include either the grouping or the constituents,
+never both.
+
+### Exceptionally reserved codes
+
+ISO 3166-1 exceptionally reserved elements (`EU`, `EZ`, `UN`, etc.) are **not** country
+records in this dataset. The European Union appears as the intblock `economic/EU.yaml`;
+join organization-level references there instead.
+
 ## Entity type (`entity_type`)
 
 | Value | Typical use |
@@ -103,7 +131,7 @@ capital by design** and are expected exclusions rather than data gaps:
 
 ## World Bank classification gaps
 
-World Bank `region`, `incomeLevel`, and `lendingType` are absent for ~33 entities (high-income OECD members, overseas territories, and special statistical areas) because the World Bank does not classify them. `adminregion` may also be missing for high-income economies outside the Bank's administrative taxonomy.
+World Bank `region`, `incomeLevel`, and `lendingType` are absent for 8 entities (overseas territories, special statistical areas, and non-standard codes) because the World Bank does not classify them. `adminregion` is absent for 39 entities — by World Bank convention it only covers low- and middle-income economies, so its absence for high-income economies (US, GB, DE, …) is expected, not a gap.
 
 For these records, enrichment MAY source regional classifications from **UN M49** with provenance documenting the alternative authority. Expected absences for uninhabited territories and special entities should not fail validation when documented in the record's provenance.
 

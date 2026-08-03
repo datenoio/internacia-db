@@ -1,73 +1,138 @@
 # Internacia Datasets
 
-> Extended index for LLM agents and crawlers. Compact version: llms.txt
-> Licensed CC-BY-4.0 (data). Code is MIT. Version: see data/datasets/*.manifest.json
+> Machine-friendly reference data for countries, intergovernmental organizations (intblocks),
+> and organization block types. Licensed CC-BY-4.0 (data). Code is MIT.
+> Version and schema: see data/datasets/*.manifest.json
+> 中文索引: llms.zh.txt
 
-## Summary
+## What this is
 
-Reference data for countries (256), intergovernmental organizations / intblocks (1078), and blocktypes (86).
-Designed for entity linking, geographic classification, and membership joins — NOT socioeconomic profiling.
+- **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names
+- **Intblocks** (1085 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, etc.
+- **Blocktypes** (86 records): taxonomy for intblock categories
 
-## Agent entry points
+This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
+Do NOT expect HDI, GDP, government type, internet penetration, or similar indicators here.
 
-- AGENTS.md — root routing hub (all platforms)
-- AGENTS.zh.md — 中文智能体路由（Kimi、GLM、通义灵码）
-- docs/agents/query.md — query and join workflow
-- docs/agents/zh/query.md — 中文查询工作流
-- docs/agents/contribute.md — YAML editing workflow
-- docs/agents/openspec-quickstart.md — schema change proposals
-- CLAUDE.md — Claude Code shim
-- .github/copilot-instructions.md — GitHub Copilot shim
+## Preferred access (do not parse source YAML unless editing)
 
-## Consumption
+- DuckDB: data/datasets/internacia.duckdb
+  - Tables: countries, intblocks, blocktypes, memberships, _meta
+- Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+- Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv / DuckDB table memberships
+  - Columns: intblock_id, country_code, include_type, status, joined, left
+- Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
+- Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
+- Python SDK: https://github.com/datenoio/internacia-python
+- REST API: https://github.com/datenoio/internacia-api
 
-- docs/ai-consumers.md — full consumption contract, scope, field semantics
-- docs/query-examples.md — verified DuckDB and Pandas recipes
-- docs/country-code-policy.md — non-standard codes and filtering
+Do NOT read data/_legacy/ — obsolete pre-1.0 snapshots kept for historical reference only.
 
-## Data access
+## Schemas and metadata
 
-| Method | Location |
-|--------|----------|
-| DuckDB | data/datasets/internacia.duckdb |
-| Parquet | data/datasets/{countries,intblocks,blocktypes}.parquet |
-| JSONL (zstd) | data/datasets/{countries,intblocks,blocktypes}.jsonl.zst |
-| Manifests | data/datasets/*.manifest.json |
-| Aliases | data/datasets/intblocks_aliases.json |
-| Python SDK | https://github.com/commondataio/internacia-python |
-| REST API | https://github.com/commondataio/internacia-api |
+- JSON Schema (source YAML): data/schemas/countries.schema.json, data/schemas/intblocks.schema.json
+  - Each property includes a description field for agents and tooling
+- Build manifests: data/datasets/countries.manifest.json, intblocks.manifest.json, blocktypes.manifest.json
+  - Fields: version, build_date, git_commit, row_count, schema_hash, data_license
+- Parquet sidecars: data/datasets/{countries,intblocks,blocktypes}.meta.json
+- ID remaps: data/datasets/intblocks_aliases.json (and .parquet)
+
+Check schema_hash before upgrading downstream pipelines. Breaking changes are in CHANGELOG.md.
 
 ## Join keys
 
-- Countries: code (alpha-2), iso3code, wikidata_id
-- Intblocks: id; membership via includes[].id → country code
-- Blocktypes: id matches values in intblocks.blocktype
+- Countries: code (ISO alpha-2, primary), iso3code (alpha-3), numeric_code, wikidata_id (Q-number)
+- Intblocks: id (uppercase string, e.g. EU, NATO, UN)
+- Intblock membership: includes[].id → country code (authoritative); includes[].name is a display label only
+- Intblock taxonomy: blocktype (list of blocktype keys), partof (parent org ids)
+- Blocktypes: id matches intblocks.blocktype values
 
 ## Critical gotchas
 
-- borders uses ISO alpha-3, not alpha-2
-- population, area, gini are structs {value, year, source, source_id}
-- Filter current ISO countries: code_status = 'official_iso3166_1' (249 records)
-- Intblock id renames: check intblocks_aliases.json
-- Out of scope: HDI, GDP, government type, internet penetration
+- borders uses ISO alpha-3 codes, NOT alpha-2
+- population, area, gini are structs: {value, year, source, source_id} — use .value for the number
+- Current ISO countries only (249): filter code_status == 'official_iso3166_1'
+- 7 non-standard country codes retained with explicit status: AN, JG, KV, XA, XS, XT, XN
+- World Bank region/incomeLevel/lendingType missing for 8 entities (territories WB does not classify); adminregion missing for 39 high-income economies by design
+- Filter World Bank region on region.id (e.g. 'ECS'), not region.value: labels vary upstream ('(all income levels)' suffix)
+- Intblock id renames: consult intblocks_aliases.json; reason=disambiguated means old id now refers to a different entity
+- timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
 
-## Maintainer docs
+## Example queries (DuckDB)
 
-- CONTRIBUTING.md — setup and PR checklist
-- docs/enrichment.md — enrichment pipeline
-- openspec/AGENTS.md — full OpenSpec reference
-- ATTRIBUTION.md — upstream sources
-- CHANGELOG.md — breaking changes
+SELECT dataset, version, schema_hash FROM _meta;
 
-## Platform adapters (thin wrappers)
+SELECT code, name FROM countries WHERE un_member = true;
 
+SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
+
+SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
+
+SELECT i.id, i.name FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE m.id = 'LA' AND m.type = 'country' LIMIT 10;
+
+SELECT intblock_id FROM memberships WHERE country_code = 'LA' AND status = 'member' LIMIT 10;
+
+SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10;
+
+## Full documentation
+
+- docs/agents/query.md — query and join workflow (all platforms)
+- docs/agents/zh/query.md — 中文查询工作流（Kimi、GLM、通义灵码）
+- docs/agents/contribute.md — YAML editing workflow (all platforms)
+- docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
+- docs/agents/openspec-quickstart.md — schema change proposals
+- docs/query-examples.md — verified query cookbook (countries, borders, intblocks, joins)
+- docs/query-examples.zh.md — 已验证中文场景查询
+- docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
+- llms.zh.txt — 中文紧凑索引
+- AGENTS.zh.md — 中文智能体路由入口
+- llms-full.txt — extended index for LLM crawlers
+- AGENTS.md — root routing hub
+- README.md — installation, build, schema tables, code examples
+- docs/country-code-policy.md — non-standard codes, entity_type, filtering
+- ATTRIBUTION.md — upstream sources and citation
+- CONTRIBUTING.md — YAML authoring (for maintainers only)
+
+## Extended index (llms-full only)
+
+Everything above this line mirrors llms.txt; the sections below add detail for crawlers.
+
+### Agent entry points by platform
+
+- AGENTS.md — root routing hub (all platforms)
+- AGENTS.zh.md — 中文智能体路由（Kimi、GLM、通义灵码）
+- CLAUDE.md — Claude Code shim
+- .github/copilot-instructions.md — GitHub Copilot shim
+- .kimi/AGENTS.md — Kimi Code shim
+- .lingma/rules/ — 通义灵码 Project Rules
 - .cursor/skills/internacia-query/SKILL.md → docs/agents/query.md
 - .cursor/skills/internacia-contribute/SKILL.md → docs/agents/contribute.md
 - .agent/workflows/ — portable step-by-step workflows
 
-## Schemas
+### Additional data artifacts
 
-- data/schemas/countries.schema.json
-- data/schemas/intblocks.schema.json
-- data/schemas/countries_completeness.yaml
-- data/schemas/intblocks_completeness.yaml
+- data/datasets/memberships.parquet — flattened country↔intblock edge table (intblock_id, country_code, include_type, status, joined, left)
+- data/datasets/memberships.csv — same edge table as CSV
+- data/datasets/blocktypes.yaml — plain YAML copy of blocktypes (regenerated on build)
+- data/datasets/intblocks_aliases.parquet — alias map in Parquet
+- data/dataquality/ — data-quality analyzer reports (referential integrity, temporal, geographic, provenance)
+
+### Validation and completeness schemas
+
+- data/schemas/countries.schema.json — countries JSON Schema (every property has a description)
+- data/schemas/intblocks.schema.json — intblocks JSON Schema (every property has a description)
+- data/schemas/countries_completeness.yaml — per-field null-rate gates (countries)
+- data/schemas/intblocks_completeness.yaml — per-field null-rate gates (intblocks)
+- scripts/validate_countries.py --json / scripts/validate_intblocks.py --json — structured validation output
+
+### Maintainer documentation
+
+- CONTRIBUTING.md — setup and PR checklist
+- docs/enrichment.md — enrichment pipeline
+- docs/agents/contribute.md — YAML editing workflow
+- docs/agents/openspec-quickstart.md — schema change proposals
+- openspec/AGENTS.md — full OpenSpec reference
+- ATTRIBUTION.md — upstream sources and citation formats
+- CHANGELOG.md — release history and breaking changes
+- docs/country-code-policy.md — non-standard codes, entity_type, un_status, filtering
+

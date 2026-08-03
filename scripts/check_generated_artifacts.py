@@ -8,6 +8,11 @@ Checks, for each dataset (countries, intblocks, blocktypes):
 2. Manifest row counts match actual exported rows.
 3. Single build identity: all manifests, ``*.meta.json`` sidecars, and DuckDB
    ``_meta`` rows agree on ``version``, ``git_commit``, and ``build_date``.
+4. Plain JSONL parity: ``<dataset>.jsonl`` decompresses byte-identical to
+   ``<dataset>.jsonl.zst``.
+5. Memberships edge parity: ``memberships.parquet``, ``memberships.csv``, and
+   the DuckDB ``memberships`` table have the same row count, which matches the
+   country-coded includes entries in ``intblocks.parquet``.
 
 Exits non-zero on any mismatch.
 """
@@ -132,6 +137,56 @@ def main(
             identities[f"{name}.meta"] = {k: sidecar.get(k) for k in ("version", "build_date", "git_commit")}
         if name in meta_rows:
             identities[f"{name}._meta"] = meta_rows[name]
+
+        # Plain JSONL must decompress byte-identical to the zst variant.
+        plain_path = datasets_dir / f"{name}.jsonl"
+        zst_path = datasets_dir / f"{name}.jsonl.zst"
+        if not plain_path.exists():
+            problems.append(f"[{name}] missing plain JSONL {plain_path.name}")
+        else:
+            dctx = zstandard.ZstdDecompressor()
+            with zst_path.open("rb") as f:
+                zst_bytes = dctx.stream_reader(f).read()
+            if zst_bytes != plain_path.read_bytes():
+                problems.append(f"[{name}] {plain_path.name} content differs from {zst_path.name}")
+
+    # Memberships edge artifact parity.
+    memb_parquet = datasets_dir / "memberships.parquet"
+    memb_csv = datasets_dir / "memberships.csv"
+    if not memb_parquet.exists():
+        problems.append("[memberships] missing memberships.parquet")
+    else:
+        parquet_rows = pq.read_table(memb_parquet).num_rows
+        duck_rows = duck.execute("SELECT COUNT(*) FROM memberships").fetchone()[0]
+        expected_rows = duck.execute(
+            "SELECT count(*) FROM (SELECT unnest(includes) AS m FROM intblocks) WHERE m.type != 'organization'"
+        ).fetchone()[0]
+        if not memb_csv.exists():
+            problems.append("[memberships] missing memberships.csv")
+        else:
+            csv_rows = sum(1 for _ in memb_csv.open(encoding="utf-8")) - 1
+            if csv_rows != parquet_rows:
+                problems.append(f"[memberships] csv rows {csv_rows} != parquet rows {parquet_rows}")
+        if duck_rows != parquet_rows:
+            problems.append(f"[memberships] duckdb rows {duck_rows} != parquet rows {parquet_rows}")
+        if expected_rows != parquet_rows:
+            problems.append(
+                f"[memberships] parquet rows {parquet_rows} != country-coded includes entries {expected_rows}"
+            )
+        memb_manifest = datasets_dir / "memberships.manifest.json"
+        if memb_manifest.exists():
+            manifest = json.loads(memb_manifest.read_text(encoding="utf-8"))
+            if manifest.get("row_count") != parquet_rows:
+                problems.append(
+                    f"[memberships] manifest row_count {manifest.get('row_count')} != actual {parquet_rows}"
+                )
+            identities["memberships.manifest"] = {
+                k: manifest.get(k) for k in ("version", "build_date", "git_commit")
+            }
+        else:
+            problems.append("[memberships] missing manifest memberships.manifest.json")
+        if "memberships" in meta_rows:
+            identities["memberships._meta"] = meta_rows["memberships"]
 
     duck.close()
 

@@ -41,10 +41,13 @@ headquarters:
 legal_status: intergovernmental
 partof: NTO
 membership_count: 38
-description: Intergovernmental organization established in 1967 to support national governments in enhancing the development
-  and institutional strengthening of tax administrations. Provides specialized technical assistance for modernization and
-  strengthening of tax administrations, promotes international cooperation, and facilitates the exchange of experiences and
-  best practices among tax administrations across the Americas and partner countries worldwide.
+membership_count_type: organizations
+description: Intergovernmental organization established in 1967 to support national
+  governments in enhancing the development and institutional strengthening of tax
+  administrations. Provides specialized technical assistance for modernization and
+  strengthening of tax administrations, promotes international cooperation, and facilitates
+  the exchange of experiences and best practices among tax administrations across
+  the Americas and partner countries worldwide.
 tags:
 - CIAT
 - tax
@@ -229,11 +232,13 @@ includes:
   name: Nigeria
   type: country
   status: associated
-notes: 'CIAT comprises 42 member and associate member countries across four continents: 32 from the Americas, five European
-  full members (France, Italy, Netherlands, Portugal, and Spain), four African countries (Angola, Kenya, Morocco, and Nigeria),
-  and one Asian country (India). Angola, India, Morocco, and Nigeria hold associate member status. The organization organizes
-  annual events such as the General Assembly (April) and the Technical Conference (October). CIAT is a founding member of
-  the Network of Tax Organizations (NTO).'
+notes: 'CIAT comprises 42 member and associate member countries across four continents:
+  32 from the Americas, five European full members (France, Italy, Netherlands, Portugal,
+  and Spain), four African countries (Angola, Kenya, Morocco, and Nigeria), and one
+  Asian country (India). Angola, India, Morocco, and Nigeria hold associate member
+  status. The organization organizes annual events such as the General Assembly (April)
+  and the Technical Conference (October). CIAT is a founding member of the Network
+  of Tax Organizations (NTO).'
 wikidata_id: Q2585529
 other_names:
 - id: en
@@ -278,3 +283,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.ciat.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.ciat.org/
+  note: membership_count counts national tax administrations; unit classified 2026-08,
+    count value from earlier enrichment

@@ -1,9 +1,16 @@
 # Internacia-db Improvement Plan
 
+> **Status: HISTORICAL (2026-08-02).** This plan was written against **v1.2.0** and most of it has
+> shipped: intblock schema validation + completeness gates + provenance requirements, pytest test
+> suite, pinned dependencies, the `internacia_builder` package refactor, DuckDB export fixes, CI
+> enforcement, and the release manifest pipeline are all in place as of v1.9.x. Kept for historical
+> context; do not treat the gap analysis below as current. Open work is tracked in
+> `openspec/changes/`.
+
 > **Generated:** 2026-06-12 (independent repository analysis)
 > **Repository:** internacia-db — reference datasets of countries, intergovernmental organizations, and country groups
-> **Current release:** v1.2.0 (2026-05-29)
-> **Consumers:** Dateno search engine, [internacia-api](https://github.com/commondataio/internacia-api), [internacia-python](https://github.com/commondataio/internacia-python)
+> **Current release at time of writing:** v1.2.0 (2026-05-29)
+> **Consumers:** Dateno search engine, [internacia-api](https://github.com/datenoio/internacia-api), [internacia-python](https://github.com/datenoio/internacia-python)
 
 This document is a prioritized improvement plan across **features**, **code quality**, and **product quality**, based on a full review of the data layer (1,317 source YAML files), all nine build/validation scripts (~3,070 lines of Python), CI configuration, and project governance. It is intended for periodic review.
 
@@ -42,7 +49,7 @@ Top five priorities, in order:
 | Dataset | Records | Source path | Governance |
 |---------|--------:|-------------|------------|
 | Countries | 256 | `data/countries/*.yaml` | Schema + completeness + CI + manifest |
-| Intblocks | 1,078 (63 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
+| Intblocks | 1,085 (62 categories) | `data/intblocks/**/*.yaml` | Schema + completeness + CI + manifest |
 | Blocktypes | 86 | `data/blocktypes/blocktypes.yaml` | Taxonomy source; copied to output on build |
 
 ### 1.3 Verified defects (found during this analysis)

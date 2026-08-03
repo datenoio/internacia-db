@@ -26,10 +26,6 @@ provenance:
   source: country-code-policy
   retrieved_at: '2026-06-15'
   url: https://github.com/datenoio/internacia-db/blob/main/docs/country-code-policy.md
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
 - field: area
   source: manual
   retrieved_at: '2026-06-15'
@@ -39,10 +35,17 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-08-02'
+  url: https://www.wikidata.org/wiki/Q244165
+  license: CC0
+  note: Preferred P1082 value with point-in-time qualifier
 population:
-  value: 137700
+  value: 146600
   source: Wikidata
   source_id: P1082
+  year: 2012
 area:
   value: 3170.0
   source: manual
@@ -56,3 +59,7 @@ native_names:
 common_names:
 - Artsakh
 - Republic of Artsakh
+un_member: false
+un_status: non_member
+independent: false
+landlocked: true

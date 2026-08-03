@@ -17,7 +17,8 @@ links:
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q1666462
   type: wikidata
-name: International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
+name: International Council for Harmonisation of Technical Requirements for Pharmaceuticals
+  for Human Use
 headquarters:
   city: Geneva
   country: CH
@@ -211,25 +212,32 @@ includes:
   type: country
   status: member
 membership_count: 25
+membership_count_type: mixed
 geographic_scope: global
 regions:
 - worldwide
-description: International organization that harmonizes technical requirements for pharmaceuticals for human use. Brings together
-  regulatory authorities and pharmaceutical industry to develop consensus guidelines for drug development, registration, and
-  pharmacovigilance. The ICH Association has been registered as a non-profit legal entity under Swiss law since 2015.
+description: International organization that harmonizes technical requirements for
+  pharmaceuticals for human use. Brings together regulatory authorities and pharmaceutical
+  industry to develop consensus guidelines for drug development, registration, and
+  pharmacovigilance. The ICH Association has been registered as a non-profit legal
+  entity under Swiss law since 2015.
 legal_status: non-governmental
-recognition_status: ICH Association registered as a non-profit legal entity under Swiss law in 2015; 25 Members (regulatory
-  authorities and industry associations) and 41 Observers as of November 2025
+recognition_status: ICH Association registered as a non-profit legal entity under
+  Swiss law in 2015; 25 Members (regulatory authorities and industry associations)
+  and 41 Observers as of November 2025
 secretariat:
   location: Geneva, Switzerland
   organization: ICH Secretariat
-notes: 'Comprises 25 Members and 41 Observers as of November 2025. Members include founding regulatory authorities (European
-  Commission, U.S. FDA, Japan MHLW/PMDA), standing regulatory members (Health Canada, Swissmedic), additional national regulatory
-  authorities, and industry associations (EFPIA, PhRMA, JPMA, BIO, Global Self-Care Federation, IGBA). Industry members
-  are not mapped in includes because membership is held by associations rather than sovereign states. Observer roster also
-  includes IFPMA, WHO, regional harmonisation initiatives (APEC, ASEAN, EAC, GHC, PANDRH, SADC), and international organisations
-  (CIOMS, EDQM, IPEC, PIC/S, USP, Gates Foundation, APIC). NAFDAC (Nigeria) and SAHPRA (South Africa) joined as Members
-  at the 51st ICH Assembly in Singapore, November 2025.'
+notes: Comprises 25 Members and 41 Observers as of November 2025. Members include
+  founding regulatory authorities (European Commission, U.S. FDA, Japan MHLW/PMDA),
+  standing regulatory members (Health Canada, Swissmedic), additional national regulatory
+  authorities, and industry associations (EFPIA, PhRMA, JPMA, BIO, Global Self-Care
+  Federation, IGBA). Industry members are not mapped in includes because membership
+  is held by associations rather than sovereign states. Observer roster also includes
+  IFPMA, WHO, regional harmonisation initiatives (APEC, ASEAN, EAC, GHC, PANDRH, SADC),
+  and international organisations (CIOMS, EDQM, IPEC, PIC/S, USP, Gates Foundation,
+  APIC). NAFDAC (Nigeria) and SAHPRA (South Africa) joined as Members at the 51st
+  ICH Assembly in Singapore, November 2025.
 tags:
 - ICH
 - pharmaceuticals
@@ -248,12 +256,13 @@ other_names:
 - id: ar
   name: المجلس الدولي لتنسيق المتطلبات التقنية للمستحضرات الصيدلانية للاستخدام البشري
 - id: de
-  name: International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
+  name: International Council for Harmonisation of Technical Requirements for Pharmaceuticals
+    for Human Use
 - id: en
   name: International Council for Harmonisation
 - id: es
-  name: Conferencia Internacional sobre armonización de requisitos técnicos para el registro de productos farmacéuticos para
-    uso humano
+  name: Conferencia Internacional sobre armonización de requisitos técnicos para el
+    registro de productos farmacéuticos para uso humano
 - id: fr
   name: Conseil international pour l'harmonisation
 - id: ru
@@ -301,3 +310,9 @@ provenance:
   source: ICH
   retrieved_at: '2026-07-15'
   url: https://www.ich.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.ich.org/
+  note: membership_count counts regulatory authorities and industry associations;
+    unit classified 2026-08, count value from earlier enrichment

@@ -48,8 +48,9 @@ acronyms:
 - lang: pt
   value: AFC
 legal_status: non-governmental
-description: AFC is the continental governing body for association football in Asia. It organizes regional competitions including
-  the AFC Asian Cup, AFC Champions League, and AFC Cup. AFC comprises 47 member associations representing countries across
+description: AFC is the continental governing body for association football in Asia.
+  It organizes regional competitions including the AFC Asian Cup, AFC Champions League,
+  and AFC Cup. AFC comprises 47 member associations representing countries across
   Asia.
 tags:
 - AFC
@@ -81,6 +82,7 @@ other_names:
 - id: zh
   name: 亚洲足球联合总会
 membership_count: 47
+membership_count_type: organizations
 includes:
 - id: AF
   name: Afghanistan
@@ -303,3 +305,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.the-afc.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.the-afc.com
+  note: membership_count counts national football associations; unit classified 2026-08,
+    count value from earlier enrichment

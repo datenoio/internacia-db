@@ -43,180 +43,595 @@ headquarters:
     lat: 39.9042
     lng: 116.4074
 includes:
-- id: CN
-  name: China
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: IN
-  name: India
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: DE
-  name: Germany
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: FR
-  name: France
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: IT
-  name: Italy
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: AU
-  name: Australia
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: KR
-  name: Korea, Republic of
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-  joined: '2016-01-16'
 - id: AE
   name: United Arab Emirates
   type: country
   status: member
   joined: '2016-01-16'
-- id: TR
-  name: Türkiye
+  note: Regional member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+  note: Regional member
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  note: Regional member
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  note: Non-regional member
+- id: AT
+  name: Austria
+  type: country
+  status: member
+  note: Non-regional member
+- id: AU
+  name: Australia
   type: country
   status: member
   joined: '2016-01-16'
-- id: ES
-  name: Spain
+  note: Regional member
+- id: AZ
+  name: Azerbaijan
   type: country
   status: member
-  joined: '2016-01-16'
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: PL
-  name: Poland
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: EG
-  name: Egypt
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: IR
-  name: Iran, Islamic Republic of
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-  joined: '2016-01-16'
+  note: Regional member
 - id: BD
   name: Bangladesh
   type: country
   status: member
   joined: '2016-01-16'
-- id: VN
-  name: Viet Nam
+  note: Regional member
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+  note: Non-regional member
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+  note: Regional member
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  note: Non-regional member
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  note: Regional member
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+  note: Non-regional member
+- id: BR
+  name: Brazil
   type: country
   status: member
   joined: '2016-01-16'
-- id: TH
-  name: Thailand
+  note: Non-regional member
+- id: BY
+  name: Belarus
   type: country
   status: member
-  joined: '2016-01-16'
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-  joined: '2016-01-16'
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-  joined: '2016-01-16'
+  note: Non-regional member
 - id: CA
   name: Canada
   type: country
   status: member
   joined: '2017-03-19'
-- id: US
-  name: United States
+  note: Non-regional member
+- id: CH
+  name: Switzerland
   type: country
-  status: observer
+  status: member
+  note: Non-regional member
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+  note: Non-regional member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+  note: Regional member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+  note: Non-regional member
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+  note: Non-regional member
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  note: Regional member
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+  note: Non-regional member
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  note: Non-regional member
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+  note: Non-regional member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+  note: Non-regional member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  note: Non-regional member
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  note: Non-regional member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  note: Regional member
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  note: Regional member
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+  note: Non-regional member
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  note: Non-regional member
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  note: Non-regional member
+- id: HK
+  name: Hong Kong SAR, China
+  type: territory
+  status: member
+  note: Regional member
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  note: Non-regional member
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  note: Non-regional member
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+  note: Non-regional member
+- id: IL
+  name: Israel
+  type: country
+  status: member
+  note: Regional member
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+  note: Regional member
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  note: Non-regional member
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+  note: Regional member
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  note: Non-regional member
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  note: Regional member
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+  note: Regional member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  note: Regional member
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  note: Regional member
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  note: Non-regional member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  note: Non-regional member
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  note: Non-regional member
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+  note: Non-regional member
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+  note: Non-regional member
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+  note: Non-regional member
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  note: Non-regional member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+  note: Regional member
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+  note: Non-regional member
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  note: Non-regional member
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+  note: Regional member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+  note: Regional member
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+  note: Regional member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  note: Non-regional member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  note: Regional member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Non-regional member
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  note: Non-regional member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+  note: Regional member
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  note: Non-regional member
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  note: Non-regional member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  note: Non-regional member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  note: Regional member
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  note: Non-regional member
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  note: Non-regional member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  note: Non-regional member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  note: Non-regional member
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  note: Non-regional member
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  note: Regional member
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  note: Regional member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  note: Non-regional member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  note: Regional member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+  note: Non-regional member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  note: Non-regional member
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  note: Non-regional member
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '2016-01-16'
+  note: Regional member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  note: Regional member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  note: Regional member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  note: Non-regional member
 membership_count: 111
 founding_members:
 - CN
@@ -253,21 +668,22 @@ founding_members:
 - MN
 - NZ
 legal_status: intergovernmental
-recognition_status: Multilateral development bank established under the Articles of Agreement of the Asian Infrastructure
-  Investment Bank (entered into force 25 December 2015; operations began 16 January 2016)
+recognition_status: Multilateral development bank established under the Articles of
+  Agreement of the Asian Infrastructure Investment Bank (entered into force 25 December
+  2015; operations began 16 January 2016)
 secretariat:
   location: Beijing, China (Asia Financial Center)
   head: President
   organization: Asian Infrastructure Investment Bank
-notes: Multilateral development bank capitalized at USD 100 billion and AAA-rated by major credit rating agencies. As of 2025,
-  AIIB reports 111 approved members worldwide (53 regional and 58 non-regional). This file includes major founding and early
-  members only (34 members + 1 observer); the full membership list should be completed from the official AIIB website. The
-  United States is an observer, not a member.
+notes: Roster lists all 111 approved members per the AIIB fact sheet (June 2026);
+  a small number are prospective members completing domestic ratification procedures.
+  53 regional and 58 non-regional members.
 partof: null
-description: Multilateral development bank established in 2016 to finance sustainable infrastructure across Asia and beyond.
-  Capitalized at USD 100 billion and AAA-rated, AIIB invests in green, technology-enabled, and connectivity-focused
-  infrastructure. As of 2025, it has 111 approved members worldwide and has invested nearly USD 70 billion in over 350
-  projects across 40 economies.
+description: Multilateral development bank established in 2016 to finance sustainable
+  infrastructure across Asia and beyond. Capitalized at USD 100 billion and AAA-rated,
+  AIIB invests in green, technology-enabled, and connectivity-focused infrastructure.
+  As of 2025, it has 111 approved members worldwide and has invested nearly USD 70
+  billion in over 350 projects across 40 economies.
 tags:
 - AIIB
 - aid
@@ -313,7 +729,7 @@ other_names:
 - id: zh
   name: 亚洲基础设施投资银行
 wikidata_id: Q18109843
-last_verified: '2026-07-12'
+last_verified: '2026-08-02'
 provenance:
 - field: description
   source: official sources
@@ -347,10 +763,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-12'
   url: https://www.aiib.org/en/about-aiib/index.html
-- field: membership_count
-  source: official sources
-  retrieved_at: '2026-07-12'
-  url: https://www.aiib.org/en/about-aiib/index.html
 - field: notes
   source: official sources
   retrieved_at: '2026-07-12'
@@ -370,3 +782,11 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.aiib.org/en/about-aiib/governance/members-of-bank/index.html
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.aiib.org/en/about-aiib/governance/members-of-bank/index.html

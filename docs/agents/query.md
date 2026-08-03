@@ -17,8 +17,8 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 | DuckDB (preferred, in-repo) | `data/datasets/internacia.duckdb` |
 | Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet` |
 | Version check | `SELECT * FROM _meta;` or `data/datasets/*.manifest.json` |
-| Python SDK (no full checkout) | https://github.com/commondataio/internacia-python |
-| HTTP API (no local files) | https://github.com/commondataio/internacia-api |
+| Python SDK (no full checkout) | https://github.com/datenoio/internacia-python |
+| HTTP API (no local files) | https://github.com/datenoio/internacia-api |
 
 ## Join keys
 
@@ -96,10 +96,10 @@ blocks = pd.read_parquet("data/datasets/intblocks.parquet")
 blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 ```
 
-Structured population field (Pandas):
+Structured population field (Pandas — `.struct` needs the Arrow dtype backend):
 
 ```python
-df = pd.read_parquet("data/datasets/countries.parquet")
+df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 pop = df["population"].struct.field("value")
 ```
 
@@ -110,7 +110,7 @@ pop = df["population"].struct.field("value")
 | Join borders on alpha-2 | Use alpha-3; join `borders` → `iso3code` |
 | Join intblocks on `includes[].name` | Use `includes[].id` (country code) |
 | Assume 256 codes are all ISO official | Filter `code_status = 'official_iso3166_1'` |
-| Read plain number from `population` | Use struct field `.value` |
+| Read plain number from `population` | Use struct field `.value` (pandas: load with `dtype_backend="pyarrow"` for `.struct`) |
 | Expect HDI/GDP in this dataset | Out of scope; enrich downstream |
 | Ignore alias remaps | Load `intblocks_aliases.json` before joining on intblock `id` |
 

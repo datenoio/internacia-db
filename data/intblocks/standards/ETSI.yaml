@@ -223,13 +223,17 @@ includes:
   type: country
   status: represented
 membership_count: 900
-notes: ETSI has over 900 member organizations from 62+ countries worldwide. Membership is organizational (not country-based),
-  including private companies, research entities, academia, government bodies, and societal stakeholders. Organizations from
-  CEPT member countries are eligible for full membership with voting rights. Organizations from non-CEPT countries can join
-  as associate members. Small and Medium Enterprises represent more than a quarter of total membership. The countries listed
-  represent CEPT member countries where organizations are eligible for full membership.
-description: Independent, not-for-profit organization that develops globally applicable standards for Information and Communications
-  Technologies (ICT), including fixed, mobile, radio, converged, broadcast, and internet technologies. ETSI produces standards
+membership_count_type: mixed
+notes: ETSI has over 900 member organizations from 62+ countries worldwide. Membership
+  is organizational (not country-based), including private companies, research entities,
+  academia, government bodies, and societal stakeholders. Organizations from CEPT
+  member countries are eligible for full membership with voting rights. Organizations
+  from non-CEPT countries can join as associate members. Small and Medium Enterprises
+  represent more than a quarter of total membership. The countries listed represent
+  CEPT member countries where organizations are eligible for full membership.
+description: Independent, not-for-profit organization that develops globally applicable
+  standards for Information and Communications Technologies (ICT), including fixed,
+  mobile, radio, converged, broadcast, and internet technologies. ETSI produces standards
   that enable global interoperability and facilitate trade.
 tags:
 - ETSI
@@ -293,3 +297,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.etsi.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.etsi.org/
+  note: membership_count counts member organizations (companies, SMEs, research bodies,
+    administrations); unit classified 2026-08, count value from earlier enrichment

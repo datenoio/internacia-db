@@ -154,15 +154,17 @@ includes:
   type: country
   status: member
 membership_count: 33
+membership_count_type: organizations
 geographic_scope: global
 regions:
 - worldwide
-description: International non-governmental organization established to promote international cooperation in planning and
-  conducting oceanographic research. Addresses interdisciplinary ocean science questions and focuses on solving methodological
-  and conceptual challenges.
+description: International non-governmental organization established to promote international
+  cooperation in planning and conducting oceanographic research. Addresses interdisciplinary
+  ocean science questions and focuses on solving methodological and conceptual challenges.
 legal_status: non-governmental
-notes: Established by the International Science Council (ISC, formerly ICSU). Comprises national committees from various countries.
-  Committed to building ocean science capacity in developing countries. Collaborates with POGO on joint initiatives.
+notes: Established by the International Science Council (ISC, formerly ICSU). Comprises
+  national committees from various countries. Committed to building ocean science
+  capacity in developing countries. Collaborates with POGO on joint initiatives.
 tags:
 - SCOR
 - oceanography
@@ -211,3 +213,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://scor-int.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://scor-int.org/
+  note: membership_count counts national SCOR committees; unit classified 2026-08,
+    count value from earlier enrichment

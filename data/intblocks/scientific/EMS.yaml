@@ -191,15 +191,18 @@ includes:
   type: country
   status: member
 membership_count: 60
+membership_count_type: organizations
 geographic_scope: regional
 regions:
 - Europe
-description: Professional society that promotes mathematics in Europe. Comprises approximately 60 national mathematical societies
-  across Europe, representing mathematicians from European countries.
+description: Professional society that promotes mathematics in Europe. Comprises approximately
+  60 national mathematical societies across Europe, representing mathematicians from
+  European countries.
 legal_status: non-governmental
-notes: Full corporate members are national mathematical societies; about 60 societies represent 42 European countries and
-  territories. Several countries have multiple member societies (e.g. Belgium, France, Italy, Norway, Romania, Russia,
-  Spain, and the United Kingdom). Affiliate member of the International Mathematical Union.
+notes: Full corporate members are national mathematical societies; about 60 societies
+  represent 42 European countries and territories. Several countries have multiple
+  member societies (e.g. Belgium, France, Italy, Norway, Romania, Russia, Spain, and
+  the United Kingdom). Affiliate member of the International Mathematical Union.
 tags:
 - EMS
 - mathematics
@@ -262,3 +265,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-14'
   url: https://euromathsoc.org/about
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://euromathsoc.org/
+  note: membership_count counts member mathematical societies and institutions; unit
+    classified 2026-08, count value from earlier enrichment

@@ -344,6 +344,41 @@ def test_contradictory_applicability_reported():
     assert "CONTRADICTORY_APPLICABILITY" in _types(issues)
 
 
+def test_non_country_count_type_exempt_from_roster_comparison():
+    # membership_count counts national federations, not the country roster,
+    # so the count/roster divergence must not be flagged.
+    record = {
+        "id": "X",
+        "membership_count": 211,
+        "membership_count_type": "organizations",
+        "includes": [_inc("FR"), _inc("DE"), _inc("IT")],
+        "provenance": [{"field": "membership_count", "url": "https://example.org/members"}],
+    }
+    assert intblock_rules.check_intblock_membership_consistency(record) == []
+
+
+def test_non_country_count_type_requires_provenance():
+    record = {
+        "id": "X",
+        "membership_count": 211,
+        "membership_count_type": "organizations",
+        "includes": [_inc("FR")],
+    }
+    issues = intblock_rules.check_intblock_membership_consistency(record)
+    assert "MEMBERSHIP_COUNT_MISMATCH" in _types(issues)
+
+
+def test_countries_count_type_still_compared_against_roster():
+    record = {
+        "id": "X",
+        "membership_count": 10,
+        "membership_count_type": "countries",
+        "includes": [_inc("FR"), _inc("DE"), _inc("IT")],
+    }
+    issues = intblock_rules.check_intblock_membership_consistency(record)
+    assert "MEMBERSHIP_COUNT_MISMATCH" in _types(issues)
+
+
 # --- Deprecated topics ---------------------------------------------------------------------------
 
 def test_deprecated_topic_key_reported():
@@ -430,16 +465,27 @@ def test_non_iso_code_flag_not_checked():
 
 
 def test_landlocked_without_borders_reported():
-    issues = country_rules.check_country_landlocked({"landlocked": True, "borders": []})
+    issues = country_rules.check_country_landlocked(
+        {"code_status": "official_iso3166_1", "landlocked": True, "borders": []}
+    )
     assert _types(issues) == ["LANDLOCKED_INCONSISTENCY"]
 
 
 def test_landlocked_with_borders_passes():
-    assert country_rules.check_country_landlocked({"landlocked": True, "borders": ["FRA"]}) == []
+    record = {"code_status": "official_iso3166_1", "landlocked": True, "borders": ["FRA"]}
+    assert country_rules.check_country_landlocked(record) == []
 
 
 def test_island_not_landlocked_passes():
-    assert country_rules.check_country_landlocked({"landlocked": False, "borders": []}) == []
+    record = {"code_status": "official_iso3166_1", "landlocked": False, "borders": []}
+    assert country_rules.check_country_landlocked(record) == []
+
+
+def test_non_iso_landlocked_without_borders_exempt():
+    # borders holds ISO alpha-3 codes only, so user-assigned/obsolete records
+    # (e.g. XS, XT, XN) legitimately combine landlocked=true with empty borders.
+    record = {"code_status": "user_assigned", "landlocked": True, "borders": []}
+    assert country_rules.check_country_landlocked(record) == []
 
 
 # --- Region hierarchy ----------------------------------------------------------

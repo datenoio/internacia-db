@@ -61,9 +61,11 @@ acronyms:
 - lang: pt
   value: FINA
 legal_status: non-governmental
-description: World Aquatics is the international governing body for aquatic sports, overseeing disciplines such as swimming,
-  diving, artistic swimming, water polo, open water swimming, and high diving. It organizes major international competitions
-  including the World Aquatics Championships. World Aquatics comprises 210 national member federations across five continents.
+description: World Aquatics is the international governing body for aquatic sports,
+  overseeing disciplines such as swimming, diving, artistic swimming, water polo,
+  open water swimming, and high diving. It organizes major international competitions
+  including the World Aquatics Championships. World Aquatics comprises 210 national
+  member federations across five continents.
 tags:
 - WORLDAQUATICS
 - aquatics
@@ -106,6 +108,7 @@ previous_names:
   name: FINA
   period: 1908-2023
 membership_count: 210
+membership_count_type: organizations
 includes:
 - id: AD
   name: Andorra
@@ -1005,3 +1008,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.worldaquatics.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.worldaquatics.com
+  note: membership_count counts national aquatics federations; unit classified 2026-08,
+    count value from earlier enrichment

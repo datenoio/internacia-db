@@ -1,6 +1,6 @@
 # Internacia DB — AI agent guide
 
-Structured reference data: **256 countries**, **1078 intblocks** (organizations/groups),
+Structured reference data: **256 countries**, **1085 intblocks** (organizations/groups),
 **86 blocktypes**. Licensed CC-BY-4.0 (data); code is MIT.
 
 中文指南：[AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt)
@@ -18,7 +18,7 @@ Structured reference data: **256 countries**, **1078 intblocks** (organizations/
 
 - **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `_meta`)
 - **Parquet:** `data/datasets/{countries,intblocks,blocktypes}.parquet`
-- **Remote:** [internacia-api](https://github.com/commondataio/internacia-api), [internacia-python](https://github.com/commondataio/internacia-python)
+- **Remote:** [internacia-api](https://github.com/datenoio/internacia-api), [internacia-python](https://github.com/datenoio/internacia-python)
 
 Check version before upgrading: `SELECT dataset, version, schema_hash FROM _meta;` or read `data/datasets/*.manifest.json`.
 
@@ -35,7 +35,8 @@ Check version before upgrading: `SELECT dataset, version, schema_hash FROM _meta
 
 - Add socioeconomic profile fields to countries (HDI, GDP, government type, internet penetration, etc.)
 - Treat all 256 country codes as official ISO — filter on `code_status`
-- Assume missing World Bank `region` / `incomeLevel` is an error (~33 entities are unclassified)
+- Assume missing World Bank `region` / `incomeLevel` is an error (8 entities are unclassified; `adminregion` is absent for 39 high-income economies by design)
+- Read `data/_legacy/` — obsolete pre-1.0 snapshots kept for historical reference only
 
 ## Validation (contributors)
 

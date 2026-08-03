@@ -442,7 +442,9 @@ def check_intblock_membership_consistency(
     mc_rule = ((config or {}).get("includes") or {}).get("membership_count") or {}
     tolerance = int(mc_rule.get("tolerance", 0))
     mc = record.get("membership_count")
-    if isinstance(mc, int) and not isinstance(mc, bool) and includes:
+    mc_type = record.get("membership_count_type")
+    non_country_count = mc_type is not None and mc_type != "countries"
+    if isinstance(mc, int) and not isinstance(mc, bool) and includes and not non_country_count:
         total = len(includes)
         member_class = sum(
             1 for inc in includes if str(inc.get("status", "")) in MEMBER_CLASS_STATUSES
@@ -457,6 +459,20 @@ def check_intblock_membership_consistency(
                 "suggested_action": (
                     f"membership_count {mc} matches neither total includes ({total}) "
                     f"nor member-class includes ({member_class})"
+                ),
+            })
+    if non_country_count:
+        provenance_fields = {
+            str(p.get("field")) for p in (record.get("provenance") or []) if isinstance(p, dict)
+        }
+        if "membership_count" not in provenance_fields:
+            issues.append({
+                "issue_type": "MEMBERSHIP_COUNT_MISMATCH",
+                "field": "membership_count",
+                "current_value": str(mc),
+                "suggested_action": (
+                    f"membership_count_type is '{mc_type}' (non-country count); "
+                    "a provenance entry for membership_count is required"
                 ),
             })
     return issues

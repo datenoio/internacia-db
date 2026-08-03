@@ -1,6 +1,6 @@
 # Internacia DB — AI 智能体指南（中文）
 
-结构化参考数据：**256** 个国家/地区、**1078** 个国际组织/集团（intblocks）、**86** 种 blocktype 分类。
+结构化参考数据：**256** 个国家/地区、**1085** 个国际组织/集团（intblocks）、**86** 种 blocktype 分类。
 数据许可：CC-BY-4.0；代码：MIT。
 
 English: [AGENTS.md](AGENTS.md)
@@ -18,7 +18,7 @@ English: [AGENTS.md](AGENTS.md)
 
 - **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`_meta`）
 - **Parquet：** `data/datasets/{countries,intblocks,blocktypes}.parquet`
-- **远程：** [internacia-api](https://github.com/commondataio/internacia-api)、[internacia-python](https://github.com/commondataio/internacia-python)
+- **远程：** [internacia-api](https://github.com/datenoio/internacia-api)、[internacia-python](https://github.com/datenoio/internacia-python)
 
 升级前检查版本：`SELECT dataset, version, schema_hash FROM _meta;` 或读 `data/datasets/*.manifest.json`。
 

@@ -145,17 +145,20 @@ includes:
   type: country
   status: member
 membership_count: 32
+membership_count_type: organizations
 geographic_scope: regional
 regions:
 - Asia
 - Pacific
-description: Regional federation that promotes chemistry in Asia and the Pacific region. Comprises 32 chemical societies from
-  countries and territories across the Asia-Pacific region, representing individual qualified chemists dedicated to advancing
-  chemistry.
+description: Regional federation that promotes chemistry in Asia and the Pacific region.
+  Comprises 32 chemical societies from countries and territories across the Asia-Pacific
+  region, representing individual qualified chemists dedicated to advancing chemistry.
 legal_status: non-governmental
-notes: Member societies include chemical societies from Australia, Bangladesh, Brunei, Cambodia, China, Hong Kong, India,
-  Indonesia, Iraq, Israel, Japan, Jordan, Korea, Kuwait, Malaysia, Mongolia, Myanmar, Nepal, New Zealand, Pakistan, Philippines,
-  Russia, Saudi Arabia, Singapore, Sri Lanka, Taiwan, Thailand, Timor-Leste, Turkey, and Vietnam.
+notes: Member societies include chemical societies from Australia, Bangladesh, Brunei,
+  Cambodia, China, Hong Kong, India, Indonesia, Iraq, Israel, Japan, Jordan, Korea,
+  Kuwait, Malaysia, Mongolia, Myanmar, Nepal, New Zealand, Pakistan, Philippines,
+  Russia, Saudi Arabia, Singapore, Sri Lanka, Taiwan, Thailand, Timor-Leste, Turkey,
+  and Vietnam.
 tags:
 - FACS
 - chemistry
@@ -193,3 +196,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://facs.website/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://facs.website/
+  note: membership_count counts member chemical societies; unit classified 2026-08,
+    count value from earlier enrichment

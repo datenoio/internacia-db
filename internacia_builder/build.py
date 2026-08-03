@@ -253,6 +253,7 @@ def get_countries_schema() -> pa.Schema:
                 pa.list_(pa.struct([("code", pa.string()), ("name", pa.string()), ("symbol", pa.string())])),
             ),
             ("un_member", pa.bool_()),
+            ("un_status", pa.string()),
             ("independent", pa.bool_()),
             ("entity_type", pa.string()),
             ("code_status", pa.string()),
@@ -336,6 +337,7 @@ def get_intblocks_schema() -> pa.Schema:
                             ("type", pa.string()),
                             ("status", pa.string()),
                             ("joined", pa.string()),
+                            ("left", pa.string()),
                             ("role", pa.string()),
                             ("note", pa.string()),
                         ]
@@ -343,6 +345,7 @@ def get_intblocks_schema() -> pa.Schema:
                 ),
             ),
             ("membership_count", pa.int64()),
+            ("membership_count_type", pa.string()),
             ("wikidata_id", pa.string()),
             ("legal_status", pa.string()),
             ("description", pa.string()),
@@ -363,6 +366,8 @@ def get_intblocks_schema() -> pa.Schema:
             ("dissolved", pa.string()),
             ("predecessor", pa.string()),
             ("successor", pa.string()),
+            ("active_period", pa.struct([("start", pa.string()), ("end", pa.string())])),
+            ("last_verified", pa.string()),
             ("other_names", pa.list_(pa.struct([("id", pa.string()), ("name", pa.string())]))),
             (
                 "provenance",
@@ -713,6 +718,18 @@ def save_jsonl_zst(data: list[dict[str, Any]], output_file: Path):
     typer.echo(f"✓ Saved JSONL (zstd): {output_file}")
 
 
+def save_jsonl(data: list[dict[str, Any]], output_file: Path):
+    """Save data as plain (uncompressed) JSONL file.
+
+    Row content is identical to the ``.jsonl.zst`` variant so consumers
+    without a zstd codec can read the same data.
+    """
+    with open(output_file, "w", encoding="utf-8") as f:
+        for item in data:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    typer.echo(f"✓ Saved JSONL: {output_file}")
+
+
 def save_yaml_zst(data: list[dict[str, Any]], output_file: Path):
     """Save data as Zstandard-compressed YAML file."""
     cctx = zstd.ZstdCompressor(level=22)
@@ -720,6 +737,59 @@ def save_yaml_zst(data: list[dict[str, Any]], output_file: Path):
     with open(output_file, "wb") as f:
         f.write(cctx.compress(yaml_str.encode("utf-8")))
     typer.echo(f"✓ Saved YAML (zstd): {output_file}")
+
+
+def get_memberships_schema() -> pa.Schema:
+    """Define explicit PyArrow schema for the flattened membership edge table."""
+    return pa.schema(
+        [
+            ("intblock_id", pa.string()),
+            ("country_code", pa.string()),
+            ("include_type", pa.string()),
+            ("status", pa.string()),
+            ("joined", pa.string()),
+            ("left", pa.string()),
+        ]
+    )
+
+
+def build_membership_rows(intblocks_data: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Flatten country-coded includes entries into one membership edge per row.
+
+    Organization-type entries are excluded: their ids reference intblocks,
+    not countries. country / territory / historical-country entries all join
+    against ``countries.code``.
+    """
+    rows: list[dict[str, Any]] = []
+    for record in intblocks_data:
+        for inc in record.get("includes") or []:
+            if not isinstance(inc, dict) or inc.get("type") == "organization":
+                continue
+            rows.append(
+                {
+                    "intblock_id": record.get("id"),
+                    "country_code": inc.get("id"),
+                    "include_type": inc.get("type"),
+                    "status": inc.get("status"),
+                    "joined": inc.get("joined"),
+                    "left": inc.get("left"),
+                }
+            )
+    rows.sort(key=lambda r: (str(r["intblock_id"]), str(r["country_code"])))
+    return rows
+
+
+def save_memberships_csv(rows: list[dict[str, Any]], output_file: Path):
+    """Save membership edges as a plain CSV file."""
+    import csv
+
+    fieldnames = get_memberships_schema().names
+    with open(output_file, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+    typer.echo(f"✓ Saved CSV: {output_file}")
 
 
 def save_parquet(data: list[dict[str, Any]], output_file: Path, schema: pa.Schema | None = None):
@@ -741,8 +811,9 @@ def create_duckdb_database(
     countries_schema: pa.Schema,
     intblocks_schema: pa.Schema,
     blocktypes_schema: pa.Schema,
+    memberships_data: list[dict[str, Any]] | None = None,
 ):
-    """Create DuckDB database with countries, intblocks, and blocktypes tables."""
+    """Create DuckDB database with countries, intblocks, blocktypes, and memberships tables."""
     # Remove existing database if it exists
     if output_file.exists():
         output_file.unlink()
@@ -756,6 +827,8 @@ def create_duckdb_database(
             ("intblocks", intblocks_data, intblocks_schema),
             ("blocktypes", blocktypes_data, blocktypes_schema),
         ]
+        if memberships_data is not None:
+            tables.append(("memberships", memberships_data, get_memberships_schema()))
         counts = {}
         for name, data, schema in tables:
             typer.echo(f"Creating {name} table...")
@@ -779,6 +852,8 @@ def create_duckdb_database(
         typer.echo(f"  - Countries: {counts['countries']} rows")
         typer.echo(f"  - Intblocks: {counts['intblocks']} rows")
         typer.echo(f"  - Blocktypes: {counts['blocktypes']} rows")
+        if "memberships" in counts:
+            typer.echo(f"  - Memberships: {counts['memberships']} rows")
 
     finally:
         con.close()
@@ -912,6 +987,10 @@ def build(
     intblocks_schema = get_intblocks_schema()
     blocktypes_schema = get_blocktypes_schema()
 
+    # Flattened membership edges derived from country-coded includes entries.
+    memberships_data = build_membership_rows(intblocks_data)
+    typer.echo(f"   Derived {len(memberships_data)} membership edge(s)")
+
     # Generate datasets
     typer.echo("\n💾 Generating datasets...\n")
 
@@ -920,6 +999,9 @@ def build(
         save_jsonl_zst(countries_data, output_dir / "countries.jsonl.zst")
         save_jsonl_zst(intblocks_data, output_dir / "intblocks.jsonl.zst")
         save_jsonl_zst(blocktypes_data, output_dir / "blocktypes.jsonl.zst")
+        save_jsonl(countries_data, output_dir / "countries.jsonl")
+        save_jsonl(intblocks_data, output_dir / "intblocks.jsonl")
+        save_jsonl(blocktypes_data, output_dir / "blocktypes.jsonl")
 
     if "yaml" in requested_formats:
         save_yaml_zst(countries_data, output_dir / "countries.yaml.zst")
@@ -930,12 +1012,16 @@ def build(
         save_parquet(countries_data, output_dir / "countries.parquet", schema=countries_schema)
         save_parquet(intblocks_data, output_dir / "intblocks.parquet", schema=intblocks_schema)
         save_parquet(blocktypes_data, output_dir / "blocktypes.parquet", schema=blocktypes_schema)
+        save_parquet(memberships_data, output_dir / "memberships.parquet", schema=get_memberships_schema())
+        save_memberships_csv(memberships_data, output_dir / "memberships.csv")
         write_manifest(output_dir, "countries", countries_schema, len(countries_data))
         write_manifest(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
         write_manifest(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
+        write_manifest(output_dir, "memberships", get_memberships_schema(), len(memberships_data))
         write_meta_sidecar(output_dir, "countries", countries_schema, len(countries_data))
         write_meta_sidecar(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
         write_meta_sidecar(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
+        write_meta_sidecar(output_dir, "memberships", get_memberships_schema(), len(memberships_data))
 
     if "duckdb" in requested_formats:
         create_duckdb_database(
@@ -946,11 +1032,13 @@ def build(
             countries_schema=countries_schema,
             intblocks_schema=intblocks_schema,
             blocktypes_schema=blocktypes_schema,
+            memberships_data=memberships_data,
         )
         if "parquet" not in requested_formats:
             write_manifest(output_dir, "countries", countries_schema, len(countries_data))
             write_manifest(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
             write_manifest(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
+            write_manifest(output_dir, "memberships", get_memberships_schema(), len(memberships_data))
 
     # Always emit the intblock alias artifact so consumers can remap retired ids.
     save_aliases(intblock_aliases, output_dir, write_parquet="parquet" in requested_formats)

@@ -31,8 +31,9 @@ acronyms:
 - lang: pt
   value: FIVB
 legal_status: non-governmental
-description: FIVB is the global governing body for volleyball, beach volleyball, and sitting volleyball. It organizes major
-  international competitions including the FIVB Volleyball World Championship, FIVB Volleyball World Cup, and FIVB Volleyball
+description: FIVB is the global governing body for volleyball, beach volleyball, and
+  sitting volleyball. It organizes major international competitions including the
+  FIVB Volleyball World Championship, FIVB Volleyball World Cup, and FIVB Volleyball
   Nations League. FIVB comprises 222 member national federations worldwide.
 tags:
 - FIVB
@@ -61,6 +62,7 @@ other_names:
 - id: zh
   name: 国际排球联合会
 membership_count: 222
+membership_count_type: organizations
 includes:
 - id: AD
   name: Andorra
@@ -960,3 +962,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.fivb.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.fivb.com
+  note: membership_count counts national volleyball federations; unit classified 2026-08,
+    count value from earlier enrichment

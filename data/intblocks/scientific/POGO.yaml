@@ -142,15 +142,18 @@ includes:
   type: country
   status: member
 membership_count: 56
+membership_count_type: organizations
 geographic_scope: global
 regions:
 - worldwide
-description: Consortium of major oceanographic institutions worldwide that promotes global oceanography, particularly through
-  the implementation of an integrated global ocean observing system. Emphasizes innovation in ocean observing, capacity development,
+description: Consortium of major oceanographic institutions worldwide that promotes
+  global oceanography, particularly through the implementation of an integrated global
+  ocean observing system. Emphasizes innovation in ocean observing, capacity development,
   and outreach.
 legal_status: non-governmental
-notes: Comprises 56 member organizations across 31 countries. Members are distributed across every continent, providing access
-  to all major ocean basins. Works closely with SCOR on joint programs including the POGO-SCOR Fellowship Programme.
+notes: Comprises 56 member organizations across 31 countries. Members are distributed
+  across every continent, providing access to all major ocean basins. Works closely
+  with SCOR on joint programs including the POGO-SCOR Fellowship Programme.
 tags:
 - POGO
 - oceanography
@@ -193,3 +196,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://pogo-ocean.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://pogo-ocean.org/
+  note: membership_count counts member oceanographic institutions; unit classified
+    2026-08, count value from earlier enrichment

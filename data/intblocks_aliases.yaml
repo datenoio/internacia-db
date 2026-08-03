@@ -38,3 +38,13 @@
   note: >-
     South Caucasus Pipeline (SOUCAPIPE) merged into BTE (Baku–Tbilisi–Erzurum /
     South Caucasus Pipeline); same Wikidata item Q572699.
+
+- alias: ICC_CRIMINAL
+  target: ICW
+  reason: disambiguated
+  since: 1.10.0
+  note: >-
+    Entity-resolution guidance: the International Criminal Court is stored under
+    id ICW (court/), while the id ICC refers to the International Cricket
+    Council (sports/). Consumers resolving the acronym "ICC" for the criminal
+    court should remap to ICW.

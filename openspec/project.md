@@ -71,7 +71,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
 
   **Out of scope**: socioeconomic profile expansion (HDI, GDP per capita, government type, internet penetration, and similar indicators). Do not propose or implement those fields in countries; consumers should enrich downstream.
 
-- **International Blocks Dataset**: Contains 1,078 organizations across 63 categories:
+- **International Blocks Dataset**: Contains 1,085 organizations across 62 categories:
   - Intergovernmental organizations (UN, EU, NATO, etc.)
   - Trade agreements and economic unions
   - Regional alliances and groups

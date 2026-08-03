@@ -69,20 +69,26 @@ WHERE landlocked
 ORDER BY name;
 ```
 
-**Expected:** 44 rows.
+**Expected:** 48 rows (including landlocked non-ISO entities such as `KV`, `XS`, `XT`, `XN`).
 
 ### By World Bank region
 
 ```sql
 SELECT code, name, region.value AS region
 FROM countries
-WHERE region.value = 'Europe & Central Asia'
+WHERE region.id = 'ECS'
   AND code_status = 'official_iso3166_1'
 ORDER BY name;
 ```
 
-**Gotcha:** `region`, `incomeLevel`, and `lendingType` are structs `{id, value}`. They are
-absent for ~33 territories the World Bank does not classify.
+**Expected:** 61 rows.
+
+**Gotcha:** `region`, `incomeLevel`, and `lendingType` are structs `{id, value}`. Filter on
+the stable `id` (`ECS`, `EAS`, `LCN`, …), **not** on `value`: the labels are inconsistent
+upstream (for some regions the stored value is e.g. `'Europe & Central Asia (all income
+levels)'`, so `region.value = 'Europe & Central Asia'` matches nothing). The structs are
+absent for 8 entities the World Bank does not classify; `adminregion` is additionally absent
+for high-income economies by World Bank convention (39 records).
 
 ### By income level
 
@@ -591,31 +597,31 @@ different participation levels.
 
 ```sql
 SELECT c.code, c.name, COUNT(DISTINCT i.id) AS org_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE c.un_member
 GROUP BY c.code, c.name
 ORDER BY org_count DESC
 LIMIT 10;
 ```
 
-**Expected top:** `FR` (397), `GB` (384), `DE` (374), `IT` (363), `US` (360).
+**Expected top:** `FR` (399), `GB` (385), `DE` (376), `IT` (365), `ES` (361).
 
 ### Least organization-dense UN members
 
 ```sql
 SELECT c.code, c.name, COUNT(DISTINCT i.id) AS org_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE c.un_member
 GROUP BY c.code, c.name
 ORDER BY org_count ASC
 LIMIT 10;
 ```
 
-**Expected bottom:** `KP` (117), `FM` (118), `PW` (124), `MH` (125), `LI` (128).
+**Expected bottom:** `KP` (116), `FM` (118), `PW` (124), `MH` (125), `LI` (127).
 
 ### Heavily connected countries missing from a bloc
 
@@ -646,9 +652,9 @@ ORDER BY d.org_count DESC;
 
 ```sql
 SELECT c.code, c.name, COUNT(*) AS observer_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE m.status = 'observer'
 GROUP BY c.code, c.name
 HAVING observer_count >= 5
@@ -710,7 +716,7 @@ ORDER BY border_count DESC, c.name;
 **Expected:** 20 rows — includes `DE` (9 borders, all high-income OECD), `TZ` (8 borders,
 all low income).
 
-**Gotcha:** Join borders on `iso3code`, not alpha-2. ~33 entities lack `incomeLevel`.
+**Gotcha:** Join borders on `iso3code`, not alpha-2. 8 entities lack `incomeLevel`.
 
 ### Countries whose neighbors are all EU members
 
@@ -803,15 +809,15 @@ ORDER BY i.id, country_code;
 
 ```sql
 SELECT c.code, c.name, COUNT(DISTINCT i.id) AS org_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE c.entity_type = 'disputed_territory'
 GROUP BY c.code, c.name
 ORDER BY org_count DESC;
 ```
 
-**Expected:** 5 rows — `KV` Kosovo (49), `EH` Western Sahara (12); `XA`, `XS`, `XT` with
+**Expected:** 5 rows — `KV` Kosovo (48), `EH` Western Sahara (14); `XA`, `XS`, `XT` with
 fewer affiliations.
 
 ### Independent but not UN members — org counts
@@ -820,15 +826,15 @@ Extends the country filter with membership tallies:
 
 ```sql
 SELECT c.code, c.name, COUNT(DISTINCT i.id) AS org_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE c.independent = true AND c.un_member = false
 GROUP BY c.code, c.name
 ORDER BY c.code;
 ```
 
-**Expected:** 1 row — `VA` Vatican City (40 org affiliations).
+**Expected:** 1 row — `VA` Vatican City (41 org affiliations).
 
 ### Declared vs actual roster size
 
@@ -849,8 +855,10 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 200 mismatches total; largest positive deltas are non-country memberships
-counted in `membership_count` (e.g. `IGA`, `WNA`).
+**Expected:** 204 mismatches total; largest positive deltas are non-country memberships
+counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
+institutions, companies, or individuals rather than countries declare it via
+`membership_count_type` and are exempt from the roster-comparison validation rule.
 
 ### Include label vs canonical country name
 
@@ -873,7 +881,7 @@ ORDER BY i.id, m.id
 LIMIT 20;
 ```
 
-**Expected:** 1826 mismatches total (advisory); examples include `CD` labeled
+**Expected:** 1791 mismatches total (advisory); examples include `CD` labeled
 "Congo, The Democratic Republic of the" vs canonical "Congo, Dem. Rep.".
 
 **Gotcha:** Mismatches are **not errors** — always join on `includes[].id`, never on
@@ -904,7 +912,7 @@ GROUP BY headquarters.city, headquarters.country
 ORDER BY org_count DESC;
 ```
 
-**Expected:** Geneva/CH (39), New York/US (18), Vienna/AT (16).
+**Expected:** Geneva/CH (39), New York/US (19), Vienna/AT (16).
 
 ### Organizations by topic
 
@@ -915,7 +923,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 15 rows — includes `UNHRC`, `UNWOMEN`, `CDEM`.
+**Expected:** 17 rows — includes `UNHRC`, `UNWOMEN`, `IACTHR`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -925,9 +933,9 @@ Useful for entity-linking pipelines flagging under-connected profiles:
 
 ```sql
 SELECT c.code, c.name, c.wikidata_id, COUNT(DISTINCT i.id) AS org_count
-FROM countries c
-JOIN intblocks i ON TRUE
-JOIN UNNEST(i.includes) AS t(m) ON m.id = c.code AND m.type = 'country'
+FROM intblocks i
+CROSS JOIN UNNEST(i.includes) AS t(m)
+JOIN countries c ON c.code = m.id AND m.type = 'country'
 WHERE c.wikidata_id IS NOT NULL AND c.un_member
 GROUP BY c.code, c.name, c.wikidata_id
 HAVING org_count <= 130
@@ -943,12 +951,33 @@ ORDER BY org_count ASC, c.name;
 ```python
 import pandas as pd
 
-df = pd.read_parquet("data/datasets/countries.parquet")
+# .struct accessor requires ArrowDtype-backed columns:
+df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 df["pop"] = df["population"].struct.field("value")
 df["region_name"] = df["region"].struct.field("value")
+
+# With the default (NumPy object) backend, struct columns are Python dicts:
+df = pd.read_parquet("data/datasets/countries.parquet")
+df["pop"] = df["population"].apply(lambda v: v["value"] if v is not None else None)
 ```
 
+**Gotcha:** without `dtype_backend="pyarrow"`, `df["population"].struct` raises
+`AttributeError` — the column is loaded as plain Python dicts, not Arrow structs.
+
 ### Membership table from intblocks
+
+The build ships a pre-flattened edge table — prefer it over exploding `includes` yourself:
+
+```python
+import pandas as pd
+
+members = pd.read_parquet("data/datasets/memberships.parquet")
+# columns: intblock_id, country_code, include_type, status, joined, left
+nato = members[(members["intblock_id"] == "NATO") & (members["status"] == "member")]
+```
+
+The same table is available as `data/datasets/memberships.csv` and as the `memberships`
+table in DuckDB. To derive it manually from `intblocks.parquet`:
 
 ```python
 import pandas as pd
@@ -975,9 +1004,9 @@ blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 
 ## Other access paths
 
-- **[internacia-python](https://github.com/commondataio/internacia-python)** — typed lookups,
+- **[internacia-python](https://github.com/datenoio/internacia-python)** — typed lookups,
   fuzzy search, filters without writing SQL.
-- **[internacia-api](https://github.com/commondataio/internacia-api)** — HTTP access without
+- **[internacia-api](https://github.com/datenoio/internacia-api)** — HTTP access without
   local dataset files.
 
 ## Related documentation

@@ -37,7 +37,7 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1078 | `id` | `data/datasets/intblocks.manifest.json` |
+| `intblocks` | 1085 | `id` | `data/datasets/intblocks.manifest.json` |
 | `blocktypes` | 86 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
@@ -144,16 +144,24 @@ Taxonomy definitions for intblock categories. Join `intblocks.blocktype` values 
 ```python
 import pandas as pd
 
-df = pd.read_parquet("data/datasets/countries.parquet")
+# .struct requires ArrowDtype-backed columns
+df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 pop = df["population"].struct.field("value")
 year = df["population"].struct.field("year")
+
+# default backend: struct columns are Python dicts
+df = pd.read_parquet("data/datasets/countries.parquet")
+pop = df["population"].apply(lambda v: v["value"] if v is not None else None)
 ```
 
 ### World Bank classifications
 
 `region`, `adminregion`, `incomeLevel`, `lendingType` are `{id, value}` structs.
-Absent for ~33 entities the World Bank does not classify (high-income OECD members,
-overseas territories, special statistical areas). Do not treat missing values as data errors.
+Filter on the stable `id`, not on `value` — labels vary upstream (some regions carry an
+`(all income levels)` suffix). `region`/`incomeLevel`/`lendingType` are absent for 8
+entities the World Bank does not classify (overseas territories, special statistical areas,
+non-standard codes); `adminregion` is absent for 39 records because it only covers low- and
+middle-income economies. Do not treat missing values as data errors.
 
 ### Borders
 
@@ -263,8 +271,8 @@ blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 | `internacia.duckdb` | SQL analytics, multi-table joins, version check via `_meta` |
 | Parquet | Pandas/Polars/Arrow pipelines |
 | JSONL.zst | Streaming, language-agnostic JSON consumers |
-| [internacia-python](https://github.com/commondataio/internacia-python) | Typed lookups, fuzzy search, filters |
-| [internacia-api](https://github.com/commondataio/internacia-api) | HTTP access without local files |
+| [internacia-python](https://github.com/datenoio/internacia-python) | Typed lookups, fuzzy search, filters |
+| [internacia-api](https://github.com/datenoio/internacia-api) | HTTP access without local files |
 | Source YAML | **Maintainers only** — editing and validation |
 
 Decompress zstd: `zstd -d data/datasets/countries.jsonl.zst`
@@ -273,10 +281,13 @@ Decompress zstd: `zstd -d data/datasets/countries.jsonl.zst`
 
 - **Data:** CC BY 4.0 — see [DATA_LICENSE](../DATA_LICENSE)
 - **Code:** MIT — see [LICENSE](../LICENSE)
-- **Upstream:** World Bank (CC BY 4.0), Wikidata (CC0), IANA tzdata (public domain)
+- **Upstream:** World Bank (CC BY 4.0), Wikidata (CC0), IANA tzdata (public domain),
+  mledoze/countries (ODbL-1.0, `centroid` field only — see the compatibility note in ATTRIBUTION.md)
+- **DOI:** [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328) (Zenodo concept DOI,
+  always resolves to the latest version); machine-readable metadata in [CITATION.cff](../CITATION.cff)
 
-When redistributing or citing, include version from the manifest and credit upstream
-sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
+When redistributing or citing, cite the DOI plus the version from the manifest, and credit
+upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 
 ## Common mistakes
 

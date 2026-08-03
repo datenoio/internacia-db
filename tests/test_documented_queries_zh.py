@@ -16,6 +16,7 @@ pytestmark = pytest.mark.skipif(
 @pytest.fixture(scope="module")
 def con():
     connection = duckdb.connect(str(DUCKDB_PATH), read_only=True)
+    connection.execute("SET memory_limit = '512MB'")
     yield connection
     connection.close()
 

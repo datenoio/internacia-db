@@ -6,7 +6,7 @@
 ## 数据集概览
 
 - **Countries（256）**：ISO 代码、地理、人口/面积、世界银行分类、Wikidata、多语言名称
-- **Intblocks（1078）**：联合国机构、贸易集团、区域组织、条约、体育联合会等
+- **Intblocks（1085）**：联合国机构、贸易集团、区域组织、条约、体育联合会等
 - **Blocktypes（86）**：intblock 分类 taxonomy
 
 这是**用于关联与 enrichment 的参考数据**，不是社会经济画像数据集。
@@ -16,8 +16,8 @@
 
 - DuckDB：data/datasets/internacia.duckdb（表 countries, intblocks, blocktypes, _meta）
 - Parquet：data/datasets/{countries,intblocks,blocktypes}.parquet
-- Python SDK：https://github.com/commondataio/internacia-python
-- REST API：https://github.com/commondataio/internacia-api
+- Python SDK：https://github.com/datenoio/internacia-python
+- REST API：https://github.com/datenoio/internacia-api
 
 ## 关联键
 

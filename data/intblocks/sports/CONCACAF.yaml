@@ -40,10 +40,12 @@ acronyms:
 - lang: ru
   value: CONCACAF
 legal_status: non-governmental
-description: CONCACAF is the continental governing body for association football in North America, Central America, and the
-  Caribbean. It organizes regional competitions including the CONCACAF Gold Cup, CONCACAF Champions League, and CONCACAF Nations
-  League. CONCACAF comprises 41 member associations representing countries and territories across North America, Central America,
-  the Caribbean, and three nations from the Guianas region of South America.
+description: CONCACAF is the continental governing body for association football in
+  North America, Central America, and the Caribbean. It organizes regional competitions
+  including the CONCACAF Gold Cup, CONCACAF Champions League, and CONCACAF Nations
+  League. CONCACAF comprises 41 member associations representing countries and territories
+  across North America, Central America, the Caribbean, and three nations from the
+  Guianas region of South America.
 tags:
 - CONCACAF
 - football
@@ -76,6 +78,7 @@ other_names:
 - id: zh
   name: 中北美洲及加勒比海足球協會
 membership_count: 41
+membership_count_type: organizations
 includes:
 - id: AI
   name: Anguilla
@@ -267,3 +270,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.concacaf.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.concacaf.com
+  note: membership_count counts national football associations; unit classified 2026-08,
+    count value from earlier enrichment

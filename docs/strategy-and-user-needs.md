@@ -3,7 +3,7 @@
 > **Generated:** 2026-06-13
 > **Repository:** internacia-db — reference datasets of countries, intergovernmental organizations, and country groups
 > **Current release:** v1.3.0 (2026-06-12)
-> **Consumers:** Dateno search engine, [internacia-api](../../internacia-api), [internacia-python](../../internacia-python)
+> **Consumers:** Dateno search engine, [internacia-api](https://github.com/datenoio/internacia-api), [internacia-python](https://github.com/datenoio/internacia-python)
 
 This document is a **product / user-needs strategy**, complementary to the engineering-focused
 [docs/improvement-plan.md](improvement-plan.md). The engineering plan (tests, validation parity,
@@ -127,14 +127,19 @@ Grouped by theme; each maps to the gaps above. Items marked *(openspec)* should 
 change proposals before implementation.
 
 ### Track A — Consumer contract (do first; highest leverage, lowest effort)
-- **A1. Re-license data** *(Critical, openspec)*: adopt a data license (recommend **CC-BY-4.0**, or
+
+> **Status update (2026-08-02):** A1 (CC-BY-4.0 data license + `ATTRIBUTION.md` + SPDX fields in
+> manifests), A2 (ID-stability policy + `intblocks_aliases.{json,parquet}` validated in CI), and
+> A3 (`_meta` table in DuckDB + `*.meta.json` sidecars) are **shipped**. A4 (release diff) remains open.
+
+- **A1. ✅ Shipped — Re-license data** *(Critical, openspec)*: adopt a data license (recommend **CC-BY-4.0**, or
   **CC0** for the original compilation) alongside MIT for the code; add an `ATTRIBUTION.md` / `DATA_LICENSE`
   documenting World Bank (CC-BY) and Wikidata (CC0) obligations and how to cite. Add SPDX/`dublin-core`-style
   fields to manifests.
-- **A2. ID-stability policy + alias map** *(Critical, openspec)*: publish a policy (when IDs may change),
+- **A2. ✅ Shipped — ID-stability policy + alias map** *(Critical, openspec)*: publish a policy (when IDs may change),
   and ship `data/datasets/intblocks_aliases.{json,parquet}` mapping retired/renamed ids → current id,
   generated from CHANGELOG history; validate it in CI.
-- **A3. Self-describing datasets** *(High)*: embed a `_meta` table (version, build_date, git_commit,
+- **A3. ✅ Shipped — Self-describing datasets** *(High)*: embed a `_meta` table (version, build_date, git_commit,
   schema_hash, row_count) into `internacia.duckdb`; emit the same as `*.meta.json` next to Parquet.
 - **A4. Machine-readable release diff** *(High)*: emit `diff-vX.Y.Z.json` (added/removed/renamed/changed)
   as a release asset; reuse `diff_countries_baseline.py` logic generalized to both datasets.
@@ -150,7 +155,7 @@ change proposals before implementation.
 
 ### Track C — Distribution & adoption (open-data growth)
 - **C1. `datapackage.json` (Frictionless)** *(Medium)* + generated **data dictionary** page from JSON Schemas.
-- **C2. Publish to a data hub** *(Medium)*: Hugging Face Datasets and/or Zenodo DOI for citation.
+- **C2. ✅ Shipped (DOI) — Publish to a data hub** *(Medium)*: Zenodo DOI [10.5281/zenodo.21452328](https://doi.org/10.5281/zenodo.21452328) published and referenced in `CITATION.cff` / README badge. Hugging Face Datasets listing remains open.
 - **C3. README/marketing**: "How consumers depend on this" section — versioning, license, stability promise.
 
 ### Track D — Access surface (only if HTTP is a real path)

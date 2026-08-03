@@ -47,10 +47,12 @@ acronyms:
 - lang: de
   value: WA
 legal_status: non-governmental
-description: World Athletics is the international governing body for the sport of athletics, including track and field, cross
-  country running, road running, race walking, mountain running, and ultra running. It organizes major international competitions
-  including the World Athletics Championships and World Athletics Indoor Championships. World Athletics comprises 214 member
-  federations representing countries and territories worldwide.
+description: World Athletics is the international governing body for the sport of
+  athletics, including track and field, cross country running, road running, race
+  walking, mountain running, and ultra running. It organizes major international competitions
+  including the World Athletics Championships and World Athletics Indoor Championships.
+  World Athletics comprises 214 member federations representing countries and territories
+  worldwide.
 tags:
 - WORLDATHLETICS
 - athletics
@@ -85,6 +87,7 @@ previous_names:
   name: International Association of Athletics Federations
   period: 2001-2019
 membership_count: 214
+membership_count_type: organizations
 includes:
 - id: AD
   name: Andorra
@@ -984,3 +987,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://worldathletics.org
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://worldathletics.org
+  note: membership_count counts national athletics federations; unit classified 2026-08,
+    count value from earlier enrichment

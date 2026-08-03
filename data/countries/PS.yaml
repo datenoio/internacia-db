@@ -30,6 +30,7 @@ currencies:
   name: Jordanian dinar
   symbol: JD
 un_member: false
+un_status: observer
 independent: false
 subregion: Western Asia
 continents:
@@ -151,6 +152,10 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: un_status
+  source: United Nations
+  retrieved_at: '2026-08-02'
+  url: https://www.un.org/en/about-us/non-member-states
 centroid:
   lat: 31.9
   lng: 35.2

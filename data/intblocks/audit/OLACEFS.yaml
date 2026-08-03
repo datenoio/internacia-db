@@ -37,7 +37,8 @@ acronyms:
 - lang: pt
   value: OLACEFS
 legal_status: membership association
-recognition_status: Regional organisation within INTOSAI serving supreme audit institutions in Latin America and the Caribbean
+recognition_status: Regional organisation within INTOSAI serving supreme audit institutions
+  in Latin America and the Caribbean
 headquarters:
   city: Santiago
   country: CL
@@ -49,7 +50,16 @@ secretariat:
   organization: Office of the Comptroller General of the Republic of Chile
   head: Executive Secretary
 membership_count: 22
-description: Regional association of supreme audit institutions in Latin America and the Caribbean, tracing its origins to the First Congress of Latin American Supreme Audit Institutions (CLADEFS) held in Caracas, Venezuela in 1963 and the subsequent founding of the Latin American Institute of Auditing Sciences (ILACIF) in 1965. Renamed the Organization of Latin American and Caribbean Supreme Audit Institutions (OLACEFS) in 1990. Promotes scientific research, training, specialization, and technical advice, assistance and coordination among member SAIs. One of seven regional organisations of INTOSAI; the Executive Secretariat is hosted by the Office of the Comptroller General of the Republic of Chile in Santiago.
+membership_count_type: organizations
+description: Regional association of supreme audit institutions in Latin America and
+  the Caribbean, tracing its origins to the First Congress of Latin American Supreme
+  Audit Institutions (CLADEFS) held in Caracas, Venezuela in 1963 and the subsequent
+  founding of the Latin American Institute of Auditing Sciences (ILACIF) in 1965.
+  Renamed the Organization of Latin American and Caribbean Supreme Audit Institutions
+  (OLACEFS) in 1990. Promotes scientific research, training, specialization, and technical
+  advice, assistance and coordination among member SAIs. One of seven regional organisations
+  of INTOSAI; the Executive Secretariat is hosted by the Office of the Comptroller
+  General of the Republic of Chile in Santiago.
 tags:
 - OLACEFS
 - audit
@@ -165,7 +175,15 @@ includes:
   name: Portugal
   type: country
   status: associate_member
-notes: Governed by a General Assembly, Board of Directors, Presidency, and Executive Secretariat. Originated as the Latin American Institute of Auditing Sciences (ILACIF) in 1965 and was renamed OLACEFS in 1990. Operates standing committees on capacity building and legal advisory matters, plus technical commissions on good governance, environment, performance indicators, ICT, and citizen participation. As of 2026, the OLACEFS presidency is held by Brazil (Tribunal de Contas da União) and the Executive Secretariat is hosted by the Office of the Comptroller General of the Republic of Chile in Santiago; under the OLACEFS Charter, headquarters follows the Executive Secretary's SAI.
+notes: Governed by a General Assembly, Board of Directors, Presidency, and Executive
+  Secretariat. Originated as the Latin American Institute of Auditing Sciences (ILACIF)
+  in 1965 and was renamed OLACEFS in 1990. Operates standing committees on capacity
+  building and legal advisory matters, plus technical commissions on good governance,
+  environment, performance indicators, ICT, and citizen participation. As of 2026,
+  the OLACEFS presidency is held by Brazil (Tribunal de Contas da União) and the Executive
+  Secretariat is hosted by the Office of the Comptroller General of the Republic of
+  Chile in Santiago; under the OLACEFS Charter, headquarters follows the Executive
+  Secretary's SAI.
 other_names:
 - id: en
   name: Organization of Latin American and Caribbean Supreme Audit Institutions
@@ -220,3 +238,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-12'
   url: https://www.olacefs.com/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.olacefs.com/
+  note: membership_count counts supreme audit institutions; unit classified 2026-08,
+    count value from earlier enrichment

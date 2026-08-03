@@ -1,6 +1,7 @@
 # Internacia Datasets
 
-[![Validate datasets](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/commondataio/internacia-db/actions/workflows/validate.yml)
+[![Validate datasets](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21452328.svg)](https://doi.org/10.5281/zenodo.21452328)
 
 Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
 
@@ -69,6 +70,7 @@ Each build writes to `data/datasets/`:
 
 | File | Description |
 |------|-------------|
+| `countries.jsonl` | Countries (plain JSONL) |
 | `countries.jsonl.zst` | Countries (JSONL, zstd) |
 | `countries.yaml.zst` | Countries (YAML, zstd) |
 | `countries.parquet` | Countries (Parquet, zstd) |
@@ -76,6 +78,7 @@ Each build writes to `data/datasets/`:
 | `countries.meta.json` | Version metadata sidecar for Parquet consumers |
 | `intblocks.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `intblocks.meta.json` | Version metadata sidecar for Parquet consumers |
+| `intblocks.jsonl` | International blocks (plain JSONL) |
 | `intblocks.jsonl.zst` | International blocks (JSONL, zstd) |
 | `intblocks.yaml.zst` | International blocks (YAML, zstd) |
 | `intblocks.parquet` | International blocks (Parquet, zstd) |
@@ -83,13 +86,22 @@ Each build writes to `data/datasets/`:
 | `intblocks_aliases.parquet` | Alias map (Parquet, zstd) |
 | `blocktypes.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `blocktypes.yaml` | Block types (plain YAML copy of source, regenerated on build) |
+| `blocktypes.jsonl` | Block types (plain JSONL) |
 | `blocktypes.jsonl.zst` | Block types (JSONL, zstd) |
 | `blocktypes.yaml.zst` | Block types (YAML, zstd) |
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
-| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, and `_meta` tables) |
+| `memberships.parquet` | Flattened country↔intblock membership edges (`intblock_id`, `country_code`, `include_type`, `status`, `joined`, `left`) |
+| `memberships.csv` | Membership edge table (CSV) |
+| `memberships.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
+| `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
+| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1078** intblocks, **86** blocktypes.
+Current row counts: **256** countries, **1085** intblocks, **86** blocktypes.
+
+Format policy: JSONL is shipped both plain and zstd-compressed; YAML exports are
+zstd-only (the plain `blocktypes.yaml` is a regenerated copy of the small source
+taxonomy, kept for convenience). Use Parquet or DuckDB for analytics.
 
 ## Validation and quality
 
@@ -146,12 +158,12 @@ Breaking and semantic changes in the latest countries schema (see [CHANGELOG.md]
 - **Entity filter**: `code_status == 'official_iso3166_1'` returns **249** current ISO-style records.
 - **Build metadata**: compare `countries.manifest.json` `schema_hash` when upgrading downstream pipelines.
 
-**Pandas example** (structured population):
+**Pandas example** (structured population — `.struct` requires the Arrow dtype backend):
 
 ```python
 import pandas as pd
 
-df = pd.read_parquet("data/datasets/countries.parquet")
+df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 pop = df["population"].struct.field("value")
 ```
 
@@ -204,11 +216,13 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 |-------|------|-------------|
 | `code` | String | ISO 3166-1 alpha-2 code (e.g. `US`) |
 | `entity_type` | String | `sovereign_state`, `dependent_territory`, `historical_entity`, etc. |
-| `code_status` | String | `official_iso3166_1`, `user_assigned`, `obsolete` |
+| `code_status` | String | `official_iso3166_1`, `user_assigned`, `obsolete`, `exceptionally_reserved` |
 | `recognition_status` | Struct | Optional recognition/dispute metadata |
+| `parent_entity` | Struct | Parent state `{code, name}` for dependent territories |
 | `name` | String | Common name |
 | `iso3code` | String | ISO 3166-1 alpha-3 code |
 | `capital_city` | Struct | `{name, lng, lat}` |
+| `centroid` | Struct | Geographic centroid `{lat, lng}` |
 | `region` | Struct | World Bank region `{id, value}` |
 | `adminregion` | Struct | World Bank admin region `{id, value}` |
 | `incomeLevel` | Struct | World Bank income level `{id, value}` |
@@ -219,6 +233,7 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 | `languages` | List[Struct] | `{code, name, official}` |
 | `currencies` | List[Struct] | `{code, name, symbol}` |
 | `un_member` | Boolean | UN member (**193** `true`; aligns with the `UN` intblock roster) |
+| `un_status` | String | `member`, `observer` (PS, VA), or `non_member` |
 | `independent` | Boolean | Independent state (non-UN independents: `VA` only) |
 | `subregion` | String | UN subregion |
 | `continents` | List[String] | Continents |
@@ -241,7 +256,7 @@ A `reason` of `disambiguated` means the old id still exists but now refers to a 
 | `common_names` | List[String] | Aliases and common names |
 | `provenance` | List[Struct] | Field sourcing `{field, source, retrieved_at, url, license}` |
 
-Non-standard codes retained with explicit status: `AN` (obsolete), `JG` (user-assigned grouping), `KV` (user-assigned, disputed).
+Seven non-standard codes are retained with explicit status (see [docs/country-code-policy.md](docs/country-code-policy.md)): `AN` (obsolete, Netherlands Antilles), `JG` (user-assigned grouping, Channel Islands), `KV` (user-assigned, Kosovo), `XA` (user-assigned, Abkhazia), `XS` (user-assigned, South Ossetia), `XT` (user-assigned, Transnistria), `XN` (user-assigned, Nagorno-Karabakh). All carry explicit `un_member`, `un_status`, `independent`, and `landlocked` values.
 
 ## International blocks schema
 
@@ -282,7 +297,7 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — 1078 international block records across 63 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — 1085 international block records across 62 domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
 
 **External enrichment**
 
@@ -335,10 +350,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the YAML authoring guide, validation 
 
 ## Related projects
 
-- [internacia-api](../internacia-api) — REST API
-- [internacia-python](../internacia-python) — Python SDK
+- [internacia-api](https://github.com/datenoio/internacia-api) — REST API
+- [internacia-python](https://github.com/datenoio/internacia-python) — Python SDK
 
 ## Roadmap
 
-- [x] Python SDK — [internacia-python](../internacia-python)
-- [x] REST API — [internacia-api](../internacia-api)
+- [x] Python SDK — [internacia-python](https://github.com/datenoio/internacia-python)
+- [x] REST API — [internacia-api](https://github.com/datenoio/internacia-api)

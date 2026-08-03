@@ -35,9 +35,11 @@ acronyms:
 - lang: zh
   value: 國際足球協會
 legal_status: non-governmental
-description: FIFA is the international governing body of association football, futsal, and beach soccer. It is responsible
-  for organizing major international tournaments, including the FIFA World Cup, FIFA Women's World Cup, FIFA U-20 World Cup,
-  and FIFA Club World Cup. FIFA comprises 211 national associations organized into six continental confederations.
+description: FIFA is the international governing body of association football, futsal,
+  and beach soccer. It is responsible for organizing major international tournaments,
+  including the FIFA World Cup, FIFA Women's World Cup, FIFA U-20 World Cup, and FIFA
+  Club World Cup. FIFA comprises 211 national associations organized into six continental
+  confederations.
 tags:
 - FIFA
 - football
@@ -65,6 +67,7 @@ other_names:
 - id: zh
   name: 国际足球联合会
 membership_count: 211
+membership_count_type: organizations
 includes:
 - id: AD
   name: Andorra
@@ -964,3 +967,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.fifa.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.fifa.com
+  note: membership_count counts national football associations; unit classified 2026-08,
+    count value from earlier enrichment

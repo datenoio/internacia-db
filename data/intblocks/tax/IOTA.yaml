@@ -29,10 +29,12 @@ headquarters:
 legal_status: intergovernmental
 partof: NTO
 membership_count: 43
-description: Non-profit intergovernmental organisation that provides European tax administrations a platform for exchanging
-  experiences and best practices on practical tax administration issues. Organises workshops and fora, publishes guidance
-  for members, and promotes cooperation with international and regional partners including CIAT, the European Commission,
-  the IMF, and the OECD.
+membership_count_type: organizations
+description: Non-profit intergovernmental organisation that provides European tax
+  administrations a platform for exchanging experiences and best practices on practical
+  tax administration issues. Organises workshops and fora, publishes guidance for
+  members, and promotes cooperation with international and regional partners including
+  CIAT, the European Commission, the IMF, and the OECD.
 tags:
 - IOTA
 - tax
@@ -254,11 +256,14 @@ includes:
   name: United Kingdom
   type: country
   status: member
-notes: IOTA was established at the Conference of Tax Administrations of Central and Eastern Europe and Baltic Countries (CEEB),
-  held in Warsaw on 28–30 October 1996, by the tax administrations of Bulgaria, Czechia, Hungary, Latvia, Lithuania, Poland,
-  and Slovakia. The organisation has since expanded to 43 full members and one associate member (Republic of Korea, from July
-  2021). The Secretariat is based in Budapest. Memberships of the Federal Tax Service of Russia and the Ministry of Taxes
-  and Duties of Belarus were terminated in June 2023. IOTA is a member of the Network of Tax Organizations (NTO).
+notes: IOTA was established at the Conference of Tax Administrations of Central and
+  Eastern Europe and Baltic Countries (CEEB), held in Warsaw on 28–30 October 1996,
+  by the tax administrations of Bulgaria, Czechia, Hungary, Latvia, Lithuania, Poland,
+  and Slovakia. The organisation has since expanded to 43 full members and one associate
+  member (Republic of Korea, from July 2021). The Secretariat is based in Budapest.
+  Memberships of the Federal Tax Service of Russia and the Ministry of Taxes and Duties
+  of Belarus were terminated in June 2023. IOTA is a member of the Network of Tax
+  Organizations (NTO).
 wikidata_id: Q1432252
 other_names:
 - id: de
@@ -301,3 +306,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.iota-tax.org/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.iota-tax.org/
+  note: membership_count counts national tax administrations; unit classified 2026-08,
+    count value from earlier enrichment

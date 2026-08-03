@@ -25,9 +25,13 @@ headquarters:
     lat: 51.507222222222
     lng: -0.1275
 legal_status: industry_association
-recognition_status: International non-profit industry association originally established as the International Coal Development Institute in 1985; renamed the World Coal Institute in 1988, the World Coal Association in 2010, and rebranded as FutureCoal in November 2023
+recognition_status: International non-profit industry association originally established
+  as the International Coal Development Institute in 1985; renamed the World Coal
+  Institute in 1988, the World Coal Association in 2010, and rebranded as FutureCoal
+  in November 2023
 secretariat:
-  location: Suite 2.06, Bridge House, 181 Queen Victoria Street, London EC4V 4EG, United Kingdom
+  location: Suite 2.06, Bridge House, 181 Queen Victoria Street, London EC4V 4EG,
+    United Kingdom
   organization: FutureCoal Limited
 includes:
 - id: AU
@@ -91,13 +95,18 @@ includes:
   type: country
   status: member
 membership_count: 50
-description: International non-profit organization representing the global coal value chain. FutureCoal, formerly known as
-  the World Coal Association (WCA), was originally established as the International Coal Development Institute in 1985, renamed
-  to the World Coal Institute in 1988, and to the World Coal Association in 2010, before rebranding as FutureCoal in November
-  2023. The organization represents major players across the entire coal value chain, advocating for an inclusive international
-  policy framework that supports the rights of all coal-producing and consuming nations. FutureCoal's membership comprises
-  corporate members, associate members, and strategic partners from various countries, including companies engaged in coal
-  production, sale, or use, as well as manufacturers of equipment for the industry, industry associations, and research bodies.
+membership_count_type: companies
+description: International non-profit organization representing the global coal value
+  chain. FutureCoal, formerly known as the World Coal Association (WCA), was originally
+  established as the International Coal Development Institute in 1985, renamed to
+  the World Coal Institute in 1988, and to the World Coal Association in 2010, before
+  rebranding as FutureCoal in November 2023. The organization represents major players
+  across the entire coal value chain, advocating for an inclusive international policy
+  framework that supports the rights of all coal-producing and consuming nations.
+  FutureCoal's membership comprises corporate members, associate members, and strategic
+  partners from various countries, including companies engaged in coal production,
+  sale, or use, as well as manufacturers of equipment for the industry, industry associations,
+  and research bodies.
 tags:
 - FUTURECOAL
 - coal
@@ -138,11 +147,13 @@ acronyms:
   value: WCA
 - lang: en
   value: WCI
-notes: CEO Michelle Manook appointed in 2019. Participates in United Nations and International Energy Agency forums, including
-  the UN Framework Convention on Climate Change and the IEA Coal Industry Advisory Board, and is part of the Carbon Sequestration
-  Leadership Forum. Membership is corporate and industry-based rather than sovereign; includes lists countries where corporate
-  members and national industry partners are based, per the FutureCoal launch announcement (November 2023). National chapters
-  include a Southern Africa Chapter and an India Chapter (launched 2026).
+notes: CEO Michelle Manook appointed in 2019. Participates in United Nations and International
+  Energy Agency forums, including the UN Framework Convention on Climate Change and
+  the IEA Coal Industry Advisory Board, and is part of the Carbon Sequestration Leadership
+  Forum. Membership is corporate and industry-based rather than sovereign; includes
+  lists countries where corporate members and national industry partners are based,
+  per the FutureCoal launch announcement (November 2023). National chapters include
+  a Southern Africa Chapter and an India Chapter (launched 2026).
 wikidata_id: Q3152360
 last_verified: '2026-07-14'
 provenance:
@@ -209,3 +220,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-14'
   url: https://www.futurecoal.org/global-alliance/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.futurecoal.org/
+  note: membership_count counts member companies; unit classified 2026-08, count value
+    from earlier enrichment

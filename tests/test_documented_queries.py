@@ -18,6 +18,9 @@ pytestmark = pytest.mark.skipif(
 @pytest.fixture(scope="module")
 def con():
     connection = duckdb.connect(str(DUCKDB_PATH), read_only=True)
+    # Documented recipes must run within a bounded memory budget; a recipe
+    # that exceeds this limit fails loudly instead of exhausting host memory.
+    connection.execute("SET memory_limit = '512MB'")
     yield connection
     connection.close()
 
@@ -197,7 +200,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            28,
+            29,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -207,7 +210,7 @@ ORDER BY b.id
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            18,
+            19,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
@@ -263,8 +266,8 @@ ADDITIONAL_RECIPES = [
     ),
     (
         """
-        SELECT c.code FROM countries c
-        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE c.un_member GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) DESC LIMIT 1
         """,
         1,
@@ -272,8 +275,8 @@ ADDITIONAL_RECIPES = [
     ),
     (
         """
-        SELECT c.code FROM countries c
-        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE c.un_member GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) ASC LIMIT 1
         """,
         1,
@@ -292,8 +295,8 @@ ADDITIONAL_RECIPES = [
     ),
     (
         """
-        SELECT c.code FROM countries c
-        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
         13,
@@ -362,13 +365,13 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        25,
+        26,
         set(),
     ),
     (
         """
-        SELECT c.code FROM countries c
-        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE c.entity_type='disputed_territory' GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) DESC LIMIT 1
         """,
         1,
@@ -376,8 +379,8 @@ ADDITIONAL_RECIPES = [
     ),
     (
         """
-        SELECT c.code FROM countries c
-        JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+        SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+        JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE c.independent=true AND c.un_member=false GROUP BY c.code ORDER BY c.code
         """,
         1,
@@ -388,7 +391,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        200,
+        204,
         set(),
     ),
     (
@@ -398,7 +401,7 @@ ADDITIONAL_RECIPES = [
         WHERE m.type='country' AND m.name IS NOT NULL AND m.name != c.name
           AND NOT list_contains(c.common_names, m.name)
         """,
-        1826,
+        1791,
         set(),
     ),
     (
@@ -422,14 +425,14 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        15,
+        17,
         set(),
     ),
     (
         """
         SELECT COUNT(*) FROM (
-          SELECT c.code FROM countries c
-          JOIN intblocks i ON TRUE JOIN UNNEST(i.includes) t(m) ON m.id=c.code AND m.type='country'
+          SELECT c.code FROM intblocks i CROSS JOIN UNNEST(i.includes) t(m)
+          JOIN countries c ON c.code = m.id AND m.type = 'country'
           WHERE c.wikidata_id IS NOT NULL AND c.un_member
           GROUP BY c.code HAVING COUNT(DISTINCT i.id) <= 130
         )
@@ -496,6 +499,87 @@ def test_former_members_with_join_and_left(con):
         """
     ).fetchone()[0]
     assert count == 199
+
+
+def test_world_bank_region_filter_uses_region_id(con):
+    """The documented World Bank region recipe filters on region.id.
+
+    region.value labels are inconsistent upstream (some carry an
+    '(all income levels)' suffix), so filtering on the label silently
+    returns zero rows for affected regions.
+    """
+    rows = con.execute(
+        """
+        SELECT code FROM countries
+        WHERE region.id = 'ECS' AND code_status = 'official_iso3166_1'
+        ORDER BY code
+        """
+    ).fetchall()
+    codes = {r[0] for r in rows}
+    assert len(rows) == 61
+    assert {"DE", "FR", "UA", "KZ"} <= codes
+    # the label-based filter documented before 2026-08 returns nothing
+    stale = con.execute(
+        "SELECT COUNT(*) FROM countries WHERE region.value = 'Europe & Central Asia'"
+    ).fetchone()[0]
+    assert stale == 0
+
+
+def test_world_bank_classification_gap_figures(con):
+    """Docs cite exact classification-gap counts; keep them anchored."""
+    missing_region = con.execute(
+        "SELECT COUNT(*) FROM countries WHERE region.id IS NULL"
+    ).fetchone()[0]
+    missing_admin = con.execute(
+        "SELECT COUNT(*) FROM countries WHERE adminregion.id IS NULL"
+    ).fetchone()[0]
+    assert missing_region == 8
+    assert missing_admin == 39
+
+
+def test_pandas_struct_field_access():
+    """The documented pandas struct recipes must execute as written."""
+    pd = pytest.importorskip("pandas")
+    parquet = DUCKDB_PATH.parent / "countries.parquet"
+    if not parquet.is_file():
+        pytest.skip("countries.parquet not built")
+    df = pd.read_parquet(parquet)
+    pop = df["population"].apply(lambda v: v["value"] if v is not None else None)
+    assert pop.notna().sum() > 200
+    df2 = pd.read_parquet(parquet, dtype_backend="pyarrow")
+    pop2 = df2["population"].struct.field("value")
+    assert pop2.notna().sum() > 200
+
+
+def test_memberships_edge_table(con):
+    """The flattened memberships table matches the intblocks includes."""
+    edge = con.execute("SELECT COUNT(*) FROM memberships").fetchone()[0]
+    derived = con.execute(
+        """
+        SELECT count(*) FROM (SELECT unnest(includes) AS m FROM intblocks)
+        WHERE m.type != 'organization'
+        """
+    ).fetchone()[0]
+    assert edge == derived
+    nato = con.execute(
+        "SELECT COUNT(*) FROM memberships WHERE intblock_id = 'NATO' AND status = 'member'"
+    ).fetchone()[0]
+    assert nato >= 32
+
+
+def test_schema_property_descriptions_complete():
+    """llms.txt claims every schema property has a description; enforce it."""
+    import json
+
+    schemas_dir = DUCKDB_PATH.parents[1] / "schemas"
+    for name in ("countries.schema.json", "intblocks.schema.json"):
+        schema = json.loads((schemas_dir / name).read_text(encoding="utf-8"))
+        missing = [
+            key
+            for key, spec in schema["properties"].items()
+            if not (isinstance(spec, dict) and spec.get("description"))
+        ]
+        assert not missing, f"{name} properties without description: {missing}"
 
 
 def test_jaccard_value(con):

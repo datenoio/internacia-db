@@ -39,9 +39,10 @@ acronyms:
 - lang: pt
   value: OFC
 legal_status: non-governmental
-description: OFC is the continental governing body for association football in Oceania. It organizes regional competitions
-  including the OFC Nations Cup and OFC Champions League. OFC comprises 13 full member associations and 2 associate members
-  representing countries and territories across Oceania.
+description: OFC is the continental governing body for association football in Oceania.
+  It organizes regional competitions including the OFC Nations Cup and OFC Champions
+  League. OFC comprises 13 full member associations and 2 associate members representing
+  countries and territories across Oceania.
 tags:
 - OFC
 - football
@@ -72,6 +73,7 @@ other_names:
 - id: zh
   name: 大洋洲足球協會
 membership_count: 13
+membership_count_type: organizations
 includes:
 - id: AS
   name: American Samoa
@@ -158,3 +160,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.oceaniafootball.com
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://www.oceaniafootball.com
+  note: membership_count counts national football associations; unit classified 2026-08,
+    count value from earlier enrichment

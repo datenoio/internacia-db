@@ -26,7 +26,10 @@ includes:
 - id: GE
   name: Georgia
   type: country
-  status: member
+  status: former_member
+  left: '2009-08-18'
+  note: Withdrew following the 2008 Russo-Georgian war; withdrawal effective 18 August
+    2009
 - id: KZ
   name: Kazakhstan
   type: country
@@ -39,6 +42,8 @@ includes:
   name: Moldova
   type: country
   status: member
+  note: Withdrawal from CIS institutions in progress; parliament has denounced multiple
+    CIS agreements since 2023
 - id: RU
   name: Russian Federation
   type: country
@@ -50,16 +55,20 @@ includes:
 - id: TM
   name: Turkmenistan
   type: country
-  status: member
+  status: associate_member
+  note: Associate member since 2005; never ratified the CIS Charter
 - id: UA
   name: Ukraine
   type: country
-  status: member
+  status: former_member
+  left: '2018'
+  note: Founding participant that never ratified the CIS Charter; ended participation
+    in CIS statutory bodies in 2018
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-membership_count: 12
+membership_count: 10
 founding_members:
 - AM
 - AZ
@@ -116,6 +125,14 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q7779
   license: CC0
+- field: includes
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://cis.minsk.by/page/about
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://cis.minsk.by/page/about
 other_names:
 - id: ar
   name: رابطة الدول المستقلة

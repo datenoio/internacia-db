@@ -41,9 +41,11 @@ acronyms:
 - lang: pt
   value: COI
 legal_status: non-governmental
-description: The International Olympic Committee is a not-for-profit independent international organization committed to building
-  a better world through sport. It organizes the modern Olympic Games and Youth Olympic Games, held in summer and winter,
-  every four years. The IOC recognizes 206 National Olympic Committees (NOCs), each representing a member country or territory.
+description: The International Olympic Committee is a not-for-profit independent international
+  organization committed to building a better world through sport. It organizes the
+  modern Olympic Games and Youth Olympic Games, held in summer and winter, every four
+  years. The IOC recognizes 206 National Olympic Committees (NOCs), each representing
+  a member country or territory.
 tags:
 - IOC
 - olympic
@@ -71,6 +73,7 @@ other_names:
 - id: zh
   name: 国际奥林匹克委员会
 membership_count: 206
+membership_count_type: organizations
 wikidata_id: Q40970
 includes:
 - id: AD
@@ -965,3 +968,9 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/International_Olympic_Committee
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-02'
+  url: https://en.wikipedia.org/wiki/International_Olympic_Committee
+  note: membership_count counts National Olympic Committees; unit classified 2026-08,
+    count value from earlier enrichment
