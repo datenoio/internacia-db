@@ -3,6 +3,7 @@
 Verified [Polars](https://pola.rs/) recipes against Parquet exports under `data/datasets/`.
 For scope, join keys, and field semantics see [ai-consumers.md](ai-consumers.md).
 DuckDB / SQL twin: [query-examples.md](query-examples.md).
+Observable / Plot twin: [query-examples-observable.md](query-examples-observable.md).
 
 **Polars struct and list fields:** use `.struct.field("…")` on struct columns and
 `.list.contains` / `.list.len` / `.explode(..., empty_as_null=True)` on lists.
@@ -842,6 +843,7 @@ Countries lite path for entity linking:
 ## Other access paths
 
 - **DuckDB SQL:** [query-examples.md](query-examples.md) — `data/datasets/internacia.duckdb`
+- **Observable / Plot:** [query-examples-observable.md](query-examples-observable.md) — DuckDB-Wasm + Plot
 - **[internacia-python](https://github.com/datenoio/internacia-python)** — typed lookups
   without writing frame code
 - **[internacia-api](https://github.com/datenoio/internacia-api)** — HTTP access without
@@ -851,6 +853,7 @@ Countries lite path for entity linking:
 
 - [ai-consumers.md](ai-consumers.md) — consumption contract and common mistakes
 - [query-examples.md](query-examples.md) — verified DuckDB recipes
+- [query-examples-observable.md](query-examples-observable.md) — Observable / Plot recipes
 - [country-code-policy.md](country-code-policy.md) — entity status and code filtering
 - [intblock-inclusion-policy.md](intblock-inclusion-policy.md) — scope_category taxonomy
 - [getting-started.md](getting-started.md) — non-programmer path

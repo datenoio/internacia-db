@@ -42,6 +42,7 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
 - [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook
+- [docs/query-examples-observable.md](docs/query-examples-observable.md) — Observable Framework / Plot cookbook (DuckDB-Wasm)
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
 - [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
@@ -202,6 +203,7 @@ pop = countries.select(pl.col("population").struct.field("value").alias("pop"))
 ```
 
 Full Polars recipes: [docs/query-examples-polars.md](docs/query-examples-polars.md).
+Observable / Plot recipes: [docs/query-examples-observable.md](docs/query-examples-observable.md).
 
 **DuckDB example** (nested intblock multilingual names):
 

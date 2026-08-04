@@ -9,7 +9,8 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 2. Use exported datasets — **do not parse** `data/countries/*.yaml` or `data/intblocks/**/*.yaml` unless authoring.
 3. Full consumption contract: [ai-consumers.md](../ai-consumers.md).
 4. Verified recipes: [query-examples.md](../query-examples.md) (DuckDB),
-   [query-examples-polars.md](../query-examples-polars.md) (Polars / Parquet).
+   [query-examples-polars.md](../query-examples-polars.md) (Polars / Parquet),
+   [query-examples-observable.md](../query-examples-observable.md) (Observable / Plot).
 
 ## Access paths
 

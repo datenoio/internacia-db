@@ -3,6 +3,7 @@
 Verified DuckDB recipes against `data/datasets/internacia.duckdb`. For scope, join keys,
 and field semantics see [ai-consumers.md](ai-consumers.md).
 Polars / Parquet twin: [query-examples-polars.md](query-examples-polars.md).
+Observable / Plot twin: [query-examples-observable.md](query-examples-observable.md).
 
 **DuckDB struct lists:** use `UNNEST(column) AS t(row)` and reference `row.field` (e.g.
 `UNNEST(i.includes) AS t(m)` then `m.id`, `m.type`).
@@ -960,6 +961,7 @@ ORDER BY org_count ASC, c.name;
 ## Pandas and Polars
 
 Full Polars cookbook (same scenarios as this file): [query-examples-polars.md](query-examples-polars.md).
+Observable / Plot cookbook: [query-examples-observable.md](query-examples-observable.md).
 
 ### Structured metric fields
 
