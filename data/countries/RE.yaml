@@ -118,6 +118,16 @@ provenance:
   source: UN M49 inference
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -21.15
   lng: 55.5
@@ -133,3 +143,8 @@ lendingType:
 adminregion:
   id: SSA
   value: Sub-Saharan Africa (excluding high income)
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: secam

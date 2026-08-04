@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '404'
 wikidata_id: Q114
+fips_code: KE
+fifa_code: KEN
+ioc_code: KEN
+geonames_id: '192950'
 official_name: Republic of Kenya
 languages:
 - code: eng
@@ -148,6 +152,21 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 1.0
   lng: 38.0
+writing_directions:
+- id: ltr
+  primary: true
+legal_systems:
+- id: common_law

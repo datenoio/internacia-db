@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '554'
 wikidata_id: Q664
+fips_code: NZ
+fifa_code: NZL
+ioc_code: NZL
+geonames_id: '2186224'
 official_name: New Zealand
 languages:
 - code: eng
@@ -130,6 +134,27 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -41.0
   lng: 174.0
+writing_directions:
+- id: ltr
+  primary: true
+legal_systems:
+- id: common_law
+dvd_region: 4

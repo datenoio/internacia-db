@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '116'
 wikidata_id: Q424
+fips_code: CB
+fifa_code: CAM
+ioc_code: CAM
+geonames_id: '1831722'
 official_name: Kingdom of Cambodia
 languages:
 - code: khm
@@ -138,6 +142,35 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 13.0
   lng: 105.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: indic
+  primary: true
+broadcast_systems:
+- id: dmbt
+dvd_region: 3

@@ -36,6 +36,7 @@ Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** 
 - pytest-cov gate (fail-under 45%, measured baseline ~48%), schema migration emitter (`migration.vUnreleased.json`), monthly enrichment auto-PR, optional HF/Zenodo release steps (dataset card + draft deposit).
 - Wikidata id backfill for TIMBI, VISTA, SAPP (110 remain on exclusion list).
 - [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook (country filters, borders, memberships, overlap, former members); covered by `tests/test_documented_queries_polars.py`. `polars` added to `requirements-dev.txt`.
+- [docs/query-examples-r.md](docs/query-examples-r.md) — verified R / dplyr / Parquet query cookbook (same scenarios via `arrow` + `dplyr` + `tidyr`).
 - [docs/query-examples-observable.md](docs/query-examples-observable.md) — Observable Framework / Plot cookbook (DuckDB-Wasm + Plot: density bars, NATO/EU overlap, centroid maps, HQ cities, former-member timeline).
 
 ## [1.9.0] - 2026-08-01

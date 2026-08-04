@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '586'
 wikidata_id: Q843
+fips_code: PK
+fifa_code: PAK
+ioc_code: PAK
+geonames_id: '1168579'
 official_name: Islamic Republic of Pakistan
 languages:
 - code: eng
@@ -147,6 +151,29 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 30.0
   lng: 70.0
+writing_directions:
+- id: rtl
+  primary: true
+broadcast_systems:
+- id: dmbt
+legal_systems:
+- id: common_law
+- id: islamic_law

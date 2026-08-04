@@ -76,6 +76,26 @@ fields:
   centroid:
     max_null_rate: 0.0
     mode: error
+  # Attribute fields migrated from inverted intblocks; historical coverage is
+  # incomplete, so warn-mode until enrichment closes gaps.
+  writing_directions:
+    max_null_rate: 0.15
+    mode: warn
+  writing_systems:
+    max_null_rate: 0.85
+    mode: warn
+  dvd_region:
+    max_null_rate: 0.60
+    mode: warn
+  broadcast_systems:
+    max_null_rate: 0.50
+    mode: warn
+  legal_systems:
+    max_null_rate: 0.70
+    mode: warn
+  rail_gauges:
+    max_null_rate: 0.90
+    mode: warn
 
 provenance:
   max_age_months: 12

@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '434'
 wikidata_id: Q1016
+fips_code: LY
+fifa_code: LBY
+ioc_code: LBA
+geonames_id: '2215636'
 official_name: State of Libya
 languages:
 - code: ara
@@ -139,6 +143,29 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 25.0
   lng: 17.0
+writing_directions:
+- id: rtl
+  primary: true
+writing_systems:
+- id: arabic
+  primary: true
+legal_systems:
+- id: islamic_law

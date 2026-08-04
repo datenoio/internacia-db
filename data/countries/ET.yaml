@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '231'
 wikidata_id: Q115
+fips_code: ET
+fifa_code: ETH
+ioc_code: ETH
+geonames_id: '337996'
 official_name: Federal Democratic Republic of Ethiopia
 languages:
 - code: amh
@@ -147,6 +151,22 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 8.0
   lng: 38.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: ethiopic
+  primary: true

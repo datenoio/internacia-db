@@ -52,3 +52,17 @@ ignore = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.coverage.run]
+branch = true
+source = ["internacia_builder"]
+omit = ["internacia_builder/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 45
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]

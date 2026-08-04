@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '860'
 wikidata_id: Q265
+fips_code: UZ
+fifa_code: UZB
+ioc_code: UZB
+geonames_id: '1512440'
 official_name: Republic of Uzbekistan
 languages:
 - code: rus
@@ -149,6 +153,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 41.0
   lng: 64.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: secam
+legal_systems:
+- id: islamic_law
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

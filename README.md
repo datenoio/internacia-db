@@ -42,6 +42,7 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
 - [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook
+- [docs/query-examples-r.md](docs/query-examples-r.md) — verified R / dplyr / Parquet query cookbook
 - [docs/query-examples-observable.md](docs/query-examples-observable.md) — Observable Framework / Plot cookbook (DuckDB-Wasm)
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
@@ -203,6 +204,20 @@ pop = countries.select(pl.col("population").struct.field("value").alias("pop"))
 ```
 
 Full Polars recipes: [docs/query-examples-polars.md](docs/query-examples-polars.md).
+
+**R / dplyr example** (same struct field via Arrow):
+
+```r
+library(arrow)
+library(dplyr)
+
+countries <- read_parquet("data/datasets/countries.parquet")
+pop <- countries |>
+  transmute(code, name, pop = population$value) |>
+  collect()
+```
+
+Full R recipes: [docs/query-examples-r.md](docs/query-examples-r.md).
 Observable / Plot recipes: [docs/query-examples-observable.md](docs/query-examples-observable.md).
 
 **DuckDB example** (nested intblock multilingual names):

@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '398'
 wikidata_id: Q232
+fips_code: KZ
+fifa_code: KAZ
+ioc_code: KAZ
+geonames_id: '1522867'
 official_name: Republic of Kazakhstan
 languages:
 - code: kaz
@@ -155,6 +159,45 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 48.0
   lng: 68.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: cyrillic
+  primary: true
+broadcast_systems:
+- id: secam
+legal_systems:
+- id: islamic_law
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

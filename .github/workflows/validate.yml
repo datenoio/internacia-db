@@ -61,7 +61,10 @@ jobs:
         run: ruff check internacia_builder/ scripts/ tests/
 
       - name: Run tests
-        run: pytest tests/
+        run: pytest tests/ --cov=internacia_builder --cov-report=term-missing --cov-fail-under=45
+
+      - name: Check data dictionary drift
+        run: python scripts/generate_data_dictionary.py --check
 
       - name: Validate countries
         run: python scripts/validate_countries.py --report completeness-report.json

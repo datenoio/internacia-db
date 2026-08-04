@@ -6,6 +6,7 @@ Visualization-oriented twin of the verified DuckDB recipes in
 [Observable Plot](https://observablehq.com/plot/) for charts.
 
 Polars twin: [query-examples-polars.md](query-examples-polars.md).
+R / dplyr twin: [query-examples-r.md](query-examples-r.md).
 
 This file is a **focused Plot cookbook**, not a line-for-line port of every SQL recipe.
 Prefer tables (`Inputs.table`) for roster lookups; use Plot for rankings, distributions,
@@ -581,6 +582,7 @@ Keep roster dumps behind `Inputs.table` / `Inputs.search` so the first viewport 
 
 - **DuckDB SQL:** [query-examples.md](query-examples.md) — `data/datasets/internacia.duckdb`
 - **Polars:** [query-examples-polars.md](query-examples-polars.md) — same Parquet exports
+- **R / dplyr:** [query-examples-r.md](query-examples-r.md) — same Parquet exports
 - **[internacia-python](https://github.com/datenoio/internacia-python)** — typed lookups without frame code
 - **[internacia-api](https://github.com/datenoio/internacia-api)** — HTTP access without local files
 

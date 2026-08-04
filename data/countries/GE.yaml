@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '268'
 wikidata_id: Q230
+fips_code: GG
+fifa_code: GEO
+ioc_code: GEO
+geonames_id: '614540'
 official_name: Georgia
 languages:
 - code: kat
@@ -145,6 +149,23 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 42.0
   lng: 43.5
+writing_directions:
+- id: ltr
+  primary: true
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

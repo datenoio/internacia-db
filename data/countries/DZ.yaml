@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '012'
 wikidata_id: Q262
+fips_code: AG
+fifa_code: ALG
+ioc_code: ALG
+geonames_id: '2589581'
 official_name: People's Democratic Republic of Algeria
 languages:
 - code: ara
@@ -148,6 +152,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 28.0
   lng: 3.0
+writing_directions:
+- id: rtl
+  primary: true
+writing_systems:
+- id: arabic
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: islamic_law

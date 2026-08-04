@@ -16,6 +16,10 @@ lendingType:
   value: IBRD
 numeric_code: '410'
 wikidata_id: Q884
+fips_code: KS
+fifa_code: KOR
+ioc_code: KOR
+geonames_id: '1835841'
 official_name: Republic of Korea
 languages:
 - code: kor
@@ -142,6 +146,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 37.0
   lng: 127.5
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: hangul
+  primary: true
+broadcast_systems:
+- id: atsc
+- id: ntsc
+dvd_region: 3

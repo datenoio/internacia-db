@@ -33,7 +33,7 @@ MANUAL_WIKIDATA: dict[str, str] = {
     "PT": "Q45",
     "CO": "Q739",
     "AN": "Q25228",
-    "KV": "Q1246",
+    "XK": "Q1246",
     "JG": "Q84804",
     "NI": "Q811",
 }
@@ -41,7 +41,7 @@ MANUAL_WIKIDATA: dict[str, str] = {
 MANUAL_TIMEZONES: dict[str, list[str]] = {
     "AN": ["America/Curacao"],
     "JG": ["Europe/Guernsey", "Europe/Jersey"],
-    "KV": ["Europe/Belgrade"],
+    "XK": ["Europe/Belgrade"],
 }
 
 TIMEZONE_NOT_APPLICABLE = frozenset({"BV", "HM", "AQ"})

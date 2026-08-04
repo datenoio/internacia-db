@@ -12,9 +12,11 @@ import math
 import re
 from datetime import date
 from functools import lru_cache
+from pathlib import Path
 from typing import Any
 
 import jsonschema
+import yaml
 
 ALPHA3 = re.compile(r"^[A-Z]{3}$")
 ISO4217 = re.compile(r"^[A-Z]{3}$")
@@ -82,7 +84,7 @@ CODE_STATUSES = frozenset(
     }
 )
 
-NON_ISO_ALPHA2 = frozenset({"AN", "JG", "KV"})
+NON_ISO_ALPHA2 = frozenset({"AN", "JG", "XK"})
 USER_ASSIGNED_EXCEPTIONS = frozenset({"XA", "XS", "XT", "XN"})
 
 # Entity types that cannot be UN members or independent states.
@@ -800,3 +802,129 @@ def validate_completeness(
                 issue["priority"] = priority_level(config, field)
             errors.append(issue)
     return errors
+
+
+ATTRIBUTE_LIST_FIELDS = (
+    "writing_directions",
+    "writing_systems",
+    "broadcast_systems",
+    "legal_systems",
+    "rail_gauges",
+)
+
+ATTRIBUTE_VOCAB_FILES = {
+    "writing_directions": "writing_directions.yaml",
+    "writing_systems": "writing_systems.yaml",
+    "broadcast_systems": "broadcast_systems.yaml",
+    "legal_systems": "legal_systems.yaml",
+    "rail_gauges": "rail_gauges.yaml",
+}
+
+_VOCAB_CACHE: dict[str, set[str]] | None = None
+
+
+def _load_attribute_vocabs(vocabs_dir: Path | None = None) -> dict[str, set[str]]:
+    global _VOCAB_CACHE
+    if _VOCAB_CACHE is not None and vocabs_dir is None:
+        return _VOCAB_CACHE
+    from internacia_builder.paths import project_root
+
+    root = vocabs_dir or (project_root() / "data" / "vocabs")
+    out: dict[str, set[str]] = {}
+    for field, filename in ATTRIBUTE_VOCAB_FILES.items():
+        path = root / filename
+        ids: set[str] = set()
+        if path.exists():
+            with path.open(encoding="utf-8") as f:
+                entries = yaml.safe_load(f) or []
+            for entry in entries:
+                if isinstance(entry, dict) and entry.get("id"):
+                    ids.add(str(entry["id"]))
+        out[field] = ids
+    if vocabs_dir is None:
+        _VOCAB_CACHE = out
+    return out
+
+
+def check_country_attribute_fields(
+    record: dict[str, Any],
+    *,
+    vocabs: dict[str, set[str]] | None = None,
+) -> list[dict[str, Any]]:
+    """Validate migrated attribute fields (vocab ids, primary cardinality, duplicates)."""
+    issues: list[dict[str, Any]] = []
+    vocabs = vocabs or _load_attribute_vocabs()
+
+    dvd = record.get("dvd_region")
+    if dvd is not None and (
+        isinstance(dvd, bool) or not isinstance(dvd, int) or dvd < 1 or dvd > 6
+    ):
+        issues.append(
+            {
+                "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                "field": "dvd_region",
+                "current_value": str(dvd),
+                "suggested_action": "dvd_region must be an integer in 1..6 when present",
+            }
+        )
+
+    for field in ATTRIBUTE_LIST_FIELDS:
+        value = record.get(field)
+        if value is None:
+            continue
+        if not isinstance(value, list):
+            issues.append(
+                {
+                    "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                    "field": field,
+                    "current_value": str(value),
+                    "suggested_action": f"{field} must be a list of objects with id",
+                }
+            )
+            continue
+        known = vocabs.get(field, set())
+        seen_ids: set[str] = set()
+        primary_count = 0
+        for idx, item in enumerate(value):
+            if not isinstance(item, dict) or not item.get("id"):
+                issues.append(
+                    {
+                        "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                        "field": f"{field}[{idx}]",
+                        "current_value": str(item),
+                        "suggested_action": f"{field} entries must be objects with a string id",
+                    }
+                )
+                continue
+            vid = str(item["id"])
+            if vid in seen_ids:
+                issues.append(
+                    {
+                        "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                        "field": f"{field}[{idx}].id",
+                        "current_value": vid,
+                        "suggested_action": f"duplicate id '{vid}' in {field}",
+                    }
+                )
+            seen_ids.add(vid)
+            if known and vid not in known:
+                issues.append(
+                    {
+                        "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                        "field": f"{field}[{idx}].id",
+                        "current_value": vid,
+                        "suggested_action": f"id '{vid}' is not in the {field} vocab catalog",
+                    }
+                )
+            if item.get("primary") is True:
+                primary_count += 1
+        if primary_count > 1:
+            issues.append(
+                {
+                    "issue_type": "INVALID_ATTRIBUTE_FIELD",
+                    "field": field,
+                    "current_value": str(primary_count),
+                    "suggested_action": f"at most one {field} entry may set primary: true",
+                }
+            )
+    return issues

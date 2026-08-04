@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '894'
 wikidata_id: Q953
+fips_code: ZA
+fifa_code: ZAM
+ioc_code: ZAM
+geonames_id: '895949'
 official_name: Republic of Zambia
 languages:
 - code: eng
@@ -149,6 +153,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -15.0
   lng: 30.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: common_law
+rail_gauges:
+- id: cape
+  gauge_mm: 1067
+  primary: true

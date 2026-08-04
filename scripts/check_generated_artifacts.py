@@ -152,7 +152,7 @@ def main(
 
     # Memberships edge artifact parity.
     memb_parquet = datasets_dir / "memberships.parquet"
-    memb_csv = datasets_dir / "memberships.csv"
+    memb_csv = datasets_dir / "memberships.csv.zst"
     if not memb_parquet.exists():
         problems.append("[memberships] missing memberships.parquet")
     else:
@@ -162,11 +162,13 @@ def main(
             "SELECT count(*) FROM (SELECT unnest(includes) AS m FROM intblocks) WHERE m.type != 'organization'"
         ).fetchone()[0]
         if not memb_csv.exists():
-            problems.append("[memberships] missing memberships.csv")
+            problems.append("[memberships] missing memberships.csv.zst")
         else:
-            csv_rows = sum(1 for _ in memb_csv.open(encoding="utf-8")) - 1
+            dctx = zstandard.ZstdDecompressor()
+            text = dctx.decompress(memb_csv.read_bytes()).decode("utf-8")
+            csv_rows = max(0, sum(1 for line in text.splitlines() if line.strip()) - 1)
             if csv_rows != parquet_rows:
-                problems.append(f"[memberships] csv rows {csv_rows} != parquet rows {parquet_rows}")
+                problems.append(f"[memberships] csv.zst rows {csv_rows} != parquet rows {parquet_rows}")
         if duck_rows != parquet_rows:
             problems.append(f"[memberships] duckdb rows {duck_rows} != parquet rows {parquet_rows}")
         if expected_rows != parquet_rows:
@@ -187,6 +189,44 @@ def main(
             problems.append("[memberships] missing manifest memberships.manifest.json")
         if "memberships" in meta_rows:
             identities["memberships._meta"] = meta_rows["memberships"]
+
+    # CSV (zstd) and lite export row counts must match full Parquet primary tables.
+    for name, key in (("countries", "code"), ("intblocks", "id")):
+        parquet_path = datasets_dir / f"{name}.parquet"
+        if not parquet_path.exists():
+            continue
+        parquet_rows = pq.read_table(parquet_path).num_rows
+        csv_path = datasets_dir / f"{name}.csv.zst"
+        if not csv_path.exists():
+            problems.append(f"[{name}] missing {name}.csv.zst")
+        else:
+            dctx = zstandard.ZstdDecompressor()
+            text = dctx.decompress(csv_path.read_bytes()).decode("utf-8")
+            csv_rows = max(0, sum(1 for line in text.splitlines() if line.strip()) - 1)
+            if csv_rows != parquet_rows:
+                problems.append(f"[{name}] csv.zst rows {csv_rows} != parquet rows {parquet_rows}")
+        lite_parquet = datasets_dir / f"{name}-lite.parquet"
+        lite_csv = datasets_dir / f"{name}-lite.csv.zst"
+        if lite_parquet.exists():
+            lite_rows = pq.read_table(lite_parquet).num_rows
+            if lite_rows != parquet_rows:
+                problems.append(f"[{name}] lite parquet rows {lite_rows} != full parquet rows {parquet_rows}")
+            if lite_csv.exists():
+                dctx = zstandard.ZstdDecompressor()
+                text = dctx.decompress(lite_csv.read_bytes()).decode("utf-8")
+                lite_csv_rows = max(0, sum(1 for line in text.splitlines() if line.strip()) - 1)
+                if lite_csv_rows != lite_rows:
+                    problems.append(f"[{name}] lite csv.zst rows {lite_csv_rows} != lite parquet rows {lite_rows}")
+        json_zst = datasets_dir / f"{name}.json.zst"
+        if not json_zst.exists():
+            problems.append(f"[{name}] missing {name}.json.zst")
+        else:
+            dctx = zstandard.ZstdDecompressor()
+            arr = json.loads(dctx.decompress(json_zst.read_bytes()).decode("utf-8"))
+            if not isinstance(arr, list) or len(arr) != parquet_rows:
+                problems.append(
+                    f"[{name}] json.zst len {len(arr) if isinstance(arr, list) else type(arr)} != parquet rows {parquet_rows}"
+                )
 
     duck.close()
 

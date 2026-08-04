@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '104'
 wikidata_id: Q836
+fips_code: BM
+fifa_code: MYA
+ioc_code: MYA
+geonames_id: '1327865'
 official_name: Republic of the Union of Myanmar
 languages:
 - code: mya
@@ -148,6 +152,42 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 22.0
   lng: 98.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: indic
+  primary: true
+broadcast_systems:
+- id: ntsc
+legal_systems:
+- id: common_law
+dvd_region: 3

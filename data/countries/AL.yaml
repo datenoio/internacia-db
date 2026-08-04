@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: 008
 wikidata_id: Q222
+fips_code: AL
+fifa_code: ALB
+ioc_code: ALB
+geonames_id: '783754'
 official_name: Republic of Albania
 languages:
 - code: sqi
@@ -37,7 +41,7 @@ borders:
 - MNE
 - GRC
 - MKD
-- KSV
+- XKX
 landlocked: false
 tld: .al
 calling_codes:
@@ -145,6 +149,34 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 41.0
   lng: 20.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: islamic_law
+dvd_region: 2

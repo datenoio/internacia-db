@@ -1,0 +1,29 @@
+name: Data request
+description: Request a new country field, intblock, or membership update
+title: "[request] "
+labels: ["enhancement", "data"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request type
+      options:
+        - New intblock
+        - Membership roster update
+        - New optional country field (reference data only)
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this needed?
+      description: Downstream use case and join targets. Socioeconomic profile fields (HDI, GDP, etc.) are out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Official URLs for membership or identifiers

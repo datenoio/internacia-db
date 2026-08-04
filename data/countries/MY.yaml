@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '458'
 wikidata_id: Q833
+fips_code: MY
+fifa_code: MAS
+ioc_code: MAS
+geonames_id: '1733045'
 official_name: Malaysia
 languages:
 - code: eng
@@ -147,6 +151,35 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 2.5
   lng: 112.5
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: common_law
+- id: islamic_law
+dvd_region: 3

@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '702'
 wikidata_id: Q334
+fips_code: SN
+fifa_code: SIN
+ioc_code: SGP
+geonames_id: '1880251'
 official_name: Republic of Singapore
 languages:
 - code: eng
@@ -135,9 +139,39 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 1.36666666
   lng: 103.8
 adminregion:
   id: EAP
   value: East Asia & Pacific (developing only)
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: common_law

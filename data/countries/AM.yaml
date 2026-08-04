@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '051'
 wikidata_id: Q399
+fips_code: AM
+fifa_code: ARM
+ioc_code: ARM
+geonames_id: '174982'
 official_name: Republic of Armenia
 languages:
 - code: hye
@@ -145,6 +149,38 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 40.0
   lng: 45.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: armenian
+  primary: true
+broadcast_systems:
+- id: secam
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

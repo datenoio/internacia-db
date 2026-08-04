@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '392'
 wikidata_id: Q17
+fips_code: JA
+fifa_code: JPN
+ioc_code: JPN
+geonames_id: '1861060'
 official_name: Japan
 languages:
 - code: jpn
@@ -134,6 +138,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 36.0
   lng: 138.0
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: isdb
+- id: ntsc
+dvd_region: 2

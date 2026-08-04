@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '100'
 wikidata_id: Q219
+fips_code: BU
+fifa_code: BUL
+ioc_code: BUL
+geonames_id: '732800'
 official_name: Republic of Bulgaria
 languages:
 - code: bul
@@ -146,6 +150,35 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 43.0
   lng: 25.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: cyrillic
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

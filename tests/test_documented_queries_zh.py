@@ -72,6 +72,34 @@ def con():
             190,
             {"CN", "US", "FR"},
         ),
+        (
+            "SELECT code FROM countries WHERE car_side = 'left'",
+            74,
+            {"JP", "GB", "AU"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.writing_directions) AS t(d)
+            WHERE d.id = 'rtl'
+            """,
+            28,
+            {"EG", "SA"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.writing_systems) AS t(s)
+            WHERE s.id = 'cyrillic'
+            """,
+            12,
+            {"RU", "UA"},
+        ),
+        (
+            "SELECT code FROM countries WHERE dvd_region = 1",
+            8,
+            {"US", "CA"},
+        ),
     ],
     ids=[
         "china_zh_official_name",
@@ -80,6 +108,10 @@ def con():
         "nato_members",
         "laos_org_memberships",
         "un_members",
+        "car_side_left",
+        "writing_direction_rtl",
+        "writing_system_cyrillic",
+        "dvd_region_1",
     ],
 )
 def test_documented_query_zh(con, sql, min_rows, expected_codes):

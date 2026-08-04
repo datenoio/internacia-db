@@ -243,6 +243,21 @@ def get_countries_schema() -> pa.Schema:
             ("lendingType", pa.struct([("id", pa.string()), ("value", pa.string())])),
             ("numeric_code", pa.string()),
             ("wikidata_id", pa.string()),
+            ("geonames_id", pa.string()),
+            ("ioc_code", pa.string()),
+            ("fifa_code", pa.string()),
+            ("fips_code", pa.string()),
+            (
+                "bbox",
+                pa.struct(
+                    [
+                        ("west", pa.float64()),
+                        ("east", pa.float64()),
+                        ("north", pa.float64()),
+                        ("south", pa.float64()),
+                    ]
+                ),
+            ),
             ("official_name", pa.string()),
             (
                 "languages",
@@ -284,6 +299,35 @@ def get_countries_schema() -> pa.Schema:
             ("calling_codes", pa.list_(pa.string())),
             ("flag_emoji", pa.string()),
             ("car_side", pa.string()),
+            (
+                "writing_directions",
+                pa.list_(pa.struct([("id", pa.string()), ("primary", pa.bool_())])),
+            ),
+            (
+                "writing_systems",
+                pa.list_(pa.struct([("id", pa.string()), ("primary", pa.bool_())])),
+            ),
+            ("dvd_region", pa.int32()),
+            (
+                "broadcast_systems",
+                pa.list_(pa.struct([("id", pa.string())])),
+            ),
+            (
+                "legal_systems",
+                pa.list_(pa.struct([("id", pa.string())])),
+            ),
+            (
+                "rail_gauges",
+                pa.list_(
+                    pa.struct(
+                        [
+                            ("id", pa.string()),
+                            ("gauge_mm", pa.float64()),
+                            ("primary", pa.bool_()),
+                        ]
+                    )
+                ),
+            ),
             ("start_of_week", pa.string()),
             ("demonyms", pa.struct([("female", pa.string()), ("male", pa.string())])),
             ("m49_code", pa.string()),
@@ -326,6 +370,7 @@ def get_intblocks_schema() -> pa.Schema:
             ("links", pa.list_(pa.struct([("url", pa.string()), ("type", pa.string())]))),
             ("founded", pa.string()),
             ("geographic_scope", pa.string()),
+            ("scope_category", pa.string()),
             ("regions", pa.list_(pa.string())),
             (
                 "includes",
@@ -669,16 +714,331 @@ def load_intblock_aliases(project_root: Path) -> list[dict[str, Any]]:
     return aliases
 
 
-def save_aliases(aliases: list[dict[str, Any]], output_dir: Path, write_parquet: bool = True) -> None:
-    """Write the intblock alias artifact as JSON and (optionally) Parquet."""
-    json_path = output_dir / "intblocks_aliases.json"
+def load_country_aliases(project_root: Path) -> list[dict[str, Any]]:
+    """Load country code alias source (retired/renamed codes → current code)."""
+    path = project_root / "data" / "countries_aliases.yaml"
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = yaml.safe_load(f) or []
+    aliases: list[dict[str, Any]] = []
+    for entry in raw:
+        if not isinstance(entry, dict):
+            continue
+        aliases.append(
+            {
+                "alias": str(entry.get("alias") or ""),
+                "target": str(entry.get("target") or ""),
+                "reason": str(entry.get("reason") or ""),
+                "since": str(entry.get("since") or ""),
+                "note": str(entry.get("note") or ""),
+            }
+        )
+    return aliases
+
+
+def get_attribute_migration_schema() -> pa.Schema:
+    """Schema for attribute-intblock → country-field migration artifact."""
+    return pa.schema(
+        [
+            ("retired_id", pa.string()),
+            ("country_field", pa.string()),
+            ("country_value", pa.string()),
+            ("country_value_id", pa.string()),
+            ("disposition", pa.string()),
+            ("vocab", pa.string()),
+            ("vocab_id", pa.string()),
+            ("since", pa.string()),
+            ("note", pa.string()),
+        ]
+    )
+
+
+def load_attribute_intblock_migrations(project_root: Path) -> list[dict[str, Any]]:
+    """Load retired attribute-partition intblock → country field mappings."""
+    path = project_root / "data" / "attribute_intblock_migrations.yaml"
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = yaml.safe_load(f) or []
+    rows: list[dict[str, Any]] = []
+    for entry in raw:
+        if not isinstance(entry, dict):
+            continue
+        value = entry.get("country_value")
+        rows.append(
+            {
+                "retired_id": str(entry.get("retired_id") or ""),
+                "country_field": str(entry.get("country_field") or ""),
+                "country_value": "" if value is None else str(value),
+                "country_value_id": str(entry.get("country_value_id") or ""),
+                "disposition": str(entry.get("disposition") or ""),
+                "vocab": str(entry.get("vocab") or ""),
+                "vocab_id": str(entry.get("vocab_id") or ""),
+                "since": str(entry.get("since") or ""),
+                "note": str(entry.get("note") or ""),
+            }
+        )
+    return rows
+
+
+def save_attribute_intblock_migrations(
+    migrations: list[dict[str, Any]],
+    output_dir: Path,
+    *,
+    write_parquet: bool = True,
+) -> None:
+    """Write attribute migration artifact as JSON and optional Parquet."""
+    json_path = output_dir / "attribute_intblock_migrations.json"
+    # Prefer source-shaped JSON (richer types) when available at data/
+    source = get_project_root() / "data" / "attribute_intblock_migrations.yaml"
+    if source.exists():
+        with open(source, encoding="utf-8") as f:
+            raw = yaml.safe_load(f) or []
+        json_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    else:
+        json_path.write_text(json.dumps(migrations, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved attribute migrations: {json_path}")
+    if write_parquet:
+        table = pa.Table.from_pylist(migrations, schema=get_attribute_migration_schema())
+        parquet_path = output_dir / "attribute_intblock_migrations.parquet"
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        typer.echo(f"✓ Saved attribute migrations (parquet): {parquet_path}")
+
+
+def save_aliases(
+    aliases: list[dict[str, Any]],
+    output_dir: Path,
+    basename: str = "intblocks_aliases",
+    write_parquet: bool = True,
+) -> None:
+    """Write an alias artifact as JSON and (optionally) Parquet."""
+    json_path = output_dir / f"{basename}.json"
     json_path.write_text(json.dumps(aliases, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     typer.echo(f"✓ Saved alias map: {json_path}")
     if write_parquet:
         table = pa.Table.from_pylist(aliases, schema=get_aliases_schema())
-        parquet_path = output_dir / "intblocks_aliases.parquet"
+        parquet_path = output_dir / f"{basename}.parquet"
         pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
         typer.echo(f"✓ Saved alias map (parquet): {parquet_path}")
+
+
+def _join_list(values: list[Any] | None, sep: str = ";") -> str:
+    if not values:
+        return ""
+    return sep.join(str(v) for v in values)
+
+
+def _indicator_cols(prefix: str, indicator: dict[str, Any] | None) -> dict[str, Any]:
+    indicator = indicator or {}
+    return {
+        f"{prefix}_value": indicator.get("value"),
+        f"{prefix}_year": indicator.get("year"),
+        f"{prefix}_source": indicator.get("source") or "",
+    }
+
+
+def flatten_country(rec: dict[str, Any]) -> dict[str, Any]:
+    """Flatten one country record to scalar CSV columns."""
+    cap = rec.get("capital_city") or {}
+    region = rec.get("region") or {}
+    adminregion = rec.get("adminregion") or {}
+    income = rec.get("incomeLevel") or {}
+    lending = rec.get("lendingType") or {}
+    rec_status = rec.get("recognition_status") or {}
+    parent = rec.get("parent_entity") or {}
+    demonyms = rec.get("demonyms") or {}
+    centroid = rec.get("centroid") or {}
+    row: dict[str, Any] = {
+        "code": rec.get("code") or "",
+        "name": rec.get("name") or "",
+        "iso3code": rec.get("iso3code") or "",
+        "numeric_code": rec.get("numeric_code") or "",
+        "wikidata_id": rec.get("wikidata_id") or "",
+        "geonames_id": rec.get("geonames_id") or "",
+        "ioc_code": rec.get("ioc_code") or "",
+        "fifa_code": rec.get("fifa_code") or "",
+        "fips_code": rec.get("fips_code") or "",
+        "official_name": rec.get("official_name") or "",
+        "capital_city_name": cap.get("name") or "",
+        "capital_city_lat": cap.get("lat"),
+        "capital_city_lng": cap.get("lng"),
+        "region_id": region.get("id") or "",
+        "region_value": region.get("value") or "",
+        "adminregion_id": adminregion.get("id") or "",
+        "adminregion_value": adminregion.get("value") or "",
+        "incomeLevel_id": income.get("id") or "",
+        "incomeLevel_value": income.get("value") or "",
+        "lendingType_id": lending.get("id") or "",
+        "lendingType_value": lending.get("value") or "",
+        "un_member": rec.get("un_member"),
+        "un_status": rec.get("un_status") or "",
+        "independent": rec.get("independent"),
+        "entity_type": rec.get("entity_type") or "",
+        "code_status": rec.get("code_status") or "",
+        "recognition_status": rec_status.get("status") or "",
+        "recognition_un_member": rec_status.get("un_member"),
+        "recognition_notes": rec_status.get("notes") or "",
+        "parent_entity_code": parent.get("code") or "",
+        "parent_entity_name": parent.get("name") or "",
+        "subregion": rec.get("subregion") or "",
+        "continents": _join_list(rec.get("continents")),
+        "borders": _join_list(rec.get("borders")),
+        "landlocked": rec.get("landlocked"),
+        "tld": rec.get("tld") or "",
+        "flag_emoji": rec.get("flag_emoji") or "",
+        "m49_code": rec.get("m49_code") or "",
+        "centroid_lat": centroid.get("lat"),
+        "centroid_lng": centroid.get("lng"),
+        "timezones": _join_list(rec.get("timezones")),
+        "demonyms_female": demonyms.get("female") or "",
+        "demonyms_male": demonyms.get("male") or "",
+        "common_names": _join_list(rec.get("common_names"), "|"),
+    }
+    row.update(_indicator_cols("population", rec.get("population")))
+    row.update(_indicator_cols("area", rec.get("area")))
+    row.update(_indicator_cols("gini", rec.get("gini")))
+    return row
+
+
+def flatten_intblock(rec: dict[str, Any]) -> dict[str, Any]:
+    """Flatten one intblock record to scalar CSV columns."""
+    hq = rec.get("headquarters") or {}
+    coords = hq.get("coordinates") or {}
+    return {
+        "id": rec.get("id") or "",
+        "name": rec.get("name") or "",
+        "status": rec.get("status") or "",
+        "wikidata_id": rec.get("wikidata_id") or "",
+        "founded": rec.get("founded") or "",
+        "geographic_scope": rec.get("geographic_scope") or "",
+        "scope_category": rec.get("scope_category") or "",
+        "legal_status": rec.get("legal_status") or "",
+        "membership_count": rec.get("membership_count"),
+        "membership_count_type": rec.get("membership_count_type") or "",
+        "blocktype": _join_list(rec.get("blocktype")),
+        "regions": _join_list(rec.get("regions")),
+        "partof": _join_list(rec.get("partof")),
+        "languages": _join_list(rec.get("languages")),
+        "hq_city": hq.get("city") or "",
+        "hq_country": hq.get("country") or "",
+        "hq_lat": coords.get("lat"),
+        "hq_lng": coords.get("lng"),
+        "dissolved": rec.get("dissolved") or "",
+        "successor": rec.get("successor") or "",
+        "description": rec.get("description") or "",
+    }
+
+
+COUNTRIES_LITE_FIELDS = (
+    "code",
+    "name",
+    "iso3code",
+    "wikidata_id",
+    "entity_type",
+    "code_status",
+    "un_status",
+    "independent",
+    "region_id",
+    "subregion",
+    "ioc_code",
+    "fifa_code",
+)
+
+INTBLOCKS_LITE_FIELDS = (
+    "id",
+    "name",
+    "status",
+    "wikidata_id",
+    "geographic_scope",
+    "scope_category",
+    "blocktype",
+    "membership_count",
+    "legal_status",
+)
+
+
+def project_lite_rows(rows: list[dict[str, Any]], fields: tuple[str, ...]) -> list[dict[str, Any]]:
+    return [{field: row.get(field) for field in fields} for row in rows]
+
+
+def save_csv_rows(rows: list[dict[str, Any]], output_file: Path) -> None:
+    """Save flattened rows as a Zstandard-compressed CSV file (``.csv.zst``)."""
+    import csv
+    import io
+
+    buf = io.StringIO(newline="")
+    if rows:
+        fieldnames = list(rows[0].keys())
+        writer = csv.DictWriter(buf, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+    cctx = zstd.ZstdCompressor(level=22)
+    output_file.write_bytes(cctx.compress(buf.getvalue().encode("utf-8")))
+    typer.echo(f"✓ Saved CSV (zstd): {output_file}")
+
+
+def save_json_array(data: list[dict[str, Any]], output_file: Path) -> None:
+    """Save records as a Zstandard-compressed JSON array (``.json.zst``)."""
+    payload = (json.dumps(data, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    cctx = zstd.ZstdCompressor(level=22)
+    output_file.write_bytes(cctx.compress(payload))
+    typer.echo(f"✓ Saved JSON array (zstd): {output_file}")
+
+
+def write_datapackage(output_dir: Path, version: str) -> None:
+    """Emit a Frictionless Data Package descriptor for published resources."""
+    resources: list[dict[str, Any]] = []
+    for name, fmt, path in (
+        ("countries", "csv", "countries.csv.zst"),
+        ("countries-lite", "csv", "countries-lite.csv.zst"),
+        ("countries", "parquet", "countries.parquet"),
+        ("countries-lite", "parquet", "countries-lite.parquet"),
+        ("countries", "json", "countries.json.zst"),
+        ("countries", "jsonl", "countries.jsonl"),
+        ("intblocks", "csv", "intblocks.csv.zst"),
+        ("intblocks-lite", "csv", "intblocks-lite.csv.zst"),
+        ("intblocks", "parquet", "intblocks.parquet"),
+        ("intblocks-lite", "parquet", "intblocks-lite.parquet"),
+        ("intblocks", "json", "intblocks.json.zst"),
+        ("intblocks", "jsonl", "intblocks.jsonl"),
+        ("blocktypes", "parquet", "blocktypes.parquet"),
+        ("memberships", "csv", "memberships.csv.zst"),
+        ("memberships", "parquet", "memberships.parquet"),
+        ("intblocks_aliases", "json", "intblocks_aliases.json"),
+        ("countries_aliases", "json", "countries_aliases.json"),
+        ("attribute_intblock_migrations", "json", "attribute_intblock_migrations.json"),
+    ):
+        file_path = output_dir / path
+        if not file_path.exists():
+            continue
+        resources.append(
+            {
+                "name": name,
+                "path": path,
+                "format": fmt,
+                "mediatype": {
+                    "csv": "text/csv",
+                    "parquet": "application/vnd.apache.parquet",
+                    "json": "application/json",
+                    "jsonl": "application/x-ndjson",
+                }.get(fmt, "application/octet-stream"),
+                "compression": "zstd" if path.endswith(".zst") else None,
+            }
+        )
+        if resources[-1]["compression"] is None:
+            del resources[-1]["compression"]
+    package = {
+        "name": "internacia-datasets",
+        "title": "Internacia reference datasets",
+        "version": version,
+        "licenses": [{"name": "CC-BY-4.0", "title": "Creative Commons Attribution 4.0"}],
+        "resources": resources,
+    }
+    out = output_dir / "datapackage.json"
+    out.write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved datapackage: {out}")
 
 
 def load_yaml_files(directory: Path, desc: str = "Loading files") -> list[dict[str, Any]]:
@@ -780,16 +1140,19 @@ def build_membership_rows(intblocks_data: list[dict[str, Any]]) -> list[dict[str
 
 
 def save_memberships_csv(rows: list[dict[str, Any]], output_file: Path):
-    """Save membership edges as a plain CSV file."""
+    """Save membership edges as a Zstandard-compressed CSV file (``.csv.zst``)."""
     import csv
+    import io
 
+    buf = io.StringIO(newline="")
     fieldnames = get_memberships_schema().names
-    with open(output_file, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
-    typer.echo(f"✓ Saved CSV: {output_file}")
+    writer = csv.DictWriter(buf, fieldnames=fieldnames)
+    writer.writeheader()
+    for row in rows:
+        writer.writerow(row)
+    cctx = zstd.ZstdCompressor(level=22)
+    output_file.write_bytes(cctx.compress(buf.getvalue().encode("utf-8")))
+    typer.echo(f"✓ Saved CSV (zstd): {output_file}")
 
 
 def save_parquet(data: list[dict[str, Any]], output_file: Path, schema: pa.Schema | None = None):
@@ -979,6 +1342,13 @@ def build(
     intblock_aliases = load_intblock_aliases(project_root)
     typer.echo(f"   Loaded {len(intblock_aliases)} intblock alias(es)")
 
+    # Load country code aliases (retired/renamed codes → current code)
+    country_aliases = load_country_aliases(project_root)
+    typer.echo(f"   Loaded {len(country_aliases)} country alias(es)")
+
+    attribute_migrations = load_attribute_intblock_migrations(project_root)
+    typer.echo(f"   Loaded {len(attribute_migrations)} attribute intblock migration(s)")
+
     # Freeze one build identity for all manifests/sidecars/_meta rows.
     begin_build_context()
 
@@ -1002,6 +1372,17 @@ def build(
         save_jsonl(countries_data, output_dir / "countries.jsonl")
         save_jsonl(intblocks_data, output_dir / "intblocks.jsonl")
         save_jsonl(blocktypes_data, output_dir / "blocktypes.jsonl")
+        save_json_array(countries_data, output_dir / "countries.json.zst")
+        save_json_array(intblocks_data, output_dir / "intblocks.json.zst")
+
+    countries_csv_rows = [flatten_country(rec) for rec in countries_data]
+    intblocks_csv_rows = [flatten_intblock(rec) for rec in intblocks_data]
+    countries_lite_rows = project_lite_rows(countries_csv_rows, COUNTRIES_LITE_FIELDS)
+    intblocks_lite_rows = project_lite_rows(intblocks_csv_rows, INTBLOCKS_LITE_FIELDS)
+    save_csv_rows(countries_csv_rows, output_dir / "countries.csv.zst")
+    save_csv_rows(intblocks_csv_rows, output_dir / "intblocks.csv.zst")
+    save_csv_rows(countries_lite_rows, output_dir / "countries-lite.csv.zst")
+    save_csv_rows(intblocks_lite_rows, output_dir / "intblocks-lite.csv.zst")
 
     if "yaml" in requested_formats:
         save_yaml_zst(countries_data, output_dir / "countries.yaml.zst")
@@ -1013,7 +1394,9 @@ def build(
         save_parquet(intblocks_data, output_dir / "intblocks.parquet", schema=intblocks_schema)
         save_parquet(blocktypes_data, output_dir / "blocktypes.parquet", schema=blocktypes_schema)
         save_parquet(memberships_data, output_dir / "memberships.parquet", schema=get_memberships_schema())
-        save_memberships_csv(memberships_data, output_dir / "memberships.csv")
+        save_parquet(countries_lite_rows, output_dir / "countries-lite.parquet")
+        save_parquet(intblocks_lite_rows, output_dir / "intblocks-lite.parquet")
+        save_memberships_csv(memberships_data, output_dir / "memberships.csv.zst")
         write_manifest(output_dir, "countries", countries_schema, len(countries_data))
         write_manifest(output_dir, "intblocks", intblocks_schema, len(intblocks_data))
         write_manifest(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
@@ -1040,8 +1423,14 @@ def build(
             write_manifest(output_dir, "blocktypes", blocktypes_schema, len(blocktypes_data))
             write_manifest(output_dir, "memberships", get_memberships_schema(), len(memberships_data))
 
-    # Always emit the intblock alias artifact so consumers can remap retired ids.
-    save_aliases(intblock_aliases, output_dir, write_parquet="parquet" in requested_formats)
+    # Always emit alias artifacts so consumers can remap retired ids/codes.
+    save_aliases(intblock_aliases, output_dir, basename="intblocks_aliases", write_parquet="parquet" in requested_formats)
+    save_aliases(country_aliases, output_dir, basename="countries_aliases", write_parquet="parquet" in requested_formats)
+    save_attribute_intblock_migrations(
+        attribute_migrations, output_dir, write_parquet="parquet" in requested_formats
+    )
+
+    write_datapackage(output_dir, get_dataset_version())
 
     typer.echo("\n✅ All datasets generated successfully!")
     typer.echo(f"📂 Output location: {output_dir}")
@@ -1108,6 +1497,8 @@ ISSUE_PRIORITY_MAP = {
         "MISSING_INCLUDES_APPLICABILITY",
         "INVALID_INCLUDE_STATUS",
         "UNRESOLVED_PARENT_ENTITY",
+        "INVALID_PARTOF_TARGET",
+        "MISSING_WIKIDATA_ID",
     ],
     "MEDIUM": [
         "UNRESOLVED_PARTOF_REF",

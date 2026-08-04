@@ -177,10 +177,21 @@ are country columns. Remap retired intblock ids with
 SELECT code, name FROM countries WHERE car_side = 'left' ORDER BY code;
 
 SELECT code, name, dvd_region FROM countries WHERE dvd_region = 1;
+
+-- List-of-struct attributes: unnest and filter on id
+SELECT c.code, c.name
+FROM countries c, UNNEST(c.writing_directions) AS t(d)
+WHERE d.id = 'rtl';
+
+SELECT c.code, c.name, g.gauge_mm
+FROM countries c, UNNEST(c.rail_gauges) AS t(g)
+WHERE g.id = 'russian' AND g."primary" = true;
 ```
 
-Vocab catalogs: `data/vocabs/`. Government-form typology is vocab-only
-(`government_forms.yaml`) and is **not** assigned on country records.
+Vocab catalogs: `data/vocabs/`. Coverage is sparse for some fields (migrated from
+attribute-partition intblocks). Government-form typology is vocab-only
+(`government_forms.yaml`) and is **not** assigned on country records. Verified
+recipes: [query-examples.md](query-examples.md).
 
 ### Country crosswalk ids
 
@@ -389,6 +400,7 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 - [AGENTS.zh.md](../AGENTS.zh.md) — 中文智能体入口
 - [query-examples.md](query-examples.md) — verified DuckDB and Pandas query cookbook
 - [query-examples-polars.md](query-examples-polars.md) — verified Polars / Parquet query cookbook
+- [query-examples-r.md](query-examples-r.md) — verified R / dplyr / Parquet query cookbook
 - [query-examples-observable.md](query-examples-observable.md) — Observable Framework / Plot cookbook
 - [llms.txt](../llms.txt) — compact index for LLM context windows
 - [llms-full.txt](../llms-full.txt) — extended index for crawlers

@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '710'
 wikidata_id: Q258
+fips_code: SF
+fifa_code: RSA
+ioc_code: RSA
+geonames_id: '953987'
 official_name: Republic of South Africa
 languages:
 - code: afr
@@ -167,6 +171,44 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -29.0
   lng: 24.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: bijuridical
+- id: common_law
+rail_gauges:
+- id: cape
+  gauge_mm: 1067
+  primary: true
+dvd_region: 2

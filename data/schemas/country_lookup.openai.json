@@ -1,0 +1,30 @@
+{
+  "name": "country_lookup",
+  "description": "Look up a country or territory in Internacia by alpha-2 code, alpha-3, name, or Wikidata Q-id. Prefer official ISO codes; remap legacy KV→XK via countries_aliases.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "ISO 3166-1 alpha-2 (or user-assigned XK). Primary key."
+      },
+      "iso3code": {
+        "type": "string",
+        "description": "ISO 3166-1 alpha-3 (join key for borders)."
+      },
+      "name": {
+        "type": "string",
+        "description": "English name or common alias substring."
+      },
+      "wikidata_id": {
+        "type": "string",
+        "description": "Wikidata item id, e.g. Q1246."
+      },
+      "official_iso_only": {
+        "type": "boolean",
+        "description": "If true, filter code_status = official_iso3166_1 (249 records)."
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -139,6 +139,26 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 22.267
   lng: 114.188
@@ -149,3 +169,13 @@ capital_city:
   name: Hong Kong
   lng: 114.1694
   lat: 22.3193
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: dmbt
+dvd_region: 3

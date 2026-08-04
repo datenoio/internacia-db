@@ -77,6 +77,11 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 49.2144
   lng: -2.1312
@@ -87,3 +92,6 @@ un_member: false
 un_status: non_member
 independent: false
 landlocked: false
+writing_directions:
+- id: ltr
+  primary: true

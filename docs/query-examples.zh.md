@@ -40,6 +40,55 @@ ORDER BY code;
 
 **预期：** 249 行。7 个非标准 code（AN、JG、XK、XA、XS、XT、XN）被排除。
 
+## 国家属性字段（原 attribute intblock）
+
+驾驶侧、书写方向/系统、DVD 区、广播制式、法律传统、轨距现为 countries 列。
+旧 intblock id 对照见 `attribute_intblock_migrations.json`。
+
+### 左侧通行
+
+```sql
+SELECT code, name
+FROM countries
+WHERE car_side = 'left'
+ORDER BY code;
+```
+
+**预期：** 74 行。
+
+### 从右到左书写方向
+
+```sql
+SELECT c.code, c.name, d.id AS direction
+FROM countries c, UNNEST(c.writing_directions) AS t(d)
+WHERE d.id = 'rtl'
+ORDER BY c.code;
+```
+
+**预期：** 28 行。SQL 中需引用 `"primary"`（保留字）。
+
+### 西里尔字母书写系统
+
+```sql
+SELECT c.code, c.name, s.id AS script
+FROM countries c, UNNEST(c.writing_systems) AS t(s)
+WHERE s.id = 'cyrillic'
+ORDER BY c.code;
+```
+
+**预期：** 12 行。覆盖面较稀疏（约 58 条有值）；词表见 `data/vocabs/`。
+
+### DVD 区域 1
+
+```sql
+SELECT code, name, dvd_region
+FROM countries
+WHERE dvd_region = 1
+ORDER BY code;
+```
+
+**预期：** 8 行（含 `US`、`CA`）。
+
 ## 泰国的陆地邻国
 
 `borders` 存 alpha-3，与 `iso3code` 关联。

@@ -225,6 +225,110 @@ def load_border_reciprocity_allowlist(config: dict[str, Any]) -> set[tuple[str, 
     return pairs
 
 
+def check_wikidata_completeness(
+    records: list[dict[str, Any]],
+    rel_paths: list[str],
+    exclusions: set[str],
+) -> list[dict[str, Any]]:
+    """Every intblock needs wikidata_id unless listed on the exclusion registry."""
+    issues: list[dict[str, Any]] = []
+    for path, rec in zip(rel_paths, records, strict=False):
+        record_id = str(rec.get("id") or "unknown")
+        if rec.get("wikidata_id"):
+            continue
+        if record_id in exclusions:
+            continue
+        issues.append(
+            {
+                "issue_type": "MISSING_WIKIDATA_ID",
+                "field": "wikidata_id",
+                "current_value": "",
+                "suggested_action": (
+                    "Add wikidata_id or document the record on data/schemas/wikidata_exclusions.yaml"
+                ),
+                "file_path": path,
+                "record_id": record_id,
+            }
+        )
+    return issues
+
+
+ORG_PARENT_BLOCKTYPES = frozenset(
+    {
+        "political",
+        "intorg",
+        "unagency",
+        "forum",
+        "parliamentary",
+        "court",
+        "bank",
+        "fund",
+        "meteorology",
+        "standards",
+        "transport",
+        "postal",
+        "research",
+    }
+)
+
+
+def _is_treaty_like(rec: dict[str, Any]) -> bool:
+    blocktypes = {str(bt).lower() for bt in (rec.get("blocktype") or [])}
+    legal = str(rec.get("legal_status") or "").lower()
+    return legal == "treaty" or "agreement" in blocktypes
+
+
+def check_partof_hierarchy(
+    records: list[dict[str, Any]],
+    rel_paths: list[str],
+) -> list[dict[str, Any]]:
+    """partof must not reference pure treaty/agreement records (organizational hierarchy only)."""
+    by_id = {str(rec.get("id", "")): rec for rec in records if rec.get("id")}
+    issues: list[dict[str, Any]] = []
+    for path, rec in zip(rel_paths, records, strict=False):
+        record_id = rec.get("id", "unknown")
+        partof = rec.get("partof")
+        if not partof:
+            continue
+        refs: list[str]
+        if isinstance(partof, str):
+            refs = [partof]
+        elif isinstance(partof, list):
+            refs = [str(p.get("id", "")) if isinstance(p, dict) else str(p) for p in partof]
+        else:
+            continue
+        source_blocktypes = {str(bt).lower() for bt in (rec.get("blocktype") or [])}
+        source_is_treaty = _is_treaty_like(rec)
+        for ref in refs:
+            if not ref:
+                continue
+            target = by_id.get(ref)
+            if not target:
+                continue
+            target_blocktypes = {str(bt).lower() for bt in (target.get("blocktype") or [])}
+            if target_blocktypes & ORG_PARENT_BLOCKTYPES:
+                continue
+            if source_is_treaty and _is_treaty_like(target):
+                continue
+            if "fund" in source_blocktypes and _is_treaty_like(target):
+                continue
+            if _is_treaty_like(target):
+                issues.append(
+                    {
+                        "issue_type": "INVALID_PARTOF_TARGET",
+                        "field": "partof",
+                        "current_value": ref,
+                        "suggested_action": (
+                            f"partof reference '{ref}' is a treaty/agreement, not an organizational parent; "
+                            "document the relationship in description/notes instead"
+                        ),
+                        "file_path": path,
+                        "record_id": record_id,
+                    }
+                )
+    return issues
+
+
 def validate_partof_refs(
     records: list[dict[str, Any]],
     rel_paths: list[str],
@@ -640,6 +744,134 @@ def validate_aliases(
                 "current_value": alias,
                 "suggested_action": f"Alias '{alias}' collides with a current intblock id; mark reason 'disambiguated'"
             })
+    return errors
+
+
+ATTRIBUTE_MIGRATION_FIELDS = frozenset(
+    {
+        "car_side",
+        "writing_directions",
+        "writing_systems",
+        "dvd_region",
+        "broadcast_systems",
+        "legal_systems",
+        "rail_gauges",
+    }
+)
+
+
+def validate_attribute_intblock_migrations(
+    migrations: list[dict[str, Any]],
+    known_intblock_ids: set[str],
+) -> list[dict[str, Any]]:
+    """Validate retirements of attribute-partition intblocks to country fields/vocabs."""
+    errors: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for entry in migrations:
+        if not isinstance(entry, dict):
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "attribute_intblock_migrations",
+                    "current_value": str(entry),
+                    "suggested_action": "Migration entry must be a dictionary",
+                }
+            )
+            continue
+        rid = str(entry.get("retired_id") or "")
+        if not rid:
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "retired_id",
+                    "current_value": "",
+                    "suggested_action": "Migration entry must include retired_id",
+                }
+            )
+            continue
+        if rid in seen:
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "retired_id",
+                    "current_value": rid,
+                    "suggested_action": f"Duplicate migration entry for '{rid}'",
+                }
+            )
+        seen.add(rid)
+        if rid in known_intblock_ids:
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "retired_id",
+                    "current_value": rid,
+                    "suggested_action": (
+                        f"retired_id '{rid}' still exists as a current intblock; "
+                        "delete the intblock or remove the migration entry"
+                    ),
+                }
+            )
+        disposition = entry.get("disposition")
+        if disposition == "vocab_only":
+            if not entry.get("vocab"):
+                errors.append(
+                    {
+                        "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                        "field": "vocab",
+                        "current_value": rid,
+                        "suggested_action": f"vocab_only retirement '{rid}' must set vocab",
+                    }
+                )
+            continue
+        field = str(entry.get("country_field") or "")
+        if field not in ATTRIBUTE_MIGRATION_FIELDS:
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "country_field",
+                    "current_value": field or "(missing)",
+                    "suggested_action": (
+                        f"Migration '{rid}' country_field must be one of "
+                        f"{sorted(ATTRIBUTE_MIGRATION_FIELDS)} or disposition vocab_only"
+                    ),
+                }
+            )
+            continue
+        if field == "car_side" and entry.get("country_value") not in {"left", "right"}:
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "country_value",
+                    "current_value": str(entry.get("country_value")),
+                    "suggested_action": f"Migration '{rid}' car_side value must be left or right",
+                }
+            )
+        if field == "dvd_region":
+            val = entry.get("country_value")
+            if not isinstance(val, int) or isinstance(val, bool) or val < 1 or val > 6:
+                errors.append(
+                    {
+                        "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                        "field": "country_value",
+                        "current_value": str(val),
+                        "suggested_action": f"Migration '{rid}' dvd_region value must be 1..6",
+                    }
+                )
+        if field in {
+            "writing_directions",
+            "writing_systems",
+            "broadcast_systems",
+            "legal_systems",
+            "rail_gauges",
+        } and not entry.get("country_value_id"):
+            errors.append(
+                {
+                    "issue_type": "ATTRIBUTE_MIGRATION_ERROR",
+                    "field": "country_value_id",
+                    "current_value": rid,
+                    "suggested_action": f"Migration '{rid}' must set country_value_id",
+                }
+            )
     return errors
 
 

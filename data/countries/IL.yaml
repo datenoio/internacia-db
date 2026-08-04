@@ -12,6 +12,10 @@ lendingType:
   value: Not classified
 numeric_code: '376'
 wikidata_id: Q801
+fips_code: IS
+fifa_code: ISR
+ioc_code: ISR
+geonames_id: '294640'
 official_name: State of Israel
 languages:
 - code: ara
@@ -141,6 +145,31 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 31.47
   lng: 35.13
@@ -148,3 +177,15 @@ capital_city:
   name: Jerusalem
   lng: 35.2137
   lat: 31.7683
+writing_directions:
+- id: rtl
+  primary: true
+writing_systems:
+- id: arabic
+  primary: true
+- id: hebrew
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: bijuridical
+dvd_region: 2

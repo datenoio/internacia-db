@@ -16,6 +16,10 @@ lendingType:
   value: IBRD
 numeric_code: '191'
 wikidata_id: Q224
+fips_code: HR
+fifa_code: CRO
+ioc_code: CRO
+geonames_id: '3202326'
 official_name: Republic of Croatia
 languages:
 - code: hrv
@@ -143,9 +147,30 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 45.16666666
   lng: 15.5
 adminregion:
   id: ECA
   value: Europe & Central Asia (developing only)
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

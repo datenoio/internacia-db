@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '704'
 wikidata_id: Q881
+fips_code: VM
+fifa_code: VIE
+ioc_code: VIE
+geonames_id: '1562822'
 official_name: Socialist Republic of Vietnam
 languages:
 - code: vie
@@ -146,6 +150,28 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 16.16666666
   lng: 107.83333333
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+- id: secam
+dvd_region: 3

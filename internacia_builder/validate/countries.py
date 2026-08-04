@@ -115,6 +115,10 @@ def validate_locale_fields(record: dict[str, Any], rel_path: str) -> list[str]:
     return _messages(issues, rel_path)
 
 
+def validate_attribute_fields(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_attribute_fields(record), rel_path)
+
+
 def validate_region_hierarchy(
     record: dict[str, Any], rel_path: str, allowlist: set[str]
 ) -> list[str]:
@@ -350,6 +354,7 @@ def run_validation(
         if prov_min_count > 0:
             warnings.extend(validate_provenance_count(record, rel, min_count=prov_min_count))
         warnings.extend(validate_locale_fields(record, rel))
+        errors.extend(validate_attribute_fields(record, rel))
         warnings.extend(validate_region_hierarchy(record, rel, region_allowlist))
         warnings.extend(validate_capital_distance(record, rel, completeness_cfg))
         warnings.extend(validate_text_encoding(record, rel))

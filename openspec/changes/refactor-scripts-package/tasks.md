@@ -13,7 +13,7 @@
 ## 3. HTTP consolidation
 
 - [x] 3.1 Shared HTTP helper with retry/backoff and 0.1s rate limit default
-- [ ] 3.2 Migrate `enrich_countries.py` from urllib to shared client
+- [x] 3.2 Migrate `enrich_countries.py` from urllib to shared client
 
 ## 4. Tests and validation
 

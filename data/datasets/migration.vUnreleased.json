@@ -1,0 +1,48 @@
+{
+  "version": "Unreleased",
+  "schema_changed": true,
+  "note": "Field-level schema migration for Internacia datasets",
+  "datasets": {
+    "countries": {
+      "added": [
+        "bbox",
+        "broadcast_systems",
+        "dvd_region",
+        "fifa_code",
+        "fips_code",
+        "geonames_id",
+        "ioc_code",
+        "legal_systems",
+        "rail_gauges",
+        "writing_directions",
+        "writing_systems"
+      ],
+      "removed": [],
+      "type_changed": [],
+      "renamed": []
+    },
+    "intblocks": {
+      "added": [
+        "scope_category"
+      ],
+      "removed": [],
+      "type_changed": [],
+      "renamed": []
+    },
+    "blocktypes": {
+      "added": [],
+      "removed": [
+        "dvdregion",
+        "govform",
+        "lawsystem",
+        "railgauge",
+        "teleregion",
+        "traffichand",
+        "writingdirection",
+        "writingsystem"
+      ],
+      "type_changed": [],
+      "renamed": []
+    }
+  }
+}

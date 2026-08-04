@@ -1,0 +1,121 @@
+code: XK
+name: Kosovo
+iso3code: XKX
+numeric_code: '383'
+capital_city:
+  name: Pristina
+  lng: 20.926
+  lat: 42.565
+region:
+  id: ECS
+  value: Europe & Central Asia (all income levels)
+adminregion:
+  id: ECA
+  value: Europe & Central Asia (developing only)
+incomeLevel:
+  id: LMC
+  value: Lower middle income
+lendingType:
+  id: IDX
+  value: IDA
+m49_code: '383'
+wikidata_id: Q1246
+fips_code: KV
+fifa_code: KVX
+ioc_code: KOS
+geonames_id: '831053'
+population:
+  value: 1586659
+  source: Wikidata
+  source_id: P1082
+  year: 2024
+area:
+  value: 10909.0
+  source: Wikidata
+  source_id: P2046
+timezones:
+- Europe/Belgrade
+native_names:
+  en:
+    official: Kosovo
+    common: Republic of Kosovo
+common_names:
+- Kosovo
+borders:
+- ALB
+- MKD
+- MNE
+- SRB
+entity_type: disputed_territory
+code_status: user_assigned
+recognition_status:
+  status: disputed_or_partially_recognized
+  un_member: false
+  notes: User-assigned alpha-2 code XK (de facto standard used by EU, IMF, SWIFT,
+    CLDR); not an official ISO 3166-1 assignment. Former primary code KV retained
+    in countries_aliases.json.
+provenance:
+- field: borders
+  source: CIA World Factbook
+  url: https://www.cia.gov/the-world-factbook/countries/kosovo/
+  retrieved_at: '2026-07-16'
+- field: centroid
+  source: mledoze/countries
+  url: https://github.com/mledoze/countries
+  retrieved_at: '2026-06-15'
+- field: area
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-06-15'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-06-15'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: region
+  source: World Bank
+  retrieved_at: '2026-06-15'
+  url: https://data.worldbank.org/country
+- field: adminregion
+  source: World Bank regional complement
+  retrieved_at: '2026-06-15'
+  url: https://unstats.un.org/unsd/methodology/m49/
+- field: incomeLevel
+  source: World Bank
+  retrieved_at: '2026-06-15'
+  url: https://data.worldbank.org/country
+- field: lendingType
+  source: World Bank
+  retrieved_at: '2026-06-15'
+  url: https://data.worldbank.org/country
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-08-02'
+  url: https://www.wikidata.org/wiki/Q1246
+  license: CC0
+  note: Preferred P1082 value with point-in-time qualifier
+- field: code
+  source: manual
+  retrieved_at: '2026-08-03'
+  note: Renamed from KV to XK to align with de facto crosswalk standard (EU, IMF,
+    SWIFT, CLDR)
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+centroid:
+  lat: 42.6026
+  lng: 20.903
+un_member: false
+un_status: non_member
+independent: false
+landlocked: true
+writing_directions:
+- id: ltr
+  primary: true

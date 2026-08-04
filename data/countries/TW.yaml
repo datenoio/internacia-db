@@ -3,6 +3,10 @@ name: Taiwan
 iso3code: TWN
 numeric_code: '158'
 wikidata_id: Q865
+fips_code: TW
+fifa_code: TPE
+ioc_code: TPE
+geonames_id: '1668284'
 official_name: Republic of China (Taiwan)
 languages:
 - code: zho
@@ -126,6 +130,26 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 23.5
   lng: 121.0
@@ -145,3 +169,13 @@ capital_city:
   name: Taipei
   lng: 121.5654
   lat: 25.033
+writing_directions:
+- id: ttb
+  primary: true
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: dvbt
+- id: ntsc
+dvd_region: 3

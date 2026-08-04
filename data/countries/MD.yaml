@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '498'
 wikidata_id: Q217
+fips_code: MD
+fifa_code: MDA
+ioc_code: MDA
+geonames_id: '617790'
 official_name: Republic of Moldova
 languages:
 - code: ron
@@ -144,6 +148,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 47.0
   lng: 29.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+- id: secam
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true
+dvd_region: 2

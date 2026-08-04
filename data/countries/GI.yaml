@@ -130,6 +130,16 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 36.13333333
   lng: -5.35
@@ -140,3 +150,7 @@ capital_city:
   name: Gibraltar
   lng: -5.3536
   lat: 36.1408
+writing_directions:
+- id: ltr
+  primary: true
+dvd_region: 2

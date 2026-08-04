@@ -43,6 +43,10 @@ demonyms:
   male: Portuguese
 m49_code: '620'
 wikidata_id: Q45
+fips_code: PO
+fifa_code: POR
+ioc_code: POR
+geonames_id: '2264397'
 population:
   value: 10694681
   year: 2024
@@ -113,6 +117,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 39.5
   lng: -8.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+rail_gauges:
+- id: iberian
+  gauge_mm: 1668
+  primary: true
+dvd_region: 2

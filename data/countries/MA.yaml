@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '504'
 wikidata_id: Q1028
+fips_code: MO
+fifa_code: MAR
+ioc_code: MAR
+geonames_id: '2542007'
 official_name: Kingdom of Morocco
 languages:
 - code: ara
@@ -146,6 +150,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 32.0
   lng: -5.0
+writing_directions:
+- id: rtl
+  primary: true
+writing_systems:
+- id: arabic
+  primary: true
+broadcast_systems:
+- id: secam
+legal_systems:
+- id: islamic_law

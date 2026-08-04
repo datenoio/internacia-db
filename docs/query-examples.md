@@ -3,6 +3,7 @@
 Verified DuckDB recipes against `data/datasets/internacia.duckdb`. For scope, join keys,
 and field semantics see [ai-consumers.md](ai-consumers.md).
 Polars / Parquet twin: [query-examples-polars.md](query-examples-polars.md).
+R / dplyr twin: [query-examples-r.md](query-examples-r.md).
 Observable / Plot twin: [query-examples-observable.md](query-examples-observable.md).
 
 **DuckDB struct lists:** use `UNNEST(column) AS t(row)` and reference `row.field` (e.g.
@@ -50,8 +51,100 @@ WHERE car_side = 'left'
 ORDER BY code;
 ```
 
+**Expected:** 74 rows.
+
 **Gotcha:** Driving side is a country property (`car_side`). Former `LHTRAFFIC` /
-`RHTRAFFIC` intblocks were retired; see `attribute_intblock_migrations.json`.
+`RHTRAFFIC` intblocks were retired; remap via `attribute_intblock_migrations.json`.
+
+### DVD region 1
+
+```sql
+SELECT code, name, dvd_region
+FROM countries
+WHERE dvd_region = 1
+ORDER BY code;
+```
+
+**Expected:** 8 rows (`AS`, `BM`, `CA`, `GU`, `MP`, `PR`, `US`, `VI`).
+
+**Gotcha:** Former `DVD_1`…`DVD_6` intblocks → `dvd_region` integer (1–6). Sparse:
+~125 records have a value.
+
+### Right-to-left writing direction
+
+```sql
+SELECT c.code, c.name, d.id AS direction, d."primary"
+FROM countries c, UNNEST(c.writing_directions) AS t(d)
+WHERE d.id = 'rtl'
+ORDER BY c.code;
+```
+
+**Expected:** 28 rows.
+
+**Gotcha:** List of `{id, primary}` structs; vocab ids are `ltr`, `rtl`, `ttb`
+(`data/vocabs/writing_directions.yaml`). Former `WDLTR` / `WDRTL` / `WDTTB` intblocks.
+Quote `"primary"` in SQL — it is a reserved word.
+
+### Cyrillic writing system
+
+```sql
+SELECT c.code, c.name, s.id AS script, s."primary"
+FROM countries c, UNNEST(c.writing_systems) AS t(s)
+WHERE s.id = 'cyrillic'
+ORDER BY c.code;
+```
+
+**Expected:** 12 rows (`BA`, `BG`, `BY`, `KG`, `KZ`, `ME`, `MK`, `MN`, `RS`, `RU`,
+`TJ`, `UA`).
+
+**Gotcha:** Coverage is sparse (~58 records) because values were migrated from former
+`WS*` attribute intblocks (non-Latin partitions). Valid ids live in
+`data/vocabs/writing_systems.yaml` even when a partition is not yet assigned.
+
+### NTSC broadcast system
+
+```sql
+SELECT c.code, c.name, b.id AS broadcast
+FROM countries c, UNNEST(c.broadcast_systems) AS t(b)
+WHERE b.id = 'ntsc'
+ORDER BY c.code;
+```
+
+**Expected:** 48 rows.
+
+**Gotcha:** List of `{id}` structs. Vocab: `atsc`, `dmbt`, `dvbt`, `isdb`, `ntsc`,
+`pal`, `secam` (`data/vocabs/broadcast_systems.yaml`). Former `NTSC` / `PAL` / `SECAM`
+/ digital-standard intblocks.
+
+### Common-law legal tradition
+
+```sql
+SELECT c.code, c.name, l.id AS legal_system
+FROM countries c, UNNEST(c.legal_systems) AS t(l)
+WHERE l.id = 'common_law'
+ORDER BY c.code;
+```
+
+**Expected:** 54 rows.
+
+**Gotcha:** Legal *tradition*, not government form. Vocab:
+`data/vocabs/legal_systems.yaml`. Government-form typology stays vocab-only
+(`government_forms.yaml`) and is **not** on country records. Former `LS*` intblocks.
+
+### Russian rail gauge (primary)
+
+```sql
+SELECT c.code, c.name, g.id AS gauge, g.gauge_mm
+FROM countries c, UNNEST(c.rail_gauges) AS t(g)
+WHERE g.id = 'russian' AND g."primary" = true
+ORDER BY c.code;
+```
+
+**Expected:** 18 rows (`AM`, `AZ`, `BY`, `EE`, `FI`, `GE`, `KG`, `KP`, `KZ`, `LT`,
+`LV`, `MD`, `MN`, `RU`, `TJ`, `TM`, `UA`, `UZ`).
+
+**Gotcha:** List of `{id, gauge_mm, primary}` structs. Former `RUGAUGE` / `STGAUGE` /
+etc. intblocks. Coverage is sparse (~34 records); quote `"primary"`.
 
 ### Sovereign states
 
@@ -961,6 +1054,7 @@ ORDER BY org_count ASC, c.name;
 ## Pandas and Polars
 
 Full Polars cookbook (same scenarios as this file): [query-examples-polars.md](query-examples-polars.md).
+R / dplyr cookbook: [query-examples-r.md](query-examples-r.md).
 Observable / Plot cookbook: [query-examples-observable.md](query-examples-observable.md).
 
 ### Structured metric fields

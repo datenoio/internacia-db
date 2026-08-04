@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '040'
 wikidata_id: Q40
+fips_code: AU
+fifa_code: AUT
+ioc_code: AUT
+geonames_id: '2782113'
 official_name: Republic of Austria
 languages:
 - code: deu
@@ -145,6 +149,27 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 47.33333333
   lng: 13.33333333
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

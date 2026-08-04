@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '222'
 wikidata_id: Q792
+fips_code: ES
+fifa_code: SLV
+ioc_code: ESA
+geonames_id: '3585968'
 official_name: Republic of El Salvador
 languages:
 - code: spa
@@ -143,6 +147,28 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 13.83333333
   lng: -88.91666666
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: isdb
+- id: ntsc
+dvd_region: 4

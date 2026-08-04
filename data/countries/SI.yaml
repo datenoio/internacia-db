@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '705'
 wikidata_id: Q215
+fips_code: SI
+fifa_code: SVN
+ioc_code: SLO
+geonames_id: '3190538'
 official_name: Republic of Slovenia
 languages:
 - code: slv
@@ -138,6 +142,27 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 46.11666666
   lng: 14.81666666
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '591'
 wikidata_id: Q804
+fips_code: PM
+fifa_code: PAN
+ioc_code: PAN
+geonames_id: '3703430'
 official_name: Republic of Panama
 languages:
 - code: spa
@@ -146,6 +150,28 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 9.0
   lng: -80.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+- id: ntsc
+dvd_region: 4

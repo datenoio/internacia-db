@@ -2,6 +2,7 @@ id: OAS
 blocktype:
 - political
 status: formal
+scope_category: igo
 languages:
 - en
 - es
@@ -40,6 +41,8 @@ includes:
   name: Cuba
   type: country
   status: member
+  note: Suspended 1962–2009; suspension lifted but Cuba declined to resume participation. Still
+    recognized as a charter member by the OAS.
 - id: BZ
   name: Belize
   type: country
@@ -64,6 +67,9 @@ includes:
   name: Venezuela, Bolivarian Republic of
   type: country
   status: member
+  note: Submitted withdrawal notice April 2017; National Assembly (recognized by OAS as legitimate
+    representative) annulled denunciation in 2019. Membership status contested but OAS recognizes
+    opposition envoy as delegate.
 - id: SR
   name: Suriname
   type: country
@@ -155,14 +161,17 @@ includes:
 - id: NI
   name: Nicaragua
   type: country
-  status: member
+  status: former_member
+  left: '2023'
+  note: Withdrew November 2023. Nicaragua submitted formal request to leave the OAS in November
+    2021; withdrawal completed November 2023.
 founded: '1948'
 headquarters:
-  city: United States
+  city: Washington, D.C.
   country: US
   coordinates:
-    lat: 39.828175
-    lng: -98.5795
+    lat: 38.8937
+    lng: -77.0406
 acronyms:
 - lang: en
   value: OEA
@@ -176,7 +185,7 @@ acronyms:
   value: OEA
 - lang: pt
   value: OEA
-membership_count: 35
+membership_count: 34
 wikidata_id: Q123759
 legal_status: intergovernmental
 official_documents:
@@ -194,7 +203,9 @@ social_media:
   twitter: https://twitter.com/OAS_official
   facebook: https://www.facebook.com/OASofficial
   youtube: https://www.youtube.com/channel/UCzwKN6cwqgDOsWbm4LAjIFg
-description: International organization of states in the Americas.
+description: Regional intergovernmental organization of the Americas, founded in 1948 to promote
+  democracy, human rights, security, and development among member states. Headquarters at the
+  OAS Main Building, 17th Street and Constitution Avenue NW, Washington, D.C.
 tags:
 - OAS
 - OEA
@@ -244,10 +255,17 @@ provenance:
   url: http://www.oas.org/
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.oas.org/
+  retrieved_at: '2026-08-03'
+  url: https://www.oas.org/en/about/our_locations.asp
+- field: includes
+  source: official sources
+  retrieved_at: '2026-08-03'
+  url: https://www.oas.org/en/member_states/
+- field: membership_count
+  source: official sources
+  retrieved_at: '2026-08-03'
+  url: https://www.oas.org/en/member_states/
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: official sources
+  retrieved_at: '2026-08-03'
+  url: https://www.oas.org/en/about/our_locations.asp

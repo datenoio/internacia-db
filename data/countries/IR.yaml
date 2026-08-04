@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '364'
 wikidata_id: Q794
+fips_code: IR
+fifa_code: IRN
+ioc_code: IRI
+geonames_id: '130758'
 official_name: Islamic Republic of Iran
 languages:
 - code: fas
@@ -149,6 +153,34 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 32.0
   lng: 53.0
+writing_directions:
+- id: rtl
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: islamic_law
+dvd_region: 2

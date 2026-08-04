@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '020'
 wikidata_id: Q228
+fips_code: AN
+fifa_code: AND
+ioc_code: AND
+geonames_id: '3041565'
 official_name: Principality of Andorra
 languages:
 - code: cat
@@ -131,9 +135,30 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 42.5
   lng: 1.5
 adminregion:
   id: ECA
   value: Europe & Central Asia (developing only)
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '840'
 wikidata_id: Q30
+fips_code: US
+fifa_code: USA
+ioc_code: USA
+geonames_id: '6252001'
 official_name: United States of America
 languages:
 - code: eng
@@ -166,6 +170,35 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 38.0
   lng: -97.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: atsc
+- id: ntsc
+legal_systems:
+- id: common_law
+dvd_region: 1

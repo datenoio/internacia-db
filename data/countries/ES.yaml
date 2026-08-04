@@ -16,6 +16,10 @@ lendingType:
   value: Not classified
 numeric_code: '724'
 wikidata_id: Q29
+fips_code: SP
+fifa_code: ESP
+ioc_code: ESP
+geonames_id: '2510769'
 official_name: Kingdom of Spain
 languages:
 - code: spa
@@ -147,6 +151,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 40.0
   lng: -4.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+rail_gauges:
+- id: iberian
+  gauge_mm: 1668
+  primary: true
+dvd_region: 2

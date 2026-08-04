@@ -1,0 +1,35 @@
+name: Data error
+description: Report incorrect country or intblock data
+title: "[data] "
+labels: ["data"]
+body:
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      options:
+        - countries
+        - intblocks
+        - blocktypes
+        - cross-dataset
+    validations:
+      required: true
+  - type: input
+    id: record_id
+    attributes:
+      label: Record id / country code
+      description: e.g. XK, NATO, EU
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Current value vs expected, with source URL if possible
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source
+      placeholder: https://…

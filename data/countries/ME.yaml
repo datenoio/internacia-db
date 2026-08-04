@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '499'
 wikidata_id: Q236
+fips_code: MJ
+fifa_code: MNE
+ioc_code: MNE
+geonames_id: '3194884'
 official_name: Montenegro
 languages:
 - code: cnr
@@ -37,7 +41,7 @@ borders:
 - ALB
 - BIH
 - HRV
-- KSV
+- XKX
 - SRB
 landlocked: false
 tld: .me
@@ -146,6 +150,35 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 42.5
   lng: 19.3
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: cyrillic
+  primary: true
+broadcast_systems:
+- id: dvbt
+dvd_region: 2

@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a build, validation, or tooling bug
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - builder / exports
+        - validation
+        - enrichment
+        - CI / workflows
+        - docs / agents
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Dataset version from `_meta` or git SHA

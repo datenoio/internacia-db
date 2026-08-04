@@ -90,6 +90,17 @@ WHERE code_status = 'official_iso3166_1'
 ORDER BY code;
 ```
 
+### 国家属性字段（原 attribute intblock）
+
+```sql
+SELECT code, name FROM countries WHERE car_side = 'left';
+SELECT code, name FROM countries WHERE dvd_region = 1;
+SELECT c.code, c.name FROM countries c, UNNEST(c.writing_directions) t(d) WHERE d.id = 'rtl';
+SELECT c.code, c.name FROM countries c, UNNEST(c.legal_systems) t(l) WHERE l.id = 'common_law';
+```
+
+旧 id 对照：`attribute_intblock_migrations.json`。完整示例见 [query-examples.zh.md](../../query-examples.zh.md)。
+
 ## 常见错误
 
 | 错误 | 正确做法 |

@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '156'
 wikidata_id: Q148
+fips_code: CH
+fifa_code: CHN
+ioc_code: CHN
+geonames_id: '1814991'
 official_name: People's Republic of China
 languages:
 - code: zho
@@ -159,6 +163,30 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 35.0
   lng: 105.0
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: dmbt

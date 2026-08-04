@@ -16,5 +16,6 @@ Also useful:
 - [docs/ai-consumers.md](../../../docs/ai-consumers.md) — consumption contract
 - [docs/query-examples.md](../../../docs/query-examples.md) — verified DuckDB recipes
 - [docs/query-examples-polars.md](../../../docs/query-examples-polars.md) — verified Polars recipes
+- [docs/query-examples-r.md](../../../docs/query-examples-r.md) — verified R / dplyr recipes
 - [docs/query-examples-observable.md](../../../docs/query-examples-observable.md) — Observable / Plot recipes
 - `.agent/workflows/query-org-members.md` — org membership workflow

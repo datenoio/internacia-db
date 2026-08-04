@@ -48,8 +48,8 @@ def test_validate_indicator_years_accepts_real_year():
 
 
 def test_entity_status_non_iso_code_must_not_be_official():
-    record = {"code": "KV", "entity_type": "disputed_territory", "code_status": "official_iso3166_1"}
-    errors, _ = vc.validate_entity_status(record, "KV.yaml")
+    record = {"code": "XK", "entity_type": "disputed_territory", "code_status": "official_iso3166_1"}
+    errors, _ = vc.validate_entity_status(record, "XK.yaml")
     assert any("must not have code_status official_iso3166_1" in e for e in errors)
 
 

@@ -95,6 +95,61 @@ def con():
             4,
             {"countries", "intblocks", "blocktypes", "memberships"},
         ),
+        (
+            "SELECT code FROM countries WHERE car_side = 'left'",
+            74,
+            {"GB", "JP", "AU", "IN"},
+        ),
+        (
+            "SELECT code FROM countries WHERE dvd_region = 1",
+            8,
+            {"US", "CA"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.writing_directions) AS t(d)
+            WHERE d.id = 'rtl'
+            """,
+            28,
+            {"EG", "SA", "IL"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.writing_systems) AS t(s)
+            WHERE s.id = 'cyrillic'
+            """,
+            12,
+            {"RU", "UA", "BG"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.broadcast_systems) AS t(b)
+            WHERE b.id = 'ntsc'
+            """,
+            48,
+            {"US", "JP", "CA"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.legal_systems) AS t(l)
+            WHERE l.id = 'common_law'
+            """,
+            54,
+            {"US", "GB", "AU"},
+        ),
+        (
+            """
+            SELECT c.code
+            FROM countries c, UNNEST(c.rail_gauges) AS t(g)
+            WHERE g.id = 'russian' AND g."primary" = true
+            """,
+            18,
+            {"RU", "UA", "FI"},
+        ),
     ],
     ids=[
         "un_members",
@@ -105,6 +160,13 @@ def con():
         "laos_reverse_borders",
         "nato_and_eu_overlap",
         "meta_tables",
+        "car_side_left",
+        "dvd_region_1",
+        "writing_direction_rtl",
+        "writing_system_cyrillic",
+        "broadcast_ntsc",
+        "legal_common_law",
+        "rail_gauge_russian",
     ],
 )
 def test_documented_query(con, sql, min_rows, expected_codes):

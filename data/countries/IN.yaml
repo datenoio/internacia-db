@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '356'
 wikidata_id: Q668
+fips_code: IN
+fifa_code: IND
+ioc_code: IND
+geonames_id: '1269750'
 official_name: Republic of India
 languages:
 - code: eng
@@ -151,6 +155,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 20.0
   lng: 77.0
+writing_directions:
+- id: ltr
+  primary: true
+writing_systems:
+- id: indic
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: common_law

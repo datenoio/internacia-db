@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '076'
 wikidata_id: Q155
+fips_code: BR
+fifa_code: BRA
+ioc_code: BRA
+geonames_id: '3469034'
 official_name: Federative Republic of Brazil
 languages:
 - code: por
@@ -169,6 +173,37 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -10.0
   lng: -55.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: atsc
+- id: isdb
+rail_gauges:
+- id: irish
+  gauge_mm: 1600
+  primary: true
+dvd_region: 4

@@ -1,0 +1,128 @@
+{
+  "name": "internacia-datasets",
+  "title": "Internacia reference datasets",
+  "version": "1.9.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "resources": [
+    {
+      "name": "countries",
+      "path": "countries.csv.zst",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "zstd"
+    },
+    {
+      "name": "countries-lite",
+      "path": "countries-lite.csv.zst",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "zstd"
+    },
+    {
+      "name": "countries",
+      "path": "countries.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "countries-lite",
+      "path": "countries-lite.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "countries",
+      "path": "countries.json.zst",
+      "format": "json",
+      "mediatype": "application/json",
+      "compression": "zstd"
+    },
+    {
+      "name": "countries",
+      "path": "countries.jsonl",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson"
+    },
+    {
+      "name": "intblocks",
+      "path": "intblocks.csv.zst",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "zstd"
+    },
+    {
+      "name": "intblocks-lite",
+      "path": "intblocks-lite.csv.zst",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "zstd"
+    },
+    {
+      "name": "intblocks",
+      "path": "intblocks.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "intblocks-lite",
+      "path": "intblocks-lite.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "intblocks",
+      "path": "intblocks.json.zst",
+      "format": "json",
+      "mediatype": "application/json",
+      "compression": "zstd"
+    },
+    {
+      "name": "intblocks",
+      "path": "intblocks.jsonl",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson"
+    },
+    {
+      "name": "blocktypes",
+      "path": "blocktypes.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "memberships",
+      "path": "memberships.csv.zst",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "zstd"
+    },
+    {
+      "name": "memberships",
+      "path": "memberships.parquet",
+      "format": "parquet",
+      "mediatype": "application/vnd.apache.parquet"
+    },
+    {
+      "name": "intblocks_aliases",
+      "path": "intblocks_aliases.json",
+      "format": "json",
+      "mediatype": "application/json"
+    },
+    {
+      "name": "countries_aliases",
+      "path": "countries_aliases.json",
+      "format": "json",
+      "mediatype": "application/json"
+    },
+    {
+      "name": "attribute_intblock_migrations",
+      "path": "attribute_intblock_migrations.json",
+      "format": "json",
+      "mediatype": "application/json"
+    }
+  ]
+}

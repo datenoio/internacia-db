@@ -19,6 +19,10 @@ lendingType:
   value: Not classified
 numeric_code: '440'
 wikidata_id: Q37
+fips_code: LH
+fifa_code: LTU
+ioc_code: LTU
+geonames_id: '597427'
 official_name: Republic of Lithuania
 languages:
 - code: lit
@@ -145,6 +149,36 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: dvd_region
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 56.0
   lng: 24.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true
+dvd_region: 2

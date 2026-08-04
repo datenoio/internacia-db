@@ -19,6 +19,10 @@ lendingType:
   value: Not classified
 numeric_code: '408'
 wikidata_id: Q423
+fips_code: KN
+fifa_code: PRK
+ioc_code: PRK
+geonames_id: '1873107'
 official_name: Democratic People's Republic of Korea
 languages:
 - code: kor
@@ -142,6 +146,32 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 40.0
   lng: 127.0
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: hangul
+  primary: true
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

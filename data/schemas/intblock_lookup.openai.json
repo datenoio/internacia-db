@@ -1,0 +1,35 @@
+{
+  "name": "intblock_lookup",
+  "description": "Look up an international organization or group (intblock) by id, name, Wikidata id, or membership. Join members on includes[].id / memberships.country_code, never includes[].name.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Uppercase intblock id, e.g. NATO, EU. Check intblocks_aliases.json for renames."
+      },
+      "name": {
+        "type": "string",
+        "description": "Organization name substring."
+      },
+      "wikidata_id": {
+        "type": "string",
+        "description": "Wikidata Q-id."
+      },
+      "member_country": {
+        "type": "string",
+        "description": "Alpha-2 country code to find orgs containing this member."
+      },
+      "scope_category": {
+        "type": "string",
+        "enum": ["igo", "treaty_body", "policy_forum", "reference_enumeration"],
+        "description": "Optional filter by inclusion taxonomy."
+      },
+      "blocktype": {
+        "type": "string",
+        "description": "Primary taxonomy key, e.g. political, bank, sports."
+      }
+    },
+    "additionalProperties": false
+  }
+}

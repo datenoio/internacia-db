@@ -19,6 +19,10 @@ lendingType:
   value: Blend
 numeric_code: '716'
 wikidata_id: Q954
+fips_code: ZI
+fifa_code: ZIM
+ioc_code: ZIM
+geonames_id: '878675'
 official_name: Republic of Zimbabwe
 languages:
 - code: bwg
@@ -173,6 +177,38 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: -20.0
   lng: 30.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: dvbt
+legal_systems:
+- id: bijuridical
+- id: common_law
+rail_gauges:
+- id: cape
+  gauge_mm: 1067
+  primary: true

@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '706'
 wikidata_id: Q1045
+fips_code: SO
+fifa_code: SOM
+ioc_code: SOM
+geonames_id: '51537'
 official_name: Federal Republic of Somalia
 languages:
 - code: ara
@@ -137,6 +141,21 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 10.0
   lng: 49.0
+writing_systems:
+- id: arabic
+  primary: true
+legal_systems:
+- id: islamic_law

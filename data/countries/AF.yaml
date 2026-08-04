@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '004'
 wikidata_id: Q889
+fips_code: AF
+fifa_code: AFG
+ioc_code: AFG
+geonames_id: '1149361'
 official_name: Islamic Republic of Afghanistan
 languages:
 - code: prs
@@ -142,6 +146,21 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 33.0
   lng: 65.0
+writing_directions:
+- id: rtl
+  primary: true
+legal_systems:
+- id: islamic_law

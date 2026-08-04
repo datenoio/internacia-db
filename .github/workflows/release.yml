@@ -33,8 +33,129 @@ jobs:
       - name: Build all dataset formats
         run: python scripts/builder.py build
 
+      - name: Emit schema migration diff
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          BASELINE="data/datasets/schema_baseline"
+          mkdir -p "$BASELINE"
+          python scripts/generate_schema_migration.py \
+            --previous "$BASELINE" \
+            --current data/schemas \
+            --version "$VERSION" \
+            --output "data/datasets/migration.v${VERSION}.json"
+          # Refresh baseline schemas for the next release comparison (committed in tag tree via build artifacts only when present).
+          for f in countries intblocks; do
+            cp "data/schemas/${f}.schema.json" "$BASELINE/" 2>/dev/null || true
+          done
+
       - name: Check artifact consistency
         run: python scripts/check_generated_artifacts.py
+
+      - name: Push to Hugging Face (optional)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
+        run: |
+          if [ -z "${HF_TOKEN:-}" ]; then
+            echo "HF_TOKEN not set; skipping Hugging Face upload"
+            exit 0
+          fi
+          pip install huggingface_hub
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          repo_id = os.environ.get("HF_DATASET_REPO") or "datenoio/internacia"
+          api.create_repo(repo_id=repo_id, repo_type="dataset", exist_ok=True)
+          root = Path("data/datasets")
+          for name in (
+              "countries.parquet", "intblocks.parquet", "blocktypes.parquet",
+              "memberships.parquet", "datapackage.json", "countries.manifest.json",
+              "intblocks.manifest.json", "README.md",
+          ):
+              path = root / name
+              if path.exists():
+                  api.upload_file(
+                      path_or_fileobj=str(path),
+                      path_in_repo=name,
+                      repo_id=repo_id,
+                      repo_type="dataset",
+                  )
+                  print("uploaded", name)
+          print("HF push complete:", repo_id)
+          PY
+
+      - name: Deposit to Zenodo (optional)
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_CONCEPT_DOI: ${{ secrets.ZENODO_CONCEPT_DOI }}
+          VERSION: ${{ github.ref_name }}
+        run: |
+          if [ -z "${ZENODO_TOKEN:-}" ]; then
+            echo "ZENODO_TOKEN not set; skipping Zenodo deposit"
+            exit 0
+          fi
+          python - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+
+          token = os.environ["ZENODO_TOKEN"]
+          concept = os.environ.get("ZENODO_CONCEPT_DOI") or "10.5281/zenodo.21452328"
+          version = os.environ.get("VERSION", "unknown").lstrip("v")
+          base = "https://zenodo.org/api"
+          headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+
+          def req(method, url, data=None):
+              body = None if data is None else json.dumps(data).encode()
+              r = urllib.request.Request(url, data=body, headers=headers, method=method)
+              with urllib.request.urlopen(r, timeout=120) as resp:
+                  return json.load(resp)
+
+          meta = {
+              "metadata": {
+                  "title": f"Internacia Datasets {version}",
+                  "upload_type": "dataset",
+                  "description": (
+                      "Reference datasets of countries and international organizations. "
+                      f"Concept DOI: {concept}. Source: https://github.com/datenoio/internacia-db"
+                  ),
+                  "creators": [{"name": "Dateno / Common Data Index"}],
+                  "access_right": "open",
+                  "license": "cc-by-4.0",
+                  "version": version,
+                  "related_identifiers": [
+                      {"identifier": concept, "relation": "isVersionOf", "scheme": "doi"}
+                  ],
+              }
+          }
+          dep = req("POST", f"{base}/deposit/depositions", meta)
+          dep_id = dep["id"]
+          bucket = dep["links"]["bucket"]
+          print("created deposition", dep_id, "bucket", bucket)
+          assets = sorted(Path("data/datasets").glob("*.parquet")) + [
+              Path("data/datasets/datapackage.json"),
+              Path("data/datasets/countries.manifest.json"),
+              Path("data/datasets/intblocks.manifest.json"),
+          ]
+          for path in assets:
+              if not path.exists():
+                  continue
+              with path.open("rb") as fh:
+                  upload = urllib.request.Request(
+                      f"{bucket}/{path.name}",
+                      data=fh.read(),
+                      headers={
+                          "Authorization": f"Bearer {token}",
+                          "Content-Type": "application/octet-stream",
+                      },
+                      method="PUT",
+                  )
+                  with urllib.request.urlopen(upload, timeout=300) as resp:
+                      print("uploaded", path.name, resp.status)
+          print("Zenodo deposition ready (draft). Publish via UI or POST /actions/publish if desired.")
+          print("concept DOI:", concept)
+          PY
 
       - name: Create GitHub release with dataset assets
         uses: softprops/action-gh-release@v2
@@ -46,6 +167,7 @@ jobs:
             data/datasets/countries.parquet
             data/datasets/countries.manifest.json
             data/datasets/countries.meta.json
+            data/datasets/countries_aliases.json
             data/datasets/intblocks.jsonl.zst
             data/datasets/intblocks.yaml.zst
             data/datasets/intblocks.parquet
@@ -53,9 +175,15 @@ jobs:
             data/datasets/intblocks.meta.json
             data/datasets/intblocks_aliases.json
             data/datasets/intblocks_aliases.parquet
+            data/datasets/attribute_intblock_migrations.json
+            data/datasets/attribute_intblock_migrations.parquet
             data/datasets/blocktypes.jsonl.zst
             data/datasets/blocktypes.yaml.zst
             data/datasets/blocktypes.parquet
             data/datasets/blocktypes.manifest.json
             data/datasets/blocktypes.meta.json
+            data/datasets/datapackage.json
             data/datasets/internacia.duckdb
+            data/datasets/memberships.parquet
+            data/datasets/memberships.csv.zst
+            data/datasets/migration.${{ github.ref_name }}.json

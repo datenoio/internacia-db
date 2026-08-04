@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '686'
 wikidata_id: Q1041
+fips_code: SG
+fifa_code: SEN
+ioc_code: SEN
+geonames_id: '2245662'
 official_name: Republic of Senegal
 languages:
 - code: fra
@@ -146,6 +150,28 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: legal_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 14.0
   lng: -14.0
+writing_directions:
+- id: ltr
+  primary: true
+broadcast_systems:
+- id: secam
+legal_systems:
+- id: islamic_law

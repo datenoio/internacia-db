@@ -140,6 +140,21 @@ provenance:
   source: manual
   retrieved_at: '2026-07-11'
   notes: De-facto seat of government / administrative capital
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 22.16666666
   lng: 113.55
@@ -150,3 +165,12 @@ capital_city:
   name: Macao
   lng: 113.5439
   lat: 22.1987
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: logographic
+  primary: true
+broadcast_systems:
+- id: dmbt

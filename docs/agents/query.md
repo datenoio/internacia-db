@@ -10,6 +10,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 3. Full consumption contract: [ai-consumers.md](../ai-consumers.md).
 4. Verified recipes: [query-examples.md](../query-examples.md) (DuckDB),
    [query-examples-polars.md](../query-examples-polars.md) (Polars / Parquet),
+   [query-examples-r.md](../query-examples-r.md) (R / dplyr),
    [query-examples-observable.md](../query-examples-observable.md) (Observable / Plot).
 
 ## Access paths
@@ -57,6 +58,17 @@ UN members:
 
 ```sql
 SELECT code, name FROM countries WHERE un_member = true ORDER BY name;
+```
+
+Country attribute fields (former attribute intblocks — prefer these over retired
+`LHTRAFFIC` / `DVD_*` / `WS*` / `LS*` / `*GAUGE` ids; remap via
+`attribute_intblock_migrations.json`):
+
+```sql
+SELECT code, name FROM countries WHERE car_side = 'left';
+SELECT code, name FROM countries WHERE dvd_region = 1;
+SELECT c.code, c.name FROM countries c, UNNEST(c.writing_directions) t(d) WHERE d.id = 'rtl';
+SELECT c.code, c.name FROM countries c, UNNEST(c.legal_systems) t(l) WHERE l.id = 'common_law';
 ```
 
 Land neighbors (alpha-3 borders — join on `iso3code`):

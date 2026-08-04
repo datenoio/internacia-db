@@ -66,12 +66,13 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
   - Demographic reference fields (population, area, Gini index where available)
   - World Bank-style classification (region, income level, lending type)
   - Cultural reference data (languages, timezones, demonyms, flag emoji)
+  - Stable attribute classifications: driving side (`car_side`), writing directions/systems, DVD region, broadcast systems, legal systems, rail gauges
   - Multilingual names (`other_names`, `common_names`)
   - Wikidata integration for entity linking
 
   **Out of scope**: socioeconomic profile expansion (HDI, GDP per capita, government type, internet penetration, and similar indicators). Do not propose or implement those fields in countries; consumers should enrich downstream.
 
-- **International Blocks Dataset**: Contains 1,085 organizations across 62 categories:
+- **International Blocks Dataset**: Organizations and named country groups (see current manifests for counts):
   - Intergovernmental organizations (UN, EU, NATO, etc.)
   - Trade agreements and economic unions
   - Regional alliances and groups
@@ -80,6 +81,7 @@ The project generates datasets in multiple formats (JSONL, YAML, Parquet, DuckDB
   - Multilingual names and translations
   - Historical data (founded, dissolved, predecessor, successor)
   - Wikidata integration for entity linking
+  - Named geographic reference enumerations (not inverted country attributes)
 
 - **Data Sources**: 
   - World Bank data for country classifications

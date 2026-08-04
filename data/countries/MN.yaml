@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: '496'
 wikidata_id: Q711
+fips_code: MG
+fifa_code: MNG
+ioc_code: MGL
+geonames_id: '2029969'
 official_name: Mongolia
 languages:
 - code: mon
@@ -144,6 +148,39 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: writing_directions
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: writing_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: broadcast_systems
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
+- field: rail_gauges
+  source: Internacia attribute-intblock migration
+  retrieved_at: '2026-08-03'
+  url: https://github.com/datenoio/internacia-db
+  license: CC-BY-4.0
 centroid:
   lat: 46.0
   lng: 105.0
+writing_directions:
+- id: ltr
+  primary: true
+- id: ttb
+writing_systems:
+- id: cyrillic
+  primary: true
+broadcast_systems:
+- id: secam
+rail_gauges:
+- id: russian
+  gauge_mm: 1520
+  primary: true

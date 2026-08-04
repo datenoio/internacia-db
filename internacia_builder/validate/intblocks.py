@@ -122,6 +122,38 @@ def load_topic_catalog(path: Path) -> set[str]:
     return {str(k) for k in (data.get("topics") or {})}
 
 
+def load_wikidata_exclusions(path: Path) -> set[str]:
+    """Intblock ids exempt from wikidata_id requirement."""
+    if not path.exists():
+        return set()
+    data = load_yaml(path) or {}
+    return {str(entry.get("id")) for entry in (data.get("exclusions") or []) if isinstance(entry, dict) and entry.get("id")}
+
+
+def validate_wikidata_completeness(
+    records: list[tuple[str, dict[str, Any]]],
+    exclusions: set[str],
+) -> list[str]:
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_wikidata_completeness(recs, rel_paths, exclusions)
+    ]
+
+
+def validate_partof_hierarchy(
+    records: list[tuple[str, dict[str, Any]]],
+) -> list[str]:
+    """partof must not point at treaty/agreement records."""
+    rel_paths = [rel for rel, _ in records]
+    recs = [rec for _, rec in records]
+    return [
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in cross_rules.check_partof_hierarchy(recs, rel_paths)
+    ]
+
+
 def validate_partof_refs(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
@@ -203,6 +235,25 @@ def validate_founding_members(
     for rel, rec in records:
         for issue in intblock_rules.check_intblock_founding_members(rec, country_codes):
             warnings.append(f"{rel}: {issue['suggested_action']}")
+    return warnings
+
+
+def validate_scope_category(
+    records: list[tuple[str, dict[str, Any]]],
+) -> list[str]:
+    """Warn when formal records lack scope_category (non-blocking)."""
+    warnings: list[str] = []
+    allowed = {"igo", "treaty_body", "policy_forum", "reference_enumeration"}
+    for rel, rec in records:
+        cat = rec.get("scope_category")
+        if cat and str(cat) not in allowed:
+            warnings.append(f"{rel}: unknown scope_category '{cat}'")
+            continue
+        if rec.get("status") == "formal" and not cat:
+            warnings.append(
+                f"{rel}: formal record missing scope_category "
+                "(see docs/intblock-inclusion-policy.md)"
+            )
     return warnings
 
 
@@ -349,6 +400,12 @@ def run_validation(
     if taxonomy:
         errors.extend(validate_blocktypes(records, taxonomy))
     errors.extend(validate_directory_alignment(records))
+    errors.extend(validate_partof_hierarchy(records))
+    errors.extend(
+        validate_wikidata_completeness(
+            records, load_wikidata_exclusions(schemas_dir / "wikidata_exclusions.yaml")
+        )
+    )
     topic_aliases = load_topic_aliases(topic_aliases_path)
     topic_catalog = load_topic_catalog(schemas_dir / "topics.yaml")
     warnings.extend(validate_topics(records, topic_aliases, topic_catalog))
@@ -358,6 +415,7 @@ def run_validation(
     warnings.extend(validate_include_dates(records))
     warnings.extend(validate_membership_consistency(records, completeness_cfg))
     warnings.extend(validate_last_verified(records, completeness_cfg))
+    warnings.extend(validate_scope_category(records))
     warnings.extend(validate_text_encoding(records))
 
     rel_paths_all = [rel for rel, _ in records]
@@ -378,6 +436,15 @@ def run_validation(
         aliases = load_yaml(aliases_path) or []
         errors.extend(validate_aliases(aliases, known_ids))
         alias_names = {str(a.get("alias") or "") for a in aliases if isinstance(a, dict)} - {""}
+
+    migration_path = root / "data" / "attribute_intblock_migrations.yaml"
+    if migration_path.exists():
+        known_ids = {str(rec.get("id", "")) for _, rec in records if rec.get("id")}
+        migrations = load_yaml(migration_path) or []
+        errors.extend(
+            f"attribute migrations: {issue['suggested_action']}"
+            for issue in cross_rules.validate_attribute_intblock_migrations(migrations, known_ids)
+        )
 
     warnings.extend(
         validate_org_refs(
