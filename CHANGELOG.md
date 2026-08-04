@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-08-04
+
 Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** countries,
 **1037** intblocks (**1078 → 1037**), **78** blocktypes (**86 → 78**).
 
