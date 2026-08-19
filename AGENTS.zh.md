@@ -1,7 +1,7 @@
 # Internacia DB — AI 智能体指南（中文）
 
 结构化参考数据：**256** 个国家/地区、**1037** 个国际组织/集团（intblocks）、**78** 种 blocktype 分类。
-数据许可：CC-BY-4.0；代码：MIT。
+[Dateno](https://dateno.io) 开源项目的一部分。数据与文档许可：CC-BY-4.0；代码：MIT。
 
 English: [AGENTS.md](AGENTS.md)
 

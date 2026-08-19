@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Internacia DB',
-  tagline: 'Reference data + verified query recipes',
-  favicon: 'img/favicon.ico',
+  tagline: 'Reference data for countries, organizations, and country groups',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -23,7 +23,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'datenoio', // Usually your GitHub org/user name.
+  organizationName: 'datenoio', // Usually your GitHub org/user name
   projectName: 'internacia-db', // Usually your repo name.
 
   // Your markdown references repo-root files (e.g. ../llms.txt, ../ATTRIBUTION.md).
@@ -31,8 +31,8 @@ const config: Config = {
   onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // useful metadata like html lang. For example, if you are writing a site
+  // in Chinese, you may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -48,26 +48,9 @@ const config: Config = {
           // (We keep the scaffold’s default website/docs unused.)
           path: '../docs',
           routeBasePath: '/docs',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/datenoio/internacia-db/edit/main/docs/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -76,15 +59,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Internacia DB',
       logo: {
-        alt: 'Internacia DB Logo',
+        alt: 'Internacia DB',
         src: 'img/logo.svg',
       },
       items: [
@@ -94,9 +76,8 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/datenoio/internacia-db',
           label: 'GitHub',
           position: 'right',
         },
@@ -112,40 +93,52 @@ const config: Config = {
               label: 'Getting started',
               to: '/docs/getting-started',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Query examples',
+              to: '/docs/query-examples',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'AI consumers',
+              to: '/docs/ai-consumers',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Data dictionary',
+              to: '/docs/data-dictionary',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Dateno',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Dateno',
+              href: 'https://dateno.io',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'internacia-api',
+              href: 'https://github.com/datenoio/internacia-api',
+            },
+            {
+              label: 'internacia-python',
+              href: 'https://github.com/datenoio/internacia-python',
+            },
+          ],
+        },
+        {
+          title: 'License',
+          items: [
+            {
+              label: 'Code: MIT',
+              href: 'https://github.com/datenoio/internacia-db/blob/main/LICENSE',
+            },
+            {
+              label: 'Data & docs: CC BY 4.0',
+              href: 'https://github.com/datenoio/internacia-db/blob/main/DATA_LICENSE',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Dateno. Internacia is part of the Dateno open-source project. Code is MIT; data and documentation are CC BY 4.0.`,
     },
     prism: {
       theme: prismThemes.github,

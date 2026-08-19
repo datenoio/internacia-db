@@ -1,7 +1,8 @@
 # Internacia Datasets
 
 > Machine-friendly reference data for countries, intergovernmental organizations (intblocks),
-> and organization block types. Licensed CC-BY-4.0 (data). Code is MIT.
+> and organization block types. Part of the Dateno open-source project.
+> Licensed CC-BY-4.0 (data and documentation). Code is MIT.
 > Version and schema: see data/datasets/*.manifest.json
 > 中文索引: llms.zh.txt
 
@@ -25,6 +26,28 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
 - Python SDK: https://github.com/datenoio/internacia-python
 - REST API: https://github.com/datenoio/internacia-api
+
+## Python SDK quick start (copy/paste)
+
+Most code-generating agents should start with the SDK: it downloads/caches `internacia.duckdb`
+and exposes small methods for common lookup/join patterns.
+
+```python
+from internacia import InternaciaClient
+
+client = InternaciaClient()
+
+country = client.countries.get_by_code("US")
+print(country["name"])
+
+# Blocks/orgs containing a country
+blocks_for_us = client.intblocks.get_by_member("US")
+
+# Multilingual fuzzy search across countries and blocks
+results = client.search.fuzzy("United States", limit=5)
+for r in results:
+    print(r["type"], r["name"])
+```
 
 Do NOT read data/_legacy/ — obsolete pre-1.0 snapshots kept for historical reference only.
 
@@ -105,11 +128,13 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
 - docs/agents/openspec-quickstart.md — schema change proposals
 - docs/query-examples.md — verified DuckDB query cookbook (countries, borders, intblocks, joins)
+- docs/llm-scenarios.md — intent-based copy/paste scenarios for LLM code generation
 - docs/query-examples-polars.md — verified Polars / Parquet query cookbook
 - docs/query-examples-r.md — verified R / dplyr / Parquet query cookbook
 - docs/query-examples-observable.md — Observable Framework / Plot cookbook (DuckDB-Wasm)
 - docs/query-examples.zh.md — 已验证中文场景查询
 - docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
+- docs/when-to-use-internacia.md — task-based routing guide for when to use Internacia
 - llms.zh.txt — 中文紧凑索引
 - AGENTS.zh.md — 中文智能体路由入口
 - llms-full.txt — extended index for LLM crawlers

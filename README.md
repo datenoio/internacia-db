@@ -3,7 +3,7 @@
 [![Validate datasets](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21452328.svg)](https://doi.org/10.5281/zenodo.21452328)
 
-Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. The project serves as a data source for the **Dateno** search engine.
+Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. Internacia is part of the **[Dateno](https://dateno.io)** open-source project and a data source for the Dateno search engine.
 
 ## Distribution
 
@@ -35,12 +35,14 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/query-examples.zh.md](docs/query-examples.zh.md) — 已验证中文 DuckDB 示例
 - [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, scope boundaries
 - [docs/getting-started.md](docs/getting-started.md) — spreadsheet / DuckDB quick start
+- [docs/when-to-use-internacia.md](docs/when-to-use-internacia.md) — task-based routing guide for choosing Internacia
 - [docs/data-dictionary.md](docs/data-dictionary.md) — generated field reference
 - [docs/architecture.md](docs/architecture.md) — pipeline diagram
 - [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md) — scope_category taxonomy
 - [docs/entity-classification-policy.md](docs/entity-classification-policy.md) — TW / PS / XK / EH edge cases
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
+- [docs/llm-scenarios.md](docs/llm-scenarios.md) — intent-based copy/paste scenarios for LLM code generation
 - [docs/query-examples-polars.md](docs/query-examples-polars.md) — verified Polars / Parquet query cookbook
 - [docs/query-examples-r.md](docs/query-examples-r.md) — verified R / dplyr / Parquet query cookbook
 - [docs/query-examples-observable.md](docs/query-examples-observable.md) — Observable Framework / Plot cookbook (DuckDB-Wasm)
@@ -399,8 +401,10 @@ Tagged releases (`vX.Y.Z`) automatically rebuild all formats and attach them as 
 
 ## License
 
-- **Code** (everything under `scripts/`, `tests/`, and build tooling) — MIT, see [LICENSE](LICENSE).
-- **Data** (curated sources under `data/` and generated artifacts in `data/datasets/`) —
+Internacia is part of the [Dateno](https://dateno.io) open-source project.
+
+- **Code** (`scripts/`, `internacia_builder/`, `tests/`, build tooling, and `website/`) — MIT, see [LICENSE](LICENSE).
+- **Data and documentation** (curated sources under `data/`, generated artifacts in `data/datasets/`, and docs under `docs/`, README, and related guides) —
   Creative Commons Attribution 4.0 (CC BY 4.0), see [DATA_LICENSE](DATA_LICENSE).
 
 Upstream sources (World Bank, Wikidata, IANA tzdata) and citation guidance are documented in

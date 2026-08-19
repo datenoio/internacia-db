@@ -371,7 +371,9 @@ Decompress zstd: `zstd -d data/datasets/countries.jsonl.zst`
 
 ## Licensing and attribution
 
-- **Data:** CC BY 4.0 — see [DATA_LICENSE](../DATA_LICENSE)
+Internacia is part of the [Dateno](https://dateno.io) open-source project.
+
+- **Data and documentation:** CC BY 4.0 — see [DATA_LICENSE](../DATA_LICENSE)
 - **Code:** MIT — see [LICENSE](../LICENSE)
 - **Upstream:** World Bank (CC BY 4.0), Wikidata (CC0), IANA tzdata (public domain),
   mledoze/countries (ODbL-1.0, `centroid` field only — see the compatibility note in ATTRIBUTION.md)

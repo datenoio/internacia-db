@@ -1,7 +1,8 @@
 # Internacia Datasets
 
 > Machine-friendly reference data for countries, intergovernmental organizations (intblocks),
-> and organization block types. Licensed CC-BY-4.0 (data). Code is MIT.
+> and organization block types. Part of the Dateno open-source project.
+> Licensed CC-BY-4.0 (data and documentation). Code is MIT.
 > Version and schema: see data/datasets/*.manifest.json
 > 中文索引: llms.zh.txt
 
@@ -105,6 +106,7 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
 - docs/agents/openspec-quickstart.md — schema change proposals
 - docs/query-examples.md — verified DuckDB query cookbook (countries, borders, intblocks, joins)
+- docs/llm-scenarios.md — intent-based copy/paste scenarios for LLM code generation
 - docs/query-examples-polars.md — verified Polars / Parquet query cookbook
 - docs/query-examples-r.md — verified R / dplyr / Parquet query cookbook
 - docs/query-examples-observable.md — Observable Framework / Plot cookbook (DuckDB-Wasm)
@@ -162,6 +164,7 @@ Everything above this line mirrors llms.txt; the sections below add detail for c
 - CONTRIBUTING.md — setup and PR checklist
 - docs/enrichment.md — enrichment pipeline
 - docs/getting-started.md — spreadsheet / DuckDB quick start
+- docs/when-to-use-internacia.md — task-based routing guide for choosing Internacia
 - docs/data-dictionary.md — generated field reference
 - docs/architecture.md — pipeline diagram
 - docs/intblock-inclusion-policy.md — scope_category taxonomy

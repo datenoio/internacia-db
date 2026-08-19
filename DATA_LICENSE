@@ -1,12 +1,16 @@
-Internacia Datasets — Data License
-===================================
+Internacia Datasets — Data and Documentation License
+====================================================
 
 SPDX-License-Identifier: CC-BY-4.0
 
-The DATA in this repository — the curated source files under `data/` and all
-generated dataset artifacts under `data/datasets/` (JSONL, YAML, Parquet, and
-DuckDB) — is licensed under the Creative Commons Attribution 4.0 International
-License (CC BY 4.0).
+The DATA and DOCUMENTATION in this repository are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+
+  - curated source files under `data/`
+  - generated dataset artifacts under `data/datasets/` (JSONL, YAML, Parquet,
+    DuckDB, CSV, and related sidecars)
+  - human-readable documentation (`docs/`, README, AGENTS.md, llms.txt, and
+    related guides)
 
   Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
   Human-readable summary: https://creativecommons.org/licenses/by/4.0/
@@ -31,9 +35,13 @@ Under the following terms:
 Scope and relationship to the code license
 ------------------------------------------
 
-This data license applies ONLY to the datasets described above. The source
-CODE in this repository (everything under `scripts/`, `tests/`, and build
-tooling) is licensed separately under the MIT License — see `LICENSE`.
+This license applies to the datasets and documentation described above. The
+source CODE in this repository (everything under `scripts/`,
+`internacia_builder/`, `tests/`, build tooling, and the documentation website
+generator under `website/`) is licensed separately under the MIT License —
+see `LICENSE`.
+
+Internacia is part of the Dateno open-source project (https://dateno.io).
 
 Upstream sources and attribution
 --------------------------------
