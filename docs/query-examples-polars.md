@@ -624,9 +624,8 @@ print(flag_n, roster_n)  # both 193
 **Expected:** 11 rows (`BEACST`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `EUA`, `GRECO`,
 `ICES`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
-**Gotcha:** Current Parquet exports include `includes[].left` and `memberships.left`.
-Older cookbook notes about omitting departure dates apply to some historical DuckDB
-builds — prefer Parquet / `memberships` when you need `left`.
+**Gotcha:** DuckDB, Parquet, and `memberships` all export `left`. Use
+`memberships` when you want a flat edge table without `UNNEST`.
 
 ### Russia: departed around March 2022
 

@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- DuckDB query cookbook no longer claims Parquet/DuckDB omit `includes[].left` (the field is exported on `includes` and on `memberships`).
+
+### Added
+
+- Mermaid diagram rendering on the documentation website (`@docusaurus/theme-mermaid`), so existing `mermaid` code blocks in `docs/` display as diagrams instead of plain text.
+- Documentation: dataset SemVer and self-host API posture ([docs/versioning-policy.md](docs/versioning-policy.md)); intblock id/category conventions; display-name and `parent_entity` policy; validator exit codes; docs-count CI guard; Chinese query/contribute coverage; website sidebar no longer presents historical planning docs as current.
+- Intblock `JEF` (Joint Expeditionary Force) — UK-led Northern European military partnership (10 members).
+- Intblock `NORTHSEASUMMIT` (North Sea Summit) — informal North Sea energy summit series (9 members + Iceland observer).
+- Intblock `UPOV` (International Union for the Protection of New Varieties of Plants) — plant variety protection IGO (80 members).
+- Intblock `ARC` (African Risk Capacity) — AU specialized agency for climate disaster risk financing (39 members).
+- Intblock `COSPASSARSAT` (International Cospas-Sarsat Programme) — satellite-aided search-and-rescue IGO (45 participants).
+- Intblock `EFI` (European Forest Institute) — European forest research IGO (30 member states).
+- Intblock `CRFM` (Caribbean Regional Fisheries Mechanism) — CARICOM fisheries institution (17 members).
+- Intblock `GMCO` (Gulf Monetary Council) — GCC monetary-union preparatory body (4 members: BH, KW, QA, SA).
+- Intblock `OIML` (International Organization of Legal Metrology) — legal metrology treaty IGO (129 members).
+- Intblock `RIMES` (Regional Integrated Multi-Hazard Early Warning System for Africa and Asia) — multi-hazard early warning IGO (22 members + 26 collaborating states).
+
 ## [2.0.0] - 2026-08-04
 
 Dataset rebuild after attribute-partition retirement and Kosovo rename: **256** countries,

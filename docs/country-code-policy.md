@@ -67,6 +67,21 @@ join organization-level references there instead.
 | `supranational_grouping` | Collective groupings, not a single territory |
 | `statistical_area` | Statistical or M49-only areas |
 
+## Display names
+
+`name` follows **World Bank short-name style** (for example `Egypt, Arab Rep.`). It can
+lag official English short-form changes (North Macedonia, Eswatini, Cabo Verde, Türkiye).
+Put the modern short form in `common_names` and translations in `other_names`. Use
+`official_name` for the formal long form. Do not "correct" `name` to a journalist-style
+label without a sourced World Bank (or documented alternative) update.
+
+## `parent_entity`
+
+The schema allows `parent_entity: {code, name}` for dependent territories and SARs
+(for example GL→DK, PR→US, HK/MO→CN). It is **optional and currently unused** (zero
+records). Populate it only when the administering state is unambiguous and sourced;
+do not invent a parent for disputed territories. Absence is not a validation error.
+
 ## Filtering examples
 
 **Current ISO countries only** (249 records):

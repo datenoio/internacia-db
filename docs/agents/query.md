@@ -21,7 +21,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 | Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet`, `memberships.parquet` |
 | Version check | `SELECT * FROM _meta;` or `data/datasets/*.manifest.json` |
 | Python SDK (no full checkout) | https://github.com/datenoio/internacia-python |
-| HTTP API (no local files) | https://github.com/datenoio/internacia-api |
+| HTTP API | https://github.com/datenoio/internacia-api (**self-host only**; no public hosted instance) |
 
 ## Join keys
 

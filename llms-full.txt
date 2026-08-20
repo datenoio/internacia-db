@@ -25,7 +25,29 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 - Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
 - Python SDK: https://github.com/datenoio/internacia-python
-- REST API: https://github.com/datenoio/internacia-api
+- REST API: https://github.com/datenoio/internacia-api (self-host only; no public hosted instance)
+
+## Python SDK quick start (copy/paste)
+
+Most code-generating agents should start with the SDK: it downloads/caches `internacia.duckdb`
+and exposes small methods for common lookup/join patterns.
+
+```python
+from internacia import InternaciaClient
+
+client = InternaciaClient()
+
+country = client.countries.get_by_code("US")
+print(country["name"])
+
+# Blocks/orgs containing a country
+blocks_for_us = client.intblocks.get_by_member("US")
+
+# Multilingual fuzzy search across countries and blocks
+results = client.search.fuzzy("United States", limit=5)
+for r in results:
+    print(r["type"], r["name"])
+```
 
 Do NOT read data/_legacy/ — obsolete pre-1.0 snapshots kept for historical reference only.
 
@@ -62,6 +84,7 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - Countries: code (ISO alpha-2, primary), iso3code (alpha-3), numeric_code, wikidata_id (Q-number)
 - Intblocks: id (uppercase string, e.g. EU, NATO, UN)
 - Intblock membership: includes[].id → country code (authoritative); includes[].name is a display label only
+- Departure dates: includes[].left and memberships.left (DuckDB/Parquet/JSONL)
 - Intblock taxonomy: blocktype (list of blocktype keys), partof (parent org ids)
 - Blocktypes: id matches intblocks.blocktype values
 
@@ -112,12 +135,14 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - docs/query-examples-observable.md — Observable Framework / Plot cookbook (DuckDB-Wasm)
 - docs/query-examples.zh.md — 已验证中文场景查询
 - docs/ai-consumers.md — agent-oriented data dictionary, recipes, scope
+- docs/when-to-use-internacia.md — task-based routing guide for when to use Internacia
 - llms.zh.txt — 中文紧凑索引
 - AGENTS.zh.md — 中文智能体路由入口
 - llms-full.txt — extended index for LLM crawlers
 - AGENTS.md — root routing hub
 - README.md — installation, build, schema tables, code examples
 - docs/country-code-policy.md — non-standard codes, entity_type, filtering
+- docs/versioning-policy.md — dataset SemVer, alias retention, API posture
 - ATTRIBUTION.md — upstream sources and citation
 - CONTRIBUTING.md — YAML authoring (for maintainers only)
 
@@ -167,6 +192,8 @@ Everything above this line mirrors llms.txt; the sections below add detail for c
 - docs/when-to-use-internacia.md — task-based routing guide for choosing Internacia
 - docs/data-dictionary.md — generated field reference
 - docs/architecture.md — pipeline diagram
+- docs/versioning-policy.md — dataset SemVer, alias retention, API posture
+- docs/agents/add-intblock-example.md — worked add-intblock walkthrough
 - docs/intblock-inclusion-policy.md — scope_category taxonomy
 - docs/entity-classification-policy.md — TW/PS/XK/EH edge cases
 - docs/agents/contribute.md — YAML editing workflow

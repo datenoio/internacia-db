@@ -7,7 +7,6 @@ import duckdb
 import pytest
 
 DUCKDB_PATH = Path(__file__).resolve().parents[1] / "data" / "datasets" / "internacia.duckdb"
-INTBLOCKS_JSONL_ZST = Path(__file__).resolve().parents[1] / "data" / "datasets" / "intblocks.jsonl.zst"
 
 pytestmark = pytest.mark.skipif(
     not DUCKDB_PATH.is_file(),
@@ -177,23 +176,17 @@ def test_documented_query(con, sql, min_rows, expected_codes):
         assert expected_codes <= codes
 
 
-@pytest.mark.skipif(
-    not INTBLOCKS_JSONL_ZST.is_file(),
-    reason="intblocks.jsonl.zst not built",
-)
 def test_ru_former_member_march_2022(con):
-    jsonl_path = INTBLOCKS_JSONL_ZST.as_posix()
     rows = con.execute(
-        f"""
+        """
         SELECT i.id
-        FROM read_json('{jsonl_path}', format='newline_delimited') i,
-             UNNEST(CAST(i.includes AS JSON[])) AS t(m)
-        WHERE json_extract_string(m, '$.id') = 'RU'
-          AND json_extract_string(m, '$.type') = 'country'
-          AND json_extract_string(m, '$.status') = 'former_member'
+        FROM intblocks i, UNNEST(i.includes) AS t(m)
+        WHERE m.id = 'RU'
+          AND m.type = 'country'
+          AND m.status = 'former_member'
           AND (
-            json_extract_string(m, '$.left') LIKE '2022-03%'
-            OR json_extract_string(m, '$.note') ILIKE '%March 2022%'
+            m.left LIKE '2022-03%'
+            OR m.note ILIKE '%March 2022%'
           )
         ORDER BY i.id
         """
@@ -568,19 +561,13 @@ def test_additional_recipes(con, sql, expected_count, expected_codes):
         assert expected_codes <= codes
 
 
-@pytest.mark.skipif(
-    not INTBLOCKS_JSONL_ZST.is_file(),
-    reason="intblocks.jsonl.zst not built",
-)
 def test_former_members_with_join_and_left(con):
-    jsonl_path = INTBLOCKS_JSONL_ZST.as_posix()
     count = con.execute(
-        f"""
+        """
         SELECT COUNT(*)
-        FROM read_json('{jsonl_path}', format='newline_delimited') i,
-             UNNEST(CAST(i.includes AS JSON[])) AS t(m)
-        WHERE json_extract_string(m, '$.status') = 'former_member'
-          AND json_extract_string(m, '$.joined') IS NOT NULL
+        FROM intblocks i, UNNEST(i.includes) AS t(m)
+        WHERE m.status = 'former_member'
+          AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
     assert count == 199

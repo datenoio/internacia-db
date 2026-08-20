@@ -530,30 +530,30 @@ ORDER BY m.joined NULLS LAST, i.name;
 **Expected:** 11 rows (`BEACST`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `EUA`, `GRECO`, `ICES`,
 `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
-**Gotcha:** `internacia.duckdb` and Parquet omit `includes[].left` (departure date). Use
-`intblocks.jsonl.zst` when you need temporal filters on when membership ended.
+**Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
+JSONL still carries the same field if you are streaming.
 
 ### Russia: departed around March 2022
 
 Organizations where Russia was a member until March 2022 and is now recorded only as
-`former_member`. Read from compressed JSONL — DuckDB decompresses `.zst` automatically:
+`former_member`. DuckDB/Parquet export `includes[].left`; the flattened `memberships`
+table is equivalent.
 
 ```sql
 SELECT
   i.id,
   i.name AS organization,
-  json_extract_string(m, '$.status') AS status,
-  json_extract_string(m, '$.joined') AS joined,
-  json_extract_string(m, '$.left') AS departed,
-  json_extract_string(m, '$.note') AS note
-FROM read_json('data/datasets/intblocks.jsonl.zst', format='newline_delimited') i,
-     UNNEST(CAST(i.includes AS JSON[])) AS t(m)
-WHERE json_extract_string(m, '$.id') = 'RU'
-  AND json_extract_string(m, '$.type') = 'country'
-  AND json_extract_string(m, '$.status') = 'former_member'
+  m.status,
+  m.joined,
+  m.left AS departed,
+  m.note
+FROM intblocks i, UNNEST(i.includes) AS t(m)
+WHERE m.id = 'RU'
+  AND m.type = 'country'
+  AND m.status = 'former_member'
   AND (
-    json_extract_string(m, '$.left') LIKE '2022-03%'
-    OR json_extract_string(m, '$.note') ILIKE '%March 2022%'
+    m.left LIKE '2022-03%'
+    OR m.note ILIKE '%March 2022%'
   )
 ORDER BY departed, organization;
 ```
@@ -891,19 +891,18 @@ ORDER BY child.id;
 
 ### Former members with join and departure dates
 
-Requires `includes[].left` from JSONL export:
+Uses DuckDB/Parquet `includes[].joined` and `includes[].left` (also on `memberships`):
 
 ```sql
 SELECT
   i.id,
   i.name AS organization,
-  json_extract_string(m, '$.id') AS country_code,
-  json_extract_string(m, '$.joined') AS joined,
-  json_extract_string(m, '$.left') AS departed
-FROM read_json('data/datasets/intblocks.jsonl.zst', format='newline_delimited') i,
-     UNNEST(CAST(i.includes AS JSON[])) AS t(m)
-WHERE json_extract_string(m, '$.status') = 'former_member'
-  AND json_extract_string(m, '$.joined') IS NOT NULL
+  m.id AS country_code,
+  m.joined,
+  m.left AS departed
+FROM intblocks i, UNNEST(i.includes) AS t(m)
+WHERE m.status = 'former_member'
+  AND m.joined IS NOT NULL
 ORDER BY i.id, country_code;
 ```
 
@@ -1196,10 +1195,21 @@ ORDER BY id;
 
 **Expected:** 24 rows.
 
+## Cookbook coverage (parity policy)
+
+- **DuckDB** ([query-examples.md](query-examples.md)) is canonical. Every recipe with an
+  **Expected:** count is executed in `tests/test_documented_queries.py`.
+- **Polars / R** cover the same core scenarios (country filters, borders, membership,
+  former members, overlap). They are not required to clone every advanced DuckDB recipe.
+- **Observable** covers visualization of that core set.
+- **Chinese** ([query-examples.zh.md](query-examples.zh.md)) covers Chinese-name lookups
+  plus the core scenarios; it is a maintained subset, not a full translation.
+  `ai-consumers.md` and the data dictionary remain English-canonical.
+
 ## Related documentation
 
 - [ai-consumers.md](ai-consumers.md) — consumption contract and common mistakes
 - [country-code-policy.md](country-code-policy.md) — entity status and code filtering
 - [intblock-inclusion-policy.md](intblock-inclusion-policy.md) — scope_category taxonomy
-- [getting-started.md](getting-started.md) — non-programmer path
+- [versioning-policy.md](versioning-policy.md) — dataset SemVer, aliases, API posture
 - [llms.txt](../llms.txt) — compact index for LLM context windows

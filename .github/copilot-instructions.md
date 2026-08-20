@@ -5,7 +5,8 @@ See [AGENTS.md](../AGENTS.md) for full agent routing.
 ## Data access
 
 - Prefer `data/datasets/internacia.duckdb` or Parquet exports over parsing source YAML.
-- Remote access: [internacia-api](https://github.com/commondataio/internacia-api), [internacia-python](https://github.com/commondataio/internacia-python).
+- Python SDK: [internacia-python](https://github.com/datenoio/internacia-python).
+- internacia-api is **self-host only** ([internacia-api](https://github.com/datenoio/internacia-api)); no public hosted HTTP API.
 
 ## Scope
 

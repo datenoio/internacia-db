@@ -36,5 +36,7 @@ ORDER BY i.name;
 
 **Reference**
 - Full cookbook: [docs/query-examples.md](../../docs/query-examples.md)
-- Remote access without checkout: [internacia-api](https://github.com/commondataio/internacia-api)
+- Flattened edges: DuckDB table `memberships` (`intblock_id`, `country_code`, `status`, `joined`, `left`)
+- Python SDK (no checkout): [internacia-python](https://github.com/datenoio/internacia-python)
+- internacia-api is self-host only: [internacia-api](https://github.com/datenoio/internacia-api)
 <!-- AGENT:END -->

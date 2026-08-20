@@ -14,7 +14,7 @@ English: [../contribute.md](../contribute.md)
 | 路径 | 规则 |
 |------|------|
 | `data/countries/{CODE}.yaml` | 一实体一文件；文件名 = ISO alpha-2 `code` |
-| `data/intblocks/{category}/{ID}.yaml` | 文件名必须与 `id` 完全一致（区分大小写） |
+| `data/intblocks/{category}/{ID}.yaml` | 文件名必须与 `id` 完全一致（大写官方缩写；目录 = 主 `blocktype`） |
 | `data/blocktypes/blocktypes.yaml` | 所有 intblock 的 `blocktype` 必须在此登记 |
 | `data/datasets/` | **仅构建生成** — 禁止手改 |
 
@@ -30,15 +30,23 @@ English: [../contribute.md](../contribute.md)
 ## Intblocks 检查清单
 
 - 必填：`id`, `name`, `blocktype`, `status`
+- `id` 为大写 ASCII 官方缩写（规则见 [intblock-inclusion-policy.md](../../intblock-inclusion-policy.md)）
 - `includes[].id` 为关联权威字段（国家 alpha-2）；`name` 仅展示
+- `includes[].status` 必须是 `data/schemas/includes_status.yaml` 中的键
 - 无 `includes` 且确实无成员制：设 `membership_applicability: not_applicable`
+- `headquarters.country` 必须对应 `data/countries/{code}.yaml`
+- `wikidata_id` 全局唯一；有意共用的 Q 号写入 `wikidata_duplicate_allowlist`
+- 主题键必须存在于 `data/schemas/topics.yaml`
+- `partof` / `predecessor` / `successor` / `suborganizations[].id` 必须能解析到已有 intblock
 - 已解散组织：`status: historical` + `dissolved` 日期；不要编造成员列表
+- `last_verified`：对照官方名录核对当天的 `YYYY-MM-DD`（12 个月顾问 SLA）
 - 新 blocktype 须先加入 `data/blocktypes/blocktypes.yaml`
+- 完整逐步示例：[add-intblock-example.md](../add-intblock-example.md)`
 
 ## 提交 PR 前校验
 
 ```bash
-python scripts/validate_countries.py --json
+python scripts/validate_countries.py --json   # 退出码 0 = 无错误；1 = 有错误（警告默认不失败）
 python scripts/validate_intblocks.py --json
 pytest tests/
 ruff check internacia_builder/ scripts/ tests/
@@ -62,4 +70,5 @@ python scripts/builder.py build --formats parquet,duckdb
 
 - [AGENTS.zh.md](../../../AGENTS.zh.md)
 - [query.md](query.md)
+- [add-intblock-example.md](../add-intblock-example.md) — 新增 intblock 示例（英文）
 - `.agent/workflows/edit-intblock.md`

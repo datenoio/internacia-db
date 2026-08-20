@@ -16,9 +16,9 @@ English: [AGENTS.md](AGENTS.md)
 
 ## 推荐数据访问方式
 
-- **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`_meta`）
-- **Parquet：** `data/datasets/{countries,intblocks,blocktypes}.parquet`
-- **远程：** [internacia-api](https://github.com/datenoio/internacia-api)、[internacia-python](https://github.com/datenoio/internacia-python)
+- **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`memberships`、`_meta`）
+- **Parquet：** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
+- **远程：** [internacia-python](https://github.com/datenoio/internacia-python)（SDK）。[internacia-api](https://github.com/datenoio/internacia-api) **仅自托管** — 无公开 HTTP 实例。
 
 升级前检查版本：`SELECT dataset, version, schema_hash FROM _meta;` 或读 `data/datasets/*.manifest.json`。
 
@@ -35,7 +35,7 @@ English: [AGENTS.md](AGENTS.md)
 
 - **不要** 给 countries 添加 HDI、GDP、政体、互联网普及率等社会经济画像字段
 - **不要** 把全部 256 个 code 都当作正式 ISO — 需按 `code_status` 过滤
-- **不要** 把 World Bank `region` / `incomeLevel` 缺失当作数据错误（约 33 个实体无分类）
+- **不要** 把 World Bank `region` / `incomeLevel` 缺失当作数据错误（8 个实体无 `region`/`incomeLevel`/`lendingType`；39 个高收入经济体按设计无 `adminregion`）
 
 ## 校验（贡献者）
 

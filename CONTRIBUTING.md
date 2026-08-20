@@ -25,7 +25,9 @@ pre-commit install   # optional but recommended
 
 ### Intblocks (`data/intblocks/<category>/*.yaml`)
 
-- One file per organization; the filename should match the record `id`, which must be **unique across all categories**.
+- Filename stem must match record `id` exactly (uppercase ASCII; see id rules in
+  [intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md)).
+- The directory is the primary `blocktype` and must exist in `data/blocktypes/blocktypes.yaml`.
 - Required fields: `id`, `name`, `blocktype`, `status` (see `data/schemas/intblocks.schema.json`).
 - Set `scope_category` on formal records when known (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`) — see [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md).
 - Every `blocktype` value must exist in `data/blocktypes/blocktypes.yaml`.
@@ -38,6 +40,8 @@ pre-commit install   # optional but recommended
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/data-dictionary.md](docs/data-dictionary.md) (regenerate with `python scripts/generate_data_dictionary.py`)
 - [docs/architecture.md](docs/architecture.md)
+- [docs/versioning-policy.md](docs/versioning-policy.md)
+- [docs/agents/add-intblock-example.md](docs/agents/add-intblock-example.md)
 
 Monthly enrichment may open a review PR labeled `enrichment` — see [docs/enrichment.md](docs/enrichment.md).
 
@@ -46,13 +50,15 @@ Monthly enrichment may open a review PR labeled `enrichment` — see [docs/enric
 Run before opening a PR:
 
 ```bash
-python scripts/validate_countries.py     # schema, completeness, cross-references
-python scripts/validate_intblocks.py     # schema, taxonomy, duplicates, completeness
+python scripts/validate_countries.py     # 0 = no errors (warnings OK); 1 = errors
+python scripts/validate_intblocks.py     # add --fail-on-warning to treat warnings as errors
+python scripts/validate_countries.py --json   # structured output for agents
 pytest tests/                            # unit and integration tests
 ruff check scripts/ tests/               # lint
 python scripts/builder.py build --formats parquet,duckdb   # full build check
 python scripts/check_generated_artifacts.py                # committed exports match source + each other
 python scripts/check_markdown_links.py                     # internal doc links
+python scripts/check_doc_counts.py                         # README/llms/AGENTS vs manifests
 ```
 
 CI runs the same checks on every pull request (`.github/workflows/validate.yml`).
@@ -90,4 +96,4 @@ New capabilities, schema changes, or breaking changes go through an OpenSpec pro
 
 ## Releases
 
-Maintainers tag releases (`vX.Y.Z`); `.github/workflows/release.yml` rebuilds all formats and attaches them as release assets. Versioning follows [SemVer](https://semver.org/) with migration notes in `CHANGELOG.md`.
+Maintainers tag releases (`vX.Y.Z`); `.github/workflows/release.yml` rebuilds all formats and attaches them as release assets. Versioning follows [docs/versioning-policy.md](docs/versioning-policy.md) (dataset SemVer) with migration notes in `CHANGELOG.md`.

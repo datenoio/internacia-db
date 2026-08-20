@@ -17,9 +17,9 @@ Licensed CC-BY-4.0 (data and documentation); code is MIT.
 
 ## Preferred data access
 
-- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `_meta`)
-- **Parquet:** `data/datasets/{countries,intblocks,blocktypes}.parquet`
-- **Remote:** [internacia-api](https://github.com/datenoio/internacia-api), [internacia-python](https://github.com/datenoio/internacia-python)
+- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `memberships`, `_meta`)
+- **Parquet:** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
+- **Remote:** [internacia-python](https://github.com/datenoio/internacia-python) (SDK). [internacia-api](https://github.com/datenoio/internacia-api) is **self-host only** — no public hosted HTTP API.
 
 Check version before upgrading: `SELECT dataset, version, schema_hash FROM _meta;` or read `data/datasets/*.manifest.json`.
 
@@ -42,7 +42,7 @@ Check version before upgrading: `SELECT dataset, version, schema_hash FROM _meta
 ## Validation (contributors)
 
 ```bash
-python scripts/validate_countries.py          # human-readable output
+python scripts/validate_countries.py          # 0 = no errors (warnings OK); 1 = errors
 python scripts/validate_countries.py --json   # structured output for agents
 python scripts/validate_intblocks.py --json
 pytest tests/

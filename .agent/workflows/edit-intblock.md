@@ -38,6 +38,7 @@ python scripts/builder.py build --formats parquet,duckdb
 7. Update `CHANGELOG.md` under `[Unreleased]` for consumer-visible changes.
 
 **Reference**
+- Worked add example: [docs/agents/add-intblock-example.md](../../docs/agents/add-intblock-example.md)
 - `includes[].status` values: `data/schemas/includes_status.yaml`
 - Completeness config: `data/schemas/intblocks_completeness.yaml`
 - OpenSpec apply workflow: `.agent/workflows/openspec-apply.md`

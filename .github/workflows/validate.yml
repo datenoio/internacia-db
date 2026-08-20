@@ -66,6 +66,9 @@ jobs:
       - name: Check data dictionary drift
         run: python scripts/generate_data_dictionary.py --check
 
+      - name: Check documentation record counts
+        run: python scripts/check_doc_counts.py
+
       - name: Validate countries
         run: python scripts/validate_countries.py --report completeness-report.json
 

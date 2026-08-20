@@ -18,7 +18,7 @@ English: [../query.md](../query.md)
 | Parquet | `data/datasets/countries.parquet` 等 |
 | 版本检查 | `SELECT * FROM _meta;` 或 `data/datasets/*.manifest.json` |
 | Python SDK | https://github.com/datenoio/internacia-python |
-| HTTP API | https://github.com/datenoio/internacia-api |
+| HTTP API | https://github.com/datenoio/internacia-api（**仅自托管**；无公开托管实例） |
 
 ## 关联键
 

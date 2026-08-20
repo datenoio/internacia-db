@@ -85,6 +85,9 @@ Before upgrading:
 3. Apply intblock alias remaps from `intblocks_aliases.json` if joining on intblock `id`
 4. Apply country code remaps from `countries_aliases.json` if joining on country `code` (e.g. legacy `KV` → `XK`)
 
+Dataset SemVer (what is MAJOR vs MINOR vs PATCH for this data product), alias retention,
+and API posture are defined in [versioning-policy.md](versioning-policy.md).
+
 **Stable join keys:** country `code` and intblock `id`. When an intblock id is renamed,
 the old id appears in `intblocks_aliases.json`:
 
@@ -115,7 +118,7 @@ Key classification fields:
 |-------|-----|
 | `code_status` | `official_iso3166_1`, `user_assigned`, `obsolete`, `exceptionally_reserved` |
 | `entity_type` | `sovereign_state`, `dependent_territory`, `disputed_territory`, etc. |
-| `un_member`, `independent` | Boolean flags |
+| `un_member`, `un_status`, `independent` | UN participation (`member` / `observer` / `non_member`) plus booleans |
 | `recognition_status` | Optional struct for dispute/recognition metadata |
 
 **Filter current ISO countries (249 records):**
@@ -135,8 +138,9 @@ Organizations, treaties, alliances, federations, and similar groupings. Each rec
 - `wikidata_id`, `description`, `tags`, `topics` — linking and discovery
 - `partof` — parent organization ids
 
-Member entry shape: `{id, name, type, status, joined, role, note}`.
+Member entry shape: `{id, name, type, status, joined, left, role, note}`.
 Use `id` for joins; `name` is a source label and may not match the canonical country name.
+`left` is the departure date (ISO string) when the member left.
 
 ### Membership status (`includes[].status`)
 
@@ -264,9 +268,9 @@ not alpha-2. Island nations may have empty borders.
 
 | Field | Purpose |
 |-------|---------|
-| `name` | Common English name |
-| `official_name` | Formal name |
-| `common_names` | Aliases for fuzzy matching |
+| `name` | World Bank-style English short name (may lag official short-form renames) |
+| `official_name` | Formal long-form state name |
+| `common_names` | Modern short forms and aliases for fuzzy matching |
 | `other_names` | Translations `{id, name}` |
 | `native_names` | Map of lang code → `{official, common}` |
 
@@ -283,10 +287,12 @@ Use this to assess data freshness and attribute upstream sources. See [ATTRIBUTI
 |-------|-------|
 | `includes[].id` | Authoritative member identifier (usually country `code`) |
 | `includes[].type` | Member type (`country`, `organization`, etc.) |
-| `includes[].status` | Membership status (values vary; not normalized to a small enum) |
-| `membership_count` | Declared count; may differ from `len(includes)` |
-| `headquarters` | `{city, country, coordinates}` — ~46% populated |
-| `legal_status`, `geographic_scope` | Optional; sparsely populated |
+| `includes[].status` | Catalogued in [`includes_status.yaml`](../data/schemas/includes_status.yaml) — see table above |
+| `includes[].joined` / `includes[].left` | ISO dates; `left` is exported on JSONL, Parquet, DuckDB, and `memberships` |
+| `membership_count` | Declared count; compared to the country roster unless `membership_count_type` is set |
+| `membership_count_type` | Unit of the count (`countries` default; `companies`, `individuals`, …) |
+| `headquarters` | `{city, country, coordinates}` — optional; coverage varies |
+| `legal_status`, `geographic_scope` | Optional free text / enum; `legal_status` is not a controlled vocabulary |
 
 ## Query recipes
 
@@ -339,9 +345,9 @@ WHERE i.id = 'NATO' AND m.type = 'country';
 ### DuckDB: countries in a World Bank region
 
 ```sql
-SELECT code, name, region.value AS region
+SELECT code, name, region.id AS region_id
 FROM countries
-WHERE region.value = 'Europe & Central Asia'
+WHERE region.id = 'ECS'
   AND code_status = 'official_iso3166_1';
 ```
 
@@ -364,7 +370,7 @@ blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 | Parquet | Pandas/Polars/Arrow pipelines |
 | JSONL.zst | Streaming, language-agnostic JSON consumers |
 | [internacia-python](https://github.com/datenoio/internacia-python) | Typed lookups, fuzzy search, filters |
-| [internacia-api](https://github.com/datenoio/internacia-api) | HTTP access without local files |
+| [internacia-api](https://github.com/datenoio/internacia-api) | **Self-host only** — no public hosted Internacia HTTP API |
 | Source YAML | **Maintainers only** — editing and validation |
 
 Decompress zstd: `zstd -d data/datasets/countries.jsonl.zst`
@@ -391,7 +397,7 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 4. **Treating missing World Bank fields as errors** — expected for territories outside WB taxonomy
 5. **Assuming all 256 codes are ISO official** — filter on `code_status`
 6. **Ignoring `schema_hash` on upgrade** — structured fields and types change between releases
-7. **Requesting socioeconomic enrichment from this dataset** — out of scope; enrich downstream
+8. **Assuming internacia-api is a hosted service** — it is self-host only; use local DuckDB or the Python SDK
 
 ## Related documentation
 
@@ -410,6 +416,7 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 - [README.md](../README.md) — full schema tables and build pipeline
 - [country-code-policy.md](country-code-policy.md) — non-standard codes and filtering
 - [enrichment.md](enrichment.md) — how profile fields are sourced (maintainers)
+- [versioning-policy.md](versioning-policy.md) — dataset SemVer, aliases, API posture
 - [CHANGELOG.md](../CHANGELOG.md) — breaking changes and migration notes
 - [data/schemas/countries.schema.json](../data/schemas/countries.schema.json) — field descriptions for countries
 - [data/schemas/intblocks.schema.json](../data/schemas/intblocks.schema.json) — field descriptions for intblocks

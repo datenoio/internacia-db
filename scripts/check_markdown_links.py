@@ -22,11 +22,14 @@ SKIP_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#", "<")
 # Directories that are generated, vendored, historical, or intentionally excluded.
 # Archived OpenSpec proposals and dev research are point-in-time snapshots whose
 # relative links are not maintained.
-SKIP_DIRS = {
+SKIP_DIR_NAMES = {
     ".git",
     "node_modules",
     ".venv",
     "venv",
+}
+# Path prefixes (from repo root) that are generated, historical, or snapshots.
+SKIP_PATH_PREFIXES = {
     "data/_legacy",
     "dev",
     "openspec/changes/archive",
@@ -36,8 +39,11 @@ SKIP_DIRS = {
 def _iter_markdown_files(root: Path) -> list[Path]:
     files: list[Path] = []
     for path in root.rglob("*.md"):
-        rel = path.relative_to(root).as_posix()
-        if any(rel == d or rel.startswith(f"{d}/") for d in SKIP_DIRS):
+        rel = path.relative_to(root)
+        if any(part in SKIP_DIR_NAMES for part in rel.parts):
+            continue
+        rel_posix = rel.as_posix()
+        if any(rel_posix == d or rel_posix.startswith(f"{d}/") for d in SKIP_PATH_PREFIXES):
             continue
         files.append(path)
     return sorted(files)

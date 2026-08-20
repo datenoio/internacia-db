@@ -28,8 +28,11 @@ If your task needs those, enrich with a separate dataset and treat Internacia as
 4. “Fuzzy match messy names (multilingual)”  
    Use Internacia search: `client.search.fuzzy(...)`.
 
-5. “Time-varying facts (historical membership changes, GDP by year, etc.)”  
-   Internacia is not designed as a time-series dataset. Use it only for stable identifiers and present-day classification.
+5. “Time-varying facts (GDP by year, HDI series, etc.)”  
+   Internacia is not an indicator time-series dataset. **Membership history is in scope:**
+   `includes[].joined` / `includes[].left` and the `memberships` table record when a
+   country joined or left an organization. Use those for former-member questions; do
+   not expect annual GDP or governance scores.
 
 ## Gotchas to bake into generated code
 

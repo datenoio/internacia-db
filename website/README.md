@@ -1,6 +1,8 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Docs are sourced from the repository `docs/` directory (`docusaurus.config.ts`
+`docs.path: '../docs'`). The unused Docusaurus classic-template files under
+`website/docs/` were removed.
 
 ## Installation
 

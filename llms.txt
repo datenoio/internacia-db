@@ -25,7 +25,7 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 - Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
 - Python SDK: https://github.com/datenoio/internacia-python
-- REST API: https://github.com/datenoio/internacia-api
+- REST API: https://github.com/datenoio/internacia-api (self-host only; no public hosted instance)
 
 ## Python SDK quick start (copy/paste)
 
@@ -84,6 +84,7 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - Countries: code (ISO alpha-2, primary), iso3code (alpha-3), numeric_code, wikidata_id (Q-number)
 - Intblocks: id (uppercase string, e.g. EU, NATO, UN)
 - Intblock membership: includes[].id → country code (authoritative); includes[].name is a display label only
+- Departure dates: includes[].left and memberships.left (DuckDB/Parquet/JSONL)
 - Intblock taxonomy: blocktype (list of blocktype keys), partof (parent org ids)
 - Blocktypes: id matches intblocks.blocktype values
 
@@ -141,5 +142,6 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - AGENTS.md — root routing hub
 - README.md — installation, build, schema tables, code examples
 - docs/country-code-policy.md — non-standard codes, entity_type, filtering
+- docs/versioning-policy.md — dataset SemVer, alias retention, API posture
 - ATTRIBUTION.md — upstream sources and citation
 - CONTRIBUTING.md — YAML authoring (for maintainers only)

@@ -13,6 +13,8 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 
 **Provenance staleness threshold:** 12 months (`provenance.max_age_months` in `data/schemas/countries_completeness.yaml`). Validation warns when `retrieved_at` is older than this.
 
+**Intblock `last_verified` SLA:** 12 months (`quality.last_verified_max_age_months` in `data/schemas/intblocks_completeness.yaml`). Validation warns (`STALE_LAST_VERIFIED`) when `last_verified` is older. Stamp `last_verified` whenever you check a roster against an official source. Missing `last_verified` is a completeness warning, not an error.
+
 **Provenance depth threshold:** at least four field-level entries per record (`provenance.min_count` in `data/schemas/countries_completeness.yaml` and `data/schemas/intblocks_completeness.yaml`). Validation warns via `INSUFFICIENT_PROVENANCE` when below the minimum.
 
 ## Maintainer workflow

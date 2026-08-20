@@ -165,8 +165,12 @@ change proposals before implementation.
 - **C3. README/marketing**: "How consumers depend on this" section — versioning, license, stability promise.
 
 ### Track D — Access surface (only if HTTP is a real path)
-- **D1. Decide API posture** *(Medium)*: host a public read-only instance **or** label it self-host-only.
-- **D2. If hosted**: add pagination, filter combinators, caching, basic rate limiting; publish OpenAPI examples.
+> **Status update (2026-08-20):** D1 **decided — self-host only.** Documented in
+> [versioning-policy.md](versioning-policy.md). There is no public hosted Internacia
+> HTTP API and no MCP server in this repository.
+
+- **D1. ✅ Decided — API posture** *(Medium)*: **self-host only.** Do not assume a public instance.
+- **D2.** If you self-host: add pagination, filter combinators, caching, basic rate limiting; publish OpenAPI examples. Out of scope for internacia-db itself.
 
 ### Track E — Optional / deferred (guard against scope creep)
 - **E1. ✅ Shipped — Country centroids + bounding boxes** *(Medium)* — `centroid` and optional `bbox`; not full geometry.

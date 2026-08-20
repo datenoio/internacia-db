@@ -13,6 +13,7 @@ Read the platform-neutral guide: **[docs/agents/contribute.md](../../../docs/age
 
 Also useful:
 - [CONTRIBUTING.md](../../../CONTRIBUTING.md) — setup and PR checklist
+- [docs/agents/add-intblock-example.md](../../../docs/agents/add-intblock-example.md) — worked add-intblock walkthrough
 - [docs/agents/openspec-quickstart.md](../../../docs/agents/openspec-quickstart.md) — schema changes
 - `.agent/workflows/edit-intblock.md` — intblock edit workflow
 

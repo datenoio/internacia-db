@@ -14,7 +14,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 | Path | Rule |
 |------|------|
 | `data/countries/{CODE}.yaml` | One file per entity; filename = ISO alpha-2 `code` |
-| `data/intblocks/{category}/{ID}.yaml` | Filename must match `id`; `id` unique globally |
+| `data/intblocks/{category}/{ID}.yaml` | Filename must match `id`; directory = primary `blocktype`; `id` unique globally |
 | `data/blocktypes/blocktypes.yaml` | Taxonomy; every intblock `blocktype` value must exist here |
 | `data/datasets/` | **Generated only** — never hand-edit |
 
@@ -34,6 +34,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 ## Intblocks checklist
 
 - Required: `id`, `name`, `blocktype`, `status`
+- `id` is uppercase ASCII (official acronym; see [intblock-inclusion-policy.md](../intblock-inclusion-policy.md))
 - `includes[].id` is **authoritative** for joins (country alpha-2); `name` is display-only
 - `includes[].status` must be a key from `data/schemas/includes_status.yaml`
 - Records without `includes` must set `membership_applicability: not_applicable` when membership is intentionally absent
@@ -57,8 +58,9 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 ```bash
 python scripts/validate_countries.py
 python scripts/validate_intblocks.py
-python scripts/validate_countries.py --json   # structured output for agents
+python scripts/validate_countries.py --json   # structured output for agents; exit 0 = no errors, 1 = errors
 python scripts/validate_intblocks.py --json
+# --fail-on-warning: treat warnings as errors (exit 1). Warnings alone do not fail.
 pytest tests/
 ruff check internacia_builder/ scripts/ tests/
 python scripts/builder.py build --formats parquet,duckdb
@@ -93,4 +95,5 @@ Update `CHANGELOG.md` under `[Unreleased]` for consumer-visible changes.
 - [AGENTS.md](../../AGENTS.md) — root routing hub
 - [AGENTS.zh.md](../../AGENTS.zh.md) — 中文路由入口
 - [query.md](query.md) — querying exported data
+- [add-intblock-example.md](add-intblock-example.md) — worked add-a-record walkthrough
 - [zh/contribute.md](zh/contribute.md) — 中文编辑指南

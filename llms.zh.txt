@@ -14,10 +14,34 @@
 
 ## 推荐访问方式（编辑以外勿解析源 YAML）
 
-- DuckDB：data/datasets/internacia.duckdb（表 countries, intblocks, blocktypes, memberships, _meta）
-- Parquet：data/datasets/{countries,intblocks,blocktypes}.parquet
-- Python SDK：https://github.com/datenoio/internacia-python
-- REST API：https://github.com/datenoio/internacia-api
+- DuckDB: data/datasets/internacia.duckdb (tables: countries, intblocks, blocktypes, memberships, _meta)
+- Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+- Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
+  - Columns: intblock_id, country_code, include_type, status, joined, left
+- Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
+- Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
+- Lite Parquet: data/datasets/{countries,intblocks}-lite.parquet (identifier + classification columns)
+- Python SDK: https://github.com/datenoio/internacia-python
+- REST API: https://github.com/datenoio/internacia-api (仅自托管；无公开托管实例)
+
+不要读取 data/_legacy/ — 1.0 之前的过时快照，仅供历史参考。
+
+## Schema 与元数据
+
+- JSON Schema：data/schemas/countries.schema.json, data/schemas/intblocks.schema.json
+- 构建清单：data/datasets/*.manifest.json（version, schema_hash, row_count, data_license）
+- ID 重映射：data/datasets/intblocks_aliases.json、countries_aliases.json
+- 数据字典：docs/data-dictionary.md
+- 版本政策：docs/versioning-policy.md
+
+## Token 预算（约）
+
+| 产物 | ~Tokens | 用途 |
+|----------|--------:|-----|
+| llms.zh.txt（本文件） | ~1.5k | 先读这个 |
+| countries-lite.parquet | ~8–15k | 实体链接 |
+| intblocks-lite.parquet | ~40–80k | 组织发现 |
+| 完整 JSONL | 很大 | 不要塞进上下文；用 DuckDB |
 
 ## 关联键
 

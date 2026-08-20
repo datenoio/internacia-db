@@ -137,6 +137,44 @@ ORDER BY name;
 
 **预期：** 192+ 行。
 
+## 扁平 memberships 表（北约）
+
+不必 `UNNEST(includes)`：
+
+```sql
+SELECT country_code, status
+FROM memberships
+WHERE intblock_id = 'NATO' AND status = 'member'
+ORDER BY country_code;
+```
+
+**预期：** 32 行。
+
+## 俄罗斯的前成员身份
+
+```sql
+SELECT i.id, i.name, m.status, m.joined, m.left AS departed
+FROM intblocks i, UNNEST(i.includes) AS t(m)
+WHERE m.id = 'RU'
+  AND m.type = 'country'
+  AND m.status = 'former_member'
+ORDER BY i.id;
+```
+
+**预期：** 11 行。`left` 在 DuckDB / Parquet / `memberships` 中均已导出。
+
+## 按世界银行区域过滤（用 `region.id`）
+
+```sql
+SELECT code, name
+FROM countries
+WHERE region.id = 'ECS'
+  AND code_status = 'official_iso3166_1'
+ORDER BY name;
+```
+
+**预期：** 61 行。不要过滤 `region.value = 'Europe & Central Asia'`（会得到 0 行）。
+
 ## 相关文档
 
 - [docs/agents/zh/query.md](agents/zh/query.md) — 中文查询工作流

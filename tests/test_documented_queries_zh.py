@@ -73,6 +73,32 @@ def con():
             {"CN", "US", "FR"},
         ),
         (
+            """
+            SELECT country_code
+            FROM memberships
+            WHERE intblock_id = 'NATO' AND status = 'member'
+            """,
+            30,
+            {"DE", "FR", "US"},
+        ),
+        (
+            """
+            SELECT i.id
+            FROM intblocks i, UNNEST(i.includes) AS t(m)
+            WHERE m.id = 'RU' AND m.type = 'country' AND m.status = 'former_member'
+            """,
+            11,
+            {"ECHR", "RAMSAR"},
+        ),
+        (
+            """
+            SELECT code FROM countries
+            WHERE region.id = 'ECS' AND code_status = 'official_iso3166_1'
+            """,
+            61,
+            {"DE", "FR"},
+        ),
+        (
             "SELECT code FROM countries WHERE car_side = 'left'",
             74,
             {"JP", "GB", "AU"},
@@ -108,6 +134,9 @@ def con():
         "nato_members",
         "laos_org_memberships",
         "un_members",
+        "nato_memberships_table",
+        "ru_former_members",
+        "wb_region_ecs",
         "car_side_left",
         "writing_direction_rtl",
         "writing_system_cyrillic",

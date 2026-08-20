@@ -20,10 +20,10 @@ const sidebars: SidebarsConfig = {
       items: [
         'getting-started',
         'architecture',
-        'topic-taxonomy',
-        'strategy-and-user-needs',
-        'release-distribution',
+        'versioning-policy',
         'when-to-use-internacia',
+        'topic-taxonomy',
+        'release-distribution',
       ],
     },
     {
@@ -34,7 +34,6 @@ const sidebars: SidebarsConfig = {
         'llm-scenarios',
         'data-dictionary',
         'enrichment',
-        'improvement-plan',
         'country-code-policy',
         'entity-classification-policy',
         'intblock-inclusion-policy',
@@ -57,6 +56,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'agents/query',
         'agents/contribute',
+        'agents/add-intblock-example',
         'agents/openspec-quickstart',
       ],
     },
@@ -64,6 +64,11 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '中文入口',
       items: ['agents/zh/query', 'agents/zh/contribute'],
+    },
+    {
+      type: 'category',
+      label: 'Historical planning',
+      items: ['improvement-plan', 'strategy-and-user-needs'],
     },
   ],
 

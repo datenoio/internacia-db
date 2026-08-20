@@ -59,9 +59,31 @@ links should be described in text instead (see `partof` hierarchy validation).
 
 Specialized UN agencies prefer `partof: UN` (not ECOSOC alone).
 
+## Intblock `id` naming
+
+- **Uppercase ASCII** letters and digits only. Filename stem must match `id` exactly
+  (case-sensitive).
+- Prefer the **official acronym** the organization uses (`NATO`, `OECD`, `AUKUS`).
+- No hyphens or spaces: drop punctuation (`NORTHSEASUMMIT`, `FATFGREYLIST`).
+- If two bodies share an acronym, keep the well-known id and disambiguate the other
+  (`sports/ICC` vs criminal-court alias) via `intblocks_aliases.json` — do not silently
+  reuse an id.
+- Do not invent nonce abbreviations that the organization itself does not use.
+- Typos in existing ids are fixed through the alias mechanism (rename + alias), not
+  by leaving a misspelled primary key.
+
+## Directory vs `blocktype`
+
+- The **directory** under `data/intblocks/` is the **primary** `blocktype` and must
+  exist in `data/blocktypes/blocktypes.yaml`.
+- The YAML `blocktype` list may include additional keys (`military` + `political`).
+- Thin categories (few records) are allowed; **empty directories should be removed**.
+- Do not create a new category folder without adding the blocktype to the taxonomy in
+  the same PR.
+
 ## Related
 
 - [entity-classification-policy.md](entity-classification-policy.md)
 - [ai-consumers.md](ai-consumers.md)
-- [topic-taxonomy.md](topic-taxonomy.md)
+- [agents/add-intblock-example.md](agents/add-intblock-example.md) — worked add-a-record walkthrough
 - [enrichment.md](enrichment.md) — Wikidata completeness exclusions

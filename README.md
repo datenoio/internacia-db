@@ -38,6 +38,8 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/when-to-use-internacia.md](docs/when-to-use-internacia.md) — task-based routing guide for choosing Internacia
 - [docs/data-dictionary.md](docs/data-dictionary.md) — generated field reference
 - [docs/architecture.md](docs/architecture.md) — pipeline diagram
+- [docs/versioning-policy.md](docs/versioning-policy.md) — dataset SemVer and API posture
+- [docs/agents/add-intblock-example.md](docs/agents/add-intblock-example.md) — worked add-intblock walkthrough
 - [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md) — scope_category taxonomy
 - [docs/entity-classification-policy.md](docs/entity-classification-policy.md) — TW / PS / XK / EH edge cases
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
@@ -385,8 +387,12 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 | `scripts/diff_countries_baseline.py` | Manifest diff vs git baseline (countries, intblocks, blocktypes) |
 | `scripts/check_generated_artifacts.py` | Cross-format primary-key parity, source/export parity, build-identity guard |
 | `scripts/check_markdown_links.py` | Internal Markdown link checker |
+| `scripts/check_doc_counts.py` | Consumer-facing docs vs manifest `row_count` |
+| `scripts/generate_data_dictionary.py` | Regenerate `docs/data-dictionary.md` from JSON Schemas |
 
-One-off migration scripts live in `dev/scripts/` and are not part of the maintained pipeline.
+One-off migration scripts currently live under `scripts/` (for example
+`apply_manus_roadmap.py`) and are not part of the maintained pipeline. `dev/scripts/`
+is the intended archive (see `dev/scripts/README.md`). Research notes: `dev/research/`.
 
 ## Releases
 
@@ -418,10 +424,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the YAML authoring guide, validation 
 
 ## Related projects
 
-- [internacia-api](https://github.com/datenoio/internacia-api) — REST API
+- [internacia-api](https://github.com/datenoio/internacia-api) — REST API (**self-host only**; no public hosted instance)
 - [internacia-python](https://github.com/datenoio/internacia-python) — Python SDK
 
 ## Roadmap
 
 - [x] Python SDK — [internacia-python](https://github.com/datenoio/internacia-python)
-- [x] REST API — [internacia-api](https://github.com/datenoio/internacia-api)
+- [x] REST API — [internacia-api](https://github.com/datenoio/internacia-api) (self-host; not a hosted service)
