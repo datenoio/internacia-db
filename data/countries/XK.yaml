@@ -63,20 +63,6 @@ provenance:
   source: mledoze/countries
   url: https://github.com/mledoze/countries
   retrieved_at: '2026-06-15'
-- field: area
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-- field: timezones
-  source: IANA tzdata
-  retrieved_at: '2026-06-15'
-  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
-  license: Public domain
-- field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: region
   source: World Bank
   retrieved_at: '2026-06-15'
@@ -93,12 +79,6 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-08-02'
-  url: https://www.wikidata.org/wiki/Q1246
-  license: CC0
-  note: Preferred P1082 value with point-in-time qualifier
 - field: code
   source: manual
   retrieved_at: '2026-08-03'
@@ -109,6 +89,28 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+- field: area
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+- field: gini
+  source: World Bank
+  retrieved_at: '2026-09-01'
+  url: https://data.worldbank.org/indicator/SI.POV.GINI
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-09-01'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+  license: CC0
 centroid:
   lat: 42.6026
   lng: 20.903
@@ -119,3 +121,8 @@ landlocked: true
 writing_directions:
 - id: ltr
   primary: true
+gini:
+  value: 38.3
+  year: 2022
+  source: World Bank
+  source_id: SI.POV.GINI

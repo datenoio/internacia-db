@@ -46,24 +46,6 @@ provenance:
   source: mledoze/countries
   url: https://github.com/mledoze/countries
   retrieved_at: '2026-06-15'
-- field: population
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-- field: area
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-- field: timezones
-  source: IANA tzdata
-  retrieved_at: '2026-06-15'
-  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
-  license: Public domain
-- field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: adminregion
   source: World Bank regional complement
   retrieved_at: '2026-06-15'
@@ -80,6 +62,24 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: population
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+- field: area
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+- field: timezones
+  source: IANA tzdata
+  retrieved_at: '2026-09-01'
+  url: https://data.iana.org/time-zones/tzdb/zone1970.tab
+  license: Public domain
+- field: native_names
+  source: Wikidata
+  retrieved_at: '2026-09-01'
+  url: https://www.wikidata.org/
+  license: CC0
 centroid:
   lat: 12.1034
   lng: -68.9335
