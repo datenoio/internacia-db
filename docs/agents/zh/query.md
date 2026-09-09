@@ -116,4 +116,5 @@ SELECT c.code, c.name FROM countries c, UNNEST(c.legal_systems) t(l) WHERE l.id 
 
 - [AGENTS.zh.md](../../../AGENTS.zh.md) — 中文路由入口
 - [contribute.md](contribute.md) — 编辑 YAML
+- [discover.md](../discover.md) — 查找缺失记录 / 改进已有 YAML（英文）
 - `.agent/workflows/query-org-members.md` — 组织成员查询步骤（英文）

@@ -127,6 +127,8 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - docs/agents/zh/query.md — 中文查询工作流（Kimi、GLM、通义灵码）
 - docs/agents/contribute.md — YAML editing workflow (all platforms)
 - docs/agents/zh/contribute.md — 中文 YAML 编辑工作流
+- docs/discovery.md — how to search and improve country / intblock records
+- docs/agents/discover.md — discovery checklist (catalogue walks, roster repair)
 - docs/agents/openspec-quickstart.md — schema change proposals
 - docs/query-examples.md — verified DuckDB query cookbook (countries, borders, intblocks, joins)
 - docs/llm-scenarios.md — intent-based copy/paste scenarios for LLM code generation
@@ -143,5 +145,6 @@ SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10
 - README.md — installation, build, schema tables, code examples
 - docs/country-code-policy.md — non-standard codes, entity_type, filtering
 - docs/versioning-policy.md — dataset SemVer, alias retention, API posture
+- docs/intblock-sources.md — catalogues searched (UNTC, WTO RTA-IS, WTO PTA, UNCTAD IIA, Wikipedia .int) and roster authorities
 - ATTRIBUTION.md — upstream sources and citation
 - CONTRIBUTING.md — YAML authoring (for maintainers only)

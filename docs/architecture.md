@@ -92,3 +92,5 @@ Country provenance and intblock `last_verified` share a **12-month** advisory SL
 - [enrichment.md](enrichment.md)
 - [ai-consumers.md](ai-consumers.md)
 - [intblock-inclusion-policy.md](intblock-inclusion-policy.md)
+- [discovery.md](discovery.md)
+- [intblock-sources.md](intblock-sources.md)

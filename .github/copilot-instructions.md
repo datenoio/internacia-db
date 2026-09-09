@@ -19,7 +19,9 @@ Countries are **reference data only**. Do not add HDI, GDP, government type, int
 
 ## Editing data
 
-Follow [docs/agents/contribute.md](../docs/agents/contribute.md). Run validators before proposing changes:
+Follow [docs/agents/contribute.md](../docs/agents/contribute.md). To find missing
+intblocks or improve existing records, start at
+[docs/discovery.md](../docs/discovery.md). Run validators before proposing changes:
 
 ```bash
 python scripts/validate_countries.py --json

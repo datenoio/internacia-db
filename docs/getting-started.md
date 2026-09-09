@@ -83,7 +83,9 @@ Version: read `data/datasets/countries.manifest.json` or
 | Verified R / dplyr recipes | [query-examples-r.md](query-examples-r.md) |
 | Observable / Plot recipes | [query-examples-observable.md](query-examples-observable.md) |
 | Edit YAML | [CONTRIBUTING.md](../CONTRIBUTING.md), [agents/contribute.md](agents/contribute.md) |
+| Find missing intblocks / improve records | [discovery.md](discovery.md), [agents/discover.md](agents/discover.md) |
 | Field reference | [data-dictionary.md](data-dictionary.md) |
 | Versioning / API posture | [versioning-policy.md](versioning-policy.md) |
 | Country / entity policy | [country-code-policy.md](country-code-policy.md), [entity-classification-policy.md](entity-classification-policy.md) |
 | Intblock inclusion | [intblock-inclusion-policy.md](intblock-inclusion-policy.md) |
+| Intblock sources | [intblock-sources.md](intblock-sources.md) |

@@ -30,6 +30,7 @@ pre-commit install   # optional but recommended
 - The directory is the primary `blocktype` and must exist in `data/blocktypes/blocktypes.yaml`.
 - Required fields: `id`, `name`, `blocktype`, `status` (see `data/schemas/intblocks.schema.json`).
 - Set `scope_category` on formal records when known (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`) — see [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md).
+- Cite official membership sources in `provenance`. How to search catalogues and improve records: [docs/discovery.md](docs/discovery.md). Catalogues already searched (UNTC, WTO RTA-IS, WTO PTA Database, UNCTAD IIA Navigator, Wikipedia `.int` list) and roster authorities are in [docs/intblock-sources.md](docs/intblock-sources.md).
 - Every `blocktype` value must exist in `data/blocktypes/blocktypes.yaml`.
 - `includes[].id` is authoritative (ISO alpha-2 for countries); `name` is a display label.
 - Dissolved organizations: set `status: historical` and a `dissolved` date. Do not invent membership lists — leave `includes` empty for records that still need research.
@@ -41,7 +42,9 @@ pre-commit install   # optional but recommended
 - [docs/data-dictionary.md](docs/data-dictionary.md) (regenerate with `python scripts/generate_data_dictionary.py`)
 - [docs/architecture.md](docs/architecture.md)
 - [docs/versioning-policy.md](docs/versioning-policy.md)
+- [docs/discovery.md](docs/discovery.md)
 - [docs/agents/add-intblock-example.md](docs/agents/add-intblock-example.md)
+- [docs/intblock-sources.md](docs/intblock-sources.md)
 
 Monthly enrichment may open a review PR labeled `enrichment` — see [docs/enrichment.md](docs/enrichment.md).
 

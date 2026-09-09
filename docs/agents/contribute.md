@@ -48,6 +48,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 - `founding_members` entries must resolve to country codes and appear in `includes` (use `former_member` for founders that left)
 - Historical entity countries (e.g. `AN`, `SU`) must not carry active statuses in non-historical blocks — use `former_member`
 - Topic keys must exist in `data/schemas/topics.yaml`; genuinely new keys are added to that catalog in the same PR
+- Cite the official membership roster in `provenance` (see [discovery.md](../discovery.md) for how to search and improve records; [intblock-sources.md](../intblock-sources.md) for catalogues searched and roster authorities)
 - Lineage: when `predecessor`/`successor` resolves to a record whose inverse field is empty, add the back-reference; a record listed in a parent's `suborganizations` must declare that parent in `partof`
 - Shared English acronyms across same-blocktype records flag `DUPLICATE_ACRONYM`; real-world collisions go in `references.acronym_duplicate_allowlist`
 - Quote YAML boolean lookalikes: `'NO'` (Norway), `'no'` (Norwegian)
@@ -95,5 +96,8 @@ Update `CHANGELOG.md` under `[Unreleased]` for consumer-visible changes.
 - [AGENTS.md](../../AGENTS.md) — root routing hub
 - [AGENTS.zh.md](../../AGENTS.zh.md) — 中文路由入口
 - [query.md](query.md) — querying exported data
+- [discover.md](discover.md) — find missing intblocks / improve existing records
 - [add-intblock-example.md](add-intblock-example.md) — worked add-a-record walkthrough
+- [discovery.md](../discovery.md) — hunt patterns and improvement loops
+- [intblock-sources.md](../intblock-sources.md) — catalogues searched and roster authorities
 - [zh/contribute.md](zh/contribute.md) — 中文编辑指南

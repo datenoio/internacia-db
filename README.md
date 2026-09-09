@@ -3,7 +3,7 @@
 [![Validate datasets](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml/badge.svg)](https://github.com/datenoio/internacia-db/actions/workflows/validate.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21452328.svg)](https://doi.org/10.5281/zenodo.21452328)
 
-Comprehensive reference datasets of countries, intergovernmental organizations, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. Internacia is part of the **[Dateno](https://dateno.io)** open-source project and a data source for the Dateno search engine.
+Comprehensive reference datasets of countries, intergovernmental organizations, treaties, trade agreements, and country groups. Source YAML files in `data/countries/`, `data/intblocks/`, and `data/blocktypes/` are validated, enriched, and exported to multiple formats in `data/datasets/`. Internacia is part of the **[Dateno](https://dateno.io)** open-source project and a data source for the Dateno search engine.
 
 ## Distribution
 
@@ -32,6 +32,8 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/agents/query.md](docs/agents/query.md) — query and join workflow
 - [docs/agents/zh/query.md](docs/agents/zh/query.md) — 中文查询工作流
 - [docs/agents/contribute.md](docs/agents/contribute.md) — YAML editing workflow
+- [docs/discovery.md](docs/discovery.md) — how to search catalogues and improve country / intblock records
+- [docs/agents/discover.md](docs/agents/discover.md) — discovery checklist (catalogue walks, roster repair)
 - [docs/query-examples.zh.md](docs/query-examples.zh.md) — 已验证中文 DuckDB 示例
 - [docs/ai-consumers.md](docs/ai-consumers.md) — consumption contract, scope boundaries
 - [docs/getting-started.md](docs/getting-started.md) — spreadsheet / DuckDB quick start
@@ -40,7 +42,8 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [docs/architecture.md](docs/architecture.md) — pipeline diagram
 - [docs/versioning-policy.md](docs/versioning-policy.md) — dataset SemVer and API posture
 - [docs/agents/add-intblock-example.md](docs/agents/add-intblock-example.md) — worked add-intblock walkthrough
-- [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md) — scope_category taxonomy
+- [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md) — scope_category taxonomy; RTA / PTA / IIA inclusion bars
+- [docs/intblock-sources.md](docs/intblock-sources.md) — catalogues searched and roster authorities
 - [docs/entity-classification-policy.md](docs/entity-classification-policy.md) — TW / PS / XK / EH edge cases
 - [docs/country-code-policy.md](docs/country-code-policy.md) — ISO vs user-assigned codes
 - [docs/query-examples.md](docs/query-examples.md) — verified DuckDB and Pandas query cookbook (UN membership, borders, org density, former members, hierarchy)
@@ -51,7 +54,8 @@ Comprehensive reference datasets of countries, intergovernmental organizations, 
 - [CLAUDE.md](CLAUDE.md) / [.github/copilot-instructions.md](.github/copilot-instructions.md) — Claude / Copilot shims
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code
 - [.lingma/rules/](.lingma/rules/) — 通义灵码 Project Rules
-- [.cursor/skills/](.cursor/skills/) — thin Cursor wrappers pointing to `docs/agents/`
+- [.cursor/skills/](.cursor/skills/) — thin Cursor wrappers (`internacia-query`, `internacia-discover`, `internacia-contribute`) pointing to `docs/agents/`
+- [.agent/workflows/](.agent/workflows/) — portable step-by-step workflows (`query-org-members.md`, `edit-intblock.md`, `discover-intblock.md`, OpenSpec)
 
 ## Installation
 
@@ -364,13 +368,15 @@ Valid `includes[].status` values are cataloged in `data/schemas/includes_status.
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
-- `data/intblocks/<category>/*.yaml` — international block records across domain categories (`intorg`, `aviation`, `agriculture`, `health`, `climate`, etc.)
+- `data/intblocks/<category>/*.yaml` — international block records across domain categories (`intorg`, `fta`, `human_rights`, `legal`, `environment`, `geographic`, `aviation`, `health`, `climate`, etc.)
 
 **External enrichment**
 
 - [World Bank](https://data.worldbank.org/) — population, area, gini, income classifications
 - [Wikidata](https://www.wikidata.org/) — entity linking, native names, fallbacks
 - [IANA tzdata](https://data.iana.org/time-zones/) — timezone mapping (`scripts/data/zone1970.tab`)
+
+Intblock catalogues searched (UN Treaty Collection, WTO RTA-IS / PTA, UNCTAD IIA Navigator, Wikipedia `.int`) and the roster authorities used to compile membership are listed in [docs/intblock-sources.md](docs/intblock-sources.md) and [ATTRIBUTION.md](ATTRIBUTION.md). How to search and improve records: [docs/discovery.md](docs/discovery.md).
 
 ## Scripts
 

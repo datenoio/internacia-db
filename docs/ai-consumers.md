@@ -165,6 +165,9 @@ Optional inclusion taxonomy (`igo`, `treaty_body`, `policy_forum`, `reference_en
 `reference_enumeration` covers named geographic/set groupings (e.g. SIDS), **not** country
 attribute partitions (those live on countries — see below).
 See [intblock-inclusion-policy.md](intblock-inclusion-policy.md).
+How to search catalogues and improve records: [discovery.md](discovery.md).
+Catalogues searched and roster authorities used to compile membership:
+[intblock-sources.md](intblock-sources.md).
 
 ```sql
 SELECT id, name FROM intblocks WHERE scope_category = 'igo' ORDER BY id;
@@ -416,6 +419,8 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 - [README.md](../README.md) — full schema tables and build pipeline
 - [country-code-policy.md](country-code-policy.md) — non-standard codes and filtering
 - [enrichment.md](enrichment.md) — how profile fields are sourced (maintainers)
+- [intblock-sources.md](intblock-sources.md) — intblock catalogues and roster authorities
+- [discovery.md](discovery.md) — how to search and improve country / intblock records
 - [versioning-policy.md](versioning-policy.md) — dataset SemVer, aliases, API posture
 - [CHANGELOG.md](../CHANGELOG.md) — breaking changes and migration notes
 - [data/schemas/countries.schema.json](../data/schemas/countries.schema.json) — field descriptions for countries

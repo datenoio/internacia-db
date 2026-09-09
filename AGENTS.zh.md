@@ -12,6 +12,8 @@ English: [AGENTS.md](AGENTS.md)
 | **查询、关联、下游 enrichment** | [llms.zh.txt](llms.zh.txt) → [docs/ai-consumers.md](docs/ai-consumers.md) | 解析 `data/countries/`、`data/intblocks/` 下的源 YAML |
 | **查国家、边界、组织成员** | [docs/agents/zh/query.md](docs/agents/zh/query.md) | 用 `includes[].name` 做关联（应用 `includes[].id`） |
 | **编辑国家或 intblock YAML** | [docs/agents/zh/contribute.md](docs/agents/zh/contribute.md) | 手改 `data/datasets/`（仅构建生成） |
+| **查找缺失 intblock / 改进已有记录** | [docs/discovery.md](docs/discovery.md) → [docs/agents/discover.md](docs/agents/discover.md) | 整库导入外部目录 |
+| **已检索过哪些目录** | [docs/intblock-sources.md](docs/intblock-sources.md) | 把目录索引卡当作成员名录来源 |
 | **改 schema、新能力、破坏性导出** | [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md) | 未批准前先实现 |
 
 ## 推荐数据访问方式

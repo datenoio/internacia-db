@@ -84,6 +84,16 @@ const sections: DocSection[] = [
         description: 'What belongs in intblocks and scope_category values.',
       },
       {
+        to: '/docs/discovery',
+        label: 'Discovery',
+        description: 'How to search catalogues and improve country and intblock records.',
+      },
+      {
+        to: '/docs/intblock-sources',
+        label: 'Intblock sources',
+        description: 'Catalogues searched and authorities used to compile membership.',
+      },
+      {
         to: '/docs/enrichment',
         label: 'Enrichment',
         description: 'World Bank, Wikidata, and timezone refresh workflow.',
@@ -132,6 +142,11 @@ const sections: DocSection[] = [
         to: '/docs/agents/query',
         label: 'Query workflow',
         description: 'Look up countries, borders, and org membership.',
+      },
+      {
+        to: '/docs/agents/discover',
+        label: 'Discover workflow',
+        description: 'Find missing intblocks or improve existing YAML.',
       },
       {
         to: '/docs/agents/contribute',

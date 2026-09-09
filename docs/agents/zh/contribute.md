@@ -71,4 +71,8 @@ python scripts/builder.py build --formats parquet,duckdb
 - [AGENTS.zh.md](../../../AGENTS.zh.md)
 - [query.md](query.md)
 - [add-intblock-example.md](../add-intblock-example.md) — 新增 intblock 示例（英文）
+- [discover.md](../discover.md) — 查找缺失记录 / 改进已有 YAML（英文）
+- [discovery.md](../../discovery.md) — 检索与改进方法（英文）
+- [intblock-inclusion-policy.md](../../intblock-inclusion-policy.md) — 收录规则（英文）
+- [intblock-sources.md](../../intblock-sources.md) — 已检索的目录与成员名录来源（英文）
 - `.agent/workflows/edit-intblock.md`

@@ -37,6 +37,8 @@ const sidebars: SidebarsConfig = {
         'country-code-policy',
         'entity-classification-policy',
         'intblock-inclusion-policy',
+        'discovery',
+        'intblock-sources',
       ],
     },
     {
@@ -55,6 +57,7 @@ const sidebars: SidebarsConfig = {
       label: 'Agent workflows',
       items: [
         'agents/query',
+        'agents/discover',
         'agents/contribute',
         'agents/add-intblock-example',
         'agents/openspec-quickstart',

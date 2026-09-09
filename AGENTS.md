@@ -13,6 +13,8 @@ Licensed CC-BY-4.0 (data and documentation); code is MIT.
 | **Query, join, or enrich** downstream data | [llms.txt](llms.txt) → [docs/ai-consumers.md](docs/ai-consumers.md) | Parse source YAML under `data/countries/` or `data/intblocks/` |
 | **Look up countries, borders, org membership** | [docs/agents/query.md](docs/agents/query.md) | Join intblocks on `includes[].name` (use `includes[].id`) |
 | **Edit country or intblock YAML** | [docs/agents/contribute.md](docs/agents/contribute.md) | Hand-edit `data/datasets/` (generated only) |
+| **Find missing intblocks / improve existing records** | [docs/discovery.md](docs/discovery.md) → [docs/agents/discover.md](docs/agents/discover.md) | Import a catalogue wholesale |
+| **Which catalogues were searched** | [docs/intblock-sources.md](docs/intblock-sources.md) | Treat a catalogue index card as the membership source of truth |
 | **Schema change, new capability, breaking export** | [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md) → [openspec/AGENTS.md](openspec/AGENTS.md) | Implement before approval |
 
 ## Preferred data access

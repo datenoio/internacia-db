@@ -1211,5 +1211,7 @@ ORDER BY id;
 - [ai-consumers.md](ai-consumers.md) — consumption contract and common mistakes
 - [country-code-policy.md](country-code-policy.md) — entity status and code filtering
 - [intblock-inclusion-policy.md](intblock-inclusion-policy.md) — scope_category taxonomy
+- [discovery.md](discovery.md) — how to search catalogues and improve records
+- [intblock-sources.md](intblock-sources.md) — catalogues searched and roster authorities
 - [versioning-policy.md](versioning-policy.md) — dataset SemVer, aliases, API posture
 - [llms.txt](../llms.txt) — compact index for LLM context windows

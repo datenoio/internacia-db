@@ -17,6 +17,27 @@ sources that carry their own licenses and attribution requirements, listed below
 Per-field provenance (source, retrieval date, and source license) is recorded in
 the `provenance` list on individual country records where applicable.
 
+## Intblock catalogues and membership
+
+Intblock records are a curated compilation, not a dump of any one external
+database. How to search catalogues and improve records:
+[docs/discovery.md](docs/discovery.md). Catalogues searched for missing
+organizations and treaties, and the authorities used to compile membership, are
+listed in [docs/intblock-sources.md](docs/intblock-sources.md):
+
+| Source | Use |
+|--------|-----|
+| **UN Treaty Collection** | Multilateral treaty candidates and states-parties rosters |
+| **WTO RTA Information System** | Named regional trade agreements (not the full RTA catalogue) |
+| **WTO Preferential Trade Arrangements Database** | Named non-reciprocal PTAs (not national GSP ID cards) |
+| **UNCTAD IIA Navigator** | Named plurilateral investment treaties (not bilateral BITs) |
+| **Wikipedia `.int` organizations** | Standing IGOs with a `.int` site |
+| **Official IGO / treaty sites** | Membership rosters (USTR, European Commission, UNECE, OHCHR, UNCITRAL, WIPO Lex, OAS SICE, and each org’s own pages) |
+| **Wikidata** | Entity linking (`wikidata_id`); not the membership source of truth |
+
+Those upstream sites remain under their own terms. Internacia’s compilation of
+identifiers and membership is CC BY 4.0 as stated in [`DATA_LICENSE`](DATA_LICENSE).
+
 ### ODbL compatibility note (mledoze/countries)
 
 The `centroid` field on 252 country records is extracted from

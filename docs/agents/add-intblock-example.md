@@ -13,7 +13,10 @@ leave `includes` empty only when you also set
 
 Read [intblock-inclusion-policy.md](../intblock-inclusion-policy.md). Standing
 IGOs, treaties with parties, durable forums, and named geographic sets are in
-scope. Ad-hoc news coalitions and socioeconomic rankings are not.
+scope. Ad-hoc news coalitions and socioeconomic rankings are not. Discovery
+catalogues and roster authorities are listed in
+[intblock-sources.md](../intblock-sources.md) — do not invent membership.
+How to search and improve records: [discovery.md](../discovery.md).
 
 Pick:
 
@@ -73,5 +76,8 @@ open an OpenSpec proposal first ([openspec-quickstart.md](openspec-quickstart.md
 ## Related
 
 - [contribute.md](contribute.md) — full checklist
+- [discover.md](discover.md) — find missing records / improve existing YAML
 - `.agent/workflows/edit-intblock.md` — edit an existing record
 - [intblock-inclusion-policy.md](../intblock-inclusion-policy.md) — id and category rules
+- [discovery.md](../discovery.md) — hunt patterns and improvement loops
+- [intblock-sources.md](../intblock-sources.md) — catalogues searched and roster authorities

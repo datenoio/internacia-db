@@ -79,6 +79,9 @@ SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN coun
 - AGENTS.zh.md — 中文路由入口
 - docs/agents/zh/query.md — 查询工作流
 - docs/agents/zh/contribute.md — YAML 编辑工作流
+- docs/discovery.md — 如何检索并改进国家 / intblock 记录（英文）
+- docs/agents/discover.md — 发现与改进清单（英文）
 - docs/query-examples.zh.md — 已验证中文场景查询
+- docs/intblock-sources.md — 已检索的组织/条约目录与成员名录来源（英文）
 - docs/ai-consumers.md — 消费契约（英文）
 - AGENTS.md — 英文路由入口

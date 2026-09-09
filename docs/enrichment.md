@@ -15,6 +15,11 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 
 **Intblock `last_verified` SLA:** 12 months (`quality.last_verified_max_age_months` in `data/schemas/intblocks_completeness.yaml`). Validation warns (`STALE_LAST_VERIFIED`) when `last_verified` is older. Stamp `last_verified` whenever you check a roster against an official source. Missing `last_verified` is a completeness warning, not an error.
 
+Catalogues already searched for missing intblocks, and the roster authorities used
+to compile membership, are listed in [intblock-sources.md](intblock-sources.md).
+How to search those catalogues and improve existing country / intblock records:
+[discovery.md](discovery.md).
+
 **Provenance depth threshold:** at least four field-level entries per record (`provenance.min_count` in `data/schemas/countries_completeness.yaml` and `data/schemas/intblocks_completeness.yaml`). Validation warns via `INSUFFICIENT_PROVENANCE` when below the minimum.
 
 ## Maintainer workflow

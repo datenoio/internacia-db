@@ -5,6 +5,8 @@ description: Edit an intblock YAML record safely with validation.
 **Goal:** Modify a record under `data/intblocks/<category>/*.yaml` without breaking validation or exports.
 
 **Read first:** [docs/agents/contribute.md](../../docs/agents/contribute.md) (intblocks checklist).
+For catalogue hunts or completeness repairs, start at
+[docs/agents/discover.md](../../docs/agents/discover.md).
 
 **Guardrails**
 - Filename stem must match record `id` exactly (case-sensitive).

@@ -170,3 +170,4 @@ For these records, enrichment MAY source regional classifications from **UN M49*
 
 - `scripts/annotate_entity_status.py` — apply or refresh entity annotations
 - `scripts/validate_countries.py` — schema and policy validation at build time
+- [discovery.md](discovery.md) — when a new country code is allowed vs when to enrich an existing record

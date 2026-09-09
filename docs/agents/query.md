@@ -137,4 +137,5 @@ Unnest list-of-struct columns: `UNNEST(i.includes) AS t(m)` then reference `m.id
 - [AGENTS.md](../../AGENTS.md) — root routing hub
 - [AGENTS.zh.md](../../AGENTS.zh.md) — 中文路由入口
 - [contribute.md](contribute.md) — editing YAML (maintainers)
+- [discover.md](discover.md) — find missing intblocks / improve existing records
 - [zh/query.md](zh/query.md) — 中文查询指南

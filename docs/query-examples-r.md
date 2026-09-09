@@ -850,5 +850,7 @@ read_parquet("data/datasets/countries-lite.parquet") |>
 - [query-examples-observable.md](query-examples-observable.md) — Observable / Plot recipes
 - [country-code-policy.md](country-code-policy.md) — entity status and code filtering
 - [intblock-inclusion-policy.md](intblock-inclusion-policy.md) — scope_category taxonomy
+- [discovery.md](discovery.md) — how to search catalogues and improve records
+- [intblock-sources.md](intblock-sources.md) — catalogues searched and roster authorities
 - [getting-started.md](getting-started.md) — non-programmer path
 - [llms.txt](../llms.txt) — compact index for LLM context windows

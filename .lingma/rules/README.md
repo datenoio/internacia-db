@@ -15,3 +15,4 @@
 - [AGENTS.zh.md](../../AGENTS.zh.md)
 - [docs/agents/zh/query.md](../../docs/agents/zh/query.md)
 - [docs/agents/zh/contribute.md](../../docs/agents/zh/contribute.md)
+- [docs/discovery.md](../../docs/discovery.md) — 检索与改进（英文）
