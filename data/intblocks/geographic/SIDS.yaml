@@ -8,6 +8,8 @@ scope_category: reference_enumeration
 languages:
 - en
 links:
+- url: https://www.un.org/ohrlls/content/list-sids
+  type: website
 - url: https://www.un.org/ohrlls/sids
   type: website
 - url: https://en.wikipedia.org/wiki/Small_Island_Developing_States
@@ -21,30 +23,178 @@ headquarters:
 geographic_scope: global
 regions:
 - Global
+- Caribbean
+- Pacific
+- Africa
+includes:
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CK
+  name: Cook Islands
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cape Verde
+  type: country
+  status: member
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+- id: NU
+  name: Niue
+  type: country
+  status: member
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+- id: PW
+  name: Palau
+  type: country
+  status: member
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
 membership_count: 39
 wikidata_id: Q1434887
 legal_status: un_grouping
 acronyms:
 - lang: en
   value: SIDS
-- lang: en
-  value: WMO
-- lang: zh
-  value: 世界氣象組織
-- lang: zh
-  value: 国际气象组织
-- lang: zh
-  value: WMO
-- lang: fr
-  value: OMM
-- lang: es
-  value: OMM
-- lang: de
-  value: WMO
-- lang: pt
-  value: WMO
+founded: '1992'
 description: UN-recognized group of small island developing states facing distinctive
-  sustainable development challenges.
+  sustainable development challenges. First recognized as a distinct grouping at the
+  1992 United Nations Conference on Environment and Development; the Barbados Programme
+  of Action followed in 1994. UN-OHRLLS lists 39 sovereign SIDS (including Cook Islands
+  and Niue) plus associate members of UN regional commissions that are not recorded here.
 tags:
 - SIDS
 - climate
@@ -57,52 +207,65 @@ topics:
   name: Climate Change
 other_names:
 - id: ar
-  name: المنظمة العالمية للأرصاد الجوية
+  name: الدول الجزرية الصغيرة النامية
 - id: de
-  name: Weltorganisation für Meteorologie
+  name: kleine Inselentwicklungsländer
 - id: en
-  name: World Meteorological Organization
+  name: Small Island Developing States
 - id: es
-  name: Organización Meteorológica Mundial
+  name: Pequeños Estados Insulares en Desarrollo
 - id: fr
-  name: Organisation météorologique mondiale
+  name: Petits États insulaires en développement
 - id: pt
-  name: Organização Meteorológica Mundial
+  name: Pequenos Estados Insulares em Desenvolvimento
 - id: ru
-  name: Всемирная метеорологическая организация
+  name: Малые островные развивающиеся государства
 - id: zh
-  name: 世界气象组织
+  name: 小岛屿发展中国家
+notes: Cook Islands and Niue are self-governing states in free association with New
+  Zealand and are counted among the 39 sovereign SIDS even though they are not UN members.
+  Eighteen associate members of UN regional commissions (dependent territories) appear
+  on the UN-OHRLLS list but are omitted from includes so membership_count matches the
+  39-sovereign figure.
+last_verified: '2026-09-09'
 provenance:
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-07-16'
-  url: https://www.wikidata.org/
-  license: CC0
+- field: includes
+  source: UN-OHRLLS / Wikipedia
+  retrieved_at: '2026-09-09'
+  url: https://www.un.org/ohrlls/content/list-sids
+- field: membership_count
+  source: UN-OHRLLS
+  retrieved_at: '2026-09-09'
+  url: https://www.un.org/ohrlls/content/list-sids
+- field: founded
+  source: Wikipedia
+  retrieved_at: '2026-09-09'
+  url: https://en.wikipedia.org/wiki/Small_Island_Developing_States
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/wiki/Q1434887
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/wiki/Q1434887
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/wiki/Q1434887
   license: CC0
 - field: legal_status
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-09-09'
   url: https://www.un.org/ohrlls/sids
 - field: geographic_scope
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-09-09'
   url: https://www.un.org/ohrlls/sids
 - field: headquarters
   source: official sources
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-09-09'
   url: https://www.un.org/ohrlls/sids
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q1434887
-  license: CC0
-founded: '1950-03-23'

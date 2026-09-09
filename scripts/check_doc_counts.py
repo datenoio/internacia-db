@@ -32,7 +32,7 @@ REQUIRE: dict[str, tuple[str, ...]] = {
 }
 
 # Headline intblock totals from retired releases — must not reappear as current.
-STALE_INTBLOCKS = (1078, 1076, 1071, 1070, 1065, 1021)
+STALE_INTBLOCKS = (1078, 1076, 1071, 1070, 1065, 1037, 1021)
 
 
 def load_counts() -> dict[str, int]:

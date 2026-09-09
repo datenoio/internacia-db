@@ -8,8 +8,70 @@ links:
 - url: https://www.wikidata.org/wiki/Q7935468
   type: wikidata
 name: Visa free countries for Iranian citizens
+includes:
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+- id: TR
+  name: Turkey
+  type: country
+  status: member
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+membership_count: 15
 wikidata_id: Q7935468
-description: Visa free countries for Iranian citizens is an international travel organization.
+description: Destinations that do not require a visa in advance for Iranian citizens, compiled from the Wikipedia visa-requirements table (visa not required or freedom of movement).
 tags:
 - VISAFIR
 - iranian
@@ -32,5 +94,32 @@ other_names:
   name: visa requirements for Iranian citizens
 provenance:
 - field: description
-  source: inferred grouping
-  retrieved_at: '2026-06-15'
+  source: Wikipedia
+  retrieved_at: '2026-09-09'
+  url: https://en.wikipedia.org/wiki/Visa_requirements_for_Iranian_citizens
+  license: CC BY-SA 4.0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/wiki/Q7935468
+  license: CC0
+- field: name
+  source: Wikidata
+  retrieved_at: '2026-09-09'
+  url: https://www.wikidata.org/wiki/Q7935468
+  license: CC0
+- field: includes
+  source: Wikipedia
+  retrieved_at: '2026-09-09'
+  url: https://en.wikipedia.org/wiki/Visa_requirements_for_Iranian_citizens
+  license: CC BY-SA 4.0
+- field: membership_count
+  source: Wikipedia
+  retrieved_at: '2026-09-09'
+  url: https://en.wikipedia.org/wiki/Visa_requirements_for_Iranian_citizens
+  license: CC BY-SA 4.0

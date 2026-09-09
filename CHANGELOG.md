@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Intblock catalogue expansion: source YAML **1037 → 1272** (+235 named treaties, FTAs, PTAs, IIAs, standing IGOs, and geographic groups). Committed `data/datasets/` exports remain at 2.0.0 until the next tagged rebuild.
+## [2.1.0] - 2026-09-09
+
+Intblock catalogue expansion: **256** countries, **1272** intblocks (**1037 → 1272**), **78** blocktypes. Adds 235 named treaties, FTAs, PTAs, IIAs, standing IGOs, and geographic groups.
 
 ### Changed
 

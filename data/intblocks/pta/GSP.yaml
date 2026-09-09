@@ -2,6 +2,7 @@ id: GSP
 blocktype:
 - pta
 status: formal
+scope_category: treaty_body
 founded: '1971'
 active_period:
   start: '1979'
@@ -70,6 +71,11 @@ includes:
   type: country
   status: participant
   joined: '2016'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: participant
+  joined: '2016-10-10'
 - id: NZ
   name: New Zealand
   type: country
@@ -105,9 +111,9 @@ includes:
   type: country
   status: participant
   joined: '1974'
-membership_count: 15
+membership_count: 16
 wikidata_id: Q1187364
-description: The Generalized System of Preferences (GSP) is a WTO-authorized framework under which developed economies grant unilateral, non-reciprocal preferential tariff treatment to imports from designated developing and least developed countries. Conceived within UNCTAD in the 1960s and codified through the 1971 GATT waivers and the permanent 1979 Enabling Clause, GSP allows preference-granting countries to reduce import duties below most-favoured-nation rates for eligible products without requiring reciprocal concessions from beneficiaries. Each preference-granting economy operates its own national scheme with distinct product coverage, rules of origin, graduation thresholds, and beneficiary lists. Fifteen economies currently maintain GSP or GSP-equivalent schemes, including the European Union, Japan, Canada, Australia, Norway, Switzerland, New Zealand, Iceland, Turkey, the United Kingdom, the United States, and the Eurasian Economic Union members Armenia, Belarus, Kazakhstan, and the Russian Federation.
+description: The Generalized System of Preferences (GSP) is a WTO-authorized framework under which developed economies grant unilateral, non-reciprocal preferential tariff treatment to imports from designated developing and least developed countries. Conceived within UNCTAD in the 1960s and codified through the 1971 GATT waivers and the permanent 1979 Enabling Clause, GSP allows preference-granting countries to reduce import duties below most-favoured-nation rates for eligible products without requiring reciprocal concessions from beneficiaries. Each preference-granting economy operates its own national scheme with distinct product coverage, rules of origin, graduation thresholds, and beneficiary lists. Sixteen economies currently maintain GSP or GSP-equivalent schemes, including the European Union, Japan, Canada, Australia, Norway, Switzerland, New Zealand, Iceland, Turkey, the United Kingdom, the United States, and the Eurasian Economic Union members Armenia, Belarus, Kazakhstan, Kyrgyzstan, and the Russian Federation.
 tags:
 - GSP
 - commerce
@@ -160,13 +166,13 @@ other_names:
   name: Загальна система преференцій
 - id: zh
   name: 普及特惠稅制度
-notes: Includes lists preference-granting economies operating national GSP schemes, not beneficiary developing countries. Armenia, Belarus, Kazakhstan, and the Russian Federation grant preferences through the Eurasian Economic Union Common System of Tariff Preferences (in force 2016). The United Kingdom replaced EU GSP coverage with the Developing Countries Trading Scheme (DCTS), which entered into force on 19 June 2023. The United States GSP authorization expired on 31 December 2020 and remained lapsed as of mid-2026, though the statutory framework persists and past lapses have been followed by retroactive renewals. Product coverage, graduation rules, and beneficiary eligibility differ across national schemes.
-last_verified: '2026-07-29'
+notes: Includes lists preference-granting economies operating national GSP schemes, not beneficiary developing countries. Armenia, Belarus, Kazakhstan, Kyrgyzstan, and the Russian Federation grant preferences through the Eurasian Economic Union Common System of Tariff Preferences; the WTO PTA Database also lists the Kyrgyz Republic as a GSP grantor from 10 October 2016. The United Kingdom replaced EU GSP coverage with the Developing Countries Trading Scheme (DCTS), which entered into force on 19 June 2023 and is the PTA-Database row typed as UK GSP. The United States GSP authorization expired on 31 December 2020 and remained lapsed as of mid-2026, though the statutory framework persists and past lapses have been followed by retroactive renewals. Named EU GSP arrangements with distinct beneficiary rosters are `GSPPLUS` (GSP+) and Everything But Arms (join LDCs via `LDC`). Product coverage, graduation rules, and beneficiary eligibility differ across national schemes.
+last_verified: '2026-09-09'
 provenance:
 - field: includes
-  source: UNCTAD; USTR
-  retrieved_at: '2026-07-29'
-  url: https://unctad.org/topic/trade-agreements/generalized-system-of-preferences
+  source: UNCTAD; WTO Preferential Trade Arrangements Database
+  retrieved_at: '2026-09-09'
+  url: https://ptadb.wto.org/ptaList.aspx
 - field: founded
   source: WTO Enabling Clause; Wikipedia
   retrieved_at: '2026-07-29'
@@ -194,9 +200,9 @@ provenance:
   source: inferred grouping
   retrieved_at: '2026-07-29'
 - field: notes
-  source: UNCTAD Trade Preferences Outlook 2025; USTR
-  retrieved_at: '2026-07-29'
-  url: https://unctad.org/publication/trade-preferences-outlook-2025
+  source: UNCTAD Trade Preferences Outlook 2025; WTO PTA Database
+  retrieved_at: '2026-09-09'
+  url: https://ptadb.wto.org/ptaList.aspx
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

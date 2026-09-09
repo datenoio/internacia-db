@@ -14,7 +14,7 @@ size_categories:
 # Internacia Datasets
 
 Reference data for **countries** (256) and **international organizations / groups**
-(“intblocks”, 1037), plus **78** blocktypes. Licensed **CC-BY-4.0**.
+(“intblocks”, 1272), plus **78** blocktypes. Licensed **CC-BY-4.0**.
 
 Source repository: [datenoio/internacia-db](https://github.com/datenoio/internacia-db)
 

@@ -129,7 +129,7 @@ Each build writes to `data/datasets/`:
 | `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1037** intblocks, **78** blocktypes.
+Current row counts: **256** countries, **1272** intblocks, **78** blocktypes.
 
 Format policy: JSONL is shipped both plain and zstd-compressed; YAML exports are
 zstd-only (the plain `blocktypes.yaml` is a regenerated copy of the small source
