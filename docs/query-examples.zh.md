@@ -161,7 +161,7 @@ WHERE m.id = 'RU'
 ORDER BY i.id;
 ```
 
-**预期：** 11 行。`left` 在 DuckDB / Parquet / `memberships` 中均已导出。
+**预期：** 12 行。`left` 在 DuckDB / Parquet / `memberships` 中均已导出。
 
 ## 按世界银行区域过滤（用 `region.id`）
 

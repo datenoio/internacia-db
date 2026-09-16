@@ -473,8 +473,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 28 rows — 18 missing the US only (e.g. `CBD`, `UNCLOS`), 2 missing China
-only (`EGMONTGROUP`, `IAU_UNIV`), 8 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`).
+**Expected:** 56 rows — 33 missing the US only (e.g. `CBD`, `UNCLOS`), 9 missing China
+only (`EGMONTGROUP`, `IAU_UNIV`), 14 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`).
 
 Filter to a single exclusion pattern:
 
@@ -498,7 +498,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
   AND NOT b.has_usa;
 ```
 
-**Expected:** 2, 18, and 8 rows respectively.
+**Expected:** 9, 33, and 14 rows respectively.
 
 **Gotcha:** Use `countries.un_member` as the denominator, not the `UN` intblock roster
 (193 entries). Some high-coverage records are informal groupings (`LMY`, `PERIPHCOUNT`) —
@@ -527,8 +527,8 @@ WHERE m.id = 'RU'
 ORDER BY m.joined NULLS LAST, i.name;
 ```
 
-**Expected:** 11 rows (`BEACST`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `EUA`, `GRECO`, `ICES`,
-`JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 12 rows (`BEACST`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `EUA`, `GRECO`, `ICES`,
+`ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
 JSONL still carries the same field if you are streaming.
@@ -768,7 +768,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 13 rows — `HU`, `IN`, `MD`, `TH`, `UA` each with 6 observer entries.
+**Expected:** 19 rows — `MD` with 7 observer entries; `HU`, `IN`, `MY`, `TH`, `UA`, `US`
+with 6 each.
 
 ## Geography and membership
 
@@ -789,7 +790,8 @@ WHERE c.landlocked
 ORDER BY c.name;
 ```
 
-**Expected:** 5 rows — `AD`, `BT`, `SM`, `TM`, `UZ`.
+**Expected:** 2 rows — `AD` Andorra, `BT` Bhutan. (`SM`, `TM`, `UZ` joined trade-bloc
+rosters in the v2.1.0 catalogue expansion and no longer qualify.)
 
 ### Landlocked enclaves (single land neighbor)
 
@@ -860,7 +862,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 24 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
+**Expected:** 25 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
 → `USMCA`.
 
 ### Dissolved organizations that still carry rosters
@@ -961,7 +963,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 205 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 174 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -987,7 +989,7 @@ ORDER BY i.id, m.id
 LIMIT 20;
 ```
 
-**Expected:** 1772 mismatches total (advisory); examples include `CD` labeled
+**Expected:** 1560 mismatches total (advisory); examples include `CD` labeled
 "Congo, The Democratic Republic of the" vs canonical "Congo, Dem. Rep.".
 
 **Gotcha:** Mismatches are **not errors** — always join on `includes[].id`, never on
@@ -1029,7 +1031,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 17 rows — includes `UNHRC`, `UNWOMEN`, `IACTHR`, `ACTHPR`.
+**Expected:** 54 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -1048,7 +1050,9 @@ HAVING org_count <= 130
 ORDER BY org_count ASC, c.name;
 ```
 
-**Expected:** 8 rows — `KP`, `FM`, `PW`, `MH`, `LI`, `AD`, `NR`, `SM` (≤130 org affiliations).
+**Expected:** 0 rows as of v2.1.0 — the sparsest UN member (`KP`) now carries 137
+affiliations, above the 130 threshold. Raise the threshold for a useful shortlist
+(`HAVING org_count <= 150` yields 3 rows).
 
 ## Pandas and Polars
 

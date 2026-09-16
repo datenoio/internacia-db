@@ -414,7 +414,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 13 rows — `HU`, `IN`, `MD`, `TH`, `UA` each with 6.
+**Expected:** 19 rows — `MD` with 7 observer entries; `HU`, `IN`, `MY`, `TH`, `UA`, `US` with 6 each.
 
 ---
 
@@ -558,7 +558,7 @@ const succession = await db.query(`
 `);
 ```
 
-**Expected:** 24 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`.
+**Expected:** 25 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`.
 
 ---
 

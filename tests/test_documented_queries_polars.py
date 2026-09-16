@@ -132,6 +132,7 @@ def test_ru_former_and_march_2022(pl, intblocks):
         "EUA",
         "GRECO",
         "ICES",
+        "ISTC",
         "JCPOA",
         "NSS",
         "OPENSKY",
