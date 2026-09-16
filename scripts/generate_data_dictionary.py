@@ -43,6 +43,20 @@ def _enum_note(prop: dict) -> str:
     return f" Values: {shown}."
 
 
+def _mdx_escape(text: str) -> str:
+    """Make generated Markdown safe for the Docusaurus/MDX docs build.
+
+    Curly braces start JSX expressions in MDX, and raw ``<`` starts an HTML
+    tag — both break compilation (see the docs deploy workflow). Escape them.
+    """
+    return (
+        text.replace("{", "\\{")
+        .replace("}", "\\}")
+        .replace("<=>", "`<=>`")
+        .replace(" <", " \\<")
+    )
+
+
 def render_properties(title: str, schema: dict) -> list[str]:
     lines = [f"## {title}", ""]
     required = set(schema.get("required") or [])
@@ -52,7 +66,7 @@ def render_properties(title: str, schema: dict) -> list[str]:
     for name, prop in props.items():
         if not isinstance(prop, dict):
             continue
-        desc = (prop.get("description") or "").replace("\n", " ").strip()
+        desc = _mdx_escape((prop.get("description") or "").replace("\n", " ").strip())
         desc += _enum_note(prop)
         lines.append(
             f"| `{name}` | {_type_label(prop)} | {'yes' if name in required else ''} | {desc} |"
