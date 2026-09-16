@@ -8,13 +8,13 @@ and DuckDB, and that manifests match the exported row counts.
 import io
 import json
 
-import builder
 import duckdb
 import pyarrow.parquet as pq
 import pytest
 import yaml
 import zstandard
 
+from internacia_builder import build as builder
 from internacia_builder.paths import project_root
 
 DATASETS = {"countries": "code", "intblocks": "id", "blocktypes": "id"}

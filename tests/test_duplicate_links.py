@@ -1,6 +1,6 @@
 """Unit tests for builder.check_duplicate_links de-noising."""
 
-import builder
+from internacia_builder import build as builder
 
 
 def _issues(records):

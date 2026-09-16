@@ -2,9 +2,10 @@
 
 import json
 
-import builder
 import pyarrow.parquet as pq
 import pytest
+
+from internacia_builder import build as builder
 
 COUNTRY = {
     "code": "AA",

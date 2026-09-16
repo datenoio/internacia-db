@@ -1,8 +1,8 @@
 """Unit tests for validate_intblocks checks."""
 
-import builder
 import validate_intblocks as vi
 
+from internacia_builder import build as builder
 from internacia_builder.paths import project_root
 from internacia_builder.validate import completeness as vc
 

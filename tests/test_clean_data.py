@@ -1,6 +1,6 @@
 """Unit tests for builder.clean_data normalization."""
 
-import builder
+from internacia_builder import build as builder
 
 
 def test_intblocks_boolean_language_list_normalized():

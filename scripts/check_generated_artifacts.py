@@ -191,7 +191,7 @@ def main(
             identities["memberships._meta"] = meta_rows["memberships"]
 
     # CSV (zstd) and lite export row counts must match full Parquet primary tables.
-    for name, key in (("countries", "code"), ("intblocks", "id")):
+    for name in ("countries", "intblocks"):
         parquet_path = datasets_dir / f"{name}.parquet"
         if not parquet_path.exists():
             continue

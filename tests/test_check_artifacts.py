@@ -2,9 +2,10 @@
 
 import json
 
-import builder
 import check_generated_artifacts as cga
 import pyarrow.parquet as pq
+
+from internacia_builder import build as builder
 
 
 def test_format_readers_round_trip(tmp_path):
