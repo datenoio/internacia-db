@@ -19,10 +19,16 @@ jobs:
         with:
           python-version: '3.11'
           cache: pip
-          cache-dependency-path: requirements.txt
+          cache-dependency-path: requirements-dev.txt
 
       - name: Install dependencies
-        run: pip install -e .
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint
+        run: ruff check internacia_builder/ scripts/ tests/
+
+      - name: Run tests
+        run: pytest tests/ -q
 
       - name: Validate countries
         run: python scripts/validate_countries.py

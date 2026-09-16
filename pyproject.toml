@@ -59,7 +59,8 @@ source = ["internacia_builder"]
 omit = ["internacia_builder/__main__.py"]
 
 [tool.coverage.report]
-fail_under = 45
+# Ratchet: only raise, never lower. Current measured total: 49.86%.
+fail_under = 49
 show_missing = true
 skip_covered = false
 exclude_lines = [
