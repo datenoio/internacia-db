@@ -18,15 +18,19 @@ regions:
 - Africa
 - Middle East
 - Southeast Asia
+- Central Asia
+- Caribbean
 languages:
 - en
 links:
+- url: https://www.brics2026.gov.in/
+  type: website
+- url: https://infobrics.org/
+  type: website
 - url: https://en.wikipedia.org/wiki/BRICS
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q243630
   type: wikidata
-- url: https://infobrics.org/
-  type: website
 acronyms:
 - lang: en
   value: BRICS+
@@ -110,31 +114,89 @@ includes:
   type: country
   status: member
   joined: '2024-01-01'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '2024-01-01'
 - id: ID
   name: Indonesia
   type: country
   status: member
   joined: '2025-01-06'
-membership_count: 10
+- id: BY
+  name: Belarus
+  type: country
+  status: partner
+  joined: '2025'
+- id: BO
+  name: Bolivia
+  type: country
+  status: partner
+  joined: '2025'
+- id: CU
+  name: Cuba
+  type: country
+  status: partner
+  joined: '2025'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: partner
+  joined: '2025'
+- id: MY
+  name: Malaysia
+  type: country
+  status: partner
+  joined: '2025'
+- id: NG
+  name: Nigeria
+  type: country
+  status: partner
+  joined: '2025'
+- id: TH
+  name: Thailand
+  type: country
+  status: partner
+  joined: '2025'
+- id: UG
+  name: Uganda
+  type: country
+  status: partner
+  joined: '2025'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: partner
+  joined: '2025'
+- id: VN
+  name: Vietnam
+  type: country
+  status: partner
+  joined: '2025'
+membership_count: 11
 founding_members:
 - BR
 - RU
 - IN
 - CN
 legal_status: informal intergovernmental summit grouping
-notes: Evolved from the four-country BRIC leaders' dialogue inaugurated at Yekaterinburg on 16 June 2009. South Africa
-  was formally admitted on 24 December 2010, expanding the acronym to BRICS. At the 15th summit in Johannesburg (August
-  2023), Egypt, Ethiopia, Iran, and the United Arab Emirates were invited to join; full membership took effect on
-  1 January 2024. Argentina declined its invitation; Saudi Arabia was invited but had not formally joined as of early
-  2025. Indonesia became the tenth full member on 6 January 2025. The bloc coordinates annual leaders' summits,
-  ministerial meetings, and institutions including the New Development Bank (NDB) and Contingent Reserve Arrangement (CRA).
-  BRICS+ informally denotes the expanded membership since 2024.
+notes: Evolved from the four-country BRIC dialogue, formalised at the first BRIC Foreign Ministers' meeting on
+  the sidelines of UNGA in New York in 2006 and inaugurated as a leaders' summit in Yekaterinburg on 16 June 2009.
+  South Africa's inclusion was agreed at the 2010 BRIC Foreign Ministers' meeting; it attended the 3rd BRICS Summit
+  in Sanya in 2011, expanding the acronym to BRICS. Egypt, Ethiopia, Iran, Saudi Arabia, and the UAE became full
+  members from January 2024; Argentina declined its 2023 invitation. Indonesia became the eleventh full member in
+  January 2025. The 16th summit in Kazan (October 2024) approved a partner-country category; Belarus, Bolivia, Cuba,
+  Kazakhstan, Malaysia, Nigeria, Thailand, Uganda, Uzbekistan, and Vietnam joined as partner countries in 2025.
+  India holds the 2026 chairship under the theme "Building for Resilience, Innovation, Cooperation and Sustainability".
+  The bloc coordinates annual leaders' summits, ministerial meetings, and institutions including the New Development
+  Bank (NDB) and Contingent Reserve Arrangement (CRA).
 description: Intergovernmental grouping of major emerging economies holding annual leaders' summits and coordinating
-  multilateral cooperation on development, finance, trade, and global governance. Formed as the BRIC dialogue at
-  Yekaterinburg in June 2009; South Africa's admission in December 2010 gave the bloc its BRICS name. Expanded
-  in January 2024 with Egypt, Ethiopia, Iran, and the United Arab Emirates, and in January 2025 with Indonesia,
-  reaching ten full members spanning Latin America, Europe, South Asia, East Asia, Africa, the Middle East, and
-  Southeast Asia.
+  multilateral cooperation on development, finance, trade, and global governance. Formed as the BRIC dialogue
+  (foreign ministers 2006; first summit at Yekaterinburg in June 2009); South Africa's admission in 2010-2011 gave
+  the bloc its BRICS name. Expanded in January 2024 with Egypt, Ethiopia, Iran, Saudi Arabia, and the United Arab
+  Emirates, and in January 2025 with Indonesia, reaching eleven full members, plus ten partner countries that joined
+  in 2025.
 tags:
 - BRICS
 - aid
@@ -173,6 +235,8 @@ other_names:
 - id: zh
   name: 金砖国家
 official_documents:
+- url: https://www.brics2026.gov.in/about-us/
+  type: document
 - url: https://infobrics.org/
   type: document
 - url: http://www.brics-info.org/
@@ -183,21 +247,33 @@ official_documents:
   type: document
 - url: https://brics2023.gov.za/
   type: document
-last_verified: '2026-07-30'
+last_verified: '2026-09-13'
 provenance:
+- field: includes
+  source: BRICS India 2026 Chairship
+  retrieved_at: '2026-09-13'
+  url: https://www.brics2026.gov.in/about-us/
+- field: membership_count
+  source: BRICS India 2026 Chairship
+  retrieved_at: '2026-09-13'
+  url: https://www.brics2026.gov.in/about-us/
+- field: description
+  source: BRICS India 2026 Chairship
+  retrieved_at: '2026-09-13'
+  url: https://www.brics2026.gov.in/about-us/
+- field: notes
+  source: BRICS India 2026 Chairship
+  retrieved_at: '2026-09-13'
+  url: https://www.brics2026.gov.in/about-us/
+- field: links
+  source: BRICS India 2026 Chairship
+  retrieved_at: '2026-09-13'
+  url: https://www.brics2026.gov.in/
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-07-30'
   url: https://www.wikidata.org/wiki/Q243630
   license: CC0
-- field: description
-  source: Wikipedia
-  retrieved_at: '2026-07-30'
-  url: https://en.wikipedia.org/wiki/BRICS
-- field: includes
-  source: Wikipedia
-  retrieved_at: '2026-07-30'
-  url: https://en.wikipedia.org/wiki/Member_states_of_BRICS
 - field: founded
   source: Wikipedia
   retrieved_at: '2026-07-30'
@@ -217,10 +293,6 @@ provenance:
   retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/BRICS
 - field: legal_status
-  source: Wikipedia
-  retrieved_at: '2026-07-30'
-  url: https://en.wikipedia.org/wiki/BRICS
-- field: notes
   source: Wikipedia
   retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/BRICS

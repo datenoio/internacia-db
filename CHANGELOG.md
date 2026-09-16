@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- `WAICO` roster aligned to the [Wikipedia membership list](https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization) (retrieved 2026-09-14): 37 members (adds Dominica on 30 July 2026 and Brunei, Georgia, Iran, Sudan, Tanzania, Togo, and Vietnam on 31 July 2026) plus Bangladesh as an observer from 1 August 2026.
+- `BRICS` roster aligned to the [India 2026 chairship About page](https://www.brics2026.gov.in/about-us/): 11 full members (adds Saudi Arabia from January 2024) and 10 partner countries that joined in 2025 (Belarus, Bolivia, Cuba, Kazakhstan, Malaysia, Nigeria, Thailand, Uganda, Uzbekistan, Vietnam).
+- Country display names updated to current official short forms, with the former names kept in `common_names`: `MK` North Macedonia (was "Macedonia, FYR"), `SZ` Eswatini (was "Swaziland"), `CV` Cabo Verde (was "Cape Verde"), `TR` Türkiye (was "Turkey").
+
 ## [2.1.0] - 2026-09-09
 
 Intblock catalogue expansion: **256** countries, **1272** intblocks (**1037 → 1272**), **78** blocktypes. Adds 235 named treaties, FTAs, PTAs, IIAs, standing IGOs, and geographic groups.

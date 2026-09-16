@@ -16,6 +16,8 @@ links:
   type: website
 name: World Artificial Intelligence Cooperation Organization
 founded: '2026-07-16'
+active_period:
+  start: '2026-07-16'
 headquarters:
   city: Shanghai
   country: CN
@@ -168,7 +170,52 @@ includes:
   type: country
   status: founding_member
   joined: '2026-07-16'
-membership_count: 29
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '2026-07-30'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '2026-07-31'
+- id: BD
+  name: Bangladesh
+  type: country
+  status: observer
+  joined: '2026-08-01'
+membership_count: 37
 founding_members:
 - DZ
 - BY
@@ -201,8 +248,15 @@ founding_members:
 - ZM
 wikidata_id: Q140589646
 legal_status: intergovernmental
+recognition_status: >-
+  China-led intergovernmental organization established by the Agreement on the
+  Establishment of the World Artificial Intelligence Cooperation Organization,
+  signed in Shanghai on 16 July 2026; open to all sovereign states, with a
+  Council of Member States as the highest decision-making body.
 secretariat:
   location: Shanghai, China
+  head: Secretary-General
+  organization: Secretariat
 acronyms:
 - lang: en
   value: WAICO
@@ -214,7 +268,9 @@ other_names:
 description: Independent intergovernmental organization established on 16 July 2026
   in Shanghai to promote international cooperation and global governance on artificial
   intelligence, with an orientation toward development and the Global South. Twenty-nine
-  countries signed the founding agreement; headquarters are in Shanghai, China.
+  countries signed the founding agreement on 16 July 2026; eight further states acceded
+  later that month, bringing membership to 37, with Bangladesh as an observer. Headquarters
+  are in Shanghai, China.
 tags:
 - WAICO
 - artificial-intelligence
@@ -229,40 +285,70 @@ topics:
   name: Governance
 - key: developing_countries
   name: Developing Countries
+notes: >-
+  Governed by a Council of Member States and a Secretariat headed by a secretary-general
+  and two deputy secretaries-general, each serving three-year terms. Founding agreement
+  signed by 29 states on 16 July 2026; later signatories were Dominica (30 July 2026)
+  and Brunei, Georgia, Iran, Sudan, Tanzania, Togo, and Vietnam (31 July 2026).
+  Bangladesh joined as an observer on 1 August 2026. Singapore has been reported as
+  considering an invitation and is not recorded as a member. Kazakhstan is also a
+  Pax Silica partner.
+official_documents:
+- url: https://dig.watch/resource/agreement-on-the-establishment-of-the-world-artificial-intelligence-cooperation-organization
+  type: document
+  name: Agreement on the Establishment of the World Artificial Intelligence Cooperation Organization
+last_verified: '2026-09-14'
 provenance:
 - field: includes
   source: Wikipedia
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
 - field: membership_count
   source: Wikipedia
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
 - field: founding_members
   source: Xinhua / www.gov.cn
   retrieved_at: '2026-07-20'
   url: https://english.www.gov.cn/news/202607/17/content_WS6a59a226c6d00ca5f9a0c432.html
 - field: headquarters
   source: Wikipedia / Wikidata
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://www.wikidata.org/wiki/Q140589646
+  license: CC0
 - field: founded
   source: Wikidata
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://www.wikidata.org/wiki/Q140589646
+  license: CC0
 - field: description
   source: Wikipedia / Xinhua
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
 - field: legal_status
   source: Xinhua / www.gov.cn
   retrieved_at: '2026-07-20'
   url: https://english.www.gov.cn/news/202607/17/content_WS6a59a226c6d00ca5f9a0c432.html
+- field: recognition_status
+  source: Wikipedia
+  retrieved_at: '2026-09-14'
+  url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
 - field: geographic_scope
   source: Wikipedia
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-09-14'
   url: https://www.wikidata.org/wiki/Q140589646
+  license: CC0
+- field: notes
+  source: Wikipedia
+  retrieved_at: '2026-09-14'
+  url: https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization
+  license: CC BY-SA 4.0
