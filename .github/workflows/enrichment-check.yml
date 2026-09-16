@@ -58,7 +58,7 @@ jobs:
 
       - name: Open enrichment PR
         if: steps.enrich.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "chore(data): monthly enrichment refresh"
           branch: chore/monthly-enrichment
