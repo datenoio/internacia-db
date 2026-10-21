@@ -6,9 +6,15 @@ on:
     - cron: '0 7 1 * *'
   workflow_dispatch:
 
+# The enrichment PR is pushed with the internacia-bot GitHub App token, not
+# GITHUB_TOKEN: PRs opened with GITHUB_TOKEN do not trigger CI. See
+# docs/enrichment.md#automation for the required secrets.
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+
+concurrency:
+  group: enrichment-check
+  cancel-in-progress: false
 
 jobs:
   enrichment-check:
@@ -63,9 +69,33 @@ jobs:
           path: |
             enrichment-check-report.txt
             enrichment-validation.json
+            dataquality/full_report.jsonl
+          if-no-files-found: warn
           retention-days: 90
 
+      - name: Check bot app secrets
+        if: steps.enrich.outputs.changed == 'true'
+        env:
+          CLIENT_ID: ${{ secrets.INTERNACIA_BOT_CLIENT_ID }}
+          PRIVATE_KEY: ${{ secrets.INTERNACIA_BOT_PRIVATE_KEY }}
+        run: |
+          if [ -z "$CLIENT_ID" ] || [ -z "$PRIVATE_KEY" ]; then
+            echo "::error::INTERNACIA_BOT_CLIENT_ID / INTERNACIA_BOT_PRIVATE_KEY are not set; cannot open the enrichment PR. The report artifact was still uploaded."
+            exit 1
+          fi
+
+      - name: Mint bot app token
+        id: app-token
+        if: steps.enrich.outputs.changed == 'true'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.INTERNACIA_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.INTERNACIA_BOT_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: Open enrichment PR
+        id: cpr
         if: steps.enrich.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
@@ -83,6 +113,29 @@ jobs:
 
             - Review provenance `retrieved_at` and field diffs carefully.
             - Do **not** merge without spot-checking World Bank / Wikidata changes.
-            - Report artifact: `enrichment-check-report` on this workflow run.
+            - Report artifact: `enrichment-check-report` on [this workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
 
             Maintainer expectations: see [docs/enrichment.md](docs/enrichment.md).
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Enrichment check"
+            echo
+            echo "- YAML diffs: \`${{ steps.enrich.outputs.changed || 'unknown' }}\`"
+            if [ -n "${{ steps.cpr.outputs.pull-request-url }}" ]; then
+              echo "- PR (${{ steps.cpr.outputs.pull-request-operation }}): ${{ steps.cpr.outputs.pull-request-url }}"
+            fi
+            echo "- Report artifact: \`enrichment-check-report\`"
+            if [ -f enrichment-check-report.txt ]; then
+              echo
+              echo '<details><summary>Report tail</summary>'
+              echo
+              echo '```'
+              tail -n 40 enrichment-check-report.txt
+              echo '```'
+              echo '</details>'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

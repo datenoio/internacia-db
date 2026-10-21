@@ -82,10 +82,28 @@ Socioeconomic profile fields (HDI, GDP per capita, government type, internet pen
 
 `.github/workflows/enrichment-check.yml` runs monthly (and on `workflow_dispatch`):
 
-1. Freshness `check` + validation report (artifact always uploaded)
+1. Freshness `check` + validation report
 2. `enrich_countries.py enrich` and `enrich_intblocks.py enrich`
 3. If YAML changes, validates and rebuilds exports and quality reports before opening a PR labeled
    `enrichment` on branch `chore/monthly-enrichment`
+
+Reports are published as the `enrichment-check-report` workflow artifact (90-day retention) and
+summarized on the run page; they are never committed:
+`enrichment-check-report.txt`, `enrichment-validation.json`, and `dataquality/full_report.jsonl`
+when exports were rebuilt.
+
+The PR is opened with a token minted from the `internacia-bot` GitHub App
+(`actions/create-github-app-token`), so `validate.yml` runs on it. PRs opened with the default
+`GITHUB_TOKEN` never trigger CI. Required repository (or org) secrets:
+
+| Secret | Value |
+|--------|-------|
+| `INTERNACIA_BOT_CLIENT_ID` | App **Client ID** (`Iv23…`) |
+| `INTERNACIA_BOT_PRIVATE_KEY` | Full PEM private key generated for the app |
+
+The app needs repository permissions **Contents: Read and write** and **Pull requests: Read and
+write**, installed on `datenoio/internacia-db`. If the secrets are missing, the run still uploads
+the report artifact and then fails at the PR step.
 
 **Maintainer review expectations:** spot-check provenance dates and unexpected
 roster/value swings before merge. The workflow never pushes directly to `main`.
