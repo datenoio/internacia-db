@@ -19,10 +19,10 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `incomeLevel` | object |  | World Bank income classification as \{id, value\} (e.g. id 'HIC', value 'High income'). Absent for 8 unclassified entities. |
 | `lendingType` | object |  | World Bank lending category as \{id, value\} (e.g. IBRD, IDA, Blend). Absent for 8 unclassified entities. |
 | `wikidata_id` | string |  | Wikidata entity id (Q-number) for cross-referencing and entity linking. |
-| `geonames_id` | string |  | GeoNames integer feature id for the country/territory (as string). |
-| `ioc_code` | string |  | International Olympic Committee three-letter country code when assigned. |
-| `fifa_code` | string |  | FIFA three-letter association code when assigned. |
-| `fips_code` | string |  | Legacy FIPS 10-4 two-letter code when known (US government geospatial). |
+| `geonames_id` | string |  | GeoNames integer feature id for the country/territory (as string). Expected for current official ISO 3166-1 records; source-specific exceptions are documented separately. |
+| `ioc_code` | string |  | International Olympic Committee three-letter NOC code when assigned; not every ISO entity has an NOC. |
+| `fifa_code` | string |  | FIFA three-letter Member Association code when assigned; FIFA association coverage is not identical to ISO country coverage. |
+| `fips_code` | string |  | Legacy FIPS 10-4-compatible two-letter code when known. FIPS 10-4 was withdrawn in 2008 and replaced by GENC; retain only for legacy joins. |
 | `bbox` | object |  | Optional geographic bounding box \{west, east, north, south\} in WGS84 degrees. |
 | `official_name` | string |  | Official long-form state name (e.g. 'Arab Republic of Egypt'). |
 | `languages` | array |  | Spoken/official languages as a list of \{code, name, official\} objects. |
@@ -78,7 +78,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `active_period` | object |  | Operational period as \{start, end\} ISO date strings; end is absent for active entities. |
 | `headquarters` | object |  | Seat of the organization as \{city, country, coordinates\{lat,lng\}\} with an alpha-2 country code. |
 | `geographic_scope` | string |  | Coverage of the membership: 'global' or 'regional'. Values: `global`, `regional`, `sub-regional`, `bilateral`. |
-| `scope_category` | string |  | Inclusion taxonomy: igo, treaty_body, policy_forum, or reference_enumeration. See docs/intblock-inclusion-policy.md. Values: `igo`, `treaty_body`, `policy_forum`, `reference_enumeration`. |
+| `scope_category` | string |  | Entity-kind taxonomy: igo, treaty_body, policy_forum, reference_enumeration, intergovernmental_body, or non_state_organization. This classifies the record itself, not the role of entries in includes. See docs/intblock-inclusion-policy.md. Values: `igo`, `treaty_body`, `policy_forum`, `reference_enumeration`, `intergovernmental_body`, `non_state_organization`. |
 | `regions` | array |  | Region labels covered by the entity (e.g. 'worldwide', 'europe', 'africa'). |
 | `partof` | any |  | Parent organization id(s) for suborganizations (string or list in source; normalized to a list in exports). |
 | `suborganizations` | array |  | Child entities as \{id, name\} references to other intblock records. |
@@ -86,7 +86,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `wikidata_id` | string |  | Wikidata entity id (Q-number) for cross-referencing and entity linking. |
 | `membership_count` | integer |  | Officially stated member count. Interpreted as country members unless membership_count_type says otherwise; compared against the includes roster by validation. |
 | `membership_count_type` | string |  | Unit of membership_count. When absent, the count is interpreted as country members and is compared against the includes roster. Non-country counts (companies, individual experts, national governing bodies, etc.) are exempt from roster comparison but require provenance for membership_count. Values: `countries`, `organizations`, `companies`, `individuals`, `mixed`. |
-| `membership_applicability` | string |  | When not_applicable, an empty includes list is intentional (conceptual entities, acronyms, etc.) Values: `not_applicable`. |
+| `membership_applicability` | string |  | When not_applicable, an empty country/organization includes roster is intentional. The entity may still have institutional or individual members that this dataset does not model (e.g. NGOs), or have no separate member states (e.g. a subsidiary office or fund). Values: `not_applicable`. |
 | `founding_members` | array |  | Country codes of founding members (list). |
 | `last_verified` | string |  | Date (YYYY-MM-DD) the record was last checked against official sources. |
 | `description` | string |  | Short text summarizing what the entity is for |

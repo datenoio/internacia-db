@@ -3,6 +3,8 @@ name: GCC Patent Office
 blocktype:
 - patent
 status: formal
+scope_category: intergovernmental_body
+membership_applicability: not_applicable
 founded: '1992-09-22'
 geographic_scope: regional
 regions:
@@ -31,46 +33,7 @@ headquarters:
 partof:
   id: CCASG
   name: Cooperation Council for the Arab States of the Gulf
-includes:
-- id: BH
-  name: Bahrain
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-- id: KW
-  name: Kuwait
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-- id: OM
-  name: Oman
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-- id: QA
-  name: Qatar
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: founding_member
-  joined: '1992-09-22'
-founding_members:
-- BH
-- KW
-- OM
-- QA
-- SA
-- AE
-membership_count: 6
-legal_status: intergovernmental
+legal_status: "GCC Secretariat patent office; not a separate IGO"
 wikidata_id: Q13233696
 description: >-
   Regional patent office of the Cooperation Council for the Arab States of the Gulf (GCC), established under the GCC Patent
@@ -108,14 +71,6 @@ other_names:
   name: 海湾阿拉伯国家合作委员会专利局
 last_verified: '2026-07-29'
 provenance:
-- field: includes
-  source: WIPO Lex
-  retrieved_at: '2026-07-29'
-  url: https://www.wipo.int/wipolex/en/legislation/details/14915
-- field: founding_members
-  source: WIPO Lex
-  retrieved_at: '2026-07-29'
-  url: https://www.wipo.int/wipolex/en/legislation/details/14915
 - field: description
   source: Wikipedia
   retrieved_at: '2026-07-29'
@@ -128,11 +83,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/Gulf_Cooperation_Council_Patent_Office
-- field: legal_status
-  source: Wikidata
-  retrieved_at: '2026-07-29'
-  url: https://www.wikidata.org/wiki/Q13233696
-  license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-07-29'
@@ -155,3 +105,15 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: scope_category
+  source: "GCC General Secretariat — Organizational Structure"
+  retrieved_at: "2026-09-30"
+  url: "https://www.gcc-sg.org/en/AboutUs/Pages/OrganizationalStructure.aspx"
+- field: legal_status
+  source: "GCC General Secretariat — Organizational Structure"
+  retrieved_at: '2026-09-30'
+  url: "https://www.gcc-sg.org/en/AboutUs/Pages/OrganizationalStructure.aspx"
+- field: membership_applicability
+  source: "GCC General Secretariat — Organizational Structure"
+  retrieved_at: '2026-09-30'
+  url: "https://www.gcc-sg.org/en/AboutUs/Pages/OrganizationalStructure.aspx"

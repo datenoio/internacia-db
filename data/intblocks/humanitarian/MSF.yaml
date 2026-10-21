@@ -3,6 +3,8 @@ blocktype:
 - humanitarian
 - health
 status: formal
+scope_category: non_state_organization
+membership_applicability: not_applicable
 languages:
 - en
 - fr
@@ -26,7 +28,7 @@ headquarters:
   coordinates:
     lat: 46.2044
     lng: 6.1432
-notes: Independent international medical humanitarian NGO operating in crisis zones; not an intergovernmental organization with state membership. The MSF movement comprises 41 national sections and offices that recruit staff, fundraise, and are represented in the International Council; field operations are directed by six operational centres.
+notes: "The MSF movement is an international humanitarian NGO, not a union of states. MSF International has institutional and individual members; the locations of MSF associations and offices are not country membership."
 wikidata_id: Q37685
 description: Independent international medical humanitarian organization providing emergency aid in conflict zones and epidemics worldwide.
 tags:
@@ -48,172 +50,6 @@ acronyms:
   value: MSF
 - lang: fr
   value: MSF
-includes:
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: HK
-  name: Hong Kong SAR, China
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: TW
-  name: Taiwan
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
-membership_count: 41
 last_verified: '2026-07-15'
 provenance:
 - field: legal_status
@@ -228,16 +64,19 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.msf.org/
-- field: includes
-  source: MSF official website and Wikipedia
-  retrieved_at: '2026-07-15'
-  url: https://www.msf.org/contact-us
-  license: CC BY-SA 4.0
-- field: membership_count
-  source: MSF official website and Wikipedia
-  retrieved_at: '2026-07-15'
-  url: https://en.wikipedia.org/wiki/M%C3%A9decins_Sans_Fronti%C3%A8res
 - field: recognition_status
   source: official sources
   retrieved_at: '2026-07-15'
   url: https://www.msf.org/
+- field: scope_category
+  source: "Médecins Sans Frontières International — Statutes"
+  retrieved_at: "2026-09-30"
+  url: "https://www.msf.org/sites/default/files/2022-06/msf-international-statutes.pdf"
+- field: membership_applicability
+  source: "Médecins Sans Frontières International — Statutes"
+  retrieved_at: '2026-09-30'
+  url: "https://www.msf.org/sites/default/files/2022-06/msf-international-statutes.pdf"
+- field: notes
+  source: "Médecins Sans Frontières International — Statutes"
+  retrieved_at: '2026-09-30'
+  url: "https://www.msf.org/sites/default/files/2022-06/msf-international-statutes.pdf"

@@ -111,13 +111,62 @@ Retired intblock ids map via `data/attribute_intblock_migrations.yaml`
 
 | Value | Meaning |
 |-------|---------|
-| `igo` | Standing intergovernmental organization with secretariat/HQ |
+| `igo` | Standing intergovernmental organization with independent institutional identity or juridical personality |
 | `treaty_body` | Treaty, protocol, or convention (parties are members) |
-| `policy_forum` | Forum, process, or club without full IGO personality |
+| `policy_forum` | Ongoing forum, process, club, or intergovernmental implementation/cooperation platform without independent IGO personality |
 | `reference_enumeration` | Named geographic or set grouping (not attribute partitions) |
+| `intergovernmental_body` | Standing subsidiary/intergovernmental organ, commission, office, fund, or joint multilateral fund partnership without independent IGO status |
+| `non_state_organization` | International NGO, professional/industry association, or federation not constituted by states as an IGO |
 
-Optional field; high-visibility and `status: formal` records should set it.
-Validation warns (non-blocking) when `status: formal` and `scope_category` is missing.
+Source JSON Schema keeps this field optional for non-formal historical/de-facto records;
+**every `status: formal` intblock must set it**. The CLI validator and quality analyzer
+now treat a missing formal category as a blocking error/IMPORTANT issue.
+
+`scope_category` classifies the **record's entity**, not the role or nationality of
+entries in `includes`. An independent treaty-established institution with its
+own juridical personality remains `igo` even if affiliated with a larger group
+(e.g. African Development Fund, `AFDF`). A dependent commission established by
+a FAO Article XIV agreement may be `intergovernmental_body` when the record is
+the **commission**, not the agreement (e.g. `APFIC`). FAO Article VI commissions,
+the joint FAO/WHO Codex Commission, and the GCC Secretariat's Patent Office are
+other examples. The Asian Development Fund (`ADF`) and Adaptation Fund (`AF`)
+are funds without their own country-member rosters, not independent IGOs.
+
+The legally independent African Development Fund (`AFDF`) is instead an `igo`:
+its 29 dated State Participants must not be confused with the 82 mixed country
+links previously ascribed to the Fund or with financing recipients. The Climate Investment Funds (`CIF`) are a standing
+two-fund partnership, not a third IGO and not an enumeration of their 15
+contributors. CIF is an `intergovernmental_body` with no country-member roster.
+The ESCAP Trans-Asian Railway Network (`TAR`) is a cooperation platform and
+`policy_forum`; its geographic coverage of 28 countries is not membership.
+Its **separate** Intergovernmental Agreement (`TARAGREEMENT`) is a `treaty_body`
+with 22 parties. Do not attach treaty accession dates to the network or infer
+that a country served by a railway is a party to the treaty.
+
+For an NGO such as MSF or an industry association such as CANTO, offices and
+member organizations' locations are **not** countries that belong to the NGO.
+Where an entity has no meaningful country-level membership list, omit `includes`
+and `membership_count`, and set `membership_applicability: not_applicable`.
+Do not turn a parent organization's country members (GCC), funding beneficiaries
+(ADF), donors (AF), or representatives' countries (RDR) into member states of a
+subsidiary. Retain documented `participant` links only when the country itself
+participates; subnational members are not their entire parent countries.
+
+**Compatibility:** these two additional enum values are additive for open-string
+consumers but potentially breaking for SDKs or queries with a closed four-value
+enum. Extend downstream parsers and regenerate data exports together; do not
+interpret `intergovernmental_body` as a synonym of `igo` or as proof that
+`includes` contains a complete country roster.
+
+An out-of-scope corporate media operator cannot acquire a false category merely
+to satisfy validation. `TELESUR` was retired from intblocks after its legal form
+was confirmed; see [retired intblock IDs](retired-intblock-ids.md). No alias maps
+this retired company to an unrelated intblock.
+
+World Bank regional, income, lending, and analytical aggregates under the `wbgroup`
+blocktype are always `reference_enumeration`, even when their source is formal and
+their `status` is `formal`. They are published classification sets, not organizations.
+World Bank institutions such as `WB` and `IBRD` remain `igo` records.
 
 ## Boundaries vs treaties in `partof`
 

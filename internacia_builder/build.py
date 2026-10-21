@@ -83,6 +83,9 @@ from internacia_builder.validate.country_rules import (
     check_country_calling_codes,
     check_country_capital_distance,
     check_country_coordinates,
+    check_country_crosswalk_policy,
+    check_country_crosswalk_provenance,
+    check_country_crosswalk_uniqueness,
     check_country_currency_codes,
     check_country_duplicates,
     check_country_entity_flags,
@@ -138,6 +141,7 @@ from internacia_builder.validate.intblock_rules import (
     check_intblock_links,
     check_intblock_membership_consistency,
     check_intblock_schema,
+    check_intblock_scope_category,
     check_intblock_text_encoding,
     check_intblock_topics,
 )
@@ -499,6 +503,11 @@ def analyze_quality(
     topic_aliases = load_topic_aliases(project_root / "data" / "schemas" / "topic_aliases.yaml")
     topic_catalog = load_topic_catalog(project_root / "data" / "schemas" / "topics.yaml")
     countries_prov_cfg = completeness_cfg_countries.get("provenance") or {}
+    crosswalk_policy = yaml.safe_load(
+        (project_root / "data" / "schemas" / "country_crosswalk_exclusions.yaml").read_text(
+            encoding="utf-8"
+        )
+    ) or {}
     intblocks_prov_cfg = (completeness_cfg_intblocks.get("fields") or {}).get("provenance") or {}
     countries_prov_max_age = int(countries_prov_cfg.get("max_age_months") or 0)
     intblocks_prov_max_age = int(intblocks_prov_cfg.get("max_age_months") or 0)
@@ -555,6 +564,7 @@ def analyze_quality(
             record_issues.extend(check_country_capital_distance(record, completeness_cfg_countries))
             record_issues.extend(check_country_text_encoding(record))
             record_issues.extend(check_provenance_integrity(record))
+            record_issues.extend(check_country_crosswalk_provenance(record))
             if countries_prov_max_age:
                 record_issues.extend(check_provenance_freshness(record, max_age_months=countries_prov_max_age))
             if countries_prov_min_count:
@@ -618,6 +628,7 @@ def analyze_quality(
             record_issues.extend(check_intblock_founding_members(record, known_country_codes))
             record_issues.extend(check_intblock_membership_consistency(record, completeness_cfg_intblocks))
             record_issues.extend(check_intblock_description_quality(record))
+            record_issues.extend(check_intblock_scope_category(record))
             record_issues.extend(check_intblock_text_encoding(record))
             if last_verified_max_age:
                 record_issues.extend(
@@ -671,6 +682,16 @@ def analyze_quality(
 
     cross_checks = [
         ("country duplicate identifiers", lambda: check_country_duplicates(country_records, country_rel_paths)),
+        (
+            "country crosswalk uniqueness",
+            lambda: check_country_crosswalk_uniqueness(country_records, country_rel_paths),
+        ),
+        (
+            "country crosswalk policy",
+            lambda: check_country_crosswalk_policy(
+                country_records, country_rel_paths, crosswalk_policy
+            ),
+        ),
         ("official ISO count", lambda: validate_official_iso_count(country_records)),
         ("country completeness", lambda: validate_completeness(country_records, completeness_cfg_countries)),
         ("intblock duplicate ids", lambda: check_intblock_duplicates(intblock_records, intblock_rel_paths)),

@@ -1,0 +1,1491 @@
+version: 1
+reviewed_at: '2026-09-29'
+fields:
+  geonames_id:
+    enforce_required: true
+    required_codes:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AI
+    - AL
+    - AM
+    - AN
+    - AO
+    - AQ
+    - AR
+    - AS
+    - AT
+    - AU
+    - AW
+    - AX
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BL
+    - BM
+    - BN
+    - BO
+    - BQ
+    - BR
+    - BS
+    - BT
+    - BV
+    - BW
+    - BY
+    - BZ
+    - CA
+    - CC
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CU
+    - CV
+    - CW
+    - CX
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - EH
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FK
+    - FM
+    - FO
+    - FR
+    - GA
+    - GB
+    - GD
+    - GE
+    - GF
+    - GG
+    - GH
+    - GI
+    - GL
+    - GM
+    - GN
+    - GP
+    - GQ
+    - GR
+    - GS
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HM
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IM
+    - IN
+    - IO
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JE
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KI
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MC
+    - MD
+    - ME
+    - MF
+    - MG
+    - MH
+    - MK
+    - ML
+    - MM
+    - MN
+    - MO
+    - MP
+    - MQ
+    - MR
+    - MS
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NC
+    - NE
+    - NF
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NR
+    - NU
+    - NZ
+    - OM
+    - PA
+    - PE
+    - PF
+    - PG
+    - PH
+    - PK
+    - PL
+    - PM
+    - PN
+    - PR
+    - PS
+    - PT
+    - PW
+    - PY
+    - QA
+    - RE
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SH
+    - SI
+    - SJ
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SV
+    - SX
+    - SY
+    - SZ
+    - TC
+    - TD
+    - TF
+    - TG
+    - TH
+    - TJ
+    - TK
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TV
+    - TW
+    - TZ
+    - UA
+    - UG
+    - UM
+    - US
+    - UY
+    - UZ
+    - VA
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WF
+    - WS
+    - XK
+    - YE
+    - YT
+    - ZA
+    - ZM
+    - ZW
+    exclusions:
+      JG:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XA:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XN:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XS:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XT:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+  ioc_code:
+    enforce_required: true
+    required_codes:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AL
+    - AM
+    - AO
+    - AR
+    - AS
+    - AT
+    - AU
+    - AW
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BM
+    - BN
+    - BO
+    - BR
+    - BS
+    - BT
+    - BW
+    - BY
+    - BZ
+    - CA
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CU
+    - CV
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FM
+    - FR
+    - GA
+    - GB
+    - GD
+    - GE
+    - GH
+    - GM
+    - GN
+    - GQ
+    - GR
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IN
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KI
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MC
+    - MD
+    - ME
+    - MG
+    - MH
+    - MK
+    - ML
+    - MM
+    - MN
+    - MR
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NE
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NR
+    - NZ
+    - OM
+    - PA
+    - PE
+    - PG
+    - PH
+    - PK
+    - PL
+    - PR
+    - PS
+    - PT
+    - PW
+    - PY
+    - QA
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SI
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SV
+    - SY
+    - SZ
+    - TD
+    - TG
+    - TH
+    - TJ
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TV
+    - TW
+    - TZ
+    - UA
+    - UG
+    - US
+    - UY
+    - UZ
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WS
+    - XK
+    - YE
+    - ZA
+    - ZM
+    - ZW
+    exclusions:
+      AI:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      AN:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      AQ:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      AX:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BL:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BQ:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BV:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      CC:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      CW:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      CX:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      EH:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      FK:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      FO:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GG:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GI:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GL:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GP:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GS:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      HM:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      IM:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      IO:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      JE:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      JG:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MO:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MP:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MQ:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MS:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NC:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NU:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PM:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PN:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      RE:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SH:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SJ:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SX:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TC:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TK:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      UM:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      VA:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      WF:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XA:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XN:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XS:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XT:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      YT:
+        reason: not_in_official_roster
+        source: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+  fifa_code:
+    enforce_required: true
+    required_codes:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AI
+    - AL
+    - AM
+    - AO
+    - AR
+    - AS
+    - AT
+    - AU
+    - AW
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BM
+    - BN
+    - BO
+    - BR
+    - BS
+    - BT
+    - BW
+    - BY
+    - BZ
+    - CA
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CU
+    - CV
+    - CW
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FO
+    - FR
+    - GA
+    - GD
+    - GE
+    - GH
+    - GI
+    - GM
+    - GN
+    - GQ
+    - GR
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IN
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MD
+    - ME
+    - MG
+    - MK
+    - ML
+    - MM
+    - MN
+    - MO
+    - MR
+    - MS
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NC
+    - NE
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NZ
+    - OM
+    - PA
+    - PE
+    - PF
+    - PG
+    - PH
+    - PK
+    - PL
+    - PR
+    - PS
+    - PT
+    - PY
+    - QA
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SI
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SV
+    - SY
+    - SZ
+    - TC
+    - TD
+    - TG
+    - TH
+    - TJ
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TW
+    - TZ
+    - UA
+    - UG
+    - US
+    - UY
+    - UZ
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WS
+    - XK
+    - YE
+    - ZA
+    - ZM
+    - ZW
+    exclusions:
+      AN:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      AQ:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      AX:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BL:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BQ:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      BV:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      CC:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      CX:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      EH:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      FK:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      FM:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GB:
+        reason: split_associations
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: FIFA uses separate associations for England, Scotland, Wales, and Northern Ireland.
+      GF:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GG:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GL:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GP:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      GS:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      HM:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      IM:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      IO:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      JE:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      JG:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      KI:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MC:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MF:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MH:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MP:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      MQ:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NF:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NR:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      NU:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PM:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PN:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      PW:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      RE:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SH:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SJ:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      SX:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TF:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TK:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      TV:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      UM:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      VA:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      WF:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XA:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XN:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XS:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      XT:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+      YT:
+        reason: not_in_official_roster
+        source: https://inside.fifa.com/associations
+        reviewed_at: '2026-09-29'
+        note: No corresponding current entry was found in the cited official roster snapshot.
+  fips_code:
+    enforce_required: false
+    required_codes:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AI
+    - AL
+    - AM
+    - AN
+    - AO
+    - AQ
+    - AR
+    - AS
+    - AT
+    - AU
+    - AW
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BL
+    - BM
+    - BN
+    - BO
+    - BR
+    - BS
+    - BT
+    - BV
+    - BW
+    - BY
+    - BZ
+    - CA
+    - CC
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CU
+    - CV
+    - CW
+    - CX
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - EH
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FK
+    - FM
+    - FO
+    - FR
+    - GA
+    - GB
+    - GD
+    - GE
+    - GF
+    - GG
+    - GH
+    - GI
+    - GL
+    - GM
+    - GN
+    - GP
+    - GQ
+    - GR
+    - GS
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HM
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IM
+    - IN
+    - IO
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JE
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KI
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MC
+    - MD
+    - ME
+    - MF
+    - MG
+    - MH
+    - MK
+    - ML
+    - MM
+    - MN
+    - MO
+    - MP
+    - MQ
+    - MR
+    - MS
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NC
+    - NE
+    - NF
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NR
+    - NU
+    - NZ
+    - OM
+    - PA
+    - PE
+    - PF
+    - PG
+    - PH
+    - PK
+    - PL
+    - PM
+    - PN
+    - PR
+    - PS
+    - PT
+    - PW
+    - PY
+    - QA
+    - RE
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SH
+    - SI
+    - SJ
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SV
+    - SX
+    - SY
+    - SZ
+    - TC
+    - TD
+    - TF
+    - TG
+    - TH
+    - TJ
+    - TK
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TV
+    - TW
+    - TZ
+    - UA
+    - UG
+    - US
+    - UY
+    - UZ
+    - VA
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WF
+    - WS
+    - XK
+    - YE
+    - YT
+    - ZA
+    - ZM
+    - ZW
+    exclusions:
+      AX:
+        reason: no_authoritative_mapping
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: No authoritative mapping was found in the cited source snapshot.
+      BQ:
+        reason: no_authoritative_mapping
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: No authoritative mapping was found in the cited source snapshot.
+      JG:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      UM:
+        reason: no_authoritative_mapping
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: No authoritative mapping was found in the cited source snapshot.
+      XA:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XN:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XS:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.
+      XT:
+        reason: non_standard_entity
+        source: https://download.geonames.org/export/dump/countryInfo.txt
+        reviewed_at: '2026-09-29'
+        note: The record does not use a current official ISO 3166-1 code.

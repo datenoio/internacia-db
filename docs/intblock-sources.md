@@ -36,6 +36,10 @@ accessions and withdrawals are under-notified).
 | UNECE instruments | [unece.org](https://unece.org/) treaty and WP.29 pages | Environment protocols, inland transport, vehicle agreements |
 | Commercial / trade law | [UNCITRAL](https://uncitral.un.org/), [WIPO Lex](https://www.wipo.int/wipolex/en/), [OAS SICE](https://www.sice.oas.org/) | CISG family, paperless trade, IP and FTA texts |
 | Crime / drugs / health | [UNODC](https://www.unodc.org/), [WHO FCTC](https://fctc.who.int/) | UNTOC/UNCAC protocols, narcotics conventions, FCTC |
+| International humanitarian law | [ICRC IHL Treaties Database](https://ihl-databases.icrc.org/en/ihl-treaties) | Geneva Conventions and protocol states-parties rosters |
+| Disarmament treaties | [UNODA Treaties Database](https://treaties.unoda.org/) and official depositary notices | Biological Weapons Convention and other arms-control party rosters |
+| UNESCO conventions | [UNESCO Legal Affairs](https://www.unesco.org/en/legal-affairs) and convention secretariats | World Heritage and cultural-property treaty rosters and deposit dates |
+| IMO conventions | [IMO Status of Conventions](https://www.imo.org/en/about/conventions/pages/statusofconventions.aspx) | SOLAS, MARPOL, and other maritime treaty contracting-state rosters; territorial applications are not counted as states parties |
 | WTO-notified FTAs | Official treaty text; RTA-IS as a cross-check | ASEAN+1, Agadir, CER, PICTA, EU and US named FTAs |
 | EU trade agreements | [European Commission](https://policy.trade.ec.europa.eu/), EUR-Lex | CETA, EU–Japan, EU–UK, EU–Korea, and related partnerships |
 | US FTAs and PTAs | [USTR](https://ustr.gov/) and Federal Register | Remaining named U.S. FTAs; AGOA / CBERA beneficiary lists |

@@ -7,11 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Current unreleased dataset snapshot (2026-09-30): **256 countries, 1278 intblocks,
+78 blocktypes**. These changes are not a tagged release.
+
 ### Changed
 
+- Six individually reviewed non-formal intblocks now have sourced `scope_category` values: `ARABW`, `BALTICSTATES`, `HISPAM`, `MIDAMERICA`, and `SLAVISPHERE` are `reference_enumeration`; the Common Monetary Area (`CMA`) is `policy_forum`. Their 96 country links and lifecycle statuses were not changed; reference-set links still need a separate membership-semantics review. **72 non-formal records remain unlabeled**; the 30-candidate backfill manifest retains 12 decisions pending review and cannot be applied wholesale.
+- Formal intblocks now **require** `scope_category`; the validator treats omissions as errors and the quality analyzer as IMPORTANT. The legacy directory heuristic is suggestion-only. `CIF` now describes the standing CTF+SCF partnership (`intergovernmental_body`), not its 15 dated contributors; `TAR` remains the ESCAP network platform (`policy_forum`), not a treaty-party roster. Neither record exports false country-membership edges or unsupported `partof: WB` on CIF.
+- Intblock `scope_category` accepts `intergovernmental_body` and `non_state_organization` in addition to the four existing values. **Closed-enum consumers must update their parsers.** Reviewed subsidiary commissions, offices, funds and NGOs are classified by legal entity rather than parent/beneficiary geography; invalid country-member rosters are removed instead of being exported as memberships.
+- Country crosswalks now use curated official-source snapshots with field-level provenance and machine-readable eligibility exceptions: GeoNames covers all 249 current ISO records, IOC covers 206 mapped NOCs, FIFA covers 207 mapped Member Associations, and FIPS remains explicitly legacy-only.
+- The `wbgroup` display label is now "World Bank classification group" to distinguish statistical aggregates from World Bank institutions.
 - `WAICO` roster aligned to the [Wikipedia membership list](https://en.wikipedia.org/wiki/World_Artificial_Intelligence_Cooperation_Organization) (retrieved 2026-09-14): 37 members (adds Dominica on 30 July 2026 and Brunei, Georgia, Iran, Sudan, Tanzania, Togo, and Vietnam on 31 July 2026) plus Bangladesh as an observer from 1 August 2026.
 - `BRICS` roster aligned to the [India 2026 chairship About page](https://www.brics2026.gov.in/about-us/): 11 full members (adds Saudi Arabia from January 2024) and 10 partner countries that joined in 2025 (Belarus, Bolivia, Cuba, Kazakhstan, Malaysia, Nigeria, Thailand, Uganda, Uzbekistan, Vietnam).
 - Country display names updated to current official short forms, with the former names kept in `common_names`: `MK` North Macedonia (was "Macedonia, FYR"), `SZ` Eswatini (was "Swaziland"), `CV` Cabo Verde (was "Cape Verde"), `TR` Türkiye (was "Turkey").
+
+### Fixed
+
+- Eliminated **114 missing formal intblock `scope_category` values** through reviewed cohorts (81 direct, 14 source-backed, 15 requiring the expanded taxonomy, and four entity-level resolutions); formal omissions now fail validation rather than being silently accepted. This does not imply that the remaining non-formal records are correctly classified or that `member` means legal membership on reference sets.
+- `AFDF` is now a legally independent `igo` with the **29 State Participants** in the African Development Fund voting statement dated 2025-09-30, instead of 82 mixed country links (53 erroneous links removed). Bank-group affiliation is documented without asserting a false legal `partof` hierarchy.
+- All 25 World Bank regional, income, lending, and analytical groups now use `scope_category: reference_enumeration` instead of `igo`; shared validation prevents the misclassification from returning.
+- Corrected four crosswalk conflicts against official snapshots: Bahrain GeoNames id (`290291`), Latvia FIFA code (`LVA`), Singapore FIFA code (`SGP`), and Kosovo FIFA code (`KOS`).
+- Country validation now requires field-level provenance for every populated crosswalk and rejects duplicate external identifiers or incomplete eligibility policy.
+
+### Added
+
+- `TARAGREEMENT`: the [Intergovernmental Agreement on the Trans-Asian Railway Network](https://treaties.un.org/pages/viewdetails.aspx?src=treaty&mtdsg_no=xi-c-5&chapter=11&clang=_en), with **22 treaty parties** as of 2026-09-30; separate from the `TAR` network and its 28-country geographic reach. Existing `TAR` Wikidata ID remains on the network, not the treaty.
+- **6 major multilateral treaty intblocks** (official rosters verified 2026-09-30): Fourth Geneva Convention `GCIV` (196 parties, ICRC), Biological Weapons Convention `BWC` (189 parties, UNODA), World Heritage Convention `WORLDHERITAGE` (196 parties, UNESCO), SOLAS 1974 `SOLAS` (168 contracting states, IMO), MARPOL 73/78 `MARPOL` (162 contracting states, IMO), and the 1954 Hague Convention for cultural property `HAGUE1954` (138 parties, UNESCO). Territorial applications are excluded from the IMO treaty rosters; only current states parties are included.
+
+### Removed
+
+- `TELESUR` (La Nueva Televisión del Sur C.A.) and its seven misleading country-membership rows: a Venezuelan commercial media operator, not an intergovernmental organization. The retired ID has **no replacement or alias**; downstream consumers must handle its absence. See [retired intblock IDs](docs/retired-intblock-ids.md).
 
 ## [2.1.0] - 2026-09-09
 

@@ -16,6 +16,9 @@ lendingType:
   value: Not classified
 numeric_code: '258'
 wikidata_id: Q30971
+geonames_id: "4030656"
+fips_code: "FP"
+fifa_code: "TAH"
 official_name: French Polynesia
 languages:
 - code: fra
@@ -136,6 +139,20 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fifa_code
+  source: "FIFA Member Associations directory"
+  url: "https://inside.fifa.com/associations"
+  retrieved_at: "2026-09-29"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -15.0
   lng: -140.0

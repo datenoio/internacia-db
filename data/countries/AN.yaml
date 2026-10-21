@@ -17,6 +17,8 @@ lendingType:
   value: Not classified
 m49_code: '530'
 wikidata_id: Q25227
+geonames_id: "8505032"
+fips_code: "NT"
 population:
   value: 197041
   year: 2009
@@ -80,6 +82,16 @@ provenance:
   source: World Bank
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 12.1034
   lng: -68.9335

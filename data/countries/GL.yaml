@@ -16,6 +16,8 @@ lendingType:
   value: Not classified
 numeric_code: '304'
 wikidata_id: Q223
+geonames_id: "3425505"
+fips_code: "GL"
 official_name: Greenland
 languages:
 - code: kal
@@ -147,6 +149,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 72.0
   lng: -40.0

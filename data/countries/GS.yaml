@@ -7,6 +7,8 @@ capital_city:
   lng: -36.5
 numeric_code: '239'
 wikidata_id: Q35086
+geonames_id: "3474415"
+fips_code: "SX"
 official_name: South Georgia and the South Sandwich Islands
 languages:
 - code: eng
@@ -106,6 +108,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -54.5
   lng: -37.0

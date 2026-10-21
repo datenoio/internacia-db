@@ -1,0 +1,24 @@
+version: 1
+retrieved_at: '2026-09-29'
+fields:
+  geonames_id:
+    source: GeoNames countryInfo.txt
+    url: https://download.geonames.org/export/dump/countryInfo.txt
+    documentation_url: https://www.geonames.org/export/
+    license: CC-BY-4.0
+    snapshot_sha256: 93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512
+  ioc_code:
+    source: IOC Olympic Data Feed NOC common codes (Beijing 2022 snapshot)
+    url: https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm
+    snapshot_sha256: c73b4e6bae93b6f8d1d722ff442ecd2a06395f91d7b07df86cacc5b5db07d2cd
+  fifa_code:
+    source: FIFA Member Associations directory
+    url: https://inside.fifa.com/associations
+    snapshot_sha256: 49b17b10777fca229d8bf94cdb0a06a12806c70362755ab6a6ad92d243fb75ec
+  fips_code:
+    source: GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)
+    url: https://download.geonames.org/export/dump/countryInfo.txt
+    documentation_url: https://www.nist.gov/document/replacement-standards-withdrawn-fips-geographic-codes
+    license: CC-BY-4.0
+    status: legacy; FIPS 10-4 withdrawn 2008-09-02 and replaced by GENC
+    snapshot_sha256: 93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512

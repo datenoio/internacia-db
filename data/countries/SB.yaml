@@ -19,6 +19,10 @@ lendingType:
   value: IDA
 numeric_code: 090
 wikidata_id: Q685
+geonames_id: "2103350"
+fips_code: "BP"
+fifa_code: "SOL"
+ioc_code: "SOL"
 official_name: Solomon Islands
 languages:
 - code: eng
@@ -151,6 +155,24 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: ioc_code
+  source: "IOC Olympic Data Feed NOC common codes (Beijing 2022 snapshot)"
+  url: "https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm"
+  retrieved_at: "2026-09-29"
+- field: fifa_code
+  source: "FIFA Member Associations directory"
+  url: "https://inside.fifa.com/associations"
+  retrieved_at: "2026-09-29"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -8.0
   lng: 159.0

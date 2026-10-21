@@ -7,6 +7,8 @@ capital_city:
   lng: 96.83
 numeric_code: '166'
 wikidata_id: Q36004
+geonames_id: "1547376"
+fips_code: "CK"
 official_name: Territory of the Cocos (Keeling) Islands
 languages:
 - code: eng
@@ -123,6 +125,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -12.5
   lng: 96.83333333

@@ -16,6 +16,8 @@ lendingType:
   value: Not classified
 numeric_code: '580'
 wikidata_id: Q16644
+geonames_id: "4041468"
+fips_code: "CQ"
 official_name: Commonwealth of the Northern Mariana Islands
 languages:
 - code: cal
@@ -143,6 +145,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 15.2
   lng: 145.75

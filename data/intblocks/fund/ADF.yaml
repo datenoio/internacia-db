@@ -3,6 +3,8 @@ name: Asian Development Fund
 blocktype:
 - fund
 status: formal
+scope_category: intergovernmental_body
+membership_applicability: not_applicable
 partof: ADB
 founded: '1974'
 active_period:
@@ -32,112 +34,6 @@ secretariat:
 acronyms:
 - lang: en
   value: ADF
-includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyzstan
-  type: country
-  status: member
-- id: LA
-  name: Lao People's Democratic Republic
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Federated States of
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: VN
-  name: Viet Nam
-  type: country
-  status: member
-membership_count: 26
 description: Grant-only special fund of the Asian Development Bank providing concessional assistance to ADB's poorest and most vulnerable developing member countries in Asia and the Pacific, focused on poverty reduction and improvements in quality of life.
 tags:
 - ADF
@@ -156,7 +52,7 @@ topics:
 - key: finance
   name: Finance
 wikidata_id: Q105340170
-notes: ADB's largest special fund and main source of grants; financed through periodic replenishments by ADB member countries and net income transfers from ordinary capital resources.
+notes: "Special fund administered by ADB. Grants and replenishment contributors are not ADF member states; donor and recipient lists are time-dependent and should be modelled in separate typed relations."
 last_verified: '2026-07-12'
 other_names:
 - id: en
@@ -191,7 +87,15 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-12'
   url: https://www.adb.org/who-we-are/about
+- field: scope_category
+  source: "ADB — Agreement Establishing the Asian Development Bank, Article 19"
+  retrieved_at: "2026-09-30"
+  url: "https://www.adb.org/sites/default/files/institutional-document/32120/amended-adb-charter-1mar2026.pdf"
+- field: membership_applicability
+  source: "ADB — Agreement Establishing the Asian Development Bank, Article 19"
+  retrieved_at: '2026-09-30'
+  url: "https://www.adb.org/sites/default/files/institutional-document/32120/amended-adb-charter-1mar2026.pdf"
 - field: notes
-  source: official sources
-  retrieved_at: '2026-07-12'
-  url: https://www.adb.org/what-we-do/funds/adf
+  source: "ADB — Agreement Establishing the Asian Development Bank, Article 19"
+  retrieved_at: '2026-09-30'
+  url: "https://www.adb.org/sites/default/files/institutional-document/32120/amended-adb-charter-1mar2026.pdf"

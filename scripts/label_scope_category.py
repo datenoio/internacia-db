@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Apply scope_category to intblocks via surgical YAML edits.
+"""Suggest scope_category labels; never mutate source YAML.
 
-Labels EXPLICIT high-visibility ids, reference-enumeration directories, and
-heuristic categories for remaining formal records missing the field.
+The legacy directory heuristic is advisory only. A reviewed manifest and
+``backfill_scope_category.py`` are required for any data change.
 """
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
 
 import yaml
@@ -57,6 +56,7 @@ EXPLICIT: dict[str, str] = {
 
 REF_DIRS = {
     "geographic",
+    "wbgroup",
 }
 
 ORG_DIRS = {
@@ -80,7 +80,6 @@ ORG_DIRS = {
     "audit",
     "aviation",
     "parliamentary",
-    "wbgroup",
 }
 
 TREATY_DIRS = {"agreement", "fta", "protocol"}
@@ -92,9 +91,9 @@ def heuristic(path: Path, data: dict) -> str | None:
     if rid in EXPLICIT:
         return EXPLICIT[rid]
     parent = path.parent.name
-    if parent in REF_DIRS:
-        return "reference_enumeration"
     bt = {str(b).lower() for b in (data.get("blocktype") or [])}
+    if parent in REF_DIRS or bt & REF_DIRS:
+        return "reference_enumeration"
     legal = str(data.get("legal_status") or "").lower()
     if "agreement" in bt or legal == "treaty" or parent in TREATY_DIRS:
         return "treaty_body"
@@ -113,41 +112,23 @@ def heuristic(path: Path, data: dict) -> str | None:
     return None
 
 
-def apply_category(path: Path, category: str) -> bool:
-    text = path.read_text(encoding="utf-8")
-    if re.search(rf"^scope_category:\s*{re.escape(category)}\s*$", text, re.M):
-        return False
-    if re.search(r"^scope_category:\s*\S+", text, re.M):
-        new = re.sub(r"^scope_category:\s*\S+.*$", f"scope_category: {category}", text, count=1, flags=re.M)
-    elif re.search(r"^status:\s*\S+", text, re.M):
-        new = re.sub(r"^(status:\s*\S+.*)$", rf"\1\nscope_category: {category}", text, count=1, flags=re.M)
-    else:
-        new = re.sub(r"^(id:\s*\S+.*)$", rf"\1\nscope_category: {category}", text, count=1, flags=re.M)
-    if new == text:
-        return False
-    path.write_text(new, encoding="utf-8")
-    return True
-
-
 def main() -> None:
-    updated = 0
+    suggested = 0
     scanned = 0
     for path in sorted(INTBLOCKS.rglob("*.yaml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             continue
         scanned += 1
-        # Only fill missing (do not overwrite manual labels unless EXPLICIT).
-        existing = data.get("scope_category")
-        rid = str(data.get("id") or path.stem)
-        if existing and rid not in EXPLICIT:
+        # Never overwrite manually reviewed labels, including EXPLICIT ones.
+        if data.get("scope_category") or data.get("status") != "formal":
             continue
         desired = heuristic(path, data)
         if not desired:
             continue
-        if apply_category(path, desired):
-            updated += 1
-    print(f"Updated scope_category on {updated} / {scanned} intblock file(s)")
+        print(f"Suggestion only: {data.get('id') or path.stem} -> {desired} ({path})")
+        suggested += 1
+    print(f"Suggested {suggested} / {scanned} intblock file(s); no source files changed")
 
 
 if __name__ == "__main__":

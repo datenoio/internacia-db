@@ -3,6 +3,8 @@ name: Antarctica
 iso3code: ATA
 numeric_code: '010'
 wikidata_id: Q51
+geonames_id: "6697173"
+fips_code: "AY"
 official_name: Antarctica
 un_member: false
 un_status: non_member
@@ -91,6 +93,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -90.0
   lng: 0.0

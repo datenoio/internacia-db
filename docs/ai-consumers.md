@@ -37,7 +37,7 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1272 | `id` | `data/datasets/intblocks.manifest.json` |
+| `intblocks` | 1278 | `id` | `data/datasets/intblocks.manifest.json` |
 | `blocktypes` | 78 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
@@ -104,6 +104,10 @@ resolved = aliases.get("ASF", "ASF")  # -> "FSA"
 A `reason` of `disambiguated` means the alias string now refers to a **different**
 entity (not just a rename).
 
+`TELESUR` was retired without a replacement because it is a commercial operator,
+not an intblock. It is **not** an alias to any organization. See
+[retired intblock IDs](retired-intblock-ids.md) before resolving historical IDs.
+
 ## Entity model
 
 ### Countries
@@ -133,7 +137,7 @@ Organizations, treaties, alliances, federations, and similar groupings. Each rec
 
 - `id` — stable uppercase identifier (join key)
 - `blocktype` — list of taxonomy keys (e.g. `intorg`, `trade`, `military`)
-- `includes` — membership list; **`includes[].id` is authoritative** for joins
+- `includes` — typed membership/participation list when applicable; **`includes[].id` is authoritative** for joins
 - `status`, `founded`, `dissolved`, `predecessor`, `successor` — lifecycle
 - `wikidata_id`, `description`, `tags`, `topics` — linking and discovery
 - `partof` — parent organization ids
@@ -156,14 +160,35 @@ Canonical catalog: [`data/schemas/includes_status.yaml`](../data/schemas/include
 | `recipient` / `contributor` / `funder` | Program / funding roles |
 | `represented` / `validation` / `extension` | Special coverage statuses |
 
-Filter current members with `status NOT IN ('former_member')` (and usually exclude
-observers unless the question asks for them).
+Filter current full members with `status IN ('member', 'founding_member')`;
+add associate tiers only when appropriate. `status NOT IN ('former_member')`
+also includes contributors, observers, recipients and partners, so it is **not**
+a safe membership filter. No `includes` plus `membership_applicability:
+not_applicable` means there is no meaningful country-level roster to join.
 
 ### Intblock `scope_category`
 
-Optional inclusion taxonomy (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`).
+Optional entity-kind taxonomy (`igo`, `treaty_body`, `policy_forum`,
+`reference_enumeration`, `intergovernmental_body`, `non_state_organization`).
 `reference_enumeration` covers named geographic/set groupings (e.g. SIDS), **not** country
 attribute partitions (those live on countries — see below).
+`intergovernmental_body` covers standing subsidiary commissions/offices and
+multilateral funds or two-fund partnerships without independent IGO personality;
+it does **not** imply a
+country-member roster. `non_state_organization` covers NGOs and industry or
+professional associations whose members may be organizations or individuals.
+Closed-enum clients must recognize both new values; do not silently coerce them
+to `igo`. For the 2026-09 scope migration, country-member rows were removed
+from entities where they represented beneficiaries, donors, parent-organization
+members, or member organizations' locations rather than actual membership.
+`AFDF` is independently constituted (`igo`) and has 29 State Participants in
+the 2025-09-30 ADF statement; it is not a regional-beneficiary set. `CIF` denotes
+the two-fund partnership (`intergovernmental_body`), not its 15 dated donor
+countries. `TAR` denotes an ESCAP cooperation platform (`policy_forum`) whose
+28-country *geographic coverage* is not a `member` roster. Its 22-party treaty
+is a **different ID**, `TARAGREEMENT` (`treaty_body`); treaty accession dates
+belong there. None of CIF, TAR, or TELESUR should be joined as a list of member
+states, and `includes IS NULL` in DuckDB represents absence of a country roster.
 See [intblock-inclusion-policy.md](intblock-inclusion-policy.md).
 How to search catalogues and improve records: [discovery.md](discovery.md).
 Catalogues searched and roster authorities used to compile membership:
@@ -203,6 +228,19 @@ recipes: [query-examples.md](query-examples.md).
 ### Country crosswalk ids
 
 Optional join aids: `geonames_id`, `ioc_code`, `fifa_code`, `fips_code`, and `bbox`.
+Coverage uses source-specific eligibility rather than all 256 records as a denominator:
+
+- `geonames_id` covers every current official ISO 3166-1 record; non-standard records
+  may lack a GeoNames entity;
+- `ioc_code` and `fifa_code` apply only when the entity has a corresponding National
+  Olympic Committee or FIFA Member Association;
+- `fips_code` is a legacy FIPS 10-4-compatible identifier. FIPS 10-4 was withdrawn in
+  2008; use it only to join legacy systems, not as a current geographic standard.
+
+Every populated crosswalk value has field-level provenance. Source snapshots and
+machine-readable null reasons are recorded in
+`data/schemas/country_crosswalk_sources.yaml` and
+`data/schemas/country_crosswalk_exclusions.yaml`.
 
 ```sql
 SELECT code, name, ioc_code, fifa_code FROM countries

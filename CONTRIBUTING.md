@@ -29,7 +29,7 @@ pre-commit install   # optional but recommended
   [intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md)).
 - The directory is the primary `blocktype` and must exist in `data/blocktypes/blocktypes.yaml`.
 - Required fields: `id`, `name`, `blocktype`, `status` (see `data/schemas/intblocks.schema.json`).
-- Set `scope_category` on formal records when known (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`) — see [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md).
+- Set `scope_category` on every formal record (`igo`, `treaty_body`, `policy_forum`, `reference_enumeration`, `intergovernmental_body`, `non_state_organization`); a missing formal category is a validation error. The category describes the entity, not the role of its country `includes` — see [docs/intblock-inclusion-policy.md](docs/intblock-inclusion-policy.md).
 - Cite official membership sources in `provenance`. How to search catalogues and improve records: [docs/discovery.md](docs/discovery.md). Catalogues already searched (UNTC, WTO RTA-IS, WTO PTA Database, UNCTAD IIA Navigator, Wikipedia `.int` list) and roster authorities are in [docs/intblock-sources.md](docs/intblock-sources.md).
 - Every `blocktype` value must exist in `data/blocktypes/blocktypes.yaml`.
 - `includes[].id` is authoritative (ISO alpha-2 for countries); `name` is a display label.

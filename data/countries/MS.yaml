@@ -7,6 +7,9 @@ capital_city:
   lng: -62.22
 numeric_code: '500'
 wikidata_id: Q13353
+geonames_id: "3578097"
+fips_code: "MH"
+fifa_code: "MSR"
 official_name: Montserrat
 languages:
 - code: eng
@@ -123,6 +126,20 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fifa_code
+  source: "FIFA Member Associations directory"
+  url: "https://inside.fifa.com/associations"
+  retrieved_at: "2026-09-29"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 16.75
   lng: -62.2

@@ -26,7 +26,8 @@ Pick:
   primary `blocktype` and must already exist in
   `data/blocktypes/blocktypes.yaml`. Additional types go in the `blocktype` list.
 - **`scope_category`** — `igo` | `treaty_body` | `policy_forum` |
-  `reference_enumeration`.
+  `reference_enumeration` | `intergovernmental_body` | `non_state_organization`.
+  The category describes the entity, not a country's role in `includes`.
 
 ## 2. Create the YAML
 

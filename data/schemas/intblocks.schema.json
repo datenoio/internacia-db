@@ -207,13 +207,15 @@
       ]
     },
     "scope_category": {
-      "description": "Inclusion taxonomy: igo, treaty_body, policy_forum, or reference_enumeration. See docs/intblock-inclusion-policy.md.",
+      "description": "Entity-kind taxonomy: igo, treaty_body, policy_forum, reference_enumeration, intergovernmental_body, or non_state_organization. This classifies the record itself, not the role of entries in includes. See docs/intblock-inclusion-policy.md.",
       "type": "string",
       "enum": [
         "igo",
         "treaty_body",
         "policy_forum",
-        "reference_enumeration"
+        "reference_enumeration",
+        "intergovernmental_body",
+        "non_state_organization"
       ]
     },
     "regions": {
@@ -340,7 +342,7 @@
       "enum": [
         "not_applicable"
       ],
-      "description": "When not_applicable, an empty includes list is intentional (conceptual entities, acronyms, etc.)"
+      "description": "When not_applicable, an empty country/organization includes roster is intentional. The entity may still have institutional or individual members that this dataset does not model (e.g. NGOs), or have no separate member states (e.g. a subsidiary office or fund)."
     },
     "founding_members": {
       "description": "Country codes of founding members (list).",

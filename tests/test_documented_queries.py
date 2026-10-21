@@ -176,6 +176,21 @@ def test_documented_query(con, sql, min_rows, expected_codes):
         assert expected_codes <= codes
 
 
+def test_dependent_body_without_country_roster_recipe(con):
+    ids = {row[0] for row in con.execute("""
+        SELECT id, name, scope_category
+        FROM intblocks
+        WHERE scope_category = 'intergovernmental_body'
+          AND COALESCE(len(includes), 0) = 0
+        ORDER BY id
+    """).fetchall()}
+    assert {"ADF", "AF", "GCCPO"} <= ids
+    for record_id in ("ADF", "AF", "GCCPO", "MSF", "CANTO", "ACIL"):
+        assert con.execute(
+            "SELECT COUNT(*) FROM memberships WHERE intblock_id = ?", [record_id]
+        ).fetchone()[0] == 0
+
+
 def test_ru_former_member_march_2022(con):
     rows = con.execute(
         """
@@ -447,7 +462,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        174,
+        173,
         set(),
     ),
     (
@@ -457,7 +472,7 @@ ADDITIONAL_RECIPES = [
         WHERE m.type='country' AND m.name IS NOT NULL AND m.name != c.name
           AND NOT list_contains(c.common_names, m.name)
         """,
-        1560,
+        1549,
         set(),
     ),
     (
@@ -571,7 +586,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 199
+    assert count == 195
 
 
 def test_world_bank_region_filter_uses_region_id(con):
@@ -638,6 +653,21 @@ def test_memberships_edge_table(con):
         "SELECT COUNT(*) FROM memberships WHERE intblock_id = 'NATO' AND status = 'member'"
     ).fetchone()[0]
     assert nato >= 32
+
+
+def test_separate_trans_asian_railway_agreement_recipe(con):
+    rows = con.execute(
+        """
+        SELECT country_code, joined
+        FROM memberships
+        WHERE intblock_id = 'TARAGREEMENT' AND status = 'member'
+        ORDER BY country_code
+        """
+    ).fetchall()
+    assert len(rows) == 22 and all(joined for _, joined in rows)
+    assert con.execute(
+        "SELECT count(*) FROM memberships WHERE intblock_id IN ('TAR', 'CIF', 'TELESUR')"
+    ).fetchone()[0] == 0
 
 
 def test_schema_property_descriptions_complete():

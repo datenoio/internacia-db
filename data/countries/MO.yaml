@@ -12,6 +12,9 @@ lendingType:
   value: Not classified
 numeric_code: '446'
 wikidata_id: Q14773
+geonames_id: "1821275"
+fips_code: "MC"
+fifa_code: "MAC"
 official_name: Macao Special Administrative Region of the People's Republic of China
 languages:
 - code: por
@@ -155,6 +158,20 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fifa_code
+  source: "FIFA Member Associations directory"
+  url: "https://inside.fifa.com/associations"
+  retrieved_at: "2026-09-29"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 22.16666666
   lng: 113.55

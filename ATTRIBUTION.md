@@ -13,6 +13,9 @@ sources that carry their own licenses and attribution requirements, listed below
 | **Wikidata** | entity linking (`wikidata_id`), `native_names`, multilingual labels, fallbacks | CC0 1.0 (public domain) | https://www.wikidata.org/ |
 | **IANA Time Zone Database (tzdata)** | `timezones` mapping (`scripts/data/zone1970.tab`) | Public domain | https://data.iana.org/time-zones/ |
 | **mledoze/countries** | `centroid` (geographic centroid `{lat, lng}`, 252 records) | ODbL-1.0 | https://github.com/mledoze/countries |
+| **GeoNames** | `geonames_id` and legacy `fips_code` crosswalks from `countryInfo.txt` | CC BY 4.0 | https://www.geonames.org/export/ |
+| **IOC Olympic Data Feed** | `ioc_code` reference snapshot | Upstream terms | https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm |
+| **FIFA Member Associations** | `fifa_code` reference directory | Upstream terms | https://inside.fifa.com/associations |
 
 Per-field provenance (source, retrieval date, and source license) is recorded in
 the `provenance` list on individual country records where applicable.
@@ -63,7 +66,7 @@ When redistributing or building on these datasets, include a credit such as:
 
 > Contains data from Internacia Datasets (https://github.com/datenoio/internacia-db),
 > licensed under CC BY 4.0, incorporating data from the World Bank (CC BY 4.0),
-> Wikidata (CC0), the IANA Time Zone Database (public domain), and
+> GeoNames (CC BY 4.0), Wikidata (CC0), the IANA Time Zone Database (public domain), and
 > mledoze/countries (ODbL-1.0, `centroid` field only).
 
 ## Recommended citation

@@ -677,6 +677,43 @@ def check_provenance_integrity(record: dict[str, Any]) -> list[dict[str, Any]]:
     return issues
 
 
+CROSSWALK_FIELDS = ("geonames_id", "ioc_code", "fifa_code", "fips_code")
+CROSSWALK_EXCLUSION_REASONS = frozenset({
+    "historical_only",
+    "no_authoritative_mapping",
+    "non_country_entity",
+    "non_standard_entity",
+    "not_a_member",
+    "not_in_official_roster",
+    "split_associations",
+})
+
+
+def check_country_crosswalk_provenance(record: dict[str, Any]) -> list[dict[str, Any]]:
+    """Every populated crosswalk field must have complete field-level provenance."""
+    issues: list[dict[str, Any]] = []
+    provenance = [entry for entry in (record.get("provenance") or []) if isinstance(entry, dict)]
+    for field in CROSSWALK_FIELDS:
+        value = record.get(field)
+        if value in (None, ""):
+            continue
+        entries = [entry for entry in provenance if str(entry.get("field") or "") == field]
+        complete = any(
+            entry.get("source") and entry.get("url") and entry.get("retrieved_at")
+            for entry in entries
+        )
+        if not complete:
+            issues.append({
+                "issue_type": "MISSING_CROSSWALK_PROVENANCE",
+                "field": field,
+                "current_value": str(value),
+                "suggested_action": (
+                    f"add field-level provenance for {field} with source, url, and retrieved_at"
+                ),
+            })
+    return issues
+
+
 def check_provenance_count(
     record: dict[str, Any],
     *,
@@ -755,6 +792,132 @@ def check_country_duplicates(records: list[dict[str, Any]], rel_paths: list[str]
             else:
                 mapping[val] = (path, record_id)
     return errors
+
+
+def check_country_crosswalk_uniqueness(
+    records: list[dict[str, Any]], rel_paths: list[str]
+) -> list[dict[str, Any]]:
+    """External crosswalk identifiers must resolve to one country record."""
+    issues: list[dict[str, Any]] = []
+    for field in CROSSWALK_FIELDS:
+        seen: dict[str, tuple[str, str]] = {}
+        for path, record in zip(rel_paths, records, strict=False):
+            value = str(record.get(field) or "")
+            if not value:
+                continue
+            code = str(record.get("code") or "unknown")
+            if value in seen:
+                other_path, other_code = seen[value]
+                issues.append({
+                    "issue_type": "DUPLICATE_CROSSWALK_IDENTIFIER",
+                    "field": field,
+                    "current_value": value,
+                    "suggested_action": (
+                        f"{field} '{value}' is shared by {other_code} and {code}; "
+                        "resolve the mapping before export"
+                    ),
+                    "file_path": path,
+                    "record_id": code,
+                    "other_path": other_path,
+                })
+            else:
+                seen[value] = (path, code)
+    return issues
+
+
+def check_country_crosswalk_policy(
+    records: list[dict[str, Any]],
+    rel_paths: list[str],
+    policy: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Validate required-code coverage and machine-readable null exceptions."""
+    issues: list[dict[str, Any]] = []
+    policy_path = "data/schemas/country_crosswalk_exclusions.yaml"
+    by_code = {
+        str(record.get("code")): (record, path)
+        for record, path in zip(records, rel_paths, strict=False)
+        if record.get("code")
+    }
+    known_codes = set(by_code)
+    for field in CROSSWALK_FIELDS:
+        rule = ((policy.get("fields") or {}).get(field) or {})
+        required = {str(code) for code in (rule.get("required_codes") or [])}
+        exclusions = rule.get("exclusions") or {}
+        excluded = {str(code) for code in exclusions}
+
+        for code in sorted((required | excluded) - known_codes):
+            issues.append({
+                "issue_type": "INVALID_CROSSWALK_POLICY",
+                "field": field,
+                "current_value": code,
+                "suggested_action": f"remove unknown country code {code} from crosswalk policy",
+                "file_path": policy_path,
+                "record_id": code,
+            })
+        for code in sorted(required & excluded):
+            issues.append({
+                "issue_type": "INVALID_CROSSWALK_POLICY",
+                "field": field,
+                "current_value": code,
+                "suggested_action": f"{code} cannot be both required and excluded for {field}",
+                "file_path": policy_path,
+                "record_id": code,
+            })
+        for code in sorted(known_codes - required - excluded):
+            issues.append({
+                "issue_type": "INCOMPLETE_CROSSWALK_POLICY",
+                "field": field,
+                "current_value": code,
+                "suggested_action": f"classify {code} as required or excluded for {field}",
+                "file_path": policy_path,
+                "record_id": code,
+            })
+
+        if rule.get("enforce_required", True):
+            for code in sorted(required & known_codes):
+                record, path = by_code[code]
+                if record.get(field) in (None, ""):
+                    issues.append({
+                        "issue_type": "MISSING_REQUIRED_CROSSWALK",
+                        "field": field,
+                        "current_value": "",
+                        "suggested_action": f"populate required {field} for {code}",
+                        "file_path": path,
+                        "record_id": code,
+                    })
+
+        for code in sorted(excluded & known_codes):
+            entry = exclusions.get(code) or {}
+            reason = str(entry.get("reason") or "")
+            record, path = by_code[code]
+            if reason not in CROSSWALK_EXCLUSION_REASONS:
+                issues.append({
+                    "issue_type": "INVALID_CROSSWALK_POLICY",
+                    "field": field,
+                    "current_value": reason,
+                    "suggested_action": f"use an allowed exclusion reason for {code}/{field}",
+                    "file_path": policy_path,
+                    "record_id": code,
+                })
+            if not entry.get("source") or not entry.get("reviewed_at"):
+                issues.append({
+                    "issue_type": "INVALID_CROSSWALK_POLICY",
+                    "field": field,
+                    "current_value": code,
+                    "suggested_action": f"add source and reviewed_at for {code}/{field} exclusion",
+                    "file_path": policy_path,
+                    "record_id": code,
+                })
+            if record.get(field) not in (None, ""):
+                issues.append({
+                    "issue_type": "STALE_CROSSWALK_EXCLUSION",
+                    "field": field,
+                    "current_value": str(record.get(field)),
+                    "suggested_action": f"remove exclusion for populated {code}/{field}",
+                    "file_path": path,
+                    "record_id": code,
+                })
+    return issues
 
 
 def validate_official_iso_count(records: list[dict[str, Any]]) -> list[dict[str, Any]]:

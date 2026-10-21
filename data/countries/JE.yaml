@@ -7,6 +7,8 @@ capital_city:
   lng: -2.1
 numeric_code: '832'
 wikidata_id: Q785
+geonames_id: "3042142"
+fips_code: "JE"
 official_name: Bailiwick of Jersey
 languages:
 - code: eng
@@ -132,6 +134,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 49.25
   lng: -2.16666666

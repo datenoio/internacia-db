@@ -87,6 +87,10 @@ def validate_provenance_integrity(record: dict[str, Any], rel_path: str) -> list
     return _messages(country_rules.check_provenance_integrity(record), rel_path)
 
 
+def validate_crosswalk_provenance(record: dict[str, Any], rel_path: str) -> list[str]:
+    return _messages(country_rules.check_country_crosswalk_provenance(record), rel_path)
+
+
 def validate_provenance_count(
     record: dict[str, Any],
     rel_path: str,
@@ -310,9 +314,11 @@ def run_validation(
     intblocks_dir = root / "data" / "intblocks"
     schema_path = root / "data" / "schemas" / "countries.schema.json"
     completeness_path = root / "data" / "schemas" / "countries_completeness.yaml"
+    crosswalk_policy_path = root / "data" / "schemas" / "country_crosswalk_exclusions.yaml"
 
     schema = load_json(schema_path)
     completeness_cfg = load_yaml(completeness_path)
+    crosswalk_policy = load_yaml(crosswalk_policy_path)
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -351,6 +357,7 @@ def run_validation(
         warnings.extend(validate_centroid_coords(record, rel))
         warnings.extend(validate_currency_codes(record, rel))
         warnings.extend(validate_provenance_integrity(record, rel))
+        errors.extend(validate_crosswalk_provenance(record, rel))
         if prov_min_count > 0:
             warnings.extend(validate_provenance_count(record, rel, min_count=prov_min_count))
         warnings.extend(validate_locale_fields(record, rel))
@@ -363,6 +370,16 @@ def run_validation(
     errors.extend(validate_official_iso_count(all_records))
 
     rel_paths = [rel for rel, _ in records]
+    errors.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in country_rules.check_country_crosswalk_uniqueness(all_records, rel_paths)
+    )
+    errors.extend(
+        f"{issue['file_path']}: {issue['suggested_action']}"
+        for issue in country_rules.check_country_crosswalk_policy(
+            all_records, rel_paths, crosswalk_policy
+        )
+    )
     errors.extend(
         f"{issue['file_path']}: {issue['suggested_action']}"
         for issue in cross_rules.check_border_resolution(all_records, rel_paths)

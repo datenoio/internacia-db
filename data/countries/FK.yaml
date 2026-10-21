@@ -7,6 +7,8 @@ capital_city:
   lng: -57.85
 numeric_code: '238'
 wikidata_id: Q9648
+geonames_id: "3474414"
+fips_code: "FK"
 official_name: Falkland Islands
 languages:
 - code: eng
@@ -133,6 +135,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -51.75
   lng: -59.0

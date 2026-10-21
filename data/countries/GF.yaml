@@ -7,6 +7,8 @@ capital_city:
   lng: -52.33
 numeric_code: '254'
 wikidata_id: Q3769
+geonames_id: "3381670"
+fips_code: "FG"
 official_name: Guiana
 languages:
 - code: fra
@@ -135,6 +137,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 4.0
   lng: -53.0

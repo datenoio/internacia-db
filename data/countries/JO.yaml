@@ -19,6 +19,10 @@ lendingType:
   value: IBRD
 numeric_code: '400'
 wikidata_id: Q810
+geonames_id: "248816"
+fips_code: "JO"
+fifa_code: "JOR"
+ioc_code: "JOR"
 official_name: Hashemite Kingdom of Jordan
 languages:
 - code: ara
@@ -166,6 +170,24 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: ioc_code
+  source: "IOC Olympic Data Feed NOC common codes (Beijing 2022 snapshot)"
+  url: "https://odf.olympictech.org/2022-Beijing/codes/HTML/og_cc/NOC.htm"
+  retrieved_at: "2026-09-29"
+- field: fifa_code
+  source: "FIFA Member Associations directory"
+  url: "https://inside.fifa.com/associations"
+  retrieved_at: "2026-09-29"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 31.0
   lng: 36.0

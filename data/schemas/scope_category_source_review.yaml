@@ -1,0 +1,72 @@
+version: 1
+change_id: complete-intblock-scope-taxonomy
+cohort_id: source_review_14
+expected_count: 14
+require_evidence: true
+description: >-
+  Source-backed scope assignments from the 2026-09-30 review of 18 formal
+  records. ACIL, RDR, GCCPO and TAR are intentionally deferred rather than
+  assigned a misleading category; review notes live under
+  .work/scope-category-backfill/source-review/.
+categories:
+  igo: [CROPTRUST, GCF]
+  treaty_body: [CACM, TRACECA, PETROCARIBE, ISS]
+  policy_forum: [AMERIPOL, CELSE, CKURAILWAY, IPSOS]
+  reference_enumeration: [CFACENTRAL, CFAWEST, ECCU, EUCU]
+evidence:
+  CROPTRUST:
+    source: FAO — Agreement for the Establishment of the Global Crop Diversity Trust, Article 1 and Annex (Constitution)
+    url: https://www.fao.org/fileadmin/user_upload/legal/docs/034t-e.pdf
+    retrieved_at: '2026-09-30'
+  GCF:
+    source: Governing Instrument for the Green Climate Fund, paragraphs 4–8
+    url: https://www.greenclimate.fund/sites/default/files/document/governing-instrument.pdf
+    retrieved_at: '2026-09-30'
+  CACM:
+    source: SICA — Tratado General de Integración Económica Centroamericana
+    url: https://www.sica.int/download/?449
+    retrieved_at: '2026-09-30'
+  TRACECA:
+    source: TRACECA — Basic Multilateral Agreement, Articles 8–9 and 14
+    url: https://traceca-org.org/tj/home/basic-documents/traceca-agreements/basic-multilateral-agreement-mla/
+    retrieved_at: '2026-09-30'
+  PETROCARIBE:
+    source: Jamaica Information Service — PM Says PetroCaribe Agreement will Deepen Regional Ties
+    url: https://jis.gov.jm/pm-says-petrocaribe-agreement-will-deepen-regional-ties/
+    retrieved_at: '2026-09-30'
+  ISS:
+    source: U.S. Department of State — TIAS 12927, Agreement concerning Cooperation on the Civil International Space Station
+    url: https://www.state.gov/wp-content/uploads/2019/02/12927-Multilateral-Space-Space-Station-1.29.1998.pdf
+    retrieved_at: '2026-09-30'
+  AMERIPOL:
+    source: AMERIPOL — Chile deposits ratification instrument; constitutive treaty not yet in force
+    url: https://ameripol.org/noticias/chile-deposita-el-instrumento-de-ratificacion-del-tratado-constitutivo-de-ameripol-y-fortalece-la-cooperacion-policial-en-las-americas/
+    retrieved_at: '2026-09-30'
+  CELSE:
+    source: State-owned Assets Supervision and Administration Commission of the State Council — CELSE logistics corridor
+    url: http://en.sasac.gov.cn/2024/05/23/c_17219.htm
+    retrieved_at: '2026-09-30'
+  CKURAILWAY:
+    source: State Council of the People's Republic of China — CKU railway project commencement
+    url: https://english.www.gov.cn/news/202412/27/content_WS676eabb1c6d0868f4e8ee51f.html
+    retrieved_at: '2026-09-30'
+  IPSOS:
+    source: International Patient Summary — JIC IPS Coordination Committee
+    url: https://international-patient-summary.net/cross-sdo-ips-collaboration/
+    retrieved_at: '2026-09-30'
+  CFACENTRAL:
+    source: BEAC — Rôle de la BEAC
+    url: https://www.beac.int/billets-pieces/mission-de-beac/
+    retrieved_at: '2026-09-30'
+  CFAWEST:
+    source: BCEAO — Traité de l'Union Monétaire Ouest Africaine, articles 2, 4 and 25–29
+    url: https://www.bceao.int/sites/default/files/inline-files/TraiteUMOA2010.pdf
+    retrieved_at: '2026-09-30'
+  ECCU:
+    source: Eastern Caribbean Central Bank — Currency
+    url: https://www.eccb-centralbank.org/currency
+    retrieved_at: '2026-09-30'
+  EUCU:
+    source: EUR-Lex — TFEU Article 28, Union customs territory
+    url: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX%3A12008E028%3AEN%3AHTML
+    retrieved_at: '2026-09-30'

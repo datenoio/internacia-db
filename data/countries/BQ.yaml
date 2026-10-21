@@ -7,6 +7,7 @@ capital_city:
   lng: -68.27
 numeric_code: '535'
 wikidata_id: Q27561
+geonames_id: "7626844"
 official_name: Bonaire, Sint Eustatius and Saba
 languages:
 - code: eng
@@ -127,6 +128,11 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 12.18
   lng: -68.25

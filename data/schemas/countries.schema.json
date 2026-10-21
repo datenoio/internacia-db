@@ -128,24 +128,24 @@
       "pattern": "^Q[1-9][0-9]*$"
     },
     "geonames_id": {
-      "description": "GeoNames integer feature id for the country/territory (as string).",
+      "description": "GeoNames integer feature id for the country/territory (as string). Expected for current official ISO 3166-1 records; source-specific exceptions are documented separately.",
       "type": "string",
       "pattern": "^[1-9][0-9]*$"
     },
     "ioc_code": {
-      "description": "International Olympic Committee three-letter country code when assigned.",
+      "description": "International Olympic Committee three-letter NOC code when assigned; not every ISO entity has an NOC.",
       "type": "string",
       "minLength": 3,
       "maxLength": 3
     },
     "fifa_code": {
-      "description": "FIFA three-letter association code when assigned.",
+      "description": "FIFA three-letter Member Association code when assigned; FIFA association coverage is not identical to ISO country coverage.",
       "type": "string",
       "minLength": 3,
       "maxLength": 3
     },
     "fips_code": {
-      "description": "Legacy FIPS 10-4 two-letter code when known (US government geospatial).",
+      "description": "Legacy FIPS 10-4-compatible two-letter code when known. FIPS 10-4 was withdrawn in 2008 and replaced by GENC; retain only for legacy joins.",
       "type": "string",
       "minLength": 2,
       "maxLength": 2

@@ -2,7 +2,9 @@
 
 from datetime import date
 
+from internacia_builder.quality_report import get_priority_level
 from internacia_builder.validate import country_rules, cross_rules, intblock_rules
+from internacia_builder.validate.intblocks import validate_scope_category
 
 
 def _types(issues):
@@ -64,6 +66,69 @@ def test_reciprocity_allowlist_parsing():
 
 def _intblocks(*recs):
     return list(recs), [f"data/intblocks/intorg/{r.get('id', 'X')}.yaml" for r in recs]
+
+
+def test_wbgroup_must_be_reference_enumeration():
+    issues = intblock_rules.check_intblock_scope_category({
+        "id": "WLD",
+        "blocktype": ["wbgroup"],
+        "status": "formal",
+        "scope_category": "igo",
+    })
+    assert _types(issues) == ["SCOPE_CATEGORY_SEMANTIC_MISMATCH"]
+
+
+def test_wbgroup_reference_enumeration_passes():
+    assert intblock_rules.check_intblock_scope_category({
+        "id": "WLD",
+        "blocktype": ["wbgroup"],
+        "status": "formal",
+        "scope_category": "reference_enumeration",
+    }) == []
+
+
+def test_formal_intblock_without_scope_is_important_error():
+    issues = intblock_rules.check_intblock_scope_category({
+        "id": "X",
+        "blocktype": ["intorg"],
+        "status": "formal",
+    })
+    assert _types(issues) == ["MISSING_SCOPE_CATEGORY"]
+    assert get_priority_level(issues[0]["issue_type"], issues[0]) == "IMPORTANT"
+
+
+def test_non_formal_missing_scope_is_not_a_gate_error():
+    assert intblock_rules.check_intblock_scope_category({
+        "id": "OLD", "blocktype": ["intorg"], "status": "historical"
+    }) == []
+
+
+def test_formal_scope_gate_is_consistent_between_cli_and_quality():
+    missing = {"id": "NEW", "status": "formal", "blocktype": ["intorg"]}
+    shared_issue = intblock_rules.check_intblock_scope_category(missing)[0]
+    assert shared_issue["issue_type"] == "MISSING_SCOPE_CATEGORY"
+    assert len(validate_scope_category([("NEW.yaml", missing)])) == 1
+    assert get_priority_level(shared_issue["issue_type"], shared_issue) == "IMPORTANT"
+
+
+def test_expanded_scope_categories_pass():
+    for category in ("intergovernmental_body", "non_state_organization"):
+        assert intblock_rules.check_intblock_scope_category({
+            "id": "X",
+            "blocktype": ["intorg"],
+            "status": "formal",
+            "scope_category": category,
+        }) == []
+
+
+def test_unknown_scope_category_is_rejected():
+    issues = intblock_rules.check_intblock_scope_category({
+        "id": "X",
+        "blocktype": ["intorg"],
+        "status": "formal",
+        "scope_category": "other",
+    })
+    assert _types(issues) == ["UNKNOWN_SCOPE_CATEGORY"]
 
 
 def test_valid_successor_reference_passes():
@@ -230,6 +295,68 @@ def test_provenance_count_at_minimum_passes():
         ],
     }
     assert country_rules.check_provenance_count(record, min_count=4) == []
+
+
+def test_populated_crosswalk_requires_field_level_provenance():
+    issues = country_rules.check_country_crosswalk_provenance({
+        "code": "AA",
+        "geonames_id": "123",
+        "provenance": [{"field": "name", "source": "Example"}],
+    })
+    assert _types(issues) == ["MISSING_CROSSWALK_PROVENANCE"]
+
+
+def test_complete_crosswalk_provenance_passes():
+    record = {
+        "code": "AA",
+        "geonames_id": "123",
+        "provenance": [{
+            "field": "geonames_id",
+            "source": "GeoNames",
+            "url": "https://www.geonames.org/",
+            "retrieved_at": "2026-09-29",
+        }],
+    }
+    assert country_rules.check_country_crosswalk_provenance(record) == []
+
+
+def test_duplicate_crosswalk_identifier_reported():
+    records = [
+        {"code": "AA", "geonames_id": "123"},
+        {"code": "BB", "geonames_id": "123"},
+    ]
+    issues = country_rules.check_country_crosswalk_uniqueness(
+        records, ["data/countries/AA.yaml", "data/countries/BB.yaml"]
+    )
+    assert _types(issues) == ["DUPLICATE_CROSSWALK_IDENTIFIER"]
+
+
+def test_crosswalk_policy_requires_value_for_required_code():
+    records = [{"code": "AA"}, {"code": "BB"}]
+    paths = ["data/countries/AA.yaml", "data/countries/BB.yaml"]
+    policy = {"fields": {
+        field: {
+            "enforce_required": field == "geonames_id",
+            "required_codes": ["AA"] if field == "geonames_id" else [],
+            "exclusions": {
+                "BB": {
+                    "reason": "no_authoritative_mapping",
+                    "source": "https://example.test",
+                    "reviewed_at": "2026-09-29",
+                },
+                **({
+                    "AA": {
+                        "reason": "no_authoritative_mapping",
+                        "source": "https://example.test",
+                        "reviewed_at": "2026-09-29",
+                    }
+                } if field != "geonames_id" else {}),
+            },
+        }
+        for field in country_rules.CROSSWALK_FIELDS
+    }}
+    issues = country_rules.check_country_crosswalk_policy(records, paths, policy)
+    assert "MISSING_REQUIRED_CROSSWALK" in _types(issues)
 
 
 def test_provenance_count_disabled_when_min_zero():

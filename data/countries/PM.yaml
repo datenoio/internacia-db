@@ -7,6 +7,8 @@ capital_city:
   lng: -56.18
 numeric_code: '666'
 wikidata_id: Q34617
+geonames_id: "3424932"
+fips_code: "SB"
 official_name: Saint Pierre and Miquelon
 languages:
 - code: fra
@@ -128,6 +130,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 46.83333333
   lng: -56.33333333

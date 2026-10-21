@@ -7,6 +7,8 @@ capital_city:
   lng: -5.72
 numeric_code: '654'
 wikidata_id: Q192184
+geonames_id: "3370751"
+fips_code: "SH"
 official_name: Saint Helena, Ascension and Tristan da Cunha
 languages:
 - code: eng
@@ -127,6 +129,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -15.95
   lng: -5.72

@@ -1,0 +1,308 @@
+version: 1
+change_id: complete-intblock-scope-taxonomy
+cohort_id: nonformal_candidates_30
+expected_count: 30
+description: Staged non-formal scope candidates from 2026-09-30 audit. Six individually approved assignments have
+  already been applied with source provenance; 12 additional decisions are source-reviewed but unapplied, and 12
+  remain pending review. The all-or-nothing 30-record apply command remains blocked by those pending decisions.
+records:
+  ANGLOSPHERE:
+    path: data/intblocks/cultural/ANGLOSPHERE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 058df40fc017ec97fa7a645d2af7bd9c6228fa0286adbbfdddcd427c7feaf0d3
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  ARABW:
+    path: data/intblocks/cultural/ARABW.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 0aef36b3d70a075680944478516aaa009dfe17969e14838c81405eca689efea4
+    review_state: source_reviewed
+    review_note: Approved reference set using the 22 LAS-country convention; no changes to the country roster or member statuses.
+    evidence:
+      source: 'Library of Congress: Arab World convention based on 22 LAS countries'
+      url: https://guides.loc.gov/arab-world-newspapers/country
+      retrieved_at: '2026-09-30'
+  BALTICSTATES:
+    path: data/intblocks/acronym/BALTICSTATES.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: da4b5a28c503689c55d4aa7679bfbcec15adf21f10f61edbddb13d701be98e20
+    review_state: source_reviewed
+    review_note: Approved three-state geographic reference set; not the separate Baltic institutions.
+    evidence:
+      source: 'European Commission: Baltic countries are Estonia, Latvia and Lithuania'
+      url: https://economy-finance.ec.europa.eu/eueconomyexplained/graphs-economic-topics/integration-baltic-economies_en
+      retrieved_at: '2026-09-30'
+  CHIP4:
+    path: data/intblocks/digital/CHIP4.yaml
+    expected_status: informal
+    category: policy_forum
+    source_sha256: db120127c565e5eea018a659429358322086264b6c9ef6c16e61ebc6e424ca31
+    review_state: pending_review
+    review_note: 'Sources document 2022 preliminary and 2023 officials'' meetings, but no independent legal personality
+      or durable future schedule. Next: Assign policy_forum provisionally; recheck whether format remains active
+      and consider participant roles.'
+    evidence:
+      source: Reuters documented preliminary Chip 4 working-group meeting.
+      url: https://www.reuters.com/technology/taiwan-says-us-led-chip-4-group-discussed-supply-chain-resilience-2022-09-30/
+      retrieved_at: '2026-09-30'
+  CMA:
+    path: data/intblocks/currency/CMA.yaml
+    expected_status: de-facto
+    category: policy_forum
+    source_sha256: 624e51ce371c161218a48c7641b850d8bc134e3927cf1f05f78864a5d974c19e
+    review_state: source_reviewed
+    review_note: Approved monetary cooperation arrangement, not the separate MMA treaty or CPOC committee; other status/date issues remain open.
+    evidence:
+      source: 'Namibia Government Gazette: Common Monetary Area as four-country monetary arrangement'
+      url: https://www.bon.com.na/CMSTemplates/Bon/Files/bon.com.na/54/54ae6b7e-d1e6-4277-8916-55d56388b981.pdf
+      retrieved_at: '2026-09-30'
+  DUTCHSPHERE:
+    path: data/intblocks/cultural/DUTCHSPHERE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: a90ec2c3dec2feb07b1505af62ca979c72496c301dddbb965cff61ca2289de4d
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  FATFBLACKLIST:
+    path: data/intblocks/acronym/FATFBLACKLIST.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 6ba7bb62061d4d97bad810a128bbc4f3fa3093153cf5535f1877c26d07dc0718
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: FATF June 2026 statement names DPRK, Iran and Myanmar in risk categories.
+      url: https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/call-for-action-june-2026.html
+      retrieved_at: '2026-09-30'
+  G33:
+    path: data/intblocks/acronym/G33.yaml
+    expected_status: informal
+    category: policy_forum
+    source_sha256: 5e70cc30ded7b1fabeb42a9ed28a6c05211d74657cf38f0d18742f886c5ab8f4
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: WTO coalition page describes G33 and roster of 47 WTO members.
+      url: https://www.wto.org/english/tratop_e/agric_e/negoti_groups_e.htm
+      retrieved_at: '2026-09-30'
+  GATT:
+    path: data/intblocks/trade/GATT.yaml
+    expected_status: historical
+    category: treaty_body
+    source_sha256: 72755f26948f0c4745505ebbbdcc36144519382839ccae294a312680b52b21ce
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: WTO GATT 1947 text defines contracting parties and accession.
+      url: https://www.wto.org/english/docs_e/legal_e/gatt47_e.htm
+      retrieved_at: '2026-09-30'
+  GERMANOPHONE:
+    path: data/intblocks/cultural/GERMANOPHONE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 221b61a6a372459ecd253b9b0a76b3a10410463dcfe10d56af042147bb67a1a7
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  HISPAM:
+    path: data/intblocks/cultural/HISPAM.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 45188c7ba6038d6a0cdf40c8cd91ac2673b1901363d2decb712fafb6ff297ac8
+    review_state: source_reviewed
+    review_note: Approved Hispanic America as an eighteen-sovereign-state reference set, not legal membership.
+    evidence:
+      source: 'RAE/ASALE: Hispanoamerica as a geographic language-based grouping'
+      url: https://www.rae.es/dpd/Hispanoam%C3%A9rica
+      retrieved_at: '2026-09-30'
+  HISPANIDAD:
+    path: data/intblocks/cultural/HISPANIDAD.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: a013cc8bca10200ffd3f87e09df9b2569dba96e1bcc41b25a7ea0ae886f085e0
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  INOGATE:
+    path: data/intblocks/project/INOGATE.yaml
+    expected_status: historical
+    category: policy_forum
+    source_sha256: 4f22756b6e6342533f3f1ee871bcbee50a9cdfafdfb39fa31e5a1dd07dd7f724
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: Commission describes closure after 20 years and names 11 partner countries.
+      url: https://enlargement.ec.europa.eu/news/eu-boost-its-focus-energy-cooperation-partner-countries-eastern-neighbourhood-and-central-asia-2016-03-17_en
+      retrieved_at: '2026-09-30'
+  LLDC:
+    path: data/intblocks/acronym/LLDC.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 8f3a78abf12f165feeb1beb16418e3d0a736441c908adb37f5b5ec241363f70e
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: UN defines and lists 32 LLDCs as a classified group.
+      url: https://www.un.org/en/landlocked/about-landlocked-developing-countries
+      retrieved_at: '2026-09-30'
+  MAR:
+    path: data/intblocks/acronym/MAR.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 02540565b26c466db8f2120897c1689aecd8c01ddeb76c7ec2878cd27d1a4145
+    review_state: pending_review
+    review_note: Verify published definition and historical period before backfill
+  MENA:
+    path: data/intblocks/acronym/MENA.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 9a7d47ebff488631e825922da4875dddb6b0ecf98e96d0fed6d5198a7c937419
+    review_state: pending_review
+    review_note: Verify published definition and historical period before backfill
+  MICEU:
+    path: data/intblocks/currency/MICEU.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 12ed322a2094629eaf4d105b367b9637e4a04d1a3dafb1938f1af23958dd157b
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: Commission identifies five independent non-EU microstates and distinct EU relationships.
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52012DC0680R(01)
+      retrieved_at: '2026-09-30'
+  MIDAMERICA:
+    path: data/intblocks/acronym/MIDAMERICA.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 365c1a6141e58946075a465b5bb4a2ae773a6a898d4a09f413b894d5bb6c2dca
+    review_state: source_reviewed
+    review_note: Approved geographic reference grouping with a separate M49-based operational definition; not an official UN Middle America roster.
+    evidence:
+      source: 'Encyclopaedia Britannica: Middle America as Mexico, Central America and West Indies'
+      url: https://www.britannica.com/place/Americas
+      retrieved_at: '2026-09-30'
+  MTCR:
+    path: data/intblocks/armscontrol/MTCR.yaml
+    expected_status: informal
+    category: policy_forum
+    source_sha256: a5a23915d844c0867743973548dd8eeb002e6631b3920393e8b5783846469b2c
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: MTCR FAQ states nonbinding informal regime, 35 partners and no observer status.
+      url: https://www.mtcr.info/en/faq
+      retrieved_at: '2026-09-30'
+  NWFZ:
+    path: data/intblocks/armscontrol/NWFZ.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 3c84ec03615fec7b9f6fbfea2f40a8dcc8d36696052fa13227fd4d4cccc71503
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: UNODA describes treaty-established zones separately.
+      url: https://www.un.org/nwfz/
+      retrieved_at: '2026-09-30'
+  NWS:
+    path: data/intblocks/armscontrol/NWS.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 5c8d8674302b8ddc1fdbf3d4d802413beb24cc26337f4858cf2ab577f2602da5
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: Article IX(3) defines nuclear-weapon State by pre-1967 test.
+      url: https://www.un.org/en/conf/npt/2005/npttreaty.html
+      retrieved_at: '2026-09-30'
+  PALOP:
+    path: data/intblocks/cultural/PALOP.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: bc810a3309f740a0812f9822400dbad208a91f43a5701d23619855efb149647b
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  ROMSE:
+    path: data/intblocks/cultural/ROMSE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 3829037604380e34e3068c1125aa42bb7b757a377fe3ea9cef1e39268247eb2d
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  RUSSOPHONE:
+    path: data/intblocks/cultural/RUSSOPHONE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 457f99e1b7edfa78f9b5f7e1572e0c362568b7eb5d3d276421ac6ba3eba070bf
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  SAPTA:
+    path: data/intblocks/pta/SAPTA.yaml
+    expected_status: historical
+    category: treaty_body
+    source_sha256: 100019de7f8fb631d52fa7bcf416c227d59d920b695942c43bb7acf0e474425d
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: Primary SAPTA treaty lists seven contracting states and agreement articles.
+      url: https://nepal.saarc-sec.org/index.php/resources/agreements-conventions/35-agreement-on-saarc-preferential-trading-arrangement-sapta/file
+      retrieved_at: '2026-09-30'
+  SINOSPHERE:
+    path: data/intblocks/cultural/SINOSPHERE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 62c6fb895034bb3a5375454ea37af6dfaf1f17bd2658b670eee4cbaa98494b66
+    review_state: pending_review
+    review_note: Verify set definition and dated provenance before backfill
+  SLAVISPHERE:
+    path: data/intblocks/cultural/SLAVISPHERE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 514708b42894b5463e3842e24bf9c9c202be78971a08f85d692cbcf64cc1ce7e
+    review_state: source_reviewed
+    review_note: Approved thirteen sovereign Slavic countries as a cultural reference set, not an institution.
+    evidence:
+      source: 'Wei Liu, Comparative Journal of Slavic Studies: thirteen Slavic countries'
+      url: https://www.degruyterbrill.com/document/doi/10.1515/cjss-2021-2003/html
+      retrieved_at: '2026-09-30'
+  SOUTHERNCONE:
+    path: data/intblocks/acronym/SOUTHERNCONE.yaml
+    expected_status: informal
+    category: reference_enumeration
+    source_sha256: 30ea118abbf168fea384f0bcccde0f742e10718306654cfef902356b2d298711
+    review_state: pending_review
+    review_note: Verify published definition and historical period before backfill
+  UNILAT:
+    path: data/intblocks/cultural/UNILAT.yaml
+    expected_status: historical
+    category: igo
+    source_sha256: 4f907f0a7c634f23d03576180a2836e7b42d31fe7b1e428563e1db739548aada
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: French MFA archive states institutional organs, 36 states and 2012 secretariat dissolution.
+      url: https://archivesdiplomatiques.diplomatie.gouv.fr/media/0a198acf-8e63-4151-9839-5417aad0bb61.pdf
+      retrieved_at: '2026-09-30'
+  WIEMARTRIANGLE:
+    path: data/intblocks/acronym/WIEMARTRIANGLE.yaml
+    expected_status: informal
+    category: policy_forum
+    source_sha256: adacf435201438c35ac32fbb4aade85769cf38310f4a0e5c5741b9e505c67bdb
+    review_state: source_reviewed
+    review_note: Source-level taxonomy decision; recheck the separate roster warning before downstream membership
+      joins.
+    evidence:
+      source: French foreign ministry describes Weimar Triangle as cooperation forum.
+      url: https://www.diplomatie.gouv.fr/en/the-ministry-in-action/promoting-a-sovereign-europe/the-weimar-triangle
+      retrieved_at: '2026-09-30'

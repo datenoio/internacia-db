@@ -908,7 +908,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 199 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `WESTERNBLOC` /
+**Expected:** 195 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
 ## Edge cases and data quality
@@ -963,7 +963,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 174 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 173 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -989,7 +989,7 @@ ORDER BY i.id, m.id
 LIMIT 20;
 ```
 
-**Expected:** 1560 mismatches total (advisory); examples include `CD` labeled
+**Expected:** 1549 mismatches total (advisory); examples include `CD` labeled
 "Congo, The Democratic Republic of the" vs canonical "Congo, Dem. Rep.".
 
 **Gotcha:** Mismatches are **not errors** — always join on `includes[].id`, never on
@@ -1142,6 +1142,45 @@ rows = con.execute(
 ).fetchall()
 # Embed `f"{id}: {name}. {text[:500]}"` then retrieve; join full row on id.
 ```
+
+The `scope_category` enum also includes `intergovernmental_body` (dependent
+commissions, offices and funds) and `non_state_organization` (NGOs and
+associations). The category is an **entity type**, not proof of a country-member
+roster. For example, find dependent bodies without a country-level roster:
+
+```sql
+SELECT id, name, scope_category
+FROM intblocks
+WHERE scope_category = 'intergovernmental_body'
+  AND COALESCE(len(includes), 0) = 0
+ORDER BY id;
+```
+
+`membership_applicability: not_applicable` is a **source-YAML marker**, not an
+exported DuckDB column; a missing `includes` list is exported as `NULL`, hence
+the `COALESCE`. A missing list does not imply the entity has no institutional or
+individual members, only that no country-level roster is modelled here.
+
+To find full country members, explicitly filter `memberships.status IN
+('member', 'founding_member')`; excluding only `former_member` would also include
+donors, observers, recipients and participants.
+
+The Trans-Asian Railway **Agreement** is a separate intblock from the ESCAP
+network. Its 22 parties can be queried without mistaking the network's
+28-country geographic reach for treaty accession:
+
+```sql
+SELECT country_code, joined
+FROM memberships
+WHERE intblock_id = 'TARAGREEMENT' AND status = 'member'
+ORDER BY country_code;
+```
+
+**Expected:** 22 rows as of the 2026-09-30 UN Treaty Collection roster. `TAR`
+has `scope_category = 'policy_forum'` and no country-membership rows; `CIF`
+likewise has no country-member rows despite 15 documented contributors.
+`AFDF` has 29 actual State Participants. The retired commercial-media ID
+`TELESUR` has no row in `intblocks` or `memberships`.
 
 Countries lite path for entity linking:
 

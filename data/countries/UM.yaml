@@ -7,6 +7,7 @@ capital_city:
   lng: -77.032
 numeric_code: '581'
 wikidata_id: Q16645
+geonames_id: "5854968"
 official_name: United States Minor Outlying Islands
 languages:
 - code: eng
@@ -124,6 +125,11 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 19.3
   lng: 166.633333

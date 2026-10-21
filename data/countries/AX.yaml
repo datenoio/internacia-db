@@ -7,6 +7,7 @@ capital_city:
   lng: 19.9
 numeric_code: '248'
 wikidata_id: Q5689
+geonames_id: "661882"
 official_name: Åland Islands
 languages:
 - code: swe
@@ -129,6 +130,11 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: 60.116667
   lng: 19.9

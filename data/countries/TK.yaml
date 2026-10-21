@@ -7,6 +7,8 @@ capital_city:
   lng: -171.22
 numeric_code: '772'
 wikidata_id: Q36823
+geonames_id: "4031074"
+fips_code: "TL"
 official_name: Tokelau
 languages:
 - code: eng
@@ -127,6 +129,16 @@ provenance:
   retrieved_at: '2026-08-03'
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
+- field: geonames_id
+  source: "GeoNames countryInfo.txt"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
+- field: fips_code
+  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
+  url: "https://download.geonames.org/export/dump/countryInfo.txt"
+  retrieved_at: "2026-09-29"
+  license: "CC-BY-4.0"
 centroid:
   lat: -9.0
   lng: -172.0
