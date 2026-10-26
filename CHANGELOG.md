@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-10-26
+
 ### Fixed
 
 - `last_verified` set to 2026-10-25 for IPBES (151 coded members after the United States withdrew on 6 February 2026 and Slovenia joined on 9 February 2026; the Plenary 12 list prints both Eswatini and Swaziland, and the Council of the EU counts 152), the Global Fund (123 countries with an eligible or transition-funded component on the 2026 eligibility list), ICH (New Zealand and Pakistan added as observers; 25 members), the European Mathematical Society (52 full corporate members in 40 countries; Serbia added, and Belarus, Malta, and North Macedonia removed), EuChemS (42 societies in the same 35 countries), and FACS (the 31 coded societies match the member page; the Chemical Society of the South Pacific has no single country code).
@@ -68,6 +70,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Cayman Islands, Curaçao, French Guiana, Martinique and the Turks and Caicos Islands
   (`membership_count` 23). APEC and the OIC were left unchanged: their member pages
   could not be retrieved.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1275 → 1275 records; 217 changed
+- Blocktypes: 78 → 78 records
+- Membership edges: 59466 → 59050; 270 added, 686 removed, 110 changed
 
 ## [3.1.0] - 2026-10-22
 
