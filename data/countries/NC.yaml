@@ -16,9 +16,9 @@ lendingType:
   value: Not classified
 numeric_code: '540'
 wikidata_id: Q33788
-geonames_id: "2139685"
-fips_code: "NC"
-fifa_code: "NCL"
+geonames_id: '2139685'
+fips_code: NC
+fifa_code: NCL
 official_name: New Caledonia
 languages:
 - code: fra
@@ -63,8 +63,8 @@ population:
   source: World Bank
   source_id: SP.POP.TOTL
 area:
-  value: 18280.0
-  year: 2023
+  value: 18576.0
+  year: 2024
   source: World Bank
   source_id: AG.LND.TOTL.K2
 timezones:
@@ -104,7 +104,7 @@ provenance:
   url: https://data.worldbank.org/indicator/SP.POP.TOTL
 - field: area
   source: World Bank
-  retrieved_at: '2026-06-15'
+  retrieved_at: '2026-11-01'
   url: https://data.worldbank.org/indicator/AG.LND.TOTL.K2
 - field: timezones
   source: IANA tzdata
@@ -138,19 +138,19 @@ provenance:
   url: https://github.com/datenoio/internacia-db
   license: CC-BY-4.0
 - field: geonames_id
-  source: "GeoNames countryInfo.txt"
-  url: "https://download.geonames.org/export/dump/countryInfo.txt"
-  retrieved_at: "2026-09-29"
-  license: "CC-BY-4.0"
+  source: GeoNames countryInfo.txt
+  url: https://download.geonames.org/export/dump/countryInfo.txt
+  retrieved_at: '2026-09-29'
+  license: CC-BY-4.0
 - field: fifa_code
-  source: "FIFA Member Associations directory"
-  url: "https://inside.fifa.com/associations"
-  retrieved_at: "2026-09-29"
+  source: FIFA Member Associations directory
+  url: https://inside.fifa.com/associations
+  retrieved_at: '2026-09-29'
 - field: fips_code
-  source: "GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)"
-  url: "https://download.geonames.org/export/dump/countryInfo.txt"
-  retrieved_at: "2026-09-29"
-  license: "CC-BY-4.0"
+  source: GeoNames countryInfo.txt (legacy FIPS 10-4-compatible code)
+  url: https://download.geonames.org/export/dump/countryInfo.txt
+  retrieved_at: '2026-09-29'
+  license: CC-BY-4.0
 centroid:
   lat: -21.5
   lng: 165.5
