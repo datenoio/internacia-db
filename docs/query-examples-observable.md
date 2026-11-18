@@ -147,8 +147,8 @@ Plot.plot({
 })
 ```
 
-**Expected bars (ISO only):** High income: nonOECD 60, Lower middle 58, Upper middle 50,
-Low income 41, High income: OECD 30, High income 5.
+**Expected bars (ISO only):** High income 108, Upper middle income 61, Lower middle income 50,
+Low income 25.
 
 ### World Bank region distribution (ISO countries)
 
@@ -172,8 +172,9 @@ Plot.plot({
 })
 ```
 
-**Gotcha:** Labels include upstream suffixes such as `(all income levels)`. Filter downstream
-on `region_id` (`ECS`, `SSF`, …), not the label string.
+**Gotcha:** Labels are the World Bank's current names, which change (in 2025 `MEA` became
+*Middle East, North Africa, Afghanistan & Pakistan*). Filter downstream on `region_id` (`ECS`,
+`SSF`, …), not the label string.
 
 ---
 

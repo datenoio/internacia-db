@@ -94,8 +94,9 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - Current ISO countries only (249): filter code_status == 'official_iso3166_1'
 - 7 non-standard country codes retained with explicit status: AN, JG, XK, XA, XS, XT, XN (Kosovo is XK; legacy KV in countries_aliases.json)
 - Country code remaps: data/datasets/countries_aliases.json
-- World Bank region/incomeLevel/lendingType missing for 8 entities (territories WB does not classify); adminregion missing for 39 high-income economies by design
-- Filter World Bank region on region.id (e.g. 'ECS'), not region.value: labels vary upstream ('(all income levels)' suffix)
+- World Bank region/incomeLevel/lendingType missing for 8 entities (territories WB does not classify); adminregion missing for 119 records (those 8 plus 111 high-income economies) by design
+- Bank-published classifications have provenance source 'World Bank'; 31 entities the Bank does not classify carry inferred values ('UN M49 inference' or 'World Bank (historical classification)')
+- Filter World Bank region on region.id (e.g. 'ECS'), not region.value: the Bank renames regions (MEA became 'Middle East, North Africa, Afghanistan & Pakistan' in 2025)
 - Intblock id renames: consult intblocks_aliases.json; reason=disambiguated means old id now refers to a different entity
 - Attribute partitions (traffic hand, DVD region, scripts, legal/broadcast systems, rail gauges) are country fields — not intblocks; remap retired ids via attribute_intblock_migrations.json
 - Driving side: filter countries.car_side ('left'|'right'); do not join traffichand intblocks (retired)

@@ -7,12 +7,12 @@ capital_city:
   lat: 35.9042
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '470'
 wikidata_id: Q233
@@ -128,22 +128,18 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MLT
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MLT
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MLT
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -185,9 +181,6 @@ provenance:
 centroid:
   lat: 35.83333333
   lng: 14.58333333
-adminregion:
-  id: MEA
-  value: Middle East & North Africa (excluding high income)
 writing_directions:
 - id: ltr
   primary: true

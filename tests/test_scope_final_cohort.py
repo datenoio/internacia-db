@@ -84,7 +84,7 @@ def test_exported_memberships_match_the_new_entity_boundaries():
     db = datasets_dir() / "internacia.duckdb"
     with duckdb.connect(str(db), read_only=True) as con:
         assert con.execute("SELECT count(*) FROM intblocks").fetchone()[0] == 1275
-        assert con.execute("SELECT count(*) FROM memberships").fetchone()[0] == 59080
+        assert con.execute("SELECT count(*) FROM memberships").fetchone()[0] == 59094
         exported = con.execute(
             "SELECT id, scope_category FROM intblocks WHERE id IN ('AFDF','CIF','TAR','TARAGREEMENT','TELESUR')"
         ).fetchall()

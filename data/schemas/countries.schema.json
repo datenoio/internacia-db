@@ -59,7 +59,7 @@
       "additionalProperties": true
     },
     "region": {
-      "description": "World Bank region as {id, value} (e.g. id 'ECS'). Filter on id: value labels are inconsistent upstream (some carry an '(all income levels)' suffix). Absent for 8 entities the World Bank does not classify.",
+      "description": "World Bank region as {id, value} (e.g. id 'ECS'), with the Bank's current label. Filter on id: the Bank renames regions (MEA became 'Middle East, North Africa, Afghanistan & Pakistan' in 2025). Absent for 8 entities the World Bank does not classify.",
       "type": "object",
       "required": [
         "id",
@@ -76,7 +76,7 @@
       "additionalProperties": true
     },
     "adminregion": {
-      "description": "World Bank administrative region as {id, value}. Only covers low- and middle-income economies; absence for high-income economies is expected.",
+      "description": "World Bank administrative region as {id, value} (e.g. id 'ECA', value 'Europe & Central Asia (excluding high income)'). Only covers low- and middle-income economies; absence for high-income economies is expected.",
       "type": "object",
       "properties": {
         "id": {

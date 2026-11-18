@@ -114,10 +114,6 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -173,16 +169,13 @@ centroid:
   lng: 121.0
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 capital_city:
   name: Taipei
   lng: 121.5654

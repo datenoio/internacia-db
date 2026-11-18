@@ -3,7 +3,7 @@ blocktype:
 - wbgroup
 status: formal
 scope_category: reference_enumeration
-name: Sub-Saharan Africa (developing only)
+name: Sub-Saharan Africa (excluding high income)
 includes:
 - id: AO
   name: Angola
@@ -73,6 +73,10 @@ includes:
   name: Guinea
   type: country
   status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
 - id: GW
   name: Guinea-Bissau
   type: country
@@ -133,10 +137,6 @@ includes:
   name: Rwanda
   type: country
   status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
 - id: SD
   name: Sudan
   type: country
@@ -151,6 +151,10 @@ includes:
   status: member
 - id: SO
   name: Somalia
+  type: country
+  status: member
+- id: SS
+  name: South Sudan
   type: country
   status: member
 - id: ST
@@ -177,10 +181,6 @@ includes:
   name: Uganda
   type: country
   status: member
-- id: YT
-  name: Mayotte
-  type: country
-  status: member
 - id: ZA
   name: South Africa
   type: country
@@ -195,7 +195,7 @@ includes:
   status: member
 membership_count: 47
 geographic_scope: regional
-description: World Bank analytical grouping for Sub-Saharan Africa (developing only),
+description: World Bank analytical grouping for Sub-Saharan Africa (excluding high income),
   used in World Development Indicators.
 tags:
 - SSA
@@ -231,12 +231,12 @@ provenance:
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: includes
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=SSA
 - field: membership_count
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=SSA
 - field: acronyms
   source: World Bank (WDI income/region groupings)
   retrieved_at: '2026-07-13'
@@ -249,4 +249,7 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+last_verified: '2026-11-18'
+previous_names:
+- id: en
+  name: Sub-Saharan Africa (developing only)

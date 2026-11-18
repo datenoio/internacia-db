@@ -108,10 +108,6 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -140,16 +136,13 @@ centroid:
   lng: 19.9
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 writing_directions:
 - id: ltr
   primary: true

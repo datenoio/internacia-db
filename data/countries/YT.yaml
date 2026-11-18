@@ -7,15 +7,15 @@ capital_city:
   lat: -12.7846
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '175'
 wikidata_id: Q17063
@@ -117,7 +117,7 @@ provenance:
   url: https://www.wikidata.org/
   license: CC0
 - field: region
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: adminregion
@@ -125,11 +125,11 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: lendingType
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: writing_directions

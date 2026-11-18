@@ -109,10 +109,6 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -145,16 +141,13 @@ centroid:
   lng: -63.16666666
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

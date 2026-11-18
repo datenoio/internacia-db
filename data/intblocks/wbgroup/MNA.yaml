@@ -3,8 +3,12 @@ blocktype:
 - wbgroup
 status: formal
 scope_category: reference_enumeration
-name: Middle East & North Africa (developing only)
+name: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 includes:
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
 - id: DJ
   name: Djibouti
   type: country
@@ -41,6 +45,10 @@ includes:
   name: Morocco
   type: country
   status: member
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
 - id: PS
   name: West Bank and Gaza
   type: country
@@ -57,7 +65,7 @@ includes:
   name: Yemen, Rep.
   type: country
   status: member
-membership_count: 13
+membership_count: 15
 geographic_scope: regional
 regions:
 - Middle East
@@ -100,13 +108,13 @@ provenance:
   retrieved_at: '2026-07-13'
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: includes
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=MNA
 - field: membership_count
-  source: World Bank (WDI)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=MNA
 - field: acronyms
   source: World Bank (WDI)
   retrieved_at: '2026-07-13'
@@ -115,4 +123,7 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+last_verified: '2026-11-18'
+previous_names:
+- id: en
+  name: Middle East & North Africa (developing only)

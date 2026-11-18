@@ -254,9 +254,9 @@ countries.filter(pl.col("independent") & ~pl.col("un_member")).select("code", "n
 **Expected:** 61 rows.
 
 **Gotcha:** Filter on the stable `region.id` (`ECS`, `EAS`, `LCN`, …), **not** on
-`value` — labels are inconsistent upstream. Structs are absent for 8 entities the World
+`value` — the World Bank renames regions. Structs are absent for 8 entities the World
 Bank does not classify; `adminregion` is additionally absent for high-income economies
-(39 records).
+(119 records in all).
 
 ### By income level
 
@@ -273,7 +273,7 @@ Bank does not classify; `adminregion` is additionally absent for high-income eco
 )
 ```
 
-**Expected:** 41 rows.
+**Expected:** 25 rows.
 
 ### Structured metric fields
 
