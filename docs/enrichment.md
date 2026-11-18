@@ -108,8 +108,9 @@ adds list items or mapping keys, or stays within the field's threshold (populati
 Enrichment never changes ids, `includes` or enum values: those fields belong to no source, so
 such a change would land in the reviewed `other` PR.
 
-Metadata-only intblock changes (the `intblock-metadata` fields and their provenance) do not need
-`last_verified`, which attests the roster; the validator's changed-record rule skips them.
+Metadata-only intblock changes (the `intblock-metadata` fields, `scope_category`, and their
+provenance) do not need `last_verified`, which attests the roster; the validator's changed-record
+rule skips them.
 
 **Requirements:** the internacia-bot GitHub App secrets (`INTERNACIA_BOT_CLIENT_ID`,
 `INTERNACIA_BOT_PRIVATE_KEY`), "Allow auto-merge", and branch protection on `main` requiring the

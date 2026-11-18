@@ -122,6 +122,13 @@ Source JSON Schema keeps this field optional for non-formal historical/de-facto 
 **every `status: formal` intblock must set it**. The CLI validator and quality analyzer
 now treat a missing formal category as a blocking error/IMPORTANT issue.
 
+`igo` requires independent institutional identity, so it is incompatible with
+`status: informal` or `status: de-facto`. Informal coalitions, caucuses, and
+intelligence-sharing groups (for example `QSD`, `BASIC`, `MIKTA`, `CLUBDEBERNE`,
+and the five UN regional groups) are `policy_forum`; an analyst classification
+such as `3GC` is a `reference_enumeration`. The validators report the
+combination as `SCOPE_CATEGORY_STATUS_CONFLICT` (a blocking error/IMPORTANT issue).
+
 `scope_category` classifies the **record's entity**, not the role or nationality of
 entries in `includes`. An independent treaty-established institution with its
 own juridical personality remains `igo` even if affiliated with a larger group

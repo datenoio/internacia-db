@@ -46,6 +46,14 @@ def test_roster_change_must_refresh_last_verified():
     assert check_changed_records([("x.yaml", description_only)], {"x.yaml": before}, "origin/main") == []
 
 
+def test_reclassifying_a_record_does_not_need_last_verified():
+    before = {"id": "QSD", "status": "informal", "scope_category": "igo", "includes": [{"id": "IN"}]}
+    reclassified = {**before, "scope_category": "policy_forum", "provenance": [{"field": "scope_category"}]}
+    assert check_changed_records([("q.yaml", reclassified)], {"q.yaml": before}, "origin/main") == []
+    renamed = {**reclassified, "name": "Quad"}
+    assert check_changed_records([("q.yaml", renamed)], {"q.yaml": before}, "origin/main")
+
+
 def test_tier1_list_is_loaded():
     tier1 = load_tier1()
     assert {"UN", "EU", "NATO", "AFUNION", "G-20"} <= set(tier1)
