@@ -225,7 +225,8 @@ def sync_wb_group_block(
 ) -> bool:
     """Rebuild a wbgroup roster from the country classifications; returns True when it changed.
 
-    Entries for members that stay are kept as they are; new members get the country's name.
+    Entries for members that stay keep their fields; every country entry carries the country's
+    ``name``, which is what the build exports (``fill_country_include_names``).
     """
     expected = wb_group_members(countries_by_code.values(), str(block["id"]))
     if roster_members(block) == expected:
@@ -236,6 +237,10 @@ def sync_wb_group_block(
         str(i.get("id")) for i in includes if isinstance(i, dict)
     )
     kept = [inc for inc in includes if not _is_roster_entry(inc) or str(inc.get("id")) in expected]
+    for inc in kept:
+        country = countries_by_code.get(str(inc.get("id"))) if _is_roster_entry(inc) else None
+        if country and country.get("name"):
+            inc["name"] = country["name"]
     present = {str(inc["id"]) for inc in kept if _is_roster_entry(inc)}
     for code in sorted(expected - present):
         kept.append(

@@ -196,10 +196,11 @@ def test_group_members_follow_bank_classified_fields_only():
 
 def test_sync_rebuilds_a_stale_roster_and_keeps_retained_entries():
     stale = block("HIC", "BB", "DD")
-    stale["includes"][0]["name"] = "Kept as written"
+    stale["includes"][0]["name"] = "Old label"
+    stale["includes"][0]["joined"] = "1990"
     assert wbc.sync_wb_group_block(stale, COUNTRIES, retrieved_at=TODAY)
     assert [i["id"] for i in stale["includes"]] == ["BB", "CC"]
-    assert stale["includes"][0]["name"] == "Kept as written"
+    assert stale["includes"][0] == {"id": "BB", "name": "Country BB", "type": "country", "status": "member", "joined": "1990"}
     assert stale["includes"][1]["name"] == "Country CC"
     assert stale["membership_count"] == 2
     assert stale["last_verified"] == TODAY
