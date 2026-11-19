@@ -15,6 +15,10 @@ geographic_scope: regional
 regions:
 - Europe
 includes:
+- id: AT
+  name: Austria
+  type: country
+  status: member
 - id: BE
   name: Belgium
   type: country
@@ -127,7 +131,11 @@ includes:
   name: Switzerland
   type: country
   status: member
-membership_count: 28
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+membership_count: 30
 legal_status: informal
 description: Informal intelligence-sharing forum established in 1971, comprising the intelligence services of 26 European
   Union member states (excluding Austria), Norway, and Switzerland. The Club facilitates voluntary exchanges of information,
@@ -159,7 +167,16 @@ other_names:
 - id: zh
   name: 伯尔尼俱乐部
 wikidata_id: Q353813
+last_verified: '2026-11-19'
 provenance:
+- field: includes
+  source: "Wikipedia: intelligence services of the 27 EU states, Norway, the United Kingdom and Switzerland"
+  retrieved_at: '2026-11-19'
+  url: https://en.wikipedia.org/wiki/Club_de_Berne
+- field: membership_count
+  source: "Wikipedia: intelligence services of the 27 EU states, Norway, the United Kingdom and Switzerland"
+  retrieved_at: '2026-11-19'
+  url: https://en.wikipedia.org/wiki/Club_de_Berne
 - field: scope_category
   source: Internacia inclusion policy; informal status and record description rule out an independent IGO
   retrieved_at: '2026-11-18'

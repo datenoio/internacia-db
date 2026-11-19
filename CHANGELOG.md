@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `tests/test_dependency_pins.py` fails CI when the runtime pins in `pyproject.toml`, `requirements.txt` and `uv.lock` disagree (Dependabot's pip updates do not touch `uv.lock`). The coverage gate rises from 49% to 80% (measured 82.6%).
 - Exported `includes[].name` of `type: country` entries is the country's `name`, filled by the build; `name` is optional for those entries in the source. The 3,501 source names that differed (95 id–name pairs, for example TR `Turkey`, MK `Macedonia, FYR`, CV `Cape Verde`) are rewritten to the country `name`. `INCLUDE_NAME_MISMATCH` compares exactly and is now a validator warning. Relabelling a country include does not need `last_verified`.
 - Associate memberships use `associate_member`: 40 entries move from `associate` (UNESCO 12, SCAR 13, ACS 10, IMO 3, EMBL 1, OECD DAC 1) and 10 from `associated` (OECS 5, PASO 3, MSG 1, Dutch Language Union 1). OECS, PASO, MSG and the Dutch Language Union were checked against their sources and have `last_verified` 2026-11-19. OpenSpec change `normalize-include-labels-and-statuses`.
 - Hugging Face is pushed after the GitHub Release, in one commit (`scripts/push_huggingface.py`) that also removes legacy files and is tagged with the release tag. Before, files were uploaded one by one before the GitHub Release, and failed legacy deletions were silently ignored.
@@ -37,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Club de Berne roster: Austria (re-admitted in 2022) and the United Kingdom are added, giving the 30 services of the 27 EU states, Norway, the United Kingdom and Switzerland that the cited source lists; `last_verified` is set.
 - The World Bank groups `OEC` (High income: OECD) and `NOC` (High income: nonOECD) are `historical`, with `dissolved: '2016-07-05'`: the World Bank removed both in the July 2016 World Development Indicators update (Data Updates and Errata). Their last rosters are kept.
 - ERRA roster refreshed from its members page: 37 full and 14 associate member regulators (`membership_count: 51`, `membership_count_type: organizations`). By country, 37 are `member` and 6 are `associate_member` (Algeria, Bahamas, Egypt, Fiji, France, United States); Austria, Latvia, Lithuania, Moldova, Nigeria, North Macedonia, Pakistan, Palestine, Russia and Ukraine are added, Kosovo is now a full member, and Ghana, Jordan and Peru are removed.
 - `python scripts/<name>.py` and `pytest` now import the `internacia_builder` of the checkout they run in (`scripts/_checkout.py`, `pythonpath = ["."]`). Before, with an editable install from another checkout, a script in a git worktree silently ran the other checkout's code against its data; only `builder.py` had this guard.
