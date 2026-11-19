@@ -342,11 +342,17 @@ pop = df["population"].apply(lambda v: v["value"] if v is not None else None)
 ### World Bank classifications
 
 `region`, `adminregion`, `incomeLevel`, `lendingType` are `{id, value}` structs.
-Filter on the stable `id`, not on `value` — labels vary upstream (some regions carry an
-`(all income levels)` suffix). `region`/`incomeLevel`/`lendingType` are absent for 8
-entities the World Bank does not classify (overseas territories, special statistical areas,
-non-standard codes); `adminregion` is absent for 39 records because it only covers low- and
-middle-income economies. Do not treat missing values as data errors.
+Values are the World Bank's current ids and labels (refreshed by
+`scripts/enrich_countries.py refresh-classifications`). Filter on the stable `id`, not on
+`value` — the Bank renames regions (in 2025 `MEA` became *Middle East, North Africa,
+Afghanistan & Pakistan*). `region`/`incomeLevel`/`lendingType` are absent for 8 entities the
+World Bank does not classify (overseas territories, special statistical areas, non-standard
+codes); `adminregion` is absent for 119 records (those 8 plus 111 high-income economies)
+because it only covers low- and middle-income economies. Do not treat missing values as data
+errors. Another 31 entities the Bank does not classify carry inferred values: their provenance
+source is `UN M49 inference` or `World Bank (historical classification)`, never `World Bank`.
+The `wbgroup` intblocks (`HIC`, `LMC`, `SAS`, …) list exactly the economies whose
+Bank-published field puts them in the group.
 
 ### Borders
 

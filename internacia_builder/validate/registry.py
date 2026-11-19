@@ -23,6 +23,7 @@ from typing import Any
 
 import yaml
 
+from internacia_builder import wb_classification
 from internacia_builder.paths import blocktypes_source_path
 from internacia_builder.validate import completeness, country_rules, cross_rules, intblock_rules
 
@@ -390,6 +391,10 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _cross("headquarters coordinates", INTBLOCKS, W,
            lambda ctx: cross_rules.check_hq_coordinates(
                ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code, ctx.intblocks_cfg),
+           enabled=_has_countries),
+    _cross("World Bank group rosters", INTBLOCKS, W,
+           lambda ctx: wb_classification.check_wb_group_rosters(
+               ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code),
            enabled=_has_countries),
     _cross("historical entity members", INTBLOCKS, W,
            lambda ctx: cross_rules.check_historical_entity_members(

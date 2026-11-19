@@ -8,12 +8,12 @@ capital_city:
   lat: 12.1034
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 m49_code: '530'
 wikidata_id: Q25227
@@ -66,20 +66,16 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: incomeLevel
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: lendingType
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: geonames_id
@@ -95,9 +91,6 @@ provenance:
 centroid:
   lat: 12.1034
   lng: -68.9335
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 un_member: false
 un_status: non_member
 independent: false

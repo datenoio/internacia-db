@@ -196,11 +196,11 @@ ORDER BY name;
 **Expected:** 61 rows.
 
 **Gotcha:** `region`, `incomeLevel`, and `lendingType` are structs `{id, value}`. Filter on
-the stable `id` (`ECS`, `EAS`, `LCN`, …), **not** on `value`: the labels are inconsistent
-upstream (for some regions the stored value is e.g. `'Europe & Central Asia (all income
-levels)'`, so `region.value = 'Europe & Central Asia'` matches nothing). The structs are
-absent for 8 entities the World Bank does not classify; `adminregion` is additionally absent
-for high-income economies by World Bank convention (39 records).
+the stable `id` (`ECS`, `EAS`, `LCN`, …), **not** on `value`: the World Bank renames
+regions (in 2025 `MEA` became `'Middle East, North Africa, Afghanistan & Pakistan'`), so a
+label filter silently breaks. The structs are absent for 8 entities the World Bank does not
+classify; `adminregion` is additionally absent for high-income economies by World Bank
+convention (119 records in all).
 
 ### By income level
 
@@ -211,7 +211,7 @@ WHERE incomeLevel.value = 'Low income'
 ORDER BY name;
 ```
 
-**Expected:** 41 rows.
+**Expected:** 25 rows.
 
 ## Geography and borders
 
@@ -878,8 +878,8 @@ WHERE c.incomeLevel.value IS NOT NULL
 ORDER BY border_count DESC, c.name;
 ```
 
-**Expected:** 20 rows — includes `DE` (9 borders, all high-income OECD), `TZ` (8 borders,
-all low income).
+**Expected:** 22 rows — includes `DE` (9 borders, all high income), `AT` and `FR` (8 borders
+each, all high income).
 
 **Gotcha:** Join borders on `iso3code`, not alpha-2. 8 entities lack `incomeLevel`.
 

@@ -9,7 +9,7 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 | `population`, `area`, `gini` | World Bank API | Annually (after WB spring update) |
 | `timezones` | IANA `zone1970.tab` | When tzdata bundle is updated in `scripts/data/` |
 | `native_names`, `wikidata_id` | Wikidata | Annually or when labels change |
-| `region`, `adminregion`, `incomeLevel`, `lendingType` | World Bank + M49 inference | When classification policy changes |
+| `region`, `adminregion`, `incomeLevel`, `lendingType` | World Bank API (`/v2/country`); M49 inference for entities the Bank does not classify | Monthly `enrich`; at the latest after the Bank's 1 July reclassification |
 
 **Provenance staleness threshold:** 12 months (`provenance.max_age_months` in `data/schemas/countries_completeness.yaml`). Validation warns when `retrieved_at` is older than this.
 
@@ -39,6 +39,9 @@ python scripts/validate_countries.py
 # Full enrichment (World Bank + Wikidata + timezones)
 python scripts/enrich_countries.py enrich
 
+# World Bank classifications only, plus the wbgroup rosters derived from them
+python scripts/enrich_countries.py refresh-classifications
+
 # Targeted backfills (no Wikidata fetch)
 python scripts/enrich_countries.py backfill-classifications
 python scripts/enrich_countries.py backfill-gini
@@ -48,6 +51,15 @@ python scripts/enrich_countries.py backfill-provenance
 ```
 
 Use `--code XX` on `enrich` for a single country. Use `--dry-run` to preview YAML diffs.
+
+`refresh-classifications` (and `enrich`) copy the Bank's ids and labels verbatim for every
+economy it classifies, with provenance source `World Bank` and the economy's API URL. Entities
+the Bank does not classify keep their inferred values, recoded to current ids (`OEC`/`NOC` →
+`HIC`, `NC` → `LNX`); a high-income entity has no `adminregion`. The run then rebuilds the
+`wbgroup` rosters (`EAS` … `SSF`, `ECA`/`LAC`/`MNA`/`SSA`, `HIC`/`UMC`/`LMC`/`LIC`, `MIC`,
+`LMY`) from the refreshed fields; the `World Bank group rosters` validation rule warns when a
+roster and the country fields disagree. A single-country `enrich --code` run does not touch
+the rosters.
 Usable World Bank responses refresh existing World Bank observations without
 regressing their observation year. Other curated sources remain unchanged unless
 `--force` is used. Failed, unused, and unchanged observations retain their retrieval

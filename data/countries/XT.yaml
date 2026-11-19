@@ -31,16 +31,13 @@ timezones:
 - Europe/Chisinau
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 native_names:
   ro:
     official: Republica Moldovenească Nistreană
@@ -68,10 +65,6 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
 - field: lendingType
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
-- field: adminregion
   source: UN M49 inference
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/

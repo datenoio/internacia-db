@@ -14,8 +14,8 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `iso3code` | string | yes | yes | ISO 3166-1 alpha-3 code. Join key for the borders field, which stores alpha-3 neighbor codes. |
 | `numeric_code` | string | yes | yes | ISO 3166-1 numeric code as a zero-padded string (e.g. '004'). |
 | `capital_city` | object |  | yes | Capital or de facto seat of government with name and optional lat/lng coordinates. Absent by design for uninhabited territories and groupings. |
-| `region` | object |  | yes | World Bank region as \{id, value\} (e.g. id 'ECS'). Filter on id: value labels are inconsistent upstream (some carry an '(all income levels)' suffix). Absent for 8 entities the World Bank does not classify. |
-| `adminregion` | object |  | yes | World Bank administrative region as \{id, value\}. Only covers low- and middle-income economies; absence for high-income economies is expected. |
+| `region` | object |  | yes | World Bank region as \{id, value\} (e.g. id 'ECS'), with the Bank's current label. Filter on id: the Bank renames regions (MEA became 'Middle East, North Africa, Afghanistan & Pakistan' in 2025). Absent for 8 entities the World Bank does not classify. |
+| `adminregion` | object |  | yes | World Bank administrative region as \{id, value\} (e.g. id 'ECA', value 'Europe & Central Asia (excluding high income)'). Only covers low- and middle-income economies; absence for high-income economies is expected. |
 | `incomeLevel` | object |  | yes | World Bank income classification as \{id, value\} (e.g. id 'HIC', value 'High income'). Absent for 8 unclassified entities. |
 | `lendingType` | object |  | yes | World Bank lending category as \{id, value\} (e.g. IBRD, IDA, Blend). Absent for 8 unclassified entities. |
 | `wikidata_id` | string |  | yes | Wikidata entity id (Q-number) for cross-referencing and entity linking. |
