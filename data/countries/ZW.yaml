@@ -7,13 +7,13 @@ capital_city:
   lat: -17.8312
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
-  id: LIC
-  value: Low income
+  id: LMC
+  value: Lower middle income
 lendingType:
   id: IDB
   value: Blend
@@ -114,24 +114,24 @@ gini:
 timezones:
 - Africa/Maputo
 native_names:
-  ar:
-    official: زيمبابوي
-    common: جمهورية زيمبابوي
   en:
     official: Zimbabwe
-    common: Republic of Zimbabwe
-  es:
-    official: Zimbabue
-    common: República de Zimbabue
-  fr:
+    common: Zimbabwe
+  ny:
+    common: Zimbabwe
+  sn:
     official: Zimbabwe
-    common: Zimbabwé
-  ru:
-    official: Зимбабве
-    common: Республика Зимбабве
-  zh:
-    official: 津巴布韦
-    common: 津巴布韋共和國
+    common: Zimbabwe
+  st:
+    common: Zimbabwe
+  tn:
+    common: Zimbabwe
+  ts:
+    common: Zimbabwe
+  ve:
+    common: Zimbagwe
+  xh:
+    common: IZimbabwe
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -157,26 +157,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q954
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ZWE
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ZWE
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ZWE
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ZWE
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

@@ -2,7 +2,7 @@ id: AG
 blocktype:
 - political
 status: informal
-scope_category: igo
+scope_category: policy_forum
 links:
 - url: https://en.wikipedia.org/wiki/Australia_Group
   type: wikipedia
@@ -119,11 +119,11 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -163,7 +163,7 @@ includes:
   type: country
   status: member
 - id: KR
-  name: Korea, Republic of
+  name: Korea, Rep.
   type: country
   status: member
 - id: NL
@@ -234,6 +234,10 @@ other_names:
   name: 澳洲協定
 last_verified: '2026-10-22'
 provenance:
+- field: scope_category
+  source: Internacia inclusion policy; informal status and record description rule out an independent IGO
+  retrieved_at: '2026-11-18'
+  url: https://github.com/datenoio/internacia-db/blob/main/docs/intblock-inclusion-policy.md
 - field: includes
   source: Australia Group
   retrieved_at: '2026-10-22'

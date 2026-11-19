@@ -20,6 +20,7 @@ on:
       - 'tests/**'
       - 'requirements.txt'
       - 'requirements-dev.txt'
+      - 'requirements-publish.txt'
       - 'pyproject.toml'
       - '.github/workflows/**'
       - 'uv.lock'
@@ -38,28 +39,35 @@ on:
       - 'tests/**'
       - 'requirements.txt'
       - 'requirements-dev.txt'
+      - 'requirements-publish.txt'
 
 concurrency:
   group: validate-${{ github.ref }}
   cancel-in-progress: true
+
+# Read-only: this workflow runs pull-request code and internacia-python's contract suite.
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     env:
       INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.ci-datasets
-      # internacia-python ref whose tests/contract suite must pass on every build.
-      INTERNACIA_SDK_REF: main
+      # internacia-python commit whose tests/contract suite must pass (v0.4.1). Keep it equal to
+      # INTERNACIA_SDK_REF in release.yml so a pull request fails before the release would.
+      INTERNACIA_SDK_REF: d2ba4e2ab37c2e94b2fc7897375870e3db13ce24
     strategy:
       fail-fast: false
       matrix:
         python-version: ['3.11', '3.12', '3.13']
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
@@ -75,8 +83,8 @@ jobs:
 
       - name: Audit dependencies
         run: |
-          pip install pip-audit
-          pip-audit --requirement requirements.txt
+          pip install pip-audit==2.10.1
+          pip-audit --requirement requirements.txt --requirement requirements-publish.txt
 
       - name: Build datasets (fresh artifacts for tests)
         run: python scripts/builder.py build --output-dir .ci-datasets
@@ -97,7 +105,9 @@ jobs:
         if: matrix.python-version == '3.12'
         run: |
           sdk="$RUNNER_TEMP/internacia-python"
-          git clone --depth 1 --branch "$INTERNACIA_SDK_REF" https://github.com/datenoio/internacia-python "$sdk"
+          git init -q "$sdk"
+          git -C "$sdk" fetch -q --depth 1 https://github.com/datenoio/internacia-python "$INTERNACIA_SDK_REF"
+          git -C "$sdk" checkout -q FETCH_HEAD
           pip install "$sdk"
           cd "$sdk" && INTERNACIA_CONTRACT_DB_PATH="$INTERNACIA_DATASETS_DIR/internacia.duckdb" pytest tests/contract -q
 
@@ -129,7 +139,7 @@ jobs:
           python scripts/check_release_bundle.py .ci-datasets
 
       - name: Upload validation reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
           name: validation-reports-py${{ matrix.python-version }}
@@ -147,7 +157,7 @@ jobs:
         run: python scripts/check_quality_report.py dataquality/full_report.jsonl
 
       - name: Upload quality report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:
           name: quality-report-py${{ matrix.python-version }}

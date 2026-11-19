@@ -7,10 +7,10 @@ capital_city:
   lat: 11.5806
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 adminregion:
   id: MNA
-  value: Middle East & North Africa (developing only)
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
@@ -88,23 +88,11 @@ timezones:
 - Africa/Nairobi
 native_names:
   ar:
-    official: جيبوتي
+    official: جمهورية جيبوتي
     common: جيبوتي
-  en:
-    official: Djibouti
-    common: Republic of Djibouti
-  es:
-    official: Yibuti
-    common: Djibouti
   fr:
-    official: Djibouti
-    common: la République de Djibouti
-  ru:
-    official: Джибути
-    common: Республика Джибути
-  zh:
-    official: 吉布提
-    common: 吉布地
+    official: République de Djibouti
+    common: Djibouti
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -130,26 +118,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q977
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DJI
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DJI
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DJI
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DJI
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

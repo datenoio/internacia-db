@@ -5,20 +5,16 @@ status: formal
 scope_category: reference_enumeration
 name: Upper middle income
 includes:
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
 - id: AL
   name: Albania
   type: country
   status: member
-- id: AR
-  name: Argentina
+- id: AM
+  name: Armenia
   type: country
   status: member
-- id: AS
-  name: American Samoa
+- id: AR
+  name: Argentina
   type: country
   status: member
 - id: AZ
@@ -27,10 +23,6 @@ includes:
   status: member
 - id: BA
   name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
   type: country
   status: member
 - id: BR
@@ -45,20 +37,24 @@ includes:
   name: Belarus
   type: country
   status: member
-- id: CL
-  name: Chile
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CN
+  name: China
   type: country
   status: member
 - id: CO
   name: Colombia
   type: country
   status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
 - id: CU
   name: Cuba
+  type: country
+  status: member
+- id: CV
+  name: Cabo Verde
   type: country
   status: member
 - id: DM
@@ -73,8 +69,16 @@ includes:
   name: Algeria
   type: country
   status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
 - id: FJ
   name: Fiji
+  type: country
+  status: member
+- id: FM
+  name: Micronesia, Fed. Sts.
   type: country
   status: member
 - id: GA
@@ -85,6 +89,26 @@ includes:
   name: Grenada
   type: country
   status: member
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
 - id: IR
   name: Iran, Islamic Rep.
   type: country
@@ -93,40 +117,52 @@ includes:
   name: Jamaica
   type: country
   status: member
-- id: KN
-  name: St. Kitts and Nevis
+- id: JO
+  name: Jordan
   type: country
   status: member
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
 - id: LC
   name: St. Lucia
   type: country
   status: member
-- id: LT
-  name: Lithuania
+- id: LK
+  name: Sri Lanka
   type: country
   status: member
 - id: LY
   name: Libya
   type: country
   status: member
+- id: MD
+  name: Moldova
+  type: country
+  status: member
 - id: ME
   name: Montenegro
   type: country
   status: member
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
 - id: MK
-  name: Macedonia, FYR
+  name: North Macedonia
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: MU
   name: Mauritius
+  type: country
+  status: member
+- id: MV
+  name: Maldives
   type: country
   status: member
 - id: MX
@@ -137,59 +173,75 @@ includes:
   name: Malaysia
   type: country
   status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
 - id: PE
   name: Peru
   type: country
   status: member
-- id: PW
-  name: Palau
+- id: PH
+  name: Philippines
   type: country
   status: member
-- id: RO
-  name: Romania
+- id: PY
+  name: Paraguay
   type: country
   status: member
 - id: RS
   name: Serbia
   type: country
   status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
 - id: SR
   name: Suriname
   type: country
   status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+- id: TO
+  name: Tonga
+  type: country
+  status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
-- id: UY
-  name: Uruguay
+- id: TV
+  name: Tuvalu
   type: country
   status: member
-- id: VE
-  name: Venezuela, RB
+- id: UA
+  name: Ukraine
   type: country
   status: member
-- id: YT
-  name: Mayotte
+- id: VC
+  name: St. Vincent and the Grenadines
   type: country
   status: member
-membership_count: 46
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+- id: XK
+  name: Kosovo
+  type: country
+  status: member
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+membership_count: 59
 geographic_scope: global
 description: World Bank analytical grouping for upper-middle-income economies, used in
   World Development Indicators.
@@ -226,12 +278,12 @@ provenance:
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: includes
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?incomelevel=UMC
 - field: membership_count
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?incomelevel=UMC
 - field: acronyms
   source: World Bank (WDI income/region groupings)
   retrieved_at: '2026-07-13'
@@ -244,4 +296,4 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+last_verified: '2026-11-18'

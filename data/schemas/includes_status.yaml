@@ -3,6 +3,9 @@
 #
 # Each status describes how a country (or other entity) relates to the block.
 # The canonical key set matches data/schemas/intblocks.schema.json.
+#
+# A status with `deprecated` stays valid until the next MAJOR release removes it. contract.json
+# lists it under deprecated[] and validation warns (DEPRECATED_INCLUDE_STATUS) on every use.
 
 statuses:
   member:
@@ -13,16 +16,28 @@ statuses:
     description: Observer status without full voting or membership rights.
   associated:
     name: Associated
-    description: Associated state or territory linked to the block under special terms.
+    description: >-
+      Association that the organization's instrument does not call membership, such as
+      "associated countries" or "associated nations". Use associate_member when the instrument
+      speaks of associate members or associate membership.
   associated_observer:
     name: Associated observer
-    description: Associated participant with observer-level participation.
+    description: Associated participant with observer-level participation. Unused.
+    deprecated:
+      replacements: [observer, associated]
+      removal: next MAJOR
   associate:
     name: Associate
     description: Associate participant with limited or partial membership.
+    deprecated:
+      replacements: [associate_member, associated]
+      removal: next MAJOR
   associate_member:
     name: Associate member
-    description: Associate member with defined but non-full membership rights.
+    description: >-
+      Associate membership as the organization's instrument names it ("associate member",
+      "associate membership", or an "Associate" category on its membership list, as at the
+      OECD DAC): defined but not full membership rights.
   founding_member:
     name: Founding member
     description: Original founding participant at establishment.

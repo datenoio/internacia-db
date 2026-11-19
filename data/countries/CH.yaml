@@ -7,12 +7,12 @@ capital_city:
   lat: 46.948
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '756'
 wikidata_id: Q39
@@ -22,6 +22,8 @@ ioc_code: SUI
 geonames_id: '2658434'
 official_name: Swiss Confederation
 languages:
+- code: deu
+  name: German
 - code: fra
   name: French
 - code: gsw
@@ -90,27 +92,27 @@ gini:
 timezones:
 - Europe/Zurich
 native_names:
-  ar:
-    official: سويسرا
-    common: سويسرة
-  en:
-    official: Switzerland
-    common: Swiss Confederation
-  es:
-    official: Suiza
-    common: Confederación Suiza
+  de:
+    official: Schweizerische Eidgenossenschaft
+    common: Schweiz
   fr:
-    official: Suisse
-    common: Confédération helvétique
-  ru:
-    official: Швейцария
+    official: Confédération suisse
+    common: Suisse
+  gsw:
+    common: Schwiz
+  it:
+    official: Confederazione svizzera
     common: Svizzera
-  zh:
-    official: 瑞士
-    common: 瑞士联邦
+  rm:
+    official: Confederaziun svizra
+    common: Svizra
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: Federal Constitution of the Swiss Confederation, Article 4 (national languages German, French, Italian and Romansh)
+  retrieved_at: '2026-11-19'
+  url: https://www.fedlex.admin.ch/eli/cc/1999/404/en
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -133,22 +135,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q39
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHE
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHE
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHE
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

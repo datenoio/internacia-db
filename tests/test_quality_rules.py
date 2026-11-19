@@ -2,6 +2,8 @@
 
 from datetime import date
 
+import pytest
+
 from internacia_builder.quality_report import get_priority_level
 from internacia_builder.validate import country_rules, cross_rules, intblock_rules
 from internacia_builder.validate.intblocks import validate_scope_category
@@ -84,6 +86,28 @@ def test_wbgroup_reference_enumeration_passes():
         "blocktype": ["wbgroup"],
         "status": "formal",
         "scope_category": "reference_enumeration",
+    }) == []
+
+
+@pytest.mark.parametrize("status", ["informal", "de-facto"])
+def test_non_formal_record_cannot_be_an_igo(status):
+    issues = intblock_rules.check_intblock_scope_category({
+        "id": "QSD", "blocktype": ["military"], "status": status, "scope_category": "igo",
+    })
+    assert _types(issues) == ["SCOPE_CATEGORY_STATUS_CONFLICT"]
+    assert get_priority_level(issues[0]["issue_type"], issues[0]) == "IMPORTANT"
+    assert len(validate_scope_category([("QSD.yaml", {"status": status, "scope_category": "igo"})])) == 1
+
+
+@pytest.mark.parametrize(("status", "category"), [
+    ("informal", "policy_forum"),
+    ("de-facto", "reference_enumeration"),
+    ("historical", "igo"),
+    ("formal", "igo"),
+])
+def test_scope_status_combinations_that_stay_valid(status, category):
+    assert intblock_rules.check_intblock_scope_category({
+        "id": "X", "blocktype": ["political"], "status": status, "scope_category": category,
     }) == []
 
 
@@ -194,19 +218,31 @@ def test_allowlisted_wikidata_id_suppressed():
 
 def test_include_name_mismatch_reported():
     recs, paths = _intblocks(
-        {"id": "ORG", "includes": [{"id": "TR", "name": "Anatolia", "type": "country", "status": "member"}]}
+        {"id": "ORG", "includes": [{"id": "TR", "name": "Turkey", "type": "country", "status": "member"}]}
     )
-    countries = {"TR": {"code": "TR", "name": "Turkey"}}
+    countries = {"TR": {"code": "TR", "name": "Türkiye"}}
     issues = cross_rules.check_include_name_mismatch(recs, paths, countries)
     assert _types(issues) == ["INCLUDE_NAME_MISMATCH"]
+    assert "Türkiye" in issues[0]["suggested_action"]
 
 
-def test_include_name_variant_accepted():
+def test_include_name_must_match_exactly_or_be_omitted():
     recs, paths = _intblocks(
-        {"id": "ORG", "includes": [{"id": "KR", "name": "Republic of Korea", "type": "country", "status": "member"}]}
+        {"id": "ORG", "includes": [
+            {"id": "KR", "name": "Republic of Korea", "type": "country", "status": "member"},
+            {"id": "FR", "type": "country", "status": "member"},
+            {"id": "EU", "name": "EU", "type": "organization", "status": "member"},
+        ]}
     )
-    countries = {"KR": {"code": "KR", "name": "Korea, Rep.", "official_name": "Korea, Republic of"}}
-    assert cross_rules.check_include_name_mismatch(recs, paths, countries) == []
+    countries = {"KR": {"code": "KR", "name": "Korea, Rep."}, "FR": {"code": "FR", "name": "France"}}
+    assert [i["current_value"] for i in cross_rules.check_include_name_mismatch(recs, paths, countries)] == ["Republic of Korea"]
+
+
+def test_include_name_rule_warns_without_failing():
+    from internacia_builder.validate import registry
+
+    rule = next(r for r in registry.INTBLOCK_RULES if r.name == "include display names")
+    assert rule.severity == registry.W
 
 
 # --- Indicator plausibility ----------------------------------------------------

@@ -7,16 +7,16 @@ capital_city:
   lat: 3.8721
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
 lendingType:
-  id: IDX
-  value: IDA
+  id: IDB
+  value: Blend
 numeric_code: '120'
 wikidata_id: Q1009
 geonames_id: "2233387"
@@ -90,24 +90,12 @@ gini:
 timezones:
 - Africa/Lagos
 native_names:
-  ar:
-    official: الكاميرون
-    common: جمهورية الكمرون
   en:
-    official: Cameroon
-    common: Republic of Cameroon
-  es:
-    official: Camerún
-    common: República de Camerún
+    official: Republic of Cameroon
+    common: Cameroon
   fr:
-    official: Cameroun
-    common: République du Cameroun
-  ru:
-    official: Камерун
-    common: Республика Камерун
-  zh:
-    official: 喀麦隆
-    common: 喀麥隆
+    official: République du Cameroun
+    common: Cameroun
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -133,26 +121,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1009
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CMR
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CMR
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CMR
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CMR
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

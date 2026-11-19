@@ -34,6 +34,7 @@ from internacia_builder.export import (
     INTBLOCKS_LITE_FIELDS,
     build_membership_rows,
     create_duckdb_database,
+    fill_country_include_names,
     flatten_country,
     flatten_intblock,
     load_attribute_intblock_migrations,
@@ -190,6 +191,7 @@ def build(
     # Clean intblocks data
     typer.echo("🧹 Cleaning data...")
     intblocks_data = clean_data(intblocks_data, "intblocks")
+    intblocks_data = fill_country_include_names(intblocks_data, countries_data)
 
     # Load blocktypes data
     blocktypes_file = blocktypes_source_path(project_root)

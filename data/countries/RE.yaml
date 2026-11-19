@@ -60,24 +60,9 @@ area:
 timezones:
 - Asia/Dubai
 native_names:
-  ar:
-    official: ريونيون
-    common: لا ريونيون
-  en:
-    official: Réunion
-    common: Reunion
-  es:
-    official: Reunión
-    common: Reunion
   fr:
     official: La Réunion
-    common: Réunion
-  ru:
-    official: Реюньон
-    common: Реюньон
-  zh:
-    official: 留尼汪
-    common: 留尼汪
+    common: La Réunion
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -104,9 +89,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q17070
   license: CC0
 - field: adminregion
   source: UN M49 inference
@@ -145,12 +130,12 @@ centroid:
   lng: 55.5
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 incomeLevel:
   id: UMC
   value: Upper middle income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 adminregion:
   id: SSA

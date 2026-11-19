@@ -7,16 +7,16 @@ capital_city:
   lat: 17.2534
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
-  id: LMC
-  value: Lower middle income
+  id: UMC
+  value: Upper middle income
 lendingType:
-  id: IBD
-  value: IBRD
+  id: IDB
+  value: Blend
 numeric_code: 084
 wikidata_id: Q242
 geonames_id: "3582678"
@@ -25,7 +25,7 @@ fifa_code: "BLZ"
 ioc_code: "BIZ"
 official_name: Belize
 languages:
-- code: bjz
+- code: bzj
   name: Belizean Creole
 - code: eng
   name: English
@@ -86,29 +86,20 @@ gini:
 timezones:
 - America/Belize
 native_names:
-  ar:
-    official: بليز
-    common: بليز
   en:
     official: Belize
-    common: bz
+    common: Belize
   es:
-    official: Belice
     common: Belice
-  fr:
-    official: Belize
-    common: Bélize
-  ru:
-    official: Белиз
-    common: Белиз
-  zh:
-    official: 伯利兹
-    common: 貝里斯
 common_names:
 - Belize
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Belize Kriol English is bzj, bjz is Baruga
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/bzj
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -131,26 +122,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q242
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BLZ
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BLZ
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BLZ
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BLZ
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

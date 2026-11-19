@@ -7,12 +7,12 @@ capital_city:
   lat: 50.0878
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '203'
 wikidata_id: Q213
@@ -86,24 +86,11 @@ gini:
 timezones:
 - Europe/Prague
 native_names:
-  ar:
-    official: جمهورية التشيك
-    common: الجمهورية التشيكية
-  en:
-    official: Czech Republic
-    common: Czechia
-  es:
-    official: República Checa
-    common: Bohemia
-  fr:
-    official: Tchéquie
-    common: République tchèque
-  ru:
-    official: Чехия
-    common: Чешская Республика
-  zh:
-    official: 捷克
-    common: 捷克共和國
+  cs:
+    official: Česká republika
+    common: Česko
+  sk:
+    common: Česko
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -129,22 +116,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q213
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CZE
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CZE
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CZE
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

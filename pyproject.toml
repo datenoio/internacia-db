@@ -51,6 +51,9 @@ ignore = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# This checkout first, so tests never import an internacia_builder installed from another
+# checkout (an editable install of the main checkout, while working in a git worktree).
+pythonpath = ["."]
 addopts = "-q"
 
 [tool.coverage.run]
@@ -59,8 +62,8 @@ source = ["internacia_builder"]
 omit = ["internacia_builder/__main__.py"]
 
 [tool.coverage.report]
-# Ratchet: only raise, never lower. Current measured total: 49.86%.
-fail_under = 49
+# Ratchet: only raise, never lower. Measured total on 2026-11-19: 82.6%.
+fail_under = 80
 show_missing = true
 skip_covered = false
 exclude_lines = [

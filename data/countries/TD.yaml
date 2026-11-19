@@ -7,10 +7,10 @@ capital_city:
   lat: 12.1048
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: LIC
   value: Low income
@@ -91,23 +91,10 @@ timezones:
 - Africa/Ndjamena
 native_names:
   ar:
-    official: تشاد
-    common: جمهورية تشاد
-  en:
-    official: Chad
-    common: Republic of Chad
-  es:
-    official: Chad
-    common: República de Chad
+    common: تشاد
   fr:
-    official: Tchad
-    common: République du Tchad
-  ru:
-    official: Чад
-    common: Республика Чад
-  zh:
-    official: 乍得
-    common: 查德
+    official: la République du Tchad
+    common: Tchad
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -133,26 +120,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q657
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCD
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCD
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCD
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCD
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

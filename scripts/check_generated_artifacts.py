@@ -13,6 +13,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import duckdb
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -26,6 +27,7 @@ from internacia_builder.export import (
     COUNTRIES_LITE_FIELDS,
     INTBLOCKS_LITE_FIELDS,
     build_membership_rows,
+    fill_country_include_names,
     flatten_country,
     flatten_intblock,
     load_attribute_intblock_migrations,
@@ -177,6 +179,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     problems: list[str] = []
     identities: dict[str, dict] = {}
     source = {name: clean_data(_source_rows(spec, root), name) for name, spec in DATASETS.items()}
+    fill_country_include_names(source["intblocks"], source["countries"])
     source["memberships"] = build_membership_rows(source["intblocks"])
     con = duckdb.connect(str(datasets_dir / "internacia.duckdb"), read_only=True)
     try:

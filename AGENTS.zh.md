@@ -38,7 +38,7 @@ English: [AGENTS.md](AGENTS.md)
 
 - **不要** 给 countries 添加 HDI、GDP、政体、互联网普及率等社会经济画像字段
 - **不要** 把全部 256 个 code 都当作正式 ISO — 需按 `code_status` 过滤
-- **不要** 把 World Bank `region` / `incomeLevel` 缺失当作数据错误（8 个实体无 `region`/`incomeLevel`/`lendingType`；39 个高收入经济体按设计无 `adminregion`）
+- **不要** 把 World Bank `region` / `incomeLevel` 缺失当作数据错误（8 个实体无 `region`/`incomeLevel`/`lendingType`；共 119 条记录按设计无 `adminregion`：即这 8 个实体加 111 个高收入经济体）
 
 ## 校验（贡献者）
 

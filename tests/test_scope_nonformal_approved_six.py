@@ -1,4 +1,7 @@
-"""Reviewed six-record non-formal scope cohort: exact identity and evidence."""
+"""Reviewed six-record non-formal scope cohort: category, status and evidence.
+
+Rosters are checked by validation and ``last_verified``, not pinned here, so a sourced roster
+update does not break this test."""
 
 from pathlib import Path
 
@@ -11,12 +14,12 @@ from internacia_builder.validate.intblock_rules import check_intblock_scope_cate
 ROOT = Path(project_root())
 MANIFEST = ROOT / "data/schemas/scope_category_nonformal_30.yaml"
 EXPECTED = {
-    "ARABW": ("reference_enumeration", "informal", 22),
-    "BALTICSTATES": ("reference_enumeration", "informal", 3),
-    "HISPAM": ("reference_enumeration", "informal", 18),
-    "MIDAMERICA": ("reference_enumeration", "informal", 36),
-    "SLAVISPHERE": ("reference_enumeration", "informal", 13),
-    "CMA": ("policy_forum", "de-facto", 4),
+    "ARABW": ("reference_enumeration", "informal"),
+    "BALTICSTATES": ("reference_enumeration", "informal"),
+    "HISPAM": ("reference_enumeration", "informal"),
+    "MIDAMERICA": ("reference_enumeration", "informal"),
+    "SLAVISPHERE": ("reference_enumeration", "informal"),
+    "CMA": ("policy_forum", "de-facto"),
 }
 
 
@@ -25,13 +28,13 @@ def test_approved_nonformal_category_and_source_provenance(record_id: str) -> No
     manifest = yaml.safe_load(MANIFEST.read_text(encoding="utf-8"))
     entry = manifest["records"][record_id]
     record = yaml.safe_load((ROOT / entry["path"]).read_text(encoding="utf-8"))
-    category, status, roster_count = EXPECTED[record_id]
+    category, status = EXPECTED[record_id]
 
     assert entry["review_state"] == "source_reviewed"
     assert entry["category"] == record["scope_category"] == category
     assert record["status"] == status
     assert record["id"] == record_id
-    assert len(record["includes"]) == record["membership_count"] == roster_count
+    assert record["includes"] and len(record["includes"]) == record["membership_count"]
     assert check_intblock_scope_category(record) == []
     provenance = [p for p in record["provenance"] if p.get("field") == "scope_category"]
     assert len(provenance) == 1

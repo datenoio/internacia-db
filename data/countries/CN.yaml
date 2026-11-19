@@ -7,13 +7,13 @@ capital_city:
   lat: 40.0495
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 adminregion:
   id: EAP
-  value: East Asia & Pacific (developing only)
+  value: East Asia & Pacific (excluding high income)
 incomeLevel:
-  id: LMC
-  value: Lower middle income
+  id: UMC
+  value: Upper middle income
 lendingType:
   id: IBD
   value: IBRD
@@ -100,21 +100,6 @@ timezones:
 - Asia/Shanghai
 - Asia/Urumqi
 native_names:
-  ar:
-    official: الصين
-    common: الصين الشعبية
-  en:
-    official: People's Republic of China
-    common: Red China
-  es:
-    official: República Popular China
-    common: China Popular
-  fr:
-    official: République populaire de Chine
-    common: Chine communiste
-  ru:
-    official: Китай
-    common: КНР
   zh:
     official: 中华人民共和国
     common: 中国
@@ -143,26 +128,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q148
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHN
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHN
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHN
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CHN
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

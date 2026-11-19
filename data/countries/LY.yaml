@@ -7,10 +7,10 @@ capital_city:
   lat: 32.8578
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 adminregion:
   id: MNA
-  value: Middle East & North Africa (developing only)
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
@@ -85,23 +85,7 @@ timezones:
 - Africa/Tripoli
 native_names:
   ar:
-    official: ليبيا
-    common: ليبية
-  en:
-    official: Libya
-    common: State of Libya
-  es:
-    official: Libia
-    common: Estado de Libia
-  fr:
-    official: Libye
-    common: LY
-  ru:
-    official: Ливия
-    common: Государство Ливия
-  zh:
-    official: 利比亞
-    common: 利比亚国
+    common: ليبيا
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -123,26 +107,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1016
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/LBY
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/LBY
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/LBY
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/LBY
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

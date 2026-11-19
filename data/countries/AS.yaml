@@ -7,15 +7,12 @@ capital_city:
   lat: -14.2846
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
+  value: East Asia & Pacific
 incomeLevel:
-  id: UMC
-  value: Upper middle income
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '016'
 wikidata_id: Q16641
@@ -76,24 +73,12 @@ area:
 timezones:
 - Pacific/Pago_Pago
 native_names:
-  ar:
-    official: ساموا الأمريكية
-    common: ساموا الامريكية
   en:
     official: American Samoa
-    common: as
-  es:
-    official: Samoa Americana
-    common: Samoa Estadounidense
-  fr:
-    official: Samoa américaines
-    common: Territoire des Samoa américaines
-  ru:
-    official: Американское Самоа
-    common: Восточное Самоа
-  zh:
-    official: 美屬薩摩亞
-    common: 美屬薩摩亞
+    common: American Samoa
+  sm:
+    official: Amerika Sāmoa
+    common: Amerika Sāmoa
 common_names:
 - American Samoa
 borders: []
@@ -118,26 +103,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q16641
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ASM
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ASM
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ASM
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

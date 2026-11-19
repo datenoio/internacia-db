@@ -57,24 +57,9 @@ area:
 timezones:
 - Europe/Helsinki
 native_names:
-  ar:
-    official: جزر أولاند
-    common: AX
-  en:
+  sv:
     official: Åland
-    common: Aland Isles
-  es:
-    official: Åland
-    common: Ahvenanmaa
-  fr:
-    official: Åland
-    common: Aaland
-  ru:
-    official: Аландские острова
-    common: Ахвенанмаа
-  zh:
-    official: 奥兰
-    common: 阿赫韦南马
+    common: Åland
 common_names:
 - Åland Islands
 - Åland
@@ -104,14 +89,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q5689
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -140,16 +121,13 @@ centroid:
   lng: 19.9
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 writing_directions:
 - id: ltr
   primary: true

@@ -7,12 +7,12 @@ capital_city:
   lat: 21.4602778
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '796'
 wikidata_id: Q18221
@@ -70,24 +70,9 @@ area:
 timezones:
 - America/Grand_Turk
 native_names:
-  ar:
-    official: جزر توركس وكيكوس
-    common: جزر توركس وكيكوس
   en:
     official: Turks and Caicos Islands
-    common: TCI
-  es:
-    official: Islas Turcas y Caicos
-    common: Islas Turcas y Caicos
-  fr:
-    official: Îles Turques et Caïques
-    common: Îles Turks-et-Caïcos
-  ru:
-    official: Тёркс и Кайкос
-    common: Острова Тёркс и Кайкос
-  zh:
-    official: 特克斯和凯科斯群岛
-    common: 土克凱可群島
+    common: Turks and Caicos Islands
 common_names:
 - Turks and Caicos Islands
 borders: []
@@ -112,26 +97,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q18221
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCA
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCA
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TCA
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -154,9 +135,6 @@ provenance:
 centroid:
   lat: 21.75
   lng: -71.58333333
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

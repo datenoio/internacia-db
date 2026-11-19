@@ -3,7 +3,7 @@ blocktype:
 - unregionalblock
 - political
 status: informal
-scope_category: igo
+scope_category: policy_forum
 founded: '1964'
 geographic_scope: regional
 regions:
@@ -44,7 +44,7 @@ includes:
   type: country
   status: member
 - id: CZ
-  name: Czechia
+  name: Czech Republic
   type: country
   status: member
 - id: EE
@@ -96,7 +96,7 @@ includes:
   type: country
   status: member
 - id: SK
-  name: Slovakia
+  name: Slovak Republic
   type: country
   status: member
 - id: SI
@@ -151,6 +151,10 @@ acronyms:
   value: УЭГ
 last_verified: '2026-07-30'
 provenance:
+- field: scope_category
+  source: Internacia inclusion policy; informal status and record description rule out an independent IGO
+  retrieved_at: '2026-11-18'
+  url: https://github.com/datenoio/internacia-db/blob/main/docs/intblock-inclusion-policy.md
 - field: includes
   source: Wikipedia
   retrieved_at: '2026-07-30'

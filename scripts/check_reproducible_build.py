@@ -8,6 +8,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
 from internacia_builder.snapshot import compare_builds
 
 

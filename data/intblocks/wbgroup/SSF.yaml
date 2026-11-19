@@ -3,7 +3,7 @@ blocktype:
 - wbgroup
 status: formal
 scope_category: reference_enumeration
-name: Sub-Saharan Africa (all income levels)
+name: Sub-Saharan Africa
 includes:
 - id: AO
   name: Angola
@@ -46,7 +46,7 @@ includes:
   type: country
   status: member
 - id: CV
-  name: Cape Verde
+  name: Cabo Verde
   type: country
   status: member
 - id: ER
@@ -166,7 +166,7 @@ includes:
   type: country
   status: member
 - id: SZ
-  name: Swaziland
+  name: Eswatini
   type: country
   status: member
 - id: TD
@@ -185,10 +185,6 @@ includes:
   name: Uganda
   type: country
   status: member
-- id: YT
-  name: Mayotte
-  type: country
-  status: member
 - id: ZA
   name: South Africa
   type: country
@@ -201,9 +197,9 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 49
+membership_count: 48
 geographic_scope: regional
-description: World Bank analytical grouping for Sub-Saharan Africa (all income levels),
+description: World Bank analytical grouping for Sub-Saharan Africa,
   used in World Development Indicators.
 tags:
 - SSF
@@ -239,12 +235,12 @@ provenance:
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
 - field: includes
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=SSF
 - field: membership_count
   source: World Bank (WDI income/region groupings)
-  retrieved_at: '2026-07-13'
-  url: https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=SSF
 - field: acronyms
   source: World Bank (WDI income/region groupings)
   retrieved_at: '2026-07-13'
@@ -257,4 +253,7 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+last_verified: '2026-11-18'
+previous_names:
+- id: en
+  name: Sub-Saharan Africa (all income levels)

@@ -62,24 +62,9 @@ area:
 timezones:
 - Africa/Abidjan
 native_names:
-  ar:
-    official: سانت هيلانة وأسينشين وتريستان دا كونا
-    common: جزر سانت هيلينا وأسينشين وتريستان دا كونا
   en:
-    official: Saint Helena, Ascension and Tristan da Cunha
-    common: Saint Helena and Dependencies
-  es:
-    official: Santa Elena, Ascensión y Tristán de Acuña
-    common: Santa Helena, Ascensión y Tristán de Acuña
-  fr:
-    official: Sainte-Hélène, Ascension et Tristan da Cunha
-    common: Saint Helena and Dependencies
-  ru:
-    official: Острова Святой Елены, Вознесения и Тристан-да-Кунья
-    common: Острова Святой Елены, Вознесения и Тристан-да-Кунья
-  zh:
-    official: 圣赫勒拿、阿森松和特里斯坦-达库尼亚
-    common: 圣赫勒拿、阿森松和特里斯坦达库尼亚
+    official: St Helena, Ascension & Tristan da Cunha
+    common: Saint Helena, Ascension and Tristan da Cunha
 common_names:
 - Saint Helena, Ascension and Tristan da Cunha
 borders: []
@@ -108,9 +93,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q192184
   license: CC0
 - field: adminregion
   source: UN M49 inference
@@ -144,12 +129,12 @@ centroid:
   lng: -5.72
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 incomeLevel:
   id: LMC
   value: Lower middle income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 adminregion:
   id: SSA

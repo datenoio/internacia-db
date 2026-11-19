@@ -6,7 +6,7 @@ scope_category: reference_enumeration
 links:
 - url: https://www.worldbank.org/en/region/eca
   type: website
-name: Europe & Central Asia (developing only)
+name: Europe & Central Asia (excluding high income)
 includes:
 - id: AL
   name: Albania
@@ -22,10 +22,6 @@ includes:
   status: member
 - id: BA
   name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
   type: country
   status: member
 - id: BY
@@ -48,10 +44,6 @@ includes:
   name: Kazakhstan
   type: country
   status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
 - id: MD
   name: Moldova
   type: country
@@ -61,19 +53,11 @@ includes:
   type: country
   status: member
 - id: MK
-  name: Macedonia, FYR
-  type: country
-  status: member
-- id: RO
-  name: Romania
+  name: North Macedonia
   type: country
   status: member
 - id: RS
   name: Serbia
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
   type: country
   status: member
 - id: TJ
@@ -85,7 +69,7 @@ includes:
   type: country
   status: member
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
 - id: UA
@@ -96,7 +80,7 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-membership_count: 22
+membership_count: 18
 geographic_scope: regional
 regions:
 - Europe
@@ -167,4 +151,15 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=ECA
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=ECA
+last_verified: '2026-11-18'
+previous_names:
+- id: en
+  name: Europe & Central Asia (developing only)

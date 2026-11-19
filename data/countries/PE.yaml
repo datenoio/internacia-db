@@ -7,10 +7,10 @@ capital_city:
   lat: -12.0931
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
@@ -91,24 +91,13 @@ gini:
 timezones:
 - America/Lima
 native_names:
-  ar:
-    official: بيرو
-    common: جمهورية بيرو
-  en:
-    official: Peru
-    common: pe
+  ay:
+    common: Piruw
   es:
-    official: Perú
-    common: República del Perú
-  fr:
-    official: Pérou
-    common: République du Pérou
-  ru:
-    official: Перу
-    common: Республика Перу
-  zh:
-    official: 秘鲁
-    common: 秘魯
+    official: República del Perú
+    common: Perú
+  qu:
+    common: Piruw
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -134,26 +123,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q419
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PER
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PER
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PER
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PER
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

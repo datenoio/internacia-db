@@ -7,12 +7,12 @@ capital_city:
   lat: 1.28941
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '702'
 wikidata_id: Q334
@@ -79,24 +79,18 @@ area:
 timezones:
 - Asia/Singapore
 native_names:
-  ar:
-    official: سنغافورة
-    common: سنغافورة
   en:
-    official: Singapore
-    common: Republic of Singapore
-  es:
-    official: Singapur
-    common: República de Singapur
-  fr:
-    official: Singapour
-    common: SG
-  ru:
-    official: Сингапур
-    common: Республика Сингапур
+    official: Republic of Singapore
+    common: Singapore
+  ms:
+    official: Republik Singapura
+    common: Singapura
+  ta:
+    official: சிங்கப்பூர் குடியரசு
+    common: சிங்கப்பூர்
   zh:
-    official: 新加坡
-    common: 新加坡共和国
+    official: 新加坡共和国
+    common: 新加坡
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -119,26 +113,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q334
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SGP
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SGP
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SGP
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -180,9 +170,6 @@ provenance:
 centroid:
   lat: 1.36666666
   lng: 103.8
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 writing_directions:
 - id: ltr
   primary: true

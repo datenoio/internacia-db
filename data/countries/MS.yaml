@@ -59,24 +59,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: مونتسيرات
-    common: مونتسرات
   en:
     official: Montserrat
-    common: Island of Montserrat
-  es:
-    official: Montserrat
-    common: 🇲🇸
-  fr:
-    official: Montserrat
-    common: île de Montserrat
-  ru:
-    official: Монтсеррат
-    common: Монтсеррат
-  zh:
-    official: 蒙塞拉特島
-    common: 蒙塞拉特島
+    common: Montserrat
 common_names:
 - Montserrat
 borders: []
@@ -105,14 +90,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q13353
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -145,16 +126,13 @@ centroid:
   lng: -62.2
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

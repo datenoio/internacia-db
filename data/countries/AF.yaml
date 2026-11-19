@@ -6,11 +6,11 @@ capital_city:
   lng: 69.1761
   lat: 34.5228
 region:
-  id: SAS
-  value: South Asia
+  id: MEA
+  value: Middle East, North Africa, Afghanistan & Pakistan
 adminregion:
-  id: SAS
-  value: South Asia
+  id: MNA
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 incomeLevel:
   id: LIC
   value: Low income
@@ -87,24 +87,12 @@ area:
 timezones:
 - Asia/Kabul
 native_names:
-  ar:
-    official: أفغانستان
-    common: أفغانستان
-  en:
-    official: Afghanistan
-    common: Affghanistan
-  es:
-    official: Afganistán
-    common: Afganistán
-  fr:
-    official: Afghanistan
-    common: pays des Cavaliers
-  ru:
-    official: Афганистан
-    common: Исламский Эмират Афганистан
-  zh:
-    official: 阿富汗
-    common: 阿富汗
+  prs:
+    official: امارت اسلامی افغانستان
+  ps:
+    common: افغانستان
+  tk:
+    common: Owganystan
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -126,26 +114,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q889
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AFG
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AFG
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AFG
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AFG
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

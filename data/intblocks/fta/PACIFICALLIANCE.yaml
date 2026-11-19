@@ -1,95 +1,61 @@
 id: PACIFICALLIANCE
-name: Pacific Alliance
+name: Additional Protocol to the Framework Agreement of the Pacific Alliance
 blocktype:
 - fta
 - economic
 status: formal
 scope_category: treaty_body
-founded: '2011-04-28'
+founded: '2014-02-10'
 active_period:
-  start: '2012-06-06'
+  start: '2016-05-01'
 geographic_scope: regional
 regions:
 - Latin America
 languages:
 - es
-- en
-- pt
 links:
-- url: https://alianzapacifico.net/en/
+- url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
   type: website
-- url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+- url: https://alianzapacifico.net/en/?p=6594
   type: website
-- url: https://en.wikipedia.org/wiki/Pacific_Alliance
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7122288
-  type: wikidata
-acronyms:
-- lang: en
-  value: PA
-- lang: es
-  value: AP
-headquarters:
-  city: Lima
-  country: PE
-  coordinates:
-    lat: -12.0464
-    lng: -77.0428
-legal_status: regional integration initiative
-recognition_status: Regional integration initiative established by the Lima Declaration on 28 April 2011; Framework Agreement
-  signed on 6 June 2012; four member states (Chile, Colombia, Mexico and Peru); Singapore is the first associated state after
-  its free trade agreement entered into force on 3 May 2025; Costa Rica admitted as a membership candidate in December 2024;
-  Panama is an official membership candidate
+legal_status: treaty
+recognition_status: Free trade agreement of the Pacific Alliance (PACALL), signed in Cartagena de Indias on 10 February
+  2014 and in force since 1 May 2016 for Chile, Colombia, Mexico and Peru; notified to the WTO as a regional trade agreement
+  covering goods and services.
 includes:
 - id: CL
   name: Chile
   type: country
-  status: founding_member
-  joined: '2011-04-28'
+  status: member
+  joined: '2016-05-01'
 - id: CO
   name: Colombia
   type: country
-  status: founding_member
-  joined: '2011-04-28'
+  status: member
+  joined: '2016-05-01'
 - id: MX
   name: Mexico
   type: country
-  status: founding_member
-  joined: '2011-04-28'
+  status: member
+  joined: '2016-05-01'
 - id: PE
   name: Peru
   type: country
-  status: founding_member
-  joined: '2011-04-28'
-- id: CR
-  name: Costa Rica
-  type: country
-  status: associate_member
-  joined: '2024-12-14'
-- id: PA
-  name: Panama
-  type: country
-  status: associate_member
-- id: SG
-  name: Singapore
-  type: country
-  status: associated
-  joined: '2025-05-03'
-membership_count: 7
+  status: member
+  joined: '2016-05-01'
+membership_count: 4
 founding_members:
 - CL
 - CO
 - MX
 - PE
-wikidata_id: Q7122288
-description: Latin American regional integration initiative and trade bloc comprising Chile, Colombia, Mexico and Peru, established
-  by the Lima Declaration on 28 April 2011 and consolidated through the Framework Agreement signed on 6 June 2012. Aims at
-  deep integration toward free movement of goods, services, capital and people, with strategic orientation toward the Asia-Pacific
-  region. Singapore became the first associated state when the Pacific Alliance–Singapore free trade agreement entered into
-  force on 3 May 2025. Costa Rica and Panama are official candidates for full membership.
-notes: Full member count is four. membership_count reflects founding members plus associated state (Singapore) and membership
-  candidates (Costa Rica, Panama). Observer states are tracked in the trade-bloc record PACALL.
-last_verified: '2026-07-29'
+description: Free trade agreement among the four Pacific Alliance members, Chile, Colombia, Mexico and Peru, signed in
+  Cartagena de Indias on 10 February 2014 as the Additional Protocol to the 2012 Framework Agreement and in force since 1
+  May 2016. It removed duties on 92% of tariff lines on entry into force, with all products except sugar to trade freely by
+  2030, and also covers trade in services, investment, government procurement and electronic commerce.
+notes: The Pacific Alliance itself, with its associated state, membership candidates and observers, is recorded as PACALL.
+  This record is the trade agreement; it has no Wikidata item of its own (see data/schemas/wikidata_exclusions.yaml).
+last_verified: '2026-11-19'
 tags:
 - Pacific Alliance
 - Alianza del Pacífico
@@ -97,7 +63,6 @@ tags:
 - fta
 - latin america
 - regional
-- regional_cooperation
 - trade
 topics:
 - key: economy
@@ -107,69 +72,48 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 other_names:
-- id: ar
-  name: تحالف المحيط الهادئ
-- id: de
-  name: Pazifik-Allianz
 - id: en
-  name: Pacific Alliance
-- id: en
-  name: Alliance of the Pacific
+  name: Pacific Alliance Additional Protocol
 - id: es
-  name: Alianza del Pacífico
-- id: fr
-  name: Alliance du Pacifique
-- id: pt
-  name: Aliança do Pacífico
-- id: ru
-  name: Тихоокеанский альянс
-- id: zh
-  name: 太平洋联盟
+  name: Protocolo Adicional al Acuerdo Marco de la Alianza del Pacífico
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-07-29'
-  url: https://www.wikidata.org/wiki/Q7122288
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-07-29'
-  url: https://www.wikidata.org/wiki/Q7122288
-  license: CC0
-- field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-07-29'
-  url: https://www.wikidata.org/wiki/Q7122288
-  license: CC0
+- field: name
+  source: Pacific Alliance joint communiqué on the entry into force of the Additional Protocol
+  retrieved_at: '2026-11-19'
+  url: https://alianzapacifico.net/en/?p=6594
 - field: founded
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+  source: Pacific Alliance joint communiqué on the entry into force of the Additional Protocol
+  retrieved_at: '2026-11-19'
+  url: https://alianzapacifico.net/en/?p=6594
 - field: active_period
-  source: Wikipedia
-  retrieved_at: '2026-07-29'
-  url: https://en.wikipedia.org/wiki/Pacific_Alliance
-- field: geographic_scope
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
-- field: headquarters
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/
+  source: WTO, Regional trade agreements news, 17 September 2019
+  retrieved_at: '2026-11-19'
+  url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
 - field: includes
-  source: Colombia Ministry of Foreign Affairs
-  retrieved_at: '2026-07-29'
-  url: https://www.cancilleria.gov.co/international/consensus/pacific-alliance
-- field: legal_status
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
+  source: WTO, Regional trade agreements news, 17 September 2019
+  retrieved_at: '2026-11-19'
+  url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
+- field: membership_count
+  source: WTO, Regional trade agreements news, 17 September 2019
+  retrieved_at: '2026-11-19'
+  url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
 - field: description
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/what-is-the-pacific-alliance/
-- field: links
-  source: Pacific Alliance
-  retrieved_at: '2026-07-29'
-  url: https://alianzapacifico.net/en/
+  source: WTO, Regional trade agreements news, 17 September 2019
+  retrieved_at: '2026-11-19'
+  url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
+- field: legal_status
+  source: WTO, Regional trade agreements news, 17 September 2019
+  retrieved_at: '2026-11-19'
+  url: https://www.wto.org/english/news_e/news19_e/rta_17sep19_e.htm
+- field: recognition_status
+  source: Pacific Alliance joint communiqué on the entry into force of the Additional Protocol
+  retrieved_at: '2026-11-19'
+  url: https://alianzapacifico.net/en/?p=6594
+- field: other_names
+  source: Pacific Alliance joint communiqué on the entry into force of the Additional Protocol
+  retrieved_at: '2026-11-19'
+  url: https://alianzapacifico.net/en/?p=6594
+- field: scope_category
+  source: Internacia inclusion policy; one intblock per legal instrument (RTA rows of the WTO RTA-IS)
+  retrieved_at: '2026-11-19'
+  url: https://github.com/datenoio/internacia-db/blob/main/docs/intblock-inclusion-policy.md

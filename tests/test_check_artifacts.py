@@ -78,6 +78,7 @@ def artifact_fixture(tmp_path_factory):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(yaml.safe_dump(rows if name == "blocktypes" else rows[0]))
         source[name] = clean_data(rows, name)
+    builder.fill_country_include_names(source["intblocks"], source["countries"])
     source["memberships"] = builder.build_membership_rows(source["intblocks"])
     builder.begin_build_context()
     for name, rows in source.items():

@@ -75,24 +75,9 @@ area:
 timezones:
 - Africa/El_Aaiun
 native_names:
-  ar:
-    official: الصحراء الغربية
-    common: الصحراء المغربية
-  en:
-    official: Western Sahara
-    common: West Sahara
   es:
-    official: Sahara Occidental
-    common: Sáhara Occidental
-  fr:
-    official: Sahara occidental
-    common: Sahara de l'Ouest
-  ru:
-    official: Западная Сахара
-    common: Испанская Сахара
-  zh:
-    official: 西撒哈拉
-    common: 西撒哈拉
+    official: Sáhara Occidental
+    common: Sahara Occidental
 code_status: official_iso3166_1
 entity_type: disputed_territory
 provenance:
@@ -118,9 +103,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q6250
   license: CC0
 - field: adminregion
   source: UN M49 inference
@@ -154,16 +139,16 @@ centroid:
   lng: -13.0
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 incomeLevel:
   id: LMC
   value: Lower middle income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 adminregion:
-  id: MEA
-  value: Middle East & North Africa (excluding high income)
+  id: MNA
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 writing_directions:
 - id: rtl
   primary: true

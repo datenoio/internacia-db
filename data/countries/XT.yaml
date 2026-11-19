@@ -31,23 +31,14 @@ timezones:
 - Europe/Chisinau
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
-native_names:
-  ro:
-    official: Republica Moldovenească Nistreană
-    common: Transnistria
-  ru:
-    official: Приднестровская Молдавская Республика
-    common: Приднестровье
+native_names: {}
 common_names:
 - Transnistria
 - Pridnestrovian Moldavian Republic
@@ -71,23 +62,14 @@ provenance:
   source: UN M49 inference
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: area
   source: Wikidata
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/wiki/Q907112
-- field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q907112
-  license: CC0
 - field: capital_city
   source: manual
   retrieved_at: '2026-07-11'
-  notes: De-facto seat of government / administrative capital
+  note: De-facto seat of government / administrative capital
 - field: population
   source: Wikidata
   retrieved_at: '2026-08-02'

@@ -7,10 +7,10 @@ capital_city:
   lat: 14.7247
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
@@ -87,24 +87,9 @@ gini:
 timezones:
 - Africa/Abidjan
 native_names:
-  ar:
-    official: السنغال
-    common: سينيغال
-  en:
-    official: Senegal
-    common: Republic of Senegal
-  es:
-    official: Senegal
-    common: República de Senegal
   fr:
-    official: Sénégal
-    common: République du Sénégal
-  ru:
-    official: Сенегал
-    common: Республика Сенегал
-  zh:
-    official: 塞内加尔
-    common: 塞內加爾
+    official: République du Sénégal
+    common: Sénégal
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -130,26 +115,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1041
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SEN
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SEN
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SEN
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SEN
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

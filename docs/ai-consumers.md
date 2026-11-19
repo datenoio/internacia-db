@@ -154,7 +154,7 @@ Organizations, treaties, alliances, federations, and similar groupings. Each rec
 - `partof` — parent organization ids
 
 Member entry shape: `{id, name, type, status, joined, left, role, note}`.
-Use `id` for joins; `name` is a source label and may not match the canonical country name.
+Use `id` for joins. For `type: country` entries the export sets `name` to the country's `name`; other types keep their source label.
 `left` is the departure date (ISO string) when the member left.
 
 ### Membership status (`includes[].status`)
@@ -164,8 +164,10 @@ Canonical catalog: [`data/schemas/includes_status.yaml`](../data/schemas/include
 | Status | Meaning |
 |--------|---------|
 | `member` / `founding_member` | Current (or founding) full member |
-| `observer` / `associated_observer` | Observer seat |
-| `associate` / `associate_member` / `associated` | Associate-tier participation |
+| `observer` | Observer seat |
+| `associate_member` | Associate membership, as the organization's instrument names it |
+| `associated` | Association that the instrument does not call membership (associated countries/nations) |
+| `associate` / `associated_observer` | **Deprecated** (`contract.json` `deprecated[]`); removed in the next MAJOR. Read them as `associate_member` / `observer` until then |
 | `former_member` | Left; prefer `left` date when known |
 | `participant` / `partner` / `cooperating` | Non-member participation |
 | `recipient` / `contributor` / `funder` | Program / funding roles |
@@ -340,11 +342,17 @@ pop = df["population"].apply(lambda v: v["value"] if v is not None else None)
 ### World Bank classifications
 
 `region`, `adminregion`, `incomeLevel`, `lendingType` are `{id, value}` structs.
-Filter on the stable `id`, not on `value` — labels vary upstream (some regions carry an
-`(all income levels)` suffix). `region`/`incomeLevel`/`lendingType` are absent for 8
-entities the World Bank does not classify (overseas territories, special statistical areas,
-non-standard codes); `adminregion` is absent for 39 records because it only covers low- and
-middle-income economies. Do not treat missing values as data errors.
+Values are the World Bank's current ids and labels (refreshed by
+`scripts/enrich_countries.py refresh-classifications`). Filter on the stable `id`, not on
+`value` — the Bank renames regions (in 2025 `MEA` became *Middle East, North Africa,
+Afghanistan & Pakistan*). `region`/`incomeLevel`/`lendingType` are absent for 8 entities the
+World Bank does not classify (overseas territories, special statistical areas, non-standard
+codes); `adminregion` is absent for 119 records (those 8 plus 111 high-income economies)
+because it only covers low- and middle-income economies. Do not treat missing values as data
+errors. Another 31 entities the Bank does not classify carry inferred values: their provenance
+source is `UN M49 inference` or `World Bank (historical classification)`, never `World Bank`.
+The `wbgroup` intblocks (`HIC`, `LMC`, `SAS`, …) list exactly the economies whose
+Bank-published field puts them in the group.
 
 ### Borders
 
@@ -359,9 +367,10 @@ not alpha-2. Island nations may have empty borders.
 | `official_name` | Formal long-form state name |
 | `common_names` | Modern short forms and aliases for fuzzy matching |
 | `other_names` | Translations `{id, name}` |
-| `native_names` | Map of lang code → `{official, common}` |
+| `native_names` | Names in the entity's own `languages[]`: lang code → `{official, common}`, either may be absent (DE has only `de`) |
 
-For entity linking, search across `name`, `common_names`, `other_names`, and codes.
+For entity linking, search across `name`, `common_names`, `other_names`, `native_names`, and codes.
+Exonyms ("Allemagne", "Германия") are in `other_names`; `native_names` holds only endonyms.
 
 ### Provenance
 
