@@ -7,10 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- The release workflow is split into `build`, `sdk-contract` and `publish` jobs. Only `publish` has `contents: write` and secrets; it verifies every artifact against a digest recorded by `build` and runs no third-party code except pinned actions and `huggingface_hub`. Before, `internacia-python@main` was installed and tested in the job that held `HF_TOKEN`, with the write token stored in `.git/config`.
+- Every GitHub Action is pinned to a commit SHA (Dependabot keeps them current). `pip-audit` and `huggingface_hub` (`requirements-publish.txt`) are pinned. The SDK contract suite runs against a pinned internacia-python commit (v0.4.0) in both `validate.yml` and `release.yml`.
+- `validate.yml` and `link-validation.yml` run with a read-only token, and checkouts that run pull-request or third-party code no longer keep credentials.
+
 ### Changed
 
 - Exported `includes[].name` of `type: country` entries is the country's `name`, filled by the build; `name` is optional for those entries in the source. The 3,501 source names that differed (95 id–name pairs, for example TR `Turkey`, MK `Macedonia, FYR`, CV `Cape Verde`) are rewritten to the country `name`. `INCLUDE_NAME_MISMATCH` compares exactly and is now a validator warning. Relabelling a country include does not need `last_verified`.
 - Associate memberships use `associate_member`: 40 entries move from `associate` (UNESCO 12, SCAR 13, ACS 10, IMO 3, EMBL 1, OECD DAC 1) and 10 from `associated` (OECS 5, PASO 3, MSG 1, Dutch Language Union 1). OECS, PASO, MSG and the Dutch Language Union were checked against their sources and have `last_verified` 2026-11-19. OpenSpec change `normalize-include-labels-and-statuses`.
+- Hugging Face is pushed after the GitHub Release, in one commit (`scripts/push_huggingface.py`) that also removes legacy files and is tagged with the release tag. Before, files were uploaded one by one before the GitHub Release, and failed legacy deletions were silently ignored.
 
 ### Deprecated
 
@@ -19,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - `python scripts/<name>.py` and `pytest` now import the `internacia_builder` of the checkout they run in (`scripts/_checkout.py`, `pythonpath = ["."]`). Before, with an editable install from another checkout, a script in a git worktree silently ran the other checkout's code against its data; only `builder.py` had this guard.
-
 - `last_verified` set to 2026-10-25 for IPBES (151 coded members after the United States withdrew on 6 February 2026 and Slovenia joined on 9 February 2026; the Plenary 12 list prints both Eswatini and Swaziland, and the Council of the EU counts 152), the Global Fund (123 countries with an eligible or transition-funded component on the 2026 eligibility list), ICH (New Zealand and Pakistan added as observers; 25 members), the European Mathematical Society (52 full corporate members in 40 countries; Serbia added, and Belarus, Malta, and North Macedonia removed), EuChemS (42 societies in the same 35 countries), and FACS (the 31 coded societies match the member page; the Chemical Society of the South Pacific has no single country code).
 - `last_verified` set to 2026-10-25 for the OFC (11 ordinary members in the March 2026 statutes; Kiribati and Tuvalu are associate members; Niue is not a member) and the Rio Group (24 members in the 29 September 2011 UN statement, including Suriname; CELAC succeeded the group on 3 December 2011).
 - `last_verified` set to 2026-10-25 for the Global Health Security Agenda (71 countries on the membership page; international and non-government organizations on that page are not country rows).

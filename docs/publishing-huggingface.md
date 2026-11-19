@@ -57,8 +57,8 @@ typed, and the viewer's *Features* panel shows the real struct/list types.
    - Variable `HF_DATASET_REPO` (optional) — e.g. `datenoio/internacia`;
      defaults to `datenoio/internacia` when unset.
 
-No local Python setup is required for the automated path; CI installs
-`huggingface_hub` itself.
+No local Python setup is required for the automated path; CI installs the pinned
+`huggingface_hub` from `requirements-publish.txt` itself.
 
 ## Automated publishing (recommended)
 
@@ -68,14 +68,14 @@ Every tagged release (`v*`) runs `.github/workflows/release.yml`, which:
    into `.release-datasets`.
 2. Tests that final build, checks artifact content and descriptor paths, enforces
    the quality gate and tag-version consistency, and emits the migration report.
-3. If `HF_TOKEN` is set, creates the HF dataset repo if missing
-   (`create_repo(..., repo_type="dataset", exist_ok=True)`) and uploads the
-   files listed above — parquet files into their per-table folders, card
-   and manifests at the root. The step also deletes any legacy flat
-   `*.parquet` files left at the repo root from pre-folder uploads
-   (missing files are ignored). If the token is absent, the step logs
-   `HF_TOKEN not set; skipping Hugging Face upload` and exits 0 — the
-   rest of the release is unaffected.
+3. Creates the GitHub Release, then, if `HF_TOKEN` is set, runs
+   `scripts/push_huggingface.py`. It creates the HF dataset repo if missing and pushes the
+   files listed above in **one commit** — parquet files into their per-table folders, card
+   and manifests at the root — deleting any legacy flat `*.parquet` files at the repo root
+   in the same commit, and tags that commit with the release tag. If the token is absent,
+   the step logs `HF_TOKEN not set; skipping Hugging Face upload` and exits 0 — the rest of
+   the release is unaffected. The step runs in the `publish` job, which installs only
+   `requirements-publish.txt` and checks every file against the `build` job's digest first.
 
 Before tagging, align the dated release entry in `CHANGELOG.md`, `pyproject.toml`,
 and `internacia_builder/__init__.py` with the intended version. Run a full build,
@@ -90,10 +90,11 @@ git push origin v2.2.0
 Then watch the *Release datasets* workflow run; the step is named
 **Push to Hugging Face (optional)**.
 
-The upload overwrites files in place on the `main` revision of the HF repo,
-so the HF `main` always mirrors the latest tagged release. HF keeps git
-history per file, so earlier states remain reachable via the repo's commit
-history.
+The commit replaces files on the `main` revision of the HF repo, so the HF `main`
+always mirrors the latest tagged release, and never a mix of two. Each release is also an
+HF tag, so it stays reachable after the next one: `load_dataset("datenoio/internacia",
+revision="vX.Y.Z")`. Releases before this workflow change have no HF tag; use the commit
+history for them.
 
 ## Manual publishing (one-off / recovery)
 
@@ -101,58 +102,22 @@ Use this to bootstrap the repo, re-push after a failed CI step, or publish
 from a local build:
 
 ```bash
-pip install huggingface_hub
+pip install -r requirements-publish.txt
 export HF_TOKEN=hf_...  # use a write token for the target dataset repo
 
 python scripts/builder.py build
 python scripts/check_generated_artifacts.py
 python scripts/check_release_bundle.py data/datasets
 
-python - <<'PY'
-import os
-from pathlib import Path
-from tempfile import TemporaryDirectory
-from huggingface_hub import HfApi
-from internacia_builder.distribution import prepare_huggingface_bundle
-
-api = HfApi(token=os.environ["HF_TOKEN"])
-repo_id = os.environ.get("HF_DATASET_REPO") or "datenoio/internacia"
-tables = ("countries", "intblocks", "blocktypes", "memberships")
-
 # Prepare and validate the same descriptor, Parquet files, and metadata as CI.
-with TemporaryDirectory(prefix="internacia-hf-") as staging:
-    root = Path(staging)
-    prepare_huggingface_bundle(Path("data/datasets"), root)
-    api.create_repo(repo_id=repo_id, repo_type="dataset", exist_ok=True)
-    for path in sorted(root.rglob("*")):
-        if path.is_file():
-            name = path.relative_to(root).as_posix()
-            api.upload_file(
-                path_or_fileobj=str(path),
-                path_in_repo=name,
-                repo_id=repo_id,
-                repo_type="dataset",
-            )
-            print("uploaded", name)
-
-# One-time cleanup of the legacy flat layout; missing files are fine.
-for table in tables:
-    try:
-        api.delete_file(
-            path_in_repo=f"{table}.parquet",
-            repo_id=repo_id,
-            repo_type="dataset",
-        )
-        print("deleted legacy", f"{table}.parquet")
-    except Exception:
-        pass
-PY
+rm -rf .hf-release
+python -c "from pathlib import Path; from internacia_builder.distribution import prepare_huggingface_bundle; prepare_huggingface_bundle(Path('data/datasets'), Path('.hf-release'))"
+python scripts/push_huggingface.py .hf-release --message "Release vX.Y.Z" --tag vX.Y.Z
 ```
 
 Run this from the repository root with the development dependencies installed
-and `HF_TOKEN` set. Use a commit message via
-`commit_message="Release vX.Y.Z"` on `upload_file` if you want the HF git
-log to match release tags.
+and `HF_TOKEN` set. `--repo` (or `HF_DATASET_REPO`) selects another dataset repository;
+omit `--tag` for a push that is not a release.
 
 ## Dataset card
 
