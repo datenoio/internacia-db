@@ -53,6 +53,10 @@ includes:
   name: Armenia
   type: country
   status: member
+- id: AT
+  name: Austria
+  type: country
+  status: member
 - id: AZ
   name: Azerbaijan
   type: country
@@ -97,8 +101,24 @@ includes:
   name: Kazakhstan
   type: country
   status: member
+- id: XK
+  name: Kosovo
+  type: country
+  status: member
 - id: KG
   name: Kyrgyz Republic
+  type: country
+  status: member
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+- id: MD
+  name: Moldova
   type: country
   status: member
 - id: MN
@@ -109,8 +129,20 @@ includes:
   name: Mozambique
   type: country
   status: member
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
 - id: OM
   name: Oman
+  type: country
+  status: member
+- id: PK
+  name: Pakistan
   type: country
   status: member
 - id: PL
@@ -119,6 +151,10 @@ includes:
   status: member
 - id: RO
   name: Romania
+  type: country
+  status: member
+- id: RU
+  name: Russian Federation
   type: country
   status: member
 - id: SA
@@ -141,6 +177,10 @@ includes:
   name: Türkiye
   type: country
   status: member
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
 - id: AE
   name: United Arab Emirates
   type: country
@@ -149,39 +189,35 @@ includes:
   name: Uzbekistan
   type: country
   status: member
-- id: EG
-  name: Egypt, Arab Rep.
+- id: PS
+  name: West Bank and Gaza
   type: country
-  status: associated
-- id: GH
-  name: Ghana
-  type: country
-  status: associated
-- id: JO
-  name: Jordan
-  type: country
-  status: associated
-- id: XK
-  name: Kosovo
-  type: country
-  status: associated
-- id: PE
-  name: Peru
-  type: country
-  status: associated
-- id: US
-  name: United States
-  type: country
-  status: associated
+  status: member
 - id: DZ
   name: Algeria
   type: country
-  status: associated
+  status: associate_member
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: associate_member
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: associate_member
+- id: FJ
+  name: Fiji
+  type: country
+  status: associate_member
 - id: FR
   name: France
   type: country
-  status: associated
-membership_count: 26
+  status: associate_member
+- id: US
+  name: United States
+  type: country
+  status: associate_member
+membership_count: 51
 membership_count_type: organizations
 wikidata_id: Q5376973
 description: Inter-institutional non-profit association bringing together independent
@@ -226,8 +262,12 @@ notes: Predecessor cooperative platform began in 1998 with 12 regulatory bodies;
   runs training programmes, annual conferences, regulatory committees on grids, markets,
   and customers in the energy transition, and publishes research papers and regulatory
   stories.
-last_verified: '2026-07-13'
+last_verified: '2026-11-19'
 provenance:
+- field: includes
+  source: ERRA members page (member regulators by country)
+  retrieved_at: '2026-11-19'
+  url: https://erranet.org/members/
 - field: description
   source: official sources
   retrieved_at: '2026-07-13'
@@ -273,8 +313,8 @@ provenance:
   retrieved_at: '2026-07-13'
   url: https://erranet.org/about-us/what-is-erra/
 - field: membership_count
-  source: official sources
-  retrieved_at: '2026-08-02'
-  url: https://erranet.org/
+  source: ERRA members page (37 full and 14 associate member regulators)
+  retrieved_at: '2026-11-19'
+  url: https://erranet.org/members/
   note: membership_count counts member energy regulatory authorities; unit classified
     2026-08, count value from earlier enrichment

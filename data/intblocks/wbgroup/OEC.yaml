@@ -1,8 +1,9 @@
 id: OEC
 blocktype:
 - wbgroup
-status: formal
+status: historical
 scope_category: reference_enumeration
+dissolved: '2016-07-05'
 name: 'High income: OECD'
 includes:
 - id: AU
@@ -127,8 +128,9 @@ includes:
   status: member
 membership_count: 30
 geographic_scope: global
-description: World Bank analytical grouping for high-income economies that are members
-  of the OECD, used in World Development Indicators.
+description: Former World Bank analytical grouping for high-income economies that were
+  members of the OECD. The World Bank removed it, with the non-OECD counterpart (NOC), in the
+  July 2016 World Development Indicators update; high-income economies form one group, HIC.
 tags:
 - OEC
 - aid
@@ -152,10 +154,18 @@ other_names:
 - id: en
   name: 'High income: OECD'
 provenance:
+- field: status
+  source: "World Bank Data Help Desk, Data Updates and Errata (World Development Indicators: July 2016)"
+  retrieved_at: '2026-11-19'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906522-data-updates-and-errata
+- field: dissolved
+  source: "World Bank Data Help Desk, Data Updates and Errata (World Development Indicators: July 2016)"
+  retrieved_at: '2026-11-19'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906522-data-updates-and-errata
 - field: description
-  source: World Bank
-  retrieved_at: '2026-07-13'
-  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/378834
+  source: "World Bank Data Help Desk, Data Updates and Errata (World Development Indicators: July 2016)"
+  retrieved_at: '2026-11-19'
+  url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906522-data-updates-and-errata
 - field: geographic_scope
   source: World Bank
   retrieved_at: '2026-07-13'
