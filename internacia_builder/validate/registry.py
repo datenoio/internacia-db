@@ -23,6 +23,7 @@ from typing import Any
 
 import yaml
 
+from internacia_builder import wb_classification
 from internacia_builder.paths import blocktypes_source_path
 from internacia_builder.validate import completeness, country_rules, cross_rules, intblock_rules
 
@@ -289,6 +290,7 @@ COUNTRY_RULES: tuple[Rule, ...] = (
     _record("capital distance", COUNTRIES, W,
             lambda ctx, r, p: country_rules.check_country_capital_distance(r, ctx.countries_cfg)),
     _record("text encoding", COUNTRIES, W, lambda ctx, r, p: country_rules.check_country_text_encoding(r)),
+    _record("native name languages", COUNTRIES, W, lambda ctx, r, p: country_rules.check_country_native_names(r)),
     _cross("duplicate identifiers", COUNTRIES, E,
            lambda ctx: country_rules.check_country_duplicates(ctx.countries.records, ctx.countries.paths),
            message=lambda i: (f"duplicate {i['field']} '{i['current_value']}' in {i['file_path']} "
@@ -391,6 +393,10 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
            lambda ctx: cross_rules.check_hq_coordinates(
                ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code, ctx.intblocks_cfg),
            enabled=_has_countries),
+    _cross("World Bank group rosters", INTBLOCKS, W,
+           lambda ctx: wb_classification.check_wb_group_rosters(
+               ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code),
+           enabled=_has_countries),
     _cross("historical entity members", INTBLOCKS, W,
            lambda ctx: cross_rules.check_historical_entity_members(
                ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code),
@@ -411,6 +417,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
             enabled=lambda ctx: int(ctx.intblocks_provenance.get("max_age_months") or 0) > 0),
     _record("description quality", INTBLOCKS, REPORT,
             lambda ctx, r, p: intblock_rules.check_intblock_description_quality(r)),
+    _record("deprecated include statuses", INTBLOCKS, W,
+            lambda ctx, r, p: intblock_rules.check_deprecated_include_statuses(r, ctx.includes_status_catalog)),
     _record("includes contract", INTBLOCKS, REPORT,
             lambda ctx, r, p: intblock_rules.check_intblock_includes_contract(
                 r, ctx.intblocks_cfg, ctx.includes_status_catalog)),
@@ -423,7 +431,7 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _cross("duplicate links", INTBLOCKS, REPORT,
            lambda ctx: cross_rules.check_duplicate_links(
                ctx.countries.paths + ctx.intblocks.paths, ctx.countries.records + ctx.intblocks.records)),
-    _cross("include display names", INTBLOCKS, REPORT,
+    _cross("include display names", INTBLOCKS, W,
            lambda ctx: cross_rules.check_include_name_mismatch(
                ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code),
            enabled=_has_countries),

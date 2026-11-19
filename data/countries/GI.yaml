@@ -3,12 +3,12 @@ name: Gibraltar
 iso3code: GIB
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '292'
 wikidata_id: Q1410
@@ -68,24 +68,9 @@ area:
 timezones:
 - Europe/Gibraltar
 native_names:
-  ar:
-    official: جبل طارق
-    common: جبل طارق (منطقة حكم ذاتي)
   en:
     official: Gibraltar
-    common: gi
-  es:
-    official: Gibraltar
-    common: la Roca
-  fr:
-    official: Gibraltar
     common: Gibraltar
-  ru:
-    official: Гибралтар
-    common: Гибралтар
-  zh:
-    official: 直布羅陀
-    common: 直布罗陀
 common_names:
 - Gibraltar
 code_status: official_iso3166_1
@@ -109,30 +94,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1410
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GIB
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GIB
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GIB
 - field: capital_city
   source: manual
   retrieved_at: '2026-07-11'
-  notes: De-facto seat of government / administrative capital
+  note: De-facto seat of government / administrative capital
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -160,9 +141,6 @@ provenance:
 centroid:
   lat: 36.13333333
   lng: -5.35
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 capital_city:
   name: Gibraltar
   lng: -5.3536

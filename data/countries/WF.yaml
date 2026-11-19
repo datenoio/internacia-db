@@ -60,24 +60,9 @@ area:
 timezones:
 - Pacific/Tarawa
 native_names:
-  ar:
-    official: واليس وفوتونا
-    common: والس وفوتانا
-  en:
-    official: Wallis and Futuna
-    common: Wallis and Futuna Islands
-  es:
-    official: Wallis y Futuna
-    common: Uvea mo Futuna
   fr:
     official: Wallis-et-Futuna
-    common: Wallis et Futuna
-  ru:
-    official: Уоллис и Футуна
-    common: Острова Валлис
-  zh:
-    official: 瓦利斯和富圖納
-    common: 瓦利斯及富圖納群島
+    common: Territoire des îles Wallis-et-Futuna
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -104,14 +89,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q35555
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -140,16 +121,13 @@ centroid:
   lng: -176.2
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 writing_directions:
 - id: ltr
   primary: true

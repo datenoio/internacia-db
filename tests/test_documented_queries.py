@@ -404,7 +404,7 @@ ADDITIONAL_RECIPES = [
             SELECT 1 FROM UNNEST(c.borders) b(iso3) JOIN countries n ON n.iso3code=b.iso3
             WHERE n.incomeLevel.value IS DISTINCT FROM c.incomeLevel.value)
         """,
-        20,
+        22,
         set(),
     ),
     (
@@ -475,7 +475,7 @@ ADDITIONAL_RECIPES = [
         WHERE m.type='country' AND m.name IS NOT NULL AND m.name != c.name
           AND NOT list_contains(c.common_names, m.name)
         """,
-        1486,
+        0,
         set(),
     ),
     (
@@ -595,9 +595,8 @@ def test_former_members_with_join_and_left(con):
 def test_world_bank_region_filter_uses_region_id(con):
     """The documented World Bank region recipe filters on region.id.
 
-    region.value labels are inconsistent upstream (some carry an
-    '(all income levels)' suffix), so filtering on the label silently
-    returns zero rows for affected regions.
+    region.value holds the Bank's current label, which the Bank renames (MEA in
+    2025), so the docs filter on the stable id. Each id carries one current label.
     """
     rows = con.execute(
         """
@@ -609,11 +608,12 @@ def test_world_bank_region_filter_uses_region_id(con):
     codes = {r[0] for r in rows}
     assert len(rows) == 61
     assert {"DE", "FR", "UA", "KZ"} <= codes
-    # the label-based filter documented before 2026-08 returns nothing
-    stale = con.execute(
-        "SELECT COUNT(*) FROM countries WHERE region.value = 'Europe & Central Asia'"
-    ).fetchone()[0]
-    assert stale == 0
+    labels = dict(con.execute(
+        "SELECT region.id, list_distinct(list(region.value)) FROM countries WHERE region.id IS NOT NULL GROUP BY 1"
+    ).fetchall())
+    assert labels["ECS"] == ["Europe & Central Asia"]
+    assert labels["MEA"] == ["Middle East, North Africa, Afghanistan & Pakistan"]
+    assert all(len(values) == 1 for values in labels.values())
 
 
 def test_world_bank_classification_gap_figures(con):
@@ -625,7 +625,7 @@ def test_world_bank_classification_gap_figures(con):
         "SELECT COUNT(*) FROM countries WHERE adminregion.id IS NULL"
     ).fetchone()[0]
     assert missing_region == 8
-    assert missing_admin == 39
+    assert missing_admin == 119
 
 
 def test_pandas_struct_field_access():

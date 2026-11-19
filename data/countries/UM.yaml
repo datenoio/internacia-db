@@ -58,24 +58,8 @@ timezones:
 - Pacific/Pago_Pago
 - Pacific/Tarawa
 native_names:
-  ar:
-    official: جزر الولايات المتحدة الصغيرة النائية
-    common: جزر الولايات المتحدة البعيدة الصغيرة
   en:
-    official: United States Minor Outlying Islands
-    common: um
-  es:
-    official: Islas ultramarinas de Estados Unidos
-    common: Islas ultramarinas de Estados Unidos
-  fr:
-    official: îles mineures éloignées des États-Unis
-    common: îles mineures éloignées des États-Unis
-  ru:
-    official: Внешние малые острова США
-    common: Внешние малые острова США
-  zh:
-    official: 美国本土外小岛屿
-    common: 美国本土外小岛屿
+    common: United States Minor Outlying Islands
 common_names:
 - United States Minor Outlying Islands
 borders: []
@@ -104,14 +88,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q16645
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -135,16 +115,13 @@ centroid:
   lng: 166.633333
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 writing_directions:
 - id: ltr
   primary: true

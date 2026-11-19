@@ -4,7 +4,7 @@ blocktype:
 - military
 - political
 status: informal
-scope_category: igo
+scope_category: policy_forum
 founded: '2022-04-26'
 geographic_scope: global
 regions:
@@ -205,7 +205,7 @@ includes:
   status: member
   joined: '2022-04-26'
 - id: MK
-  name: Macedonia, FYR
+  name: North Macedonia
   type: country
   status: member
   joined: '2022-04-26'
@@ -260,7 +260,7 @@ includes:
   status: member
   joined: '2022-04-26'
 - id: TR
-  name: Turkey
+  name: Türkiye
   type: country
   status: member
   joined: '2022-04-26'
@@ -361,6 +361,10 @@ notes: No official static membership roster exists; countries are treated as par
   attendance.
 last_verified: '2026-07-29'
 provenance:
+- field: scope_category
+  source: Internacia inclusion policy; informal status and record description rule out an independent IGO
+  retrieved_at: '2026-11-18'
+  url: https://github.com/datenoio/internacia-db/blob/main/docs/intblock-inclusion-policy.md
 - field: includes
   source: Wikipedia
   retrieved_at: '2026-07-29'

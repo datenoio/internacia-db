@@ -7,16 +7,16 @@ capital_city:
   lat: 7.11046
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 adminregion:
   id: EAP
-  value: East Asia & Pacific (developing only)
+  value: East Asia & Pacific (excluding high income)
 incomeLevel:
-  id: LMC
-  value: Lower middle income
+  id: UMC
+  value: Upper middle income
 lendingType:
-  id: IBD
-  value: IBRD
+  id: IDX
+  value: IDA
 numeric_code: '584'
 wikidata_id: Q709
 geonames_id: "2080185"
@@ -83,24 +83,12 @@ timezones:
 - Pacific/Kwajalein
 - Pacific/Tarawa
 native_names:
-  ar:
-    official: جزر مارشال
-    common: جزر مارشال
   en:
     official: Marshall Islands
-    common: Republic of the Marshall Islands
-  es:
-    official: Islas Marshall
-    common: República de las Islas Marshall
-  fr:
-    official: Îles Marshall
-    common: république des Îles Marshall
-  ru:
-    official: Маршалловы Острова
-    common: Республика Маршалловы Острова
-  zh:
-    official: 馬紹爾群島
-    common: 马绍尔群岛
+    common: Marshall Islands
+  mh:
+    official: Aolepān Aorōkin M̧ajeļ
+    common: M̧ajeļ
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -127,26 +115,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q709
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MHL
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MHL
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MHL
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MHL
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

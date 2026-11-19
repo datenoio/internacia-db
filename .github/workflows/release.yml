@@ -4,22 +4,26 @@ on:
   push:
     tags: ['v*']
 
+# Jobs that run project or third-party code get a read-only token and no secrets. Only `publish`
+# can write, and it runs no code from outside this repository except the pinned actions and the
+# pinned huggingface_hub package.
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     env:
       INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.release-datasets
-      # internacia-python ref whose tests/contract suite must pass before publishing.
-      INTERNACIA_SDK_REF: main
+    outputs:
+      digest: ${{ steps.digest.outputs.digest }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.11'
           cache: pip
@@ -40,13 +44,6 @@ jobs:
 
       - name: Run tests against the final release build
         run: pytest tests/ --cov=internacia_builder --cov-report=term-missing
-
-      - name: Run the internacia SDK contract suite against the release build
-        run: |
-          sdk="$RUNNER_TEMP/internacia-python"
-          git clone --depth 1 --branch "$INTERNACIA_SDK_REF" https://github.com/datenoio/internacia-python "$sdk"
-          pip install "$sdk"
-          cd "$sdk" && INTERNACIA_CONTRACT_DB_PATH="$INTERNACIA_DATASETS_DIR/internacia.duckdb" pytest tests/contract -q
 
       - name: Validate release content, version, and documentation
         run: |
@@ -76,6 +73,116 @@ jobs:
           python scripts/write_checksums.py .release-datasets
           python scripts/check_release_bundle.py .release-datasets --version "$GITHUB_REF_NAME"
 
+      - name: Prepare the Hugging Face bundle
+        run: |
+          python -c "from pathlib import Path; from internacia_builder.distribution import prepare_huggingface_bundle; prepare_huggingface_bundle(Path('.release-datasets'), Path('.hf-release'))"
+
+      # `publish` re-checks every file against this digest, which travels as a job output,
+      # so an artifact replaced by a later job (upload-artifact can overwrite) is rejected.
+      - name: Record artifact digests
+        id: digest
+        run: |
+          find .release-datasets .hf-release -type f -print0 | sort -z | xargs -0 sha256sum > release-digests.txt
+          echo "digest=$(sha256sum release-digests.txt | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: release-datasets
+          path: .release-datasets
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: hf-release
+          path: .hf-release
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: release-digests
+          path: release-digests.txt
+          if-no-files-found: error
+          retention-days: 7
+
+  # Runs internacia-python's code, so it has no secrets and no checkout credentials.
+  sdk-contract:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.release-datasets
+      # internacia-python commit whose tests/contract suite must pass before publishing (v0.4.0).
+      # Bump it to the latest internacia-python release when one is made.
+      INTERNACIA_SDK_REF: 94445907dccd11497af87fee839ec597dcb02871
+    steps:
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: release-datasets
+          path: .release-datasets
+
+      - name: Run the internacia SDK contract suite against the release build
+        run: |
+          sdk="$RUNNER_TEMP/internacia-python"
+          git init -q "$sdk"
+          git -C "$sdk" fetch -q --depth 1 https://github.com/datenoio/internacia-python "$INTERNACIA_SDK_REF"
+          git -C "$sdk" checkout -q FETCH_HEAD
+          pip install "$sdk" pytest==9.1.1
+          cd "$sdk" && INTERNACIA_CONTRACT_DB_PATH="$INTERNACIA_DATASETS_DIR/internacia.duckdb" pytest tests/contract -q
+
+  publish:
+    needs: [build, sdk-contract]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: release-datasets
+          path: .release-datasets
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: hf-release
+          path: .hf-release
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: release-digests
+
+      - name: Verify artifacts against the build digest
+        env:
+          DIGEST: ${{ needs.build.outputs.digest }}
+        run: |
+          echo "$DIGEST  release-digests.txt" | sha256sum -c -
+          sha256sum -c --quiet release-digests.txt
+          find .release-datasets .hf-release -type f | sort > actual-files.txt
+          cut -d' ' -f3- release-digests.txt | sort > expected-files.txt
+          diff -u expected-files.txt actual-files.txt
+
+      - name: Create GitHub release with dataset assets
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
+        with:
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: .release-datasets/*
+
+      # After the GitHub release, so a Hugging Face failure never leaves a mirror ahead of
+      # GitHub; re-running this job retries the push.
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+
       - name: Push to Hugging Face (optional)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -85,40 +192,8 @@ jobs:
             echo "HF_TOKEN not set; skipping Hugging Face upload"
             exit 0
           fi
-          pip install huggingface_hub
-          python - <<'PY'
-          import os
-          from pathlib import Path
-          from huggingface_hub import HfApi
-          api = HfApi(token=os.environ["HF_TOKEN"])
-          repo_id = os.environ.get("HF_DATASET_REPO") or "datenoio/internacia"
-          api.create_repo(repo_id=repo_id, repo_type="dataset", exist_ok=True)
-          from internacia_builder.distribution import prepare_huggingface_bundle
-          root = Path(".hf-release")
-          prepare_huggingface_bundle(Path(".release-datasets"), root)
-          tables = ("countries", "intblocks", "blocktypes", "memberships")
-          for path in sorted(root.rglob("*")):
-              if path.is_file():
-                  name = path.relative_to(root).as_posix()
-                  api.upload_file(path_or_fileobj=str(path), path_in_repo=name,
-                                  repo_id=repo_id, repo_type="dataset")
-                  print("uploaded", name)
-          # One-time cleanup of the legacy flat layout; missing files are fine.
-          for name in (f"{t}.parquet" for t in tables):
-              try:
-                  api.delete_file(path_in_repo=name, repo_id=repo_id, repo_type="dataset")
-                  print("deleted legacy", name)
-              except Exception:
-                  pass
-          print("HF push complete:", repo_id)
-          PY
-
-      - name: Create GitHub release with dataset assets
-        uses: softprops/action-gh-release@v2
-        with:
-          generate_release_notes: true
-          fail_on_unmatched_files: true
-          files: .release-datasets/*
+          pip install -r requirements-publish.txt
+          python scripts/push_huggingface.py .hf-release --message "Release $GITHUB_REF_NAME" --tag "$GITHUB_REF_NAME"
 
       # internacia-python and internacia-api also poll for new releases daily; the dispatch only
       # makes them react at once. It needs the internacia-bot App installed on both repositories.
@@ -138,7 +213,7 @@ jobs:
         id: downstream-token
         if: steps.bot.outputs.available == 'true'
         continue-on-error: true
-        uses: actions/create-github-app-token@v3
+        uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
         with:
           client-id: ${{ secrets.INTERNACIA_BOT_CLIENT_ID }}
           private-key: ${{ secrets.INTERNACIA_BOT_PRIVATE_KEY }}

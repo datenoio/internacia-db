@@ -61,24 +61,8 @@ timezones:
 - Asia/Dubai
 - Indian/Maldives
 native_names:
-  ar:
-    official: أراض فرنسية جنوبية وأنتارتيكية
-    common: أراضي فرنسية جنوبية وانتارتيكية
-  en:
-    official: French Southern and Antarctic Lands
-    common: tf
-  es:
-    official: Tierras Australes y Antárticas Francesas
-    common: Territorios Australes Franceses
   fr:
-    official: Terres australes et antarctiques françaises
-    common: TAAF
-  ru:
-    official: Французские Южные и Антарктические территории
-    common: TAAF
-  zh:
-    official: 法属南部和南极领地
-    common: 法屬南部地區
+    common: Terres australes et antarctiques françaises
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -86,7 +70,7 @@ provenance:
 - field: common_names
   source: manual
   retrieved_at: '2026-07-16'
-  notes: Added alternate display names used by international organization sources
+  note: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -105,9 +89,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q129003
   license: CC0
 - field: writing_directions
   source: Internacia attribute-intblock migration

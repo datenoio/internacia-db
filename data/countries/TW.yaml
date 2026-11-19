@@ -62,24 +62,9 @@ area:
 timezones:
 - Asia/Taipei
 native_names:
-  ar:
-    official: تايوان
-    common: جمهورية الصين
-  en:
-    official: Taiwan
-    common: ROC
-  es:
-    official: República de China
-    common: China Nacionalista
-  fr:
-    official: Taïwan
-    common: Chine nationaliste
-  ru:
-    official: Китайская Республика (Тайвань)
-    common: Китайская Республика Тайвань
   zh:
     official: 中華民國
-    common: 民国
+    common: 臺灣
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -87,7 +72,7 @@ provenance:
 - field: common_names
   source: manual
   retrieved_at: '2026-07-16'
-  notes: Added alternate display names used by international organization sources
+  note: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -110,14 +95,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q865
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -129,7 +110,7 @@ provenance:
 - field: capital_city
   source: manual
   retrieved_at: '2026-07-11'
-  notes: De-facto seat of government / administrative capital
+  note: De-facto seat of government / administrative capital
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -173,16 +154,13 @@ centroid:
   lng: 121.0
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 capital_city:
   name: Taipei
   lng: 121.5654

@@ -7,13 +7,13 @@ capital_city:
   lat: 37.9509
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 adminregion:
   id: ECA
-  value: Europe & Central Asia (developing only)
+  value: Europe & Central Asia (excluding high income)
 incomeLevel:
-  id: LMC
-  value: Lower middle income
+  id: UMC
+  value: Upper middle income
 lendingType:
   id: IBD
   value: IBRD
@@ -86,24 +86,11 @@ gini:
 timezones:
 - Asia/Ashgabat
 native_names:
-  ar:
-    official: تركمانستان
-    common: تركمانيا
-  en:
-    official: Turkmenistan
-    common: Turkmenia
-  es:
-    official: Turkmenistán
-    common: Turcmenistán
-  fr:
-    official: Turkménistan
-    common: Turkménie
   ru:
-    official: Туркменистан
-    common: Туркмения
-  zh:
-    official: 土庫曼
-    common: 土库曼斯坦
+    common: Туркменистан
+  tk:
+    official: Türkmenistan
+    common: Türkmenistan Respublikasi
 common_names:
 - Turkmenistan
 code_status: official_iso3166_1
@@ -131,26 +118,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q874
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TKM
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TKM
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TKM
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TKM
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

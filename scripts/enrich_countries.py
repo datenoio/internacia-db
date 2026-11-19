@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Enrich country YAML records with population, area, gini, timezones, and native_names."""
+"""Enrich country YAML records with population, area, gini, timezones, native_names, and
+World Bank classifications (region, adminregion, incomeLevel, lendingType)."""
 
 from __future__ import annotations
 
@@ -10,9 +11,12 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
 import yaml
 
+from internacia_builder import native_names as nn
+from internacia_builder import wb_classification as wbc
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.http import fetch_json as _fetch_json
 
@@ -20,9 +24,12 @@ app = typer.Typer(help="Enrich country profile fields from World Bank and Wikida
 
 ROOT = Path(__file__).resolve().parents[1]
 COUNTRIES_DIR = ROOT / "data" / "countries"
+WBGROUP_DIR = ROOT / "data" / "intblocks" / "wbgroup"
 ZONE1970 = Path(__file__).resolve().parent / "data" / "zone1970.tab"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 REQUEST_DELAY = 0.1
+WIKIDATA_MAX_LANGUAGES = 50  # wbgetentities limit for the languages parameter
+NATIVE_NAMES_SOURCE = "Wikidata (official name P1448, label, native label P1705)"
 
 WB_INDICATORS = {
     "population": ("SP.POP.TOTL", "World Bank"),
@@ -51,13 +58,20 @@ UNINHABITED = frozenset({"BV", "HM", "GS", "IO", "TF"})
 
 M49_URL = "https://unstats.un.org/unsd/methodology/m49/"
 
+
+def _wb(field: str, code: str) -> dict[str, str]:
+    """A World Bank classification value with the Bank's current label."""
+    return {"id": code, "value": wbc.LABELS[field][code]}
+
+
 ADMINREGION_BY_REGION: dict[str, dict[str, str]] = {
-    "LCN": {"id": "LAC", "value": "Latin America & Caribbean (developing only)"},
-    "ECS": {"id": "ECA", "value": "Europe & Central Asia (developing only)"},
-    "EAS": {"id": "EAP", "value": "East Asia & Pacific (developing only)"},
-    "MEA": {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"},
-    "SSF": {"id": "SSA", "value": "Sub-Saharan Africa (excluding high income)"},
+    "LCN": _wb("adminregion", "LAC"),
+    "ECS": _wb("adminregion", "ECA"),
+    "EAS": _wb("adminregion", "EAP"),
+    "MEA": _wb("adminregion", "MNA"),
+    "SSF": _wb("adminregion", "SSA"),
 }
+HIGH_INCOME_IDS = frozenset({wbc.HIGH_INCOME, *wbc.LEGACY_IDS["incomeLevel"]})
 
 WB_INDICATOR_URLS = {
     "SP.POP.TOTL": "https://data.worldbank.org/indicator/SP.POP.TOTL",
@@ -65,24 +79,48 @@ WB_INDICATOR_URLS = {
     "SI.POV.GINI": "https://data.worldbank.org/indicator/SI.POV.GINI",
 }
 
-LANG3_TO2 = {
-    "eng": "en",
-    "por": "pt",
-    "spa": "es",
-    "fra": "fr",
-    "deu": "de",
-    "rus": "ru",
-    "ara": "ar",
-    "zho": "zh",
-    "jpn": "ja",
-    "kor": "ko",
-    "nld": "nl",
-    "ita": "it",
-}
-
-
 def fetch_json(url: str) -> Any:
     return _fetch_json(url, user_agent="Internacia-DB Country Enricher/1.0", timeout=120)
+
+
+def fetch_world_bank_classifications() -> dict[str, dict[str, Any]]:
+    """Current region, adminregion, incomeLevel, and lendingType of every World Bank economy."""
+    payload = fetch_json(f"{wbc.WB_COUNTRY_API}?format=json&per_page=1000")
+    return wbc.parse_country_classifications(payload)
+
+
+def refresh_classification(record: dict[str, Any], classifications: dict[str, dict[str, Any]]) -> set[str]:
+    """Apply the Bank's classification, or recode an entity it does not classify.
+
+    ``classifications`` must be a complete fetch: an entity missing from it is treated as one
+    the Bank does not classify.
+    """
+    entry = classifications.get(str(record.get("code", "")))
+    if entry:
+        return wbc.apply_world_bank_classification(record, entry)
+    return wbc.modernize_classification(record)
+
+
+def sync_wbgroup_blocks(
+    countries_by_code: dict[str, dict[str, Any]], *, dry_run: bool = False
+) -> list[str]:
+    """Rebuild the wbgroup rosters from the country classifications; returns changed block ids."""
+    changed: list[str] = []
+    for block_id in sorted(wbc.WB_GROUP_BLOCKS):
+        path = WBGROUP_DIR / f"{block_id}.yaml"
+        if not path.exists():
+            continue
+        block = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if not wbc.is_wb_group_block(block) or not wbc.sync_wb_group_block(block, countries_by_code):
+            continue
+        changed.append(block_id)
+        rel = path.relative_to(ROOT)
+        if dry_run:
+            typer.echo(f"would update {rel}")
+        else:
+            write_enriched_yaml(path, block, "intblocks")
+            typer.echo(f"updated {rel}")
+    return changed
 
 
 def fetch_world_bank(indicator_id: str) -> dict[str, dict[str, Any]]:
@@ -191,18 +229,40 @@ def parse_zone1970(path: Path) -> dict[str, list[str]]:
 
 
 def wikidata_batch(qids: list[str], langs: list[str]) -> dict[str, dict[str, Any]]:
+    """Claims and labels for ``qids`` in every language of ``langs``.
+
+    The API accepts at most ``WIKIDATA_MAX_LANGUAGES`` languages per request, so labels are
+    fetched in chunks and merged; claims come with the first chunk.
+    """
     if not qids:
         return {}
-    params = {
-        "action": "wbgetentities",
-        "ids": "|".join(qids),
-        "props": "labels|aliases|claims",
-        "languages": "|".join(langs[:10]) if langs else "en",
-        "format": "json",
-    }
-    url = f"{WIKIDATA_API}?{urllib.parse.urlencode(params)}"
-    data = fetch_json(url)
-    return data.get("entities") or {}
+    langs = list(dict.fromkeys(langs or ["en"]))
+    entities: dict[str, dict[str, Any]] = {}
+    for start in range(0, len(langs), WIKIDATA_MAX_LANGUAGES):
+        params = {
+            "action": "wbgetentities",
+            "ids": "|".join(qids),
+            "props": "labels|claims" if start == 0 else "labels",
+            "languages": "|".join(langs[start : start + WIKIDATA_MAX_LANGUAGES]),
+            "format": "json",
+        }
+        data = fetch_json(f"{WIKIDATA_API}?{urllib.parse.urlencode(params)}")
+        if "entities" not in data:
+            raise RuntimeError(f"Wikidata wbgetentities failed: {data.get('error') or data}")
+        for qid, entity in data["entities"].items():
+            merged = entities.setdefault(qid, {})
+            if start == 0:
+                merged.update(entity)
+            else:
+                merged.setdefault("labels", {}).update(entity.get("labels") or {})
+        if start + WIKIDATA_MAX_LANGUAGES < len(langs):
+            time.sleep(REQUEST_DELAY)
+    return entities
+
+
+def wikidata_languages(records: list[dict[str, Any]]) -> list[str]:
+    """English (for common_names) plus every code native_names needs for ``records``."""
+    return ["en", *nn.requested_languages(records, nn.load_language_codes())]
 
 
 def wikidata_numeric_claim(entity: dict[str, Any], prop: str) -> float | None:
@@ -227,57 +287,39 @@ def infer_wb_classification(record: dict[str, Any]) -> dict[str, dict[str, str]]
     if cont == "Antarctica" or code in {"AQ", "BV", "HM", "TF", "GS"}:
         return None
 
-    lending: dict[str, str] = {"id": "NC", "value": "Not classified"}
+    lending = _wb("lendingType", "LNX")
     admin: dict[str, str] | None = None
 
     if sub == "Caribbean" or code in {"AI", "BL", "BQ", "GP", "MQ", "MS", "PM"}:
-        region = {"id": "LCN", "value": "Latin America & Caribbean (all income levels)"}
-        admin = {"id": "LAC", "value": "Latin America & Caribbean (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "LCN"), ADMINREGION_BY_REGION["LCN"], _wb("incomeLevel", "HIC")
     elif sub in ("Northern Europe", "Southern Europe", "Western Europe", "Eastern Europe") or cont == "Europe":
-        region = {"id": "ECS", "value": "Europe & Central Asia (all income levels)"}
-        admin = {"id": "ECA", "value": "Europe & Central Asia (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "ECS"), ADMINREGION_BY_REGION["ECS"], _wb("incomeLevel", "HIC")
     elif sub in ("Polynesia", "Australia and New Zealand", "Melanesia", "Micronesia") or cont == "Oceania":
-        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
-        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "EAS"), ADMINREGION_BY_REGION["EAS"], _wb("incomeLevel", "HIC")
     elif sub == "Eastern Asia" or code == "TW":
-        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
-        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "EAS"), ADMINREGION_BY_REGION["EAS"], _wb("incomeLevel", "HIC")
     elif sub in ("Northern Africa",) or code == "EH":
-        region = {"id": "MEA", "value": "Middle East & North Africa (all income levels)"}
-        admin = {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"}
-        income = {"id": "LMC", "value": "Lower middle income"}
+        region, admin, income = _wb("region", "MEA"), ADMINREGION_BY_REGION["MEA"], _wb("incomeLevel", "LMC")
     elif "Africa" in sub or cont == "Africa":
-        region = {"id": "SSF", "value": "Sub-Saharan Africa (all income levels)"}
-        admin = {"id": "SSA", "value": "Sub-Saharan Africa (excluding high income)"}
-        income = {"id": "UMC", "value": "Upper middle income"} if code == "RE" else {"id": "LMC", "value": "Lower middle income"}
+        region, admin = _wb("region", "SSF"), ADMINREGION_BY_REGION["SSF"]
+        income = _wb("incomeLevel", "UMC") if code == "RE" else _wb("incomeLevel", "LMC")
     elif sub == "South America" or cont == "South America":
-        region = {"id": "LCN", "value": "Latin America & Caribbean (all income levels)"}
-        admin = {"id": "LAC", "value": "Latin America & Caribbean (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"} if code == "GF" else {"id": "UMC", "value": "Upper middle income"}
+        region, admin = _wb("region", "LCN"), ADMINREGION_BY_REGION["LCN"]
+        income = _wb("incomeLevel", "HIC") if code == "GF" else _wb("incomeLevel", "UMC")
     elif sub == "North America" or cont == "North America":
-        region = {"id": "NAC", "value": "North America"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, income = _wb("region", "NAC"), _wb("incomeLevel", "HIC")
     elif sub == "Eastern Africa" or code == "IO":
-        region = {"id": "MEA", "value": "Middle East & North Africa (all income levels)"}
-        admin = {"id": "MEA", "value": "Middle East & North Africa (excluding high income)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "MEA"), ADMINREGION_BY_REGION["MEA"], _wb("incomeLevel", "HIC")
     elif code == "UM":
-        region = {"id": "EAS", "value": "East Asia & Pacific (all income levels)"}
-        admin = {"id": "EAP", "value": "East Asia & Pacific (developing only)"}
-        income = {"id": "NOC", "value": "High income: nonOECD"}
+        region, admin, income = _wb("region", "EAS"), ADMINREGION_BY_REGION["EAS"], _wb("incomeLevel", "HIC")
     elif code == "VA":
-        region = {"id": "ECS", "value": "Europe & Central Asia (all income levels)"}
-        admin = {"id": "ECA", "value": "Europe & Central Asia (developing only)"}
-        income = {"id": "HIC", "value": "High income"}
+        region, admin, income = _wb("region", "ECS"), ADMINREGION_BY_REGION["ECS"], _wb("incomeLevel", "HIC")
     else:
         return None
 
     out: dict[str, dict[str, str]] = {"region": region, "incomeLevel": income, "lendingType": lending}
-    if admin:
+    # The Bank publishes an administrative region only for low- and middle-income economies.
+    if admin and income["id"] != wbc.HIGH_INCOME:
         out["adminregion"] = admin
     return out
 
@@ -286,7 +328,7 @@ def infer_adminregion_from_region(record: dict[str, Any]) -> dict[str, str] | No
     """Map existing WB/M49 region to adminregion where the Bank omits it."""
     if record.get("adminregion"):
         return None
-    if (record.get("incomeLevel") or {}).get("id") == "OEC":
+    if (record.get("incomeLevel") or {}).get("id") in HIGH_INCOME_IDS:
         return None
     code = str(record.get("code", ""))
     if code in {"AQ", "BV", "HM", "TF", "GS"}:
@@ -318,35 +360,6 @@ def ensure_classification_provenance(record: dict[str, Any]) -> None:
         upsert_provenance(record, field, source, url=url)
 
 
-def build_native_names(entity: dict[str, Any], lang_codes: set[str]) -> dict[str, dict[str, str]]:
-    labels = entity.get("labels") or {}
-    aliases = entity.get("aliases") or {}
-    native: dict[str, dict[str, str]] = {}
-    for lang in sorted(lang_codes):
-        label = (labels.get(lang) or {}).get("value")
-        if not label:
-            continue
-        alias_list = aliases.get(lang) or []
-        common = alias_list[0]["value"] if alias_list else label
-        native[lang] = {"official": label, "common": common}
-    if not native and labels.get("en"):
-        en = labels["en"]["value"]
-        native["en"] = {"official": en, "common": en}
-    return native
-
-
-def lang_codes_for_record(record: dict[str, Any]) -> set[str]:
-    codes: set[str] = {"en"}
-    for lang in record.get("languages") or []:
-        if isinstance(lang, dict):
-            c = str(lang.get("code", ""))
-            codes.add(LANG3_TO2.get(c, c[:2] if len(c) >= 2 else c))
-    for name in record.get("other_names") or []:
-        if isinstance(name, dict) and name.get("id"):
-            codes.add(str(name["id"]))
-    return {c for c in codes if c and len(c) == 2}
-
-
 def indicator_from_wb(
     wb_row: dict[str, Any] | None,
     source: str,
@@ -376,8 +389,8 @@ def upsert_provenance(
     license: str = "",
     retrieved_at: str | None = None,
 ) -> None:
+    """Set the provenance entry for ``field``, keeping its position in the list (stable diffs)."""
     retrieved_at = retrieved_at or date.today().isoformat()
-    provenance = [p for p in (record.get("provenance") or []) if p.get("field") != field]
     entry: dict[str, str] = {
         "field": field,
         "source": source,
@@ -387,7 +400,14 @@ def upsert_provenance(
         entry["url"] = url
     if license:
         entry["license"] = license
-    provenance.append(entry)
+    provenance: list[dict[str, Any]] = []
+    for item in record.get("provenance") or []:
+        if item.get("field") != field:
+            provenance.append(item)
+        elif entry not in provenance:
+            provenance.append(entry)
+    if entry not in provenance:
+        provenance.append(entry)
     record["provenance"] = provenance
 
 
@@ -419,15 +439,27 @@ def sync_provenance_from_record(record: dict[str, Any], *, retrieved_fields: set
                 retrieved_at=today,
             )
 
-    if "native_names" in retrieved_fields and record.get("native_names"):
-        upsert_provenance(
-            record,
-            "native_names",
-            "Wikidata",
-            url="https://www.wikidata.org/",
-            license="CC0",
-            retrieved_at=today,
-        )
+    if "native_names" in retrieved_fields:
+        if record.get("native_names"):
+            upsert_provenance(
+                record,
+                "native_names",
+                NATIVE_NAMES_SOURCE,
+                url=f"https://www.wikidata.org/wiki/{record.get('wikidata_id')}",
+                license="CC0",
+                retrieved_at=today,
+            )
+        else:
+            record["provenance"] = [p for p in record.get("provenance") or [] if p.get("field") != "native_names"]
+
+
+def refresh_native_names(record: dict[str, Any], entity: dict[str, Any]) -> bool:
+    """Rebuild ``native_names`` from ``entity``; True when the value changed."""
+    names = nn.build_native_names(record, entity, nn.load_language_codes())
+    if names == (record.get("native_names") or {}) and "native_names" in record:
+        return False
+    record["native_names"] = names
+    return True
 
 
 def enrich_record(
@@ -437,7 +469,13 @@ def enrich_record(
     wikidata_entities: dict[str, dict[str, Any]],
     *,
     force: bool = False,
+    wb_classifications: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    """Merge fetched data into ``record``.
+
+    ``wb_classifications`` is a complete World Bank classification fetch, or ``None``/empty
+    when it was not fetched (classification fields are then only inferred, never recoded).
+    """
     code = record.get("code", "")
     iso3 = record.get("iso3code", "")
     qid = record.get("wikidata_id") or MANUAL_WIKIDATA.get(code, "")
@@ -471,21 +509,26 @@ def enrich_record(
                 }
                 retrieved_fields.add(field)
 
-    if not record.get("region"):
-        inferred = infer_wb_classification(record)
-        if inferred:
-            for field, value in inferred.items():
-                if force or not record.get(field):
-                    record[field] = value
-            for field in inferred:
-                source, url = ("UN M49 inference", M49_URL)
-                upsert_provenance(record, field, source, url=url)
+    if wb_classifications and code in wb_classifications:
+        refresh_classification(record, wb_classifications)
+    else:
+        if not record.get("region"):
+            inferred = infer_wb_classification(record)
+            if inferred:
+                for field, value in inferred.items():
+                    if force or not record.get(field):
+                        record[field] = value
+                for field in inferred:
+                    source, url = ("UN M49 inference", M49_URL)
+                    upsert_provenance(record, field, source, url=url)
+        if wb_classifications:
+            refresh_classification(record, wb_classifications)
 
-    admin = infer_adminregion_from_region(record)
-    if admin and (force or not record.get("adminregion")):
-        record["adminregion"] = admin
-        source, url = classification_provenance_source(record, "adminregion")
-        upsert_provenance(record, "adminregion", source, url=url)
+        admin = infer_adminregion_from_region(record)
+        if admin and (force or not record.get("adminregion")):
+            record["adminregion"] = admin
+            source, url = classification_provenance_source(record, "adminregion")
+            upsert_provenance(record, "adminregion", source, url=url)
 
     ensure_classification_provenance(record)
 
@@ -506,13 +549,8 @@ def enrich_record(
     if record.get("timezones") != old_timezones:
         retrieved_fields.add("timezones")
 
-    if force or not record.get("native_names"):
-        langs = lang_codes_for_record(record)
-        if entity:
-            names = build_native_names(entity, langs)
-            if names and names != record.get("native_names"):
-                record["native_names"] = names
-                retrieved_fields.add("native_names")
+    if entity and refresh_native_names(record, entity):
+        retrieved_fields.add("native_names")
 
     if not record.get("common_names"):
         names: list[str] = []
@@ -538,6 +576,42 @@ def enrich_record(
     return record
 
 
+def fetch_wikidata_entities(qids: list[str], langs: list[str]) -> dict[str, dict[str, Any]]:
+    entities: dict[str, dict[str, Any]] = {}
+    unique_qids = sorted(set(qids))
+    for i in range(0, len(unique_qids), 50):
+        entities.update(wikidata_batch(unique_qids[i : i + 50], langs))
+        time.sleep(REQUEST_DELAY)
+    return entities
+
+
+@app.command("refresh-native-names")
+def refresh_native_names_command(
+    code: str = typer.Option("", "--code", help="Single alpha-2 code to refresh"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Print changes without writing"),
+) -> None:
+    """Rebuild native_names from Wikidata for each entity's own languages."""
+    paths = [COUNTRIES_DIR / f"{code.upper()}.yaml"] if code else sorted(COUNTRIES_DIR.glob("*.yaml"))
+    records = [(path, yaml.safe_load(path.read_text(encoding="utf-8")) or {}) for path in paths]
+    qids = [str(r["wikidata_id"]) for _, r in records if r.get("wikidata_id")]
+    typer.echo(f"Fetching Wikidata for {len(set(qids))} entities...")
+    entities = fetch_wikidata_entities(qids, wikidata_languages([r for _, r in records]))
+    updated = 0
+    for path, record in records:
+        entity = entities.get(str(record.get("wikidata_id") or ""))
+        if not entity or not refresh_native_names(record, entity):
+            continue
+        sync_provenance_from_record(record, retrieved_fields={"native_names"})
+        updated += 1
+        rel = path.relative_to(ROOT)
+        if dry_run:
+            typer.echo(f"would update {rel}")
+        else:
+            write_enriched_yaml(path, record, "countries")
+            typer.echo(f"updated {rel}")
+    typer.echo(f"done: {updated} record(s) {'would be ' if dry_run else ''}updated")
+
+
 @app.command()
 def enrich(
     code: str = typer.Option("", "--code", help="Single alpha-2 code to enrich"),
@@ -554,6 +628,13 @@ def enrich(
         except Exception as exc:
             typer.echo(f"  WARN: failed to fetch {ind_id}: {exc}", err=True)
             wb[key] = {}
+
+    typer.echo("Fetching World Bank classifications...")
+    try:
+        classifications = fetch_world_bank_classifications()
+    except Exception as exc:
+        typer.echo(f"  WARN: failed to fetch World Bank classifications: {exc}", err=True)
+        classifications = {}
 
     typer.echo("Loading IANA timezones...")
     tz_map = parse_zone1970(ZONE1970)
@@ -572,12 +653,7 @@ def enrich(
         records.append((path, data))
 
     typer.echo(f"Fetching Wikidata for {len(set(qids))} entities...")
-    wikidata_entities: dict[str, dict[str, Any]] = {}
-    unique_qids = sorted(set(qids))
-    for i in range(0, len(unique_qids), 50):
-        batch = unique_qids[i : i + 50]
-        wikidata_entities.update(wikidata_batch(batch, ["en", "fr", "de", "es", "pt", "ru", "ar", "zh"]))
-        time.sleep(REQUEST_DELAY)
+    wikidata_entities = fetch_wikidata_entities(qids, wikidata_languages([data for _, data in records]))
 
     updated = 0
     for path, data in records:
@@ -588,6 +664,7 @@ def enrich(
             tz_map,
             wikidata_entities,
             force=force,
+            wb_classifications=classifications,
         )
         after = yaml.dump(data, sort_keys=True)
         if before == after:
@@ -601,6 +678,36 @@ def enrich(
             typer.echo(f"updated {rel}")
 
     typer.echo(f"done: {updated} record(s) {'would be ' if dry_run else ''}updated")
+    # The wbgroup rosters follow the classifications; a single-country run cannot rebuild them.
+    if classifications and not code:
+        blocks = sync_wbgroup_blocks({str(r.get("code")): r for _, r in records}, dry_run=dry_run)
+        typer.echo(f"done: {len(blocks)} wbgroup roster(s) {'would be ' if dry_run else ''}updated")
+
+
+@app.command("refresh-classifications")
+def refresh_classifications(
+    dry_run: bool = typer.Option(False, "--dry-run", help="Print changes without writing"),
+) -> None:
+    """Refresh World Bank region, adminregion, income, and lending fields and the wbgroup rosters."""
+    typer.echo("Fetching World Bank classifications...")
+    classifications = fetch_world_bank_classifications()
+    typer.echo(f"  {len(classifications)} economies")
+    countries: dict[str, dict[str, Any]] = {}
+    updated = 0
+    for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        countries[str(record.get("code"))] = record
+        if not refresh_classification(record, classifications):
+            continue
+        updated += 1
+        rel = path.relative_to(ROOT)
+        if dry_run:
+            typer.echo(f"would update {rel}")
+        else:
+            write_enriched_yaml(path, record, "countries")
+    typer.echo(f"done: {updated} country record(s) {'would be ' if dry_run else ''}updated")
+    blocks = sync_wbgroup_blocks(countries, dry_run=dry_run)
+    typer.echo(f"done: {len(blocks)} wbgroup roster(s) {'would be ' if dry_run else ''}updated")
 
 
 @app.command("backfill-gini")

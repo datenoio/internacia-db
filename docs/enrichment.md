@@ -9,7 +9,7 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 | `population`, `area`, `gini` | World Bank API | Annually (after WB spring update) |
 | `timezones` | IANA `zone1970.tab` | When tzdata bundle is updated in `scripts/data/` |
 | `native_names`, `wikidata_id` | Wikidata | Annually or when labels change |
-| `region`, `adminregion`, `incomeLevel`, `lendingType` | World Bank + M49 inference | When classification policy changes |
+| `region`, `adminregion`, `incomeLevel`, `lendingType` | World Bank API (`/v2/country`); M49 inference for entities the Bank does not classify | Monthly `enrich`; at the latest after the Bank's 1 July reclassification |
 
 **Provenance staleness threshold:** 12 months (`provenance.max_age_months` in `data/schemas/countries_completeness.yaml`). Validation warns when `retrieved_at` is older than this.
 
@@ -39,15 +39,38 @@ python scripts/validate_countries.py
 # Full enrichment (World Bank + Wikidata + timezones)
 python scripts/enrich_countries.py enrich
 
+# World Bank classifications only, plus the wbgroup rosters derived from them
+python scripts/enrich_countries.py refresh-classifications
+
 # Targeted backfills (no Wikidata fetch)
 python scripts/enrich_countries.py backfill-classifications
 python scripts/enrich_countries.py backfill-gini
 
 # Preserve existing provenance; unknown historical retrieval dates are not invented
 python scripts/enrich_countries.py backfill-provenance
+
+# Rebuild native_names only (Wikidata official name P1448, label, native label P1705)
+python scripts/enrich_countries.py refresh-native-names
 ```
 
+`native_names` keys are the record's own `languages[]`, mapped through
+`data/vocabs/language_codes.yaml` (ISO 639-3 code → map key and the Wikidata label codes to
+try). `official` is the current P1448 statement in that language (preferred rank first);
+`common` is the Wikidata label, or a P1705 value when the label repeats `official`. Aliases
+are never used. Chinese follows the entity's script (Simplified for CN and SG, Traditional for
+TW, HK and MO). `enrich` refreshes the field on every run. A new code in `languages[]` needs a
+vocabulary entry first (`tests/test_native_names.py` checks coverage).
+
 Use `--code XX` on `enrich` for a single country. Use `--dry-run` to preview YAML diffs.
+
+`refresh-classifications` (and `enrich`) copy the Bank's ids and labels verbatim for every
+economy it classifies, with provenance source `World Bank` and the economy's API URL. Entities
+the Bank does not classify keep their inferred values, recoded to current ids (`OEC`/`NOC` →
+`HIC`, `NC` → `LNX`); a high-income entity has no `adminregion`. The run then rebuilds the
+`wbgroup` rosters (`EAS` … `SSF`, `ECA`/`LAC`/`MNA`/`SSA`, `HIC`/`UMC`/`LMC`/`LIC`, `MIC`,
+`LMY`) from the refreshed fields; the `World Bank group rosters` validation rule warns when a
+roster and the country fields disagree. A single-country `enrich --code` run does not touch
+the rosters.
 Usable World Bank responses refresh existing World Bank observations without
 regressing their observation year. Other curated sources remain unchanged unless
 `--force` is used. Failed, unused, and unchanged observations retain their retrieval
@@ -108,8 +131,9 @@ adds list items or mapping keys, or stays within the field's threshold (populati
 Enrichment never changes ids, `includes` or enum values: those fields belong to no source, so
 such a change would land in the reviewed `other` PR.
 
-Metadata-only intblock changes (the `intblock-metadata` fields and their provenance) do not need
-`last_verified`, which attests the roster; the validator's changed-record rule skips them.
+Metadata-only intblock changes (the `intblock-metadata` fields, `scope_category`, and their
+provenance) do not need `last_verified`, which attests the roster; the validator's changed-record
+rule skips them.
 
 **Requirements:** the internacia-bot GitHub App secrets (`INTERNACIA_BOT_CLIENT_ID`,
 `INTERNACIA_BOT_PRIVATE_KEY`), "Allow auto-merge", and branch protection on `main` requiring the

@@ -117,3 +117,49 @@ def test_validate_provenance_freshness_warns_stale():
 def test_validate_provenance_freshness_accepts_recent():
     record = {"provenance": [{"field": "population", "source": "World Bank", "retrieved_at": "2026-06-01"}]}
     assert vc.validate_provenance_freshness(record, "x.yaml", max_age_months=12) == []
+
+
+def _schema_errors(record):
+    import json
+
+    from internacia_builder.paths import project_root
+    from internacia_builder.validate import country_rules
+
+    schema = json.loads((project_root() / "data/schemas/countries.schema.json").read_text(encoding="utf-8"))
+    return [e["field"] for e in country_rules.check_country_schema(record, schema)]
+
+
+def test_country_schema_rejects_misspelled_fields():
+    import yaml
+
+    from internacia_builder.paths import project_root
+
+    record = yaml.safe_load((project_root() / "data/countries/DE.yaml").read_text(encoding="utf-8"))
+    assert _schema_errors(record) == []
+    assert _schema_errors({**record, "capitol_city": {"name": "Berlin"}}) == ["(root)"]
+    typo = {**record, "provenance": [{"field": "area", "source": "World Bank", "retrieved_at": "2026-01-01", "notes": "x"}]}
+    assert _schema_errors(typo) == ["provenance.0"]
+    assert set(_schema_errors({**record, "region": {"id": "ECS", "valeu": "Europe"}})) == {"region"}
+
+
+def test_every_country_schema_object_is_closed():
+    import json
+
+    from internacia_builder.paths import project_root
+
+    schema = json.loads((project_root() / "data/schemas/countries.schema.json").read_text(encoding="utf-8"))
+
+    def objects(node, path=""):
+        if isinstance(node, dict):
+            if node.get("type") == "object" or "object" in (node.get("type") or []):
+                yield path or "(root)", node
+            for key, value in node.items():
+                yield from objects(value, f"{path}/{key}")
+        elif isinstance(node, list):
+            for i, value in enumerate(node):
+                yield from objects(value, f"{path}[{i}]")
+
+    # native_names is a map keyed by language code; its values are closed structs.
+    open_maps = {"/properties/native_names"}
+    open_objects = [p for p, node in objects(schema) if p not in open_maps and node.get("additionalProperties") is not False]
+    assert open_objects == []

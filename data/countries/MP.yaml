@@ -7,12 +7,12 @@ capital_city:
   lat: 15.1935
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '580'
 wikidata_id: Q16644
@@ -75,24 +75,14 @@ area:
 timezones:
 - Pacific/Guam
 native_names:
-  ar:
-    official: جزر ماريانا الشمالية
-    common: جزر ماريانا الشمالية
+  cal:
+    official: Commonwealth Téél Falúw kka Efáng llól Marianas
+  ch:
+    official: Sankattan Siha Na Islas Mariånas
+    common: Notte Mariånas
   en:
-    official: Northern Mariana Islands
-    common: MP
-  es:
-    official: Islas Marianas del Norte
-    common: Mancomunidad de las Islas Marías del Norte
-  fr:
-    official: îles Mariannes du Nord
-    common: Mariannes du Nord
-  ru:
-    official: Северные Марианские Острова
-    common: Содружество Северных Марианских островов
-  zh:
-    official: 北马里亚纳群岛
-    common: 北马里亚纳群岛
+    official: Commonwealth of the Northern Mariana Islands
+    common: Northern Mariana Islands
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -115,26 +105,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q16644
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MNP
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MNP
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MNP
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -158,9 +144,6 @@ provenance:
 centroid:
   lat: 15.2
   lng: 145.75
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 writing_directions:
 - id: ltr
   primary: true

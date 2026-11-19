@@ -7,10 +7,10 @@ capital_city:
   lat: 36.7899
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 adminregion:
   id: MNA
-  value: Middle East & North Africa (developing only)
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
@@ -85,23 +85,8 @@ timezones:
 - Africa/Tunis
 native_names:
   ar:
-    official: تونس
-    common: تُوْنِس
-  en:
-    official: Tunisia
-    common: Republic of Tunisia
-  es:
-    official: Túnez
-    common: República Tunecina
-  fr:
-    official: Tunisie
-    common: TN
-  ru:
-    official: Тунис
-    common: Тунисская Республика
-  zh:
-    official: 突尼西亞
-    common: 突尼斯
+    official: الجمهورية التونسية
+    common: تونس
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -127,26 +112,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q948
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TUN
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TUN
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TUN
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/TUN
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

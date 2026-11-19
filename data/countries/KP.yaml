@@ -7,15 +7,15 @@ capital_city:
   lat: 39.0319
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 adminregion:
   id: EAP
-  value: East Asia & Pacific (developing only)
+  value: East Asia & Pacific (excluding high income)
 incomeLevel:
   id: LIC
   value: Low income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '408'
 wikidata_id: Q423
@@ -83,31 +83,15 @@ area:
 timezones:
 - Asia/Pyongyang
 native_names:
-  ar:
-    official: كوريا الشمالية
-    common: جمهورية كوريا الديمقراطية الشعبية
-  en:
-    official: North Korea
-    common: PRK
-  es:
-    official: Corea del Norte
-    common: Norcorea
-  fr:
-    official: Corée du Nord
-    common: République populaire démocratique de Corée
-  ru:
-    official: КНДР
-    common: Северная Корея
-  zh:
-    official: 朝鮮民主主義人民共和國
-    common: 朝鲜
+  ko:
+    common: 조선민주주의인민공화국
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
 - field: common_names
   source: manual
   retrieved_at: '2026-07-16'
-  notes: Added alternate display names used by international organization sources
+  note: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -126,26 +110,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q423
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PRK
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PRK
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PRK
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/PRK
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

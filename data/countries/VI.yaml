@@ -7,12 +7,12 @@ capital_city:
   lat: 18.3358
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '850'
 wikidata_id: Q11703
@@ -73,24 +73,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: جزر العذراء الأمريكية
-    common: جزر الولايات المتحدة العذراء
   en:
-    official: United States Virgin Islands
-    common: U.S. Virgin Islands
-  es:
-    official: Islas Vírgenes de los Estados Unidos
-    common: Islas Vírgenes Estadounidenses
-  fr:
-    official: îles Vierges des États-Unis
-    common: îles Vierges américaines
-  ru:
-    official: Американские Виргинские Острова
-    common: Виргинские Острова (США)
-  zh:
-    official: 美屬維爾京群島
-    common: 美屬維爾京群島
+    official: U.S. Virgin Islands
+    common: United States Virgin Islands
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -113,26 +98,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q11703
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VIR
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VIR
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VIR
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -169,9 +150,6 @@ provenance:
 centroid:
   lat: 18.35
   lng: -64.933333
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

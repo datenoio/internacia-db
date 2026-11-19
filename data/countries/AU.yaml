@@ -7,12 +7,12 @@ capital_city:
   lat: -35.282
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '036'
 wikidata_id: Q408
@@ -90,24 +90,9 @@ timezones:
 - Australia/Perth
 - Australia/Sydney
 native_names:
-  ar:
-    official: أستراليا
-    common: أوستراليا
   en:
     official: Australia
-    common: Commonwealth of Australia
-  es:
-    official: Australia
-    common: Mancomunidad de Australia
-  fr:
-    official: Australie
-    common: Commonwealth d'Australie
-  ru:
-    official: Австралия
-    common: Австралийский Союз
-  zh:
-    official: 澳大利亚
-    common: 澳洲
+    common: Australia
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -134,22 +119,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q408
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AUS
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AUS
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/AUS
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

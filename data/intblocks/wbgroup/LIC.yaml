@@ -12,20 +12,12 @@ includes:
   name: Afghanistan
   type: country
   status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
 - id: BF
   name: Burkina Faso
   type: country
   status: member
 - id: BI
   name: Burundi
-  type: country
-  status: member
-- id: BJ
-  name: Benin
   type: country
   status: member
 - id: CD
@@ -44,48 +36,16 @@ includes:
   name: Ethiopia
   type: country
   status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
 - id: GM
   name: Gambia, The
-  type: country
-  status: member
-- id: GN
-  name: Guinea
   type: country
   status: member
 - id: GW
   name: Guinea-Bissau
   type: country
   status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
 - id: KP
   name: Korea, Dem. Rep.
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
   type: country
   status: member
 - id: LR
@@ -100,14 +60,6 @@ includes:
   name: Mali
   type: country
   status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
 - id: MW
   name: Malawi
   type: country
@@ -120,16 +72,12 @@ includes:
   name: Niger
   type: country
   status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
 - id: RW
   name: Rwanda
   type: country
   status: member
-- id: SB
-  name: Solomon Islands
+- id: SD
+  name: Sudan
   type: country
   status: member
 - id: SL
@@ -140,35 +88,27 @@ includes:
   name: Somalia
   type: country
   status: member
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
 - id: TD
   name: Chad
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
   type: country
   status: member
 - id: UG
   name: Uganda
   type: country
   status: member
-- id: ZM
-  name: Zambia
+- id: YE
+  name: Yemen, Rep.
   type: country
   status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-membership_count: 40
+membership_count: 25
 geographic_scope: global
 description: World Bank income group for economies with the lowest gross national
   income per capita.
@@ -214,4 +154,12 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?incomelevel=LIC
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?incomelevel=LIC
+last_verified: '2026-11-18'

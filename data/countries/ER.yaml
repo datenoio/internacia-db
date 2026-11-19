@@ -7,10 +7,10 @@ capital_city:
   lat: 15.3315
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: LIC
   value: Low income
@@ -85,23 +85,13 @@ timezones:
 - Africa/Nairobi
 native_names:
   ar:
-    official: إرتريا
-    common: دولة إرتريا
+    official: دولة إرتريا
+    common: إرتريا
   en:
-    official: Eritrea
-    common: State of Eritrea
-  es:
-    official: Eritrea
-    common: Estado de Eritrea
-  fr:
-    official: Érythrée
-    common: Erythrée
-  ru:
-    official: Эритрея
-    common: Государство Эритрея
-  zh:
-    official: 厄立特里亞
-    common: 厄利垂亞
+    common: Eritrea
+  ti:
+    official: ሃገረ ኤርትራ
+    common: ኤርትራ
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -123,26 +113,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q986
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ERI
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ERI
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ERI
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/ERI
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

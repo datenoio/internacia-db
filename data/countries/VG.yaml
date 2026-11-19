@@ -73,24 +73,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: جزر عذراء بريطانية
-    common: جزر العذراء البريطانية
   en:
     official: British Virgin Islands
-    common: Virgin Islands of the United Kingdom
-  es:
-    official: Islas Vírgenes Británicas
-    common: Islas Vírgenes
-  fr:
-    official: îles Vierges britanniques
-    common: îles Vierges du Royaume-Uni
-  ru:
-    official: Британские Виргинские Острова
-    common: Вирджинские острова
-  zh:
-    official: 英屬維爾京群島
-    common: 英屬維京群島
+    common: British Virgin Islands
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -113,26 +98,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q25305
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VGB
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VGB
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/VGB
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -159,9 +140,6 @@ provenance:
 centroid:
   lat: 18.431383
   lng: -64.62305
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

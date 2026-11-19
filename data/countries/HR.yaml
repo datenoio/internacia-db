@@ -7,10 +7,10 @@ capital_city:
   lat: 45.8069
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
   id: IBD
   value: IBRD
@@ -84,24 +84,9 @@ gini:
 timezones:
 - Europe/Belgrade
 native_names:
-  ar:
-    official: كرواتيا
-    common: كرواتيا
-  en:
-    official: Croatia
-    common: Republic of Croatia
-  es:
-    official: Croacia
-    common: República de Croacia
-  fr:
-    official: Croatie
-    common: HR
-  ru:
-    official: Хорватия
-    common: Республика Хорватия
-  zh:
-    official: 克羅地亞
-    common: 克羅埃西亞
+  hr:
+    official: Republika Hrvatska
+    common: Hrvatska
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -127,26 +112,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q224
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/HRV
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/HRV
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/HRV
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -183,9 +164,6 @@ provenance:
 centroid:
   lat: 45.16666666
   lng: 15.5
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 writing_directions:
 - id: ltr
   primary: true

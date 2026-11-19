@@ -72,21 +72,33 @@
       }
     },
     "includes": {
-      "description": "Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only. status captures member/observer/former_member etc.; joined/left are ISO dates.",
+      "description": "Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only (for type: country the build sets it to the country's name). status captures member/observer/former_member etc. (see data/schemas/includes_status.yaml); joined/left are ISO dates.",
       "type": "array",
       "items": {
         "type": "object",
         "required": [
           "id",
-          "name",
           "type",
           "status"
         ],
+        "if": {
+          "properties": {
+            "type": {
+              "const": "country"
+            }
+          }
+        },
+        "else": {
+          "required": [
+            "name"
+          ]
+        },
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
+            "description": "Display label. For type: country the build sets it to the country's name, and the source value is optional; other types keep their source label.",
             "type": "string"
           },
           "type": {

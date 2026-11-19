@@ -7,10 +7,10 @@ capital_city:
   lat: 30.0982
 region:
   id: MEA
-  value: Middle East & North Africa (all income levels)
+  value: Middle East, North Africa, Afghanistan & Pakistan
 adminregion:
   id: MNA
-  value: Middle East & North Africa (developing only)
+  value: Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
@@ -87,23 +87,8 @@ timezones:
 - Africa/Cairo
 native_names:
   ar:
-    official: مصر
-    common: جمهوريّة مصر العربيّة
-  en:
-    official: Egypt
-    common: Republic of Egypt
-  es:
-    official: Egipto
-    common: República Árabe de Egipto
-  fr:
-    official: Égypte
-    common: République arabe d'Égypte
-  ru:
-    official: Египет
-    common: Арабская Республика Египет
-  zh:
-    official: 埃及
-    common: 阿拉伯埃及共和國
+    official: جُمهورِيّةُ مِصرَ العَرَبيّةِ
+    common: مصر
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -129,26 +114,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q79
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/EGY
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/EGY
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/EGY
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/EGY
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

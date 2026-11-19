@@ -53,9 +53,12 @@ SCOPE_CATEGORIES = frozenset(
     }
 )
 
+# Statuses that deny the formal, institutional standing an IGO requires.
+NON_INSTITUTIONAL_STATUSES = frozenset({"informal", "de-facto"})
+
 
 def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]]:
-    """Validate scope_category syntax and known blocktype semantics."""
+    """Validate scope_category syntax, known blocktype semantics, and status consistency."""
     category = record.get("scope_category")
     blocktypes = {str(value) for value in (record.get("blocktype") or [])}
 
@@ -81,7 +84,20 @@ def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]
             ),
         }]
 
-    if record.get("status") == "formal" and not category:
+    status = record.get("status")
+    if category == "igo" and status in NON_INSTITUTIONAL_STATUSES:
+        return [{
+            "issue_type": "SCOPE_CATEGORY_STATUS_CONFLICT",
+            "field": "scope_category",
+            "current_value": str(category),
+            "suggested_action": (
+                f"status '{status}' contradicts scope_category 'igo', which requires "
+                "independent institutional identity; use 'policy_forum' or "
+                "'reference_enumeration' (see docs/intblock-inclusion-policy.md)"
+            ),
+        }]
+
+    if status == "formal" and not category:
         return [{
             "issue_type": "MISSING_SCOPE_CATEGORY",
             "field": "scope_category",
@@ -616,6 +632,31 @@ def check_intblock_includes_contract(
                     "suggested_action": f"Use a defined status from includes_status.yaml (not '{status}')",
                     "priority": PRIORITY_TO_LEVEL.get(str(status_rule.get("priority") or "high"), "IMPORTANT"),
                 })
+    return issues
+
+
+def check_deprecated_include_statuses(
+    record: dict[str, Any], status_catalog: dict[str, dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Warn on includes[].status values marked ``deprecated`` in includes_status.yaml."""
+    issues: list[dict[str, Any]] = []
+    for idx, inc in enumerate(record.get("includes") or []):
+        if not isinstance(inc, dict):
+            continue
+        status = str(inc.get("status") or "")
+        marker = (status_catalog.get(status) or {}).get("deprecated")
+        if not marker:
+            continue
+        replacements = " or ".join(f"'{r}'" for r in marker.get("replacements") or [])
+        issues.append({
+            "issue_type": "DEPRECATED_INCLUDE_STATUS",
+            "field": f"includes[{idx}].status",
+            "current_value": status,
+            "suggested_action": (
+                f"status '{status}' is deprecated and will be removed in the {marker.get('removal') or 'next MAJOR'} "
+                f"release; use {replacements} (see data/schemas/includes_status.yaml)"
+            ),
+        })
     return issues
 
 

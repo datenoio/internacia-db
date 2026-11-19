@@ -14,8 +14,8 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `iso3code` | string | yes | yes | ISO 3166-1 alpha-3 code. Join key for the borders field, which stores alpha-3 neighbor codes. |
 | `numeric_code` | string | yes | yes | ISO 3166-1 numeric code as a zero-padded string (e.g. '004'). |
 | `capital_city` | object |  | yes | Capital or de facto seat of government with name and optional lat/lng coordinates. Absent by design for uninhabited territories and groupings. |
-| `region` | object |  | yes | World Bank region as \{id, value\} (e.g. id 'ECS'). Filter on id: value labels are inconsistent upstream (some carry an '(all income levels)' suffix). Absent for 8 entities the World Bank does not classify. |
-| `adminregion` | object |  | yes | World Bank administrative region as \{id, value\}. Only covers low- and middle-income economies; absence for high-income economies is expected. |
+| `region` | object |  | yes | World Bank region as \{id, value\} (e.g. id 'ECS'), with the Bank's current label. Filter on id: the Bank renames regions (MEA became 'Middle East, North Africa, Afghanistan & Pakistan' in 2025). Absent for 8 entities the World Bank does not classify. |
+| `adminregion` | object |  | yes | World Bank administrative region as \{id, value\} (e.g. id 'ECA', value 'Europe & Central Asia (excluding high income)'). Only covers low- and middle-income economies; absence for high-income economies is expected. |
 | `incomeLevel` | object |  | yes | World Bank income classification as \{id, value\} (e.g. id 'HIC', value 'High income'). Absent for 8 unclassified entities. |
 | `lendingType` | object |  | yes | World Bank lending category as \{id, value\} (e.g. IBRD, IDA, Blend). Absent for 8 unclassified entities. |
 | `wikidata_id` | string |  | yes | Wikidata entity id (Q-number) for cross-referencing and entity linking. |
@@ -37,7 +37,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `area` | object \| null |  | yes | Land area indicator struct \{value, year, source, source_id\} in square kilometres. Use .value for the number. |
 | `gini` | object \| null |  | yes | Gini income-inequality index struct \{value, year, source, source_id\}. Sparse: roughly a third of records have no value. |
 | `centroid` | object |  | yes | Geographic centroid as \{lat, lng\}. |
-| `native_names` | object |  | yes | Native-language names keyed by language code, each with official and common variants. |
+| `native_names` | object |  | yes | Names in the entity's own languages (languages[] mapped through data/vocabs/language_codes.yaml), keyed by ISO 639-1 or ISO 639-3 code: official from Wikidata P1448, common from the Wikidata label. Either may be absent. Names in other languages are in other_names. Empty only when languages[] is empty. |
 | `landlocked` | boolean |  | yes | True when the entity has no coastline. Non-ISO records may be landlocked with an empty borders list (borders holds alpha-3 codes only). |
 | `timezones` | array |  | yes | IANA/UTC timezone offsets covering the territory. Empty for uninhabited territories (see timezone_status). |
 | `timezone_status` | string |  | yes | Marker explaining an empty timezones list, e.g. 'not_applicable' for uninhabited territories. Values: `not_applicable`. |
@@ -60,7 +60,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `code_status` | string | yes | yes | Code assignment status: official_iso3166_1 (249 records), user_assigned, obsolete, or exceptionally_reserved. See docs/country-code-policy.md. Values: `official_iso3166_1`, `user_assigned`, `obsolete`, `exceptionally_reserved`. |
 | `recognition_status` | object |  | yes | Recognition metadata for non-standard entities: \{status, un_member, notes\} explaining disputed, dissolved, or collective-grouping records. |
 | `parent_entity` | object |  | yes | Parent state \{code, name\} for dependent territories and special administrative regions. |
-| `provenance` | array |  | yes | Field-level sourcing entries \{field, source, url, retrieved_at, license\} documenting where enriched values came from. |
+| `provenance` | array |  | yes | Field-level sourcing entries \{field, source, url, retrieved_at, license, note\} documenting where enriched values came from. |
 
 ## intblocks
 
@@ -72,7 +72,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `status` | string | yes | yes | Formality of the entity: e.g. 'formal' (treaty-based organization) or informal grouping. Values: `formal`, `informal`, `de-facto`, `historical`. |
 | `languages` | array |  | yes | Official/working languages as ISO 639-1 codes. |
 | `links` | array |  | yes | Related URLs as \{url, type\} where type is website, wikipedia, or wikidata. |
-| `includes` | array |  | yes | Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only. status captures member/observer/former_member etc.; joined/left are ISO dates. |
+| `includes` | array |  | yes | Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only (for type: country the build sets it to the country's name). status captures member/observer/former_member etc. (see data/schemas/includes_status.yaml); joined/left are ISO dates. |
 | `founded` | string |  | yes | Foundation date (YYYY, YYYY-MM, YYYY-MM-DD) or decade (e.g. 1950s) when only decade precision is known |
 | `dissolved` | string |  | yes | Dissolution date (ISO string) for defunct entities. |
 | `active_period` | object |  | yes | Operational period as \{start, end\} ISO date strings; end is absent for active entities. |

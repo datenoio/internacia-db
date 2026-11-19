@@ -7,16 +7,16 @@ capital_city:
   lat: 5.8232
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
 lendingType:
-  id: IBD
-  value: IBRD
+  id: IDB
+  value: Blend
 numeric_code: '740'
 wikidata_id: Q730
 geonames_id: "3382998"
@@ -85,24 +85,9 @@ gini:
 timezones:
 - America/Paramaribo
 native_names:
-  ar:
-    official: سورينام
-    common: جمهورية سورينام
-  en:
+  nl:
     official: Suriname
-    common: Surinam
-  es:
-    official: Surinam
-    common: República de Surinam
-  fr:
-    official: Suriname
-    common: Surinam
-  ru:
-    official: Суринам
-    common: Республика Суринам
-  zh:
-    official: 蘇利南
-    common: 苏里南
+    common: Republiek Suriname
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -128,26 +113,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q730
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SUR
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SUR
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SUR
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/SUR
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

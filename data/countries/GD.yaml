@@ -7,10 +7,10 @@ capital_city:
   lat: 12.0653
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
@@ -79,24 +79,9 @@ gini:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: غرنادة
-    common: غَرْنَادَة
   en:
     official: Grenada
-    common: gd
-  es:
-    official: Granada
-    common: Isla de Granada
-  fr:
-    official: Grenade
-    common: gd
-  ru:
-    official: Гренада
-    common: Гренада
-  zh:
-    official: 格瑞那達
-    common: 格林納達
+    common: State of Grenada
 common_names:
 - Grenada
 borders: []
@@ -125,26 +110,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q769
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GRD
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GRD
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GRD
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GRD
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

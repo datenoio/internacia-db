@@ -7,10 +7,10 @@ capital_city:
   lat: 15.2976
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
@@ -76,24 +76,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: دومينيكا
-    common: دومينيكا
   en:
-    official: Dominica
-    common: Commonwealth of Dominica
-  es:
-    official: Dominica
-    common: Mancomunidad de Dominica
-  fr:
-    official: Dominique
-    common: dm
-  ru:
-    official: Доминика
-    common: Содружество Доминики
-  zh:
-    official: 多米尼克
-    common: 多米尼加
+    official: Commonwealth of Dominica
+    common: Dominica
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -116,26 +101,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q784
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DMA
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DMA
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DMA
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/DMA
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

@@ -7,12 +7,12 @@ capital_city:
   lat: 35.1676
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '196'
 wikidata_id: Q229
@@ -81,24 +81,12 @@ timezones:
 - Asia/Famagusta
 - Asia/Nicosia
 native_names:
-  ar:
-    official: قبرص
-    common: قبرص
-  en:
-    official: Cyprus
-    common: Greek Cypriot State
-  es:
-    official: Chipre
-    common: 🇨🇾
-  fr:
-    official: Chypre
-    common: Chypre-Sud
-  ru:
-    official: Кипр
-    common: Республика Кипр
-  zh:
-    official: 塞浦路斯
-    common: 希腊塞浦路斯
+  el:
+    official: Κυπριακή Δημοκρατία
+    common: Κύπρος
+  tr:
+    official: Kıbrıs Cumhuriyeti
+    common: Kıbrıs
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -125,26 +113,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q229
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CYP
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CYP
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/CYP
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -191,9 +175,6 @@ provenance:
 centroid:
   lat: 35.0
   lng: 33.0
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 writing_directions:
 - id: ltr
   primary: true

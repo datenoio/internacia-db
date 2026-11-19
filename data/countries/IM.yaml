@@ -7,12 +7,12 @@ capital_city:
   lat: 54.1509
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '833'
 wikidata_id: Q9676
@@ -74,24 +74,12 @@ area:
 timezones:
 - Europe/London
 native_names:
-  ar:
-    official: جزيرة مان
-    common: آيل أوف مان
   en:
     official: Isle of Man
-    common: Mann
-  es:
-    official: Isla de Man
-    common: Isla de Man
-  fr:
-    official: Île de Man
-    common: Insula Mona
-  ru:
-    official: Остров Мэн
-    common: Мэн
-  zh:
-    official: 马恩岛
-    common: 曼岛
+    common: Isle of Man
+  gv:
+    official: Mannin
+    common: Mannin
 common_names:
 - Isle of Man
 borders: []
@@ -116,26 +104,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q9676
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/IMN
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/IMN
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/IMN
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -159,9 +143,6 @@ provenance:
 centroid:
   lat: 54.25
   lng: -4.5
-adminregion:
-  id: ECA
-  value: Europe & Central Asia (developing only)
 writing_directions:
 - id: ltr
   primary: true

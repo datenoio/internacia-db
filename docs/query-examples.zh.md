@@ -173,7 +173,7 @@ WHERE region.id = 'ECS'
 ORDER BY name;
 ```
 
-**预期：** 61 行。不要过滤 `region.value = 'Europe & Central Asia'`（会得到 0 行）。
+**预期：** 61 行。请按 `region.id` 过滤，不要按 `region.value`：世界银行会更改区域名称（例如 2025 年 `MEA` 改名为 “Middle East, North Africa, Afghanistan & Pakistan”）。
 
 ## 相关文档
 

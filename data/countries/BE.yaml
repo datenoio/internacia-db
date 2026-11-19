@@ -7,12 +7,12 @@ capital_city:
   lat: 50.8371
 region:
   id: ECS
-  value: Europe & Central Asia (all income levels)
+  value: Europe & Central Asia
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '056'
 wikidata_id: Q31
@@ -87,27 +87,15 @@ gini:
 timezones:
 - Europe/Brussels
 native_names:
-  ar:
-    official: بلجيكا
-    common: بلجيكا
   de:
-    official: Belgien
-    common: Königreich Belgien
-  en:
-    official: Belgium
-    common: Kingdom of Belgium
-  es:
-    official: Bélgica
-    common: Reino de Bélgica
+    official: Königreich Belgien
+    common: Belgien
   fr:
-    official: Belgique
-    common: Royaume de Belgique
-  ru:
-    official: Бельгия
+    official: Royaume de Belgique
     common: Belgique
-  zh:
-    official: 比利時
-    common: 比利时王国
+  nl:
+    official: Koninkrijk België
+    common: België
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -133,22 +121,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q31
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BEL
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BEL
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BEL
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

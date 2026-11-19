@@ -60,24 +60,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: سان بارتيلمي
-    common: سانت بارتليمي
-  en:
-    official: Saint Barthélemy
-    common: Ouanalao
-  es:
-    official: San Bartolomé
-    common: San Bartalomé
   fr:
-    official: Saint-Barthélemy
-    common: Saint Barthélemy
-  ru:
-    official: Сен-Бартелеми
-    common: Сен-Бартельми
-  zh:
-    official: 聖巴泰勒米
-    common: 圣巴托罗缪岛
+    official: Saint Barthélemy
+    common: Saint-Barthélemy
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -104,14 +89,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q25362
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -140,16 +121,13 @@ centroid:
   lng: -63.41666666
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

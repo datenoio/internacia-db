@@ -7,15 +7,15 @@ capital_city:
   lat: -12.7846
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '175'
 wikidata_id: Q17063
@@ -72,24 +72,9 @@ area:
 timezones:
 - Africa/Nairobi
 native_names:
-  ar:
-    official: مايوت
-    common: مايوت
-  en:
-    official: Mayotte
-    common: Department of Mayotte
-  es:
-    official: Mayotte
-    common: Mayotte
   fr:
     official: Mayotte
-    common: Département de Mayotte
-  ru:
-    official: Майотта
-    common: Майотта
-  zh:
-    official: 马约特
-    common: 马约特
+    common: Mayotte
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -112,12 +97,12 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q17063
   license: CC0
 - field: region
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: adminregion
@@ -125,11 +110,11 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: lendingType
-  source: World Bank
+  source: World Bank (historical classification)
   retrieved_at: '2026-06-15'
   url: https://data.worldbank.org/country
 - field: writing_directions

@@ -7,10 +7,10 @@ capital_city:
   lat: -20.1605
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
   id: UMC
   value: Upper middle income
@@ -85,24 +85,12 @@ gini:
 timezones:
 - Indian/Mauritius
 native_names:
-  ar:
-    official: موريشيوس
-    common: مورشس
   en:
     official: Mauritius
-    common: Republic of Mauritius
-  es:
-    official: Mauricio
-    common: República de Mauricio
+    common: Mauritius
   fr:
-    official: Maurice
-    common: République de Maurice
-  ru:
-    official: Маврикий
-    common: Республика Маврикий
-  zh:
-    official: 毛里求斯
-    common: 模里西斯
+    official: République de Maurice
+    common: Maurice
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -129,26 +117,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1027
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MUS
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MUS
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MUS
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/MUS
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

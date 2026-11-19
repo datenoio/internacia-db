@@ -6,7 +6,7 @@ scope_category: reference_enumeration
 links:
 - url: https://www.worldbank.org/en/region/eap
   type: website
-name: East Asia & Pacific (all income levels)
+name: East Asia & Pacific
 includes:
 - id: AS
   name: American Samoa
@@ -96,6 +96,10 @@ includes:
   name: New Caledonia
   type: country
   status: member
+- id: NR
+  name: Nauru
+  type: country
+  status: member
 - id: NZ
   name: New Zealand
   type: country
@@ -152,7 +156,7 @@ includes:
   name: Samoa
   type: country
   status: member
-membership_count: 36
+membership_count: 37
 geographic_scope: regional
 regions:
 - East Asia
@@ -223,4 +227,15 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+- field: includes
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=EAS
+- field: membership_count
+  source: World Bank (WDI income/region groupings)
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country?region=EAS
+last_verified: '2026-11-18'
+previous_names:
+- id: en
+  name: East Asia & Pacific (all income levels)

@@ -7,13 +7,13 @@ capital_city:
   lat: -22.5648
 region:
   id: SSF
-  value: Sub-Saharan Africa (all income levels)
+  value: Sub-Saharan Africa
 adminregion:
   id: SSA
-  value: Sub-Saharan Africa (developing only)
+  value: Sub-Saharan Africa (excluding high income)
 incomeLevel:
-  id: UMC
-  value: Upper middle income
+  id: LMC
+  value: Lower middle income
 lendingType:
   id: IBD
   value: IBRD
@@ -33,7 +33,7 @@ languages:
   name: English
 - code: her
   name: Herero
-- code: hgm
+- code: naq
   name: Khoekhoe
 - code: kwn
   name: Kwangali
@@ -105,30 +105,22 @@ gini:
 timezones:
 - Africa/Windhoek
 native_names:
-  ar:
-    official: ناميبيا
-    common: نامبيا
+  af:
+    common: Namibië
   de:
-    official: Namibia
-    common: Republik Namibia
+    common: Namibia
   en:
     official: Namibia
     common: Republic of Namibia
-  es:
-    official: Namibia
-    common: República de Namibia
-  fr:
-    official: Namibie
-    common: République de Namibie
-  ru:
-    official: Намибия
-    common: Республика Намибия
-  zh:
-    official: 纳米比亚
-    common: 納米比亞
+  tn:
+    common: Namibia
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Khoekhoe is naq, hgm is Haiǁom
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/naq
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -151,26 +143,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1030
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/NAM
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/NAM
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/NAM
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/NAM
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

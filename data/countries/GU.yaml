@@ -7,12 +7,12 @@ capital_city:
   lat: 13.4443
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '316'
 wikidata_id: Q16635
@@ -75,24 +75,14 @@ area:
 timezones:
 - Pacific/Guam
 native_names:
-  ar:
-    official: غوام
-    common: غوام
+  ch:
+    official: Guåhan
+    common: Guåhan
   en:
     official: Guam
-    common: GU
+    common: Guam
   es:
-    official: Guam
-    common: Guaján
-  fr:
-    official: Guam
-    common: US-GU
-  ru:
-    official: Гуам
-    common: Территория Гуам
-  zh:
-    official: 關島
-    common: 关岛
+    common: Guam
 common_names:
 - Guam
 borders: []
@@ -117,26 +107,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q16635
   license: CC0
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GUM
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GUM
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/GUM
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
@@ -173,9 +159,6 @@ provenance:
 centroid:
   lat: 13.46666666
   lng: 144.78333333
-adminregion:
-  id: EAP
-  value: East Asia & Pacific (developing only)
 writing_directions:
 - id: ltr
   primary: true

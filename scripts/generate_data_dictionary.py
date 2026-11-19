@@ -11,6 +11,8 @@ import argparse
 import json
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
 from internacia_builder.schemas import get_blocktypes_schema, get_countries_schema, get_intblocks_schema
 
 EXPORT_SCHEMAS = {"countries": get_countries_schema, "intblocks": get_intblocks_schema, "blocktypes": get_blocktypes_schema}

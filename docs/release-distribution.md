@@ -48,12 +48,24 @@ keys, enum values and versioning rules are in `contract.json`; see
 
 ## Workflow
 
-The workflow builds the bundle, checks that the committed descriptors match it, runs the
-internacia SDK's `tests/contract` suite against it (`INTERNACIA_SDK_REF`), then tests and
-checks the final `.release-datasets` staging directory, enforces the shared quality
-gate and tag-version consistency, then publishes that exact bundle as listed
-above. Hugging Face gets a separate validated Parquet-only descriptor with
-`table/table.parquet` paths and all four tables' metadata.
+The workflow has three jobs:
+
+1. **`build`** (read-only token, no secrets, no stored checkout credentials) builds the
+   bundle, checks that the committed descriptors match it, tests and checks the final
+   `.release-datasets` staging directory, enforces the shared quality gate and tag-version
+   consistency, prepares the Hugging Face bundle, and records a SHA-256 of every file as a
+   job output.
+2. **`sdk-contract`** (read-only, no secrets) runs the internacia SDK's `tests/contract`
+   suite against that build. `INTERNACIA_SDK_REF` is a pinned internacia-python commit, the
+   same one `validate.yml` uses; bump both when the SDK releases.
+3. **`publish`** (the only job with `contents: write` and secrets) verifies every artifact
+   against the `build` digest, creates the GitHub Release, then pushes Hugging Face in one
+   commit tagged with the release tag (`scripts/push_huggingface.py`, `requirements-publish.txt`).
+   A Hugging Face failure leaves the GitHub Release in place; re-run `publish` to retry.
+
+Hugging Face gets a separate validated Parquet-only descriptor with
+`table/table.parquet` paths and all four tables' metadata. Every action is pinned to a
+commit SHA; Dependabot proposes updates.
 Migration files identify the prior release; a first release without a baseline
 reports compatibility as unknown rather than unchanged.
 

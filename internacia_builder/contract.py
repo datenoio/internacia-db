@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import pyarrow as pa
+import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import (
@@ -222,6 +223,31 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
     return sorted(enums, key=lambda e: (e["table"], e["column"]))
 
 
+# Columns that carry includes[].status values.
+STATUS_COLUMNS = (("memberships", "status"), ("intblocks", "includes[].status"))
+
+
+def _deprecated(schemas_dir: Path) -> list[dict[str, Any]]:
+    """Enum values scheduled for removal, from the ``deprecated`` markers in includes_status.yaml."""
+    path = schemas_dir / "includes_status.yaml"
+    statuses = ((yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}) if path.exists() else {}
+    entries = []
+    for value, spec in sorted(statuses.items()):
+        marker = (spec or {}).get("deprecated")
+        if not marker:
+            continue
+        for table, column in STATUS_COLUMNS:
+            entries.append({
+                "kind": "enum_value",
+                "table": table,
+                "column": column,
+                "value": value,
+                "replacements": list(marker.get("replacements") or []),
+                "removal": str(marker.get("removal") or "next MAJOR"),
+            })
+    return entries
+
+
 def build_contract(dataset_version: str, root: Path | None = None) -> dict[str, Any]:
     """Build the contract document for ``dataset_version`` from the export schemas."""
     root = root or project_root()
@@ -269,7 +295,7 @@ def build_contract(dataset_version: str, root: Path | None = None) -> dict[str, 
         "type_grammar": TYPE_GRAMMAR,
         "tables": tables,
         "enums": _enums(root / "data" / "schemas"),
-        "deprecated": [],
+        "deprecated": _deprecated(root / "data" / "schemas"),
     }
 
 

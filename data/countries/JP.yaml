@@ -7,12 +7,12 @@ capital_city:
   lat: 35.67
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
 numeric_code: '392'
 wikidata_id: Q17
@@ -76,24 +76,9 @@ gini:
 timezones:
 - Asia/Tokyo
 native_names:
-  ar:
-    official: اليابان
-    common: يابان
-  en:
-    official: Japan
-    common: State of Japan
-  es:
-    official: Japón
-    common: Estado de Japón
-  fr:
-    official: Japon
-    common: pays du soleil levant
-  ru:
-    official: Япония
-    common: Страна восходящего солнца
-  zh:
-    official: 日本
-    common: 日本国
+  ja:
+    official: 日本国
+    common: 日本
 common_names:
 - Japan
 borders: []
@@ -122,22 +107,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q17
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/JPN
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/JPN
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/JPN
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

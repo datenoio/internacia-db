@@ -7,13 +7,13 @@ capital_city:
   lat: 37.5323
 region:
   id: EAS
-  value: East Asia & Pacific (all income levels)
+  value: East Asia & Pacific
 incomeLevel:
-  id: OEC
-  value: 'High income: OECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: IBD
-  value: IBRD
+  id: LNX
+  value: Not classified
 numeric_code: '410'
 wikidata_id: Q884
 fips_code: KS
@@ -83,31 +83,16 @@ gini:
 timezones:
 - Asia/Seoul
 native_names:
-  ar:
-    official: كوريا الجنوبية
-    common: جمهورية كوريا
-  en:
-    official: South Korea
-    common: Republic of Korea
-  es:
-    official: Corea del Sur
-    common: República de Corea
-  fr:
-    official: Corée du Sud
-    common: République de Corée
-  ru:
-    official: Республика Корея
-    common: Южная Корея
-  zh:
-    official: 大韩民国
-    common: 韩国
+  ko:
+    official: 大韓民國
+    common: 대한민국
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
 - field: common_names
   source: manual
   retrieved_at: '2026-07-16'
-  notes: Added alternate display names used by international organization sources
+  note: Added alternate display names used by international organization sources
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -130,22 +115,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q884
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KOR
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KOR
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KOR
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

@@ -8,7 +8,6 @@ datasets) and return structured issue dicts.
 from __future__ import annotations
 
 import re
-import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -942,79 +941,34 @@ def validate_intblock_refs(
     return errors
 
 
-def _normalize_display_name(name: str) -> str:
-    text = unicodedata.normalize("NFKD", name)
-    text = "".join(c for c in text if not unicodedata.combining(c))
-    text = re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
-    return text
-
-
-def _name_keys(name: str) -> set[str]:
-    """Comparison keys for a country display name.
-
-    Besides plain normalization, generate rotations for UN-style inverted forms so
-    'Korea, Republic of' and 'Bolivia (Plurinational State of)' match
-    'Republic of Korea' and 'Plurinational State of Bolivia'.
-    """
-    forms = {name}
-    m = re.match(r"^([^,(]+),\s*(.+)$", name)
-    if m:
-        forms.add(f"{m.group(2).strip()} {m.group(1).strip()}")
-    m = re.match(r"^([^(]+)\(([^)]+)\)\s*$", name)
-    if m:
-        forms.add(f"{m.group(2).strip()} {m.group(1).strip()}")
-    return {_normalize_display_name(f) for f in forms if f}
-
-
-def _country_name_variants(country: dict[str, Any]) -> set[str]:
-    names = {str(country.get("name", "")), str(country.get("official_name", ""))}
-    names |= {str(x) for x in (country.get("common_names") or [])}
-    names |= {
-        str(o.get("name", ""))
-        for o in (country.get("other_names") or [])
-        if isinstance(o, dict)
-    }
-    for nn in (country.get("native_names") or {}).values():
-        if isinstance(nn, dict):
-            names |= {str(nn.get("official", "")), str(nn.get("common", ""))}
-    variants: set[str] = set()
-    for n in names:
-        if n:
-            variants |= _name_keys(n)
-    return variants
-
-
 def check_include_name_mismatch(
     intblocks_records: list[dict[str, Any]],
     intblocks_paths: list[str],
     countries_by_code: dict[str, dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Advisory: includes[].name differs from every known name variant of the
-    referenced country. `name` is display-only per the includes contract, so
-    this never fails validation."""
-    variants_cache: dict[str, set[str]] = {}
+    """Warn when a ``type: country`` include's source ``name`` differs from the country's ``name``.
+
+    The build exports the country's ``name`` either way (``fill_country_include_names``), so
+    this never fails validation; it keeps the YAML readable as what consumers see. Omitting
+    ``name`` is fine.
+    """
     issues: list[dict[str, Any]] = []
     for path, rec in zip(intblocks_paths, intblocks_records, strict=False):
         record_id = rec.get("id", "unknown")
         for idx, inc in enumerate(rec.get("includes") or []):
-            if not isinstance(inc, dict) or inc.get("type") != "country":
+            if not isinstance(inc, dict) or inc.get("type") != "country" or not inc.get("name"):
                 continue
             cid = str(inc.get("id", "")).strip().upper()
-            display = str(inc.get("name", "")).strip()
             country = countries_by_code.get(cid)
-            if not country or not display:
-                continue
-            if cid not in variants_cache:
-                variants_cache[cid] = _country_name_variants(country)
-            if _name_keys(display) & variants_cache[cid]:
+            if not country or str(inc["name"]) == str(country.get("name")):
                 continue
             issues.append({
                 "issue_type": "INCLUDE_NAME_MISMATCH",
                 "field": f"includes[{idx}].name",
-                "current_value": display,
+                "current_value": str(inc["name"]),
                 "suggested_action": (
-                    f"include name '{display}' differs from canonical "
-                    f"'{country.get('name')}' for {cid} (display-only; advisory)"
+                    f"include name '{inc['name']}' differs from the country name '{country.get('name')}' "
+                    f"for {cid}; use that name or omit it (the build exports the country name)"
                 ),
                 "file_path": path,
                 "record_id": record_id,

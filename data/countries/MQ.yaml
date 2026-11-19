@@ -58,24 +58,9 @@ area:
 timezones:
 - America/Martinique
 native_names:
-  ar:
-    official: مارتينيك
-    common: مارتينيك
-  en:
-    official: Martinique
-    common: Matnik
-  es:
-    official: Martinica
-    common: 🇲🇶
   fr:
     official: Martinique
-    common: Mart.
-  ru:
-    official: Мартиника
-    common: Мартиника
-  zh:
-    official: 馬提尼克
-    common: 馬提尼克
+    common: Martinique
 common_names:
 - Martinique
 borders: []
@@ -104,14 +89,10 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q17054
   license: CC0
-- field: adminregion
-  source: UN M49 inference
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
 - field: incomeLevel
   source: UN M49 inference
   retrieved_at: '2026-06-15'
@@ -145,16 +126,13 @@ centroid:
   lng: -61.0
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: NOC
-  value: 'High income: nonOECD'
+  id: HIC
+  value: High income
 lendingType:
-  id: NC
+  id: LNX
   value: Not classified
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
 writing_directions:
 - id: ltr
   primary: true

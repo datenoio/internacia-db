@@ -7,13 +7,10 @@ capital_city:
   lat: 17.3
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
-adminregion:
-  id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean
 incomeLevel:
-  id: UMC
-  value: Upper middle income
+  id: HIC
+  value: High income
 lendingType:
   id: IBD
   value: IBRD
@@ -76,24 +73,9 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: سانت كيتس ونيفيس
-    common: سانت كيتس ونيفيس
   en:
     official: Saint Kitts and Nevis
-    common: Saint Christopher and Nevis
-  es:
-    official: San Cristóbal y Nieves
-    common: Federación de San Cristóbal y Nieves
-  fr:
-    official: Saint-Christophe-et-Niévès
-    common: Fédération de Saint-Christophe-et-Niévès
-  ru:
-    official: Сент-Китс и Невис
-    common: Федерация Сент-Китс и Невис
-  zh:
-    official: 聖克里斯多福及尼維斯
-    common: 圣基茨和尼维斯
+    common: Federation of Saint Kitts and Nevis
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -116,26 +98,22 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q763
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
-- field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KNA
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KNA
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/KNA
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'

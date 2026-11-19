@@ -7,16 +7,16 @@ capital_city:
   lat: -13.9908
 region:
   id: LCN
-  value: Latin America & Caribbean (all income levels)
+  value: Latin America & Caribbean
 adminregion:
   id: LAC
-  value: Latin America & Caribbean (developing only)
+  value: Latin America & Caribbean (excluding high income)
 incomeLevel:
   id: LMC
   value: Lower middle income
 lendingType:
-  id: IDB
-  value: Blend
+  id: IBD
+  value: IBRD
 numeric_code: 068
 wikidata_id: Q750
 geonames_id: "3923057"
@@ -94,24 +94,15 @@ gini:
 timezones:
 - America/La_Paz
 native_names:
-  ar:
-    official: بوليفيا
-    common: البوليفية
-  en:
-    official: Bolivia
-    common: Plurinational State of Bolivia
+  ay:
+    common: Wuliwya
   es:
-    official: Bolivia
-    common: República de Bolivia
-  fr:
-    official: Bolivie
-    common: l’État plurinational de Bolivie
-  ru:
-    official: Боливия
-    common: Многонациональное Государство Боливия
-  zh:
-    official: 玻利維亞
-    common: 玻利维亚
+    official: Estado Plurinacional de Bolivia
+    common: Bolivia
+  gn:
+    common: Volívia
+  qu:
+    common: Wuliwya
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -137,26 +128,26 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q750
   license: CC0
 - field: region
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BOL
 - field: adminregion
-  source: World Bank regional complement
-  retrieved_at: '2026-06-15'
-  url: https://unstats.un.org/unsd/methodology/m49/
+  source: World Bank
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BOL
 - field: incomeLevel
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BOL
 - field: lendingType
   source: World Bank
-  retrieved_at: '2026-06-15'
-  url: https://data.worldbank.org/country
+  retrieved_at: '2026-11-18'
+  url: https://api.worldbank.org/v2/country/BOL
 - field: writing_directions
   source: Internacia attribute-intblock migration
   retrieved_at: '2026-08-03'
