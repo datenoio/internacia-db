@@ -81,24 +81,12 @@ timezones:
 - Asia/Famagusta
 - Asia/Nicosia
 native_names:
-  ar:
-    official: قبرص
-    common: قبرص
-  en:
-    official: Cyprus
-    common: Greek Cypriot State
-  es:
-    official: Chipre
-    common: 🇨🇾
-  fr:
-    official: Chypre
-    common: Chypre-Sud
-  ru:
-    official: Кипр
-    common: Республика Кипр
-  zh:
-    official: 塞浦路斯
-    common: 希腊塞浦路斯
+  el:
+    official: Κυπριακή Δημοκρατία
+    common: Κύπρος
+  tr:
+    official: Kıbrıs Cumhuriyeti
+    common: Kıbrıs
 borders: []
 code_status: official_iso3166_1
 entity_type: sovereign_state
@@ -125,9 +113,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q229
   license: CC0
 - field: region
   source: World Bank

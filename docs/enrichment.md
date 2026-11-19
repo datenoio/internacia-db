@@ -48,7 +48,18 @@ python scripts/enrich_countries.py backfill-gini
 
 # Preserve existing provenance; unknown historical retrieval dates are not invented
 python scripts/enrich_countries.py backfill-provenance
+
+# Rebuild native_names only (Wikidata official name P1448, label, native label P1705)
+python scripts/enrich_countries.py refresh-native-names
 ```
+
+`native_names` keys are the record's own `languages[]`, mapped through
+`data/vocabs/language_codes.yaml` (ISO 639-3 code → map key and the Wikidata label codes to
+try). `official` is the current P1448 statement in that language (preferred rank first);
+`common` is the Wikidata label, or a P1705 value when the label repeats `official`. Aliases
+are never used. Chinese follows the entity's script (Simplified for CN and SG, Traditional for
+TW, HK and MO). `enrich` refreshes the field on every run. A new code in `languages[]` needs a
+vocabulary entry first (`tests/test_native_names.py` checks coverage).
 
 Use `--code XX` on `enrich` for a single country. Use `--dry-run` to preview YAML diffs.
 

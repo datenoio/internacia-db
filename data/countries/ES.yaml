@@ -28,7 +28,7 @@ languages:
   name: Catalan
 - code: eus
   name: Basque
-- code: glc
+- code: glg
   name: Galician
 currencies:
 - code: EUR
@@ -92,27 +92,25 @@ timezones:
 - Atlantic/Canary
 - Europe/Madrid
 native_names:
-  ar:
-    official: إسبانيا
-    common: مملكة إسبانيا
-  en:
-    official: Spain
-    common: Kingdom of Spain
+  ca:
+    official: Regne d'Espanya
+    common: Espanya
   es:
-    official: España
-    common: Reino de España
-  fr:
-    official: Espagne
-    common: Royaume d'Espagne
-  ru:
-    official: Испания
-    common: Королевство Испания
-  zh:
-    official: 西班牙
-    common: 西班牙王國
+    official: Reino de España
+    common: España
+  eu:
+    official: Espainiako Erresuma
+    common: Espainia
+  gl:
+    official: Reino de España
+    common: España
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Galician is glg, glc is Bon Gula
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/glg
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -135,9 +133,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q29
   license: CC0
 - field: region
   source: World Bank

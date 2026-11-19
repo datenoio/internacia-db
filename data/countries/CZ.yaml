@@ -86,24 +86,11 @@ gini:
 timezones:
 - Europe/Prague
 native_names:
-  ar:
-    official: جمهورية التشيك
-    common: الجمهورية التشيكية
-  en:
-    official: Czech Republic
-    common: Czechia
-  es:
-    official: República Checa
-    common: Bohemia
-  fr:
-    official: Tchéquie
-    common: République tchèque
-  ru:
-    official: Чехия
-    common: Чешская Республика
-  zh:
-    official: 捷克
-    common: 捷克共和國
+  cs:
+    official: Česká republika
+    common: Česko
+  sk:
+    common: Česko
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -129,9 +116,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q213
   license: CC0
 - field: region
   source: World Bank

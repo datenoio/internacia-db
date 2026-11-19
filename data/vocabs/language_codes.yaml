@@ -1,0 +1,929 @@
+# Controlled vocab: languages used in countries languages[].code (ISO 639-3).
+# key: the countries native_names map key (ISO 639-1 when one exists, otherwise ISO 639-3).
+# wikidata_codes: Wikidata label/monolingual-text codes tried in order; empty means the
+#   language yields no native name. Chinese script variants are chosen per entity in
+#   scripts/enrich_countries.py. Generated from Wikidata P220/P218/P424 on 2026-11-19 and
+#   reviewed by hand (ron, ell, gsw, ndo, nor, nrf, srp items and codes are overrides).
+- id: afr
+  name: Afrikaans
+  key: af
+  wikidata_id: Q14196
+  wikidata_codes:
+  - af
+- id: amh
+  name: Amharic
+  key: am
+  wikidata_id: Q28244
+  wikidata_codes:
+  - am
+- id: ara
+  name: Arabic
+  key: ar
+  wikidata_id: Q13955
+  wikidata_codes:
+  - ar
+- id: arc
+  name: Aramaic
+  key: arc
+  wikidata_id: Q7079491
+  wikidata_codes: []
+  note: historical Official Aramaic; Wikidata has no label language for it
+- id: aym
+  name: Aymara
+  key: ay
+  wikidata_id: Q4627
+  wikidata_codes:
+  - ay
+- id: aze
+  name: Azerbaijani
+  key: az
+  wikidata_id: Q9292
+  wikidata_codes:
+  - az
+- id: bel
+  name: Belarusian
+  key: be
+  wikidata_id: Q9091
+  wikidata_codes:
+  - be
+- id: ben
+  name: Bengali
+  key: bn
+  wikidata_id: Q9610
+  wikidata_codes:
+  - bn
+- id: ber
+  name: Berber
+  key: ber
+  wikidata_codes: []
+  note: collective code (Berber languages); no single written form
+- id: bis
+  name: Bislama
+  key: bi
+  wikidata_id: Q35452
+  wikidata_codes:
+  - bi
+- id: bos
+  name: Bosnian
+  key: bs
+  wikidata_id: Q9303
+  wikidata_codes:
+  - bs
+- id: bul
+  name: Bulgarian
+  key: bg
+  wikidata_id: Q7918
+  wikidata_codes:
+  - bg
+- id: bwg
+  name: Chibarwe
+  key: bwg
+  wikidata_id: Q8826802
+  wikidata_codes: []
+  note: Wikidata has no label language for this code
+- id: bzj
+  name: Belize Kriol
+  key: bzj
+  wikidata_id: Q1363055
+  wikidata_codes:
+  - bzj
+- id: cal
+  name: Carolinian
+  key: cal
+  wikidata_id: Q28427
+  wikidata_codes:
+  - cal
+- id: cat
+  name: Catalan
+  key: ca
+  wikidata_id: Q7026
+  wikidata_codes:
+  - ca
+- id: ces
+  name: Czech
+  key: cs
+  wikidata_id: Q9056
+  wikidata_codes:
+  - cs
+- id: cha
+  name: Chamorro
+  key: ch
+  wikidata_id: Q33262
+  wikidata_codes:
+  - ch
+- id: ckb
+  name: Sorani
+  key: ckb
+  wikidata_id: Q36811
+  wikidata_codes:
+  - ckb
+- id: cnr
+  name: Montenegrin
+  key: cnr
+  wikidata_id: Q8821
+  wikidata_codes:
+  - cnr
+- id: crs
+  name: Seychellois Creole
+  key: crs
+  wikidata_id: Q34015
+  wikidata_codes:
+  - crs
+- id: dan
+  name: Danish
+  key: da
+  wikidata_id: Q9035
+  wikidata_codes:
+  - da
+- id: deu
+  name: German
+  key: de
+  wikidata_id: Q188
+  wikidata_codes:
+  - de
+- id: div
+  name: Maldivian
+  key: dv
+  wikidata_id: Q32656
+  wikidata_codes:
+  - dv
+- id: dzo
+  name: Dzongkha
+  key: dz
+  wikidata_id: Q33081
+  wikidata_codes:
+  - dz
+- id: ell
+  name: Greek
+  key: el
+  wikidata_id: Q36510
+  wikidata_codes:
+  - el
+- id: eng
+  name: English
+  key: en
+  wikidata_id: Q1860
+  wikidata_codes:
+  - en
+- id: est
+  name: Estonian
+  key: et
+  wikidata_id: Q9072
+  wikidata_codes:
+  - et
+- id: eus
+  name: Basque
+  key: eu
+  wikidata_id: Q8752
+  wikidata_codes:
+  - eu
+- id: fao
+  name: Faroese
+  key: fo
+  wikidata_id: Q25258
+  wikidata_codes:
+  - fo
+- id: fas
+  name: Persian (Farsi)
+  key: fa
+  wikidata_id: Q9168
+  wikidata_codes:
+  - fa
+- id: fij
+  name: Fijian
+  key: fj
+  wikidata_id: Q33295
+  wikidata_codes:
+  - fj
+- id: fil
+  name: Filipino
+  key: fil
+  wikidata_id: Q33298
+  wikidata_codes:
+  - fil
+- id: fin
+  name: Finnish
+  key: fi
+  wikidata_id: Q1412
+  wikidata_codes:
+  - fi
+- id: fra
+  name: French
+  key: fr
+  wikidata_id: Q150
+  wikidata_codes:
+  - fr
+- id: gil
+  name: Gilbertese
+  key: gil
+  wikidata_id: Q30898
+  wikidata_codes:
+  - gil
+- id: gle
+  name: Irish
+  key: ga
+  wikidata_id: Q9142
+  wikidata_codes:
+  - ga
+- id: glg
+  name: Galician
+  key: gl
+  wikidata_id: Q9307
+  wikidata_codes:
+  - gl
+- id: glv
+  name: Manx
+  key: gv
+  wikidata_id: Q12175
+  wikidata_codes:
+  - gv
+- id: grn
+  name: Guaraní
+  key: gn
+  wikidata_id: Q35876
+  wikidata_codes:
+  - gn
+- id: gsw
+  name: Swiss German
+  key: gsw
+  wikidata_id: Q387066
+  wikidata_codes:
+  - gsw
+  - als
+- id: hat
+  name: Haitian Creole
+  key: ht
+  wikidata_id: Q33491
+  wikidata_codes:
+  - ht
+- id: heb
+  name: Hebrew
+  key: he
+  wikidata_id: Q9288
+  wikidata_codes:
+  - he
+- id: her
+  name: Herero
+  key: hz
+  wikidata_id: Q33315
+  wikidata_codes:
+  - hz
+- id: hif
+  name: Fiji Hindi
+  key: hif
+  wikidata_id: Q46728
+  wikidata_codes:
+  - hif
+  - hif-latn
+- id: hin
+  name: Hindi
+  key: hi
+  wikidata_id: Q1568
+  wikidata_codes:
+  - hi
+- id: hmo
+  name: Hiri Motu
+  key: ho
+  wikidata_id: Q33617
+  wikidata_codes:
+  - ho
+- id: hrv
+  name: Croatian
+  key: hr
+  wikidata_id: Q6654
+  wikidata_codes:
+  - hr
+- id: hun
+  name: Hungarian
+  key: hu
+  wikidata_id: Q9067
+  wikidata_codes:
+  - hu
+- id: hye
+  name: Armenian
+  key: hy
+  wikidata_id: Q8785
+  wikidata_codes:
+  - hy
+- id: ind
+  name: Indonesian
+  key: id
+  wikidata_id: Q9240
+  wikidata_codes:
+  - id
+- id: isl
+  name: Icelandic
+  key: is
+  wikidata_id: Q294
+  wikidata_codes:
+  - is
+- id: ita
+  name: Italian
+  key: it
+  wikidata_id: Q652
+  wikidata_codes:
+  - it
+- id: jam
+  name: Jamaican Patois
+  key: jam
+  wikidata_id: Q35939
+  wikidata_codes:
+  - jam
+- id: jpn
+  name: Japanese
+  key: ja
+  wikidata_id: Q5287
+  wikidata_codes:
+  - ja
+- id: kal
+  name: Greenlandic
+  key: kl
+  wikidata_id: Q25355
+  wikidata_codes:
+  - kl
+- id: kat
+  name: Georgian
+  key: ka
+  wikidata_id: Q8108
+  wikidata_codes:
+  - ka
+- id: kaz
+  name: Kazakh
+  key: kk
+  wikidata_id: Q9252
+  wikidata_codes:
+  - kk
+  - kk-cyrl
+  - kk-arab
+  - kk-latn
+- id: kck
+  name: Kalanga
+  key: kck
+  wikidata_id: Q33672
+  wikidata_codes:
+  - kck
+- id: khi
+  name: Khoisan
+  key: khi
+  wikidata_codes: []
+  note: collective code (Khoisan languages); no single written form
+- id: khm
+  name: Khmer
+  key: km
+  wikidata_id: Q9205
+  wikidata_codes:
+  - km
+- id: kin
+  name: Kinyarwanda
+  key: rw
+  wikidata_id: Q33573
+  wikidata_codes:
+  - rw
+- id: kir
+  name: Kyrgyz
+  key: ky
+  wikidata_id: Q9255
+  wikidata_codes:
+  - ky
+- id: kon
+  name: Kikongo
+  key: kg
+  wikidata_id: Q33702
+  wikidata_codes:
+  - kg
+- id: kor
+  name: Korean
+  key: ko
+  wikidata_id: Q9176
+  wikidata_codes:
+  - ko
+- id: kwn
+  name: Kwangali
+  key: kwn
+  wikidata_id: Q36334
+  wikidata_codes: []
+  note: Wikidata has no label language for this code
+- id: lao
+  name: Lao
+  key: lo
+  wikidata_id: Q9211
+  wikidata_codes:
+  - lo
+- id: lat
+  name: Latin
+  key: la
+  wikidata_id: Q397
+  wikidata_codes:
+  - la
+- id: lav
+  name: Latvian
+  key: lv
+  wikidata_id: Q9078
+  wikidata_codes:
+  - lv
+- id: lin
+  name: Lingala
+  key: ln
+  wikidata_id: Q36217
+  wikidata_codes:
+  - ln
+- id: lit
+  name: Lithuanian
+  key: lt
+  wikidata_id: Q9083
+  wikidata_codes:
+  - lt
+- id: loz
+  name: Lozi
+  key: loz
+  wikidata_id: Q33628
+  wikidata_codes:
+  - loz
+- id: ltz
+  name: Luxembourgish
+  key: lb
+  wikidata_id: Q9051
+  wikidata_codes:
+  - lb
+- id: lua
+  name: Tshiluba
+  key: lua
+  wikidata_id: Q34173
+  wikidata_codes:
+  - lua
+- id: mah
+  name: Marshallese
+  key: mh
+  wikidata_id: Q36280
+  wikidata_codes:
+  - mh
+- id: mey
+  name: Hassaniya
+  key: mey
+  wikidata_id: Q56231
+  wikidata_codes:
+  - mey
+- id: mfe
+  name: Mauritian Creole
+  key: mfe
+  wikidata_id: Q33661
+  wikidata_codes:
+  - mfe
+- id: mkd
+  name: Macedonian
+  key: mk
+  wikidata_id: Q9296
+  wikidata_codes:
+  - mk
+- id: mlg
+  name: Malagasy
+  key: mg
+  wikidata_id: Q7930
+  wikidata_codes:
+  - mg
+- id: mlt
+  name: Maltese
+  key: mt
+  wikidata_id: Q9166
+  wikidata_codes:
+  - mt
+- id: mon
+  name: Mongolian
+  key: mn
+  wikidata_id: Q9246
+  wikidata_codes:
+  - mn
+- id: mri
+  name: Māori
+  key: mi
+  wikidata_id: Q36451
+  wikidata_codes:
+  - mi
+- id: msa
+  name: Malay
+  key: ms
+  wikidata_id: Q9237
+  wikidata_codes:
+  - ms
+- id: mya
+  name: Burmese
+  key: my
+  wikidata_id: Q9228
+  wikidata_codes:
+  - my
+- id: naq
+  name: Khoekhoe
+  key: naq
+  wikidata_id: Q13301
+  wikidata_codes:
+  - naq
+- id: nau
+  name: Nauru
+  key: na
+  wikidata_id: Q13307
+  wikidata_codes:
+  - na
+- id: nbl
+  name: Southern Ndebele
+  key: nr
+  wikidata_id: Q36785
+  wikidata_codes:
+  - nr
+- id: ndc
+  name: Ndau
+  key: ndc
+  wikidata_id: Q13311
+  wikidata_codes: []
+  note: Wikidata has no label language for this code
+- id: nde
+  name: Northern Ndebele
+  key: nd
+  wikidata_id: Q35613
+  wikidata_codes:
+  - nd
+- id: ndo
+  name: Ndonga
+  key: ng
+  wikidata_id: Q33900
+  wikidata_codes:
+  - ng
+- id: nep
+  name: Nepali
+  key: ne
+  wikidata_id: Q33823
+  wikidata_codes:
+  - ne
+- id: niu
+  name: Niuean
+  key: niu
+  wikidata_id: Q33790
+  wikidata_codes:
+  - niu
+- id: nld
+  name: Dutch
+  key: nl
+  wikidata_id: Q7411
+  wikidata_codes:
+  - nl
+- id: nno
+  name: Norwegian Nynorsk
+  key: nn
+  wikidata_id: Q25164
+  wikidata_codes:
+  - nn
+- id: nob
+  name: Norwegian Bokmål
+  key: nb
+  wikidata_id: Q25167
+  wikidata_codes:
+  - nb
+- id: nor
+  name: Norwegian
+  key: 'no'
+  wikidata_id: Q9043
+  wikidata_codes:
+  - nb
+  - nn
+  - 'no'
+- id: nrf
+  name: Norman
+  key: nrf
+  wikidata_id: Q33850
+  wikidata_codes:
+  - nrm
+- id: nso
+  name: Northern Sotho
+  key: nso
+  wikidata_id: Q33890
+  wikidata_codes:
+  - nso
+- id: nya
+  name: Chewa
+  key: ny
+  wikidata_id: Q33273
+  wikidata_codes:
+  - ny
+- id: nzs
+  name: New Zealand Sign Language
+  key: nzs
+  wikidata_id: Q36239
+  wikidata_codes: []
+  note: sign language; no written name
+- id: pap
+  name: Papiamento
+  key: pap
+  wikidata_id: Q33856
+  wikidata_codes:
+  - pap
+- id: pau
+  name: Palauan
+  key: pau
+  wikidata_id: Q33776
+  wikidata_codes:
+  - pau
+- id: pih
+  name: Norfuk
+  key: pih
+  wikidata_id: Q36554
+  wikidata_codes:
+  - pih
+- id: pol
+  name: Polish
+  key: pl
+  wikidata_id: Q809
+  wikidata_codes:
+  - pl
+- id: por
+  name: Portuguese
+  key: pt
+  wikidata_id: Q5146
+  wikidata_codes:
+  - pt
+- id: pov
+  name: Upper Guinea Creole
+  key: pov
+  wikidata_id: Q33339
+  wikidata_codes:
+  - pov
+- id: prs
+  name: Dari
+  key: prs
+  wikidata_id: Q178440
+  wikidata_codes:
+  - fa-af
+  - prs
+- id: pus
+  name: Pashto
+  key: ps
+  wikidata_id: Q58680
+  wikidata_codes:
+  - ps
+- id: que
+  name: Quechua
+  key: qu
+  wikidata_id: Q5218
+  wikidata_codes:
+  - qu
+- id: rar
+  name: Cook Islands Māori
+  key: rar
+  wikidata_id: Q36745
+  wikidata_codes:
+  - rar
+- id: roh
+  name: Romansh
+  key: rm
+  wikidata_id: Q13199
+  wikidata_codes:
+  - rm
+- id: ron
+  name: Romanian
+  key: ro
+  wikidata_id: Q7913
+  wikidata_codes:
+  - ro
+- id: run
+  name: Kirundi
+  key: rn
+  wikidata_id: Q33583
+  wikidata_codes:
+  - rn
+- id: rus
+  name: Russian
+  key: ru
+  wikidata_id: Q7737
+  wikidata_codes:
+  - ru
+- id: sag
+  name: Sango
+  key: sg
+  wikidata_id: Q33954
+  wikidata_codes:
+  - sg
+- id: sin
+  name: Sinhala
+  key: si
+  wikidata_id: Q13267
+  wikidata_codes:
+  - si
+- id: slk
+  name: Slovak
+  key: sk
+  wikidata_id: Q9058
+  wikidata_codes:
+  - sk
+- id: slv
+  name: Slovene
+  key: sl
+  wikidata_id: Q9063
+  wikidata_codes:
+  - sl
+- id: smi
+  name: Sami
+  key: smi
+  wikidata_codes: []
+  note: collective code (Sami languages); no single written form
+- id: smo
+  name: Samoan
+  key: sm
+  wikidata_id: Q34011
+  wikidata_codes:
+  - sm
+- id: sna
+  name: Shona
+  key: sn
+  wikidata_id: Q34004
+  wikidata_codes:
+  - sn
+- id: som
+  name: Somali
+  key: so
+  wikidata_id: Q13275
+  wikidata_codes:
+  - so
+- id: sot
+  name: Sotho
+  key: st
+  wikidata_id: Q34340
+  wikidata_codes:
+  - st
+- id: spa
+  name: Spanish
+  key: es
+  wikidata_id: Q1321
+  wikidata_codes:
+  - es
+- id: sqi
+  name: Albanian
+  key: sq
+  wikidata_id: Q8748
+  wikidata_codes:
+  - sq
+- id: srp
+  name: Serbian
+  key: sr
+  wikidata_id: Q9299
+  wikidata_codes:
+  - sr
+- id: ssw
+  name: Swazi
+  key: ss
+  wikidata_id: Q34014
+  wikidata_codes:
+  - ss
+- id: swa
+  name: Swahili
+  key: sw
+  wikidata_id: Q7838
+  wikidata_codes:
+  - sw
+- id: swe
+  name: Swedish
+  key: sv
+  wikidata_id: Q9027
+  wikidata_codes:
+  - sv
+- id: tam
+  name: Tamil
+  key: ta
+  wikidata_id: Q5885
+  wikidata_codes:
+  - ta
+- id: tet
+  name: Tetum
+  key: tet
+  wikidata_id: Q34125
+  wikidata_codes:
+  - tet
+- id: tgk
+  name: Tajik
+  key: tg
+  wikidata_id: Q9260
+  wikidata_codes:
+  - tg
+- id: tha
+  name: Thai
+  key: th
+  wikidata_id: Q9217
+  wikidata_codes:
+  - th
+- id: tir
+  name: Tigrinya
+  key: ti
+  wikidata_id: Q34124
+  wikidata_codes:
+  - ti
+- id: tkl
+  name: Tokelauan
+  key: tkl
+  wikidata_id: Q34097
+  wikidata_codes:
+  - tkl
+- id: toi
+  name: Tonga
+  key: toi
+  wikidata_id: Q34101
+  wikidata_codes:
+  - toi
+- id: ton
+  name: Tongan
+  key: to
+  wikidata_id: Q34094
+  wikidata_codes:
+  - to
+- id: tpi
+  name: Tok Pisin
+  key: tpi
+  wikidata_id: Q34159
+  wikidata_codes:
+  - tpi
+- id: tsn
+  name: Tswana
+  key: tn
+  wikidata_id: Q34137
+  wikidata_codes:
+  - tn
+- id: tso
+  name: Tsonga
+  key: ts
+  wikidata_id: Q34327
+  wikidata_codes:
+  - ts
+- id: tuk
+  name: Turkmen
+  key: tk
+  wikidata_id: Q9267
+  wikidata_codes:
+  - tk
+- id: tur
+  name: Turkish
+  key: tr
+  wikidata_id: Q256
+  wikidata_codes:
+  - tr
+- id: tvl
+  name: Tuvaluan
+  key: tvl
+  wikidata_id: Q34055
+  wikidata_codes:
+  - tvl
+- id: ukr
+  name: Ukrainian
+  key: uk
+  wikidata_id: Q8798
+  wikidata_codes:
+  - uk
+- id: urd
+  name: Urdu
+  key: ur
+  wikidata_id: Q1617
+  wikidata_codes:
+  - ur
+- id: uzb
+  name: Uzbek
+  key: uz
+  wikidata_id: Q9264
+  wikidata_codes:
+  - uz
+- id: ven
+  name: Venda
+  key: ve
+  wikidata_id: Q32704
+  wikidata_codes:
+  - ve
+- id: vie
+  name: Vietnamese
+  key: vi
+  wikidata_id: Q9199
+  wikidata_codes:
+  - vi
+- id: xho
+  name: Xhosa
+  key: xh
+  wikidata_id: Q13218
+  wikidata_codes:
+  - xh
+- id: zdj
+  name: Comorian
+  key: zdj
+  wikidata_id: Q33077
+  wikidata_codes: []
+  note: Wikidata has no label language for this code
+- id: zho
+  name: Chinese
+  key: zh
+  wikidata_id: Q7850
+  wikidata_codes:
+  - zh
+- id: zib
+  name: Zimbabwean Sign Language
+  key: zib
+  wikidata_id: Q8072097
+  wikidata_codes: []
+  note: sign language; no written name
+- id: zul
+  name: Zulu
+  key: zu
+  wikidata_id: Q10179
+  wikidata_codes:
+  - zu

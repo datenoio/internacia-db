@@ -335,7 +335,7 @@
       "additionalProperties": false
     },
     "native_names": {
-      "description": "Native-language names keyed by language code, each with official and common variants.",
+      "description": "Names in the entity's own languages (languages[] mapped through data/vocabs/language_codes.yaml), keyed by ISO 639-1 or ISO 639-3 code: official from Wikidata P1448, common from the Wikidata label. Either may be absent. Names in other languages are in other_names. Empty only when languages[] is empty.",
       "type": "object",
       "additionalProperties": {
         "type": "object",

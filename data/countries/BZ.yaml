@@ -25,7 +25,7 @@ fifa_code: "BLZ"
 ioc_code: "BIZ"
 official_name: Belize
 languages:
-- code: bjz
+- code: bzj
   name: Belizean Creole
 - code: eng
   name: English
@@ -86,29 +86,20 @@ gini:
 timezones:
 - America/Belize
 native_names:
-  ar:
-    official: بليز
-    common: بليز
   en:
     official: Belize
-    common: bz
+    common: Belize
   es:
-    official: Belice
     common: Belice
-  fr:
-    official: Belize
-    common: Bélize
-  ru:
-    official: Белиз
-    common: Белиз
-  zh:
-    official: 伯利兹
-    common: 貝里斯
 common_names:
 - Belize
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Belize Kriol English is bzj, bjz is Baruga
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/bzj
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -131,9 +122,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q242
   license: CC0
 - field: region
   source: World Bank

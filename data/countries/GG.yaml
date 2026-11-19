@@ -15,7 +15,7 @@ languages:
   name: English
 - code: fra
   name: French
-- code: nfr
+- code: nrf
   name: Guernésiais
 currencies:
 - code: GBP
@@ -67,28 +67,21 @@ area:
 timezones:
 - Europe/London
 native_names:
-  ar:
-    official: غيرنزي
-    common: جزيرة جرنزي
   en:
-    official: Guernsey
-    common: GB-GSY
-  es:
-    official: Guernsey
-    common: Bailiazgo de Guernsey
+    official: Bailiwick of Guernsey
+    common: Guernsey
   fr:
-    official: Guernesey
-    common: bailliage de Guernesey
-  ru:
-    official: Гернси
-    common: Гернсей
-  zh:
-    official: 根西
-    common: 耿西岛
+    common: Guernesey
+  nrf:
+    common: Bailliage dé Guernési
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Guernésiais is a Norman dialect (nrf), nfr is Nafaanra
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/nrf
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -111,9 +104,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q25230
   license: CC0
 - field: incomeLevel
   source: UN M49 inference
