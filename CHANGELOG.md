@@ -37,6 +37,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- The World Bank groups `OEC` (High income: OECD) and `NOC` (High income: nonOECD) are `historical`, with `dissolved: '2016-07-05'`: the World Bank removed both in the July 2016 World Development Indicators update (Data Updates and Errata). Their last rosters are kept.
+- ERRA roster refreshed from its members page: 37 full and 14 associate member regulators (`membership_count: 51`, `membership_count_type: organizations`). By country, 37 are `member` and 6 are `associate_member` (Algeria, Bahamas, Egypt, Fiji, France, United States); Austria, Latvia, Lithuania, Moldova, Nigeria, North Macedonia, Pakistan, Palestine, Russia and Ukraine are added, Kosovo is now a full member, and Ghana, Jordan and Peru are removed.
 - `python scripts/<name>.py` and `pytest` now import the `internacia_builder` of the checkout they run in (`scripts/_checkout.py`, `pythonpath = ["."]`). Before, with an editable install from another checkout, a script in a git worktree silently ran the other checkout's code against its data; only `builder.py` had this guard.
 - `scope_category` corrected for 21 informal intblocks that were classified as `igo`. Twenty become `policy_forum`: the five UN regional groups (AFRICANGROUP, ASIAPACIFICGROUP, EEG, GRULAC, WEOG), AG, ASPA, BASIC, CLUBDEBERNE, CTG, EUMED, GROUPOFFIVE, I2U2, LMDC, MIKTA, NB8, NINEEYES, PBP, QSD and UDCG. 3GC, a Citigroup classification, becomes `reference_enumeration`.
 - Country provenance entries use `note`, like intblocks; 26 entries in 22 records used `notes`.

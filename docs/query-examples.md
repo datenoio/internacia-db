@@ -930,7 +930,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 34 rows — includes `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`.
+**Expected:** 36 rows — includes `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
