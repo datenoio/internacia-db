@@ -14,21 +14,78 @@ def workflow(name):
     return yaml.load((project_root() / ".github/workflows" / name).read_text(), Loader=yaml.BaseLoader)
 
 
-@pytest.mark.parametrize(("name", "job"), [("validate.yml", "validate"), ("release.yml", "release")])
+SHA = re.compile(r"^[0-9a-f]{40}$")
+
+
+def commands(job):
+    return [step.get("run", "") for step in job["steps"]]
+
+
+def index(job, text):
+    return next(i for i, command in enumerate(commands(job)) if text in command)
+
+
+@pytest.mark.parametrize(("name", "job"), [("validate.yml", "validate"), ("release.yml", "build")])
 def test_committed_snapshot_is_checked_against_the_build_and_final_artifacts_are_tested(name, job):
     config = workflow(name)["jobs"][job]
-    commands = [step.get("run", "") for step in config["steps"]]
-    build = next(i for i, command in enumerate(commands) if "scripts/builder.py build" in command)
-    committed = next(i for i, command in enumerate(commands) if "scripts/check_committed_snapshot.py --fresh" in command)
-    tests = next(i for i, command in enumerate(commands) if "pytest tests/" in command)
-    assert build < committed and build < tests
-    assert any("check_generated_artifacts.py --datasets-dir" in command for command in commands)
-    sdk = next(i for i, command in enumerate(commands) if "pytest tests/contract" in command)
-    assert build < sdk
-    assert config["env"]["INTERNACIA_SDK_REF"]
+    build = index(config, "scripts/builder.py build")
+    assert build < index(config, "scripts/check_committed_snapshot.py --fresh") and build < index(config, "pytest tests/")
+    assert any("check_generated_artifacts.py --datasets-dir" in command for command in commands(config))
     assert "INTERNACIA_DATASETS_DIR" in config["env"]
-    assert any("check_quality_report.py" in command for command in commands)
-    assert any("check_release_bundle.py" in command for command in commands)
+    assert any("check_quality_report.py" in command for command in commands(config))
+    assert any("check_release_bundle.py" in command for command in commands(config))
+
+
+def test_sdk_contract_suite_runs_on_the_build_at_one_pinned_commit():
+    validate = workflow("validate.yml")["jobs"]["validate"]
+    release = workflow("release.yml")["jobs"]
+    assert index(validate, "scripts/builder.py build") < index(validate, "pytest tests/contract")
+    assert release["sdk-contract"]["needs"] == "build"
+    assert any("pytest tests/contract" in command for command in commands(release["sdk-contract"]))
+    ref = release["sdk-contract"]["env"]["INTERNACIA_SDK_REF"]
+    assert SHA.match(ref) and validate["env"]["INTERNACIA_SDK_REF"] == ref
+
+
+def test_every_action_is_pinned_to_a_commit_with_its_version():
+    for path in (project_root() / ".github/workflows").glob("*.yml"):
+        for line in path.read_text().splitlines():
+            if line.strip().startswith(("uses:", "- uses:")):
+                ref = line.split("uses:", 1)[1].strip()
+                assert re.fullmatch(r"[\w.-]+/[\w.-]+@[0-9a-f]{40} # v\d+\.\d+\.\d+", ref), f"{path.name}: {ref}"
+
+
+def test_release_secrets_and_write_access_stay_in_the_publish_job():
+    config = workflow("release.yml")
+    assert config["permissions"] == {"contents": "read"}
+    jobs = config["jobs"]
+    assert {name for name, job in jobs.items() if job.get("permissions")} == {"publish"}
+    assert jobs["publish"]["permissions"] == {"contents": "write"}
+    assert set(jobs["publish"]["needs"]) == {"build", "sdk-contract"}
+    for name in ("build", "sdk-contract"):
+        assert "secrets." not in yaml.safe_dump(jobs[name]), name
+    for name, job in jobs.items():
+        for step in job["steps"]:
+            if step.get("uses", "").startswith("actions/checkout@"):
+                assert step["with"]["persist-credentials"] == "false", name
+
+
+def test_publish_verifies_the_build_digest_then_releases_github_before_hugging_face():
+    jobs = workflow("release.yml")["jobs"]
+    assert jobs["build"]["outputs"]["digest"] == "${{ steps.digest.outputs.digest }}"
+    steps = jobs["publish"]["steps"]
+    names = [step.get("name", step.get("uses", "")) for step in steps]
+    verify = names.index("Verify artifacts against the build digest")
+    release = names.index("Create GitHub release with dataset assets")
+    hf = names.index("Push to Hugging Face (optional)")
+    assert verify < release < hf
+    assert "needs.build.outputs.digest" in steps[verify]["env"]["DIGEST"]
+    assert "scripts/push_huggingface.py" in steps[hf]["run"] and "requirements-publish.txt" in steps[hf]["run"]
+    assert "pip install -r requirements-dev.txt" not in yaml.safe_dump(jobs["publish"])
+
+
+def test_validate_workflow_token_is_read_only():
+    assert workflow("validate.yml")["permissions"] == {"contents": "read"}
+    assert workflow("link-validation.yml")["permissions"] == {"contents": "read"}
 
 
 def test_docs_pr_build_has_no_publication_permissions_or_deployment():
