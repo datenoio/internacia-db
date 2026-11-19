@@ -55,7 +55,11 @@ def test_a_copied_checkout_uses_its_own_package_and_data(tmp_path):
         "print(project_root())\n",
         encoding="utf-8",
     )
-    env = {**os.environ, "PYTHONPATH": str(ROOT)}  # the other checkout is importable too
+    # The other checkout is importable too. Coverage variables are dropped: pytest-cov would
+    # follow the child into tmp_path, measure it without this repo's branch=true config, and
+    # fail to combine its data with the parent's.
+    env = {k: v for k, v in os.environ.items() if not k.startswith(("COV_CORE_", "COVERAGE_"))}
+    env["PYTHONPATH"] = str(ROOT)
     result = subprocess.run(
         [sys.executable, str(probe)], cwd=tmp_path, env=env, capture_output=True, text=True, check=True
     )
