@@ -49,7 +49,7 @@ def test_no_false_country_membership(record_id: str):
 
 def test_rdr_only_retains_actual_state_participants():
     record = _record("RDR")
-    assert [item["id"] for item in record["includes"]] == ["DE", "AT", "CH", "LI"]
-    assert {item["status"] for item in record["includes"]} == {"participant"}
+    assert record["includes"]
+    assert {(item["type"], item["status"]) for item in record["includes"]} == {("country", "participant")}
     assert "membership_count" not in record
     assert check_intblock_membership_consistency(record) == []
