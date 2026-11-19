@@ -27,6 +27,7 @@ scripts (`internacia-build`, `internacia-validate-*`) run the checkout that was 
 - Add a `provenance` entry whenever you set or update an enriched field. Validation warns when a record has fewer than four provenance entries (`INSUFFICIENT_PROVENANCE`; threshold in `data/schemas/*_completeness.yaml`).
 - See [docs/enrichment.md](docs/enrichment.md) for refresh cadence and maintainer commands.
 - Crosswalks (`geonames_id`, `ioc_code`, `fifa_code`, `fips_code`) are optional reference ids — not socioeconomic fields.
+- The country schema is closed: a field it does not declare (including a misspelled one) fails validation. Add new fields to `data/schemas/countries.schema.json` first.
 
 ### Intblocks (`data/intblocks/<category>/*.yaml`)
 

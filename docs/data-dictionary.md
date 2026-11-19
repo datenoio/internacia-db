@@ -60,7 +60,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `code_status` | string | yes | yes | Code assignment status: official_iso3166_1 (249 records), user_assigned, obsolete, or exceptionally_reserved. See docs/country-code-policy.md. Values: `official_iso3166_1`, `user_assigned`, `obsolete`, `exceptionally_reserved`. |
 | `recognition_status` | object |  | yes | Recognition metadata for non-standard entities: \{status, un_member, notes\} explaining disputed, dissolved, or collective-grouping records. |
 | `parent_entity` | object |  | yes | Parent state \{code, name\} for dependent territories and special administrative regions. |
-| `provenance` | array |  | yes | Field-level sourcing entries \{field, source, url, retrieved_at, license\} documenting where enriched values came from. |
+| `provenance` | array |  | yes | Field-level sourcing entries \{field, source, url, retrieved_at, license, note\} documenting where enriched values came from. |
 
 ## intblocks
 
