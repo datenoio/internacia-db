@@ -5,15 +5,29 @@ from __future__ import annotations
 from typing import Any
 
 
+def _record_id(item: dict[str, Any]) -> str:
+    return str(item.get("id") or item.get("code") or "<unknown record>")
+
+
+def _boolean_text(item: dict[str, Any], field: str) -> ValueError:
+    """A YAML boolean where text belongs: usually an unquoted ``no``/``yes``/``on``/``off``."""
+    return ValueError(
+        f"{_record_id(item)}: {field} is a boolean where text is expected; quote YAML "
+        "lookalikes such as 'no' (Norwegian) or 'NO' (Norway)"
+    )
+
+
 def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, Any]]:
     """
     Clean data to ensure consistency with schema.
 
-    Fixes known issues:
-    - Boolean 'lang' values (from 'no' parsed as False) -> converted to "no"
-    - Inconsistent 'partof' field -> normalized to list of strings
-    - Boolean values in string fields -> converted to strings
-    - None values in required string fields -> converted to empty strings
+    Normalizes:
+    - Inconsistent 'partof' field -> list of strings
+    - None values in string fields -> empty strings
+    - Missing capital coordinates -> null (never 0)
+
+    Raises ``ValueError`` instead of guessing when a text field holds a YAML boolean (an
+    unquoted ``no`` parses as False) or a capital coordinate is not a number.
     """
     cleaned_data = []
 
@@ -42,9 +56,8 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                 new_languages = []
                 for lang in cleaned_item["languages"]:
                     if isinstance(lang, bool):
-                        new_languages.append("no" if lang is False else "yes")
-                    else:
-                        new_languages.append(str(lang))
+                        raise _boolean_text(cleaned_item, "languages")
+                    new_languages.append(str(lang))
                 cleaned_item["languages"] = new_languages
 
             # Normalize partof to list of strings
@@ -66,7 +79,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
             for field in string_fields:
                 if field in cleaned_item:
                     if isinstance(cleaned_item[field], bool):
-                        cleaned_item[field] = "yes" if cleaned_item[field] else "no"
+                        raise _boolean_text(cleaned_item, field)
                     elif cleaned_item[field] is None:
                         cleaned_item[field] = ""
 
@@ -77,7 +90,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                         for key in ["id", "name", "type", "status", "joined", "role", "note"]:
                             if key in member:
                                 if isinstance(member[key], bool):
-                                    member[key] = "yes" if member[key] else "no"
+                                    raise _boolean_text(cleaned_item, f"includes.{key}")
                                 elif member[key] is None:
                                     member[key] = ""
 
@@ -88,7 +101,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                         for key in ["url", "type"]:
                             if key in link:
                                 if isinstance(link[key], bool):
-                                    link[key] = "yes" if link[key] else "no"
+                                    raise _boolean_text(cleaned_item, f"links.{key}")
                                 elif link[key] is None:
                                     link[key] = ""
 
@@ -99,7 +112,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                         for key in ["id", "name"]:
                             if key in name:
                                 if isinstance(name[key], bool):
-                                    name[key] = "yes" if name[key] else "no"
+                                    raise _boolean_text(cleaned_item, f"other_names.{key}")
                                 elif name[key] is None:
                                     name[key] = ""
 
@@ -110,7 +123,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                         for key in ["lang", "value"]:
                             if key in acronym:
                                 if isinstance(acronym[key], bool):
-                                    acronym[key] = "yes" if acronym[key] else "no"
+                                    raise _boolean_text(cleaned_item, f"acronyms.{key}")
                                 elif acronym[key] is None:
                                     acronym[key] = ""
 
@@ -121,16 +134,17 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                     for key in ["city", "country"]:
                         if key in hq:
                             if isinstance(hq[key], bool):
-                                hq[key] = "yes" if hq[key] else "no"
+                                raise _boolean_text(cleaned_item, f"headquarters.{key}")
                             elif hq[key] is None:
                                 hq[key] = ""
                     if "coordinates" in hq and isinstance(hq["coordinates"], dict):
                         for key in ["lat", "lng"]:
                             if key in hq["coordinates"]:
                                 if isinstance(hq["coordinates"][key], bool):
-                                    hq["coordinates"][key] = 0.0
-                                elif hq["coordinates"][key] is None:
-                                    hq["coordinates"][key] = 0.0
+                                    raise ValueError(
+                                        f"{_record_id(cleaned_item)}: headquarters.coordinates.{key} is a boolean, not a number"
+                                    )
+                                # None stays null: unknown coordinates are never a fabricated 0,0 point.
 
             # Ensure topics fields are strings
             if "topics" in cleaned_item:
@@ -139,7 +153,7 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                         for key in ["key", "name"]:
                             if key in topic:
                                 if isinstance(topic[key], bool):
-                                    topic[key] = "yes" if topic[key] else "no"
+                                    raise _boolean_text(cleaned_item, f"topics.{key}")
                                 elif topic[key] is None:
                                     topic[key] = ""
 
@@ -195,13 +209,18 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
             cc = cleaned_item.get("capital_city")
             if isinstance(cc, dict):
                 for coord in ("lat", "lng"):
-                    if coord in cc and cc[coord] is not None:
+                    value = cc.get(coord)
+                    if value is None:
+                        cc[coord] = None  # unknown stays null; never a fabricated 0,0 point
+                    elif isinstance(value, bool) or not isinstance(value, (int, float, str)):
+                        raise ValueError(f"{_record_id(cleaned_item)}: capital_city.{coord} is not a number: {value!r}")
+                    else:
                         try:
-                            cc[coord] = float(cc[coord])
-                        except (TypeError, ValueError):
-                            cc[coord] = 0.0
-                    elif coord not in cc:
-                        cc[coord] = 0.0
+                            cc[coord] = float(value)
+                        except ValueError as exc:
+                            raise ValueError(
+                                f"{_record_id(cleaned_item)}: capital_city.{coord} is not a number: {value!r}"
+                            ) from exc
 
             prov = cleaned_item.get("provenance")
             if prov is None:
@@ -224,14 +243,14 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                             for key in ["lang", "name"]:
                                 if key in name:
                                     if isinstance(name[key], bool):
-                                        name[key] = "yes" if name[key] else "no"
+                                        raise _boolean_text(cleaned_item, f"other_names.{key}")
                                     elif name[key] is None:
                                         name[key] = ""
             # Ensure id and name are strings
             for field in ["id", "name"]:
                 if field in cleaned_item:
                     if isinstance(cleaned_item[field], bool):
-                        cleaned_item[field] = "yes" if cleaned_item[field] else "no"
+                        raise _boolean_text(cleaned_item, field)
                     elif cleaned_item[field] is None:
                         cleaned_item[field] = ""
 
