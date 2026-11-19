@@ -1,9 +1,10 @@
 """Test bootstrap.
 
-``internacia_builder`` is expected to be installed (``pip install -e .``), so no
-repository-root ``sys.path`` insert is needed. Scripts under ``scripts/`` are not
-part of the package (see the deferred ``refactor-scripts-package`` OpenSpec
-change), so tests that exercise them import via this path insert.
+``pythonpath = ["."]`` in ``pyproject.toml`` puts this checkout first, so tests import
+its ``internacia_builder`` even when another checkout is installed in editable mode (a
+git worktree next to the main checkout). Scripts under ``scripts/`` are not part of the
+package (see the deferred ``refactor-scripts-package`` OpenSpec change), so tests that
+exercise them import via this path insert.
 """
 
 import os

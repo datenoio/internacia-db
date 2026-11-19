@@ -3,6 +3,8 @@
 import argparse
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
 from internacia_builder.distribution import check_release_version, validate_bundle
 
 

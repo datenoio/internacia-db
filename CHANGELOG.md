@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- `python scripts/<name>.py` and `pytest` now import the `internacia_builder` of the checkout they run in (`scripts/_checkout.py`, `pythonpath = ["."]`). Before, with an editable install from another checkout, a script in a git worktree silently ran the other checkout's code against its data; only `builder.py` had this guard.
+
 - `last_verified` set to 2026-10-25 for IPBES (151 coded members after the United States withdrew on 6 February 2026 and Slovenia joined on 9 February 2026; the Plenary 12 list prints both Eswatini and Swaziland, and the Council of the EU counts 152), the Global Fund (123 countries with an eligible or transition-funded component on the 2026 eligibility list), ICH (New Zealand and Pakistan added as observers; 25 members), the European Mathematical Society (52 full corporate members in 40 countries; Serbia added, and Belarus, Malta, and North Macedonia removed), EuChemS (42 societies in the same 35 countries), and FACS (the 31 coded societies match the member page; the Chemical Society of the South Pacific has no single country code).
 - `last_verified` set to 2026-10-25 for the OFC (11 ordinary members in the March 2026 statutes; Kiribati and Tuvalu are associate members; Niue is not a member) and the Rio Group (24 members in the 29 September 2011 UN statement, including Suriname; CELAC succeeded the group on 3 December 2011).
 - `last_verified` set to 2026-10-25 for the Global Health Security Agenda (71 countries on the membership page; international and non-government organizations on that page are not country rows).
