@@ -3,7 +3,7 @@
 - [x] 1.2 Make `name` optional for `type: country` includes in `intblocks.schema.json` (if/then)
 - [x] 1.3 Normalize the 3,501 differing source names with a one-off script; verify only `name` changed
 - [x] 1.4 `INCLUDE_NAME_MISMATCH`: exact comparison with the country `name`, validator warning, registry update
-- [ ] 1.5 Update tooling that writes includes to write the country `name` (wbgroup sync lives on the World Bank branch; nothing on main writes include names)
+- [x] 1.5 Update tooling that writes includes to write the country `name` (the wbgroup roster sync writes it on every country entry)
 - [x] 1.6 Tests: export label, optional name, rule severity
 
 ## 2. Associate statuses (MINOR)

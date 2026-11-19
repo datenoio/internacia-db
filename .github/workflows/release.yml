@@ -114,9 +114,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.release-datasets
-      # internacia-python commit whose tests/contract suite must pass before publishing (v0.4.0).
+      # internacia-python commit whose tests/contract suite must pass before publishing (v0.4.1).
       # Bump it to the latest internacia-python release when one is made.
-      INTERNACIA_SDK_REF: 94445907dccd11497af87fee839ec597dcb02871
+      INTERNACIA_SDK_REF: d2ba4e2ab37c2e94b2fc7897375870e3db13ce24
     steps:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
