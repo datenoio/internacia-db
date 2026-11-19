@@ -118,7 +118,7 @@ def validate_lifecycle(
 def validate_scope_category(
     records: list[tuple[str, dict[str, Any]]],
 ) -> list[str]:
-    """Reject unknown categories and formal records without one."""
+    """Reject unknown categories, formal records without one, and non-formal IGOs."""
     return [f"{rel}: {issue['suggested_action']}" for rel, rec in records
             for issue in intblock_rules.check_intblock_scope_category(rec)
             if issue["issue_type"] != "SCOPE_CATEGORY_SEMANTIC_MISMATCH"]

@@ -74,6 +74,14 @@ def test_recoding_a_deprecated_status_to_its_replacement_is_not_a_roster_change(
     assert check_changed_records([("f.yaml", recoded)], {"f.yaml": judged}, "origin/main")
 
 
+def test_reclassifying_a_record_does_not_need_last_verified():
+    before = {"id": "QSD", "status": "informal", "scope_category": "igo", "includes": [{"id": "IN"}]}
+    reclassified = {**before, "scope_category": "policy_forum", "provenance": [{"field": "scope_category"}]}
+    assert check_changed_records([("q.yaml", reclassified)], {"q.yaml": before}, "origin/main") == []
+    renamed = {**reclassified, "name": "Quad"}
+    assert check_changed_records([("q.yaml", renamed)], {"q.yaml": before}, "origin/main")
+
+
 def test_tier1_list_is_loaded():
     tier1 = load_tier1()
     assert {"UN", "EU", "NATO", "AFUNION", "G-20"} <= set(tier1)

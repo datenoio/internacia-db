@@ -40,7 +40,8 @@ scripts (`internacia-build`, `internacia-validate-*`) run the checkout that was 
 - `includes[].id` is authoritative (ISO alpha-2 for countries); `name` is a display label.
 - **`last_verified`** is the date you checked the record against the source in its `provenance`. Every new or changed
   intblock must have one, and a change to `includes` must update it; validation compares your branch with the pull
-  request base (`INTERNACIA_BASE_REF` overrides it locally). Tier-1 organizations (`data/watch/rosters.yaml`) are
+  request base (`INTERNACIA_BASE_REF` overrides it locally). Changes limited to the Wikidata metadata fields or to
+  `scope_category` (and their provenance) are exempt: they do not attest the roster. Tier-1 organizations (`data/watch/rosters.yaml`) are
   overdue after 6 months, all others after 12; `python scripts/last_verified_report.py` prints the counts.
 - Dissolved organizations: set `status: historical` and a `dissolved` date. Do not invent membership lists — leave `includes` empty for records that still need research.
 - **Quote YAML-boolean lookalikes**: write `'NO'` (Norway) and `'no'` (Norwegian), otherwise YAML parses them as `false`.

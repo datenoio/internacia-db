@@ -137,14 +137,20 @@ def changed_base_records(
     return records
 
 
+# Repository taxonomy fields: they classify the record under docs/intblock-inclusion-policy.md
+# and say nothing about the roster, so reclassifying a record does not attest its members.
+CLASSIFICATION_FIELDS = frozenset({"scope_category"})
+
+
 def _enrichment_metadata_fields() -> frozenset[str]:
-    """Intblock fields the metadata enricher fills from Wikidata, plus their provenance.
+    """Intblock fields the metadata enricher fills from Wikidata, plus their provenance
+    and the repository's classification fields.
 
     ``last_verified`` attests the roster, so changes limited to these fields do not need it.
     """
     from internacia_builder.enrichment_sources import load_policy  # noqa: PLC0415 (import cycle)
 
-    return load_policy().fields("intblocks") | {"provenance"}
+    return load_policy().fields("intblocks") | {"provenance"} | CLASSIFICATION_FIELDS
 
 
 def _roster(includes: Any) -> Any:
@@ -203,9 +209,9 @@ def check_changed_records(
     Errors for records that are new or changed since ``base_ref`` (``changed``, from
     ``changed_base_records``) and have no ``last_verified``, and for records whose
     ``includes`` changed while ``last_verified`` stayed the same. Changes limited to the
-    enrichment metadata fields (data/schemas/enrichment_sources.yaml), to the labels of
-    country includes, or to recoding a deprecated include status to one of its replacements
-    are exempt.
+    enrichment metadata fields (data/schemas/enrichment_sources.yaml), to
+    ``CLASSIFICATION_FIELDS``, to the labels of country includes, or to recoding a deprecated
+    include status to one of its replacements are exempt.
     """
     errors: list[str] = []
     metadata = _enrichment_metadata_fields()
