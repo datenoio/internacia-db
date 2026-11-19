@@ -1,12 +1,29 @@
 """Unit tests for builder.clean_data normalization."""
 
+import pytest
+
 from internacia_builder import build as builder
 
 
-def test_intblocks_boolean_language_list_normalized():
-    data = [{"id": "X", "languages": ["en", False, "sv"]}]
-    out = builder.clean_data(data, "intblocks")
-    assert out[0]["languages"] == ["en", "no", "sv"]
+def test_yaml_booleans_in_text_fields_fail_instead_of_becoming_yes_or_no():
+    cases = [
+        ({"id": "X", "languages": ["en", False, "sv"]}, "intblocks", "X: languages"),
+        ({"id": "X", "includes": [{"id": False, "type": "country", "status": "member"}]}, "intblocks", "X: includes.id"),
+        ({"id": "X", "name": True}, "intblocks", "X: name"),
+        ({"id": "intorg", "name": False}, "blocktypes", "intorg: name"),
+    ]
+    for record, dataset, message in cases:
+        with pytest.raises(ValueError, match=message):
+            builder.clean_data([record], dataset)
+
+
+def test_coordinates_are_never_fabricated():
+    country = builder.clean_data([{"code": "AA", "capital_city": {"name": "A", "lat": "12.5"}}], "countries")[0]
+    assert country["capital_city"] == {"name": "A", "lat": 12.5, "lng": None}
+    with pytest.raises(ValueError, match="AA: capital_city.lat is not a number"):
+        builder.clean_data([{"code": "AA", "capital_city": {"name": "A", "lat": "north", "lng": 1}}], "countries")
+    block = builder.clean_data([{"id": "X", "headquarters": {"coordinates": {"lat": None, "lng": 3.0}}}], "intblocks")[0]
+    assert block["headquarters"]["coordinates"] == {"lat": None, "lng": 3.0}
 
 
 def test_intblocks_partof_string_becomes_list():
