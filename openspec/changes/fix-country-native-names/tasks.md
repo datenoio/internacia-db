@@ -21,4 +21,4 @@
 - [x] 5.1 Schema description, `docs/data-dictionary.md`, README, `docs/ai-consumers.md`, `docs/enrichment.md`, `llms*.txt`
 - [x] 5.2 Migration notes in CHANGELOG and `docs/data-contract.md`
 - [x] 5.3 `internacia-python`: add `other_names` to `search` (internacia-python#11, released in 0.4.1)
-- [ ] 5.4 Schedule for the next MAJOR release (maintainer)
+- [x] 5.4 Schedule for the next MAJOR release (maintainer): v4.0.0

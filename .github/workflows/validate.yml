@@ -57,9 +57,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.ci-datasets
-      # internacia-python commit whose tests/contract suite must pass (v0.4.1). Keep it equal to
+      # internacia-python commit whose tests/contract suite must pass (0.5.0, contracts 3 and 4).
+      # Keep it equal to
       # INTERNACIA_SDK_REF in release.yml so a pull request fails before the release would.
-      INTERNACIA_SDK_REF: d2ba4e2ab37c2e94b2fc7897375870e3db13ce24
+      INTERNACIA_SDK_REF: 74f9338efe1d0b36d10ed0eadff08ccf75063d34
     strategy:
       fail-fast: false
       matrix:
