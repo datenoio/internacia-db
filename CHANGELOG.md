@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- `PACIFICALLIANCE` now describes the Pacific Alliance's free trade agreement, the Additional Protocol to the Framework Agreement (signed 10 February 2014, in force 1 May 2016, parties Chile, Colombia, Mexico and Peru), instead of duplicating the alliance. The alliance with its associated state, candidates and observers stays `PACALL`. The Wikidata id Q7122288 stays on `PACALL` only; the Protocol has no Wikidata item and is listed in `wikidata_exclusions.yaml`. Costa Rica, Panama and Singapore are no longer listed on the trade agreement, which they are not parties to.
 - The build no longer guesses: a YAML boolean in a text field (an unquoted `no` parses as False) fails with the record and field instead of becoming "yes"/"no", and a missing or invalid capital or headquarters coordinate no longer becomes 0 (missing stays null, invalid fails). No current record is affected.
 - Club de Berne roster: Austria (re-admitted in 2022) and the United Kingdom are added, giving the 30 services of the 27 EU states, Norway, the United Kingdom and Switzerland that the cited source lists; `last_verified` is set.
 - The World Bank groups `OEC` (High income: OECD) and `NOC` (High income: nonOECD) are `historical`, with `dissolved: '2016-07-05'`: the World Bank removed both in the July 2016 World Development Indicators update (Data Updates and Errata). Their last rosters are kept.
