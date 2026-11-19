@@ -552,7 +552,7 @@ def create_duckdb_database(
             con.register("arrow_source", arrow_table)
             con.execute(f"CREATE TABLE {name} AS SELECT * FROM arrow_source")
             con.unregister("arrow_source")
-            counts[name] = con.execute(f"SELECT COUNT(*) FROM {name}").fetchone()[0]
+            counts[name] = con.execute(f"SELECT COUNT(*) FROM {name}").fetchall()[0][0]
 
         # Embed a self-describing _meta table (one row per dataset) so the
         # database file carries its own version/schema info.
