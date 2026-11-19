@@ -183,7 +183,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     source["memberships"] = build_membership_rows(source["intblocks"])
     con = duckdb.connect(str(datasets_dir / "internacia.duckdb"), read_only=True)
     try:
-        meta = con.execute("SELECT * FROM _meta").to_arrow_table().to_pylist()
+        meta = con.sql("SELECT * FROM _meta").to_arrow_table().to_pylist()
         if Counter(r["dataset"] for r in meta) != Counter(dict.fromkeys(SCHEMAS, 1)):
             problems.append("_meta: expected exactly one row per dataset")
         for name, schema_fn in SCHEMAS.items():
@@ -194,7 +194,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
             if not table.schema.equals(schema, check_metadata=False):
                 problems.append(f"{name}.parquet: schema differs from declared export schema")
             _compare(table.to_pylist(), expected, f"{name}.parquet", problems, key)
-            duck_rows = con.execute(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
+            duck_rows = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
             _compare(duck_rows, expected, f"{name}.duckdb", problems, key)
             if name in DATASETS:
                 _compare(source[name], source[name], f"{name}.source", problems, key)
@@ -241,13 +241,13 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
             expected = loader(root)
             _compare(json.loads((datasets_dir / f"{name}.json").read_text()), expected, f"{name}.json", problems, "alias")
             _compare(pq.read_table(datasets_dir / f"{name}.parquet").to_pylist(), expected, f"{name}.parquet", problems, "alias")
-            duck = con.execute(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
+            duck = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
             _compare(duck, _arrow_rows(expected, get_aliases_schema()), f"{name}.duckdb", problems, "alias")
         migrations = _arrow_rows(load_attribute_intblock_migrations(root), get_attribute_migration_schema())
-        duck = con.execute("SELECT * FROM attribute_intblock_migrations").to_arrow_table().to_pylist()
+        duck = con.sql("SELECT * FROM attribute_intblock_migrations").to_arrow_table().to_pylist()
         _compare(duck, migrations, "attribute_intblock_migrations.duckdb", problems, "retired_id")
         for name, expected in _expected_views(source).items():
-            duck = con.execute(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
+            duck = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
             _compare(duck, expected, f"{name} view", problems)
         if len({_canonical(i) for i in identities.values()}) != 1:
             problems.append("build identity differs across artifacts")
