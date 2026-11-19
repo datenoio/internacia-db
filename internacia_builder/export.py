@@ -447,6 +447,24 @@ def save_yaml_zst(data: list[dict[str, Any]], output_file: Path):
         f.write(cctx.compress(yaml_str.encode("utf-8")))
     typer.echo(f"✓ Saved YAML (zstd): {output_file}")
 
+def fill_country_include_names(
+    intblocks_data: list[dict[str, Any]], countries_data: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Set ``includes[].name`` of ``type: country`` entries to the country's ``name``.
+
+    ``id`` is the join key; the label always comes from the country record, so a stale or
+    missing source name never reaches an export. Other entry types keep their source name.
+    """
+    names = {str(c["code"]): c.get("name") for c in countries_data if c.get("code")}
+    for record in intblocks_data:
+        for inc in record.get("includes") or []:
+            if isinstance(inc, dict) and inc.get("type") == "country":
+                name = names.get(str(inc.get("id")))
+                if name:
+                    inc["name"] = name
+    return intblocks_data
+
+
 def build_membership_rows(intblocks_data: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Flatten country-coded includes entries into one membership edge per row.
 

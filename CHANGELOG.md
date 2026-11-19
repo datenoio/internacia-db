@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Exported `includes[].name` of `type: country` entries is the country's `name`, filled by the build; `name` is optional for those entries in the source. The 3,501 source names that differed (95 id–name pairs, for example TR `Turkey`, MK `Macedonia, FYR`, CV `Cape Verde`) are rewritten to the country `name`. `INCLUDE_NAME_MISMATCH` compares exactly and is now a validator warning. Relabelling a country include does not need `last_verified`.
+- Associate memberships use `associate_member`: 40 entries move from `associate` (UNESCO 12, SCAR 13, ACS 10, IMO 3, EMBL 1, OECD DAC 1) and 10 from `associated` (OECS 5, PASO 3, MSG 1, Dutch Language Union 1). OECS, PASO, MSG and the Dutch Language Union were checked against their sources and have `last_verified` 2026-11-19. OpenSpec change `normalize-include-labels-and-statuses`.
+
+### Deprecated
+
+- Include statuses `associate` and `associated_observer`, listed in `contract.json` `deprecated[]` (new `enum_value` entries) and reported as `DEPRECATED_INCLUDE_STATUS` warnings. They will be removed in the next MAJOR release. Fifteen entries still use `associate` (CEOS 12, AMN 2, GRECO 1) because their sources could not be reached; recoding a deprecated value to one of its replacements does not need `last_verified`.
+
 ### Fixed
 
 - `last_verified` set to 2026-10-25 for IPBES (151 coded members after the United States withdrew on 6 February 2026 and Slovenia joined on 9 February 2026; the Plenary 12 list prints both Eswatini and Swaziland, and the Council of the EU counts 152), the Global Fund (123 countries with an eligible or transition-funded component on the 2026 eligibility list), ICH (New Zealand and Pakistan added as observers; 25 members), the European Mathematical Society (52 full corporate members in 40 countries; Serbia added, and Belarus, Malta, and North Macedonia removed), EuChemS (42 societies in the same 35 countries), and FACS (the 31 coded societies match the member page; the Chemical Society of the South Pacific has no single country code).

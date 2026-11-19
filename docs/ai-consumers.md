@@ -154,7 +154,7 @@ Organizations, treaties, alliances, federations, and similar groupings. Each rec
 - `partof` — parent organization ids
 
 Member entry shape: `{id, name, type, status, joined, left, role, note}`.
-Use `id` for joins; `name` is a source label and may not match the canonical country name.
+Use `id` for joins. For `type: country` entries the export sets `name` to the country's `name`; other types keep their source label.
 `left` is the departure date (ISO string) when the member left.
 
 ### Membership status (`includes[].status`)
@@ -164,8 +164,10 @@ Canonical catalog: [`data/schemas/includes_status.yaml`](../data/schemas/include
 | Status | Meaning |
 |--------|---------|
 | `member` / `founding_member` | Current (or founding) full member |
-| `observer` / `associated_observer` | Observer seat |
-| `associate` / `associate_member` / `associated` | Associate-tier participation |
+| `observer` | Observer seat |
+| `associate_member` | Associate membership, as the organization's instrument names it |
+| `associated` | Association that the instrument does not call membership (associated countries/nations) |
+| `associate` / `associated_observer` | **Deprecated** (`contract.json` `deprecated[]`); removed in the next MAJOR. Read them as `associate_member` / `observer` until then |
 | `former_member` | Left; prefer `left` date when known |
 | `participant` / `partner` / `cooperating` | Non-member participation |
 | `recipient` / `contributor` / `funder` | Program / funding roles |

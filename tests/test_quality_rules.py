@@ -194,19 +194,31 @@ def test_allowlisted_wikidata_id_suppressed():
 
 def test_include_name_mismatch_reported():
     recs, paths = _intblocks(
-        {"id": "ORG", "includes": [{"id": "TR", "name": "Anatolia", "type": "country", "status": "member"}]}
+        {"id": "ORG", "includes": [{"id": "TR", "name": "Turkey", "type": "country", "status": "member"}]}
     )
-    countries = {"TR": {"code": "TR", "name": "Turkey"}}
+    countries = {"TR": {"code": "TR", "name": "Türkiye"}}
     issues = cross_rules.check_include_name_mismatch(recs, paths, countries)
     assert _types(issues) == ["INCLUDE_NAME_MISMATCH"]
+    assert "Türkiye" in issues[0]["suggested_action"]
 
 
-def test_include_name_variant_accepted():
+def test_include_name_must_match_exactly_or_be_omitted():
     recs, paths = _intblocks(
-        {"id": "ORG", "includes": [{"id": "KR", "name": "Republic of Korea", "type": "country", "status": "member"}]}
+        {"id": "ORG", "includes": [
+            {"id": "KR", "name": "Republic of Korea", "type": "country", "status": "member"},
+            {"id": "FR", "type": "country", "status": "member"},
+            {"id": "EU", "name": "EU", "type": "organization", "status": "member"},
+        ]}
     )
-    countries = {"KR": {"code": "KR", "name": "Korea, Rep.", "official_name": "Korea, Republic of"}}
-    assert cross_rules.check_include_name_mismatch(recs, paths, countries) == []
+    countries = {"KR": {"code": "KR", "name": "Korea, Rep."}, "FR": {"code": "FR", "name": "France"}}
+    assert [i["current_value"] for i in cross_rules.check_include_name_mismatch(recs, paths, countries)] == ["Republic of Korea"]
+
+
+def test_include_name_rule_warns_without_failing():
+    from internacia_builder.validate import registry
+
+    rule = next(r for r in registry.INTBLOCK_RULES if r.name == "include display names")
+    assert rule.severity == registry.W
 
 
 # --- Indicator plausibility ----------------------------------------------------

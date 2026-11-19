@@ -507,7 +507,7 @@ ORDER BY i.name
 LIMIT 20;
 ```
 
-Gotcha: `includes[].name` is a *label* and may not match the canonical country name.
+Gotcha: `includes[].name` is a *label*. For countries the export copies the country's `name`, but joins still belong on the code.
 
 ```sql
 -- Wrong: don't join on includes[].name

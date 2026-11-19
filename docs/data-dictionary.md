@@ -72,7 +72,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `status` | string | yes | yes | Formality of the entity: e.g. 'formal' (treaty-based organization) or informal grouping. Values: `formal`, `informal`, `de-facto`, `historical`. |
 | `languages` | array |  | yes | Official/working languages as ISO 639-1 codes. |
 | `links` | array |  | yes | Related URLs as \{url, type\} where type is website, wikipedia, or wikidata. |
-| `includes` | array |  | yes | Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only. status captures member/observer/former_member etc.; joined/left are ISO dates. |
+| `includes` | array |  | yes | Membership roster. Join on includes[].id (country code or intblock id per type); includes[].name is a display label only (for type: country the build sets it to the country's name). status captures member/observer/former_member etc. (see data/schemas/includes_status.yaml); joined/left are ISO dates. |
 | `founded` | string |  | yes | Foundation date (YYYY, YYYY-MM, YYYY-MM-DD) or decade (e.g. 1950s) when only decade precision is known |
 | `dissolved` | string |  | yes | Dissolution date (ISO string) for defunct entities. |
 | `active_period` | object |  | yes | Operational period as \{start, end\} ISO date strings; end is absent for active entities. |

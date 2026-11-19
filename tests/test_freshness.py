@@ -46,6 +46,34 @@ def test_roster_change_must_refresh_last_verified():
     assert check_changed_records([("x.yaml", description_only)], {"x.yaml": before}, "origin/main") == []
 
 
+def test_country_include_labels_are_not_roster_changes():
+    before = {"id": "X", "last_verified": "2026-01-01", "includes": [
+        {"id": "TR", "name": "Turkey", "type": "country", "status": "member"},
+        {"id": "EU", "name": "EU", "type": "organization", "status": "member"},
+    ]}
+    relabelled = {**before, "includes": [{**before["includes"][0], "name": "Türkiye"}, before["includes"][1]]}
+    assert check_changed_records([("x.yaml", relabelled)], {"x.yaml": before}, "origin/main") == []
+    unverified = {k: v for k, v in relabelled.items() if k != "last_verified"}
+    old = {k: v for k, v in before.items() if k != "last_verified"}
+    assert check_changed_records([("x.yaml", unverified)], {"x.yaml": old}, "origin/main") == []
+    org_renamed = {**before, "includes": [before["includes"][0], {**before["includes"][1], "name": "European Union"}]}
+    assert check_changed_records([("x.yaml", org_renamed)], {"x.yaml": before}, "origin/main")
+    recoded = {**before, "includes": [{**before["includes"][0], "status": "observer"}, before["includes"][1]]}
+    assert check_changed_records([("x.yaml", recoded)], {"x.yaml": before}, "origin/main")
+
+
+def test_recoding_a_deprecated_status_to_its_replacement_is_not_a_roster_change():
+    entry = {"id": "FO", "name": "Faroe Islands", "type": "country", "status": "associate"}
+    before = {"id": "IMO", "last_verified": "2026-01-01", "includes": [entry]}
+    migrated = {**before, "includes": [{**entry, "status": "associate_member"}]}
+    assert check_changed_records([("i.yaml", migrated)], {"i.yaml": before}, "origin/main") == []
+    unrelated = {**before, "includes": [{**entry, "status": "member"}]}
+    assert check_changed_records([("i.yaml", unrelated)], {"i.yaml": before}, "origin/main")
+    judged = {"id": "FAO", "last_verified": "2026-01-01", "includes": [{**entry, "status": "associated"}]}
+    recoded = {**judged, "includes": [{**entry, "status": "associate_member"}]}
+    assert check_changed_records([("f.yaml", recoded)], {"f.yaml": judged}, "origin/main")
+
+
 def test_tier1_list_is_loaded():
     tier1 = load_tier1()
     assert {"UN", "EU", "NATO", "AFUNION", "G-20"} <= set(tier1)

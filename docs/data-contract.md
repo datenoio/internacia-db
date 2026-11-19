@@ -21,7 +21,7 @@ generated one.
 | `type_grammar` | Version of the logical type grammar below. |
 | `tables[]` | One entry per table: `name`, `in_duckdb`, `primary_key`, `foreign_keys`, `schema_hash`, `columns[]` (`name`, `type`, `nullable`). |
 | `enums[]` | Enum-like columns: `table`, `column` (nested paths use `field[].sub`), `values`, `open`. |
-| `deprecated[]` | Columns or resources scheduled for removal in the next MAJOR release. |
+| `deprecated[]` | Columns, resources or enum values scheduled for removal in the next MAJOR release. An enum value entry is `{kind: "enum_value", table, column, value, replacements, removal}`; today `associate` and `associated_observer` on `memberships.status` and `intblocks.includes[].status`, from the `deprecated` markers in `data/schemas/includes_status.yaml`. |
 
 Every entry in `tables[]` is present in `internacia.duckdb`; `kind` is `table` or `view`.
 The alias and migration tables are also published as JSON and Parquet files. The `*-lite`

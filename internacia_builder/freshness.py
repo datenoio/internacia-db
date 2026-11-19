@@ -147,8 +147,51 @@ def _enrichment_metadata_fields() -> frozenset[str]:
     return load_policy().fields("intblocks") | {"provenance"}
 
 
+def _roster(includes: Any) -> Any:
+    """``includes`` without the labels of ``type: country`` entries.
+
+    The build copies those labels from the country records, so renaming one is not a
+    roster change and does not need ``last_verified``.
+    """
+    if not isinstance(includes, list):
+        return includes
+    return [
+        {k: v for k, v in inc.items() if k != "name"} if isinstance(inc, dict) and inc.get("type") == "country" else inc
+        for inc in includes
+    ]
+
+
+def _deprecated_statuses() -> dict[str, set[str]]:
+    """``{deprecated status: replacements}`` from data/schemas/includes_status.yaml."""
+    from internacia_builder.paths import project_root  # noqa: PLC0415
+
+    path = project_root() / "data" / "schemas" / "includes_status.yaml"
+    statuses = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}
+    return {
+        str(name): set((spec.get("deprecated") or {}).get("replacements") or [])
+        for name, spec in statuses.items()
+        if isinstance(spec, dict) and spec.get("deprecated")
+    }
+
+
+def _same_roster(before: Any, after: Any, deprecated: dict[str, set[str]]) -> bool:
+    """Rosters are equal ignoring country labels and the recoding of a deprecated status to
+    one of its listed replacements (a vocabulary migration, not a change of who is a member)."""
+    before, after = _roster(before), _roster(after)
+    if not (isinstance(before, list) and isinstance(after, list)) or len(before) != len(after):
+        return before == after
+    for old, new in zip(before, after, strict=True):
+        if old == new:
+            continue
+        if not (isinstance(old, dict) and isinstance(new, dict)):
+            return False
+        if new.get("status") not in deprecated.get(str(old.get("status")), set()) or {**old, "status": new.get("status")} != new:
+            return False
+    return True
+
+
 def _strip(record: dict[str, Any], names: frozenset[str]) -> dict[str, Any]:
-    return {k: v for k, v in record.items() if k not in names}
+    return {k: v for k, v in record.items() if k not in names and k != "includes"}
 
 
 def check_changed_records(
@@ -160,15 +203,22 @@ def check_changed_records(
     Errors for records that are new or changed since ``base_ref`` (``changed``, from
     ``changed_base_records``) and have no ``last_verified``, and for records whose
     ``includes`` changed while ``last_verified`` stayed the same. Changes limited to the
-    enrichment metadata fields (data/schemas/enrichment_sources.yaml) are exempt.
+    enrichment metadata fields (data/schemas/enrichment_sources.yaml), to the labels of
+    country includes, or to recoding a deprecated include status to one of its replacements
+    are exempt.
     """
     errors: list[str] = []
     metadata = _enrichment_metadata_fields()
+    deprecated = _deprecated_statuses()
     for rel, record in records:
         if rel not in changed:
             continue
         before = changed[rel]
-        if before == record or (before is not None and _strip(before, metadata) == _strip(record, metadata)):
+        if before == record or (
+            before is not None
+            and _strip(before, metadata) == _strip(record, metadata)
+            and _same_roster(before.get("includes"), record.get("includes"), deprecated)
+        ):
             continue
         if not record.get("last_verified"):
             state = "new" if before is None else "changed"
@@ -178,7 +228,7 @@ def check_changed_records(
             )
         elif (
             before is not None
-            and before.get("includes") != record.get("includes")
+            and not _same_roster(before.get("includes"), record.get("includes"), deprecated)
             and before.get("last_verified") == record.get("last_verified")
         ):
             errors.append(

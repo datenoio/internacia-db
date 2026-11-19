@@ -371,7 +371,7 @@ Seven non-standard codes are retained with explicit status (see [docs/country-co
 | `founded` | String | Foundation date |
 | `geographic_scope` | String | Scope |
 | `regions` | List[String] | Regions covered |
-| `includes` | List[Struct] | Members `{id, name, type, status, joined, left, role, note}` — **`id` is authoritative**; `name` is a source label; not every link is legal membership |
+| `includes` | List[Struct] | Members `{id, name, type, status, joined, left, role, note}` — **`id` is authoritative**; for `type: country` the export sets `name` to the country's `name`; not every link is legal membership |
 | `membership_count` | Integer | Reported or legacy count; on reference sets it may count elements, not institutional members |
 | `membership_count_type` | String | Unit of the reported headcount, when non-country-based |
 | `active_period` | Struct | `{start, end}` |

@@ -619,6 +619,31 @@ def check_intblock_includes_contract(
     return issues
 
 
+def check_deprecated_include_statuses(
+    record: dict[str, Any], status_catalog: dict[str, dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Warn on includes[].status values marked ``deprecated`` in includes_status.yaml."""
+    issues: list[dict[str, Any]] = []
+    for idx, inc in enumerate(record.get("includes") or []):
+        if not isinstance(inc, dict):
+            continue
+        status = str(inc.get("status") or "")
+        marker = (status_catalog.get(status) or {}).get("deprecated")
+        if not marker:
+            continue
+        replacements = " or ".join(f"'{r}'" for r in marker.get("replacements") or [])
+        issues.append({
+            "issue_type": "DEPRECATED_INCLUDE_STATUS",
+            "field": f"includes[{idx}].status",
+            "current_value": status,
+            "suggested_action": (
+                f"status '{status}' is deprecated and will be removed in the {marker.get('removal') or 'next MAJOR'} "
+                f"release; use {replacements} (see data/schemas/includes_status.yaml)"
+            ),
+        })
+    return issues
+
+
 def check_intblock_links(
     record: dict[str, Any],
     check_http: bool = False,

@@ -1027,8 +1027,9 @@ institutions, companies, or individuals rather than countries declare it via
 
 ### Include label vs canonical country name
 
-`includes[].name` is a display label — compare against `countries.name` and
-`common_names`:
+`includes[].name` is a display label. For `type: country` entries the build copies the
+country's `name`, so `include_label` equals `canonical_name` below; organization entries keep
+their own label:
 
 ```sql
 SELECT
@@ -1046,10 +1047,10 @@ ORDER BY i.id, m.id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 1486 mismatches total (advisory); examples include `CD` labeled
-"Congo, The Democratic Republic of the" vs canonical "Congo, Dem. Rep.".
+**Expected:** 0 rows. The build copies the country `name` into every `type: country`
+include, and validation warns (`INCLUDE_NAME_MISMATCH`) when a source label differs.
 
-**Gotcha:** Mismatches are **not errors** — always join on `includes[].id`, never on
+**Gotcha:** Labels are still for display — always join on `includes[].id`, never on
 `includes[].name`.
 
 ## Taxonomy and discovery

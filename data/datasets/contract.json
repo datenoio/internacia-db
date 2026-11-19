@@ -1106,5 +1106,50 @@
       "open": true
     }
   ],
-  "deprecated": []
+  "deprecated": [
+    {
+      "kind": "enum_value",
+      "table": "memberships",
+      "column": "status",
+      "value": "associate",
+      "replacements": [
+        "associate_member",
+        "associated"
+      ],
+      "removal": "next MAJOR"
+    },
+    {
+      "kind": "enum_value",
+      "table": "intblocks",
+      "column": "includes[].status",
+      "value": "associate",
+      "replacements": [
+        "associate_member",
+        "associated"
+      ],
+      "removal": "next MAJOR"
+    },
+    {
+      "kind": "enum_value",
+      "table": "memberships",
+      "column": "status",
+      "value": "associated_observer",
+      "replacements": [
+        "observer",
+        "associated"
+      ],
+      "removal": "next MAJOR"
+    },
+    {
+      "kind": "enum_value",
+      "table": "intblocks",
+      "column": "includes[].status",
+      "value": "associated_observer",
+      "replacements": [
+        "observer",
+        "associated"
+      ],
+      "removal": "next MAJOR"
+    }
+  ]
 }

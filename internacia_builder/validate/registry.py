@@ -411,6 +411,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
             enabled=lambda ctx: int(ctx.intblocks_provenance.get("max_age_months") or 0) > 0),
     _record("description quality", INTBLOCKS, REPORT,
             lambda ctx, r, p: intblock_rules.check_intblock_description_quality(r)),
+    _record("deprecated include statuses", INTBLOCKS, W,
+            lambda ctx, r, p: intblock_rules.check_deprecated_include_statuses(r, ctx.includes_status_catalog)),
     _record("includes contract", INTBLOCKS, REPORT,
             lambda ctx, r, p: intblock_rules.check_intblock_includes_contract(
                 r, ctx.intblocks_cfg, ctx.includes_status_catalog)),
@@ -423,7 +425,7 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _cross("duplicate links", INTBLOCKS, REPORT,
            lambda ctx: cross_rules.check_duplicate_links(
                ctx.countries.paths + ctx.intblocks.paths, ctx.countries.records + ctx.intblocks.records)),
-    _cross("include display names", INTBLOCKS, REPORT,
+    _cross("include display names", INTBLOCKS, W,
            lambda ctx: cross_rules.check_include_name_mismatch(
                ctx.intblocks.records, ctx.intblocks.paths, ctx.countries_by_code),
            enabled=_has_countries),
