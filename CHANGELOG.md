@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-11-19
+
 ### Security
 
 - The release workflow is split into `build`, `sdk-contract` and `publish` jobs. Only `publish` has `contents: write` and secrets; it verifies every artifact against a digest recorded by `build` and runs no third-party code except pinned actions and `huggingface_hub`. Before, `internacia-python@main` was installed and tested in the job that held `HF_TOKEN`, with the write token stored in `.git/config`.
@@ -110,6 +112,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Cayman Islands, Curaçao, French Guiana, Martinique and the Turks and Caicos Islands
   (`membership_count` 23). APEC and the OIC were left unchanged: their member pages
   could not be retrieved.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records; 256 changed
+- Intblocks: 1275 → 1275 records; 893 changed
+- Blocktypes: 78 → 78 records
+- Membership edges: 59466 → 59072; 342 added, 736 removed, 140 changed
 
 ## [3.1.0] - 2026-10-22
 
