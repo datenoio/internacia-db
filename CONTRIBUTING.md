@@ -11,6 +11,10 @@ pip install -r requirements-dev.txt
 pre-commit install   # optional but recommended
 ```
 
+Runtime dependencies are pinned in `pyproject.toml`, repeated in `requirements.txt`, and
+resolved in `uv.lock`. Change a pin in the first two together, then run `uv lock`;
+`tests/test_dependency_pins.py` fails when they disagree.
+
 `python scripts/<name>.py` and `pytest` always use the `internacia_builder` and data of the
 checkout they run in, so one virtual environment serves several git worktrees. The console
 scripts (`internacia-build`, `internacia-validate-*`) run the checkout that was installed with
