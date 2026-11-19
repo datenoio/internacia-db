@@ -13,6 +13,7 @@ from typing import Any
 import typer
 import yaml
 
+from internacia_builder import native_names as nn
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.http import fetch_json as _fetch_json
 
@@ -23,6 +24,8 @@ COUNTRIES_DIR = ROOT / "data" / "countries"
 ZONE1970 = Path(__file__).resolve().parent / "data" / "zone1970.tab"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 REQUEST_DELAY = 0.1
+WIKIDATA_MAX_LANGUAGES = 50  # wbgetentities limit for the languages parameter
+NATIVE_NAMES_SOURCE = "Wikidata (official name P1448, label, native label P1705)"
 
 WB_INDICATORS = {
     "population": ("SP.POP.TOTL", "World Bank"),
@@ -64,22 +67,6 @@ WB_INDICATOR_URLS = {
     "AG.LND.TOTL.K2": "https://data.worldbank.org/indicator/AG.LND.TOTL.K2",
     "SI.POV.GINI": "https://data.worldbank.org/indicator/SI.POV.GINI",
 }
-
-LANG3_TO2 = {
-    "eng": "en",
-    "por": "pt",
-    "spa": "es",
-    "fra": "fr",
-    "deu": "de",
-    "rus": "ru",
-    "ara": "ar",
-    "zho": "zh",
-    "jpn": "ja",
-    "kor": "ko",
-    "nld": "nl",
-    "ita": "it",
-}
-
 
 def fetch_json(url: str) -> Any:
     return _fetch_json(url, user_agent="Internacia-DB Country Enricher/1.0", timeout=120)
@@ -191,18 +178,40 @@ def parse_zone1970(path: Path) -> dict[str, list[str]]:
 
 
 def wikidata_batch(qids: list[str], langs: list[str]) -> dict[str, dict[str, Any]]:
+    """Claims and labels for ``qids`` in every language of ``langs``.
+
+    The API accepts at most ``WIKIDATA_MAX_LANGUAGES`` languages per request, so labels are
+    fetched in chunks and merged; claims come with the first chunk.
+    """
     if not qids:
         return {}
-    params = {
-        "action": "wbgetentities",
-        "ids": "|".join(qids),
-        "props": "labels|aliases|claims",
-        "languages": "|".join(langs[:10]) if langs else "en",
-        "format": "json",
-    }
-    url = f"{WIKIDATA_API}?{urllib.parse.urlencode(params)}"
-    data = fetch_json(url)
-    return data.get("entities") or {}
+    langs = list(dict.fromkeys(langs or ["en"]))
+    entities: dict[str, dict[str, Any]] = {}
+    for start in range(0, len(langs), WIKIDATA_MAX_LANGUAGES):
+        params = {
+            "action": "wbgetentities",
+            "ids": "|".join(qids),
+            "props": "labels|claims" if start == 0 else "labels",
+            "languages": "|".join(langs[start : start + WIKIDATA_MAX_LANGUAGES]),
+            "format": "json",
+        }
+        data = fetch_json(f"{WIKIDATA_API}?{urllib.parse.urlencode(params)}")
+        if "entities" not in data:
+            raise RuntimeError(f"Wikidata wbgetentities failed: {data.get('error') or data}")
+        for qid, entity in data["entities"].items():
+            merged = entities.setdefault(qid, {})
+            if start == 0:
+                merged.update(entity)
+            else:
+                merged.setdefault("labels", {}).update(entity.get("labels") or {})
+        if start + WIKIDATA_MAX_LANGUAGES < len(langs):
+            time.sleep(REQUEST_DELAY)
+    return entities
+
+
+def wikidata_languages(records: list[dict[str, Any]]) -> list[str]:
+    """English (for common_names) plus every code native_names needs for ``records``."""
+    return ["en", *nn.requested_languages(records, nn.load_language_codes())]
 
 
 def wikidata_numeric_claim(entity: dict[str, Any], prop: str) -> float | None:
@@ -318,35 +327,6 @@ def ensure_classification_provenance(record: dict[str, Any]) -> None:
         upsert_provenance(record, field, source, url=url)
 
 
-def build_native_names(entity: dict[str, Any], lang_codes: set[str]) -> dict[str, dict[str, str]]:
-    labels = entity.get("labels") or {}
-    aliases = entity.get("aliases") or {}
-    native: dict[str, dict[str, str]] = {}
-    for lang in sorted(lang_codes):
-        label = (labels.get(lang) or {}).get("value")
-        if not label:
-            continue
-        alias_list = aliases.get(lang) or []
-        common = alias_list[0]["value"] if alias_list else label
-        native[lang] = {"official": label, "common": common}
-    if not native and labels.get("en"):
-        en = labels["en"]["value"]
-        native["en"] = {"official": en, "common": en}
-    return native
-
-
-def lang_codes_for_record(record: dict[str, Any]) -> set[str]:
-    codes: set[str] = {"en"}
-    for lang in record.get("languages") or []:
-        if isinstance(lang, dict):
-            c = str(lang.get("code", ""))
-            codes.add(LANG3_TO2.get(c, c[:2] if len(c) >= 2 else c))
-    for name in record.get("other_names") or []:
-        if isinstance(name, dict) and name.get("id"):
-            codes.add(str(name["id"]))
-    return {c for c in codes if c and len(c) == 2}
-
-
 def indicator_from_wb(
     wb_row: dict[str, Any] | None,
     source: str,
@@ -376,8 +356,8 @@ def upsert_provenance(
     license: str = "",
     retrieved_at: str | None = None,
 ) -> None:
+    """Set the provenance entry for ``field``, keeping its position in the list (stable diffs)."""
     retrieved_at = retrieved_at or date.today().isoformat()
-    provenance = [p for p in (record.get("provenance") or []) if p.get("field") != field]
     entry: dict[str, str] = {
         "field": field,
         "source": source,
@@ -387,7 +367,14 @@ def upsert_provenance(
         entry["url"] = url
     if license:
         entry["license"] = license
-    provenance.append(entry)
+    provenance: list[dict[str, Any]] = []
+    for item in record.get("provenance") or []:
+        if item.get("field") != field:
+            provenance.append(item)
+        elif entry not in provenance:
+            provenance.append(entry)
+    if entry not in provenance:
+        provenance.append(entry)
     record["provenance"] = provenance
 
 
@@ -419,15 +406,27 @@ def sync_provenance_from_record(record: dict[str, Any], *, retrieved_fields: set
                 retrieved_at=today,
             )
 
-    if "native_names" in retrieved_fields and record.get("native_names"):
-        upsert_provenance(
-            record,
-            "native_names",
-            "Wikidata",
-            url="https://www.wikidata.org/",
-            license="CC0",
-            retrieved_at=today,
-        )
+    if "native_names" in retrieved_fields:
+        if record.get("native_names"):
+            upsert_provenance(
+                record,
+                "native_names",
+                NATIVE_NAMES_SOURCE,
+                url=f"https://www.wikidata.org/wiki/{record.get('wikidata_id')}",
+                license="CC0",
+                retrieved_at=today,
+            )
+        else:
+            record["provenance"] = [p for p in record.get("provenance") or [] if p.get("field") != "native_names"]
+
+
+def refresh_native_names(record: dict[str, Any], entity: dict[str, Any]) -> bool:
+    """Rebuild ``native_names`` from ``entity``; True when the value changed."""
+    names = nn.build_native_names(record, entity, nn.load_language_codes())
+    if names == (record.get("native_names") or {}) and "native_names" in record:
+        return False
+    record["native_names"] = names
+    return True
 
 
 def enrich_record(
@@ -506,13 +505,8 @@ def enrich_record(
     if record.get("timezones") != old_timezones:
         retrieved_fields.add("timezones")
 
-    if force or not record.get("native_names"):
-        langs = lang_codes_for_record(record)
-        if entity:
-            names = build_native_names(entity, langs)
-            if names and names != record.get("native_names"):
-                record["native_names"] = names
-                retrieved_fields.add("native_names")
+    if entity and refresh_native_names(record, entity):
+        retrieved_fields.add("native_names")
 
     if not record.get("common_names"):
         names: list[str] = []
@@ -536,6 +530,42 @@ def enrich_record(
 
     sync_provenance_from_record(record, retrieved_fields=retrieved_fields)
     return record
+
+
+def fetch_wikidata_entities(qids: list[str], langs: list[str]) -> dict[str, dict[str, Any]]:
+    entities: dict[str, dict[str, Any]] = {}
+    unique_qids = sorted(set(qids))
+    for i in range(0, len(unique_qids), 50):
+        entities.update(wikidata_batch(unique_qids[i : i + 50], langs))
+        time.sleep(REQUEST_DELAY)
+    return entities
+
+
+@app.command("refresh-native-names")
+def refresh_native_names_command(
+    code: str = typer.Option("", "--code", help="Single alpha-2 code to refresh"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Print changes without writing"),
+) -> None:
+    """Rebuild native_names from Wikidata for each entity's own languages."""
+    paths = [COUNTRIES_DIR / f"{code.upper()}.yaml"] if code else sorted(COUNTRIES_DIR.glob("*.yaml"))
+    records = [(path, yaml.safe_load(path.read_text(encoding="utf-8")) or {}) for path in paths]
+    qids = [str(r["wikidata_id"]) for _, r in records if r.get("wikidata_id")]
+    typer.echo(f"Fetching Wikidata for {len(set(qids))} entities...")
+    entities = fetch_wikidata_entities(qids, wikidata_languages([r for _, r in records]))
+    updated = 0
+    for path, record in records:
+        entity = entities.get(str(record.get("wikidata_id") or ""))
+        if not entity or not refresh_native_names(record, entity):
+            continue
+        sync_provenance_from_record(record, retrieved_fields={"native_names"})
+        updated += 1
+        rel = path.relative_to(ROOT)
+        if dry_run:
+            typer.echo(f"would update {rel}")
+        else:
+            write_enriched_yaml(path, record, "countries")
+            typer.echo(f"updated {rel}")
+    typer.echo(f"done: {updated} record(s) {'would be ' if dry_run else ''}updated")
 
 
 @app.command()
@@ -572,12 +602,7 @@ def enrich(
         records.append((path, data))
 
     typer.echo(f"Fetching Wikidata for {len(set(qids))} entities...")
-    wikidata_entities: dict[str, dict[str, Any]] = {}
-    unique_qids = sorted(set(qids))
-    for i in range(0, len(unique_qids), 50):
-        batch = unique_qids[i : i + 50]
-        wikidata_entities.update(wikidata_batch(batch, ["en", "fr", "de", "es", "pt", "ru", "ar", "zh"]))
-        time.sleep(REQUEST_DELAY)
+    wikidata_entities = fetch_wikidata_entities(qids, wikidata_languages([data for _, data in records]))
 
     updated = 0
     for path, data in records:

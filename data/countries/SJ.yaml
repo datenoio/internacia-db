@@ -60,24 +60,8 @@ area:
 timezones:
 - Europe/Berlin
 native_names:
-  ar:
-    official: سفالبارد ويان ماين
-    common: سفالبارد ويان ماين
-  en:
-    official: Svalbard and Jan Mayen
-    common: sj
-  es:
-    official: Svalbard y Jan Mayen
-    common: Svalbard y Jan Mayen
-  fr:
-    official: Svalbard et Jan Mayen
-    common: Svalbard et île Jan Mayen
-  ru:
-    official: Шпицберген и Ян-Майен
-    common: Шпицберген и Ян-Майен
-  zh:
-    official: 斯瓦巴和扬马延
-    common: 斯瓦巴和扬马延
+  'no':
+    common: Svalbard og Jan Mayen
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -104,9 +88,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q842829
   license: CC0
 - field: adminregion
   source: UN M49 inference

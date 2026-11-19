@@ -289,6 +289,7 @@ COUNTRY_RULES: tuple[Rule, ...] = (
     _record("capital distance", COUNTRIES, W,
             lambda ctx, r, p: country_rules.check_country_capital_distance(r, ctx.countries_cfg)),
     _record("text encoding", COUNTRIES, W, lambda ctx, r, p: country_rules.check_country_text_encoding(r)),
+    _record("native name languages", COUNTRIES, W, lambda ctx, r, p: country_rules.check_country_native_names(r)),
     _cross("duplicate identifiers", COUNTRIES, E,
            lambda ctx: country_rules.check_country_duplicates(ctx.countries.records, ctx.countries.paths),
            message=lambda i: (f"duplicate {i['field']} '{i['current_value']}' in {i['file_path']} "

@@ -112,6 +112,7 @@ RULE_DESCRIPTIONS = {
     "MISSING_SCOPE_CATEGORY": "A formal intblock lacks its required entity-kind scope_category.",
     "UNKNOWN_SCOPE_CATEGORY": "scope_category is not one of the six supported entity kinds.",
     "SCOPE_CATEGORY_SEMANTIC_MISMATCH": "The category contradicts deterministic blocktype semantics.",
+    "NATIVE_NAME_LANGUAGE": "A native_names key is not one of the country's own languages.",
     "UNRESOLVED_HISTORICAL_INCLUDE": "Historical membership identifier is absent from both countries and the explicit historical registry.",
     "SCHEMA_ERROR": "YAML source does not validate against its JSON Schema definition.",
     "DUPLICATE_IDENTIFIER": "Multiple countries share the same code, ISO3 code, or numeric code.",

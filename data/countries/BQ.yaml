@@ -63,24 +63,15 @@ area:
 timezones:
 - America/Puerto_Rico
 native_names:
-  ar:
-    official: الجزر الكاريبية الهولندية
-    common: جزر الكاريبي الهولندية
   en:
     official: Caribbean Netherlands
-    common: BES islands
-  es:
-    official: Caribe neerlandés
+    common: Caribbean Netherlands
+  nl:
+    official: Caribisch Nederland
     common: Caribisch Nederland
-  fr:
-    official: Pays-Bas caribéens
-    common: Bonaire, Saint-Eustache et Saba
-  ru:
-    official: Бонайре, Синт-Эстатиус и Саба
-    common: БЭС-острова
-  zh:
-    official: 荷蘭加勒比區
-    common: 三個島
+  pap:
+    official: Bonaire, Sint Eustatius, Saba
+    common: Hulanda Karibense
 borders: []
 code_status: official_iso3166_1
 entity_type: dependent_territory
@@ -107,9 +98,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q27561
   license: CC0
 - field: adminregion
   source: UN M49 inference

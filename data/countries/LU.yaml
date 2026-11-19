@@ -86,27 +86,15 @@ gini:
 timezones:
 - Europe/Brussels
 native_names:
-  ar:
-    official: لوكسمبورغ
-    common: Luxembourg
   de:
-    official: Luxemburg
-    common: Groussherzogtum Lëtzebuerg
-  en:
-    official: Luxembourg
+    official: Großherzogtum Luxemburg
     common: Luxemburg
-  es:
-    official: Luxemburgo
-    common: Gran Ducado de Luxemburgo
   fr:
-    official: Luxembourg
-    common: Grand-Duché de Luxembourg
-  ru:
-    official: Люксембург
+    official: Grand-Duché de Luxembourg
+    common: Luxembourg
+  lb:
+    official: Groussherzogtum Lëtzebuerg
     common: Lëtzebuerg
-  zh:
-    official: 卢森堡
-    common: 卢森堡大公国
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -132,9 +120,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q32
   license: CC0
 - field: region
   source: World Bank

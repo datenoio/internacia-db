@@ -7,8 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING (content):** `countries.native_names` now holds names in each entity's own languages (`languages[]`), not English and the UN languages. `official` comes from Wikidata P1448 (official name) and `common` from the Wikidata label, falling back to P1705 (native label) when the label repeats `official`. Aliases are no longer used, which removes values such as CN `en.common: Red China`, BY `en.common: White Russia` and RU `fr.common: Rus.`. The variants were also swapped before (DE `en` had `official: Germany`, `common: Federal Republic of Germany`). Chinese follows the entity's script. Entries fall from 1504 to 388, and `en` remains for the 91 entities that list English. Read exonyms from `other_names` and English names from `name`/`official_name`. The column type `map<string, struct<official, common>>` is unchanged; either field may now be null. OpenSpec change `fix-country-native-names`.
+
+### Added
+
+- `data/vocabs/language_codes.yaml`: the 153 ISO 639-3 codes used in `languages[]`, each with its `native_names` key and the Wikidata label codes to try. It replaces two-letter truncation (`pol` became `po`, `swe` became `sw`) and resolves collisions (`ron` also matches the "Moldovan" item; Norwegian labels are under `nb`/`nn`).
+- `python scripts/enrich_countries.py refresh-native-names [--code XX] [--dry-run]`.
+- Validation warning `NATIVE_NAME_LANGUAGE`: a `native_names` key must be one of the record's languages. An empty `native_names` map is complete when `languages[]` is empty.
+
 ### Fixed
 
+- `languages[]` codes: ES Galician `glc` → `glg` (`glc` is Bon Gula), BZ Belize Kriol `bjz` → `bzj` (`bjz` is Baruga), NA Khoekhoe `hgm` → `naq` (`hgm` is Haiǁom), GG Guernésiais `nfr` → `nrf` (Norman; `nfr` is Nafaanra). CH gains German (`deu`, Federal Constitution Article 4) and XK gains Albanian and Serbian (`sqi`, `srp`, Constitution Article 5).
+- Enrichment keeps a refreshed provenance entry at its position instead of moving it to the end of the list.
 - `last_verified` set to 2026-10-25 for IPBES (151 coded members after the United States withdrew on 6 February 2026 and Slovenia joined on 9 February 2026; the Plenary 12 list prints both Eswatini and Swaziland, and the Council of the EU counts 152), the Global Fund (123 countries with an eligible or transition-funded component on the 2026 eligibility list), ICH (New Zealand and Pakistan added as observers; 25 members), the European Mathematical Society (52 full corporate members in 40 countries; Serbia added, and Belarus, Malta, and North Macedonia removed), EuChemS (42 societies in the same 35 countries), and FACS (the 31 coded societies match the member page; the Chemical Society of the South Pacific has no single country code).
 - `last_verified` set to 2026-10-25 for the OFC (11 ordinary members in the March 2026 statutes; Kiribati and Tuvalu are associate members; Niue is not a member) and the Rio Group (24 members in the 29 September 2011 UN statement, including Suriname; CELAC succeeded the group on 3 December 2011).
 - `last_verified` set to 2026-10-25 for the Global Health Security Agenda (71 countries on the membership page; international and non-government organizations on that page are not country rows).

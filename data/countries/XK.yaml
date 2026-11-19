@@ -24,6 +24,11 @@ fips_code: KV
 fifa_code: "KOS"
 ioc_code: KOS
 geonames_id: '831053'
+languages:
+- code: sqi
+  name: Albanian
+- code: srp
+  name: Serbian
 population:
   value: 1586659
   source: Wikidata
@@ -36,9 +41,11 @@ area:
 timezones:
 - Europe/Belgrade
 native_names:
-  en:
-    official: Kosovo
-    common: Republic of Kosovo
+  sq:
+    official: Republika e Kosovës
+    common: Kosovë
+  sr:
+    common: Косово
 common_names:
 - Kosovo
 borders:
@@ -55,6 +62,10 @@ recognition_status:
     CLDR); not an official ISO 3166-1 assignment. Former primary code KV retained
     in countries_aliases.json.
 provenance:
+- field: languages
+  source: Constitution of the Republic of Kosovo, Article 5 (official languages Albanian and Serbian)
+  retrieved_at: '2026-11-19'
+  url: https://gzk.rks-gov.net/ActDetail.aspx?ActID=3702
 - field: borders
   source: CIA World Factbook
   url: https://www.cia.gov/the-world-factbook/countries/kosovo/
@@ -73,9 +84,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1246
   license: CC0
 - field: region
   source: World Bank

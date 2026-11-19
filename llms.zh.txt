@@ -57,7 +57,7 @@
 - 7 个非标准 code：AN, JG, XK, XA, XS, XT, XN（科索沃为 XK；旧码 KV 见 countries_aliases.json）
 - intblock id 变更：查 intblocks_aliases.json
 - 属性分区（行驶方向、DVD 区、文字系统等）为国家字段，不是 intblocks；旧 id 见 attribute_intblock_migrations.json
-- 中文名称：other_names（id=zh）或 native_names，勿与 includes[].name 混淆
+- 中文名称：other_names（id=zh）；native_names 只含该实体自身语言的名称（CN、TW、HK、MO、SG 才有 zh），勿与 includes[].name 混淆
 
 ## 示例 SQL（DuckDB）
 

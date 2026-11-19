@@ -37,7 +37,7 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `area` | object \| null |  | yes | Land area indicator struct \{value, year, source, source_id\} in square kilometres. Use .value for the number. |
 | `gini` | object \| null |  | yes | Gini income-inequality index struct \{value, year, source, source_id\}. Sparse: roughly a third of records have no value. |
 | `centroid` | object |  | yes | Geographic centroid as \{lat, lng\}. |
-| `native_names` | object |  | yes | Native-language names keyed by language code, each with official and common variants. |
+| `native_names` | object |  | yes | Names in the entity's own languages (languages[] mapped through data/vocabs/language_codes.yaml), keyed by ISO 639-1 or ISO 639-3 code: official from Wikidata P1448, common from the Wikidata label. Either may be absent. Names in other languages are in other_names. Empty only when languages[] is empty. |
 | `landlocked` | boolean |  | yes | True when the entity has no coastline. Non-ISO records may be landlocked with an empty borders list (borders holds alpha-3 codes only). |
 | `timezones` | array |  | yes | IANA/UTC timezone offsets covering the territory. Empty for uninhabited territories (see timezone_status). |
 | `timezone_status` | string |  | yes | Marker explaining an empty timezones list, e.g. 'not_applicable' for uninhabited territories. Values: `not_applicable`. |

@@ -82,24 +82,12 @@ gini:
 timezones:
 - Europe/Dublin
 native_names:
-  ar:
-    official: جمهورية أيرلندا
-    common: جمهورية إيرلندا
   en:
     official: Ireland
+    common: Ireland
+  ga:
+    official: Éire
     common: Éire
-  es:
-    official: Irlanda
-    common: República de Irlanda
-  fr:
-    official: Irlande
-    common: République d'Irlande
-  ru:
-    official: Ирландия
-    common: Республика Ирландия
-  zh:
-    official: 愛爾蘭共和國
-    common: 爱尔兰
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
@@ -125,9 +113,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q27
   license: CC0
 - field: region
   source: World Bank

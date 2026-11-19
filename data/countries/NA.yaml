@@ -33,7 +33,7 @@ languages:
   name: English
 - code: her
   name: Herero
-- code: hgm
+- code: naq
   name: Khoekhoe
 - code: kwn
   name: Kwangali
@@ -105,30 +105,22 @@ gini:
 timezones:
 - Africa/Windhoek
 native_names:
-  ar:
-    official: ناميبيا
-    common: نامبيا
+  af:
+    common: Namibië
   de:
-    official: Namibia
-    common: Republik Namibia
+    common: Namibia
   en:
     official: Namibia
     common: Republic of Namibia
-  es:
-    official: Namibia
-    common: República de Namibia
-  fr:
-    official: Namibie
-    common: République de Namibie
-  ru:
-    official: Намибия
-    common: Республика Намибия
-  zh:
-    official: 纳米比亚
-    common: 納米比亞
+  tn:
+    common: Namibia
 code_status: official_iso3166_1
 entity_type: sovereign_state
 provenance:
+- field: languages
+  source: ISO 639-3 code table (SIL International); Khoekhoe is naq, hgm is Haiǁom
+  retrieved_at: '2026-11-19'
+  url: https://iso639-3.sil.org/code/naq
 - field: centroid
   source: mledoze/countries
   url: https://github.com/mledoze/countries
@@ -151,9 +143,9 @@ provenance:
   url: https://data.iana.org/time-zones/tzdb/zone1970.tab
   license: Public domain
 - field: native_names
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (official name P1448, label, native label P1705)
+  retrieved_at: '2026-11-19'
+  url: https://www.wikidata.org/wiki/Q1030
   license: CC0
 - field: region
   source: World Bank

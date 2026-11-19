@@ -359,9 +359,10 @@ not alpha-2. Island nations may have empty borders.
 | `official_name` | Formal long-form state name |
 | `common_names` | Modern short forms and aliases for fuzzy matching |
 | `other_names` | Translations `{id, name}` |
-| `native_names` | Map of lang code → `{official, common}` |
+| `native_names` | Names in the entity's own `languages[]`: lang code → `{official, common}`, either may be absent (DE has only `de`) |
 
-For entity linking, search across `name`, `common_names`, `other_names`, and codes.
+For entity linking, search across `name`, `common_names`, `other_names`, `native_names`, and codes.
+Exonyms ("Allemagne", "Германия") are in `other_names`; `native_names` holds only endonyms.
 
 ### Provenance
 

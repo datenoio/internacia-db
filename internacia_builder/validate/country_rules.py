@@ -18,6 +18,8 @@ from typing import Any
 import jsonschema
 import yaml
 
+from internacia_builder.native_names import check_native_name_keys
+
 ALPHA3 = re.compile(r"^[A-Z]{3}$")
 ISO4217 = re.compile(r"^[A-Z]{3}$")
 ALPHA2 = re.compile(r"^[A-Z]{2}$")
@@ -98,6 +100,9 @@ EXPECTED_OFFICIAL_ISO_COUNT = 249
 def is_null_field(record: dict[str, Any], field: str) -> bool:
     if field == "timezones" and record.get("timezone_status") == "not_applicable":
         return False
+    # native_names holds names in the record's own languages; none listed, none expected.
+    if field == "native_names" and record.get("native_names") == {} and not record.get("languages"):
+        return False
     if field not in record:
         return True
     val = record[field]
@@ -106,6 +111,11 @@ def is_null_field(record: dict[str, Any], field: str) -> bool:
     if val == "" or val == [] or val == {}:
         return True
     return False
+
+
+def check_country_native_names(record: dict[str, Any]) -> list[dict[str, Any]]:
+    """native_names keys must be the record's own languages (data/vocabs/language_codes.yaml)."""
+    return check_native_name_keys(record)
 
 
 def check_country_schema(record: dict[str, Any], schema: dict[str, Any]) -> list[dict[str, Any]]:

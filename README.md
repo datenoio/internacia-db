@@ -348,7 +348,7 @@ country fields. Remap those ids with `attribute_intblock_migrations.json` (e.g. 
 | `gini` | Struct | Gini index `{value, year, source, source_id}` |
 | `timezones` | List[String] | IANA timezone identifiers |
 | `timezone_status` | String | `not_applicable` when no zones apply |
-| `native_names` | Map | Lang code → `{official, common}` |
+| `native_names` | Map | Names in the entity's own languages: lang code → `{official, common}` (either may be absent); exonyms are in `other_names` |
 | `other_names` | List[Struct] | Translations `{id, name}` |
 | `common_names` | List[String] | Aliases and common names |
 | `geonames_id` / `ioc_code` / `fifa_code` / `fips_code` | String | Optional external crosswalk identifiers; FIPS is historical |
