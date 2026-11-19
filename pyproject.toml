@@ -51,6 +51,9 @@ ignore = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# This checkout first, so tests never import an internacia_builder installed from another
+# checkout (an editable install of the main checkout, while working in a git worktree).
+pythonpath = ["."]
 addopts = "-q"
 
 [tool.coverage.run]

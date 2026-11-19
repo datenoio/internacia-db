@@ -3,22 +3,16 @@
 
 Build/export logic now lives in the installable package. This shim keeps the
 historical ``python scripts/builder.py ...`` entry point (and ``import builder``
-in tests) working. Prefer the ``internacia-build`` console script.
+in tests) working, from any directory and in any git worktree: it always uses this
+checkout's package. The ``internacia-build`` console script runs the installed checkout.
 """
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 
-# Ensure imports work even when invoked outside the repo root, e.g.:
-#   python /path/to/internacia-db/scripts/builder.py
-_REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(_REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(_REPO_ROOT))
-
-from internacia_builder.build import *  # noqa: E402,F401,F403 (re-export package API)
-from internacia_builder.build import main  # noqa: E402
+from internacia_builder.build import *  # noqa: F401,F403 (re-export package API)
+from internacia_builder.build import main
 
 if __name__ == "__main__":
     main()

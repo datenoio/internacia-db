@@ -4,6 +4,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
 from internacia_builder.contract import CHECKSUMS_FILE, verify_checksums, write_checksums
 
 

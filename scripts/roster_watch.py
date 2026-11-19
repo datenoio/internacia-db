@@ -8,6 +8,8 @@ from dataclasses import asdict
 from datetime import date
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
 from internacia_builder.roster_watch import IssueSync, report_markdown, run
 
 

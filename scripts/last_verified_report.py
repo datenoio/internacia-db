@@ -4,6 +4,7 @@ import argparse
 import json
 import sys
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import yaml
 
 from internacia_builder.freshness import kpi_markdown, last_verified_kpi, load_tier1

@@ -13,6 +13,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import pyarrow as pa
 import pyarrow.parquet as pq
 
