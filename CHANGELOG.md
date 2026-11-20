@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   partnerships and hosted funds.
 - 170 intblock files moved to new directories. Record ids are unchanged, so no alias is needed.
   Code that reads source YAML by path should look a record up by `id`.
+- 24 non-state organizations no longer list countries in `includes` (1,800 membership edges,
+  59,102 → 57,302). Their members are companies, unions, universities or other organizations,
+  so the countries where those members are based were never member states. Queries that
+  counted, for example, IATA, ITF or WFTU membership by country return no rows for them now.
 
 ### Added
 
@@ -63,6 +67,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   GFDRR, IOC-UNESCO), 10 `policy_forum` (for example GBEP, IGF, GMI, PLG), and `ISA_SEABED`
   becomes `igo` (it was `treaty_body`). The legacy labeller no longer maps `intorg` to `igo`,
   which caused these labels.
+- Country rosters removed from 24 records that became `non_state_organization` and whose members
+  are organizations, not states: `AAU`, `ACU`, `EBU`, `EMS`, `ETSI`, `EUA`, `EUCHEMS`,
+  `EUROGEOGRAPHICS`, `IAF`, `IAF_ASTRO`, `IAPH`, `IATA`, `IAU_UNIV`, `IBRO`, `IFOAM`,
+  `INTERPORTPOLICE`, `IRU`, `ISTO`, `ITFTRANSPORT`, `PATA`, `PBEC`, `POGO`, `UIC`, `WFTU`.
+  Each now has `membership_applicability: not_applicable` with provenance, as `MSF` and
+  `CANTO` already did, and `last_verified` 2026-11-20. `includes`, `founding_members` and
+  country-unit `membership_count` values are removed; counts of organizations keep their
+  `membership_count_type`. Records whose members are one national body per country (ISO, IEC,
+  CEN, the scientific unions) keep their rosters. Documented recipes change accordingly: Russia
+  has 13 former memberships (not 14), and 58 majority-UN blocks lack China or the US (not 59).
 - The changed-record `last_verified` rule compares a moved file with its record at the old path
   and treats `blocktype` as a classification field, like `scope_category`.
 

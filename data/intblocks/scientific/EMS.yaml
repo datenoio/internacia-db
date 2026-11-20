@@ -4,6 +4,7 @@ blocktype:
 - intorg
 status: formal
 scope_category: non_state_organization
+membership_applicability: not_applicable
 founded: '1990'
 languages:
 - en
@@ -22,167 +23,6 @@ headquarters:
 acronyms:
 - lang: en
   value: EMS
-includes:
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: XK
-  name: Kosovo
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
 membership_count: 52
 membership_count_type: organizations
 geographic_scope: regional
@@ -226,12 +66,8 @@ other_names:
 - id: zh
   name: 歐洲數學學會
 wikidata_id: Q1376788
-last_verified: '2026-10-25'
+last_verified: '2026-11-20'
 provenance:
-- field: includes
-  source: European Mathematical Society
-  retrieved_at: '2026-10-25'
-  url: https://euromathsoc.org/corporate-members/full
 - field: membership_count
   source: European Mathematical Society
   retrieved_at: '2026-10-25'
@@ -258,11 +94,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://euromathsoc.org/
-- field: includes
-  source: Wikipedia
-  retrieved_at: '2026-07-14'
-  url: https://en.wikipedia.org/wiki/European_Mathematical_Society
-  license: CC BY-SA 4.0
 - field: notes
   source: official sources
   retrieved_at: '2026-07-14'
@@ -274,6 +105,10 @@ provenance:
   note: membership_count counts member mathematical societies and institutions; unit
     classified 2026-08, count value from earlier enrichment
 - field: scope_category
+  source: "EMS — Statutes"
+  retrieved_at: "2026-11-20"
+  url: "https://euromathsoc.org/governance-statutes"
+- field: membership_applicability
   source: "EMS — Statutes"
   retrieved_at: "2026-11-20"
   url: "https://euromathsoc.org/governance-statutes"

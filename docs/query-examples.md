@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 59 rows — 35 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 9 missing China
-only (`EGMONTGROUP`, `IAU_UNIV`), 15 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`).
+**Expected:** 58 rows — 35 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`), 15 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`).
 
 Filter to a single exclusion pattern:
 
@@ -555,7 +555,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
   AND NOT b.has_usa;
 ```
 
-**Expected:** 9, 35, and 14 rows respectively.
+**Expected:** 8, 35, and 15 rows respectively.
 
 **Gotcha:** Use `countries.un_member` as the denominator, not the `UN` intblock roster
 (193 entries). Some high-coverage records are informal groupings (`LMY`, `PERIPHCOUNT`) —
@@ -584,7 +584,7 @@ WHERE m.id = 'RU'
 ORDER BY m.joined NULLS LAST, i.name;
 ```
 
-**Expected:** 14 rows (`BEACST`, `CBSS`, `COE`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `EUA`, `GRECO`, `ICES`,
+**Expected:** 13 rows (`BEACST`, `CBSS`, `COE`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`, `ICES`,
 `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
@@ -615,11 +615,10 @@ WHERE m.id = 'RU'
 ORDER BY departed, organization;
 ```
 
-**Expected:** 4 rows:
+**Expected:** 3 rows:
 
 | id | organization | departed | note |
 |----|-------------|----------|------|
-| `EUA` | European University Association | `2022-03` | — |
 | `COE` | Council of Europe | `2022-03-16` | Ceased to be a member on 16 March 2022 under Committee of Ministers Resolution CM/Res(2022)2 |
 | `ECHR` | European Court of Human Rights | `2022-03-16` | — |
 | `ICES` | International Council for the Exploration of the Sea | `2025-12-09` | Suspended 30 March 2022; formal withdrawal later |
@@ -657,8 +656,8 @@ for line in lines:
                 }
             )
 
-assert len(rows) == 4
-assert {r["id"] for r in rows} == {"COE", "ECHR", "EUA", "ICES"}
+assert len(rows) == 3
+assert {r["id"] for r in rows} == {"COE", "ECHR", "ICES"}
 ```
 
 ## Membership overlap and set logic
@@ -932,7 +931,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 36 rows — includes `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 35 rows — includes `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
@@ -1022,7 +1021,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 192 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 183 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
