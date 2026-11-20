@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Three transport corridor records with route roles (`transport`, `corridor`), checked on
+  2026-11-20 (1282 intblocks):
+  - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
+    `transit`. Sources: ADB (ARIC) and the Azerbaijani government.
+  - `TITR` (Trans-Caspian International Transport Route, the Middle Corridor): CN and TR
+    `terminal`; KZ, AZ and GE `transit`. Sources: the TITR association and the Azerbaijani
+    government.
+  - `LAPISLAZULI` (Lapis Lazuli route, a 2017 agreement and `treaty_body`): AF and TR
+    `terminal`; TM, AZ and GE `transit`. Source: Afghanistan's foreign ministry (RECCA).
+  `INSTC` and `TITR` describe the route, not the organization: the 2000 INSTC agreement has
+  parties that are not crossed, and the TITR association's members are companies. A separate
+  INSTC agreement record is deferred.
+- `institutional_design` for 21 more organizations, from founding instruments or official
+  pages checked on 2026-11-20 (55 in all): BENELUX, BSEC, CAN, CELAC, CEMAC, COMESA,
+  COMMONWEALTH, CPLP, EAC, ECCAS, ECO, FAO, GUAM, ILO, IMO, OIF, OSCE, PIF, SICA, UEMOA and
+  UNESCO. IGAD (its 2023 treaty's entry into force is unconfirmed) and SAARC (no readable
+  source) are deferred, with BRICS and OECD.
+
 ## [4.1.0] - 2026-11-20
 
 ### Migration

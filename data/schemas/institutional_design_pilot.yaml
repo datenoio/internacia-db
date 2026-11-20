@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: pilot_34
-expected_count: 34
+cohort_id: reviewed_55
+expected_count: 55
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -577,11 +577,335 @@ records:
         url: https://www.wipo.int/wipolex/en/text/283854
         retrieved_at: '2026-11-20'
 
-# Pilot candidates not applied in this cohort, and why. Revisit when a qualifying source is read.
+  # --- wave 2 (2026-11-20) -------------------------------------------------
+  BENELUX:
+    institutional_design:
+      mandate: economic
+      decision_rule: unanimity
+      decision_force: partly_binding
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Treaty revising the Benelux Union Treaty (2008) Art 8: Committee of Ministers decisions need unanimity,
+      one vote per party, abstention not blocking. Art 6(2)(a): implementing decisions bind the parties; (f) conventions
+      go to parties for entry into force under their constitutional rules; (g) recommendations do not bind. Art 2
+      aims at an economic union plus sustainable development and cross-border cooperation, and the treaty has no suspension,
+      sanction or defence clause (Art 39: withdrawal on three years'' notice).'
+    evidence:
+    - {source: 'Traite portant revision du Traite instituant l''Union economique Benelux, 2008 (benelux.int)', url: 'https://www.benelux.int/wp-content/uploads/2022/12/TraiteBenelux_2008-1.pdf',
+      retrieved_at: '2026-11-20'}
+  BSEC:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: Art 1 creates a regional economic organization. The Council of Foreign Ministers is the principal decision-making
+      organ and endeavours to achieve consensus, with consensus mandatory on some issues (Charter Art 18). Under the
+      Rules of Procedure, resolutions are by consensus and bind all (Arts 11, 18), decisions by two-thirds bind those
+      who voted for them (Art 19), and recommendations do not bind (Art 20). PABSEC is consultative (Art 20) and the
+      Charter creates no court or executive. Only observer status can be suspended (Art 8); no defence clause.
+    evidence:
+    - {source: 'Charter of the Organization of the Black Sea Economic Cooperation, official site bsec-organization.org',
+      url: 'https://www.bsec-organization.org/UploadedDocuments/StatutoryDocumentsAgreements/CHARTERFourthEdition7July.pdf',
+      retrieved_at: '2026-11-20'}
+    - {source: 'BSEC Rules of Procedure, official site bsec-organization.org', url: 'https://www.bsec-organization.org/UploadedDocuments/StatutoryDocumentsAgreements/Rules%20of%20Procedure.pdf',
+      retrieved_at: '2026-11-20'}
+  CAN:
+    institutional_design:
+      mandate: economic
+      decision_rule: simple_majority
+      independent_organs: [court]
+      mutual_defence: false
+    basis: Art 1 objectives are economic and social integration. The Commission, made of government plenipotentiaries,
+      adopts decisions by absolute majority of members (Art 26), with exceptions for Annex I matters requiring no
+      negative vote. The Presidential Council only issues directives (Art 11). The Court of Justice is an organ (Arts
+      6, 40) and the Andean Parliament is only deliberative (Art 42). Art 28 loss of vote for arrears is automatic.
+      No defence clause.
+    evidence:
+    - {source: 'Acuerdo de Cartagena, texto codificado (Decision 563), official site comunidadandina.org', url: 'https://www.comunidadandina.org/StaticFiles/201338102616Acuerdo_Cartagena.pdf',
+      retrieved_at: '2026-11-20'}
+  CELAC:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Procedures for the organic functioning of CELAC (Caracas, 3 December 2011), section II: decisions are
+      adopted by consensus in all instances, and all take the character of political agreements and constitute mandates.
+      The document establishes the Summit, foreign ministers'' meeting, national coordinators and rotating Pro Tempore
+      Presidency, with no court, executive, parliament or sanction clause.'
+    evidence:
+    - {source: 'Procedimientos para el funcionamiento orgánico de la CELAC (Mexican Ministry of Foreign Affairs, portales.sre.gob.mx)',
+      url: 'https://portales.sre.gob.mx/ppt-celac/es/component/phocadownload/category/1-documentos-constitutivos-y-organizativos?download=3%3Aprocedimientos-para-el-funcionamiento-organico-de-la-celac',
+      retrieved_at: '2026-11-20'}
+  CEMAC:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [executive, court]
+      enforcement: [sanctions]
+      mutual_defence: false
+    basis: Art 2 aims at an economic union and a monetary union. The Conference of Heads of State decides by consensus
+      (Art 16) and its additional acts must be respected by organs and state authorities (Art 41). The Commission
+      has independent members and right of initiative (Arts 31, 34), the Court of Justice ensures legality (Art 48),
+      and the Parliament legislates by directives (Art 47). BEAC is a Community organ (Art 10). Art 4 allows the Court
+      to pronounce sanctions on a defaulting state. No defence clause. The Parliament (created by a separate convention,
+      with an interim commission under Art 60) and BEAC (whose independence the treaty does not state) are not recorded
+      as independent organs.
+    evidence:
+    - {source: 'Traite revise de la CEMAC (2008/2009), official site cemac.int (scanned PDF read by OCR)', url: 'https://cemac.int/wp-content/uploads/2024/12/traite-revise-de-la-CEMAC.pdf',
+      retrieved_at: '2026-11-20'}
+  COMESA:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [court]
+      enforcement: [sanctions, suspension, expulsion]
+      mutual_defence: false
+    basis: The Authority of Heads of State is the supreme organ and takes decisions by consensus (Art 8(7)); its directions
+      and decisions bind Member States and organs (Art 8(3)). The Council decides by consensus, failing which by two-thirds
+      majority (Art 9(6)), and its regulations bind (Art 10). The Court of Justice is an organ (Art 7, Art 19ff).
+      Art 171 lets the Authority impose financial penalties, suspend rights or membership, and expel. Art 6 lists
+      non-aggression only, with no assistance duty.
+    evidence:
+    - {source: 'Treaty Establishing the Common Market for Eastern and Southern Africa (revised, comesa.int)', url: 'https://www.comesa.int/wp-content/uploads/2019/02/comesa-treaty-revised-20092012_with-zaire_final.pdf',
+      retrieved_at: '2026-11-20'}
+  COMMONWEALTH:
+    institutional_design: {mandate: general, decision_rule: consensus, mutual_defence: false}
+    basis: 'Commonwealth Charter (2013) preamble: "the Commonwealth way is to seek consensus through consultation"
+      and consensus and common action are named a core principle; the Charter sets out values (democracy, human rights,
+      development, peace) rather than organs or voting rules. It refers to the Commonwealth Ministerial Action Group
+      but gives it no listed measures and contains no assistance clause.'
+    evidence:
+    - {source: Commonwealth Charter (thecommonwealth.org), url: 'https://thecommonwealth.org/charter', retrieved_at: '2026-11-20'}
+  CPLP:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'Estatutos (2023 revision) Art 23(1): decisions of the organs are taken by consensus of the Member States
+      present, with exceptions for the Parliamentary Assembly and for suspension decisions (Art 7(3), consensus of
+      the other members). Art 4: objectives span political-diplomatic concertation, cooperation in all fields including
+      defence, and economic cooperation, with no defence pact. Art 7(2): the Council of Ministers may apply sanctioning
+      measures up to suspension of participation after an unconstitutional change of government. Organs (Art 11) are
+      the Conference, Council, Standing Committee and Executive Secretariat; the Parliamentary Assembly groups national
+      parliament delegations.'
+    evidence:
+    - {source: 'Estatutos da CPLP, 2023 revision (cplp.org)', url: 'https://www.cplp.org/media/e23bn0a0/r2_res_rev_estatutos_2023_aprovado_.pdf',
+      retrieved_at: '2026-11-20'}
+  EAC:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [court, parliament]
+      enforcement: [sanctions, suspension, expulsion]
+      mutual_defence: false
+    basis: Art 5(1) objectives span political, economic, social fields, defence and security, so the mandate is general.
+      Summit decisions are by consensus (Art 12) and Council decisions by consensus subject to a decision-making protocol
+      (Art 15(4)); Council regulations, directives and decisions bind Partner States (Art 16). The Court's judgments
+      are final and binding (Art 35) and the Legislative Assembly is the legislative organ (Art 49). The Summit may
+      impose action for default (Art 143), suspend (Art 146) or expel (Art 147). Art 125 only commits to defence cooperation,
+      not assistance against attack.
+    evidence:
+    - {source: 'Treaty for the Establishment of the East African Community (University of Oslo Faculty of Law copy,
+        1999 text)', url: 'https://www.jus.uio.no/english/services/library/treaties/09/9-05/east_africa_economic.html',
+      retrieved_at: '2026-11-20'}
+  ECCAS:
+    institutional_design:
+      mandate: general
+      decision_rule: mixed
+      decision_force: binding
+      independent_organs: [executive, court]
+      enforcement: [sanctions, suspension]
+      mutual_defence: true
+    basis: 'Art 14: Conference decisions are taken by unanimity, consensus or two-thirds depending on the matter (no
+      default named; consensus only until the rules of procedure take effect), and bind states and organs (Art 14(4)).
+      Commission is the executive organ with independent members (Art 20), the Court''s judgments bind (Art 29), the
+      Parliament adopts the budget (Art 28(3)). Art 99: the Conference may sanction a defaulting state, including
+      suspension of vote and participation and of loans. Art 34(3)(a): members undertake mutual aid and assistance
+      against armed aggression. Peace, security and economic aims make it general. The Parliament (Art 27) is not
+      recorded because the text does not show it is operational.'
+    evidence:
+    - {source: 'Traite revise de la CEEAC (2019), official site ceeac-eccas.org', url: 'https://www.ceeac-eccas.org/wp-content/uploads/2023/05/VF-officielle-TRAITE-REVISE-FINAL-17122019-version-finale-a-imprimer.pdf',
+      retrieved_at: '2026-11-20'}
+  ECO:
+    institutional_design:
+      mandate: economic
+      decision_rule: mixed
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: Art II objectives are economic. The Council of Ministers is the highest decision-making body (Art VI);
+      Art XII requires unanimity for vital issues (membership, budget, strategies, amendments, external relations)
+      and a simple majority for other matters provided the rest abstain or do not object. No court, executive or parliament
+      is created; the Secretariat is a general secretariat. The treaty has no suspension, sanction or defence provision.
+    evidence:
+    - {source: 'Treaty of Izmir (1996 revised), official site eco.int', url: 'https://eco.int/wp-content/uploads/2017/05/Izmir-Treaty.pdf',
+      retrieved_at: '2026-11-20'}
+  FAO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Constitution Art III(8): except as otherwise provided, all Conference decisions are by a majority of votes
+      cast (one vote per Member Nation, Art III(4)). Art IV(3): recommendations to members need two thirds and are
+      not binding; Art XIV: conventions and agreements approved by the Conference by two thirds are only submitted
+      to members for acceptance. No court, executive or parliament is established, and no suspension, expulsion or
+      sanction clause exists (Art III(4) loss of vote for arrears is automatic; Art XIX covers voluntary withdrawal
+      only).'
+    evidence:
+    - {source: Constitution of the FAO (text via University of Oslo), url: 'https://www.jus.uio.no/english/services/library/treaties/14/14-01/food-organization.html',
+      retrieved_at: '2026-11-20'}
+  GUAM:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Art 1 purposes mix democracy, security and stability, economic and humanitarian cooperation. Art 12: decisions
+      in all bodies are adopted by consensus without voting; the Council of Heads of State is the top level (Art 4).
+      Structure is the Council and Secretariat only (Art 3). Art 13: the Heads of State may suspend a violating member
+      by consensus minus one and later end its membership. No defence or assistance clause.'
+    evidence:
+    - {source: 'Charter of the Organization for Democracy and Economic Development GUAM (2006), official site guam-organization.org',
+      url: 'https://guam-organization.org/en/charter-of-organization-for-democracy-and-economic-development-guam/',
+      retrieved_at: '2026-11-20'}
+  ILO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+      mutual_defence: false
+    basis: 'Constitution Art 17: unless otherwise provided, all matters in the Conference are decided by a simple
+      majority of votes cast by delegates present. The Conference is tripartite (two government delegates, one employers''
+      and one workers'' delegate per member, Art 3), and the default rule is recorded for the Conference as a whole.
+      Art 19: Conventions and Recommendations need two thirds; Conventions bind only after the member ratifies, Recommendations
+      do not bind. Art 26 Commissions of Inquiry are ad hoc and their recommendations may be rejected (Art 29), so
+      no independent organ is recorded; the loss of vote for arrears (Art 13) is automatic.'
+    evidence:
+    - {source: Constitution of the International Labour Organization (text via Wikisource), url: 'https://en.wikisource.org/wiki/Constitution_of_the_International_Labour_Organization',
+      retrieved_at: '2026-11-20'}
+  IMO:
+    institutional_design:
+      mandate: technical
+      decision_rule: simple_majority
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Original 1948 Convention (UNTS 289 No 4214) Art 43(b): decisions of the Assembly, Council and Maritime
+      Safety Committee are by a majority of Members present and voting, except where the Convention provides otherwise;
+      the imo.org summary of the current Convention gives the same one-member-one-vote majority rule (Art 62). The
+      Assembly''s role in regulation is to recommend to Members for adoption (Art 16(i) of the 1948 text). Organs
+      are the Assembly, Council, committees and Secretariat, all of member governments, and no suspension, expulsion
+      or sanction provision appears.'
+    evidence:
+    - {source: 'Convention on the Intergovernmental Maritime Consultative Organization, UNTS vol 289 No 4214 (UN Treaty
+        Collection)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%20289/volume-289-I-4214-English.pdf',
+      retrieved_at: '2026-11-20'}
+    - {source: 'Convention on the International Maritime Organization, article summary (imo.org)', url: 'https://www.imo.org/en/About/Conventions/Pages/Convention-on-the-International-Maritime-Organization.aspx',
+      retrieved_at: '2026-11-20'}
+  OIF:
+    institutional_design:
+      mandate: general
+      independent_organs: [none]
+      mutual_defence: false
+    basis: 'Charte de la Francophonie (2005) Art 1: objectives cover democracy, peace and conflict prevention, rule
+      of law and human rights, cultural dialogue, economic cooperation and education. Arts 3-5 set the Summit, Ministerial
+      Conference and Permanent Council without any voting rule, and the Parliamentary Assembly (APF) is only consultative.
+      The Charter contains no suspension, sanction or defence clause.'
+    evidence:
+    - {source: 'Charte de la Francophonie, Antananarivo 2005 (francophonie.org)', url: 'https://www.francophonie.org/sites/default/files/2019-09/charte_francophonie_antananarivo_2005.pdf',
+      retrieved_at: '2026-11-20'}
+  OSCE:
+    institutional_design: {mandate: general, decision_rule: consensus, decision_force: non_binding, mutual_defence: false}
+    basis: 'Rules of Procedure (MC.DOC/1/06), chapter on decision-making, paras 2-3: decisions of OSCE decision-making
+      bodies are adopted by consensus, meaning no objection by a participating State, and texts so adopted are politically
+      binding. The Helsinki Final Act states it is not eligible for registration under UN Charter Art 102, so it is
+      not a legally binding treaty and contains no assistance duty. The Rules of Procedure state they do not apply
+      to the Court of Conciliation and Arbitration, which binds only parties to its own Convention, so no independent
+      organ is recorded.'
+    evidence:
+    - {source: 'OSCE Rules of Procedure, MC.DOC/1/06 (OSCE document host cdn.osce.org)', url: 'https://cdn.osce.org/sites/default/files/f/documents/5/0/22775.pdf',
+      retrieved_at: '2026-11-20'}
+    - {source: 'Final Act of the Conference on Security and Co-operation in Europe, Helsinki 1975 (osce.org)', url: 'https://www.osce.org/files/f/documents/5/c/39501.pdf',
+      retrieved_at: '2026-11-20'}
+    - {source: 'OSCE, Decision-making in the OSCE (osce.org)', url: 'https://www.osce.org/decision-making', retrieved_at: '2026-11-20'}
+  PIF:
+    institutional_design: {mandate: general, decision_rule: consensus}
+    basis: The Forum Secretariat's own description states that decisions made by Leaders are reached by consensus
+      and set out in a Forum Communique, and calls the Forum the region's premier political and economic policy organisation.
+      No founding agreement text was read, so the bindingness of communique decisions, organs and enforcement are
+      not settled.
+    evidence:
+    - {source: 'Pacific Islands Forum Secretariat, "The Pacific Islands Forum" (organization site)', url: 'https://forumsec.org/pacific-islands-forum',
+      retrieved_at: '2026-11-20'}
+  SICA:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      independent_organs: [court]
+    basis: Art 3 purposes cover democracy, security and development, so general. The Meeting of Presidents is the
+      supreme organ and decides by consensus (Arts 13-14); the Council of Ministers decides substantive questions
+      by consensus (Art 21). The Central American Court of Justice is established by Art 12 and its Statute makes
+      it a permanent judicial organ. PARLACEN is only an organ of planning, analysis and recommendation (Art 12),
+      and the Executive Committee has one state representative each (Art 24).
+    evidence:
+    - {source: 'Protocolo de Tegucigalpa (1991, as amended 2002), Guatemalan Ministry of Economy copy', url: 'https://mineco.gob.gt/images/viceministerio_integracion_comercio/direccion_administracion_comercio_exterior/tratados_vigentes/int_economica_centroamericana/protocolo_de_tegucigalpa.pdf',
+      retrieved_at: '2026-11-20'}
+    - {source: 'Convention on the Statute of the Central American Court of Justice, UN Treaty Series vol 1821 I-31191',
+      url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%201821/volume-1821-I-31191-English.pdf', retrieved_at: '2026-11-20'}
+  UEMOA:
+    institutional_design:
+      mandate: economic
+      decision_rule: qualified_majority
+      decision_force: binding
+      independent_organs: [executive, court, central_bank]
+      enforcement: [sanctions]
+      mutual_defence: false
+    basis: Principal organ is the Council of Ministers, which acts mostly by two-thirds of its members (e.g. Arts
+      11, 29, 74; unanimity only for specific cases such as amending Commission proposals, Art 22). Regulations and
+      decisions are binding (Art 43). The Commission members act independently (Art 28), a Court of Justice exists
+      (Art 38) and the BCEAO acts independently (Art 41). Art 74 lets the Council apply graded sanctions up to suspension
+      of Union assistance. Art 15 only provides for consultation in war or tension.
+    evidence:
+    - {source: 'Traite modifie de l''UEMOA (2003), official site uemoa.int', url: 'https://www.uemoa.int/sites/default/files/2023-04/traitreviseuemoa.pdf',
+      retrieved_at: '2026-11-20'}
+  UNESCO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+      mutual_defence: false
+    basis: 'Constitution Art IV.C(8)(a): each Member State has one vote in the General Conference and decisions are
+      by a simple majority of members present and voting unless two thirds is required. Art IV.B(4): the Conference
+      distinguishes recommendations (majority) from conventions (two thirds); members must submit them to their authorities,
+      and conventions bind only those that accept them. Art IV.C(8)(b)-(c) loss of vote for arrears is automatic.'
+    evidence:
+    - {source: Constitution of UNESCO (unesco.org), url: 'https://www.unesco.org/en/legal-affairs/constitution', retrieved_at: '2026-11-20'}
+
+# Candidates not applied, and why. Revisit when a qualifying source is read.
 deferred:
-  BRICS: >-
-    No official BRICS or government page with usable text could be read (brics.br and mea.gov.in unreachable; the
-    Kazan Declaration on kremlin.ru is a PDF that could not be extracted); only search snippets were available.
-  OECD: >-
-    oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
+  BRICS: No official BRICS or government page with usable text could be read (brics.br and mea.gov.in unreachable;
+    the Kazan Declaration on kremlin.ru is a PDF that could not be extracted); only search snippets were available.
+  IGAD: The 1996 Agreement is being replaced by the 2023 Treaty, whose entry into force (endorsed for 15 September
+    2026) is not confirmed by a qualifying source; the instrument in force is not settled.
+  OECD: oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
     repository copy of the 1960 Convention could be read.
+  SAARC: 'No qualifying source could be read: the SAARC Secretariat charter pages return 404 and only search snippets
+    were available.'

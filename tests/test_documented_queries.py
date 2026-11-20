@@ -740,7 +740,7 @@ def test_authority_level_recipe(con):
     rows = dict(
         (row[0], row[2]) for row in con.execute(_documented_sql("Authority level from institutional design")).fetchall()
     )
-    assert len(rows) == 34
+    assert len(rows) == 55
     assert {rows[i] for i in ("EU", "UNSC", "WTO")} == {"high"}
     assert {rows[i] for i in ("G7", "APEC")} == {"low"}
     assert {rows[i] for i in ("UPU", "WMO", "OPEC")} == {"medium"}
