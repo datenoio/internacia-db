@@ -1,0 +1,446 @@
+# Generated review artifact for openspec change reorganize-intorg-blocktype.
+version: 1
+change_id: reorganize-intorg-blocktype
+description: 'Proposed ID-based plan for retiring the intorg blocktype. Review artifact only: it authorizes
+  no source edit before the change is approved. Folder targets come from each record''s name, topics and
+  description. scope_category targets come from each record''s legal_status text; each one needs an official
+  source and field-level provenance before it is applied.'
+baseline:
+  dataset_version: 4.0.0
+  git_commit: 88a0a27f
+  records_with_intorg: 358
+  records_in_intorg_folder: 147
+new_blocktypes:
+- governance
+- commodity
+activated_blocktypes:
+- fisheries
+- financial
+- development
+- tourism
+- labor
+- disaster
+moves_from_intorg:
+  fisheries:
+  - EUROFISH
+  - FFA
+  - IATTC
+  - ICCAT
+  - IPHC
+  - IWC
+  - LVFO
+  - NAFO
+  - NASCO
+  - NEAFC
+  - NPAFC
+  - NPFC
+  - PSC
+  - SEAFDEC
+  - SEAFO
+  - SIOFA
+  - SPRFMO
+  financial:
+  - AMRO
+  - APG
+  - CFATF
+  - EAG
+  - ESAAMLG
+  - FATF
+  - FSB
+  - GAFISUD
+  - GIABA
+  - GIFCS
+  - IAIS
+  - IOSCO
+  - MENAFATF
+  development:
+  - AAGC
+  - ACBF
+  - APO
+  - CIRDAP
+  - FILAC
+  - IGF
+  - JDTJUBA
+  - MEKONGINSTITUTE
+  - NEPAD
+  - PPD
+  - SOUTHCENTRE
+  - SPC
+  environment:
+  - ACTO
+  - AFOCO
+  - CBFP
+  - GGGI
+  - HELCOM
+  - INBAR
+  - IPBES
+  - MOUNTPART
+  - RAINCOALITION
+  - SPREP
+  political:
+  - BEACST
+  - CICA
+  - COI
+  - ICGLR
+  - LMDC
+  - MSG
+  - NCM
+  - PBP
+  - PLG
+  governance:
+  - CAPAM
+  - EITI
+  - EROPA
+  - FORUMOFFEDERATIONS
+  - IACA
+  - IDEA
+  - RAI
+  standards:
+  - AFSEC
+  - CEN
+  - CENELEC
+  - COPANT
+  - EASC
+  - IAF
+  - IEC
+  commodity:
+  - CPOPC
+  - ICSG
+  - ILZSG
+  - INSG
+  - ITTO
+  - OIV
+  scientific:
+  - ANZLIC
+  - EUROGEOGRAPHICS
+  - IAU
+  - ICACI
+  - ICES
+  - SOPAC
+  agriculture:
+  - EPPO
+  - IFDC
+  - IFOAM
+  - IPPC
+  - WOAH
+  health:
+  - CARPHA
+  - CEPI
+  - GLOBALFUND
+  - IIMSAM
+  - UNITAID
+  maritime:
+  - BIMCO
+  - GLOBALMARITIMEFORUM
+  - IALA
+  - IAPH
+  - ISA_SEABED
+  fund:
+  - CFTC
+  - CGIARFUND
+  - GEF
+  - PROFOR
+  labor:
+  - ISSA
+  - ITFTRANSPORT
+  - OISS
+  - WFTU
+  legal:
+  - CMI
+  - IDLO
+  - IOMED
+  - UNIDROIT
+  tourism:
+  - CTO
+  - ETC
+  - ISTO
+  - PATA
+  digital:
+  - DN
+  - GFCE
+  - WAICO
+  research:
+  - CISRI
+  - COMSATS
+  - D8TTEN
+  transport:
+  - AFUNIONRAIL
+  - CCRZKR
+  - IRU
+  armscontrol:
+  - CTBTO
+  - OPCW
+  cultural:
+  - CF
+  - COMMONWEALTHINSTITUTE
+  disaster:
+  - CDRI
+  - GFDRR
+  economic:
+  - ICDT
+  - PBEC
+  education:
+  - CAMES
+  - EUCLID
+  aviation:
+  - IAC
+  climate:
+  - GMI
+  court:
+  - ITLOS
+  energy:
+  - GBEP
+  humanitarian:
+  - ICRC
+  meteorology:
+  - ECMWF
+  military:
+  - SICOFAA
+  patent:
+  - NPI
+  telecom:
+  - EBU
+  trade:
+  - WCO
+moves_from_other_folders:
+  fisheries:
+  - id: APFIC
+    from: food
+  - id: CCAMLR
+    from: food
+  - id: CCSBT
+    from: food
+  - id: CECAF
+    from: food
+  - id: CIFAA
+    from: food
+  - id: COPESCAALC
+    from: food
+  - id: CRFM
+    from: food
+  - id: EIFAAC
+    from: food
+  - id: GFCM
+    from: food
+  - id: GLFC
+    from: food
+  - id: IOTC
+    from: food
+  - id: OLDEPESCA
+    from: food
+  - id: OSPESCA
+    from: food
+  - id: RECOFI
+    from: food
+  - id: SWIOFC
+    from: food
+  - id: WCPFC
+    from: food
+  - id: WECAFC
+    from: food
+  governance:
+  - id: CAFRAD
+    from: education
+  - id: RESPA
+    from: education
+  commodity:
+  - id: COMMONFUND
+    from: fund
+  - id: IGC
+    from: food
+  disaster:
+  - id: ADPC
+    from: climate
+  financial:
+  - id: BCBS
+    from: standards
+scope_category_corrections:
+  non_state_organization:
+  - id: AAU
+    from: igo
+  - id: ACU
+    from: igo
+  - id: BIMCO
+    from: igo
+  - id: CAPAM
+    from: igo
+  - id: CEN
+    from: igo
+  - id: CENELEC
+    from: igo
+  - id: CMI
+    from: igo
+  - id: COMMONWEALTHINSTITUTE
+    from: igo
+  - id: COPANT
+    from: igo
+  - id: COSPAR
+    from: igo
+  - id: CREDAF
+    from: igo
+  - id: EBU
+    from: igo
+  - id: EMS
+    from: igo
+  - id: EROPA
+    from: igo
+  - id: ETC
+    from: igo
+  - id: ETSI
+    from: igo
+  - id: EUA
+    from: igo
+  - id: EUCHEMS
+    from: igo
+  - id: EUROGEOGRAPHICS
+    from: igo
+  - id: FACS
+    from: igo
+  - id: FORUMOFFEDERATIONS
+    from: igo
+  - id: GLOBALMARITIMEFORUM
+    from: igo
+  - id: HUGO
+    from: igo
+  - id: IAF
+    from: igo
+  - id: IAF_ASTRO
+    from: igo
+  - id: IAPH
+    from: igo
+  - id: IASC
+    from: igo
+  - id: IATA
+    from: igo
+  - id: IAU
+    from: igo
+  - id: IAU_UNIV
+    from: igo
+  - id: IBRO
+    from: igo
+  - id: ICACI
+    from: igo
+  - id: ICSU
+    from: igo
+  - id: IEC
+    from: igo
+  - id: IFOAM
+    from: igo
+  - id: IFRC
+    from: igo
+  - id: IMU
+    from: igo
+  - id: INTERPORTPOLICE
+    from: igo
+  - id: IRF
+    from: igo
+  - id: IRU
+    from: igo
+  - id: ISC
+    from: igo
+  - id: ISO
+    from: igo
+  - id: ISTO
+    from: igo
+  - id: ITFTRANSPORT
+    from: igo
+  - id: IUBMB
+    from: igo
+  - id: IUBS
+    from: igo
+  - id: IUCr
+    from: igo
+  - id: IUGG
+    from: igo
+  - id: IUGS
+    from: igo
+  - id: IUPAC
+    from: igo
+  - id: IUPAP
+    from: igo
+  - id: PATA
+    from: igo
+  - id: PBEC
+    from: igo
+  - id: POGO
+    from: igo
+  - id: SCAR
+    from: igo
+  - id: SCOR
+    from: igo
+  - id: UIC
+    from: igo
+  - id: WFTU
+    from: igo
+  - id: WMA
+    from: igo
+  policy_forum:
+  - id: CBFP
+    from: igo
+  - id: D8TTEN
+    from: igo
+  - id: EUMETNET
+    from: igo
+  - id: GBEP
+    from: igo
+  - id: GICNT
+    from: igo
+  - id: GIFCS
+    from: igo
+  - id: GMI
+    from: igo
+  - id: IGF
+    from: igo
+  - id: JDTJUBA
+    from: igo
+  - id: MOUNTPART
+    from: igo
+  - id: PASC
+    from: igo
+  - id: PLG
+    from: igo
+  intergovernmental_body:
+  - id: BCBS
+    from: igo
+  - id: CFTC
+    from: igo
+  - id: CGIARFUND
+    from: igo
+  - id: EASC
+    from: igo
+  - id: GFDRR
+    from: igo
+  - id: IOC_UNESCO
+    from: igo
+  - id: NEPAD
+    from: igo
+  - id: PROFOR
+    from: igo
+  - id: SOPAC
+    from: igo
+  - id: UNITAID
+    from: igo
+  igo:
+  - id: ISA_SEABED
+    from: treaty_body
+scope_category_deferred:
+- AFROSAIE
+- ARABOSAI
+- ASOSAI
+- AVRDC
+- CAROSAI
+- CEPI
+- CIMMYT
+- EITI
+- EUROSAI
+- FSB
+- GAVI
+- GLOBALFUND
+- IAIS
+- ICARDA
+- ICRC
+- INTOSAI
+- IOSCO
+- ISSA
+- OLACEFS
+- PASAI
