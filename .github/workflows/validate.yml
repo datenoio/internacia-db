@@ -26,8 +26,11 @@ on:
       - 'uv.lock'
       - '.pre-commit-config.yaml'
       # validate (3.11/3.12/3.13) are required checks on main, so a pull request
-      # that only touches the website must run them too or it can never merge.
+      # that only touches the website, OpenSpec or research notes must run them
+      # too or it can never merge.
       - 'website/**'
+      - 'openspec/**'
+      - 'dev/**'
   push:
     branches: [main]
     paths:

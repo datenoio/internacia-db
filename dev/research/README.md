@@ -10,6 +10,7 @@ contract — prefer `docs/` and OpenSpec for normative guidance.
 | [gaps_merged_20260528.md](gaps_merged_20260528.md) | Merged gap notes |
 | [wb_classification_gaps_20260615.md](wb_classification_gaps_20260615.md) | World Bank classification gaps |
 | [report_manus_20260615.md](report_manus_20260615.md) | Follow-up Manus report |
+| [intorg_review_20261120.md](intorg_review_20261120.md) | Review of the `intorg` blocktype and reorganization plan |
 | [intblocks_missing_includes_20260528.txt](intblocks_missing_includes_20260528.txt) | Missing includes scan |
 
 Deep-review implementation tracking: [`../docs/DEEP_REVIEW_IMPLEMENTATION_PLAN.md`](../docs/DEEP_REVIEW_IMPLEMENTATION_PLAN.md)
