@@ -38,12 +38,14 @@ from internacia_builder.export import (
     flatten_country,
     flatten_intblock,
     load_attribute_intblock_migrations,
+    load_border_status,
     load_country_aliases,
     load_intblock_aliases,
     load_yaml_files,
     project_lite_rows,
     save_aliases,
     save_attribute_intblock_migrations,
+    save_border_status,
     save_csv_rows,
     save_json_array,
     save_jsonl,
@@ -74,6 +76,7 @@ from internacia_builder.schemas import (
     get_aliases_schema,
     get_attribute_migration_schema,
     get_blocktypes_schema,
+    get_border_status_schema,
     get_countries_schema,
     get_intblocks_schema,
     get_memberships_schema,
@@ -234,6 +237,9 @@ def build(
     attribute_migrations = load_attribute_intblock_migrations(project_root)
     typer.echo(f"   Loaded {len(attribute_migrations)} attribute intblock migration(s)")
 
+    border_status = load_border_status(project_root)
+    typer.echo(f"   Loaded {len(border_status)} border status entr{'y' if len(border_status) == 1 else 'ies'}")
+
     # Freeze one build identity for all manifests/sidecars/_meta rows.
     begin_build_context()
 
@@ -301,6 +307,7 @@ def build(
                 ("intblocks_aliases", intblock_aliases, get_aliases_schema()),
                 ("countries_aliases", country_aliases, get_aliases_schema()),
                 ("attribute_intblock_migrations", attribute_migrations, get_attribute_migration_schema()),
+                ("border_status", border_status, get_border_status_schema()),
             ],
         )
 
@@ -310,6 +317,7 @@ def build(
     save_attribute_intblock_migrations(
         attribute_migrations, output_dir, write_parquet="parquet" in requested_formats
     )
+    save_border_status(border_status, output_dir, write_parquet="parquet" in requested_formats)
 
     # Manifests list the checksums of their dataset's files, so they follow every data file.
     if {"parquet", "duckdb"} & set(requested_formats):

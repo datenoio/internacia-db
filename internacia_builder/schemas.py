@@ -344,6 +344,46 @@ def get_memberships_schema() -> pa.Schema:
             ("status", pa.string()),
             ("joined", pa.string()),
             ("left", pa.string()),
+            # Appended last (add-transit-dependence-layer): route role on infrastructure records.
+            ("role", pa.string()),
+        ]
+    )
+
+def get_border_status_schema() -> pa.Schema:
+    """Schema for the ``border_status`` table (one row per closed or restricted border period)."""
+    return pa.schema(
+        [
+            pa.field("country_a", pa.string(), nullable=False),
+            pa.field("country_b", pa.string(), nullable=False),
+            ("status", pa.string()),
+            ("since", pa.string()),
+            ("until", pa.string()),
+            ("note", pa.string()),
+            ("last_verified", pa.string()),
+            (
+                "provenance",
+                pa.list_(
+                    pa.struct(
+                        [
+                            ("source", pa.string()),
+                            ("url", pa.string()),
+                            ("retrieved_at", pa.string()),
+                            ("license", pa.string()),
+                        ]
+                    )
+                ),
+            ),
+        ]
+    )
+
+def get_country_borders_schema() -> pa.Schema:
+    """Schema for the ``country_borders`` view (one row per country and land neighbour)."""
+    return pa.schema(
+        [
+            pa.field("country_code", pa.string(), nullable=False),
+            ("iso3code", pa.string()),
+            pa.field("neighbor_iso3", pa.string(), nullable=False),
+            ("current_status", pa.string()),
         ]
     )
 

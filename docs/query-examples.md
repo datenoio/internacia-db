@@ -1377,6 +1377,91 @@ ORDER BY world_pop_pct DESC;
 **Expected:** UPU covers about 99% of world population with about 14 effective members; EAEU's
 largest member (RU) holds about 78% of its population, about 1.6 effective members.
 
+## Transit and borders
+
+Transit dependence is structural: which neighbours a country's goods must cross, and which
+countries a pipeline or corridor runs through. Border crossing status lives in the
+`border_status` table and the `country_borders` view; route roles live in `includes[].role` and
+the `role` column of `memberships`. Bilateral trade volumes are not shipped (see
+[ai-consumers.md](ai-consumers.md#trade-dependence-is-downstream)).
+
+### Current border status of a country's neighbours
+
+```sql
+SELECT neighbor_iso3, current_status
+FROM country_borders
+WHERE country_code = 'AM'
+ORDER BY neighbor_iso3;
+```
+
+**Expected:** AZE and TUR are `closed`; GEO and IRN have no recorded closure (NULL). NULL means
+that no closure is recorded, not that the border is verified open.
+
+### Sea-access gateways of landlocked countries
+
+For each official landlocked country, the first-hop neighbours that lie on a crossable path to a
+coastal country, and the number of borders from each to a coast. A border is crossable only when
+it has no current `border_status` (`closed` and `restricted` both block it), and a Caspian shore
+does not count as a coast, as in `landlocked`. The result is a structural lower bound, not a route
+model: it ignores corridors, capacity, cost and sanctions. For example, it sends Kyrgyzstan to the
+sea through China, while its rail freight mostly runs through Kazakhstan to Russia.
+
+```sql
+WITH RECURSIVE
+official AS (
+  SELECT code, iso3code, landlocked FROM countries WHERE code_status = 'official_iso3166_1'
+),
+edges AS (
+  SELECT cb.iso3code AS a, cb.neighbor_iso3 AS b
+  FROM country_borders cb
+  JOIN official o1 ON o1.iso3code = cb.iso3code
+  JOIN official o2 ON o2.iso3code = cb.neighbor_iso3
+  WHERE cb.current_status IS NULL
+),
+walk(origin, gateway, node, hops, path) AS (
+  SELECT l.iso3code, e.b, e.b, 1, [l.iso3code, e.b]
+  FROM official l JOIN edges e ON e.a = l.iso3code
+  WHERE l.landlocked
+  UNION ALL
+  SELECT w.origin, w.gateway, e.b, w.hops + 1, list_append(w.path, e.b)
+  FROM walk w
+  JOIN official n ON n.iso3code = w.node
+  JOIN edges e ON e.a = w.node
+  WHERE n.landlocked AND w.hops < 4 AND NOT list_contains(w.path, e.b)
+),
+gateways AS (
+  SELECT w.origin, w.gateway, min(w.hops) AS borders_to_coast
+  FROM walk w JOIN official n ON n.iso3code = w.node
+  WHERE NOT n.landlocked
+  GROUP BY w.origin, w.gateway
+)
+SELECT o.code AS country_code,
+       g.gateway,
+       g.borders_to_coast,
+       count(*) FILTER (WHERE g.borders_to_coast = 1) OVER (PARTITION BY g.origin) AS direct_coastal_gateways,
+       count(*) FILTER (WHERE g.borders_to_coast = 1) OVER (PARTITION BY g.origin) = 1 AS single_direct_gateway
+FROM gateways g
+JOIN official o ON o.iso3code = g.origin
+ORDER BY country_code, borders_to_coast, gateway;
+```
+
+**Expected:** 44 landlocked countries. Armenia keeps only GEO and IRN (its borders with AZE and TUR
+are closed); Lesotho has a single gateway (ZAF); Liechtenstein and Uzbekistan are two borders from
+a coast; KG, LS, SM, TJ, TM and VA have a single direct coastal gateway.
+
+### Countries by role on infrastructure routes
+
+```sql
+SELECT m.intblock_id, i.name, m.country_code, m.role
+FROM current_memberships m
+JOIN intblocks i ON i.id = m.intblock_id
+WHERE m.role IS NOT NULL
+ORDER BY m.intblock_id, m.role, m.country_code;
+```
+
+**Expected:** one row per country on each pipeline or corridor with reviewed roles; for example
+TAP has GR `origin`, AL `transit` and IT `destination`.
+
 ## Cookbook coverage (parity policy)
 
 - **DuckDB** ([query-examples.md](query-examples.md)) is canonical. Core SQL scenarios

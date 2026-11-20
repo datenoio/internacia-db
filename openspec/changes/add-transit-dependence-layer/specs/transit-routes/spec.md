@@ -2,12 +2,22 @@
 
 ### Requirement: Infrastructure include roles
 
-Intblock `includes` entries MAY carry an optional `role` with one of the values `origin`, `transit`, or `destination`, defined in `data/schemas/include_roles.yaml`. The JSON Schema enum and the catalog keys SHALL be identical, and `contract.json` SHALL list `includes[].role` as an open enum. A `role` SHALL appear only on records whose `blocktype` includes `gaspipeline`. `origin` SHALL mean the route starts in that country, `transit` that the route crosses it and continues into another country, and `destination` that the route ends there; offtake along the route SHALL NOT change a `transit` role.
+Intblock `includes` entries MAY carry an optional `role` with one of the values `origin`, `transit`, `destination`, or `terminal`, defined in `data/schemas/include_roles.yaml`. The JSON Schema enum and the catalog keys SHALL be identical, and `contract.json` SHALL list `includes[].role` as an open enum. A `role` SHALL appear only on records whose `blocktype` includes `gaspipeline`, `oilpipeline`, or `corridor`; the taxonomy SHALL define `oilpipeline` and `corridor` with descriptions. `origin` SHALL mean the route starts in that country, `transit` that the route crosses it and continues into another country, `destination` that the route ends there, and `terminal` that a bidirectional corridor ends there; offtake along a pipeline SHALL NOT change a `transit` role. `terminal` SHALL be used only on `corridor` records, and `origin` and `destination` only on pipeline records.
 
 #### Scenario: Pipeline roles are valid
 
 - **WHEN** a `gaspipeline` record gives AZ `role: origin`, GE `role: transit`, and TR `role: destination`, with provenance
 - **THEN** validation passes
+
+#### Scenario: Corridor roles are valid
+
+- **WHEN** a `corridor` record gives CN `role: terminal`, KG `role: transit`, and UZ `role: terminal`, with provenance
+- **THEN** validation passes
+
+#### Scenario: Origin on a corridor
+
+- **WHEN** a `corridor` record gives an include `role: origin`
+- **THEN** the intblock validator reports an error
 
 #### Scenario: Role on a non-infrastructure record
 
@@ -26,7 +36,7 @@ Intblock `includes` entries MAY carry an optional `role` with one of the values 
 
 ### Requirement: Complete roles per infrastructure record
 
-When any current country entry of a record has a `role`, every current country entry of that record SHALL have one. The record SHALL then have at least one `origin` and at least one `destination`. Every record with roles SHALL have a `provenance` entry with `field: includes` that cites the route.
+When any current country entry of a record has a `role`, every current country entry of that record SHALL have one. A pipeline record SHALL then have at least one `origin` and at least one `destination`, and a corridor record SHALL have at least two `terminal` entries. Every record with roles SHALL have a `provenance` entry with `field: includes` that cites the route.
 
 #### Scenario: Partial roles
 
@@ -64,7 +74,7 @@ The role backfill SHALL apply values only from an explicit, versioned manifest t
 
 ### Requirement: Sea-access gateway recipe
 
-The query documentation SHALL include a tested DuckDB recipe that returns, for every official landlocked country, each first-hop neighbour that lies on a crossable path to a coastal country, the smallest number of borders from that neighbour to a coast, whether the path crosses a `restricted` border, the count of direct coastal gateways, and a flag for a single direct coastal gateway. A coastal country SHALL be an official country with `landlocked = false`, and a border SHALL be crossable unless its current `border_status` is `closed`. The documentation SHALL state that the result is a structural lower bound that ignores corridors, capacity, cost, and sanctions.
+The query documentation SHALL include a tested DuckDB recipe that returns, for every official landlocked country, each first-hop neighbour that lies on a crossable path to a coastal country, the smallest number of borders from that neighbour to a coast, the count of direct coastal gateways, and a flag for a single direct coastal gateway. A coastal country SHALL be an official country with `landlocked = false`, and a border SHALL be crossable only when it has no current `border_status` (neither `closed` nor `restricted`). The measure SHALL ship as a recipe, not a view. The documentation SHALL state that the result is a structural lower bound that ignores corridors, capacity, cost, and sanctions.
 
 #### Scenario: Single gateway
 

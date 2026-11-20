@@ -25,7 +25,7 @@ import yaml
 
 from internacia_builder import wb_classification
 from internacia_builder.paths import blocktypes_source_path
-from internacia_builder.validate import completeness, country_rules, cross_rules, intblock_rules
+from internacia_builder.validate import border_rules, completeness, country_rules, cross_rules, intblock_rules
 
 Issue = dict[str, Any]
 
@@ -136,6 +136,9 @@ class RuleContext:
     check_wikidata: bool = False
     blocktype_catalog: dict[str, dict[str, Any]] = field(default_factory=dict)
     deprecated_blocktype_baseline: dict[str, set[str]] = field(default_factory=dict)
+    include_roles_catalog: dict[str, Any] = field(default_factory=dict)
+    border_status: dict[str, Any] | None = None
+    border_status_schema: dict[str, Any] = field(default_factory=dict)
 
     def dataset(self, name: str) -> Dataset:
         return self.countries if name == COUNTRIES else self.intblocks
@@ -205,6 +208,7 @@ def load_context(
     blocktypes_path = blocktypes_source_path(root)
     aliases_path = root / "data" / "intblocks_aliases.yaml"
     migrations_path = root / "data" / "attribute_intblock_migrations.yaml"
+    border_status_path = root / "data" / "borders" / "border_status.yaml"
     blocktype_catalog: dict[str, dict[str, Any]] = {}
     if blocktypes_path.exists():
         blocktype_catalog = {
@@ -236,6 +240,11 @@ def load_context(
         blocktype_catalog=blocktype_catalog,
         deprecated_blocktype_baseline=load_deprecated_blocktype_baseline(
             schemas / "deprecated_blocktypes_baseline.yaml"),
+        include_roles_catalog=(load_yaml(schemas / "include_roles.yaml") or {})
+        if (schemas / "include_roles.yaml").exists() else {},
+        border_status=(load_yaml(border_status_path) or {}) if border_status_path.exists() else None,
+        border_status_schema=json.loads((schemas / "border_status.schema.json").read_text(encoding="utf-8"))
+        if (schemas / "border_status.schema.json").exists() else {},
     )
 
 
@@ -333,6 +342,15 @@ COUNTRY_RULES: tuple[Rule, ...] = (
            lambda ctx: cross_rules.check_border_reciprocity(
                ctx.countries.records, ctx.countries.paths,
                cross_rules.load_border_reciprocity_allowlist(ctx.countries_cfg))),
+    _cross("border status", COUNTRIES, E,
+           lambda ctx: border_rules.check_border_status(
+               ctx.border_status, ctx.border_status_schema, ctx.countries.records),
+           message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.border_status is not None),
+    _cross("border status freshness", COUNTRIES, W,
+           lambda ctx: border_rules.check_border_status_freshness(ctx.border_status, ctx.last_verified_max_age),
+           message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.border_status is not None and ctx.last_verified_max_age > 0),
     _cross("parent entity references", COUNTRIES, W,
            lambda ctx: cross_rules.check_parent_entity_refs(ctx.countries.records, ctx.countries.paths)),
     _cross("completeness", COUNTRIES, REPORT,
@@ -393,6 +411,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
             lambda ctx, r, p: intblock_rules.check_intblock_institutional_design(r)),
     _record("veto holders under consensus", INTBLOCKS, W,
             lambda ctx, r, p: intblock_rules.check_intblock_veto_under_consensus(r)),
+    _record("include roles", INTBLOCKS, E,
+            lambda ctx, r, p: intblock_rules.check_intblock_include_roles(r, ctx.include_roles_catalog)),
     _cross("scope coverage", INTBLOCKS, E,
            lambda ctx: intblock_rules.check_scope_coverage(ctx.intblocks.records, ctx.intblocks_cfg),
            message=_action_only),

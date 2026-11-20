@@ -19,10 +19,12 @@ includes:
   name: Argentina
   type: country
   status: member
+  role: origin
 - id: CL
   name: Chile
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q5526274
 description: Natural gas pipeline from La Mora, Mendoza Province, Argentina, to San Bernardo on the outskirts of Santiago,
@@ -55,6 +57,10 @@ other_names:
   name: GasAndes
 provenance:
 - field: includes
+  source: "GasAndes - Gas natural (operator site, Spanish)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.gasandes.com/gas-natural"
+- field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q5526274
@@ -80,4 +86,4 @@ provenance:
 - field: geographic_scope
   source: inferred grouping
   retrieved_at: '2026-07-29'
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'

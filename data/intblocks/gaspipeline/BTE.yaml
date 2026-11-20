@@ -23,14 +23,17 @@ includes:
   name: Azerbaijan
   type: country
   status: member
+  role: origin
 - id: GE
   name: Georgia
   type: country
   status: member
+  role: transit
 - id: TR
   name: Türkiye
   type: country
   status: member
+  role: destination
 membership_count: 3
 wikidata_id: Q572699
 description: Natural gas pipeline from the Shah Deniz gas field in the Azerbaijan sector
@@ -98,6 +101,14 @@ notes: The 692 km line runs from the Sangachal terminal near Baku through Georgi
   Erzurum in eastern Turkey. Gas is sourced from the Shah Deniz field; capacity was expanded
   via SCPx to feed TANAP and the Southern Gas Corridor.
 provenance:
+- field: includes
+  source: "Ministry of Energy of Azerbaijan - Gas Transportation / South Caucasus Pipeline"
+  retrieved_at: "2026-11-20"
+  url: "https://minenergy.gov.az/en/qaz/cenubi-qafqaz-boru-kemeri-cqbk"
+- field: includes
+  source: "US EIA - Turkiye country analysis"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/TUR"
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-07-29'
@@ -132,4 +143,4 @@ provenance:
   source: Wikipedia
   retrieved_at: '2026-07-30'
   url: https://en.wikipedia.org/wiki/South_Caucasus_Pipeline
-last_verified: '2026-07-30'
+last_verified: '2026-11-20'

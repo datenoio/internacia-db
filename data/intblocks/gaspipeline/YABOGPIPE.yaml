@@ -20,10 +20,12 @@ includes:
   name: Argentina
   type: country
   status: member
+  role: destination
 - id: BO
   name: Bolivia
   type: country
   status: member
+  role: origin
 membership_count: 2
 wikidata_id: Q8046382
 description: Natural gas pipeline from Río Grande in Santa Cruz de la Sierra, Bolivia, to Campo
@@ -57,6 +59,10 @@ other_names:
   name: Yabog
 provenance:
 - field: includes
+  source: "US EIA - Bolivia country analysis"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/BOL"
+- field: includes
   source: Wikipedia
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Yabog_pipeline
@@ -85,4 +91,4 @@ provenance:
   source: Wikipedia
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Yabog_pipeline
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'

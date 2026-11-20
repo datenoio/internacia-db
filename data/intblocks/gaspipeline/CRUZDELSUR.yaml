@@ -27,10 +27,12 @@ includes:
   name: Argentina
   type: country
   status: member
+  role: origin
 - id: UY
   name: Uruguay
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q5190326
 description: Natural gas pipeline linking Buenos Aires, Argentina with Colonia del Sacramento and Montevideo, Uruguay.
@@ -67,6 +69,14 @@ other_names:
   name: Cruz del Sur
 provenance:
 - field: includes
+  source: "MIEM Uruguay - Contrato de Concesion de Gasoducto Cruz del Sur (22 March 1999)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.gub.uy/ministerio-industria-energia-mineria/sites/ministerio-industria-energia-mineria/files/2020-06/Contrato%20de%20Concesi%C3%B3n%20de%20Gasoducto%20Cruz%20del%20Sur%20de%20fecha%2022%20de%20marzo%20de%201999.pdf"
+- field: includes
+  source: "URSEA Uruguay - Gas natural"
+  retrieved_at: "2026-11-20"
+  url: "https://www.gub.uy/unidad-reguladora-servicios-energia-agua/gas-natural-0"
+- field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q5190326
@@ -98,4 +108,4 @@ provenance:
 - field: geographic_scope
   source: inferred grouping
   retrieved_at: '2026-07-29'
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'

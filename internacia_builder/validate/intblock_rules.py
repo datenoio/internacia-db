@@ -258,6 +258,83 @@ def check_intblock_veto_under_consensus(record: dict[str, Any]) -> list[dict[str
     return []
 
 
+def _role_kind(record: dict[str, Any], catalog: dict[str, Any]) -> str | None:
+    """The include-role kind (``pipeline`` or ``corridor``) whose blocktypes the record carries."""
+    blocktypes = {str(b) for b in record.get("blocktype") or []}
+    for name, kind in (catalog.get("kinds") or {}).items():
+        if blocktypes & {str(b) for b in kind.get("blocktypes") or []}:
+            return str(name)
+    return None
+
+
+def check_intblock_include_roles(record: dict[str, Any], catalog: dict[str, Any]) -> list[dict[str, Any]]:
+    """Route roles on infrastructure records (data/schemas/include_roles.yaml).
+
+    A role is allowed only on country entries of records whose blocktype belongs to a role kind,
+    and only with that kind's values. Once any entry has a role, every current country entry needs
+    one, the kind's required endpoints must be present, and ``provenance`` must cite ``includes``.
+    """
+    includes = [inc for inc in record.get("includes") or [] if isinstance(inc, dict)]
+    with_role = [inc for inc in includes if inc.get("role")]
+    if not with_role:
+        return []
+    kind_name = _role_kind(record, catalog)
+    if kind_name is None:
+        return [{
+            "issue_type": "INCLUDE_ROLE_NOT_ALLOWED",
+            "field": "includes[].role",
+            "current_value": ",".join(sorted({str(inc["role"]) for inc in with_role})),
+            "suggested_action": "includes[].role is allowed only on gaspipeline, oilpipeline and corridor records",
+        }]
+    kind = (catalog.get("kinds") or {})[kind_name]
+    allowed = {str(r) for r in kind.get("roles") or []}
+    issues: list[dict[str, Any]] = []
+    for inc in with_role:
+        if (inc.get("type") or "country") != "country":
+            issues.append({
+                "issue_type": "INCLUDE_ROLE_NOT_ALLOWED",
+                "field": "includes[].role",
+                "current_value": str(inc.get("id")),
+                "suggested_action": "a route role is allowed only on country entries",
+            })
+        elif str(inc["role"]) not in allowed:
+            issues.append({
+                "issue_type": "INVALID_INCLUDE_ROLE",
+                "field": "includes[].role",
+                "current_value": f"{inc.get('id')}={inc['role']}",
+                "suggested_action": f"{kind_name} records use only roles {sorted(allowed)}",
+            })
+    current = [inc for inc in includes if (inc.get("type") or "country") == "country" and not inc.get("left")]
+    missing = [str(inc.get("id")) for inc in current if not inc.get("role")]
+    if missing:
+        issues.append({
+            "issue_type": "INCOMPLETE_INCLUDE_ROLES",
+            "field": "includes[].role",
+            "current_value": ",".join(missing),
+            "suggested_action": "once any country entry has a role, every current country entry needs one",
+        })
+    counts: dict[str, int] = {}
+    for inc in current:
+        if inc.get("role"):
+            counts[str(inc["role"])] = counts.get(str(inc["role"]), 0) + 1
+    for role, minimum in (kind.get("requires") or {}).items():
+        if counts.get(str(role), 0) < int(minimum):
+            issues.append({
+                "issue_type": "MISSING_ROUTE_ENDPOINT",
+                "field": "includes[].role",
+                "current_value": f"{role}={counts.get(str(role), 0)}",
+                "suggested_action": f"a {kind_name} record needs at least {minimum} '{role}' entr{'y' if int(minimum) == 1 else 'ies'}",
+            })
+    if not any(isinstance(e, dict) and str(e.get("field") or "") == "includes" for e in record.get("provenance") or []):
+        issues.append({
+            "issue_type": "MISSING_ROLE_PROVENANCE",
+            "field": "includes",
+            "current_value": "",
+            "suggested_action": "add a provenance entry with field 'includes' citing the route",
+        })
+    return issues
+
+
 def check_scope_coverage(records: list[dict], config: dict) -> list[dict]:
     scope = config.get("scope_category") or {}
     limit = scope.get("max_missing_formal")

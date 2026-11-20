@@ -517,7 +517,7 @@
           "note": "Rows with include_type 'historical-country' may reference codes that are not in countries (e.g. SU)."
         }
       ],
-      "schema_hash": "1bdbd0d9427722d3ed3c23ee0a101ccc0e62c8eba9e65ae0000f441648b0d76c",
+      "schema_hash": "23ab1f7f65fc09c1a1939d6aa1faa7d5239342146e172c81cff05d17a6e50d33",
       "columns": [
         {
           "name": "intblock_id",
@@ -546,6 +546,11 @@
         },
         {
           "name": "left",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role",
           "type": "string",
           "nullable": true
         }
@@ -735,6 +740,82 @@
       ]
     },
     {
+      "name": "border_status",
+      "kind": "table",
+      "in_duckdb": true,
+      "primary_key": [
+        "country_a",
+        "country_b"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "country_a"
+          ],
+          "references": {
+            "table": "countries",
+            "columns": [
+              "iso3code"
+            ]
+          }
+        },
+        {
+          "columns": [
+            "country_b"
+          ],
+          "references": {
+            "table": "countries",
+            "columns": [
+              "iso3code"
+            ]
+          }
+        }
+      ],
+      "schema_hash": "b69da6d62f7a1d433d5ed509111cb0729789e4f9cb5d08579d2184cfc62dad52",
+      "columns": [
+        {
+          "name": "country_a",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "country_b",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "since",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "until",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "note",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "last_verified",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "provenance",
+          "type": "list<struct<source:string,url:string,retrieved_at:string,license:string>>",
+          "nullable": true
+        }
+      ]
+    },
+    {
       "name": "current_memberships",
       "kind": "view",
       "in_duckdb": true,
@@ -743,7 +824,7 @@
         "country_code"
       ],
       "foreign_keys": [],
-      "schema_hash": "1bdbd0d9427722d3ed3c23ee0a101ccc0e62c8eba9e65ae0000f441648b0d76c",
+      "schema_hash": "23ab1f7f65fc09c1a1939d6aa1faa7d5239342146e172c81cff05d17a6e50d33",
       "columns": [
         {
           "name": "intblock_id",
@@ -772,6 +853,11 @@
         },
         {
           "name": "left",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role",
           "type": "string",
           "nullable": true
         }
@@ -850,6 +936,41 @@
       "definition": "SELECT c.code AS country_code, u.lang.code AS language_code, u.lang.name AS language_name, u.lang.official AS official FROM countries c, UNNEST(c.languages) AS u(lang) ORDER BY country_code, language_code"
     },
     {
+      "name": "country_borders",
+      "kind": "view",
+      "in_duckdb": true,
+      "primary_key": [
+        "country_code",
+        "neighbor_iso3"
+      ],
+      "foreign_keys": [],
+      "schema_hash": "71ba6b977bc02e0486bb55fcd6a73aaf09ae7abd3ad3f6ffda2bc4d709f55957",
+      "columns": [
+        {
+          "name": "country_code",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "iso3code",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "neighbor_iso3",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "current_status",
+          "type": "string",
+          "nullable": true
+        }
+      ],
+      "description": "One row per country and land neighbour (countries.borders), with the pair's current border_status (closed or restricted), or NULL when no closure is recorded.",
+      "definition": "SELECT c.code AS country_code, c.iso3code, b.neighbor AS neighbor_iso3, s.status AS current_status FROM countries c, UNNEST(c.borders) AS b(neighbor) LEFT JOIN border_status s ON s.\"until\" IS NULL AND ((s.country_a = c.iso3code AND s.country_b = b.neighbor) OR (s.country_b = c.iso3code AND s.country_a = b.neighbor)) ORDER BY country_code, neighbor_iso3"
+    },
+    {
       "name": "country_timezones",
       "kind": "view",
       "in_duckdb": true,
@@ -876,6 +997,15 @@
     }
   ],
   "enums": [
+    {
+      "table": "border_status",
+      "column": "status",
+      "values": [
+        "closed",
+        "restricted"
+      ],
+      "open": true
+    },
     {
       "table": "countries",
       "column": "car_side",
@@ -949,6 +1079,15 @@
       "open": true
     },
     {
+      "table": "country_borders",
+      "column": "current_status",
+      "values": [
+        "closed",
+        "restricted"
+      ],
+      "open": true
+    },
+    {
       "table": "current_memberships",
       "column": "include_type",
       "values": [
@@ -956,6 +1095,17 @@
         "organization",
         "territory",
         "historical-country"
+      ],
+      "open": true
+    },
+    {
+      "table": "current_memberships",
+      "column": "role",
+      "values": [
+        "origin",
+        "transit",
+        "destination",
+        "terminal"
       ],
       "open": true
     },
@@ -991,6 +1141,17 @@
         "regional",
         "sub-regional",
         "bilateral"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "includes[].role",
+      "values": [
+        "origin",
+        "transit",
+        "destination",
+        "terminal"
       ],
       "open": true
     },
@@ -1153,6 +1314,17 @@
         "organization",
         "territory",
         "historical-country"
+      ],
+      "open": true
+    },
+    {
+      "table": "memberships",
+      "column": "role",
+      "values": [
+        "origin",
+        "transit",
+        "destination",
+        "terminal"
       ],
       "open": true
     },

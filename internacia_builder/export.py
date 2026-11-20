@@ -22,6 +22,7 @@ from internacia_builder.paths import project_root
 from internacia_builder.schemas import (
     get_aliases_schema,
     get_attribute_migration_schema,
+    get_border_status_schema,
     get_memberships_schema,
     get_meta_schema,
 )
@@ -120,6 +121,52 @@ def save_attribute_intblock_migrations(
         parquet_path = output_dir / "attribute_intblock_migrations.parquet"
         pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
         typer.echo(f"✓ Saved attribute migrations (parquet): {parquet_path}")
+
+def load_border_status(project_root: Path) -> list[dict[str, Any]]:
+    """Border status rows from data/borders/border_status.yaml, sorted by pair and start."""
+    path = project_root / "data" / "borders" / "border_status.yaml"
+    if not path.exists():
+        return []
+    document = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    rows: list[dict[str, Any]] = []
+    for entry in document.get("entries") or []:
+        if not isinstance(entry, dict):
+            continue
+        pair = [str(code) for code in entry.get("countries") or []]
+        rows.append(
+            {
+                "country_a": pair[0] if pair else None,
+                "country_b": pair[1] if len(pair) > 1 else None,
+                "status": entry.get("status"),
+                "since": None if entry.get("since") is None else str(entry["since"]),
+                "until": None if entry.get("until") is None else str(entry["until"]),
+                "note": entry.get("note"),
+                "last_verified": None if entry.get("last_verified") is None else str(entry["last_verified"]),
+                "provenance": [
+                    {
+                        "source": p.get("source"),
+                        "url": p.get("url"),
+                        "retrieved_at": None if p.get("retrieved_at") is None else str(p["retrieved_at"]),
+                        "license": p.get("license"),
+                    }
+                    for p in entry.get("provenance") or []
+                    if isinstance(p, dict)
+                ],
+            }
+        )
+    rows.sort(key=lambda r: (str(r["country_a"]), str(r["country_b"]), str(r["since"] or "")))
+    return rows
+
+def save_border_status(rows: list[dict[str, Any]], output_dir: Path, write_parquet: bool = True) -> None:
+    """Write the border status artifact as JSON and (optionally) Parquet."""
+    json_path = output_dir / "border_status.json"
+    json_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    typer.echo(f"✓ Saved border status: {json_path}")
+    if write_parquet:
+        table = pa.Table.from_pylist(rows, schema=get_border_status_schema())
+        parquet_path = output_dir / "border_status.parquet"
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        typer.echo(f"✓ Saved border status (parquet): {parquet_path}")
 
 def save_aliases(
     aliases: list[dict[str, Any]],
@@ -355,6 +402,8 @@ def write_datapackage(output_dir: Path, version: str) -> None:
         ("intblocks_aliases", "json", "intblocks_aliases.json"),
         ("countries_aliases", "json", "countries_aliases.json"),
         ("attribute_intblock_migrations", "json", "attribute_intblock_migrations.json"),
+        ("border_status", "json", "border_status.json"),
+        ("border_status", "parquet", "border_status.parquet"),
     ):
         file_path = output_dir / path
         if not file_path.exists():
@@ -494,6 +543,7 @@ def build_membership_rows(intblocks_data: list[dict[str, Any]]) -> list[dict[str
                     "status": inc.get("status"),
                     "joined": inc.get("joined"),
                     "left": inc.get("left"),
+                    "role": inc.get("role"),
                 }
             )
     rows.sort(key=lambda r: (str(r["intblock_id"]), str(r["country_code"])))
@@ -570,7 +620,11 @@ def create_duckdb_database(
         con.execute("CREATE TABLE _meta AS SELECT * FROM arrow_source")
         con.unregister("arrow_source")
 
-        for name, data, schema in reference_tables or []:
+        reference_tables = list(reference_tables or [])
+        if "border_status" not in {name for name, _, _ in reference_tables}:
+            # The country_borders view reads it; an empty table keeps the view valid.
+            reference_tables.append(("border_status", [], get_border_status_schema()))
+        for name, data, schema in reference_tables:
             con.register("arrow_source", pa.Table.from_pylist(data, schema=schema))
             con.execute(f"CREATE TABLE {name} AS SELECT * FROM arrow_source")
             con.unregister("arrow_source")

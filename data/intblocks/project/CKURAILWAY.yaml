@@ -2,6 +2,7 @@ id: CKURAILWAY
 blocktype:
 - project
 - transport
+- corridor
 status: formal
 scope_category: policy_forum
 partof: BRI
@@ -26,16 +27,19 @@ includes:
   type: country
   status: member
   joined: '2024-06'
+  role: terminal
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
   joined: '2024-06'
+  role: transit
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
   joined: '2024-06'
+  role: terminal
 membership_count: 3
 wikidata_id: Q4178849
 description: International railway project under construction linking Kashgar in western China to Andijan in eastern
@@ -77,8 +81,16 @@ notes: The three governments signed a trilateral agreement to proceed in June 20
   conversion planned in a second phase. Standard gauge (1,435 mm) applies in China and Russian gauge (1,520 mm) in
   Kyrgyzstan and Uzbekistan. Estimated cost was reported at US$4.7 billion in 2024, funded through Chinese concessional
   loans, multilateral development financing, and domestic contributions from Kyrgyzstan and Uzbekistan.
-last_verified: '2026-10-22'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "gov.cn (State Council English), report on CKU railway commencement ceremony"
+  retrieved_at: "2026-11-20"
+  url: "https://english.www.gov.cn/news/202412/27/content_WS676eabb1c6d0868f4e8ee51f.html"
+- field: includes
+  source: "gov.cn (State Council English), follow-up report on the railway"
+  retrieved_at: "2026-11-20"
+  url: "https://english.www.gov.cn/news/202412/28/content_WS676f37fcc6d0868f4e8ee532.html"
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

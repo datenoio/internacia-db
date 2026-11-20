@@ -37,7 +37,7 @@ The non-goals are:
 
 - **Trade data.** No trade values, shares, balances or product flows are stored, and no external trade dataset is mirrored.
 - **Flows and capacity.** No transit volumes, port throughput, route capacity, cost or travel time.
-- **Other infrastructure in this change.** Roles on oil pipelines or transport corridors, maritime chokepoints, air and sea connectivity.
+- **Other infrastructure in this change.** Maritime chokepoints, air and sea connectivity, power grids, and route networks such as the Asian Highway.
 - **Political judgement.** No ruling on sanctions, embargoes, or the legitimacy of a border or a closure.
 - **Scores.** No composite transit, dependence or influence score, and no ranking.
 - **Countries schema.** No new field on country records.
@@ -53,10 +53,16 @@ The non-goals are:
 | `origin` | The route starts here: gas enters the pipeline in this country |
 | `transit` | The route crosses this country and continues into another |
 | `destination` | The route ends here |
+| `terminal` | An end of a bidirectional route (corridors only) |
 
 Offtake along the route is not recorded; a country that takes gas and passes the rest on is `transit`. A route that starts and ends in the same country (an export loop) is not expected among the 25 records; if one appears, it is deferred.
 
-`role` is allowed only on records whose blocktype includes `gaspipeline` in this change. Once any country entry of a record has a role, every current country entry of that record must have one, and the record needs at least one `origin` and one `destination`. Every role assignment needs a provenance entry with `field: includes`. The role enum is open in `contract.json`.
+Following the maintainer's decision (2026-11-20), roles apply to three blocktypes:
+
+- `gaspipeline` and the new `oilpipeline`: directional flows, so roles are `origin`, `transit` and `destination`, with at least one `origin` and one `destination`.
+- The new `corridor`: a linear transport route with two ends, carried as an additional blocktype on records such as CKURAILWAY. Corridors run both ways, so their roles are `terminal` and `transit`, with at least two `terminal` entries and no `origin` or `destination`. A network of routes (Asian Highway, Trans-Asian Railway) is not a corridor and gets no roles.
+
+Once any country entry of a record has a role, every current country entry of that record must have one. Every record with roles needs a provenance entry with `field: includes`. The role enum is open in `contract.json`.
 
 ### Decision 2: Border status is an edge dataset, not a country field
 
@@ -66,7 +72,7 @@ A border belongs to two countries. Storing its status on country records would d
 - countries: [ARM, TUR]        # unordered pair of iso3code values; stored sorted
   status: closed               # closed | restricted
   since: '1993'                # YYYY, YYYY-MM or YYYY-MM-DD
-  until: null                  # set when the crossing reopens; the entry is kept as history
+  until: null                  # set when the crossing reopens; the entry stays until a new closure replaces it
   note: >-
     Land crossings closed to regular traffic; illustrative, values set from sources at backfill.
   last_verified: '2026-11-20'
@@ -86,13 +92,13 @@ Absence of an entry means that no closure is recorded. It does not mean the bord
 Validation rules:
 
 - The pair must be adjacent in `countries.borders`, in both directions.
-- Entries for one pair must not overlap in time.
+- A border has one entry; a later closure replaces an ended one.
 - `since` must not be after `until`.
 - Every entry needs at least one provenance entry. Sources are a government, an intergovernmental organization, or an official border or customs authority.
 
 The status describes whether a border can be crossed. It does not judge the legitimacy of the closure, the boundary or the states.
 
-The dataset exports as a `border_status` table, with a primary key on (`country_a`, `country_b`, `since`) and foreign keys to `countries.iso3code`. It also gets a DuckDB view `country_borders`:
+The dataset exports like the alias artifacts: a committed `border_status.json`, a `border_status.parquet` and a DuckDB `border_status` table. The table has a primary key on (`country_a`, `country_b`): one entry per border, so a border that reopens keeps its entry with an `until` date, and a later closure replaces it. `since` is omitted when no qualifying source gives the start. Foreign keys point to `countries.iso3code`. Candidates that are not added are listed in the file's `deferred` map with the reason. It also gets a DuckDB view `country_borders`:
 
 ```sql
 SELECT c.code AS country_code, c.iso3code, b AS neighbor_iso3, s.status AS current_status
@@ -107,7 +113,7 @@ LEFT JOIN border_status s
 The recipe uses the following definitions:
 
 - **Coastal country:** an official country with `landlocked = false`. As with `landlocked` itself, a shore on the Caspian Sea does not count.
-- **Crossable border:** a border whose `current_status` is not `closed`. The recipe also returns whether any edge on the path is `restricted`.
+- **Crossable border:** a border with no current status. Following the maintainer's decision (2026-11-20), both `closed` and `restricted` borders are treated as not crossable.
 - **Gateway:** a first-hop neighbour of a landlocked country that lies on a crossable path to some coastal country. For each gateway the recipe gives the smallest number of borders to a coast. It is a recursive CTE limited to four steps, which covers every current case.
 - **Outputs per landlocked country:** the gateways and their distances, the number of direct coastal gateways, and a flag for a single direct coastal gateway.
 
@@ -134,8 +140,13 @@ It lists sources and their terms: IMF IMTS (formerly DOTS), CEPII BACI (Licence 
 
 Both backfills follow the safety model of `scripts/backfill_institutional_design.py`: an explicit manifest, a dry run by default, whole-cohort validation, conflict blocking, idempotence and provenance insertion.
 
-- **Roles pilot:** all 25 `gaspipeline` records. Sources are operator, government or intergovernmental pages describing the route.
+- **Roles pilot:** all 25 `gaspipeline` records, a small set of new `oilpipeline` records for major international crude-oil pipelines (candidates: Baku–Tbilisi–Ceyhan, Druzhba, CPC, Kirkuk–Ceyhan, Kazakhstan–China), and the linear corridor records (candidates: CKURAILWAY, TRACECA). Sources are operator, government, intergovernmental or project-finance pages describing the route; Wikidata is used only for identifiers and labels.
 - **Border status pilot:** candidates are ARM–TUR, ARM–AZE, PRK–KOR, DZA–MAR, RUS–UKR, ISR–LBN and ISR–SYR. A candidate without an official source is deferred, and the manifest records the reason, as in the institutional-design pilot.
+
+Pilot outcome (2026-11-20):
+
+- **Roles:** 20 records applied from `data/schemas/include_roles_pilot.yaml`: 15 gas pipelines, 4 new oil pipeline records (BTC, KAZCHINA, CPC, KIRKUKCEYHAN) and the CKURAILWAY corridor. Thirteen candidates are deferred with reasons in the manifest. Four are roster questions, where a supplier sits on a feeder pipeline rather than on the record's own route: BALTICPIPE, GNEAPIPE, MEGP, TANAP. The others lack a settling source: ARABGPIPE, CACGPSPIPE, DOLPHIN, KMAAPIPE, MYANMARCHINA and TRANSCARPIPE, plus the DRUZHBA, ESPO and TRACECA candidates. Changed records get `last_verified: 2026-11-20` because their roster was checked against the route source.
+- **Border status:** six closures from official travel advice (ARM–AZE, ARM–TUR, DZA–MAR since 1994, ISR–LBN, KOR–PRK, RUS–UKR). Only DZA–MAR has a sourced start year. ISR–SYR is deferred. A border has one entry, keyed on the pair.
 
 ## Risks / Trade-offs
 
@@ -164,7 +175,7 @@ It ships as a MINOR release with CHANGELOG notes. Before release, rollback is a 
 ## Open Questions
 
 1. **Scope of border status.** Resolved by the maintainer on 2026-11-20: border crossing status is in scope. It is significant reference information about the border graph and likely affects trade volumes between neighbouring countries. Decision 2 stays in this change; the guardrail against socioeconomic fields on country records is unchanged, because status lives in its own edge dataset.
-2. **Other infrastructure.** Should roles later extend to transport corridors (positions on a route rather than treaty parties) and to an `oilpipeline` blocktype?
-3. **Restricted borders.** Should `restricted` count as crossable in the recipe (the default proposed here), or be excluded?
-4. **View.** Should the gateway recipe become a view once both pilots land?
-5. **Pilot.** Is the border-closure candidate list the right pilot?
+2. **Other infrastructure.** Resolved (2026-11-20): roles extend to transport corridors and oil pipelines, through the new `corridor` and `oilpipeline` blocktypes (Decision 1).
+3. **Restricted borders.** Resolved (2026-11-20): `restricted` borders are not crossable in the recipe (Decision 3).
+4. **View.** Resolved (2026-11-20): the gateway measure ships as a DuckDB recipe, not a view.
+5. **Pilot.** Resolved (2026-11-20): the border-closure candidate list is accepted.

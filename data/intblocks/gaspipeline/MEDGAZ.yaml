@@ -19,10 +19,12 @@ includes:
   name: Algeria
   type: country
   status: member
+  role: origin
 - id: ES
   name: Spain
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q286680
 description: Submarine natural gas pipeline from Hassi R'Mel, Algeria, to Almería, Spain,
@@ -67,6 +69,14 @@ other_names:
   name: Medgaz
 provenance:
 - field: includes
+  source: "Medgaz - home page (Spanish text)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.medgaz.com/"
+- field: includes
+  source: "US EIA - Algeria country analysis (Table 4)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/DZA"
+- field: includes
   source: Wikipedia
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Medgaz
@@ -93,4 +103,4 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Medgaz
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'

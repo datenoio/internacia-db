@@ -205,6 +205,25 @@ organization decide and enforce. Its values and their boundary cases are defined
 The field is not a ranking. It does not store influence scores, vote shares, quotas or budget
 contributions, and capacity indicators such as GDP or military spending stay out of countries.
 
+## `includes[].role` on infrastructure records
+
+`includes[].role` records a country's function on an infrastructure route. Values and kinds are
+defined in [`data/schemas/include_roles.yaml`](../data/schemas/include_roles.yaml):
+
+- Pipelines (`gaspipeline`, `oilpipeline`) are directional: `origin` (the route starts here),
+  `transit` (crosses and continues), `destination` (the route ends here; a branch end counts).
+  Offtake along the route does not change `transit`. A pipeline needs at least one `origin` and
+  one `destination`.
+- Linear transport corridors (`corridor`, usually an additional blocktype) run both ways:
+  `terminal` (an end country) and `transit`. A corridor needs at least two `terminal` entries. A
+  network of routes, such as the Asian Highway or the Trans-Asian Railway, is not a corridor.
+- `status` keeps saying how a country relates to the record; `role` says what it does on the route.
+- Once any current country entry has a role, every current country entry needs one, and the
+  record needs a `provenance` entry with `field: includes` citing the route (operator, government,
+  intergovernmental or project-finance source).
+- A country listed on the record but not on its own route (for example on a connected pipeline) is
+  a roster question: the record is deferred instead of forcing a role.
+
 ## Boundaries vs treaties in `partof`
 
 `partof` expresses **organizational hierarchy**, not “established by treaty X”.

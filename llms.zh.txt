@@ -6,15 +6,15 @@
 ## 数据集概览
 
 - **Countries（256）**：ISO 代码、地理、人口/面积、世界银行分类、Wikidata、多语言名称、稳定属性（`car_side`、书写系统/方向、DVD 区、广播/法律体系、轨距）
-- **Intblocks（1275）**：联合国机构、贸易集团、区域组织、条约、体育联合会、具名地理分组等
-- **Blocktypes（80）**：intblock 分类 taxonomy
+- **Intblocks（1279）**：联合国机构、贸易集团、区域组织、条约、体育联合会、具名地理分组等
+- **Blocktypes（82）**：intblock 分类 taxonomy
 
 这是**用于关联与 enrichment 的参考数据**，不是社会经济画像数据集。
 **不要**在此期望 HDI、GDP、政体、互联网普及率等指标。
 
 ## 推荐访问方式（编辑以外勿解析源 YAML）
 
-- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）(tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations; views: current_memberships, country_currencies, country_languages, country_timezones)
+- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）(tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status; views: current_memberships, country_currencies, country_languages, country_timezones, country_borders)
 - Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
 - Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
   - Columns: intblock_id, country_code, include_type, status, joined, left

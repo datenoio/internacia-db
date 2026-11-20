@@ -19,7 +19,9 @@ from internacia_builder.schemas import (
     get_aliases_schema,
     get_attribute_migration_schema,
     get_blocktypes_schema,
+    get_border_status_schema,
     get_countries_schema,
+    get_country_borders_schema,
     get_country_currencies_schema,
     get_country_languages_schema,
     get_country_timezones_schema,
@@ -111,6 +113,20 @@ TABLES: list[dict[str, Any]] = [
         "primary_key": ["retired_id"],
         "foreign_keys": [],
     },
+    {
+        "name": "border_status",
+        "schema": get_border_status_schema,
+        "in_duckdb": True,
+        # One entry per border; a later closure replaces an ended one.
+        "primary_key": ["country_a", "country_b"],
+        "foreign_keys": [
+            {"columns": ["country_a"], "references": {"table": "countries", "columns": ["iso3code"]}},
+            {"columns": ["country_b"], "references": {"table": "countries", "columns": ["iso3code"]}},
+        ],
+        "enum_source": "border_status.schema.json",
+        # The source file wraps rows in an `entries` list; enums are read below that prefix.
+        "enum_prefix": "entries[].",
+    },
 ]
 
 # Canonical views inside internacia.duckdb. Their semantics are part of the contract, so
@@ -156,6 +172,23 @@ VIEWS: list[dict[str, Any]] = [
         ),
     },
     {
+        "name": "country_borders",
+        "schema": get_country_borders_schema,
+        "primary_key": ["country_code", "neighbor_iso3"],
+        "description": (
+            "One row per country and land neighbour (countries.borders), with the pair's current "
+            "border_status (closed or restricted), or NULL when no closure is recorded."
+        ),
+        "sql": (
+            "SELECT c.code AS country_code, c.iso3code, b.neighbor AS neighbor_iso3, s.status AS current_status "
+            "FROM countries c, UNNEST(c.borders) AS b(neighbor) "
+            "LEFT JOIN border_status s ON s.\"until\" IS NULL "
+            "AND ((s.country_a = c.iso3code AND s.country_b = b.neighbor) "
+            "OR (s.country_b = c.iso3code AND s.country_a = b.neighbor)) "
+            "ORDER BY country_code, neighbor_iso3"
+        ),
+    },
+    {
         "name": "country_timezones",
         "schema": get_country_timezones_schema,
         "primary_key": ["country_code", "timezone"],
@@ -174,6 +207,9 @@ DERIVED_ENUMS = [
     ("memberships", "status", "intblocks", "includes[].status"),
     ("current_memberships", "include_type", "intblocks", "includes[].type"),
     ("current_memberships", "status", "intblocks", "includes[].status"),
+    ("memberships", "role", "intblocks", "includes[].role"),
+    ("current_memberships", "role", "intblocks", "includes[].role"),
+    ("country_borders", "current_status", "border_status", "status"),
 ]
 
 
@@ -210,7 +246,12 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
             continue
         columns = set(table["schema"]().names)
         json_schema = json.loads((schemas_dir / source).read_text(encoding="utf-8"))
+        prefix = table.get("enum_prefix", "")
         for path, values in _schema_enums(json_schema):
+            if prefix:
+                if not path.startswith(prefix):
+                    continue
+                path = path[len(prefix):]
             if path.split("[]")[0].split(".")[0] not in columns:
                 continue
             by_column[(table["name"], path)] = values

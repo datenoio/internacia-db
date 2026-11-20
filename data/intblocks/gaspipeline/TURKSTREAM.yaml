@@ -20,10 +20,12 @@ includes:
   name: Russian Federation
   type: country
   status: member
+  role: origin
 - id: TR
   name: Türkiye
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q18810087
 description: Twin-line offshore natural gas pipeline from the Russkaya compressor station near Anapa, Russia, to Kıyıköy,
@@ -74,8 +76,12 @@ other_names:
   name: 土耳其溪
 notes: Route crosses the Black Sea exclusive economic zones of Russia and Turkey; endpoint countries are listed in includes.
   Most gas transits onward to Bulgaria and other Southeast European markets via the Malkoçlar–Provadia link (Balkan Stream).
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "US EIA - Russia country analysis (Table 12)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/RUS"
 - field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'

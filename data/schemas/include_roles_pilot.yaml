@@ -1,0 +1,273 @@
+version: 1
+change_id: add-transit-dependence-layer
+cohort_id: pilot_roles
+expected_count: 20
+verified_on: '2026-11-20'
+description: Reviewed route roles (includes[].role) for pipelines and linear corridors, checked on 2026-11-20 against
+  operator, government, intergovernmental or project-finance sources. Apply with scripts/backfill_include_roles.py
+  (dry run by default).
+records:
+  BLUESTREAMPIPE:
+    roles:
+      RU: origin
+      TR: destination
+    basis: 'EIA: Stavropol Krai, Russia, to Ankara, Turkiye; also lists Blue Stream as Russia to Turkiye via the
+      Black Sea.'
+    evidence:
+    - source: US EIA - Russia country analysis (Table 12)
+      url: https://www.eia.gov/international/analysis/country/RUS
+      retrieved_at: '2026-11-20'
+    - source: US EIA - Turkiye country analysis
+      url: https://www.eia.gov/international/analysis/country/TUR
+      retrieved_at: '2026-11-20'
+  BTC:
+    roles:
+      AZ: origin
+      GE: transit
+      TR: destination
+    basis: BP states the route runs from Sangachal (Azerbaijan) through Georgia to Ceyhan (Türkiye); EBRD describes
+      the same route.
+    evidence:
+    - source: BP Azerbaijan, press release "BTC celebrates full commissioning"
+      url: https://www.bp.com/en_az/azerbaijan/home/news/press-releases/btc-celebrates-full-commissioning.html
+      retrieved_at: '2026-11-20'
+    - source: EBRD project summary document 18806 (BTC)
+      url: https://www.ebrd.com/home/work-with-us/projects/psd/18806.html
+      retrieved_at: '2026-11-20'
+  BTE:
+    roles:
+      AZ: origin
+      GE: transit
+      TR: destination
+    basis: 'Azerbaijan Ministry of Energy: South Caucasus Pipeline is 692 km (443 km Azerbaijan, 249 km Georgia),
+      Shah Deniz gas delivered to Georgian and Turkish markets, linked with BTE. EIA: SCP runs from Azerbaijan through
+      Georgia to Turkiye.'
+    evidence:
+    - source: Ministry of Energy of Azerbaijan - Gas Transportation / South Caucasus Pipeline
+      url: https://minenergy.gov.az/en/qaz/cenubi-qafqaz-boru-kemeri-cqbk
+      retrieved_at: '2026-11-20'
+    - source: US EIA - Turkiye country analysis
+      url: https://www.eia.gov/international/analysis/country/TUR
+      retrieved_at: '2026-11-20'
+  CACGP:
+    roles:
+      TM: origin
+      UZ: transit
+      KZ: transit
+      CN: destination
+    basis: 'EIA: gas flows from Turkmenistan through Uzbekistan and Kazakhstan before reaching western China. Kazakhstan''s
+      KazMunayGas report: the line moves Turkmen and Uzbek gas through Kazakhstan to China.'
+    evidence:
+    - source: US EIA - Turkmenistan country analysis
+      url: https://www.eia.gov/international/analysis/country/TKM
+      retrieved_at: '2026-11-20'
+    - source: KazMunayGas 2020 Annual Report - Gas transportation
+      url: https://ar2020.kmg.kz/en/strategic-report/operating/gas-transportation
+      retrieved_at: '2026-11-20'
+  CKURAILWAY:
+    roles:
+      CN: terminal
+      KG: transit
+      UZ: terminal
+    add_blocktypes:
+    - corridor
+    basis: The Chinese government describes the line from Kashgar (China) through Kyrgyzstan (Torugart, Jalalabad)
+      to Andijan (Uzbekistan); the Kyrgyz section is under construction.
+    evidence:
+    - source: gov.cn (State Council English), report on CKU railway commencement ceremony
+      url: https://english.www.gov.cn/news/202412/27/content_WS676eabb1c6d0868f4e8ee51f.html
+      retrieved_at: '2026-11-20'
+    - source: gov.cn (State Council English), follow-up report on the railway
+      url: https://english.www.gov.cn/news/202412/28/content_WS676f37fcc6d0868f4e8ee532.html
+      retrieved_at: '2026-11-20'
+  CPC:
+    roles:
+      KZ: origin
+      RU: destination
+    basis: The KazMunayGas annual report describes the route from Tengiz (Kazakhstan) to the Yuzhnaya Ozereyevka
+      terminal near Novorossiysk (Russia).
+    evidence:
+    - source: KMG Annual Report 2022, Operating review, Oil transportation
+      url: https://ar2022.kmg.kz/en/strategic-report/operating-review/oil-transportation
+      retrieved_at: '2026-11-20'
+  CRUZDELSUR:
+    roles:
+      AR: origin
+      UY: destination
+    basis: 'Uruguay Ministry of Industry, Energy and Mining concession contract: the pipeline system supplies gas
+      from Argentina to Colonia, San Jose, Canelones and Montevideo; Uruguay''s regulator says gas enters Uruguay
+      via Cruz del Sur at Santa Ana, Colonia.'
+    evidence:
+    - source: MIEM Uruguay - Contrato de Concesion de Gasoducto Cruz del Sur (22 March 1999)
+      url: https://www.gub.uy/ministerio-industria-energia-mineria/sites/ministerio-industria-energia-mineria/files/2020-06/Contrato%20de%20Concesi%C3%B3n%20de%20Gasoducto%20Cruz%20del%20Sur%20de%20fecha%2022%20de%20marzo%20de%201999.pdf
+      retrieved_at: '2026-11-20'
+    - source: URSEA Uruguay - Gas natural
+      url: https://www.gub.uy/unidad-reguladora-servicios-energia-agua/gas-natural-0
+      retrieved_at: '2026-11-20'
+  GASANDESPIPE:
+    roles:
+      AR: origin
+      CL: destination
+    basis: 'Operator: operations begin at La Mora, Mendoza, Argentina and the 463 km line goes to San Bernardo,
+      Chile; it can reverse to carry gas from Chile to Argentina in special cases.'
+    evidence:
+    - source: GasAndes - Gas natural (operator site, Spanish)
+      url: https://www.gasandes.com/gas-natural
+      retrieved_at: '2026-11-20'
+  GREENSTREAM:
+    roles:
+      LY: origin
+      IT: destination
+    basis: 'EIA: connects Mellitah on Libya''s northwest coast to Gela, Italy.'
+    evidence:
+    - source: US EIA - Libya country analysis
+      url: https://www.eia.gov/international/analysis/country/LBY
+      retrieved_at: '2026-11-20'
+  KAZCHINA:
+    roles:
+      KZ: origin
+      CN: destination
+    basis: KazTransOil states the Atasu–Alashankou section carries crude from Kazakhstan to the Chinese border for
+      delivery to China.
+    evidence:
+    - source: KazTransOil, news "Atasu-Alashankou trunk oil pipeline marks 20 years"
+      url: https://kaztransoil.kz/en/press_centre/news/6066-atasu-alashankou-trunk-oil-pipeline-marks-20-years
+      retrieved_at: '2026-11-20'
+    - source: KazTransOil, subsidiaries and JVs, KCP page
+      url: https://kaztransoil.kz/en/about/subsidiaries_and_jvs/kcp/
+      retrieved_at: '2026-11-20'
+  KIRKUKCEYHAN:
+    roles:
+      IQ: origin
+      TR: destination
+    basis: BOTAŞ describes the Iraq–Türkiye crude oil pipeline ending at Ceyhan; the US EIA describes Kirkuk exports
+      through it to Ceyhan.
+    evidence:
+    - source: BOTAS, Petroleum Operations District Management page
+      url: https://www.botas.gov.tr/Sayfa/petroleum-operations-district-management/155
+      retrieved_at: '2026-11-20'
+    - source: US EIA, Country Analysis Brief Iraq (updated 14 Jul 2025), PDF text read locally via PDFKit
+      url: https://www.eia.gov/international/content/analysis/countries_long/Iraq/Iraq_2025.pdf
+      retrieved_at: '2026-11-20'
+  MEDGAZ:
+    roles:
+      DZ: origin
+      ES: destination
+    basis: Operator site covers construction from Beni Saf (Algeria) and arrival at Almeria (Spain), described as
+      the Algeria-Europe pipeline via Spain. EIA table lists the route as Algeria to Spain via the Mediterranean
+      Sea.
+    evidence:
+    - source: Medgaz - home page (Spanish text)
+      url: https://www.medgaz.com/
+      retrieved_at: '2026-11-20'
+    - source: US EIA - Algeria country analysis (Table 4)
+      url: https://www.eia.gov/international/analysis/country/DZA
+      retrieved_at: '2026-11-20'
+  NIGALPIPE:
+    roles:
+      NG: origin
+      NE: transit
+      DZ: destination
+    basis: EIA table lists the (proposed) TSGP as Nigeria to Algeria via Niger, ending at Hassi R'Mel.
+    evidence:
+    - source: US EIA - Algeria country analysis (Table 4)
+      url: https://www.eia.gov/international/analysis/country/DZA
+      retrieved_at: '2026-11-20'
+  NORDSTREAM1:
+    roles:
+      RU: origin
+      DE: destination
+    basis: EIA lists Nord Stream 1 as Vyborg, Russia to Germany via the Baltic Sea.
+    evidence:
+    - source: US EIA - Russia country analysis (Table 12)
+      url: https://www.eia.gov/international/analysis/country/RUS
+      retrieved_at: '2026-11-20'
+  NORDSTREAM2:
+    roles:
+      RU: origin
+      DE: destination
+    basis: EIA lists Nord Stream 2 as Ust-Luga, Russia to Germany via the Baltic Sea.
+    evidence:
+    - source: US EIA - Russia country analysis (Table 12)
+      url: https://www.eia.gov/international/analysis/country/RUS
+      retrieved_at: '2026-11-20'
+  POWEROFSIBERIA:
+    roles:
+      RU: origin
+      CN: destination
+    basis: 'EIA: Power of Siberia 1 runs from the Kovykta and Chayanda fields in Eastern Siberia to the border with
+      Northwest China (record''s roster is RU, CN).'
+    evidence:
+    - source: US EIA - Russia country analysis (Table 12)
+      url: https://www.eia.gov/international/analysis/country/RUS
+      retrieved_at: '2026-11-20'
+  TAP:
+    roles:
+      GR: origin
+      AL: transit
+      IT: destination
+    basis: TAP operator says the pipeline starts at Kipoi, Greece, on the Greek-Turkish border (link to TANAP),
+      crosses about 214 km of Albania, then the Adriatic, and ends at the Pipeline Receiving Terminal in Melendugno,
+      Italy.
+    evidence:
+    - source: Trans Adriatic Pipeline AG - TAP route and infrastructure
+      url: https://www.tap-ag.com/infrastructure-operation/tap-route-and-infrastructure
+      retrieved_at: '2026-11-20'
+    - source: Trans Adriatic Pipeline AG - home page
+      url: https://www.tap-ag.com/
+      retrieved_at: '2026-11-20'
+  TURKSTREAM:
+    roles:
+      RU: origin
+      TR: destination
+    basis: 'EIA: Anapa, Russia to Northwest Turkiye via the Black Sea. Turkiye brief says TurkStream goes Russia
+      to Turkiye (and Bulgaria, which is beyond this record''s roster).'
+    evidence:
+    - source: US EIA - Russia country analysis (Table 12)
+      url: https://www.eia.gov/international/analysis/country/RUS
+      retrieved_at: '2026-11-20'
+  WAGP:
+    roles:
+      NG: origin
+      BJ: transit
+      TG: transit
+      GH: destination
+    basis: WAPCo site gives the line as Itoki, Nigeria to Takoradi, Ghana (678 km) and says it moves gas in Nigeria,
+      Benin, Togo and Ghana.
+    evidence:
+    - source: West African Gas Pipeline Company - home page
+      url: https://www.wagpco.com/
+      retrieved_at: '2026-11-20'
+  YABOGPIPE:
+    roles:
+      BO: origin
+      AR: destination
+    basis: 'EIA: the YABOG pipeline runs from Rio Grande, Bolivia, to Salta, Argentina.'
+    evidence:
+    - source: US EIA - Bolivia country analysis
+      url: https://www.eia.gov/international/analysis/country/BOL
+      retrieved_at: '2026-11-20'
+deferred:
+  ARABGPIPE: No qualifying source covers the Syria–Türkiye link at Kilis, so the role of TR is unsourced.
+  BALTICPIPE: The route starts at the Europipe II tie-in in Danish waters; Norway supplies it through a connected
+    pipeline, so NO is not on this record's own route (roster question).
+  CACGPSPIPE: No qualifying source states the endpoints or Kazakhstan's role on the Central Asia–Center system.
+  DOLPHIN: The export line ends at Taweelah (UAE); Oman is supplied through the UAE network, so the UAE role (destination
+    or transit) is not settled.
+  DRUZHBA: 'Not added as a record: the Polish and German legs could not be confirmed from a qualifying source (PERN
+    pages returned 403).'
+  ESPO: 'Not added as a record: no Wikidata item and no readable operator or government source for the cross-border
+    branch.'
+  GNEAPIPE: Bolivian gas reaches the GNEA through the Juana Azurduy feeder, so the GNEA itself starts in Argentina
+    and BO is not on its own route (roster question).
+  KMAAPIPE: The sources read describe the South Caucasus Pipeline, not the Kazi-Magomed–Astara route, so they do
+    not settle this record.
+  MEGP: Sources state only "Algeria to Spain/Portugal via Morocco"; whether Portugal is on this pipeline or reached
+    through the Spanish network is not settled.
+  MYANMARCHINA: Only the crude-oil line route could be read; the gas route source pages were unreachable.
+  TANAP: The operator states the route runs inside Türkiye from the Georgian border to the Greek border; AZ and
+    GE on the roster are not on it (roster question).
+  TRACECA: The TRACECA Permanent Secretariat describes an east–west Europe–Caucasus–Asia corridor among its members
+    but defines no linear route with two ends, so it is not a corridor in the catalog sense.
+  TRANSCARPIPE: The line is bidirectional between La Guajira and Lake Maracaibo, so origin and destination are not
+    settled.
