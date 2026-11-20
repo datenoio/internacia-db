@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.0] - 2026-11-20
+
 ### Migration
 
 - `intorg` is deprecated (see Deprecated). To select intergovernmental organizations, filter
@@ -128,6 +130,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Blocktype `intorg`, listed in `contract.json` `deprecated[]` (`intblocks.blocktype`). It
   described entity form, which `scope_category` holds. It stays as the last blocktype of its
   358 records in 4.x and will be removed no earlier than 5.0.0.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1275 → 1279 records; added `BTC`, `CPC`, `KAZCHINA`, `KIRKUKCEYHAN`; 280 changed
+- Blocktypes: 78 → 82 records; added `commodity`, `corridor`, `governance`, `oilpipeline`; 78 changed
+- Membership edges: 59072 → 57281; 9 added, 1800 removed, 40 changed
+- Schema (minor): table border_status added
+- Schema (minor): table country_borders added
+- Schema (minor): column blocktypes.deprecated added
+- Schema (minor): column blocktypes.description added
+- Schema (minor): column current_memberships.role added
+- Schema (minor): column intblocks.institutional_design added
+- Schema (minor): column memberships.role added
+- Schema (minor): source field intblocks.institutional_design added
 
 ## [4.0.0] - 2026-11-19
 
