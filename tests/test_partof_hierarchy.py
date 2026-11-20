@@ -21,7 +21,7 @@ def test_org_partof_treaty_like_fails():
 def test_org_partof_org_passes():
     records = [
         {"id": "ILO", "blocktype": ["unagency"], "partof": ["UN"]},
-        {"id": "UN", "blocktype": ["intorg", "political"]},
+        {"id": "UN", "blocktype": ["political"]},
     ]
     assert cross_rules.check_partof_hierarchy(records, ["a.yaml", "b.yaml"]) == []
 

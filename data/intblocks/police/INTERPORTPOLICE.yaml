@@ -3,7 +3,8 @@ blocktype:
 - police
 - intorg
 status: formal
-scope_category: igo
+scope_category: non_state_organization
+membership_applicability: not_applicable
 languages:
 - en
 links:
@@ -25,46 +26,10 @@ acronyms:
   value: INTERPORTPOLICE
 - lang: en
   value: IAASP
-includes:
-- id: CA
-  name: Canada
-  type: country
-  status: founding_member
-- id: NL
-  name: Netherlands
-  type: country
-  status: founding_member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: founding_member
-- id: US
-  name: United States
-  type: country
-  status: founding_member
-- id: BM
-  name: Bermuda
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: TW
-  name: Taiwan
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
-  type: country
-  status: member
-membership_count: 8
 description: International organization of law enforcement agencies focused on combating serious transnational crimes affecting
   transportation hubs, including seaports and airports. The organization facilitates cooperation among airport, seaport, transport,
   and border police forces to address crimes such as terrorism, drug smuggling, and human trafficking.
-notes: Membership is held by individual law enforcement and security authorities rather than states. The includes list reflects
-  countries with documented jurisdiction member authorities (founding members and board presidents) per the organization's official
-  history; additional member jurisdictions may exist without public country-level listings.
+notes: "Membership is held by individual law enforcement and security authorities rather than states, so this record lists no member countries."
 tags:
 - INTERPORTPOLICE
 - airport
@@ -99,7 +64,7 @@ previous_names:
   name: International Association of Airport and Seaport Police
   period: 1974-2010
 wikidata_id: Q54953955
-last_verified: '2026-07-14'
+last_verified: '2026-11-20'
 provenance:
 - field: wikidata_id
   source: Wikidata
@@ -110,14 +75,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://en.wikipedia.org/wiki/InterPortPolice
-- field: includes
-  source: official sources
-  retrieved_at: '2026-07-14'
-  url: https://interportpolice.org/our-history
-- field: membership_count
-  source: official sources
-  retrieved_at: '2026-07-14'
-  url: https://interportpolice.org/our-history
 - field: recognition_status
   source: official sources
   retrieved_at: '2026-07-14'
@@ -138,3 +95,11 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-14'
   url: https://interportpolice.org/
+- field: scope_category
+  source: "InterPortPolice — About"
+  retrieved_at: "2026-11-20"
+  url: "https://interportpolice.org/About"
+- field: membership_applicability
+  source: "InterPortPolice — About"
+  retrieved_at: "2026-11-20"
+  url: "https://interportpolice.org/About"

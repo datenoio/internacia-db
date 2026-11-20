@@ -33,14 +33,16 @@ def test_intblock_filename_must_match_id():
     assert "does not match id 'UfM'" in errors[0]
 
 
-def test_directory_alignment_requires_dir_in_blocktype():
+def test_directory_alignment_requires_dir_as_first_blocktype():
     records = [
-        ("data/intblocks/space/OK.yaml", {"id": "OK", "blocktype": ["agreement", "space"]}),
+        ("data/intblocks/space/OK.yaml", {"id": "OK", "blocktype": ["space", "agreement"]}),
+        ("data/intblocks/space/LATE.yaml", {"id": "LATE", "blocktype": ["agreement", "space"]}),
         ("data/intblocks/space/BAD.yaml", {"id": "BAD", "blocktype": ["agreement"]}),
     ]
     errors = vi.validate_directory_alignment(records)
-    assert len(errors) == 1
-    assert "space" in errors[0]
+    assert len(errors) == 2
+    assert errors[0].startswith("data/intblocks/space/LATE.yaml: primary blocktype 'agreement'")
+    assert errors[1].startswith("data/intblocks/space/BAD.yaml: directory 'space' is not in")
 
 
 def test_intblocks_schema_export_parity():
@@ -115,7 +117,7 @@ def test_schema_validation_against_repo_schema():
     good = {
         "id": "TESTORG",
         "name": "Test Organization",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
         "includes": [{"id": "NO", "name": "Norway", "type": "country", "status": "member"}],
     }
@@ -132,7 +134,7 @@ def test_schema_accepts_expanded_scope_categories_and_rejects_unknown():
     base = {
         "id": "TESTORG",
         "name": "Test Organization",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
     }
     for category in ("intergovernmental_body", "non_state_organization"):
@@ -147,12 +149,12 @@ def test_schema_accepts_expanded_scope_categories_and_rejects_unknown():
 
 
 def test_missing_formal_scope_category_is_blocking_cli_error():
-    records = [("formal.yaml", {"id": "FORMAL", "status": "formal", "blocktype": ["intorg"]})]
+    records = [("formal.yaml", {"id": "FORMAL", "status": "formal", "blocktype": ["political"]})]
     errors = vi.validate_scope_category(records)
     assert len(errors) == 1
     assert "formal.yaml" in errors[0] and "missing scope_category" in errors[0]
 
-    non_formal = [("historic.yaml", {"id": "HIST", "status": "historical", "blocktype": ["intorg"]})]
+    non_formal = [("historic.yaml", {"id": "HIST", "status": "historical", "blocktype": ["political"]})]
     assert vi.validate_scope_category(non_formal) == []
 
 

@@ -228,12 +228,36 @@ Specialized UN agencies prefer `partof: UN` (not ECOSOC alone).
 
 ## Directory vs `blocktype`
 
-- The **directory** under `data/intblocks/` is the **primary** `blocktype` and must
-  exist in `data/blocktypes/blocktypes.yaml`.
+- The **directory** under `data/intblocks/` is the **primary** `blocktype`: it is the
+  first value of the record's `blocktype` list and must exist in
+  `data/blocktypes/blocktypes.yaml`. The validator reports `PRIMARY_BLOCKTYPE_MISMATCH`
+  otherwise.
 - The YAML `blocktype` list may include additional keys (`military` + `political`).
 - Thin categories (few records) are allowed; **empty directories should be removed**.
 - Do not create a new category folder without adding the blocktype to the taxonomy in
   the same PR.
+
+## Blocktype semantics
+
+A blocktype says **what an entity does** (its domain or function). `scope_category`
+says **what kind of entity it is** (IGO, treaty, forum, non-state organization). Do not
+encode entity form in a blocktype: a regional fisheries management organization is
+`fisheries` with `scope_category: igo`.
+
+- Every taxonomy entry has a `description` (scope note). Where keys overlap, the notes
+  state the boundary: `maritime` / `ocean` / `fisheries`, `research` / `scientific`,
+  `bank` / `fund` / `financial`, `political` / `forum`, `legal` / `court`. Read them
+  before choosing a directory.
+- Multipurpose regional organizations (AU, ASEAN, Nordic Council of Ministers) are
+  `political`. Development cooperation is `development`, financial regulation and
+  anti-money-laundering bodies are `financial`, public administration and
+  anti-corruption bodies are `governance`, and intergovernmental commodity bodies and
+  study groups are `commodity`.
+- **`intorg` is deprecated.** It described entity form, which `scope_category` holds.
+  It stays as the last blocktype of the 358 records listed in
+  `data/schemas/deprecated_blocktypes_baseline.yaml` until the next MAJOR release, so
+  existing queries return the same rows. Do not add it to any record, and never use it
+  as the primary blocktype. To select IGOs, filter on `scope_category = 'igo'`.
 
 ## Discovery catalogues
 

@@ -3,7 +3,9 @@
 
 The default mode is a non-mutating dry run. ``--apply`` performs surgical text
 edits only after the complete manifest and repository inventory pass validation.
-Existing, different values are conflicts and are never overwritten.
+Existing, different values are conflicts and are never overwritten, except for a
+reviewed reclassification: an id listed under ``expected_current`` in the manifest
+changes from exactly that value to its new category, and needs evidence.
 """
 
 from __future__ import annotations
@@ -124,6 +126,19 @@ def load_assignments(manifest_path: Path) -> tuple[dict[str, str], dict[str, Any
             raise BackfillValidationError(
                 f"manifest requires evidence for every assignment; missing: {missing_evidence}"
             )
+    expected_current = raw.get("expected_current") or {}
+    if not isinstance(expected_current, dict):
+        raise BackfillValidationError("manifest expected_current must be a mapping")
+    for record_id, current in expected_current.items():
+        record_id = str(record_id)
+        if record_id not in assignments:
+            raise BackfillValidationError(f"expected_current references unknown assignment id: {record_id}")
+        if str(current) not in VALID_CATEGORIES:
+            raise BackfillValidationError(f"expected_current for {record_id} is not a scope category: {current}")
+        if str(current) == assignments[record_id]:
+            raise BackfillValidationError(f"expected_current for {record_id} equals its new category")
+        if record_id not in evidence:
+            raise BackfillValidationError(f"reclassifying {record_id} requires evidence")
     return assignments, raw
 
 
@@ -165,17 +180,25 @@ def reconcile_text(
     text: str,
     target: str,
     evidence: dict[str, Any] | None = None,
+    expected_current: str | None = None,
 ) -> tuple[str, str, str | None]:
-    """Return updated text, action, and any conflicting current value."""
+    """Return updated text, action, and any conflicting current value.
+
+    With ``expected_current``, a record whose category is exactly that value is reclassified
+    to ``target``; any other different value is still a conflict.
+    """
     record = yaml.safe_load(text)
     if not isinstance(record, dict):
         raise BackfillValidationError("intblock YAML must contain a mapping")
 
     current = record.get("scope_category")
+    reclassify = False
     if current is not None:
         current_text = str(current)
         if current_text != target:
-            return text, "conflict", current_text
+            if expected_current is None or current_text != expected_current:
+                return text, "conflict", current_text
+            reclassify = True
 
     scope_provenance = [
         entry
@@ -188,9 +211,18 @@ def reconcile_text(
         if any(str(existing.get(key, "")) != str(evidence.get(key, "")) for key in comparable):
             return text, "conflict", "scope_category provenance differs"
 
+    if reclassify and scope_provenance:
+        return text, "conflict", "scope_category provenance exists for the old value"
+
     updated = text
     changed = False
-    if current is None:
+    if reclassify:
+        lines = re.findall(r"^scope_category:[^\n]*$", updated, flags=re.MULTILINE)
+        if len(lines) != 1:
+            raise BackfillValidationError("cannot find a single scope_category line to reclassify")
+        updated = re.sub(r"^scope_category:[^\n]*$", f"scope_category: {target}", updated, flags=re.MULTILINE)
+        changed = True
+    elif current is None:
         anchor = re.search(r"^(status:\s*[^\n]+)$", updated, flags=re.MULTILINE)
         if anchor is None:
             anchor = re.search(r"^(id:\s*[^\n]+)$", updated, flags=re.MULTILINE)
@@ -247,15 +279,19 @@ def plan_backfill(
     changes: list[PlannedChange] = []
     updated_text: dict[Path, str] = {}
     evidence = metadata.get("evidence") or {}
+    expected_current = {str(k): str(v) for k, v in (metadata.get("expected_current") or {}).items()}
     for record_id, category in sorted(assignments.items()):
         path = records[record_id]
         text = path.read_text(encoding="utf-8")
         record = yaml.safe_load(text)
-        if record.get("status") != "formal":
+        # A reclassification replaces a category already set, so the record's status was
+        # settled when that category was assigned; only first assignments must be formal.
+        if record.get("status") != "formal" and record_id not in expected_current:
             raise BackfillValidationError(
                 f"{record_id} has status={record.get('status')!r}; direct cohort requires formal"
             )
-        updated, action, current = reconcile_text(text, category, evidence.get(record_id))
+        updated, action, current = reconcile_text(
+            text, category, evidence.get(record_id), expected_current.get(record_id))
         changes.append(
             PlannedChange(
                 record_id=record_id,

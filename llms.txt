@@ -10,7 +10,7 @@
 
 - **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names, stable attributes (`car_side`, writing systems/directions, DVD region, broadcast/legal systems, rail gauges)
 - **Intblocks** (1275 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, named geographic groupings, etc.
-- **Blocktypes** (78 records): taxonomy for intblock categories
+- **Blocktypes** (80 records): taxonomy for intblock categories
 
 This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
 Do NOT expect HDI, GDP, government type, internet penetration, or similar indicators here.
@@ -120,7 +120,7 @@ SELECT i.id, i.name FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE m.id = 'L
 
 SELECT intblock_id FROM memberships WHERE country_code = 'LA' AND status = 'member' LIMIT 10;
 
-SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg') LIMIT 10;
+SELECT id, name FROM intblocks WHERE scope_category = 'igo' LIMIT 10;  -- IGOs; blocktype is the domain (e.g. 'fisheries')
 
 ## Full documentation
 

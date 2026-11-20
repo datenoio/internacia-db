@@ -14,8 +14,8 @@ English: [../contribute.md](../contribute.md)
 | 路径 | 规则 |
 |------|------|
 | `data/countries/{CODE}.yaml` | 一实体一文件；文件名 = ISO alpha-2 `code` |
-| `data/intblocks/{category}/{ID}.yaml` | 文件名必须与 `id` 完全一致（大写官方缩写；目录 = 主 `blocktype`） |
-| `data/blocktypes/blocktypes.yaml` | 所有 intblock 的 `blocktype` 必须在此登记 |
+| `data/intblocks/{category}/{ID}.yaml` | 文件名必须与 `id` 完全一致（大写官方缩写；目录 = `blocktype` 列表的第一个值） |
+| `data/blocktypes/blocktypes.yaml` | 所有 intblock 的 `blocktype` 必须在此登记；选择目录前请阅读各键的 `description` |
 | `data/datasets/` | **仅构建生成** — 禁止手改 |
 
 ## Countries 检查清单
@@ -40,7 +40,8 @@ English: [../contribute.md](../contribute.md)
 - `partof` / `predecessor` / `successor` / `suborganizations[].id` 必须能解析到已有 intblock
 - 已解散组织：`status: historical` + `dissolved` 日期；不要编造成员列表
 - `last_verified`：对照官方名录核对当天的 `YYYY-MM-DD`（12 个月顾问 SLA）
-- 新 blocktype 须先加入 `data/blocktypes/blocktypes.yaml`
+- 新 blocktype 须先加入 `data/blocktypes/blocktypes.yaml`，并附 `description`；blocktype 表示领域，不表示实体形式
+- 不要使用已弃用的 `intorg`；实体形式请用 `scope_category`（IGO 用 `scope_category = 'igo'` 过滤）
 - 完整逐步示例：[add-intblock-example.md](../add-intblock-example.md)
 
 ## 提交 PR 前校验

@@ -219,3 +219,64 @@ def test_manifest_can_require_evidence_for_every_assignment(tmp_path: Path):
 
     with pytest.raises(backfill.BackfillValidationError, match="requires evidence"):
         backfill.load_assignments(manifest)
+
+
+EVIDENCE = {"source": "Example — Statutes", "url": "https://example.org/statutes", "retrieved_at": "2026-11-20"}
+
+
+def test_reconcile_reclassifies_only_from_the_expected_value():
+    text = "id: EXAMPLE\nstatus: formal\nscope_category: igo\nname: Example\n"
+    updated, action, current = backfill.reconcile_text(
+        text, "non_state_organization", EVIDENCE, expected_current="igo")
+    assert action == "pending"
+    assert current is None
+    record = yaml.safe_load(updated)
+    assert record["scope_category"] == "non_state_organization"
+    assert record["provenance"] == [{"field": "scope_category", **EVIDENCE}]
+    assert updated.startswith("id: EXAMPLE\nstatus: formal\nscope_category: non_state_organization\nname: Example\n")
+
+    again = backfill.reconcile_text(updated, "non_state_organization", EVIDENCE, expected_current="igo")
+    assert again == (updated, "already_set", None)
+
+    _, action, current = backfill.reconcile_text(
+        text.replace("igo", "policy_forum"), "non_state_organization", EVIDENCE, expected_current="igo")
+    assert (action, current) == ("conflict", "policy_forum")
+
+
+def test_reclassification_refuses_old_scope_provenance():
+    text = (
+        "id: EXAMPLE\nstatus: formal\nscope_category: igo\nprovenance:\n"
+        "- field: scope_category\n  source: Old\n  retrieved_at: '2026-01-01'\n  url: https://old.example\n"
+    )
+    _, action, current = backfill.reconcile_text(
+        text, "non_state_organization", EVIDENCE, expected_current="igo")
+    assert action == "conflict"
+    assert "provenance" in current
+
+
+def test_manifest_reclassification_needs_evidence_and_a_different_value(tmp_path: Path):
+    path = _write_manifest(tmp_path, {"non_state_organization": ["A"]})
+    payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    payload["expected_current"] = {"A": "igo"}
+    path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+    with pytest.raises(backfill.BackfillValidationError, match="requires evidence"):
+        backfill.load_assignments(path)
+    payload["evidence"] = {"A": EVIDENCE}
+    payload["expected_current"] = {"A": "non_state_organization"}
+    path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+    with pytest.raises(backfill.BackfillValidationError, match="equals its new category"):
+        backfill.load_assignments(path)
+
+
+def test_apply_reclassifies_a_historical_record(tmp_path: Path):
+    record = tmp_path / "data" / "intblocks" / "economic" / "OLD.yaml"
+    record.parent.mkdir(parents=True)
+    record.write_text("id: OLD\nstatus: historical\nscope_category: igo\nname: Old\n", encoding="utf-8")
+    manifest = _write_manifest(tmp_path, {"intergovernmental_body": ["OLD"]}, evidence={"OLD": EVIDENCE})
+    payload = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    payload["expected_current"] = {"OLD": "igo"}
+    manifest.write_text(yaml.safe_dump(payload), encoding="utf-8")
+
+    report = backfill.execute_backfill(tmp_path, manifest, mode="apply")
+    assert (report.pending, report.applied, report.conflicts) == (1, 1, 0)
+    assert yaml.safe_load(record.read_text(encoding="utf-8"))["scope_category"] == "intergovernmental_body"

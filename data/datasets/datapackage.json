@@ -343,8 +343,8 @@
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "zstd",
-      "bytes": 178782,
-      "hash": "sha256:4ea1d7bc30d4e6242c02a9c309f753aeb17c9f30729d33a4e1e719014364e796"
+      "bytes": 178797,
+      "hash": "sha256:0c680360660c1a9a85b87b24fea15d57de13e60edaab0300c8bada1894e1d8df"
     },
     {
       "name": "intblocks-lite-csv",
@@ -353,8 +353,8 @@
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "zstd",
-      "bytes": 34442,
-      "hash": "sha256:8c869c2801e6daca3c4b376b3e668bfcbe6ae2ab379e2930aecd88812992f0bd"
+      "bytes": 34593,
+      "hash": "sha256:76015634a9ad67d25d22fd0d893bd00ff123119db9b7d6375bfaac86924440cc"
     },
     {
       "name": "intblocks-parquet",
@@ -362,8 +362,8 @@
       "path": "intblocks.parquet",
       "format": "parquet",
       "mediatype": "application/vnd.apache.parquet",
-      "bytes": 706668,
-      "hash": "sha256:3c30d8ceadf4af109e4c7e5e084dae73255a75ee9eab1f7b45dd9d5293ae4e9b",
+      "bytes": 707050,
+      "hash": "sha256:de0c84c73c27962ab3883b64d762416fe80bc30f2e290198983b6ca32dc58fa1",
       "schema": {
         "fields": [
           {
@@ -497,8 +497,8 @@
       "path": "intblocks-lite.parquet",
       "format": "parquet",
       "mediatype": "application/vnd.apache.parquet",
-      "bytes": 41283,
-      "hash": "sha256:fccd53355a174886e2381d1dcda543ce656a4589c89bc9320533dce7499b507d",
+      "bytes": 41402,
+      "hash": "sha256:07ee344606ed84bc2757aa2174ea6534d7fbd43f5f7178cf0c7745feca498adb",
       "schema": {
         "fields": [
           {
@@ -547,8 +547,8 @@
       "format": "json",
       "mediatype": "application/json",
       "compression": "zstd",
-      "bytes": 779219,
-      "hash": "sha256:ff6c2c6a935e32d29e12e14cbb17eadb07fb59a651374f1e8b9c045d827ca9f4"
+      "bytes": 779465,
+      "hash": "sha256:b8dd07a8a134cb920ea189aa77cd8cd54b8377c7ee6b955b4e6bb71eae4c9218"
     },
     {
       "name": "intblocks-jsonl",
@@ -556,8 +556,8 @@
       "path": "intblocks.jsonl",
       "format": "jsonl",
       "mediatype": "application/x-ndjson",
-      "bytes": 9906412,
-      "hash": "sha256:c8ce27b997d5e210de86a6b84007f2da3fc10b7d4587d3c68bf9bacd3de430f4"
+      "bytes": 9786846,
+      "hash": "sha256:131a97f5f8fea232c9b01c13db1b74273c62d996128d5423bd005db58acefd7d"
     },
     {
       "name": "blocktypes-parquet",
@@ -565,8 +565,8 @@
       "path": "blocktypes.parquet",
       "format": "parquet",
       "mediatype": "application/vnd.apache.parquet",
-      "bytes": 5991,
-      "hash": "sha256:6adc43f3a942a89394cee4fa67c658859a7af547c033672f5f2b3554896c3494",
+      "bytes": 11080,
+      "hash": "sha256:e73093186bc8ac3689330d2e13c99b30fb8a875c9d6d15959366e564224e27ac",
       "schema": {
         "fields": [
           {
@@ -579,6 +579,14 @@
           {
             "name": "name",
             "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "deprecated",
+            "type": "object"
           },
           {
             "name": "other_names",
@@ -597,8 +605,8 @@
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "zstd",
-      "bytes": 155983,
-      "hash": "sha256:55d684c5051cf7248005825afca31b6441b88560b66c643672b79f6e82f7c1e3"
+      "bytes": 152377,
+      "hash": "sha256:90709ee4b020bbe86e1e3fce3ed21a4f857bd8db2afa6a58197a9ecc48629b99"
     },
     {
       "name": "memberships-parquet",
@@ -606,8 +614,8 @@
       "path": "memberships.parquet",
       "format": "parquet",
       "mediatype": "application/vnd.apache.parquet",
-      "bytes": 98530,
-      "hash": "sha256:4b12c3d44bda1fcdef6a65c34a03606df283e7ce82646a028b503b772c9a8872",
+      "bytes": 97324,
+      "hash": "sha256:a65d4cc22c12de4073e3df8996142415d952a12d40b9ef32c814707f8130138d",
       "schema": {
         "fields": [
           {
