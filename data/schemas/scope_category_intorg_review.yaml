@@ -1,0 +1,473 @@
+version: 1
+change_id: reorganize-intorg-blocktype
+cohort_id: intorg_scope_review
+description: scope_category corrections for records that carried the intorg blocktype. The legacy labeller
+  mapped intorg to igo; each value here was checked against the cited official source on 2026-11-20. Records
+  whose source did not confirm a change stay as they are (see scope_category.igo_legal_status_allowlist
+  in intblocks_completeness.yaml).
+expected_count: 76
+require_evidence: true
+categories:
+  igo:
+  - ISA_SEABED
+  intergovernmental_body:
+  - BCBS
+  - CFTC
+  - CGIARFUND
+  - D8TTEN
+  - EASC
+  - GFDRR
+  - IOC_UNESCO
+  - JDTJUBA
+  - NEPAD
+  - PROFOR
+  - UNITAID
+  non_state_organization:
+  - AAU
+  - ACU
+  - BIMCO
+  - CEN
+  - CENELEC
+  - CMI
+  - COPANT
+  - COSPAR
+  - EBU
+  - EMS
+  - ETC
+  - ETSI
+  - EUA
+  - EUCHEMS
+  - EUROGEOGRAPHICS
+  - FACS
+  - FORUMOFFEDERATIONS
+  - GLOBALMARITIMEFORUM
+  - HUGO
+  - IAF
+  - IAF_ASTRO
+  - IAPH
+  - IASC
+  - IATA
+  - IAU
+  - IAU_UNIV
+  - IBRO
+  - ICACI
+  - ICSU
+  - IEC
+  - IFOAM
+  - IFRC
+  - IMU
+  - INTERPORTPOLICE
+  - IRF
+  - IRU
+  - ISC
+  - ISO
+  - ISTO
+  - ITFTRANSPORT
+  - IUBMB
+  - IUBS
+  - IUCr
+  - IUGG
+  - IUGS
+  - IUPAC
+  - IUPAP
+  - PATA
+  - PBEC
+  - POGO
+  - SCAR
+  - SCOR
+  - UIC
+  - WFTU
+  policy_forum:
+  - CBFP
+  - EUMETNET
+  - GBEP
+  - GICNT
+  - GIFCS
+  - GMI
+  - IGF
+  - MOUNTPART
+  - PASC
+  - PLG
+expected_current:
+  AAU: igo
+  ACU: igo
+  BCBS: igo
+  BIMCO: igo
+  CBFP: igo
+  CEN: igo
+  CENELEC: igo
+  CFTC: igo
+  CGIARFUND: igo
+  CMI: igo
+  COPANT: igo
+  COSPAR: igo
+  D8TTEN: igo
+  EASC: igo
+  EBU: igo
+  EMS: igo
+  ETC: igo
+  ETSI: igo
+  EUA: igo
+  EUCHEMS: igo
+  EUMETNET: igo
+  EUROGEOGRAPHICS: igo
+  FACS: igo
+  FORUMOFFEDERATIONS: igo
+  GBEP: igo
+  GFDRR: igo
+  GICNT: igo
+  GIFCS: igo
+  GLOBALMARITIMEFORUM: igo
+  GMI: igo
+  HUGO: igo
+  IAF: igo
+  IAF_ASTRO: igo
+  IAPH: igo
+  IASC: igo
+  IATA: igo
+  IAU: igo
+  IAU_UNIV: igo
+  IBRO: igo
+  ICACI: igo
+  ICSU: igo
+  IEC: igo
+  IFOAM: igo
+  IFRC: igo
+  IGF: igo
+  IMU: igo
+  INTERPORTPOLICE: igo
+  IOC_UNESCO: igo
+  IRF: igo
+  IRU: igo
+  ISA_SEABED: treaty_body
+  ISC: igo
+  ISO: igo
+  ISTO: igo
+  ITFTRANSPORT: igo
+  IUBMB: igo
+  IUBS: igo
+  IUCr: igo
+  IUGG: igo
+  IUGS: igo
+  IUPAC: igo
+  IUPAP: igo
+  JDTJUBA: igo
+  MOUNTPART: igo
+  NEPAD: igo
+  PASC: igo
+  PATA: igo
+  PBEC: igo
+  PLG: igo
+  POGO: igo
+  PROFOR: igo
+  SCAR: igo
+  SCOR: igo
+  UIC: igo
+  UNITAID: igo
+  WFTU: igo
+evidence:
+  AAU:
+    source: World Bank — Financing Agreement with AAU, Grant D5330-GH
+    url: https://documents1.worldbank.org/curated/en/158201595440991753/pdf/Official-Documents-Financing-Agreement-with-Association-of-African-Univesities-Ghana-for-Grant-No-D5330-GH-Closing-Package.pdf
+    retrieved_at: '2026-11-20'
+  ACU:
+    source: Companies House — Association of Commonwealth Universities (RC000017)
+    url: https://find-and-update.company-information.service.gov.uk/company/RC000017
+    retrieved_at: '2026-11-20'
+  BCBS:
+    source: BIS — Basel Committee Charter
+    url: https://www.bis.org/bcbs/charter.htm
+    retrieved_at: '2026-11-20'
+  BIMCO:
+    source: BIMCO — BIMCO Rules
+    url: https://www.bimco.org/about-bimco/governance/bimco-rules/
+    retrieved_at: '2026-11-20'
+  CBFP:
+    source: UN SDG Partnerships Platform — Congo Basin Forest Partnership
+    url: https://sdgs.un.org/partnerships/congo-basin-forest-partnership-cbfp-partenariat-pour-les-forets-du-basin-du-congo-pfbc
+    retrieved_at: '2026-11-20'
+  CEN:
+    source: CEN — Statutes
+    url: https://boss.cen.eu/media/BOSS%20CEN/ref/cen_statutes_e.pdf
+    retrieved_at: '2026-11-20'
+  CENELEC:
+    source: CENELEC — Statutes
+    url: https://boss.cenelec.eu/media/BOSS%20CENELEC/ref/clc_statutes_e.pdf
+    retrieved_at: '2026-11-20'
+  CFTC:
+    source: Commonwealth Secretariat — Building Capacity, Advancing Development
+    url: https://thecommonwealth.org/news/building-capacity-advancing-development
+    retrieved_at: '2026-11-20'
+  CGIARFUND:
+    source: World Bank FIF Trustee — CGIAR fund detail
+    url: https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar
+    retrieved_at: '2026-11-20'
+  CMI:
+    source: CMI — Articles of Association (2022)
+    url: https://comitemaritime.org/wp-content/uploads/2023/02/CMI-2022-English_Final-clean-PDF_00926373.pdf
+    retrieved_at: '2026-11-20'
+  COPANT:
+    source: COPANT — Estatutos y Reglamento (May 2025)
+    url: https://copant.org/wp-content/uploads/2025/07/Estatutos_Reglamento_COPANT_Mayo_2025.pdf
+    retrieved_at: '2026-11-20'
+  COSPAR:
+    source: COSPAR — By-Laws
+    url: https://cosparhq.cnes.fr/?p=90
+    retrieved_at: '2026-11-20'
+  D8TTEN:
+    source: Charter of Establishment and Management of D-8 TTEN
+    url: https://d8tten.org/wp-content/uploads/2023/05/Charter-of-D-8-TTEN-v4.pdf
+    retrieved_at: '2026-11-20'
+  EASC:
+    source: Azstand — Euro-Asian Council for Standardization, Metrology and Certification
+    url: https://azstand.gov.az/en/euro-asian-council-mgs
+    retrieved_at: '2026-11-20'
+  EBU:
+    source: EBU — Statutes
+    url: https://www.ebu.ch/files/live/sites/ebu/files/About/Governance/Statutes_EN.pdf
+    retrieved_at: '2026-11-20'
+  EMS:
+    source: EMS — Statutes
+    url: https://euromathsoc.org/governance-statutes
+    retrieved_at: '2026-11-20'
+  ETC:
+    source: ETC — Privacy Policy
+    url: https://etc-corporate.org/privacy-policy
+    retrieved_at: '2026-11-20'
+  ETSI:
+    source: ETSI — Directives v52 (Dec 2025), Statutes
+    url: https://portal.etsi.org/directives/52_ETSI_directives_dec_2025.pdf
+    retrieved_at: '2026-11-20'
+  EUA:
+    source: EUA — Statutes (Belgium, 2023)
+    url: https://www.eua.eu/images/publications/Statutes_Belgium_2023_English.pdf
+    retrieved_at: '2026-11-20'
+  EUCHEMS:
+    source: EuChemS — Constitution (23.01.2023)
+    url: https://www.euchems.eu/wp-content/uploads/2023/06/EuChemS-23.01.23-Constitution-EN-VBB004-C1780711.pdf
+    retrieved_at: '2026-11-20'
+  EUMETNET:
+    source: EUMETNET — About us
+    url: https://www.eumetnet.eu/about-us-2/
+    retrieved_at: '2026-11-20'
+  EUROGEOGRAPHICS:
+    source: EuroGeographics — About us
+    url: https://eurogeographics.org/about-us/
+    retrieved_at: '2026-11-20'
+  FACS:
+    source: FACS — About FACS
+    url: https://facs.website/?p=48
+    retrieved_at: '2026-11-20'
+  FORUMOFFEDERATIONS:
+    source: Forum of Federations — About The Forum
+    url: https://www.forumfed.org/about/
+    retrieved_at: '2026-11-20'
+  GBEP:
+    source: UN SDG Actions Platform — Global Bioenergy Partnership
+    url: https://sdgs.un.org/partnerships/global-bioenergy-partnership-gbep
+    retrieved_at: '2026-11-20'
+  GFDRR:
+    source: GFDRR Strategy 2030
+    url: https://www.gfdrr.org/sites/default/files/2025-04/GFDRR%20Strategy%202030_v3.pdf
+    retrieved_at: '2026-11-20'
+  GICNT:
+    source: White House (archived) — Nuclear Security Summit 2016 Action Plan in Support of GICNT
+    url: https://obamawhitehouse.archives.gov/the-press-office/2016/04/01/nuclear-security-summit-2016-action-plan-support-global-initiative
+    retrieved_at: '2026-11-20'
+  GIFCS:
+    source: GIFCS — History
+    url: https://www.groupgifcs.org/about/history
+    retrieved_at: '2026-11-20'
+  GLOBALMARITIMEFORUM:
+    source: Global Maritime Forum — About
+    url: https://www.globalmaritimeforum.org/about/
+    retrieved_at: '2026-11-20'
+  GMI:
+    source: GMI — About GMI
+    url: https://gmidev.org/web/about-gmi/about-gmi
+    retrieved_at: '2026-11-20'
+  HUGO:
+    source: HUGO — Bylaws (amended 2 Jan 2026)
+    url: https://www.hugo-international.org/wp-content/uploads/2026/03/HUGO-ByLaw_Amended-on-020126.pdf
+    retrieved_at: '2026-11-20'
+  IAF:
+    source: IAF — IAF after 20 years
+    url: https://iaf.nu/en/news/iaf-after-20-years/
+    retrieved_at: '2026-11-20'
+  IAF_ASTRO:
+    source: IAF — About
+    url: https://www.iafastro.org/about/
+    retrieved_at: '2026-11-20'
+  IAPH:
+    source: IAPH — Join IAPH
+    url: https://www.iaphworldports.org/join-iaph/
+    retrieved_at: '2026-11-20'
+  IASC:
+    source: IASC — Founding Articles (August 1990)
+    url: https://iasc.info/images/about/iasc-founding-articles.pdf
+    retrieved_at: '2026-11-20'
+  IATA:
+    source: IATA — Articles of Association
+    url: https://www.iata.org/contentassets/01e197ea66384f27a9e763d151ae2d7d/articles-of-association.pdf
+    retrieved_at: '2026-11-20'
+  IAU:
+    source: IAU — Statutes [English]
+    url: https://www.iau.org/IAU/Iau/About/Statutes---Rules/Statutes-English.aspx
+    retrieved_at: '2026-11-20'
+  IAU_UNIV:
+    source: IAU — About
+    url: https://iau.global/about
+    retrieved_at: '2026-11-20'
+  IBRO:
+    source: IBRO — Bylaws of International Brain Research Organization, Inc.
+    url: https://ibro.org/wp-content/uploads/2024/08/IBRO-Bylaws.pdf
+    retrieved_at: '2026-11-20'
+  ICACI:
+    source: ICA — Statutes and By-Laws
+    url: https://icaci.org/ica-statutes/
+    retrieved_at: '2026-11-20'
+  ICSU:
+    source: International Science Council — A brief history
+    url: https://council.science/about-us/a-brief-history/
+    retrieved_at: '2026-11-20'
+  IEC:
+    source: IEC Statutes and Rules of Procedure
+    url: https://share.ansi.org/Shared Documents/Standards Activities/International Standardization/IEC/USNC
+      Tool Box/IEC-Statutes-and-Rules-of-Procedure.pdf
+    retrieved_at: '2026-11-20'
+  IFOAM:
+    source: IFOAM — Imprint (archived 2009)
+    url: https://webarchive.library.unt.edu/eot2008/20090116182014/http://www.ifoam.org/sub/imprint.html
+    retrieved_at: '2026-11-20'
+  IFRC:
+    source: IFRC — Constitution (2024)
+    url: https://ifrc.org/sites/default/files/2025-01/EN_Constitution2024_Adopted.pdf
+    retrieved_at: '2026-11-20'
+  IGF:
+    source: IGF — Members
+    url: https://www.igfmining.org/member/
+    retrieved_at: '2026-11-20'
+  IMU:
+    source: IMU — Statutes (2026)
+    url: https://www.mathunion.org/fileadmin/documents/2026-07/Statutes2026.pdf
+    retrieved_at: '2026-11-20'
+  INTERPORTPOLICE:
+    source: InterPortPolice — About
+    url: https://interportpolice.org/About
+    retrieved_at: '2026-11-20'
+  IOC_UNESCO:
+    source: Revised Statutes of the IOC (IEA Database)
+    url: https://iea.uoregon.edu/node/115382
+    retrieved_at: '2026-11-20'
+  IRF:
+    source: IRF Global — Membership
+    url: https://www.irf.global/membership/
+    retrieved_at: '2026-11-20'
+  IRU:
+    source: IRU — Constitution (2009)
+    url: https://www.iru.org/sites/default/files/2017-03/2.1.%20IRU%20Constitution%20%26%20Rules%20of%20Procedure_e.pdf
+    retrieved_at: '2026-11-20'
+  ISA_SEABED:
+    source: International Seabed Authority — About ISA
+    url: https://www.isa.org.jm/about-isa/
+    retrieved_at: '2026-11-20'
+  ISC:
+    source: ISC — Statutes and Rules of Procedure (March 2024)
+    url: https://council.science/wp-content/uploads/2024/03/ISC_Statutes_RulesProcedure_8march2024.pdf
+    retrieved_at: '2026-11-20'
+  ISO:
+    source: ISO — Structure and governance
+    url: https://www.iso.org/structure.html
+    retrieved_at: '2026-11-20'
+  ISTO:
+    source: Belgian Crossroads Bank for Enterprises (KBO) — enterprise 0408.300.021
+    url: https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0408300021
+    retrieved_at: '2026-11-20'
+  ITFTRANSPORT:
+    source: ITF — Privacy Policy (Who we are)
+    url: https://www.itfglobal.org/en/page/privacy-policy
+    retrieved_at: '2026-11-20'
+  IUBMB:
+    source: IUBMB — Charity and Donations
+    url: https://iubmb.org/about/charity-and-donations/
+    retrieved_at: '2026-11-20'
+  IUBS:
+    source: IUBS Secretary-General presentation, ISC General Assembly 2025
+    url: https://council.science/wp-content/uploads/2025/02/Borges_Union-Membership-Issues_MuscatGA2025.pdf
+    retrieved_at: '2026-11-20'
+  IUCr:
+    source: IUCr — Statutes and By-Laws
+    url: https://www.iucr.org/iucr/governance/statutes-and-by-laws
+    retrieved_at: '2026-11-20'
+  IUGG:
+    source: IUGG — Statutes and By-Laws (modified 12 July 2023)
+    url: https://iugg.org/wp-content/uploads/2023/08/IUGG_SBL_2023.pdf
+    retrieved_at: '2026-11-20'
+  IUGS:
+    source: IUGS — Membership
+    url: https://www.iugs.org/membership/
+    retrieved_at: '2026-11-20'
+  IUPAC:
+    source: IUPAC — Statutes and Bylaws (valid from 1 January 2024)
+    url: https://iupac.org/wp-content/uploads/2024/04/IUPAC_Statutes_ByLaws_jan2024_v.03apr2024.pdf
+    retrieved_at: '2026-11-20'
+  IUPAP:
+    source: IUPAP — Articles (Statutes)
+    url: https://iupap.org/documents/statutes-bylaws/articles/
+    retrieved_at: '2026-11-20'
+  JDTJUBA:
+    source: Norad — Mid-Term Evaluation of the Joint Donor Team in Juba, Sudan (2009)
+    url: https://www.norad.no/publications/2009/mid-term-evaluation-of-the-joint-donor-team-in-juba-sudan
+    retrieved_at: '2026-11-20'
+  MOUNTPART:
+    source: UN SDG Partnerships — International Partnership for Sustainable Development in Mountain Regions
+    url: https://sdgs.un.org/partnerships/international-partnership-sustainable-development-mountain-regions-mountain
+    retrieved_at: '2026-11-20'
+  NEPAD:
+    source: African Union — NEPAD
+    url: https://au.int/en/organs/nepad
+    retrieved_at: '2026-11-20'
+  PASC:
+    source: PASC — Charter
+    url: https://pascnet.org/charter
+    retrieved_at: '2026-11-20'
+  PATA:
+    source: PATA — About PATA
+    url: https://www.pata.org/about-pata
+    retrieved_at: '2026-11-20'
+  PBEC:
+    source: PBEC — Introduction to PBEC
+    url: https://www.pbec.org/introduction-to-pbec/
+    retrieved_at: '2026-11-20'
+  PLG:
+    source: RNZ — New Polynesian group to complement Pacific regional line-up (22 Nov 2011)
+    url: https://www.rnz.co.nz/international/pacific-news/201036/new-polynesian-group-to-complement-pacific-regional-line-up
+    retrieved_at: '2026-11-20'
+  POGO:
+    source: POGO — homepage and Members page
+    url: https://pogo-ocean.org/
+    retrieved_at: '2026-11-20'
+  PROFOR:
+    source: World Bank — Forest Knowledge and Partnership Initiatives for Impact (2021)
+    url: https://www.worldbank.org/en/events/2021/04/28/forest-knowledge-and-partnership-initiatives-for-impact-results-key-tools-and-new-opportunities
+    retrieved_at: '2026-11-20'
+  SCAR:
+    source: SCAR — About us
+    url: https://www.scar.org/about-us/
+    retrieved_at: '2026-11-20'
+  SCOR:
+    source: SCOR — About
+    url: https://scor-int.org/about/
+    retrieved_at: '2026-11-20'
+  UIC:
+    source: UIC — Standardisation timeline
+    url: https://uic.org/activities/standardisation-timeline
+    retrieved_at: '2026-11-20'
+  UNITAID:
+    source: WHO — Hosted partnerships
+    url: https://www.who.int/about/collaboration/partnerships/hosted-partnerships
+    retrieved_at: '2026-11-20'
+  WFTU:
+    source: WFTU — History (constitutional principles)
+    url: https://www.wftucentral.org/history/
+    retrieved_at: '2026-11-20'
