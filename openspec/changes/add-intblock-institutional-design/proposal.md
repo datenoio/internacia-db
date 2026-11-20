@@ -25,7 +25,7 @@ The change has five parts:
   - `veto_holders`: members with a treaty-granted veto that other members lack.
 - Add a reference catalog `data/schemas/institutional_design.yaml` that defines every value, with positive criteria and boundary examples.
 - Add validation: enum checks, `none` exclusivity, `veto_holders` resolved against current members, provenance required, and the field forbidden on `reference_enumeration` and `non_state_organization` records.
-- Backfill a reviewed pilot cohort from an explicit ID-based manifest, each record with field-level provenance to a founding instrument or rules of procedure. Of 36 candidates, 29 were applied and 7 deferred because no qualifying source could be read.
+- Backfill a reviewed pilot cohort from an explicit ID-based manifest, each record with field-level provenance to a founding instrument or rules of procedure. Of 36 candidates, 34 were applied and 2 deferred because no qualifying source could be read.
 - Document two DuckDB recipes, backed by tests:
   - **Authority level**: derive `none`/`low`/`medium`/`high` from the new facts.
   - **Member capacity concentration**: compute each bloc's share of world population, its largest member's share, the Herfindahl–Hirschman index, and the effective number of members, from the existing `countries.population`.
@@ -40,7 +40,7 @@ The new column is additive and optional, and its enums are open under the contra
 The expected repository impact is:
 
 - Affected specs: new `intblock-institutional-design`.
-- Affected source: `data/schemas/intblocks.schema.json`, new `data/schemas/institutional_design.yaml`, new pilot manifest `data/schemas/institutional_design_pilot.yaml`, and 29 records under `data/intblocks/**/*.yaml`.
+- Affected source: `data/schemas/intblocks.schema.json`, new `data/schemas/institutional_design.yaml`, new pilot manifest `data/schemas/institutional_design_pilot.yaml`, and 34 records under `data/intblocks/**/*.yaml`.
 - Affected code: `internacia_builder/schemas.py` (Arrow struct), `internacia_builder/export.py` (flattened CSV export; lite exports unchanged), `internacia_builder/validate/intblock_rules.py`, `internacia_builder/validate/completeness.py`, a dry-run-first backfill script, and `tests/`.
 - Affected documentation: `docs/intblock-inclusion-policy.md`, `docs/when-to-use-internacia.md`, `docs/ai-consumers.md`, `docs/query-examples.md` (with `tests/test_documented_queries.py`), `docs/data-dictionary.md` (generated), `llms.txt`, agent-shim templates, and `CHANGELOG.md`.
 - Affected exports: all intblock formats gain the `institutional_design` struct column; `contract.json` gains the open enums for its subfields automatically from the JSON Schema.

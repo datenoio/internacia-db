@@ -33,12 +33,12 @@ The schema, catalog, and documentation land together, so consumers never see an 
 
 ## 4. Pilot backfill
 
-- [x] 4.1 Add `data/schemas/institutional_design_pilot.yaml` with the reviewed IDs, values, and a primary-source URL per record (29 applied, 7 deferred with reasons)
+- [x] 4.1 Add `data/schemas/institutional_design_pilot.yaml` with the reviewed IDs, values, and a primary-source URL per record (34 applied, 2 deferred with reasons)
 - [x] 4.2 Add a dry-run-first backfill script: whole-cohort validation, conflict blocking, idempotence, provenance insertion, and a JSON report
 - [x] 4.3 Add unit tests for dry run, conflict, idempotence, and an unknown ID
 - [x] 4.4 Review each of the 36 candidates against its founding instrument or rules of procedure
 - [x] 4.5 Run the dry run and review the full JSON report
-- [x] 4.6 Apply, then confirm that exactly 29 source files changed and that no roster, name, or hierarchy changed
+- [x] 4.6 Apply, then confirm that exactly 34 source files changed and that no roster, name, or hierarchy changed
 - [x] 4.7 Run both validators with zero errors
 
 ## 5. Recipes and documentation

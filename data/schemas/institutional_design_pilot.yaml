@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: pilot_29
-expected_count: 29
+cohort_id: pilot_34
+expected_count: 34
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -182,6 +182,49 @@ records:
         url: https://jus.uio.no/english/services/library/treaties/09/9-01/sadc_treaty_consolidated.html
         retrieved_at: '2026-11-20'
 
+  OIC:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      mutual_defence: false
+    basis: >-
+      OIC Charter Arts 1-2: political, economic, cultural and scientific aims. Art 33(2): decisions by consensus,
+      failing which by two thirds of members present and voting. No clause says decisions bind; the Court of Justice
+      (Art 14) exists only once its Statute enters into force; Art 34(4) loss of vote for arrears is automatic. No
+      assistance duty (Arts 2 and 27 provide only for peaceful settlement).
+    evidence:
+      - source: Charter of the Organisation of Islamic Cooperation (OIC document host cdn.oic-apps.org, linked from oic-oci.org)
+        url: http://cdn.oic-apps.org/documents/pages/legal/charter/charter_of_the_organisation_of_islamic_cooperation_en.pdf
+        retrieved_at: '2026-11-20'
+  CIS:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      mutual_defence: false
+    basis: >-
+      CIS Charter Art 2: political, economic, humanitarian, security and legal cooperation. Art 23: Council decisions by
+      general consent, and a state may declare lack of interest without blocking a decision. Art 12 provides only for
+      mutual consultations on a threat; the Collective Security Treaty binds only its parties. Binding force, the
+      Economic Court (Art 32) and the measures under Art 10 are not settled by the text, so they are omitted.
+    evidence:
+      - source: Charter of the Commonwealth of Independent States (text via Russian Wikisource)
+        url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+        retrieved_at: '2026-11-20'
+  CCASG:
+    institutional_design:
+      decision_rule: unanimity
+      independent_organs: [none]
+      enforcement: [none]
+    basis: >-
+      GCC Charter Art 9: substantive Supreme Council decisions need unanimity of the member states present and voting;
+      procedural matters a majority. Art 10: the Commission for the Settlement of Disputes is formed case by case and
+      only recommends, so it is not a dispute_panel. No suspension, sanction or expulsion clause. Mandate (Art 4) and
+      mutual defence (the 2000 Joint Defence Agreement was not checked) are omitted.
+    evidence:
+      - source: Charter of the Cooperation Council for the Arab States of the Gulf (GCC Secretariat General, Primary Law)
+        url: https://www.gcc-sg.org/en/AboutUs/Pages/PrimaryLaw.aspx
+        retrieved_at: '2026-11-20'
+
   # --- regional economic communities -----------------------------------------
   ECOWAS:
     institutional_design:
@@ -342,6 +385,21 @@ records:
         url: https://www.apec.org/who-we-are/how-apec-operates
         retrieved_at: '2026-11-20'
 
+  G-20:
+    institutional_design:
+      mandate: economic
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      Global Affairs Canada describes the G20 as the primary forum for international economic cooperation, with no
+      charter or permanent secretariat. The page states neither a decision rule nor whether leaders' declarations
+      bind, so decision_rule and decision_force are omitted.
+    evidence:
+      - source: Global Affairs Canada, G20
+        url: https://www.international.gc.ca/world-monde/international_relations-relations_internationales/g20/index.aspx?lang=eng
+        retrieved_at: '2026-11-20'
+
   # --- global economic institutions ------------------------------------------
   WTO:
     institutional_design:
@@ -389,6 +447,24 @@ records:
     evidence:
       - source: Articles of Agreement of the International Bank for Reconstruction and Development
         url: https://thedocs.worldbank.org/en/doc/722361541184234501-0330022018/original/IBRDArticlesOfAgreementEnglish.pdf
+        retrieved_at: '2026-11-20'
+
+  OPEC:
+    institutional_design:
+      mandate: economic
+      decision_rule: unanimity
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      OPEC Statute Art 2: coordination of members' petroleum policies. Art 11(C): Conference decisions other than
+      procedural ones need the unanimous agreement of all Full Members; resolutions take effect after 30 days unless a
+      member notifies the Secretariat to the contrary. Art 9: Conference, Board of Governors (nominated by members,
+      Art 17) and Secretariat only. No suspension, expulsion, sanction or defence provision.
+    evidence:
+      - source: OPEC Statute, 2021 edition
+        url: https://www.opec.org/assets/assetdb/opec-statute.pdf
         retrieved_at: '2026-11-20'
 
   # --- sectoral and technical agencies ---------------------------------------
@@ -503,10 +579,9 @@ records:
 
 # Pilot candidates not applied in this cohort, and why. Revisit when a qualifying source is read.
 deferred:
-  OIC: Only a third-party reproduction of the Charter could be read; article numbering unverified.
-  CIS: The UN Treaty Series copy of the Charter is a scan that could not be read; values rest on secondary sources.
-  CCASG: The Charter text could not be read; only search snippets were available.
-  G-20: g20.org could not be reached; only secondary backgrounders were available.
-  BRICS: No official BRICS or government page could be read; only search snippets were available.
-  OECD: oecd.org could not be reached; the only copy read is on an unaffiliated site.
-  OPEC: The only Statute copy read has no identifiable publisher.
+  BRICS: >-
+    No official BRICS or government page with usable text could be read (brics.br and mea.gov.in unreachable; the
+    Kazan Declaration on kremlin.ru is a PDF that could not be extracted); only search snippets were available.
+  OECD: >-
+    oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
+    repository copy of the 1960 Convention could be read.

@@ -33,7 +33,7 @@ The goals are:
 - Record the authority axis as optional, sourced, reviewable facts on intblock records.
 - Define every value precisely enough that two reviewers assign the same value from the same founding instrument.
 - Give consumers a tested recipe to derive an authority level and a tested recipe to compute capacity concentration from data already in scope.
-- Cover a pilot cohort of high-profile records that spans both strategic and technical organizations (36 candidates; 29 applied).
+- Cover a pilot cohort of high-profile records that spans both strategic and technical organizations (36 candidates; 34 applied).
 
 The non-goals are:
 
@@ -164,7 +164,7 @@ The 36 pilot candidates are:
 
 The grouping above is a sampling plan, not the `mandate` assignment. The backfill review sets each record's `mandate` from its sources.
 
-Review outcome (2026-11-20): 29 candidates were applied. Seven were deferred, because no source that meets the provenance rule could be read: OIC (third-party reproduction only), CIS (unreadable scan), CCASG (search snippets only), G-20 and BRICS (official sites unreachable; secondary backgrounders only), OECD (unaffiliated copy only), and OPEC (copy without an identifiable publisher). The manifest's `deferred` section records each reason. A source is accepted from the organization's or a government's own site, or from a recognized legal-text repository. Subfields that a source does not settle are omitted, for example NATO `decision_force`.
+Review outcome (2026-11-20): a first pass applied 29 candidates and deferred seven, because no source that meets the provenance rule could be read: OIC (third-party reproduction only), CIS (unreadable scan), CCASG (search snippets only), G-20 and BRICS (official sites unreachable; secondary backgrounders only), OECD (unaffiliated copy only), and OPEC (copy without an identifiable publisher). A second pass the same day found qualifying sources for five of them and applied them with only the subfields those sources settle: OIC (Charter on the OIC's document host), CIS (Charter via Russian Wikisource), CCASG (Charter on the GCC Secretariat site), G-20 (Global Affairs Canada) and OPEC (Statute on opec.org). BRICS and OECD remain deferred: no official or government page about BRICS, and no copy of the OECD Convention, could be read (oecd.org answers automated requests with a bot-verification page). The manifest's `deferred` section records each reason. A source is accepted from the organization's or a government's own site, or from a recognized legal-text repository. Subfields that a source does not settle are omitted, for example NATO `decision_force`.
 
 Three conventions were fixed during review and are recorded in the catalog, the manifest and the inclusion policy:
 
@@ -177,7 +177,7 @@ Three conventions were fixed during review and are recorded in the catalog, the 
 - **Reviewer judgement on `mandate` and `decision_force`.** Mitigation: normative definitions with boundary examples, a reviewed manifest, and mandatory provenance.
 - **Consumers read the authority level as an influence ranking.** Mitigation: the documentation presents authority and capacity as separate axes, and places both recipes next to each other.
 - **Treaty reform changes the design.** For example, the Lisbon Treaty moved many EU areas to qualified majority. Mitigation: values describe the instrument in force at `last_verified`, and corrections ship as PATCH value changes.
-- **Sparse coverage (29 of 1275).** Mitigation: absent means unknown, recipes return NULL, and the completeness report tracks coverage. No gate fails on missing values.
+- **Sparse coverage (34 of 1275).** Mitigation: absent means unknown, recipes return NULL, and the completeness report tracks coverage. No gate fails on missing values.
 - **One more struct column for flat consumers.** Mitigation: the flattened CSV export follows the existing `headquarters` flattening pattern with `design_*` columns, and the lite exports stay unchanged.
 
 ## Migration Plan
