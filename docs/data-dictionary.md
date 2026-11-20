@@ -103,3 +103,4 @@ For consumption contracts and join keys, see [ai-consumers.md](ai-consumers.md).
 | `official_documents` | array |  | full JSON/YAML only | Links to founding or official documents |
 | `social_media` | object |  | full JSON/YAML only | Social media handles keyed by platform |
 | `secretariat` | object |  | full JSON/YAML only | Secretariat location and host organization |
+| `institutional_design` | object |  | yes | What the founding instrument lets the organization decide and enforce. Optional; an absent object or subfield means unknown, not none. Values are defined in data/schemas/institutional_design.yaml. Allowed only on igo, treaty_body, policy_forum and intergovernmental_body records, with provenance. |

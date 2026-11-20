@@ -3,6 +3,14 @@ blocktype:
 - unagency
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: sectoral
+  decision_rule: simple_majority
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  mutual_defence: false
 partof: UN
 languages:
 - en
@@ -145,7 +153,12 @@ other_names:
   name: Международное агентство по атомной энергии
 - id: zh
   name: 国际原子能机构
+last_verified: '2026-11-20'
 provenance:
+- field: institutional_design
+  source: "Statute of the International Atomic Energy Agency (text via University of Oslo)"
+  retrieved_at: "2026-11-20"
+  url: "https://jus.uio.no/english/services/library/treaties/14/14-02/atomic-energy-agency.html"
 - field: description
   source: Wikidata
   retrieved_at: '2026-06-13'

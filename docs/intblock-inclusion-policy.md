@@ -176,6 +176,35 @@ blocktype are always `reference_enumeration`, even when their source is formal a
 their `status` is `formal`. They are published classification sets, not organizations.
 World Bank institutions such as `WB` and `IBRD` remain `igo` records.
 
+## `institutional_design`
+
+`institutional_design` records what a record's founding instrument and rules of procedure let the
+organization decide and enforce. Its values and their boundary cases are defined in
+[`data/schemas/institutional_design.yaml`](../data/schemas/institutional_design.yaml). The rules are:
+
+- It is optional. An absent object or subfield means unknown; record only what the source settles.
+- It is allowed only on `igo`, `treaty_body`, `policy_forum` and `intergovernmental_body` records.
+  A named country set (`reference_enumeration`) has no organs, and states do not take a
+  `non_state_organization`'s decisions.
+- `decision_rule` and `decision_force` describe the principal decision-making organ: the organ of
+  member-state representatives that adopts the main acts. Record its default rule; use `mixed`
+  only when the instrument names no default.
+- A general secretariat is not an independent organ. An organ that never became operational, or is
+  suspended, is not a standing organ. Ad hoc arbitration with a binding award is `dispute_panel`.
+- An automatic loss of vote for arrears is not an enforcement measure; a suspension that an organ
+  decides is.
+- `mutual_defence` counts only an instrument binding all members of the record. A separate pact
+  that binds only its ratifying members does not count.
+- `veto_holders` lists only treaty-granted vetoes that other members lack, and each holder must be a
+  current member.
+- Every populated record needs a `provenance` entry with `field: institutional_design`, citing the
+  instrument from the organization's or a government's site, or a recognized legal-text repository.
+- Values are never inferred from `blocktype`, directory or `topics`. Batch changes go through a
+  reviewed manifest and `scripts/backfill_institutional_design.py` (dry run by default).
+
+The field is not a ranking. It does not store influence scores, vote shares, quotas or budget
+contributions, and capacity indicators such as GDP or military spending stay out of countries.
+
 ## Boundaries vs treaties in `partof`
 
 `partof` expresses **organizational hierarchy**, not “established by treaty X”.

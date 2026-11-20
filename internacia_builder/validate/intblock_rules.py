@@ -56,6 +56,19 @@ SCOPE_CATEGORIES = frozenset(
 # Statuses that deny the formal, institutional standing an IGO requires.
 NON_INSTITUTIONAL_STATUSES = frozenset({"informal", "de-facto"})
 
+# scope_category values whose records may carry institutional_design: the object describes
+# intergovernmental authority, so named country sets and non-state bodies cannot have it.
+INSTITUTIONAL_DESIGN_SCOPES = frozenset({"igo", "treaty_body", "policy_forum", "intergovernmental_body"})
+
+# institutional_design list subfields in which "none" must be the only value.
+EXCLUSIVE_NONE_FIELDS = ("independent_organs", "enforcement")
+
+# Include statuses of a current full member, for veto_holders resolution.
+CURRENT_MEMBER_STATUSES = frozenset({"member", "founding_member"})
+
+# Decision rules under which every member can block, so no member holds an extra veto.
+BLOCKING_DECISION_RULES = frozenset({"consensus", "unanimity"})
+
 
 def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]]:
     """Validate scope_category syntax, known blocktype semantics, and status consistency."""
@@ -108,6 +121,106 @@ def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]
             ),
         }]
 
+    return []
+
+
+def _current_country_members(record: dict[str, Any]) -> set[str]:
+    """Alpha-2 codes of current full country members (no ``left`` date)."""
+    members: set[str] = set()
+    for include in record.get("includes") or []:
+        if not isinstance(include, dict) or include.get("left"):
+            continue
+        if (include.get("type") or "country") != "country":
+            continue
+        if include.get("status") in CURRENT_MEMBER_STATUSES and include.get("id"):
+            members.add(str(include["id"]))
+    return members
+
+
+def check_intblock_institutional_design(record: dict[str, Any]) -> list[dict[str, Any]]:
+    """Structural rules for ``institutional_design`` that JSON Schema cannot express.
+
+    Enum values, list uniqueness and unknown keys are JSON Schema errors. This rule checks
+    the entity kind, exclusive ``none`` values, veto holders against the current roster,
+    and the required provenance entry (see data/schemas/institutional_design.yaml).
+    """
+    design = record.get("institutional_design")
+    if not isinstance(design, dict):
+        return []
+    issues: list[dict[str, Any]] = []
+
+    category = record.get("scope_category")
+    if category not in INSTITUTIONAL_DESIGN_SCOPES:
+        issues.append({
+            "issue_type": "INSTITUTIONAL_DESIGN_SCOPE_CONFLICT",
+            "field": "institutional_design",
+            "current_value": str(category or ""),
+            "suggested_action": (
+                f"scope_category '{category or ''}' cannot carry institutional_design; it is allowed "
+                f"only on {sorted(INSTITUTIONAL_DESIGN_SCOPES)}"
+            ),
+        })
+
+    for name in EXCLUSIVE_NONE_FIELDS:
+        values = design.get(name)
+        if isinstance(values, list) and "none" in values and len(values) > 1:
+            issues.append({
+                "issue_type": "INSTITUTIONAL_DESIGN_NONE_CONFLICT",
+                "field": f"institutional_design.{name}",
+                "current_value": ",".join(str(v) for v in values),
+                "suggested_action": f"'none' must be the only value of institutional_design.{name}",
+            })
+
+    veto_holders = design.get("veto_holders")
+    if isinstance(veto_holders, list) and veto_holders:
+        members = _current_country_members(record)
+        for code in veto_holders:
+            if str(code) not in members:
+                issues.append({
+                    "issue_type": "INVALID_VETO_HOLDER",
+                    "field": "institutional_design.veto_holders",
+                    "current_value": str(code),
+                    "suggested_action": (
+                        f"veto holder '{code}' is not a current country member of the record "
+                        "(includes entry with status member or founding_member and no left date)"
+                    ),
+                })
+
+    has_provenance = any(
+        isinstance(entry, dict)
+        and (str(entry.get("field") or "") == "institutional_design"
+             or str(entry.get("field") or "").startswith("institutional_design."))
+        for entry in record.get("provenance") or []
+    )
+    if not has_provenance:
+        issues.append({
+            "issue_type": "MISSING_INSTITUTIONAL_DESIGN_PROVENANCE",
+            "field": "institutional_design",
+            "current_value": "",
+            "suggested_action": (
+                "add a provenance entry with field 'institutional_design' (or "
+                "'institutional_design.<subfield>') citing the founding instrument or rules of procedure"
+            ),
+        })
+    return issues
+
+
+def check_intblock_veto_under_consensus(record: dict[str, Any]) -> list[dict[str, Any]]:
+    """Warn when veto holders are listed for a body where every member can already block."""
+    design = record.get("institutional_design")
+    if not isinstance(design, dict):
+        return []
+    rule = design.get("decision_rule")
+    if design.get("veto_holders") and rule in BLOCKING_DECISION_RULES:
+        return [{
+            "issue_type": "VETO_HOLDERS_UNDER_CONSENSUS",
+            "field": "institutional_design.veto_holders",
+            "current_value": ",".join(str(v) for v in design["veto_holders"]),
+            "suggested_action": (
+                f"decision_rule '{rule}' lets every member block; record veto_holders only for "
+                "treaty-granted vetoes that other members lack"
+            ),
+        }]
     return []
 
 

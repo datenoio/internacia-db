@@ -3,6 +3,17 @@ blocktype:
 - unagency
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: economic
+  decision_rule: weighted_voting
+  decision_force: binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  - expulsion
+  - conditionality
+  mutual_defence: false
 partof: UN
 languages:
 - ar
@@ -957,6 +968,10 @@ other_names:
   name: 國際貨幣基金組織
 last_verified: '2026-10-22'
 provenance:
+- field: institutional_design
+  source: "Articles of Agreement of the International Monetary Fund"
+  retrieved_at: "2026-11-20"
+  url: "https://www.imf.org/external/pubs/ft/aa/index.htm"
 - field: includes
   source: International Monetary Fund
   retrieved_at: '2026-10-22'

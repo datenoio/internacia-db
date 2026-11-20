@@ -1,0 +1,512 @@
+version: 1
+change_id: add-intblock-institutional-design
+cohort_id: pilot_29
+expected_count: 29
+description: >-
+  Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
+  data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
+  instrument or an official page. A source is accepted only from the organization's or a
+  government's own site, or from a recognized legal-text repository (UN Office of Legal Affairs,
+  legislation.gov.uk, Wikisource, Yale Avalon, University of Oslo, World Trade Institute). A
+  subfield is omitted when the source does not settle it. Apply with
+  scripts/backfill_institutional_design.py (dry run by default).
+
+# Review conventions applied to the whole cohort:
+# - Ad hoc arbitration whose award binds the parties counts as dispute_panel (catalog definition).
+# - A loss of vote that follows automatically from arrears is not an enforcement measure, because
+#   the organization does not decide it; suspension decided by an organ is.
+# - An organ that the instrument provides for but that never became operational, or is suspended,
+#   is not a standing organ.
+# - mutual_defence: false is recorded only when the instrument was checked, or when there is no
+#   instrument binding all members. Separate defence pacts that bind only ratifying members do not count.
+
+records:
+  # --- general-purpose organizations ---------------------------------------
+  UN:
+    institutional_design:
+      mandate: general
+      decision_rule: simple_majority
+      decision_force: non_binding
+      independent_organs: [court]
+      enforcement: [sanctions, suspension, expulsion]
+      mutual_defence: false
+    basis: >-
+      Principal organ: the General Assembly. Charter Art 18(3): other questions by a majority of members present
+      and voting (two thirds for important questions, Art 18(2)); Arts 10-14 give recommendations. ICJ is the
+      principal judicial organ (Art 92) and parties must comply (Art 94). Suspension (Art 5) and expulsion (Art 6);
+      Security Council measures under Art 41. Art 51 preserves self-defence only.
+    evidence:
+      - source: Charter of the United Nations, Art 18 (UN Office of Legal Affairs, Repertory of Practice)
+        url: https://legal.un.org/repertory/art18.shtml
+        retrieved_at: '2026-11-20'
+      - source: Charter of the United Nations (text via Wikisource)
+        url: https://en.wikisource.org/wiki/Charter_of_the_United_Nations
+        retrieved_at: '2026-11-20'
+  UNSC:
+    institutional_design:
+      mandate: security
+      decision_rule: qualified_majority
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [sanctions]
+      mutual_defence: false
+      veto_holders: [CN, FR, GB, RU, US]
+    basis: >-
+      Charter Art 27(3): non-procedural decisions need nine affirmative votes including the concurring votes of the
+      permanent members. Art 25: Members agree to accept and carry out its decisions. Art 41: measures short of force
+      that Members must apply. The five permanent members hold a veto that elected members lack.
+    evidence:
+      - source: Charter of the United Nations, Art 27 (UN Office of Legal Affairs, Repertory of Practice)
+        url: https://legal.un.org/repertory/art27.shtml
+        retrieved_at: '2026-11-20'
+      - source: Charter of the United Nations, Art 25 (UN Office of Legal Affairs, Repertory of Practice)
+        url: https://legal.un.org/repertory/art25.shtml
+        retrieved_at: '2026-11-20'
+  EU:
+    institutional_design:
+      mandate: general
+      decision_rule: qualified_majority
+      decision_force: binding
+      independent_organs: [executive, court, parliament, central_bank]
+      enforcement: [sanctions, suspension]
+      mutual_defence: true
+    basis: >-
+      TEU Art 16(3): the Council acts by qualified majority except where the Treaties provide otherwise. TEU Art 13
+      institutions include the Commission, Parliament, Court of Justice and ECB; TFEU Art 288 binding acts. TEU Art 7(3)
+      suspension of rights including voting rights; TFEU Art 260(2) lump sums and penalty payments. TEU Art 42(7)
+      obligation of aid and assistance against armed aggression.
+    evidence:
+      - source: Treaty on European Union (consolidated), Art 16 (legislation.gov.uk copy of EUR-Lex text)
+        url: https://www.legislation.gov.uk/eut/teu/article/16
+        retrieved_at: '2026-11-20'
+      - source: Treaty on European Union (consolidated), Art 42 (legislation.gov.uk copy of EUR-Lex text)
+        url: https://www.legislation.gov.uk/eut/teu/article/42
+        retrieved_at: '2026-11-20'
+      - source: Treaty on European Union (consolidated), Art 7 (legislation.gov.uk copy of EUR-Lex text)
+        url: https://www.legislation.gov.uk/eut/teu/article/7
+        retrieved_at: '2026-11-20'
+  AFUNION:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [sanctions, suspension]
+      mutual_defence: false
+    basis: >-
+      Constitutive Act Art 3 objectives span unity, peace and security, governance and integration. Art 7(1): the
+      Assembly decides by consensus, failing which by two thirds. Art 23(2) sanctions for non-compliance with
+      decisions and policies; Art 30 suspension of governments that come to power unconstitutionally. The Court of
+      Justice (Art 18) never became operational and the Pan-African Parliament is consultative. Art 4(h) intervention
+      is not an assistance duty.
+    evidence:
+      - source: Constitutive Act of the African Union (text via Wikisource)
+        url: https://en.wikisource.org/wiki/Constitutive_Act_of_the_African_Union
+        retrieved_at: '2026-11-20'
+  ASEAN:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      ASEAN Charter Art 20(1): decisions based on consultation and consensus. Summit declarations do not bind; binding
+      instruments are separate agreements that each member ratifies. Chapter IV organs are intergovernmental or
+      secretariat bodies. No suspension, expulsion or defence clause.
+    evidence:
+      - source: Charter of the Association of Southeast Asian Nations (text via Wikisource)
+        url: https://en.wikisource.org/wiki/ASEAN_Charter
+        retrieved_at: '2026-11-20'
+  OAS:
+    institutional_design:
+      mandate: general
+      decision_rule: simple_majority
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: >-
+      OAS Charter Art 59: General Assembly decisions by absolute majority unless two thirds is required. Assembly
+      resolutions are not stated to bind. Art 9 suspension after an unconstitutional overthrow. Arts 28-29 refer
+      collective measures to special treaties (the Rio Treaty binds only its parties).
+    evidence:
+      - source: Charter of the Organization of American States (text via Wikisource)
+        url: https://en.wikisource.org/wiki/Charter_of_the_Organization_of_American_States
+        retrieved_at: '2026-11-20'
+  COE:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: unanimity
+      decision_force: partly_binding
+      independent_organs: [court]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: >-
+      Statute Art 1: human rights, democracy and rule of law; national defence excluded (Art 1(d)). Art 20(a): the
+      Committee of Ministers adopts recommendations and conventions unanimously; conventions bind only after
+      ratification. Art 8 suspension and cessation of membership. The European Court of Human Rights binds every member,
+      since all members are parties to the Convention.
+    evidence:
+      - source: Statute of the Council of Europe (text via Wikisource)
+        url: https://en.wikisource.org/wiki/Statute_of_the_Council_of_Europe
+        retrieved_at: '2026-11-20'
+  LAS:
+    institutional_design:
+      mandate: general
+      decision_rule: mixed
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [expulsion]
+    basis: >-
+      Pact Art 7: unanimous Council decisions bind all members; majority decisions bind only those that accept them,
+      and no default rule is named. Art 18: a member failing its obligations may be considered separated. The 1950
+      Joint Defence Treaty was not checked, so mutual_defence is omitted.
+    evidence:
+      - source: Pact of the League of Arab States (text via Yale Avalon Project)
+        url: https://avalon.law.yale.edu/20th_century/arableag.asp
+        retrieved_at: '2026-11-20'
+  SADC:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: binding
+      enforcement: [sanctions, suspension]
+    basis: >-
+      SADC Treaty Art 5 pairs economic integration with peace, security and democracy. Art 10(9): Summit decisions by
+      consensus and binding. Art 33 sanctions, including suspension. The Tribunal (Art 16) has been suspended since
+      2010, so independent_organs is omitted; the 2003 Mutual Defence Pact binds only ratifying members.
+    evidence:
+      - source: Treaty of the Southern African Development Community, consolidated (text via University of Oslo)
+        url: https://jus.uio.no/english/services/library/treaties/09/9-01/sadc_treaty_consolidated.html
+        retrieved_at: '2026-11-20'
+
+  # --- regional economic communities -----------------------------------------
+  ECOWAS:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [court]
+      enforcement: [sanctions, suspension]
+    basis: >-
+      Revised Treaty Art 3 aims at an economic union. Art 9(3): the Authority decides by consensus until the protocol
+      on voting matters enters into force; Art 9(4) its decisions bind. Art 15 Community Court of Justice. Art 77
+      sanctions, including suspension. The 1981 Defence Protocol was not confirmed as binding all members.
+    evidence:
+      - source: ECOWAS Revised Treaty (1993)
+        url: https://www.ecowas.int/wp-content/uploads/2022/08/Revised-treaty.pdf
+        retrieved_at: '2026-11-20'
+  CARICOM:
+    institutional_design:
+      mandate: economic
+      decision_rule: unanimity
+      decision_force: binding
+      independent_organs: [court]
+    basis: >-
+      Revised Treaty of Chaguaramas Art 6: economic integration and functional cooperation. Art 28(1): the Conference
+      decides by affirmative vote of all members and its decisions bind. Art 211: the Caribbean Court of Justice has
+      compulsory and exclusive original jurisdiction on the Treaty. Enforcement and defence were not settled.
+    evidence:
+      - source: Revised Treaty of Chaguaramas (2001)
+        url: https://caricom.org/documents/4906-revised_treaty-text.pdf
+        retrieved_at: '2026-11-20'
+  EAEU:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [executive, court]
+    basis: >-
+      Treaty on the EAEU Art 4: common market. Art 13(2): the Supreme Council decides by consensus; Art 6(1) its
+      decisions are enforceable by member states. Art 18 Eurasian Economic Commission, whose Board members do not take
+      instructions from states; Art 19 Court of the Union. Enforcement and defence were not settled.
+    evidence:
+      - source: Treaty on the Eurasian Economic Union (2014) (text via World Trade Institute)
+        url: https://edit.wti.org/document/show/b733d847-dc58-442a-afee-d73c0f1c472d
+        retrieved_at: '2026-11-20'
+  MERCOSUR:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [court, dispute_panel]
+    basis: >-
+      Protocol of Ouro Preto Art 37: decisions by consensus with all parties present; Art 9 Council decisions bind, but
+      Arts 38 and 42 require national incorporation. Protocol of Olivos: ad hoc arbitral tribunals (Arts 9-10) and the
+      Permanent Review Tribunal (Art 18), with binding awards (Art 26).
+    evidence:
+      - source: Protocol of Ouro Preto (1994) and Protocol of Olivos (2002) (Ouro Preto text via Wikisource)
+        url: https://es.wikisource.org/wiki/Protocolo_de_Ouro_Preto
+        retrieved_at: '2026-11-20'
+  EFTA:
+    institutional_design:
+      mandate: economic
+      decision_rule: unanimity
+      decision_force: binding
+      independent_organs: [dispute_panel]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      Vaduz Convention Art 2: trade and economic objectives. Art 43(4): Council decisions bind all Member States;
+      Art 43(5): decisions by unanimous vote unless the Convention provides otherwise. Arts 47-48 arbitration with final
+      binding awards. No suspension, expulsion or defence clause. The EEA Surveillance Authority and EFTA Court belong
+      to the EEA Agreement, not the Convention.
+    evidence:
+      - source: Convention Establishing the European Free Trade Association (Vaduz Convention, updated 1 November 2021)
+        url: https://www.efta.int/sites/default/files/uploads/2024-04/Vaduz_Convention_Agreement_Updated_1_November_2021.pdf
+        retrieved_at: '2026-11-20'
+
+  # --- security organizations ------------------------------------------------
+  NATO:
+    institutional_design:
+      mandate: security
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: true
+    basis: >-
+      North Atlantic Treaty Art 5: an armed attack on one is an attack on all. Art 9 establishes only a Council of
+      party representatives. No suspension or expulsion clause. NATO states that all decisions are made by consensus.
+      Neither source says whether Council decisions bind, so decision_force is omitted.
+    evidence:
+      - source: The North Atlantic Treaty (1949)
+        url: https://www.nato.int/cps/en/natohq/official_texts_17120.htm
+        retrieved_at: '2026-11-20'
+      - source: NATO, Consensus decision-making at NATO
+        url: https://www.nato.int/cps/en/natohq/topics_49178.htm
+        retrieved_at: '2026-11-20'
+  CSTO:
+    institutional_design:
+      mandate: security
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: true
+    basis: >-
+      CSTO Charter Art 12: Council decisions on non-procedural matters by consensus and binding. Art 20: suspension of a
+      member in breach and later exclusion. Collective Security Treaty Art 4: aggression against one member is aggression
+      against all, with assistance including military.
+    evidence:
+      - source: Charter of the Collective Security Treaty Organization (2002)
+        url: https://en.odkb-csto.org/documents/documents/ustav_organizatsii_dogovora_o_kollektivnoy_bezopasnosti_/
+        retrieved_at: '2026-11-20'
+  SCO:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: >-
+      SCO Charter Art 1: security, counter-terrorism, economic and political cooperation. Art 16: decisions by agreement
+      without a vote; a member may stay out of particular projects. Art 17: implementation under national legislation.
+      Art 13: suspension and expulsion for violating the Charter. No defence clause.
+    evidence:
+      - source: Charter of the Shanghai Cooperation Organisation (2002)
+        url: https://eng.sectsco.org/images/07e8/0c/14/1625960.pdf
+        retrieved_at: '2026-11-20'
+
+  # --- forums ----------------------------------------------------------------
+  G7:
+    institutional_design:
+      mandate: general
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      Italian Ministry of Foreign Affairs: the G7 is an informal forum without a secretariat, budget or permanent staff;
+      it began with economic and financial matters and added policy and security issues. As an informal forum it adopts
+      no binding acts and has no founding instrument. The decision rule is not stated, so it is omitted.
+    evidence:
+      - source: Italian Ministry of Foreign Affairs and International Cooperation, G7
+        url: https://www.esteri.it/en/temi/organizzazioni_internazionali/g7/
+        retrieved_at: '2026-11-20'
+  APEC:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      APEC operates on voluntary cooperation and consensus, its decisions are non-binding, and members enter no legally
+      binding obligations. It has no founding treaty; the Singapore secretariat is not an independent organ.
+    evidence:
+      - source: APEC, How APEC operates
+        url: https://www.apec.org/who-we-are/how-apec-operates
+        retrieved_at: '2026-11-20'
+
+  # --- global economic institutions ------------------------------------------
+  WTO:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [dispute_panel]
+      enforcement: [sanctions]
+      mutual_defence: false
+    basis: >-
+      Marrakesh Agreement Art IX:1: decisions by consensus, with voting as a fallback. Art II:2 multilateral agreements
+      bind all members. Dispute settlement under the DSU through panels, with authorized suspension of concessions
+      (retaliation) against a member that does not comply.
+    evidence:
+      - source: Marrakesh Agreement Establishing the World Trade Organization
+        url: https://www.wto.org/english/docs_e/legal_e/04-wto_e.htm
+        retrieved_at: '2026-11-20'
+  IMF:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion, conditionality]
+      mutual_defence: false
+    basis: >-
+      Articles of Agreement Art XII Sec 5: votes weighted by quota. Art XXVI Sec 2: suspension of voting rights and
+      compulsory withdrawal. Art V Sec 3: use of Fund resources subject to policies and conditions. The 85% thresholds
+      create only a de-facto veto from quota share, which is not recorded.
+    evidence:
+      - source: Articles of Agreement of the International Monetary Fund
+        url: https://www.imf.org/external/pubs/ft/aa/index.htm
+        retrieved_at: '2026-11-20'
+  WB:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion, conditionality]
+      mutual_defence: false
+    basis: >-
+      IBRD Articles of Agreement Art V Sec 3: votes weighted by shares. Art VI Sec 2: suspension by the Board of
+      Governors, after which membership ceases unless restored within one year. Art III Sec 4: conditions on loans.
+    evidence:
+      - source: Articles of Agreement of the International Bank for Reconstruction and Development
+        url: https://thedocs.worldbank.org/en/doc/722361541184234501-0330022018/original/IBRDArticlesOfAgreementEnglish.pdf
+        retrieved_at: '2026-11-20'
+
+  # --- sectoral and technical agencies ---------------------------------------
+  WHO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: >-
+      WHO Constitution Art 60(b): other questions by a majority of members present and voting (two thirds for
+      conventions, Art 60(a)). Regulations under Art 21 bind members that do not reject them (Art 22); conventions bind
+      after acceptance (Art 19-20). Art 7: the Assembly may suspend voting privileges and services.
+    evidence:
+      - source: Constitution of the World Health Organization (Basic Documents, 49th edition)
+        url: https://apps.who.int/gb/bd/pdf_files/BD_49th-en.pdf
+        retrieved_at: '2026-11-20'
+  IAEA:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: >-
+      IAEA Statute Art V.C: General Conference decisions by majority, two thirds for financial questions, amendments
+      and suspension. Art XIX: suspension of privileges and rights of membership. Binding force is mixed (recommendations,
+      binding budget decisions, safeguards through agreements), so decision_force is omitted.
+    evidence:
+      - source: Statute of the International Atomic Energy Agency (text via University of Oslo)
+        url: https://jus.uio.no/english/services/library/treaties/14/14-02/atomic-energy-agency.html
+        retrieved_at: '2026-11-20'
+  UPU:
+    institutional_design:
+      mandate: technical
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      mutual_defence: false
+    basis: >-
+      UPU Constitution and General Regulations: Congress adopts the Acts, which bind members after ratification or
+      approval, with reservations allowed. Binding arbitration of disputes between member countries. The only
+      enforcement found is the automatic loss of vote for arrears, which is not recorded.
+    evidence:
+      - source: Constitution and General Regulations of the Universal Postal Union (2025 Dubai Congress texts)
+        url: https://www.upu.int/UPU/media/upu/files/aboutUpu/acts/07-actsAndOtherDecisions2025DubaiCongress/2025DubaiCongressDecisionsEn.pdf
+        retrieved_at: '2026-11-20'
+  ITU:
+    institutional_design:
+      mandate: technical
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      mutual_defence: false
+    basis: >-
+      ITU Constitution: conferences decide by majority under the General Rules (Convention Art 32); the Radio
+      Regulations bind members subject to reservations. Art 56: binding arbitration of disputes. The only enforcement
+      found is the automatic loss of vote for arrears, which is not recorded.
+    evidence:
+      - source: Constitution of the International Telecommunication Union
+        url: https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf
+        retrieved_at: '2026-11-20'
+  WMO:
+    institutional_design:
+      mandate: technical
+      decision_rule: qualified_majority
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: >-
+      WMO Convention Art 11: Congress decisions by two-thirds of votes cast. Technical Regulations bind members unless
+      they notify a departure. Art 29: arbitration of disputes. Art 31: Congress may suspend a member that fails its
+      financial obligations.
+    evidence:
+      - source: Convention of the World Meteorological Organization (2012 edition, Hong Kong Department of Justice copy)
+        url: https://www.doj.gov.hk/en/external/pdf/lawdoc/wmo_15-2012_en.pdf
+        retrieved_at: '2026-11-20'
+  ICAO:
+    institutional_design:
+      mandate: technical
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      enforcement: [sanctions, suspension]
+      mutual_defence: false
+    basis: >-
+      Chicago Convention Art 48(c): Assembly decisions by majority of votes cast. Standards bind unless a state notifies
+      a difference (Art 38). Arts 84-86: Council decisions on disagreements, with appeal to an ad hoc arbitral tribunal.
+      Art 87: states refuse operation of a non-conforming airline; Art 88: the Assembly suspends the voting power of a
+      state in default.
+    evidence:
+      - source: Convention on International Civil Aviation (Chicago, 1944), Airports Economic Regulatory Authority of India copy
+        url: https://aera.gov.in/uploads/order/Chicago.pdf
+        retrieved_at: '2026-11-20'
+  WIPO:
+    institutional_design:
+      mandate: technical
+      decision_rule: qualified_majority
+      independent_organs: [none]
+      mutual_defence: false
+    basis: >-
+      WIPO Convention Art 6(3)(d): General Assembly decisions by two thirds of votes cast. Art 6(2) lists administrative
+      acts and does not say whether they bind, so decision_force is omitted. The only enforcement found is the automatic
+      loss of vote for arrears (Art 11(5)), which is not recorded.
+    evidence:
+      - source: Convention Establishing the World Intellectual Property Organization (WIPO Lex)
+        url: https://www.wipo.int/wipolex/en/text/283854
+        retrieved_at: '2026-11-20'
+
+# Pilot candidates not applied in this cohort, and why. Revisit when a qualifying source is read.
+deferred:
+  OIC: Only a third-party reproduction of the Charter could be read; article numbering unverified.
+  CIS: The UN Treaty Series copy of the Charter is a scan that could not be read; values rest on secondary sources.
+  CCASG: The Charter text could not be read; only search snippets were available.
+  G-20: g20.org could not be reached; only secondary backgrounders were available.
+  BRICS: No official BRICS or government page could be read; only search snippets were available.
+  OECD: oecd.org could not be reached; the only copy read is on an unaffiliated site.
+  OPEC: The only Statute copy read has no identifiable publisher.

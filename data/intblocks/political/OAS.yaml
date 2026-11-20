@@ -3,6 +3,15 @@ blocktype:
 - political
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: general
+  decision_rule: simple_majority
+  decision_force: non_binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  mutual_defence: false
 languages:
 - en
 - es
@@ -239,6 +248,10 @@ other_names:
 - id: zh
   name: 美洲国家组织
 provenance:
+- field: institutional_design
+  source: "Charter of the Organization of American States (text via Wikisource)"
+  retrieved_at: "2026-11-20"
+  url: "https://en.wikisource.org/wiki/Charter_of_the_Organization_of_American_States"
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'

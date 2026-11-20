@@ -1,0 +1,162 @@
+# Reference catalog for the intblocks `institutional_design` object.
+# Used by validate_intblocks.py, the schema/catalog parity test, and the documentation.
+#
+# The object records what an organization's founding instrument and rules of procedure let it
+# decide and enforce. It is optional: an absent object or subfield means "unknown", never "none".
+# It is allowed only on records whose scope_category is igo, treaty_body, policy_forum or
+# intergovernmental_body, and every record that carries it needs a provenance entry whose
+# field is `institutional_design` or starts with `institutional_design.`.
+#
+# decision_rule and decision_force describe the principal decision-making organ: the organ of
+# member-state representatives that adopts the organization's main acts (a council of ministers,
+# an assembly of states parties, a summit). When the instrument sets different rules for different
+# areas, record the default rule for the main acts; use `mixed` only when there is no default.
+#
+# Keys under each field's `values` must match the enum in data/schemas/intblocks.schema.json.
+
+fields:
+  mandate:
+    name: Mandate
+    kind: enum
+    description: Primary policy domain of the organization, from the purposes article of its founding instrument.
+    values:
+      general:
+        name: General
+        description: >-
+          General-purpose or multi-domain organization with significant mandates in at least two of
+          security, economic integration and political cooperation.
+        examples: [UN, EU, AFUNION, ASEAN]
+        boundary: >-
+          An economic community that later added a security protocol stays `economic` unless the
+          security mandate is a core purpose in its founding or amended treaty.
+      security:
+        name: Security
+        description: Defence, collective security, or arms control.
+        examples: [NATO, CSTO]
+        boundary: A general-purpose organization with a security organ is `general`, not `security`.
+      economic:
+        name: Economic
+        description: >-
+          Trade, customs, monetary policy, finance, development lending, or coordination of
+          commodity producers.
+        examples: [WTO, IMF, MERCOSUR, OPEC]
+        boundary: A forum of major economies whose agenda spans finance and politics is `economic` only if its founding mandate is economic.
+      sectoral:
+        name: Sectoral
+        description: >-
+          One non-economic policy field, such as health, environment, labour, human rights,
+          education, nuclear energy, or migration.
+        examples: [WHO, IAEA]
+        boundary: A body that mainly maintains technical standards in that field is `technical`.
+      technical:
+        name: Technical
+        description: >-
+          Coordination of standards, networks, or registries with limited policy discretion, such as
+          post, telecommunications, meteorology, civil aviation, or intellectual-property registration.
+        examples: [UPU, ITU, WMO, ICAO, WIPO]
+        boundary: A technical body whose standards bind members is still `technical`; bindingness is recorded in `decision_force`.
+
+  decision_rule:
+    name: Decision rule
+    kind: enum
+    description: Default voting rule of the principal decision-making organ for its main acts.
+    values:
+      consensus:
+        name: Consensus
+        description: Adoption without formal objection and without a vote. Every member can block.
+      unanimity:
+        name: Unanimity
+        description: A formal vote that requires every member (abstention rules as the instrument sets them). Every member can block.
+      simple_majority:
+        name: Simple majority
+        description: More than half of the votes cast or of the members.
+      qualified_majority:
+        name: Qualified majority
+        description: A threshold above a simple majority, such as two thirds, or a double majority of states and population.
+        boundary: A qualified majority that also needs the concurring votes of named members is `qualified_majority` with those members in `veto_holders`.
+      weighted_voting:
+        name: Weighted voting
+        description: Votes weighted by quota, shares, contribution, or population.
+      mixed:
+        name: Mixed
+        description: The instrument sets different rules for different core areas and names no default.
+
+  decision_force:
+    name: Decision force
+    kind: enum
+    description: Whether the principal organ's main acts bind members.
+    values:
+      binding:
+        name: Binding
+        description: The main acts bind members without each member's separate ratification.
+      partly_binding:
+        name: Partly binding
+        description: >-
+          Some categories of main acts bind, or acts bind only after each member ratifies or
+          accepts them, or members may opt out of acts that would otherwise bind them.
+      non_binding:
+        name: Non-binding
+        description: Recommendations, declarations, or communiqués only.
+
+  independent_organs:
+    name: Independent organs
+    kind: list
+    description: >-
+      Standing organs whose members do not act as state representatives and do not take
+      instructions from states. A general secretariat does not count, because almost every
+      organization has one. Use [none] when the instrument establishes no such organ.
+    values:
+      executive:
+        name: Executive
+        description: An executive organ with its own right of initiative or implementation.
+      court:
+        name: Court
+        description: A standing judicial body whose rulings bind members.
+      dispute_panel:
+        name: Dispute panel
+        description: Non-standing panels or arbitration whose outcomes bind members.
+      parliament:
+        name: Parliament
+        description: An elected assembly with legislative or budgetary powers.
+      central_bank:
+        name: Central bank
+        description: An independent monetary authority.
+      none:
+        name: None
+        description: The instrument establishes no independent organ. Must be the only value.
+
+  enforcement:
+    name: Enforcement
+    kind: list
+    description: Measures the organization can decide against a member. Use [none] when the instrument provides none.
+    values:
+      sanctions:
+        name: Sanctions
+        description: Economic, financial, or other penalties that the organization decides against a member.
+      suspension:
+        name: Suspension
+        description: Suspension of membership, participation, or voting rights.
+      expulsion:
+        name: Expulsion
+        description: Termination of a member's membership by decision of the organization.
+      conditionality:
+        name: Conditionality
+        description: Access to the organization's financing conditioned on policy commitments.
+      none:
+        name: None
+        description: The instrument provides no measure against a member. Must be the only value.
+
+  mutual_defence:
+    name: Mutual defence
+    kind: boolean
+    description: >-
+      true only when an instrument binding all members of this record obliges assistance against
+      an armed attack on a member.
+
+  veto_holders:
+    name: Veto holders
+    kind: country_list
+    description: >-
+      Members with a treaty-granted veto that other members lack, as country alpha-2 codes. Each must
+      be a current country member of the record. Consensus and unanimity do not create veto holders,
+      and de-facto vetoes that follow from voting weight are not recorded.

@@ -216,6 +216,7 @@ def flatten_intblock(rec: dict[str, Any]) -> dict[str, Any]:
     """Flatten one intblock record to scalar CSV columns."""
     hq = rec.get("headquarters") or {}
     coords = hq.get("coordinates") or {}
+    design = rec.get("institutional_design") or {}
     return {
         "id": rec.get("id") or "",
         "name": rec.get("name") or "",
@@ -238,6 +239,13 @@ def flatten_intblock(rec: dict[str, Any]) -> dict[str, Any]:
         "dissolved": rec.get("dissolved") or "",
         "successor": rec.get("successor") or "",
         "description": rec.get("description") or "",
+        "design_mandate": design.get("mandate") or "",
+        "design_decision_rule": design.get("decision_rule") or "",
+        "design_decision_force": design.get("decision_force") or "",
+        "design_independent_organs": _join_list(design.get("independent_organs")),
+        "design_enforcement": _join_list(design.get("enforcement")),
+        "design_mutual_defence": design.get("mutual_defence"),
+        "design_veto_holders": _join_list(design.get("veto_holders")),
     }
 
 

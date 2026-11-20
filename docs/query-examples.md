@@ -1297,6 +1297,83 @@ ORDER BY id;
 
 **Expected:** 27 rows.
 
+## Authority and capacity
+
+Influence has two independent axes. **Authority** is what an organization's founding instrument
+lets it decide and enforce: the optional `institutional_design` object, defined in
+[`data/schemas/institutional_design.yaml`](../data/schemas/institutional_design.yaml). **Capacity** is
+what its members hold: population is in scope; GDP, military spending and similar indicators are
+not, and come from an external dataset (see [ai-consumers.md](ai-consumers.md#capacity-indicators-are-downstream)).
+`institutional_design` covers a reviewed pilot cohort only; an absent object means unknown, never none.
+
+### Authority level from institutional design
+
+The level is a documented convention, not an exported column. It measures institutional
+authority, not influence: UPU has binding acts and majority voting yet a technical mandate, so read
+the level together with `mandate`.
+
+```sql
+SELECT id,
+       institutional_design.mandate AS mandate,
+       CASE
+         WHEN scope_category = 'reference_enumeration' THEN 'none'
+         WHEN institutional_design.decision_force IS NULL THEN NULL
+         WHEN institutional_design.decision_force = 'non_binding' THEN 'low'
+         WHEN institutional_design.decision_force = 'binding' AND (
+                coalesce(institutional_design.decision_rule IN ('simple_majority', 'qualified_majority', 'weighted_voting'), false)
+             OR coalesce(list_has_any(institutional_design.independent_organs, ['executive', 'court']), false)
+             OR coalesce(list_has_any(institutional_design.enforcement, ['sanctions', 'conditionality']), false)
+           ) THEN 'high'
+         ELSE 'medium'
+       END AS authority_level
+FROM intblocks
+WHERE institutional_design IS NOT NULL
+ORDER BY authority_level NULLS LAST, id;
+```
+
+**Expected:** 29 rows (the pilot cohort). EU, UNSC and WTO are `high`; G7 and APEC are `low`;
+UPU and WMO are `medium`; NATO is NULL because its source does not settle `decision_force`.
+Asymmetric vetoes are in `institutional_design.veto_holders` (UNSC: CN, FR, GB, RU, US).
+
+### Member capacity concentration (population)
+
+Share of world population, the largest member, the Herfindahl–Hirschman index (HHI) of member
+population shares, and the effective number of members (1/HHI). Population years differ by country,
+so the recipe reports the range it used. Population concentration is not power.
+
+```sql
+WITH members AS (
+  SELECT cm.intblock_id, c.code, c.population.value::DOUBLE AS pop, c.population.year AS pop_year
+  FROM current_memberships cm
+  JOIN countries c ON c.code = cm.country_code
+  WHERE cm.status IN ('member', 'founding_member') AND c.population.value IS NOT NULL
+),
+world AS (
+  SELECT sum(population.value)::DOUBLE AS pop FROM countries WHERE code_status = 'official_iso3166_1'
+),
+totals AS (
+  SELECT intblock_id, sum(pop) AS bloc_pop FROM members GROUP BY intblock_id
+)
+SELECT m.intblock_id,
+       count(*) AS members,
+       round(100 * t.bloc_pop / w.pop, 1) AS world_pop_pct,
+       arg_max(m.code, m.pop) AS largest_member,
+       round(100 * max(m.pop) / t.bloc_pop, 1) AS largest_member_pct,
+       round(sum((m.pop / t.bloc_pop) ^ 2), 3) AS hhi,
+       round(1 / sum((m.pop / t.bloc_pop) ^ 2), 1) AS effective_members,
+       min(m.pop_year) AS min_pop_year,
+       max(m.pop_year) AS max_pop_year
+FROM members m
+JOIN totals t USING (intblock_id)
+CROSS JOIN world w
+WHERE m.intblock_id IN ('EAEU', 'EU', 'NATO', 'UPU')
+GROUP BY m.intblock_id, t.bloc_pop, w.pop
+ORDER BY world_pop_pct DESC;
+```
+
+**Expected:** UPU covers about 99% of world population with about 14 effective members; EAEU's
+largest member (RU) holds about 78% of its population, about 1.6 effective members.
+
 ## Cookbook coverage (parity policy)
 
 - **DuckDB** ([query-examples.md](query-examples.md)) is canonical. Core SQL scenarios

@@ -267,6 +267,21 @@ def get_intblocks_schema() -> pa.Schema:
                     )
                 ),
             ),
+            # Appended last so existing column positions do not move (MINOR, additive).
+            (
+                "institutional_design",
+                pa.struct(
+                    [
+                        ("mandate", pa.string()),
+                        ("decision_rule", pa.string()),
+                        ("decision_force", pa.string()),
+                        ("independent_organs", pa.list_(pa.string())),
+                        ("enforcement", pa.list_(pa.string())),
+                        ("mutual_defence", pa.bool_()),
+                        ("veto_holders", pa.list_(pa.string())),
+                    ]
+                ),
+            ),
         ]
     )
 
