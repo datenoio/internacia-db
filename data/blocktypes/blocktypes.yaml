@@ -1,5 +1,6 @@
 - id: acronym
   name: Acronym
+  description: Analyst or media groupings known by an acronym (BRICS-style lists, MINT, PIGS). Not organizations; standing bodies go to their domain blocktype.
   other_names:
   - lang: ar
     name: اختصار
@@ -15,6 +16,7 @@
     name: Acrónimo
 - id: agreement
   name: Agreement
+  description: Multilateral treaties, conventions and protocols whose parties are the members. Trade agreements use fta, pta or customs; arms-control treaties use armscontrol; human-rights treaties use human_rights.
   other_names:
   - lang: ar
     name: اتفاقية
@@ -30,6 +32,7 @@
     name: Acuerdo
 - id: armscontrol
   name: Arms Control
+  description: Arms-control, disarmament and non-proliferation treaties, regimes and their implementing organizations.
   other_names:
   - lang: ar
     name: السيطرة على الأسلحة
@@ -45,6 +48,7 @@
     name: Control de armas
 - id: bank
   name: Bank
+  description: Central banks, multilateral development banks and other intergovernmental banks that lend or hold deposits. Financial regulators and standard setters use financial; grant or trust funds use fund.
   other_names:
   - lang: ar
     name: بنك
@@ -60,6 +64,7 @@
     name: Banco
 - id: court
   name: Court
+  description: International courts, tribunals and arbitration bodies. Treaties and law-making bodies use legal.
   other_names:
   - lang: ar
     name: محكمة
@@ -75,6 +80,7 @@
     name: Tribunal
 - id: cultural
   name: Cultural
+  description: Cultural, linguistic and heritage cooperation, including language communities and cultural-heritage conventions.
   other_names:
   - lang: ar
     name: ثقافي
@@ -90,6 +96,7 @@
     name: Cultural
 - id: currency
   name: Currency
+  description: Currency unions and shared-currency areas. Combined unions use cuscurr or eccurr.
   other_names:
   - lang: ar
     name: عملة
@@ -105,6 +112,7 @@
     name: Moneda
 - id: cuscurr
   name: Customs and Currency Union
+  description: Unions that are both a customs union and a currency union.
   other_names:
   - lang: ar
     name: اتحاد الجمارك والعملة
@@ -120,6 +128,7 @@
     name: Unión aduanera y monetaria
 - id: customs
   name: Customs Union
+  description: Customs unions and common external tariff areas. Customs administrations cooperation (WCO) uses trade.
   other_names:
   - lang: ar
     name: اتحاد جمركي
@@ -135,6 +144,7 @@
     name: Unión aduanera
 - id: eccurr
   name: Economic and Currency Union
+  description: Economic unions that also share a currency.
   other_names:
   - lang: ar
     name: الاتحاد الاقتصادي والنقدي
@@ -150,6 +160,7 @@
     name: Unión económica y monetaria
 - id: economic
   name: Economic
+  description: Regional economic communities and economic cooperation organizations. Development agencies use development; financial regulators use financial.
   other_names:
   - lang: ar
     name: اقتصادي
@@ -165,6 +176,7 @@
     name: Económico
 - id: education
   name: Education
+  description: Education, higher-education and training cooperation, including university associations. Schools of public administration use governance.
   other_names:
   - lang: ar
     name: تعليم
@@ -180,6 +192,7 @@
     name: Educación
 - id: energy
   name: Energy
+  description: Energy producers, consumers, grids, agencies and energy cooperation. Gas pipelines use gaspipeline.
   other_names:
   - lang: ar
     name: طاقة
@@ -195,6 +208,7 @@
     name: Energía
 - id: environment
   name: Environment
+  description: Environmental protection, nature conservation and sustainability bodies. Fisheries management uses fisheries; marine science uses ocean or scientific; climate-specific bodies use climate.
   other_names:
   - lang: ar
     name: بيئة
@@ -210,6 +224,7 @@
     name: Medio ambiente
 - id: food
   name: Food
+  description: Food security, food safety and food aid. Fisheries management uses fisheries; farming and plant or animal health use agriculture; commodity bodies use commodity.
   other_names:
   - lang: ar
     name: غذاء
@@ -225,6 +240,7 @@
     name: Alimentación
 - id: forum
   name: Forum
+  description: Standing intergovernmental forums, dialogues and summit processes without a narrower domain. Multipurpose regional organizations use political.
   other_names:
   - lang: ar
     name: منتدى
@@ -240,6 +256,7 @@
     name: Foro
 - id: fta
   name: Free Trade Agreement
+  description: Free trade agreements and the areas they create.
   other_names:
   - lang: ar
     name: اتفاقية التجارة الحرة
@@ -255,6 +272,7 @@
     name: Acuerdo de libre comercio
 - id: fund
   name: Fund
+  description: Intergovernmental funds, trust funds and financing facilities that grant or co-finance. Lending institutions use bank.
   other_names:
   - lang: ar
     name: صندوق
@@ -270,6 +288,7 @@
     name: Fondo
 - id: gaspipeline
   name: Gas Pipeline
+  description: International natural-gas pipelines and the countries they cross.
   other_names:
   - lang: ar
     name: خط أنابيب الغاز
@@ -285,6 +304,7 @@
     name: Gasoducto
 - id: geographic
   name: Geographic
+  description: Named geographic regions and sets of countries (reference enumerations), not organizations.
   other_names:
   - lang: ar
     name: جغرافي
@@ -300,6 +320,7 @@
     name: Geográfico
 - id: humanitarian
   name: Humanitarian
+  description: Humanitarian relief, protection and migration-response organizations.
   other_names:
   - lang: ar
     name: إنساني
@@ -315,6 +336,7 @@
     name: Humanitario
 - id: intelligence
   name: Intelligence
+  description: Intelligence-sharing alliances and financial-intelligence or security-information networks.
   other_names:
   - lang: ar
     name: استخبارات
@@ -330,6 +352,11 @@
     name: Inteligencia
 - id: intorg
   name: International Organization
+  description: Deprecated. Described entity form, not domain. Use scope_category = 'igo' for entity form and a domain blocktype for the domain.
+  deprecated:
+    replacements: []
+    removal: next MAJOR
+    note: Use scope_category = 'igo' for entity form and a domain blocktype for the domain.
   other_names:
   - lang: ar
     name: منظمة دولية
@@ -345,6 +372,7 @@
     name: Organización internacional
 - id: legal
   name: Legal
+  description: International law-making, harmonization and legal-cooperation bodies and legal instruments. Courts and tribunals use court.
   other_names:
   - lang: ar
     name: قانوني
@@ -360,6 +388,7 @@
     name: Legal
 - id: meteorology
   name: Meteorology
+  description: Weather and meteorological services cooperation and forecasting centres. Climate bodies use climate.
   other_names:
   - lang: ar
     name: الأرصاد الجوية
@@ -375,6 +404,7 @@
     name: Meteorología
 - id: military
   name: Military
+  description: Military alliances, defence cooperation and joint forces.
   other_names:
   - lang: ar
     name: عسكري
@@ -390,6 +420,7 @@
     name: Militar
 - id: parliamentary
   name: Parliamentary
+  description: International and regional parliamentary assemblies and unions.
   other_names:
   - lang: ar
     name: برلماني
@@ -405,6 +436,7 @@
     name: Parlamentario
 - id: patent
   name: Patent
+  description: Patent, trademark and other intellectual-property offices and cooperation.
   other_names:
   - lang: ar
     name: براءة اختراع
@@ -420,6 +452,7 @@
     name: Patente
 - id: police
   name: Police
+  description: Police and law-enforcement cooperation.
   other_names:
   - lang: ar
     name: شرطة
@@ -435,6 +468,7 @@
     name: Policía
 - id: political
   name: Political
+  description: Multipurpose political and regional cooperation organizations (for example AU, ASEAN, Nordic Council of Ministers). Standing dialogues without an organization use forum.
   other_names:
   - lang: ar
     name: سياسي
@@ -450,6 +484,7 @@
     name: Político
 - id: postal
   name: Postal
+  description: Postal unions and postal cooperation.
   other_names:
   - lang: ar
     name: بريدي
@@ -465,6 +500,7 @@
     name: Postal
 - id: project
   name: Project
+  description: Named multinational projects, corridors and programmes with a participant list.
   other_names:
   - lang: ar
     name: مشروع
@@ -480,6 +516,7 @@
     name: Proyecto
 - id: pta
   name: Preferential Trade Agreement
+  description: Non-reciprocal and partial-scope preferential trade arrangements.
   other_names:
   - lang: ar
     name: اتفاقية التجارة التفضيلية
@@ -495,6 +532,7 @@
     name: Acuerdo comercial preferencial
 - id: research
   name: Research
+  description: Research institutes, laboratories, research centres and research-funding programmes. Scientific unions and councils use scientific.
   other_names:
   - lang: ar
     name: بحث
@@ -510,6 +548,7 @@
     name: Investigación
 - id: scientific
   name: Scientific
+  description: Scientific unions, councils, societies and science-policy or scientific-coordination bodies. Research institutes and laboratories use research.
   other_names:
   - lang: ar
     name: علمي
@@ -525,6 +564,7 @@
     name: Científico
 - id: sports
   name: Sports
+  description: International and continental sports federations and anti-doping bodies.
   other_names:
   - lang: ar
     name: رياضة
@@ -540,6 +580,7 @@
     name: Deportes
 - id: standards
   name: Standards
+  description: Standardization, metrology, accreditation and conformity-assessment bodies.
   other_names:
   - lang: ar
     name: معايير
@@ -555,6 +596,7 @@
     name: Estándares
 - id: statistics
   name: Statistics
+  description: Statistical offices and statistical cooperation.
   other_names:
   - lang: ar
     name: إحصاء
@@ -570,6 +612,7 @@
     name: Estadísticas
 - id: telecom
   name: Telecommunications
+  description: Telecommunications, broadcasting and telecom-regulation cooperation. Satellite operators use space; digital policy uses digital.
   other_names:
   - lang: ar
     name: الاتصالات
@@ -585,6 +628,7 @@
     name: Telecomunicaciones
 - id: trade
   name: Trade
+  description: Trade organizations, trade facilitation and customs-administration cooperation that are not an FTA, PTA or customs union.
   other_names:
   - lang: ar
     name: تجارة
@@ -600,6 +644,7 @@
     name: Comercio
 - id: travel
   name: Travel
+  description: Travel-document and visa regimes (for example visa-free access lists). Tourism promotion uses tourism.
   other_names:
   - lang: ar
     name: سفر
@@ -615,6 +660,7 @@
     name: Viaje
 - id: unagency
   name: UN Agency
+  description: United Nations specialized agencies, funds, programmes and other UN system bodies.
   other_names:
   - lang: ar
     name: وكالة الأمم المتحدة
@@ -630,6 +676,7 @@
     name: Agencia de la ONU
 - id: wbgroup
   name: World Bank classification group
+  description: World Bank regional, income, lending and analytical classification groups (reference enumerations).
   other_names:
   - lang: ar
     name: مجموعة تصنيف البنك الدولي
@@ -645,76 +692,91 @@
     name: Grupo de clasificación del Banco Mundial
 - id: agriculture
   name: Agriculture
+  description: Agriculture, plant protection and animal health. Fisheries use fisheries; commodity bodies use commodity.
   other_names:
   - lang: en
     name: Agriculture
 - id: aviation
   name: Aviation
+  description: Civil aviation authorities, air navigation and aviation cooperation.
   other_names:
   - lang: en
     name: Aviation
 - id: aviation_safety
   name: Aviation Safety
+  description: Aviation safety oversight and accident investigation (usually a secondary tag with aviation).
   other_names:
   - lang: en
     name: Aviation Safety
 - id: biodiversity
   name: Biodiversity
+  description: Biodiversity and ecosystem bodies (usually a secondary tag with environment).
   other_names:
   - lang: en
     name: Biodiversity
 - id: climate
   name: Climate
+  description: Climate change, climate science and climate-finance bodies.
   other_names:
   - lang: en
     name: Climate
 - id: counter_terrorism
   name: Counter Terrorism
+  description: Counter-terrorism cooperation (usually a secondary tag).
   other_names:
   - lang: en
     name: Counter Terrorism
 - id: cybersecurity
   name: Cybersecurity
+  description: Cybersecurity cooperation (usually a secondary tag with digital).
   other_names:
   - lang: en
     name: Cybersecurity
 - id: development
   name: Development
+  description: Development cooperation, capacity building and development-policy organizations. Lending banks use bank; grant funds use fund.
   other_names:
   - lang: en
     name: Development
 - id: digital
   name: Digital
+  description: Digital policy, information technology, artificial intelligence and cyber cooperation.
   other_names:
   - lang: en
     name: Digital
 - id: disaster
   name: Disaster
+  description: Disaster risk reduction, preparedness and resilience.
   other_names:
   - lang: en
     name: Disaster
 - id: financial
   name: Financial
+  description: Financial regulation, supervision and standard setting, and anti-money-laundering bodies (FATF and its regional bodies). Lending institutions use bank.
   other_names:
   - lang: en
     name: Financial
 - id: fisheries
   name: Fisheries
+  description: Fisheries management and fisheries development organizations, including regional fisheries management organizations. Marine environment uses ocean or environment; shipping uses maritime.
   other_names:
   - lang: en
     name: Fisheries
 - id: forestry
   name: Forestry
+  description: Forests and forest products (usually a secondary tag with environment).
   other_names:
   - lang: en
     name: Forestry
 - id: gender
   name: Gender
+  description: Gender equality (usually a secondary tag).
   other_names:
   - lang: en
     name: Gender
 - id: health
   name: Health
+  description: Public health, medicines, vaccines and health financing. Animal health uses agriculture.
   other_names:
   - lang: ar
     name: صحة
@@ -730,36 +792,43 @@
     name: Salud
 - id: human_rights
   name: Human Rights
+  description: Human-rights treaties and bodies.
   other_names:
   - lang: en
     name: Human Rights
 - id: labor
   name: Labor
+  description: Labour, trade unions and social security.
   other_names:
   - lang: en
     name: Labor
 - id: maritime
   name: Maritime
+  description: Shipping, navigation, ports, hydrography and the law of the sea institutions. Fisheries use fisheries; marine environment and science use ocean.
   other_names:
   - lang: en
     name: Maritime
 - id: migration
   name: Migration
+  description: Migration and refugee cooperation.
   other_names:
   - lang: en
     name: Migration
 - id: mining
   name: Mining
+  description: Mining and extractive industries (usually a secondary tag). Commodity study groups use commodity.
   other_names:
   - lang: en
     name: Mining
 - id: nuclear
   name: Nuclear
+  description: Nuclear energy and nuclear safety (usually a secondary tag).
   other_names:
   - lang: en
     name: Nuclear
 - id: ocean
   name: Ocean
+  description: Marine environment, ocean science and ocean governance (usually a secondary tag). Shipping uses maritime; fisheries use fisheries.
   other_names:
   - lang: ar
     name: محيط
@@ -775,36 +844,43 @@
     name: Océano
 - id: security
   name: Security
+  description: Security cooperation and confidence building (usually a secondary tag).
   other_names:
   - lang: en
     name: Security
 - id: space
   name: Space
+  description: Space agencies, satellite organizations and outer-space treaties.
   other_names:
   - lang: en
     name: Space
 - id: tax
   name: Tax
+  description: Tax administrations cooperation and tax policy.
   other_names:
   - lang: en
     name: Tax
 - id: technical
   name: Technical
+  description: Technical cooperation (usually a secondary tag).
   other_names:
   - lang: en
     name: Technical
 - id: technology
   name: Technology
+  description: Technology cooperation (usually a secondary tag with digital or research).
   other_names:
   - lang: en
     name: Technology
 - id: tourism
   name: Tourism
+  description: Tourism promotion and tourism cooperation. Visa and travel-document regimes use travel.
   other_names:
   - lang: en
     name: Tourism
 - id: transport
   name: Transport
+  description: Road, rail, inland-waterway and multimodal transport. Shipping and ports use maritime; aviation uses aviation.
   other_names:
   - lang: ar
     name: نقل
@@ -820,21 +896,25 @@
     name: Transporte
 - id: unregionalblock
   name: UN Regional Block
+  description: United Nations regional groups of member states.
   other_names:
   - lang: en
     name: UN Regional Block
 - id: unregionalgroup
   name: UN Regional Group
+  description: Reserved; no record uses it. UN regional groups use unregionalblock.
   other_names:
   - lang: en
     name: UN Regional Group
 - id: waste
   name: Waste
+  description: Waste and pollution reduction (usually a secondary tag).
   other_names:
   - lang: en
     name: Waste
 - id: water
   name: Water
+  description: River-basin and shared-water organizations.
   other_names:
   - lang: ar
     name: مياه
@@ -850,13 +930,47 @@
     name: Agua
 - id: youth
   name: Youth
+  description: Youth cooperation (usually a secondary tag).
   other_names:
   - lang: en
     name: Youth
 - id: audit
   name: Supreme Audit Institution
+  description: Supreme audit institutions and their regional organizations.
   other_names:
   - lang: en
     name: Supreme Audit Institution
   - lang: fr
     name: Institution supérieure de contrôle
+- id: governance
+  name: Governance
+  description: Public administration, federalism, elections, anti-corruption and transparency bodies.
+  other_names:
+  - lang: ar
+    name: الحوكمة
+  - lang: zh
+    name: 治理
+  - lang: en
+    name: Governance
+  - lang: fr
+    name: Gouvernance
+  - lang: ru
+    name: Государственное управление
+  - lang: es
+    name: Gobernanza
+- id: commodity
+  name: Commodities
+  description: 'Intergovernmental commodity bodies: producer and consumer organizations and study groups for a single commodity (metals, grains, wine, timber, palm oil).'
+  other_names:
+  - lang: ar
+    name: السلع الأساسية
+  - lang: zh
+    name: 大宗商品
+  - lang: en
+    name: Commodities
+  - lang: fr
+    name: Produits de base
+  - lang: ru
+    name: Сырьевые товары
+  - lang: es
+    name: Productos básicos

@@ -21,12 +21,12 @@ COUNTRY = {
 INTBLOCK = {
     "id": "TESTORG",
     "name": "Test Organization",
-    "blocktype": ["intorg"],
+    "blocktype": ["political"],
     "status": "formal",
     "includes": [{"id": "NO", "name": "Norway", "type": "country", "status": "member"}],
 }
 
-BLOCKTYPE = {"id": "intorg", "name": "International organization"}
+BLOCKTYPE = {"id": "political", "name": "Political"}
 
 
 def test_save_parquet_round_trip(tmp_path):

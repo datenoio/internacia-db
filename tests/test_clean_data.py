@@ -10,7 +10,7 @@ def test_yaml_booleans_in_text_fields_fail_instead_of_becoming_yes_or_no():
         ({"id": "X", "languages": ["en", False, "sv"]}, "intblocks", "X: languages"),
         ({"id": "X", "includes": [{"id": False, "type": "country", "status": "member"}]}, "intblocks", "X: includes.id"),
         ({"id": "X", "name": True}, "intblocks", "X: name"),
-        ({"id": "intorg", "name": False}, "blocktypes", "intorg: name"),
+        ({"id": "political", "name": False}, "blocktypes", "political: name"),
     ]
     for record, dataset, message in cases:
         with pytest.raises(ValueError, match=message):

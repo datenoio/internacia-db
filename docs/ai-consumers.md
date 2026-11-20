@@ -38,7 +38,7 @@ Downstream consumers should enrich from separate datasets. See
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
 | `intblocks` | 1275 | `id` | `data/datasets/intblocks.manifest.json` |
-| `blocktypes` | 78 | `id` | `data/datasets/blocktypes.manifest.json` |
+| `blocktypes` | 80 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
 over reading individual YAML source files under `data/countries/` and `data/intblocks/`.
@@ -147,7 +147,7 @@ df[df["code_status"] == "official_iso3166_1"]
 Organizations, treaties, alliances, federations, and similar groupings. Each record has:
 
 - `id` — stable uppercase identifier (join key)
-- `blocktype` — list of taxonomy keys (e.g. `intorg`, `trade`, `military`)
+- `blocktype` — list of domain taxonomy keys (e.g. `fisheries`, `trade`, `military`); the first is the primary domain. Entity form (IGO, treaty, forum, NGO) is `scope_category`, not a blocktype. `intorg` is deprecated: filter IGOs with `scope_category = 'igo'`
 - `includes` — typed membership/participation list when applicable; **`includes[].id` is authoritative** for joins
 - `status`, `founded`, `dissolved`, `predecessor`, `successor` — lifecycle
 - `wikidata_id`, `description`, `tags`, `topics` — linking and discovery

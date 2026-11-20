@@ -59,9 +59,10 @@ REF_DIRS = {
     "wbgroup",
 }
 
+# intorg is deprecated and never implies an entity form: it used to map to igo, which labelled
+# NGOs, associations and partnerships as IGOs (openspec change reorganize-intorg-blocktype).
 ORG_DIRS = {
     "political",
-    "intorg",
     "unagency",
     "bank",
     "court",
@@ -101,7 +102,6 @@ def heuristic(path: Path, data: dict) -> str | None:
         return "policy_forum"
     if parent in ORG_DIRS or bt & {
         "political",
-        "intorg",
         "unagency",
         "bank",
         "court",

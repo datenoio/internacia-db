@@ -207,7 +207,7 @@ def test_ru_former_member_march_2022(con):
         ORDER BY i.id
         """
     ).fetchall()
-    assert [row[0] for row in rows] == ["COE", "ECHR", "EUA", "ICES"]
+    assert [row[0] for row in rows] == ["COE", "ECHR", "ICES"]
 
 
 def test_ru_former_members_only(con):
@@ -221,7 +221,7 @@ def test_ru_former_members_only(con):
         ORDER BY i.id
         """
     ).fetchall()
-    assert len(rows) == 14
+    assert len(rows) == 13
     assert {row[0] for row in rows} == {
         "BEACST",
         "CBSS",
@@ -229,7 +229,6 @@ def test_ru_former_members_only(con):
         "DANUBECOM",
         "EASTERNBLOC",
         "ECHR",
-        "EUA",
         "GRECO",
         "ICES",
         "ISTC",
@@ -274,13 +273,13 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            59,
+            58,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            9,
-            {"EGMONTGROUP", "IAU_UNIV"},
+            8,
+            {"EGMONTGROUP", "FLORENCE"},
         ),
         (
             "b.has_china AND NOT b.has_usa",
@@ -386,8 +385,8 @@ ADDITIONAL_RECIPES = [
               AND COALESCE(m.status,'member') != 'former_member'
           ) ORDER BY c.code
         """,
-        2,
-        {"AD", "BT"},
+        0,
+        set(),
     ),
     (
         """
@@ -429,7 +428,7 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        36,
+        35,
         set(),
     ),
     (
@@ -465,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        192,
+        183,
         set(),
     ),
     (
@@ -483,7 +482,7 @@ ADDITIONAL_RECIPES = [
         SELECT id FROM intblocks ORDER BY len(blocktype) DESC, id LIMIT 1
         """,
         1,
-        {"PICES"},
+        {"CGIARFUND"},
     ),
     (
         """

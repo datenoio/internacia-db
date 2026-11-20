@@ -7,7 +7,7 @@ from internacia_builder.validate import cross_rules
 
 def _setup(tmp_path, intblock_yaml: str):
     countries_dir = tmp_path / "data" / "countries"
-    intblocks_dir = tmp_path / "data" / "intblocks" / "intorg"
+    intblocks_dir = tmp_path / "data" / "intblocks" / "political"
     countries_dir.mkdir(parents=True)
     intblocks_dir.mkdir(parents=True)
     (countries_dir / "US.yaml").write_text("code: US\nname: United States\n", encoding="utf-8")

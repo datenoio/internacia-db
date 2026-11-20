@@ -70,6 +70,18 @@ def load_wikidata_exclusions(path: Path) -> set[str]:
     }
 
 
+def load_deprecated_blocktype_baseline(path: Path) -> dict[str, set[str]]:
+    """Deprecated blocktype -> the record ids that carried it when it was deprecated."""
+    if not path.exists():
+        return {}
+    data = load_yaml(path) or {}
+    return {
+        str(bt): {str(i) for i in (spec.get("ids") or [])}
+        for bt, spec in (data.get("blocktypes") or {}).items()
+        if isinstance(spec, dict)
+    }
+
+
 @dataclass
 class Dataset:
     """Parsed YAML records of one dataset, with paths relative to the project root."""
@@ -122,6 +134,8 @@ class RuleContext:
     wikidata_exclusions: set[str]
     check_http: bool = False
     check_wikidata: bool = False
+    blocktype_catalog: dict[str, dict[str, Any]] = field(default_factory=dict)
+    deprecated_blocktype_baseline: dict[str, set[str]] = field(default_factory=dict)
 
     def dataset(self, name: str) -> Dataset:
         return self.countries if name == COUNTRIES else self.intblocks
@@ -141,6 +155,11 @@ class RuleContext:
     @cached_property
     def alias_names(self) -> set[str]:
         return {str(a.get("alias") or "") for a in self.aliases or [] if isinstance(a, dict)} - {""}
+
+    @property
+    def igo_legal_status_allowlist(self) -> frozenset[str]:
+        scope = self.intblocks_cfg.get("scope_category") or {}
+        return frozenset(str(x) for x in (scope.get("igo_legal_status_allowlist") or []))
 
     @property
     def references_cfg(self) -> dict[str, Any]:
@@ -186,11 +205,12 @@ def load_context(
     blocktypes_path = blocktypes_source_path(root)
     aliases_path = root / "data" / "intblocks_aliases.yaml"
     migrations_path = root / "data" / "attribute_intblock_migrations.yaml"
-    taxonomy: set[str] = set()
+    blocktype_catalog: dict[str, dict[str, Any]] = {}
     if blocktypes_path.exists():
-        taxonomy = {
-            str(b.get("id", "")) for b in (load_yaml(blocktypes_path) or []) if isinstance(b, dict)
+        blocktype_catalog = {
+            str(b.get("id", "")): b for b in (load_yaml(blocktypes_path) or []) if isinstance(b, dict)
         }
+    taxonomy: set[str] = set(blocktype_catalog)
     countries_dir = countries_dir or root / "data" / "countries"
     intblocks_dir = intblocks_dir or root / "data" / "intblocks"
     return RuleContext(
@@ -213,6 +233,9 @@ def load_context(
         wikidata_exclusions=load_wikidata_exclusions(schemas / "wikidata_exclusions.yaml"),
         check_http=check_http,
         check_wikidata=check_wikidata,
+        blocktype_catalog=blocktype_catalog,
+        deprecated_blocktype_baseline=load_deprecated_blocktype_baseline(
+            schemas / "deprecated_blocktypes_baseline.yaml"),
     )
 
 
@@ -332,6 +355,16 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
             enabled=lambda ctx: bool(ctx.taxonomy)),
     _record("directory alignment", INTBLOCKS, E,
             lambda ctx, r, p: intblock_rules.check_intblock_directory_alignment(r, p)),
+    _cross("blocktype descriptions", INTBLOCKS, E,
+           lambda ctx: intblock_rules.check_blocktype_descriptions(ctx.blocktype_catalog),
+           enabled=lambda ctx: bool(ctx.blocktype_catalog)),
+    _record("deprecated primary blocktype", INTBLOCKS, E,
+            lambda ctx, r, p: intblock_rules.check_deprecated_primary_blocktype(r, ctx.blocktype_catalog)),
+    _cross("deprecated blocktype ratchet", INTBLOCKS, E,
+           lambda ctx: intblock_rules.check_deprecated_blocktype_ratchet(
+               ctx.intblocks.records, ctx.intblocks.paths, ctx.blocktype_catalog,
+               ctx.deprecated_blocktype_baseline, ctx.alias_names),
+           enabled=lambda ctx: any(spec.get("deprecated") for spec in ctx.blocktype_catalog.values())),
     _cross("partof hierarchy", INTBLOCKS, E,
            lambda ctx: cross_rules.check_partof_hierarchy(ctx.intblocks.records, ctx.intblocks.paths)),
     _cross("wikidata completeness", INTBLOCKS, E,
@@ -354,7 +387,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
             lambda ctx, r, p: intblock_rules.check_intblock_last_verified(
                 r, max_age_months=ctx.last_verified_max_age),
             enabled=lambda ctx: ctx.last_verified_max_age > 0),
-    _record("scope category", INTBLOCKS, E, lambda ctx, r, p: intblock_rules.check_intblock_scope_category(r)),
+    _record("scope category", INTBLOCKS, E,
+            lambda ctx, r, p: intblock_rules.check_intblock_scope_category(r, ctx.igo_legal_status_allowlist)),
     _cross("scope coverage", INTBLOCKS, E,
            lambda ctx: intblock_rules.check_scope_coverage(ctx.intblocks.records, ctx.intblocks_cfg),
            message=_action_only),

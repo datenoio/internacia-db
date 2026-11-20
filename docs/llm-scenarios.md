@@ -237,7 +237,7 @@ WHERE car_side = 'left'
 ORDER BY code;
 ```
 
-## 11. Blocks by blocktype (e.g., trade / intorg)
+## 11. Blocks by blocktype (e.g., trade / fisheries)
 
 Python SDK:
 

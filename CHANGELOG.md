@@ -7,6 +7,85 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Migration
+
+- `intorg` is deprecated (see Deprecated). To select intergovernmental organizations, filter
+  on `scope_category` (712 → 638 records after this release's corrections), not on a blocktype:
+
+  ```sql
+  -- before
+  SELECT id, name FROM intblocks WHERE list_contains(blocktype, 'intorg');
+  -- after
+  SELECT id, name FROM intblocks WHERE scope_category = 'igo';
+  ```
+
+  The `intorg` query still returns the same 358 records in 4.x.
+- `scope_category = 'igo'` returns 638 records instead of 712: 75 records leave `igo` and
+  `ISA_SEABED` joins it (see Changed). Filters that treated every
+  `igo` as state-constituted now exclude NGOs, scientific unions, industry associations,
+  partnerships and hosted funds.
+- 170 intblock files moved to new directories. Record ids are unchanged, so no alias is needed.
+  Code that reads source YAML by path should look a record up by `id`.
+- 24 non-state organizations no longer list countries in `includes` (1,800 membership edges,
+  59,102 → 57,302). Their members are companies, unions, universities or other organizations,
+  so the countries where those members are based were never member states. Queries that
+  counted, for example, IATA, ITF or WFTU membership by country return no rows for them now.
+
+### Added
+
+- Blocktypes `governance` (public administration, federalism, elections, anti-corruption,
+  transparency) and `commodity` (intergovernmental commodity bodies and study groups), and
+  directories for six existing keys: `fisheries`, `financial`, `development`, `tourism`,
+  `labor`, `disaster`. 80 blocktypes.
+- Every blocktype has a `description` (scope note) that states the boundary with overlapping
+  keys. The blocktypes export gains nullable `description` and `deprecated` columns.
+- Validation rules (blocking): `PRIMARY_BLOCKTYPE_MISMATCH` (the directory must be the first
+  blocktype), `MISSING_BLOCKTYPE_DESCRIPTION`, `DEPRECATED_PRIMARY_BLOCKTYPE`, and
+  `DEPRECATED_BLOCKTYPE_RATCHET` (the records that carry a deprecated blocktype must equal the
+  baseline in `data/schemas/deprecated_blocktypes_baseline.yaml` until the next MAJOR release).
+- `SCOPE_CATEGORY_SEMANTIC_MISMATCH` now also reports `igo` with a non-state `legal_status`
+  (NGO, non-profit, charity, private body, industry or trade association, union federation).
+  39 reviewed ids are allowlisted in `intblocks_completeness.yaml`
+  (`scope_category.igo_legal_status_allowlist`) pending review: 11 former `intorg` records and
+  28 sports federations, energy and postal associations.
+- `scripts/backfill_scope_category.py` can reclassify a record from the value listed under
+  `expected_current` in a reviewed manifest, with evidence.
+
+### Changed
+
+- The 147 records in `data/intblocks/intorg/` and 23 records from other directories moved to
+  domain directories (OpenSpec change `reorganize-intorg-blocktype`, mapping in
+  `openspec/changes/reorganize-intorg-blocktype/intorg_mapping.yaml`). Examples: 34 regional
+  fisheries bodies in `fisheries/` (17 from `intorg/`, 17 from `food/`); FATF, its regional
+  bodies, FSB, IOSCO, IAIS and BCBS in `financial/`; BEACST, NCM, MSG and other multipurpose
+  regional organizations in `political/`. Each record's directory is now its first blocktype;
+  `intorg` moved to the end of the list. 26 `space/` records were reordered the same way.
+- `scope_category` corrected for 76 records that carried `intorg`, each from an official
+  source with field-level provenance (`data/schemas/scope_category_intorg_review.yaml`):
+  54 become `non_state_organization` (for example ISO, IEC, CEN, IATA, BIMCO, UIC, IFRC and
+  the scientific unions), 11 `intergovernmental_body` (for example BCBS, UNITAID, NEPAD,
+  GFDRR, IOC-UNESCO), 10 `policy_forum` (for example GBEP, IGF, GMI, PLG), and `ISA_SEABED`
+  becomes `igo` (it was `treaty_body`). The legacy labeller no longer maps `intorg` to `igo`,
+  which caused these labels.
+- Country rosters removed from 24 records that became `non_state_organization` and whose members
+  are organizations, not states: `AAU`, `ACU`, `EBU`, `EMS`, `ETSI`, `EUA`, `EUCHEMS`,
+  `EUROGEOGRAPHICS`, `IAF`, `IAF_ASTRO`, `IAPH`, `IATA`, `IAU_UNIV`, `IBRO`, `IFOAM`,
+  `INTERPORTPOLICE`, `IRU`, `ISTO`, `ITFTRANSPORT`, `PATA`, `PBEC`, `POGO`, `UIC`, `WFTU`.
+  Each now has `membership_applicability: not_applicable` with provenance, as `MSF` and
+  `CANTO` already did, and `last_verified` 2026-11-20. `includes`, `founding_members` and
+  country-unit `membership_count` values are removed; counts of organizations keep their
+  `membership_count_type`. Records whose members are one national body per country (ISO, IEC,
+  CEN, the scientific unions) keep their rosters. Documented recipes change accordingly: Russia
+  has 13 former memberships (not 14), and 58 majority-UN blocks lack China or the US (not 59).
+- The changed-record `last_verified` rule compares a moved file with its record at the old path
+  and treats `blocktype` as a classification field, like `scope_category`.
+
+### Deprecated
+
+- Blocktype `intorg`, listed in `contract.json` `deprecated[]` (`intblocks.blocktype`). It
+  described entity form, which `scope_category` holds. It stays as the last blocktype of its
+  358 records in 4.x and will be removed no earlier than 5.0.0.
+
 ## [4.0.0] - 2026-11-19
 
 ### Migration from 3.x

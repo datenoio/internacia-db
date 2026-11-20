@@ -450,7 +450,7 @@
         "id"
       ],
       "foreign_keys": [],
-      "schema_hash": "746aaa1c260dba43d1bc12a885baae302d4e62fac11b95e921805a3b89e044fa",
+      "schema_hash": "0414ec9cf9df76014c03238bb87e4e992bcae1475c096e0e38fa1981ac52ed22",
       "columns": [
         {
           "name": "id",
@@ -460,6 +460,16 @@
         {
           "name": "name",
           "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "deprecated",
+          "type": "struct<replacements:list<string>,removal:string,note:string>",
           "nullable": true
         },
         {
@@ -1150,6 +1160,15 @@
         "associated"
       ],
       "removal": "next MAJOR"
+    },
+    {
+      "kind": "enum_value",
+      "table": "intblocks",
+      "column": "blocktype",
+      "value": "intorg",
+      "replacements": [],
+      "removal": "next MAJOR",
+      "note": "Use scope_category = 'igo' for entity form and a domain blocktype for the domain."
     }
   ]
 }

@@ -67,7 +67,7 @@ def test_reciprocity_allowlist_parsing():
 # --- Organizational references ----------------------------------------------
 
 def _intblocks(*recs):
-    return list(recs), [f"data/intblocks/intorg/{r.get('id', 'X')}.yaml" for r in recs]
+    return list(recs), [f"data/intblocks/political/{r.get('id', 'X')}.yaml" for r in recs]
 
 
 def test_wbgroup_must_be_reference_enumeration():
@@ -114,7 +114,7 @@ def test_scope_status_combinations_that_stay_valid(status, category):
 def test_formal_intblock_without_scope_is_important_error():
     issues = intblock_rules.check_intblock_scope_category({
         "id": "X",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
     })
     assert _types(issues) == ["MISSING_SCOPE_CATEGORY"]
@@ -123,12 +123,12 @@ def test_formal_intblock_without_scope_is_important_error():
 
 def test_non_formal_missing_scope_is_not_a_gate_error():
     assert intblock_rules.check_intblock_scope_category({
-        "id": "OLD", "blocktype": ["intorg"], "status": "historical"
+        "id": "OLD", "blocktype": ["political"], "status": "historical"
     }) == []
 
 
 def test_formal_scope_gate_is_consistent_between_cli_and_quality():
-    missing = {"id": "NEW", "status": "formal", "blocktype": ["intorg"]}
+    missing = {"id": "NEW", "status": "formal", "blocktype": ["political"]}
     shared_issue = intblock_rules.check_intblock_scope_category(missing)[0]
     assert shared_issue["issue_type"] == "MISSING_SCOPE_CATEGORY"
     assert len(validate_scope_category([("NEW.yaml", missing)])) == 1
@@ -139,7 +139,7 @@ def test_expanded_scope_categories_pass():
     for category in ("intergovernmental_body", "non_state_organization"):
         assert intblock_rules.check_intblock_scope_category({
             "id": "X",
-            "blocktype": ["intorg"],
+            "blocktype": ["political"],
             "status": "formal",
             "scope_category": category,
         }) == []
@@ -148,7 +148,7 @@ def test_expanded_scope_categories_pass():
 def test_unknown_scope_category_is_rejected():
     issues = intblock_rules.check_intblock_scope_category({
         "id": "X",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
         "scope_category": "other",
     })
@@ -572,6 +572,87 @@ def test_intblock_directory_mismatch_reported():
 def test_intblock_directory_match_passes():
     record = {"id": "ADB", "blocktype": ["bank"]}
     assert intblock_rules.check_intblock_directory_alignment(record, "data/intblocks/bank/ADB.yaml") == []
+
+
+def test_intblock_directory_must_be_first_blocktype():
+    record = {"id": "AFSA", "blocktype": ["intorg", "space"]}
+    issues = intblock_rules.check_intblock_directory_alignment(record, "data/intblocks/space/AFSA.yaml")
+    assert _types(issues) == ["PRIMARY_BLOCKTYPE_MISMATCH"]
+    assert get_priority_level("PRIMARY_BLOCKTYPE_MISMATCH") == "IMPORTANT"
+
+
+# --- Blocktype taxonomy: scope notes and deprecation ------------------------------------------
+
+CATALOG = {
+    "fisheries": {"id": "fisheries", "description": "Fisheries management."},
+    "intorg": {"id": "intorg", "description": "Deprecated.", "deprecated": {"removal": "next MAJOR"}},
+}
+
+
+def test_blocktype_without_description_reported():
+    issues = intblock_rules.check_blocktype_descriptions({**CATALOG, "ocean": {"id": "ocean", "description": " "}})
+    assert _types(issues) == ["MISSING_BLOCKTYPE_DESCRIPTION"]
+    assert issues[0]["record_id"] == "ocean"
+    assert issues[0]["file_path"] == "data/blocktypes/blocktypes.yaml"
+
+
+def test_deprecated_blocktype_cannot_be_primary():
+    assert _types(intblock_rules.check_deprecated_primary_blocktype(
+        {"id": "X", "blocktype": ["intorg", "health"]}, CATALOG)) == ["DEPRECATED_PRIMARY_BLOCKTYPE"]
+    assert intblock_rules.check_deprecated_primary_blocktype(
+        {"id": "X", "blocktype": ["fisheries", "intorg"]}, CATALOG) == []
+
+
+def _ratchet(records, baseline, gone=frozenset()):
+    paths = [f"data/intblocks/fisheries/{r['id']}.yaml" for r in records]
+    return intblock_rules.check_deprecated_blocktype_ratchet(records, paths, CATALOG, baseline, set(gone))
+
+
+def test_deprecated_blocktype_ratchet_accepts_the_baseline():
+    records = [{"id": "NAFO", "blocktype": ["fisheries", "intorg"]}, {"id": "GFCM", "blocktype": ["fisheries"]}]
+    assert _ratchet(records, {"intorg": {"NAFO"}}) == []
+
+
+def test_deprecated_blocktype_ratchet_rejects_growth_and_early_removal():
+    records = [{"id": "NAFO", "blocktype": ["fisheries"]}, {"id": "NEW", "blocktype": ["fisheries", "intorg"]}]
+    issues = _ratchet(records, {"intorg": {"NAFO"}})
+    assert sorted(i["record_id"] for i in issues) == ["NAFO", "NEW"]
+    assert set(_types(issues)) == {"DEPRECATED_BLOCKTYPE_RATCHET"}
+
+
+def test_deprecated_blocktype_ratchet_ignores_ids_that_left_through_aliases():
+    records = [{"id": "NAFO", "blocktype": ["fisheries", "intorg"]}]
+    assert _ratchet(records, {"intorg": {"NAFO", "OLDID"}}, gone={"OLDID"}) == []
+
+
+def test_deprecated_blocktype_without_baseline_reported():
+    issues = _ratchet([{"id": "NAFO", "blocktype": ["fisheries", "intorg"]}], {})
+    assert _types(issues) == ["DEPRECATED_BLOCKTYPE_RATCHET"]
+    assert issues[0]["record_id"] == "intorg"
+
+
+# --- scope_category vs legal_status -------------------------------------------------------------
+
+@pytest.mark.parametrize("legal_status", [
+    "international non-governmental organization", "nongovernmental", "ngo", "nonprofit",
+    "not-for-profit membership association", "charity", "private", "industry_association",
+    "trade association incorporated under Canadian federal law", "global union federation",
+])
+def test_non_state_legal_status_contradicts_igo(legal_status):
+    record = {"id": "X", "status": "formal", "scope_category": "igo", "legal_status": legal_status}
+    assert _types(intblock_rules.check_intblock_scope_category(record)) == ["SCOPE_CATEGORY_SEMANTIC_MISMATCH"]
+    assert intblock_rules.check_intblock_scope_category(record, frozenset({"X"})) == []
+    record["scope_category"] = "non_state_organization"
+    assert intblock_rules.check_intblock_scope_category(record) == []
+
+
+@pytest.mark.parametrize("legal_status", [
+    "intergovernmental", "intergovernmental organization", "membership association", "association",
+    "partnership", "treaty-based international organization",
+])
+def test_state_or_ambiguous_legal_status_is_not_flagged(legal_status):
+    record = {"id": "X", "status": "formal", "scope_category": "igo", "legal_status": legal_status}
+    assert intblock_rules.check_intblock_scope_category(record) == []
 
 
 # --- Country field validity (add-extended-quality-rules) ----------------------

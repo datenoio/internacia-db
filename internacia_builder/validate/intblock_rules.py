@@ -56,9 +56,25 @@ SCOPE_CATEGORIES = frozenset(
 # Statuses that deny the formal, institutional standing an IGO requires.
 NON_INSTITUTIONAL_STATUSES = frozenset({"informal", "de-facto"})
 
+# legal_status wording that states a non-state legal form (NGO, non-profit, charity, private
+# body, industry or trade association, union federation). Bare "association", "partnership" or
+# "network" are not markers: associations of public authorities are a policy question.
+NON_STATE_LEGAL_STATUS_RE = re.compile(
+    r"\b(non-?governmental|ngo|non-?profit|not-for-profit|charity|private|"
+    r"industry[ _]association|trade association|business association|civil association|"
+    r"union federation)\b",
+    re.IGNORECASE,
+)
 
-def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]]:
-    """Validate scope_category syntax, known blocktype semantics, and status consistency."""
+
+def check_intblock_scope_category(
+    record: dict[str, Any], igo_legal_status_allowlist: frozenset[str] | set[str] = frozenset()
+) -> list[dict[str, Any]]:
+    """Validate scope_category syntax, known semantics, and status consistency.
+
+    ``igo_legal_status_allowlist`` lists reviewed IDs whose ``legal_status`` wording looks
+    non-state but whose ``igo`` category is kept pending a policy decision.
+    """
     category = record.get("scope_category")
     blocktypes = {str(value) for value in (record.get("blocktype") or [])}
 
@@ -81,6 +97,24 @@ def check_intblock_scope_category(record: dict[str, Any]) -> list[dict[str, Any]
             "suggested_action": (
                 "World Bank classification groups must use "
                 "scope_category 'reference_enumeration', not an organization category"
+            ),
+        }]
+
+    legal_status = str(record.get("legal_status") or "")
+    if (
+        category == "igo"
+        and NON_STATE_LEGAL_STATUS_RE.search(legal_status)
+        and str(record.get("id") or "") not in igo_legal_status_allowlist
+    ):
+        return [{
+            "issue_type": "SCOPE_CATEGORY_SEMANTIC_MISMATCH",
+            "field": "scope_category",
+            "current_value": str(category),
+            "suggested_action": (
+                f"legal_status '{legal_status}' states a non-state legal form, which contradicts "
+                "scope_category 'igo'; use 'non_state_organization' (or another category) with a "
+                "cited source, or add the id to scope_category.igo_legal_status_allowlist in "
+                "intblocks_completeness.yaml after review (see docs/intblock-inclusion-policy.md)"
             ),
         }]
 
@@ -203,7 +237,111 @@ def check_intblock_directory_alignment(record: dict[str, Any], rel_path: str) ->
             "current_value": str(bts),
             "suggested_action": f"directory '{dir_name}' is not in blocktype list {bts}",
         }]
+    if bts[0] != dir_name:
+        return [{
+            "issue_type": "PRIMARY_BLOCKTYPE_MISMATCH",
+            "field": "blocktype",
+            "current_value": str(bts),
+            "suggested_action": (
+                f"primary blocktype '{bts[0]}' does not match directory '{dir_name}'; "
+                f"put '{dir_name}' first in the blocktype list"
+            ),
+        }]
     return []
+
+
+BLOCKTYPES_SOURCE = "data/blocktypes/blocktypes.yaml"
+
+
+def check_blocktype_descriptions(catalog: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """Every blocktype taxonomy entry needs a non-empty English ``description`` (scope note)."""
+    return [
+        {
+            "issue_type": "MISSING_BLOCKTYPE_DESCRIPTION",
+            "field": "description",
+            "current_value": bt_id,
+            "suggested_action": f"blocktype '{bt_id}' has no description in {BLOCKTYPES_SOURCE}",
+            "file_path": BLOCKTYPES_SOURCE,
+            "record_id": bt_id,
+        }
+        for bt_id, spec in sorted(catalog.items())
+        if not str(spec.get("description") or "").strip()
+    ]
+
+
+def check_deprecated_primary_blocktype(
+    record: dict[str, Any], catalog: dict[str, dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """A deprecated blocktype must not be a record's primary (first) blocktype."""
+    bts = [str(b) for b in (record.get("blocktype") or [])]
+    if not bts or not (catalog.get(bts[0]) or {}).get("deprecated"):
+        return []
+    return [{
+        "issue_type": "DEPRECATED_PRIMARY_BLOCKTYPE",
+        "field": "blocktype",
+        "current_value": bts[0],
+        "suggested_action": (
+            f"blocktype '{bts[0]}' is deprecated and cannot be the primary blocktype; move the record "
+            f"to a domain directory (see {BLOCKTYPES_SOURCE})"
+        ),
+    }]
+
+
+def check_deprecated_blocktype_ratchet(
+    records: list[dict[str, Any]],
+    rel_paths: list[str],
+    catalog: dict[str, dict[str, Any]],
+    baseline: dict[str, set[str]],
+    gone_ids: set[str],
+) -> list[dict[str, Any]]:
+    """Records carrying a deprecated blocktype must equal its reviewed baseline until removal.
+
+    ``gone_ids`` are alias names (merged, renamed, retired): a baseline id that left that way is
+    no longer expected. The set may neither grow nor shrink before the MAJOR release.
+    """
+    issues: list[dict[str, Any]] = []
+    for bt_id in sorted(b for b, spec in catalog.items() if spec.get("deprecated")):
+        if bt_id not in baseline:
+            issues.append({
+                "issue_type": "DEPRECATED_BLOCKTYPE_RATCHET",
+                "field": "blocktype",
+                "current_value": bt_id,
+                "suggested_action": (
+                    f"deprecated blocktype '{bt_id}' has no baseline in "
+                    "data/schemas/deprecated_blocktypes_baseline.yaml"
+                ),
+                "file_path": BLOCKTYPES_SOURCE,
+                "record_id": bt_id,
+            })
+            continue
+        expected = baseline[bt_id] - gone_ids
+        carrying: dict[str, str] = {}
+        for rec, rel in zip(records, rel_paths, strict=False):
+            if bt_id in {str(b) for b in (rec.get("blocktype") or [])}:
+                carrying[str(rec.get("id") or "")] = rel
+        present = {str(r.get("id") or ""): rel for r, rel in zip(records, rel_paths, strict=False)}
+        for rid in sorted(set(carrying) - expected):
+            issues.append({
+                "issue_type": "DEPRECATED_BLOCKTYPE_RATCHET",
+                "field": "blocktype",
+                "current_value": bt_id,
+                "suggested_action": f"'{rid}' adds deprecated blocktype '{bt_id}', which is outside its baseline",
+                "file_path": carrying[rid],
+                "record_id": rid,
+            })
+        for rid in sorted((expected & set(present)) - set(carrying)):
+            issues.append({
+                "issue_type": "DEPRECATED_BLOCKTYPE_RATCHET",
+                "field": "blocktype",
+                "current_value": bt_id,
+                "suggested_action": (
+                    f"'{rid}' dropped deprecated blocktype '{bt_id}' before its removal release; "
+                    "keep it as the last blocktype until the next MAJOR release"
+                ),
+                "file_path": present[rid],
+                "record_id": rid,
+            })
+    return issues
 
 
 def check_intblock_topics_present(record: dict[str, Any]) -> list[dict[str, Any]]:

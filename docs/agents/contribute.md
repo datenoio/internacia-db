@@ -14,8 +14,8 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 | Path | Rule |
 |------|------|
 | `data/countries/{CODE}.yaml` | One file per entity; filename = ISO alpha-2 `code` |
-| `data/intblocks/{category}/{ID}.yaml` | Filename must match `id`; directory = primary `blocktype`; `id` unique globally |
-| `data/blocktypes/blocktypes.yaml` | Taxonomy; every intblock `blocktype` value must exist here |
+| `data/intblocks/{category}/{ID}.yaml` | Filename must match `id`; directory = first `blocktype` value; `id` unique globally |
+| `data/blocktypes/blocktypes.yaml` | Taxonomy; every intblock `blocktype` value must exist here. Read each key's `description` before choosing a directory |
 | `data/datasets/` | **Generated only** — never hand-edit |
 
 ## Countries checklist
@@ -52,7 +52,8 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 - Lineage: when `predecessor`/`successor` resolves to a record whose inverse field is empty, add the back-reference; a record listed in a parent's `suborganizations` must declare that parent in `partof`
 - Shared English acronyms across same-blocktype records flag `DUPLICATE_ACRONYM`; real-world collisions go in `references.acronym_duplicate_allowlist`
 - Quote YAML boolean lookalikes: `'NO'` (Norway), `'no'` (Norwegian)
-- New blocktype: add to `data/blocktypes/blocktypes.yaml` first
+- New blocktype: add to `data/blocktypes/blocktypes.yaml` first, with a `description`; a blocktype names a domain, never an entity form
+- Do not use the deprecated `intorg` blocktype; set `scope_category` for entity form (see [intblock-inclusion-policy.md](../intblock-inclusion-policy.md#blocktype-semantics))
 
 ## Validate before PR
 

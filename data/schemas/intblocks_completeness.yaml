@@ -178,3 +178,52 @@ geography:
 # non_state_organization since the six-value taxonomy).
 scope_category:
   max_missing_formal: 0
+  # Reviewed exceptions to SCOPE_CATEGORY_SEMANTIC_MISMATCH for igo records whose legal_status
+  # wording states a non-state form. Each id keeps igo until its source is reviewed; remove an
+  # id when it is reclassified. Do not add new ids without a review.
+  #   - intorg-tagged records left after openspec change reorganize-intorg-blocktype: no source
+  #     confirmed a change (CAPAM, CREDAF, EROPA, COMMONWEALTHINSTITUTE, WMA), a policy decision
+  #     is pending (public-private partnerships, CGIAR centres), or not yet reviewed (ICH).
+  #   - the remaining records are the follow-up audit of existing igo labels
+  #     (complete-intblock-scope-taxonomy task 6.2): sports federations, energy and postal
+  #     associations.
+  igo_legal_status_allowlist:
+    - AFC
+    - AICEP
+    - AVRDC
+    - CAF
+    - CAPAM
+    - CEPI
+    - CIMMYT
+    - COMMONWEALTHINSTITUTE
+    - CONCACAF
+    - CONMEBOL
+    - CREDAF
+    - EROPA
+    - FIBA
+    - FIFA
+    - FIVB
+    - FUTURECOAL
+    - GAVI
+    - GEIDCO
+    - IBSS
+    - ICARDA
+    - ICC
+    - ICH
+    - IGA
+    - IHA
+    - IOC
+    - ITF
+    - IWF
+    - NAERC
+    - OFC
+    - POSTEUROP
+    - UEFA
+    - WANO
+    - WBA
+    - WEC
+    - WMA
+    - WNA
+    - WORLDAQUATICS
+    - WORLDATHLETICS
+    - WWEA

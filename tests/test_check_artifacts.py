@@ -68,7 +68,7 @@ def artifact_fixture(tmp_path_factory):
         "intblocks": [{"id": "ORG", "name": "Organization", "notes": "curation only", "includes": [
             {"id": "AA", "name": "Name", "type": "country", "status": "member"},
         ]}],
-        "blocktypes": [{"id": "intorg", "name": "Organization"}],
+        "blocktypes": [{"id": "political", "name": "Political"}],
     }
     for name, rows in source.items():
         spec = cga.DATASETS[name]
@@ -160,7 +160,7 @@ def test_content_guard_rejects_independent_corruption(artifact_fixture, tmp_path
     elif mutation in ("source_value", "taxonomy"):
         path = root / ("data/countries/AA.yaml" if mutation == "source_value" else "data/blocktypes/blocktypes.yaml")
         path.write_text(path.read_text().replace("Name with", "Changed") if mutation == "source_value"
-                        else path.read_text().replace("Organization", "Changed"))
+                        else path.read_text().replace("Political", "Changed"))
     elif mutation == "csv_value":
         builder.save_csv_rows([{"code": "AA", "name": "corrupt"}], out / "countries.csv.zst")
     elif mutation == "lite":

@@ -248,6 +248,28 @@ def _deprecated(schemas_dir: Path) -> list[dict[str, Any]]:
     return entries
 
 
+def _deprecated_blocktypes(path: Path) -> list[dict[str, Any]]:
+    """Blocktype values scheduled for removal, from the ``deprecated`` markers in blocktypes.yaml."""
+    entries = []
+    blocktypes = (yaml.safe_load(path.read_text(encoding="utf-8")) or []) if path.exists() else []
+    for spec in sorted((b for b in blocktypes if isinstance(b, dict)), key=lambda b: str(b.get("id"))):
+        marker = spec.get("deprecated")
+        if not marker:
+            continue
+        entry = {
+            "kind": "enum_value",
+            "table": "intblocks",
+            "column": "blocktype",
+            "value": str(spec["id"]),
+            "replacements": list(marker.get("replacements") or []),
+            "removal": str(marker.get("removal") or "next MAJOR"),
+        }
+        if marker.get("note"):
+            entry["note"] = str(marker["note"])
+        entries.append(entry)
+    return entries
+
+
 def build_contract(dataset_version: str, root: Path | None = None) -> dict[str, Any]:
     """Build the contract document for ``dataset_version`` from the export schemas."""
     root = root or project_root()
@@ -295,7 +317,8 @@ def build_contract(dataset_version: str, root: Path | None = None) -> dict[str, 
         "type_grammar": TYPE_GRAMMAR,
         "tables": tables,
         "enums": _enums(root / "data" / "schemas"),
-        "deprecated": _deprecated(root / "data" / "schemas"),
+        "deprecated": _deprecated(root / "data" / "schemas")
+        + _deprecated_blocktypes(root / "data" / "blocktypes" / "blocktypes.yaml"),
     }
 
 

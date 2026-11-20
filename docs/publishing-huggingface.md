@@ -16,7 +16,7 @@ build. Both use `prepare_huggingface_bundle` to produce:
 |-----------|--------------------|
 | `countries/countries.parquet` | 256 country records |
 | `intblocks/intblocks.parquet` | 1275 organizations / groups |
-| `blocktypes/blocktypes.parquet` | 78 taxonomy keys |
+| `blocktypes/blocktypes.parquet` | 80 taxonomy keys |
 | `memberships/memberships.parquet` | Flattened country↔intblock edges |
 | `datapackage.json` | Parquet-only Frictionless index with paths matching the per-table folders |
 | `{countries,intblocks,blocktypes,memberships}.manifest.json` | All four tables' version, `schema_hash`, and build identity |
