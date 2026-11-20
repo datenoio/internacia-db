@@ -20,10 +20,12 @@ includes:
   name: Russian Federation
   type: country
   status: member
+  role: origin
 - id: TR
   name: Türkiye
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q519472
 description: Trans-Black Sea natural gas pipeline from Izobilnoye (Stavropol Krai), Russia, to Ankara, Turkey.
@@ -80,8 +82,16 @@ notes: Route crosses the Black Sea exclusive economic zones of Russia and Turkey
   listed in includes. The 396 km offshore section is among the deepest subsea pipelines of its diameter,
   laid at depths up to 2.2 km. Official inauguration at Durusu was on 17 November 2005; TurkStream later
   succeeded planned Blue Stream 2 / South Stream expansions on a similar route.
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "US EIA - Russia country analysis (Table 12)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/RUS"
+- field: includes
+  source: "US EIA - Turkiye country analysis"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/TUR"
 - field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'

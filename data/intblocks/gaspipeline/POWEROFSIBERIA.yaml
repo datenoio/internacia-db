@@ -19,10 +19,12 @@ includes:
   name: Russian Federation
   type: country
   status: member
+  role: origin
 - id: CN
   name: China
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q2898164
 description: Gazprom-operated natural gas pipeline in Eastern Siberia from the Chayanda and Kovykta
@@ -74,8 +76,12 @@ other_names:
   name: 시베리아의 힘
 - id: pt
   name: Força da Sibéria
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "US EIA - Russia country analysis (Table 12)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/RUS"
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-07-29'

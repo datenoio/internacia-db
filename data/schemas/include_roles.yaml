@@ -1,0 +1,42 @@
+# Reference catalog for includes[].role: the function of a country on an infrastructure route.
+# Used by validate_intblocks.py and the schema/catalog parity test.
+#
+# A role is allowed only on records whose blocktype includes one of the kinds below
+# (OpenSpec change add-transit-dependence-layer). `status` keeps saying how a country relates to
+# the record; `role` says what it does on the route. Once any current country entry of a record
+# has a role, every current country entry must have one, and the record needs a provenance entry
+# with `field: includes` that cites the route.
+#
+# Keys under `roles` must match the enum of includes[].role in data/schemas/intblocks.schema.json.
+
+kinds:
+  pipeline:
+    blocktypes: [gaspipeline, oilpipeline]
+    roles: [origin, transit, destination]
+    requires: {origin: 1, destination: 1}
+    description: >-
+      A directional flow. The route needs at least one origin and one destination.
+  corridor:
+    blocktypes: [corridor]
+    roles: [terminal, transit]
+    requires: {terminal: 2}
+    description: >-
+      A linear transport route that runs both ways. The route needs at least two terminal countries.
+      A network of routes (Asian Highway, Trans-Asian Railway) is not a corridor and gets no roles.
+
+roles:
+  origin:
+    name: Origin
+    description: The route starts in this country; for a pipeline, oil or gas enters it here.
+    boundary: A country that only supplies gas through another pipeline that feeds this one is not an origin of this record.
+  transit:
+    name: Transit
+    description: The route crosses this country and continues into another country.
+    boundary: Offtake along the route does not change the role; a country that takes gas and passes the rest on is transit.
+  destination:
+    name: Destination
+    description: The route ends in this country. A country where a branch ends is also a destination.
+  terminal:
+    name: Terminal
+    description: An end of a bidirectional corridor (corridors only).
+    boundary: Use origin and destination, not terminal, for pipelines, whose flow has a direction.

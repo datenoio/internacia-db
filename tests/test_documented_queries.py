@@ -772,3 +772,31 @@ def test_member_capacity_concentration_recipe(con):
     for row in rows.values():
         assert 0 < row["hhi"] <= 1
         assert row["min_pop_year"] <= row["max_pop_year"]
+
+
+def test_country_borders_recipe(con):
+    rows = dict(con.execute(_documented_sql("Current border status of a country's neighbours")).fetchall())
+    assert rows == {"AZE": "closed", "GEO": None, "IRN": None, "TUR": "closed"}
+
+
+def test_sea_access_gateways_recipe(con):
+    rows = con.execute(_documented_sql("Sea-access gateways of landlocked countries")).fetchall()
+    by_country: dict[str, dict[str, int]] = {}
+    direct: dict[str, int] = {}
+    for code, gateway, hops, n_direct, _single in rows:
+        by_country.setdefault(code, {})[gateway] = hops
+        direct[code] = n_direct
+    assert len(by_country) == 44
+    assert {g for g, hops in by_country["AM"].items() if hops == 1} == {"GEO", "IRN"}
+    assert "TUR" not in by_country["AM"] and "AZE" not in by_country["AM"]
+    assert by_country["LS"] == {"ZAF": 1}
+    for code in ("LI", "UZ"):
+        assert direct[code] == 0 and min(by_country[code].values()) == 2
+    assert {code for code, n in direct.items() if n == 1} == {"KG", "LS", "SM", "TJ", "TM", "VA"}
+
+
+def test_route_roles_recipe(con):
+    rows = con.execute(_documented_sql("Countries by role on infrastructure routes")).fetchall()
+    tap = {(code, role) for intblock, _name, code, role in rows if intblock == "TAP"}
+    assert tap == {("GR", "origin"), ("AL", "transit"), ("IT", "destination")}
+    assert {role for *_, role in rows} <= {"origin", "transit", "destination", "terminal"}

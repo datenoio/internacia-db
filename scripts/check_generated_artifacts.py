@@ -31,6 +31,7 @@ from internacia_builder.export import (
     flatten_country,
     flatten_intblock,
     load_attribute_intblock_migrations,
+    load_border_status,
     load_country_aliases,
     load_intblock_aliases,
     project_lite_rows,
@@ -40,6 +41,7 @@ from internacia_builder.schemas import (
     get_aliases_schema,
     get_attribute_migration_schema,
     get_blocktypes_schema,
+    get_border_status_schema,
     get_countries_schema,
     get_intblocks_schema,
     get_memberships_schema,
@@ -153,6 +155,10 @@ def _check_contract(datasets_dir: Path, version: str, problems: list[str]) -> No
 def _expected_views(source: dict[str, list[dict]]) -> dict[str, list[dict]]:
     """Rows each canonical view must return, computed independently of its SQL."""
     countries = _arrow_rows(source["countries"], get_countries_schema())
+    current_status = {
+        frozenset((row["country_a"], row["country_b"])): row["status"]
+        for row in source.get("border_status") or [] if row.get("until") is None
+    }
     ended = {
         row["id"] for row in source["intblocks"] if row.get("status") == "historical" or row.get("dissolved") is not None
     }
@@ -171,6 +177,15 @@ def _expected_views(source: dict[str, list[dict]]) -> dict[str, list[dict]]:
             for c in countries for x in c["languages"] or []
         ],
         "country_timezones": [{"country_code": c["code"], "timezone": tz} for c in countries for tz in c["timezones"] or []],
+        "country_borders": [
+            {
+                "country_code": c["code"],
+                "iso3code": c["iso3code"],
+                "neighbor_iso3": b,
+                "current_status": current_status.get(frozenset((c["iso3code"], b))),
+            }
+            for c in countries for b in c["borders"] or []
+        ],
     }
 
 
@@ -181,6 +196,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     source = {name: clean_data(_source_rows(spec, root), name) for name, spec in DATASETS.items()}
     fill_country_include_names(source["intblocks"], source["countries"])
     source["memberships"] = build_membership_rows(source["intblocks"])
+    source["border_status"] = load_border_status(root)
     con = duckdb.connect(str(datasets_dir / "internacia.duckdb"), read_only=True)
     try:
         meta = con.sql("SELECT * FROM _meta").to_arrow_table().to_pylist()
@@ -243,6 +259,12 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
             _compare(pq.read_table(datasets_dir / f"{name}.parquet").to_pylist(), expected, f"{name}.parquet", problems, "alias")
             duck = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
             _compare(duck, _arrow_rows(expected, get_aliases_schema()), f"{name}.duckdb", problems, "alias")
+        border_status = source["border_status"]
+        _compare(json.loads((datasets_dir / "border_status.json").read_text()), border_status, "border_status.json", problems)
+        _compare(pq.read_table(datasets_dir / "border_status.parquet").to_pylist(),
+                 _arrow_rows(border_status, get_border_status_schema()), "border_status.parquet", problems)
+        duck = con.sql("SELECT * FROM border_status").to_arrow_table().to_pylist()
+        _compare(duck, _arrow_rows(border_status, get_border_status_schema()), "border_status.duckdb", problems)
         migrations = _arrow_rows(load_attribute_intblock_migrations(root), get_attribute_migration_schema())
         duck = con.sql("SELECT * FROM attribute_intblock_migrations").to_arrow_table().to_pylist()
         _compare(duck, migrations, "attribute_intblock_migrations.duckdb", problems, "retired_id")

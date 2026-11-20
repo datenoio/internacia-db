@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Land-border crossing status",
+  "description": "Source file data/borders/border_status.yaml: one entry per period in which a land border is closed or restricted to regular traffic. Absence of an entry means no closure is recorded, not that the border is verified open.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entries"],
+  "properties": {
+    "entries": {
+      "description": "Reviewed border status entries.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["countries", "status", "last_verified", "provenance"],
+        "properties": {
+          "countries": {
+            "description": "The two iso3code values of the border, sorted.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {"type": "string", "pattern": "^[A-Z]{3}$"}
+          },
+          "status": {
+            "description": "closed: no land crossing on the border is open to regular traffic of goods. restricted: at least one crossing is closed, or traffic is limited to named categories.",
+            "type": "string",
+            "enum": ["closed", "restricted"]
+          },
+          "since": {
+            "description": "Start of the period (YYYY, YYYY-MM or YYYY-MM-DD); omitted when no qualifying source gives it.",
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "until": {
+            "description": "End of the period when the border reopened; null or absent for the current entry.",
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "note": {
+            "description": "Which crossings are closed, in neutral words.",
+            "type": "string"
+          },
+          "last_verified": {
+            "description": "Date (YYYY-MM-DD) the entry was last checked against its sources.",
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "provenance": {
+            "description": "Government, intergovernmental or official border/customs sources.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "url", "retrieved_at"],
+              "properties": {
+                "source": {"type": "string", "minLength": 1},
+                "url": {"type": "string", "minLength": 1},
+                "retrieved_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+                "license": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "deferred": {
+      "description": "Candidate pairs (AAA-BBB) not added, with the reason.",
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    }
+  }
+}

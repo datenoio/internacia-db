@@ -9,8 +9,8 @@
 ## What this is
 
 - **Countries** (256 records): ISO codes, geography, demographics, World Bank classifications, Wikidata links, multilingual names, stable attributes (`car_side`, writing systems/directions, DVD region, broadcast/legal systems, rail gauges)
-- **Intblocks** (1275 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, named geographic groupings, etc.
-- **Blocktypes** (80 records): taxonomy for intblock categories
+- **Intblocks** (1279 records): UN agencies, trade blocs, regional orgs, treaties, sports federations, named geographic groupings, etc.
+- **Blocktypes** (82 records): taxonomy for intblock categories
 
 This is **reference data for joins and enrichment**, not a socioeconomic profile dataset.
 Do NOT expect HDI, GDP, government type, internet penetration, or similar indicators here.
@@ -18,7 +18,7 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 ## Preferred access (do not parse source YAML unless editing)
 
 - DuckDB: data/datasets/internacia.duckdb (generated, not committed: run `python scripts/builder.py build` or download from the latest GitHub Release)
-  - Tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations
+  - Tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status
   - Views: current_memberships, country_currencies, country_languages, country_timezones (see docs/data-contract.md)
 - Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
 - Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
@@ -102,6 +102,7 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - Driving side: filter countries.car_side ('left'|'right'); do not join traffichand intblocks (retired)
 - scope_category filters entity kind: igo | treaty_body | policy_forum | reference_enumeration (named sets) | intergovernmental_body (dependent commission/fund/office) | non_state_organization (NGO/association). The category does not imply country membership; filter includes[].status explicitly (see docs/intblock-inclusion-policy.md).
 - institutional_design (optional, reviewed pilot cohort): mandate, decision_rule, decision_force, independent_organs[], enforcement[], mutual_defence, veto_holders[] of the principal organ; absent = unknown, [none] = none. Values: data/schemas/institutional_design.yaml. It measures authority, not influence; GDP and military capacity are not shipped (join external data on countries.iso3code). Recipes: docs/query-examples.md#authority-and-capacity
+- Transit: includes[].role (origin|transit|destination on gaspipeline/oilpipeline records; terminal|transit on corridor records; also memberships.role) and border_status (closed|restricted land borders with since/until and sources; view country_borders). NULL status = no closure recorded, not verified open. Recipe: docs/query-examples.md#transit-and-borders. Trade volumes are not shipped.
 - timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
 
 ## Example queries (DuckDB)

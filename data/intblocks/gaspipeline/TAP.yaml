@@ -33,14 +33,17 @@ includes:
   name: Greece
   type: country
   status: member
+  role: origin
 - id: AL
   name: Albania
   type: country
   status: member
+  role: transit
 - id: IT
   name: Italy
   type: country
   status: member
+  role: destination
 membership_count: 3
 wikidata_id: Q505615
 description: 878 km natural gas pipeline and western terminus of the Southern Gas Corridor, carrying Shah Deniz gas from
@@ -104,8 +107,16 @@ other_names:
 notes: Upstream gas enters at Kipoi from TANAP on the Turkish–Greek border; Turkey is not a transit country on the TAP
   route. The offshore section crosses the Adriatic without landfall in Croatia or other states. Greece and Italy each
   receive 1 billion m³/a offtake capacity; Bulgaria is supplied via the IGB interconnector from the Greek section.
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "Trans Adriatic Pipeline AG - TAP route and infrastructure"
+  retrieved_at: "2026-11-20"
+  url: "https://www.tap-ag.com/infrastructure-operation/tap-route-and-infrastructure"
+- field: includes
+  source: "Trans Adriatic Pipeline AG - home page"
+  retrieved_at: "2026-11-20"
+  url: "https://www.tap-ag.com/"
 - field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'

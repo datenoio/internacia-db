@@ -26,6 +26,7 @@ COMMITTED_PATTERNS = (
     "intblocks_aliases.json",
     "countries_aliases.json",
     "attribute_intblock_migrations.json",
+    "border_status.json",
 )
 
 # Fields that identify one build rather than its content.

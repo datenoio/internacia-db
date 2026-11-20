@@ -33,6 +33,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - One optional column, `institutional_design`, is appended as the last intblocks column, with
   open enums for its subfields (see Added). No existing column, type, key or identifier
   changes. Consumers that read intblocks into a fixed-width row see one new trailing column.
+- `memberships` and `current_memberships` gain a trailing `role` column (route role on
+  pipelines and corridors; NULL elsewhere). The intblocks `includes[].role` field, exported but
+  always NULL before, is now declared and populated for a reviewed cohort. A new `border_status`
+  table (one row per border, keyed on the sorted `iso3code` pair) and `country_borders` view are
+  added, and four oil pipeline records are new. All new enums are open; no existing column,
+  type, key or identifier changes.
 
 ### Added
 
@@ -59,6 +65,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `scripts/backfill_institutional_design.py`: dry run by default, whole-cohort validation, conflict blocking, idempotent apply, provenance insertion.
 - Validation rules: `INSTITUTIONAL_DESIGN_SCOPE_CONFLICT`, `INSTITUTIONAL_DESIGN_NONE_CONFLICT`, `INVALID_VETO_HOLDER` and `MISSING_INSTITUTIONAL_DESIGN_PROVENANCE` (blocking); `VETO_HOLDERS_UNDER_CONSENSUS` (warning). `institutional_design` coverage is reported, never gated.
 - Documented, tested DuckDB recipes in `docs/query-examples.md` (Authority and capacity): an authority level (`none`/`low`/`medium`/`high`) derived from `institutional_design`, and member population concentration (world share, largest member, HHI, effective members). `docs/ai-consumers.md` shows how to join external GDP or military indicators on `iso3code`; none ship.
+- Transit dependence layer (OpenSpec change `add-transit-dependence-layer`):
+  - `includes[].role` declared, with values in `data/schemas/include_roles.yaml`: `origin`,
+    `transit` and `destination` on pipelines (`gaspipeline`, `oilpipeline`); `terminal` and
+    `transit` on linear transport corridors (`corridor`). Blocking rules `INCLUDE_ROLE_NOT_ALLOWED`,
+    `INVALID_INCLUDE_ROLE`, `INCOMPLETE_INCLUDE_ROLES`, `MISSING_ROUTE_ENDPOINT` and
+    `MISSING_ROLE_PROVENANCE`. `scripts/backfill_include_roles.py` applies roles from the reviewed
+    manifest `data/schemas/include_roles_pilot.yaml` (dry run by default).
+  - Blocktypes `oilpipeline` and `corridor` (82 blocktypes).
+  - Reviewed role pilot, checked on 2026-11-20 against operator, government, intergovernmental or
+    project-finance sources: 15 gas pipelines, four new `oilpipeline` records (`BTC`, `KAZCHINA`,
+    `CPC`, `KIRKUKCEYHAN`; 1279 intblocks) and the `CKURAILWAY` corridor (which gains the
+    `corridor` blocktype). Changed records get `last_verified` 2026-11-20. Thirteen candidates are
+    deferred with reasons in the manifest, among them TANAP, Baltic Pipe and the MEG pipeline,
+    whose rosters list supplier countries that sit on a feeder pipeline rather than on the
+    record's own route.
+  - Land-border crossing status in `data/borders/border_status.yaml` (schema
+    `data/schemas/border_status.schema.json`), exported as `border_status.json`,
+    `border_status.parquet` and the DuckDB `border_status` table, plus the `country_borders`
+    view. Six closures from official travel advice, checked on 2026-11-20: ARM–AZE, ARM–TUR,
+    DZA–MAR (since 1994), ISR–LBN, KOR–PRK and RUS–UKR. ISR–SYR is deferred for lack of a
+    qualifying source. Absence of a row means no closure is recorded, not that the border is
+    verified open. Blocking rules `UNRESOLVED_BORDER_STATUS_PAIR`, `BORDER_STATUS_NOT_ADJACENT`
+    and `BORDER_STATUS_PERIOD_CONFLICT`; warning `STALE_BORDER_STATUS`.
+  - Recipes in `docs/query-examples.md` (Transit and borders): neighbours' border status,
+    sea-access gateways of landlocked countries (a structural lower bound; `closed` and
+    `restricted` borders are not crossable), and countries by route role.
+    `docs/ai-consumers.md` documents trade dependence measures and the external join pattern;
+    no trade data ships.
 
 ### Changed
 

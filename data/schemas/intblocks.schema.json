@@ -145,6 +145,11 @@
               "null"
             ],
             "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "role": {
+            "description": "Function of the country on an infrastructure route (gaspipeline, oilpipeline or corridor records only); values defined in data/schemas/include_roles.yaml.",
+            "type": "string",
+            "enum": ["origin", "transit", "destination", "terminal"]
           }
         },
         "additionalProperties": true

@@ -1,0 +1,82 @@
+# Land-border crossing status (OpenSpec change add-transit-dependence-layer).
+#
+# One entry per period in which a land border is closed or restricted to regular traffic.
+# - countries: the two iso3code values of the border, sorted; both must list each other in `borders`.
+# - status: closed (no land crossing open to regular traffic of goods) or restricted (at least one
+#   crossing closed, or traffic limited to named categories).
+# - since / until: YYYY, YYYY-MM or YYYY-MM-DD. `since` is omitted when no qualifying source gives the
+#   start; `until` is set when the border reopens. A border has one entry: a later closure replaces
+#   an ended one.
+# - note: which crossings are closed, in neutral words. It never judges the legitimacy of a closure,
+#   a boundary or a state.
+# - provenance: a government, an intergovernmental organization, or an official border or customs
+#   authority. News, think tanks and Wikipedia do not qualify.
+#
+# Absence of an entry means that no closure is recorded, not that the border is verified open.
+# Entries are added only after review; candidates without a qualifying source are listed under
+# `deferred` with the reason. Validated by data/schemas/border_status.schema.json.
+
+entries:
+  - countries: [ARM, AZE]
+    status: closed
+    note: The land border between Armenia and Azerbaijan is closed, and no crossing into Azerbaijan is open.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Armenia
+        url: https://travel.gc.ca/destinations/armenia
+        retrieved_at: '2026-11-20'
+      - source: UK Foreign, Commonwealth & Development Office, Armenia travel advice (warnings and insurance)
+        url: https://www.gov.uk/foreign-travel-advice/armenia/warnings-and-insurance
+        retrieved_at: '2026-11-20'
+  - countries: [ARM, TUR]
+    status: closed
+    note: The land border between Armenia and Türkiye is closed.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Armenia
+        url: https://travel.gc.ca/destinations/armenia
+        retrieved_at: '2026-11-20'
+  - countries: [DZA, MAR]
+    status: closed
+    since: '1994'
+    note: The land border between Algeria and Morocco has been closed since 1994.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Algeria
+        url: https://travel.gc.ca/destinations/algeria
+        retrieved_at: '2026-11-20'
+      - source: Government of Canada, Travel advice and advisories for Morocco
+        url: https://travel.gc.ca/destinations/morocco
+        retrieved_at: '2026-11-20'
+  - countries: [ISR, LBN]
+    status: closed
+    note: No crossing between Lebanon and Israel is open across the Blue Line, which UNIFIL monitors.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Lebanon
+        url: https://travel.gc.ca/destinations/lebanon
+        retrieved_at: '2026-11-20'
+  - countries: [KOR, PRK]
+    status: closed
+    note: No crossing between the Republic of Korea and the Democratic People's Republic of Korea is open to travellers.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for North Korea
+        url: https://travel.gc.ca/destinations/north-korea
+        retrieved_at: '2026-11-20'
+  - countries: [RUS, UKR]
+    status: closed
+    note: The land border between Ukraine and the Russian Federation is closed to regular crossings.
+    last_verified: '2026-11-20'
+    provenance:
+      - source: UK Foreign, Commonwealth & Development Office, Ukraine travel advice (entry requirements)
+        url: https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements
+        retrieved_at: '2026-11-20'
+      - source: Government of Canada, Travel advice and advisories for Ukraine
+        url: https://travel.gc.ca/destinations/ukraine
+        retrieved_at: '2026-11-20'
+
+deferred:
+  ISR-SYR: >-
+    No qualifying source states the crossing status: the Canadian and UK travel advice pages give only
+    safety warnings, and the UN pages could not be read.

@@ -35,7 +35,7 @@ the next release, which adds `contract.json` and `SHA256SUMS`):
 | Intblocks | `intblocks.parquet`, `intblocks.jsonl`, `intblocks.jsonl.zst`, `intblocks.json.zst`, `intblocks.yaml.zst`, `intblocks.csv.zst`, `intblocks-lite.parquet`, `intblocks-lite.csv.zst`, `intblocks.manifest.json`, `intblocks.meta.json` |
 | Blocktypes | `blocktypes.parquet`, `blocktypes.jsonl`, `blocktypes.jsonl.zst`, `blocktypes.yaml`, `blocktypes.yaml.zst`, `blocktypes.manifest.json`, `blocktypes.meta.json` |
 | Memberships | `memberships.parquet`, `memberships.csv.zst`, `memberships.manifest.json`, `memberships.meta.json` |
-| Aliases and migrations | `intblocks_aliases.json`, `intblocks_aliases.parquet`, `countries_aliases.json`, `countries_aliases.parquet`, `attribute_intblock_migrations.json`, `attribute_intblock_migrations.parquet` |
+| Aliases and migrations | `intblocks_aliases.json`, `intblocks_aliases.parquet`, `countries_aliases.json`, `countries_aliases.parquet`, `attribute_intblock_migrations.json`, `attribute_intblock_migrations.parquet`, `border_status.json`, `border_status.parquet` |
 | Descriptors | `datapackage.json`, `README.md` (dataset card), `contract.json` (consumer contract) |
 | Checksums | `SHA256SUMS` (every other asset, including the migration file) |
 | Schema migration | `migration.vX.Y.Z.json` (release only; not committed) |

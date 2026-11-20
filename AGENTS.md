@@ -1,7 +1,7 @@
 # Internacia DB — AI agent guide
 
-Structured reference data: **256 countries**, **1275 intblocks** (organizations/groups),
-**80 blocktypes**. Part of the [Dateno](https://dateno.io) open-source project.
+Structured reference data: **256 countries**, **1279 intblocks** (organizations/groups),
+**82 blocktypes**. Part of the [Dateno](https://dateno.io) open-source project.
 Licensed CC-BY-4.0 (data and documentation); code is MIT.
 
 中文指南：[AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt)
@@ -22,7 +22,7 @@ Platform shims (`CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/skills/
 ## Preferred data access
 
 - **Build first:** exports are not committed; run `python scripts/builder.py build` (≈1 min) or download `internacia.duckdb` from the latest GitHub Release.
-- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `memberships`, `_meta`, alias tables; views: `current_memberships`, `country_currencies`, `country_languages`, `country_timezones` — see [data contract](docs/data-contract.md))
+- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `memberships`, `_meta`, alias tables, `border_status`; views: `current_memberships`, `country_currencies`, `country_languages`, `country_timezones`, `country_borders` — see [data contract](docs/data-contract.md))
 - **Parquet:** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
 - **Remote:** [internacia-python](https://github.com/datenoio/internacia-python) (SDK; 0.2.x on PyPI predates data v3 — see [SDK status](docs/llm-scenarios.md#sdk-status)). [internacia-api](https://github.com/datenoio/internacia-api) is **in development** and self-host only — no public hosted HTTP API.
 

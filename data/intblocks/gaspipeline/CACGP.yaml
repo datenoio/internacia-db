@@ -20,18 +20,22 @@ includes:
   name: Turkmenistan
   type: country
   status: member
+  role: origin
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  role: transit
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  role: transit
 - id: CN
   name: China
   type: country
   status: member
+  role: destination
 membership_count: 4
 wikidata_id: Q250141
 description: Natural gas pipeline system from Turkmen gas fields on the Amu Darya via Uzbekistan and Kazakhstan to
@@ -91,8 +95,16 @@ notes: Lines A, B, and C follow a parallel route from Saman-Depe through Olot an
   (966 km) would add a southern route via Kyrgyzstan and Tajikistan to western China; construction resumed in stages but
   remained incomplete as of 2024. A Kazakhstan branch from Beyneu (commissioned 2014) feeds western Kazakh gas into the
   system at Shymkent.
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "US EIA - Turkmenistan country analysis"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/TKM"
+- field: includes
+  source: "KazMunayGas 2020 Annual Report - Gas transportation"
+  retrieved_at: "2026-11-20"
+  url: "https://ar2020.kmg.kz/en/strategic-report/operating/gas-transportation"
 - field: includes
   source: Wikidata
   retrieved_at: '2026-07-29'

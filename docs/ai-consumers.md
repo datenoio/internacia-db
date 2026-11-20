@@ -30,6 +30,7 @@ Do **not** infer or expect these fields — they are intentionally absent:
 - HDI, GDP, GDP per capita, government type, internet penetration
 - Military spending, armed-forces size, or any composite power or influence score
 - Vote shares, quotas, or budget contribution scales of organizations
+- Bilateral trade values, shares or balances, transit volumes, and route capacity
 - Time-series economic or governance indicators
 - Real-time membership or political recognition status
 
@@ -41,8 +42,8 @@ Downstream consumers should enrich from separate datasets. See
 | Dataset | Records | Primary key | Manifest |
 |---------|--------:|-------------|----------|
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
-| `intblocks` | 1275 | `id` | `data/datasets/intblocks.manifest.json` |
-| `blocktypes` | 80 | `id` | `data/datasets/blocktypes.manifest.json` |
+| `intblocks` | 1279 | `id` | `data/datasets/intblocks.manifest.json` |
+| `blocktypes` | 82 | `id` | `data/datasets/blocktypes.manifest.json` |
 
 All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
 over reading individual YAML source files under `data/countries/` and `data/intblocks/`.
@@ -279,6 +280,64 @@ JOIN countries c ON c.code = cm.country_code
 JOIN gdp g ON g.iso3 = c.iso3code AND g.year = 2024
 WHERE cm.intblock_id = 'EU' AND cm.status IN ('member', 'founding_member')
 GROUP BY cm.intblock_id;
+```
+
+### Transit: route roles and border crossing status
+
+Two structural layers describe transit dependence (OpenSpec change `add-transit-dependence-layer`):
+
+- **Route roles.** `includes[].role` gives a country's function on an infrastructure route, defined
+  in [`data/schemas/include_roles.yaml`](../data/schemas/include_roles.yaml). Pipelines
+  (`gaspipeline`, `oilpipeline`) use `origin`, `transit` and `destination`; linear transport
+  corridors (`corridor`) use `terminal` and `transit`. Roles appear only on those records, and only
+  on a reviewed cohort; elsewhere `role` is NULL. The `role` column of `memberships` and
+  `current_memberships` carries the same value.
+- **Border crossing status.** The `border_status` table lists land borders that are `closed` (no
+  crossing open to regular traffic of goods) or `restricted` (some crossings closed, or traffic
+  limited to named categories), with `since`, `until` and official sources. The `country_borders`
+  view joins it to `countries.borders`. A NULL status means that **no closure is recorded**, not
+  that the border is verified open. The status describes whether crossings are open; it does not
+  judge the legitimacy of a closure, a boundary or a state.
+
+The sea-access gateway recipe in [query-examples.md](query-examples.md#transit-and-borders)
+combines both with `landlocked`. It is a structural lower bound, not a route model.
+
+#### Trade dependence is downstream
+
+Trade influence is asymmetric dependence, not volume or balance. Internacia does not ship trade
+values, shares, balances, transit volumes or route capacity. Load bilateral trade yourself, for
+example from IMF IMTS (formerly DOTS), CEPII BACI (product level, Licence Ouverte) or UN Comtrade
+(check its redistribution terms), into a table such as
+`trade(reporter_iso3, partner_iso3, year, exports, imports)`, and compute:
+
+| Measure | Definition |
+|---|---|
+| Partner share `dep(A←B)` | A's trade with B divided by A's total trade (or imports, or exports, separately) |
+| Asymmetry | `dep(A←B) / dep(B←A)` |
+| Exposure | A–B trade divided by A's GDP (from your own GDP table) |
+| Partner concentration | HHI of A's partner shares |
+| In-bloc leverage | A member's share of intra-bloc imports, and the mean dependence of the other members on it |
+
+Import dependence gives leverage to the supplier; export dependence gives leverage to the buyer.
+A surplus with a partner signals export dependence on that partner's market, not strength.
+
+```sql
+-- trade(reporter_iso3, partner_iso3, year, exports, imports) is a table you load yourself.
+WITH t AS (
+  SELECT reporter_iso3, partner_iso3, exports + imports AS total
+  FROM trade WHERE year = 2024
+),
+shares AS (
+  SELECT reporter_iso3, partner_iso3, total / sum(total) OVER (PARTITION BY reporter_iso3) AS dep
+  FROM t
+)
+SELECT a.reporter_iso3 AS a, a.partner_iso3 AS b, a.dep AS dep_a_on_b, b.dep AS dep_b_on_a,
+       a.dep / nullif(b.dep, 0) AS asymmetry
+FROM shares a
+JOIN shares b ON b.reporter_iso3 = a.partner_iso3 AND b.partner_iso3 = a.reporter_iso3
+JOIN countries ca ON ca.iso3code = a.reporter_iso3
+JOIN current_memberships m ON m.country_code = ca.code AND m.intblock_id = 'EAEU'
+ORDER BY asymmetry DESC;
 ```
 
 ### Country attribute fields (former attribute intblocks)
@@ -576,5 +635,5 @@ mirrors have their own descriptor and may place tables in subdirectories.
 
 The retired IDs `COMMLEARN`, `ABCZNZ`, and `USAN` resolve to `COL`, `ABCANZ`, and
 `UNASUR` through the alias artifact. The 3.0.0 catalogue had 1269 records after
-these duplicate consolidations; the current catalogue has 1275 after adding seven
+these duplicate consolidations; the catalogue then had 1275 after adding seven
 treaty records and retiring `TELESUR`. Aliases preserve joins from older releases.

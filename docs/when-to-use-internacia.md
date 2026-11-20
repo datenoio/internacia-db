@@ -6,6 +6,8 @@ Use this repository when you need **stable reference data** for:
 - **Borders** (neighbors stored as ISO alpha-3 codes)
 - **International organization / treaty membership rosters** (“intblocks”), including reliable **join keys**
 - **Entity linking** (multilingual names/aliases + Wikidata IDs)
+- **Transit structure**: route roles on pipelines and corridors (`includes[].role`) and closed or
+  restricted land borders (`border_status`, `country_borders`)
 - **Institutional design** of organizations (`institutional_design`: decision rule, binding force,
   enforcement, vetoes) for a reviewed cohort, to tell binding institutions from forums and technical bodies
 
@@ -13,6 +15,7 @@ Do **not** use Internacia for socioeconomic or time-series analytics:
 
 - HDI, GDP, government type, internet penetration
 - military spending, armed-forces size, composite power or influence scores
+- bilateral trade values, shares or balances, transit volumes, route capacity
 - governance scores, macro time-series indicators
 
 If your task needs those, enrich with a separate dataset and treat Internacia as a join-key hub.

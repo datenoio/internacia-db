@@ -44,10 +44,16 @@ FROM read_json('contract.json') AS c, UNNEST(c.tables) AS u(t);
 | `_meta` | table | One row per dataset: version, build identity, `schema_hash`, `contract_version` |
 | `intblocks_aliases`, `countries_aliases` | table | Retired or renamed IDs (`alias` → `target`, `reason`, `since`) |
 | `attribute_intblock_migrations` | table | Retired attribute intblocks → country fields |
+| `border_status` | table | Closed or restricted land borders: sorted `iso3code` pair (`country_a`, `country_b`), `status`, `since`, `until`, `note`, `last_verified`, `provenance`. Source: `data/borders/border_status.yaml`. Absence of a row means no closure is recorded, not that the border is verified open. |
 | `current_memberships` | view | Membership edges that are current: not `former_member`, no `left` date, and the intblock is neither `historical` nor dissolved. All participation statuses are kept; filter `status` for full members. |
 | `country_currencies` | view | `country_code`, `currency_code`, `currency_name`, `currency_symbol` |
 | `country_languages` | view | `country_code`, `language_code`, `language_name`, `official` |
 | `country_timezones` | view | `country_code`, `timezone` |
+| `country_borders` | view | `country_code`, `iso3code`, `neighbor_iso3`, `current_status`: one row per entry of `countries.borders`, with the pair's current `border_status` (`closed`, `restricted`) or NULL |
+
+`memberships` and `current_memberships` carry `role`, the country's function on an
+infrastructure route (`origin`, `transit`, `destination` on pipelines; `terminal`, `transit` on
+corridors), defined in `data/schemas/include_roles.yaml`; it is NULL on every other record.
 
 Views carry their SQL in `contract.json` (`definition`), so consumers without DuckDB can
 reproduce them. Countries with NULL `currencies`, `languages` or `timezones` have no rows in

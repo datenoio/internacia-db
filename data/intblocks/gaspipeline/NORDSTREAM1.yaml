@@ -22,10 +22,12 @@ includes:
   name: Russian Federation
   type: country
   status: member
+  role: origin
 - id: DE
   name: Germany
   type: country
   status: member
+  role: destination
 membership_count: 2
 wikidata_id: Q154125
 description: Offshore natural gas pipeline from Vyborg, Russia, to Lubmin near Greifswald,
@@ -71,6 +73,10 @@ notes: Route also crosses the exclusive economic zones of Finland, Sweden, and D
   twin lines (A and B); both were damaged in the September 2022 sabotage.
 provenance:
 - field: includes
+  source: "US EIA - Russia country analysis (Table 12)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/RUS"
+- field: includes
   source: Wikipedia
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Nord_Stream_1
@@ -104,4 +110,4 @@ provenance:
   source: Wikipedia
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Nord_Stream_1
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'

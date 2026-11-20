@@ -42,6 +42,7 @@ SOURCE_PATHS = (
     "data/countries_aliases.yaml",
     "data/intblocks_aliases.yaml",
     "data/attribute_intblock_migrations.yaml",
+    "data/borders",
 )
 RELEASE_PATHS = ("data/", "internacia_builder/")
 SCHEMA_FILES = ("countries", "intblocks", "blocktypes", "memberships")

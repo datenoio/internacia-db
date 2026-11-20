@@ -26,14 +26,17 @@ includes:
   name: Algeria
   type: country
   status: member
+  role: destination
 - id: NE
   name: Niger
   type: country
   status: member
+  role: transit
 - id: NG
   name: Nigeria
   type: country
   status: member
+  role: origin
 membership_count: 3
 wikidata_id: Q2584545
 description: 4,128 km natural gas pipeline under construction from Warri in southern Nigeria
@@ -89,8 +92,12 @@ other_names:
 notes: Route spans 1,037 km in Nigeria, 841 km in Niger, and 2,310 km in Algeria. Competes with
   the planned Nigeria–Morocco (African Atlantic) pipeline, which follows the Atlantic coast and
   avoids Sahel security risks. Niger holds a planned 10% stake in the operating company.
-last_verified: '2026-07-29'
+last_verified: '2026-11-20'
 provenance:
+- field: includes
+  source: "US EIA - Algeria country analysis (Table 4)"
+  retrieved_at: "2026-11-20"
+  url: "https://www.eia.gov/international/analysis/country/DZA"
 - field: includes
   source: Wikipedia
   retrieved_at: '2026-07-29'
