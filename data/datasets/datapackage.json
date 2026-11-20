@@ -343,8 +343,8 @@
       "format": "csv",
       "mediatype": "text/csv",
       "compression": "zstd",
-      "bytes": 178142,
-      "hash": "sha256:e310211875b4b0dd1504321a9690d186bf81a6fa0873fc2246737d9e6a13b39f"
+      "bytes": 178797,
+      "hash": "sha256:0c680360660c1a9a85b87b24fea15d57de13e60edaab0300c8bada1894e1d8df"
     },
     {
       "name": "intblocks-lite-csv",
@@ -362,8 +362,8 @@
       "path": "intblocks.parquet",
       "format": "parquet",
       "mediatype": "application/vnd.apache.parquet",
-      "bytes": 702368,
-      "hash": "sha256:2898440a9e17e49f27ddf5c13014cc8c0cadba8a13d64631c9d8dfd767a62330",
+      "bytes": 707050,
+      "hash": "sha256:de0c84c73c27962ab3883b64d762416fe80bc30f2e290198983b6ca32dc58fa1",
       "schema": {
         "fields": [
           {
@@ -480,6 +480,10 @@
           {
             "name": "provenance",
             "type": "array"
+          },
+          {
+            "name": "institutional_design",
+            "type": "object"
           }
         ],
         "primaryKey": [
@@ -543,8 +547,8 @@
       "format": "json",
       "mediatype": "application/json",
       "compression": "zstd",
-      "bytes": 777195,
-      "hash": "sha256:9e2253ae62b7d9da8c50c640aa20762e3cbd5692c360f9d7597486f2c5bdfad7"
+      "bytes": 779465,
+      "hash": "sha256:b8dd07a8a134cb920ea189aa77cd8cd54b8377c7ee6b955b4e6bb71eae4c9218"
     },
     {
       "name": "intblocks-jsonl",
@@ -552,8 +556,8 @@
       "path": "intblocks.jsonl",
       "format": "jsonl",
       "mediatype": "application/x-ndjson",
-      "bytes": 9773434,
-      "hash": "sha256:c468ab1a76285e3843161711382fbc757412cd77acd0718b2acc718b901ce5f0"
+      "bytes": 9786846,
+      "hash": "sha256:131a97f5f8fea232c9b01c13db1b74273c62d996128d5423bd005db58acefd7d"
     },
     {
       "name": "blocktypes-parquet",

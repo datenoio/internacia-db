@@ -5,6 +5,15 @@ blocktype:
 - health
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: sectoral
+  decision_rule: simple_majority
+  decision_force: partly_binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  mutual_defence: false
 partof: UN
 languages:
 - ar
@@ -909,6 +918,10 @@ other_names:
   name: 世界卫生组织
 last_verified: '2026-10-22'
 provenance:
+- field: institutional_design
+  source: "Constitution of the World Health Organization (Basic Documents, 49th edition)"
+  retrieved_at: "2026-11-20"
+  url: "https://apps.who.int/gb/bd/pdf_files/BD_49th-en.pdf"
 - field: includes
   source: World Health Organization
   retrieved_at: '2026-10-22'

@@ -96,6 +96,11 @@ fields:
   last_verified:
     max_null_rate: 1.0
     mode: warn
+  # Optional authority facts (add-intblock-institutional-design): coverage is reported,
+  # never gated. Absent means unknown, so a missing object is not a defect.
+  institutional_design:
+    max_null_rate: 1.0
+    mode: warn
 
 includes:
   membership_applicability:

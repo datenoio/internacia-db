@@ -4,6 +4,17 @@ blocktype:
 - bank
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: economic
+  decision_rule: weighted_voting
+  decision_force: binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  - expulsion
+  - conditionality
+  mutual_defence: false
 founded: '1945-12-27'
 active_period:
   start: '1945-12-27'
@@ -999,6 +1010,10 @@ other_names:
 - id: es
   name: Banco Mundial
 provenance:
+- field: institutional_design
+  source: "Articles of Agreement of the International Bank for Reconstruction and Development"
+  retrieved_at: "2026-11-20"
+  url: "https://thedocs.worldbank.org/en/doc/722361541184234501-0330022018/original/IBRDArticlesOfAgreementEnglish.pdf"
 - field: description
   source: official sources
   retrieved_at: '2026-07-12'

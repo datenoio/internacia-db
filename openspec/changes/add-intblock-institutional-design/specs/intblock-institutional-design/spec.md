@@ -128,7 +128,7 @@ A record that declares `institutional_design` SHALL have at least one `provenanc
 
 ### Requirement: Institutional design export
 
-The `institutional_design` object SHALL be exported as a struct column in Parquet, DuckDB, and JSONL intblock exports. The flattened CSV and lite exports SHALL carry one column per subfield, and SHALL join list subfields with the delimiter used for other flattened lists. The JSON Schema and the Arrow schema SHALL stay in parity without a new allowlist entry.
+The `institutional_design` object SHALL be exported as a struct column in Parquet, DuckDB, and JSONL intblock exports, appended after the existing columns. The flattened CSV export SHALL carry one `design_<subfield>` column per subfield, and SHALL join list subfields with the delimiter used for other flattened lists. The lite exports SHALL NOT change. The JSON Schema and the Arrow schema SHALL stay in parity without a new allowlist entry.
 
 #### Scenario: Populated record in DuckDB
 
@@ -139,6 +139,11 @@ The `institutional_design` object SHALL be exported as a struct column in Parque
 
 - **WHEN** a consumer queries `institutional_design` for a record that has no such object
 - **THEN** the query returns NULL
+
+#### Scenario: Flattened CSV columns
+
+- **WHEN** a record declares `enforcement: [suspension, expulsion]`
+- **THEN** its flattened CSV row has `design_enforcement` set to `suspension;expulsion`
 
 #### Scenario: Schema parity
 

@@ -33,7 +33,7 @@ The goals are:
 - Record the authority axis as optional, sourced, reviewable facts on intblock records.
 - Define every value precisely enough that two reviewers assign the same value from the same founding instrument.
 - Give consumers a tested recipe to derive an authority level and a tested recipe to compute capacity concentration from data already in scope.
-- Cover a pilot cohort of 36 high-profile records that spans both strategic and technical organizations.
+- Cover a pilot cohort of high-profile records that spans both strategic and technical organizations (36 candidates; 29 applied).
 
 The non-goals are:
 
@@ -154,7 +154,7 @@ The pilot uses an explicit manifest `data/schemas/institutional_design_pilot.yam
 - a matching value is idempotent;
 - provenance is inserted with each value.
 
-The 36 pilot IDs are:
+The 36 pilot candidates are:
 
 - General: `UN`, `UNSC`, `EU`, `AFUNION`, `ASEAN`, `OAS`, `COE`, `LAS`, `OIC`, `CIS`, `CCASG`, `SADC`, `ECOWAS`, `CARICOM`
 - Security: `NATO`, `CSTO`, `SCO`
@@ -164,13 +164,21 @@ The 36 pilot IDs are:
 
 The grouping above is a sampling plan, not the `mandate` assignment. The backfill review sets each record's `mandate` from its sources.
 
+Review outcome (2026-11-20): 29 candidates were applied. Seven were deferred, because no source that meets the provenance rule could be read: OIC (third-party reproduction only), CIS (unreadable scan), CCASG (search snippets only), G-20 and BRICS (official sites unreachable; secondary backgrounders only), OECD (unaffiliated copy only), and OPEC (copy without an identifiable publisher). The manifest's `deferred` section records each reason. A source is accepted from the organization's or a government's own site, or from a recognized legal-text repository. Subfields that a source does not settle are omitted, for example NATO `decision_force`.
+
+Three conventions were fixed during review and are recorded in the catalog, the manifest and the inclusion policy:
+
+- Ad hoc arbitration with a binding award is `dispute_panel`, as the catalog defines it.
+- An automatic loss of vote for arrears is not an enforcement measure; a suspension an organ decides is.
+- An organ that never became operational, or is suspended, is not a standing organ.
+
 ## Risks / Trade-offs
 
 - **Reviewer judgement on `mandate` and `decision_force`.** Mitigation: normative definitions with boundary examples, a reviewed manifest, and mandatory provenance.
 - **Consumers read the authority level as an influence ranking.** Mitigation: the documentation presents authority and capacity as separate axes, and places both recipes next to each other.
 - **Treaty reform changes the design.** For example, the Lisbon Treaty moved many EU areas to qualified majority. Mitigation: values describe the instrument in force at `last_verified`, and corrections ship as PATCH value changes.
-- **Sparse coverage (36 of 1275).** Mitigation: absent means unknown, recipes return NULL, and the completeness report tracks coverage. No gate fails on missing values.
-- **One more struct column for flat consumers.** Mitigation: the flattened CSV and lite exports follow the existing `headquarters` flattening pattern.
+- **Sparse coverage (29 of 1275).** Mitigation: absent means unknown, recipes return NULL, and the completeness report tracks coverage. No gate fails on missing values.
+- **One more struct column for flat consumers.** Mitigation: the flattened CSV export follows the existing `headquarters` flattening pattern with `design_*` columns, and the lite exports stay unchanged.
 
 ## Migration Plan
 
@@ -178,9 +186,11 @@ The change is additive. The new column and its open enums ship in a MINOR releas
 
 ## Open Questions
 
-1. Field name: `institutional_design` or the shorter `authority`?
-2. Is a five-value `mandate` enough, or should `political` be separate from `general`?
-3. Should `includes[]` later gain other structural rights, such as a permanent seat or host-state status?
-4. After the pilot, should the authority recipe become a DuckDB view?
-5. Should records carry an MIA crosswalk identifier, once MIA's licence and identifier stability are confirmed?
-6. Is the 36-record pilot the right size and mix?
+The maintainer approved the proposal for implementation on 2026-11-20 without changes. The open questions were resolved with the proposal's defaults:
+
+1. Field name: keep `institutional_design`. `authority` reads as "an authority (a body)" and collides with the derived authority level.
+2. `mandate`: keep five values. Political cooperation is covered by `general`; revisit if the pilot shows records that fit no value.
+3. `includes[]` structural rights beyond `veto_holders`: deferred to a later change.
+4. Authority-level view: deferred; the recipe ships in documentation only.
+5. MIA crosswalk identifier: deferred until MIA's licence and identifier stability are confirmed.
+6. Pilot: the 36 candidates listed in Decision 8.

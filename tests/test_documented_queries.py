@@ -727,3 +727,48 @@ def test_alias_resolution_recipe(con):
         "LEFT JOIN intblocks_aliases a ON a.alias = x.id AND a.reason <> 'disambiguated' ORDER BY 1"
     ).fetchall()
     assert resolved == [("EU", "EU"), ("USAN", "UNASUR")]
+
+
+def _documented_sql(heading: str) -> str:
+    """The first fenced SQL block under a ``### heading`` in docs/query-examples.md."""
+    text = (project_root() / "docs" / "query-examples.md").read_text(encoding="utf-8")
+    section = text.split(f"### {heading}\n", 1)[1]
+    return section.split("```sql\n", 1)[1].split("```", 1)[0]
+
+
+def test_authority_level_recipe(con):
+    rows = dict(
+        (row[0], row[2]) for row in con.execute(_documented_sql("Authority level from institutional design")).fetchall()
+    )
+    assert len(rows) == 29
+    assert {rows[i] for i in ("EU", "UNSC", "WTO")} == {"high"}
+    assert {rows[i] for i in ("G7", "APEC")} == {"low"}
+    assert {rows[i] for i in ("UPU", "WMO")} == {"medium"}
+    assert rows["NATO"] is None
+    veto = con.execute("SELECT institutional_design.veto_holders FROM intblocks WHERE id = 'UNSC'").fetchone()[0]
+    assert sorted(veto) == ["CN", "FR", "GB", "RU", "US"]
+
+
+def test_authority_level_none_for_reference_enumeration(con):
+    sql = _documented_sql("Authority level from institutional design").replace(
+        "WHERE institutional_design IS NOT NULL", "WHERE scope_category = 'reference_enumeration'"
+    )
+    levels = {row[2] for row in con.execute(sql).fetchall()}
+    assert levels == {"none"}
+
+
+def test_member_capacity_concentration_recipe(con):
+    cols = ["intblock_id", "members", "world_pop_pct", "largest_member", "largest_member_pct",
+            "hhi", "effective_members", "min_pop_year", "max_pop_year"]
+    rows = {
+        row[0]: dict(zip(cols, row, strict=True))
+        for row in con.execute(_documented_sql("Member capacity concentration (population)")).fetchall()
+    }
+    assert set(rows) == {"EAEU", "EU", "NATO", "UPU"}
+    assert rows["UPU"]["world_pop_pct"] > 95
+    assert rows["EAEU"]["largest_member"] == "RU"
+    assert rows["EAEU"]["effective_members"] < 2
+    assert rows["EU"]["effective_members"] > rows["EAEU"]["effective_members"]
+    for row in rows.values():
+        assert 0 < row["hhi"] <= 1
+        assert row["min_pop_year"] <= row["max_pop_year"]

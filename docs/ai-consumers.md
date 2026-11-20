@@ -19,6 +19,8 @@ membership joins:
 - Multilingual names and aliases (`other_names`, `common_names`, `native_names`)
 - Wikidata entity links (`wikidata_id`)
 - Intergovernmental organizations with membership rosters and taxonomy
+- Institutional design of intblocks (`institutional_design`: mandate, decision rule, binding force,
+  independent organs, enforcement, mutual defence, asymmetric vetoes) for a reviewed cohort
 - Field-level provenance on country records where enriched
 
 ### Out of scope
@@ -26,6 +28,8 @@ membership joins:
 Do **not** infer or expect these fields — they are intentionally absent:
 
 - HDI, GDP, GDP per capita, government type, internet penetration
+- Military spending, armed-forces size, or any composite power or influence score
+- Vote shares, quotas, or budget contribution scales of organizations
 - Time-series economic or governance indicators
 - Real-time membership or political recognition status
 
@@ -238,6 +242,43 @@ Catalogues searched and roster authorities used to compile membership:
 
 ```sql
 SELECT id, name FROM intblocks WHERE scope_category = 'igo' ORDER BY id;
+```
+
+### Intblock `institutional_design`
+
+Optional, sourced facts about what an organization's founding instrument lets it decide and
+enforce. Values are defined in
+[`data/schemas/institutional_design.yaml`](../data/schemas/institutional_design.yaml). An absent
+object or subfield means **unknown**, never "none"; an explicit `[none]` list means the instrument
+provides none. Only a reviewed pilot cohort carries it (see
+`data/schemas/institutional_design_pilot.yaml`), and every populated record has a `provenance`
+entry with `field: institutional_design`.
+
+- `mandate`: `general`, `security`, `economic`, `sectoral`, `technical`
+- `decision_rule` and `decision_force`: the default rule and binding force of the principal
+  decision-making organ (the organ of member-state representatives that adopts the main acts)
+- `independent_organs[]`, `enforcement[]`, `mutual_defence`
+- `veto_holders[]`: treaty-granted vetoes other members lack (UNSC permanent members); consensus
+  bodies have none, and de-facto vetoes from voting weight are not recorded
+
+The field never appears on `reference_enumeration` or `non_state_organization` records. Flat CSV
+exports carry it as `design_*` columns. Derive an authority level, and read it next to member
+capacity, with the recipes in [query-examples.md](query-examples.md#authority-and-capacity).
+
+#### Capacity indicators are downstream
+
+Influence needs both authority and capacity. Population is in scope (`countries.population`);
+GDP, military spending and similar indicators are not shipped. Load them from an external source
+(for example World Bank WDI or SIPRI) and join on `countries.iso3code`:
+
+```sql
+-- gdp(iso3 VARCHAR, year INTEGER, value DOUBLE) is a table you load yourself.
+SELECT cm.intblock_id, sum(g.value) AS members_gdp
+FROM current_memberships cm
+JOIN countries c ON c.code = cm.country_code
+JOIN gdp g ON g.iso3 = c.iso3code AND g.year = 2024
+WHERE cm.intblock_id = 'EU' AND cm.status IN ('member', 'founding_member')
+GROUP BY cm.intblock_id;
 ```
 
 ### Country attribute fields (former attribute intblocks)

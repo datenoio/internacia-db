@@ -536,6 +536,64 @@
       },
       "additionalProperties": true,
       "description": "Secretariat location and host organization"
+    },
+    "institutional_design": {
+      "description": "What the founding instrument lets the organization decide and enforce. Optional; an absent object or subfield means unknown, not none. Values are defined in data/schemas/institutional_design.yaml. Allowed only on igo, treaty_body, policy_forum and intergovernmental_body records, with provenance.",
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "mandate": {
+          "description": "Primary policy domain from the purposes article of the founding instrument.",
+          "type": "string",
+          "enum": ["general", "security", "economic", "sectoral", "technical"]
+        },
+        "decision_rule": {
+          "description": "Default voting rule of the principal decision-making organ for its main acts.",
+          "type": "string",
+          "enum": ["consensus", "unanimity", "simple_majority", "qualified_majority", "weighted_voting", "mixed"]
+        },
+        "decision_force": {
+          "description": "Whether the principal organ's main acts bind members.",
+          "type": "string",
+          "enum": ["binding", "partly_binding", "non_binding"]
+        },
+        "independent_organs": {
+          "description": "Standing organs whose members do not act as state representatives; [none] when the instrument establishes none.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["executive", "court", "dispute_panel", "parliament", "central_bank", "none"]
+          }
+        },
+        "enforcement": {
+          "description": "Measures the organization can decide against a member; [none] when the instrument provides none.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["sanctions", "suspension", "expulsion", "conditionality", "none"]
+          }
+        },
+        "mutual_defence": {
+          "description": "true only when an instrument binding all members obliges assistance against an armed attack on a member.",
+          "type": "boolean"
+        },
+        "veto_holders": {
+          "description": "Country alpha-2 codes of members with a treaty-granted veto that other members lack.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+          }
+        }
+      },
+      "additionalProperties": false
     }
   }
 }

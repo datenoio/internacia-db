@@ -101,6 +101,7 @@ Check schema_hash before upgrading downstream pipelines. Breaking changes are in
 - Attribute partitions (traffic hand, DVD region, scripts, legal/broadcast systems, rail gauges) are country fields — not intblocks; remap retired ids via attribute_intblock_migrations.json
 - Driving side: filter countries.car_side ('left'|'right'); do not join traffichand intblocks (retired)
 - scope_category filters entity kind: igo | treaty_body | policy_forum | reference_enumeration (named sets) | intergovernmental_body (dependent commission/fund/office) | non_state_organization (NGO/association). The category does not imply country membership; filter includes[].status explicitly (see docs/intblock-inclusion-policy.md).
+- institutional_design (optional, reviewed pilot cohort): mandate, decision_rule, decision_force, independent_organs[], enforcement[], mutual_defence, veto_holders[] of the principal organ; absent = unknown, [none] = none. Values: data/schemas/institutional_design.yaml. It measures authority, not influence; GDP and military capacity are not shipped (join external data on countries.iso3code). Recipes: docs/query-examples.md#authority-and-capacity
 - timezones: empty for uninhabited territories; timezone_status may be 'not_applicable'
 
 ## Example queries (DuckDB)

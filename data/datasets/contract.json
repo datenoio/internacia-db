@@ -298,7 +298,7 @@
           }
         }
       ],
-      "schema_hash": "aa66550599e0342fa0117232375f7428bb94431f8174000933e7ae483e70c4aa",
+      "schema_hash": "8f94d46614938b01fd7b803c3ceae106bf8f93941269588d21beea8ac4fed8ea",
       "columns": [
         {
           "name": "id",
@@ -438,6 +438,11 @@
         {
           "name": "provenance",
           "type": "list<struct<field:string,source:string,url:string,retrieved_at:string,license:string>>",
+          "nullable": true
+        },
+        {
+          "name": "institutional_design",
+          "type": "struct<mandate:string,decision_rule:string,decision_force:string,independent_organs:list<string>,enforcement:list<string>,mutual_defence:boolean,veto_holders:list<string>>",
           "nullable": true
         }
       ]
@@ -1021,6 +1026,66 @@
         "organization",
         "territory",
         "historical-country"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "institutional_design.decision_force",
+      "values": [
+        "binding",
+        "partly_binding",
+        "non_binding"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "institutional_design.decision_rule",
+      "values": [
+        "consensus",
+        "unanimity",
+        "simple_majority",
+        "qualified_majority",
+        "weighted_voting",
+        "mixed"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "institutional_design.enforcement[]",
+      "values": [
+        "sanctions",
+        "suspension",
+        "expulsion",
+        "conditionality",
+        "none"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "institutional_design.independent_organs[]",
+      "values": [
+        "executive",
+        "court",
+        "dispute_panel",
+        "parliament",
+        "central_bank",
+        "none"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks",
+      "column": "institutional_design.mandate",
+      "values": [
+        "general",
+        "security",
+        "economic",
+        "sectoral",
+        "technical"
       ],
       "open": true
     },

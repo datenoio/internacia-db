@@ -5,6 +5,13 @@ blocktype:
 - telecom
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: technical
+  decision_rule: simple_majority
+  decision_force: partly_binding
+  independent_organs:
+  - dispute_panel
+  mutual_defence: false
 partof: UN
 languages:
 - ar
@@ -856,6 +863,10 @@ acronyms:
   value: 国际电信联盟
 last_verified: '2026-10-25'
 provenance:
+- field: institutional_design
+  source: "Constitution of the International Telecommunication Union"
+  retrieved_at: "2026-11-20"
+  url: "https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf"
 - field: includes
   source: International Telecommunication Union
   retrieved_at: '2026-10-25'
