@@ -1,7 +1,6 @@
 """last_verified KPI and the rule for new or changed records."""
-from datetime import date
-
 import subprocess
+from datetime import date
 
 from internacia_builder.freshness import (
     changed_base_records,

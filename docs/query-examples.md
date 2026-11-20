@@ -846,8 +846,10 @@ WHERE c.landlocked
 ORDER BY c.name;
 ```
 
-**Expected:** 2 rows — `AD` Andorra, `BT` Bhutan. (`SM`, `TM`, `UZ` joined trade-bloc
-rosters in the v2.1.0 catalogue expansion and no longer qualify.)
+**Expected:** 0 rows. The last two, `AD` Andorra and `BT` Bhutan, are members of the World
+Customs Organization (`WCO`), which carries the `trade` blocktype since the `intorg`
+reorganization. (`SM`, `TM`, `UZ` joined trade-bloc rosters in the v2.1.0 catalogue
+expansion.)
 
 ### Landlocked enclaves (single land neighbor)
 
@@ -1064,8 +1066,9 @@ ORDER BY type_count DESC, id
 LIMIT 10;
 ```
 
-**Expected top:** `PICES` (5 types: `climate`, `intorg`, `environment`, `research`,
-`ocean`).
+**Expected top:** `CGIARFUND` and `PICES`, 5 types each (`fund`, `bank`, `research`,
+`agriculture`, `intorg`; and `climate`, `intorg`, `environment`, `research`, `ocean`).
+`intorg` is deprecated and will drop from both lists in 5.0.0.
 
 ### Formal organizations in Geneva, New York, and Vienna
 

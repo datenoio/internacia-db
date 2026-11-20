@@ -386,8 +386,8 @@ ADDITIONAL_RECIPES = [
               AND COALESCE(m.status,'member') != 'former_member'
           ) ORDER BY c.code
         """,
-        2,
-        {"AD", "BT"},
+        0,
+        set(),
     ),
     (
         """
@@ -483,7 +483,7 @@ ADDITIONAL_RECIPES = [
         SELECT id FROM intblocks ORDER BY len(blocktype) DESC, id LIMIT 1
         """,
         1,
-        {"PICES"},
+        {"CGIARFUND"},
     ),
     (
         """
