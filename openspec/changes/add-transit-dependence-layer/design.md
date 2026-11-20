@@ -141,7 +141,7 @@ Both backfills follow the safety model of `scripts/backfill_institutional_design
 
 - **Political sensitivity of border status.**
   - Mitigation: neutral definitions limited to whether a crossing is open, official sources only, dates and history kept, and no judgement in notes.
-  - Mitigation: a maintainer decision gate (task 0.2) before any entry is added.
+  - Mitigation: the maintainer confirmed the scope on 2026-11-20 (task 0.2); every entry still goes through the reviewed pilot manifest.
 - **Staleness.** Closures change, sometimes quickly.
   - Mitigation: `last_verified` on every entry, and a reported warning when an entry is older than the intblock freshness threshold.
 - **Readers taking the gateway recipe as a route model.**
@@ -163,7 +163,7 @@ It ships as a MINOR release with CHANGELOG notes. Before release, rollback is a 
 
 ## Open Questions
 
-1. **Scope of border status.** Is it in scope under the reference-data guardrail? If not, split Decision 2 into its own change, and the recipe runs on `borders` alone.
+1. **Scope of border status.** Resolved by the maintainer on 2026-11-20: border crossing status is in scope. It is significant reference information about the border graph and likely affects trade volumes between neighbouring countries. Decision 2 stays in this change; the guardrail against socioeconomic fields on country records is unchanged, because status lives in its own edge dataset.
 2. **Other infrastructure.** Should roles later extend to transport corridors (positions on a route rather than treaty parties) and to an `oilpipeline` blocktype?
 3. **Restricted borders.** Should `restricted` count as crossable in the recipe (the default proposed here), or be excluded?
 4. **View.** Should the gateway recipe become a view once both pilots land?

@@ -1,7 +1,7 @@
 ## 0. Approval gate
 
 - [ ] 0.1 Resolve the open questions in `design.md`
-- [ ] 0.2 Record the maintainer decision on whether border crossing status is in scope; if not, split section 3 into its own change
+- [x] 0.2 Record the maintainer decision on whether border crossing status is in scope; if not, split section 3 into its own change (in scope, 2026-11-20)
 - [ ] 0.3 Obtain approval for `add-transit-dependence-layer` before any schema, code, or data change
 
 ## 1. Infrastructure roles: contract
