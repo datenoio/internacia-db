@@ -67,7 +67,7 @@ def test_reciprocity_allowlist_parsing():
 # --- Organizational references ----------------------------------------------
 
 def _intblocks(*recs):
-    return list(recs), [f"data/intblocks/intorg/{r.get('id', 'X')}.yaml" for r in recs]
+    return list(recs), [f"data/intblocks/political/{r.get('id', 'X')}.yaml" for r in recs]
 
 
 def test_wbgroup_must_be_reference_enumeration():
@@ -114,7 +114,7 @@ def test_scope_status_combinations_that_stay_valid(status, category):
 def test_formal_intblock_without_scope_is_important_error():
     issues = intblock_rules.check_intblock_scope_category({
         "id": "X",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
     })
     assert _types(issues) == ["MISSING_SCOPE_CATEGORY"]
@@ -123,12 +123,12 @@ def test_formal_intblock_without_scope_is_important_error():
 
 def test_non_formal_missing_scope_is_not_a_gate_error():
     assert intblock_rules.check_intblock_scope_category({
-        "id": "OLD", "blocktype": ["intorg"], "status": "historical"
+        "id": "OLD", "blocktype": ["political"], "status": "historical"
     }) == []
 
 
 def test_formal_scope_gate_is_consistent_between_cli_and_quality():
-    missing = {"id": "NEW", "status": "formal", "blocktype": ["intorg"]}
+    missing = {"id": "NEW", "status": "formal", "blocktype": ["political"]}
     shared_issue = intblock_rules.check_intblock_scope_category(missing)[0]
     assert shared_issue["issue_type"] == "MISSING_SCOPE_CATEGORY"
     assert len(validate_scope_category([("NEW.yaml", missing)])) == 1
@@ -139,7 +139,7 @@ def test_expanded_scope_categories_pass():
     for category in ("intergovernmental_body", "non_state_organization"):
         assert intblock_rules.check_intblock_scope_category({
             "id": "X",
-            "blocktype": ["intorg"],
+            "blocktype": ["political"],
             "status": "formal",
             "scope_category": category,
         }) == []
@@ -148,7 +148,7 @@ def test_expanded_scope_categories_pass():
 def test_unknown_scope_category_is_rejected():
     issues = intblock_rules.check_intblock_scope_category({
         "id": "X",
-        "blocktype": ["intorg"],
+        "blocktype": ["political"],
         "status": "formal",
         "scope_category": "other",
     })

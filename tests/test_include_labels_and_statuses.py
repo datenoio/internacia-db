@@ -46,13 +46,26 @@ def test_deprecated_status_warns_with_replacements():
 
 
 def test_contract_lists_deprecated_status_values_on_both_columns():
-    entries = build_contract("0.0.0")["deprecated"]
+    entries = [e for e in build_contract("0.0.0")["deprecated"] if e["column"] != "blocktype"]
     assert {(e["table"], e["column"], e["value"]) for e in entries} == {
         (table, column, value)
         for table, column in (("memberships", "status"), ("intblocks", "includes[].status"))
         for value in ("associate", "associated_observer")
     }
     assert all(e["kind"] == "enum_value" and e["removal"] == "next MAJOR" and e["replacements"] for e in entries)
+
+
+def test_contract_lists_the_deprecated_intorg_blocktype():
+    entries = [e for e in build_contract("0.0.0")["deprecated"] if e["column"] == "blocktype"]
+    assert entries == [{
+        "kind": "enum_value",
+        "table": "intblocks",
+        "column": "blocktype",
+        "value": "intorg",
+        "replacements": [],
+        "removal": "next MAJOR",
+        "note": "Use scope_category = 'igo' for entity form and a domain blocktype for the domain.",
+    }]
 
 
 def test_repository_has_no_stale_country_include_names():
