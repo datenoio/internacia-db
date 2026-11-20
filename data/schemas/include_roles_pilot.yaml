@@ -1,7 +1,7 @@
 version: 1
 change_id: add-transit-dependence-layer
 cohort_id: pilot_roles
-expected_count: 20
+expected_count: 23
 verified_on: '2026-11-20'
 description: Reviewed route roles (includes[].role) for pipelines and linear corridors, checked on 2026-11-20 against
   operator, government, intergovernmental or project-finance sources. Apply with scripts/backfill_include_roles.py
@@ -123,6 +123,21 @@ records:
     - source: US EIA - Libya country analysis
       url: https://www.eia.gov/international/analysis/country/LBY
       retrieved_at: '2026-11-20'
+  INSTC:
+    roles:
+      IN: terminal
+      IR: transit
+      AZ: transit
+      RU: terminal
+    basis: ADB (ARIC) describes the India–Iran–Caspian–Russia route of the 2000 agreement; the Azerbaijani government
+      describes the 511 km rail section across Azerbaijan between the Russian and Iranian borders.
+    evidence:
+    - source: ADB ARIC, International North-South Transport Corridor Initiative
+      url: https://aric.adb.org/initiative/international-north-south-transport-corridor
+      retrieved_at: '2026-11-20'
+    - source: Azerbaijan Transit Council (government), North-South Corridor
+      url: https://transit.gov.az/en/corridors/north-south-corridor
+      retrieved_at: '2026-11-20'
   KAZCHINA:
     roles:
       KZ: origin
@@ -148,6 +163,22 @@ records:
       retrieved_at: '2026-11-20'
     - source: US EIA, Country Analysis Brief Iraq (updated 14 Jul 2025), PDF text read locally via PDFKit
       url: https://www.eia.gov/international/content/analysis/countries_long/Iraq/Iraq_2025.pdf
+      retrieved_at: '2026-11-20'
+  LAPISLAZULI:
+    roles:
+      AF: terminal
+      TM: transit
+      AZ: transit
+      GE: transit
+      TR: terminal
+    basis: Afghanistan's foreign ministry (RECCA) gives the five contracting parties and the route from Torghundi
+      and Aqina through Turkmenbashi, Baku and Georgia to Kars and Istanbul.
+    evidence:
+    - source: Afghanistan MFA RECCA, The Lapis Lazuli Signing Ceremony
+      url: https://recca.mfa.gov.af/the-lapis-lazuli-signing-ceremony/
+      retrieved_at: '2026-11-20'
+    - source: Azerbaijan Transit Council (government), Lapis-Lazuli Corridor
+      url: https://transit.gov.az/en/corridors/lapis-lazuli-corridor
       retrieved_at: '2026-11-20'
   MEDGAZ:
     roles:
@@ -216,6 +247,26 @@ records:
     - source: Trans Adriatic Pipeline AG - home page
       url: https://www.tap-ag.com/
       retrieved_at: '2026-11-20'
+  TITR:
+    roles:
+      CN: terminal
+      KZ: transit
+      AZ: transit
+      GE: transit
+      TR: terminal
+    basis: The TITR association and the Azerbaijani government describe the route from China through Kazakhstan,
+      across the Caspian, through Azerbaijan and Georgia, and on through Türkiye (Baku–Tbilisi–Kars) towards Europe;
+      Türkiye is the last country named on the main route.
+    evidence:
+    - source: TITR International Association, home page
+      url: https://middlecorridor.com/en
+      retrieved_at: '2026-11-20'
+    - source: TITR International Association, History
+      url: https://middlecorridor.com/ru/ob-assotsiatsii/history
+      retrieved_at: '2026-11-20'
+    - source: Azerbaijan Transit Council (government), East-West Corridor
+      url: https://transit.gov.az/en/corridors/east-west-corridor
+      retrieved_at: '2026-11-20'
   TURKSTREAM:
     roles:
       RU: origin
@@ -260,6 +311,9 @@ deferred:
     branch.'
   GNEAPIPE: Bolivian gas reaches the GNEA through the Juana Azurduy feeder, so the GNEA itself starts in Argentina
     and BO is not on its own route (roster question).
+  INSTCAGREEMENT: 'The 2000 INSTC agreement has parties that are not on the main route (Armenia, Belarus, Kazakhstan,
+    Kyrgyzstan, Oman, Syria, Tajikistan, Türkiye, Ukraine; Bulgaria observer). A separate treaty record with that
+    roster, as for TAR and TARAGREEMENT, is not added yet: no treaty text or depositary list was read.'
   KMAAPIPE: The sources read describe the South Caucasus Pipeline, not the Kazi-Magomed–Astara route, so they do
     not settle this record.
   MEGP: Sources state only "Algeria to Spain/Portugal via Morocco"; whether Portugal is on this pipeline or reached

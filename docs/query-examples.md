@@ -1333,7 +1333,7 @@ WHERE institutional_design IS NOT NULL
 ORDER BY authority_level NULLS LAST, id;
 ```
 
-**Expected:** 34 rows (the pilot cohort). EU, UNSC and WTO are `high`; G7 and APEC are `low`;
+**Expected:** 55 rows (the reviewed cohort). EU, UNSC and WTO are `high`; G7 and APEC are `low`;
 UPU, WMO and OPEC are `medium`; NATO and G-20 are NULL because their sources do not settle
 `decision_force`.
 Asymmetric vetoes are in `institutional_design.veto_holders` (UNSC: CN, FR, GB, RU, US).
