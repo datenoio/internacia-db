@@ -276,6 +276,17 @@ def get_blocktypes_schema() -> pa.Schema:
         [
             pa.field("id", pa.string(), nullable=False),
             ("name", pa.string()),
+            ("description", pa.string()),
+            (
+                "deprecated",
+                pa.struct(
+                    [
+                        ("replacements", pa.list_(pa.string())),
+                        ("removal", pa.string()),
+                        ("note", pa.string()),
+                    ]
+                ),
+            ),
             ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),
         ]
     )

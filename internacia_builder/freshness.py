@@ -125,21 +125,31 @@ def changed_base_records(
     root: Path, base: str, source_dir: str = "data/intblocks"
 ) -> dict[str, dict[str, Any] | None]:
     """``{relative path: record at the merge base, or None if new}`` for YAML files under
-    ``source_dir`` that differ from the merge base (committed, uncommitted or untracked)."""
+    ``source_dir`` that differ from the merge base (committed, uncommitted or untracked).
+
+    A file moved between category directories is compared with its record at the old path,
+    so a move alone does not make a record look new.
+    """
     merge_base = (_git(root, "merge-base", base, "HEAD") or "").strip() or base
     changed = (_git(root, "diff", "--name-only", merge_base, "--", source_dir) or "").splitlines()
     changed += (_git(root, "ls-files", "--others", "--exclude-standard", "--", source_dir) or "").splitlines()
+    renamed_from: dict[str, str] = {}
+    for line in (_git(root, "diff", "--name-status", "-M", merge_base, "--", source_dir) or "").splitlines():
+        parts = line.split("\t")
+        if len(parts) == 3 and parts[0].startswith("R"):
+            renamed_from[parts[2]] = parts[1]
     records: dict[str, dict[str, Any] | None] = {}
-    for path in sorted(set(changed)):
+    for path in sorted(set(changed) - set(renamed_from.values())):
         if path.endswith(".yaml"):
-            text = _git(root, "show", f"{merge_base}:{path}")
+            text = _git(root, "show", f"{merge_base}:{renamed_from.get(path, path)}")
             records[path] = (yaml.safe_load(text) or {}) if text is not None else None
     return records
 
 
 # Repository taxonomy fields: they classify the record under docs/intblock-inclusion-policy.md
-# and say nothing about the roster, so reclassifying a record does not attest its members.
-CLASSIFICATION_FIELDS = frozenset({"scope_category"})
+# and data/blocktypes/blocktypes.yaml and say nothing about the roster, so reclassifying a
+# record does not attest its members.
+CLASSIFICATION_FIELDS = frozenset({"scope_category", "blocktype"})
 
 
 def _enrichment_metadata_fields() -> frozenset[str]:

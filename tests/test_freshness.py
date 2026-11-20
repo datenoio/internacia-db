@@ -1,7 +1,15 @@
 """last_verified KPI and the rule for new or changed records."""
 from datetime import date
 
-from internacia_builder.freshness import check_changed_records, kpi_markdown, last_verified_kpi, load_tier1
+import subprocess
+
+from internacia_builder.freshness import (
+    changed_base_records,
+    check_changed_records,
+    kpi_markdown,
+    last_verified_kpi,
+    load_tier1,
+)
 
 TODAY = date(2026, 10, 22)
 
@@ -80,6 +88,36 @@ def test_reclassifying_a_record_does_not_need_last_verified():
     assert check_changed_records([("q.yaml", reclassified)], {"q.yaml": before}, "origin/main") == []
     renamed = {**reclassified, "name": "Quad"}
     assert check_changed_records([("q.yaml", renamed)], {"q.yaml": before}, "origin/main")
+
+
+def test_moving_and_reordering_blocktypes_does_not_need_last_verified():
+    before = {"id": "NAFO", "blocktype": ["intorg", "fisheries"], "includes": [{"id": "CA"}]}
+    moved = {**before, "blocktype": ["fisheries", "intorg"]}
+    assert check_changed_records([("n.yaml", moved)], {"n.yaml": before}, "origin/main") == []
+
+
+def test_a_moved_file_is_compared_with_its_old_path(tmp_path):
+    def git(*args):
+        subprocess.run(["git", *args], cwd=tmp_path, check=True, capture_output=True)
+
+    git("init", "-q")
+    git("config", "user.email", "t@example.invalid")
+    git("config", "user.name", "t")
+    old = tmp_path / "data/intblocks/intorg/NAFO.yaml"
+    old.parent.mkdir(parents=True)
+    old.write_text("id: NAFO\nblocktype:\n- intorg\n- fisheries\nincludes:\n- id: CA\n", encoding="utf-8")
+    git("add", ".")
+    git("commit", "-q", "-m", "base")
+    git("branch", "base")
+    (tmp_path / "data/intblocks/fisheries").mkdir()
+    git("mv", "data/intblocks/intorg/NAFO.yaml", "data/intblocks/fisheries/NAFO.yaml")
+
+    changed = changed_base_records(tmp_path, "base")
+    assert changed == {
+        "data/intblocks/fisheries/NAFO.yaml": {
+            "id": "NAFO", "blocktype": ["intorg", "fisheries"], "includes": [{"id": "CA"}],
+        },
+    }
 
 
 def test_tier1_list_is_loaded():
