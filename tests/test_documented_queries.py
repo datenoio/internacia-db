@@ -740,11 +740,11 @@ def test_authority_level_recipe(con):
     rows = dict(
         (row[0], row[2]) for row in con.execute(_documented_sql("Authority level from institutional design")).fetchall()
     )
-    assert len(rows) == 29
+    assert len(rows) == 34
     assert {rows[i] for i in ("EU", "UNSC", "WTO")} == {"high"}
     assert {rows[i] for i in ("G7", "APEC")} == {"low"}
-    assert {rows[i] for i in ("UPU", "WMO")} == {"medium"}
-    assert rows["NATO"] is None
+    assert {rows[i] for i in ("UPU", "WMO", "OPEC")} == {"medium"}
+    assert {rows[i] for i in ("NATO", "G-20", "CIS")} == {None}
     veto = con.execute("SELECT institutional_design.veto_holders FROM intblocks WHERE id = 'UNSC'").fetchone()[0]
     assert sorted(veto) == ["CN", "FR", "GB", "RU", "US"]
 
