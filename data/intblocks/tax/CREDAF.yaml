@@ -6,6 +6,8 @@ blocktype:
 status: formal
 scope_category: igo
 founded: '1982'
+active_period:
+  start: '1982'
 geographic_scope: regional
 regions:
 - Africa
@@ -24,20 +26,17 @@ acronyms:
 - lang: en
   value: CREDAF
 headquarters:
-  city: Yaoundé
-  country: CM
-  coordinates:
-    lat: 3.848
-    lng: 11.5021
-legal_status: non-governmental
+  city: Paris
+  country: FR
+  location: 86, allée de Bercy, 75574 Paris Cedex 12
+secretariat:
+  location: 86, allée de Bercy, 75574 Paris Cedex 12, France
+  head: Secretary General
+legal_status: Non-profit French-speaking non-governmental association (self-description) whose members are national tax administrations, admitted at the request of their heads with accreditation from the supervising minister
 partof: NTO
 membership_count: 30
 membership_count_type: organizations
-description: Francophone non-profit association founded in Yaoundé in 1982 that facilitates
-  dialogue and exchange among senior officials of tax administrations from 30 French-speaking
-  member countries across four continents. Promotes multilateral international cooperation
-  through annual conferences, director seminars, working groups, and thematic meetings,
-  and develops practical tax guidance through peer learning and best-practice sharing.
+description: Francophone association of national tax administrations that promotes dialogue, peer learning and multilateral cooperation among their senior officials. It grew out of meetings convened by the French General Directorate of Taxes in Paris in 1972 and 1978; its constitutive act and statutes were drawn up in Yaoundé, Cameroon, in 1982. CREDAF has 30 member administrations in Africa, the Americas, Asia and Europe, plus Revenu Québec as an associate member since 2020. It holds an annual conference and General Assembly, director seminars, working groups and thematic meetings, and publishes practical guidance from members' experience. The secretariat is in Paris. CREDAF is a founding member of the Network of Tax Organizations (NTO) and supports the Addis Tax Initiative.
 tags:
 - CREDAF
 - tax
@@ -55,6 +54,10 @@ topics:
   name: Taxation
 - key: regional_cooperation
   name: Regional Cooperation
+- key: capacity_building
+  name: Capacity Building
+- key: information_exchange
+  name: Information Exchange
 includes:
 - id: DZ
   name: Algeria
@@ -67,11 +70,13 @@ includes:
 - id: BJ
   name: Benin
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: BF
   name: Burkina Faso
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: BI
   name: Burundi
   type: country
@@ -83,7 +88,8 @@ includes:
 - id: CM
   name: Cameroon
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: CA
   name: Canada
   type: country
@@ -107,19 +113,23 @@ includes:
 - id: CI
   name: Cote d'Ivoire
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: DJ
   name: Djibouti
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: FR
   name: France
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: GA
   name: Gabon
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: GN
   name: Guinea
   type: country
@@ -135,7 +145,8 @@ includes:
 - id: LB
   name: Lebanon
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: MG
   name: Madagascar
   type: country
@@ -143,11 +154,13 @@ includes:
 - id: ML
   name: Mali
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: MA
   name: Morocco
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: MR
   name: Mauritania
   type: country
@@ -155,7 +168,8 @@ includes:
 - id: NE
   name: Niger
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: ST
   name: Sao Tome and Principe
   type: country
@@ -163,66 +177,122 @@ includes:
 - id: SN
   name: Senegal
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: TD
   name: Chad
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: TG
   name: Togo
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: TN
   name: Tunisia
   type: country
-  status: member
+  status: founding_member
+  joined: '1982'
 - id: REVENU-QC
   name: Revenu Québec
   type: organization
   status: associate_member
   joined: '2020'
-notes: CREDAF was initially named "Centre de Rencontres et d'Études des Dirigeants
-  des Administrations fiscales" and adopted its current name in 2018 during the general
-  assembly in Haiti. The organization was created in Yaoundé in 1982; founding members
-  were Benin, Burkina Faso, Cameroon, Chad, Djibouti, France, Côte d'Ivoire, Lebanon,
-  Mali, Morocco, Niger, Senegal, Togo, and Tunisia. CREDAF groups senior officials
-  from 30 French-speaking member countries across four continents, plus Revenu Québec
-  as associate member since 2020. CREDAF is a founding member of the Network of Tax
-  Organizations (NTO) and an Addis Tax Initiative (ATI) supporting organisation. It
-  has cooperation agreements with CIAT, OECD, UNDP, OIF, FERDI, and other partners.
+founding_members:
+- BJ
+- BF
+- CM
+- TD
+- DJ
+- FR
+- GA
+- CI
+- LB
+- ML
+- MA
+- NE
+- SN
+- TG
+- TN
+previous_names:
+- id: fr
+  name: Centre de Rencontres et d'Études des Dirigeants des Administrations Fiscales
+  period: 1982-2018
+- id: en
+  name: Center for Meetings and Studies of Managers of Tax Administrations
+  period: 1982-2018
+notes: >-
+  At the request of the French General Directorate of Taxes, heads of tax administrations first met in Paris in 1972
+  and 1978; a third meeting in Abidjan decided to create an association, and the constitutive act and statutes were
+  drawn up in Yaoundé in 1982. Founding member administrations: Benin, Burkina Faso, Cameroon, Chad, Côte d'Ivoire,
+  Djibouti, France, Gabon, Lebanon, Mali, Morocco, Niger, Senegal, Togo and Tunisia. The Centre de Rencontres et
+  d'Études des Dirigeants des Administrations Fiscales took its current name by decision of the 2018 General Assembly
+  in Haiti. Members are national tax administrations: their heads apply to the secretariat with accreditation from
+  their supervising minister, admission is confirmed by the General Assembly, and members pay an annual contribution.
+  The membership roster in includes lists the country of each member administration; Revenu Québec has been an
+  associate member since 2020. Executive Bureau: President Ludovic Itoua (Director General of Taxes and Domains,
+  Republic of the Congo); Vice-President Barnabé Muakadi Muamba (Director General of Taxes, DR Congo); Secretary
+  General Catherine Lemesle; Deputy Secretary General Ismaïla Diallo. Recent annual conferences: Lebanon (2012), Congo
+  (2013), Côte d'Ivoire (2014), DR Congo (2015), Gabon (2016), Togo (Lomé, 2017), Haiti (2018), Cameroon (2019), France
+  (2022), Côte d'Ivoire (2024), and the 39th conference in Conakry, Guinea (9-12 June 2026); the 2025 General Assembly
+  met in Kinshasa on 17 June 2025. CREDAF is a founding member of the Network of Tax Organizations (NTO) and an
+  Addis Tax Initiative (ATI) supporting organisation. It has cooperation agreements with CIAT (2013), the OECD (2015),
+  the UNDP Dakar hub for development strategy and public finance (2016), the OIF (2017), FERDI (2017) and Mines
+  ParisTech (2017).
 other_names:
 - id: fr
   name: Cercle de Réflexion et d'Échange des Dirigeants des Administrations Fiscales
 - id: en
-  name: Circle of Reflection and Exchange of Tax Administration Leaders
+  name: Circle of Reflection and Exchange of Managers of Tax Administrations
+last_verified: '2026-11-21'
 provenance:
 - field: description
-  source: CREDAF official website
-  retrieved_at: '2026-06-15'
+  source: CREDAF official website (presentation and history pages)
+  retrieved_at: '2026-11-21'
   url: https://credaf.org/en/presentation-3-2/
 - field: founded
-  source: CREDAF official website
-  retrieved_at: '2026-06-15'
+  source: CREDAF official website (history page)
+  retrieved_at: '2026-11-21'
   url: https://credaf.org/history/
+- field: founding_members
+  source: CREDAF official website (history page)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/history/
+- field: previous_names
+  source: CREDAF official website (presentation page)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/presentation-3-2/
+- field: other_names
+  source: CREDAF official website (presentation page)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/presentation-3-2/
 - field: headquarters
-  source: CREDAF official website
-  retrieved_at: '2026-06-15'
-  url: https://credaf.org/history/
+  source: CREDAF official website (site footer address)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/
+- field: secretariat
+  source: CREDAF official website (site footer address; Executive Bureau page)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/bureau-executif-credaf/
 - field: includes
-  source: CREDAF official website
-  retrieved_at: '2026-06-15'
+  source: CREDAF official website (member countries page; history page for founding members)
+  retrieved_at: '2026-11-21'
   url: https://credaf.org/en/member-countries/
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://credaf.org/
+  source: CREDAF official website (presentation and membership pages)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/adhesion-2/
 - field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://credaf.org/
+  source: CREDAF official website (member countries page)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/member-countries/
 - field: membership_count
-  source: official sources
-  retrieved_at: '2026-08-02'
-  url: https://credaf.org/
-  note: membership_count counts national tax administrations; unit classified 2026-08,
-    count value from earlier enrichment
+  source: CREDAF official website (presentation page, 30 members and 1 associate member)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/presentation-3-2/
+  note: membership_count counts national tax administrations (full members only)
+- field: notes
+  source: CREDAF official website (history, Executive Bureau, conferences and international organisations pages)
+  retrieved_at: '2026-11-21'
+  url: https://credaf.org/en/oi-2/
