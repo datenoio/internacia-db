@@ -32,9 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
   The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
   unchanged (648 on v4.2.0 data, 36 with a status).
-
-### Fixed
-
 - `ASIANHIGHWAY` `regions` listed all six continents, including Africa, the Americas and
   Oceania. They now follow its states parties: Asia, Europe, Caucasus, Central Asia, East Asia,
   Middle East, South Asia and Southeast Asia.
