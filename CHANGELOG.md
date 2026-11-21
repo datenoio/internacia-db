@@ -116,6 +116,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- `ECOWAS` was missing Mauritania (`MR`), one of the 15 signatories of the 1975 Treaty of Lagos.
+  It is now listed as `former_member`, joined 1975-05-28 and left 2000-12, per the ECOWAS
+  Creation (History) page. The page also says Mauritania signed an associate-membership
+  agreement in August 2017. That agreement is kept in the entry's note, because it is not
+  membership.
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
   "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
