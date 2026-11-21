@@ -1,4 +1,5 @@
 id: ITU
+name: International Telecommunication Union
 blocktype:
 - unagency
 - technology
@@ -12,7 +13,16 @@ institutional_design:
   independent_organs:
   - dispute_panel
   mutual_defence: false
+founded: '1865-05-17'
+active_period:
+  start: '1866-01-01'
+geographic_scope: global
+regions:
+- worldwide
 partof: UN
+legal_status: intergovernmental
+recognition_status: Specialized agency of the United Nations for telecommunications
+  under the agreement of 15 November 1947, in force 1 January 1949
 languages:
 - ar
 - en
@@ -23,895 +33,1248 @@ languages:
 links:
 - url: https://www.itu.int/
   type: website
+- url: https://www.itu.int/hub/membership/our-members/directory/?myitu-members-states=true&request=countries
+  type: website
 - url: https://en.wikipedia.org/wiki/International_Telecommunication_Union
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q376150
   type: wikidata
-name: International Telecommunication Union
-includes:
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: LI
-  name: Liechtenstein
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
-- id: MH
-  name: Marshall Islands
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: BS
-  name: Bahamas, The
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
-  type: country
-  status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: KW
-  name: Kuwait
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: OM
-  name: Oman
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: CG
-  name: Congo, Rep.
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: MK
-  name: North Macedonia
-  type: country
-  status: member
-- id: AL
-  name: Albania
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: AD
-  name: Andorra
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia, The
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
-- id: CV
-  name: Cabo Verde
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
-- id: NG
-  name: Nigeria
-  type: country
-  status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: RW
-  name: Rwanda
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: VA
-  name: Vatican City
-  type: country
-  status: member
-founded: '1865'
-geographic_scope: global
-headquarters:
-  city: Geneva
-  country: CH
-  coordinates:
-    lat: 46.2236
-    lng: 6.1403
-legal_status: intergovernmental
-membership_count: 194
-wikidata_id: Q376150
-description: Specialized agency of the United Nations for information and communication
-  technologies
-tags:
-- ITU
-- communication
-- ICT
-- information
-- technology
-- telecommunications
-- unagency
-topics:
-- key: technology
-  name: Technology
-- key: communication
-  name: Communication
-other_names:
-- id: en
-  name: International Telecommunication Union
-- id: ar
-  name: الاتحاد الدولي للاتصالات
-- id: zh
-  name: 國際電信聯盟
-- id: fr
-  name: Union internationale des télécommunications
-- id: ru
-  name: Международный союз электросвязи
-- id: es
-  name: Unión Internacional de Telecomunicaciones
-- id: de
-  name: Internationale Fernmeldeunion
-- id: pt
-  name: União Internacional de Telecomunicações
 acronyms:
 - lang: en
   value: ITU
 - lang: fr
   value: UIT
+- lang: es
+  value: UIT
+- lang: pt
+  value: UIT
 - lang: ru
   value: МСЭ
 - lang: zh
-  value: 國際電聯
-- lang: zh
   value: 国际电联
 - lang: zh
+  value: 國際電聯
+- lang: zh
   value: 国际电信联盟
-last_verified: '2026-10-25'
+previous_names:
+- id: en
+  name: International Telegraph Union
+  period: 1865-1933
+- id: fr
+  name: Union télégraphique internationale
+  period: 1865-1933
+headquarters:
+  city: Geneva
+  country: CH
+  coordinates:
+    lat: 46.22294
+    lng: 6.136776
+secretariat:
+  organization: General Secretariat
+  location: Place des Nations, 1211 Geneva 20, Switzerland
+  head: Secretary-General
+includes:
+- id: AD
+  name: Andorra
+  type: country
+  status: member
+  joined: '1993-11-12'
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+  joined: '1972-06-27'
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+  joined: '1928-04-12'
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+  joined: '1987-02-04'
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '1922-06-02'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '1992-06-30'
+- id: AO
+  name: Angola
+  type: country
+  status: member
+  joined: '1976-10-13'
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '1889-01-01'
+- id: AT
+  name: Austria
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: AU
+  name: Australia
+  type: country
+  status: member
+  joined: '1878-05-27'
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+  joined: '1992-04-10'
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+  joined: '1992-10-20'
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+  joined: '1967-08-16'
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+  joined: '1973-09-05'
+- id: BE
+  name: Belgium
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+  joined: '1962-01-16'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '1880-09-18'
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+  joined: '1975-01-01'
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+  joined: '1963-02-16'
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '1961-01-01'
+- id: BN
+  name: Brunei Darussalam
+  type: country
+  status: member
+  joined: '1984-11-19'
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+  joined: '1907-06-01'
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '1877-07-04'
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+  joined: '1974-08-19'
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
+  joined: '1988-09-15'
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+  joined: '1968-04-02'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '1947-05-07'
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+  joined: '1981-12-16'
+- id: CA
+  name: Canada
+  type: country
+  status: member
+  joined: '1908-07-01'
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+  joined: '1961-12-06'
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+  joined: '1960-12-02'
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+  joined: '1960-12-13'
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+  joined: '1960-12-23'
+- id: CL
+  name: Chile
+  type: country
+  status: member
+  joined: '1908-01-01'
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+  joined: '1960-12-22'
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '1920-09-01'
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+  joined: '1914-08-25'
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+  joined: '1932-09-13'
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  joined: '1918-01-16'
+- id: CV
+  name: Cabo Verde
+  type: country
+  status: member
+  joined: '1976-09-10'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '1961-04-24'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '1993-01-01'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+  joined: '1977-11-22'
+- id: DK
+  name: Denmark
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '1996-10-28'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+  joined: '1926-07-11'
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+  joined: '1963-05-03'
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+  joined: '1920-04-17'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '1992-04-22'
+  note: First ITU member in 1922; membership resumed on 1992-04-22.
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '1876-12-09'
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+  joined: '1993-08-06'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  joined: '1932-02-20'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1920-09-01'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '1971-05-05'
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+  joined: '1993-03-18'
+- id: FR
+  name: France
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+  joined: '1960-12-28'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '1871-02-24'
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+  joined: '1981-11-17'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '1993-01-07'
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+  joined: '1957-05-17'
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+  joined: '1974-05-27'
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  joined: '1959-03-09'
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+  joined: '1970-07-02'
+- id: GR
+  name: Greece
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+  joined: '1914-07-10'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '1976-01-15'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '1967-03-08'
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+  joined: '1925-10-27'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '1992-06-03'
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+  joined: '1927-10-10'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '1949-01-01'
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+  joined: '1923-12-08'
+- id: IL
+  name: Israel
+  type: country
+  status: member
+  joined: '1948-06-24'
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '1869-01-01'
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+  joined: '1928-11-12'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '1869-01-01'
+- id: IS
+  name: Iceland
+  type: country
+  status: member
+  joined: '1906-10-01'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+  joined: '1963-02-18'
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+  joined: '1947-05-20'
+- id: JP
+  name: Japan
+  type: country
+  status: member
+  joined: '1879-01-29'
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  joined: '1964-04-11'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '1994-01-20'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '1952-04-10'
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+  joined: '1986-11-03'
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+  joined: '1976-01-05'
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+  joined: '2006-03-15'
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
+  joined: '1975-09-24'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '1952-01-31'
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+  joined: '1959-08-14'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '1993-02-23'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '1952-04-03'
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  joined: '1924-01-12'
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+  joined: '1997-09-04'
+- id: LI
+  name: Liechtenstein
+  type: country
+  status: member
+  joined: '1963-07-25'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  joined: '1897-01-01'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '1927-10-10'
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+  joined: '1967-05-26'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '1991-10-12'
+  note: First ITU member in 1923; membership resumed on 1991-10-12.
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '1866-03-02'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '1991-11-11'
+  note: First ITU member in 1921; membership resumed on 1991-11-11.
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  joined: '1953-02-03'
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+  joined: '1956-11-01'
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+  joined: '1908-07-01'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '1992-10-20'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2006-06-21'
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+  joined: '1961-05-11'
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+  joined: '1996-02-22'
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
+  joined: '1993-05-04'
+- id: ML
+  name: Mali
+  type: country
+  status: member
+  joined: '1960-10-21'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '1937-09-15'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '1964-08-27'
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+  joined: '1962-04-18'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '1965-01-01'
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+  joined: '1969-08-30'
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+  joined: '1967-02-28'
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+  joined: '1965-02-19'
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+  joined: '1908-07-01'
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '1958-02-03'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+  joined: '1975-11-04'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '1984-01-25'
+- id: NE
+  name: Niger
+  type: country
+  status: member
+  joined: '1960-11-14'
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+  joined: '1961-04-11'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '1926-05-12'
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+  joined: '1957-12-05'
+- id: NR
+  name: Nauru
+  type: country
+  status: member
+  joined: '1969-06-10'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: member
+  joined: '1878-06-03'
+- id: OM
+  name: Oman
+  type: country
+  status: member
+  joined: '1972-04-28'
+- id: PA
+  name: Panama
+  type: country
+  status: member
+  joined: '1914-07-14'
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  joined: '1915-07-12'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '1975-10-31'
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '1912-05-25'
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+  joined: '1947-08-26'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '1921-01-01'
+- id: PT
+  name: Portugal
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: PW
+  name: Palau
+  type: country
+  status: member
+  joined: '2024-09-19'
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+  joined: '1927-09-27'
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+  joined: '1973-03-27'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '1866-02-09'
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  joined: '2001-06-01'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  joined: '1962-12-12'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '1949-02-07'
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '1987-07-27'
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+  joined: '1999-09-17'
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  joined: '1957-10-23'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: SG
+  name: Singapore
+  type: country
+  status: member
+  joined: '1965-10-22'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '1992-06-16'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: member
+  joined: '1993-02-23'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+  joined: '1961-12-30'
+- id: SM
+  name: San Marino
+  type: country
+  status: member
+  joined: '1977-03-25'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '1960-11-15'
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+  joined: '1962-09-28'
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+  joined: '1976-07-15'
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  joined: '2011-10-03'
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+  joined: '1976-09-01'
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  joined: '1927-10-12'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+  joined: '1924-01-12'
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+  joined: '1970-11-11'
+- id: TD
+  name: Chad
+  type: country
+  status: member
+  joined: '1960-11-25'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '1961-09-14'
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+  joined: '1883-04-21'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '1994-04-28'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  joined: '2010-08-24'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+  joined: '1993-05-07'
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  joined: '1956-12-14'
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '1972-01-07'
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+  joined: '1866-01-01'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '1965-03-06'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+  joined: '1996-08-15'
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+  joined: '1962-10-31'
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '1947-05-07'
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+  joined: '1963-03-08'
+- id: US
+  name: United States
+  type: country
+  status: member
+  joined: '1908-07-01'
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  joined: '1902-07-01'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '1992-07-10'
+- id: VA
+  name: Vatican City
+  type: country
+  status: member
+  joined: '1929-06-01'
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+  joined: '1983-03-25'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  joined: '1920-08-13'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '1951-09-24'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '1988-03-30'
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  joined: '1988-10-07'
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+  joined: '1931-01-01'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '1910-01-01'
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+  joined: '1965-08-23'
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+  joined: '1981-02-10'
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: observer
+  note: 'State of Palestine: observer under Plenipotentiary Resolution 99 (Rev. Dubai,
+    2018), with additional rights such as raising points of order and submitting proposals;
+    no vote.'
+founding_members:
+- AT
+- BE
+- CH
+- DE
+- DK
+- ES
+- FR
+- GR
+- HU
+- IT
+- NL
+- 'NO'
+- PT
+- RU
+- SE
+- TR
+membership_count: 194
+wikidata_id: Q376150
+official_documents:
+- url: https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf
+  type: document
+  name: Constitution of the International Telecommunication Union
+- url: https://www.itu.int/en/council/Documents/basic-texts/Convention-E.pdf
+  type: document
+  name: Convention of the International Telecommunication Union
+- url: https://www.itu.int/pub/S-CONF-PLEN
+  type: document
+  name: Collection of the basic texts of the International Telecommunication Union
+- url: https://www.itu.int/pub/R-REG-RR
+  type: document
+  name: Radio Regulations
+- url: https://www.itu.int/pub/T-REG-ITR
+  type: document
+  name: International Telecommunication Regulations
+social_media:
+  twitter: https://twitter.com/ITU
+  facebook: https://www.facebook.com/ITU
+  linkedin: https://www.linkedin.com/company/international-telecommunication-union
+  youtube: https://www.youtube.com/channel/UCQdZWRxu7uCjkCay0OCnvWw
+  instagram: https://www.instagram.com/ituofficial/
+description: United Nations specialized agency for information and communication technologies,
+  headquartered in Geneva, Switzerland. Founded in Paris on 17 May 1865 as the International
+  Telegraph Union, it took its present name in 1934 and became a UN specialized agency
+  in 1949. ITU allocates the global radio spectrum and satellite orbits through the
+  Radio Regulations, develops international telecommunication standards (ITU-T Recommendations),
+  and supports telecommunication development in developing countries, working through
+  its Radiocommunication, Standardization and Development Sectors.
+tags:
+- ITU
+- UIT
+- МСЭ
+- 国际电联
+- 國際電聯
+- ICT
+- broadcasting
+- communication
+- information
+- radio_spectrum
+- satellite_orbits
+- standards
+- technology
+- telecommunications
+- unagency
+topics:
+- key: telecommunications
+  name: Telecommunications
+- key: technology
+  name: Technology
+- key: communication
+  name: Communication
+- key: standardization
+  name: Standardization
+- key: connectivity
+  name: Connectivity
+other_names:
+- id: en
+  name: International Telecommunication Union
+- id: fr
+  name: Union internationale des télécommunications
+- id: ar
+  name: الاتحاد الدولي للاتصالات
+- id: zh
+  name: 國際電信聯盟
+- id: ru
+  name: Международный союз электросвязи
+- id: es
+  name: Unión Internacional de Telecomunicaciones
+- id: pt
+  name: União Internacional de Telecomunicações
+- id: de
+  name: Internationale Fernmeldeunion
+- id: it
+  name: Unione internazionale delle telecomunicazioni
+- id: tr
+  name: Uluslararası Telekomünikasyon Birliği
+- id: uk
+  name: Міжнародний союз електрозв’язку
+- id: ja
+  name: 国際電気通信連合
+- id: ko
+  name: 국제전기통신연합
+notes: 'Membership comprises 194 Member States: the 193 UN members and the Vatican.
+  More than 1,000 companies, universities, research institutes and international organizations
+  take part as Sector Members, Associates and Academia; they are not modelled in includes.
+  includes[].joined is the ITU ''Member Since'' date. The 1865 International Telegraph
+  Convention took effect on 1 January 1866, the date ITU gives for its first members;
+  successor states carry their own dates (Serbia 2001, Montenegro 2006), and Estonia,
+  Latvia and Lithuania carry the date their membership resumed in 1991-1992. Founding
+  members are the 20 states that signed the convention in Paris on 17 May 1865, mapped
+  to present states as ITU does: the Austrian Empire to Austria and Hungary; Baden,
+  Bavaria, Hamburg, Hanover, Prussia, Saxony and Württemberg to Germany; and Sweden-Norway
+  to Sweden and Norway. The 1868 Vienna conference set up a bureau in Berne, which
+  moved to Geneva in 1948. The 1932 Madrid conference merged the International Telegraph
+  Union and the International Radiotelegraph Union under the present name, in effect
+  from 1 January 1934. The 1992 Additional Plenipotentiary Conference in Geneva organized
+  ITU into three Sectors: Radiocommunication (ITU-R), Telecommunication Standardization
+  (ITU-T) and Telecommunication Development (ITU-D). The Plenipotentiary Conference
+  meets every four years; the Council of 48 Member States governs between conferences.
+  Secretary-General Doreen Bogdan-Martin (United States), in office since 2023, was
+  re-elected at the 2026 Plenipotentiary Conference in Doha on 12 November 2026. World
+  Telecommunication and Information Society Day, 17 May, marks the signing of the
+  1865 convention.'
+last_verified: '2026-11-21'
 provenance:
 - field: institutional_design
-  source: "Constitution of the International Telecommunication Union"
-  retrieved_at: "2026-11-20"
-  url: "https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf"
+  source: Constitution of the International Telecommunication Union
+  retrieved_at: '2026-11-20'
+  url: https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf
 - field: includes
-  source: International Telecommunication Union
-  retrieved_at: '2026-10-25'
-  url: https://www.itu.int/en/ITU-R/terrestrial/fmd/pages/administrations_members.aspx
+  source: ITU Member States directory (Member Since dates)
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/hub/membership/our-members/directory/?myitu-members-states=true&request=countries
 - field: membership_count
-  source: International Telecommunication Union
-  retrieved_at: '2026-10-25'
-  url: https://www.itu.int/en/ITU-R/terrestrial/fmd/pages/administrations_members.aspx
+  source: ITU Member States directory
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/hub/membership/our-members/directory/?myitu-members-states=true&request=countries
+- field: includes
+  source: 'ITU Plenipotentiary Resolution 99 (Rev. Dubai, 2018): Status of Palestine
+    in ITU'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/council/Documents/basic-texts/RES-099-E.pdf
+- field: founding_members
+  source: 'ITU History Portal: ITU is born (1865)'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUBorn1865.aspx
+- field: founded
+  source: 'ITU History Portal: ITU is born (1865)'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUBorn1865.aspx
+- field: active_period
+  source: 'ITU History Portal: ITU is born (1865)'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUBorn1865.aspx
+- field: previous_names
+  source: 'ITU History Portal: overview of ITU''s history'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUsHistory-page-3.aspx
+- field: recognition_status
+  source: 'ITU History Portal: overview of ITU''s history'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUsHistory-page-3.aspx
+- field: headquarters
+  source: Wikidata (P159 headquarters with address and coordinates)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q376150
+  license: CC0
+- field: secretariat
+  source: ITU General Secretariat
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/osg/Pages/default.aspx
+- field: languages
+  source: Constitution of the International Telecommunication Union, Article 29
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf
+- field: official_documents
+  source: ITU basic texts
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/pub/S-CONF-PLEN
+- field: social_media
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q376150
+  license: CC0
+- field: notes
+  source: 'ITU History Portal: overview of ITU''s history'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUsHistory-page-8.aspx
+- field: notes
+  source: ITU Council
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/council/Pages/default.aspx
+- field: notes
+  source: ITU membership
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/about/Pages/membership.aspx
+- field: notes
+  source: 'ITU press release: Member States re-elect Doreen Bogdan-Martin as Secretary-General
+    (12 November 2026)'
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/mediacentre/Pages/PR-2026-11-12-SG-Election.aspx
+- field: description
+  source: ITU History Portal
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/history/Pages/ITUsHistory.aspx
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-07-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q376150
   license: CC0
 - field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-07-15'
-  url: https://www.wikidata.org/
+  source: Wikidata (P1813 short name and aliases)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q376150
   license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-07-15'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.itu.int/
-- field: geographic_scope
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.itu.int/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: https://www.itu.int/
 - field: wikidata_id
   source: Wikidata
-  retrieved_at: '2026-07-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q376150
   license: CC0
-- field: includes
-  source: ITU official member states list
-  retrieved_at: '2026-07-15'
-  url: https://www.itu.int/gladapp/Administration/Members
-- field: membership_count
-  source: ITU official member states list
-  retrieved_at: '2026-07-15'
-  url: https://www.itu.int/gladapp/Administration/Members
+- field: legal_status
+  source: Constitution of the International Telecommunication Union
+  retrieved_at: '2026-11-21'
+  url: https://www.itu.int/en/council/Documents/basic-texts/Constitution-E.pdf
