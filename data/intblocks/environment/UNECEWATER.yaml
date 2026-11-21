@@ -10,21 +10,9 @@ scope_category: treaty_body
 founded: '1992-03-17'
 active_period:
   start: '1996-10-06'
-geographic_scope: regional
+geographic_scope: global
 regions:
-- Europe
-- Africa
-- Asia
-- North America
-- Caucasus
-- Central Africa
-- Central America
-- Central Asia
-- East Africa
-- Middle East
-- South Asia
-- Southern Africa
-- West Africa
+- worldwide
 languages:
 - ar
 - zh
@@ -412,10 +400,15 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://www.wikidata.org/
   license: CC0
-- field: regions
-  source: Derived from the continents and UN M49 subregions of the parties in includes (data/countries)
+- field: geographic_scope
+  source: 'United Nations Treaty Collection: 19 of the 59 states parties are outside the UNECE region;
+    the amendments to articles 25 and 26 that open accession to them entered into force on 6 February
+    2013'
   retrieved_at: '2026-11-21'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-5&chapter=27&clang=_en
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-5-b&chapter=27&clang=_en
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
 other_names:
 - id: de
   name: Übereinkommen zum Schutz und zur Nutzung grenzüberschreitender Wasserläufe
