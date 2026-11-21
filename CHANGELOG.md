@@ -229,6 +229,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `JCPOA`: no roster change. The 8 participants, the US withdrawal on 8 May 2018 and the end
     on 18 October 2025 are now cited from the EEAS, the White House and Iran's foreign
     ministry, not only Wikipedia.
+- The `regions` label `Global` is now `worldwide`, the label other global records use, on 40
+  intblocks. 39 of them had `regions: [Global]`, for example ATT, CWC, WCO, WEF, BIMCO and IRF.
+  SIDS keeps its other labels (Caribbean, Pacific, Africa). 34 records gain a `provenance` entry
+  for `regions`. CTBTO, MSC, BIMCO, GSP, GSTP and IRF keep the entry they already had, because
+  only the spelling of the label changed. BUDCONV, COVAX and JCPOA, the other three records
+  with `Global`, are covered by the roster check entry above.
 - `UPU` checked on 2026-11-21 against the UPU member countries list and its 192 member pages.
   - Cook Islands (`CK`) and Niue (`NU`) were listed as members. The UPU covers them under New
     Zealand's membership, so they are now `represented`. `AW` is added as the coded `member` for
