@@ -9,6 +9,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Seven more `statistics` records, checked on 2026-11-21 (1318 intblocks):
+  - `AITRS` (Arab Institute for Training and Research in Statistics, Amman, an `igo`): 22
+    countries, whose national statistical offices are its members. Its own sources do not
+    call it an organ of the League of Arab States, so `partof` is not set.
+  - `UNSTATCOM` (United Nations Statistical Commission, `partof: ECOSOC`): the 34 members
+    of 2026, from the UN Statistics Division list. `UNSC` is already the Security Council.
+  - Five `intergovernmental_body` records with `membership_applicability: not_applicable`,
+    as for `GCCPO`, so the parent's members are not copied: `GCCSTAT` (GCC-Stat, `CCASG`),
+    `SESRIC` (`OIC`), `STATAFRIC` (AU Institute for Statistics, `AFUNION`), `ISSEA`
+    (`CEMAC`) and `SIAP` (UN Statistical Institute for Asia and the Pacific; ESCAP has no
+    record, so `partof` is not set).
+- Seven `statistics` records, checked on 2026-11-21 (1311 intblocks). Before this, the
+  blocktype held only `CISSTAT`.
+  - `AFRISTAT` (Economic and Statistical Observatory of Sub-Saharan Africa, an `igo`): 22
+    member states, with the 14 founders of 1993. Source: AFRISTAT's member-states page.
+  - `AFRICANSTATISTICSCHARTER` (African Charter on Statistics, a `treaty_body`, in force since
+    8 February 2015): 26 parties. Source: the AU status list of 19 September 2023. The AU uses
+    no acronym for the Charter, so the id is descriptive.
+  - `SDDSPLUS` (32 adherents), `SDDS` (48 subscribers) and `EGDDS` (110 participants): the
+    three tiers of the IMF Data Standards Initiatives, as `reference_enumeration` records
+    with `partof: IMF`. Source: the IMF DSBB. An economy appears in only one tier, as on
+    DSBB, so the 32 SDDS Plus adherents are not repeated in `SDDS`.
+  - `CES` (Conference of European Statisticians, an `intergovernmental_body` of UNECE): the
+    56 UNECE member States and the 8 OECD members outside the region; Argentina, Brazil,
+    Mongolia and the Philippines are `participant`. Source: UNECE's 2022 report to the UN
+    Statistical Commission.
+  - `ESS` (European Statistical System, a `policy_forum`): the EU-27 and the four EFTA
+    States. Sources: Eurostat, EFTA and Regulation (EC) No 223/2009.
+- `wikidata_exclusions.yaml` entries for `AFRICANSTATISTICSCHARTER`, `SDDSPLUS`, `EGDDS` and
+  `CES`, which have no Wikidata item.
 - `AH` (Asian Highway Network, Wikidata Q728802), a `project`/`transport` record for the ESCAP
   road network itself, checked on 2026-11-21 (1304 intblocks). It mirrors `TAR`: no country
   roster (`membership_applicability: not_applicable`), because the 32 countries the network
@@ -83,6 +113,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Cookbook results that the new records change: the UN-majority blocks without China or the US
+  return 59 rows (16 without both, now including `EGDDS`), UN grandchildren return 44 (the
+  three IMF standards and `UNSTATCOM` under `ECOSOC`), and `membership_count` mismatches total 186 (`CES` counts 64 members
+  and 4 participants; with the `SICA` and `CEI` changes below).
 - `SICA` (Central American Integration System) is enriched and reclassified, checked on
   2026-11-21 against archived sica.int pages, the UN Treaty Series and OAS SICE copies of
   the instruments (live sica.int refused automated requests):
@@ -136,6 +170,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
   The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
   unchanged (648 on v4.2.0 data, 36 with a status).
+
 - `ASIANHIGHWAY` `regions` listed all six continents, including Africa, the Americas and
   Oceania. They now follow its states parties: Asia, Europe, Caucasus, Central Asia, East Asia,
   Middle East, South Asia and Southeast Asia.
@@ -194,8 +229,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (regional, Europe), the topic physics and 19 provenance entries. CERN joins the reviewed
   `institutional_design` cohort, which now has 110 records (`reviewed_110`); with `CEI`, 111
   records carry `institutional_design`. CERN adds one more membership-count mismatch,
-  because it lists 40 entries, observers included, against a count of 36. With `SICA`,
-  `CEI` and ITER, the declared vs actual roster recipe returns 187 mismatches.
+  because it lists 40 entries, observers included, against a count of 36. With the records
+  above, the declared vs actual roster recipe returns 188 mismatches.
 
 ## [4.2.0] - 2026-11-21
 
