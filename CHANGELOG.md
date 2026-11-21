@@ -211,6 +211,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     and `TW` move from 5 to 6 observer entries, and `CN` from 6 to 7. "Declared vs actual
     roster size" counts 187 mismatches, one more than with `SICA`, `CEI` and `CES`:
     `membership_count` stays 6, the member states, while `includes` now has 12 entries.
+- Three global records checked against official sources on 2026-11-21. Each gains
+  `last_verified`, and its `regions` label `Global` becomes `worldwide`.
+  - `BUDCONV` (Budapest Convention on Cybercrime): parties now follow the Council of Europe
+    Treaty Office chart, which counts 84 ratifications and accessions; the record had 69. 20
+    parties are added, with the date each ratified or acceded as `joined`; among them are AM, AZ,
+    IL, MC, SM, eight African states and five Pacific states. Kazakhstan and Seychelles are in
+    the count, but the Convention enters into force for them only in 2027. IE and ZA (signed
+    only), MX and UY (invited to accede only) and SV (not on the chart) are removed.
+  - `COVAX`: Gavi says COVAX closed on 31 December 2023, so the record is now `historical`
+    with `dissolved: 2023-12-31`. Participants now follow Gavi's list of participating economies
+    of 12 May 2021, the latest list that names them, and their status changes from `member` to
+    `participant`. That list has 177 economies: 56 self-financing, 29 "Team Europe" and 92
+    eligible for the COVAX AMC. Kosovo and West Bank and Gaza are added. 19 economies not on the
+    list are removed, among them US, RU, TR, ZA, MY and TH. The notes record that Gavi counts
+    195 participants and donors at closure but names none beyond the list.
+  - `JCPOA`: no roster change. The 8 participants, the US withdrawal on 8 May 2018 and the end
+    on 18 October 2025 are now cited from the EEAS, the White House and Iran's foreign
+    ministry, not only Wikipedia.
 - `EROPA` checked on 2026-11-21 against the EROPA website (history, constitution, secretariat,
   centers): `headquarters.city` is now Quezon City (it held the college name), and admission
   dates come from the official history, so Nepal joined in December 1980, not 1983. Founding
@@ -226,9 +244,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Gabon and Togo, which joined the Commonwealth in 2022. The record drops `partof: COMMONWEALTH`
   and sets `membership_applicability: not_applicable`, as `ACU` does, and leaves
   `scope_category.igo_legal_status_allowlist`. `memberships` loses 55 rows and the documented
-  dissolved-with-roster recipe returns 34 rows. The record also gains the last registered office,
-  the 2019 dissolution vote and reasons, the 1998 start of the Innovations Awards (not 1997),
-  conference examples and three topics.
+  dissolved-with-roster recipe has one row fewer (35 with `COVAX` added). The record also gains
+  the last registered office, the 2019 dissolution vote and reasons, the 1998 start of the
+  Innovations Awards (not 1997), conference examples and three topics.
 - `CREDAF` checked on 2026-11-21 against credaf.org. `headquarters` is now Paris (86, allée de
   Bercy), where the secretariat sits, not Yaoundé, where the statutes were drawn up in 1982.
   The 15 founding administrations, Gabon among them, are in `founding_members` and marked
