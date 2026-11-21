@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_73
-expected_count: 73
+cohort_id: reviewed_89
+expected_count: 89
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -1197,6 +1197,262 @@ records:
     - {source: 'Convention Establishing a Customs Co-operation Council, 1950 (University of Oslo, jus.uio.no copy)',
       url: 'https://www.jus.uio.no/english/services/library/treaties/09/9-04/wco_customs_council.html', retrieved_at: '2026-11-21'}
 
+  # --- wave 4 (2026-11-21) -------------------------------------------------
+  ACD:
+    institutional_design: {decision_force: non_binding}
+    basis: The ACD website describes the Dialogue as an informal and non-institutionalized forum for Asian foreign
+      ministers and lists voluntarism among its core values. No founding treaty, decision rule, organ or enforcement
+      text was read, so all other fields are omitted.
+    evidence:
+    - {source: 'Asia Cooperation Dialogue, About ACD (organization site)', url: 'https://www.acd-dialogue.org/about-acd.html',
+      retrieved_at: '2026-11-21'}
+  ACS:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Convention Art III names consultation, cooperation and concerted action, with economic integration, trade
+      and the Caribbean Sea as the activities. Art VII: permanent organs are only the Ministerial Council and the
+      Secretariat. Art XI(4): the Council decides substantive matters by consensus and procedural ones by two thirds.
+      Art XXIX: disputes on the Convention are settled by the Council. No suspension, sanction, court or defence clause.
+      Whether Council decisions bind is not stated.'
+    evidence:
+    - {source: 'Convention Establishing the Association of Caribbean States (1994), official ACS site (acs_convention_eng.doc
+        linked from the ACS document page)', url: 'https://www.acs-aec.org/sites/default/files/acs_convention_eng.doc',
+      retrieved_at: '2026-11-21'}
+    - {source: ACS document page for the Convention (preamble and download link), url: 'https://www.acs-aec.org/en/document/convention-establishing-association-caribbean-states-acs',
+      retrieved_at: '2026-11-21'}
+  ALADI:
+    institutional_design:
+      mandate: economic
+      decision_rule: qualified_majority
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Treaty of Montevideo 1980 Arts 1-2 aim at economic integration and trade promotion. Art 28: political
+      organs are the Council of Foreign Ministers (supreme, Art 30), the Evaluation and Convergence Conference and
+      the Committee of Representatives. Art 43: all three decide by two thirds of members, with a list of matters
+      needing two thirds and no negative vote. The Secretariat is a technical body (Art 29) and the treaty has no
+      court, sanction, suspension or defence provision (Art 47 only lets a member refer a grievance to the Committee
+      for recommendations).'
+    evidence:
+    - {source: 'Tratado de Montevideo 1980, Portuguese text as Decreto 87.054/1982 (Brazilian Federal Senate legislation
+        site; the ALADI site was unreachable)', url: 'https://legis.senado.leg.br/norma/509694/publicacao/15645253',
+      retrieved_at: '2026-11-21'}
+  ARCTICC:
+    institutional_design: {mandate: sectoral, decision_rule: consensus}
+    basis: The Arctic Council's own page says all decisions and statements require consensus of the eight Arctic States
+      and that the Ottawa Declaration mandate excludes military security. It describes the focus as sustainable development
+      and environmental protection and says the Council cannot implement or enforce its recommendations. The Declaration
+      text itself could not be fetched, and no source read says outputs are non-binding or that the Council lacks
+      legal personality, so decision_force is omitted.
+    evidence:
+    - {source: 'Arctic Council, "Organization" (organization site)', url: 'https://arctic-council.org/about/', retrieved_at: '2026-11-21'}
+    - {source: 'Arctic Council, "History of the Arctic Council" (organization site)', url: 'https://arctic-council.org/about/history/',
+      retrieved_at: '2026-11-21'}
+  BEACST:
+    institutional_design:
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Annex to the Kirkenes Declaration (Terms of Reference) para 1: the Council is a forum for cooperation
+      among participants; para 9: decisions of the Council and its subsidiary bodies are taken by consensus. The 13
+      paragraphs establish no court, panel, sanction, suspension or defence provision. The 2021 Administrative Manual
+      lists members Denmark, Finland, Iceland, Norway, Russia, Sweden and the EU; the Barents Regional Council statement
+      of 24 Oct 2023 acknowledges Russia''s decision to withdraw from the BEAC on 18 September 2023 after suspension
+      of activities with Russia in March 2022. Bindingness of decisions is not stated, so decision_force is omitted.'
+    evidence:
+    - {source: 'Annex to the Kirkenes Declaration, Terms of Reference, 11 January 1993 (barents-council.org, PDF decoded
+        locally)', url: 'https://barents-council.org/document/460_doc_AnnextotheKirkenesDeclaration.pdf', retrieved_at: '2026-11-21'}
+    - {source: 'Administrative Manual of the Barents Euro-Arctic Council, 2021 (barents-council.org, PDF decoded locally)',
+      url: 'https://barents-council.org/document/2021-11-02-ADMINISTRATIVE-MANUAL.pdf', retrieved_at: '2026-11-21'}
+    - {source: 'Statement of the Barents Regional Council, Joensuu, 24 October 2023 (barents-council.org)', url: 'https://barents-council.org/img/2023-10-24-BRC-Joensuu-Statement-of-the-BRC.pdf',
+      retrieved_at: '2026-11-21'}
+  BIMSTEC:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'BIMSTEC Charter Art 1: the purposes are mainly economic growth, connectivity, trade and investment, with
+      peace and stability in the region as one purpose among eleven. Art 8: the Summit is the supreme decision-making
+      body and its decisions are by consensus; Art 18: all decisions are by consensus. Art 14: the Secretariat is
+      a general secretariat. No court, parliament or arbitration organ (Art 19 asks for dialogue, Art 29 for good
+      offices); no suspension, sanction or defence clause. The Charter does not state whether decisions bind.'
+    evidence:
+    - {source: 'BIMSTEC Charter (2022), official BIMSTEC site (scanned PDF read by OCR)', url: 'https://bimstec.org/images/content_page_pdf/1696679710_BIMSTEC%20Charter.pdf',
+      retrieved_at: '2026-11-21'}
+    - {source: BIMSTEC Charter page (bimstec.org), url: 'https://bimstec.org/charter', retrieved_at: '2026-11-21'}
+  CEFTA:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'CEFTA 2006 Art 1 sets trade-liberalisation objectives. Art 40(4): the Joint Committee of party representatives
+      takes decisions where the Agreement provides and otherwise recommends; Art 41(2): it acts by consensus; Art
+      41(3): a representative may accept a decision with a reservation pending domestic legal requirements. Art 43
+      and Annex 9: an ad hoc Arbitral Tribunal whose award is final and binding. Art 42(4) lets a party take provisional
+      rebalancing measures itself; the Committee does not decide sanctions. No suspension, expulsion or defence clause.'
+    evidence:
+    - {source: 'CEFTA 2006 consolidated text (Annex 1 to the Agreement on Amendment and Accession), official CEFTA
+        site', url: 'https://cefta.int/wp-content/uploads/2016/05/ANN1CEFTA-2006-Final-Text.pdf', retrieved_at: '2026-11-21'}
+    - {source: CEFTA legal documents page (links to the Agreement and Annexes 8-9), url: 'https://cefta.int/?p=178',
+      retrieved_at: '2026-11-21'}
+  CENSAD:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      decision_force: binding
+      independent_organs: [none]
+    basis: 'Revised Treaty Art 3 names regional security and sustainable development as the two action areas (peace,
+      political dialogue, economic cooperation, free movement). Art 12: the Conference of Heads of State deliberates
+      by consensus (unanimity for accession and treaty revision) and its acts bind member states and Community institutions.
+      Organs (Art 9) are the Conference, Executive Council, Peace and Security Council, Sustainable Development Council,
+      Committee of Ambassadors and the Executive Secretariat; the Economic, Social and Cultural Council is consultative
+      (Art 37). No court or parliament is established. Enforcement and mutual_defence are omitted, because Art 6 refers
+      breaches to the Executive Council for unspecified action, Art 50 is loss of rights for arrears, and Art 5 refers
+      to a Security Charter that was not read.'
+    evidence:
+    - {source: 'Community of Sahel-Saharan States Revised Treaty (2013), PDF copy hosted by the World Trade Institute
+        (EDIT database)', url: 'https://edit.wti.org/document/show/pdf/5dbd7174-6ed3-403d-a5ed-9b1de76cd34e', retrieved_at: '2026-11-21'}
+  CICA:
+    institutional_design:
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+    basis: 'CICA Rules of Procedure (as amended 2021) Rule 1.1: CICA is an intergovernmental forum for discussion
+      on peace, security and stability in Asia on the basis of consensus, and Rule 1.2 defines consensus as the absence
+      of formal objection from any member. Rule 3.1: the Summit is the supreme governing body; Rule 1.9 and 1.11 list
+      only the Summit, Ministerial Meeting, Senior Officials Committee and a permanent Secretariat. The Rules contain
+      no suspension, sanction or expulsion measure and no court or arbitration organ.'
+    evidence:
+    - {source: 'CICA Rules of Procedure as amended in 2021 (MM/2021/DEC/3), official CICA site', url: 'https://www.s-cica.org/docs/277464106194d41b57fc1.pdf',
+      retrieved_at: '2026-11-21'}
+  COI:
+    institutional_design:
+      mandate: general
+      decision_rule: unanimity
+      independent_organs: [dispute_panel]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Revised Victoria Agreement (signed 6 March 2020) Art 2 covers diplomatic cooperation, peace and stability,
+      economic and trade cooperation, maritime security and more, so general. Art 5: the COI decides by unanimity
+      of its member states; Art 7 makes the Council of Ministers the main decision-making organ. Art 16: disputes
+      between members go to the Council or to an arbitration body whose decisions bind the parties. Art 4 organs are
+      summit, council, liaison officers committee and a general secretariat only; no suspension, sanction, expulsion
+      or defence clause.'
+    evidence:
+    - {source: 'Accord portant revision de l''accord general de cooperation entre les Etats membres de la COI (2020),
+        text annexed to the French National Assembly ratification bill No 150', url: 'https://questions.assemblee-nationale.fr/dyn/16/textes/l16b0150_projet-loi.pdf',
+      retrieved_at: '2026-11-21'}
+  NCM:
+    institutional_design:
+      decision_rule: unanimity
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Helsinki Treaty (Lovdata consolidated Norwegian text) Art 62: Council of Ministers decisions must be unanimous
+      (each country one vote, procedural questions by simple majority, abstention does not block). Art 63: decisions
+      bind the countries, but a decision requiring parliamentary approval does not bind that country until approved,
+      and autonomous territories are bound only to the extent they join. The treaty text read has no court, arbitration,
+      suspension, expulsion or defence provision; Art 70 only provides for withdrawal.'
+    evidence:
+    - {source: 'Samarbeidsavtale mellom Norge, Danmark, Finland, Island og Sverige (Helsingforsavtalen), consolidated
+        text (Lovdata)', url: 'https://lovdata.no/dokument/NL/lov/1962-03-23-2', retrieved_at: '2026-11-21'}
+  NORDEN:
+    institutional_design:
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Helsinki Treaty (Lovdata) Arts 44-45: the Nordic Council can take initiatives, give advice and adopt recommendations
+      (rekommandasjoner) addressed to governments or the Council of Ministers; Art 65 only requires the Ministers
+      to report on measures taken. Its members are elected by national parliaments (Arts 47-48), government representatives
+      do not vote (Art 49). No voting majority for recommendations is stated (Art 59 concerns rules of procedure only),
+      so decision_rule is omitted. No court, sanction or defence provision.'
+    evidence:
+    - {source: 'Samarbeidsavtale mellom Norge, Danmark, Finland, Island og Sverige (Helsingforsavtalen), consolidated
+        text (Lovdata)', url: 'https://lovdata.no/dokument/NL/lov/1962-03-23-2', retrieved_at: '2026-11-21'}
+  OECS:
+    institutional_design:
+      mandate: general
+      decision_rule: unanimity
+      decision_force: binding
+      independent_organs: [court, dispute_panel]
+      enforcement: [sanctions]
+      mutual_defence: false
+    basis: 'Revised Treaty of Basseterre Art 4 lists economic union alongside foreign-policy harmonisation and defence
+      of sovereignty. Art 8.4-8.8: the Authority of Heads of Government is the supreme organ; non-procedural decisions
+      need the affirmative vote of all full members present and voting (absentees count as abstaining after 30 days)
+      and bind all members and organs. Dispute Settlement Annex: the Eastern Caribbean Court of Appeal''s treaty jurisdiction
+      (para 6.3) and arbitral tribunals (para 5.10) give binding outcomes. Economic Union Protocol Art 30.4: the Economic
+      Affairs Council by majority authorises a member to suspend obligations towards a non-complying member. The OECS
+      Assembly (Art 10) is consultative and the Commission (Art 12) has state-named members. Art 4.2(a) only lists
+      defence as an area of coordination; no assistance clause.'
+    evidence:
+    - {source: 'Revised Treaty of Basseterre establishing the OECS Economic Union (2010), Government of Saint Lucia
+        copy', url: 'https://www.govt.lc/media.govt.lc/www/resources/legislation/revisedtreatyofbasseterre.pdf', retrieved_at: '2026-11-21'}
+  SACU:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      independent_organs: [dispute_panel]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'SACU Agreement Art 2 sets customs-union and revenue-sharing objectives. Art 17: unless otherwise provided,
+      decisions of SACU institutions (Council of Ministers, Art 8, and Summit, Art 7A) are by consensus. Art 13: disputes
+      go to an ad hoc Tribunal whose majority decision is final and binding; the Tariff Board (Art 11) only recommends
+      and the Commission (Art 9) is made of member officials. The agreement has no suspension, sanction, expulsion
+      or defence clause (Art 49 is withdrawal only). Whether Council decisions bind is not stated, so decision_force
+      is omitted.'
+    evidence:
+    - {source: 'SACU Agreement 2002 as amended 2013 (sacu.int, linked from the SACU Agreements page; text read via
+        PDF extraction)', url: 'https://www.sacu.int/uploads/documents/6a7ae39b41cba945b083e93a2e1a103d7cee629c.pdf',
+      retrieved_at: '2026-11-21'}
+  SELA:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Panama Convention Arts 2-3 and 5 make SELA a body for economic and social consultation, coordination and
+      cooperation. Art 15 and 17: the Latin American Council sets general policy, interprets the Convention and approves
+      common positions by consensus, while other functions (budget, programme, quotas) use two thirds or an absolute
+      majority. Art 19 bars decisions that adversely affect national policies; Arts 18 and 24 bind only the participants
+      in specific projects. Organs (Chapter IV) are the Council, Action Committees and a Permanent Secretariat; no
+      court or sanction clause.'
+    evidence:
+    - {source: 'Panama Convention Establishing the Latin American Economic System (SELA), text via University of Oslo
+        Faculty of Law', url: 'https://jus.uio.no/english/services/library/treaties/09/9-05/latin_am_economic.html',
+      retrieved_at: '2026-11-21'}
+  UNWTO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'Art 3: the fundamental aim is promotion and development of tourism. Art 9 makes the General Assembly of
+      member delegates the supreme organ and Art 29(1) sets a simple majority of Full Members present and voting as
+      the default (two thirds only for budget, headquarters and matters the Assembly deems important, Art 29(2)).
+      Organs are only Assembly, Executive Council of elected Full Members, and Secretariat (Art 8, 14); no court or
+      panel. Art 34 lets the Assembly suspend a member by a two-thirds vote; the arrears loss of vote in the Financing
+      Rules is automatic and not counted. No defence clause. Bindingness of Assembly decisions is not settled (Art
+      12 speaks of recommendations and Art 19 of decisions and recommendations), so decision_force is omitted.'
+    evidence:
+    - {source: 'Statutes of the World Tourism Organization, Mexico City 1970 (Australian Treaty Series 1979 No 15,
+        Australian Parliament / DFAT copy; original 1970 text, later amendments not read)', url: 'https://aphref.aph.gov.au/house/committee/jsct/2march2004/treaties/wtotext.pdf',
+      retrieved_at: '2026-11-21'}
+
 # Candidates not applied, and why. Revisit when a qualifying source is read.
 deferred:
   ALBA: 'No qualifying source could be read: alba-tcp.org refused the connection and the Venezuelan foreign ministry
@@ -1207,7 +1463,13 @@ deferred:
     is not in force; the Preparatory Commission resolution could not be read.
   IGAD: The 1996 Agreement is being replaced by the 2023 Treaty, whose entry into force (endorsed for 15 September
     2026) is not confirmed by a qualifying source; the instrument in force is not settled.
+  NAM: No qualifying source settles any field; the Movement has no charter, and the Cartagena document could not
+    be read.
   OECD: oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
     repository copy of the 1960 Convention could be read.
   SAARC: 'No qualifying source could be read: the SAARC Secretariat charter pages return 404 and only search snippets
     were available.'
+  SPC: 'No qualifying source could be read: spc.int and AustLII returned 403, and the UN Treaty Series copy is image-only.'
+  TURKKON: No text of the Nakhchivan Agreement or the Charter could be read; the official sites returned 403.
+  V4: The only statement found on bindingness is an interview article on the Visegrad Group site, not an instrument
+    or official statement.
