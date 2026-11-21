@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        183,
+        184,
         set(),
     ),
     (
@@ -588,7 +588,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 200
+    assert count == 201
 
 
 def test_world_bank_region_filter_uses_region_id(con):
@@ -740,7 +740,7 @@ def test_authority_level_recipe(con):
     rows = dict(
         (row[0], row[2]) for row in con.execute(_documented_sql("Authority level from institutional design")).fetchall()
     )
-    assert len(rows) == 108
+    assert len(rows) == 109
     assert {rows[i] for i in ("EU", "UNSC", "WTO")} == {"high"}
     assert {rows[i] for i in ("G7", "APEC")} == {"low"}
     assert {rows[i] for i in ("UPU", "WMO", "OPEC")} == {"medium"}
