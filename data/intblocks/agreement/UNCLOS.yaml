@@ -28,12 +28,7 @@ active_period:
   start: '1994-11-16'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 legal_status: treaty
 membership_count: 172
 notes: Membership consists of states parties to the convention as recorded in the UN Treaty Collection (chapter XXI.6). As
@@ -791,3 +786,6 @@ provenance:
   source: United Nations Treaty Collection
   retrieved_at: '2026-07-14'
   url: https://treaties.un.org/Pages/ViewDetailsIII.aspx?src=TREATY&mtdsg_no=XXI-6&chapter=21&clang=_en
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

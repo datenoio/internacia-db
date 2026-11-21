@@ -12,12 +12,19 @@ active_period:
   start: '1996-10-06'
 geographic_scope: regional
 regions:
+- Europe
 - Africa
 - Asia
-- Europe
 - North America
-- Oceania
-- South America
+- Caucasus
+- Central Africa
+- Central America
+- Central Asia
+- East Africa
+- Middle East
+- South Asia
+- Southern Africa
+- West Africa
 languages:
 - ar
 - zh
@@ -405,6 +412,10 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://www.wikidata.org/
   license: CC0
+- field: regions
+  source: Derived from the continents and UN M49 subregions of the parties in includes (data/countries)
+  retrieved_at: '2026-11-21'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-5&chapter=27&clang=_en
 other_names:
 - id: de
   name: Übereinkommen zum Schutz und zur Nutzung grenzüberschreitender Wasserläufe

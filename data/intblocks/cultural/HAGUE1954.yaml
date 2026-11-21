@@ -11,12 +11,7 @@ active_period:
   start: '1956-08-07'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 links:
 - url: https://www.unesco.org/en/heritage-armed-conflicts/states-parties
   type: website
@@ -792,3 +787,6 @@ provenance:
   source: UNESCO Legal Affairs — official States Parties export for Convention 179
   url: https://www.unesco.org/strapi/api/la0002/export?convention=179&langcode=en
   retrieved_at: '2026-10-22'
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
