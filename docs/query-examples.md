@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 58 rows — 35 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`), 15 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`).
+**Expected:** 59 rows — 35 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`), 16 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`).
 
 Filter to a single exclusion pattern:
 
@@ -823,8 +823,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 40 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7;
-`AU`, `CH`, `CN`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `PL`, `TH`, `TR`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `MX`, `NO`, `NZ`, `PE`, `PH`, `PT`, `TM` and `TW` with 5.
+**Expected:** 40 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `CN`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7;
+`AU`, `CH`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `MX`, `PL`, `TH`, `TR`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `NO`, `NZ`, `PE`, `PH`, `PT` and `TM` with 5.
 
 ## Geography and membership
 
@@ -946,7 +946,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 40 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 44 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -1021,7 +1021,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 185 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 187 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.

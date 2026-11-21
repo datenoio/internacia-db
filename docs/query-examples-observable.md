@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 40 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7; `AU`, `CH`, `CN`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `PL`, `TH`, `TR`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `MX`, `NO`, `NZ`, `PE`, `PH`, `PT`, `TM` and `TW` with 5.
+**Expected:** 40 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `CN`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7; `AU`, `CH`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `MX`, `PL`, `TH`, `TR`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `NO`, `NZ`, `PE`, `PH`, `PT` and `TM` with 5.
 
 ---
 
@@ -483,7 +483,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 58 rows. Inspect `blocktype` /
+**Expected:** 59 rows. Inspect `blocktype` /
 `status` before treating informal groupings as formal organizations.
 
 ---

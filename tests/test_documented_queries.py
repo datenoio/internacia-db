@@ -273,7 +273,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            58,
+            59,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -288,8 +288,8 @@ ORDER BY b.id
         ),
         (
             "NOT b.has_china AND NOT b.has_usa",
-            15,
-            {"NAM", "ICW", "APMINEBANCONVENTION"},
+            16,
+            {"NAM", "ICW", "APMINEBANCONVENTION", "EGDDS"},
         ),
     ],
     ids=[
@@ -438,7 +438,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        40,
+        44,
         set(),
     ),
     (
@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        185,
+        187,
         set(),
     ),
     (
