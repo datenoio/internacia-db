@@ -4,6 +4,16 @@ blocktype:
 - bank
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: economic
+  decision_rule: weighted_voting
+  decision_force: binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  - expulsion
+  mutual_defence: false
 founded: '1966-12-19'
 active_period:
   start: '1966-12-19'
@@ -397,6 +407,10 @@ other_names:
 - id: zh
   name: 亞洲開發銀行
 provenance:
+- field: institutional_design
+  source: "Agreement Establishing the Asian Development Bank, 1965 original text (UN Treaty Collection, Ch X-4)"
+  retrieved_at: "2026-11-21"
+  url: "https://treaties.un.org/doc/Treaties/1966/08/19660822%2009-43%20PM/Ch_X_04p.pdf"
 - field: description
   source: official sources
   retrieved_at: '2026-07-12'

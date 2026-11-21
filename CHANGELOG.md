@@ -26,6 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   COMMONWEALTH, CPLP, EAC, ECCAS, ECO, FAO, GUAM, ILO, IMO, OIF, OSCE, PIF, SICA, UEMOA and
   UNESCO. IGAD (its 2023 treaty's entry into force is unconfirmed) and SAARC (no readable
   source) are deferred, with BRICS and OECD.
+- `institutional_design` for 18 more organizations, checked on 2026-11-21 (73 in all): ADB,
+  AFDB, AIIB, BIS, CBSS, EBRD, IADB, IEA, IFAD, INTERPOL, IOM, IRENA, ISA_SEABED, OPCW,
+  PACIFICALLIANCE, UMA, UNIDO and WCO. Arbitration that covers only disputes with former members
+  is not an independent organ, as for WB. ALBA (no readable source) and CTBTO (the record is the
+  Preparatory Commission, while the sources describe the organs of the CTBT, which is not in
+  force) are deferred. `UNIDO` gains `last_verified`.
+- Nine more `border_status` entries from Canadian and UK travel advice, checked on 2026-11-21
+  (15 in all): `closed` for ERI–ETH, FIN–RUS, GUY–VEN (no official crossing), IND–PAK and
+  KHM–THA; `restricted` for AFG–PAK, BLR–LTU, BLR–POL and EST–RUS. No source gives a start
+  date, so `since` is omitted. LVA–RUS, NOR–RUS and ISR–SYR are deferred.
 
 ## [4.1.0] - 2026-11-20
 

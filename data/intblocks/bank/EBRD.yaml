@@ -4,6 +4,17 @@ blocktype:
 - bank
 status: formal
 scope_category: igo
+institutional_design:
+  mandate: economic
+  decision_rule: weighted_voting
+  decision_force: binding
+  independent_organs:
+  - none
+  enforcement:
+  - suspension
+  - expulsion
+  - conditionality
+  mutual_defence: false
 founded: '1991-03-28'
 active_period:
   start: '1991-03-28'
@@ -436,6 +447,10 @@ other_names:
 - id: zh
   name: 欧洲复兴开发银行
 provenance:
+- field: institutional_design
+  source: "Basic Documents of the EBRD, July 2025 edition (ebrd.com PDF)"
+  retrieved_at: "2026-11-21"
+  url: "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/institutional-documents/basic-documents-of-the-ebrd-july-2025-english.pdf"
 - field: description
   source: official sources
   retrieved_at: '2026-07-12'

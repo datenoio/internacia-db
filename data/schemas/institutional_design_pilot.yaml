@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_55
-expected_count: 55
+cohort_id: reviewed_73
+expected_count: 73
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -899,10 +899,312 @@ records:
     evidence:
     - {source: Constitution of UNESCO (unesco.org), url: 'https://www.unesco.org/en/legal-affairs/constitution', retrieved_at: '2026-11-20'}
 
+  # --- wave 3 (2026-11-21) -------------------------------------------------
+  ADB:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Agreement Art 1: foster economic growth and development in Asia and the Far East. Art 28(1): all powers
+      of the Bank are vested in the Board of Governors; Art 33(1)-(2): votes are basic plus share-proportional votes,
+      and Governors decide by a majority of the voting power represented. Art 42: Governors may suspend a member (two
+      thirds of Governors, three fourths of voting power), who ceases to be a member after one year unless restored.
+      Art 61: binding three-arbitrator award, but only for disputes with former members or after termination of operations.
+      No defence clause. The arbitration clause covers only disputes with former members or on termination of operations,
+      so it is not recorded as an independent organ (as for WB).'
+    evidence:
+    - {source: 'Agreement Establishing the Asian Development Bank, 1965 original text (UN Treaty Collection, Ch X-4)',
+      url: 'https://treaties.un.org/doc/Treaties/1966/08/19660822%2009-43%20PM/Ch_X_04p.pdf', retrieved_at: '2026-11-21'}
+  AFDB:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Agreement Art 1: contribute to economic development and social progress of regional members. Art 35(1)-(2):
+      each member has 625 votes plus one per share, and the Board of Governors decides in general by 66 2/3 percent
+      of voting power represented. Art 44: Governors may suspend a member (70 percent of voting power); membership
+      ends after one year unless restored. Art 62: binding three-arbitrator award for disputes with former members
+      or on termination. No defence clause. The arbitration clause covers only disputes with former members or on
+      termination of operations, so it is not recorded as an independent organ (as for WB).'
+    evidence:
+    - {source: 'Agreement Establishing the African Development Bank (University of Oslo, jus.uio.no copy)', url: 'https://www.jus.uio.no/english/services/library/treaties/13/13-01/african_development_bank.html',
+      retrieved_at: '2026-11-21'}
+  AIIB:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Articles Art 1: foster sustainable economic development and infrastructure connectivity in Asia. Art 28(1)-(2):
+      votes are basic, share and founding-member votes, and the Board of Governors decides by a majority of votes
+      cast unless otherwise provided. Art 38: Governors may suspend a member by Super Majority; membership ends after
+      one year unless restored. Art 55: binding three-arbitrator award, for disputes with former members or on termination.
+      No defence clause. The arbitration clause covers only disputes with former members or on termination of operations,
+      so it is not recorded as an independent organ (as for WB).'
+    evidence:
+    - {source: AIIB Articles of Agreement (aiib.org PDF), url: 'https://www.aiib.org/en/about-aiib/basic-documents/_download/articles-of-agreement/basic_document_english-bank_articles_of_agreement.pdf',
+      retrieved_at: '2026-11-21'}
+  BIS:
+    institutional_design: {mandate: economic, decision_rule: weighted_voting, mutual_defence: false}
+    basis: 'Statutes Art 3: promote co-operation of central banks and provide facilities for international financial
+      operations. Arts 14 and 44: voting at the General Meeting is by central banks (or nominees) in proportion to
+      shares subscribed in each country; Art 57 amendments pass by majority of the General Meeting. Art 54: disputes
+      on the Statutes go to the Hague Agreement tribunal for final decision. No suspension, expulsion or defence clause
+      found.'
+    evidence:
+    - {source: 'Statutes of the Bank for International Settlements, text as amended 7 November 2016 (bis.org PDF)',
+      url: 'https://www.bis.org/about/statutes-en.pdf', retrieved_at: '2026-11-21'}
+  CBSS:
+    institutional_design:
+      mandate: general
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'CBSS Terms of Reference (revised 14 June 2024) para 5: a forum for political dialogue and practical cooperation
+      in all multilateral regional areas the members agree on; para 22: decisions are taken by consensus. The Council
+      of foreign ministers and the Committee of Senior Officials represent states, and the Secretariat is permanent
+      staff. No court, sanction, suspension, expulsion or defence provision is present; the document does not say
+      that decisions bind, so decision_force is omitted.'
+    evidence:
+    - {source: 'Council of the Baltic Sea States Terms of Reference, revised 14 June 2024 (CBSS website; PDF read
+        as text)', url: 'https://cbss.org/wp-content/uploads/2024/07/revised-cbss-terms-of-reference-2024-06-14.pdf',
+      retrieved_at: '2026-11-21'}
+  EBRD:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion, conditionality]
+      mutual_defence: false
+    basis: 'Agreement Art 1: foster transition to open market-oriented economies in countries applying multiparty
+      democracy and pluralism. Art 29(1)-(2): voting power equals subscribed shares, and the Board of Governors decides
+      by a majority of voting power of members voting. Art 38: suspension by two thirds of Governors and two thirds
+      of voting power; membership ends after one year unless restored. Art 8(3): access to Bank resources may be suspended
+      or modified where policies are inconsistent with Art 1. Art 58: binding arbitration for former members or on
+      termination. The arbitration clause covers only disputes with former members or on termination of operations,
+      so it is not recorded as an independent organ (as for WB).'
+    evidence:
+    - {source: 'Basic Documents of the EBRD, July 2025 edition (ebrd.com PDF)', url: 'https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/institutional-documents/basic-documents-of-the-ebrd-july-2025-english.pdf',
+      retrieved_at: '2026-11-21'}
+  IADB:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Agreement Art I Sec 1: accelerate economic development of member countries. Art VIII Sec 4: each member
+      has 135 votes plus one per share, and the Board of Governors decides by a majority of total voting power. Art
+      IX Sec 2: Governors may suspend a member (two thirds of governors, three fourths of voting power); membership
+      ends after one year unless the suspension is terminated. Art XIII Sec 2: binding three-arbitrator tribunal for
+      former members or on termination. The arbitration clause covers only disputes with former members or on termination
+      of operations, so it is not recorded as an independent organ (as for WB).'
+    evidence:
+    - {source: 'Agreement Establishing the Inter-American Development Bank (University of Oslo, jus.uio.no copy)',
+      url: 'https://www.jus.uio.no/english/services/library/treaties/14/14-03/interamer-development-bank.html', retrieved_at: '2026-11-21'}
+  IEA:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: mixed
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: '1974 Agreement on an International Energy Program (original text), Art 50-52: the Governing Board of ministers
+      or delegates adopts decisions that bind Participating Countries (Art 52), recommendations do not. Art 61-62
+      set no single default: majority (weighted votes, 60 percent of combined and 50 percent of general weights) for
+      management and procedure, unanimity for decisions creating new obligations, with special majorities elsewhere,
+      so mixed. No suspension, sanction, expulsion, court or arbitration provision appears; the Management Committee,
+      Standing Groups and Secretariat are state-staffed or staff organs.'
+    evidence:
+    - {source: 'Agreement on an International Energy Program (UN Treaty Series vol 1040, I-15664; UN Treaty Collection;
+        scanned PDF read by OCR)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%201040/volume-1040-I-15664-English.pdf',
+      retrieved_at: '2026-11-21'}
+  IFAD:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [suspension, expulsion]
+      mutual_defence: false
+    basis: 'Agreement Art 2: mobilize resources for agricultural development in developing countries (a financing
+      institution). Art 6 Sec 2-3: all powers vested in the Governing Council; 1,800 votes distributed by category
+      and formula in Schedule II; decisions by a simple majority of total votes unless otherwise specified. Art 9
+      Sec 2: suspension by three fourths of votes; membership ends after one year unless restored. Art 11 Sec 2: binding
+      three-arbitrator tribunal for disputes with former members or on termination. The arbitration clause covers
+      only disputes with former members or on termination of operations, so it is not recorded as an independent organ
+      (as for WB).'
+    evidence:
+    - {source: 'Agreement establishing the International Fund for Agricultural Development, UNTS vol. 1059 No. 16041
+        (UN Treaty Collection)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%201059/volume-1059-I-16041-English.pdf',
+      retrieved_at: '2026-11-21'}
+  INTERPOL:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'INTERPOL Constitution Art 2 aims at mutual assistance between criminal police authorities; Art 3 forbids
+      political, military, religious or racial activity. Art 6: the General Assembly is the supreme authority; Art
+      14: decisions by simple majority unless the Constitution requires two thirds. Art 9 only asks Members to do
+      all within their power to carry out its decisions, so decision_force is omitted. Art 5 organs are the Assembly,
+      Executive Committee, General Secretariat, National Central Bureaus, Advisers and the Commission for the Control
+      of Files (Art 36, an independent data-protection body that fits no catalog organ). No suspension, expulsion
+      or defence provision.'
+    evidence:
+    - {source: 'Constitution of the ICPO-INTERPOL (INTERPOL website, PDF read as text)', url: 'https://www.interpol.int/content/download/590/file/Constitution%20of%20the%20ICPO-INTERPOL-EN.pdf',
+      retrieved_at: '2026-11-21'}
+  IOM:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'Constitution Art 1: migration purposes and functions. Art 7: the Council is made up of representatives
+      of Member States, one vote each. Art 24(1): decisions by a simple majority vote unless otherwise provided. Art
+      5: organs are the Council and the Administration only. Art 4(2): the Council may suspend a Member by two thirds
+      if it persistently violates the principles of the Constitution; loss of vote for arrears (Art 4(1)) is automatic
+      and not counted. Art 26: disputes go to the ICJ, which is not an IOM organ. No defence clause.'
+    evidence:
+    - {source: 'IOM Constitution and Basic Texts, 2nd edition (iom.int publications PDF)', url: 'https://publications.iom.int/system/files/pdf/iom_constitution_en.pdf',
+      retrieved_at: '2026-11-21'}
+  IRENA:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'IRENA Statute Art II promotes renewable energy. Art IX: the Assembly is the supreme organ (IX.A.1); substantive
+      matters are decided by consensus, and where none is reached the decision stands unless more than two members
+      object (IX.F), with two thirds only for the seat and Director-General. Art XVII.B: the Assembly may suspend
+      membership privileges by two thirds on Council recommendation for persistent violations; loss of vote for arrears
+      (XVII.A) is automatic and not recorded. Art XV has withdrawal but no expulsion. Council and Secretariat are
+      member-state or staff organs; Art XVI settles disputes peacefully without binding panels.'
+    evidence:
+    - {source: 'Statute of the International Renewable Energy Agency, English text (Dutch government treaty database)',
+      url: 'https://wetten.overheid.nl/BWBV0003141', retrieved_at: '2026-11-21'}
+  ISA_SEABED:
+    institutional_design:
+      decision_rule: consensus
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: UNCLOS Art 160 makes the Assembly the supreme organ; Art 159 sets two thirds of members present and voting
+      for substance, and the 1994 Agreement Annex Section 3 paras 2-3 make consensus the general rule with a two-thirds
+      vote as fallback. The Council (Art 161-162) is the executive organ, and Annex Section 3 para 4 ties Assembly
+      decisions on shared matters to Council recommendations. Art 185 lets the Assembly suspend a State Party's membership
+      rights after the Seabed Disputes Chamber finds gross and persistent violation. Art 187 gives that Chamber jurisdiction
+      over Part XI disputes.
+    evidence:
+    - {source: 'UN Convention on the Law of the Sea, Part XI (text via Wikisource)', url: 'https://en.wikisource.org/wiki/United_Nations_Convention_on_the_Law_of_the_Sea/Part_11',
+      retrieved_at: '2026-11-21'}
+    - {source: 'Agreement relating to the Implementation of Part XI, Annex Section 3 (University of Oslo)', url: 'https://jus.uio.no/english/services/library/treaties/08/8-01/part-xi-law-sea.html',
+      retrieved_at: '2026-11-21'}
+  OPCW:
+    institutional_design:
+      mandate: security
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [suspension]
+    basis: 'Chemical Weapons Convention Art VIII: the Conference of the States Parties is the principal organ (para
+      19); substantive decisions are taken as far as possible by consensus, failing which by two thirds of members
+      present and voting after a 24-hour deferral (paras 16-18). The Executive Council (41 states) and the Technical
+      Secretariat are not independent of states. Art XII(2): the Conference may restrict or suspend a State Party''s
+      rights and privileges; Art XII(3)-(4): it only recommends collective measures and refers grave cases to the
+      UN, so sanctions are not recorded. The text never says in terms that Conference decisions bind, so decision_force
+      is omitted.'
+    evidence:
+    - {source: 'Chemical Weapons Convention, Article VIII (OPCW website)', url: 'https://www.opcw.org/chemical-weapons-convention/articles/article-viii-organization',
+      retrieved_at: '2026-11-21'}
+    - {source: 'Chemical Weapons Convention, Article XII (OPCW website)', url: 'https://www.opcw.org/chemical-weapons-convention/articles/article-xii-measures-redress-situation-and-ensure-compliance',
+      retrieved_at: '2026-11-21'}
+    - {source: 'Chemical Weapons Convention, Article I (OPCW website)', url: 'https://www.opcw.org/chemical-weapons-convention/articles/article-i-general-obligations',
+      retrieved_at: '2026-11-21'}
+  PACIFICALLIANCE:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Framework Agreement (2012), as reproduced in a Colombian government copy: Art 3 aims at an area of deep
+      integration with free movement of goods, services, capital and persons; Art 4: Council of Ministers (foreign
+      and trade ministers); Art 5: decisions are adopted by consensus; Art 6: decisions form part of the Alliance''s
+      legal order without saying they bind; Art 12: only consultation, with a dispute regime left to later negotiation.
+      No court, suspension, expulsion or defence clause appears.'
+    evidence:
+    - {source: 'Framework Agreement of the Pacific Alliance, as reproduced in Colombian Law 1628 of 2013 (Colombian
+        Ministry of Foreign Affairs normograma)', url: 'https://cancilleria.gov.co/sites/default/files/Normograma/docs/ley_1628_2013.htm',
+      retrieved_at: '2026-11-21'}
+  UMA:
+    institutional_design:
+      mandate: general
+      decision_rule: unanimity
+      enforcement: [none]
+    basis: 'Treaty of Marrakesh (1989), authentic Arabic text, read in the French translation in the UN Treaty Series:
+      Art 2-3 cover political, defence, economic and cultural aims. Art 4: the Presidential Council is the supreme
+      organ; Art 6: it alone takes decisions, by unanimity. Art 13 provides a Judicial Instance with binding decisions,
+      but it is not recorded as standing because its operation was not verified; the Consultative Council (Art 12)
+      is advisory. No sanction, suspension or expulsion provision (Arts 1-19 read).'
+    evidence:
+    - {source: 'Treaty instituting the Arab Maghreb Union, UN Treaty Series vol 1546, I-26844 (UN Treaty Collection,
+        French translation; scanned PDF read by OCR)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%201546/volume-1546-I-26844-French.pdf',
+      retrieved_at: '2026-11-21'}
+  UNIDO:
+    institutional_design:
+      mandate: economic
+      decision_rule: simple_majority
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Constitution Art 1: promote and accelerate industrial development in developing countries. Art 8(6): each
+      Member has one vote in the General Conference, decisions by a majority of Members present and voting unless
+      otherwise specified. Art 22 and Annex III: disputes go to the Board, then (if the parties agree) to the ICJ
+      or an arbitral tribunal whose award binds the parties. Art 5: suspension follows automatically from UN suspension,
+      and loss of vote follows from arrears, so no measure is decided by the organization. No defence clause. Arbitration
+      applies only if the parties agree, so independent_organs is omitted.'
+    evidence:
+    - {source: 'Constitution of the United Nations Industrial Development Organization (unido.org PDF, reproduced
+        2020)', url: 'https://www.unido.org/sites/default/files/files/2020-11/19-12162_UNIDO_Constitution_ebook.pdf',
+      retrieved_at: '2026-11-21'}
+  WCO:
+    institutional_design:
+      mandate: economic
+      decision_rule: qualified_majority
+      decision_force: non_binding
+      independent_organs: [none]
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'Convention Preamble and Art III: harmonize and unify customs systems in the interest of international
+      trade. Art II(c) and VIII: the Council is made up of one delegate per Member, one vote each, with decisions
+      by two thirds of Members present and entitled to vote. Art III: functions are study, draft conventions and recommendations
+      only, and conventions bind only ratifying parties. Art V: organs are a Technical Committee and General Secretariat.
+      Art XII(c): the Council may deprive a Member of its vote for non-payment.'
+    evidence:
+    - {source: 'Convention Establishing a Customs Co-operation Council, 1950 (University of Oslo, jus.uio.no copy)',
+      url: 'https://www.jus.uio.no/english/services/library/treaties/09/9-04/wco_customs_council.html', retrieved_at: '2026-11-21'}
+
 # Candidates not applied, and why. Revisit when a qualifying source is read.
 deferred:
+  ALBA: 'No qualifying source could be read: alba-tcp.org refused the connection and the Venezuelan foreign ministry
+    page returned 404.'
   BRICS: No official BRICS or government page with usable text could be read (brics.br and mea.gov.in unreachable;
     the Kazan Declaration on kremlin.ru is a PDF that could not be extracted); only search snippets were available.
+  CTBTO: The record is the Preparatory Commission, while the sources read describe the organs of the CTBT, which
+    is not in force; the Preparatory Commission resolution could not be read.
   IGAD: The 1996 Agreement is being replaced by the 2023 Treaty, whose entry into force (endorsed for 15 September
     2026) is not confirmed by a qualifying source; the instrument in force is not settled.
   OECD: oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
