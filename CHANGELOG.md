@@ -136,7 +136,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `acronyms` carry the right language tags (for example `KGAÖ` is `tr`, `ҰҚШҰ` is `kk`), and
     `other_names` add the member-state languages (az, be, hy, kk, ky, tg, tr, uk, uz, ms).
   - Documented query counts move with the roster: one more `membership_count` mismatch and
-    three more `former_member` rows with `joined` (187 and 204 together with the CEI, SICA and CES changes).
+    three more `former_member` rows with `joined` (188 and 204 together with the CEI, SICA, CES and PARLACEN changes).
 - `SICA` (Central American Integration System) is enriched and reclassified, checked on
   2026-11-21 against archived sica.int pages, the UN Treaty Series and OAS SICE copies of
   the instruments (live sica.int refused automated requests):
@@ -217,6 +217,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the 1958 Agreement's 61 Contracting Parties are outside it, for example AU, JP, KR and ZA;
   Revision 2, which opened it, entered into force on 16 October 1995. As for other global
   records, `regions` is now `worldwide`.
+- `PARLACEN` (Central American Parliament) roster checked on 2026-11-21 against PARLACEN's
+  official observer list and press reports; `last_verified` was 2026-07-29.
+  - The record listed no observers. It now has the five on the official list as `observer`:
+    `MX`, `PR`, `MA`, `VE` and `CN` (admitted on 21 August 2023). `TW` is a former observer
+    (`joined` 1999, `left` 2023-08-21): the same plenary decision revoked the Legislative Yuan's
+    status. Russia, approved in September 2024 subject to ratification, is not on the official
+    list and is not added.
+  - Nicaragua denounced the Constitutive Treaty on 3 October 2026 "with immediate effect". The
+    treaty has no denunciation or withdrawal clause, and PARLACEN has not accepted the exit, so
+    `NI` stays a founding member and `notes` records the pending exit.
+  - The documented recipe "Countries with many observer seats" still returns 40 rows: `MX`
+    and `TW` move from 5 to 6 observer entries, and `CN` from 6 to 7. "Declared vs actual
+    roster size" counts 187 mismatches, one more than with `SICA`, `CEI` and `CES`:
+    `membership_count` stays 6, the member states, while `includes` now has 12 entries.
 
 ## [4.2.0] - 2026-11-21
 
