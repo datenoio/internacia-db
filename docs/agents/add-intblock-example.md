@@ -74,10 +74,13 @@ new record so those checks pass.
 
 ## 4. Changelog and PR
 
-Add a line under `[Unreleased]` in `CHANGELOG.md` (new intblock = MINOR when
-released). In the PR: cite the official membership source, do not hand-edit
-`data/datasets/`, and include the full build's regenerated descriptors with the YAML.
-CI rebuilds and checks the committed descriptors against its own staging directory.
+Add a `changelog.d/<slug>.md` fragment with an `### Added` entry (new intblock = MINOR
+when released); do not edit `CHANGELOG.md` and do not write running totals such as
+"(1304 intblocks)" (see [changelog.d/README.md](../../changelog.d/README.md)). In the PR:
+cite the official membership source and do not hand-edit `data/datasets/`. Run the full
+build; a new record normally leaves `data/datasets/` clean, because build manifests and
+`datapackage.json` are not committed. CI rebuilds and checks the committed descriptors
+against its own staging directory.
 
 If the change needs a new `blocktype`, a schema field, or an id rename, stop and
 open an OpenSpec proposal first ([openspec-quickstart.md](openspec-quickstart.md)).
