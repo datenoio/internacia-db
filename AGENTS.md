@@ -1,7 +1,7 @@
 # Internacia DB — AI agent guide
 
-Structured reference data: **256 countries**, **1282 intblocks** (organizations/groups),
-**82 blocktypes**. Part of the [Dateno](https://dateno.io) open-source project.
+Structured reference data: **256 countries**, **1287 intblocks** (organizations/groups),
+**83 blocktypes**. Part of the [Dateno](https://dateno.io) open-source project.
 Licensed CC-BY-4.0 (data and documentation); code is MIT.
 
 中文指南：[AGENTS.zh.md](AGENTS.zh.md) · [llms.zh.txt](llms.zh.txt)
