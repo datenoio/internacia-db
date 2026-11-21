@@ -74,6 +74,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     order. Subregions follow each country's UN M49 `subregion`: Western Asia is `Middle East`
     (except AM, AZ and GE, which are `Caucasus`), and Iran is in `South Asia`. ASIANHIGHWAY gets
     the same fix in a separate change.
+- `AGR` (European Agreement on Main International Traffic Arteries, which defines the
+  International E-road network) now links the English Wikipedia article on the network. Its
+  Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
+  `ASIANHIGHWAY`; the old reason said no English article existed.
 - `ITER` checked on 2026-11-21 against the ITER Agreement and iter.org. `name` is now the
   Article 1 name, "ITER International Fusion Energy Organization". `founded` moves from
   2006 (the signing year) to 2007-10-24, the date the Organization was established, and
