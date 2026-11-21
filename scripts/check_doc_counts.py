@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """Assert consumer-facing docs advertise the current manifest row counts.
 
-Run: python scripts/check_doc_counts.py
-Exit 1 when a listed file omits a current count or still claims a stale
-intblock headline count from pre-2.0.0 docs.
+Run: python scripts/check_doc_counts.py (after `python scripts/builder.py build`; the
+manifests are build outputs read from INTERNACIA_DATASETS_DIR, else data/datasets).
+
+Country and blocktype counts are stated exactly. The intblock count is stated rounded
+down to the hundred and written as ``N+`` (1304 -> ``1300+``; see
+internacia_builder/doc_counts.py), so adding records does not touch ten documentation
+files until the count crosses a hundred.
+
+Exit 1 when a listed file omits a current count, states an older rounded intblock count,
+or still claims a stale intblock headline count from pre-2.0.0 docs.
 """
 
 from __future__ import annotations
@@ -13,8 +20,12 @@ import re
 import sys
 from pathlib import Path
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
+from internacia_builder.doc_counts import documented_count, intblocks_floor
+from internacia_builder.paths import datasets_dir
+
 ROOT = Path(__file__).resolve().parents[1]
-DATASETS = ROOT / "data" / "datasets"
 
 # Files that publish "current dataset size" to humans and agents.
 # Historical planning docs and CHANGELOG are excluded on purpose.
@@ -35,25 +46,23 @@ REQUIRE: dict[str, tuple[str, ...]] = {
 STALE_INTBLOCKS = (1078, 1076, 1071, 1070, 1065, 1037, 1021)
 
 
-def load_counts() -> dict[str, int]:
+def load_counts(datasets: Path | None = None) -> dict[str, int]:
+    directory = datasets or datasets_dir()
     out: dict[str, int] = {}
     for name in ("countries", "intblocks", "blocktypes"):
-        path = DATASETS / f"{name}.manifest.json"
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        payload = json.loads((directory / f"{name}.manifest.json").read_text(encoding="utf-8"))
         out[name] = int(payload["row_count"])
     return out
 
 
-def check(root: Path | None = None) -> list[str]:
+def advertised(dataset: str, count: int) -> str:
+    return documented_count(dataset, count)
+
+
+def check(root: Path | None = None, counts: dict[str, int] | None = None) -> list[str]:
     base = root or ROOT
-    counts = load_counts() if root is None else {
-        name: int(
-            json.loads((base / "data" / "datasets" / f"{name}.manifest.json").read_text())[
-                "row_count"
-            ]
-        )
-        for name in ("countries", "intblocks", "blocktypes")
-    }
+    counts = counts or load_counts()
+    current_ib = counts["intblocks"]
     errors: list[str] = []
     for rel, needed in REQUIRE.items():
         path = base / rel
@@ -62,10 +71,12 @@ def check(root: Path | None = None) -> list[str]:
             continue
         text = path.read_text(encoding="utf-8")
         for dataset in needed:
-            n = counts[dataset]
-            if str(n) not in text:
-                errors.append(f"{rel}: missing current {dataset} count {n}")
-        current_ib = counts["intblocks"]
+            expected = advertised(dataset, counts[dataset])
+            if expected not in text:
+                errors.append(f"{rel}: missing current {dataset} count {expected}")
+        for older in range(1000, intblocks_floor(current_ib), 100):
+            if re.search(rf"\b{older}\+", text):
+                errors.append(f"{rel}: older rounded intblock count {older}+ (current {advertised('intblocks', current_ib)})")
         for stale in STALE_INTBLOCKS:
             if stale == current_ib:
                 continue
@@ -84,7 +95,7 @@ def main() -> int:
     counts = load_counts()
     print(
         "OK: consumer docs match manifests "
-        f"(countries={counts['countries']}, intblocks={counts['intblocks']}, "
+        f"(countries={counts['countries']}, intblocks={advertised('intblocks', counts['intblocks'])}, "
         f"blocktypes={counts['blocktypes']})"
     )
     return 0

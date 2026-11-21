@@ -87,14 +87,14 @@ python3 scripts/builder.py build
 python3 scripts/builder.py build --formats parquet,duckdb --output-dir .local-datasets
 ```
 
-After editing source data, run the full build and commit the regenerated
-`data/datasets/` descriptors with the source changes. Binary and bulk exports are
-build outputs that git ignores; CI rebuilds, checks that the committed descriptors
-match, and checks that two builds are identical.
+After editing source data, run the full build. Build manifests, `datapackage.json` and
+the binary and bulk exports are build outputs that git ignores; commit the descriptors
+git still tracks in `data/datasets/` when the build changes them. CI rebuilds, checks
+that the committed descriptors match, and checks that two builds are identical.
 
 ## Output files
 
-Generated exports are **not committed** (only manifests, `contract.json`, `datapackage.json`, the dataset card and the alias JSON are). Run `python scripts/builder.py build` once to create `data/datasets/internacia.duckdb` and the other files locally, or download them from the [latest release](https://github.com/datenoio/internacia-db/releases/latest).
+Generated exports are **not committed** (only `contract.json`, the dataset card, the alias JSON, `border_status.json` and `attribute_intblock_migrations.json` are; build manifests and `datapackage.json` are build outputs). Run `python scripts/builder.py build` once to create `data/datasets/internacia.duckdb` and the other files locally, or download them from the [latest release](https://github.com/datenoio/internacia-db/releases/latest).
 
 Each build writes to `data/datasets/`:
 
@@ -136,7 +136,7 @@ Each build writes to `data/datasets/`:
 | `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1304** intblocks, **83** blocktypes.
+Current row counts: **256** countries, **1300+** intblocks, **83** blocktypes.
 
 The retired IDs `COMMLEARN`, `ABCZNZ`, and `USAN` resolve to `COL`, `ABCANZ`, and
 `UNASUR` through `intblocks_aliases.json`. Use `status IN ('member', 'founding_member')`
