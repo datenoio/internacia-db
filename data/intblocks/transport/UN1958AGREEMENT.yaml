@@ -12,12 +12,20 @@ active_period:
   start: '1959-06-20'
 geographic_scope: regional
 regions:
-- Africa
-- Asia
 - Europe
-- North America
+- Asia
+- Africa
 - Oceania
-- South America
+- Caucasus
+- Central Asia
+- East Africa
+- East Asia
+- Middle East
+- North Africa
+- South Asia
+- Southeast Asia
+- Southern Africa
+- West Africa
 languages:
 - ar
 - zh
@@ -397,4 +405,8 @@ provenance:
 - field: recognition_status
   source: United Nations Treaty Collection
   retrieved_at: '2026-09-09'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-16&chapter=11&clang=_en
+- field: regions
+  source: Derived from the continents and UN M49 subregions of the parties in includes (data/countries)
+  retrieved_at: '2026-11-21'
   url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-16&chapter=11&clang=_en

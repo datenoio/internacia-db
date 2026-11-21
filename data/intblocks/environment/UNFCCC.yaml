@@ -18,12 +18,7 @@ active_period:
   start: '1994-03-21'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 - es
@@ -972,3 +967,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/wiki/Q208645
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
