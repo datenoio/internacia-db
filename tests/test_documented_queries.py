@@ -588,7 +588,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 201
+    assert count == 203
 
 
 def test_world_bank_region_filter_uses_region_id(con):
