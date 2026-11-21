@@ -9,6 +9,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
+  depositary and official sources (1297 intblocks):
+  - Treaties (`transport`, `agreement`; `treaty_body`): `ARABMASHREQRAILWAYS` (UNTC XI-C-4,
+    12 parties), the ESCWA rail network agreement and sibling of `ARABMASHREQROADS` below,
+    renamed "between Arab Countries" in 2016; `PANAMERICANHIGHWAY` (1936 convention, OAS B-19,
+    12 ratifying states); `SCOROADTRANSPORT` (2014 SCO road transport agreement: the six
+    founding parties plus IN, PK and BY); `GMSCBTA` (GMS Cross-Border Transport Facilitation
+    Agreement, 6 parties); `QTTA` (1995 China–Kazakhstan–Kyrgyzstan–Pakistan transit
+    agreement); `CHABAHAR` (2016 Afghanistan–India–Iran transit corridor agreement).
+  - Corridor bodies (`transport`): `CCTTFA` (Central Corridor, 7 members with MW in 2023 and
+    ZM in 2024), `LCTTFA` (Lobito Corridor, 3 members) and `ALCOMA` (Abidjan–Lagos Corridor,
+    5 members), all `igo`, alongside `NCTTCA` below; `TKCS`
+    (Trans-Kalahari Corridor, MoU of 3 members) and `CLRT` (Trans-Saharan Road Liaison
+    Committee, 6 members), both `policy_forum`.
+  - `GMS` (Greater Mekong Subregion Economic Cooperation Program, ADB-supported, 6 members;
+    `project`, `policy_forum`).
+  - Ten of them have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
+  The roads agreement (UNTC XI-B-33) is not added again: it is `ARABMASHREQROADS` below.
+  `GMS` is the programme behind the `EWEC` corridor below.
+  The Ashgabat Agreement is deferred: Qatar's status conflicts between sources, Pakistan's
+  and Armenia's accessions are unconfirmed, and its 10-year term from 23 April 2016 ended
+  in April 2026 with no extension found. The older Abidjan–Lagos Corridor Organization
+  (ALCO) is a different body and is not added. None of the new records carries corridor
+  route roles.
 - `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
   2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
   Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
@@ -24,6 +48,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
   on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
   blocked), so no ADB page is cited.
+- `CICPEC` (China-Indochina Peninsula Economic Corridor, formerly the Nanning-Singapore
+  Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1298 intblocks).
+  Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
+  Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 
