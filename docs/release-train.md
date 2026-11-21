@@ -36,12 +36,13 @@ the release with the maintainers.
 
 The PR, opened by `internacia-bot`, contains:
 
-- the CHANGELOG `[Unreleased]` entries moved under `## [X.Y.Z] - <date>`, followed by "Data changes
+- the CHANGELOG `[Unreleased]` entries and the `changelog.d/` fragments merged under
+  `## [X.Y.Z] - <date>` (grouped by subsection; the fragments are deleted), followed by "Data changes
   since the previous release" (record counts, ids added and removed, membership edges added,
   removed and changed, new aliases, schema additions);
 - the version in `pyproject.toml`, `internacia_builder/__init__.py`, `CITATION.cff`
   (with `date-released`) and `uv.lock`;
-- the rebuilt descriptors in `data/datasets/`.
+- the rebuilt tracked descriptors in `data/datasets/` (such as `contract.json`).
 
 Validation runs on it like on any PR. Edit the CHANGELOG wording on the branch if needed. If the
 train runs again before the PR is merged, it rebuilds the branch from the current `main`.

@@ -58,10 +58,15 @@ python scripts/check_doc_counts.py
 python scripts/check_markdown_links.py
 ```
 
-源数据变更须连同重新生成的 `data/datasets/` 一起提交，禁止手改导出文件。
-部分格式构建不会更新 JSONL/YAML，不能替代完整构建。新增或删除记录时，
-同步更新文档中的当前记录数和受影响的查询预期结果。CI 先检查已提交的导出数据，
-再构建 `.ci-datasets` 并对该目录运行测试。
+构建清单（`*.manifest.json`）、`datapackage.json` 及二进制/批量导出都是构建产物，git 忽略它们，
+因此数据变更通常不会改动 `data/datasets/`。仅当构建改动了仍被 git 跟踪的描述文件
+（`contract.json`、数据集卡片、别名 JSON、`border_status.json`）时才提交它们；禁止手改导出文件。
+部分格式构建不会更新 JSONL/YAML，不能替代完整构建。文档中的 intblock 数量按百位向下取整
+（`1300+`），仅在 `scripts/check_doc_counts.py` 报告新的百位时更新。新增或删除记录时，
+同步更新受影响的查询预期结果。CI 先检查已提交的描述文件，再构建 `.ci-datasets` 并对该目录运行测试。
+
+面向使用者的变更请新增 `changelog.d/<slug>.md` 片段，不要直接编辑 `CHANGELOG.md`，
+也不要写 "(1304 intblocks)" 这类累计数量。见 [changelog.d/README.md](../../../changelog.d/README.md)。
 
 ## Schema 或破坏性变更
 

@@ -40,8 +40,8 @@ python scripts/validate_countries.py --json
 
 8. Run the full build and artifact/documentation checks in
    [docs/agents/contribute.md](../../docs/agents/contribute.md). {{ commit_note_en }}
-   Refresh affected counts and query expectations.
-9. If the catalogue walk is new, append a row to [docs/intblock-sources.md](../../docs/intblock-sources.md). Update `CHANGELOG.md` under `[Unreleased]`.
+   Refresh affected query expectations; the intblock count in docs is rounded down to the hundred (`1300+`).
+9. If the catalogue walk is new, append a row to [docs/intblock-sources.md](../../docs/intblock-sources.md).
 
 **Reference**
 - Roster authorities: [docs/intblock-sources.md](../../docs/intblock-sources.md)
