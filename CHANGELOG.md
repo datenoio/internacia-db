@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
+  corridor record with route roles, checked on 2026-11-21 (1283 intblocks): MM and VN
+  `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
+  to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
+  on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
+  blocked), so no ADB page is cited.
+
+## [4.2.0] - 2026-11-21
+
+### Added
+
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
@@ -21,12 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `INSTC` and `TITR` describe the route, not the organization: the 2000 INSTC agreement has
   parties that are not crossed, and the TITR association's members are companies. A separate
   INSTC agreement record is deferred.
-- `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
-  corridor record with route roles, checked on 2026-11-21 (1283 intblocks): MM and VN
-  `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
-  to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
-  on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
-  blocked), so no ADB page is cited.
 - `institutional_design` for 21 more organizations, from founding instruments or official
   pages checked on 2026-11-20 (55 in all): BENELUX, BSEC, CAN, CELAC, CEMAC, COMESA,
   COMMONWEALTH, CPLP, EAC, ECCAS, ECO, FAO, GUAM, ILO, IMO, OIF, OSCE, PIF, SICA, UEMOA and
@@ -54,6 +59,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   describes crossings for travellers, so a `closed` border can still carry some freight. A
   re-check against customs, border and transport sources on 2026-11-21 could not read them (403
   or bot checks), so no status changed. FIN–RUS, IND–PAK and KHM–THA are the first to verify.
+- `institutional_design` for 19 treaty bodies and courts, checked on 2026-11-21 (108 in all):
+  ATS, BASEL, CBD, CITES, ECSEE, ECT, HCCN, ICW, IGC, ITLOS, ITTO, IWC, MONTREALPROTOCOL, NPT,
+  PARISAGREEMENT, PCA, POPS, UNCLOS and UNFCCC. For treaties the principal organ is the
+  Conference or Meeting of the Parties. Where the text names consensus only for rules of
+  procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
+  `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1279 → 1282 records; added `INSTC`, `LAPISLAZULI`, `TITR`; 74 changed
+- Blocktypes: 82 → 82 records
+- Membership edges: 57281 → 57295; 14 added, 0 removed, 0 changed
 
 ## [4.1.0] - 2026-11-20
 
