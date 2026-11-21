@@ -1,0 +1,86 @@
+id: RAILBALTICA
+blocktype:
+- transport
+- corridor
+status: de-facto
+links:
+- url: https://www.railbaltica.org/
+  type: website
+- url: https://cinea.ec.europa.eu/featured-projects/rail-baltica-connecting-baltic-states-rest-europe-high-speed-train_en
+  type: website
+- url: https://www.wikidata.org/wiki/Q581518
+  type: wikidata
+name: Rail Baltica
+geographic_scope: regional
+regions:
+- Europe
+- Northern Europe
+includes:
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  role: terminal
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  role: transit
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  role: transit
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  role: terminal
+membership_count: 4
+wikidata_id: Q581518
+description: Standard-gauge railway under construction on the Tallinn–Salaspils–Kaunas–Warsaw route, almost 900 km
+  through Estonia, Latvia and Lithuania and on into Poland. The transport ministers of the three Baltic states agreed to
+  cooperate on it in 2001, and RB Rail AS, their joint venture, was founded in 2014; main construction began in 2020.
+founded: '2001'
+tags:
+- rail-baltica
+- estonia
+- latvia
+- lithuania
+- poland
+- railway
+- corridor
+- transport
+topics:
+- key: transport
+  name: Transport
+- key: infrastructure
+  name: Infrastructure
+other_names:
+- id: et
+  name: Rail Baltic
+notes: Finland signed the 2010 memorandum and is linked to Tallinn by sea, but RB Rail describes its role as indirect, so
+  it is not listed. Phase II links to Riga, Riga Airport and Vilnius are spurs inside Latvia and Lithuania.
+last_verified: '2026-11-21'
+provenance:
+- field: includes
+  source: European Climate, Infrastructure and Environment Executive Agency (CINEA), Rail Baltica featured project
+  retrieved_at: '2026-11-21'
+  url: https://cinea.ec.europa.eu/featured-projects/rail-baltica-connecting-baltic-states-rest-europe-high-speed-train_en
+- field: includes
+  source: RB Rail AS, About Rail Baltica
+  retrieved_at: '2026-11-21'
+  url: https://www.railbaltica.org/about-rail-baltica/
+- field: founded
+  source: RB Rail AS, About Rail Baltica
+  retrieved_at: '2026-11-21'
+  url: https://www.railbaltica.org/about-rail-baltica/
+- field: description
+  source: RB Rail AS, Infrastructure
+  retrieved_at: '2026-11-21'
+  url: https://www.railbaltica.org/infrastructure/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q581518
+  license: CC0
