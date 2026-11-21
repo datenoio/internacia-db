@@ -39,7 +39,7 @@ headquarters:
 secretariat:
   location: Strasbourg, France
   organization: GRECO Secretariat (Council of Europe)
-membership_count: 49
+membership_count: 48
 description: Council of Europe anti-corruption monitoring body established on 1 May 1999 as an enlarged partial agreement.
   GRECO evaluates member compliance with Council of Europe anti-corruption standards through mutual evaluation, on-site visits,
   and peer pressure, covering themes such as parliamentary integrity, judicial independence, party funding, and central government
@@ -82,7 +82,9 @@ includes:
 - id: BY
   name: Belarus
   type: country
-  status: associate
+  status: former_member
+  joined: '2011-01-13'
+  left: '2024-05-01'
 - id: CH
   name: Switzerland
   type: country
@@ -219,7 +221,7 @@ includes:
   name: Poland
   type: country
   status: member
-  joined: '1999-05-19'
+  joined: '1999-05-20'
 - id: PT
   name: Portugal
   type: country
@@ -237,7 +239,7 @@ includes:
   name: Russian Federation
   type: country
   status: former_member
-  joined: '2006'
+  joined: '2007-02-01'
   left: '2023-07-01'
 - id: SE
   name: Sweden
@@ -322,28 +324,29 @@ other_names:
   name: Группа государств по борьбе с коррупцией
 - id: zh
   name: 反腐败国家集团
-notes: Established by 17 founding states under Resolution (99) 5; Poland joined on 19 May 1999. Since August 2010 all Council
-  of Europe member states have been GRECO members. The Russian Federation joined in 2006 but ceased membership on 1 July 2023
-  after denouncing the Criminal Law Convention on Corruption. Belarus participates with limited representation. The European
-  Union has observer status since July 2019.
-last_verified: '2026-07-29'
+notes: Established by 17 founding states under Resolution (99) 5; Poland joined on 20 May 1999. Since August 2010 all Council
+  of Europe member states have been GRECO members. The Russian Federation joined on 1 February 2007 and ceased membership on
+  1 July 2023 after denouncing the Criminal Law Convention on Corruption. Belarus joined on 13 January 2011 and ceased
+  membership on 1 May 2024 after denouncing the Criminal and Civil Law Conventions on Corruption and the Additional Protocol.
+  The European Union has observer status since July 2019.
+last_verified: '2026-11-21'
 provenance:
 - field: description
   source: Council of Europe
   retrieved_at: '2026-07-29'
   url: https://www.coe.int/en/web/greco/about-greco
 - field: includes
-  source: Council of Europe
-  retrieved_at: '2026-07-29'
-  url: https://www.coe.int/en/web/greco/about-greco
+  source: GRECO, Members and Observers (archived copy of 2025-11-14; coe.int served a bot check on 2026-11-21)
+  retrieved_at: '2026-11-21'
+  url: https://web.archive.org/web/20251114133302/https://www.coe.int/en/web/greco/structure/member-and-observers
 - field: founding_members
   source: Council of Europe
   retrieved_at: '2026-07-29'
   url: https://rm.coe.int/16805e301c
 - field: membership_count
-  source: Council of Europe
-  retrieved_at: '2026-07-29'
-  url: https://www.coe.int/en/web/greco/about-greco
+  source: GRECO, What is GRECO ("48 member States"; archived copy of 2025-11-12; coe.int served a bot check on 2026-11-21)
+  retrieved_at: '2026-11-21'
+  url: https://web.archive.org/web/20251112170927/https://www.coe.int/en/web/greco/about-greco
 - field: headquarters
   source: Wikipedia
   retrieved_at: '2026-07-29'
@@ -361,6 +364,10 @@ provenance:
   source: Council of Europe
   retrieved_at: '2026-07-29'
   url: https://rm.coe.int/general-activity-report-2023-greco-060424-gbrweb/1680afd7f2
+- field: notes
+  source: GRECO, Members and Observers (accession dates; Belarus and Russian Federation withdrawals; archived copy of 2025-11-14)
+  retrieved_at: '2026-11-21'
+  url: https://web.archive.org/web/20251114133302/https://www.coe.int/en/web/greco/structure/member-and-observers
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-07-29'

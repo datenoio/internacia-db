@@ -2,7 +2,10 @@
 
 Every data-quality rule is listed here once, with the dataset it belongs to and its
 severity in the validators (``error`` fails ``validate_countries``/``validate_intblocks``,
-``warning`` is reported, ``None`` runs only in ``analyze-quality``). Both consumers load
+``warning`` is reported and fails them under ``--fail-on-warning``, ``None`` runs only in
+``analyze-quality``). A ``dated`` warning rule compares a recorded date with today, so it
+starts firing as time passes without any change to the data; ``--fail-on-warning`` reports
+it but does not fail on it. Both consumers load
 their inputs with :func:`load_context` and run the rules with :func:`run_rules`, so a rule
 added here is enforced by the validators and reported by ``analyze-quality`` alike.
 
@@ -270,7 +273,11 @@ def _has_countries(ctx: RuleContext) -> bool:
 
 @dataclass(frozen=True)
 class Rule:
-    """One check. Record rules get ``(ctx, record, rel_path)``; cross rules get ``ctx``."""
+    """One check. Record rules get ``(ctx, record, rel_path)``; cross rules get ``ctx``.
+
+    ``dated`` marks a freshness rule whose findings appear as the calendar advances (an age
+    limit on a recorded date), so ``--fail-on-warning`` does not count them.
+    """
 
     name: str
     dataset: str
@@ -279,6 +286,7 @@ class Rule:
     cross: bool = False
     message: Callable[[Issue], str] = _default_message
     enabled: Callable[[RuleContext], bool] = _always
+    dated: bool = False
 
 
 def _record(name, dataset, severity, check, **kwargs) -> Rule:
@@ -350,7 +358,8 @@ COUNTRY_RULES: tuple[Rule, ...] = (
     _cross("border status freshness", COUNTRIES, W,
            lambda ctx: border_rules.check_border_status_freshness(ctx.border_status, ctx.last_verified_max_age),
            message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
-           enabled=lambda ctx: ctx.border_status is not None and ctx.last_verified_max_age > 0),
+           enabled=lambda ctx: ctx.border_status is not None and ctx.last_verified_max_age > 0,
+           dated=True),
     _cross("parent entity references", COUNTRIES, W,
            lambda ctx: cross_rules.check_parent_entity_refs(ctx.countries.records, ctx.countries.paths)),
     _cross("completeness", COUNTRIES, REPORT,
@@ -358,7 +367,8 @@ COUNTRY_RULES: tuple[Rule, ...] = (
     _record("provenance freshness", COUNTRIES, W,
             lambda ctx, r, p: country_rules.check_provenance_freshness(
                 r, max_age_months=int(ctx.countries_provenance.get("max_age_months") or 0)),
-            enabled=lambda ctx: int(ctx.countries_provenance.get("max_age_months") or 0) > 0),
+            enabled=lambda ctx: int(ctx.countries_provenance.get("max_age_months") or 0) > 0,
+            dated=True),
 )
 
 INTBLOCK_RULES: tuple[Rule, ...] = (
@@ -404,7 +414,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _record("last verified", INTBLOCKS, W,
             lambda ctx, r, p: intblock_rules.check_intblock_last_verified(
                 r, max_age_months=ctx.last_verified_max_age),
-            enabled=lambda ctx: ctx.last_verified_max_age > 0),
+            enabled=lambda ctx: ctx.last_verified_max_age > 0,
+            dated=True),
     _record("scope category", INTBLOCKS, E,
             lambda ctx, r, p: intblock_rules.check_intblock_scope_category(r, ctx.igo_legal_status_allowlist)),
     _record("institutional design", INTBLOCKS, E,
@@ -472,7 +483,8 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _record("provenance freshness", INTBLOCKS, W,
             lambda ctx, r, p: country_rules.check_provenance_freshness(
                 r, max_age_months=int(ctx.intblocks_provenance.get("max_age_months") or 0)),
-            enabled=lambda ctx: int(ctx.intblocks_provenance.get("max_age_months") or 0) > 0),
+            enabled=lambda ctx: int(ctx.intblocks_provenance.get("max_age_months") or 0) > 0,
+            dated=True),
     _record("description quality", INTBLOCKS, REPORT,
             lambda ctx, r, p: intblock_rules.check_intblock_description_quality(r)),
     _record("deprecated include statuses", INTBLOCKS, W,
@@ -536,10 +548,13 @@ def run_rules(
 
 def validator_messages(
     dataset: str, ctx: RuleContext
-) -> tuple[list[str], list[str]]:
-    """Errors and warnings of the validator rules for ``dataset``, as CLI messages."""
+) -> tuple[list[str], list[str], list[str]]:
+    """Errors, warnings and dated warnings of the validator rules for ``dataset``, as CLI
+    messages. Dated warnings come from ``dated`` rules and are not in ``warnings``."""
     errors: list[str] = []
     warnings: list[str] = []
+    dated: list[str] = []
     for rule, issue in run_rules(RULES[dataset], ctx, validator=True):
-        (errors if rule.severity == E else warnings).append(rule.message(issue))
-    return errors, warnings
+        target = errors if rule.severity == E else dated if rule.dated else warnings
+        target.append(rule.message(issue))
+    return errors, warnings, dated

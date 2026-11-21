@@ -58,11 +58,12 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 ## Validate before PR
 
 ```bash
-python scripts/validate_countries.py
-python scripts/validate_intblocks.py
+python scripts/validate_countries.py --fail-on-warning
+python scripts/validate_intblocks.py --fail-on-warning
 python scripts/validate_countries.py --json   # structured output for agents; exit 0 = no errors, 1 = errors
 python scripts/validate_intblocks.py --json
-# --fail-on-warning: treat warnings as errors (exit 1). Warnings alone do not fail.
+# --fail-on-warning: warnings fail too (exit 1), as in CI. The date-based staleness warnings
+# (last_verified and provenance age) are reported but do not fail it.
 python scripts/builder.py build             # regenerate every committed format
 python scripts/check_generated_artifacts.py
 pytest tests/

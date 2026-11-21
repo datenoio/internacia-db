@@ -175,7 +175,8 @@ def main(
     fail_on_warning: bool = typer.Option(
         False,
         "--fail-on-warning",
-        help="Treat warnings as errors",
+        help="Treat warnings as errors, except the dated freshness warnings (age of last_verified "
+        "and provenance dates), which only report",
     ),
     report: Path = typer.Option(
         None,
@@ -219,7 +220,9 @@ def run_validation(
     all_records = ctx.intblocks.records
     records = list(zip(ctx.intblocks.paths, all_records, strict=True))
 
-    rule_errors, rule_warnings = registry.validator_messages(registry.INTBLOCKS, ctx)
+    # Dated warnings start firing as the calendar advances, so they report without failing
+    # --fail-on-warning: a gate on them would turn CI red with no change to the data.
+    rule_errors, rule_warnings, dated_warnings = registry.validator_messages(registry.INTBLOCKS, ctx)
     errors.extend(rule_errors)
     warnings.extend(rule_warnings)
 
@@ -265,9 +268,9 @@ def run_validation(
         summary = {
             "intblocks_validated": len(records),
             "error_count": len(errors),
-            "warning_count": len(warnings),
+            "warning_count": len(warnings) + len(dated_warnings),
             "errors": errors,
-            "warnings": warnings,
+            "warnings": warnings + dated_warnings,
             "completeness": completeness_report,
             "description_quality": description_report,
         }
@@ -278,7 +281,7 @@ def run_validation(
         dataset="intblocks",
         validated=len(records),
         errors=errors,
-        warnings=warnings,
+        warnings=warnings + dated_warnings,
         json_output=json_output,
     )
 

@@ -163,7 +163,7 @@ includes:
 - id: KR
   name: Korea, Rep.
   type: country
-  status: associated
+  status: associate_member
   joined: '2021'
 - id: LV
   name: Latvia
@@ -257,15 +257,23 @@ includes:
   name: United Kingdom
   type: country
   status: member
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: associate_member
+  joined: '2026'
 notes: IOTA was established at the Conference of Tax Administrations of Central and
   Eastern Europe and Baltic Countries (CEEB), held in Warsaw on 28–30 October 1996,
   by the tax administrations of Bulgaria, Czechia, Hungary, Latvia, Lithuania, Poland,
-  and Slovakia. The organisation has since expanded to 43 full members and one associate
-  member (Republic of Korea, from July 2021). The Secretariat is based in Budapest.
+  and Slovakia. The organisation has since expanded to 43 full members and two associate
+  members (Republic of Korea, from July 2021, and Uzbekistan, from 2026). Bosnia and
+  Herzegovina is represented by two full members, its Indirect Taxation Authority and the
+  Tax Administration of Republika Srpska. The Secretariat is based in Budapest.
   Memberships of the Federal Tax Service of Russia and the Ministry of Taxes and Duties
   of Belarus were terminated in June 2023. IOTA is a member of the Network of Tax
   Organizations (NTO).
 wikidata_id: Q1432252
+last_verified: '2026-11-21'
 other_names:
 - id: de
   name: Intra-European Organisation of Tax Administrations
@@ -283,9 +291,13 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://iota-tax.org/about-us
 - field: includes
-  source: IOTA official website
-  retrieved_at: '2026-06-15'
-  url: https://iota-tax.org/membership
+  source: IOTA, Member Countries ("43 full members and 2 associate members")
+  retrieved_at: '2026-11-21'
+  url: https://www.iota-tax.org/about-us/member-countries
+- field: notes
+  source: IOTA, Member Countries
+  retrieved_at: '2026-11-21'
+  url: https://www.iota-tax.org/about-us/member-countries
 - field: founded
   source: IOTA official website
   retrieved_at: '2026-06-15'

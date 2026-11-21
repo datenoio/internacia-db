@@ -55,7 +55,9 @@ python scripts/validate_intblocks.py --json
 ```
 
 Exit codes: `0` = no errors (warnings allowed); `1` = errors, or warnings with
-`--fail-on-warning`. Fix every `errors[]` item; use `fix_hint` when present.
+`--fail-on-warning`. CI runs with `--fail-on-warning`, so fix every `errors[]` and
+`warnings[]` item; use `fix_hint` when present. Only the date-based staleness warnings
+(`last_verified` and provenance age) do not fail it.
 
 Also run:
 

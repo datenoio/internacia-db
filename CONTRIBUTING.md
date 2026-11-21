@@ -69,8 +69,8 @@ Monthly enrichment may open a review PR labeled `enrichment` — see [docs/enric
 Run before opening a PR:
 
 ```bash
-python scripts/validate_countries.py     # 0 = no errors (warnings OK); 1 = errors
-python scripts/validate_intblocks.py     # add --fail-on-warning to treat warnings as errors
+python scripts/validate_countries.py --fail-on-warning   # as CI runs it: 1 = errors or warnings
+python scripts/validate_intblocks.py --fail-on-warning   # (date-based staleness warnings only report)
 python scripts/validate_countries.py --json   # structured output for agents
 python scripts/builder.py build          # regenerate data/datasets after source edits
 python scripts/check_generated_artifacts.py                # local build matches source + each other
