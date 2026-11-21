@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Seven `statistics` records, checked on 2026-11-21 (1291 intblocks). Before this, the
+- Seven `statistics` records, checked on 2026-11-21 (1292 intblocks). Before this, the
   blocktype held only `CISSTAT`.
   - `AFRISTAT` (Economic and Statistical Observatory of Sub-Saharan Africa, an `igo`): 22
     member states, with the 14 founders of 1993. Source: AFRISTAT's member-states page.
@@ -37,6 +37,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
   roles because the corridor branches from Mombasa to several landlocked countries instead of
   running between two ends.
+- `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
+  corridor record with route roles, checked on 2026-11-21 (1285 intblocks): MM and VN
+  `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
+  to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
+  on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
+  blocked), so no ADB page is cited.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 
