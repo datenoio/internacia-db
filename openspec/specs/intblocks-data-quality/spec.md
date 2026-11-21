@@ -292,7 +292,7 @@ Intblock lifecycle fields SHALL be chronologically coherent: `founded` and `diss
 
 ### Requirement: Intblock quality report parity
 
-Every intblock rule enforced by `validate_intblocks.py` SHALL also be executed by the quality analyzer and surfaced in `dataquality/` reports, including filename-to-`id` alignment, directory-to-blocktype alignment, deprecated topic key detection against `data/schemas/topic_aliases.yaml`, and provenance integrity (each `provenance[].field` naming an existing record field with a valid, non-future `retrieved_at` date).
+Every intblock rule enforced by `validate_intblocks.py` SHALL also be executed by the quality analyzer and surfaced in `dataquality/` reports, including filename-to-`id` alignment, directory-to-blocktype alignment, deprecated topic key detection against `data/schemas/topic_aliases.yaml`, the `wikidata_id` requirement, `partof` targets, and provenance integrity (each `provenance[].field` naming an existing record field with a valid, non-future `retrieved_at` date). Parity SHALL follow from both consumers running the shared rule registry.
 
 #### Scenario: Filename and id mismatch appears in quality report
 
@@ -308,6 +308,11 @@ Every intblock rule enforced by `validate_intblocks.py` SHALL also be executed b
 
 - **WHEN** an intblock uses topic key `climate`, which `topic_aliases.yaml` maps to canonical `climate_change`
 - **THEN** the analyzer reports a `DEPRECATED_TOPIC_KEY` issue
+
+#### Scenario: Missing wikidata_id appears in quality report
+
+- **WHEN** an intblock has no `wikidata_id` and is not listed in `data/schemas/wikidata_exclusions.yaml`
+- **THEN** `validate_intblocks.py` reports an error and the analyzer reports a `MISSING_WIKIDATA_ID` issue
 
 ### Requirement: Schema and export field parity
 
