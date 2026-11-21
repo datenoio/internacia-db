@@ -26,6 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   blocked), so no ADB page is cited.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+- `includes[].joined` dates for 21 tier-1 organizations (`data/watch/rosters.yaml`) that had
+  none: 891 entries, checked on 2026-11-21. Affected organizations: UN, EU, NATO, AFUNION,
+  ECOWAS, OECD, WTO, COMMONWEALTH, OIC, G-20, G7, SCO, CIS, LAS, CELAC, SAARC, APEC, OAS,
+  CARICOM, SADC and COE. Each date comes from the organization's official member list and
+  keeps the precision of that list. Where the official list could not be read, the date comes
+  from an archived copy of the organization's own page (OAS, LAS) or from government treaty
+  registers (OECD). Four entries stay undated because their official sources conflict: AFUNION
+  KE and AO, and CIS AZ and MD. The reviewed values are in `data/schemas/includes_joined_tier1.yaml`.
+  `scripts/backfill_includes_joined.py` applies them. It runs as a dry run by default and
+  stops on any conflict. It adds provenance and sets `last_verified`.
 
 ### Fixed
 
