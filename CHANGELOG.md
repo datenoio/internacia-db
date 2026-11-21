@@ -55,6 +55,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 
+### Changed
+
+- `SICA` (Central American Integration System) is enriched and reclassified, checked on
+  2026-11-21 against archived sica.int pages, the UN Treaty Series and OAS SICE copies of
+  the instruments (live sica.int refused automated requests):
+  - The record moves from `fta/` to `political/`. Its `blocktype` is now `[political,
+    economic]`, as for `ASEAN`, because the Protocol of Tegucigalpa sets a general mandate.
+    `scope_category` changes from `treaty_body` to `igo`, because Arts 29-31 of the Protocol
+    give SICA legal personality.
+  - `founded` is now `1991-12-13`, the date of signature. New `active_period.start`:
+    `1993-02-01`. New `founding_members`: the six isthmus signatories.
+  - Members get `joined` dates: BZ in 2000, DO on 2013-06-27.
+  - 38 observers are added from SICA's observer table (June 2024): 34 countries and the EU,
+    OEI, OIJ and ACS. The observer agreements still pending are given in an include `note`.
+  - New fields: `suborganizations` (the 8 records whose `partof` is SICA), `secretariat`,
+    `headquarters.country` with the Wikidata P159 coordinates, `official_documents`,
+    `social_media`, `recognition_status`, `legal_status`, `geographic_scope`, `regions` and
+    `notes`. The notes cover the ODECA lineage, the Pro Tempore Presidency, the Secretary
+    General and Nicaragua.
+  - `languages` is now `[es]`, since Spanish is the Protocol's only authentic text.
+  - The documented recipes change. Countries with five or more observer seats: 34 rows
+    become 40. Membership-count mismatches: 183 become 184.
+
 ### Fixed
 
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
