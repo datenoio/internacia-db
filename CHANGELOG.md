@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- 13 international road, rail and transit-corridor records, checked on 2026-11-21 against
+- 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
   depositary and official sources (1296 intblocks):
-  - Treaties (`transport`, `agreement`; `treaty_body`): `ARABROADS` (UNTC XI-B-33, 13 parties)
-    and `ARABRAILWAYS` (UNTC XI-C-4, 12 parties), the ESCWA road and rail network agreements
+  - Treaties (`transport`, `agreement`; `treaty_body`): `ARABMASHREQRAILWAYS` (UNTC XI-C-4,
+    12 parties), the ESCWA rail network agreement and sibling of `ARABMASHREQROADS` below,
     renamed "between Arab Countries" in 2016; `PANAMERICANHIGHWAY` (1936 convention, OAS B-19,
     12 ratifying states); `SCOROADTRANSPORT` (2014 SCO road transport agreement: the six
     founding parties plus IN, PK and BY); `GMSCBTA` (GMS Cross-Border Transport Facilitation
@@ -26,11 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `GMS` (Greater Mekong Subregion Economic Cooperation Program, ADB-supported, 6 members;
     `project`, `policy_forum`).
   - Ten of them have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
+  The roads agreement (UNTC XI-B-33) is not added again: it is `ARABMASHREQROADS` below.
   The Ashgabat Agreement is deferred: Qatar's status conflicts between sources, Pakistan's
   and Armenia's accessions are unconfirmed, and its 10-year term from 23 April 2016 ended
   in April 2026 with no extension found. The older Abidjan–Lagos Corridor Organization
   (ALCO) is a different body and is not added. None of the new records carries corridor
   route roles.
+- `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
+  2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
+  Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
+  2026-11-21 (1284 intblocks). Oman is served by the network but is not a party.
 - `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
   checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
   its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
