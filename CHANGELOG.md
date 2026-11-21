@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Seven more `statistics` records, checked on 2026-11-21 (1317 intblocks):
+- Seven more `statistics` records, checked on 2026-11-21 (1318 intblocks):
   - `AITRS` (Arab Institute for Training and Research in Statistics, Amman, an `igo`): 22
     countries, whose national statistical offices are its members. Its own sources do not
     call it an organ of the League of Arab States, so `partof` is not set.
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     `SESRIC` (`OIC`), `STATAFRIC` (AU Institute for Statistics, `AFUNION`), `ISSEA`
     (`CEMAC`) and `SIAP` (UN Statistical Institute for Asia and the Pacific; ESCAP has no
     record, so `partof` is not set).
-- Seven `statistics` records, checked on 2026-11-21 (1310 intblocks). Before this, the
+- Seven `statistics` records, checked on 2026-11-21 (1311 intblocks). Before this, the
   blocktype held only `CISSTAT`.
   - `AFRISTAT` (Economic and Statistical Observatory of Sub-Saharan Africa, an `igo`): 22
     member states, with the 14 founders of 1993. Source: AFRISTAT's member-states page.
@@ -39,6 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     States. Sources: Eurostat, EFTA and Regulation (EC) No 223/2009.
 - `wikidata_exclusions.yaml` entries for `AFRICANSTATISTICSCHARTER`, `SDDSPLUS`, `EGDDS` and
   `CES`, which have no Wikidata item.
+- `AH` (Asian Highway Network, Wikidata Q728802), a `project`/`transport` record for the ESCAP
+  road network itself, checked on 2026-11-21 (1304 intblocks). It mirrors `TAR`: no country
+  roster (`membership_applicability: not_applicable`), because the 32 countries the network
+  crosses are not treaty parties. The 30 states parties stay on `ASIANHIGHWAY`.
 - 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
   depositary and official sources (1297 intblocks):
   - Treaties (`transport`, `agreement`; `treaty_body`): `ARABMASHREQRAILWAYS` (UNTC XI-C-4,
@@ -146,6 +150,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
   unchanged (648 on v4.2.0 data, 36 with a status).
 
+- `ASIANHIGHWAY` `regions` listed all six continents, including Africa, the Americas and
+  Oceania. They now follow its states parties: Asia, Europe, Caucasus, Central Asia, East Asia,
+  Middle East, South Asia and Southeast Asia.
 - `regions` on 174 intblocks no longer carries the six-continent placeholder (Africa, Asia,
   Europe, North America, Oceania, South America) left by the 2026-09-09 UNTC import. Each fixed
   record gains a `provenance` entry for `regions`.
