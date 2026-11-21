@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1283 intblocks).
   Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
   Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
+
+## [4.2.0] - 2026-11-21
+
+### Added
+
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
@@ -58,6 +63,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Conference or Meeting of the Parties. Where the text names consensus only for rules of
   procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
   `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1279 → 1282 records; added `INSTC`, `LAPISLAZULI`, `TITR`; 74 changed
+- Blocktypes: 82 → 82 records
+- Membership edges: 57281 → 57295; 14 added, 0 removed, 0 changed
 
 ## [4.1.0] - 2026-11-20
 
