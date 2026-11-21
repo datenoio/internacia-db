@@ -1,8 +1,10 @@
 """The committed text snapshot of ``data/datasets/`` and build reproducibility checks.
 
-Binary and bulk exports are build outputs (see ``.gitignore``); only the descriptors
-below are committed, so pull requests show which datasets changed without carrying
-megabytes of regenerated files.
+Exports and build descriptors are build outputs (see ``.gitignore``). Only the descriptors
+below are committed: they change with the schema or with rare source edits. Build
+manifests and ``datapackage.json`` carry per-build checksums, sizes, row counts and build
+identity, which every data change rewrites; committing them made every pair of open data
+pull requests conflict, so they ship only in builds and GitHub Releases.
 """
 
 from __future__ import annotations
@@ -19,18 +21,13 @@ from internacia_builder.contract import CHECKSUMS_FILE, file_digest
 
 # Keep in sync with the ``data/datasets/`` negations in .gitignore.
 COMMITTED_PATTERNS = (
-    "*.manifest.json",
     "contract.json",
-    "datapackage.json",
     "README.md",
     "intblocks_aliases.json",
     "countries_aliases.json",
     "attribute_intblock_migrations.json",
     "border_status.json",
 )
-
-# Fields that identify one build rather than its content.
-IDENTITY_FIELDS = ("build_date", "git_commit")
 
 DUCKDB_FILE = "internacia.duckdb"
 
@@ -39,23 +36,8 @@ def is_committed(name: str) -> bool:
     return any(fnmatch.fnmatch(name, pattern) for pattern in COMMITTED_PATTERNS)
 
 
-def _normalized(path: Path) -> str:
-    """File content with build identity removed from manifests."""
-    text = path.read_text(encoding="utf-8")
-    if not path.name.endswith(".manifest.json"):
-        return text
-    manifest = json.loads(text)
-    for field in IDENTITY_FIELDS:
-        manifest.pop(field, None)
-    manifest["files"] = [f for f in manifest.get("files", []) if not f["path"].endswith(".meta.json")]
-    return json.dumps(manifest, indent=2, sort_keys=True)
-
-
 def compare_snapshot(committed_dir: Path, fresh_dir: Path) -> list[str]:
-    """Compare the committed descriptors with a fresh build of the same sources.
-
-    Manifests are compared without build identity (``build_date``, ``git_commit``) and
-    without the checksums of ``.meta.json`` sidecars, which embed that identity."""
+    """Compare the committed descriptors with a fresh build of the same sources."""
     problems: list[str] = []
     committed = {p.name for p in committed_dir.iterdir() if p.is_file() and is_committed(p.name)}
     fresh = {p.name for p in fresh_dir.iterdir() if p.is_file() and is_committed(p.name)}
@@ -64,12 +46,14 @@ def compare_snapshot(committed_dir: Path, fresh_dir: Path) -> list[str]:
     for name in sorted(committed - fresh):
         problems.append(f"{name}: committed but no longer produced by the build")
     for name in sorted(committed & fresh):
-        if _normalized(committed_dir / name) != _normalized(fresh_dir / name):
+        if (committed_dir / name).read_bytes() != (fresh_dir / name).read_bytes():
             problems.append(f"{name}: differs from a fresh build; run `python scripts/builder.py build` and commit")
     stray = sorted(
         p.name for p in committed_dir.iterdir() if p.is_file() and not is_committed(p.name) and _tracked(p)
     )
-    problems.extend(f"{name}: generated binary/bulk export is tracked in git" for name in stray)
+    problems.extend(
+        f"{name}: build output is tracked in git; run `git rm --cached data/datasets/{name}`" for name in stray
+    )
     return problems
 
 

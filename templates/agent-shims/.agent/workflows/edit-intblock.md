@@ -32,9 +32,9 @@ python scripts/validate_intblocks.py --json
 
 {{ validate_full }}
 
-7. {{ commit_note_en }} Update current counts and cookbook expectations when
-   record counts or query results change. Update `CHANGELOG.md` under
-   `[Unreleased]` for consumer-visible changes.
+7. Run the full build. {{ commit_note_en }} Update cookbook expectations when
+   query results change; the intblock count in docs is rounded down to the hundred
+   (`1300+`), so update it only when `scripts/check_doc_counts.py` asks.
 
 **Reference**
 - Worked add example: [docs/agents/add-intblock-example.md](../../docs/agents/add-intblock-example.md)
