@@ -74,6 +74,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     order. Subregions follow each country's UN M49 `subregion`: Western Asia is `Middle East`
     (except AM, AZ and GE, which are `Caucasus`), and Iran is in `South Asia`. ASIANHIGHWAY gets
     the same fix in a separate change.
+- `AGR` (European Agreement on Main International Traffic Arteries, which defines the
+  International E-road network) now links the English Wikipedia article on the network. Its
+  Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
+  `ASIANHIGHWAY`; the old reason said no English article existed.
 - `IAC` (Interstate Aviation Committee) roster checked on 2026-11-21 against the IAC website
   (nine participating states as of January 2026) and the 1991 Minsk Agreement on Civil Aviation
   and on the Use of Airspace. `membership_count` drops from 12 to 9: `UA` becomes
