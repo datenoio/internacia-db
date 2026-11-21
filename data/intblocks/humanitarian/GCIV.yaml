@@ -10,12 +10,7 @@ active_period:
   start: '1950-10-21'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 links:
 - url: https://ihl-databases.icrc.org/en/ihl-treaties/gciv-1949/state-parties
   type: website
@@ -1081,3 +1076,6 @@ provenance:
   source: International Committee of the Red Cross (ICRC), IHL Treaties Database — States parties and signatories
   url: https://ihl-databases.icrc.org/en/ihl-treaties/gciv-1949/state-parties
   retrieved_at: '2026-10-22'
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

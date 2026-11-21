@@ -11,12 +11,7 @@ active_period:
   start: '2008-01-01'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 links:
@@ -122,3 +117,6 @@ provenance:
   source: UNFCCC — Adaptation Fund Decision 10/CP.7
   retrieved_at: '2026-09-30'
   url: https://unfccc.int/resource/docs/cop7/13a01.pdf
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global
+  retrieved_at: '2026-11-21'
