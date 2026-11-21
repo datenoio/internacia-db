@@ -9,12 +9,7 @@ active_period:
   start: '1984-07-11'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - ar
 - zh
@@ -220,3 +215,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-30'
   url: https://treaties.un.org/doc/Publication/UNTS/Volume%201363/volume-1363-A-23002-English.pdf
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

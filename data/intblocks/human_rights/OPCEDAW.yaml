@@ -13,12 +13,7 @@ active_period:
   start: '2000-12-22'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - ar
 - zh
@@ -698,6 +693,9 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://www.wikidata.org/
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
 other_names:
 - id: ar
   name: البروتوكول الاختياري الملحق باتفاقية القضاء على جميع أشكال التمييز ضد المرأة

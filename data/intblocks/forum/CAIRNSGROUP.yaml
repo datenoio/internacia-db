@@ -7,12 +7,7 @@ scope_category: policy_forum
 founded: '1986-08'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 links:
@@ -233,3 +228,6 @@ provenance:
   retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q1025959
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

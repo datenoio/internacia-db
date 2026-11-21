@@ -11,12 +11,10 @@ active_period:
   start: '2000-04-19'
 geographic_scope: regional
 regions:
-- Africa
-- Asia
 - Europe
-- North America
-- Oceania
-- South America
+- Asia
+- Caucasus
+- Central Asia
 languages:
 - ar
 - zh
@@ -320,6 +318,10 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://www.wikidata.org/
   license: CC0
+- field: regions
+  source: Derived from the continents and UN M49 subregions of the parties in includes (data/countries)
+  retrieved_at: '2026-11-21'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-6&chapter=27&clang=_en
 other_names:
 - id: ar
   name: اتفاقية الآثار العابرة للحدود للحوادث الصناعية
