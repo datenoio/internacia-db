@@ -1,7 +1,7 @@
 version: 1
 change_id: add-transit-dependence-layer
 cohort_id: pilot_roles
-expected_count: 23
+expected_count: 24
 verified_on: '2026-11-20'
 description: Reviewed route roles (includes[].role) for pipelines and linear corridors, checked on 2026-11-20 against
   operator, government, intergovernmental or project-finance sources. Apply with scripts/backfill_include_roles.py
@@ -104,6 +104,24 @@ records:
     - source: URSEA Uruguay - Gas natural
       url: https://www.gub.uy/unidad-reguladora-servicios-energia-agua/gas-natural-0
       retrieved_at: '2026-11-20'
+  EWEC:
+    roles:
+      MM: terminal
+      TH: transit
+      LA: transit
+      VN: terminal
+    basis: JICA describes the corridor from Mawlamyine (Myanmar) through Thailand and Laos to Da Nang (Viet Nam);
+      IDE-JETRO gives the same Da Nang–Mawlamyine route, with Route No. 9 across Laos and Viet Nam. Cambodia is not
+      on the route.
+    evidence:
+    - source: JICA, Ex-Ante Evaluation of the East-West Economic Corridor Improvement Project (Myanmar, 2015), PDF
+        text read locally via PDFKit
+      url: https://www.jica.go.jp/english/our_work/evaluation/oda_loan/economic_cooperation/c8h0vm000001rdjt-att/myanmar_151016_03.pdf
+      retrieved_at: '2026-11-21'
+    - source: IDE-JETRO, Ishida and Isono (2012), Old, New and Potential Economic Corridors in the Mekong Region, PDF
+        text read locally via PDFKit
+      url: https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/08_chapter1.pdf
+      retrieved_at: '2026-11-21'
   GASANDESPIPE:
     roles:
       AR: origin

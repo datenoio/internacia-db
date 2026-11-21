@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `INSTC` and `TITR` describe the route, not the organization: the 2000 INSTC agreement has
   parties that are not crossed, and the TITR association's members are companies. A separate
   INSTC agreement record is deferred.
+- `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
+  corridor record with route roles, checked on 2026-11-21 (1283 intblocks): MM and VN
+  `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
+  to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
+  on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
+  blocked), so no ADB page is cited.
 - `institutional_design` for 21 more organizations, from founding instruments or official
   pages checked on 2026-11-20 (55 in all): BENELUX, BSEC, CAN, CELAC, CEMAC, COMESA,
   COMMONWEALTH, CPLP, EAC, ECCAS, ECO, FAO, GUAM, ILO, IMO, OIF, OSCE, PIF, SICA, UEMOA and
