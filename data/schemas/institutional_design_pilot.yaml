@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_89
-expected_count: 89
+cohort_id: reviewed_108
+expected_count: 108
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -1453,6 +1453,314 @@ records:
         Australian Parliament / DFAT copy; original 1970 text, later amendments not read)', url: 'https://aphref.aph.gov.au/house/committee/jsct/2march2004/treaties/wtotext.pdf',
       retrieved_at: '2026-11-21'}
 
+  # --- wave 5 (2026-11-21) -------------------------------------------------
+  ATS:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Treaty Art I: Antarctica is used for peaceful purposes only, and Art II keeps scientific cooperation free,
+      so the field is one policy area. Art IX(1) and (4): the Consultative Meeting recommends measures, which take
+      effect only once all Consultative Parties approve them. The ATS site states that Measures, Decisions and Resolutions
+      are adopted by consensus and that only Measures bind, and only after approval by all Consultative Parties. The
+      Treaty sets no organ other than the meeting, no sanction, suspension or expulsion (Art XI disputes go to the
+      ICJ only with every party''s consent), and no assistance duty.'
+    evidence:
+    - {source: The Antarctic Treaty (ATS document host documents.ats.aq), url: 'https://documents.ats.aq/recatt/att005_e.pdf',
+      retrieved_at: '2026-11-21'}
+    - {source: 'Antarctic Treaty Secretariat, Antarctic Treaty Consultative Meeting (ats.aq)', url: 'https://www.ats.aq/e/atcm.html',
+      retrieved_at: '2026-11-21'}
+  BASEL:
+    institutional_design:
+      mandate: sectoral
+      decision_force: partly_binding
+      independent_organs: [none]
+    basis: 'Art 15(3): the COP adopts rules of procedure by consensus; the text has no ordinary voting rule. Art 17(3)-(5):
+      amendments by consensus, failing which three-fourths of Parties present and voting, then ratification by each
+      Party. Art 20: negotiation, then ICJ or arbitration (Annex VI) only if the parties agree or have declared acceptance;
+      Art 19 verification is information only. Enforcement is omitted because the compliance mechanism is not in the
+      fetched text. The text names consensus only for rules of procedure and amendments, not as the default rule for
+      the main decisions, so decision_rule is omitted.'
+    evidence:
+    - {source: 'Basel Convention text, 2025 revised English (basel.int)', url: 'https://www.basel.int/Portals/4/download.aspx?d=UNEP-CHW-IMPL-CONVTEXT-2025.English.pdf',
+      retrieved_at: '2026-11-21'}
+  CBD:
+    institutional_design:
+      mandate: sectoral
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+    basis: 'Art 23(3): the COP adopts its rules of procedure by consensus; the text sets no ordinary voting rule.
+      Art 29(3): amendments and protocols by consensus, failing which a two-thirds vote of the Parties present and
+      voting, and they bind only Parties that accept them. Art 27: negotiation, mediation by agreement, optional declarations
+      accepting arbitration or the ICJ, otherwise conciliation whose commission renders a proposal considered in good
+      faith (Annex II Part 2, Art 5). The text provides no measure against a Party. The text names consensus only
+      for rules of procedure and amendments, not as the default rule for the main decisions, so decision_rule is omitted.'
+    evidence:
+    - {source: 'Convention on Biological Diversity, text (cbd.int)', url: 'https://www.cbd.int/doc/legal/cbd-en.pdf',
+      retrieved_at: '2026-11-21'}
+  CITES:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: qualified_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+    basis: 'Art XV(1)(b)-(c): amendments to Appendices I and II at a COP are adopted by two thirds of Parties present
+      and voting and enter into force for all Parties except those that enter a reservation (Art XV(3)). Art XI(5):
+      the Conference may adopt its own rules of procedure; Art XIII(3) lets it make only recommendations on non-implementation.
+      Art XVIII: arbitration only by mutual consent. Treaty-based enforcement is not settled by the text, so enforcement
+      is omitted.'
+    evidence:
+    - {source: CITES text (Wikisource copy), url: 'https://en.wikisource.org/wiki/Convention_on_International_Trade_in_Endangered_Species_of_Wild_Fauna_and_Flora',
+      retrieved_at: '2026-11-21'}
+  ECSEE:
+    institutional_design:
+      mandate: economic
+      decision_rule: mixed
+      decision_force: binding
+      enforcement: [suspension]
+      mutual_defence: false
+    basis: 'Art 2: a legal and economic framework for network energy (electricity and gas) trade. Ministerial Council
+      (Art 47) measures: Title II by majority of votes cast (Art 81), Title III by two thirds including the European
+      Community (Art 83), Title IV by unanimity (Art 85), and no default is named. Art 76: a Decision is legally binding
+      in its entirety, a Recommendation is not. Art 92: the Council, acting by unanimity, may suspend a party''s rights,
+      including voting rights, after a serious and persistent breach. No defence clause.'
+    evidence:
+    - {source: 'Treaty establishing the Energy Community (consolidated text, energy-community.org)', url: 'https://www.energy-community.org/enc-lex/law/treaty.html',
+      retrieved_at: '2026-11-21'}
+    - {source: 'Energy Community, Ministerial Council (energy-community.org)', url: 'https://www.energy-community.org/aboutus/MC.html',
+      retrieved_at: '2026-11-21'}
+  ECT:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [dispute_panel]
+      enforcement: [sanctions, suspension]
+      mutual_defence: false
+    basis: 'Art 2 sets a legal framework for long-term cooperation in the energy field, with trade and investment
+      rules. Art 36 first sets unanimity of those present and voting for listed matters (amendments, accessions),
+      then requires every effort at consensus on any other matter, with a three-fourths majority fallback; consensus
+      is the default. Protocols apply only to parties that consent (Art 33(5)) and amendments need ratification (Art
+      42). Art 27: either state party may unilaterally submit a dispute to an ad hoc arbitral tribunal whose award
+      is final and binding (Art 27(3)), and Art 26 gives investors binding arbitration. Art 36(8): the Conference
+      may suspend voting rights for persistent arrears; trade disputes allow the Conference to authorise retaliation
+      (Annex D). No defence clause.'
+    evidence:
+    - {source: 'Energy Charter Treaty, consolidated reader-friendly version (energycharter.org)', url: 'https://www.energycharter.org/fileadmin/DocumentsMedia/Legal/ECTC-en.pdf',
+      retrieved_at: '2026-11-21'}
+  HCCN:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: consensus
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Statute Art 1: progressive unification of the rules of private international law. Art 8(2): Sessions,
+      the Council and Special Commissions operate on the basis of consensus to the furthest extent possible, and Art
+      13(1) requires consensus of Member States present for amendments. The Statute creates no court, executive or
+      parliament (the Permanent Bureau, Art 5, is a secretariat), no suspension, expulsion or sanction clause, and
+      no assistance duty. It does not state whether Council or Session decisions bind members, so decision_force is
+      omitted.'
+    evidence:
+    - {source: Statute of the Hague Conference on Private International Law (hcch.net), url: 'https://www.hcch.net/en/instruments/conventions/full-text/?cid=29',
+      retrieved_at: '2026-11-21'}
+  ICW:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [court]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Art 1 establishes the Court and Art 5 limits it to the most serious crimes (criminal justice, a single
+      field). Art 112(7): each State Party has one vote in the Assembly, every effort is made to decide by consensus,
+      and failing that substantive matters need two thirds of those present and voting. Art 34 lists the Court''s
+      organs and Art 40 secures judicial independence. Amendments need ratification or acceptance (Art 121), and Art
+      112(8) loss of vote for arrears is automatic. Art 87(7) only refers non-cooperation to the Assembly; no suspension
+      or assistance clause.'
+    evidence:
+    - {source: 'Rome Statute of the International Criminal Court (UN Office of Legal Affairs, legal.un.org)', url: 'https://legal.un.org/icc/statute/99_corr/cstatute.htm',
+      retrieved_at: '2026-11-21'}
+  IGC:
+    institutional_design:
+      mandate: economic
+      decision_rule: weighted_voting
+      decision_force: binding
+      independent_organs: [none]
+      enforcement: [expulsion]
+      mutual_defence: false
+    basis: 'Art 1: further trade cooperation, freer grain trade and market stability. Art 14(1): decisions by a majority
+      of votes cast by exporting members and a majority cast by importing members, counted separately, with votes
+      set by trade shares (Arts 11-12). Art 14(2): each member accepts all Council decisions as binding. Art 30: the
+      Council may exclude a member in breach by special vote. Art 21(6) loss of vote for arrears is automatic. The
+      Executive Committee (Art 15) is formed of members; no defence clause.'
+    evidence:
+    - {source: 'Grains Trade Convention, 1995 (igc.int)', url: 'http://www.igc.int/en/downloads/brochure/gtc1995.pdf',
+      retrieved_at: '2026-11-21'}
+    - {source: 'International Grains Council, About us (igc.int)', url: 'https://igc.int/public-site/aboutus.aspx',
+      retrieved_at: '2026-11-21'}
+  ITLOS:
+    institutional_design:
+      mandate: sectoral
+      independent_organs: [court]
+    basis: 'Annex VI Art 2: the Tribunal is a body of 21 independent members, and Art 33: its decision is final and
+      must be complied with by all parties to the dispute (binding only between them). The law of the sea is a single
+      policy field. The Statute names no decision rule for the Meeting of States Parties beyond the two-thirds election
+      rule in Art 4, so decision_rule and decision_force are omitted; enforcement and mutual defence were not checked
+      against the Convention.'
+    evidence:
+    - {source: 'Statute of the International Tribunal for the Law of the Sea, UNCLOS Annex VI (itlos.org)', url: 'https://www.itlos.org/fileadmin/itlos/documents/basic_texts/statute_en.pdf',
+      retrieved_at: '2026-11-21'}
+  ITTO:
+    institutional_design:
+      mandate: economic
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Art 1: expand and diversify international trade in tropical timber and promote sustainable forest management.
+      Art 12: the Council endeavours to decide by consensus, and failing that by a simple distributed majority vote
+      (producers and consumers hold 1,000 votes each, Art 10), unless a special vote is required. Art 31: Council
+      decisions on complaints and disputes are taken by consensus and are final and binding; recommendations (Art
+      12) do not bind. Arts 10 and 19: loss of voting rights for arrears is automatic and not recorded. No other measure
+      against a member and no defence clause.'
+    evidence:
+    - {source: 'International Tropical Timber Agreement, 2006 (UNCTAD text TD/TIMBER.3/12, hosted on itto.int)', url: 'https://www.itto.int/direct/topics/topics_pdf_download/topics_id=3363&no=1&disp=inline',
+      retrieved_at: '2026-11-21'}
+  IWC:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'Preamble and Art V: conservation of whale stocks through Schedule regulations. Art III(2): each member
+      has one vote and decisions are by simple majority of those voting, with three fourths for Schedule amendments
+      under Art V. Art V(3): an amendment does not take effect for a government that objects, and Art VI recommendations
+      do not bind. Art IX leaves enforcement to each state. No expulsion, suspension or defence clause.'
+    evidence:
+    - {source: 'International Convention for the Regulation of Whaling, 1946 (text via Wikisource)', url: 'https://en.wikisource.org/wiki/International_Convention_for_the_Regulation_of_Whaling',
+      retrieved_at: '2026-11-21'}
+  MONTREALPROTOCOL:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: consensus
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [suspension]
+    basis: 'Art 2(9)(c)-(d) (1987 text): adjustments are decided by consensus, failing which by two thirds of Parties
+      present and voting representing at least fifty per cent of consumption, and bind all Parties; Art 2(10): additions
+      to annexes need acceptance. Art 11(3): rules of procedure by consensus. Art 8 and the Meeting of the Parties''
+      non-compliance procedure (Implementation Committee) with its indicative list of measures allow the Meeting to
+      suspend specific rights and privileges under the Protocol.'
+    evidence:
+    - {source: 'Montreal Protocol, UNTS vol 1522 No 26369 (UN Treaty Collection)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%201522/volume-1522-I-26369-English.pdf',
+      retrieved_at: '2026-11-21'}
+    - {source: Indicative list of measures for non-compliance (ozone.unep.org), url: 'https://ozone.unep.org/node/2080',
+      retrieved_at: '2026-11-21'}
+    - {source: Non-compliance procedure (ozone.unep.org), url: 'https://ozone.unep.org/node/2078', retrieved_at: '2026-11-21'}
+  NPT:
+    institutional_design:
+      mandate: security
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: 'The treaty creates no decision-making organ: Art VIII(3) only provides review conferences, Art X(2) a
+      conference on extension decided by a majority of Parties, and Art VIII(2) amendments by a majority of all Parties
+      including all nuclear-weapon States and IAEA Board members, then ratification. Art III relies on IAEA safeguards.
+      There is no dispute clause, enforcement measure or assistance obligation; Art X(1) only requires notice of withdrawal
+      to the Security Council.'
+    evidence:
+    - {source: Treaty on the Non-Proliferation of Nuclear Weapons (Wikisource copy), url: 'https://en.wikisource.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons',
+      retrieved_at: '2026-11-21'}
+    - {source: 'NPT, UNTS vol 729 No 10485 (UN Treaty Collection)', url: 'https://treaties.un.org/doc/Publication/UNTS/Volume%20729/volume-729-I-10485-English.pdf',
+      retrieved_at: '2026-11-21'}
+  PARISAGREEMENT:
+    institutional_design:
+      mandate: sectoral
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+    basis: 'Art 16(1)-(5): the COP serves as the meeting of the Parties (CMA), and the Convention''s rules of procedure
+      apply mutatis mutandis unless the CMA decides otherwise by consensus, so the default is the UNFCCC rule (consensus).
+      Art 22 applies Convention Art 15 to amendments (acceptance by each Party); Art 24 applies Convention Art 14
+      (court or arbitration only by declaration, otherwise recommendatory conciliation). Art 15(2): the compliance
+      committee is expert-based, facilitative, transparent, non-adversarial and non-punitive. The text names consensus
+      only for rules of procedure and amendments, not as the default rule for the main decisions, so decision_rule
+      is omitted.'
+    evidence:
+    - {source: 'Paris Agreement text (unfccc.int, paris_agreement_english_.pdf)', url: 'https://unfccc.int/files/meetings/paris_nov_2015/application/pdf/paris_agreement_english_.pdf',
+      retrieved_at: '2026-11-21'}
+    - {source: 'UNFCCC text (unfccc.int, conveng.pdf), Arts 14-15', url: 'https://unfccc.int/resource/docs/convkp/conveng.pdf',
+      retrieved_at: '2026-11-21'}
+  PCA:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      independent_organs: [none]
+      enforcement: [none]
+      mutual_defence: false
+    basis: '1907 Convention Art 49: the Permanent Administrative Council, made up of the diplomatic representatives
+      of the contracting powers at The Hague, decides by a majority of votes. Art 37 makes an award binding once parties
+      choose to arbitrate, but Art 38 only recommends arbitration and Art 40 leaves compulsory arbitration to separate
+      agreements, so recourse depends on the parties'' agreement and no independent organ is recorded. The Bureau
+      (Art 43) is a registry. No sanction, suspension, expulsion or assistance clause.'
+    evidence:
+    - {source: 'Convention for the Pacific Settlement of International Disputes, 1907 (Yale Avalon Project)', url: 'https://avalon.law.yale.edu/20th_century/pacific.asp',
+      retrieved_at: '2026-11-21'}
+  POPS:
+    institutional_design:
+      mandate: sectoral
+      decision_force: partly_binding
+      independent_organs: [none]
+    basis: 'Art 19(4): the COP adopts rules of procedure and financial rules by consensus; Art 21 amendments by consensus,
+      failing which three-fourths, then ratification. Art 22 annex amendments enter into force for all Parties except
+      those that have notified non-acceptance. Art 18: negotiation; ICJ or arbitration only by declaration; otherwise
+      conciliation with a report of recommendations. Art 17 only requires the COP to develop non-compliance procedures;
+      enforcement is omitted. The text names consensus only for rules of procedure and amendments, not as the default
+      rule for the main decisions, so decision_rule is omitted.'
+    evidence:
+    - {source: 'Stockholm Convention text, 2025 English (pops.int)', url: 'https://www.pops.int/Portals/0/download.aspx?e=UNEP-POPS-COP-CONVTEXT-2025.English.pdf',
+      retrieved_at: '2026-11-21'}
+  UNCLOS:
+    institutional_design:
+      independent_organs: [court, dispute_panel]
+    basis: 'Part XV Arts 286-287: a dispute goes at any party''s request to ITLOS, the ICJ, or an Annex VII or VIII
+      tribunal, and a State without a declaration is deemed to accept Annex VII arbitration; Art 296 and Annex VI
+      Art 33 make decisions final and binding on the parties. Arts 297-299 limit and allow exceptions. The Meeting
+      of States Parties is convened by the Secretary-General (Art 319(2)(e)) and elects ITLOS members by two thirds
+      present and voting (Annex VI Art 4(4)); the Convention gives it no general decision-making power, so decision_rule
+      and decision_force are omitted.'
+    evidence:
+    - {source: UNCLOS Part XV (Wikisource), url: 'https://en.wikisource.org/wiki/United_Nations_Convention_on_the_Law_of_the_Sea/Part_15',
+      retrieved_at: '2026-11-21'}
+    - {source: 'UNCLOS Annex VI, ITLOS Statute (Wikisource)', url: 'https://en.wikisource.org/wiki/United_Nations_Convention_on_the_Law_of_the_Sea/Annex_6',
+      retrieved_at: '2026-11-21'}
+    - {source: 'UNCLOS Part XVII, Art 319 (Wikisource)', url: 'https://en.wikisource.org/wiki/United_Nations_Convention_on_the_Law_of_the_Sea/Part_17',
+      retrieved_at: '2026-11-21'}
+  UNFCCC:
+    institutional_design:
+      mandate: sectoral
+      decision_force: partly_binding
+      independent_organs: [none]
+      enforcement: [none]
+    basis: 'Art 7(2)(k): the Conference of the Parties adopts its rules of procedure by consensus; the text sets no
+      voting rule for ordinary decisions. Art 15(3): amendments by consensus, failing which three-fourths of Parties
+      present and voting, then acceptance by each Party (Art 15(4)-(5)); annexes bind all except Parties that notify
+      non-acceptance (Art 16(3)). Art 14: ICJ or arbitration only if a Party declares it compulsory; otherwise conciliation
+      with a recommendatory award. Art 13 provides only a consultative process; no measure against a Party. The text
+      names consensus only for rules of procedure and amendments, not as the default rule for the main decisions,
+      so decision_rule is omitted.'
+    evidence:
+    - {source: 'UNFCCC text (unfccc.int, conveng.pdf)', url: 'https://unfccc.int/resource/docs/convkp/conveng.pdf',
+      retrieved_at: '2026-11-21'}
+
 # Candidates not applied, and why. Revisit when a qualifying source is read.
 deferred:
   ALBA: 'No qualifying source could be read: alba-tcp.org refused the connection and the Venezuelan foreign ministry
@@ -1467,6 +1775,8 @@ deferred:
     be read.
   OECD: oecd.org answers automated requests with a bot-verification page, and no government treaty series or legal-text
     repository copy of the 1960 Convention could be read.
+  RAMSAR: Only the 1971 text could be read; the Paris Protocol and Regina amendments changed Arts 6-10, and the
+    current text on ramsar.org returned 403.
   SAARC: 'No qualifying source could be read: the SAARC Secretariat charter pages return 404 and only search snippets
     were available.'
   SPC: 'No qualifying source could be read: spc.int and AustLII returned 403, and the UN Treaty Series copy is image-only.'
