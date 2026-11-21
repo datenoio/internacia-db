@@ -4,169 +4,270 @@ blocktype:
 - intorg
 status: formal
 scope_category: igo
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization established by the 1953 CERN Convention; the Director-General of UNESCO
+  is depositary of the Convention
+institutional_design:
+  mandate: sectoral
+  decision_rule: simple_majority
+  enforcement:
+  - expulsion
+  mutual_defence: false
 languages:
 - en
 - fr
 links:
-- url: http://www.cern.ch/
+- url: https://home.cern/
+  type: website
+- url: https://home.cern/about/who-we-are/our-stakeholders
   type: website
 - url: https://en.wikipedia.org/wiki/CERN
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q42944
   type: wikidata
+official_documents:
+- url: https://wetten.overheid.nl/BWBV0004885
+  type: document
+  name: Convention for the Establishment of a European Organization for Nuclear Research (Paris, 1 July 1953), English
+    and French authentic texts via the Dutch government treaty database
+social_media:
+  facebook: https://www.facebook.com/cern
+  linkedin: https://www.linkedin.com/company/cern
+  youtube: https://www.youtube.com/user/cerntv
+  instagram: https://www.instagram.com/cern
 name: CERN (European Organization for Nuclear Research)
+previous_names:
+- id: en
+  name: European Council for Nuclear Research
+  period: 1952-1954
+- id: fr
+  name: Conseil Européen pour la Recherche Nucléaire
+  period: 1952-1954
 includes:
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '1959'
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '1954-09-29'
 - id: BG
   name: Bulgaria
   type: country
   status: member
+  joined: '1999'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '1954-09-29'
 - id: CZ
   name: Czech Republic
   type: country
   status: member
+  joined: '1993'
 - id: DE
   name: Germany
   type: country
   status: member
+  joined: '1954-09-29'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '1954-09-29'
 - id: EE
   name: Estonia
   type: country
   status: member
+  joined: '2024'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '1983'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '1991'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1954-09-29'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '1954-09-29'
 - id: GR
   name: Greece
   type: country
   status: member
+  joined: '1954-09-29'
 - id: HU
   name: Hungary
   type: country
   status: member
+  joined: '1992'
 - id: IL
   name: Israel
   type: country
   status: member
+  joined: '2014'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1954-09-29'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1954-09-29'
 - id: 'NO'
   name: Norway
   type: country
   status: member
+  joined: '1954-09-29'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '1991'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '1985'
 - id: RO
   name: Romania
   type: country
   status: member
+  joined: '2016'
 - id: RS
   name: Serbia
   type: country
   status: member
+  joined: '2019'
 - id: SE
   name: Sweden
   type: country
   status: member
+  joined: '1954-09-29'
 - id: SI
   name: Slovenia
   type: country
   status: member
+  joined: '2025'
 - id: SK
   name: Slovak Republic
   type: country
   status: member
+  joined: '1993'
 - id: BR
   name: Brazil
   type: country
   status: associate_member
+  joined: '2024'
 - id: CL
   name: Chile
   type: country
   status: associate_member
+  joined: '2026'
 - id: HR
   name: Croatia
   type: country
   status: associate_member
+  joined: '2019'
 - id: CY
   name: Cyprus
   type: country
   status: associate_member
+  joined: '2016'
 - id: IN
   name: India
   type: country
   status: associate_member
+  joined: '2017'
 - id: IE
   name: Ireland
   type: country
   status: associate_member
+  joined: '2025'
 - id: LV
   name: Latvia
   type: country
   status: associate_member
+  joined: '2021'
 - id: LT
   name: Lithuania
   type: country
   status: associate_member
+  joined: '2018'
 - id: PK
   name: Pakistan
   type: country
   status: associate_member
+  joined: '2015'
 - id: TR
   name: Türkiye
   type: country
   status: associate_member
+  joined: '2015'
 - id: UA
   name: Ukraine
   type: country
   status: associate_member
-founded: '1954'
+  joined: '2016'
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+- id: UNESCO
+  name: UNESCO
+  type: organization
+  status: observer
+membership_count: 36
+founding_members:
+- BE
+- CH
+- DE
+- DK
+- FR
+- GB
+- GR
+- IT
+- NL
+- 'NO'
+- SE
+founded: '1954-09-29'
+active_period:
+  start: '1954-09-29'
+geographic_scope: regional
+regions:
+- Europe
 headquarters:
   city: Meyrin
   country: CH
   coordinates:
-    lat: 46.23222
-    lng: 6.07911
+    lat: 46.234493
+    lng: 6.049129
+secretariat:
+  location: Esplanade des Particules 1, P.O. Box, 1211 Geneva 23, Switzerland
+  head: Director-General
 acronyms:
 - lang: en
   value: CERN
@@ -190,17 +291,39 @@ acronyms:
   value: CEIN
 - lang: es
   value: CERN
-membership_count: 36
 wikidata_id: Q42944
-description: International organization which operates the world's largest particle physics laboratory.
+description: Intergovernmental organization that operates the world's largest particle physics laboratory, on the Franco-Swiss
+  border near Geneva. Under the 1953 Convention it has no concern with work for military requirements, and its results are
+  published or otherwise made generally available. It is governed and primarily funded by its 25 Member States, and 11
+  Associate Member States also take part.
+notes: >-
+  A UNESCO intergovernmental meeting in Paris in December 1951 adopted the first resolution on a European Council for
+  Nuclear Research; the provisional Council (Conseil Européen pour la Recherche Nucléaire), set up two months later, gave
+  the acronym CERN. Twelve States signed the Convention at the sixth Council session in Paris (29 June to 1 July 1953),
+  and it entered into force on 29 September 1954. Of the founders, Yugoslavia left in 1961 and is not listed because the
+  dataset has no country record for it. Spain was a member from 1961 to 1969 and rejoined in 1983. Czechoslovakia joined
+  in 1992; Czechia and Slovakia succeeded it in 1993. The Council has up to two delegates and one vote per Member State
+  and decides by a simple majority of Member States represented and voting unless the Convention says otherwise (Art
+  V(4)-(5)). Programmes, contribution scales and the appointment of the Director-General need a two-thirds majority of all
+  Member States; the budget needs two thirds of those represented and voting; admission of new members and amendments need
+  every Member State (Arts III, X). A Member State in arrears for more than two years of contributions loses its vote (Art
+  V(8)); one that fails to fulfil its obligations can be expelled by a two-thirds majority of all Member States (Art XIII).
+  Disputes not settled by the Council go to the International Court of Justice (Art XI). Mark Thomson is
+  Director-General, succeeding Fabiola Gianotti (2016-2025); the first was Felix Bloch (1954-1955). Observers are the
+  European Union and UNESCO, and Japan and the United States for the High-Luminosity LHC only. The Council suspended the
+  observer status of the Russian Federation on 8 March 2022 and of JINR on 25 March 2022, and in June 2022 declared that it
+  would end the cooperation agreement with Russia when it expired in 2024. CERN employs about 2,500 people.
 tags:
 - CERN
+- accelerator
 - atomic
 - energy
 - european
 - intorg
 - nuclear
 - organization
+- particle_physics
+- physics
 - research
 - science
 - technology
@@ -212,6 +335,8 @@ topics:
   name: Science
 - key: technology
   name: Technology
+- key: physics
+  name: Physics
 other_names:
 - id: ar
   name: سيرن
@@ -229,21 +354,78 @@ other_names:
   name: ЦЕРН
 - id: zh
   name: 歐洲核子研究組織
-last_verified: '2026-10-22'
+last_verified: '2026-11-21'
 provenance:
 - field: includes
-  source: CERN
-  retrieved_at: '2026-10-22'
-  url: https://home.cern/about/who-we-are/member-states/
+  source: CERN, Our stakeholders
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
 - field: membership_count
-  source: CERN
-  retrieved_at: '2026-10-22'
-  url: https://home.cern/about/who-we-are/member-states/
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  source: CERN, Our stakeholders (25 Member States and 11 Associate Member States)
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
+- field: founding_members
+  source: CERN, Our stakeholders
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
+- field: founded
+  source: CERN, Our stakeholders
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
+- field: active_period
+  source: CERN, Our stakeholders
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
+- field: previous_names
+  source: CERN, Our history
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-history
+- field: institutional_design
+  source: CERN Convention (Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004885
+- field: legal_status
+  source: CERN Convention (Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004885
+- field: recognition_status
+  source: CERN Convention, Arts XVI, XVII and XX (Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004885
+- field: languages
+  source: CERN Convention, final clause (Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004885
+- field: official_documents
+  source: Dutch government treaty database (wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004885
+- field: headquarters
+  source: Wikipedia (infobox)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/CERN
+- field: headquarters.coordinates
+  source: Wikidata (Q42944, P625)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q42944
   license: CC0
+- field: secretariat
+  source: CERN website footer
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/
+- field: social_media
+  source: CERN website footer
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/
+- field: description
+  source: CERN; CERN Convention, Art II
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-stakeholders
+- field: notes
+  source: CERN (Our history, Our governance, Our people, Council press releases of 25 March and 17 June 2022); CERN
+    Convention
+  retrieved_at: '2026-11-21'
+  url: https://home.cern/about/who-we-are/our-history
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -254,7 +436,3 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.cern.ch/
