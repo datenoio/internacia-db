@@ -142,6 +142,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   State/Group/Individual membership. The record gains `social_media`, the constitution in
   `official_documents`, `secretariat.organization`, notes on PRC and SRV seat successions, and
   three topics. `scope_category` stays `igo` pending review.
+- `CAPAM` is now `non_state_organization` and no longer lists 55 country members. It was a
+  Canadian federal not-for-profit corporation whose members were individuals and organisations,
+  including government ministries and departments, not states (Corporations Canada; Jamaica
+  Information Service, 2008). The old roster copied the Commonwealth's, without the UK and with
+  Gabon and Togo, which joined the Commonwealth in 2022. The record drops `partof: COMMONWEALTH`
+  and sets `membership_applicability: not_applicable`, as `ACU` does, and leaves
+  `scope_category.igo_legal_status_allowlist`. `memberships` loses 55 rows and the documented
+  dissolved-with-roster recipe returns 34 rows. The record also gains the last registered office,
+  the 2019 dissolution vote and reasons, the 1998 start of the Innovations Awards (not 1997),
+  conference examples and three topics.
 
 ## [4.2.0] - 2026-11-21
 
