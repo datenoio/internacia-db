@@ -10,22 +10,9 @@ scope_category: treaty_body
 founded: '1958-03-20'
 active_period:
   start: '1959-06-20'
-geographic_scope: regional
+geographic_scope: global
 regions:
-- Europe
-- Asia
-- Africa
-- Oceania
-- Caucasus
-- Central Asia
-- East Africa
-- East Asia
-- Middle East
-- North Africa
-- South Asia
-- Southeast Asia
-- Southern Africa
-- West Africa
+- worldwide
 languages:
 - ar
 - zh
@@ -406,7 +393,11 @@ provenance:
   source: United Nations Treaty Collection
   retrieved_at: '2026-09-09'
   url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-16&chapter=11&clang=_en
-- field: regions
-  source: Derived from the continents and UN M49 subregions of the parties in includes (data/countries)
+- field: geographic_scope
+  source: 'United Nations Treaty Collection: 16 of the 61 Contracting Parties are outside the UNECE region;
+    Revision 2, which opened the Agreement to them, entered into force on 16 October 1995'
   retrieved_at: '2026-11-21'
   url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-16&chapter=11&clang=_en
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
