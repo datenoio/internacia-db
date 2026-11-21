@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `AH` (Asian Highway Network, Wikidata Q728802), a `project`/`transport` record for the ESCAP
-  road network itself, checked on 2026-11-21 (1298 intblocks). It mirrors `TAR`: no country
+  road network itself, checked on 2026-11-21 (1299 intblocks). It mirrors `TAR`: no country
   roster (`membership_applicability: not_applicable`), because the 32 countries the network
   crosses are not treaty parties. The 30 states parties stay on `ASIANHIGHWAY`.
 - 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
@@ -52,6 +52,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
   on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
   blocked), so no ADB page is cited.
+- `CICPEC` (China-Indochina Peninsula Economic Corridor, formerly the Nanning-Singapore
+  Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1298 intblocks).
+  Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
+  Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 

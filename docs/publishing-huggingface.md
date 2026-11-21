@@ -15,7 +15,7 @@ build. Both use `prepare_huggingface_bundle` to produce:
 | Repo path | Why it is uploaded |
 |-----------|--------------------|
 | `countries/countries.parquet` | 256 country records |
-| `intblocks/intblocks.parquet` | 1298 organizations / groups |
+| `intblocks/intblocks.parquet` | 1299 organizations / groups |
 | `blocktypes/blocktypes.parquet` | 80 taxonomy keys |
 | `memberships/memberships.parquet` | Flattened country↔intblock edges |
 | `datapackage.json` | Parquet-only Frictionless index with paths matching the per-table folders |
