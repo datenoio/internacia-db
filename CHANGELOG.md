@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
-  depositary and official sources (1296 intblocks):
+  depositary and official sources (1297 intblocks):
   - Treaties (`transport`, `agreement`; `treaty_body`): `ARABMASHREQRAILWAYS` (UNTC XI-C-4,
     12 parties), the ESCWA rail network agreement and sibling of `ARABMASHREQROADS` below,
     renamed "between Arab Countries" in 2016; `PANAMERICANHIGHWAY` (1936 convention, OAS B-19,
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     `project`, `policy_forum`).
   - Ten of them have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
   The roads agreement (UNTC XI-B-33) is not added again: it is `ARABMASHREQROADS` below.
+  `GMS` is the programme behind the `EWEC` corridor below.
   The Ashgabat Agreement is deferred: Qatar's status conflicts between sources, Pakistan's
   and Armenia's accessions are unconfirmed, and its 10-year term from 23 April 2016 ended
   in April 2026 with no extension found. The older Abidjan–Lagos Corridor Organization
@@ -41,6 +42,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
   roles because the corridor branches from Mombasa to several landlocked countries instead of
   running between two ends.
+- `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
+  corridor record with route roles, checked on 2026-11-21 (1285 intblocks): MM and VN
+  `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
+  to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
+  on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
+  blocked), so no ADB page is cited.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 
@@ -51,9 +58,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
   The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
   unchanged (648 on v4.2.0 data, 36 with a status).
-
-### Fixed
-
 - `regions` on 174 intblocks no longer carries the six-continent placeholder (Africa, Asia,
   Europe, North America, Oceania, South America) left by the 2026-09-09 UNTC import. Each fixed
   record gains a `provenance` entry for `regions`.
