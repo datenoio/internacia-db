@@ -81,6 +81,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   The UN Group of Friends for International Cooperation on AI Capacity-building is deferred: it
   publishes no member list.
 
+### Changed
+
+- `CEI` (Central European Initiative) enriched and checked on 2026-11-21 against cei.int and
+  the CEI Guidelines and Rules of Procedure (2023):
+  - `includes`: accession years for the 17 members from the official roster; a note on the
+    suspension of Belarus's rights of representation (25 March 2022), which keeps it on the
+    roster as `member`; and founding member Austria as `former_member` (1989–2018). SFR
+    Yugoslavia and Czechoslovakia have no country code, so they are only in `notes`.
+  - `headquarters` gains `country: IT`. The website link moves from ceinet.org to cei.int.
+    `languages` is English, the working language under Article 32.
+  - New fields: `founded` (1989-11-11, Budapest), `founding_members` (AT, HU, IT),
+    `previous_names` (Quadragonale, Pentagonale, Hexagonale), `secretariat`,
+    `geographic_scope`, `regions`, `legal_status`, `recognition_status` (UN General Assembly
+    observer since 2011), `official_documents`, `social_media`, a full `description` and
+    `notes`, and 17 more `provenance` entries (23 in all).
+  - `institutional_design` from the Guidelines: `general` mandate, `consensus`, no
+    independent organs, suspension and expulsion by consensus minus one. `CEI` is the first
+    record outside the reviewed cohort of 108 that carries it. `decision_force` is omitted
+    because the Guidelines do not say whether decisions bind.
+  - `other_names` gains ten languages from Wikidata (be, bg, cs, hr, it, pl, ro, sl, sr, uk).
+    `acronyms` adds `InCE` (it), `ЦЕИ` (bg), `ЦЕІ` (be) and `ЦЄІ` (uk). The two Chinese
+    "acronyms" are removed: 中歐倡議組織 is a name and moves to `other_names`; 歐洲創新中心
+    ("European Innovation Centre") was a wrong Wikidata alias.
+  - Documented query counts move with the record: 184 `membership_count` mismatches (the
+    roster now lists 17 members plus Austria), 201 `former_member` rows with `joined`, and
+    109 records with `institutional_design`.
+
 ### Fixed
 
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
