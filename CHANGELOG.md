@@ -197,6 +197,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the 1958 Agreement's 61 Contracting Parties are outside it, for example AU, JP, KR and ZA;
   Revision 2, which opened it, entered into force on 16 October 1995. As for other global
   records, `regions` is now `worldwide`.
+- `PARLACEN` (Central American Parliament) roster checked on 2026-11-21 against PARLACEN's
+  official observer list and press reports; `last_verified` was 2026-07-29.
+  - The record listed no observers. It now has the five on the official list as `observer`:
+    `MX`, `PR`, `MA`, `VE` and `CN` (admitted on 21 August 2023). `TW` is a former observer
+    (`joined` 1999, `left` 2023-08-21): the same plenary decision revoked the Legislative Yuan's
+    status. Russia, approved in September 2024 subject to ratification, is not on the official
+    list and is not added.
+  - Nicaragua denounced the Constitutive Treaty on 3 October 2026 "with immediate effect". The
+    treaty has no denunciation or withdrawal clause, and PARLACEN has not accepted the exit, so
+    `NI` stays a founding member and `notes` records the pending exit.
+  - The documented recipe "Countries with many observer seats" still returns 40 rows: `MX`
+    and `TW` move from 5 to 6 observer entries, and `CN` from 6 to 7. "Declared vs actual
+    roster size" counts 187 mismatches, one more than with `SICA`, `CEI` and `CES`:
+    `membership_count` stays 6, the member states, while `includes` now has 12 entries.
 - `IAC` (Interstate Aviation Committee) roster checked on 2026-11-21 against the IAC website
   (nine participating states as of January 2026) and the 1991 Minsk Agreement on Civil Aviation
   and on the Use of Airspace. `membership_count` drops from 12 to 9: `UA` becomes
