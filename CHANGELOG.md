@@ -22,6 +22,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   from its 38 states parties. The UNTC import had set all six continents. The record now links
   the English Wikipedia article on the network. Its Wikidata exclusion now records that Q106123
   describes the network, not the agreement, as for `ASIANHIGHWAY`.
+- `regions` on 27 regional treaty records is now derived from their states parties. The UNTC
+  import (2026-09-09) had set all six continents on them. Each record gets a `regions`
+  provenance entry dated 2026-11-21. European parties map to Europe, Armenia, Azerbaijan and
+  Georgia to Caucasus, and the rest to their UN M49 subregion (Iran to Middle East). Records:
+  AARHUS, ASCOBANS, CLRTAP, ESPOO, INDUSTRIALACCIDENTS, KIEVSEA, LUSAKA, PRTR, UNECEWATER,
+  WATERHEALTH, EUROARBITRATION, PAPERLESSTRADE, ADN, ADR, AETR, AGC, AGN, AGTC, ASIANHIGHWAY,
+  ATP, CMR, CMRPROTOCOL, DRYPORTS, ECMR, EURO1968TRAFFIC, UN1958AGREEMENT and UN1997AGREEMENT.
+  The 147 global treaty records keep the six-continent set.
 
 ## [4.2.0] - 2026-11-21
 
