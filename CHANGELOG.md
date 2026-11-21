@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `AH` (Asian Highway Network, Wikidata Q728802), a `project`/`transport` record for the ESCAP
+  road network itself, checked on 2026-11-21 (1283 intblocks). It mirrors `TAR`: no country
+  roster (`membership_applicability: not_applicable`), because the 32 countries the network
+  crosses are not treaty parties. The 30 states parties stay on `ASIANHIGHWAY`.
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
@@ -54,6 +58,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Conference or Meeting of the Parties. Where the text names consensus only for rules of
   procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
   `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
+
+### Fixed
+
+- `ASIANHIGHWAY` `regions` listed all six continents, including Africa, the Americas and
+  Oceania. They now follow its states parties: Asia, Europe, Caucasus, Central Asia, East Asia,
+  Middle East, South Asia and Southeast Asia.
 
 ## [4.1.0] - 2026-11-20
 
