@@ -7,143 +7,337 @@ blocktype:
 status: formal
 scope_category: igo
 partof: CIS
+geographic_scope: regional
+regions:
+- Asia
+- Europe
+- Caucasus
+- Central Asia
 languages:
-- en
 - ru
+- en
 links:
-- url: http://www.mak.ru/russian/russian.html
+- url: https://mak-iac.org/
+  type: website
+- url: https://mak-iac.org/en/
   type: website
 - url: https://en.wikipedia.org/wiki/Interstate_Aviation_Committee
+  type: wikipedia
+- url: https://ru.wikipedia.org/wiki/Межгосударственный_авиационный_комитет
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q245076
   type: wikidata
 name: Interstate Aviation Committee
-founded: '1991'
+founded: '1991-12-25'
+founding_members:
+- AZ
+- AM
+- BY
+- GE
+- KZ
+- KG
+- MD
+- RU
+- TJ
+- TM
+- UZ
+- UA
 headquarters:
   city: Moscow
+  country: RU
   coordinates:
-    lat: 55.75055555555556
-    lng: 37.6175
+    lat: 55.7407472
+    lng: 37.6244594
+secretariat:
+  location: 22/2 Bolshaya Ordynka Street, Moscow 119017, Russia
+  organization: Interstate Aviation Committee
 acronyms:
-- lang: ru
-  value: МАК
-- lang: en
-  value: MAK
 - lang: en
   value: IAC
 - lang: en
-  value: SAK
-- lang: en
-  value: DAK
-- lang: en
-  value: CIEA
-- lang: en
+  value: MAK
+- lang: ru
+  value: МАК
+- lang: uk
+  value: МАК
+- lang: be
+  value: МАК
+- lang: kk
+  value: МАК
+- lang: hy
   value: ՄԱԿ
-- lang: zh
-  value: 俄羅斯州際航空委員会
-- lang: zh
-  value: 州際航空委員会
+- lang: tk
+  value: DAK
+- lang: lv
+  value: SAK
+- lang: es
+  value: CIEA
 includes:
 - id: AM
   name: Armenia
   type: country
   status: member
+  joined: '1991-12-25'
 - id: AZ
   name: Azerbaijan
   type: country
   status: member
+  joined: '1991-12-25'
 - id: BY
   name: Belarus
   type: country
   status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
+  joined: '1991-12-25'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '1991-12-25'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
+  joined: '1991-12-25'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '1991-12-25'
+  note: Russian Government Decree No. 1283 of 28 November 2015 moved the certification of civil aircraft and aerodromes
+    from the IAC to Russian federal bodies, and the IAC's certification powers for Russia ended in December 2015. Russia
+    still takes part in the IAC's investigation of aviation accidents.
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1991-12-25'
 - id: TM
   name: Turkmenistan
   type: country
   status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
+  joined: '1991-12-25'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
-membership_count: 12
+  joined: '1991-12-25'
+- id: UA
+  name: Ukraine
+  type: country
+  status: former_member
+  joined: '1991-12-25'
+  left: '2021-02-23'
+  note: Signed the 1991 Agreement. Presidential Decree No. 70/2021 of 23 February 2021 withdrew Ukraine from the Agreement
+    and told the Ministry of Foreign Affairs to notify the Council on Aviation and Use of Airspace. Under Article 18 a
+    withdrawal takes effect 12 months after that notice.
+- id: GE
+  name: Georgia
+  type: country
+  status: former_member
+  joined: '1991-12-25'
+  note: Signed the 1991 Agreement. Georgia left the CIS in 2009 and is not among the participating states listed by the
+    IAC (January 2026). No formal withdrawal date from the Agreement was found.
+- id: MD
+  name: Moldova
+  type: country
+  status: former_member
+  joined: '1991-12-25'
+  note: Signed the 1991 Agreement. In 1999 the Moldovan government announced that it would reduce or end its participation.
+    Moldova is not among the participating states listed by the IAC (January 2026). No formal withdrawal date from the
+    Agreement was found.
+membership_count: 9
 wikidata_id: Q245076
-description: Executive body of the Civil Aviation and Airspace Use Council of the Commonwealth of Independent States (CIS).
+legal_status: intergovernmental
+recognition_status: Accredited by ICAO as an intergovernmental organization that may be invited to ICAO meetings; member of
+  the International Transportation Safety Association (ITSA)
+official_documents:
+- url: https://mak-iac.org/en/o-mak/dokumenty/soglashenie-o-grazhdanskoy-aviatsii-i-ob-ispolzovanii-vozdushnogo-prostranstva/
+  type: treaty
+  title: Agreement on Civil Aviation and on the Use of Airspace, Minsk, 25 December 1991
+description: Permanent interstate executive body of the Agreement on Civil Aviation and on the Use of Airspace, signed in
+  Minsk on 25 December 1991 by twelve former Soviet republics. It carries out the Agreement and runs the Council on Aviation
+  and Use of Airspace, which brings together the plenipotentiary representatives of the member states. The IAC conducts
+  independent investigations of accidents and serious incidents involving civil aircraft. It certifies aircraft types,
+  aviation equipment, maintenance organizations, aerodromes, air navigation systems and training institutions. It also
+  harmonizes aviation rules and flight safety standards among its nine member states.
+notes: Article 8 of the 1991 Agreement set up the Council on Aviation and Use of Airspace, which works by consensus, and the
+  Interstate Aviation Committee as its permanent executive body. Under Article 9 the IAC succeeded the USSR Commission for
+  Airspace Use and Air Traffic Management, the Commission for State Supervision of Flight Safety (Gosavianadzor) and, for
+  the agreed functions, the USSR Ministry of Civil Aviation, as well as the former USSR's international aviation agreements
+  and its participation in ICAO. Article 21 places the headquarters in Moscow. The Agreement entered into force on signature
+  by at least three states, and Article 18 lets a state withdraw on 12 months' notice to the Council. All twelve signatories
+  took part at first; Georgia, Moldova and Ukraine have since left. The IAC's Aviation Register certified aircraft types and
+  aerodromes for the member states; Russia moved these functions to its own federal bodies in December 2015, and accident
+  investigation became the IAC's main task. Tatyana Anodina chaired the IAC from 1991 until January 2023, when the Council
+  appointed Oleg Storchevoy, a former deputy head of Rosaviatsia, and named Anodina honorary president of the Council. The
+  chairmanship of the Council rotates; from January 2026 it is held for three years by Habibullo Nazarzoda, the
+  plenipotentiary representative of Tajikistan. The IAC has concluded more than 100 agreements, including with ICAO, EASA,
+  IATA, IFALPA and the Eurasian Economic Commission. Its investigations include the 2010 crash of the Polish Air Force
+  Tu-154 near Smolensk.
 tags:
 - CIEA
 - DAK
 - IAC
 - MAK
 - SAK
+- accident_investigation
+- airspace
 - aviation
+- aviation_safety
+- certification
+- civil_aviation
 - committee
 - interstate
-- intorg
+- post-soviet
 - transport
-- transportation
 - МАК
 - ՄԱԿ
 topics:
+- key: aviation
+  name: Aviation
 - key: transport
   name: Transport
+- key: accident_investigation
+  name: Accident Investigation
+- key: certification
+  name: Certification
+- key: safety
+  name: Safety
 other_names:
 - id: ar
   name: لجنة الطيران الدولية
+- id: az
+  name: Dövlətlərarası Aviasiya Komitəsi
+- id: be
+  name: Міждзяржаўны авіяцыйны камітэт
 - id: de
   name: Zwischenstaatliches Luftfahrtkomitee
 - id: en
   name: Interstate Aviation Committee
 - id: es
   name: Comité Interestatal de Aviación
-- id: fr
-  name: Interstate Aviation Committee
+- id: hy
+  name: Միջպետական ավիացիոն կոմիտե
+- id: ja
+  name: 国家間航空委員会
+- id: ka
+  name: სახელმწიფოთაშორისი საავიაციო კომიტეტი
+- id: kk
+  name: Мемлекетаралық авиация комитеті
+- id: ky
+  name: Мамлекеттер аралык авиация комитети
+- id: pl
+  name: Międzypaństwowy Komitet Lotniczy
+- id: ro
+  name: Comitetul Interstatal de Aviație
 - id: ru
   name: Межгосударственный авиационный комитет
+- id: tg
+  name: Кумитаи Байнидавлатии Ҳавопаймоӣ
+- id: tk
+  name: Döwletara awiasiýa komiteti
+- id: tr
+  name: Devletler Arası Havacılık Komitesi
+- id: uk
+  name: Міждержавний авіаційний комітет
+- id: uz
+  name: Davlatlararo aviatsiya qoʻmitasi
 - id: zh
-  name: 國際航空委員會
+  name: 国家间航空委员会
+last_verified: '2026-11-21'
 provenance:
+- field: includes
+  source: IAC, About the IAC (participating states as of January 2026)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/o-mak/
+- field: includes
+  source: Agreement on Civil Aviation and on the Use of Airspace, Minsk, 25 December 1991 (signatories, Article 18 withdrawal)
+  retrieved_at: '2026-11-21'
+  url: https://pavlodar.com/zakon/?dok=02050&all=all
+- field: includes
+  source: Interfax (Ukraine's withdrawal by Presidential Decree No. 70/2021, 23 February 2021)
+  retrieved_at: '2026-11-21'
+  url: https://www.interfax.ru/world/752193
+- field: includes
+  source: Wikipedia, membership section (Georgia, Moldova and Ukraine as former participants; Russia's partial participation)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Interstate_Aviation_Committee
+  license: CC-BY-SA
+- field: includes
+  source: Wikipedia, 2015 transfer of Russian certification powers (Government Decree No. 1283 of 28 November 2015)
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikipedia.org/wiki/Межгосударственный_авиационный_комитет
+  license: CC-BY-SA
+- field: membership_count
+  source: IAC, About the IAC (nine participating states as of January 2026)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/o-mak/
+- field: founded
+  source: Agreement on Civil Aviation and on the Use of Airspace (Minsk, 25 December 1991; Article 23 entry into force on
+    signature)
+  retrieved_at: '2026-11-21'
+  url: https://pavlodar.com/zakon/?dok=02050&all=all
+- field: founding_members
+  source: Agreement on Civil Aviation and on the Use of Airspace (twelve signature blocks)
+  retrieved_at: '2026-11-21'
+  url: https://pavlodar.com/zakon/?dok=02050&all=all
+- field: headquarters
+  source: IAC, About the IAC (address 22/2 Bolshaya Ordynka Street, Moscow 119017)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/
+- field: headquarters
+  source: OpenStreetMap Nominatim (coordinates of 22/2 Bolshaya Ordynka Street, Moscow)
+  retrieved_at: '2026-11-21'
+  url: https://www.openstreetmap.org/relation/6381244
+  license: ODbL
+- field: secretariat
+  source: IAC, About the IAC (address)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/
+- field: languages
+  source: IAC website (published in Russian and English)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/
+- field: regions
+  source: Continents of current members, then subregions of members outside Europe (AM, AZ Caucasus; KZ, KG, TJ, TM, UZ
+    Central Asia)
+  retrieved_at: '2026-11-21'
+- field: recognition_status
+  source: IAC, About the IAC (ITSA membership); Wikipedia (ICAO accreditation)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/o-mak/
+- field: official_documents
+  source: IAC, documents section
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/o-mak/dokumenty/soglashenie-o-grazhdanskoy-aviatsii-i-ob-ispolzovanii-vozdushnogo-prostranstva/
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
+  source: IAC, About the IAC and Council pages
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/o-mak/
+- field: notes
+  source: Agreement on Civil Aviation and on the Use of Airspace (Articles 8, 9, 18, 21, 23)
+  retrieved_at: '2026-11-21'
+  url: https://pavlodar.com/zakon/?dok=02050&all=all
+- field: notes
+  source: IAC, Council on Aviation and Use of Airspace (rotating chairmanship, Tajikistan from January 2026)
+  retrieved_at: '2026-11-21'
+  url: https://mak-iac.org/en/council/
+- field: notes
+  source: Parlamentskaya Gazeta citing TASS (Oleg Storchevoy appointed chair, Anodina honorary president, 17 January 2023)
+  retrieved_at: '2026-11-21'
+  url: https://www.pnp.ru/social/predsedatelem-mak-naznachen-byvshiy-zamglavy-rosaviacii-oleg-storchevoy.html
+- field: notes
+  source: Wikipedia (Aviation Register, 2015 transfer of certification, Smolensk investigation)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Interstate_Aviation_Committee
+  license: CC-BY-SA
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q245076
   license: CC0
 - field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  source: Wikidata P1813 (short names with language tags)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q245076
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.mak.ru/russian/russian.html
