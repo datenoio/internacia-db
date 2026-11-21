@@ -129,11 +129,12 @@ IGOs; attribute partitions; socioeconomic rankings; Wikipedia-only membership.
 
 Hand off to [contribute.md](contribute.md) and, for a first add,
 [add-intblock-example.md](add-intblock-example.md). If the catalogue walk is
-new, append a row to [intblock-sources.md](../intblock-sources.md). Update
-`CHANGELOG.md` under `[Unreleased]`.
+new, append a row to [intblock-sources.md](../intblock-sources.md). Add a
+`changelog.d/<slug>.md` fragment instead of editing `CHANGELOG.md`
+([changelog.d/README.md](../../changelog.d/README.md)).
 
-Run the full build and commit the regenerated `data/datasets/` descriptors with source
-changes; never edit exports by hand. Follow [contribute.md](contribute.md) for the
+Run the full build and commit any tracked `data/datasets/` descriptor it changes; build
+manifests and `datapackage.json` are not committed, and exports are never edited by hand. Follow [contribute.md](contribute.md) for the
 artifact, documentation-count, and query-expectation checks required before PR.
 
 ## Related
