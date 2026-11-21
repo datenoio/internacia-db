@@ -151,6 +151,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   now has 109 records (`reviewed_109`). With `CEI` above, 110 records carry
   `institutional_design`. The declared vs actual roster recipe now returns 185 mismatches,
   because ITER lists 11 entries against its 7 Members.
+- `CERN` checked on 2026-11-21 against home.cern and the CERN Convention (English text on
+  the Dutch government treaty database). `founded` moves from 1954 to 1954-09-29, the date
+  the Convention entered into force, and `active_period` starts on the same day. All 25
+  Member States and 11 Associate Member States gain `joined` years from CERN's timeline,
+  and the 11 founders still members become `founding_members`. Yugoslavia, the twelfth
+  founder, left in 1961 and has no country record. The observers JP, US, EU and UNESCO are
+  added as `observer`. `membership_count` stays 36 (Member States plus Associate Member
+  States). `previous_names` records the provisional Conseil Européen pour la Recherche
+  Nucléaire (1952-1954). Also changed: the website becomes https://home.cern/, the
+  headquarters coordinates come from Wikidata, and `description` is rewritten.
+  The record also gains `institutional_design`, `legal_status`, `recognition_status`,
+  `official_documents`, `social_media`, `secretariat`, `notes`, `geographic_scope`
+  (regional, Europe), the topic physics and 19 provenance entries. CERN joins the reviewed
+  `institutional_design` cohort, which now has 110 records (`reviewed_110`); with `CEI`, 111
+  records carry `institutional_design`. The declared vs actual roster recipe now returns 186
+  mismatches, because CERN lists 40 entries, observers included, against a count of 36.
 
 ## [4.2.0] - 2026-11-21
 

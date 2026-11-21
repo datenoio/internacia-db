@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_109
-expected_count: 109
+cohort_id: reviewed_110
+expected_count: 110
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -1761,7 +1761,7 @@ records:
     - {source: 'UNFCCC text (unfccc.int, conveng.pdf)', url: 'https://unfccc.int/resource/docs/convkp/conveng.pdf',
       retrieved_at: '2026-11-21'}
 
-  # --- ITER record review (2026-11-21) ---------------------------------------
+  # --- ITER and CERN record reviews (2026-11-21) -------------------------------
   ITER:
     institutional_design:
       mandate: sectoral
@@ -1779,6 +1779,26 @@ records:
     evidence:
       - source: ITER Agreement (text via University of Oslo)
         url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+        retrieved_at: '2026-11-21'
+  CERN:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      enforcement: [expulsion]
+      mutual_defence: false
+    basis: >-
+      CERN Convention Art II: nuclear research with no concern for military requirements, results made generally
+      available (one research field, so sectoral). Art V(4)-(5): one vote per Member State, decisions by a simple
+      majority of Member States represented and voting unless the Convention provides otherwise; programmes,
+      contribution scales and the Director-General need two thirds of all Member States, the budget two thirds of
+      those represented and voting, and admission (Art III) and amendments (Art X) every Member State. Art XIII: a
+      Member State failing its obligations ceases to be a member by a two-thirds decision of the Council. Loss of
+      vote for arrears (Art V(8)) is automatic and not recorded. Disputes go to the International Court of Justice
+      (Art XI), which is not an organ of CERN. Whether Council acts bind and whether the Director-General is an
+      independent executive are not settled by the text, so decision_force and independent_organs are omitted.
+    evidence:
+      - source: CERN Convention (Dutch government treaty database, wetten.overheid.nl)
+        url: https://wetten.overheid.nl/BWBV0004885
         retrieved_at: '2026-11-21'
 
 # Candidates not applied, and why. Revisit when a qualifying source is read.
