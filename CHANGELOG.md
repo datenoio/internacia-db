@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.0] - 2026-11-21
+
 ### Added
 
 - Seven more `statistics` records, checked on 2026-11-21 (1318 intblocks):
@@ -110,6 +112,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     not be read automatically.
   The UN Group of Friends for International Cooperation on AI Capacity-building is deferred: it
   publishes no member list.
+- `includes[].joined` dates for 21 tier-1 organizations (`data/watch/rosters.yaml`) that had
+  none: 891 entries, checked on 2026-11-21. Affected organizations: UN, EU, NATO, AFUNION,
+  ECOWAS, OECD, WTO, COMMONWEALTH, OIC, G-20, G7, SCO, CIS, LAS, CELAC, SAARC, APEC, OAS,
+  CARICOM, SADC and COE. Each date comes from the organization's official member list and
+  keeps the precision of that list. Where the official list could not be read, the date comes
+  from an archived copy of the organization's own page (OAS, LAS) or from government treaty
+  registers (OECD). Four entries stay undated because their official sources conflict: AFUNION
+  KE and AO, and CIS AZ and MD. The reviewed values are in `data/schemas/includes_joined_tier1.yaml`.
+  `scripts/backfill_includes_joined.py` applies them. It runs as a dry run by default and
+  stops on any conflict. It adds provenance and sets `last_verified`.
+- 20 linear transport corridors with route roles (`transport`, `corridor`), checked on 2026-11-21
+  against government, intergovernmental, operator and project-finance sources. Each is in the
+  reviewed manifest `data/schemas/include_roles_pilot.yaml`:
+  - Asia: `CPEC` (CN, PK `terminal`; `project`, `partof: BRI`), `TRILATERALHIGHWAY`
+    (India–Myanmar–Thailand), `BTKRAILWAY` (Baku–Tbilisi–Kars), `ITIRAILWAY`
+    (Islamabad–Tehran–Istanbul), `TRANSAFGHANRAILWAY` (planned, UZ–AF–PK), `DEVELOPMENTROAD`
+    (IQ, TR; Qatar and the UAE are memorandum parties only) and `GMSSECCENTRAL` (GMS Southern
+    Economic Corridor, central subcorridor: TH, KH, VN).
+  - Europe: `RAILBALTICA` (EE, LV, LT, PL) and `VIABALTICA` (PL, LT, LV, EE). Finland is not
+    on either route.
+  - Africa: `MAPUTOCORRIDOR`, `LAPSSET` (KE, SS and ET all `terminal`), `TAZARARAILWAY`,
+    `ADDISDJIBOUTIRAILWAY`, `WBNLDC` (Walvis Bay–Ndola–Lubumbashi), `TRANSCUNENE`,
+    `DOUALANDJAMENA` and `DOUALABANGUI`.
+  - Americas: `BIOCEANICCORRIDOR` (BR, PY, AR, CL), `INTEROCEANICHIGHWAY` (BR, PE) and
+    `PACIFICCORRIDOR` (Mesoamerican Pacific Corridor, Mexico to Panama).
+  The manifest also defers 14 corridors, with reasons, because they branch, have no defined
+  ends or have only one terminal country:
+  - the China–Mongolia–Russia, New Eurasian Land Bridge and China–Central Asia–West Asia
+    corridors;
+  - BCIM;
+  - Kaladan, whose two ends are both in India;
+  - IMEC;
+  - the nine TEN-T European Transport Corridors;
+  - Nacala, Beira and the wider Dar es Salaam corridor;
+  - the GMS North–South and Southern corridors as wholes;
+  - CAREC corridors 1 to 6.
+  `BRI` lists `CPEC` among its suborganizations.
 
 ### Changed
 
@@ -162,6 +201,134 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Documented query counts move with the record: 184 `membership_count` mismatches (the
     roster now lists 17 members plus Austria), 201 `former_member` rows with `joined`, and
     109 records with `institutional_design`.
+- The review of associate statuses is complete, and no record uses the deprecated `associate`
+  status any more. CEOS (12 agencies' home states) and AMN (Bolivia, Chile) move from
+  `associate` to `associate_member`. FAO (Faroe Islands, Tokelau), CIAT (Angola, India,
+  Morocco, Nigeria) and IOTA (Republic of Korea) move from `associated` to `associate_member`,
+  because each organization names the tier associate membership. IICA keeps Spain as
+  `associated` ("Associated country").
+- `CIS` (Commonwealth of Independent States) checked on 2026-11-21 against the CIS Charter, the
+  CIS portal, Wikidata and news on Moldova's withdrawal. The roster keeps nine members, `TM` as
+  `associate_member` and `GE` and `UA` as `former_member`. Join dates follow the reviewed
+  tier-1 backfill; `AZ` and `MD` stay undated there, and their notes give the 1993 and 1994
+  ratifications.
+  - `MD` stays `member` with a note: it deposited its withdrawal notifications on 8 April 2026,
+    so under Charter Article 9 it leaves on 8 April 2027.
+  - `UA` now has `left: 2018-05-19`, the decree that ended its participation in the statutory
+    bodies (was `2018`).
+  - `GE` is removed from `founding_members`: it joined in 1993, after the Alma-Ata Protocol.
+    The eleven Alma-Ata signatories remain.
+  - The headquarters is now the Executive Committee at 17 Kirova Street, Minsk, with
+    coordinates. The website moves to `https://cis.minsk.by/`, and the CIS portal, the Russian
+    Wikipedia article and Wikidata are linked.
+  - Acronyms gain their language tags from Wikidata P1813, and the `ru` entry `CIS` is
+    dropped. Two traditional Chinese duplicates are dropped too. The French name is capitalized.
+  - New fields: `geographic_scope`, `regions`, `headquarters`, `secretariat` (with the Moscow
+    branch), `suborganizations` (IACIS, ECCIS, CISSTAT, IAC, EASC, IFESCCO), `legal_status`,
+    `recognition_status` (UN General Assembly observer, resolution 48/237), `official_documents`,
+    a full `description` and `notes`, 21 `other_names` languages, and the `security` and
+    `trade` topics. Field-level `provenance` is added for each.
+- Build manifests (`*.manifest.json`) and `datapackage.json` are no longer committed under
+  `data/datasets/`. The build still writes them, and every GitHub Release still ships them:
+  read them from the latest release or run `python scripts/builder.py build`. They carried
+  per-build checksums, sizes, row counts and build identity, so every pair of open data pull
+  requests conflicted on them. `contract.json`, the alias files, `border_status.json` and
+  `attribute_intblock_migrations.json` stay committed.
+- Documentation states the intblock count rounded down to the hundred (`1300+`);
+  `scripts/check_doc_counts.py` reads the built manifests and checks that figure.
+- Changelog entries go in `changelog.d/<slug>.md` fragments, which the release train merges
+  into the release section (see `changelog.d/README.md`).
+- `scripts/diff_countries_baseline.py` compares the built manifests with the baseline ref's
+  source record counts and committed `contract.json` schema hashes.
+- `CSTO` (Collective Security Treaty Organization), checked on 2026-11-21 against the CSTO
+  website, Wikidata Q318693 and Wikipedia:
+  - `name` uses the official English spelling "Collective Security Treaty Organization"; the
+    "Organisation" spelling moves to `other_names`.
+  - `includes` gains `joined` dates for the six members and three `former_member` entries:
+    UZ (2006-08-16 to 2012-12-19), AZ and GE (1993 to 1999, parties to the 1992 treaty that did
+    not sign the 1999 extension). AM stays `member` with a note: participation frozen since
+    February 2024, voting rights suspended at the 11 November 2026 Moscow summit, no withdrawal
+    filed. `membership_count` stays 6.
+  - `founded` is `1992-05-15` (Tashkent treaty) instead of `1992`; new `founding_members`,
+    `previous_names`, `suborganizations` (CRRF, PAODKB), `secretariat`, `official_documents`
+    (Treaty and Charter), `social_media`, `recognition_status` (UN General Assembly observer
+    since 2004), `geographic_scope`, `legal_status` and `regions`.
+  - `headquarters.city` is `Moscow` instead of the street name; `languages` is `ru` only, the
+    working language; the templated `description` is replaced, and `notes` cover the history
+    and statutory bodies.
+  - `acronyms` carry the right language tags (for example `KGAÖ` is `tr`, `ҰҚШҰ` is `kk`), and
+    `other_names` add the member-state languages (az, be, hy, kk, ky, tg, tr, uk, uz, ms).
+  - Documented query counts move with the roster: one more `membership_count` mismatch and
+    three more `former_member` rows with `joined`.
+- The `validate` workflow runs the test suite in parallel with `pytest-xdist` (`-n auto`;
+  `pytest-xdist` is pinned in `requirements-dev.txt`). Python 3.11, 3.12 and 3.13 still
+  each build and test their own artifacts. Only 3.11 runs the second build for the
+  reproducibility check, and only 3.12 measures coverage against the `fail_under` gate.
+- `IAC` (Interstate Aviation Committee) roster checked on 2026-11-21 against the IAC website
+  (nine participating states as of January 2026) and the 1991 Minsk Agreement on Civil Aviation
+  and on the Use of Airspace. `membership_count` drops from 12 to 9: `UA` becomes
+  `former_member` with `left: 2021-02-23` (Presidential Decree No. 70/2021), and `GE` and `MD`
+  become `former_member` without a `left` date, since no formal withdrawal date was found. All
+  twelve signatories get `joined: 1991-12-25` and are listed in `founding_members`. `RU` keeps
+  `member` with a note on the December 2015 transfer of certification to Russian federal bodies.
+  - The headquarters now has its country (`RU`) and the coordinates of 22/2 Bolshaya Ordynka
+    Street, Moscow, instead of the city centre. The website moves from the retired `mak.ru` to
+    `mak-iac.org`.
+  - Acronyms get their Wikidata language tags (`SAK` lv, `DAK` tk, `CIEA` es, `ՄԱԿ` hy). Two
+    Chinese aliases tagged as acronyms are dropped. The French `other_names` entry, which was
+    the English name, is also dropped.
+  - New fields: `founded` as a full date, `founding_members`, `secretariat`,
+    `geographic_scope`, `regions`, `legal_status`, `recognition_status`, `official_documents`,
+    `notes`, `last_verified`, a full `description`, 20 `other_names` languages, and the
+    `aviation`, `accident_investigation`, `certification` and `safety` topics. Field-level
+    `provenance` cites the IAC website, the Agreement text, Interfax, Wikidata, Wikipedia and
+    OpenStreetMap.
+  - The documented query counts move with the roster: one more `membership_count` mismatch
+    and three more `former_member` rows with `joined`.
+- The `last_verified` rule for changed rosters now accepts a record that keeps the base's
+  `last_verified` when that date is today. A pull request that re-verified a roster on the same day
+  another merge stamped it (for example after the tier-1 `joined` backfill) had no later true date
+  to set, so validation failed. A roster change on any later day must still update the date.
+- `SCO` (Shanghai Cooperation Organisation), checked on 2026-11-21 against the SCO Secretariat
+  website, the 2002 Charter and Wikidata Q485207:
+  - The record moves from `data/intblocks/military/` to `data/intblocks/political/`. `blocktype`
+    is now `political`, `security`, `military`, `economic` (was `military`, `forum`, `political`):
+    the SCO is a multipurpose regional organization and its Charter has no mutual-defence clause.
+  - `scope_category` is `igo` (was `policy_forum`). Charter Article 15 makes the SCO a subject of
+    international law.
+  - `includes` gains `joined` dates for the ten members (founders 2001-06-15, IN and PK
+    2017-06-09, IR 2023-07-04, BY 2024-07-04) and the 15 dialogue partners as `partner`, each with
+    its Council of Heads of State decision and memorandum. Afghanistan and Mongolia stay
+    `observer`. `membership_count` stays 10.
+  - `languages` is `ru`, `zh` (Charter Article 20); `headquarters` gains `country: CN`; `founded`
+    is `2001-06-15` instead of `2001`. New `founding_members`, `previous_names` (Shanghai Five),
+    `secretariat`, `geographic_scope`, `regions`, website links and `social_media`.
+    `official_documents` lists the Charter and the 2026 Bishkek Declaration instead of the site root.
+  - The templated `description` is replaced, and `notes` cover the Shanghai Five, the 2025
+    decision to replace observer and dialogue partner with one SCO Partner status, and the 2026
+    Charter protocol.
+  - `acronyms` carry the Wikidata language tags (for example `ŞİÖ` is `tr`, `SOZ` is `de`, `ШКУ`
+    is `ky`) instead of `en`, and `other_names` add the member and partner languages.
+- `ITU` checked on 2026-11-21 against the ITU Member States directory. The 194 Member States
+  are unchanged.
+  - Every member has `joined` set to its ITU "Member Since" date. Estonia, Latvia and Lithuania
+    use the date their membership resumed in 1991-1992, with the interwar year in a `note`.
+  - Palestine (`PS`) is an `observer` under Plenipotentiary Resolution 99 (Rev. Dubai, 2018).
+  - The record also gets the founding date 1865-05-17 (International Telegraph Convention),
+    `active_period` from 1866-01-01 and `previous_names` (International Telegraph Union). The 20
+    signatories of 1865 are listed as 16 present-day `founding_members`, mapped as ITU's
+    history portal does. It also gets `secretariat`, `recognition_status` (UN agreement of 1947,
+    in force 1949), the six official languages, the Constitution, Convention, Radio Regulations
+    and International Telecommunication Regulations as `official_documents`, `social_media`,
+    `notes` and source-backed `provenance`.
+  - `telecommunications`, `standardization` and `connectivity` are added to `topics`.
+- Documented recipe expectations in `docs/query-examples.md` now reflect these changes:
+  `PS` reaches five observer seats in "Countries with many observer seats", and the UPU and
+  ITU rosters now differ from their `membership_count` in "Declared vs actual roster size".
+- CI fails on validator warnings: both validation steps run with `--fail-on-warning`. The
+  date-based staleness warnings (`last_verified` age, provenance age, border status age) are
+  still reported but do not fail it, because they appear as time passes without any change
+  to the data.
 
 ### Fixed
 
@@ -235,6 +402,138 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   for `regions`. CTBTO, MSC, BIMCO, GSP, GSTP and IRF keep the entry they already had, because
   only the spelling of the label changed. BUDCONV, COVAX and JCPOA, the other three records
   with `Global`, are covered by the roster check entry above.
+- `GRECO`: Belarus is a `former_member` (it ceased to be a member on 1 May 2024), not an
+  associate. `membership_count` is now 48, and the `joined` dates of Poland and the Russian
+  Federation follow GRECO's members page.
+- `IOTA`: Uzbekistan is added as an associate member (2026).
+- `EROPA` checked on 2026-11-21 against the EROPA website (history, constitution, secretariat,
+  centers): `headquarters.city` is now Quezon City (it held the college name), and admission
+  dates come from the official history, so Nepal joined in December 1980, not 1983. Founding
+  members carry `joined: 1960-12-05`, which adds one row (`AU`) to the documented
+  former-members-with-dates recipe. `legal_status` now describes the hybrid
+  State/Group/Individual membership. The record gains `social_media`, the constitution in
+  `official_documents`, `secretariat.organization`, notes on PRC and SRV seat successions, and
+  three topics. `scope_category` stays `igo` pending review.
+- `CAPAM` is now `non_state_organization` and no longer lists 55 country members. It was a
+  Canadian federal not-for-profit corporation whose members were individuals and organisations,
+  including government ministries and departments, not states (Corporations Canada; Jamaica
+  Information Service, 2008). The old roster copied the Commonwealth's, without the UK and with
+  Gabon and Togo, which joined the Commonwealth in 2022. The record drops `partof: COMMONWEALTH`
+  and sets `membership_applicability: not_applicable`, as `ACU` does, and leaves
+  `scope_category.igo_legal_status_allowlist`. `memberships` loses CAPAM's 55 rows, and the
+  documented dissolved-with-roster recipe loses one row. The record also gains the last
+  registered office, the 2019 dissolution vote and reasons, the 1998 start of the Innovations
+  Awards (not 1997), conference examples and three topics.
+- `CREDAF` checked on 2026-11-21 against credaf.org. `headquarters` is now Paris (86, allée de
+  Bercy), where the secretariat sits, not Yaoundé, where the statutes were drawn up in 1982.
+  The 15 founding administrations, Gabon among them, are in `founding_members` and marked
+  `founding_member` (`joined: 1982`) in `includes`. The English name in `other_names` is the one
+  the site uses, and the pre-2018 name is in `previous_names`. `legal_status` now records the
+  self-described non-governmental form and the membership of national tax administrations.
+  The record also gains `secretariat`, the Executive Bureau, conferences from 2012 to 2026,
+  cooperation agreements and two topics. `scope_category` stays `igo`, as for its NTO peers.
+- `GFDRR` (Global Facility for Disaster Reduction and Recovery) roster and metadata, checked on
+  2026-11-21 against the GFDRR Annual Reports 2024 and 2025 on World Bank Documents & Reports.
+  `includes` now has 11 `member` entries: AU, AT, CA, DE, IT, JP, NO, SE, CH, US and the EU.
+  IN, LU and RS are not in either report's partner list, so they are now `former_member`
+  (exit dates unknown), and `membership_count` drops from 14 to 11. The record gains the
+  `fund` blocktype and `partof: WB`. It also gains `geographic_scope`, `regions`,
+  `active_period`, `legal_status`, `recognition_status`, `secretariat`, `social_media`,
+  `official_documents` and `notes` (governance, Umbrella Program trust funds, FY2025 figures).
+  The description is rewritten and `provenance` is extended. GFDRR adds one row to the
+  `membership_count` mismatch recipe in `docs/query-examples.md`.
+- `CDRI` (Coalition for Disaster Resilient Infrastructure) roster and metadata, checked on
+  2026-11-21 against cdri.world (About page, Charter and Leadership team). The Philippines
+  (`PH`, joined 2026-09) is added, so `membership_count` goes from 58 to 59 member countries.
+  ECOWAS gets `joined: '2026-02'`. The site now reports 13 partner organizations but shows
+  logos for only 12, so the 13th is not mapped. The record gains French and Spanish
+  `languages` and links. It also gains `other_names` (fr, es, ar, zh), `social_media`
+  (X, LinkedIn, YouTube, Facebook), `official_documents` (the amended Charter in three
+  languages and the 2024–25 Annual Report) and the `sustainable_development` topic. `notes`
+  now covers governance under the Charter, the co-chairs and IRAF. The description is
+  rewritten and `provenance` is extended.
+- `ECOWAS` was missing Mauritania (`MR`), one of the 15 signatories of the 1975 Treaty of Lagos.
+  It is now listed as `former_member`, joined 1975-05-28 and left 2000-12, per the ECOWAS
+  Creation (History) page. The page also says Mauritania signed an associate-membership
+  agreement in August 2017. That agreement is kept in the entry's note, because it is not
+  membership.
+- `ITER` checked on 2026-11-21 against the ITER Agreement and iter.org. `name` is now the
+  Article 1 name, "ITER International Fusion Energy Organization". `founded` moves from
+  2006 (the signing year) to 2007-10-24, the date the Organization was established, and
+  `active_period` starts on the same day. `headquarters` gains `country: FR` and the
+  Saint-Paul-lez-Durance site coordinates, replacing the CEA Cadarache point. `languages`
+  is now `en` only, because English is the working language. The seven Members gain
+  `joined` 2007-10-24 and become `founding_members`: CN, IN, JP, KR, RU and US, since
+  Euratom has no country code. New `includes` entries: CH (`participant` through Fusion for
+  Energy, from 2026-01-01) and the non-Member cooperation partners AU, KZ and CA
+  (`cooperating`). `membership_count` stays 7. The record also gains `institutional_design`,
+  `legal_status`, `recognition_status`, `official_documents`, `social_media`, `secretariat`,
+  `notes`, a rewritten `description`, the topics energy, nuclear and physics, and 19
+  provenance entries. A second Wikidata link points to the organization item Q101069148;
+  `wikidata_id` stays Q191788. ITER joins the reviewed `institutional_design` cohort, and
+  it now appears in the declared vs actual roster recipe, because it lists 11 entries
+  against its 7 Members.
+- `CERN` checked on 2026-11-21 against home.cern and the CERN Convention (English text on
+  the Dutch government treaty database). `founded` moves from 1954 to 1954-09-29, the date
+  the Convention entered into force, and `active_period` starts on the same day. All 25
+  Member States and 11 Associate Member States gain `joined` years from CERN's timeline,
+  and the 11 founders still members become `founding_members`. Yugoslavia, the twelfth
+  founder, left in 1961 and has no country record. The observers JP, US, EU and UNESCO are
+  added as `observer`. `membership_count` stays 36 (Member States plus Associate Member
+  States). `previous_names` records the provisional Conseil Européen pour la Recherche
+  Nucléaire (1952-1954). Also changed: the website becomes https://home.cern/, the
+  headquarters coordinates come from Wikidata, and `description` is rewritten.
+  The record also gains `institutional_design`, `legal_status`, `recognition_status`,
+  `official_documents`, `social_media`, `secretariat`, `notes`, `geographic_scope`
+  (regional, Europe), the topic physics and 19 provenance entries. CERN joins the reviewed
+  `institutional_design` cohort, and it now appears in the declared vs actual roster
+  recipe, because it lists 40 entries, observers included, against a count of 36.
+- `ESO` checked on 2026-11-21 against eso.org and the ESO Convention (Dutch authentic text on
+  the Dutch government treaty database). `founded` moves from 1962 to 1962-10-05, the date of
+  signature, and `active_period` starts on 1964-01-17, when the Convention took effect. The
+  16 Member States gain `joined` dates from ESO's Member States table and timeline. The five
+  signatories (BE, DE, FR, NL, SE) become `founding_members`. Chile, the host and partner
+  country, and Australia, a Strategic Partner since 2017, are added as `partner`.
+  `membership_count` stays 16. `languages` gains `fr` and `de`. The website moves to
+  https://www.eso.org/, the headquarters coordinates come from Wikidata, and `description` is
+  rewritten. The record also gains `institutional_design`, `legal_status`,
+  `recognition_status`, `official_documents`, `social_media`, `secretariat`, `notes`,
+  `geographic_scope` (regional, Europe), the topic astronomy and 18 provenance entries. ESO
+  joins the reviewed `institutional_design` cohort, and it now appears in the declared vs
+  actual roster recipe, because it lists 18 entries against 16 Member States.
+- With ITER, CERN and ESO, the reviewed `institutional_design` cohort in
+  `data/schemas/institutional_design_pilot.yaml` becomes `reviewed_111`. The documented
+  authority-level and declared vs actual roster recipes, and their tests, are updated.
+- The roster watch no longer reports Denmark as missing from Wikidata for the UN and the OECD.
+  Wikidata records those memberships on the Kingdom of Denmark (Q756617), which has no
+  ISO 3166-1 code. The Denmark mapping pointed at Q35, which already has the code.
+- The roster watch no longer opens a new `roster-drift` issue for differences that a person
+  closed as not planned (internacia-db is right). It reports them again only when the
+  differences change. Before, closing such an issue brought it back as a new issue the next
+  Monday.
+- `UPU` checked on 2026-11-21 against the UPU member countries list and its 192 member pages.
+  - Cook Islands (`CK`) and Niue (`NU`) were listed as members. The UPU covers them under New
+    Zealand's membership, so they are now `represented`. `AW` is added as the coded `member` for
+    the joint member "Aruba, Curaçao and Sint Maarten". The roster still has 190 sovereign-state
+    members.
+  - 42 territories that UPU member pages list under another member (Constitution art. 23) are
+    `represented`. They include the UK Overseas Territories, which form one UPU member without a
+    single ISO code. `membership_count` stays 192, with `membership_count_type: mixed`.
+  - Palestine (`PS`) is an `observer` (since 1999).
+  - Every member has `joined` set to its UPU date of entry.
+  - The record also gets the founding date 1874-10-09 (Treaty of Bern), `active_period`,
+    `previous_names` (General Postal Union), the 22 Treaty of Bern signatories as
+    `founding_members`, `secretariat`, `recognition_status`, named `official_documents`, `notes`
+    and source-backed `provenance`. Mislabelled acronym languages are fixed.
+  - Off-topic tags and topics (`regional_cooperation`, `telecommunications`) are replaced with
+    `standardization` and `trade_facilitation`.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1282 → 1338 records; added `ADDISDJIBOUTIRAILWAY`, `AFRICANSTATISTICSCHARTER`, `AFRISTAT`, `AH`, `AITRS`, `ALCOMA`, `ARABMASHREQRAILWAYS`, `ARABMASHREQROADS`, `BIOCEANICCORRIDOR`, `BTKRAILWAY`, `CCTTFA`, `CES`, `CHABAHAR`, `CICPEC`, `CLRT`, `COEAICONVENTION`, `CPEC`, `DEVELOPMENTROAD`, `DOUALABANGUI`, `DOUALANDJAMENA` and 36 more; 262 changed
+- Blocktypes: 82 → 83 records; added `artificial_intelligence`; 1 changed
+- Membership edges: 57295 → 58096; 880 added, 79 removed, 1670 changed
 
 ## [4.2.0] - 2026-11-21
 
