@@ -46,6 +46,30 @@ def test_sdk_contract_suite_runs_on_the_build_at_one_pinned_commit():
     assert SHA.match(ref) and validate["env"]["INTERNACIA_SDK_REF"] == ref
 
 
+def runs_on(step, version):
+    """Whether a validate step runs on a matrix leg; only python-version conditions are expected."""
+    condition = step.get("if")
+    if condition is None:
+        return True
+    match = re.fullmatch(r"matrix\.python-version (==|!=) '([\d.]+)'", condition)
+    assert match, f"unexpected condition: {condition}"
+    return (match.group(2) == version) == (match.group(1) == "==")
+
+
+def test_every_python_runs_the_suite_and_the_costly_checks_run_once():
+    validate = workflow("validate.yml")["jobs"]["validate"]
+    versions = validate["strategy"]["matrix"]["python-version"]
+
+    def legs(pattern):
+        return [v for v in versions for s in validate["steps"] if re.search(pattern, s.get("run", "")) and runs_on(s, v)]
+
+    suite = r"\bpytest tests/(\s|$)"
+    assert sorted(legs(suite)) == sorted(versions), "every Python version runs pytest tests/ exactly once"
+    assert all("-n auto" in s["run"] for s in validate["steps"] if re.search(suite, s.get("run", "")))
+    assert legs(r"--cov=internacia_builder") == ["3.12"]
+    assert legs(r"check_reproducible_build\.py") == ["3.12"]
+
+
 def test_every_action_is_pinned_to_a_commit_with_its_version():
     for path in (project_root() / ".github/workflows").glob("*.yml"):
         for line in path.read_text().splitlines():
