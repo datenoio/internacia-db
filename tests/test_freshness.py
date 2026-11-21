@@ -53,6 +53,19 @@ def test_roster_change_must_refresh_last_verified():
     assert check_changed_records([("x.yaml", description_only)], {"x.yaml": before}, "origin/main") == []
 
 
+def test_roster_change_may_keep_a_base_date_of_today():
+    before = {"id": "X", "last_verified": "2026-11-21", "includes": [{"id": "FR"}]}
+    after = {**before, "includes": [{"id": "FR"}, {"id": "DE"}]}
+    checked = [("x.yaml", after)]
+    assert check_changed_records(checked, {"x.yaml": before}, "origin/main", today=date(2026, 11, 21)) == []
+    errors = check_changed_records(checked, {"x.yaml": before}, "origin/main", today=date(2026, 11, 22))
+    assert errors and "includes changed" in errors[0]
+    as_date = {**after, "last_verified": date(2026, 11, 21)}
+    before_as_date = {**before, "last_verified": date(2026, 11, 21)}
+    assert check_changed_records([("x.yaml", as_date)], {"x.yaml": before_as_date}, "origin/main",
+                                 today=date(2026, 11, 21)) == []
+
+
 def test_country_include_labels_are_not_roster_changes():
     before = {"id": "X", "last_verified": "2026-01-01", "includes": [
         {"id": "TR", "name": "Turkey", "type": "country", "status": "member"},
