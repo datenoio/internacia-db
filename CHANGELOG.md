@@ -9,13 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
+  2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
+  Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
+  2026-11-21 (1284 intblocks). Oman is served by the network but is not a party.
+- `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
+  checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
+  its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
+  roles because the corridor branches from Mombasa to several landlocked countries instead of
+  running between two ends.
+- `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
+  running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 - Blocktype `artificial_intelligence` (83 blocktypes), a secondary tag for artificial
   intelligence governance, safety and cooperation, including partnerships on AI compute and
   semiconductor supply chains. Four records take it as an additional blocktype, with no
   directory move: `WAICO`, `PAXSILICA`, `CHIP4` and `GPAI`. The `digital` scope note now
   points AI bodies to the new key.
 - Five artificial intelligence records with `artificial_intelligence`, checked on 2026-11-21
-  (1287 intblocks):
+  (1289 intblocks):
   - `NAAIMES` (International Network for Advanced AI Measurement, Evaluation and Science, formerly
     the International Network of AI Safety Institutes): 9 countries and the EU, all founding members
     from November 2024. Sources: NIST and the UK government.
@@ -31,6 +42,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     not be read automatically.
   The UN Group of Friends for International Cooperation on AI Capacity-building is deferred: it
   publishes no member list.
+
+### Fixed
+
+- The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
+  "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
+  view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
+  The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
+  unchanged (648 on v4.2.0 data, 36 with a status).
 
 ## [4.2.0] - 2026-11-21
 
