@@ -1,7 +1,7 @@
 # Getting started
 
 Internacia is reference data for **countries** (256 records) and **international
-organizations / groups** (“intblocks”, 1284 records; **82** blocktypes). It is part of
+organizations / groups** (“intblocks”, 1285 records; **82** blocktypes). It is part of
 the [Dateno](https://dateno.io) open-source project. Data and documentation are licensed
 [CC-BY-4.0](../DATA_LICENSE); code is MIT.
 

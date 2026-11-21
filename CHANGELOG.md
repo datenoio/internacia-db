@@ -9,13 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
+  2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
+  Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
+  2026-11-21 (1284 intblocks). Oman is served by the network but is not a party.
 - `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
   checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
   its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
   roles because the corridor branches from Mombasa to several landlocked countries instead of
   running between two ends.
 - `EWEC` (East–West Economic Corridor of the Greater Mekong Subregion programme), a transport
-  corridor record with route roles, checked on 2026-11-21 (1284 intblocks): MM and VN
+  corridor record with route roles, checked on 2026-11-21 (1285 intblocks): MM and VN
   `terminal`, TH and LA `transit`. Sources: JICA and IDE-JETRO for the route from Mawlamyine
   to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
   on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
