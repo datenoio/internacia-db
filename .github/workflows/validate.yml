@@ -99,6 +99,14 @@ jobs:
       - name: Check committed descriptors match the fresh build
         run: python scripts/check_committed_snapshot.py --fresh .ci-datasets
 
+      - name: Check the build reads on the oldest supported DuckDB
+        if: matrix.python-version == '3.12'
+        run: |
+          min=$(python -c "import json; print(json.load(open('.ci-datasets/contract.json'))['min_duckdb'])")
+          python -m venv "$RUNNER_TEMP/min-duckdb"
+          "$RUNNER_TEMP/min-duckdb/bin/pip" install -q "duckdb==$min"
+          "$RUNNER_TEMP/min-duckdb/bin/python" scripts/check_min_duckdb.py .ci-datasets
+
       - name: Check the build is reproducible
         run: |
           python scripts/builder.py build --output-dir .ci-datasets-repro > /dev/null
