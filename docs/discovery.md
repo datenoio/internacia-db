@@ -213,8 +213,9 @@ with `data/datasets/attribute_intblock_migrations.json`.
    `membership_applicability: not_applicable`.
 3. Validate (`validate_intblocks.py --json`, `validate_countries.py --json`,
    `pytest tests/`). Do not hand-edit `data/datasets/`.
-4. Cite the official roster in the PR description. Add a `[Unreleased]` line in
-   `CHANGELOG.md` for new intblocks or consumer-visible repairs.
+4. Cite the official roster in the PR description. Add a `changelog.d/<slug>.md`
+   fragment for new intblocks or consumer-visible repairs; do not edit `CHANGELOG.md`
+   ([changelog.d/README.md](../changelog.d/README.md)).
 5. If the catalogue walk is new, append a row to
    [intblock-sources.md](intblock-sources.md) (catalogue, URL, retrieved date,
    what was searched, what was kept).

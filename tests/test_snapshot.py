@@ -1,5 +1,4 @@
 """Committed descriptor snapshot (D3) and reproducible-build checks."""
-import json
 import shutil
 
 import duckdb
@@ -9,21 +8,6 @@ from internacia_builder.paths import project_root
 from internacia_builder.snapshot import COMMITTED_PATTERNS, compare_builds, compare_snapshot, is_committed
 
 
-def _manifest(path, **overrides):
-    manifest = {
-        "dataset": "countries",
-        "build_date": "2026-01-01T00:00:00Z",
-        "git_commit": "aaaaaaa",
-        "row_count": 1,
-        "files": [
-            {"path": "countries.meta.json", "sha256": "1" * 64, "bytes": 1},
-            {"path": "countries.parquet", "sha256": "2" * 64, "bytes": 2},
-        ],
-    }
-    manifest.update(overrides)
-    path.write_text(json.dumps(manifest))
-
-
 @pytest.fixture
 def dirs(tmp_path):
     committed, fresh = tmp_path / "committed", tmp_path / "fresh"
@@ -31,38 +15,33 @@ def dirs(tmp_path):
         directory.mkdir()
         (directory / "contract.json").write_text("{}")
         (directory / "countries.parquet").write_bytes(b"binary")
-    _manifest(committed / "countries.manifest.json")
+        (directory / "countries.manifest.json").write_text("{}")
     return committed, fresh
 
 
-def test_identity_and_sidecar_checksums_are_ignored(dirs):
+def test_build_only_files_are_not_compared(dirs):
     committed, fresh = dirs
-    _manifest(
-        fresh / "countries.manifest.json",
-        build_date="2026-02-02T00:00:00Z",
-        git_commit="bbbbbbb",
-        files=[
-            {"path": "countries.meta.json", "sha256": "9" * 64, "bytes": 9},
-            {"path": "countries.parquet", "sha256": "2" * 64, "bytes": 2},
-        ],
-    )
+    (fresh / "countries.manifest.json").write_text('{"row_count": 2}')
+    (fresh / "datapackage.json").write_text("{}")
     assert compare_snapshot(committed, fresh) == []
 
 
 def test_content_change_and_missing_descriptor_are_reported(dirs):
     committed, fresh = dirs
-    _manifest(fresh / "countries.manifest.json", row_count=2)
-    (fresh / "datapackage.json").write_text("{}")
+    (fresh / "contract.json").write_text('{"changed": true}')
+    (fresh / "countries_aliases.json").write_text("[]")
     problems = compare_snapshot(committed, fresh)
-    assert any("countries.manifest.json: differs" in p for p in problems)
-    assert any("datapackage.json: produced by the build but not committed" in p for p in problems)
+    assert any("contract.json: differs" in p for p in problems)
+    assert any("countries_aliases.json: produced by the build but not committed" in p for p in problems)
 
 
 def test_committed_patterns_match_gitignore():
     lines = (project_root() / ".gitignore").read_text().splitlines()
     negated = {line.removeprefix("!/data/datasets/") for line in lines if line.startswith("!/data/datasets/")}
     assert negated == set(COMMITTED_PATTERNS)
-    assert is_committed("intblocks.manifest.json")
+    assert is_committed("contract.json")
+    assert not is_committed("intblocks.manifest.json")
+    assert not is_committed("datapackage.json")
     assert not is_committed("internacia.duckdb")
     assert not is_committed("countries.meta.json")
 
