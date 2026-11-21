@@ -107,9 +107,10 @@ jobs:
           "$RUNNER_TEMP/min-duckdb/bin/pip" install -q "duckdb==$min"
           "$RUNNER_TEMP/min-duckdb/bin/python" scripts/check_min_duckdb.py .ci-datasets
 
-      # A second full build: run it once. Every leg still builds and tests its own artifacts.
+      # A second full build: run it once, on 3.11, so it does not add to 3.12's coverage run.
+      # Every leg still builds and tests its own artifacts.
       - name: Check the build is reproducible
-        if: matrix.python-version == '3.12'
+        if: matrix.python-version == '3.11'
         run: |
           python scripts/builder.py build --output-dir .ci-datasets-repro > /dev/null
           python scripts/check_reproducible_build.py .ci-datasets .ci-datasets-repro

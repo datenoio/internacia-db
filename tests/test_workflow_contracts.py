@@ -67,7 +67,7 @@ def test_every_python_runs_the_suite_and_the_costly_checks_run_once():
     assert sorted(legs(suite)) == sorted(versions), "every Python version runs pytest tests/ exactly once"
     assert all("-n auto" in s["run"] for s in validate["steps"] if re.search(suite, s.get("run", "")))
     assert legs(r"--cov=internacia_builder") == ["3.12"]
-    assert legs(r"check_reproducible_build\.py") == ["3.12"]
+    assert len(legs(r"check_reproducible_build\.py")) == 1
 
 
 def test_every_action_is_pinned_to_a_commit_with_its_version():
