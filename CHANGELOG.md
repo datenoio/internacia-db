@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
+  checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
+  its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
+  roles because the corridor branches from Mombasa to several landlocked countries instead of
+  running between two ends.
+
+## [4.2.0] - 2026-11-21
+
+### Added
+
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
@@ -54,11 +64,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Conference or Meeting of the Parties. Where the text names consensus only for rules of
   procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
   `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
-- `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
-  checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
-  its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
-  roles because the corridor branches from Mombasa to several landlocked countries instead of
-  running between two ends.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1279 → 1282 records; added `INSTC`, `LAPISLAZULI`, `TITR`; 74 changed
+- Blocktypes: 82 → 82 records
+- Membership edges: 57281 → 57295; 14 added, 0 removed, 0 changed
 
 ## [4.1.0] - 2026-11-20
 
