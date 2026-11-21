@@ -229,6 +229,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `JCPOA`: no roster change. The 8 participants, the US withdrawal on 8 May 2018 and the end
     on 18 October 2025 are now cited from the EEAS, the White House and Iran's foreign
     ministry, not only Wikipedia.
+- The `regions` label `Global` is now `worldwide`, the label other global records use, on 40
+  intblocks. 39 of them had `regions: [Global]`, for example ATT, CWC, WCO, WEF, BIMCO and IRF.
+  SIDS keeps its other labels (Caribbean, Pacific, Africa). 34 records gain a `provenance` entry
+  for `regions`. CTBTO, MSC, BIMCO, GSP, GSTP and IRF keep the entry they already had, because
+  only the spelling of the label changed. BUDCONV, COVAX and JCPOA, the other three records
+  with `Global`, are covered by the roster check entry above.
 - `EROPA` checked on 2026-11-21 against the EROPA website (history, constitution, secretariat,
   centers): `headquarters.city` is now Quezon City (it held the college name), and admission
   dates come from the official history, so Nepal joined in December 1980, not 1983. Founding
