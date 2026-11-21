@@ -10,12 +10,7 @@ active_period:
   start: '1966-12-13'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 - fr
@@ -448,3 +443,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-15'
   url: https://www.uncdf.org/where-we-work
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

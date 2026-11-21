@@ -14,12 +14,7 @@ active_period:
   start: '1996-10-01'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 - fr
@@ -823,4 +818,7 @@ provenance:
   source: United Nations Treaty Collection
   retrieved_at: '2026-07-29'
   url: https://treaties.un.org/Pages/ViewDetailsIII.aspx?src=TREATY&mtdsg_no=XXI-6&chapter=21&clang=_en
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
 last_verified: '2026-07-29'
