@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - 20 linear transport corridors with route roles (`transport`, `corridor`), checked on 2026-11-21
-  against government, intergovernmental, operator and project-finance sources (1323 intblocks).
+  against government, intergovernmental, operator and project-finance sources (1324 intblocks).
   Each is in the reviewed manifest `data/schemas/include_roles_pilot.yaml` (44 records):
   - Asia: `CPEC` (CN, PK `terminal`; `project`, `partof: BRI`), `TRILATERALHIGHWAY`
     (India–Myanmar–Thailand), `BTKRAILWAY` (Baku–Tbilisi–Kars), `ITIRAILWAY`
@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   BCIM, Kaladan (both ends in India), IMEC, the nine TEN-T European Transport Corridors,
   Nacala, Beira, the wider Dar es Salaam corridor, the GMS North–South and Southern corridors
   as wholes, and CAREC corridors 1 to 6. `BRI` lists `CPEC` among its suborganizations.
+- `AH` (Asian Highway Network, Wikidata Q728802), a `project`/`transport` record for the ESCAP
+  road network itself, checked on 2026-11-21 (1304 intblocks). It mirrors `TAR`: no country
+  roster (`membership_applicability: not_applicable`), because the 32 countries the network
+  crosses are not treaty parties. The 30 states parties stay on `ASIANHIGHWAY`.
 - 12 international road, rail and transit-corridor records, checked on 2026-11-21 against
   depositary and official sources (1297 intblocks):
   - Treaties (`transport`, `agreement`; `treaty_body`): `ARABMASHREQRAILWAYS` (UNTC XI-C-4,
@@ -131,6 +135,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
   The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
   unchanged (648 on v4.2.0 data, 36 with a status).
+- `ASIANHIGHWAY` `regions` listed all six continents, including Africa, the Americas and
+  Oceania. They now follow its states parties: Asia, Europe, Caucasus, Central Asia, East Asia,
+  Middle East, South Asia and Southeast Asia.
 - `regions` on 174 intblocks no longer carries the six-continent placeholder (Africa, Asia,
   Europe, North America, Oceania, South America) left by the 2026-09-09 UNTC import. Each fixed
   record gains a `provenance` entry for `regions`.
