@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- `AGR` (European Agreement on Main International Traffic Arteries, which defines the
+  International E-road network): `regions` is now Europe, Caucasus and Central Asia, derived
+  from its 38 states parties. The UNTC import had set all six continents. The record now links
+  the English Wikipedia article on the network. Its Wikidata exclusion now records that Q106123
+  describes the network, not the agreement, as for `ASIANHIGHWAY`.
+
 ## [4.2.0] - 2026-11-21
 
 ### Added

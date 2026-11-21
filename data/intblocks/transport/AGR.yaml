@@ -10,12 +10,9 @@ active_period:
   start: '1983-03-15'
 geographic_scope: regional
 regions:
-- Africa
-- Asia
 - Europe
-- North America
-- Oceania
-- South America
+- Caucasus
+- Central Asia
 languages:
 - ar
 - zh
@@ -24,6 +21,8 @@ languages:
 - ru
 - es
 links:
+- url: https://en.wikipedia.org/wiki/International_E-road_network
+  type: wikipedia
 - url: https://unece.org/transport/international-e-road-network
   type: website
 - url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-28&chapter=11&clang=_en
@@ -279,3 +278,11 @@ provenance:
   source: United Nations Treaty Collection
   retrieved_at: '2026-09-09'
   url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-28&chapter=11&clang=_en
+- field: regions
+  source: Derived from the states parties in includes (UN Treaty Collection XI-B-28)
+  retrieved_at: '2026-11-21'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XI-B-28&chapter=11&clang=_en
+- field: links
+  source: English Wikipedia article on the network the agreement defines (Wikidata Q106123)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/International_E-road_network
