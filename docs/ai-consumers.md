@@ -298,6 +298,12 @@ Two structural layers describe transit dependence (OpenSpec change `add-transit-
   view joins it to `countries.borders`. A NULL status means that **no closure is recorded**, not
   that the border is verified open. The status describes whether crossings are open; it does not
   judge the legitimacy of a closure, a boundary or a state.
+- **Evidence limit.** Most entries come from official travel advice, which describes crossings for
+  travellers. A border marked `closed` can still carry some freight (for example rail freight), so
+  for goods-traffic analysis treat `closed` as "closed to regular crossings" and check freight
+  separately. Entries are corrected to `restricted` when a customs, border or transport authority
+  states that goods still cross; a 2026-11-21 re-check could not read such sources (they returned
+  403 or a bot check), so no entry was changed.
 
 The sea-access gateway recipe in [query-examples.md](query-examples.md#transit-and-borders)
 combines both with `landlocked`. It is a structural lower bound, not a route model.

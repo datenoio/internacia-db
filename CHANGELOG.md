@@ -43,6 +43,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `restricted` for LTU–RUS and POL–RUS (Kaliningrad crossings). KAZ–TKM and AFG–TJK are deferred
   because the travel advice read concerns travellers and does not settle whether goods cross;
   nine more pairs are deferred for lack of a qualifying source.
+- The evidence limit of `border_status` is documented in `docs/ai-consumers.md`,
+  `docs/query-examples.md` and the source file header. Most entries rest on travel advice, which
+  describes crossings for travellers, so a `closed` border can still carry some freight. A
+  re-check against customs, border and transport sources on 2026-11-21 could not read them (403
+  or bot checks), so no status changed. FIN–RUS, IND–PAK and KHM–THA are the first to verify.
 
 ## [4.1.0] - 2026-11-20
 
