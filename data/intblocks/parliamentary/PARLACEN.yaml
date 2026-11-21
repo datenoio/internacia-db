@@ -74,6 +74,33 @@ includes:
   type: country
   status: member
   joined: '2010'
+- id: MX
+  name: Mexico
+  type: country
+  status: observer
+- id: PR
+  name: Puerto Rico
+  type: country
+  status: observer
+- id: MA
+  name: Morocco
+  type: country
+  status: observer
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: observer
+- id: CN
+  name: China
+  type: country
+  status: observer
+  joined: '2023-08-21'
+- id: TW
+  name: Taiwan
+  type: country
+  status: observer
+  joined: '1999'
+  left: '2023-08-21'
 membership_count: 6
 wikidata_id: Q190023
 description: Regional parliamentary organ of the Central American Integration System (SICA), composed of 20
@@ -85,7 +112,20 @@ notes: Costa Rica signed the 1987 constitutive treaty but never ratified Esquipu
   declared unconstitutional and Panama returned in 2012. The Dominican Republic was an observer from 1996
   and became a full member with elected delegates in 2010. El Salvador's Legislative Assembly passed a
   constitutional reform on 31 July 2025 to withdraw; the country will stop electing representatives starting
-  with the 2027 legislative elections but remains a member until then.
+  with the 2027 legislative elections but remains a member until then. On 3 October 2026 Nicaragua's
+  Foreign Ministry notified PARLACEN, and Guatemala as depositary, that it denounced the Constitutive Treaty
+  with immediate effect, and Nicaragua's National Assembly repealed Decree A.N. No. 28 of 1988, which had
+  approved the treaty. The treaty, as amended by the 2008 Protocol of Reforms, has no denunciation or
+  withdrawal clause, and the Central American Court of Justice held after Panama's 2009 attempt that a
+  state could not withdraw on that basis. PARLACEN said it was analysing the legal scope of the note and
+  elected its 2026-2027 Junta Directiva without Nicaraguan members; its official site still lists a
+  Nicaraguan parliamentary group. Nicaragua therefore stays recorded as a member, with its exit pending
+  until it is accepted or takes legal effect. Observers on PARLACEN's official list are Mexico, Puerto
+  Rico, Morocco, Venezuela and the People's Republic of China. The plenary admitted China as a permanent
+  observer in Managua on 21 August 2023 and in the same decision revoked the permanent observer status that
+  Taiwan's Legislative Yuan had held since 1999. In September 2024 the plenary approved Russia's State Duma
+  and Federation Council as a permanent observer, subject to ratification; Russia is not on the official
+  observer list and is not recorded as an observer.
 tags:
 - PARLACEN
 - american
@@ -121,7 +161,7 @@ other_names:
   name: Центральноамериканский парламент
 - id: zh
   name: 中美洲议会
-last_verified: '2026-07-29'
+last_verified: '2026-11-21'
 provenance:
 - field: wikidata_id
   source: Wikidata
@@ -178,3 +218,47 @@ provenance:
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/Central_American_Parliament
   license: CC BY-SA 4.0
+- field: includes
+  source: PARLACEN, Observadores (official observer list)
+  retrieved_at: '2026-11-21'
+  url: https://parlacen.int/observadores
+- field: includes
+  source: Bloomberg Línea, "Parlamento Centroamericano revoca estatus de observador de Taiwán; lo reemplaza China"
+    (2023-08-23)
+  retrieved_at: '2026-11-21'
+  url: https://www.bloomberglinea.com/2023/08/23/parlamento-centroamericano-revoca-estatus-de-observador-de-taiwan-lo-reemplaza-china/
+- field: includes
+  source: Voz de América, "Parlamento Centroamericano expulsa a Taiwán como país observador y añade a China"
+  retrieved_at: '2026-11-21'
+  url: https://www.vozdeamerica.com/a/parlamento-centroamericano-expulsa-a-taiw%c3%a1n-como-pa%c3%ads-observador-y-a%c3%b1ade-a-china/7235851.html
+- field: notes
+  source: Bloomberg Línea, "Nicaragua anuncia su retirada del Parlacen en medio de creciente aislamiento regional"
+    (2026-10-06)
+  retrieved_at: '2026-11-21'
+  url: https://www.bloomberglinea.com/2026/10/06/nicaragua-anuncia-su-retirada-del-parlacen-en-medio-de-creciente-aislamiento-regional/
+- field: notes
+  source: EFE via Infobae, "Nicaragua anuncia su salida inmediata del Parlamento Centroamericano" (2026-10-04)
+  retrieved_at: '2026-11-21'
+  url: https://www.infobae.com/america/agencias/2026/10/04/nicaragua-anuncia-su-salida-inmediata-del-parlamento-centroamericano/
+- field: notes
+  source: Radio Nicaragua, "Nicaragua formaliza salida del PARLACEN derogando decreto" (2026-10-06)
+  retrieved_at: '2026-11-21'
+  url: https://radionicaragua.com.ni/nicaragua-formaliza-salida-del-parlacen-con-derogacion-de-decreto/
+- field: notes
+  source: Infobae, PARLACEN elects 2026-2027 Junta Directiva without Nicaraguan members (2026-10-26)
+  retrieved_at: '2026-11-21'
+  url: https://www.infobae.com/nicaragua/2026/10/27/parlamento-centroamericano-eligio-nueva-junta-directiva-sin-representantes-de-nicaragua-tras-el-anuncio-de-retiro-de-managua/
+- field: notes
+  source: PARLACEN, Tratado Constitutivo del Parlamento Centroamericano as amended by the 2008 Protocol of Reforms
+    (final provisions, Articles 27-32)
+  retrieved_at: '2026-11-21'
+  url: https://parlacen.int/assets/pdf/Parlacen-Tratado%20Constitutivo.pdf
+- field: notes
+  source: PARLACEN, Bancadas Parlamentarias (lists a Nicaraguan group)
+  retrieved_at: '2026-11-21'
+  url: https://parlacen.int/diputados
+- field: notes
+  source: Diario Las Américas, "Parlamento Centroamericano aprueba incorporación de Rusia como observador"
+    (2024-09-27)
+  retrieved_at: '2026-11-21'
+  url: https://www.diariolasamericas.com/america-latina/parlamento-centroamericano-aprueba-incorporacion-rusia-como-observador-n5364360
