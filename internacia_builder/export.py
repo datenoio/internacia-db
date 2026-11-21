@@ -15,6 +15,7 @@ import zstandard as zstd
 from tqdm import tqdm
 
 from internacia_builder.contract import DUCKDB_STORAGE_COMPATIBILITY, TABLES, VIEWS, file_digest
+from internacia_builder.doc_counts import documented_count
 from internacia_builder.manifest import (
     dataset_metadata,
 )
@@ -443,11 +444,14 @@ def write_datapackage(output_dir: Path, version: str) -> None:
 
 
 def write_dataset_card(output_dir: Path, counts: dict[str, int]) -> None:
-    """Render the maintained distribution-card template with current counts."""
+    """Render the maintained distribution-card template with current counts.
+
+    The card is committed, so it states the intblock count rounded down to the hundred
+    (``documented_count``) and a new record does not change it."""
     template = project_root() / "templates" / "dataset-card.md"
     text = template.read_text(encoding="utf-8")
     for dataset, count in counts.items():
-        text = text.replace("{{" + dataset + "_count}}", str(count))
+        text = text.replace("{{" + dataset + "_count}}", documented_count(dataset, count))
     (output_dir / "README.md").write_text(text, encoding="utf-8")
 
 def load_yaml_files(directory: Path, desc: str = "Loading files") -> list[dict[str, Any]]:

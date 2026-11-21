@@ -17,9 +17,11 @@ Hugging Face setup, manual publish, and verification guide.
 ## Release assets
 
 The GitHub Release assets on tag `vX.Y.Z` are the **bundle of record** for that
-version. The repository commits only the text descriptors in `data/datasets/`
-(manifests, `contract.json`, `datapackage.json`, dataset card, alias JSON); the
-binary and bulk exports exist only in Release assets and local builds.
+version. The repository commits only the text descriptors in `data/datasets/` that
+change with the schema or with rare source edits (`contract.json`, dataset card, alias
+JSON, `border_status.json`, `attribute_intblock_migrations.json`); build manifests,
+`datapackage.json` and the binary and bulk exports exist only in Release assets and
+local builds.
 
 Builds are reproducible: `build_date` is the commit time (or `SOURCE_DATE_EPOCH`) and
 `git_commit` the built commit, so rebuilding a tag reproduces every asset byte for
