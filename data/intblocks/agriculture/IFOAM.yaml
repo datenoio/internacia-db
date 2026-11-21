@@ -11,12 +11,7 @@ active_period:
   start: '1972-11-05'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- South America
-- Oceania
+- worldwide
 languages:
 - en
 - fr
@@ -98,3 +93,6 @@ provenance:
   source: "IFOAM — Imprint (archived 2009)"
   retrieved_at: "2026-11-20"
   url: "https://webarchive.library.unt.edu/eot2008/20090116182014/http://www.ifoam.org/sub/imprint.html"
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global
+  retrieved_at: '2026-11-21'

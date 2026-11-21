@@ -8,12 +8,7 @@ active_period:
   start: '2021-01-22'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - ar
 - zh
@@ -432,3 +427,6 @@ provenance:
   source: Wikipedia / United Nations Office for Disarmament Affairs
   retrieved_at: '2026-07-29'
   url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Prohibition_of_Nuclear_Weapons
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

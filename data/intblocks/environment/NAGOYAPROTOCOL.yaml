@@ -13,12 +13,7 @@ active_period:
   start: '2014-10-12'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 - es
@@ -758,3 +753,6 @@ provenance:
   retrieved_at: '2026-07-16'
   url: https://www.wikidata.org/wiki/Q1963613
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

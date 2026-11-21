@@ -10,12 +10,7 @@ active_period:
   start: '1988-09-22'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 - es
@@ -999,3 +994,6 @@ provenance:
   source: Ozone Secretariat
   retrieved_at: '2026-07-29'
   url: https://ozone.unep.org/treaties/montreal-protocol
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
