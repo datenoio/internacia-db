@@ -75,6 +75,7 @@ python scripts/validate_countries.py --json   # structured output for agents
 python scripts/builder.py build          # regenerate data/datasets after source edits
 python scripts/check_generated_artifacts.py                # local build matches source + each other
 pytest tests/                            # unit and integration tests against updated exports
+pytest tests/ -n auto                    # the same, in parallel (pytest-xdist, as in CI)
 ruff check internacia_builder/ scripts/ tests/             # lint
 python scripts/generate_data_dictionary.py --check         # generated field reference
 python scripts/check_markdown_links.py                     # internal doc links

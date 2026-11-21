@@ -107,14 +107,24 @@ jobs:
           "$RUNNER_TEMP/min-duckdb/bin/pip" install -q "duckdb==$min"
           "$RUNNER_TEMP/min-duckdb/bin/python" scripts/check_min_duckdb.py .ci-datasets
 
+      # A second full build: run it once, on 3.11, so it does not add to 3.12's coverage run.
+      # Every leg still builds and tests its own artifacts.
       - name: Check the build is reproducible
+        if: matrix.python-version == '3.11'
         run: |
           python scripts/builder.py build --output-dir .ci-datasets-repro > /dev/null
           python scripts/check_reproducible_build.py .ci-datasets .ci-datasets-repro
           rm -rf .ci-datasets-repro
 
+      # Every leg runs the whole suite in parallel (pytest-xdist); only 3.12 measures
+      # coverage and enforces the fail_under gate from pyproject.toml.
+      - name: Run tests against freshly built artifacts (with coverage)
+        if: matrix.python-version == '3.12'
+        run: pytest tests/ -n auto --cov=internacia_builder --cov-report=term-missing
+
       - name: Run tests against freshly built artifacts
-        run: pytest tests/ --cov=internacia_builder --cov-report=term-missing
+        if: matrix.python-version != '3.12'
+        run: pytest tests/ -n auto
 
       - name: Run the internacia SDK contract suite against the fresh build
         if: matrix.python-version == '3.12'
