@@ -136,7 +136,7 @@ Each build writes to `data/datasets/`:
 | `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
 | `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
 
-Current row counts: **256** countries, **1285** intblocks, **82** blocktypes.
+Current row counts: **256** countries, **1286** intblocks, **82** blocktypes.
 
 The retired IDs `COMMLEARN`, `ABCZNZ`, and `USAN` resolve to `COL`, `ABCANZ`, and
 `UNASUR` through `intblocks_aliases.json`. Use `status IN ('member', 'founding_member')`
