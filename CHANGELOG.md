@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `CICPEC` (China-Indochina Peninsula Economic Corridor, formerly the Nanning-Singapore
+  Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1283 intblocks).
+  Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
+  Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
