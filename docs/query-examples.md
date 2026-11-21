@@ -1395,7 +1395,9 @@ ORDER BY neighbor_iso3;
 ```
 
 **Expected:** AZE and TUR are `closed`; GEO and IRN have no recorded closure (NULL). NULL means
-that no closure is recorded, not that the border is verified open.
+that no closure is recorded, not that the border is verified open. Most entries rest on official
+travel advice, which describes crossings for travellers; freight can differ (see
+[ai-consumers.md](ai-consumers.md#transit-route-roles-and-border-crossing-status)).
 
 ### Sea-access gateways of landlocked countries
 

@@ -13,6 +13,12 @@
 #   authority. News, think tanks and Wikipedia do not qualify.
 #
 # Absence of an entry means that no closure is recorded, not that the border is verified open.
+#
+# Evidence limit: most entries rest on official travel advice, which describes crossings for
+# travellers. When a customs, border or transport authority states that goods still cross a border
+# marked `closed` (for example rail freight), change it to `restricted` and say which traffic passes.
+# A re-check on 2026-11-21 could not read such sources (403 or bot checks), so none was changed;
+# candidates to verify first: FIN-RUS (rail freight at Vainikkala), IND-PAK, KHM-THA.
 # Entries are added only after review; candidates without a qualifying source are listed under
 # `deferred` with the reason. Validated by data/schemas/border_status.schema.json.
 
