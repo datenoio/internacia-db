@@ -23,7 +23,7 @@ configs:
 # Internacia Datasets
 
 Reference data for **countries** (256) and **international organizations / groups**
-(“intblocks”, 1282), plus **82** blocktypes. Licensed **CC-BY-4.0**.
+(“intblocks”, 1284), plus **82** blocktypes. Licensed **CC-BY-4.0**.
 
 Source repository: [datenoio/internacia-db](https://github.com/datenoio/internacia-db)
 

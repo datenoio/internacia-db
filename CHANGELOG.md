@@ -9,6 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
+  2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
+  Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
+  2026-11-21 (1284 intblocks). Oman is served by the network but is not a party.
+- `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
+  checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
+  its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
+  roles because the corridor branches from Mombasa to several landlocked countries instead of
+  running between two ends.
+- `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
+  running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+
+### Fixed
+
+- The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
+  "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
+  view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
+  The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
+  unchanged (648 on v4.2.0 data, 36 with a status).
+- `regions` on 27 regional treaty records is now derived from their states parties. The UNTC
+  import (2026-09-09) had set all six continents on them. Each record gets a `regions`
+  provenance entry dated 2026-11-21. European parties map to Europe, Armenia, Azerbaijan and
+  Georgia to Caucasus, and the rest to their UN M49 subregion (Iran to Middle East). Records:
+  AARHUS, ASCOBANS, CLRTAP, ESPOO, INDUSTRIALACCIDENTS, KIEVSEA, LUSAKA, PRTR, UNECEWATER,
+  WATERHEALTH, EUROARBITRATION, PAPERLESSTRADE, ADN, ADR, AETR, AGC, AGN, AGTC, ASIANHIGHWAY,
+  ATP, CMR, CMRPROTOCOL, DRYPORTS, ECMR, EURO1968TRAFFIC, UN1958AGREEMENT and UN1997AGREEMENT.
+  The 147 global treaty records keep the six-continent set.
+
+## [4.2.0] - 2026-11-21
+
+### Added
+
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
@@ -55,16 +87,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
   `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
 
-### Fixed
+### Data changes since the previous release
 
-- `regions` on 27 regional treaty records is now derived from their states parties. The UNTC
-  import (2026-09-09) had set all six continents on them. Each record gets a `regions`
-  provenance entry dated 2026-11-21. European parties map to Europe, Armenia, Azerbaijan and
-  Georgia to Caucasus, and the rest to their UN M49 subregion (Iran to Middle East). Records:
-  AARHUS, ASCOBANS, CLRTAP, ESPOO, INDUSTRIALACCIDENTS, KIEVSEA, LUSAKA, PRTR, UNECEWATER,
-  WATERHEALTH, EUROARBITRATION, PAPERLESSTRADE, ADN, ADR, AETR, AGC, AGN, AGTC, ASIANHIGHWAY,
-  ATP, CMR, CMRPROTOCOL, DRYPORTS, ECMR, EURO1968TRAFFIC, UN1958AGREEMENT and UN1997AGREEMENT.
-  The 147 global treaty records keep the six-continent set.
+- Countries: 256 → 256 records
+- Intblocks: 1279 → 1282 records; added `INSTC`, `LAPISLAZULI`, `TITR`; 74 changed
+- Blocktypes: 82 → 82 records
+- Membership edges: 57281 → 57295; 14 added, 0 removed, 0 changed
 
 ## [4.1.0] - 2026-11-20
 
