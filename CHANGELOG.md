@@ -36,6 +36,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (15 in all): `closed` for ERI–ETH, FIN–RUS, GUY–VEN (no official crossing), IND–PAK and
   KHM–THA; `restricted` for AFG–PAK, BLR–LTU, BLR–POL and EST–RUS. No source gives a start
   date, so `since` is omitted. LVA–RUS, NOR–RUS and ISR–SYR are deferred.
+- `institutional_design` for 16 more organizations, checked on 2026-11-21 (89 in all): ACD,
+  ACS, ALADI, ARCTICC, BEACST, BIMSTEC, CEFTA, CENSAD, CICA, COI, NCM, NORDEN, OECS, SACU, SELA
+  and UNWTO. NAM, SPC, TURKKON and V4 are deferred for lack of a qualifying source.
+- Three more `border_status` entries, checked on 2026-11-21 (18 in all): `closed` for BLR–UKR;
+  `restricted` for LTU–RUS and POL–RUS (Kaliningrad crossings). KAZ–TKM and AFG–TJK are deferred
+  because the travel advice read concerns travellers and does not settle whether goods cross;
+  nine more pairs are deferred for lack of a qualifying source.
 
 ## [4.1.0] - 2026-11-20
 

@@ -50,7 +50,7 @@ def _entry(design=None, evidence=None):
 def test_reviewed_pilot_manifest_is_valid():
     records, metadata = backfill.load_manifest(backfill.DEFAULT_MANIFEST, project_root())
     assert metadata["change_id"] == "add-intblock-institutional-design"
-    assert len(records) == metadata["expected_count"] == 73
+    assert len(records) == metadata["expected_count"] == 89
     assert not set(records) & set(metadata["deferred"])
 
 

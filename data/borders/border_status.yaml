@@ -72,6 +72,14 @@ entries:
       - source: UK FCDO, Poland travel advice, entry requirements (Poland advice main page still current at 21 November 2026, updated 11 November 2026)
         url: https://www.gov.uk/foreign-travel-advice/poland/entry-requirements
         retrieved_at: '2026-11-21'
+  - countries: [BLR, UKR]
+    status: closed
+    note: Official advice states that Ukraine's border with Belarus is currently closed.
+    last_verified: '2026-11-21'
+    provenance:
+      - source: UK FCDO, Ukraine travel advice, entry requirements (no last-updated date shown in fetched text)
+        url: https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements
+        retrieved_at: '2026-11-21'
   - countries: [DZA, MAR]
     status: closed
     since: '1994'
@@ -166,6 +174,25 @@ entries:
       - source: Government of Canada, Travel advice and advisories for North Korea
         url: https://travel.gc.ca/destinations/north-korea
         retrieved_at: '2026-11-20'
+  - countries: [LTU, RUS]
+    status: restricted
+    note: The Nida crossing between Lithuania and Russia (Kaliningrad) is closed; the status of other crossings is not stated.
+    last_verified: '2026-11-21'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Lithuania (last updated 2026-08-11)
+        url: https://travel.gc.ca/destinations/lithuania
+        retrieved_at: '2026-11-21'
+  - countries: [POL, RUS]
+    status: restricted
+    note: Poland has closed certain crossings with Russia (Kaliningrad); from Poland, cars and buses can use only Grzechotki-Mamonovo and Bezledy-Bagrationovsk.
+    last_verified: '2026-11-21'
+    provenance:
+      - source: Government of Canada, Travel advice and advisories for Russia (last updated 2026-11-19)
+        url: https://travel.gc.ca/destinations/russia
+        retrieved_at: '2026-11-21'
+      - source: Government of Canada, Travel advice and advisories for Poland (last updated 2026-09-09)
+        url: https://travel.gc.ca/destinations/poland
+        retrieved_at: '2026-11-21'
   - countries: [RUS, UKR]
     status: closed
     note: The land border between Ukraine and the Russian Federation is closed to regular crossings.
@@ -179,9 +206,31 @@ entries:
         retrieved_at: '2026-11-20'
 
 deferred:
+  AFG-TJK: >-
+    The official travel advice read says the border is closed, but it addresses travellers; whether goods cross is not settled, so the status is not recorded.
+  AFG-TKM: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
+  CHN-IND: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
+  CHN-PRK: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
+  IRN-TKM: >-
+    The official travel advice read is contradictory about the Sarakhs crossing (fully open, or open only to citizens).
+  IRQ-SYR: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
   ISR-SYR: >-
     No qualifying source states the crossing status: the Canadian and UK travel advice pages give only safety warnings, and the UN pages could not be read (checked again on 2026-11-21).
+  KAZ-TKM: >-
+    The official travel advice read says the border is closed, but it addresses travellers; whether goods cross is not settled, so the status is not recorded.
+  LBN-SYR: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
   LVA-RUS: >-
     The official advice read gives only vehicle-plate rules and a generic closure warning, not the status of the crossings.
+  MMR-THA: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
   NOR-RUS: >-
     No qualifying source stating the status of the Storskog crossing could be read.
+  PRK-RUS: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
+  TKM-UZB: >-
+    No qualifying source stating the current crossing status could be read (checked 2026-11-21).
