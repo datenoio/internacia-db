@@ -48,6 +48,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   describes crossings for travellers, so a `closed` border can still carry some freight. A
   re-check against customs, border and transport sources on 2026-11-21 could not read them (403
   or bot checks), so no status changed. FIN–RUS, IND–PAK and KHM–THA are the first to verify.
+- `institutional_design` for 19 treaty bodies and courts, checked on 2026-11-21 (108 in all):
+  ATS, BASEL, CBD, CITES, ECSEE, ECT, HCCN, ICW, IGC, ITLOS, ITTO, IWC, MONTREALPROTOCOL, NPT,
+  PARISAGREEMENT, PCA, POPS, UNCLOS and UNFCCC. For treaties the principal organ is the
+  Conference or Meeting of the Parties. Where the text names consensus only for rules of
+  procedure and amendments (UNFCCC, the Paris Agreement, CBD, Basel, Stockholm),
+  `decision_rule` is omitted. RAMSAR is deferred because only the 1971 text could be read.
 
 ## [4.1.0] - 2026-11-20
 
