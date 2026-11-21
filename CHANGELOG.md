@@ -54,6 +54,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+- Blocktype `artificial_intelligence` (83 blocktypes), a secondary tag for artificial
+  intelligence governance, safety and cooperation, including partnerships on AI compute and
+  semiconductor supply chains. Four records take it as an additional blocktype, with no
+  directory move: `WAICO`, `PAXSILICA`, `CHIP4` and `GPAI`. The `digital` scope note now
+  points AI bodies to the new key.
+- Five artificial intelligence records with `artificial_intelligence`, checked on 2026-11-21
+  (1303 intblocks):
+  - `NAAIMES` (International Network for Advanced AI Measurement, Evaluation and Science, formerly
+    the International Network of AI Safety Institutes): 9 countries and the EU, all founding members
+    from November 2024. Sources: NIST and the UK government.
+  - `HAIPFRIENDS` (Hiroshima AI Process Friends Group): 69 countries and the EU, with join dates from
+    the Japanese Ministry of Internal Affairs and Communications.
+  - `OECDAIPRINCIPLES` (OECD Recommendation of the Council on AI, OECD/LEGAL/0449): 51 adherents
+    (38 OECD members, 12 non-members and the EU). Source: the OECD Legal Instruments database.
+  - `MILITARYAIDECLARATION` (Political Declaration on Responsible Military Use of AI and Autonomy):
+    58 endorsing states on the U.S. Department of State list dated 27 November 2024.
+  - `COEAICONVENTION` (Council of Europe Framework Convention on AI, CETS No. 225): not in force; the
+    parties are the EU and Bosnia and Herzegovina, and the 19 other signatories are named in `notes`.
+    Source: the Netherlands treaty database, because the Council of Europe Treaty Office chart could
+    not be read automatically.
+  The UN Group of Friends for International Cooperation on AI Capacity-building is deferred: it
+  publishes no member list.
 
 ### Changed
 
@@ -97,6 +119,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     order. Subregions follow each country's UN M49 `subregion`: Western Asia is `Middle East`
     (except AM, AZ and GE, which are `Caucasus`), and Iran is in `South Asia`. ASIANHIGHWAY gets
     the same fix in a separate change.
+- `AGR` (European Agreement on Main International Traffic Arteries, which defines the
+  International E-road network) now links the English Wikipedia article on the network. Its
+  Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
+  `ASIANHIGHWAY`; the old reason said no English article existed.
 
 ## [4.2.0] - 2026-11-21
 

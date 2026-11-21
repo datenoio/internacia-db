@@ -56,9 +56,9 @@ exclusions:
   verified_at: '2026-09-30'
   source: UNTC treaty record and Wikidata entity review
 - id: AGR
-  reason: No English Wikipedia article or verified Wikidata item for the AGR E-road agreement
-  verified_at: '2026-09-09'
-  source: UNTC treaty import
+  reason: Wikipedia/Wikidata Q106123 is the International E-road network itself, not the 1975 AGR agreement; no distinct Wikidata item for the agreement was found
+  verified_at: '2026-11-21'
+  source: Wikidata entity review (enwiki sitelink International_E-road_network; entity search for the agreement title)
 - id: VCDROP
   reason: No distinct Wikipedia/Wikidata item verified for the VCDR disputes optional protocol
   verified_at: '2026-09-09'
@@ -745,3 +745,11 @@ exclusions:
   reason: No Wikidata item for the secretariat; Q387799 is the Trans-Kalahari highway
   verified_at: '2026-11-21'
   source: Transport corridor hunt
+- id: NAAIMES
+  reason: No Wikidata item or dedicated English Wikipedia article for the network (searched under its present and former names)
+  verified_at: '2026-11-21'
+  source: AI blocktype discovery
+- id: HAIPFRIENDS
+  reason: No Wikidata item or Wikipedia article for the Friends Group (the parent Hiroshima AI Process items Q140133641 and Q131344636 describe the G7 process, not this group)
+  verified_at: '2026-11-21'
+  source: AI blocktype discovery
