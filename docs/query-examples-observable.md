@@ -483,7 +483,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 59 rows. Inspect `blocktype` /
+**Expected:** 60 rows. Inspect `blocktype` /
 `status` before treating informal groupings as formal organizations.
 
 ---
