@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Seven `statistics` records, checked on 2026-11-21 (1289 intblocks). Before this, the
+  blocktype held only `CISSTAT`.
+  - `AFRISTAT` (Economic and Statistical Observatory of Sub-Saharan Africa, an `igo`): 22
+    member states, with the 14 founders of 1993. Source: AFRISTAT's member-states page.
+  - `AFRICANSTATISTICSCHARTER` (African Charter on Statistics, a `treaty_body`, in force since
+    8 February 2015): 26 parties. Source: the AU status list of 19 September 2023. The AU uses
+    no acronym for the Charter, so the id is descriptive.
+  - `SDDSPLUS` (32 adherents), `SDDS` (48 subscribers) and `EGDDS` (110 participants): the
+    three tiers of the IMF Data Standards Initiatives, as `reference_enumeration` records
+    with `partof: IMF`. Source: the IMF DSBB. An economy appears in only one tier, as on
+    DSBB, so the 32 SDDS Plus adherents are not repeated in `SDDS`.
+  - `CES` (Conference of European Statisticians, an `intergovernmental_body` of UNECE): the
+    56 UNECE member States and the 8 OECD members outside the region; Argentina, Brazil,
+    Mongolia and the Philippines are `participant`. Source: UNECE's 2022 report to the UN
+    Statistical Commission.
+  - `ESS` (European Statistical System, a `policy_forum`): the EU-27 and the four EFTA
+    States. Sources: Eurostat, EFTA and Regulation (EC) No 223/2009.
+- `wikidata_exclusions.yaml` entries for `AFRICANSTATISTICSCHARTER`, `SDDSPLUS`, `EGDDS` and
+  `CES`, which have no Wikidata item.
+
+### Changed
+
+- Cookbook results that the new records change: the UN-majority blocks without China or the US
+  return 59 rows (16 without both, now including `EGDDS`), UN grandchildren return 43 (the
+  three IMF standards), and `membership_count` mismatches total 184 (`CES` counts 64 members
+  and 4 participants).
+
 ## [4.2.0] - 2026-11-21
 
 ### Added
