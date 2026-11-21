@@ -115,7 +115,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `active_period`, `legal_status`, `recognition_status`, `secretariat`, `social_media`,
   `official_documents` and `notes` (governance, Umbrella Program trust funds, FY2025 figures).
   The description is rewritten and `provenance` is extended. The `membership_count` mismatch
-  recipe in `docs/query-examples.md` now expects 184 rows.
+  recipe in `docs/query-examples.md` now expects 185 rows (184 after the CEI update above).
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
   "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
