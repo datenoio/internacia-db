@@ -1,0 +1,1168 @@
+# Generated from reviewed research; edit by hand only to correct a reviewed value.
+version: 1
+cohort_id: tier1_joined
+expected_count: 21
+verified_on: '2026-11-21'
+description: Reviewed membership start dates (includes[].joined) for tier-1 organizations (data/watch/rosters.yaml),
+  read on 2026-11-21 from each organization's official roster, or from a government treaty register where the official
+  roster was unreachable. Dates keep the precision the source gives. Apply with scripts/backfill_includes_joined.py
+  (dry run by default). Entries under deferred are left undated on purpose.
+records:
+  AFUNION:
+    definition: 'Date the state joined the African Union or its predecessor, the OAU, as given in the ''Date of
+      joining the OAU or AU'' column of the AU''s official member-states list (OAU founders: 25 May 1963).'
+    evidence:
+    - source: African Union - Member States (date of joining the OAU or AU)
+      url: https://au.int/en/member_states/countryprofiles2
+      retrieved_at: '2026-11-21'
+    joined:
+      BF: '1963-05-25'
+      BI: '1963-05-25'
+      BJ: '1963-05-25'
+      BW: '1966-10-31'
+      CD: '1963-05-25'
+      CF: '1963-05-25'
+      CG: '1963-05-25'
+      CI: '1963-05-25'
+      CM: '1963-05-25'
+      CV: '1975-07-18'
+      DJ: '1977-06-27'
+      DZ: '1963-05-25'
+      EG: '1963-05-25'
+      ER: '1993-05-24'
+      ET: '1963-05-25'
+      GA: '1963-05-25'
+      GH: '1963-05-25'
+      GM: '1965-03-09'
+      GN: '1963-05-25'
+      GQ: '1968-10-12'
+      GW: '1973-11-19'
+      KM: '1975-07-18'
+      LR: '1963-05-25'
+      LS: '1966-10-31'
+      LY: '1963-05-25'
+      MG: '1963-05-25'
+      ML: '1963-05-25'
+      MR: '1963-05-25'
+      MU: 1968-08
+      MW: '1964-07-13'
+      MZ: '1975-07-18'
+      NA: 1990-06
+      NE: '1963-05-25'
+      NG: '1963-05-25'
+      RW: '1963-05-25'
+      SC: '1976-06-29'
+      SD: '1963-05-25'
+      SL: '1963-05-25'
+      SN: '1963-05-25'
+      SO: '1963-05-25'
+      SS: '2011-07-27'
+      ST: '1975-07-18'
+      SZ: '1968-09-24'
+      TD: '1963-05-25'
+      TG: '1963-05-25'
+      TN: '1963-05-25'
+      TZ: '1963-05-25'
+      UG: '1963-05-25'
+      ZA: '1994-06-06'
+      ZM: '1964-12-16'
+      ZW: '1980-06-18'
+    deferred:
+      KE: AU list gives 1963-05-25, before Kenya's independence (December 1963); needs a second source.
+      AO: AU list gives 1975-02-11, before Angola's independence (November 1975); needs a second source.
+  APEC:
+    definition: Month and year the economy joined APEC, from the "Date of Joining" column of the APEC Secretariat's
+      "Our members" page; the source gives the multi-day ministerial meeting range (e.g. "6-7 Nov 1989"), so no
+      single day is recorded.
+    evidence:
+    - source: APEC - Our members (date of joining)
+      url: https://www.apec.org/who-we-are/our-members
+      retrieved_at: '2026-11-21'
+    joined:
+      AU: 1989-11
+      BN: 1989-11
+      CA: 1989-11
+      CL: 1994-11
+      CN: 1991-11
+      HK: 1991-11
+      ID: 1989-11
+      JP: 1989-11
+      KR: 1989-11
+      MX: 1993-11
+      MY: 1989-11
+      NZ: 1989-11
+      PE: 1998-11
+      PG: 1993-11
+      PH: 1989-11
+      RU: 1998-11
+      SG: 1989-11
+      TH: 1989-11
+      TW: 1991-11
+      US: 1989-11
+      VN: 1998-11
+  CARICOM:
+    definition: 'Date of membership in CARICOM as stated by the CARICOM Secretariat: the "Date of Membership in
+      CARICOM" field on each caricom.org country profile (Member States and Associate Members alike); for the three
+      newest Associate Members with no profile date, the date CARICOM says associate membership took effect or the
+      agreement was signed.'
+    evidence:
+    - source: 'CARICOM - Member States and Associate Members (country profiles: Date of Membership in CARICOM)'
+      url: https://caricom.org/member-states-and-associate-members/
+      retrieved_at: '2026-11-21'
+    - source: CARICOM - Curacao joins CARICOM
+      url: https://caricom.org/curacao-joins-caricom-pledges-to-leverage-cultural-economic-strengths/
+      retrieved_at: '2026-11-21'
+    - source: CARICOM - Martinique joins CARICOM
+      url: https://caricom.org/martinique-joins-caricom/
+      retrieved_at: '2026-11-21'
+    - source: CARICOM - French Guiana becomes the eighth Associate Member of CARICOM
+      url: https://caricom.org/french-guiana-becomes-the-eighth-associate-member-of-caricom/
+      retrieved_at: '2026-11-21'
+    joined:
+      AG: '1974-07-04'
+      AI: '1999-07-04'
+      BB: '1973-08-01'
+      BM: '2003-07-02'
+      BS: '1983-07-04'
+      BZ: '1974-05-01'
+      CW: '2024-07-28'
+      DM: '1974-05-01'
+      GD: '1974-05-01'
+      GF: '2026-07-07'
+      GY: '1973-08-01'
+      HT: '2002-07-01'
+      JM: '1973-08-01'
+      KN: '1974-07-26'
+      KY: '2002-05-12'
+      LC: '1974-05-01'
+      MQ: '2026-06-16'
+      MS: '1974-05-01'
+      SR: '1995-07-04'
+      TC: '1991-07-02'
+      TT: '1973-08-01'
+      VC: '1974-05-01'
+      VG: '1991-07-02'
+  CELAC:
+    definition: Founding date of CELAC (3 December 2011, date of the Caracas Declaration at the founding summit
+      of 2-3 December 2011); every one of the 33 Latin American and Caribbean states is a founding member, so all
+      share this date.
+    evidence:
+    - source: Ministry of Foreign Affairs of Colombia - CELAC
+      url: https://cancilleria.gov.co/en/node/32251
+      retrieved_at: '2026-11-21'
+    - source: Declaracion de Caracas (3 December 2011), Ministry of Foreign Affairs of Colombia
+      url: https://www.cancilleria.gov.co/sites/default/files/declaraciondecaracas.pdf
+      retrieved_at: '2026-11-21'
+    joined:
+      AG: '2011-12-03'
+      AR: '2011-12-03'
+      BB: '2011-12-03'
+      BO: '2011-12-03'
+      BR: '2011-12-03'
+      BS: '2011-12-03'
+      BZ: '2011-12-03'
+      CL: '2011-12-03'
+      CO: '2011-12-03'
+      CR: '2011-12-03'
+      CU: '2011-12-03'
+      DM: '2011-12-03'
+      DO: '2011-12-03'
+      EC: '2011-12-03'
+      GD: '2011-12-03'
+      GT: '2011-12-03'
+      GY: '2011-12-03'
+      HN: '2011-12-03'
+      HT: '2011-12-03'
+      JM: '2011-12-03'
+      KN: '2011-12-03'
+      LC: '2011-12-03'
+      MX: '2011-12-03'
+      NI: '2011-12-03'
+      PA: '2011-12-03'
+      PE: '2011-12-03'
+      PY: '2011-12-03'
+      SR: '2011-12-03'
+      SV: '2011-12-03'
+      TT: '2011-12-03'
+      UY: '2011-12-03'
+      VC: '2011-12-03'
+      VE: '2011-12-03'
+  CIS:
+    definition: 'Date the state became a CIS participant: signature of the Agreement on the creation of the CIS
+      (Minsk/Viskuli, 8 Dec 1991) or of the Alma-Ata Protocol to it (21 Dec 1991), as stated by the CIS Executive
+      Committee; for Georgia, its later accession.'
+    evidence:
+    - source: CIS Executive Committee - Historical note (e-cis.info)
+      url: https://e-cis.info/page/3509/80648/
+      retrieved_at: '2026-11-21'
+    - source: CIS Executive Committee - Milestones of the Commonwealth (e-cis.info)
+      url: https://e-cis.info/page/3509/80702/
+      retrieved_at: '2026-11-21'
+    joined:
+      AM: '1991-12-21'
+      BY: '1991-12-08'
+      GE: 1993-12
+      KG: '1991-12-21'
+      KZ: '1991-12-21'
+      RU: '1991-12-08'
+      TJ: '1991-12-21'
+      TM: '1991-12-21'
+      UA: '1991-12-08'
+      UZ: '1991-12-21'
+    deferred:
+      AZ: CIS portal dates founding participation to 1991-12-21; Azerbaijan dates its accession to 1993-09-24.
+      MD: CIS portal dates founding participation to 1991-12-21; Moldova dates membership to its 1994 ratification.
+  COE:
+    definition: For member states, the date the state joined the Council of Europe as stated on its coe.int portal
+      page ('joined the Council of Europe on ...'), which equals the accession date in the Treaty Office chart for
+      ETS 001 and is 5 May 1949 (signature of the Statute) for the 10 founders; for observers, the date observer
+      status was granted.
+    evidence:
+    - source: Council of Europe Treaty Office - Chart of signatures and ratifications of Treaty 001 (Statute of
+        the Council of Europe)
+      url: https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=001
+      retrieved_at: '2026-11-21'
+    - source: Council of Europe Portal - member and observer state pages
+      url: https://www.coe.int/en/web/portal/members-states
+      retrieved_at: '2026-11-21'
+    joined:
+      AD: '1994-11-10'
+      AL: '1995-07-13'
+      AM: '2001-01-25'
+      AT: '1956-04-16'
+      AZ: '2001-01-25'
+      BA: '2002-04-24'
+      BE: '1949-05-05'
+      BG: '1992-05-07'
+      CA: '1996-05-29'
+      CH: '1963-05-06'
+      CY: '1961-05-24'
+      CZ: '1993-06-30'
+      DE: '1950-07-13'
+      DK: '1949-05-05'
+      EE: '1993-05-14'
+      ES: '1977-11-24'
+      FI: '1989-05-05'
+      FR: '1949-05-05'
+      GB: '1949-05-05'
+      GE: '1999-04-27'
+      GR: '1949-08-09'
+      HR: '1996-11-06'
+      HU: '1990-11-06'
+      IE: '1949-05-05'
+      IS: '1950-03-07'
+      IT: '1949-05-05'
+      JP: '1996-11-21'
+      LI: '1978-11-23'
+      LT: '1993-05-14'
+      LU: '1949-05-05'
+      LV: '1995-02-10'
+      MC: '2004-10-05'
+      MD: '1995-07-13'
+      ME: '2007-05-11'
+      MK: '1995-11-09'
+      MT: '1965-04-29'
+      MX: '1999-12-01'
+      NL: '1949-05-05'
+      'NO': '1949-05-05'
+      PL: '1991-11-26'
+      PT: '1976-09-22'
+      RO: '1993-10-07'
+      RS: '2003-04-03'
+      SE: '1949-05-05'
+      SI: '1993-05-14'
+      SK: '1993-06-30'
+      SM: '1988-11-16'
+      TR: '1950-04-13'
+      UA: '1995-11-09'
+      US: '1996-01-10'
+      VA: '1970-03-07'
+  COMMONWEALTH:
+    definition: Date the country became a member of the Commonwealth as stated by the Commonwealth Secretariat (history
+      timeline date where given, else the year on the country page); for members that left and later rejoined, the
+      original joining date.
+    evidence:
+    - source: 'Commonwealth Secretariat - Member countries (country pages: joined the Commonwealth)'
+      url: https://thecommonwealth.org/our-member-countries
+      retrieved_at: '2026-11-21'
+    - source: Commonwealth Secretariat - Our history (timeline)
+      url: https://thecommonwealth.org/history
+      retrieved_at: '2026-11-21'
+    - source: Commonwealth Secretariat - Gabon and Togo join the Commonwealth (25 June 2022)
+      url: https://thecommonwealth.org/news/gabon-and-togo-join-commonwealth
+      retrieved_at: '2026-11-21'
+    joined:
+      AG: '1981-11-01'
+      AU: '1931'
+      BB: '1966-11-30'
+      BD: '1972-04-18'
+      BN: '1984-05-07'
+      BS: '1973-07-10'
+      BW: '1966-09-30'
+      BZ: '1981-09-21'
+      CA: '1931'
+      CM: '1995-11-01'
+      CY: '1961-03-13'
+      DM: '1978-11-03'
+      FJ: '1970-10-10'
+      GA: '2022-06-25'
+      GB: '1926'
+      GD: '1974-02-07'
+      GH: '1957-03-06'
+      GM: '1965-02-18'
+      GY: '1966-05-26'
+      IN: '1947'
+      JM: '1962-08-06'
+      KE: '1963-12-12'
+      KI: '1979-07-12'
+      KN: '1983-09-19'
+      LC: '1979-02-22'
+      LK: '1948'
+      LS: '1966-10-04'
+      MT: '1964-09-21'
+      MU: '1968-03-12'
+      MV: '1982-07-09'
+      MW: '1964-07-06'
+      MY: '1957-08-31'
+      MZ: '1995-11-13'
+      NA: '1990-03-21'
+      NG: '1960-10-01'
+      NR: '1968-11-29'
+      NZ: '1931'
+      PG: '1975-09-16'
+      PK: '1947'
+      RW: '2009-11-29'
+      SB: '1978-07-07'
+      SC: '1976-06-28'
+      SG: '1965-10-15'
+      SL: '1961-04-27'
+      SZ: '1968-09-06'
+      TG: '2022-06-25'
+      TO: '1970-06-04'
+      TT: '1962-08-31'
+      TV: '1978-10-01'
+      TZ: '1961-12-09'
+      UG: '1962-10-09'
+      VC: '1979-10-27'
+      VU: '1980-07-30'
+      WS: '1970-08-28'
+      ZA: '1931'
+      ZM: '1964-10-24'
+  ECOWAS:
+    definition: 'Date the state became an ECOWAS member: founders = signature of the ECOWAS Treaty (Treaty of Lagos)
+      on 28 May 1975; later members = year of joining as given by ecowas.int.'
+    evidence:
+    - source: ECOWAS - Creation (History)
+      url: https://www.ecowas.int/creation-history/
+      retrieved_at: '2026-11-21'
+    - source: ECOWAS - The 1975 Treaty of ECOWAS
+      url: https://www.ecowas.int/wp-content/uploads/2022/06/THE-1975-TREATY-OF-ECOWAS.pdf
+      retrieved_at: '2026-11-21'
+    joined:
+      BF: '1975-05-28'
+      BJ: '1975-05-28'
+      CI: '1975-05-28'
+      CV: '1977'
+      GH: '1975-05-28'
+      GM: '1975-05-28'
+      GN: '1975-05-28'
+      GW: '1975-05-28'
+      LR: '1975-05-28'
+      ML: '1975-05-28'
+      NE: '1975-05-28'
+      NG: '1975-05-28'
+      SL: '1975-05-28'
+      SN: '1975-05-28'
+      TG: '1975-05-28'
+  EU:
+    definition: 'Date the country became a Member State of the European Union / European Communities, as stated
+      on its official european-union.europa.eu country page (''Member State: since ...''); founders carry 1 January
+      1958, the date the EEC (Treaty of Rome) took effect.'
+    evidence:
+    - source: 'European Union - EU countries (country pages: Member State since)'
+      url: https://european-union.europa.eu/principles-countries-history/eu-countries_en
+      retrieved_at: '2026-11-21'
+    joined:
+      AT: '1995-01-01'
+      BE: '1958-01-01'
+      BG: '2007-01-01'
+      CY: '2004-05-01'
+      CZ: '2004-05-01'
+      DE: '1958-01-01'
+      DK: '1973-01-01'
+      EE: '2004-05-01'
+      ES: '1986-01-01'
+      FI: '1995-01-01'
+      FR: '1958-01-01'
+      GR: '1981-01-01'
+      HR: '2013-07-01'
+      HU: '2004-05-01'
+      IE: '1973-01-01'
+      IT: '1958-01-01'
+      LT: '2004-05-01'
+      LU: '1958-01-01'
+      LV: '2004-05-01'
+      MT: '2004-05-01'
+      NL: '1958-01-01'
+      PL: '2004-05-01'
+      PT: '1986-01-01'
+      RO: '2007-01-01'
+      SE: '1995-01-01'
+      SI: '2004-05-01'
+      SK: '2004-05-01'
+  G-20:
+    definition: 'Year the member joined the G20: the group was founded in 1999 with 19 countries and the European
+      Union (Deutsche Bundesbank); the African Union joined in 2023.'
+    evidence:
+    - source: Deutsche Bundesbank - G20
+      url: https://www.bundesbank.de/en/tasks/financial-and-monetary-system/international-cooperation/g20-625730
+      retrieved_at: '2026-11-21'
+    - source: US Treasury - Statement of G-7 Finance Ministers and Central Bank Governors, 25 September 1999 (LS-120)
+      url: https://home.treasury.gov/news/press-releases/ls120
+      retrieved_at: '2026-11-21'
+    joined:
+      AR: '1999'
+      AU: '1999'
+      BR: '1999'
+      CA: '1999'
+      CN: '1999'
+      DE: '1999'
+      EU: '1999'
+      FR: '1999'
+      GB: '1999'
+      ID: '1999'
+      IN: '1999'
+      IT: '1999'
+      JP: '1999'
+      KR: '1999'
+      MX: '1999'
+      RU: '1999'
+      SA: '1999'
+      TR: '1999'
+      US: '1999'
+      ZA: '1999'
+  G7:
+    definition: 'G7 has no accession instrument: joined is the year the country first took part in the leaders''
+      summit (Rambouillet 1975 for the original six; Canada from 1976).'
+    evidence:
+    - source: German Federal Government - The history of the G7
+      url: https://www.bundesregierung.de/breg-en/federal-government/the-history-of-the-g7-397438
+      retrieved_at: '2026-11-21'
+    - source: German G7 Presidency 2022 - G7 history
+      url: https://www.g7germany.de/g7-en/g7-summit/g7-history
+      retrieved_at: '2026-11-21'
+    joined:
+      CA: '1976'
+      DE: '1975'
+      FR: '1975'
+      GB: '1975'
+      IT: '1975'
+      JP: '1975'
+      US: '1975'
+  LAS:
+    definition: Membership date of the state in the League of Arab States, from the "Membership Date" on the League's
+      own member-state pages (22 March 1945 for founding members). Where that conflicts with the League's timeline,
+      the conflict is resolved per entry and explained.
+    evidence:
+    - source: League of Arab States - Member states (lasportal.org, Internet Archive copy 2025-10-15)
+      url: https://web.archive.org/web/20251015011909/http://www.lasportal.org/en/aboutlas/Pages/CountryData.aspx
+      retrieved_at: '2026-11-21'
+    - source: League of Arab States - Member state pages, membership date (lasportal.org, Internet Archive copies
+        2019)
+      url: https://web.archive.org/web/20190722052658/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=1
+      retrieved_at: '2026-11-21'
+    - source: League of Arab States - Historical overview (lasportal.org, Internet Archive copy 2026-02-16)
+      url: https://web.archive.org/web/20260216091146/http://www.lasportal.org/en/aboutlas/Pages/HistoricalOverView.aspx
+      retrieved_at: '2026-11-21'
+    - source: 'UN Security Council - Official Records, 716th meeting (6 February 1956): Sudan admitted to the Arab
+        League'
+      url: https://documents.un.org/doc/undoc/gen/n56/122/04/pdf/n5612204.pdf
+      retrieved_at: '2026-11-21'
+    joined:
+      AE: '1971-12-06'
+      BH: '1971-09-11'
+      DJ: '1977-09-04'
+      DZ: '1962-08-16'
+      EG: '1945-03-22'
+      IQ: '1945-03-22'
+      JO: '1945-03-22'
+      KM: '1993-11-20'
+      KW: '1961-07-20'
+      LB: '1945-03-22'
+      LY: '1953-03-28'
+      MA: '1958-10-01'
+      MR: '1973-11-26'
+      OM: '1971-09-29'
+      PS: '1976-09-09'
+      QA: '1971-09-11'
+      SA: '1945-03-22'
+      SD: '1956-01-19'
+      SO: '1974-02-14'
+      SY: '1945-03-22'
+      TN: '1958-10-01'
+      YE: '1945-05-05'
+  NATO:
+    definition: 'Date the country became a NATO member: for the 20 enlargement members, the accession date given
+      by nato.int; for the 12 founding members, the year 1949 (nato.int gives no per-country membership date, only
+      the 4 April 1949 signature of the North Atlantic Treaty).'
+    evidence:
+    - source: NATO - NATO member countries
+      url: https://www.nato.int/en/about-us/organization/nato-member-countries
+      retrieved_at: '2026-11-21'
+    - source: NATO - Enlargement and Article 10
+      url: https://www.nato.int/en/what-we-do/partnerships-and-cooperation/enlargement-and-article-10
+      retrieved_at: '2026-11-21'
+    joined:
+      AL: '2009-04-01'
+      BE: '1949'
+      BG: '2004-03-29'
+      CA: '1949'
+      CZ: '1999-03-12'
+      DE: '1955-05-06'
+      DK: '1949'
+      EE: '2004-03-29'
+      ES: '1982-05-30'
+      FI: '2023-04-04'
+      FR: '1949'
+      GB: '1949'
+      GR: '1952-02-18'
+      HR: '2009-04-01'
+      HU: '1999-03-12'
+      IS: '1949'
+      IT: '1949'
+      LT: '2004-03-29'
+      LU: '1949'
+      LV: '2004-03-29'
+      ME: '2017-06-05'
+      MK: '2020-03-27'
+      NL: '1949'
+      'NO': '1949'
+      PL: '1999-03-12'
+      PT: '1949'
+      RO: '2004-03-29'
+      SE: '2024-03-07'
+      SI: '2004-03-29'
+      SK: '2004-03-29'
+      TR: '1952-02-18'
+      US: '1949'
+  OAS:
+    definition: Date of deposit of the state's instrument of ratification of the OAS Charter (A-41) with the General
+      Secretariat, as given in the "Deposit" column of the OAS Department of International Law signatories and ratifications
+      table; the same date type is used for every state.
+    evidence:
+    - source: OAS Department of International Law - Charter of the OAS (A-41) signatories and ratifications (read
+        from Wayback Machine copy of 2026-10-26)
+      url: https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp
+      retrieved_at: '2026-11-21'
+    joined:
+      AG: '1981-12-03'
+      AR: '1956-04-10'
+      BB: '1967-11-15'
+      BO: '1950-10-18'
+      BR: '1950-03-13'
+      BS: '1982-03-03'
+      BZ: '1991-01-08'
+      CA: '1990-01-08'
+      CL: '1953-06-05'
+      CO: '1951-12-13'
+      CR: '1948-11-16'
+      CU: '1952-07-16'
+      DM: '1979-05-22'
+      DO: '1949-04-22'
+      EC: '1950-12-28'
+      GD: '1975-05-13'
+      GT: '1955-04-06'
+      GY: '1991-01-08'
+      HN: '1950-02-07'
+      HT: '1951-03-28'
+      JM: '1969-08-20'
+      KN: '1984-03-12'
+      LC: '1979-05-22'
+      MX: '1948-11-23'
+      NI: '1950-07-26'
+      PA: '1951-03-22'
+      PE: '1954-02-12'
+      PY: '1950-05-03'
+      SR: '1977-06-08'
+      SV: '1950-09-11'
+      TT: '1967-03-17'
+      US: '1951-06-19'
+      UY: '1955-09-01'
+      VC: '1981-12-03'
+      VE: '1951-12-29'
+  OECD:
+    definition: Date the member deposited its instrument of ratification of (or accession to) the Convention on
+      the OECD with the depositary (French Government); for the 20 original members the Convention entered into
+      force on 30 September 1961.
+    evidence:
+    - source: 'OECD - Rules of Procedure of the Organisation (2013), foreword: deposit of instruments of accession'
+      url: https://www.oecd.org/content/dam/oecd/en/about/legal/OECD-Rules-of-Procedure-2013.pdf
+      retrieved_at: '2026-11-21'
+    - source: Swiss Confederation - RS 0.970.4 Convention relative a l'OCDE, champ d'application (10 April 2019)
+      url: https://res.cloudinary.com/adminch/image/private/s--Uy-gaywd--/v1719847632/Bundespublikationen/0-970-4f.pdf
+      retrieved_at: '2026-11-21'
+    - source: Government of the Netherlands - Treaty Database, Convention on the OECD, parties
+      url: https://treatydatabase.overheid.nl/en/Treaty/Details/007756_p
+      retrieved_at: '2026-11-21'
+    joined:
+      AT: '1961-09-29'
+      AU: '1971-06-07'
+      BE: '1961-09-13'
+      CA: '1961-04-10'
+      CH: '1961-09-28'
+      CL: '2010-05-07'
+      CO: '2020-04-28'
+      CR: '2021-05-25'
+      CZ: '1995-12-21'
+      DE: '1961-09-27'
+      DK: '1961-05-30'
+      EE: '2010-12-09'
+      ES: '1961-08-03'
+      FI: '1969-01-28'
+      FR: '1961-08-07'
+      GB: '1961-05-02'
+      GR: '1961-09-27'
+      HU: '1996-05-07'
+      IE: '1961-08-17'
+      IL: '2010-09-07'
+      IS: '1961-06-05'
+      IT: '1962-03-29'
+      JP: '1964-04-28'
+      KR: '1996-12-12'
+      LT: '2018-07-05'
+      LU: '1961-12-07'
+      LV: '2016-07-01'
+      MX: '1994-05-18'
+      NL: '1961-11-13'
+      'NO': '1961-07-04'
+      NZ: '1973-05-29'
+      PL: '1996-11-22'
+      PT: '1961-08-04'
+      SE: '1961-09-28'
+      SI: '2010-07-21'
+      SK: '2000-12-14'
+      TR: '1961-08-02'
+      US: '1961-04-12'
+  OIC:
+    definition: Year the state became a member of the OIC, as given in the "Member since" field of the OIC General
+      Secretariat Member States page (year precision only).
+    evidence:
+    - source: Organisation of Islamic Cooperation - Member States (member since)
+      url: https://www.oic-oci.org/en/members
+      retrieved_at: '2026-11-21'
+    joined:
+      AE: '1972'
+      AF: '1969'
+      AL: '1992'
+      AZ: '1992'
+      BD: '1974'
+      BF: '1974'
+      BH: '1972'
+      BJ: '1983'
+      BN: '1984'
+      CI: '2001'
+      CM: '1974'
+      DJ: '1978'
+      DZ: '1969'
+      EG: '1969'
+      GA: '1974'
+      GM: '1974'
+      GN: '1969'
+      GW: '1974'
+      GY: '1998'
+      ID: '1969'
+      IQ: '1975'
+      IR: '1969'
+      JO: '1969'
+      KG: '1992'
+      KM: '1976'
+      KW: '1969'
+      KZ: '1995'
+      LB: '1969'
+      LY: '1969'
+      MA: '1969'
+      ML: '1969'
+      MR: '1969'
+      MV: '1976'
+      MY: '1969'
+      MZ: '1994'
+      NE: '1969'
+      NG: '1986'
+      OM: '1972'
+      PK: '1969'
+      PS: '1969'
+      QA: '1972'
+      SA: '1969'
+      SD: '1969'
+      SL: '1972'
+      SN: '1969'
+      SO: '1969'
+      SR: '1996'
+      SY: '1972'
+      TD: '1969'
+      TG: '1997'
+      TJ: '1992'
+      TM: '1992'
+      TN: '1969'
+      TR: '1969'
+      UG: '1974'
+      UZ: '1996'
+      YE: '1969'
+  SAARC:
+    definition: 'Date the state became a SAARC member: signature of the SAARC Charter in Dhaka (8 Dec 1985) for
+      the seven founders; for Afghanistan, its entry at the 14th SAARC Summit.'
+    evidence:
+    - source: SAARC Secretariat - Dhaka Declaration, First SAARC Summit (1985)
+      url: https://www.saarc-sec.org/medias/FirstSaarcSummitDhaka1985_2026_05_11_04_58_26.pdf
+      retrieved_at: '2026-11-21'
+    - source: SAARC - Protocol of Accession of Afghanistan to SAFTA (WTO RTA database copy)
+      url: https://rtais.wto.org/rtadocs/966/TOA/English/21_19_SAFTA_Protocol_on_Afghanistan.doc
+      retrieved_at: '2026-11-21'
+    joined:
+      AF: '2007-04-03'
+      BD: '1985-12-08'
+      BT: '1985-12-08'
+      IN: '1985-12-08'
+      LK: '1985-12-08'
+      MV: '1985-12-08'
+      NP: '1985-12-08'
+      PK: '1985-12-08'
+  SADC:
+    definition: Date the state became a member of SADC or, for states that joined before the 1992 transformation,
+      of its predecessor SADCC, as given by sadc.int (founders = SADCC formation in Lusaka, 1 April 1980); for Seychelles,
+      the date of its current membership (2008 readmission).
+    evidence:
+    - source: SADC - Member States (country pages)
+      url: https://www.sadc.int/member-states
+      retrieved_at: '2026-11-21'
+    - source: SADC - History and Treaty
+      url: https://www.sadc.int/pages/history-and-treaty
+      retrieved_at: '2026-11-21'
+    joined:
+      AO: '1980-04-01'
+      BW: '1980-04-01'
+      CD: '1998'
+      KM: 2018-08
+      LS: '1980-04-01'
+      MG: 2005-08
+      MU: '1995-08-28'
+      MW: '1980-04-01'
+      MZ: '1980-04-01'
+      NA: '1990-08-24'
+      SC: '2008'
+      SZ: '1980-04-01'
+      TZ: '1980-04-01'
+      ZA: '1994'
+      ZM: '1980-04-01'
+      ZW: '1980-04-01'
+  SCO:
+    definition: 'Date the state became an SCO member state: the founding decision in Shanghai (15 June 2001) or
+      the Heads of State Council meeting that granted membership / completed the accession procedure.'
+    evidence:
+    - source: SCO Secretariat - About SCO
+      url: https://eng.sectsco.org/20170110/192193.html
+      retrieved_at: '2026-11-21'
+    - source: SCO Secretariat - Flags of India and Pakistan hoisted at SCO Headquarters (2017)
+      url: https://eng.sectsco.org/20170615/299202.html
+      retrieved_at: '2026-11-21'
+    - source: SCO Secretariat - Regular SCO Heads of State Council Meeting (4 July 2023)
+      url: https://eng.sectsco.org/20230704/Regular-SCO-Heads-of-State-Council-Meeting-948760.html
+      retrieved_at: '2026-11-21'
+    - source: SCO Secretariat - 24th meeting of the SCO Heads of State Council (4 July 2024)
+      url: https://eng.sectsco.org/20240704/1445827.html
+      retrieved_at: '2026-11-21'
+    joined:
+      BY: '2024-07-04'
+      CN: '2001-06-15'
+      IN: '2017-06-09'
+      IR: '2023-07-04'
+      KG: '2001-06-15'
+      KZ: '2001-06-15'
+      PK: '2017-06-09'
+      RU: '2001-06-15'
+      TJ: '2001-06-15'
+      UZ: '2001-06-15'
+  UN:
+    definition: 'Date the state became a UN Member State as given in the UN roster''s ''Date of Admission'' column:
+      24 October 1945 or the later Charter ratification date for original (founding) Members, otherwise the date
+      of the General Assembly admission resolution; for continuing or successor seats the roster''s footnote explains
+      which date is kept.'
+    evidence:
+    - source: United Nations Information Service Vienna - Press release ORG/1469, United Nations Member States (Date
+        of Admission)
+      url: https://unis.unvienna.org/unis/en/pressrels/2006/org1469.html
+      retrieved_at: '2026-11-21'
+    - source: UN Dag Hammarskjold Library - Current UN Member States (admission resolutions)
+      url: https://research.un.org/en/unmembers/currentmembers
+      retrieved_at: '2026-11-21'
+    - source: UN News - UN welcomes South Sudan as 193rd Member State (14 July 2011)
+      url: https://news.un.org/en/node/381552
+      retrieved_at: '2026-11-21'
+    joined:
+      AD: '1993-07-28'
+      AE: '1971-12-09'
+      AF: '1946-11-19'
+      AG: '1981-11-11'
+      AL: '1955-12-14'
+      AM: '1992-03-02'
+      AO: '1976-12-01'
+      AR: '1945-10-24'
+      AT: '1955-12-14'
+      AU: '1945-11-01'
+      AZ: '1992-03-02'
+      BA: '1992-05-22'
+      BB: '1966-12-09'
+      BD: '1974-09-17'
+      BE: '1945-12-27'
+      BF: '1960-09-20'
+      BG: '1955-12-14'
+      BH: '1971-09-21'
+      BI: '1962-09-18'
+      BJ: '1960-09-20'
+      BN: '1984-09-21'
+      BO: '1945-11-14'
+      BR: '1945-10-24'
+      BS: '1973-09-18'
+      BT: '1971-09-21'
+      BW: '1966-10-17'
+      BY: '1945-10-24'
+      BZ: '1981-09-25'
+      CA: '1945-11-09'
+      CD: '1960-09-20'
+      CF: '1960-09-20'
+      CG: '1960-09-20'
+      CH: '2002-09-10'
+      CI: '1960-09-20'
+      CL: '1945-10-24'
+      CM: '1960-09-20'
+      CN: '1945-10-24'
+      CO: '1945-11-05'
+      CR: '1945-11-02'
+      CU: '1945-10-24'
+      CV: '1975-09-16'
+      CY: '1960-09-20'
+      CZ: '1993-01-19'
+      DE: '1973-09-18'
+      DJ: '1977-09-20'
+      DK: '1945-10-24'
+      DM: '1978-12-18'
+      DO: '1945-10-24'
+      DZ: '1962-10-08'
+      EC: '1945-12-21'
+      EE: '1991-09-17'
+      EG: '1945-10-24'
+      ER: '1993-05-28'
+      ES: '1955-12-14'
+      ET: '1945-11-13'
+      FI: '1955-12-14'
+      FJ: '1970-10-13'
+      FM: '1991-09-17'
+      FR: '1945-10-24'
+      GA: '1960-09-20'
+      GB: '1945-10-24'
+      GD: '1974-09-17'
+      GE: '1992-07-31'
+      GH: '1957-03-08'
+      GM: '1965-09-21'
+      GN: '1958-12-12'
+      GQ: '1968-11-12'
+      GR: '1945-10-25'
+      GT: '1945-11-21'
+      GW: '1974-09-17'
+      GY: '1966-09-20'
+      HN: '1945-12-17'
+      HR: '1992-05-22'
+      HT: '1945-10-24'
+      HU: '1955-12-14'
+      ID: '1950-09-28'
+      IE: '1955-12-14'
+      IL: '1949-05-11'
+      IN: '1945-10-30'
+      IQ: '1945-12-21'
+      IR: '1945-10-24'
+      IS: '1946-11-19'
+      IT: '1955-12-14'
+      JM: '1962-09-18'
+      JO: '1955-12-14'
+      JP: '1956-12-18'
+      KE: '1963-12-16'
+      KG: '1992-03-02'
+      KH: '1955-12-14'
+      KI: '1999-09-14'
+      KM: '1975-11-12'
+      KN: '1983-09-23'
+      KP: '1991-09-17'
+      KR: '1991-09-17'
+      KW: '1963-05-14'
+      KZ: '1992-03-02'
+      LA: '1955-12-14'
+      LB: '1945-10-24'
+      LC: '1979-09-18'
+      LI: '1990-09-18'
+      LK: '1955-12-14'
+      LR: '1945-11-02'
+      LS: '1966-10-17'
+      LT: '1991-09-17'
+      LU: '1945-10-24'
+      LV: '1991-09-17'
+      LY: '1955-12-14'
+      MA: '1956-11-12'
+      MC: '1993-05-28'
+      MD: '1992-03-02'
+      ME: '2006-06-28'
+      MG: '1960-09-20'
+      MH: '1991-09-17'
+      MK: '1993-04-08'
+      ML: '1960-09-28'
+      MM: '1948-04-19'
+      MN: '1961-10-27'
+      MR: '1961-10-27'
+      MT: '1964-12-01'
+      MU: '1968-04-24'
+      MV: '1965-09-21'
+      MW: '1964-12-01'
+      MX: '1945-11-07'
+      MY: '1957-09-17'
+      MZ: '1975-09-16'
+      NA: '1990-04-23'
+      NE: '1960-09-20'
+      NG: '1960-10-07'
+      NI: '1945-10-24'
+      NL: '1945-12-10'
+      'NO': '1945-11-27'
+      NP: '1955-12-14'
+      NR: '1999-09-14'
+      NZ: '1945-10-24'
+      OM: '1971-10-07'
+      PA: '1945-11-13'
+      PE: '1945-10-31'
+      PG: '1975-10-10'
+      PH: '1945-10-24'
+      PK: '1947-09-30'
+      PL: '1945-10-24'
+      PT: '1955-12-14'
+      PW: '1994-12-15'
+      PY: '1945-10-24'
+      QA: '1971-09-21'
+      RO: '1955-12-14'
+      RS: '2000-11-01'
+      RU: '1945-10-24'
+      RW: '1962-09-18'
+      SA: '1945-10-24'
+      SB: '1978-09-19'
+      SC: '1976-09-21'
+      SD: '1956-11-12'
+      SE: '1946-11-19'
+      SG: '1965-09-21'
+      SI: '1992-05-22'
+      SK: '1993-01-19'
+      SL: '1961-09-27'
+      SM: '1992-03-02'
+      SN: '1960-09-28'
+      SO: '1960-09-20'
+      SR: '1975-12-04'
+      SS: '2011-07-14'
+      ST: '1975-09-16'
+      SV: '1945-10-24'
+      SY: '1945-10-24'
+      SZ: '1968-09-24'
+      TD: '1960-09-20'
+      TG: '1960-09-20'
+      TH: '1946-12-16'
+      TJ: '1992-03-02'
+      TL: '2002-09-27'
+      TM: '1992-03-02'
+      TN: '1956-11-12'
+      TO: '1999-09-14'
+      TR: '1945-10-24'
+      TT: '1962-09-18'
+      TV: '2000-09-05'
+      TZ: '1961-12-14'
+      UA: '1945-10-24'
+      UG: '1962-10-25'
+      US: '1945-10-24'
+      UY: '1945-12-18'
+      UZ: '1992-03-02'
+      VC: '1980-09-16'
+      VE: '1945-11-15'
+      VN: '1977-09-20'
+      VU: '1981-09-15'
+      WS: '1976-12-15'
+      YE: '1947-09-30'
+      ZA: '1945-11-07'
+      ZM: '1964-12-01'
+      ZW: '1980-08-25'
+  WTO:
+    definition: Date the member became a WTO Member, as given in the WTO "Members and Observers" list of members
+      and dates of membership (1 January 1995 = original Member when the WTO Agreement entered into force).
+    evidence:
+    - source: WTO - Members and Observers (members and dates of membership)
+      url: https://www.wto.org/english/thewto_e/whatis_e/tif_e/org6_e.htm
+      retrieved_at: '2026-11-21'
+    joined:
+      AE: '1996-04-10'
+      AF: '2016-07-29'
+      AG: '1995-01-01'
+      AL: '2000-09-08'
+      AM: '2003-02-05'
+      AO: '1996-11-23'
+      AR: '1995-01-01'
+      AT: '1995-01-01'
+      AU: '1995-01-01'
+      BB: '1995-01-01'
+      BD: '1995-01-01'
+      BE: '1995-01-01'
+      BF: '1995-06-03'
+      BG: '1996-12-01'
+      BH: '1995-01-01'
+      BI: '1995-07-23'
+      BJ: '1996-02-22'
+      BN: '1995-01-01'
+      BO: '1995-09-12'
+      BR: '1995-01-01'
+      BW: '1995-05-31'
+      BZ: '1995-01-01'
+      CA: '1995-01-01'
+      CD: '1997-01-01'
+      CF: '1995-05-31'
+      CG: '1997-03-27'
+      CH: '1995-07-01'
+      CI: '1995-01-01'
+      CL: '1995-01-01'
+      CM: '1995-12-13'
+      CN: '2001-12-11'
+      CO: '1995-04-30'
+      CR: '1995-01-01'
+      CU: '1995-04-20'
+      CV: '2008-07-23'
+      CY: '1995-07-30'
+      CZ: '1995-01-01'
+      DE: '1995-01-01'
+      DJ: '1995-05-31'
+      DK: '1995-01-01'
+      DM: '1995-01-01'
+      DO: '1995-03-09'
+      EC: '1996-01-21'
+      EE: '1999-11-13'
+      EG: '1995-06-30'
+      ES: '1995-01-01'
+      EU: '1995-01-01'
+      FI: '1995-01-01'
+      FJ: '1996-01-14'
+      FR: '1995-01-01'
+      GA: '1995-01-01'
+      GB: '1995-01-01'
+      GD: '1996-02-22'
+      GE: '2000-06-14'
+      GH: '1995-01-01'
+      GM: '1996-10-23'
+      GN: '1995-10-25'
+      GR: '1995-01-01'
+      GT: '1995-07-21'
+      GW: '1995-05-31'
+      GY: '1995-01-01'
+      HK: '1995-01-01'
+      HN: '1995-01-01'
+      HR: '2000-11-30'
+      HT: '1996-01-30'
+      HU: '1995-01-01'
+      ID: '1995-01-01'
+      IE: '1995-01-01'
+      IL: '1995-04-21'
+      IN: '1995-01-01'
+      IS: '1995-01-01'
+      IT: '1995-01-01'
+      JM: '1995-03-09'
+      JO: '2000-04-11'
+      JP: '1995-01-01'
+      KE: '1995-01-01'
+      KG: '1998-12-20'
+      KH: '2004-10-13'
+      KM: '2024-08-21'
+      KN: '1996-02-21'
+      KR: '1995-01-01'
+      KW: '1995-01-01'
+      KZ: '2015-11-30'
+      LA: '2013-02-02'
+      LC: '1995-01-01'
+      LI: '1995-09-01'
+      LK: '1995-01-01'
+      LR: '2016-07-14'
+      LS: '1995-05-31'
+      LT: '2001-05-31'
+      LU: '1995-01-01'
+      LV: '1999-02-10'
+      MA: '1995-01-01'
+      MD: '2001-07-26'
+      ME: '2012-04-29'
+      MG: '1995-11-17'
+      MK: '2003-04-04'
+      ML: '1995-05-31'
+      MM: '1995-01-01'
+      MN: '1997-01-29'
+      MO: '1995-01-01'
+      MR: '1995-05-31'
+      MT: '1995-01-01'
+      MU: '1995-01-01'
+      MV: '1995-05-31'
+      MW: '1995-05-31'
+      MX: '1995-01-01'
+      MY: '1995-01-01'
+      MZ: '1995-08-26'
+      NA: '1995-01-01'
+      NE: '1996-12-13'
+      NG: '1995-01-01'
+      NI: '1995-09-03'
+      NL: '1995-01-01'
+      'NO': '1995-01-01'
+      NP: '2004-04-23'
+      NZ: '1995-01-01'
+      OM: '2000-11-09'
+      PA: '1997-09-06'
+      PE: '1995-01-01'
+      PG: '1996-06-09'
+      PH: '1995-01-01'
+      PK: '1995-01-01'
+      PL: '1995-07-01'
+      PT: '1995-01-01'
+      PY: '1995-01-01'
+      QA: '1996-01-13'
+      RO: '1995-01-01'
+      RU: '2012-08-22'
+      RW: '1996-05-22'
+      SA: '2005-12-11'
+      SB: '1996-07-26'
+      SC: '2015-04-26'
+      SE: '1995-01-01'
+      SG: '1995-01-01'
+      SI: '1995-07-30'
+      SK: '1995-01-01'
+      SL: '1995-07-23'
+      SN: '1995-01-01'
+      SR: '1995-01-01'
+      SV: '1995-05-07'
+      SZ: '1995-01-01'
+      TD: '1996-10-19'
+      TG: '1995-05-31'
+      TH: '1995-01-01'
+      TJ: '2013-03-02'
+      TL: '2024-08-30'
+      TN: '1995-03-29'
+      TO: '2007-07-27'
+      TR: '1995-03-26'
+      TT: '1995-03-01'
+      TW: '2002-01-01'
+      TZ: '1995-01-01'
+      UA: '2008-05-16'
+      UG: '1995-01-01'
+      US: '1995-01-01'
+      UY: '1995-01-01'
+      VC: '1995-01-01'
+      VE: '1995-01-01'
+      VN: '2007-01-11'
+      VU: '2012-08-24'
+      WS: '2012-05-10'
+      YE: '2014-06-26'
+      ZA: '1995-01-01'
+      ZM: '1995-01-01'
+      ZW: '1995-03-05'

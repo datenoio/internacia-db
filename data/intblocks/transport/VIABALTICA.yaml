@@ -1,0 +1,76 @@
+id: VIABALTICA
+blocktype:
+- transport
+- corridor
+status: de-facto
+links:
+- url: https://ec.europa.eu/assets/cinea/project_fiches/cef/cef_transport/2014-LT-TMC-0258-W.pdf
+  type: website
+- url: https://www.wikidata.org/wiki/Q6444438
+  type: wikidata
+name: Via Baltica
+geographic_scope: regional
+regions:
+- Europe
+- Northern Europe
+includes:
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  role: terminal
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  role: transit
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  role: transit
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  role: terminal
+membership_count: 4
+wikidata_id: Q6444438
+description: Road corridor on the E67 connecting Warsaw, Kaunas, Riga and Tallinn, part of the North Sea–Baltic corridor
+  of the trans-European transport network. The Polish section, over 310 km from Warsaw to Budzisko on the Lithuanian
+  border, was completed as an expressway on 2 October 2025; upgrades in Lithuania, Latvia and Estonia continue.
+tags:
+- via-baltica
+- e67
+- poland
+- lithuania
+- latvia
+- estonia
+- corridor
+- transport
+topics:
+- key: transport
+  name: Transport
+- key: infrastructure
+  name: Infrastructure
+notes: The record is Via Baltica, not the longer E67 (Prague to Helsinki). Finland is reached from Tallinn by ferry and
+  is not listed. No launch or agreement date was found, so founded is omitted.
+last_verified: '2026-11-21'
+provenance:
+- field: includes
+  source: CINEA, CEF Transport project fiche 2014-LT-TMC-0258-W (Via Baltica)
+  retrieved_at: '2026-11-21'
+  url: https://ec.europa.eu/assets/cinea/project_fiches/cef/cef_transport/2014-LT-TMC-0258-W.pdf
+- field: includes
+  source: Ministry of Infrastructure of Poland, Łomża bypass opened in full
+  retrieved_at: '2026-11-21'
+  url: https://www.gov.pl/web/infrastruktura/obwodnica-lomzy-w-calosci-oddana-do-ruchu
+- field: description
+  source: Ministry of Infrastructure of Poland, Łomża bypass opened in full
+  retrieved_at: '2026-11-21'
+  url: https://www.gov.pl/web/infrastruktura/obwodnica-lomzy-w-calosci-oddana-do-ruchu
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q6444438
+  license: CC0

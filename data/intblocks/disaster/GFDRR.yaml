@@ -1,17 +1,44 @@
 id: GFDRR
+name: Global Facility for Disaster Reduction and Recovery
 blocktype:
 - disaster
+- fund
 - intorg
 status: formal
 scope_category: intergovernmental_body
+founded: '2006-09-29'
+active_period:
+  start: '2006-09-29'
+geographic_scope: global
+regions:
+- worldwide
 languages:
 - en
 links:
-- url: http://www.gfdrr.org
+- url: https://www.gfdrr.org/en
   type: website
+- url: https://en.wikipedia.org/wiki/Global_Facility_for_Disaster_Reduction_and_Recovery
+  type: wikipedia
+- url: https://fr.wikipedia.org/wiki/Dispositif_mondial_pour_la_r%C3%A9duction_des_risques_de_catastrophes
+  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q106238279
   type: wikidata
-name: Global Facility for Disaster Reduction and Recovery
+headquarters:
+  city: Washington, D.C.
+  country: US
+  coordinates:
+    lat: 38.898919916456705
+    lng: -77.04246523090436
+  note: World Bank Headquarters, 1818 H Street NW, Washington, DC 20433
+legal_status: World Bank-administered multi-donor trust fund umbrella program
+recognition_status: >-
+  Global partnership hosted and administered by the World Bank; the GFDRR Partnership Council of
+  contributing development partners oversees the GFDRR Umbrella Program. Integrated into the World
+  Bank's Infrastructure Vertical in 2025.
+partof: WB
+secretariat:
+  location: Washington, D.C., United States
+  organization: GFDRR Program Management Unit, World Bank
 includes:
 - id: AU
   name: Australia
@@ -33,10 +60,6 @@ includes:
   name: Germany
   type: country
   status: member
-- id: IN
-  name: India
-  type: country
-  status: member
 - id: IT
   name: Italy
   type: country
@@ -45,16 +68,8 @@ includes:
   name: Japan
   type: country
   status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
 - id: 'NO'
   name: Norway
-  type: country
-  status: member
-- id: RS
-  name: Serbia
   type: country
   status: member
 - id: SE
@@ -69,59 +84,187 @@ includes:
   name: United States
   type: country
   status: member
-membership_count: 14
-description: The Global Facility for Disaster Reduction and Recovery is an international
-  organization that is used to promote regional cooperation in the disaster reduction
-  and recovery sector.
+- id: IN
+  name: India
+  type: country
+  status: former_member
+- id: LU
+  name: Luxembourg
+  type: country
+  status: former_member
+- id: RS
+  name: Serbia
+  type: country
+  status: former_member
+membership_count: 11
+description: >-
+  Global partnership hosted and administered by the World Bank that helps low- and lower-middle-income
+  countries understand and reduce their vulnerability to natural hazards and adapt to climate change.
+  Established on 29 September 2006 to support the Hyogo Framework for Action and now aligned with the
+  Sendai Framework, GFDRR funds grants, technical assistance, training and knowledge sharing that build
+  disaster and climate risk management into national and regional policies, strategies and investment
+  plans. Its Umbrella Program pools an anchor multi-donor trust fund with associated trust funds such as
+  the ACP-EU Disaster Risk Management Program, the Japan–World Bank Program and the City Resilience
+  Program. In fiscal year 2025 it had 328 active grants worth US$140.5 million across 100 countries.
 tags:
 - GFDRR
+- climate_resilience
 - disaster
 - disaster_relief
+- disaster_risk_management
+- disaster_risk_reduction
 - emergency
 - facility
+- fund
 - global
 - intorg
+- resilience
+- sendai_framework
+- trust_fund
+- world_bank
 topics:
 - key: disaster_relief
   name: Disaster Relief
+- key: climate_change
+  name: Climate Change
+- key: development
+  name: Development
+- key: infrastructure
+  name: Infrastructure
+- key: urban
+  name: Urban
 wikidata_id: Q106238279
 other_names:
 - id: en
   name: Global Facility for Disaster Reduction and Recovery
 - id: fr
   name: Dispositif mondial pour la réduction des risques de catastrophes
-provenance:
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q106238279
-  license: CC0
-- field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-12'
-  url: https://www.wikidata.org/wiki/Q106238279
-  license: CC0
-- field: scope_category
-  source: "GFDRR Strategy 2030"
-  retrieved_at: "2026-11-20"
-  url: "https://www.gfdrr.org/sites/default/files/2025-04/GFDRR%20Strategy%202030_v3.pdf"
 acronyms:
 - lang: en
   value: GFDRR
-founded: '2006-09-29'
-headquarters:
-  city: World Bank Headquarters
-  coordinates:
-    lat: 38.898919916456705
-    lng: -77.04246523090436
-last_verified: '2026-07-12'
+notes: >-
+  Governance: GFDRR was first overseen by a Consultative Group (CG) of donor members and observers; under
+  the 2021–2025 Partnership Charter the CG was reconstituted as the GFDRR Partnership Council, which
+  oversees the Umbrella Program run by a Program Management Unit in the World Bank. includes lists the
+  partners shown as "GFDRR Members" in the FY2024 Annual Report and as "GFDRR Development Partners" in the
+  FY2025 Annual Report: Australia, Austria, Canada, the European Union, Germany, Italy, Japan, Norway,
+  Sweden, Switzerland and the United States. The Gates Foundation became an Umbrella Program donor in
+  FY2025 (US$2 million) and is not mapped in includes. India (CG member from 2015, elected co-chair in
+  2019), Luxembourg and Serbia sat on earlier CG rosters but are absent from the FY2024 and FY2025 lists;
+  they are kept as former_member with unknown exit dates. Umbrella Program trust funds in FY2025: anchor
+  MDTF III (TF073410, active from 2019-11-15) and the associated trust funds USAID (TF072896), City
+  Resilience Program (TF072921), ACP-EU DRM (TF073845), Japan–World Bank Program Phase III (TF073971) and
+  EU Resilient Caribbean Program (TF074038); EU-SAR DRM (TF072458) ended disbursement on 2023-09-30.
+  FY2025 figures: donor contributions received US$61.9 million; cumulative signed contributions to the
+  Umbrella since the inception of MDTF III US$327.6 million, of which US$246.4 million paid in. GFDRR
+  moved into the World Bank's Infrastructure Vertical in 2025 and adopted a Strategy 2026–2030.
+social_media:
+  twitter: https://twitter.com/GFDRR
+  flickr: https://www.flickr.com/photos/77160677@N06/
+official_documents:
+- url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+  type: document
+  title: 'GFDRR Annual Report 2025: Bringing Resilience to Scale'
+- url: https://documents.worldbank.org/curated/en/099548302262528656/pdf/IDU-557f1447-7f6f-4d30-a385-e6d31e9296d1.pdf
+  type: document
+  title: 'GFDRR Annual Report 2024: Bringing Resilience to Scale'
+- url: https://www.gfdrr.org/sites/default/files/2025-04/GFDRR%20Strategy%202030_v3.pdf
+  type: document
+  title: 'GFDRR Strategy 2026–2030: Driving Measurable Change to Enhance Disaster and Climate Resilience'
+- url: https://www.gfdrr.org/sites/default/files/publication/GFDRR%20%20Partnership%20Charter%202021-2025_10132021.pdf
+  type: charter
+  title: GFDRR Partnership Charter 2021–2025
+last_verified: '2026-11-21'
+provenance:
+- field: includes
+  source: 'GFDRR Annual Report 2025 (development partners page) and Annual Report 2024 (GFDRR Members page)'
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: membership_count
+  source: GFDRR Annual Report 2025
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: description
+  source: GFDRR Annual Report 2025 / Wikipedia
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: notes
+  source: GFDRR Annual Reports 2024 and 2025 (Table A2.1, Note 1 donor contributions)
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: notes
+  source: Press Information Bureau, Government of India — India to co-chair Consultative Group of GFDRR
+  retrieved_at: '2026-11-21'
+  url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1572014
+- field: legal_status
+  source: GFDRR Annual Report 2025 (Table A2.1, Key Umbrella Program Data)
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: recognition_status
+  source: GFDRR Annual Reports 2024 and 2025
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099548302262528656/pdf/IDU-557f1447-7f6f-4d30-a385-e6d31e9296d1.pdf
+- field: secretariat
+  source: GFDRR Annual Report 2025
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: partof
+  source: Wikidata (P126 maintained by World Bank Group) / Wikipedia (parent organization World Bank)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: blocktype
+  source: GFDRR Annual Report 2025 (Umbrella Program of trust funds)
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: geographic_scope
+  source: GFDRR Annual Report 2025 (Table A2.1, scope Global and Regional)
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099926202112641624/pdf/IDU-65ff2bac-3dd7-46c6-9b15-9c295206a4db.pdf
+- field: topics
+  source: GFDRR Annual Report 2024 (strategic objectives and thematic areas)
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/curated/en/099548302262528656/pdf/IDU-557f1447-7f6f-4d30-a385-e6d31e9296d1.pdf
+- field: official_documents
+  source: World Bank Documents & Reports
+  retrieved_at: '2026-11-21'
+  url: https://documents.worldbank.org/
+- field: acronyms
+  source: Wikidata
+  retrieved_at: '2026-06-13'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: founded
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: active_period
+  source: Wikidata (P571 inception)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: headquarters
+  source: Wikidata (P159, P669, P670) / GFDRR Annual Report 2025
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: social_media
+  source: Wikidata (P2002 X username, P3267 Flickr user ID)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: other_names
+  source: Wikidata (frwiki sitelink)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q106238279
+  license: CC0
+- field: scope_category
+  source: GFDRR Strategy 2030
+  retrieved_at: '2026-11-20'
+  url: https://www.gfdrr.org/sites/default/files/2025-04/GFDRR%20Strategy%202030_v3.pdf

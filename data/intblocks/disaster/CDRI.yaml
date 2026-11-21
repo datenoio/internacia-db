@@ -13,10 +13,16 @@ regions:
 - worldwide
 languages:
 - en
+- fr
+- es
 links:
 - url: https://cdri.world/
   type: website
 - url: https://cdri.world/about/
+  type: website
+- url: https://cdri.world/fr/about/
+  type: website
+- url: https://cdri.world/es/about/
   type: website
 - url: https://en.wikipedia.org/wiki/Coalition_for_Disaster_Resilient_Infrastructure
   type: wikipedia
@@ -37,6 +43,7 @@ secretariat:
   location: New Delhi, India
   head: Director General
   organization: CDRI Secretariat
+  note: Director General Amit Prothi; Deputy Director General (Chief Operating Officer) Nick O'Regan
 founding_members:
 - IN
 includes:
@@ -229,6 +236,11 @@ includes:
   name: Peru
   type: country
   status: member
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '2026-09'
 - id: WS
   name: Samoa
   type: country
@@ -305,6 +317,7 @@ includes:
   name: Economic Community of West African States
   type: organization
   status: partner
+  joined: '2026-02'
 - id: EU
   name: European Union
   type: organization
@@ -321,19 +334,27 @@ includes:
   name: United Nations Office for Disaster Risk Reduction
   type: organization
   status: partner
-membership_count: 58
+membership_count: 59
 description: >-
-  International coalition that promotes disaster- and climate-resilient infrastructure through research,
-  knowledge sharing, standards, financing, and recovery mechanisms. Launched by India at the 2019 UN Climate
-  Action Summit; as of 2026 it comprises 58 member countries and 12 partner organizations, with a Secretariat
-  in New Delhi.
+  Global partnership of national governments, UN agencies and programmes, multilateral development banks,
+  the private sector and knowledge institutions that works to make infrastructure systems resilient to
+  climate and disaster risks. Launched by India at the 2019 UN Climate Action Summit, it supports countries
+  through technical assistance, research, standards and certification, financing advocacy and risk
+  governance, aligned with the Sustainable Development Goals, the Paris Agreement and the Sendai Framework.
+  Its mission is to make US$10 trillion of new and existing infrastructure investments resilient to natural
+  hazards and climate change by 2050. As of November 2026 it has 59 member countries and 13 partner
+  organizations, with a Secretariat in New Delhi.
 tags:
 - CDRI
-- disaster
-- infrastructure
-- resilience
 - climate
+- climate_resilience
+- disaster
+- disaster_risk_reduction
+- infrastructure
 - intorg
+- resilience
+- resilient_infrastructure
+- sendai_framework
 topics:
 - key: disaster_relief
   name: Disaster Relief
@@ -341,29 +362,113 @@ topics:
   name: Infrastructure
 - key: climate_change
   name: Climate Change
+- key: sustainable_development
+  name: Sustainable Development
 other_names:
 - id: en
   name: Coalition for Disaster Resilient Infrastructure
+- id: fr
+  name: Coalition pour des infrastructures résilientes aux désastres
+- id: es
+  name: Coalición para las Infraestructuras Resilientes a los Desastres
+- id: ar
+  name: تحالف من أجل بنية تحتية مقاومة للكوارث
+- id: zh
+  name: 抗灾基础设施联盟
 acronyms:
 - lang: en
   value: CDRI
 notes: >-
-  Membership is voluntary and non-binding; countries and organizations join by endorsing the CDRI Charter.
-  Official figures (cdri.world/about/, retrieved 2026-07-20): 58 member countries and 12 partner organizations.
-  Partner organization list taken from logos on the About page (African Union, ARISE, ADB, CAF, CDEMA,
-  SICA, EIB, ECOWAS, EU, World Bank, UNDP, UNDRR). India is the founding initiator; France, Germany, Italy,
-  the United States and Canada joined in 2020.
+  Membership is voluntary and non-binding. Countries and organizations join by endorsing the CDRI Charter
+  and naming a focal point and a lead representative, and the Governing Council approves each request.
+  Official figures (cdri.world/about/, retrieved 2026-11-21): 59 member countries and 13 partner
+  organizations. The About page shows logos for 12 partner organizations (African Union, ARISE, ADB, CAF,
+  CDEMA, SICA, EIB, ECOWAS, EU, World Bank, UNDP, UNDRR); the 13th is not identified on the site and is not
+  mapped. The Philippines joined in September 2026, announced at the 18th BRICS Summit in New Delhi, as the
+  71st member; ECOWAS joined in February 2026. India is the founding initiator and permanent co-chair;
+  France, Germany, Italy, the United States and Canada joined in 2020. Governance under the Charter: the
+  Governing Council of all members (at least two-thirds national governments) meets yearly and is co-chaired
+  by India and a second government that rotates every two years; France co-chaired the 7th Governing
+  Council and Brazil is co-chair for 2026–2028. A ten-member Executive Committee, including the Director
+  General, meets twice a year. The Secretariat keeps a Secretariat Fund and multi-donor Trust Fund(s)
+  (Charter amended by GC/06/008, 15 May 2025). Voluntary contributors include Australia, Canada, France,
+  Germany, India, Japan, the Netherlands, the UK, the USA, the EU and the World Bank. The Infrastructure
+  Resilience Accelerator Fund (IRAF), launched in 2022, is a multi-partner trust fund hosted by the UN
+  MPTF Office with support from UNDP, UNDRR, France and the USA.
+social_media:
+  twitter: https://twitter.com/cdri_world
+  linkedin: https://www.linkedin.com/company/coalition-for-disaster-resilient-infrastructure
+  youtube: https://www.youtube.com/@coalitionfordri
+  facebook: https://www.facebook.com/CDRI.world
+official_documents:
+- url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/05/01125356/Annexure-3-Amended-CDRI-Charter-English.pdf
+  type: charter
+  title: The Charter of the Coalition for Disaster Resilient Infrastructure (amended, English)
+- url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/07/01124512/Annexure-3-Amended-CDRI-Charter-French.pdf
+  type: charter
+  title: Charte de la Coalition pour des infrastructures résilientes aux désastres (French)
+- url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/07/01124951/Annexure-3-Amended-CDRI-Charter-Spanish.pdf
+  type: charter
+  title: La Carta de la Coalición para las Infraestructuras Resilientes a los Desastres (Spanish)
+- url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/06/06130146/CDRI_Annual_Report_2024_25.pdf
+  type: document
+  title: CDRI Annual Report 2024–2025
 wikidata_id: Q85753142
-last_verified: '2026-07-20'
+last_verified: '2026-11-21'
 provenance:
 - field: includes
-  source: CDRI official website
-  retrieved_at: '2026-07-20'
+  source: CDRI official website (About page member list and partner logos)
+  retrieved_at: '2026-11-21'
   url: https://cdri.world/about/
+- field: includes
+  source: The Star (Philippines joins global coalition for disaster-resilient infrastructure, 12 September 2026)
+  retrieved_at: '2026-11-21'
+  url: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/12/philippines-joins-global-coalition-for-disaster-resilient-infrastructure
+- field: includes
+  source: UNDP (ECOWAS joins the Coalition for Disaster Resilient Infrastructure)
+  retrieved_at: '2026-11-21'
+  url: https://www.undp.org/node/571881
 - field: membership_count
   source: CDRI official website
-  retrieved_at: '2026-07-20'
+  retrieved_at: '2026-11-21'
   url: https://cdri.world/about/
+- field: notes
+  source: The Charter of the Coalition for Disaster Resilient Infrastructure (amended)
+  retrieved_at: '2026-11-21'
+  url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/05/01125356/Annexure-3-Amended-CDRI-Charter-English.pdf
+- field: notes
+  source: CDRI — France co-chairs the 7th Governing Council and hands the baton to Brazil as co-chair for 2026-2028 (23 April 2026)
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/france-co-chairs-the-7th-governing-council-of-the-coalition-for-disaster-resilient-infrastructure-cdri-and-hands-the-baton-to-brazil-as-co-chair-for-2026-2028/
+- field: notes
+  source: CDRI — Infrastructure Resilience Accelerator Fund (IRAF)
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/iraf/
+- field: secretariat
+  source: CDRI official website (Leadership team)
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/our-team/
+- field: social_media
+  source: CDRI official website footer / Wikidata (P2002, P4264, P2013)
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/
+- field: other_names
+  source: CDRI Charter French and Spanish versions / Wikidata (ar, zh labels)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q85753142
+  license: CC0
+- field: languages
+  source: CDRI official website (EN, FR, ES pages) and Charter translations
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/about/
+- field: official_documents
+  source: CDRI official website (Key documents)
+  retrieved_at: '2026-11-21'
+  url: https://cdri.world/about/
+- field: topics
+  source: The Charter of the Coalition for Disaster Resilient Infrastructure (Article 3)
+  retrieved_at: '2026-11-21'
+  url: https://dymez6ioe12by.cloudfront.net/media/wp-content/uploads/2025/05/01125356/Annexure-3-Amended-CDRI-Charter-English.pdf
 - field: founded
   source: Wikipedia
   retrieved_at: '2026-07-20'
@@ -374,8 +479,8 @@ provenance:
   retrieved_at: '2026-07-20'
   url: https://cdri.world/about/
 - field: description
-  source: CDRI official website / Wikipedia
-  retrieved_at: '2026-07-20'
+  source: CDRI official website / CDRI Charter
+  retrieved_at: '2026-11-21'
   url: https://cdri.world/about/
 - field: legal_status
   source: CDRI official website

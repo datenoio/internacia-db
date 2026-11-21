@@ -1,7 +1,7 @@
 version: 1
 change_id: add-transit-dependence-layer
 cohort_id: pilot_roles
-expected_count: 24
+expected_count: 44
 verified_on: '2026-11-20'
 description: Reviewed route roles (includes[].role) for pipelines and linear corridors, checked on 2026-11-20 against
   operator, government, intergovernmental or project-finance sources. Apply with scripts/backfill_include_roles.py
@@ -316,6 +316,255 @@ records:
     - source: US EIA - Bolivia country analysis
       url: https://www.eia.gov/international/analysis/country/BOL
       retrieved_at: '2026-11-20'
+  ADDISDJIBOUTIRAILWAY:
+    roles:
+      ET: terminal
+      DJ: terminal
+    basis: 'G20 Global Infrastructure Hub: standard-gauge line from Sebeta near Addis Ababa (Ethiopia) to the port of Djibouti
+      at Doraleh.'
+    evidence:
+    - source: Global Infrastructure Hub (G20), Addis Ababa–Djibouti Railway case study
+      url: https://www.gihub.org/connectivity-across-borders/case-studies/addis-ababa-djibouti-railway
+      retrieved_at: '2026-11-21'
+  BIOCEANICCORRIDOR:
+    roles:
+      BR: terminal
+      PY: transit
+      AR: transit
+      CL: terminal
+    basis: 'Argentine and Chilean foreign ministries and DNIT: Campo Grande and Porto Murtinho (Brazil) through Carmelo
+      Peralta (Paraguay) and Salta and Jujuy (Argentina) to northern Chilean ports.'
+    evidence:
+    - source: Ministry of Foreign Affairs of Argentina, Declaration on bioceanic corridors and border crossings (8 September
+        2023)
+      url: https://www.cancilleria.gob.ar/userfiles/ut/declaracion_sobre_corredores_bioceanicos_y_pasos_fronterizos.pdf
+      retrieved_at: '2026-11-21'
+    - source: Government of Chile, Chile states its commitment to continue the bioceanic corridor (2016)
+      url: https://www.chile.gob.cl/chile/blog/brasil/brasilia/chile-manifiesta-su-compromiso-y-voluntad-politica-para-continuar-con-el
+      retrieved_at: '2026-11-21'
+  BTKRAILWAY:
+    roles:
+      AZ: terminal
+      GE: transit
+      TR: terminal
+    basis: 'President of Azerbaijan, opening of 30 October 2017: Baku (Azerbaijan) through Tbilisi and Akhalkalaki (Georgia)
+      to Kars (Turkiye).'
+    evidence:
+    - source: President of the Republic of Azerbaijan, opening ceremony of the Baku–Tbilisi–Kars railway (30 October 2017)
+      url: https://president.az/en/articles/view/25639
+      retrieved_at: '2026-11-21'
+  CPEC:
+    roles:
+      CN: terminal
+      PK: terminal
+    basis: 'Long Term Plan for CPEC: the corridor starts from Kashgar in Xinjiang and reaches Karachi and Gwadar via the
+      Khunjerab Pass; its branches lie inside Pakistan.'
+    evidence:
+    - source: Government of Pakistan, Long Term Plan for China-Pakistan Economic Corridor (2017–2030)
+      url: http://cpec.gov.pk/brain/public/uploads/documents/CPEC-LTP.pdf
+      retrieved_at: '2026-11-21'
+  DEVELOPMENTROAD:
+    roles:
+      IQ: terminal
+      TR: terminal
+    basis: 'Turkiye Directorate of Communications and QNA: road and railway from Grand Faw port (Iraq) to Turkiye and its
+      ports; Qatar and the UAE are memorandum parties, not on the route.'
+    evidence:
+    - source: Türkiye Directorate of Communications, Türkiye, Iraq, Qatar and UAE sign Development Road memorandum of understanding
+      url: https://www.iletisim.gov.tr/English/haberler/detay/turkiye-iraq-qatar-and-uae-sign-development-road-memorandum-of-understanding
+      retrieved_at: '2026-11-21'
+    - source: Qatar News Agency, Qatar signs MoU on joint cooperation between states participants on Development Road project
+        (22 April 2024)
+      url: https://www.qna.org.qa/en/News-Area/News/2024-04/22/0083-qatar-signs-mou-on-joint-cooperation-between-states-participants-on-development-road-project,-al-faw-port-development
+      retrieved_at: '2026-11-21'
+  DOUALABANGUI:
+    roles:
+      CM: terminal
+      CF: terminal
+    basis: 'AfDB and World Bank: port of Douala through Garoua-Boulai (Cameroon) to Bouar and Bangui (Central African Republic).'
+    evidence:
+    - source: AfDB, Cameroon – Transport Facilitation Programme on the Douala–N'Djamena and Douala–Bangui corridors, appraisal
+        report
+      url: https://www.afdb.org/fileadmin/uploads/afdb/Documents/Project-and-Operations/Cameroon_-_Transport_Facilitation_Programme_on_the_Douala_-_Appraisal_Report.pdf
+      retrieved_at: '2026-11-21'
+    - source: World Bank, World Bank approves US$1.12 billion program to modernize the Douala–Bangui economic corridor
+        (12 June 2026)
+      url: https://www.worldbank.org/en/news/press-release/2026/06/12/world-bank-approves-us-1-12-billion-program-to-modernize-the-douala-bangui-economic-corridor
+      retrieved_at: '2026-11-21'
+  DOUALANDJAMENA:
+    roles:
+      CM: terminal
+      TD: terminal
+    basis: 'AfDB and World Bank: port of Douala (Cameroon) by rail to Ngaoundere and by road to N''Djamena (Chad); both
+      road alternatives stay within the two countries.'
+    evidence:
+    - source: AfDB, Cameroon – Transport Facilitation Programme on the Douala–N'Djamena and Douala–Bangui corridors, appraisal
+        report
+      url: https://www.afdb.org/fileadmin/uploads/afdb/Documents/Project-and-Operations/Cameroon_-_Transport_Facilitation_Programme_on_the_Douala_-_Appraisal_Report.pdf
+      retrieved_at: '2026-11-21'
+    - source: World Bank, Cameroon–Chad Transport Corridor (P167798), concept project information document (2021)
+      url: https://documents1.worldbank.org/curated/en/493301633812350826/pdf/Concept-Project-Information-Document-Integrated-Safeguards-Data-Sheet-Cameroon-Chad-Transport-Corridor-P167798.pdf
+      retrieved_at: '2026-11-21'
+  GMSSECCENTRAL:
+    roles:
+      TH: terminal
+      KH: transit
+      VN: terminal
+    basis: 'IDE-JETRO: Bangkok (Thailand) through Poipet and Phnom Penh (Cambodia) and Bavet-Moc Bai to Ho Chi Minh City
+      and Vung Tau (Viet Nam); the Dawei spur is not settled.'
+    evidence:
+    - source: IDE-JETRO, Ishida and Isono (2012), Old, New and Potential Economic Corridors in the Mekong Region
+      url: https://www.ide.go.jp/library/English/Publish/Reports/Brc/pdf/08_chapter1.pdf
+      retrieved_at: '2026-11-21'
+  INTEROCEANICHIGHWAY:
+    roles:
+      BR: terminal
+      PE: terminal
+    basis: 'OSITRAN and IPEA: Assis Brasil (Brazil) across Inapari to Puerto Maldonado, Cusco and the southern Peruvian
+      ports (Peru).'
+    evidence:
+    - source: OSITRAN (Peru), performance report 2025, IIRSA Sur section 3
+      url: https://www.ositran.gob.pe/anterior/wp-content/uploads/2020/07/informe-desempeno-2025-iirsa-sur-tramo-3.pdf
+      retrieved_at: '2026-11-21'
+    - source: IPEA (Brazil), technical note on the Abunã bridge
+      url: https://repositorio.ipea.gov.br/bitstream/11058/10771/2/NT_A_Ponte_do_Abuna_Publicacao_Preliminar.pdf
+      retrieved_at: '2026-11-21'
+  ITIRAILWAY:
+    roles:
+      PK: terminal
+      IR: transit
+      TR: terminal
+    basis: 'ECO: container train Islamabad (Pakistan) to Istanbul (Turkiye), transiting Iran on a 6,560 km railway corridor.'
+    evidence:
+    - source: Economic Cooperation Organization, Resumption of ECO ITI (Islamabad–Tehran–Istanbul) cargo train
+      url: https://eco.int/resumption-of-eco-iti-islamabad-tehran-istanbul-cargo-train/
+      retrieved_at: '2026-11-21'
+  LAPSSET:
+    roles:
+      KE: terminal
+      SS: terminal
+      ET: terminal
+    basis: 'LCDA highways: Lamu (Kenya) to Isiolo, then one leg to Juba (South Sudan) and one to Hawassa towards Addis
+      Ababa (Ethiopia); one port end and two inland ends.'
+    evidence:
+    - source: LAPSSET Corridor Development Authority, Highways
+      url: https://lapsset.go.ke/highways/
+      retrieved_at: '2026-11-21'
+    - source: AU-PIDA, LAPSSET project prospectus
+      url: https://au-pida.org/prospectus/project.php?id=45
+      retrieved_at: '2026-11-21'
+  MAPUTOCORRIDOR:
+    roles:
+      ZA: terminal
+      MZ: terminal
+    basis: 'SADC and the Port of Maputo: Gauteng and Mpumalanga (South Africa) along the N4 to the Port of Maputo (Mozambique);
+      Eswatini is connected but not on the main route.'
+    evidence:
+    - source: SADC, Transport corridors and spatial development initiatives
+      url: https://www.sadc.int/pillars/transport-corridors-spatial-development-initiatives
+      retrieved_at: '2026-11-21'
+    - source: Port of Maputo, Maputo Development Corridor
+      url: https://www.portmaputo.com/who-we-are/maputo-development-corridor/
+      retrieved_at: '2026-11-21'
+  PACIFICCORRIDOR:
+    roles:
+      MX: terminal
+      GT: transit
+      SV: transit
+      HN: transit
+      NI: transit
+      CR: transit
+      PA: terminal
+    basis: 'IDB RG-T2908 and JICA: Puebla (Mexico) along the Pacific coast through Guatemala, El Salvador, Honduras, Nicaragua
+      and Costa Rica to Panama City (Panama).'
+    evidence:
+    - source: Inter-American Development Bank, technical cooperation RG-T2908 (Pacific Corridor), abstract of 17 February
+        2017
+      url: https://ewsdata.rightsindevelopment.org/files/documents/08/IADB-RG-T2908.pdf
+      retrieved_at: '2026-11-21'
+    - source: JICA, survey on logistics in the Mesoamerican Pacific Corridor (March 2017)
+      url: https://openjicareport.jica.go.jp/pdf/12285920.pdf
+      retrieved_at: '2026-11-21'
+  RAILBALTICA:
+    roles:
+      EE: terminal
+      LV: transit
+      LT: transit
+      PL: terminal
+    basis: 'CINEA and RB Rail: Tallinn-Salaspils-Kaunas-Warsaw route through Estonia, Latvia and Lithuania into Poland;
+      Finland is linked only indirectly.'
+    evidence:
+    - source: European Climate, Infrastructure and Environment Executive Agency (CINEA), Rail Baltica featured project
+      url: https://cinea.ec.europa.eu/featured-projects/rail-baltica-connecting-baltic-states-rest-europe-high-speed-train_en
+      retrieved_at: '2026-11-21'
+    - source: RB Rail AS, About Rail Baltica
+      url: https://www.railbaltica.org/about-rail-baltica/
+      retrieved_at: '2026-11-21'
+  TAZARARAILWAY:
+    roles:
+      TZ: terminal
+      ZM: terminal
+    basis: 'TAZARA: railway from Dar es Salaam (Tanzania) to Kapiri Mposhi (Zambia).'
+    evidence:
+    - source: TAZARA, Our history
+      url: https://www.tazarasite.com/our-history
+      retrieved_at: '2026-11-21'
+  TRANSAFGHANRAILWAY:
+    roles:
+      UZ: terminal
+      AF: transit
+      PK: terminal
+    basis: 'Uzbekistan Ministry of Transport: Termez (Uzbekistan) through Naibabad, Maidan Shahr and Logar (Afghanistan)
+      to Kharlachi (Pakistan); planned.'
+    evidence:
+    - source: Ministry of Transport of Uzbekistan, trilateral framework agreement signed in Kabul (18 July 2025)
+      url: https://gov.uz/oz/mintrans/news/view/69752
+      retrieved_at: '2026-11-21'
+  TRANSCUNENE:
+    roles:
+      NA: terminal
+      AO: terminal
+    basis: 'Walvis Bay Corridor Group: Walvis Bay (Namibia) to Oshikango and on to Lubango (Angola).'
+    evidence:
+    - source: Walvis Bay Corridor Group, The Trans-Cunene Corridor
+      url: https://www.wbcg.com.na/the-trans-cunene-corridor/
+      retrieved_at: '2026-11-21'
+  TRILATERALHIGHWAY:
+    roles:
+      IN: terminal
+      MM: transit
+      TH: terminal
+    basis: 'ERIA: original alignment Moreh (India/Myanmar border) through Mandalay and Hpa-An to Myawaddy (Myanmar/Thailand
+      border) and Mae Sot.'
+    evidence:
+    - source: ERIA, Trilateral Highway report (2020), chapter 1, Introduction
+      url: https://www.eria.org/uploads/media/Research-Project-Report/2020-02-Trilateral-Highway-Report/2a-Chapter-1-Introduction.pdf
+      retrieved_at: '2026-11-21'
+  VIABALTICA:
+    roles:
+      PL: terminal
+      LT: transit
+      LV: transit
+      EE: terminal
+    basis: 'CINEA project fiche: the E67 Via Baltica connects Tallinn, Riga, Kaunas and Warsaw; Finland is reached by ferry.'
+    evidence:
+    - source: CINEA, CEF Transport project fiche 2014-LT-TMC-0258-W (Via Baltica)
+      url: https://ec.europa.eu/assets/cinea/project_fiches/cef/cef_transport/2014-LT-TMC-0258-W.pdf
+      retrieved_at: '2026-11-21'
+    - source: Ministry of Infrastructure of Poland, Łomża bypass opened in full
+      url: https://www.gov.pl/web/infrastruktura/obwodnica-lomzy-w-calosci-oddana-do-ruchu
+      retrieved_at: '2026-11-21'
+  WBNLDC:
+    roles:
+      NA: terminal
+      ZM: transit
+      CD: terminal
+    basis: 'Walvis Bay Corridor Group: Walvis Bay (Namibia) through Katima Mulilo, Livingstone, Lusaka and Ndola (Zambia)
+      to Lubumbashi (DR Congo); links to Zimbabwe, Malawi and Tanzania are feeders.'
+    evidence:
+    - source: Walvis Bay Corridor Group, The Walvis Bay–Ndola–Lubumbashi Development Corridor
+      url: https://www.wbcg.com.na/the-walvis-bay-ndola-lubumbashi-development-corridor/
+      retrieved_at: '2026-11-21'
 deferred:
   ARABGPIPE: No qualifying source covers the Syria–Türkiye link at Kilis, so the role of TR is unsourced.
   BALTICPIPE: The route starts at the Europipe II tie-in in Danish waters; Norway supplies it through a connected
@@ -343,3 +592,29 @@ deferred:
     but defines no linear route with two ends, so it is not a corridor in the catalog sense.
   TRANSCARPIPE: The line is bidirectional between La Guajira and Lake Maracaibo, so origin and destination are not
     settled.
+  CMREC: 'Not added as a record: the 2016 programme for the China–Mongolia–Russia Economic Corridor names no route,
+    and the arteries described elsewhere split, one of them bypassing Mongolia.'
+  NEWEURASIANLANDBRIDGE: 'Not added as a record: the New Eurasian Land Bridge Economic Corridor is a network of
+    China–Europe rail services with no defined ends.'
+  CCWAEC: 'Not added as a record: the China–Central Asia–West Asia Economic Corridor runs to several end regions
+    (Persian Gulf, Arabian Peninsula, Mediterranean) with no main line.'
+  BCIM: 'Not added as a record: no intergovernmental agreement or alignment for the BCIM Economic Corridor was found,
+    and it has been dormant since about 2019.'
+  KALADAN: 'Not added as a record: the Kaladan Multi-Modal Transit Transport Project runs from India through Myanmar
+    back to India, so it has only one terminal country.'
+  IMEC: 'Not added as a record: the 2023 IMEC memorandum describes two separate multimodal corridors with sea legs and
+    names no end ports or European end country.'
+  TENTCORRIDORS: 'Not added as records: Regulation (EU) 2024/1679 defines the nine European Transport Corridors only by
+    maps (Annex III), and each has several ends or branches.'
+  NACALA: 'Not added as a record: JICA and the 2023 tripartite agreements describe the Nacala corridor as several road
+    and rail routes, with no single main line.'
+  BEIRA: 'Not added as a record: the Beira Development Corridor Agreement describes a multimodal network serving five
+    countries, and no main line beyond Harare was found.'
+  DARESSALAAMCORRIDOR: 'Not added as a record: the wider Dar es Salaam corridor is a rail, road and pipeline network; its
+    railway is recorded as TAZARARAILWAY.'
+  GMSNSEC: 'Not added as a record: the GMS North–South Economic Corridor has several routes (Kunming–Bangkok through Lao
+    PDR or Myanmar, Kunming–Hanoi–Hai Phong) with no single main line.'
+  GMSSEC: 'Not added as a record: the GMS Southern Economic Corridor has four subcorridors; only the central subcorridor
+    is recorded, as GMSSECCENTRAL.'
+  CARECCORRIDORS: 'Not added as records: each of CAREC corridors 1 to 6 splits into lettered subcorridors on the official
+    maps, and no text defines their end points.'
