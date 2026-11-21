@@ -10,12 +10,7 @@ active_period:
   start: '2011-12-11'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 links:
@@ -213,3 +208,6 @@ provenance:
   source: Governing Instrument for the Green Climate Fund, paragraphs 4–8
   retrieved_at: '2026-09-30'
   url: https://www.greenclimate.fund/sites/default/files/document/governing-instrument.pdf
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

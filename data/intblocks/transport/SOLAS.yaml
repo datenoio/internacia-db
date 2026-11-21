@@ -10,12 +10,7 @@ active_period:
   start: '1980-05-25'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 links:
 - url: https://www.imo.org/en/about/conventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx
   type: website
@@ -932,3 +927,6 @@ provenance:
   source: International Maritime Organization — Status of IMO Treaties 2026, SOLAS 1974 Contracting States table (pp. 17–19)
   url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%202026.pdf
   retrieved_at: '2026-10-22'
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
