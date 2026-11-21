@@ -10,12 +10,7 @@ active_period:
   start: '1952-04-03'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - ar
 - en
@@ -1005,3 +1000,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/wiki/Q1374375
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
