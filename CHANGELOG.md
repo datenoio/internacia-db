@@ -155,6 +155,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   International E-road network) now links the English Wikipedia article on the network. Its
   Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
   `ASIANHIGHWAY`; the old reason said no English article existed.
+- `UNECEWATER` (Water Convention) and `UN1958AGREEMENT` (1958 Agreement on vehicle regulations)
+  now have `geographic_scope: global`, not `regional`, because their parties are no longer
+  limited to the UNECE region. 19 of the Water Convention's 59 parties are outside it; the
+  amendments to articles 25 and 26 that opened it entered into force on 6 February 2013. 16 of
+  the 1958 Agreement's 61 Contracting Parties are outside it, for example AU, JP, KR and ZA;
+  Revision 2, which opened it, entered into force on 16 October 1995. As for other global
+  records, `regions` is now `worldwide`.
 - `UPU` checked on 2026-11-21 against the UPU member countries list and its 192 member pages.
   - Cook Islands (`CK`) and Niue (`NU`) were listed as members. The UPU covers them under New
     Zealand's membership, so they are now `represented`. `AW` is added as the coded `member` for
