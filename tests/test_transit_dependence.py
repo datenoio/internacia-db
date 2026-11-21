@@ -6,18 +6,18 @@ import json
 import duckdb
 import pyarrow as pa
 import pytest
-import yaml
 
 from internacia_builder import contract
 from internacia_builder.export import build_membership_rows, load_border_status, save_border_status
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import get_border_status_schema, get_memberships_schema
 from internacia_builder.validate import border_rules, intblock_rules, registry
+from internacia_builder.yaml_io import safe_load
 
 SCHEMAS = project_root() / "data" / "schemas"
 INTBLOCK_SCHEMA = json.loads((SCHEMAS / "intblocks.schema.json").read_text(encoding="utf-8"))
 BORDER_SCHEMA = json.loads((SCHEMAS / "border_status.schema.json").read_text(encoding="utf-8"))
-ROLES = yaml.safe_load((SCHEMAS / "include_roles.yaml").read_text(encoding="utf-8"))
+ROLES = safe_load((SCHEMAS / "include_roles.yaml").read_text(encoding="utf-8"))
 
 PROVENANCE = [{"field": "includes", "source": "Operator", "url": "https://example.org", "retrieved_at": "2026-11-20"}]
 PIPELINE = {
@@ -75,7 +75,7 @@ def test_role_catalog_matches_schema():
 
 
 def test_role_kinds_name_existing_blocktypes():
-    blocktypes = {b["id"] for b in yaml.safe_load((project_root() / "data" / "blocktypes" / "blocktypes.yaml").read_text())}
+    blocktypes = {b["id"] for b in safe_load((project_root() / "data" / "blocktypes" / "blocktypes.yaml").read_text())}
     for kind in ROLES["kinds"].values():
         assert set(kind["blocktypes"]) <= blocktypes
 
@@ -192,8 +192,8 @@ def _check(*entries):
 
 def test_repository_border_status_is_valid():
     path = project_root() / "data" / "borders" / "border_status.yaml"
-    document = yaml.safe_load(path.read_text(encoding="utf-8"))
-    countries = [yaml.safe_load(p.read_text(encoding="utf-8")) for p in (project_root() / "data" / "countries").glob("*.yaml")]
+    document = safe_load(path.read_text(encoding="utf-8"))
+    countries = [safe_load(p.read_text(encoding="utf-8")) for p in (project_root() / "data" / "countries").glob("*.yaml")]
     assert border_rules.check_border_status(document, BORDER_SCHEMA, countries) == []
 
 

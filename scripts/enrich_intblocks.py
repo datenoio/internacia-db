@@ -24,6 +24,7 @@ import yaml
 
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.http import fetch_json as _fetch_json
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(help="Enrich intblock records from Wikidata")
 
@@ -412,7 +413,7 @@ def backfill_structural(
     search_dir = INTBLOCKS_DIR / subdir if subdir else INTBLOCKS_DIR
     records: list[tuple[Path, dict[str, Any]]] = []
     for path in sorted(search_dir.rglob("*.yaml")):
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = safe_load(path.read_text(encoding="utf-8")) or {}
         if not data.get("wikidata_id"):
             continue
         if data.get("headquarters") and data.get("founded"):
@@ -464,7 +465,7 @@ def backfill_founded(
     paths = sorted(search_dir.rglob("*.yaml"))
     records: list[tuple[Path, dict[str, Any]]] = []
     for path in paths:
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = safe_load(path.read_text(encoding="utf-8")) or {}
         if data.get("founded") or not data.get("wikidata_id"):
             continue
         records.append((path, data))
@@ -519,7 +520,7 @@ def enrich(
     records: list[tuple[Path, dict[str, Any]]] = []
     originals: dict[Path, str] = {}
     for path in paths:
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = safe_load(path.read_text(encoding="utf-8")) or {}
         rid = str(data.get("id") or "")
         if id and rid != id.upper():
             continue

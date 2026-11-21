@@ -24,8 +24,11 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
 import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(add_completion=False, help="Validate or apply reviewed includes[].role values.")
 
@@ -82,7 +85,7 @@ def _kind(blocktypes: list[str], catalog: dict[str, Any]) -> tuple[str, dict[str
 
 
 def load_manifest(path: Path) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
-    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    raw = safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict) or not isinstance(raw.get("records"), dict) or not raw["records"]:
         raise BackfillValidationError("manifest must have a non-empty records mapping")
     expected = raw.get("expected_count")
@@ -105,7 +108,7 @@ def _include_id(line: str) -> str | None:
     match = re.match(r"^- id:\s*(.+?)\s*$", line)
     if not match:
         return None
-    return str(yaml.safe_load(match.group(1)))
+    return str(safe_load(match.group(1)))
 
 
 def _edit_text(text: str, roles: dict[str, str], add_blocktypes: list[str], evidence: list[dict[str, Any]],
@@ -176,7 +179,7 @@ def _set_last_verified(text: str, verified_on: str) -> str:
 
 def reconcile(text: str, entry: dict[str, Any], catalog: dict[str, Any],
               verified_on: str | None = None) -> tuple[str, str, str | None]:
-    record = yaml.safe_load(text)
+    record = safe_load(text)
     if not isinstance(record, dict):
         raise BackfillValidationError("intblock YAML must contain a mapping")
     roles = {str(k): str(v) for k, v in entry["roles"].items()}
@@ -220,7 +223,7 @@ def reconcile(text: str, entry: dict[str, Any], catalog: dict[str, Any],
     updated = _edit_text(text, pending_roles, add, evidence, role_urls)
     if verified_on and pending_roles:
         updated = _set_last_verified(updated, verified_on)
-    parsed = yaml.safe_load(updated)
+    parsed = safe_load(updated)
     expected = copy.deepcopy(record)
     if verified_on and pending_roles:
         expected["last_verified"] = verified_on
@@ -236,7 +239,7 @@ def reconcile(text: str, entry: dict[str, Any], catalog: dict[str, Any],
 def discover_records(root: Path) -> dict[str, Path]:
     records: dict[str, Path] = {}
     for path in sorted((root / "data" / "intblocks").glob("*/*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = safe_load(path.read_text(encoding="utf-8"))
         if isinstance(record, dict) and record.get("id"):
             if str(record["id"]) in records:
                 raise BackfillValidationError(f"duplicate intblock id {record['id']}")
@@ -247,7 +250,7 @@ def discover_records(root: Path) -> dict[str, Path]:
 def execute_backfill(root: Path, manifest_path: Path, *, mode: str, catalog_path: Path | None = None) -> BackfillReport:
     if mode not in {"dry-run", "check", "apply"}:
         raise BackfillValidationError(f"unknown mode: {mode}")
-    catalog = yaml.safe_load((catalog_path or root / "data" / "schemas" / "include_roles.yaml").read_text(encoding="utf-8"))
+    catalog = safe_load((catalog_path or root / "data" / "schemas" / "include_roles.yaml").read_text(encoding="utf-8"))
     entries, metadata = load_manifest(manifest_path)
     records = discover_records(root)
     missing = sorted(set(entries) - set(records))

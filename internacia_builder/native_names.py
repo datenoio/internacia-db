@@ -11,9 +11,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 VOCAB_PARTS = ("data", "vocabs", "language_codes.yaml")
 OFFICIAL_NAME = "P1448"
@@ -40,7 +39,7 @@ def load_language_codes(root: Path | None = None) -> dict[str, dict[str, Any]]:
     if root is None and _VOCAB_CACHE is not None:
         return _VOCAB_CACHE
     path = (root or project_root()).joinpath(*VOCAB_PARTS)
-    entries = yaml.safe_load(path.read_text(encoding="utf-8")) or []
+    entries = safe_load(path.read_text(encoding="utf-8")) or []
     vocab = {str(e["id"]): e for e in entries if isinstance(e, dict) and e.get("id")}
     if root is None:
         _VOCAB_CACHE = vocab

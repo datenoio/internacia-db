@@ -19,9 +19,12 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import jsonschema
 import typer
 import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(
     add_completion=False,
@@ -77,7 +80,7 @@ def _design_schema(root: Path) -> dict[str, Any]:
 
 def load_manifest(manifest_path: Path, root: Path) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
     """Load and validate the reviewed manifest: ``{id: {institutional_design, evidence}}``."""
-    raw = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    raw = safe_load(manifest_path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict):
         raise BackfillValidationError("manifest must contain a YAML mapping")
     records = raw.get("records")
@@ -164,7 +167,7 @@ def reconcile_text(
     evidence: list[dict[str, Any]],
 ) -> tuple[str, str, str | None]:
     """Return updated text, the action, and any conflicting current value."""
-    record = yaml.safe_load(text)
+    record = safe_load(text)
     if not isinstance(record, dict):
         raise BackfillValidationError("intblock YAML must contain a mapping")
 
@@ -192,7 +195,7 @@ def reconcile_text(
     if not design_provenance:
         updated = _insert_provenance(updated, evidence)
 
-    parsed = yaml.safe_load(updated)
+    parsed = safe_load(updated)
     if not isinstance(parsed, dict) or parsed.get(FIELD) != design:
         raise BackfillValidationError(f"surgical {FIELD} insertion failed validation")
     stripped = {k: v for k, v in parsed.items() if k not in (FIELD, "provenance")}
@@ -208,7 +211,7 @@ def discover_records(root: Path) -> dict[str, Path]:
     """Index all intblock source files and reject duplicate ids."""
     records: dict[str, Path] = {}
     for path in sorted((root / "data" / "intblocks").glob("*/*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(record, dict) or not record.get("id"):
             continue
         record_id = str(record["id"])
@@ -231,7 +234,7 @@ def plan_backfill(root: Path, manifest_path: Path) -> tuple[list[PlannedChange],
     for record_id in sorted(entries):
         path = records[record_id]
         text = path.read_text(encoding="utf-8")
-        record = yaml.safe_load(text)
+        record = safe_load(text)
         category = record.get("scope_category")
         if category not in ALLOWED_SCOPES:
             raise BackfillValidationError(

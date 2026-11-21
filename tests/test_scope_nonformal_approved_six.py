@@ -6,10 +6,10 @@ update does not break this test."""
 from pathlib import Path
 
 import pytest
-import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.validate.intblock_rules import check_intblock_scope_category
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(project_root())
 MANIFEST = ROOT / "data/schemas/scope_category_nonformal_30.yaml"
@@ -25,9 +25,9 @@ EXPECTED = {
 
 @pytest.mark.parametrize("record_id", sorted(EXPECTED))
 def test_approved_nonformal_category_and_source_provenance(record_id: str) -> None:
-    manifest = yaml.safe_load(MANIFEST.read_text(encoding="utf-8"))
+    manifest = safe_load(MANIFEST.read_text(encoding="utf-8"))
     entry = manifest["records"][record_id]
-    record = yaml.safe_load((ROOT / entry["path"]).read_text(encoding="utf-8"))
+    record = safe_load((ROOT / entry["path"]).read_text(encoding="utf-8"))
     category, status = EXPECTED[record_id]
 
     assert entry["review_state"] == "source_reviewed"

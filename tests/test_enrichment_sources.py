@@ -12,6 +12,7 @@ from typer.testing import CliRunner
 
 from internacia_builder import enrichment, freshness
 from internacia_builder import enrichment_sources as es
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 FR = "data/countries/FR.yaml"
@@ -19,7 +20,7 @@ TODAY = date.today()
 
 
 def _fr():
-    return yaml.safe_load((ROOT / FR).read_text(encoding="utf-8"))
+    return safe_load((ROOT / FR).read_text(encoding="utf-8"))
 
 
 def _enriched(record):
@@ -108,7 +109,7 @@ def test_apply_cli(tmp_path, monkeypatch):
     )
 
     assert result.exit_code == 0, result.output
-    written = yaml.safe_load((tmp_path / FR).read_text(encoding="utf-8"))
+    written = safe_load((tmp_path / FR).read_text(encoding="utf-8"))
     assert written["population"]["year"] == TODAY.year and written["region"] == before["region"]
     assert "auto_merge=true" in out.read_text()
     assert "merges automatically" in (tmp_path / "body.md").read_text()

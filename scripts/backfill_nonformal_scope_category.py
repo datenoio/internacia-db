@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
 import yaml
 from backfill_scope_category import (
@@ -26,6 +27,8 @@ from backfill_scope_category import (
     discover_records,
     reconcile_text,
 )
+
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = ROOT / "data/schemas/scope_category_nonformal_30.yaml"
@@ -101,7 +104,7 @@ def _evidence(value: Any, record_id: str) -> dict[str, str] | None:
 
 def load_manifest(path: Path) -> list[Decision]:
     """Validate all manifest entries before touching the repository."""
-    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    raw = safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict) or type(raw.get("version")) is not int or raw["version"] != 1:
         raise BackfillValidationError("manifest requires version: 1")
     if raw.get("cohort_id") != "nonformal_candidates_30":
@@ -176,7 +179,7 @@ def plan_backfill(root: Path, manifest: Path) -> tuple[list[PlannedChange], dict
         if source.is_symlink() or source.resolve() != (root / d.path).resolve():
             raise BackfillValidationError(f"{d.record_id}: source path moved or is a symlink")
         text = source.read_text(encoding="utf-8")
-        record = yaml.safe_load(text)
+        record = safe_load(text)
         if not isinstance(record, dict) or record.get("id") != d.record_id:
             raise BackfillValidationError(f"{d.record_id}: source record ID changed")
         if record.get("status") != d.expected_status:
@@ -230,7 +233,7 @@ def plan_backfill(root: Path, manifest: Path) -> tuple[list[PlannedChange], dict
             )
             continue
         if action == "pending":
-            _preserved_fields(record, yaml.safe_load(updated), d.record_id)
+            _preserved_fields(record, safe_load(updated), d.record_id)
         if d.review_state == "pending_review":
             changes.append(
                 PlannedChange(

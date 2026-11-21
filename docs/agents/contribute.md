@@ -65,6 +65,7 @@ python scripts/validate_intblocks.py --json
 # --fail-on-warning: warnings fail too (exit 1), as in CI. The date-based staleness warnings
 # (last_verified and provenance age) are reported but do not fail it.
 python scripts/builder.py build             # regenerate every committed format
+# INTERNACIA_ZSTD_LEVEL=3 python scripts/builder.py build  # nearly 2x faster; CI does this, releases use 22
 python scripts/check_generated_artifacts.py
 pytest tests/
 ruff check internacia_builder/ scripts/ tests/

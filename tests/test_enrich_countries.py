@@ -4,11 +4,11 @@ from copy import deepcopy
 
 import enrich_countries as ec
 import pytest
-import yaml
 
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.paths import project_root
 from internacia_builder.validate.country_rules import check_country_indicator_years
+from internacia_builder.yaml_io import safe_load
 
 
 def country(source="World Bank"):
@@ -94,18 +94,18 @@ def test_invalid_enrichment_preserves_original_file(tmp_path):
 
 
 def test_valid_enrichment_replaces_content_preserving_permissions(tmp_path):
-    record = yaml.safe_load((project_root() / "data/countries/US.yaml").read_text())
+    record = safe_load((project_root() / "data/countries/US.yaml").read_text())
     path = tmp_path / "US.yaml"
     path.write_text("old source\n")
     path.chmod(0o640)
     write_enriched_yaml(path, record, "countries")
-    assert yaml.safe_load(path.read_text()) == record
+    assert safe_load(path.read_text()) == record
     assert path.stat().st_mode & 0o777 == 0o640
     assert list(tmp_path.iterdir()) == [path]
 
 
 def test_failed_atomic_replacement_preserves_source_and_removes_temporary_file(tmp_path, monkeypatch):
-    record = yaml.safe_load((project_root() / "data/countries/US.yaml").read_text())
+    record = safe_load((project_root() / "data/countries/US.yaml").read_text())
     path = tmp_path / "US.yaml"
     path.write_text("old source\n")
 

@@ -5,10 +5,10 @@ import json
 import sys
 
 import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
-import yaml
 
 from internacia_builder.freshness import kpi_markdown, last_verified_kpi, load_tier1
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 
 def main() -> int:
@@ -16,9 +16,9 @@ def main() -> int:
     parser.add_argument("--markdown", action="store_true", help="Markdown table (CI job summary)")
     args = parser.parse_args()
     root = project_root()
-    config = yaml.safe_load((root / "data/schemas/intblocks_completeness.yaml").read_text()) or {}
+    config = safe_load((root / "data/schemas/intblocks_completeness.yaml").read_text()) or {}
     quality = config.get("quality") or {}
-    records = [yaml.safe_load(p.read_text(encoding="utf-8")) for p in sorted((root / "data/intblocks").rglob("*.yaml"))]
+    records = [safe_load(p.read_text(encoding="utf-8")) for p in sorted((root / "data/intblocks").rglob("*.yaml"))]
     kpi = last_verified_kpi(
         records,
         load_tier1(root),

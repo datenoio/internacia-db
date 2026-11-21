@@ -5,8 +5,6 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-import yaml
-
 from internacia_builder.build import (
     get_countries_schema,
     load_attribute_intblock_migrations,
@@ -14,6 +12,7 @@ from internacia_builder.build import (
 )
 from internacia_builder.validate.country_rules import check_country_attribute_fields
 from internacia_builder.validate.cross_rules import validate_attribute_intblock_migrations
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -47,7 +46,7 @@ def test_retired_attribute_dirs_gone():
 
 
 def test_blocktypes_drop_attribute_ids():
-    data = yaml.safe_load((ROOT / "data" / "blocktypes" / "blocktypes.yaml").read_text())
+    data = safe_load((ROOT / "data" / "blocktypes" / "blocktypes.yaml").read_text())
     ids = {e["id"] for e in data}
     for bid in (
         "dvdregion",
@@ -63,7 +62,7 @@ def test_blocktypes_drop_attribute_ids():
 
 
 def test_migration_artifact_covers_retired_ids():
-    migrations = yaml.safe_load((ROOT / "data" / "attribute_intblock_migrations.yaml").read_text())
+    migrations = safe_load((ROOT / "data" / "attribute_intblock_migrations.yaml").read_text())
     retired = {m["retired_id"] for m in migrations}
     for rid in ("RHTRAFFIC", "LHTRAFFIC", "DVD_1", "WDLTR", "LSCOMMONLAW", "ABSMON"):
         assert rid in retired
@@ -72,7 +71,7 @@ def test_migration_artifact_covers_retired_ids():
 
 
 def test_migration_since_is_a_released_version():
-    migrations = yaml.safe_load((ROOT / "data" / "attribute_intblock_migrations.yaml").read_text())
+    migrations = safe_load((ROOT / "data" / "attribute_intblock_migrations.yaml").read_text())
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     released = set(re.findall(r"^## \[(\d+\.\d+\.\d+)\] - \d{4}-\d{2}-\d{2}", changelog, re.MULTILINE))
     assert {m["since"] for m in migrations} <= released
@@ -110,7 +109,7 @@ def test_check_attribute_fields_vocab_and_primary():
 
 
 def test_us_has_migrated_attributes():
-    us = yaml.safe_load((ROOT / "data" / "countries" / "US.yaml").read_text())
+    us = safe_load((ROOT / "data" / "countries" / "US.yaml").read_text())
     assert us.get("car_side") == "right"
     assert us.get("dvd_region") == 1
     assert {x["id"] for x in us.get("broadcast_systems") or []} >= {"atsc", "ntsc"}

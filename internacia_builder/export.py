@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,30 @@ from internacia_builder.schemas import (
     get_memberships_schema,
     get_meta_schema,
 )
+from internacia_builder.yaml_io import safe_load
+
+RELEASE_ZSTD_LEVEL = 22
+ZSTD_LEVEL_ENV = "INTERNACIA_ZSTD_LEVEL"
+
+
+def zstd_level() -> int:
+    """The zstd level of every compressed export (``*.zst`` and Parquet): 22 unless overridden.
+
+    Releases always use 22. At 22 compression takes nearly half of a build; ``validate.yml`` sets
+    ``INTERNACIA_ZSTD_LEVEL=3`` because a pull-request build is only tested, never published.
+    The level changes the compressed bytes, not the data, so every check that a release runs
+    passes at either level. Set it locally for a faster ``builder.py build`` too.
+    """
+    raw = os.environ.get(ZSTD_LEVEL_ENV, "").strip()
+    if not raw:
+        return RELEASE_ZSTD_LEVEL
+    try:
+        level = int(raw)
+    except ValueError:
+        level = 0
+    if not 1 <= level <= RELEASE_ZSTD_LEVEL:
+        raise ValueError(f"{ZSTD_LEVEL_ENV} must be an integer from 1 to {RELEASE_ZSTD_LEVEL}, not {raw!r}")
+    return level
 
 
 def load_intblock_aliases(project_root: Path) -> list[dict[str, Any]]:
@@ -35,7 +60,7 @@ def load_intblock_aliases(project_root: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
-        raw = yaml.safe_load(f) or []
+        raw = safe_load(f) or []
     aliases: list[dict[str, Any]] = []
     for entry in raw:
         if not isinstance(entry, dict):
@@ -57,7 +82,7 @@ def load_country_aliases(project_root: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
-        raw = yaml.safe_load(f) or []
+        raw = safe_load(f) or []
     aliases: list[dict[str, Any]] = []
     for entry in raw:
         if not isinstance(entry, dict):
@@ -79,7 +104,7 @@ def load_attribute_intblock_migrations(project_root: Path) -> list[dict[str, Any
     if not path.exists():
         return []
     with open(path, encoding="utf-8") as f:
-        raw = yaml.safe_load(f) or []
+        raw = safe_load(f) or []
     rows: list[dict[str, Any]] = []
     for entry in raw:
         if not isinstance(entry, dict):
@@ -112,7 +137,7 @@ def save_attribute_intblock_migrations(
     source = project_root() / "data" / "attribute_intblock_migrations.yaml"
     if source.exists():
         with open(source, encoding="utf-8") as f:
-            raw = yaml.safe_load(f) or []
+            raw = safe_load(f) or []
         json_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     else:
         json_path.write_text(json.dumps(migrations, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -120,7 +145,7 @@ def save_attribute_intblock_migrations(
     if write_parquet:
         table = pa.Table.from_pylist(migrations, schema=get_attribute_migration_schema())
         parquet_path = output_dir / "attribute_intblock_migrations.parquet"
-        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
         typer.echo(f"✓ Saved attribute migrations (parquet): {parquet_path}")
 
 def load_border_status(project_root: Path) -> list[dict[str, Any]]:
@@ -128,7 +153,7 @@ def load_border_status(project_root: Path) -> list[dict[str, Any]]:
     path = project_root / "data" / "borders" / "border_status.yaml"
     if not path.exists():
         return []
-    document = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    document = safe_load(path.read_text(encoding="utf-8")) or {}
     rows: list[dict[str, Any]] = []
     for entry in document.get("entries") or []:
         if not isinstance(entry, dict):
@@ -166,7 +191,7 @@ def save_border_status(rows: list[dict[str, Any]], output_dir: Path, write_parqu
     if write_parquet:
         table = pa.Table.from_pylist(rows, schema=get_border_status_schema())
         parquet_path = output_dir / "border_status.parquet"
-        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
         typer.echo(f"✓ Saved border status (parquet): {parquet_path}")
 
 def save_aliases(
@@ -182,7 +207,7 @@ def save_aliases(
     if write_parquet:
         table = pa.Table.from_pylist(aliases, schema=get_aliases_schema())
         parquet_path = output_dir / f"{basename}.parquet"
-        pq.write_table(table, parquet_path, compression="zstd", compression_level=22)
+        pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
         typer.echo(f"✓ Saved alias map (parquet): {parquet_path}")
 
 def _join_list(values: list[Any] | None, sep: str = ";") -> str:
@@ -339,14 +364,14 @@ def save_csv_rows(rows: list[dict[str, Any]], output_file: Path) -> None:
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
-    cctx = zstd.ZstdCompressor(level=22)
+    cctx = zstd.ZstdCompressor(level=zstd_level())
     output_file.write_bytes(cctx.compress(buf.getvalue().encode("utf-8")))
     typer.echo(f"✓ Saved CSV (zstd): {output_file}")
 
 def save_json_array(data: list[dict[str, Any]], output_file: Path) -> None:
     """Save records as a Zstandard-compressed JSON array (``.json.zst``)."""
     payload = (json.dumps(data, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
-    cctx = zstd.ZstdCompressor(level=22)
+    cctx = zstd.ZstdCompressor(level=zstd_level())
     output_file.write_bytes(cctx.compress(payload))
     typer.echo(f"✓ Saved JSON array (zstd): {output_file}")
 
@@ -467,7 +492,7 @@ def load_yaml_files(directory: Path, desc: str = "Loading files") -> list[dict[s
     for yaml_file in tqdm(yaml_files, desc=desc):
         try:
             with open(yaml_file, encoding="utf-8") as f:
-                content = yaml.safe_load(f)
+                content = safe_load(f)
                 if content:
                     data.append(content)
         except Exception as e:
@@ -481,7 +506,7 @@ def load_yaml_files(directory: Path, desc: str = "Loading files") -> list[dict[s
 
 def save_jsonl_zst(data: list[dict[str, Any]], output_file: Path):
     """Save data as Zstandard-compressed JSONL file."""
-    cctx = zstd.ZstdCompressor(level=22)
+    cctx = zstd.ZstdCompressor(level=zstd_level())
     with open(output_file, "wb") as f:
         with cctx.stream_writer(f) as compressor:
             for item in data:
@@ -502,7 +527,7 @@ def save_jsonl(data: list[dict[str, Any]], output_file: Path):
 
 def save_yaml_zst(data: list[dict[str, Any]], output_file: Path):
     """Save data as Zstandard-compressed YAML file."""
-    cctx = zstd.ZstdCompressor(level=22)
+    cctx = zstd.ZstdCompressor(level=zstd_level())
     yaml_str = yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False)
     with open(output_file, "wb") as f:
         f.write(cctx.compress(yaml_str.encode("utf-8")))
@@ -564,7 +589,7 @@ def save_memberships_csv(rows: list[dict[str, Any]], output_file: Path):
     writer.writeheader()
     for row in rows:
         writer.writerow(row)
-    cctx = zstd.ZstdCompressor(level=22)
+    cctx = zstd.ZstdCompressor(level=zstd_level())
     output_file.write_bytes(cctx.compress(buf.getvalue().encode("utf-8")))
     typer.echo(f"✓ Saved CSV (zstd): {output_file}")
 
@@ -575,7 +600,7 @@ def save_parquet(data: list[dict[str, Any]], output_file: Path, schema: pa.Schem
     inference, so schema drift fails the build loudly.
     """
     table = pa.Table.from_pylist(data, schema=schema)
-    pq.write_table(table, output_file, compression="zstd", compression_level=22)
+    pq.write_table(table, output_file, compression="zstd", compression_level=zstd_level())
     typer.echo(f"✓ Saved Parquet (zstd): {output_file}")
 
 def create_duckdb_database(

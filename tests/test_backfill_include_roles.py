@@ -8,6 +8,7 @@ import pytest
 import yaml
 
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 EVIDENCE = [{"source": "Operator", "url": "https://example.org/route", "retrieved_at": "2026-11-20"}]
 PIPE_ROLES = {"AZ": "origin", "GE": "transit", "TR": "destination"}
@@ -60,9 +61,9 @@ def test_dry_run_writes_nothing(tmp_path):
 def test_apply_adds_roles_and_provenance_only(tmp_path):
     root = _project(tmp_path)
     path = _write(root, "PIPE", extra="provenance:\n- field: wikidata_id\n  source: Wikidata\n  retrieved_at: '2026-01-01'\n")
-    before = yaml.safe_load(path.read_text(encoding="utf-8"))
+    before = safe_load(path.read_text(encoding="utf-8"))
     backfill.execute_backfill(root, _manifest(root, {"PIPE": _entry()}), mode="apply")
-    after = yaml.safe_load(path.read_text(encoding="utf-8"))
+    after = safe_load(path.read_text(encoding="utf-8"))
     assert {i["id"]: i["role"] for i in after["includes"]} == PIPE_ROLES
     assert [p["field"] for p in after["provenance"]] == ["includes", "wikidata_id"]
     for key in before:
@@ -75,7 +76,7 @@ def test_corridor_blocktype_is_appended(tmp_path):
     path = _write(root, "RAIL", blocktype="project", countries=("CN", "KG", "UZ"))
     roles = {"CN": "terminal", "KG": "transit", "UZ": "terminal"}
     backfill.execute_backfill(root, _manifest(root, {"RAIL": _entry(roles, add_blocktypes=["corridor"])}), mode="apply")
-    after = yaml.safe_load(path.read_text(encoding="utf-8"))
+    after = safe_load(path.read_text(encoding="utf-8"))
     assert after["blocktype"] == ["project", "corridor"]
     assert {i["id"]: i["role"] for i in after["includes"]} == roles
 
@@ -141,4 +142,4 @@ def test_changed_record_gets_verified_on(tmp_path):
     manifest.write_text(yaml.safe_dump({"version": 1, "expected_count": 1, "verified_on": "2026-11-20",
                                         "records": {"PIPE": _entry()}}, sort_keys=False), encoding="utf-8")
     backfill.execute_backfill(root, manifest, mode="apply")
-    assert yaml.safe_load(path.read_text(encoding="utf-8"))["last_verified"] == "2026-11-20"
+    assert safe_load(path.read_text(encoding="utf-8"))["last_verified"] == "2026-11-20"

@@ -10,6 +10,7 @@ import yaml
 from internacia_builder import build
 from internacia_builder.quality_report import ISSUE_PRIORITY_MAP, RULE_DESCRIPTIONS
 from internacia_builder.validate import registry
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOCKING = {"CRITICAL", "IMPORTANT"}
@@ -56,7 +57,7 @@ def _project(tmp_path: Path) -> Path:
             shutil.copy(ROOT / rel, tmp_path / rel)
 
     def copy(rel: str, edit) -> None:
-        record = yaml.safe_load((ROOT / rel).read_text(encoding="utf-8"))
+        record = safe_load((ROOT / rel).read_text(encoding="utf-8"))
         edit(record)
         target = tmp_path / rel
         target.parent.mkdir(parents=True, exist_ok=True)

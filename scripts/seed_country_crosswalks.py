@@ -16,7 +16,9 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-import yaml
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 COUNTRIES = ROOT / "data" / "countries"
@@ -77,7 +79,7 @@ def validate_seed_values(rows: dict[str, dict[str, str]]) -> None:
 def load_sources(path: Path = SOURCES) -> dict[str, dict[str, str]]:
     if not path.exists():
         raise SeedValidationError(f"source metadata does not exist: {path}")
-    payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    payload = safe_load(path.read_text(encoding="utf-8")) or {}
     retrieved_default = str(payload.get("retrieved_at") or "")
     sources = payload.get("fields") or {}
     result: dict[str, dict[str, str]] = {}
@@ -102,7 +104,7 @@ def load_sources(path: Path = SOURCES) -> dict[str, dict[str, str]]:
 def load_policy(path: Path = POLICY) -> dict[str, Any]:
     if not path.exists():
         raise SeedValidationError(f"crosswalk policy does not exist: {path}")
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return safe_load(path.read_text(encoding="utf-8")) or {}
 
 
 def yaml_scalar(value: str) -> str:
@@ -160,7 +162,7 @@ def insert_provenance(
     *,
     refresh: bool = False,
 ) -> str:
-    record = yaml.safe_load(text) or {}
+    record = safe_load(text) or {}
     if field in provenance_fields(record):
         if not refresh:
             return text
@@ -199,7 +201,7 @@ def reconcile_text(
     existing_only: bool = False,
     refresh_provenance: bool = False,
 ) -> tuple[str, list[dict[str, str]], list[dict[str, str]]]:
-    original_record = yaml.safe_load(text) or {}
+    original_record = safe_load(text) or {}
     original_provenance_fields = provenance_fields(original_record)
     updated = text
     actions: list[dict[str, str]] = []
@@ -304,7 +306,7 @@ def main(argv: list[str] | None = None) -> int:
     summary: Counter[str] = Counter()
     for code, path in country_paths.items():
         text = path.read_text(encoding="utf-8")
-        record = yaml.safe_load(text) or {}
+        record = safe_load(text) or {}
         for field in selected_fields:
             current = str(record.get(field) or "")
             target = seed[code].get(field, "")

@@ -43,11 +43,20 @@ select = [
     "I",
     "B",
     "UP",
+    "TID251",
 ]
 ignore = [
     "E501",
     "B008",
 ]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+# yaml.safe_load always uses the pure-Python parser, about eight times slower than libyaml.
+"yaml.safe_load".msg = "Use internacia_builder.yaml_io.safe_load (libyaml when available)."
+
+[tool.ruff.lint.per-file-ignores]
+# Archived one-off scripts: run once by hand, never in CI, and standalone (no _checkout bootstrap).
+"scripts/oneoff/*" = ["TID251"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

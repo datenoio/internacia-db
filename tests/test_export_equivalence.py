@@ -11,11 +11,11 @@ import json
 import duckdb
 import pyarrow.parquet as pq
 import pytest
-import yaml
 import zstandard
 
 from internacia_builder import build as builder
 from internacia_builder.paths import datasets_dir
+from internacia_builder.yaml_io import safe_load
 
 DATASETS = {"countries": "code", "intblocks": "id", "blocktypes": "id"}
 DATASETS_DIR = datasets_dir()
@@ -31,7 +31,7 @@ def _read_jsonl_zst(path):
 def _read_yaml_zst(path):
     dctx = zstandard.ZstdDecompressor()
     with path.open("rb") as f:
-        return yaml.safe_load(dctx.stream_reader(f)) or []
+        return safe_load(dctx.stream_reader(f)) or []
 
 
 def test_save_jsonl_zst_round_trip(tmp_path):

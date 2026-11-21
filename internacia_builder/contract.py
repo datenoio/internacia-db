@@ -11,7 +11,6 @@ from pathlib import Path
 from typing import Any
 
 import pyarrow as pa
-import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import (
@@ -31,6 +30,7 @@ from internacia_builder.schemas import (
     schema_columns,
     schema_hash,
 )
+from internacia_builder.yaml_io import safe_load
 
 CONTRACT_FILE = "contract.json"
 CHECKSUMS_FILE = "SHA256SUMS"
@@ -275,7 +275,7 @@ STATUS_COLUMNS = (("memberships", "status"), ("intblocks", "includes[].status"))
 def _deprecated(schemas_dir: Path) -> list[dict[str, Any]]:
     """Enum values scheduled for removal, from the ``deprecated`` markers in includes_status.yaml."""
     path = schemas_dir / "includes_status.yaml"
-    statuses = ((yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}) if path.exists() else {}
+    statuses = ((safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}) if path.exists() else {}
     entries = []
     for value, spec in sorted(statuses.items()):
         marker = (spec or {}).get("deprecated")
@@ -296,7 +296,7 @@ def _deprecated(schemas_dir: Path) -> list[dict[str, Any]]:
 def _deprecated_blocktypes(path: Path) -> list[dict[str, Any]]:
     """Blocktype values scheduled for removal, from the ``deprecated`` markers in blocktypes.yaml."""
     entries = []
-    blocktypes = (yaml.safe_load(path.read_text(encoding="utf-8")) or []) if path.exists() else []
+    blocktypes = (safe_load(path.read_text(encoding="utf-8")) or []) if path.exists() else []
     for spec in sorted((b for b in blocktypes if isinstance(b, dict)), key=lambda b: str(b.get("id"))):
         marker = spec.get("deprecated")
         if not marker:

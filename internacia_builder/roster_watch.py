@@ -18,10 +18,10 @@ from pathlib import Path
 from typing import Any
 
 import requests
-import yaml
 
 from internacia_builder.freshness import load_tier1
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 SPARQL_URL = "https://query.wikidata.org/sparql"
 USER_AGENT = "internacia-db-roster-watch/1.0 (https://github.com/datenoio/internacia-db)"
@@ -124,7 +124,7 @@ def compare(record: dict[str, Any], wikidata: set[str]) -> Drift:
 
 def load_records(root: Path, ids: list[str]) -> dict[str, dict[str, Any]]:
     files = {path.stem: path for path in (root / "data" / "intblocks").rglob("*.yaml")}
-    return {i: yaml.safe_load(files[i].read_text(encoding="utf-8")) for i in ids if i in files}
+    return {i: safe_load(files[i].read_text(encoding="utf-8")) for i in ids if i in files}
 
 
 def run(

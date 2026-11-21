@@ -3,13 +3,13 @@
 from pathlib import Path
 
 import pytest
-import yaml
 
 from internacia_builder.paths import project_root
 from internacia_builder.validate.intblock_rules import (
     check_intblock_membership_consistency,
     check_intblock_scope_category,
 )
+from internacia_builder.yaml_io import safe_load
 
 BODY_IDS = (
     "APFIC", "CECAF", "CIFAA", "CODEX", "COPESCAALC", "EIFAAC",
@@ -22,7 +22,7 @@ NO_COUNTRY_ROSTER = ("ADF", "AF", "GCCPO", "MSF", "CANTO", "ACIL")
 def _record(record_id: str) -> dict:
     paths = list((Path(project_root()) / "data/intblocks").glob(f"*/{record_id}.yaml"))
     assert len(paths) == 1
-    return yaml.safe_load(paths[0].read_text(encoding="utf-8"))
+    return safe_load(paths[0].read_text(encoding="utf-8"))
 
 
 @pytest.mark.parametrize("record_id", BODY_IDS + NGO_IDS)

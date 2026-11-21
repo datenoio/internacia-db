@@ -29,6 +29,7 @@ import yaml
 from internacia_builder import wb_classification
 from internacia_builder.paths import blocktypes_source_path
 from internacia_builder.validate import border_rules, completeness, country_rules, cross_rules, intblock_rules
+from internacia_builder.yaml_io import safe_load
 
 Issue = dict[str, Any]
 
@@ -36,12 +37,9 @@ COUNTRIES = "countries"
 INTBLOCKS = "intblocks"
 
 
-SafeLoader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
-
-
 def load_yaml(path: Path) -> Any:
     with path.open(encoding="utf-8") as f:
-        return yaml.load(f, Loader=SafeLoader)  # noqa: S506  (a safe loader, libyaml when available)
+        return safe_load(f)
 
 
 def load_topic_aliases(path: Path) -> dict[str, str]:
