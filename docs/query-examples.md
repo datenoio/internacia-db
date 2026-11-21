@@ -530,7 +530,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 59 rows — 35 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
+**Expected:** 60 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
 only (e.g. `EGMONTGROUP`, `FLORENCE`), 16 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`).
 
 Filter to a single exclusion pattern:
@@ -931,7 +931,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 35 rows — includes `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 36 rows — includes `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
