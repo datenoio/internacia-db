@@ -100,6 +100,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   International E-road network) now links the English Wikipedia article on the network. Its
   Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
   `ASIANHIGHWAY`; the old reason said no English article existed.
+- The `regions` label `Global` is now `worldwide`, the label other global records use, on 40
+  intblocks. 39 of them had `regions: [Global]`, for example ATT, CWC, WCO, WEF, BIMCO and IRF.
+  SIDS keeps its other labels (Caribbean, Pacific, Africa). 34 records gain a `provenance` entry
+  for `regions`. CTBTO, MSC, BIMCO, GSP, GSTP and IRF keep the entry they already had, because
+  only the spelling of the label changed. BUDCONV, COVAX and JCPOA keep `Global` for now: they
+  have no `last_verified`, so changing them needs a roster check against their sources first.
 
 ## [4.2.0] - 2026-11-21
 

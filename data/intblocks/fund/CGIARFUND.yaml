@@ -13,7 +13,7 @@ active_period:
   start: '2017-03-01'
 geographic_scope: global
 regions:
-- Global
+- worldwide
 partof:
   id: CGIAR
   name: CGIAR (Consultative Group on International Agricultural Research)
@@ -333,3 +333,6 @@ provenance:
   source: "World Bank FIF Trustee — CGIAR fund detail"
   retrieved_at: "2026-11-20"
   url: "https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/cgiar"
+- field: regions
+  source: Label Global normalized to worldwide, the label other global records use
+  retrieved_at: '2026-11-21'
