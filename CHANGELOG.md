@@ -173,6 +173,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   dissolved-with-roster recipe returns 34 rows. The record also gains the last registered office,
   the 2019 dissolution vote and reasons, the 1998 start of the Innovations Awards (not 1997),
   conference examples and three topics.
+- `CREDAF` checked on 2026-11-21 against credaf.org. `headquarters` is now Paris (86, allée de
+  Bercy), where the secretariat sits, not Yaoundé, where the statutes were drawn up in 1982.
+  The 15 founding administrations, Gabon among them, are in `founding_members` and marked
+  `founding_member` (`joined: 1982`) in `includes`. The English name in `other_names` is the one
+  the site uses, and the pre-2018 name is in `previous_names`. `legal_status` now records the
+  self-described non-governmental form and the membership of national tax administrations.
+  The record also gains `secretariat`, the Executive Bureau, conferences from 2012 to 2026,
+  cooperation agreements and two topics. `scope_category` stays `igo`, as for its NTO peers.
 
 ## [4.2.0] - 2026-11-21
 
