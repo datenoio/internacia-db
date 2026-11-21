@@ -74,6 +74,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     order. Subregions follow each country's UN M49 `subregion`: Western Asia is `Middle East`
     (except AM, AZ and GE, which are `Caucasus`), and Iran is in `South Asia`. ASIANHIGHWAY gets
     the same fix in a separate change.
+- `ITER` checked on 2026-11-21 against the ITER Agreement and iter.org. `name` is now the
+  Article 1 name, "ITER International Fusion Energy Organization". `founded` moves from
+  2006 (the signing year) to 2007-10-24, the date the Organization was established, and
+  `active_period` starts on the same day. `headquarters` gains `country: FR` and the
+  Saint-Paul-lez-Durance site coordinates, replacing the CEA Cadarache point. `languages`
+  is now `en` only, because English is the working language. The seven Members gain
+  `joined` 2007-10-24 and become `founding_members`: CN, IN, JP, KR, RU and US, since
+  Euratom has no country code. New `includes` entries: CH (`participant` through Fusion for
+  Energy, from 2026-01-01) and the non-Member cooperation partners AU, KZ and CA
+  (`cooperating`). `membership_count` stays 7. The record also gains `institutional_design`,
+  `legal_status`, `recognition_status`, `official_documents`, `social_media`, `secretariat`,
+  `notes`, a rewritten `description`, the topics energy, nuclear and physics, and 19
+  provenance entries. A second Wikidata link points to the organization item Q101069148;
+  `wikidata_id` stays Q191788. ITER joins the reviewed `institutional_design` cohort, which
+  now has 109 records (`reviewed_109`). The declared vs actual roster recipe now returns 184
+  mismatches, because ITER lists 11 entries against its 7 Members.
 
 ## [4.2.0] - 2026-11-21
 

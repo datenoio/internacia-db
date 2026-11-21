@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_108
-expected_count: 108
+cohort_id: reviewed_109
+expected_count: 109
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -1760,6 +1760,26 @@ records:
     evidence:
     - {source: 'UNFCCC text (unfccc.int, conveng.pdf)', url: 'https://unfccc.int/resource/docs/convkp/conveng.pdf',
       retrieved_at: '2026-11-21'}
+
+  # --- ITER record review (2026-11-21) ---------------------------------------
+  ITER:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: unanimity
+      enforcement: [none]
+      mutual_defence: false
+    basis: >-
+      ITER Agreement Art 2: cooperation on the ITER Project to demonstrate the feasibility of fusion energy for peaceful
+      purposes (nuclear energy, so sectoral). Art 6(8): the Council decides by unanimity on its main acts (Director-General
+      appointment, Staff and Project Resource Regulations, management structure, total budget and Project Plan, overall
+      cost sharing, accession, amendments); on other matters Art 6(9)-(10) asks for consensus, failing which votes are
+      weighted by contributions. The Agreement provides no suspension or expulsion, only withdrawal after ten years
+      (Art 26). Whether Council acts bind Members and whether the Director-General counts as an independent executive
+      are not settled by the text, so decision_force and independent_organs are omitted.
+    evidence:
+      - source: ITER Agreement (text via University of Oslo)
+        url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+        retrieved_at: '2026-11-21'
 
 # Candidates not applied, and why. Revisit when a qualifying source is read.
 deferred:
