@@ -498,7 +498,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        54,
+        55,
         set(),
     ),
     (
