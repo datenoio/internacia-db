@@ -6,60 +6,148 @@ blocktype:
 - nuclear
 status: formal
 scope_category: igo
+legal_status: intergovernmental
+recognition_status: Intergovernmental organization with international legal personality under the 2006 ITER Agreement;
+  the Director General of the IAEA is depositary of the Agreement
+institutional_design:
+  mandate: sectoral
+  decision_rule: unanimity
+  enforcement:
+  - none
+  mutual_defence: false
 languages:
 - en
-- fr
 links:
-- url: http://www.iter.org/
+- url: https://www.iter.org/
+  type: website
+- url: https://www.iter.org/about/iter-members
   type: website
 - url: https://en.wikipedia.org/wiki/ITER
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q191788
   type: wikidata
-name: ITER (International Thermonuclear Experimental Reactor)
+- url: https://www.wikidata.org/wiki/Q101069148
+  type: wikidata
+official_documents:
+- url: https://f4e.europa.eu/downloads/aboutf4e/l_35820061216en00620081.pdf
+  type: document
+  name: Agreement on the Establishment of the ITER International Fusion Energy Organization for the Joint Implementation
+    of the ITER Project (OJ L 358, 16.12.2006)
+- url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+  type: document
+  name: ITER Agreement (text via University of Oslo)
+social_media:
+  twitter: https://x.com/iterorg
+  facebook: https://www.facebook.com/ITEROrganization
+  linkedin: https://www.linkedin.com/company/59574
+  youtube: https://www.youtube.com/user/iterorganization
+  instagram: https://www.instagram.com/iter_organization
+name: ITER International Fusion Energy Organization
 includes:
 - id: CN
   name: China
   type: country
   status: member
+  joined: '2007-10-24'
 - id: EU
-  name: European Union
+  name: European Union (through Euratom)
   type: organization
   status: member
+  joined: '2007-10-24'
 - id: IN
   name: India
   type: country
   status: member
+  joined: '2007-10-24'
 - id: JP
   name: Japan
   type: country
   status: member
+  joined: '2007-10-24'
 - id: KR
   name: Korea, Rep.
   type: country
   status: member
+  joined: '2007-10-24'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '2007-10-24'
 - id: US
   name: United States
   type: country
   status: member
+  joined: '2007-10-24'
+- id: CH
+  name: Switzerland
+  type: country
+  status: participant
+  joined: '2026-01-01'
+- id: AU
+  name: Australia
+  type: country
+  status: cooperating
+  joined: '2016'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: cooperating
+  joined: '2017'
+- id: CA
+  name: Canada
+  type: country
+  status: cooperating
+  joined: '2020'
 membership_count: 7
-founded: '2006'
+founding_members:
+- CN
+- IN
+- JP
+- KR
+- RU
+- US
+founded: '2007-10-24'
+active_period:
+  start: '2007-10-24'
+geographic_scope: global
 headquarters:
-  city: Research centre CEA Cadarache
+  city: Saint-Paul-lez-Durance
+  country: FR
   coordinates:
-    lat: 43.6875
-    lng: 5.761944
+    lat: 43.707778
+    lng: 5.777383
+secretariat:
+  location: Route de Vinon-sur-Verdon, CS 90 046, 13067 St Paul-lez-Durance, France
+  head: Director-General
 wikidata_id: Q191788
-description: International nuclear fusion research and engineering megaproject led by the European Union.
+description: Intergovernmental organization established by the 2006 ITER Agreement to build, operate and decommission ITER,
+  an experimental tokamak fusion device at Saint-Paul-lez-Durance in southern France. Its purpose is to demonstrate the scientific
+  and technological feasibility of fusion energy for peaceful purposes. The seven Members (China, Euratom, India, Japan, Korea,
+  Russia and the United States) share the project's costs, mostly through in-kind contributions supplied by their Domestic
+  Agencies.
+notes: >-
+  ITER grew out of the 1985 Geneva summit and was initiated in 1988; conceptual and engineering design were carried out under
+  IAEA auspices by Euratom, Japan, the Soviet Union and the United States. The United States left the project in 1998 and
+  rejoined in 2003, when China and the Republic of Korea also joined; India joined in 2005. Cadarache was chosen as the site
+  in June 2005. The ITER Agreement was signed at the Élysée Palace in Paris on 21 November 2006 and entered into force on 24
+  October 2007, when the ITER Organization was formally established. The Agreement runs for an initial 35 years, including
+  de-activation, and the Council may extend it by up to 10 years. The ITER Council, with up to four representatives per
+  Member, takes its main decisions (Director-General appointment, budget, Project Plan, cost sharing, accession) by unanimity;
+  on other matters it seeks consensus and otherwise uses votes weighted by contributions. Euratom, as Host Party, bears 45.6
+  percent of construction costs; each of the other six Members bears 9.1 percent. Directors-General: Kaname Ikeda (2007-2010),
+  Osamu Motojima (2010-2015), Bernard Bigot (2015-2022) and Pietro Barabaschi (since 17 October 2022). Machine assembly began
+  on 28 July 2020; the 2024 baseline schedules the start of research operation in 2034 and deuterium-tritium operation in
+  2039. Switzerland takes part through Euratom and Fusion for Energy (2014-2020, and again as a Fusion for Energy member
+  from 1 January 2026). The United Kingdom discontinued its participation after Brexit. Australia (ANSTO, 2016), Kazakhstan
+  (National Nuclear Center, 2017) and Canada (2020) have non-Member technical cooperation agreements. The name was first
+  an acronym for International Thermonuclear Experimental Reactor; the organization now glosses ITER as Latin for "the way".
 tags:
 - ITER
 - atomic
 - energy
 - experimental
+- fusion
 - international
 - nuclear
 - project
@@ -67,6 +155,7 @@ tags:
 - science
 - technology
 - thermonuclear
+- tokamak
 topics:
 - key: research
   name: Research
@@ -74,6 +163,12 @@ topics:
   name: Science
 - key: technology
   name: Technology
+- key: energy
+  name: Energy
+- key: nuclear
+  name: Nuclear
+- key: physics
+  name: Physics
 other_names:
 - id: ar
   name: المفاعل النووي الحراري التجريبي الدولي
@@ -91,21 +186,78 @@ other_names:
   name: Международный экспериментальный термоядерный реактор
 - id: zh
   name: 国际热核聚变实验反应堆
-last_verified: '2026-10-22'
+last_verified: '2026-11-21'
 provenance:
 - field: includes
-  source: ITER Organization
-  retrieved_at: '2026-10-22'
+  source: ITER Organization, ITER Members
+  retrieved_at: '2026-11-21'
   url: https://www.iter.org/about/iter-members
 - field: membership_count
-  source: ITER Organization
-  retrieved_at: '2026-10-22'
+  source: ITER Organization, ITER Members
+  retrieved_at: '2026-11-21'
   url: https://www.iter.org/about/iter-members
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+- field: founding_members
+  source: ITER Agreement, Article 22(2) (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: name
+  source: ITER Agreement, Article 1(1) (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: founded
+  source: ITER Organization, The ITER Organization
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/about/iter-organization
+- field: active_period
+  source: ITER Organization, The ITER Organization
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/about/iter-organization
+- field: institutional_design
+  source: ITER Agreement (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: legal_status
+  source: ITER Agreement, Article 5 (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: recognition_status
+  source: ITER Agreement, Articles 5 and 29 (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: official_documents
+  source: Fusion for Energy (Official Journal of the European Union L 358, 16.12.2006)
+  retrieved_at: '2026-11-21'
+  url: https://f4e.europa.eu/downloads/aboutf4e/l_35820061216en00620081.pdf
+- field: headquarters
+  source: ITER Agreement, Article 1(2) (text via University of Oslo)
+  retrieved_at: '2026-11-21'
+  url: https://jus.uio.no/english/services/library/treaties/12/12-02/iaea_iter.html
+- field: headquarters.coordinates
+  source: Wikidata (Q191788, P625)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q191788
   license: CC0
+- field: secretariat
+  source: ITER Organization, Contact us
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/contact-us
+- field: languages
+  source: ITER Organization, The ITER Organization
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/about/iter-organization
+- field: social_media
+  source: ITER Organization website footer
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/
+- field: description
+  source: ITER Organization; ITER Agreement, Article 2
+  retrieved_at: '2026-11-21'
+  url: https://www.iter.org/about/iter-organization
+- field: notes
+  source: ITER Organization; ITER Agreement; Wikipedia
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/ITER
+  license: CC BY-SA 4.0
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -116,11 +268,9 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.iter.org/
 acronyms:
+- lang: en
+  value: ITER
 - lang: en
   value: I.T.E.R.
 - lang: ar
