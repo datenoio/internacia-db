@@ -100,6 +100,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   International E-road network) now links the English Wikipedia article on the network. Its
   Wikidata exclusion now records that Q106123 describes the network, not the agreement, as for
   `ASIANHIGHWAY`; the old reason said no English article existed.
+- `PARLACEN` (Central American Parliament) roster checked on 2026-11-21 against PARLACEN's
+  official observer list and press reports; `last_verified` was 2026-07-29.
+  - The record listed no observers. It now has the five on the official list as `observer`:
+    `MX`, `PR`, `MA`, `VE` and `CN` (admitted on 21 August 2023). `TW` is a former observer
+    (`joined` 1999, `left` 2023-08-21): the same plenary decision revoked the Legislative Yuan's
+    status. Russia, approved in September 2024 subject to ratification, is not on the official
+    list and is not added.
+  - Nicaragua denounced the Constitutive Treaty on 3 October 2026 "with immediate effect". The
+    treaty has no denunciation or withdrawal clause, and PARLACEN has not accepted the exit, so
+    `NI` stays a founding member and `notes` records the pending exit.
+  - The documented recipe "Countries with many observer seats" now returns 36 rows, not 34:
+    `MX` and `TW` reach 5 observer entries, and `CN` has 7. "Declared vs actual roster size"
+    counts 184 mismatches, not 183: `membership_count` stays 6, the member states, while
+    `includes` now has 12 entries.
 
 ## [4.2.0] - 2026-11-21
 
