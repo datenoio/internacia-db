@@ -116,6 +116,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `official_documents` and `notes` (governance, Umbrella Program trust funds, FY2025 figures).
   The description is rewritten and `provenance` is extended. The `membership_count` mismatch
   recipe in `docs/query-examples.md` now expects 185 rows (184 after the CEI update above).
+- `CDRI` (Coalition for Disaster Resilient Infrastructure) roster and metadata, checked on
+  2026-11-21 against cdri.world (About page, Charter and Leadership team). The Philippines
+  (`PH`, joined 2026-09) is added, so `membership_count` goes from 58 to 59 member countries.
+  ECOWAS gets `joined: '2026-02'`. The site now reports 13 partner organizations but shows
+  logos for only 12, so the 13th is not mapped. The record gains French and Spanish
+  `languages` and links. It also gains `other_names` (fr, es, ar, zh), `social_media`
+  (X, LinkedIn, YouTube, Facebook), `official_documents` (the amended Charter in three
+  languages and the 2024–25 Annual Report) and the `sustainable_development` topic. `notes`
+  now covers governance under the Charter, the co-chairs and IRAF. The description is
+  rewritten and `provenance` is extended.
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
   "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
