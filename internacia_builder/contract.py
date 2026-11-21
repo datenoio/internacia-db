@@ -179,12 +179,16 @@ VIEWS: list[dict[str, Any]] = [
             "One row per country and land neighbour (countries.borders), with the pair's current "
             "border_status (closed or restricted), or NULL when no closure is recorded."
         ),
+        # Unnest in a subquery: DuckDB before 2.0 (MIN_DUCKDB included) rejects a LEFT JOIN
+        # whose condition reads columns of a lateral UNNEST ("Non-inner join on correlated
+        # columns not supported").
         "sql": (
-            "SELECT c.code AS country_code, c.iso3code, b.neighbor AS neighbor_iso3, s.status AS current_status "
-            "FROM countries c, UNNEST(c.borders) AS b(neighbor) "
+            "SELECT b.country_code, b.iso3code, b.neighbor_iso3, s.status AS current_status "
+            "FROM (SELECT c.code AS country_code, c.iso3code, UNNEST(c.borders) AS neighbor_iso3 "
+            "FROM countries c) b "
             "LEFT JOIN border_status s ON s.\"until\" IS NULL "
-            "AND ((s.country_a = c.iso3code AND s.country_b = b.neighbor) "
-            "OR (s.country_b = c.iso3code AND s.country_a = b.neighbor)) "
+            "AND ((s.country_a = b.iso3code AND s.country_b = b.neighbor_iso3) "
+            "OR (s.country_b = b.iso3code AND s.country_a = b.neighbor_iso3)) "
             "ORDER BY country_code, neighbor_iso3"
         ),
     },

@@ -18,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
   roles because the corridor branches from Mombasa to several landlocked countries instead of
   running between two ends.
+- `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
+  running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+
+### Fixed
+
+- The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
+  "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
+  view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
+  The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
+  unchanged (648 on v4.2.0 data, 36 with a status).
 
 ## [4.2.0] - 2026-11-21
 
