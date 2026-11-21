@@ -42,9 +42,9 @@ python scripts/check_doc_counts.py
 python scripts/check_markdown_links.py
 ```
 
-7. Commit the regenerated `data/datasets/` descriptors (manifests, `contract.json`, `datapackage.json`) with the source changes; binary exports are not committed. CI rebuilds and checks that the descriptors match. Update current counts and cookbook expectations when
-   record counts or query results change. Update `CHANGELOG.md` under
-   `[Unreleased]` for consumer-visible changes.
+7. Run the full build. Build manifests and `datapackage.json` are build outputs that git ignores, so a data change normally leaves `data/datasets/` clean; commit only the descriptors git still tracks there (`contract.json`, dataset card, alias JSON, `border_status.json`) when the build changes them. CI rebuilds and checks that the descriptors match. Add a `changelog.d/<slug>.md` fragment instead of editing `CHANGELOG.md`. Update cookbook expectations when
+   query results change; the intblock count in docs is rounded down to the hundred
+   (`1300+`), so update it only when `scripts/check_doc_counts.py` asks.
 
 **Reference**
 - Worked add example: [docs/agents/add-intblock-example.md](../../docs/agents/add-intblock-example.md)
