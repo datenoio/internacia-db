@@ -84,7 +84,7 @@ repository. Prefer:
 
 1. `internacia.duckdb` from the GitHub Release assets (or a local build). The
    Release assets on tag `vX.Y.Z` are the **bundle of record** for that version;
-   the repository commits only the text descriptors (manifests, `contract.json`),
+   the repository commits only a few text descriptors (such as `contract.json`),
    so query a Release asset or a local `python scripts/builder.py build`
 2. [internacia-python](https://github.com/datenoio/internacia-python) — `internacia`
    0.2.x on PyPI predates data v3 and cannot download current releases; see
@@ -102,5 +102,6 @@ the `v` prefix.
 For a release by hand (MAJOR), run `python scripts/prepare_release.py --apply`
 or update the dated release entry in `CHANGELOG.md`, the version in
 `pyproject.toml`, `internacia_builder/__init__.py`, `uv.lock` and `CITATION.cff`
-(`version`, `date-released`) yourself, rebuild, commit the descriptors and tag.
+(`version`, `date-released`) yourself, merge the `changelog.d/` fragments into that
+entry and delete them, rebuild, commit the tracked descriptors and tag.
 The release gate checks these versions against the tag and manifests.
