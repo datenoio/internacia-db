@@ -14,86 +14,178 @@ institutional_design:
   - expulsion
   mutual_defence: true
 languages:
-- en
 - ru
 links:
-- url: http://odkb-csto.org/
+- url: https://odkb-csto.org/
+  type: website
+- url: https://en.odkb-csto.org/
   type: website
 - url: https://en.wikipedia.org/wiki/Collective_Security_Treaty_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q318693
   type: wikidata
-name: Collective Security Treaty Organisation
+name: Collective Security Treaty Organization
 includes:
 - id: AM
   name: Armenia
   type: country
   status: member
+  joined: '1992-05-15'
+  note: Froze its participation on 23 February 2024 and stopped paying contributions in May 2024. On 11 November 2026 the
+    Moscow summit suspended its voting rights and its right to nominate officials over unpaid dues (Charter Article 25).
+    Armenia has not filed a withdrawal notice.
 - id: BY
   name: Belarus
   type: country
   status: member
+  joined: '1993-12-31'
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
+  joined: '1992-05-15'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '1992-05-15'
 - id: RU
   name: Russian Federation
   type: country
   status: member
+  joined: '1992-05-15'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
-founded: '1992'
+  joined: '1992-05-15'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: former_member
+  joined: '2006-08-16'
+  left: '2012-12-19'
+  note: Signed the Collective Security Treaty on 15 May 1992 and left it in 1999 by not signing the extension protocol.
+    Resumed membership in 2006 (ratified 28 March 2008). Notified suspension on 28 June 2012; the Collective Security
+    Council decided the suspension on 19 December 2012.
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: former_member
+  joined: '1993-09-24'
+  left: '1999'
+  note: Party to the Collective Security Treaty; did not sign the 2 April 1999 protocol on its extension.
+- id: GE
+  name: Georgia
+  type: country
+  status: former_member
+  joined: '1993'
+  left: '1999'
+  note: Party to the Collective Security Treaty; did not sign the 2 April 1999 protocol on its extension.
+founded: '1992-05-15'
+founding_members:
+- AM
+- KZ
+- KG
+- RU
+- TJ
+- UZ
+previous_names:
+- id: en
+  name: Collective Security Treaty
+  period: 1992–2002
+geographic_scope: regional
+regions:
+- Asia
+- Europe
+- Caucasus
+- Central Asia
 headquarters:
-  city: Sverchkov Lane
+  city: Moscow
   country: RU
   coordinates:
     lat: 55.760277777778
     lng: 37.639166666667
+secretariat:
+  location: 3/2 Sverchkov Lane, Moscow 101000, Russia
+  organization: CSTO Secretariat
+suborganizations:
+- id: CRRF
+  name: Collective Rapid Reaction Force
+- id: PAODKB
+  name: Interparliamentary Assembly of CSTO
 acronyms:
-- lang: ru
-  value: ОДКБ
 - lang: en
   value: CSTO
 - lang: en
-  value: OTSC
-- lang: en
-  value: OVKS
+  value: ODKB
+- lang: ru
+  value: ОДКБ
+- lang: uk
+  value: ОДКБ
+- lang: be
+  value: АДКБ
+- lang: kk
+  value: ҰҚШҰ
+- lang: hy
+  value: ՀԱՊԿ
+- lang: tg
+  value: СПАД
+- lang: uz
+  value: KXShT
+- lang: az
+  value: KTMT
+- lang: tr
+  value: KGAÖ
+- lang: ms
+  value: PPKK
 - lang: el
   value: ΟΣΣΑ
-- lang: en
-  value: KGAÖ
-- lang: en
-  value: KXShT
-- lang: en
-  value: KTMT
-- lang: en
-  value: ODKB
-- lang: en
-  value: PPKK
-- lang: ru
-  value: ҰҚШҰ
 - lang: zh
   value: 集安组织
-- lang: zh
-  value: 独联体集体安全条约组织
 - lang: fr
   value: OTSC
-- lang: de
-  value: ODKB
+- lang: es
+  value: OTSC
 - lang: de
   value: OVKS
+- lang: de
+  value: ODKB
 - lang: de
   value: CSTO
 membership_count: 6
 wikidata_id: Q318693
-description: Intergovernmental military alliance among post-Soviet states.
+legal_status: intergovernmental
+recognition_status: Observer in the United Nations General Assembly since 2004
+official_documents:
+- url: https://en.odkb-csto.org/documents/documents/dogovor_o_kollektivnoy_bezopasnosti/
+  type: treaty
+  title: Collective Security Treaty, 15 May 1992
+- url: https://en.odkb-csto.org/documents/documents/ustav_organizatsii_dogovora_o_kollektivnoy_bezopasnosti_/
+  type: charter
+  title: Charter of the Collective Security Treaty Organization, 7 October 2002
+social_media:
+  telegram: https://t.me/odkb_csto
+  vk: https://vk.com/odkb_sekretariat
+  twitter: https://twitter.com/CSTO_ODKB
+  youtube: https://www.youtube.com/channel/UC-vg2ptgN3AJ2514SA0gM5w
+description: Military-political alliance of post-Soviet states founded on the Collective Security Treaty, signed in Tashkent
+  on 15 May 1992. On 14 May 2002 the Collective Security Council gave the treaty the status of an international regional
+  organization, and the CSTO Charter was approved in Chisinau on 7 October 2002. Under Article 4 of the Treaty, aggression
+  against one member is aggression against all. Members coordinate foreign, defence and security policy and keep collective
+  forces, including the Collective Rapid Reaction Force, against military threats, terrorism, drug trafficking and illegal
+  migration. Its first collective deployment was a peacekeeping force sent to Kazakhstan in January 2022.
+notes: The Collective Security Treaty was signed by Armenia, Kazakhstan, Kyrgyzstan, Russia, Tajikistan and Uzbekistan.
+  Azerbaijan, Belarus and Georgia acceded in 1993, and the treaty entered into force on 20 April 1994. On 2 April 1999 six
+  states signed a protocol extending it; Azerbaijan, Georgia and Uzbekistan did not. Uzbekistan resumed membership in 2006
+  and suspended it in 2012. Statutory bodies are the Collective Security Council (heads of state), the Council of Foreign
+  Ministers, the Council of Defence Ministers, the Committee of Secretaries of Security Councils, the Permanent Council, the
+  Secretariat and the Joint Staff (working since 1 January 2004). The Parliamentary Assembly was created on 16 November 2006
+  and added to the Charter in December 2010. Collective forces include the Collective Rapid Deployment Forces of the Central
+  Asian Region (2001), the Collective Rapid Reaction Force (2009), peacekeeping forces under the 2007 Agreement on Peacekeeping
+  Activities, and collective aviation forces. The CSTO received observer status in the UN General Assembly in 2004. Russian
+  is the working language. Taalatbek Masadykov (Kyrgyzstan) has been Secretary General since 1 January 2026. Armenia froze
+  its participation in February 2024; the 11 November 2026 Moscow summit suspended its voting rights.
 tags:
 - CSTO
 - KGAÖ
@@ -103,37 +195,73 @@ tags:
 - OTSC
 - OVKS
 - PPKK
+- ΟΣΣΑ
+- АДКБ
+- ОДКБ
+- СПАД
+- ҰҚШҰ
+- ՀԱՊԿ
+- alliance
 - collective
+- counter_terrorism
 - defense
 - military
+- peacekeeping
+- post-soviet
+- regional_cooperation
 - security
 - treaty
-- ΟΣΣΑ
-- ОДКБ
-- ҰҚШҰ
 topics:
 - key: military
   name: Military
 - key: security
   name: Security
+- key: counter_terrorism
+  name: Counter Terrorism
+- key: crime
+  name: Crime
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
 - id: ar
   name: منظمة معاهدة الأمن الجماعي
+- id: az
+  name: Kollektiv Təhlükəsizlik Müqaviləsi Təşkilatı
+- id: be
+  name: Арганізацыя Дагавора аб калектыўнай бяспецы
 - id: de
   name: Organisation des Vertrags über kollektive Sicherheit
 - id: en
-  name: Collective Security Treaty Organization
+  name: Collective Security Treaty Organisation
 - id: es
   name: Organización del Tratado de la Seguridad Colectiva
 - id: fr
   name: Organisation du traité de sécurité collective
+- id: hy
+  name: Հավաքական անվտանգության պայմանագրի կազմակերպություն
+- id: kk
+  name: Ұжымдық қауіпсіздік туралы шарт ұйымы
+- id: ky
+  name: Жамааттык коопсуздук жөнүндө келишим уюму
+- id: ms
+  name: Pertubuhan Perjanjian Keselamatan Kolektif
 - id: pt
   name: Organização do Tratado de Segurança Coletiva
 - id: ru
   name: Организация Договора о коллективной безопасности
+- id: tg
+  name: Созмони Паймони Амнияти Дастаҷамъӣ
+- id: tr
+  name: Kolektif Güvenlik Anlaşması Örgütü
+- id: uk
+  name: Організація договору про колективну безпеку
+- id: uz
+  name: Kollektiv xavfsizlik shartnomasi tashkiloti
 - id: zh
   name: 集体安全条约组织
-last_verified: '2026-10-22'
+- id: zh
+  name: 独联体集体安全条约组织
+last_verified: '2026-11-21'
 provenance:
 - field: institutional_design
   source: "Charter of the Collective Security Treaty Organization (2002)"
@@ -143,26 +271,101 @@ provenance:
   source: CSTO
   retrieved_at: '2026-10-22'
   url: https://mkves.odkb-csto.org/en/states/
+- field: includes
+  source: CSTO, history of the organization (accessions, 1999 extension, Uzbekistan)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: includes
+  source: Wikipedia, membership table (accession and withdrawal dates)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Collective_Security_Treaty_Organization
+  license: CC-BY-SA
+- field: includes
+  source: Wikipedia, Armenia–CSTO relations timeline (Armenia freeze and 11 November 2026 suspension of voting rights)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Armenia%E2%80%93CSTO_relations
+  license: CC-BY-SA
+- field: includes
+  source: The Times of Central Asia (11 November 2026 Moscow summit on Armenia)
+  retrieved_at: '2026-11-21'
+  url: https://timesca.com/csto-without-armenia-what-keeps-yerevan-from-leaving-and-what-the-summit-means-for-central-asia/
 - field: membership_count
   source: CSTO
   retrieved_at: '2026-10-22'
   url: https://mkves.odkb-csto.org/en/states/
+- field: founded
+  source: CSTO, history of the organization; Wikidata P571 (inception 1992-05-15)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: founding_members
+  source: CSTO, history of the organization (signatories of the Tashkent treaty)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: previous_names
+  source: CSTO, history of the organization
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: name
+  source: CSTO, English website
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/
+- field: languages
+  source: Wikidata P37 (official language Russian)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q318693
+  license: CC0
+- field: regions
+  source: Continents of current members, then M49-mapped subregions of members outside Europe (AM Caucasus; KZ, KG, TJ
+    Central Asia)
+  retrieved_at: '2026-11-21'
+- field: headquarters
+  source: CSTO, website footer (Secretariat address)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/
+- field: secretariat
+  source: CSTO, website footer (Secretariat address)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/
+- field: suborganizations
+  source: CSTO, history of the organization (CRRF 2009, Parliamentary Assembly 2006)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: recognition_status
+  source: CSTO, history of the organization (UN General Assembly observer status, 2004)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: official_documents
+  source: CSTO, documents section
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/documents/
+- field: social_media
+  source: CSTO, website header and footer
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/
+- field: description
+  source: CSTO, history of the organization
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
+- field: description
+  source: Wikipedia (January 2022 deployment to Kazakhstan)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Collective_Security_Treaty_Organization
+  license: CC-BY-SA
+- field: includes
+  source: Armenpress/Armradio citing TASS (Lavrov on Charter Article 25 and no withdrawal application, 10 November 2026)
+  retrieved_at: '2026-11-21'
+  url: https://en.armradio.am/2026/11/10/armenia-has-not-officially-applied-to-leave-eaeu-or-csto-lavrov/
+- field: notes
+  source: CSTO, history of the organization; Wikipedia (Secretary General since 1 January 2026)
+  retrieved_at: '2026-11-21'
+  url: https://en.odkb-csto.org/25years/
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q318693
   license: CC0
 - field: acronyms
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://odkb-csto.org/
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q318693
   license: CC0
