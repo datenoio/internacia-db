@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - 20 linear transport corridors with route roles (`transport`, `corridor`), checked on 2026-11-21
-  against government, intergovernmental, operator and project-finance sources (1318 intblocks).
+  against government, intergovernmental, operator and project-finance sources (1323 intblocks).
   Each is in the reviewed manifest `data/schemas/include_roles_pilot.yaml` (44 records):
   - Asia: `CPEC` (CN, PK `terminal`; `project`, `partof: BRI`), `TRILATERALHIGHWAY`
     (India–Myanmar–Thailand), `BTKRAILWAY` (Baku–Tbilisi–Kars), `ITIRAILWAY`
@@ -74,6 +74,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+- Blocktype `artificial_intelligence` (83 blocktypes), a secondary tag for artificial
+  intelligence governance, safety and cooperation, including partnerships on AI compute and
+  semiconductor supply chains. Four records take it as an additional blocktype, with no
+  directory move: `WAICO`, `PAXSILICA`, `CHIP4` and `GPAI`. The `digital` scope note now
+  points AI bodies to the new key.
+- Five artificial intelligence records with `artificial_intelligence`, checked on 2026-11-21
+  (1303 intblocks):
+  - `NAAIMES` (International Network for Advanced AI Measurement, Evaluation and Science, formerly
+    the International Network of AI Safety Institutes): 9 countries and the EU, all founding members
+    from November 2024. Sources: NIST and the UK government.
+  - `HAIPFRIENDS` (Hiroshima AI Process Friends Group): 69 countries and the EU, with join dates from
+    the Japanese Ministry of Internal Affairs and Communications.
+  - `OECDAIPRINCIPLES` (OECD Recommendation of the Council on AI, OECD/LEGAL/0449): 51 adherents
+    (38 OECD members, 12 non-members and the EU). Source: the OECD Legal Instruments database.
+  - `MILITARYAIDECLARATION` (Political Declaration on Responsible Military Use of AI and Autonomy):
+    58 endorsing states on the U.S. Department of State list dated 27 November 2024.
+  - `COEAICONVENTION` (Council of Europe Framework Convention on AI, CETS No. 225): not in force; the
+    parties are the EU and Bosnia and Herzegovina, and the 19 other signatories are named in `notes`.
+    Source: the Netherlands treaty database, because the Council of Europe Treaty Office chart could
+    not be read automatically.
+  The UN Group of Friends for International Cooperation on AI Capacity-building is deferred: it
+  publishes no member list.
+
+### Changed
+
+- `CEI` (Central European Initiative) enriched and checked on 2026-11-21 against cei.int and
+  the CEI Guidelines and Rules of Procedure (2023):
+  - `includes`: accession years for the 17 members from the official roster; a note on the
+    suspension of Belarus's rights of representation (25 March 2022), which keeps it on the
+    roster as `member`; and founding member Austria as `former_member` (1989–2018). SFR
+    Yugoslavia and Czechoslovakia have no country code, so they are only in `notes`.
+  - `headquarters` gains `country: IT`. The website link moves from ceinet.org to cei.int.
+    `languages` is English, the working language under Article 32.
+  - New fields: `founded` (1989-11-11, Budapest), `founding_members` (AT, HU, IT),
+    `previous_names` (Quadragonale, Pentagonale, Hexagonale), `secretariat`,
+    `geographic_scope`, `regions`, `legal_status`, `recognition_status` (UN General Assembly
+    observer since 2011), `official_documents`, `social_media`, a full `description` and
+    `notes`, and 17 more `provenance` entries (23 in all).
+  - `institutional_design` from the Guidelines: `general` mandate, `consensus`, no
+    independent organs, suspension and expulsion by consensus minus one. `CEI` is the first
+    record outside the reviewed cohort of 108 that carries it. `decision_force` is omitted
+    because the Guidelines do not say whether decisions bind.
+  - `other_names` gains ten languages from Wikidata (be, bg, cs, hr, it, pl, ro, sl, sr, uk).
+    `acronyms` adds `InCE` (it), `ЦЕИ` (bg), `ЦЕІ` (be) and `ЦЄІ` (uk). The two Chinese
+    "acronyms" are removed: 中歐倡議組織 is a name and moves to `other_names`; 歐洲創新中心
+    ("European Innovation Centre") was a wrong Wikidata alias.
+  - Documented query counts move with the record: 184 `membership_count` mismatches (the
+    roster now lists 17 members plus Austria), 201 `former_member` rows with `joined`, and
+    109 records with `institutional_design`.
 
 ### Fixed
 

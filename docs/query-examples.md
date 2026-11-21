@@ -965,7 +965,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 200 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 201 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1021,7 +1021,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 183 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 184 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1091,7 +1091,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 54 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 55 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -1333,7 +1333,7 @@ WHERE institutional_design IS NOT NULL
 ORDER BY authority_level NULLS LAST, id;
 ```
 
-**Expected:** 108 rows (the reviewed cohort). EU, UNSC and WTO are `high`; G7 and APEC are `low`;
+**Expected:** 109 rows (the reviewed cohort of 108 plus `CEI`). EU, UNSC and WTO are `high`; G7 and APEC are `low`;
 UPU, WMO and OPEC are `medium`; NATO and G-20 are NULL because their sources do not settle
 `decision_force`.
 Asymmetric vetoes are in `institutional_design.veto_holders` (UNSC: CN, FR, GB, RU, US).
