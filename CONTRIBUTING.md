@@ -80,11 +80,14 @@ python scripts/check_markdown_links.py                     # internal doc links
 python scripts/check_doc_counts.py                         # README/llms/AGENTS vs manifests
 ```
 
-Commit the regenerated `data/datasets/` descriptors (manifests, `contract.json`,
-`datapackage.json`, dataset card, alias JSON) with source changes; git ignores the
-binary and bulk exports. Never edit them by hand. Partial builds are useful for local
-analysis but do not refresh every descriptor. New records also require updated current-count documentation
-and any affected cookbook expectations.
+Run the full build before you push. Build manifests, `datapackage.json` and the binary
+and bulk exports are build outputs that git ignores, so a data change normally leaves
+`data/datasets/` clean. Commit the descriptors git still tracks there (`contract.json`,
+dataset card, alias JSON, `border_status.json`) when the build changes them, and never
+edit them by hand. Partial builds are useful for local analysis but do not refresh every
+descriptor. Documentation states the intblock count rounded down to the hundred
+(`1300+`): update it only when `scripts/check_doc_counts.py` reports a new hundred. New
+records may also change cookbook expectations.
 
 CI checks committed artifact freshness before rebuilding into `.ci-datasets`,
 then runs tests against that staging directory. It also checks the quality gate
@@ -113,10 +116,10 @@ reason comment per entry.
 
 - [ ] Validation passes with 0 errors (`validate_countries.py`, `validate_intblocks.py`)
 - [ ] Tests pass (`pytest tests/`)
-- [ ] Full build outputs are committed with source changes; artifact and documentation checks pass
+- [ ] Full build ran; tracked descriptors it changed are committed; artifact and documentation checks pass
 - [ ] New/changed enriched fields have `provenance` entries (countries)
 - [ ] Sources for membership or status changes are cited in the PR description
-- [ ] `CHANGELOG.md` updated under `[Unreleased]` for schema or semantic changes
+- [ ] A `changelog.d/<slug>.md` fragment for schema or semantic changes (do not edit `CHANGELOG.md`; see [changelog.d/README.md](changelog.d/README.md))
 
 ## Larger changes
 

@@ -72,10 +72,14 @@ python scripts/check_doc_counts.py
 python scripts/check_markdown_links.py
 ```
 
-Commit the regenerated `data/datasets/` descriptors with source changes (git ignores
-the binary and bulk exports). A partial build does not refresh every descriptor and
-cannot replace this full build. Update current
-counts and affected cookbook expectations when adding or removing records.
+Build manifests (`*.manifest.json`), `datapackage.json` and the binary and bulk exports
+are build outputs that git ignores, so a data change normally leaves `data/datasets/`
+clean. Commit the descriptors git still tracks there (`contract.json`, dataset card,
+alias JSON, `border_status.json`) when the build changes them. A partial build does not
+refresh every descriptor and cannot replace this full build. Documentation states the
+intblock count rounded down to the hundred (`1300+`): update it only when
+`scripts/check_doc_counts.py` reports a new hundred. Update affected cookbook
+expectations when adding or removing records.
 
 CI rebuilds into `.ci-datasets`, checks the committed descriptors against it, checks
 that a second build is identical, and tests that staging directory
@@ -90,7 +94,9 @@ New capabilities, schema changes, or breaking exports require an OpenSpec propos
 3. Run `openspec validate <change-id> --strict`
 4. Do **not** implement until approved
 
-Update `CHANGELOG.md` under `[Unreleased]` for consumer-visible changes.
+For consumer-visible changes add a `changelog.d/<slug>.md` fragment with Keep a
+Changelog subsections; do not edit `CHANGELOG.md` and do not write running totals such
+as "(1304 intblocks)". See [changelog.d/README.md](../../changelog.d/README.md).
 
 ## Common fixes
 

@@ -29,6 +29,7 @@ from typing import Any
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+from internacia_builder import changelog as changelog_fragments
 from internacia_builder.contract import CONTRACT_FILE, _schema_enums, build_contract
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import schema_columns
@@ -337,14 +338,21 @@ def render_summary(plan: Plan) -> str:
 
 
 def apply_version(root: Path, version: str, released: date, summary: str) -> list[Path]:
-    """Write ``version`` everywhere the release gate checks it and date the CHANGELOG entry."""
+    """Write ``version`` everywhere the release gate checks it and date the CHANGELOG entry.
+
+    The entry merges the ``[Unreleased]`` body with every ``changelog.d/`` fragment, which
+    are then deleted; the returned paths include the deleted fragments."""
     changelog = root / "CHANGELOG.md"
     text = changelog.read_text(encoding="utf-8")
     head, sep, rest = text.partition("## [Unreleased]\n")
     if not sep:
         raise ValueError("CHANGELOG.md has no '## [Unreleased]' section")
     body, nxt, tail = rest.partition("\n## [")
-    entry = body.strip("\n")
+    fragments = changelog_fragments.fragment_paths(root)
+    problems = [problem for path in fragments for problem in changelog_fragments.check_fragment(path)]
+    if problems:
+        raise ValueError("invalid changelog fragments:\n" + "\n".join(problems))
+    entry = changelog_fragments.merge(body.strip("\n"), [p.read_text(encoding="utf-8") for p in fragments])
     data = f"### Data changes since the previous release\n\n{summary}\n" if summary else ""
     section = f"## [{version}] - {released.isoformat()}\n\n" + (f"{entry}\n\n" if entry else "") + data
     changelog.write_text(f"{head}## [Unreleased]\n\n{section}{nxt}{tail}", encoding="utf-8")
@@ -355,7 +363,9 @@ def apply_version(root: Path, version: str, released: date, summary: str) -> lis
         "CITATION.cff": (r"(?m)^version: .+$", f"version: {version}"),
         "uv.lock": (r'(name = "internacia-builder"\nversion = )"[^"]+"', rf'\g<1>"{version}"'),
     }
-    written = [changelog]
+    for path in fragments:
+        path.unlink()
+    written = [changelog, *fragments]
     for rel, (pattern, replacement) in replacements.items():
         path = root / rel
         if not path.exists():
