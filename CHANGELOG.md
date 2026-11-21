@@ -83,6 +83,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `SICA` (Central American Integration System) is enriched and reclassified, checked on
+  2026-11-21 against archived sica.int pages, the UN Treaty Series and OAS SICE copies of
+  the instruments (live sica.int refused automated requests):
+  - The record moves from `fta/` to `political/`. Its `blocktype` is now `[political,
+    economic]`, as for `ASEAN`, because the Protocol of Tegucigalpa sets a general mandate.
+    `scope_category` changes from `treaty_body` to `igo`, because Arts 29-31 of the Protocol
+    give SICA legal personality.
+  - `founded` is now `1991-12-13`, the date of signature. New `active_period.start`:
+    `1993-02-01`. New `founding_members`: the six isthmus signatories.
+  - Members get `joined` dates: BZ in 2000, DO on 2013-06-27.
+  - 38 observers are added from SICA's observer table (June 2024): 34 countries and the EU,
+    OEI, OIJ and ACS. The observer agreements still pending are given in an include `note`.
+  - New fields: `suborganizations` (the 8 records whose `partof` is SICA), `secretariat`,
+    `headquarters.country` with the Wikidata P159 coordinates, `official_documents`,
+    `social_media`, `recognition_status`, `legal_status`, `geographic_scope`, `regions` and
+    `notes`. The notes cover the ODECA lineage, the Pro Tempore Presidency, the Secretary
+    General and Nicaragua.
+  - `languages` is now `[es]`, since Spanish is the Protocol's only authentic text.
+  - The documented recipes change. Countries with five or more observer seats: 34 rows
+    become 40. Membership-count mismatches: SICA adds one, so with `CEI` below the count
+    is 185.
 - `CEI` (Central European Initiative) enriched and checked on 2026-11-21 against cei.int and
   the CEI Guidelines and Rules of Procedure (2023):
   - `includes`: accession years for the 17 members from the official roster; a note on the
@@ -144,10 +165,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Nicaragua denounced the Constitutive Treaty on 3 October 2026 "with immediate effect". The
     treaty has no denunciation or withdrawal clause, and PARLACEN has not accepted the exit, so
     `NI` stays a founding member and `notes` records the pending exit.
-  - The documented recipe "Countries with many observer seats" now returns 36 rows, not 34:
-    `MX` and `TW` reach 5 observer entries, and `CN` has 7. "Declared vs actual roster size"
-    counts 185 mismatches, not 184: `membership_count` stays 6, the member states, while
-    `includes` now has 12 entries.
+  - The documented recipe "Countries with many observer seats" still returns 40 rows: `MX`
+    and `TW` move from 5 to 6 observer entries, and `CN` from 6 to 7. "Declared vs actual
+    roster size" counts 186 mismatches, one more than with `SICA` and `CEI`:
+    `membership_count` stays 6, the member states, while `includes` now has 12 entries.
 
 ## [4.2.0] - 2026-11-21
 

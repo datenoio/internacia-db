@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 36 rows — `JP` with 9 observer entries and `US` with 8; `CN`, `FR`, `HU`, `MD` and `MY` with 7; `CA`, `CH`, `DE`, `EG`, `ID`, `IL`, `IN`, `PL`, `RU`, `TH` and `UA` with 6; `AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `GE`, `GR`, `IT`, `KR`, `MX`, `NO`, `PH`, `PT`, `TM`, `TR`, `TW` and `VA` with 5.
+**Expected:** 40 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `CN`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7; `AU`, `CH`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `MX`, `PL`, `TH`, `TR`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `NO`, `NZ`, `PE`, `PH`, `PT` and `TM` with 5.
 
 ---
 
