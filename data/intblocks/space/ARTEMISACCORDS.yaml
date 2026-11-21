@@ -9,12 +9,7 @@ active_period:
   start: '2020-10-13'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 languages:
 - en
 links:
@@ -390,3 +385,6 @@ provenance:
   source: official sources
   retrieved_at: '2026-07-30'
   url: https://www.nasa.gov/artemis-accords/
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

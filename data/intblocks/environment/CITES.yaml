@@ -34,12 +34,7 @@ active_period:
   start: '1975-07-01'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 headquarters:
   city: Geneva
   country: CH
@@ -903,3 +898,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/wiki/Q191836
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'

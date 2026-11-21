@@ -38,12 +38,7 @@ active_period:
   start: '1993-12-29'
 geographic_scope: global
 regions:
-- Africa
-- Asia
-- Europe
-- North America
-- Oceania
-- South America
+- worldwide
 headquarters:
   city: Montreal
   country: CA
@@ -926,3 +921,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/wiki/Q152805
   license: CC0
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
