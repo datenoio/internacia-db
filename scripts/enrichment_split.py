@@ -22,12 +22,12 @@ from typing import Any
 
 import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
-import yaml
 
 from internacia_builder import enrichment_sources as es
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.paths import project_root
 from internacia_builder.validate.registry import load_yaml
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(help=__doc__.splitlines()[0])
 SOURCE_DIRS = ("data/countries", "data/intblocks")
@@ -55,7 +55,7 @@ def snapshot(output: Path = typer.Option(..., "--output", help="Snapshot JSON to
     for rel in sorted(set(p for p in paths if p.endswith(".yaml"))):
         before = subprocess.run(["git", "show", f"HEAD:{rel}"], cwd=root, capture_output=True, text=True)
         if before.returncode == 0:
-            base[rel] = yaml.safe_load(before.stdout) or {}
+            base[rel] = safe_load(before.stdout) or {}
         if (root / rel).exists():
             enriched[rel] = load_yaml(root / rel) or {}
     policy = es.load_policy(root)

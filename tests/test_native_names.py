@@ -1,11 +1,11 @@
 """native_names from each entity's own languages (openspec: fix-country-native-names), offline."""
 
 import enrich_countries as ec
-import yaml
 
 from internacia_builder import native_names as nn
 from internacia_builder.paths import project_root
 from internacia_builder.validate import country_rules, registry
+from internacia_builder.yaml_io import safe_load
 
 VOCAB = {
     "deu": {"id": "deu", "key": "de", "wikidata_codes": ["de"]},
@@ -128,7 +128,7 @@ def test_vocabulary_covers_every_country_language_code():
     codes = {
         str(lang["code"])
         for path in (project_root() / "data" / "countries").glob("*.yaml")
-        for lang in (yaml.safe_load(path.read_text(encoding="utf-8")).get("languages") or [])
+        for lang in (safe_load(path.read_text(encoding="utf-8")).get("languages") or [])
     }
     assert codes <= set(vocab), sorted(codes - set(vocab))
     assert all(e.get("note") for e in vocab.values() if not e["wikidata_codes"])

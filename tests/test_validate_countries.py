@@ -130,11 +130,10 @@ def _schema_errors(record):
 
 
 def test_country_schema_rejects_misspelled_fields():
-    import yaml
-
     from internacia_builder.paths import project_root
+    from internacia_builder.yaml_io import safe_load
 
-    record = yaml.safe_load((project_root() / "data/countries/DE.yaml").read_text(encoding="utf-8"))
+    record = safe_load((project_root() / "data/countries/DE.yaml").read_text(encoding="utf-8"))
     assert _schema_errors(record) == []
     assert _schema_errors({**record, "capitol_city": {"name": "Berlin"}}) == ["(root)"]
     typo = {**record, "provenance": [{"field": "area", "source": "World Bank", "retrieved_at": "2026-01-01", "notes": "x"}]}

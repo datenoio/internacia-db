@@ -7,17 +7,17 @@ import duckdb
 import pyarrow as pa
 import pyarrow.parquet as pq
 import pytest
-import yaml
 
 from internacia_builder import contract
 from internacia_builder.export import flatten_intblock, save_parquet
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import get_intblocks_schema
 from internacia_builder.validate import intblock_rules
+from internacia_builder.yaml_io import safe_load
 
 SCHEMAS = project_root() / "data" / "schemas"
 INTBLOCK_SCHEMA = json.loads((SCHEMAS / "intblocks.schema.json").read_text(encoding="utf-8"))
-CATALOG = yaml.safe_load((SCHEMAS / "institutional_design.yaml").read_text(encoding="utf-8"))
+CATALOG = safe_load((SCHEMAS / "institutional_design.yaml").read_text(encoding="utf-8"))
 DESIGN_SCHEMA = INTBLOCK_SCHEMA["properties"]["institutional_design"]
 
 BASE_RECORD = {

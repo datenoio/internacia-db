@@ -7,15 +7,15 @@ validation, provenance and ``last_verified``."""
 import json
 
 import duckdb
-import yaml
 
 from internacia_builder.paths import datasets_dir, project_root
+from internacia_builder.yaml_io import safe_load
 
 ROOT = project_root()
 
 
 def _record(directory: str, rid: str) -> dict:
-    return yaml.safe_load(
+    return safe_load(
         (ROOT / "data" / "intblocks" / directory / f"{rid}.yaml").read_text(encoding="utf-8")
     )
 
@@ -60,13 +60,13 @@ def test_separate_trans_asian_railway_treaty_lists_dated_parties():
     assert "wikidata_id" not in treaty and treaty.get("partof") is None
     assert network["wikidata_id"] == "Q842463"
     assert {"scope_category", "includes", "membership_count", "active_period"} <= _provenance_fields(treaty)
-    exclusions = yaml.safe_load((ROOT / "data" / "schemas" / "wikidata_exclusions.yaml").read_text())
+    exclusions = safe_load((ROOT / "data" / "schemas" / "wikidata_exclusions.yaml").read_text())
     assert "TARAGREEMENT" in {row["id"] for row in exclusions["exclusions"]}
 
 
 def test_retired_telesur_has_retired_alias_without_target():
     assert not (ROOT / "data" / "intblocks" / "telecom" / "TELESUR.yaml").exists()
-    aliases = {row["alias"]: row for row in yaml.safe_load((ROOT / "data" / "intblocks_aliases.yaml").read_text())}
+    aliases = {row["alias"]: row for row in safe_load((ROOT / "data" / "intblocks_aliases.yaml").read_text())}
     assert aliases["TELESUR"]["reason"] == "retired"
     assert not aliases["TELESUR"].get("target")
     exported = json.loads((ROOT / "data" / "datasets" / "intblocks_aliases.json").read_text())

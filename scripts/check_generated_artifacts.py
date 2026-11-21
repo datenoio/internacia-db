@@ -47,6 +47,7 @@ from internacia_builder.schemas import (
     get_memberships_schema,
     schema_hash,
 )
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(add_completion=False, help=__doc__)
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,14 +67,14 @@ SCHEMAS = {
 def _source_rows(spec: dict, root: Path) -> list[dict]:
     base = root / spec["source"]
     if spec["glob"] is None:
-        rows = yaml.safe_load(base.read_text(encoding="utf-8"))
+        rows = safe_load(base.read_text(encoding="utf-8"))
         if not isinstance(rows, list):
             raise ValueError(f"{base}: expected a list")
         return rows
     paths = sorted(base.glob(spec["glob"]))
     if not paths:
         raise ValueError(f"{base}: no source records")
-    rows = [yaml.safe_load(p.read_text(encoding="utf-8")) for p in paths]
+    rows = [safe_load(p.read_text(encoding="utf-8")) for p in paths]
     if any(not isinstance(row, dict) for row in rows):
         raise ValueError(f"{base}: expected object records")
     return rows
@@ -98,7 +99,7 @@ def _jsonl_ids(path: Path, key: str) -> set[str]:
 
 
 def _yaml_zst_ids(path: Path, key: str) -> set[str]:
-    return {str(row[key]) for row in yaml.safe_load(_decompress(path))}
+    return {str(row[key]) for row in safe_load(_decompress(path))}
 
 
 def _parquet_ids(path: Path, key: str) -> set[str]:
@@ -217,7 +218,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
                 for ext, reader in (
                     ("jsonl.zst", _jsonl_rows),
                     ("jsonl", _jsonl_rows),
-                    ("yaml.zst", lambda p: yaml.safe_load(_decompress(p))),
+                    ("yaml.zst", lambda p: safe_load(_decompress(p))),
                 ):
                     _compare(reader(datasets_dir / f"{name}.{ext}"), source[name], f"{name}.{ext}", problems, key)
                 if (datasets_dir / f"{name}.jsonl").read_bytes() != _decompress(datasets_dir / f"{name}.jsonl.zst"):

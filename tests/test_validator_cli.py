@@ -15,6 +15,7 @@ import yaml
 from internacia_builder.validate import border_rules, country_rules, intblock_rules, registry
 from internacia_builder.validate import countries as vc
 from internacia_builder.validate import intblocks as vi
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,7 +28,7 @@ def no_include_resolution(monkeypatch):
 
 
 def _copy(src: Path, dest: Path, **changes) -> Path:
-    record = yaml.safe_load(src.read_text(encoding="utf-8"))
+    record = safe_load(src.read_text(encoding="utf-8"))
     record.update(changes)
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False), encoding="utf-8")
@@ -69,7 +70,7 @@ def test_countries_cli_empty_directory(tmp_path):
 def test_intblocks_cli(tmp_path):
     intblocks = tmp_path / "intblocks"
     nato_src = next(ROOT.glob("data/intblocks/*/NATO.yaml"))
-    nato_record = yaml.safe_load(nato_src.read_text(encoding="utf-8"))
+    nato_record = safe_load(nato_src.read_text(encoding="utf-8"))
     nato = _copy(nato_src, intblocks / nato_src.parent.name / "NATO.yaml",
                  blocktype=[*nato_record["blocktype"], "spaceforce"], topics=[])
     eu_src = next(ROOT.glob("data/intblocks/*/EU.yaml"))

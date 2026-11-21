@@ -6,6 +6,8 @@ import backfill_scope_category as backfill
 import pytest
 import yaml
 
+from internacia_builder.yaml_io import safe_load
+
 
 def _write_record(root: Path, record_id: str, scope_category: str | None = None) -> Path:
     path = root / "data" / "intblocks" / "economic" / f"{record_id}.yaml"
@@ -108,7 +110,7 @@ acronyms:
     }
 
     updated, action, conflict = backfill.reconcile_text(text, "igo", evidence)
-    record = yaml.safe_load(updated)
+    record = safe_load(updated)
 
     assert action == "pending"
     assert conflict is None
@@ -186,7 +188,7 @@ def test_apply_is_idempotent(tmp_path: Path):
     assert first.applied == 1
     assert second.applied == 0
     assert second.already_set == 1
-    assert yaml.safe_load(record.read_text(encoding="utf-8"))["scope_category"] == "igo"
+    assert safe_load(record.read_text(encoding="utf-8"))["scope_category"] == "igo"
 
 
 def test_apply_refuses_all_writes_when_any_conflict_exists(tmp_path: Path):
@@ -230,7 +232,7 @@ def test_reconcile_reclassifies_only_from_the_expected_value():
         text, "non_state_organization", EVIDENCE, expected_current="igo")
     assert action == "pending"
     assert current is None
-    record = yaml.safe_load(updated)
+    record = safe_load(updated)
     assert record["scope_category"] == "non_state_organization"
     assert record["provenance"] == [{"field": "scope_category", **EVIDENCE}]
     assert updated.startswith("id: EXAMPLE\nstatus: formal\nscope_category: non_state_organization\nname: Example\n")
@@ -256,7 +258,7 @@ def test_reclassification_refuses_old_scope_provenance():
 
 def test_manifest_reclassification_needs_evidence_and_a_different_value(tmp_path: Path):
     path = _write_manifest(tmp_path, {"non_state_organization": ["A"]})
-    payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    payload = safe_load(path.read_text(encoding="utf-8"))
     payload["expected_current"] = {"A": "igo"}
     path.write_text(yaml.safe_dump(payload), encoding="utf-8")
     with pytest.raises(backfill.BackfillValidationError, match="requires evidence"):
@@ -273,10 +275,10 @@ def test_apply_reclassifies_a_historical_record(tmp_path: Path):
     record.parent.mkdir(parents=True)
     record.write_text("id: OLD\nstatus: historical\nscope_category: igo\nname: Old\n", encoding="utf-8")
     manifest = _write_manifest(tmp_path, {"intergovernmental_body": ["OLD"]}, evidence={"OLD": EVIDENCE})
-    payload = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    payload = safe_load(manifest.read_text(encoding="utf-8"))
     payload["expected_current"] = {"OLD": "igo"}
     manifest.write_text(yaml.safe_dump(payload), encoding="utf-8")
 
     report = backfill.execute_backfill(tmp_path, manifest, mode="apply")
     assert (report.pending, report.applied, report.conflicts) == (1, 1, 0)
-    assert yaml.safe_load(record.read_text(encoding="utf-8"))["scope_category"] == "intergovernmental_body"
+    assert safe_load(record.read_text(encoding="utf-8"))["scope_category"] == "intergovernmental_body"

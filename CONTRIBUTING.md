@@ -73,6 +73,7 @@ python scripts/validate_countries.py --fail-on-warning   # as CI runs it: 1 = er
 python scripts/validate_intblocks.py --fail-on-warning   # (date-based staleness warnings only report)
 python scripts/validate_countries.py --json   # structured output for agents
 python scripts/builder.py build          # regenerate data/datasets after source edits
+INTERNACIA_ZSTD_LEVEL=3 python scripts/builder.py build  # the same, nearly 2x faster (zstd 3, as in CI; releases use 22)
 python scripts/check_generated_artifacts.py                # local build matches source + each other
 pytest tests/                            # unit and integration tests against updated exports
 pytest tests/ -n auto                    # the same, in parallel (pytest-xdist, as in CI)

@@ -13,9 +13,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 
 def load_tier1(root: Path | None = None) -> list[str]:
@@ -23,7 +22,7 @@ def load_tier1(root: Path | None = None) -> list[str]:
     path = (root or project_root()) / "data" / "watch" / "rosters.yaml"
     if not path.exists():
         return []
-    config = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    config = safe_load(path.read_text(encoding="utf-8")) or {}
     return [str(entry["id"]) for entry in config.get("tier1") or []]
 
 
@@ -142,7 +141,7 @@ def changed_base_records(
     for path in sorted(set(changed) - set(renamed_from.values())):
         if path.endswith(".yaml"):
             text = _git(root, "show", f"{merge_base}:{renamed_from.get(path, path)}")
-            records[path] = (yaml.safe_load(text) or {}) if text is not None else None
+            records[path] = (safe_load(text) or {}) if text is not None else None
     return records
 
 
@@ -182,7 +181,7 @@ def _deprecated_statuses() -> dict[str, set[str]]:
     from internacia_builder.paths import project_root  # noqa: PLC0415
 
     path = project_root() / "data" / "schemas" / "includes_status.yaml"
-    statuses = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}
+    statuses = (safe_load(path.read_text(encoding="utf-8")) or {}).get("statuses") or {}
     return {
         str(name): set((spec.get("deprecated") or {}).get("replacements") or [])
         for name, spec in statuses.items()

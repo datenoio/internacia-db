@@ -180,3 +180,26 @@ def test_load_intblock_aliases_reads_source(tmp_path):
     )
     aliases = builder.load_intblock_aliases(tmp_path)
     assert aliases == [{"alias": "OLD", "target": "NEW", "reason": "renamed", "since": "1.4.0", "note": ""}]
+
+
+def test_zstd_level_defaults_to_the_release_level_and_reads_the_override(monkeypatch):
+    from internacia_builder import export
+
+    monkeypatch.delenv(export.ZSTD_LEVEL_ENV, raising=False)
+    assert export.zstd_level() == export.RELEASE_ZSTD_LEVEL == 22
+    monkeypatch.setenv(export.ZSTD_LEVEL_ENV, " 3 ")
+    assert export.zstd_level() == 3
+    for bad in ("0", "23", "fast"):
+        monkeypatch.setenv(export.ZSTD_LEVEL_ENV, bad)
+        with pytest.raises(ValueError, match=export.ZSTD_LEVEL_ENV):
+            export.zstd_level()
+
+
+def test_yaml_loader_uses_libyaml_and_matches_the_python_parser():
+    import yaml
+
+    from internacia_builder.yaml_io import SafeLoader, safe_load
+
+    assert SafeLoader is getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+    text = "a: 2026-11-21\nb: [1, 2.5, null, yes]\nflag: 🇦🇩\n"
+    assert safe_load(text) == yaml.load(text, Loader=yaml.SafeLoader)  # noqa: S506

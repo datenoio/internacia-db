@@ -11,6 +11,7 @@ import yaml
 
 from internacia_builder import release
 from internacia_builder.contract import build_contract
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -110,7 +111,7 @@ def test_plan_nothing_to_release(repo):
 
 def test_plan_patch_for_changed_values(repo):
     path = repo / "data/countries/FR.yaml"
-    record = yaml.safe_load(path.read_text(encoding="utf-8"))
+    record = safe_load(path.read_text(encoding="utf-8"))
     record["capital_city"]["name"] = "Paris (updated)"
     path.write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False), encoding="utf-8")
     _commit(repo)

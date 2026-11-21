@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Any
 
 import jsonschema
-import yaml
 
 from internacia_builder.native_names import check_native_name_keys
+from internacia_builder.yaml_io import safe_load
 
 ALPHA3 = re.compile(r"^[A-Z]{3}$")
 ISO4217 = re.compile(r"^[A-Z]{3}$")
@@ -1009,7 +1009,7 @@ def _load_attribute_vocabs(vocabs_dir: Path | None = None) -> dict[str, set[str]
         ids: set[str] = set()
         if path.exists():
             with path.open(encoding="utf-8") as f:
-                entries = yaml.safe_load(f) or []
+                entries = safe_load(f) or []
             for entry in entries:
                 if isinstance(entry, dict) and entry.get("id"):
                     ids.add(str(entry["id"]))

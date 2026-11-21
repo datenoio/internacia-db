@@ -2,7 +2,8 @@
 
 import pytest
 import seed_country_crosswalks as crosswalks
-import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 SOURCES = {
     field: {
@@ -35,7 +36,7 @@ centroid:
         ("geonames_id",),
     )
 
-    record = yaml.safe_load(updated)
+    record = safe_load(updated)
     assert record["geonames_id"] == "123"
     assert any(p["field"] == "geonames_id" for p in record["provenance"])
     assert record["centroid"] == {"lat": 0, "lng": 0}
@@ -55,7 +56,7 @@ provenance: []
         ("geonames_id",),
     )
 
-    assert yaml.safe_load(updated)["provenance"][0]["field"] == "geonames_id"
+    assert safe_load(updated)["provenance"][0]["field"] == "geonames_id"
     assert [a["action"] for a in actions] == ["provenance_added"]
     assert conflicts == []
 
@@ -91,7 +92,7 @@ provenance:
         refresh_provenance=True,
     )
 
-    entry = yaml.safe_load(updated)["provenance"][0]
+    entry = safe_load(updated)["provenance"][0]
     assert entry["source"] == "Source for geonames_id"
     assert entry["retrieved_at"] == "2026-09-29"
     assert [a["action"] for a in actions] == ["provenance_refreshed"]
@@ -135,7 +136,7 @@ def test_reconcile_allows_explicit_overwrite():
         allow_overwrite=True,
     )
 
-    assert yaml.safe_load(updated)["fifa_code"] == "NEW"
+    assert safe_load(updated)["fifa_code"] == "NEW"
     assert [a["action"] for a in actions] == ["updated", "provenance_added"]
     assert conflicts == []
 

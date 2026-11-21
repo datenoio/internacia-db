@@ -11,9 +11,12 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import requests
 import typer
 import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer()
 
@@ -171,7 +174,7 @@ def validate_yaml_file(file_path: Path, check_http: bool = True, check_wikidata:
 
     try:
         with open(file_path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+            data = safe_load(f)
 
         if not data:
             return False, ["File is empty or contains only null"]

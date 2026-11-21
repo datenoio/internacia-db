@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import yaml
+from internacia_builder.yaml_io import safe_load
 
 PRIORITY_TO_LEVEL = {
     "high": "IMPORTANT",
@@ -16,7 +16,7 @@ PRIORITY_TO_LEVEL = {
 
 def load_yaml(path: Path) -> Any:
     with path.open(encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        return safe_load(f)
 
 
 def is_null_intblock_field(record: dict[str, Any], field: str) -> bool:

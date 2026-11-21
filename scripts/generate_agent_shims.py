@@ -12,7 +12,9 @@ import re
 import sys
 from pathlib import Path
 
-import yaml
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
+
+from internacia_builder.yaml_io import safe_load
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates" / "agent-shims"
@@ -37,7 +39,7 @@ def render(template: Path, fragments: dict[str, str]) -> str:
 
 
 def outputs() -> dict[Path, str]:
-    fragments = yaml.safe_load(FRAGMENTS.read_text(encoding="utf-8"))
+    fragments = safe_load(FRAGMENTS.read_text(encoding="utf-8"))
     files = {
         ROOT / path.relative_to(TEMPLATES): render(path, fragments)
         for path in sorted(TEMPLATES.rglob("*"))

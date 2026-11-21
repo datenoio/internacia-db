@@ -11,6 +11,8 @@ import yaml
 from backfill_scope_category import BackfillValidationError
 from typer.testing import CliRunner
 
+from internacia_builder.yaml_io import safe_load
+
 RUNNER = CliRunner()
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = {
@@ -71,7 +73,7 @@ def test_curated_manifest_has_30_candidates_with_reviewed_split():
     assert sum(d.review_state == "pending_review" for d in manifest) == 12
     assert individually_approved <= reviewed
     for decision in manifest:
-        record = yaml.safe_load((ROOT / decision.path).read_text(encoding="utf-8"))
+        record = safe_load((ROOT / decision.path).read_text(encoding="utf-8"))
         assert record["status"] == decision.expected_status
 
 
@@ -97,7 +99,7 @@ def test_apply_refuses_entire_cohort_until_each_entry_reviewed(tmp_path: Path):
 
 def test_fully_reviewed_apply_preserves_other_fields_and_is_idempotent(tmp_path: Path):
     manifest, paths = _fixture(tmp_path, second_reviewed=True)
-    before = {rid: yaml.safe_load(path.read_text(encoding="utf-8")) for rid, path in paths.items()}
+    before = {rid: safe_load(path.read_text(encoding="utf-8")) for rid, path in paths.items()}
 
     first = migration.execute_backfill(tmp_path, manifest, mode="apply")
     second = migration.execute_backfill(tmp_path, manifest, mode="apply")
@@ -107,7 +109,7 @@ def test_fully_reviewed_apply_preserves_other_fields_and_is_idempotent(tmp_path:
     assert second.applied == 0 and second.already_set == 2
     assert check.exit_code == 0 and "already_set=2" in check.output
     for rid, path in paths.items():
-        after = yaml.safe_load(path.read_text(encoding="utf-8"))
+        after = safe_load(path.read_text(encoding="utf-8"))
         assert after["scope_category"] == ("treaty_body" if rid == "HIST" else "reference_enumeration")
         assert after["includes"] == before[rid]["includes"]
         assert after["provenance"][:-1] == before[rid]["provenance"]
@@ -149,7 +151,7 @@ def test_status_drift_and_existing_category_are_rejected(tmp_path: Path):
 
 def test_reviewed_decision_without_evidence_is_rejected(tmp_path: Path):
     manifest, _ = _fixture(tmp_path)
-    payload = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    payload = safe_load(manifest.read_text(encoding="utf-8"))
     del payload["records"]["HIST"]["evidence"]
     manifest.write_text(yaml.safe_dump(payload), encoding="utf-8")
     with pytest.raises(BackfillValidationError, match="needs record-specific evidence"):
@@ -158,7 +160,7 @@ def test_reviewed_decision_without_evidence_is_rejected(tmp_path: Path):
 
 def test_manifest_rejects_formal_status_and_unsafe_path(tmp_path: Path):
     manifest, _ = _fixture(tmp_path)
-    payload = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+    payload = safe_load(manifest.read_text(encoding="utf-8"))
     payload["records"]["HIST"]["expected_status"] = "formal"
     manifest.write_text(yaml.safe_dump(payload), encoding="utf-8")
     with pytest.raises(BackfillValidationError, match="invalid category or non-formal status"):

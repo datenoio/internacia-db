@@ -6,6 +6,8 @@ import backfill_includes_joined as backfill
 import pytest
 import yaml
 
+from internacia_builder.yaml_io import safe_load
+
 EVIDENCE = [{"source": "Org - Member states", "url": "https://example.org/members", "retrieved_at": "2026-11-21"}]
 
 
@@ -57,12 +59,12 @@ def test_apply_adds_joined_after_status_and_provenance_only(tmp_path):
     left = "  left: '2020-01-31'\n  note: Withdrew\n"
     path = _write(tmp_path, "ORG", _member("FR") + _member("GB", "former_member", left),
                   extra="provenance:\n- field: wikidata_id\n  source: Wikidata\n  retrieved_at: '2026-01-01'\n")
-    before = yaml.safe_load(path.read_text(encoding="utf-8"))
+    before = safe_load(path.read_text(encoding="utf-8"))
     joined = {"FR": "1958-01-01", "GB": "1973-01-01"}
     backfill.execute_backfill(tmp_path, _manifest(tmp_path, {"ORG": _entry(joined)}), mode="apply")
     text = path.read_text(encoding="utf-8")
     assert "  status: former_member\n  joined: '1973-01-01'\n  left: '2020-01-31'\n" in text
-    after = yaml.safe_load(text)
+    after = safe_load(text)
     assert {i["id"]: i["joined"] for i in after["includes"]} == joined
     assert [p["field"] for p in after["provenance"]] == ["includes", "wikidata_id"]
     for key in before:
@@ -79,7 +81,7 @@ def test_apply_sets_last_verified_only_when_dates_are_added(tmp_path):
     manifest = _manifest(tmp_path, {"ORG": _entry({"FR": "1949"}), "DONE": _entry({"FR": "1949"})},
                          verified_on="2026-11-21")
     backfill.execute_backfill(tmp_path, manifest, mode="apply")
-    assert yaml.safe_load(changed.read_text(encoding="utf-8"))["last_verified"] == "2026-11-21"
+    assert safe_load(changed.read_text(encoding="utf-8"))["last_verified"] == "2026-11-21"
     assert unchanged.read_text(encoding="utf-8") == before
 
 

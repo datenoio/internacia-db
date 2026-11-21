@@ -8,6 +8,7 @@ import pytest
 import yaml
 
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 DESIGN = {"mandate": "security", "decision_rule": "consensus", "enforcement": ["none"], "mutual_defence": True}
 EVIDENCE = {"source": "Founding treaty", "url": "https://example.org/treaty", "retrieved_at": "2026-11-20"}
@@ -76,7 +77,7 @@ def test_apply_inserts_block_and_provenance_surgically(tmp_path):
     assert report.applied == 1
     text = path.read_text(encoding="utf-8")
     assert text.startswith("id: EXAMPLE\nstatus: formal\nscope_category: igo\ninstitutional_design:\n  mandate: security\n")
-    record = yaml.safe_load(text)
+    record = safe_load(text)
     assert record["institutional_design"] == DESIGN
     assert [p["field"] for p in record["provenance"]] == ["institutional_design", "includes"]
     assert record["includes"] == [{"id": "AA", "status": "member"}]
@@ -87,7 +88,7 @@ def test_subfields_follow_schema_order(tmp_path):
     path = _write_record(root, "EXAMPLE")
     shuffled = {"mutual_defence": True, "enforcement": ["none"], "mandate": "security"}
     backfill.execute_backfill(root, _write_manifest(root, {"EXAMPLE": _entry(shuffled)}), mode="apply")
-    keys = list(yaml.safe_load(path.read_text(encoding="utf-8"))["institutional_design"])
+    keys = list(safe_load(path.read_text(encoding="utf-8"))["institutional_design"])
     assert keys == ["mandate", "enforcement", "mutual_defence"]
 
 
@@ -99,7 +100,7 @@ def test_several_sources_become_several_provenance_entries(tmp_path):
 
     backfill.execute_backfill(root, manifest, mode="apply")
 
-    provenance = yaml.safe_load(path.read_text(encoding="utf-8"))["provenance"]
+    provenance = safe_load(path.read_text(encoding="utf-8"))["provenance"]
     assert [p["url"] for p in provenance] == [EVIDENCE["url"], second["url"]]
 
 

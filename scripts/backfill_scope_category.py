@@ -16,8 +16,11 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
 import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(
     add_completion=False,
@@ -74,7 +77,7 @@ class BackfillReport:
 
 def load_assignments(manifest_path: Path) -> tuple[dict[str, str], dict[str, Any]]:
     """Load and validate the explicit ID-to-category manifest."""
-    raw = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    raw = safe_load(manifest_path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict):
         raise BackfillValidationError("manifest must contain a YAML mapping")
 
@@ -187,7 +190,7 @@ def reconcile_text(
     With ``expected_current``, a record whose category is exactly that value is reclassified
     to ``target``; any other different value is still a conflict.
     """
-    record = yaml.safe_load(text)
+    record = safe_load(text)
     if not isinstance(record, dict):
         raise BackfillValidationError("intblock YAML must contain a mapping")
 
@@ -235,7 +238,7 @@ def reconcile_text(
         updated = _insert_scope_provenance(updated, evidence)
         changed = True
 
-    parsed = yaml.safe_load(updated)
+    parsed = safe_load(updated)
     if not isinstance(parsed, dict) or parsed.get("scope_category") != target:
         raise BackfillValidationError("surgical scope_category insertion failed validation")
     if evidence:
@@ -253,7 +256,7 @@ def discover_records(root: Path) -> dict[str, Path]:
     """Index all intblock source files and reject duplicate ids."""
     records: dict[str, Path] = {}
     for path in sorted((root / "data" / "intblocks").glob("*/*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(record, dict) or not record.get("id"):
             continue
         record_id = str(record["id"])
@@ -283,7 +286,7 @@ def plan_backfill(
     for record_id, category in sorted(assignments.items()):
         path = records[record_id]
         text = path.read_text(encoding="utf-8")
-        record = yaml.safe_load(text)
+        record = safe_load(text)
         # A reclassification replaces a category already set, so the record's status was
         # settled when that category was assigned; only first assignments must be formal.
         if record.get("status") != "formal" and record_id not in expected_current:

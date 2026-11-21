@@ -68,6 +68,35 @@ def test_every_python_runs_the_suite_and_the_costly_checks_run_once():
     assert all("-n auto" in s["run"] for s in validate["steps"] if re.search(suite, s.get("run", "")))
     assert legs(r"--cov=internacia_builder") == ["3.12"]
     assert len(legs(r"check_reproducible_build\.py")) == 1
+    assert len(legs(r"scripts/builder\.py build")) == len(versions) + 1, "one build per leg, plus the reproducibility build"
+
+    # Checks that do not depend on the Python version run on one leg, never the coverage leg
+    # (the slowest) or the reproducibility leg (which builds twice).
+    data_checks = [
+        r"pip-audit --requirement",
+        r"check_min_duckdb\.py",
+        r"check_generated_artifacts\.py",
+        r"check_release_bundle\.py",
+        r"validate_countries\.py",
+        r"validate_intblocks\.py",
+        r"check_doc_counts\.py",
+        r"check_markdown_links\.py",
+        r"generate_data_dictionary\.py --check",
+        r"generate_agent_shims\.py --check",
+        r"analyze-quality",
+        r"check_quality_report\.py",
+    ]
+    busy = {*legs(r"--cov=internacia_builder"), *legs(r"check_reproducible_build\.py")}
+    for check in data_checks:
+        ran = legs(check)
+        assert len(ran) == 1 and ran[0] not in busy, f"{check} runs on {ran}"
+
+
+def test_only_pull_request_builds_lower_the_zstd_level():
+    assert workflow("validate.yml")["jobs"]["validate"]["env"]["INTERNACIA_ZSTD_LEVEL"] == "3"
+    for path in (project_root() / ".github/workflows").glob("*.yml"):
+        if path.name != "validate.yml":
+            assert "INTERNACIA_ZSTD_LEVEL" not in path.read_text(encoding="utf-8"), path.name
 
 
 def test_every_action_is_pinned_to_a_commit_with_its_version():

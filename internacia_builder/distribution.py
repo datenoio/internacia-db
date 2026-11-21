@@ -7,12 +7,11 @@ import shutil
 import tomllib
 from pathlib import Path
 
-import yaml
-
 from internacia_builder import __version__
 from internacia_builder.contract import CONTRACT_FILE, contract_version, file_digest, verify_checksums
 from internacia_builder.manifest import get_dataset_version
 from internacia_builder.paths import project_root
+from internacia_builder.yaml_io import safe_load
 
 
 def validate_package(root: Path, package: dict | None = None) -> None:
@@ -42,7 +41,7 @@ def check_release_version(version: str, datasets: Path) -> None:
     expected = version.removeprefix("v")
     root = project_root()
     package_version = tomllib.loads((root / "pyproject.toml").read_text())["project"]["version"]
-    citation = yaml.safe_load((root / "CITATION.cff").read_text(encoding="utf-8")) or {}
+    citation = safe_load((root / "CITATION.cff").read_text(encoding="utf-8")) or {}
     values = {
         "CHANGELOG": get_dataset_version(),
         "package": __version__,

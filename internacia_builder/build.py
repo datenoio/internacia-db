@@ -94,6 +94,7 @@ from internacia_builder.validate.registry import (
     load_context,
     run_rules,
 )
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(help="Dataset builder for Internacia project")
 
@@ -205,7 +206,7 @@ def build(
     typer.echo("📁 Loading blocktypes data...")
     try:
         with open(blocktypes_file, encoding="utf-8") as f:
-            blocktypes_data = yaml.safe_load(f)
+            blocktypes_data = safe_load(f)
             if blocktypes_data is None:
                 blocktypes_data = []
             elif not isinstance(blocktypes_data, list):

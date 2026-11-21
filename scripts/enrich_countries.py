@@ -19,6 +19,7 @@ from internacia_builder import native_names as nn
 from internacia_builder import wb_classification as wbc
 from internacia_builder.enrichment import write_enriched_yaml
 from internacia_builder.http import fetch_json as _fetch_json
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(help="Enrich country profile fields from World Bank and Wikidata")
 
@@ -110,7 +111,7 @@ def sync_wbgroup_blocks(
         path = WBGROUP_DIR / f"{block_id}.yaml"
         if not path.exists():
             continue
-        block = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        block = safe_load(path.read_text(encoding="utf-8")) or {}
         if not wbc.is_wb_group_block(block) or not wbc.sync_wb_group_block(block, countries_by_code):
             continue
         changed.append(block_id)
@@ -592,7 +593,7 @@ def refresh_native_names_command(
 ) -> None:
     """Rebuild native_names from Wikidata for each entity's own languages."""
     paths = [COUNTRIES_DIR / f"{code.upper()}.yaml"] if code else sorted(COUNTRIES_DIR.glob("*.yaml"))
-    records = [(path, yaml.safe_load(path.read_text(encoding="utf-8")) or {}) for path in paths]
+    records = [(path, safe_load(path.read_text(encoding="utf-8")) or {}) for path in paths]
     qids = [str(r["wikidata_id"]) for _, r in records if r.get("wikidata_id")]
     typer.echo(f"Fetching Wikidata for {len(set(qids))} entities...")
     entities = fetch_wikidata_entities(qids, wikidata_languages([r for _, r in records]))
@@ -646,7 +647,7 @@ def enrich(
     records: list[tuple[Path, dict[str, Any]]] = []
     qids: list[str] = []
     for path in paths:
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = safe_load(path.read_text(encoding="utf-8")) or {}
         qid = data.get("wikidata_id") or MANUAL_WIKIDATA.get(data.get("code", ""), "")
         if qid:
             qids.append(qid)
@@ -695,7 +696,7 @@ def refresh_classifications(
     countries: dict[str, dict[str, Any]] = {}
     updated = 0
     for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        record = safe_load(path.read_text(encoding="utf-8")) or {}
         countries[str(record.get("code"))] = record
         if not refresh_classification(record, classifications):
             continue
@@ -718,7 +719,7 @@ def backfill_gini(
     missing_iso3: list[str] = []
     paths_by_iso3: dict[str, Path] = {}
     for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        record = safe_load(path.read_text(encoding="utf-8")) or {}
         if record.get("gini"):
             continue
         iso3 = str(record.get("iso3code") or "")
@@ -733,7 +734,7 @@ def backfill_gini(
     typer.echo(f"  {len(wb_gini)} values returned")
     updated = 0
     for iso3, path in paths_by_iso3.items():
-        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        record = safe_load(path.read_text(encoding="utf-8")) or {}
         if record.get("gini"):
             continue
         gini = indicator_from_wb(wb_gini.get(iso3), "World Bank", "SI.POV.GINI")
@@ -756,7 +757,7 @@ def backfill_classifications(
     """Backfill adminregion and classification provenance without external fetches."""
     updated = 0
     for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        record = safe_load(path.read_text(encoding="utf-8")) or {}
         before = yaml.dump(record, sort_keys=True)
         if not record.get("region"):
             inferred = infer_wb_classification(record)
@@ -790,7 +791,7 @@ def backfill_provenance(
     """Add provenance entries from existing enriched fields without re-fetching."""
     updated = 0
     for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = safe_load(path.read_text(encoding="utf-8")) or {}
         before = yaml.dump(data.get("provenance"), sort_keys=True)
         sync_provenance_from_record(data)
         after = yaml.dump(data.get("provenance"), sort_keys=True)
@@ -817,7 +818,7 @@ def check_enrichment(
     import validate_countries as vc
 
     completeness_path = ROOT / "data" / "schemas" / "countries_completeness.yaml"
-    cfg = yaml.safe_load(completeness_path.read_text(encoding="utf-8")) or {}
+    cfg = safe_load(completeness_path.read_text(encoding="utf-8")) or {}
     threshold = max_age_months or int((cfg.get("provenance") or {}).get("max_age_months") or 12)
 
     stale = 0
@@ -825,7 +826,7 @@ def check_enrichment(
     track_fields = ("population", "area", "gini", "native_names", "centroid", "region", "adminregion")
 
     for path in sorted(COUNTRIES_DIR.glob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        record = safe_load(path.read_text(encoding="utf-8")) or {}
         rel = str(path.relative_to(ROOT))
         for w in vc.validate_provenance_freshness(record, rel, max_age_months=threshold):
             typer.echo(f"STALE: {w}")

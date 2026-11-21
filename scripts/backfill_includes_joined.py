@@ -23,8 +23,11 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
 
+import _checkout  # noqa: F401  (this checkout's internacia_builder, not an installed one)
 import typer
 import yaml
+
+from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(add_completion=False, help="Validate or apply reviewed includes[].joined dates.")
 
@@ -67,7 +70,7 @@ class BackfillReport:
 
 
 def load_manifest(path: Path) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
-    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    raw = safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(raw, dict) or not isinstance(raw.get("records"), dict) or not raw["records"]:
         raise BackfillValidationError("manifest must have a non-empty records mapping")
     expected = raw.get("expected_count")
@@ -158,7 +161,7 @@ def _set_last_verified(text: str, verified_on: str) -> str:
 
 
 def reconcile(text: str, entry: dict[str, Any], verified_on: str | None = None) -> tuple[str, PlannedChange]:
-    record = yaml.safe_load(text)
+    record = safe_load(text)
     if not isinstance(record, dict):
         raise BackfillValidationError("intblock YAML must contain a mapping")
     joined = {str(k): str(v) for k, v in entry["joined"].items()}
@@ -177,7 +180,7 @@ def reconcile(text: str, entry: dict[str, Any], verified_on: str | None = None) 
     updated = _edit_text(text, targets, evidence, known_urls)
     if verified_on and targets:
         updated = _set_last_verified(updated, verified_on)
-    parsed = yaml.safe_load(updated)
+    parsed = safe_load(updated)
     expected = copy.deepcopy(record)
     if verified_on and targets:
         expected["last_verified"] = verified_on
@@ -194,7 +197,7 @@ def reconcile(text: str, entry: dict[str, Any], verified_on: str | None = None) 
 def discover_records(root: Path) -> dict[str, Path]:
     records: dict[str, Path] = {}
     for path in sorted((root / "data" / "intblocks").glob("*/*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = safe_load(path.read_text(encoding="utf-8"))
         if isinstance(record, dict) and record.get("id"):
             if str(record["id"]) in records:
                 raise BackfillValidationError(f"duplicate intblock id {record['id']}")
