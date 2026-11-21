@@ -7,13 +7,25 @@ institutional_design:
   mandate: general
   decision_rule: consensus
   mutual_defence: false
+geographic_scope: regional
+regions:
+- Asia
+- Europe
+- Caucasus
+- Central Asia
 languages:
 - ru
 links:
-- url: http://www.cis.minsk.by
+- url: https://cis.minsk.by/
   type: website
-- url: https://en.wikipedia.org/wiki/CIS
+- url: https://e-cis.info/
+  type: website
+- url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States
   type: wikipedia
+- url: https://ru.wikipedia.org/wiki/Содружество_Независимых_Государств
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q7779
+  type: wikidata
 name: Commonwealth of Independent States
 includes:
 - id: AM
@@ -25,19 +37,13 @@ includes:
   name: Azerbaijan
   type: country
   status: member
+  note: Signed the Alma-Ata Protocol on 21 December 1991; its parliament ratified the founding agreement only on 24 September
+    1993.
 - id: BY
   name: Belarus
   type: country
   status: member
   joined: '1991-12-08'
-- id: GE
-  name: Georgia
-  type: country
-  status: former_member
-  joined: '1993-12'
-  left: '2009-08-18'
-  note: Withdrew following the 2008 Russo-Georgian war; withdrawal effective 18 August
-    2009
 - id: KZ
   name: Kazakhstan
   type: country
@@ -52,8 +58,10 @@ includes:
   name: Moldova
   type: country
   status: member
-  note: Withdrawal from CIS institutions in progress; parliament has denounced multiple
-    CIS agreements since 2023
+  note: Signed the Alma-Ata Protocol on 21 December 1991 and ratified the founding agreement on 8 April 1994.
+    Parliament adopted the denunciation of the Agreement on the Establishment of the CIS, its Alma-Ata Protocol and the
+    CIS Charter on 2 April 2026. Moldova deposited its withdrawal notifications on 8 April 2026, so under Charter Article 9
+    it leaves the Commonwealth on 8 April 2027. It intends to stay in about a hundred CIS economic agreements.
 - id: RU
   name: Russian Federation
   type: country
@@ -64,57 +72,218 @@ includes:
   type: country
   status: member
   joined: '1991-12-21'
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: associate_member
-  joined: '1991-12-21'
-  note: Associate member since 2005; never ratified the CIS Charter
-- id: UA
-  name: Ukraine
-  type: country
-  status: former_member
-  joined: '1991-12-08'
-  left: '2018'
-  note: Founding participant that never ratified the CIS Charter; ended participation
-    in CIS statutory bodies in 2018
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
   joined: '1991-12-21'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: associate_member
+  joined: '1991-12-21'
+  note: Signed the Alma-Ata Protocol but never ratified the CIS Charter. Associate member since the Kazan summit of 26 August
+    2005, in line with its permanent neutrality. Turkmenistan holds the CIS chairmanship in 2026.
+- id: UA
+  name: Ukraine
+  type: country
+  status: former_member
+  joined: '1991-12-08'
+  left: '2018-05-19'
+  note: Signed the Agreement on the Establishment of the CIS on 8 December 1991 but never ratified the Charter, so it was a
+    founding state and participant, not a Charter member. A presidential decree of 19 May 2018 ended its participation in
+    the CIS statutory bodies. Ukraine has since left many CIS agreements but has not denounced the founding agreement.
+- id: GE
+  name: Georgia
+  type: country
+  status: former_member
+  joined: '1993-12'
+  left: '2009-08-18'
+  note: Joined in December 1993. After the August 2008 war with Russia, parliament voted to withdraw on 14 August 2008 and
+    Georgia notified the Executive Committee on 18 August 2008; the withdrawal took effect on 18 August 2009.
 membership_count: 10
 founding_members:
-- AM
 - AZ
+- AM
 - BY
-- GE
 - KZ
 - KG
 - MD
 - RU
 - TJ
 - TM
-- UA
 - UZ
-description: Regional organisation whose participating countries are former Soviet
-  Republics.
-notes: The 2023 CIS Agreement on Free Trade in Services, Establishment, Operations and Investment is a separate instrument recorded as `CISFTASERVICES` (seven signatories; Azerbaijan and Moldova are not parties). The 2011 goods FTA remains `CISFTA`.
+- UA
+founded: '1991-12-08'
+headquarters:
+  city: Minsk
+  country: BY
+  coordinates:
+    lat: 53.8964719
+    lng: 27.5573448
+secretariat:
+  location: 17 Kirova Street, Minsk 220030, Belarus; branch office at 34 Sofiyskaya Embankment, Moscow 115035, Russia
+  organization: CIS Executive Committee
+suborganizations:
+- id: IACIS
+  name: CIS Interparliamentary Assembly
+- id: ECCIS
+  name: Economic Court of the Commonwealth of Independent States
+- id: CISSTAT
+  name: Interstate Statistical Committee of the Commonwealth of Independent States
+- id: IAC
+  name: Interstate Aviation Committee
+- id: EASC
+  name: Interstate Council for Standardization, Metrology and Certification
+- id: IFESCCO
+  name: Intergovernmental Foundation for Educational, Scientific and Cultural Cooperation
+wikidata_id: Q7779
+legal_status: intergovernmental
+recognition_status: Observer in the United Nations General Assembly since 24 March 1994 (resolution 48/237)
+official_documents:
+- url: https://ru.wikisource.org/wiki/Соглашение_о_создании_Содружества_Независимых_Государств
+  type: treaty
+  title: Agreement on the Establishment of the Commonwealth of Independent States, Viskuli, 8 December 1991
+- url: https://ru.wikisource.org/wiki/Алма-Атинская_декларация
+  type: declaration
+  title: Alma-Ata Declaration, 21 December 1991
+- url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+  type: charter
+  title: Charter of the Commonwealth of Independent States, Minsk, 22 January 1993
+- url: https://undocs.org/A/RES/48/237
+  type: resolution
+  title: UN General Assembly resolution 48/237, Observer status for the Commonwealth of Independent States, 24 March 1994
+description: Regional organization of former Soviet republics. Belarus, Russia and Ukraine created it with the Agreement on
+  the Establishment of the CIS, signed at Viskuli on 8 December 1991, and the Alma-Ata Protocol of 21 December 1991 made
+  eleven states its equal founders. The Charter, adopted in Minsk on 22 January 1993, makes members of the founders that
+  accepted its obligations. Members cooperate on foreign policy, the economy and trade, collective security, border
+  protection, law enforcement and humanitarian matters. The Council of Heads of State and the Council of Heads of Government
+  decide by consensus, and the Executive Committee in Minsk runs the organization day to day.
+notes: Under Charter Article 7 the founding states are those that signed and ratified the 1991 Agreement and its Protocol, and
+  members are the founders that accepted the Charter within a year; the Charter entered into force for members between
+  March 1993 and April 1994. Article 8 provides for associate members and observers, Article 9 lets a member withdraw on 12
+  months' written notice to the depositary (the Government of Belarus), and Article 35 makes Russian the working language.
+  Statutory and sectoral bodies include the Council of Heads of State, the Council of Heads of Government, the Council of
+  Foreign Ministers, the Council of Defence Ministers, the Council of Commanders of Border Troops, the Economic Council, the
+  Council of Permanent Representatives, the Executive Committee, the Interparliamentary Assembly in St Petersburg and the
+  Economic Court in Minsk. Sergey Lebedev has headed the Executive Committee since 5 October 2007, first as Chairman of the
+  Executive Committee and Executive Secretary, and as Secretary General since 1 January 2023. Chairmanship of the CIS
+  rotates yearly; Turkmenistan holds it in 2026. Georgia joined in 1993 and left in 2009, Ukraine stopped taking part in the
+  statutory bodies in 2018, and Moldova notified its withdrawal in April 2026. The 2023 CIS Agreement on Free Trade in
+  Services, Establishment, Operations and Investment is a separate instrument recorded as `CISFTASERVICES` (seven
+  signatories; Azerbaijan and Moldova are not parties). The 2011 goods FTA remains `CISFTA`.
 tags:
 - CIS
+- MDB
+- MDH
 - commonwealth
 - cooperation
+- free_trade
 - independent
 - political
+- post-soviet
 - regional
 - regional_cooperation
+- security
 - states
+- СНГ
+- СНД
+- ТМД
+- ԱՊՀ
 topics:
 - key: political
   name: Political
 - key: regional_cooperation
   name: Regional Cooperation
-wikidata_id: Q7779
+- key: security
+  name: Security
+- key: trade
+  name: Trade
+other_names:
+- id: ar
+  name: رابطة الدول المستقلة
+- id: az
+  name: Müstəqil Dövlətlər Birliyi
+- id: be
+  name: Садружнасць Незалежных Дзяржаў
+- id: de
+  name: Gemeinschaft Unabhängiger Staaten
+- id: en
+  name: Commonwealth of Independent States
+- id: es
+  name: Comunidad de Estados Independientes
+- id: fr
+  name: Communauté des États indépendants
+- id: hy
+  name: Անկախ պետությունների համագործակցություն
+- id: ja
+  name: 独立国家共同体
+- id: ka
+  name: დამოუკიდებელ სახელმწიფოთა თანამეგობრობა
+- id: kk
+  name: Тәуелсіз Мемлекеттер Достастығы
+- id: ky
+  name: Көзкарандысыз Мамлекеттер Шериктештиги
+- id: pl
+  name: Wspólnota Niepodległych Państw
+- id: pt
+  name: Comunidade dos Estados Independentes
+- id: ro
+  name: Comunitatea Statelor Independente
+- id: ru
+  name: Содружество Независимых Государств
+- id: tg
+  name: Иттиҳоди Давлатҳои Мустақил
+- id: tk
+  name: Garaşsyz Döwletleriň Arkalaşygy
+- id: tr
+  name: Bağımsız Devletler Topluluğu
+- id: uk
+  name: Співдружність Незалежних Держав
+- id: zh
+  name: 独立国家联合体
+acronyms:
+- lang: en
+  value: CIS
+- lang: ru
+  value: СНГ
+- lang: uk
+  value: СНД
+- lang: be
+  value: СНД
+- lang: kk
+  value: ТМД
+- lang: ky
+  value: КМШ
+- lang: tg
+  value: ИДМ
+- lang: az
+  value: MDB
+- lang: uz
+  value: MDH
+- lang: hy
+  value: ԱՊՀ
+- lang: ka
+  value: დსთ
+- lang: tk
+  value: GDA
+- lang: ro
+  value: CSI
+- lang: de
+  value: GUS
+- lang: fr
+  value: CEI
+- lang: es
+  value: CEI
+- lang: pt
+  value: CEI
+- lang: pl
+  value: WNP
+- lang: tr
+  value: BDT
+- lang: zh
+  value: 独联体
+last_verified: '2026-11-21'
 provenance:
 - field: includes
   source: "CIS Executive Committee - Historical note (e-cis.info)"
@@ -128,82 +297,110 @@ provenance:
   source: "Charter of the Commonwealth of Independent States (text via Russian Wikisource)"
   retrieved_at: "2026-11-20"
   url: "https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств"
+- field: includes
+  source: CIS Executive Committee
+  retrieved_at: '2026-10-22'
+  url: https://cis.minsk.by/map
+- field: includes
+  source: Wikidata P527 (Georgia end 2009-08-18; Ukraine end 2018-05-19)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q7779
+  license: CC0
+- field: includes
+  source: Wikipedia, membership table (signature and ratification dates, Turkmenistan associate status, Georgia and Ukraine)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States
+  license: CC-BY-SA
+- field: includes
+  source: Izvestia (CIS Secretary General on Moldova's withdrawal procedure, effective 8 April 2027)
+  retrieved_at: '2026-11-21'
+  url: https://iz.ru/2103844/2026-05-26/gensek-sng-zaiavil-o-nachale-protcedury-vykhoda-moldavii-iz-sodruzhestva
+- field: includes
+  source: Logos Press (Moldova to leave the CIS on 8 April 2027)
+  retrieved_at: '2026-11-21'
+  url: https://logos-pres.md/en/news/moldova-will-officially-leave-the-cis-on-april-8-2027/
+- field: includes
+  source: Euromaidan Press (2 April 2026 parliamentary vote on leaving the CIS)
+  retrieved_at: '2026-11-21'
+  url: https://euromaidanpress.com/2026/04/02/the-last-thread-that-keeps-us-anchored-in-a-toxic-bitter-past-moldovas-parliament-votes-to-leave-the-post-soviet-cis-bloc/
+- field: includes
+  source: RIA Novosti (Moldova's request to stay in CIS economic agreements, 19 June 2026)
+  retrieved_at: '2026-11-21'
+  url: https://ria.ru/20260619/moldaviya-2099971147.html
+- field: membership_count
+  source: CIS Executive Committee
+  retrieved_at: '2026-10-22'
+  url: https://cis.minsk.by/map
+- field: membership_count
+  source: Wikipedia infobox (9 member states and 1 associate state)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States
+  license: CC-BY-SA
+- field: founded
+  source: Agreement on the Establishment of the CIS (8 December 1991); Wikidata P571
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Соглашение_о_создании_Содружества_Независимых_Государств
+- field: founding_members
+  source: CIS Charter Article 7 (founders are signatories of the 1991 Agreement and its Protocol); Alma-Ata Declaration
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Алма-Атинская_декларация
+- field: languages
+  source: CIS Charter Article 35 (Russian is the working language)
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+- field: regions
+  source: Continents of current members and the associate member, then subregions of members outside Europe (AM, AZ
+    Caucasus; KZ, KG, TJ, TM, UZ Central Asia)
+  retrieved_at: '2026-11-21'
+- field: headquarters
+  source: CIS portal, Executive Committee general information (17 Kirova Street, Minsk)
+  retrieved_at: '2026-11-21'
+  url: https://e-cis.info/page/3466/81544/
+- field: headquarters
+  source: OpenStreetMap Nominatim (coordinates of 17 Kirova Street, Minsk 220030)
+  retrieved_at: '2026-11-21'
+  url: https://www.openstreetmap.org/way/25327685
+  license: ODbL
+- field: secretariat
+  source: CIS portal, Executive Committee general information and site footer (Minsk seat, Moscow branch)
+  retrieved_at: '2026-11-21'
+  url: https://e-cis.info/page/3466/81544/
+- field: suborganizations
+  source: Records in this dataset with partof CIS (IACIS, ECCIS, CISSTAT, IAC, EASC, IFESCCO)
+  retrieved_at: '2026-11-21'
+- field: recognition_status
+  source: UN General Assembly resolution 48/237 (24 March 1994, adopted without a vote)
+  retrieved_at: '2026-11-21'
+  url: https://undocs.org/A/RES/48/237
+- field: official_documents
+  source: Russian Wikisource (Agreement, Alma-Ata Declaration, Charter); UN Official Document System
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+- field: description
+  source: CIS Charter (Articles 7, 23) and the Agreement on the Establishment of the CIS
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+- field: notes
+  source: CIS Charter (Articles 7, 8, 9, 35 and 37, and the list of entry-into-force dates)
+  retrieved_at: '2026-11-21'
+  url: https://ru.wikisource.org/wiki/Устав_Содружества_Независимых_Государств
+- field: notes
+  source: CIS portal, Executive Committee and Secretary General pages (Lebedev since 5 October 2007; title Secretary
+    General since 1 January 2023; 2026 chairmanship of Turkmenistan)
+  retrieved_at: '2026-11-21'
+  url: https://e-cis.info/page/3466/81544/
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q7779
+  license: CC0
+- field: acronyms
+  source: Wikidata P1813 (short names with language tags)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q7779
+  license: CC0
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q7779
-  license: CC0
-- field: includes
-  source: official sources
-  retrieved_at: '2026-08-02'
-  url: https://cis.minsk.by/page/about
-- field: membership_count
-  source: official sources
-  retrieved_at: '2026-08-02'
-  url: https://cis.minsk.by/page/about
-- field: includes
-  source: CIS Executive Committee
-  retrieved_at: '2026-10-22'
-  url: https://cis.minsk.by/map
-- field: membership_count
-  source: CIS Executive Committee
-  retrieved_at: '2026-10-22'
-  url: https://cis.minsk.by/map
-last_verified: '2026-11-21'
-other_names:
-- id: ar
-  name: رابطة الدول المستقلة
-- id: de
-  name: Gemeinschaft Unabhängiger Staaten
-- id: en
-  name: Commonwealth of Independent States
-- id: es
-  name: Comunidad de Estados Independientes
-- id: fr
-  name: communauté des États indépendants
-- id: pt
-  name: Comunidade dos Estados Independentes
-- id: ru
-  name: Содружество Независимых Государств
-- id: zh
-  name: 獨立國家聯合體
-acronyms:
-- lang: en
-  value: CIS
-- lang: zh
-  value: 獨聯體
-- lang: zh
-  value: 独立国家联合体
-- lang: zh
-  value: 独联体
-- lang: fr
-  value: CEI
-- lang: ru
-  value: СНГ
-- lang: ru
-  value: CIS
-- lang: es
-  value: CEI
-- lang: de
-  value: GUS
-founded: '1991-12-08'
