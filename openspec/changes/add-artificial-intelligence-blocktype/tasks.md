@@ -1,6 +1,6 @@
 ## 0. Approval gate
 
-- [ ] 0.1 Obtain maintainer approval for `add-artificial-intelligence-blocktype` (the work below was done on 2026-11-21 at the maintainer's direct request, before this proposal)
+- [x] 0.1 Obtain maintainer approval for `add-artificial-intelligence-blocktype` (the work below was done on 2026-11-21 at the maintainer's direct request, before this proposal; approved on 2026-11-21)
 - [ ] 0.2 Resolve the open questions in `design.md`
 
 ## 1. Taxonomy
