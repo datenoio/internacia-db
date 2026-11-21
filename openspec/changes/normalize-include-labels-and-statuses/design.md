@@ -64,11 +64,28 @@ values stay valid until the MAJOR release, and `DEPRECATED_INCLUDE_STATUS` warns
 - `associated` → `associate_member` with the roster checked in both directions against the
   source and `last_verified` 2026-11-19: OECS (5), PASO (3), MSG (Indonesia; Wikipedia, the
   record's source), Dutch Language Union (Suriname; its Caribbean territories stay `associated`).
+- Completed 2026-11-21 (validation reports no `DEPRECATED_INCLUDE_STATUS`). GRECO, CEOS and FAO
+  were read from Wayback Machine copies of their official pages because the live pages served
+  bot checks; AMN's site did not respond, so its archived page was used:
+  - CEOS: 12 `associate` → `associate_member` (the agencies page heads the tier "32 Associate
+    Members"); roster checked against the 2026-10-03 copy, `last_verified` 2026-11-21.
+  - AMN: Bolivia and Chile `associate` → `associate_member` ("Associated members are the NSBs
+    of the countries registered as Associated States in MERCOSUR"). Term only: the only
+    readable copy (2025-05-29) predates the record's last check, so `last_verified` stays.
+  - GRECO: Belarus `associate` → `former_member`, not an associate tier. GRECO's members page
+    says Belarus "ceased to be a member of GRECO with effect from 1 May 2024".
+    `membership_count` 49 → 48 ("48 member States"); the Poland and Russian Federation
+    `joined` dates were corrected from the same page.
+  - FAO: Faroe Islands and Tokelau `associated` → `associate_member` ("two Associate
+    Members"); roster of 193 Member Nations, the EU and the two checked in both directions.
+  - CIAT: Angola, India, Morocco and Nigeria `associated` → `associate_member` ("two membership
+    categories in CIAT – member countries and associate member countries"); 42-country roster
+    checked against the NTO factsheet.
+  - IOTA: Korea `associated` → `associate_member` ("ASSOCIATE MEMBERS"); Uzbekistan added as
+    the second associate member (2026); first `last_verified`.
+  - IICA: Spain stays `associated` (listed as "Associated country").
 - Not recoded:
-  - GRECO, CEOS and FAO sit behind bot checks, and AMN, CIAT, IICA and IOTA did not load, so
-    15 `associate` entries remain and warn.
-  - ERRA's associate members page no longer lists GH, JO and PE and lists regulators the
-    record lacks, so its roster needs its own update first.
+  - ERRA's roster was refreshed in its own change, which recoded its associate members.
   - COPANT's page does not name the tier.
   - Cospas-Sarsat's categories (Ground Segment Providers, User States) are not association.
   - EUROCONTROL (Comprehensive Agreement States), EUCU, the Pacific Alliance (Singapore,

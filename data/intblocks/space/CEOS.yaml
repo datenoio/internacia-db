@@ -40,7 +40,7 @@ includes:
 - id: AT
   name: Austria
   type: country
-  status: associate
+  status: associate_member
   joined: '1994'
   note: UNOOSA
 - id: AU
@@ -70,7 +70,7 @@ includes:
 - id: CH
   name: Switzerland
   type: country
-  status: associate
+  status: associate_member
   joined: '1991'
   note: GCOS, WCRP, WMO
 - id: CN
@@ -88,7 +88,7 @@ includes:
 - id: EG
   name: Egypt, Arab Rep.
   type: country
-  status: associate
+  status: associate_member
   joined: '2025'
   note: AfSA
 - id: FR
@@ -100,7 +100,7 @@ includes:
 - id: GA
   name: Gabon
   type: country
-  status: associate
+  status: associate_member
   joined: '2015'
   note: AGEOS
 - id: GB
@@ -112,7 +112,7 @@ includes:
 - id: GR
   name: Greece
   type: country
-  status: associate
+  status: associate_member
   joined: '2025'
   note: HSC
 - id: IN
@@ -136,7 +136,7 @@ includes:
 - id: KE
   name: Kenya
   type: country
-  status: associate
+  status: associate_member
   joined: '1992'
   note: UNEP
 - id: KR
@@ -148,13 +148,13 @@ includes:
 - id: MX
   name: Mexico
   type: country
-  status: associate
+  status: associate_member
   joined: '2015'
   note: AEM
 - id: MY
   name: Malaysia
   type: country
-  status: associate
+  status: associate_member
   joined: '2016'
   note: MYSA
 - id: NG
@@ -172,7 +172,7 @@ includes:
 - id: 'NO'
   name: Norway
   type: country
-  status: associate
+  status: associate_member
   joined: '1990'
   note: NOSA
 - id: PH
@@ -184,13 +184,13 @@ includes:
 - id: PL
   name: Poland
   type: country
-  status: associate
+  status: associate_member
   joined: '2020'
   note: POLSA
 - id: PT
   name: Portugal
   type: country
-  status: associate
+  status: associate_member
   joined: '2021'
   note: Portugal Space
 - id: RU
@@ -202,7 +202,7 @@ includes:
 - id: SE
   name: Sweden
   type: country
-  status: associate
+  status: associate_member
   joined: '1991'
   note: SNSA
 - id: TH
@@ -265,11 +265,11 @@ description: International coordination forum for space agencies operating civil
   harmonises data formats, calibration and validation, interoperability, and mission planning across 34 member agencies and
   32 associate agencies spanning national governments and intergovernmental organisations. Works closely with CGMS and the
   Group on Earth Observations (GEO) to promote open exchange of satellite Earth observation data.
-notes: CEOS membership is agency-based (Members and Associates). Country codes represent the home states of member or associate
-  agencies; multiple agencies from the same state (e.g. NASA, NOAA, and USGS for the United States; KARI, KMA, and NIER for
+notes: CEOS membership is agency-based (Members and Associate Members). Country codes represent the home states of member or
+  associate agencies; multiple agencies from the same state (e.g. NASA, NOAA, and USGS for the United States; KARI, KMA, and NIER for
   Korea) are collapsed to a single country entry with agency notes. Intergovernmental Members (ESA, EUMETSAT) are listed as
   organization entries. Associate agencies in member states are subsumed under the member country entry.
-last_verified: '2026-07-30'
+last_verified: '2026-11-21'
 tags:
 - CEOS
 - earth
@@ -299,13 +299,13 @@ provenance:
   url: https://www.wikidata.org/wiki/Q104856537
   license: CC0
 - field: includes
-  source: official sources
-  retrieved_at: '2026-07-30'
-  url: https://ceos.org/about-ceos/agencies/
+  source: CEOS, Agencies ("34 Members", "32 Associate Members"; archived copy of 2026-10-03; ceos.org served a bot check on 2026-11-21)
+  retrieved_at: '2026-11-21'
+  url: https://web.archive.org/web/20261003120645/https://ceos.org/about-ceos/agencies/
 - field: membership_count
-  source: official sources
-  retrieved_at: '2026-07-30'
-  url: https://ceos.org/about-ceos/agencies/
+  source: CEOS, Agencies ("34 Members", "32 Associate Members"; archived copy of 2026-10-03; ceos.org served a bot check on 2026-11-21)
+  retrieved_at: '2026-11-21'
+  url: https://web.archive.org/web/20261003120645/https://ceos.org/about-ceos/agencies/
 - field: description
   source: official sources
   retrieved_at: '2026-07-30'

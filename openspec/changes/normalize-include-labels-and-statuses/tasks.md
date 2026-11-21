@@ -7,7 +7,7 @@
 - [x] 1.6 Tests: export label, optional name, rule severity
 
 ## 2. Associate statuses (MINOR)
-- [ ] 2.1 Review the 27 records with `associate`/`associated` against their sources; recode and refresh `last_verified` (10 done; see design.md Result)
+- [x] 2.1 Review the 27 records with `associate`/`associated` against their sources; recode and refresh `last_verified` (see design.md Result)
 - [x] 2.2 Rewrite `includes_status.yaml` definitions; update `docs/ai-consumers.md` status table
 - [x] 2.3 `contract.json` `deprecated[]` gains `enum_value` entries for `associate` and `associated_observer`
 - [x] 2.4 `DEPRECATED_INCLUDE_STATUS` warning rule; tests
