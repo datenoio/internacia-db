@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `ARABMASHREQROADS` (Agreement on International Roads in the Arab Mashreq, ESCWA, Beirut
+  2001; in force 19 October 2003), the treaty behind the Arab Mashreq International Road
+  Network: 13 States parties from the UN Treaty Collection table XI-B-33, checked on
+  2026-11-21 (1283 intblocks). Oman is served by the network but is not a party.
 - Three transport corridor records with route roles (`transport`, `corridor`), checked on
   2026-11-20 (1282 intblocks):
   - `INSTC` (International North–South Transport Corridor): IN and RU `terminal`, IR and AZ
