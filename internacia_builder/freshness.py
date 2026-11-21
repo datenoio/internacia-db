@@ -214,6 +214,7 @@ def check_changed_records(
     records: list[tuple[str, dict[str, Any]]],
     changed: dict[str, dict[str, Any] | None],
     base_ref: str,
+    today: date | None = None,
 ) -> list[str]:
     """
     Errors for records that are new or changed since ``base_ref`` (``changed``, from
@@ -222,7 +223,12 @@ def check_changed_records(
     enrichment metadata fields (data/schemas/enrichment_sources.yaml), to
     ``CLASSIFICATION_FIELDS``, to the labels of country includes, or to recoding a deprecated
     include status to one of its replacements are exempt.
+
+    A roster change may keep the base's ``last_verified`` when that date is ``today``
+    (default: the current date): the base was verified earlier the same day, so no later
+    true date exists to set.
     """
+    today_iso = (today or date.today()).isoformat()
     errors: list[str] = []
     metadata = _enrichment_metadata_fields()
     deprecated = _deprecated_statuses()
@@ -246,6 +252,7 @@ def check_changed_records(
             before is not None
             and not _same_roster(before.get("includes"), record.get("includes"), deprecated)
             and before.get("last_verified") == record.get("last_verified")
+            and str(record.get("last_verified")) != today_iso
         ):
             errors.append(
                 f"{rel}: includes changed since {base_ref} but last_verified is still "
