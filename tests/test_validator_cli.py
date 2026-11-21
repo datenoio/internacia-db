@@ -6,11 +6,13 @@ roster) are skipped, so these exercise the registry rules and the CLI plumbing.
 
 import json
 import shutil
+from datetime import date
 from pathlib import Path
 
 import pytest
 import yaml
 
+from internacia_builder.validate import border_rules, country_rules, intblock_rules, registry
 from internacia_builder.validate import countries as vc
 from internacia_builder.validate import intblocks as vi
 
@@ -90,4 +92,36 @@ def test_intblocks_cli(tmp_path):
 def test_validators_pass_on_the_repository_data(module):
     if not shutil.which("git"):
         pytest.skip("git is needed for the repository-state gates")
+    assert module.run_validation() == 0
+
+
+class _FarFuture(date):
+    """A today() years ahead, when every recorded last_verified and provenance date is stale."""
+
+    @classmethod
+    def today(cls):
+        return cls(2035, 1, 1)
+
+
+@pytest.mark.parametrize("module", [vc, vi])
+def test_fail_on_warning_reports_but_ignores_dated_warnings(module, monkeypatch, capsys):
+    """CI runs the validators with --fail-on-warning. Freshness warnings appear as the calendar
+    advances, so they must not fail it; every other warning must."""
+    if not shutil.which("git"):
+        pytest.skip("git is needed for the repository-state gates")
+    for rules in (border_rules, country_rules, intblock_rules):
+        monkeypatch.setattr(rules, "date", _FarFuture)
+
+    assert module.run_validation(fail_on_warning=True, json_output=True) == 0
+    warnings = [w["message"] for w in json.loads(capsys.readouterr().out)["warnings"]]
+    assert any("stale (" in w or "not verified since" in w for w in warnings)
+
+    messages = registry.validator_messages
+
+    def with_planted_warning(dataset, ctx):
+        errors, plain, dated = messages(dataset, ctx)
+        return errors, [*plain, "planted warning"], dated
+
+    monkeypatch.setattr(registry, "validator_messages", with_planted_warning)
+    assert module.run_validation(fail_on_warning=True) == 1
     assert module.run_validation() == 0

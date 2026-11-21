@@ -47,7 +47,7 @@ English: [../contribute.md](../contribute.md)
 ## 提交 PR 前校验
 
 ```bash
-python scripts/validate_countries.py --json   # 退出码 0 = 无错误；1 = 有错误（警告默认不失败）
+python scripts/validate_countries.py --json   # 退出码 0 = 无错误；1 = 有错误（警告默认不失败；CI 使用 --fail-on-warning，警告也会失败，基于日期的过期警告除外）
 python scripts/validate_intblocks.py --json
 python scripts/builder.py build             # 重新生成全部格式
 python scripts/check_generated_artifacts.py

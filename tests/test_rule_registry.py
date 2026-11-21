@@ -35,6 +35,18 @@ def test_rules_are_unique_and_well_formed():
             assert rule.severity in {"error", "warning", None}
 
 
+def test_dated_rules_are_the_freshness_warnings():
+    """Only rules that age a recorded date are dated: --fail-on-warning skips exactly these."""
+    dated = {(rule.dataset, rule.name) for rules in registry.RULES.values() for rule in rules if rule.dated}
+    assert dated == {
+        (registry.COUNTRIES, "border status freshness"),
+        (registry.COUNTRIES, "provenance freshness"),
+        (registry.INTBLOCKS, "last verified"),
+        (registry.INTBLOCKS, "provenance freshness"),
+    }
+    assert all(rule.severity == "warning" for rules in registry.RULES.values() for rule in rules if rule.dated)
+
+
 def _project(tmp_path: Path) -> Path:
     """A small project: real schemas and config, four records with planted defects."""
     for rel in ("data/schemas", "data/blocktypes", "data/watch"):
@@ -72,10 +84,10 @@ def test_validators_and_analyze_quality_see_the_same_findings(tmp_path, monkeypa
         if rule.severity == "error":
             assert priority in BLOCKING, (rule.name, issue["issue_type"], priority)
 
-    errors, warnings = registry.validator_messages(registry.COUNTRIES, ctx)
+    errors, warnings, _ = registry.validator_messages(registry.COUNTRIES, ctx)
     assert "data/countries/FR.yaml: dvd_region must be an integer in 1..6 when present" in errors
     assert any("tld 'FR'" in w for w in warnings)
-    errors, warnings = registry.validator_messages(registry.INTBLOCKS, ctx)
+    errors, warnings, _ = registry.validator_messages(registry.INTBLOCKS, ctx)
     assert any(e.endswith("unknown blocktype 'spaceforce'") for e in errors)
     assert any("wikidata_id" in e and "EU.yaml" in e for e in errors)
     assert any(w.endswith("NATO.yaml: missing topics") for w in warnings)
