@@ -1,7 +1,7 @@
 # Getting started
 
 Internacia is reference data for **countries** (256 records) and **international
-organizations / groups** (“intblocks”, 1338 records; **83** blocktypes). It is part of
+organizations / groups** (“intblocks”, 1300+ records; **83** blocktypes). It is part of
 the [Dateno](https://dateno.io) open-source project. Data and documentation are licensed
 [CC-BY-4.0](../DATA_LICENSE); code is MIT.
 
@@ -19,7 +19,8 @@ Exports are not committed: download them from the
    (`intblock_id` ↔ `country_code`). Full flattened tables are `countries.csv.zst` /
    `intblocks.csv.zst`.
 
-See also the Frictionless index: [`datapackage.json`](../data/datasets/datapackage.json).
+See also the Frictionless index `datapackage.json`, which the build writes next to the
+exports and every [GitHub Release](https://github.com/datenoio/internacia-db/releases/latest) ships.
 
 ## Lookups (DuckDB / Python)
 
