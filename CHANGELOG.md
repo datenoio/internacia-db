@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `NCTTCA` (Northern Corridor Transit and Transport Coordination Authority; `transport`, `igo`),
+  checked on 2026-11-21 (1283 intblocks): BI, CD, KE, RW, SS (since December 2012) and UG, with
+  its Permanent Secretariat in Mombasa. Source: the authority's official site. It has no route
+  roles because the corridor branches from Mombasa to several landlocked countries instead of
+  running between two ends.
+
 ## [4.2.0] - 2026-11-21
 
 ### Added
