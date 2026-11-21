@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Seven more `statistics` records, checked on 2026-11-21 (1317 intblocks):
+  - `AITRS` (Arab Institute for Training and Research in Statistics, Amman, an `igo`): 22
+    countries, whose national statistical offices are its members. Its own sources do not
+    call it an organ of the League of Arab States, so `partof` is not set.
+  - `UNSTATCOM` (United Nations Statistical Commission, `partof: ECOSOC`): the 34 members
+    of 2026, from the UN Statistics Division list. `UNSC` is already the Security Council.
+  - Five `intergovernmental_body` records with `membership_applicability: not_applicable`,
+    as for `GCCPO`, so the parent's members are not copied: `GCCSTAT` (GCC-Stat, `CCASG`),
+    `SESRIC` (`OIC`), `STATAFRIC` (AU Institute for Statistics, `AFUNION`), `ISSEA`
+    (`CEMAC`) and `SIAP` (UN Statistical Institute for Asia and the Pacific; ESCAP has no
+    record, so `partof` is not set).
 - Seven `statistics` records, checked on 2026-11-21 (1310 intblocks). Before this, the
   blocktype held only `CISSTAT`.
   - `AFRISTAT` (Economic and Statistical Observatory of Sub-Saharan Africa, an `igo`): 22
@@ -99,8 +110,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Cookbook results that the new records change: the UN-majority blocks without China or the US
-  return 59 rows (16 without both, now including `EGDDS`), UN grandchildren return 43 (the
-  three IMF standards), and `membership_count` mismatches total 184 (`CES` counts 64 members
+  return 59 rows (16 without both, now including `EGDDS`), UN grandchildren return 44 (the
+  three IMF standards and `UNSTATCOM` under `ECOSOC`), and `membership_count` mismatches total 184 (`CES` counts 64 members
   and 4 participants).
 
 ### Fixed

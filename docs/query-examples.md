@@ -946,7 +946,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 43 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 44 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
