@@ -229,8 +229,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (regional, Europe), the topic physics and 19 provenance entries. CERN joins the reviewed
   `institutional_design` cohort, which now has 110 records (`reviewed_110`); with `CEI`, 111
   records carry `institutional_design`. CERN adds one more membership-count mismatch,
-  because it lists 40 entries, observers included, against a count of 36. With the records
-  above, the declared vs actual roster recipe returns 188 mismatches.
+  because it lists 40 entries, observers included, against a count of 36.
+- `ESO` checked on 2026-11-21 against eso.org and the ESO Convention (Dutch authentic text on
+  the Dutch government treaty database). `founded` moves from 1962 to 1962-10-05, the date of
+  signature, and `active_period` starts on 1964-01-17, when the Convention took effect. The
+  16 Member States gain `joined` dates from ESO's Member States table and timeline. The five
+  signatories (BE, DE, FR, NL, SE) become `founding_members`. Chile, the host and partner
+  country, and Australia, a Strategic Partner since 2017, are added as `partner`.
+  `membership_count` stays 16. `languages` gains `fr` and `de`. The website moves to
+  https://www.eso.org/, the headquarters coordinates come from Wikidata, and `description` is
+  rewritten. The record also gains `institutional_design`, `legal_status`,
+  `recognition_status`, `official_documents`, `social_media`, `secretariat`, `notes`,
+  `geographic_scope` (regional, Europe), the topic astronomy and 18 provenance entries.
+  ESO joins the reviewed `institutional_design` cohort, which now has 111 records
+  (`reviewed_111`); with `CEI`, 112 records carry `institutional_design`. ESO adds one
+  membership-count mismatch, because it lists 18 entries against 16 Member States. With the
+  records above, the declared vs actual roster recipe returns 189 mismatches.
 
 ## [4.2.0] - 2026-11-21
 

@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        188,
+        189,
         set(),
     ),
     (
@@ -740,7 +740,7 @@ def test_authority_level_recipe(con):
     rows = dict(
         (row[0], row[2]) for row in con.execute(_documented_sql("Authority level from institutional design")).fetchall()
     )
-    assert len(rows) == 111
+    assert len(rows) == 112
     assert {rows[i] for i in ("EU", "UNSC", "WTO")} == {"high"}
     assert {rows[i] for i in ("G7", "APEC")} == {"low"}
     assert {rows[i] for i in ("UPU", "WMO", "OPEC")} == {"medium"}

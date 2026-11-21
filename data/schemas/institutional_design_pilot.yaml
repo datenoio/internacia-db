@@ -1,7 +1,7 @@
 version: 1
 change_id: add-intblock-institutional-design
-cohort_id: reviewed_110
-expected_count: 110
+cohort_id: reviewed_111
+expected_count: 111
 description: >-
   Reviewed institutional_design values for the pilot cohort. Values follow the definitions in
   data/schemas/institutional_design.yaml and were checked on 2026-11-20 against the founding
@@ -1761,7 +1761,7 @@ records:
     - {source: 'UNFCCC text (unfccc.int, conveng.pdf)', url: 'https://unfccc.int/resource/docs/convkp/conveng.pdf',
       retrieved_at: '2026-11-21'}
 
-  # --- ITER and CERN record reviews (2026-11-21) -------------------------------
+  # --- ITER, CERN and ESO record reviews (2026-11-21) --------------------------
   ITER:
     institutional_design:
       mandate: sectoral
@@ -1799,6 +1799,25 @@ records:
     evidence:
       - source: CERN Convention (Dutch government treaty database, wetten.overheid.nl)
         url: https://wetten.overheid.nl/BWBV0004885
+        retrieved_at: '2026-11-21'
+  ESO:
+    institutional_design:
+      mandate: sectoral
+      decision_rule: simple_majority
+      enforcement: [expulsion]
+      mutual_defence: false
+    basis: >-
+      ESO Convention (Dutch authentic text) Art II: build, equip and operate an observatory in the southern hemisphere
+      (one research field, so sectoral). Art V(4) and V(6): one vote per Member State, decisions by an absolute majority
+      of votes unless the Convention provides otherwise; the budget, the contribution scale and the Director need two
+      thirds, and admission (Art XIII(4)), the observatory site and amendments (Art VIII) unanimity. Art XI: if a member
+      does not meet its obligations, the others may decide unanimously to continue without it, and it ceases to be a
+      member (Art XV(2)). Disputes go to arbitration under the Permanent Court of Arbitration (Art IX); whether the
+      award binds and whether the Director is an independent executive are not settled by the text, so
+      independent_organs is omitted, as is decision_force.
+    evidence:
+      - source: ESO Convention (Dutch authentic text, Dutch government treaty database, wetten.overheid.nl)
+        url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
         retrieved_at: '2026-11-21'
 
 # Candidates not applied, and why. Revisit when a qualifying source is read.

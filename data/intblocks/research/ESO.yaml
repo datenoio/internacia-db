@@ -3,99 +3,185 @@ blocktype:
 - research
 status: formal
 scope_category: igo
+legal_status: intergovernmental
+recognition_status: Intergovernmental organisation established by the 1962 ESO Convention; the French Ministry of Foreign
+  Affairs is depositary of the Convention
+institutional_design:
+  mandate: sectoral
+  decision_rule: simple_majority
+  enforcement:
+  - expulsion
+  mutual_defence: false
 languages:
 - en
+- fr
+- de
 links:
-- url: http://www.eso.org
+- url: https://www.eso.org/
+  type: website
+- url: https://www.eso.org/public/about-eso/memberstates/
   type: website
 - url: https://en.wikipedia.org/wiki/European_Southern_Observatory
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q151991
   type: wikidata
+official_documents:
+- url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
+  type: document
+  name: Convention establishing a European Organisation for Astronomical Research in the Southern Hemisphere (Paris, 5
+    October 1962), Dutch authentic text via the Dutch government treaty database
+social_media:
+  facebook: https://www.facebook.com/ESOAstronomy
+  instagram: https://www.instagram.com/esoastronomy/
+  youtube: https://www.youtube.com/ESOObservatory/
+  linkedin: https://www.linkedin.com/company/european-southern-observatory
+  bluesky: https://bsky.app/profile/eso.org
+  mastodon: https://mastodon.social/@esoastronomy
+  flickr: https://www.flickr.com/photos/esoastronomy/
 name: European Southern Observatory
 includes:
 - id: AT
   name: Austria
   type: country
   status: member
+  joined: '2009-07-01'
 - id: BE
   name: Belgium
   type: country
   status: member
+  joined: '1967-10-02'
 - id: CH
   name: Switzerland
   type: country
   status: member
+  joined: '1982-03-01'
 - id: CZ
   name: Czech Republic
   type: country
   status: member
+  joined: '2007-04-30'
 - id: DE
   name: Germany
   type: country
   status: member
+  joined: '1964-01-17'
 - id: DK
   name: Denmark
   type: country
   status: member
+  joined: '1967-08-24'
 - id: ES
   name: Spain
   type: country
   status: member
+  joined: '2007-02-14'
 - id: FI
   name: Finland
   type: country
   status: member
+  joined: '2004-07-07'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '1964-01-17'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '2002-06-24'
 - id: IE
   name: Ireland
   type: country
   status: member
+  joined: '2018'
 - id: IT
   name: Italy
   type: country
   status: member
+  joined: '1982-05-24'
 - id: NL
   name: Netherlands
   type: country
   status: member
+  joined: '1964-01-17'
 - id: PL
   name: Poland
   type: country
   status: member
+  joined: '2015-08-05'
 - id: PT
   name: Portugal
   type: country
   status: member
+  joined: '2001-05-07'
 - id: SE
   name: Sweden
   type: country
   status: member
-founded: '1962'
+  joined: '1964-01-17'
+- id: CL
+  name: Chile
+  type: country
+  status: partner
+- id: AU
+  name: Australia
+  type: country
+  status: partner
+  joined: '2017'
+founding_members:
+- BE
+- DE
+- FR
+- NL
+- SE
+founded: '1962-10-05'
+active_period:
+  start: '1964-01-17'
+geographic_scope: regional
+regions:
+- Europe
 headquarters:
   city: Garching bei München
   country: DE
   coordinates:
-    lat: 48.25
-    lng: 11.65
+    lat: 48.259722
+    lng: 11.671111
+secretariat:
+  location: Karl-Schwarzschild-Str. 2, 85748 Garching bei München, Germany
+  head: Director General
 membership_count: 16
 wikidata_id: Q151991
-description: Intergovernmental organization and observatory in Chile.
+description: Intergovernmental research organisation for astronomy, headquartered in Garching near Munich, Germany. It
+  builds and operates observatories in northern Chile at La Silla, Paranal and Chajnantor, and is building the Extremely
+  Large Telescope on Cerro Armazones, to be run as part of Paranal. It has 16 Member States; Chile is its host and partner
+  country, and Australia has been a Strategic Partner since 2017.
+notes: >-
+  The official name is the European Organisation for Astronomical Research in the Southern Hemisphere. A shared European
+  observatory was first discussed by astronomers at Leiden on 21 June 1953, and astronomers from six countries signed an
+  ESO declaration on 26 January 1954. Belgium, France, Germany, the Netherlands and Sweden signed the Convention in Paris on
+  5 October 1962. It took effect on 17 January 1964, after ratification by France, Germany, the Netherlands and Sweden;
+  Belgium joined in 1967. Its authentic texts are German, French, Dutch and Swedish, with the French text prevailing,
+  and the French Ministry of Foreign Affairs is depositary. The Council has two delegates per Member State, at least one
+  an astronomer, and one vote each (Art V). It decides by an absolute majority of votes unless the Convention says
+  otherwise. The budget, the contribution scale and the appointment of the Director General need two thirds of the
+  votes. Admission of new members (Art XIII(4)), the choice of the observatory site and amendments (Art VIII) need
+  unanimity. If a Member State does not meet its obligations, the others may decide unanimously to continue without it,
+  and it ceases to be a member (Arts XI, XV). A member may withdraw after ten years of membership (Art X). Disputes the
+  Council cannot settle go to arbitration under the Permanent Court of Arbitration (Art IX). Directors General: Otto
+  Heckmann (1962-1969), Adriaan Blaauw (1970-1974), Lodewijk Woltjer (1975-1987), Harry van der Laan (1988-1992),
+  Riccardo Giacconi (1993-1999), Catherine Cesarsky (1999-2007), Tim de Zeeuw (2007-2017), Xavier Barcons (2017-2026) and
+  Andreas Kaufer (since 1 September 2026). ESO has over 750 staff from more than 30 countries.
 tags:
 - ESO
+- astronomy
 - european
 - observatory
 - research
 - science
 - southern
 - technology
+- telescope
 topics:
 - key: research
   name: Research
@@ -103,6 +189,8 @@ topics:
   name: Science
 - key: technology
   name: Technology
+- key: astronomy
+  name: Astronomy
 other_names:
 - id: ar
   name: المرصد الأوروبي الجنوبي
@@ -120,21 +208,73 @@ other_names:
   name: Европейская южная обсерватория
 - id: zh
   name: 欧洲南方天文台
-last_verified: '2026-10-22'
+last_verified: '2026-11-21'
 provenance:
 - field: includes
-  source: European Southern Observatory
-  retrieved_at: '2026-10-22'
-  url: https://www.eso.org/public/archives/annualreports/pdfsm/ar_2024.pdf
+  source: ESO, Member States; ESO timeline
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/memberstates/
 - field: membership_count
-  source: European Southern Observatory
-  retrieved_at: '2026-10-22'
-  url: https://www.eso.org/public/archives/annualreports/pdfsm/ar_2024.pdf
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  source: ESO, Member States
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/memberstates/
+- field: founding_members
+  source: ESO timeline
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/timeline/
+- field: founded
+  source: ESO timeline
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/timeline/
+- field: active_period
+  source: ESO timeline
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/timeline/
+- field: institutional_design
+  source: ESO Convention (Dutch authentic text, Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
+- field: legal_status
+  source: ESO Convention (Dutch authentic text, Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
+- field: recognition_status
+  source: ESO Convention, Arts XIII, XV and XVI (Dutch government treaty database, wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
+- field: official_documents
+  source: Dutch government treaty database (wetten.overheid.nl)
+  retrieved_at: '2026-11-21'
+  url: https://wetten.overheid.nl/BWBV0004585/1964-01-17
+- field: languages
+  source: Wikipedia (infobox)
+  retrieved_at: '2026-11-21'
+  url: https://en.wikipedia.org/wiki/European_Southern_Observatory
+- field: headquarters
+  source: ESO, Getting to ESO Headquarters
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/travel/garching/
+- field: headquarters.coordinates
+  source: Wikidata (Q151991, P159 coordinates qualifier)
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q151991
   license: CC0
+- field: secretariat
+  source: ESO, Getting to ESO Headquarters
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/travel/garching/
+- field: social_media
+  source: ESO website
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/
+- field: description
+  source: ESO, About ESO
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/
+- field: notes
+  source: ESO (timeline, Director General office, About ESO); ESO Convention
+  retrieved_at: '2026-11-21'
+  url: https://www.eso.org/public/about-eso/timeline/
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
@@ -145,10 +285,6 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.eso.org
 acronyms:
 - lang: en
   value: ESO
