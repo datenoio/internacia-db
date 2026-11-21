@@ -1,0 +1,78 @@
+id: LAPSSET
+blocktype:
+- transport
+- corridor
+status: de-facto
+links:
+- url: https://www.lapsset.go.ke/
+  type: website
+- url: https://au-pida.org/prospectus/project.php?id=45
+  type: website
+- url: https://www.wikidata.org/wiki/Q6482734
+  type: wikidata
+name: Lamu Port–South Sudan–Ethiopia Transport Corridor
+acronyms:
+- lang: en
+  value: LAPSSET
+geographic_scope: regional
+regions:
+- Africa
+- East Africa
+includes:
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  role: terminal
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  role: terminal
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  role: terminal
+membership_count: 3
+wikidata_id: Q6482734
+description: Transport corridor from the new port of Lamu in Kenya, run by Kenya's LAPSSET Corridor Development Authority
+  and listed in the AU's Programme for Infrastructure Development in Africa. Its highway runs from Lamu to Garissa and
+  Isiolo, where it splits into a leg through Lokichar and Nadapal to Torit and Juba in South Sudan and a leg through
+  Moyale to Hawassa towards Addis Ababa in Ethiopia. The first berth at Lamu is operating; most other parts are planned
+  or under construction.
+tags:
+- LAPSSET
+- lamu
+- kenya
+- south-sudan
+- ethiopia
+- corridor
+- transport
+topics:
+- key: transport
+  name: Transport
+- key: infrastructure
+  name: Infrastructure
+notes: All three countries are terminal because the corridor has one port end in Kenya and two defined inland ends, in
+  South Sudan and Ethiopia, which branch at Isiolo. Pipelines, resort cities and airports planned under LAPSSET are
+  components, not route branches.
+last_verified: '2026-11-21'
+provenance:
+- field: includes
+  source: LAPSSET Corridor Development Authority, Highways
+  retrieved_at: '2026-11-21'
+  url: https://lapsset.go.ke/highways/
+- field: includes
+  source: AU-PIDA, LAPSSET project prospectus
+  retrieved_at: '2026-11-21'
+  url: https://au-pida.org/prospectus/project.php?id=45
+- field: description
+  source: LAPSSET Corridor Development Authority
+  retrieved_at: '2026-11-21'
+  url: https://www.lapsset.go.ke/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-21'
+  url: https://www.wikidata.org/wiki/Q6482734
+  license: CC0
