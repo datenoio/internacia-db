@@ -25,7 +25,12 @@ change, and closes it when the rosters agree. The report is also in the job summ
 `roster-watch` artifact.
 
 To resolve an issue, check the official member list cited in the record's `provenance`, then
-either fix `includes` and set `last_verified`, or close the issue if internacia-db is right.
+either fix `includes` and set `last_verified`, or, if internacia-db is right, close the issue as
+**not planned** with a comment naming the official source. The watch remembers the differences
+of an issue closed as not planned and does not open a new issue for them. It opens one again
+when the differences change, for example when a country joins or leaves, or when Wikidata adds
+or removes a member. Issues closed as completed (by the watch, or after a fix) do not have this
+effect.
 
 ## Running it locally
 

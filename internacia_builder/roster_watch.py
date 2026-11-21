@@ -27,9 +27,11 @@ SPARQL_URL = "https://query.wikidata.org/sparql"
 USER_AGENT = "internacia-db-roster-watch/1.0 (https://github.com/datenoio/internacia-db)"
 CURRENT_STATUSES = {"member", "founding_member"}
 ISSUE_LABEL = "roster-drift"
-# Constituent countries that carry memberships in Wikidata while the ISO 3166-1 code is on
-# the kingdom item (Kingdom of the Netherlands Q29999, Kingdom of Denmark Q756617).
-ISO_OVERRIDES = {"Q55": "NL", "Q35": "DK"}
+# Items that carry memberships in Wikidata without an ISO 3166-1 code of their own. For the
+# Netherlands the code is on the kingdom (Q29999) while some memberships sit on the
+# constituent country Q55. For Denmark it is the other way round: the code is on Q35 while
+# UN and OECD membership sit on the Kingdom of Denmark (Q756617).
+ISO_OVERRIDES = {"Q55": "NL", "Q756617": "DK"}
 MARKER = re.compile(r"<!-- roster-watch:(\S+) (\w+) -->")
 # Below this share of our members confirmed by Wikidata, the wikidata_id or Wikidata's
 # modelling is the likelier cause than the roster.
@@ -172,8 +174,10 @@ def issue_body(drift: Drift, as_of: str) -> str:
         )
         + "Wikidata can be wrong or late. Check the organization's official member list (the "
         "source in the record's `provenance`), then either fix `includes` (and `last_verified`) "
-        "or close this issue if internacia-db is right. This issue is updated by "
-        "`.github/workflows/roster-watch.yml` and closed automatically when the rosters agree.\n\n"
+        "or, if internacia-db is right, close this issue as *not planned* with a comment naming "
+        "the source. The watch does not reopen it while the differences stay the same. This "
+        "issue is updated by `.github/workflows/roster-watch.yml` and closed automatically when "
+        "the rosters agree.\n\n"
         f"<!-- roster-watch:{drift.id} {drift.fingerprint} -->"
     )
 
@@ -196,28 +200,48 @@ class IssueSync:
         if response.status_code not in (201, 422):  # 422: the label already exists
             response.raise_for_status()
 
-    def _open_issues(self) -> dict[str, dict[str, Any]]:
-        response = self.session.get(
-            f"{self.api}/issues", params={"labels": ISSUE_LABEL, "state": "open", "per_page": 100}
-        )
-        response.raise_for_status()
-        issues = {}
-        for issue in response.json():
+    def _issues(self) -> tuple[dict[str, dict[str, Any]], dict[str, set[str]]]:
+        """Open issues by organization, and fingerprints of issues a person closed as not planned."""
+        listed: list[dict[str, Any]] = []
+        for page in range(1, 51):
+            response = self.session.get(
+                f"{self.api}/issues",
+                params={"labels": ISSUE_LABEL, "state": "all", "per_page": 100, "page": page},
+            )
+            response.raise_for_status()
+            batch = response.json()
+            listed.extend(batch)
+            if len(batch) < 100:
+                break
+        issues: dict[str, dict[str, Any]] = {}
+        dismissed: dict[str, set[str]] = {}
+        for issue in listed:
             match = MARKER.search(issue.get("body") or "")
-            if match:
+            if not match:
+                continue
+            if issue.get("state") == "open":
                 issues[match.group(1)] = {**issue, "fingerprint": match.group(2)}
-        return issues
+            elif issue.get("state_reason") == "not_planned":
+                dismissed.setdefault(match.group(1), set()).add(match.group(2))
+        return issues, dismissed
 
     def sync(self, drifts: list[Drift], as_of: str) -> dict[str, list[str]]:
-        """Open or update issues for drift, close issues whose rosters now agree."""
-        existing = self._open_issues()
-        actions: dict[str, list[str]] = {"opened": [], "updated": [], "closed": []}
+        """Open or update issues for drift, close issues whose rosters now agree.
+
+        Drift that a person already reviewed and closed as not planned (internacia-db is right)
+        is not reported again until the differences change.
+        """
+        existing, dismissed = self._issues()
+        actions: dict[str, list[str]] = {"opened": [], "updated": [], "closed": [], "dismissed": []}
         for drift in drifts:
             if drift.error:
                 continue
             issue = existing.get(drift.id)
             if drift.has_drift:
                 payload = {"title": issue_title(drift), "body": issue_body(drift, as_of)}
+                if issue is None and drift.fingerprint in dismissed.get(drift.id, set()):
+                    actions["dismissed"].append(drift.id)
+                    continue
                 if issue is None:
                     if not actions["opened"]:
                         self._ensure_label()

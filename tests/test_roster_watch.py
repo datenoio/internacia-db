@@ -29,11 +29,12 @@ def test_wikidata_parsing_maps_constituent_countries():
     response.json.return_value = {"results": {"bindings": [
         {"country": {"value": "http://www.wikidata.org/entity/Q142"}, "iso": {"value": "fr"}},
         {"country": {"value": "http://www.wikidata.org/entity/Q55"}},
+        {"country": {"value": "http://www.wikidata.org/entity/Q756617"}},
         {"country": {"value": "http://www.wikidata.org/entity/Q999"}},
     ]}}
     session = MagicMock()
     session.get.return_value = response
-    assert wikidata_members("Q1", session) == {"FR", "NL"}
+    assert wikidata_members("Q1", session) == {"FR", "NL", "DK"}
     assert "wd:Q1" in session.get.call_args.kwargs["params"]["query"]
 
 
@@ -50,17 +51,34 @@ def test_opens_updates_skips_and_closes_issues():
     new = Drift("D", "Org D", "Q4", only_wikidata=["IT"])
     stale_a = Drift("A", "Org A", "Q1", only_internacia=["ES"])
     issues = [
-        {"number": 1, "body": issue_body(stale_a, "2026-10-01")},
-        {"number": 2, "body": issue_body(same, "2026-10-01")},
-        {"number": 3, "body": issue_body(Drift("C", "Org C", "Q3", only_wikidata=["PT"]), "2026-10-01")},
+        {"number": 1, "state": "open", "body": issue_body(stale_a, "2026-10-01")},
+        {"number": 2, "state": "open", "body": issue_body(same, "2026-10-01")},
+        {"number": 3, "state": "open", "body": issue_body(Drift("C", "Org C", "Q3", only_wikidata=["PT"]), "2026-10-01")},
+        # Closed as completed by an earlier run: does not stop D from being reported.
+        {"number": 4, "state": "closed", "state_reason": "completed", "body": issue_body(new, "2026-09-01")},
     ]
     sync, session = _sync(issues)
     actions = sync.sync([changed, same, resolved, new, Drift("E", "Org E", "", error="x")], "2026-10-22")
-    assert actions == {"opened": ["D"], "updated": ["A"], "closed": ["C"]}
+    assert actions == {"opened": ["D"], "updated": ["A"], "closed": ["C"], "dismissed": []}
+    assert session.get.call_args.kwargs["params"]["state"] == "all"
     created = next(c.kwargs["json"] for c in session.post.call_args_list if "labels" in c.kwargs["json"])
     assert any(c.args[0].endswith("/labels") for c in session.post.call_args_list)
     assert created["labels"] == [ISSUE_LABEL] and created["title"] == "Roster drift: D (Org D)"
     assert "`IT`" in created["body"]
+
+
+def test_drift_closed_as_not_planned_is_not_reopened_until_it_changes():
+    reviewed = Drift("UN", "United Nations", "Q1065", only_internacia=["DK"])
+    changed = Drift("AU", "African Union", "Q7159", only_internacia=["EH", "ML"])
+    issues = [
+        {"number": 83, "state": "closed", "state_reason": "not_planned", "body": issue_body(reviewed, "2026-10-26")},
+        {"number": 85, "state": "closed", "state_reason": "not_planned",
+         "body": issue_body(Drift("AU", "African Union", "Q7159", only_internacia=["EH"]), "2026-10-26")},
+    ]
+    sync, session = _sync(issues)
+    actions = sync.sync([reviewed, changed], "2026-11-23")
+    assert actions == {"opened": ["AU"], "updated": [], "closed": [], "dismissed": ["UN"]}
+    assert not session.patch.called
 
 
 def test_low_overlap_note():
