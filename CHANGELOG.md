@@ -57,6 +57,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- `GFDRR` (Global Facility for Disaster Reduction and Recovery) roster and metadata, checked on
+  2026-11-21 against the GFDRR Annual Reports 2024 and 2025 on World Bank Documents & Reports.
+  `includes` now has 11 `member` entries: AU, AT, CA, DE, IT, JP, NO, SE, CH, US and the EU.
+  IN, LU and RS are not in either report's partner list, so they are now `former_member`
+  (exit dates unknown), and `membership_count` drops from 14 to 11. The record gains the
+  `fund` blocktype and `partof: WB`. It also gains `geographic_scope`, `regions`,
+  `active_period`, `legal_status`, `recognition_status`, `secretariat`, `social_media`,
+  `official_documents` and `notes` (governance, Umbrella Program trust funds, FY2025 figures).
+  The description is rewritten and `provenance` is extended. The `membership_count` mismatch
+  recipe in `docs/query-examples.md` now expects 184 rows.
 - The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
   "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
   view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
