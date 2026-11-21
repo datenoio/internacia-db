@@ -20,6 +20,7 @@ includes:
   name: Armenia
   type: country
   status: member
+  joined: '1991-12-21'
 - id: AZ
   name: Azerbaijan
   type: country
@@ -28,10 +29,12 @@ includes:
   name: Belarus
   type: country
   status: member
+  joined: '1991-12-08'
 - id: GE
   name: Georgia
   type: country
   status: former_member
+  joined: '1993-12'
   left: '2009-08-18'
   note: Withdrew following the 2008 Russo-Georgian war; withdrawal effective 18 August
     2009
@@ -39,10 +42,12 @@ includes:
   name: Kazakhstan
   type: country
   status: member
+  joined: '1991-12-21'
 - id: KG
   name: Kyrgyz Republic
   type: country
   status: member
+  joined: '1991-12-21'
 - id: MD
   name: Moldova
   type: country
@@ -53,19 +58,23 @@ includes:
   name: Russian Federation
   type: country
   status: member
+  joined: '1991-12-08'
 - id: TJ
   name: Tajikistan
   type: country
   status: member
+  joined: '1991-12-21'
 - id: TM
   name: Turkmenistan
   type: country
   status: associate_member
+  joined: '1991-12-21'
   note: Associate member since 2005; never ratified the CIS Charter
 - id: UA
   name: Ukraine
   type: country
   status: former_member
+  joined: '1991-12-08'
   left: '2018'
   note: Founding participant that never ratified the CIS Charter; ended participation
     in CIS statutory bodies in 2018
@@ -73,6 +82,7 @@ includes:
   name: Uzbekistan
   type: country
   status: member
+  joined: '1991-12-21'
 membership_count: 10
 founding_members:
 - AM
@@ -106,6 +116,14 @@ topics:
   name: Regional Cooperation
 wikidata_id: Q7779
 provenance:
+- field: includes
+  source: "CIS Executive Committee - Historical note (e-cis.info)"
+  retrieved_at: "2026-11-21"
+  url: "https://e-cis.info/page/3509/80648/"
+- field: includes
+  source: "CIS Executive Committee - Milestones of the Commonwealth (e-cis.info)"
+  retrieved_at: "2026-11-21"
+  url: "https://e-cis.info/page/3509/80702/"
 - field: institutional_design
   source: "Charter of the Commonwealth of Independent States (text via Russian Wikisource)"
   retrieved_at: "2026-11-20"
@@ -151,7 +169,7 @@ provenance:
   source: CIS Executive Committee
   retrieved_at: '2026-10-22'
   url: https://cis.minsk.by/map
-last_verified: '2026-10-22'
+last_verified: '2026-11-21'
 other_names:
 - id: ar
   name: رابطة الدول المستقلة
