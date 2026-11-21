@@ -74,6 +74,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     order. Subregions follow each country's UN M49 `subregion`: Western Asia is `Middle East`
     (except AM, AZ and GE, which are `Caucasus`), and Iran is in `South Asia`. ASIANHIGHWAY gets
     the same fix in a separate change.
+- `EROPA` checked on 2026-11-21 against the EROPA website (history, constitution, secretariat,
+  centers): `headquarters.city` is now Quezon City (it held the college name), and admission
+  dates come from the official history, so Nepal joined in December 1980, not 1983. Founding
+  members carry `joined: 1960-12-05`, which adds one row (`AU`) to the documented
+  former-members-with-dates recipe (201 rows). `legal_status` now describes the hybrid
+  State/Group/Individual membership. The record gains `social_media`, the constitution in
+  `official_documents`, `secretariat.organization`, notes on PRC and SRV seat successions, and
+  three topics. `scope_category` stays `igo` pending review.
 
 ## [4.2.0] - 2026-11-21
 
