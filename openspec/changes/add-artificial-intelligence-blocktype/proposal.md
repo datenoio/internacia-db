@@ -10,7 +10,7 @@ The taxonomy already uses secondary domain tags for this case. `cybersecurity` (
 
 - **New blocktype.** Add `artificial_intelligence` to `data/blocktypes/blocktypes.yaml`. Its scope note covers AI governance, safety and cooperation, including partnerships on AI compute and semiconductor supply chains, and says it is usually a secondary tag with `digital`. The `digital` scope note points AI bodies to the new key. The taxonomy grows from 82 to 83 blocktypes.
 - **Retag four records.** `WAICO`, `PAXSILICA`, `CHIP4` and `GPAI` take `artificial_intelligence` as an additional blocktype. No record changes directory or primary blocktype, and `WAICO` keeps the deprecated `intorg` as its last value.
-- **Add five sourced records** (1285 to 1290 intblocks after the main-branch additions `NCTTCA`, `ARABMASHREQROADS` and `EWEC`), each with `artificial_intelligence`, `last_verified` and field-level provenance:
+- **Add five sourced records** (1297 to 1302 intblocks after the concurrent main-branch transport additions), each with `artificial_intelligence`, `last_verified` and field-level provenance:
 
   | id | Directory | `scope_category` | Roster |
   |---|---|---|---|
