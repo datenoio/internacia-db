@@ -18,7 +18,7 @@
 
 ## 3. Documentation
 
-- [x] 3.1 Update current counts (83 blocktypes, 1302 intblocks) and regenerate agent shims
+- [x] 3.1 Update current counts (83 blocktypes, 1303 intblocks) and regenerate agent shims
 - [x] 3.2 Update the `human_rights` topic recipe in `docs/query-examples.md` and `tests/test_documented_queries.py`
 - [x] 3.3 Add a MINOR entry to `CHANGELOG.md`
 

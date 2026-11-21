@@ -48,6 +48,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   to Da Nang and the 1998 Eighth GMS Ministerial Conference. Cambodia is a GMS member but is not
   on the route, so it is not listed. ADB and GMS Secretariat pages could not be read (access
   blocked), so no ADB page is cited.
+- `CICPEC` (China-Indochina Peninsula Economic Corridor, formerly the Nanning-Singapore
+  Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1298 intblocks).
+  Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
+  Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
 - `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
   running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
 - Blocktype `artificial_intelligence` (83 blocktypes), a secondary tag for artificial
@@ -56,7 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   directory move: `WAICO`, `PAXSILICA`, `CHIP4` and `GPAI`. The `digital` scope note now
   points AI bodies to the new key.
 - Five artificial intelligence records with `artificial_intelligence`, checked on 2026-11-21
-  (1302 intblocks):
+  (1303 intblocks):
   - `NAAIMES` (International Network for Advanced AI Measurement, Evaluation and Science, formerly
     the International Network of AI Safety Institutes): 9 countries and the EU, all founding members
     from November 2024. Sources: NIST and the UK government.
