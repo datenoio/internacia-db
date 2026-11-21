@@ -22,6 +22,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Economic Corridor), a Belt and Road economic corridor with `partof: BRI` (1285 intblocks).
   Its eight `participant` countries are CN, VN, LA, KH, TH, MM, MY and SG. Sources: Xinhua
   Silk Road and Beijing Review. `BRI` lists it in `suborganizations`.
+- `scripts/check_min_duckdb.py` reads every table and view of `internacia.duckdb` on the
+  running DuckDB. CI runs it with `min_duckdb` from `contract.json` (Python 3.12 job).
+
+### Fixed
+
+- The `country_borders` view failed on DuckDB before 2.0, `min_duckdb` 1.5.4 included, with
+  "Non-inner join on correlated columns not supported": a build on such a DuckDB stopped at
+  view creation, and the v4.1.0 and v4.2.0 release databases could not query the view there.
+  The view now unnests `countries.borders` in a subquery before the `LEFT JOIN`. Its rows are
+  unchanged (648 on v4.2.0 data, 36 with a status).
 
 ## [4.2.0] - 2026-11-21
 
