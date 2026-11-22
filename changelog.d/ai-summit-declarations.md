@@ -1,7 +1,7 @@
 ### Added
 
-- Eight artificial intelligence declarations with `artificial_intelligence`, `treaty_body`
-  and the signatory lists of the host governments, checked on 2026-11-22:
+- Ten artificial intelligence declarations and coalitions with `artificial_intelligence` and the
+  signatory lists of the host governments, checked on 2026-11-22:
   - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
     Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
     the UK government.
@@ -24,6 +24,13 @@
     states and Palestine. Source: the Netherlands government.
   - `REAIMPATHWAYS` (REAIM 2026 Pathways to Action, A Coruña), in `armscontrol`: 45
     states. Source: the Spanish Ministry of Foreign Affairs.
+  - `PARISAISAFETYCALL` (Paris Call for AI Safety and Security, 9 November 2026): 19 states;
+    the 11 companies and 11 civil society signatories are named in `notes`. Source: the
+    French Presidency.
+  - `CHILDRENAICOALITION` (Coalition for Children's Rights and Protection in the Age of AI,
+    July 2026), a `policy_forum` with `human_rights`: the 18 founding states and Australia.
+    Source: the French Ministry for Europe and Foreign Affairs. The coalition has since
+    reported 23 states without naming them, so the roster is incomplete.
 
   The REAIM Blueprint for Action (Seoul, 2024) is deferred: its list of endorsing states
   is no longer published.
