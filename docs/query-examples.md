@@ -968,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 285 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 291 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1024,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 221 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 222 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
