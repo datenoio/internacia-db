@@ -1,8 +1,7 @@
 id: GCCNZ
 name: New Zealand-Gulf Cooperation Council FTA
 agreement_type: fta
-status: signed
-signed: '2024'
+status: negotiating
 parties:
 - id: NZ
   type: country
@@ -19,7 +18,10 @@ parties:
 - id: AE
   type: country
 aric_id: 201
-notes: 'ADB ARIC dates: negotiations launched 2007-07; proposed/under consultation and study 2006-11.'
+notes: Negotiations were concluded by a joint statement signed in Doha on 31 October 2024; New Zealand's Ministry of Foreign
+  Affairs and Trade lists the agreement as concluded but not in force and will publish the text on signature. The parties
+  are listed as New Zealand and the six GCC states, following the Korea-GCC text; MFAT refers only to the GCC, so the party
+  structure is unconfirmed.
 verification: catalogue
 last_verified: '2026-11-22'
 provenance:
@@ -28,6 +30,14 @@ provenance:
   url: https://aric.adb.org/fta.php?id=201&ssid=3
   retrieved_at: '2026-11-22'
 - field: status
+  source: New Zealand Ministry of Foreign Affairs and Trade, NZ-GCC FTA
+  url: https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-concluded-but-not-in-force/nz-gulf-cooperation-council
+  retrieved_at: '2026-11-22'
+- field: notes
+  source: GCC Secretariat, joint statement of 31 October 2024
+  url: https://gcc-sg.org/en/MediaCenter/News/Pages/news2024-10-31-4.aspx
+  retrieved_at: '2026-11-22'
+- field: aric_id
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=201&ssid=3
   retrieved_at: '2026-11-22'
