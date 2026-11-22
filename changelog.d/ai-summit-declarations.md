@@ -1,6 +1,6 @@
 ### Added
 
-- Eighteen artificial intelligence declarations, coalitions and partnerships with
+- Nineteen artificial intelligence declarations, coalitions and partnerships with
   `artificial_intelligence` and the signatory lists of their hosts, checked on 2026-11-22:
   - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
     Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
@@ -58,3 +58,6 @@
     with `environment`: 15 supporting governments and five intergovernmental organisations
     (UNEP, ITU, UNDP, IEA, GGGI), with status `participant`. Sources: the coalition's site
     and the French Ministry of Ecological Transition.
+  - `HAMBURGAIDECLARATION` (Hamburg Declaration on Responsible AI for the SDGs, 2 June 2025):
+    eight states, each through a ministry, and the EAC, UNDP and UNICEF. Source: BMZ
+    Digital.Global and the declaration's list of endorsements.
