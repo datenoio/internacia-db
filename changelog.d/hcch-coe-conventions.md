@@ -25,3 +25,8 @@
   waste), `EARLYNOTIFICATION`, `ASSISTANCECONVENTION`, `API1977`, `APII1977` and
   `GENEVAPROTOCOL1925`. Organizations that are parties (EURATOM, FAO, WHO, WMO) are listed as
   `organization` entries.
+- Three CMS daughter agreements and three river basin commissions, with parties from the Netherlands
+  Treaty Database (checked on 2026-11-22): `AEWA` (African-Eurasian Migratory Waterbirds),
+  `EUROBATS` (European bats), `WADDENSEALS` (Wadden Sea seals), `ICPR` (International Commission
+  for the Protection of the Rhine), `IMC` (International Meuse Commission) and `SCHELDTCOM`
+  (International Scheldt Commission).
