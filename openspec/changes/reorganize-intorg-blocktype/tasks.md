@@ -49,7 +49,7 @@
 
 ## 6. Removal (MAJOR, v5.0.0)
 
-- [ ] 6.1 After at least one MINOR release with `intorg` deprecated, remove `intorg` from every record and from `blocktypes.yaml`. Remove the deprecation entry and the ratchet.
+- [ ] 6.1 After at least one MINOR release with `intorg` deprecated, remove `intorg` from every record and from `blocktypes.yaml`. Remove the deprecation entry and the ratchet. In the same release remove `eccurr` and `cuscurr` from `OECS`, `CEMAC`, `UEMOA` and from `blocktypes.yaml`, and remove their baseline entries (task 5.1 of the archived `deprecate-composite-currency-blocktypes`).
 - [ ] 6.2 Remove `intorg` from `ORG_PARENT_BLOCKTYPES` in `internacia_builder/validate/cross_rules.py`. Prefer a test on the target's `scope_category` (`igo`, `intergovernmental_body`, `policy_forum`, `non_state_organization`) over a blocktype list. Known case: today `intorg` stops `EPPO` `partof: IPPC` from being reported, because `IPPC` is a `treaty_body`. Decide that link before the MAJOR release.
-- [ ] 6.3 Add migration SQL to `CHANGELOG.md` and to the migration artifact.
+- [ ] 6.3 Add migration SQL to `CHANGELOG.md` and to the migration artifact. Include the `eccurr`/`cuscurr` migration from `openspec/changes/archive/2026-11-22-deprecate-composite-currency-blocktypes/design.md`.
 - [ ] 6.4 Rebuild and run the full test and validation suite.

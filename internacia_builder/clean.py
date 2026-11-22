@@ -60,7 +60,9 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                     new_languages.append(str(lang))
                 cleaned_item["languages"] = new_languages
 
-            # Normalize partof to list of strings
+            # Normalize partof to a list of parent intblock ids. Source YAML uses a string,
+            # an ``{id, name}`` object, or a list of either; read the id from an object the
+            # same way the cross-dataset validation rules do.
             if "partof" in cleaned_item:
                 partof = cleaned_item["partof"]
                 if partof is None:
@@ -68,12 +70,9 @@ def clean_data(data: list[dict[str, Any]], dataset_type: str) -> list[dict[str, 
                 elif isinstance(partof, str):
                     cleaned_item["partof"] = [partof]
                 elif isinstance(partof, dict):
-                    # If it's a dict, it might be an ID->Name map or similar
-                    # For now, let's just take keys if they look like IDs
-                    cleaned_item["partof"] = list(partof.keys())
+                    cleaned_item["partof"] = [str(partof["id"])]
                 elif isinstance(partof, list):
-                    # Ensure all items are strings
-                    cleaned_item["partof"] = [str(p) for p in partof]
+                    cleaned_item["partof"] = [str(p["id"]) if isinstance(p, dict) else str(p) for p in partof]
 
             # Fix boolean values in string fields
             for field in string_fields:
