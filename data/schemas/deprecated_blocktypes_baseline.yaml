@@ -370,3 +370,18 @@ blocktypes:
     - WOAH
     - WORLDFISH
     - ZAMCOM
+  # openspec change deprecate-composite-currency-blocktypes: composite keys that combine
+  # two domain blocktypes. Replacements are listed in data/blocktypes/blocktypes.yaml.
+  eccurr:
+    deprecated_in: Unreleased (next MINOR after 4.3.0)
+    removal: next MAJOR
+    count: 1
+    ids:
+    - OECS
+  cuscurr:
+    deprecated_in: Unreleased (next MINOR after 4.3.0)
+    removal: next MAJOR
+    count: 2
+    ids:
+    - CEMAC
+    - UEMOA

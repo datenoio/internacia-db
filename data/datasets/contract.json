@@ -1402,6 +1402,30 @@
       "kind": "enum_value",
       "table": "intblocks",
       "column": "blocktype",
+      "value": "cuscurr",
+      "replacements": [
+        "customs",
+        "currency"
+      ],
+      "removal": "next MAJOR",
+      "note": "Use customs and currency together; the currency roster is a separate currency record."
+    },
+    {
+      "kind": "enum_value",
+      "table": "intblocks",
+      "column": "blocktype",
+      "value": "eccurr",
+      "replacements": [
+        "economic",
+        "currency"
+      ],
+      "removal": "next MAJOR",
+      "note": "Use economic and currency together; the currency roster is a separate currency record."
+    },
+    {
+      "kind": "enum_value",
+      "table": "intblocks",
+      "column": "blocktype",
       "value": "intorg",
       "replacements": [],
       "removal": "next MAJOR",

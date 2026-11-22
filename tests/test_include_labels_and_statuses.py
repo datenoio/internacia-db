@@ -55,17 +55,29 @@ def test_contract_lists_deprecated_status_values_on_both_columns():
     assert all(e["kind"] == "enum_value" and e["removal"] == "next MAJOR" and e["replacements"] for e in entries)
 
 
-def test_contract_lists_the_deprecated_intorg_blocktype():
+def test_contract_lists_the_deprecated_blocktypes():
     entries = [e for e in build_contract("0.0.0")["deprecated"] if e["column"] == "blocktype"]
-    assert entries == [{
-        "kind": "enum_value",
-        "table": "intblocks",
-        "column": "blocktype",
-        "value": "intorg",
-        "replacements": [],
-        "removal": "next MAJOR",
-        "note": "Use scope_category = 'igo' for entity form and a domain blocktype for the domain.",
-    }]
+    base = {"kind": "enum_value", "table": "intblocks", "column": "blocktype", "removal": "next MAJOR"}
+    assert entries == [
+        {
+            **base,
+            "value": "cuscurr",
+            "replacements": ["customs", "currency"],
+            "note": "Use customs and currency together; the currency roster is a separate currency record.",
+        },
+        {
+            **base,
+            "value": "eccurr",
+            "replacements": ["economic", "currency"],
+            "note": "Use economic and currency together; the currency roster is a separate currency record.",
+        },
+        {
+            **base,
+            "value": "intorg",
+            "replacements": [],
+            "note": "Use scope_category = 'igo' for entity form and a domain blocktype for the domain.",
+        },
+    ]
 
 
 def test_repository_has_no_stale_country_include_names():

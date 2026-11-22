@@ -684,7 +684,8 @@ ORDER BY c.name;
 
 ### EU members outside the eurozone
 
-Eurozone membership is tracked via the `EMU` intblock:
+Eurozone membership is tracked via the `EUROAREA` currency record (`EMU` is the World Bank
+aggregate with the same roster):
 
 ```sql
 SELECT c.code, c.name
@@ -697,12 +698,13 @@ WHERE c.code IN (
   AND c.code NOT IN (
     SELECT m.id
     FROM intblocks i, UNNEST(i.includes) AS t(m)
-    WHERE i.id = 'EMU' AND m.type = 'country'
+    WHERE i.id = 'EUROAREA' AND m.type = 'country'
   )
 ORDER BY c.name;
 ```
 
-**Expected:** 7 rows — `BG`, `CZ`, `DK`, `HU`, `PL`, `RO`, `SE`.
+**Expected:** 6 rows — `CZ`, `DK`, `HU`, `PL`, `RO`, `SE`. Bulgaria joined the euro area on
+1 January 2026.
 
 ### Jaccard similarity between organization rosters
 
