@@ -5,59 +5,64 @@ blocktype:
 - nuclear
 status: formal
 scope_category: igo
-legal_status: intergovernmental
 founded: '1991-07-18'
 active_period:
-  start: '1991-07-18'
-geographic_scope: regional
+  start: '1991-12-12'
+geographic_scope: bilateral
 regions:
 - South America
 languages:
 - es
 - pt
+- en
 links:
-- url: https://abacc.org/en/home/
+- url: https://abacc.org/en/
   type: website
-- url: https://en.wikipedia.org/wiki/Brazilian%E2%80%93Argentine_Agency_for_Accounting_and_Control_of_Nuclear_Materials
-  type: wikipedia
+- url: https://abacc.org/en/abacc/
+  type: website
+- url: https://planalto.gov.br/ccivil_03/decreto/1990-1994/D0439.htm
+  type: website
 - url: https://www.wikidata.org/wiki/Q290585
   type: wikidata
-acronyms:
-- lang: en
-  value: ABACC
 headquarters:
   city: Rio de Janeiro
   country: BR
-  coordinates:
-    lat: -22.9028
-    lng: -43.1767
-  note: Liaison office in Argentina.
+legal_status: intergovernmental
+recognition_status: Binational intergovernmental organization created by the Agreement between Argentina and Brazil for
+  the Exclusively Peaceful Use of Nuclear Energy, signed in Guadalajara on 18 July 1991 and in force since 12 December 1991;
+  it applies the Common System for Accounting and Control of Nuclear Materials (SCCC) and is a party, with both states and
+  the IAEA, to the Quadripartite safeguards agreement signed in December 1991
+secretariat:
+  location: Av. Rio Branco 123, Centro, Rio de Janeiro, Brazil
+  organization: ABACC Secretariat
 includes:
 - id: AR
   name: Argentina
   type: country
-  status: founding_member
-  joined: '1991-07-18'
+  status: member
+  joined: '1991-12-12'
 - id: BR
   name: Brazil
   type: country
-  status: founding_member
-  joined: '1991-07-18'
+  status: member
+  joined: '1991-12-12'
 membership_count: 2
-wikidata_id: Q290585
-description: Binational agency created by Argentina and Brazil to verify that all nuclear materials and facilities in both
-  countries are used exclusively for peaceful purposes. It applies the Common System for Accounting and Control of Nuclear
-  Materials (SCCC), mainly through inspections, and works with the IAEA under the Quadripartite Agreement between Argentina,
-  Brazil, ABACC and the IAEA, in force since 1994.
+founding_members:
+- AR
+- BR
+description: Binational agency that verifies that Argentina and Brazil use all their nuclear materials and facilities only
+  for peaceful purposes. Its inspectors from each country check the other country's installations under the Common System
+  for Accounting and Control of Nuclear Materials, in coordination with the IAEA.
 tags:
 - ABACC
-- argentina
-- brazil
-- inspections
-- non_proliferation
 - nuclear
 - safeguards
-- sccc
+- non_proliferation
+- verification
+- argentina
+- brazil
+- bilateral
+- intergovernmental
 topics:
 - key: arms_control
   name: Arms Control
@@ -65,63 +70,87 @@ topics:
   name: Nuclear
 - key: security
   name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
 other_names:
-- id: ar
-  name: الوكالة البرازيلية الأرجنتينية للمحاسبة ومراقبة المواد النووية
 - id: en
-  name: Brazilian–Argentine Agency for Accounting and Control of Nuclear Materials
+  name: Brazilian-Argentine Agency for Accounting and Control of Nuclear Materials
 - id: es
   name: Agencia Brasileño-Argentina de Contabilidad y Control de Materiales Nucleares
 - id: pt
   name: Agência Brasileiro-Argentina de Contabilidade e Controle de Materiais Nucleares
-- id: zh
-  name: 巴西－阿根廷核材料衡算和管理局
-notes: Its two members are the founding parties to the 1991 Bilateral Agreement. ABACC has a Commission and a Secretariat
-  in Rio de Janeiro, with a liaison office in Argentina. It signed a cooperation agreement with OPANAL in 1993.
+- id: ar
+  name: الوكالة البرازيلية الأرجنتينية للمحاسبة ومراقبة المواد النووية
+acronyms:
+- lang: en
+  value: ABACC
+- lang: es
+  value: ABACC
+- lang: pt
+  value: ABACC
+notes: The Guadalajara Agreement built on a 1980 Argentine-Brazilian agreement on cooperation in the peaceful uses of nuclear
+  energy. The Quadripartite Agreement between Argentina, Brazil, ABACC and the IAEA entered into force in 1994. ABACC has
+  a Commission and a Secretariat, its headquarters in Rio de Janeiro and a liaison office in Buenos Aires, and it attends
+  the IAEA Board of Governors as an observer. It signed a cooperation agreement with OPANAL in 1993 and an agreement with EURATOM
+  in 1998-1999, and a memorandum of understanding with ESARDA in 2022.
+wikidata_id: Q290585
 last_verified: '2026-11-22'
 provenance:
 - field: includes
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  source: ABACC
   retrieved_at: '2026-11-22'
-  url: https://abacc.org/en/abacc/
-- field: membership_count
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  url: https://abacc.org/en/
+- field: founding_members
+  source: Argentine Ministry of Foreign Affairs
   retrieved_at: '2026-11-22'
-  url: https://abacc.org/en/abacc/
+  url: https://www.cancilleria.gob.ar/es/actualidad/boletin/argentina-y-brasil-25-anos-de-un-hito-estrategico-en-la-cooperacion-nuclear
 - field: founded
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  source: ABACC
   retrieved_at: '2026-11-22'
-  url: https://abacc.org/en/abacc/
+  url: https://abacc.org/en/
 - field: active_period
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  source: Presidency of Brazil, Decree No. 439 of 1992
   retrieved_at: '2026-11-22'
-  url: https://abacc.org/en/abacc/
+  url: https://planalto.gov.br/ccivil_03/decreto/1990-1994/D0439.htm
+- field: recognition_status
+  source: Argentine Ministry of Foreign Affairs
+  retrieved_at: '2026-11-22'
+  url: https://www.cancilleria.gob.ar/es/actualidad/boletin/argentina-y-brasil-25-anos-de-un-hito-estrategico-en-la-cooperacion-nuclear
+- field: recognition_status
+  source: Presidency of Brazil, Decree No. 439 of 1992
+  retrieved_at: '2026-11-22'
+  url: https://planalto.gov.br/ccivil_03/decreto/1990-1994/D0439.htm
 - field: description
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
-  retrieved_at: '2026-11-22'
-  url: https://abacc.org/en/abacc/
-- field: notes
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  source: ABACC
   retrieved_at: '2026-11-22'
   url: https://abacc.org/en/abacc/
 - field: headquarters
-  source: ABACC, About ABACC (established on 18 July 1991 by the Argentina-Brazil Agreement for the Exclusively Peaceful Use
-    of Nuclear Energy)
+  source: ABACC
+  retrieved_at: '2026-11-22'
+  url: https://abacc.org/en/
+- field: secretariat
+  source: ABACC
   retrieved_at: '2026-11-22'
   url: https://abacc.org/en/abacc/
-- field: other_names
-  source: Wikidata
+- field: notes
+  source: ABACC
   retrieved_at: '2026-11-22'
-  url: https://www.wikidata.org/wiki/Q290585
-  license: CC0
+  url: https://abacc.org/en/abacc/
+- field: notes
+  source: Argentine Ministry of Foreign Affairs
+  retrieved_at: '2026-11-22'
+  url: https://www.cancilleria.gob.ar/es/actualidad/boletin/argentina-y-brasil-25-anos-de-un-hito-estrategico-en-la-cooperacion-nuclear
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-11-22'
   url: https://www.wikidata.org/wiki/Q290585
   license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q290585
+  license: CC0
+- field: other_names
+  source: ABACC
+  retrieved_at: '2026-11-22'
+  url: https://abacc.org/

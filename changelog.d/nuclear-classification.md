@@ -9,17 +9,15 @@
 - Nuclear arms-control treaties `NPT`, `CTBT`, `TPNW`, `PELINDABA`, `RAROTONGA`, `BANGKOK`
   and `SEABEDTREATY` move from `agreement` to `armscontrol` as primary blocktype, as the
   `agreement` description requires. They keep `agreement` and add `nuclear`.
-- `NSG` (from `energy`), `OPANAL` (from `energy`), `ZANGGERCOM` (from `forum`) and `AG`, the
-  Australia Group (from `political`), move to `armscontrol`.
+- `OPANAL` (from `energy`) and `AG`, the Australia Group (from `political`), move to
+  `armscontrol`.
 - The `nuclear` blocktype now covers nuclear security and non-proliferation, not only energy
-  and safety. It is added as a secondary tag to `IAEA`, `CTBT`, `CTBTO`, `NEA`, `KEDO`, `NSG`,
-  `ZANGGERCOM`, `OPANAL`, `GICNT`, `NSS`, `JCPOA`, `NWS`, `NWFZ` and the nuclear-weapon-free
-  zone treaties. `NSS`, `ISTC` and `STCU` also gain `armscontrol`.
-- `scope_category`: `NSG` is a `policy_forum` (a group of supplier countries, not an IGO).
-  `OPANAL` is an `igo` established by Article 7 of the treaty, no longer a `treaty_body`.
-  `NWS` and `NWFZ` are `reference_enumeration`, applying the reviewed decisions in
-  `scope_category_nonformal_30.yaml`. `WANO` and `WNA` are `non_state_organization` and leave
-  the `igo` legal-status allowlist.
+  and safety. It is added as a secondary tag to `IAEA`, `CTBT`, `CTBTO`, `KEDO`, `OPANAL`,
+  `GICNT`, `NSS`, `JCPOA`, `NWS`, `NWFZ` and the nuclear-weapon-free zone treaties. `NSS`,
+  `ISTC` and `STCU` also gain `armscontrol`.
+- `scope_category`: `OPANAL` is an `igo` established by Article 7 of the treaty, no longer a
+  `treaty_body`. `NWS` and `NWFZ` are `reference_enumeration`, applying the reviewed decisions
+  in `scope_category_nonformal_30.yaml`.
 
 ### Fixed
 
@@ -32,6 +30,6 @@
 - `CTBTO` listed 195 states, including non-signatories (India, Pakistan, North Korea, Saudi
   Arabia, Syria and others). It now lists the 188 CTBT signatories that make up the
   Preparatory Commission, with signature dates.
-- `WANO` and `WNA` no longer present countries with nuclear plants or member companies as
-  member states. Their members are operators and companies, so the records have no country
-  roster (`membership_applicability: not_applicable`).
+- `WANO` and `WNA`, now `non_state_organization`, no longer present countries with nuclear
+  plants or member companies as member states. Their members are operators and companies, so
+  the records have no country roster (`membership_applicability: not_applicable`).

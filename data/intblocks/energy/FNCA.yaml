@@ -3,11 +3,12 @@ name: Forum for Nuclear Cooperation in Asia
 blocktype:
 - energy
 - nuclear
-- research
+- technical
 status: formal
 scope_category: policy_forum
-legal_status: Ministerial and senior-official forum led by Japan
-founded: 1999-03
+founded: '2000-11'
+active_period:
+  start: '2000-11'
 geographic_scope: regional
 regions:
 - Asia
@@ -17,9 +18,12 @@ languages:
 links:
 - url: https://www.fnca.mext.go.jp/english/
   type: website
-acronyms:
-- lang: en
-  value: FNCA
+- url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
+  type: website
+legal_status: informal
+recognition_status: Japan-led intergovernmental cooperation framework for the peaceful use of nuclear technology, which
+  replaced the International Conference for Nuclear Cooperation in Asia (ICNCA, first held in Tokyo in March 1990) after
+  the 10th ICNCA in March 1999 agreed to move to a forum; the first Forum meeting was held in Bangkok in November 2000
 includes:
 - id: AU
   name: Australia
@@ -41,20 +45,20 @@ includes:
   name: Japan
   type: country
   status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
 - id: KZ
   name: Kazakhstan
   type: country
   status: member
-- id: MN
-  name: Mongolia
+- id: KR
+  name: Korea, Rep.
   type: country
   status: member
 - id: MY
   name: Malaysia
+  type: country
+  status: member
+- id: MN
+  name: Mongolia
   type: country
   status: member
 - id: PH
@@ -74,52 +78,83 @@ includes:
   type: country
   status: member
 membership_count: 13
-description: Japan-led framework for regional cooperation on peaceful nuclear technology in Asia, covering radiation utilization,
-  research reactor utilization, nuclear safety and nuclear infrastructure. It works through a Forum meeting at ministerial
-  and senior-official level, a Coordinators meeting and project activities. It succeeded the International Conference for
-  Nuclear Cooperation in Asia (ICNCA), held in Tokyo from 1990.
+description: Japan-led forum through which 13 Asian and Pacific countries cooperate on the peaceful use of nuclear technology,
+  in projects on radiation use in agriculture, industry and cancer treatment, research reactor use, radiation safety and
+  radioactive waste management, and nuclear security and safeguards. A ministerial-level and a senior-officials meeting set
+  policy, and national coordinators plan and review the joint projects.
 tags:
 - FNCA
+- nuclear
+- radiation
 - asia
 - japan
-- nuclear
-- nuclear_applications
-- nuclear_safety
-- research
+- peaceful_uses
+- capacity_building
+- regional
+- intergovernmental
 topics:
 - key: nuclear
   name: Nuclear
+- key: energy
+  name: Energy
+- key: technology
+  name: Technology
 - key: research
   name: Research
 - key: capacity_building
   name: Capacity Building
 - key: regional_cooperation
   name: Regional Cooperation
-notes: Members are the 13 participating countries listed by FNCA in November 2026. The move to the FNCA framework was agreed
-  at the 10th ICNCA in March 1999.
+other_names:
+- id: en
+  name: Forum for Nuclear Cooperation in Asia
+previous_names:
+- id: en
+  name: International Conference for Nuclear Cooperation in Asia
+  period: 1990-2000
+acronyms:
+- lang: en
+  value: FNCA
+notes: The ICNCA was hosted by the Atomic Energy Commission of Japan from 1990. The first Forum meeting in November 2000
+  was co-sponsored by Thailand's Ministry of Science, Technology and Environment and the Atomic Energy Commission of Japan.
+  The Forum works at three levels - the Forum meeting (ministerial and senior-official levels), the Coordinators Meeting
+  with one coordinator per country, and project activities. The FNCA website is run under Japan's Ministry of Education,
+  Culture, Sports, Science and Technology (MEXT). The official pages do not give accession dates for individual countries.
 last_verified: '2026-11-22'
 provenance:
 - field: includes
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
   url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
 - field: membership_count
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
   url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
+- field: includes
+  source: Forum for Nuclear Cooperation in Asia
+  retrieved_at: '2026-11-22'
+  url: https://www.fnca.mext.go.jp/english/
 - field: founded
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
   url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
-- field: legal_status
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+- field: previous_names
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
   url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
 - field: description
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
   url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
+- field: recognition_status
+  source: Forum for Nuclear Cooperation in Asia
+  retrieved_at: '2026-11-22'
+  url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
+- field: description
+  source: Forum for Nuclear Cooperation in Asia
+  retrieved_at: '2026-11-22'
+  url: https://www.fnca.mext.go.jp/english/e_project.html
 - field: notes
-  source: FNCA, About FNCA (participating countries; framework agreed at the 10th ICNCA in March 1999)
+  source: Forum for Nuclear Cooperation in Asia
   retrieved_at: '2026-11-22'
-  url: https://www.fnca.mext.go.jp/english/about/e_aboutfnca.html
+  url: https://www.fnca.mext.go.jp/english/

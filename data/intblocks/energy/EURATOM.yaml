@@ -3,95 +3,65 @@ name: European Atomic Energy Community
 blocktype:
 - energy
 - nuclear
-- research
 status: formal
 scope_category: igo
-legal_status: intergovernmental
 founded: '1958-01-01'
 active_period:
   start: '1958-01-01'
 geographic_scope: regional
 regions:
 - Europe
-partof:
-  id: EU
-  name: European Union
 languages:
-- bg
-- cs
-- da
-- de
-- el
 - en
-- es
-- et
-- fi
 - fr
-- ga
-- hr
-- hu
-- it
-- lt
-- lv
-- mt
-- nl
-- pl
-- pt
-- ro
-- sk
-- sl
-- sv
+- de
 links:
+- url: https://eur-lex.europa.eu/summary/EN/4301853
+  type: website
 - url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
   type: website
-- url: https://euratom-supply.ec.europa.eu/
+- url: https://european-union.europa.eu/principles-countries-history/eu-countries_en
   type: website
-- url: https://en.wikipedia.org/wiki/European_Atomic_Energy_Community
-  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q8919
   type: wikidata
-acronyms:
-- lang: en
-  value: Euratom
-- lang: en
-  value: EAEC
-- lang: fr
-  value: CEEA
 headquarters:
   city: Brussels
   country: BE
-  coordinates:
-    lat: 50.8503
-    lng: 4.3517
-  note: Shares the institutions of the European Union; the Euratom Supply Agency is in Luxembourg.
+legal_status: intergovernmental
+recognition_status: International organization established by the Treaty establishing the European Atomic Energy Community,
+  signed in Rome on 25 March 1957 and in force since 1 January 1958; it has not merged with the European Union and keeps
+  a separate legal personality, but it has the same membership and shares the EU institutions
+secretariat:
+  location: Brussels, Belgium
+  organization: European Commission
 includes:
-- id: AT
-  name: Austria
-  type: country
-  status: member
-  joined: '1995-01-01'
 - id: BE
   name: Belgium
   type: country
   status: member
   joined: '1958-01-01'
-- id: BG
-  name: Bulgaria
+- id: FR
+  name: France
   type: country
   status: member
-  joined: '2007-01-01'
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-  joined: '2004-05-01'
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-  joined: '2004-05-01'
+  joined: '1958-01-01'
 - id: DE
   name: Germany
+  type: country
+  status: member
+  joined: '1958-01-01'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '1958-01-01'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '1958-01-01'
+- id: NL
+  name: Netherlands
   type: country
   status: member
   joined: '1958-01-01'
@@ -99,211 +69,226 @@ includes:
   name: Denmark
   type: country
   status: member
-  joined: '1973-01-01'
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-  joined: '2004-05-01'
-- id: ES
-  name: Spain
-  type: country
-  status: member
-  joined: '1986-01-01'
-- id: FI
-  name: Finland
-  type: country
-  status: member
-  joined: '1995-01-01'
-- id: FR
-  name: France
-  type: country
-  status: member
-  joined: '1958-01-01'
-- id: GB
-  name: United Kingdom
-  type: country
-  status: former_member
-  joined: '1973-01-01'
-  left: '2020-01-31'
-  note: Left the European Union and Euratom together on 31 January 2020 under the Withdrawal Agreement.
-- id: GR
-  name: Greece
-  type: country
-  status: member
-  joined: '1981-01-01'
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-  joined: '2013-07-01'
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-  joined: '2004-05-01'
+  joined: '1973'
 - id: IE
   name: Ireland
   type: country
   status: member
-  joined: '1973-01-01'
-- id: IT
-  name: Italy
+  joined: '1973'
+- id: GR
+  name: Greece
   type: country
   status: member
-  joined: '1958-01-01'
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-  joined: '2004-05-01'
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-  joined: '1958-01-01'
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-  joined: '2004-05-01'
-- id: MT
-  name: Malta
-  type: country
-  status: member
-  joined: '2004-05-01'
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-  joined: '1958-01-01'
-- id: PL
-  name: Poland
-  type: country
-  status: member
-  joined: '2004-05-01'
+  joined: '1981'
 - id: PT
   name: Portugal
   type: country
   status: member
-  joined: '1986-01-01'
-- id: RO
-  name: Romania
+  joined: '1986'
+- id: ES
+  name: Spain
   type: country
   status: member
-  joined: '2007-01-01'
+  joined: '1986'
+- id: AT
+  name: Austria
+  type: country
+  status: member
+  joined: '1995'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1995'
 - id: SE
   name: Sweden
   type: country
   status: member
-  joined: '1995-01-01'
-- id: SI
-  name: Slovenia
+  joined: '1995'
+- id: CY
+  name: Cyprus
   type: country
   status: member
-  joined: '2004-05-01'
+  joined: '2004'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '2004'
+- id: EE
+  name: Estonia
+  type: country
+  status: member
+  joined: '2004'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '2004'
+- id: LV
+  name: Latvia
+  type: country
+  status: member
+  joined: '2004'
+- id: LT
+  name: Lithuania
+  type: country
+  status: member
+  joined: '2004'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '2004'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '2004'
 - id: SK
   name: Slovak Republic
   type: country
   status: member
-  joined: '2004-05-01'
+  joined: '2004'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '2004'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2007'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '2007'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '2013'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  left: '2020-01-31'
 membership_count: 27
-wikidata_id: Q8919
-description: International organisation established by the Euratom Treaty, one of the two Treaties of Rome signed in March
-  1957, which entered into force on 1 January 1958. Euratom pools research, sets common safety and radiation-protection standards,
-  supplies ores and nuclear fuel through the Euratom Supply Agency and applies safeguards on civil nuclear material in its
-  member states. It has not merged with the European Union and keeps a separate legal personality, while sharing the EU institutions;
-  every EU member state is a member.
+founding_members:
+- BE
+- FR
+- DE
+- IT
+- LU
+- NL
+description: Euratom is the international organization created by the 1957 Euratom Treaty to pool the civil nuclear sector
+  of its member states. It supports nuclear research, sets common health and safety standards, secures the supply of ores
+  and nuclear fuel through its Supply Agency, and inspects civil nuclear material to check that it is not diverted from peaceful
+  uses. It has the same members as the European Union and is run by the EU institutions.
 tags:
-- EAEC
 - EURATOM
-- atomic
-- energy
-- europe
-- european
-- fusion
 - nuclear
+- atomic_energy
+- europe
+- european_union
+- safeguards
 - nuclear_safety
 - research
-- safeguards
+- supply_agency
+- intergovernmental
 topics:
 - key: energy
   name: Energy
 - key: nuclear
   name: Nuclear
+- key: nuclear_security
+  name: Nuclear Security
 - key: research
   name: Research
+- key: safety
+  name: Safety
 - key: regional_cooperation
   name: Regional Cooperation
+- key: integration
+  name: Integration
 other_names:
-- id: ar
-  name: الجماعة الأوروبية للطاقة الذرية
-- id: de
-  name: Europäische Atomgemeinschaft
 - id: en
   name: European Atomic Energy Community
-- id: es
-  name: Comunidad Europea de la Energía Atómica
 - id: fr
   name: Communauté européenne de l'énergie atomique
-- id: pt
-  name: Comunidade Europeia da Energia Atómica
-- id: ru
-  name: Европейское сообщество по атомной энергии
-- id: zh
-  name: 歐洲原子能共同體
-notes: 'Membership follows EU membership: the six founding states (Belgium, France, Germany, Italy, Luxembourg and the Netherlands)
-  joined on 1 January 1958 and later members on their EU accession dates. The United Kingdom left on 31 January 2020. Third
-  countries associated with the Euratom Research and Training Programme, and states with nuclear cooperation agreements, are
-  not members and are not listed. Euratom is the Member of ITER for the EU and was a member of KEDO.'
+- id: es
+  name: Comunidad Europea de la Energía Atómica
+- id: ar
+  name: الجماعة الأوروبية للطاقة الذرية
+acronyms:
+- lang: en
+  value: Euratom
+notes: Euratom did not merge into the European Union under the amending treaty signed in December 2007 and keeps its own
+  legal personality, but every EU member state is a member and the Council, Commission, European Parliament and Court of
+  Justice act for it. A Safeguards Office carries out physical and accounting checks in nuclear installations.
+  The Euratom Supply Agency has its own legal personality and financial autonomy. The United Kingdom left Euratom with the
+  European Union on 31 January 2020 and takes part in the Euratom research and training programme under a separate agreement
+  from 1 January 2021. Accession years for members after the six founders follow the years each joined the European Union.
+wikidata_id: Q8919
 last_verified: '2026-11-22'
 provenance:
 - field: includes
-  source: European Union, EU countries (Euratom membership follows EU membership); Withdrawal Agreement (OJ C 384I, 12.11.2019)
-    for the United Kingdom
+  source: European Union
   retrieved_at: '2026-11-22'
   url: https://european-union.europa.eu/principles-countries-history/eu-countries_en
+- field: includes
+  source: European Union
+  retrieved_at: '2026-11-22'
+  url: https://european-union.europa.eu/principles-countries-history/eu-countries_en?page=1
 - field: membership_count
-  source: European Union, EU countries (Euratom membership follows EU membership); Withdrawal Agreement (OJ C 384I, 12.11.2019)
-    for the United Kingdom
+  source: EUR-Lex
   retrieved_at: '2026-11-22'
-  url: https://european-union.europa.eu/principles-countries-history/eu-countries_en
+  url: https://eur-lex.europa.eu/summary/EN/4301853
+- field: includes
+  source: UK Government
+  retrieved_at: '2026-11-22'
+  url: https://www.gov.uk/guidance/nuclear-research-after-brexit
 - field: founded
-  source: 'EUR-Lex summary: Treaty establishing the European Atomic Energy Community (Euratom)'
+  source: EUR-Lex
   retrieved_at: '2026-11-22'
-  url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
-- field: active_period
-  source: 'EUR-Lex summary: Treaty establishing the European Atomic Energy Community (Euratom)'
-  retrieved_at: '2026-11-22'
-  url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
-- field: legal_status
-  source: 'EUR-Lex summary: Treaty establishing the European Atomic Energy Community (Euratom)'
+  url: https://eur-lex.europa.eu/summary/EN/4301853
+- field: founding_members
+  source: EUR-Lex
   retrieved_at: '2026-11-22'
   url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
 - field: description
-  source: 'EUR-Lex summary: Treaty establishing the European Atomic Energy Community (Euratom)'
+  source: EUR-Lex
   retrieved_at: '2026-11-22'
-  url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
+  url: https://eur-lex.europa.eu/summary/EN/4301853
+- field: recognition_status
+  source: EUR-Lex
+  retrieved_at: '2026-11-22'
+  url: https://eur-lex.europa.eu/summary/EN/4301853
 - field: notes
-  source: 'EUR-Lex summary: Treaty establishing the European Atomic Energy Community (Euratom)'
+  source: UK Government
+  retrieved_at: '2026-11-22'
+  url: https://www.gov.uk/guidance/nuclear-research-after-brexit
+- field: notes
+  source: Euratom Supply Agency
+  retrieved_at: '2026-11-22'
+  url: https://euratom-supply.ec.europa.eu/about-esa/legal-basis_en
+- field: notes
+  source: EUR-Lex
   retrieved_at: '2026-11-22'
   url: https://eur-lex.europa.eu/EN/legal-content/summary/treaty-establishing-the-european-atomic-energy-community-euratom.html
-- field: partof
-  source: Wikidata
-  retrieved_at: '2026-11-22'
-  url: https://www.wikidata.org/wiki/Q8919
-  license: CC0
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-11-22'
-  url: https://www.wikidata.org/wiki/Q8919
-  license: CC0
-- field: acronyms
+- field: headquarters
   source: Wikidata
   retrieved_at: '2026-11-22'
   url: https://www.wikidata.org/wiki/Q8919
   license: CC0
 - field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q8919
+  license: CC0
+- field: other_names
   source: Wikidata
   retrieved_at: '2026-11-22'
   url: https://www.wikidata.org/wiki/Q8919
