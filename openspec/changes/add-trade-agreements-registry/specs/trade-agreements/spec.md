@@ -87,7 +87,7 @@ Records taken only from a catalogue (WTO RTA-IS or ADB ARIC) SHALL set `verifica
 #### Scenario: ARIC row imported
 
 - **WHEN** an ARIC row with `aric_id: 2` is imported without an official source
-- **THEN** the record has `verification: catalogue` and a provenance entry citing `https://aric.adb.org/fta.php?id=2`
+- **THEN** the record has `verification: catalogue` and a provenance entry citing `https://aric.adb.org/fta.php?id=2&ssid=3`
 
 #### Scenario: Linked record must be official
 
