@@ -28,7 +28,12 @@ includes:
 - id: ER
   name: Eritrea
   type: country
-  status: member
+  status: former_member
+  joined: '1993'
+  left: '2025-12-12'
+  note: Joined after independence in 1993, self-suspended its participation in April 2007 and rejoined after the June 2023
+    summit. Withdrew again by a Note Verbale to the IGAD Secretariat, which IGAD acknowledged on 12 December 2025; the
+    left date is the notice date, as no effective date was published.
 - id: ET
   name: Ethiopia
   type: country
@@ -49,11 +54,13 @@ includes:
   name: Sudan
   type: country
   status: member
+  note: Founding member. Suspended its membership on 20 January 2024 after IGAD invited the RSF leader to its Kampala
+    summit, and resumed full participation on 9 February 2026, which the IGAD Secretariat welcomed the same day.
 - id: UG
   name: Uganda
   type: country
   status: member
-membership_count: 8
+membership_count: 7
 wikidata_id: Q499039
 description: Trade bloc in East Africa.
 tags:
@@ -90,8 +97,16 @@ other_names:
   name: Межправительственный орган по вопросам развития
 - id: zh
   name: 东非政府间发展组织
-last_verified: '2026-10-22'
+last_verified: '2026-11-22'
 provenance:
+- field: includes
+  source: IGAD Secretariat statement on the return of the Republic of the Sudan to IGAD (9 February 2026)
+  retrieved_at: '2026-11-22'
+  url: https://igad.int/statement-by-the-secretariat-of-the-intergovernmental-authority-on-development-igad-on-the-return-of-the-republic-of-the-sudan-to-igad/
+- field: includes
+  source: IGAD press release "IGAD Regrets Eritrea's Decision to Withdraw from the Organisation" (12 December 2025)
+  retrieved_at: '2026-11-22'
+  url: https://igad.int/?p=23228
 - field: includes
   source: IGAD
   retrieved_at: '2026-10-22'
