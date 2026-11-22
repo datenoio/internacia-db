@@ -21,3 +21,13 @@
   describe the unamended 1969 and 1973 conventions.
 - The Maritime Labour Convention, 2006 is not added: the ILO NORMLEX ratification page could
   not be read.
+
+### Fixed
+
+- `SOLAS` and `MARPOL` rosters follow the IMO Status Book, Vol. I, dated 30 October 2026.
+  Both add Kyrgyzstan (`SOLAS` 169, `MARPOL` 163).
+- `MARPOL` `joined` dates for Liberia, Mexico, the Netherlands, Poland, Spain, Sweden, the
+  United Kingdom, the United States and Uruguay were all `2007-01-09`, which is Albania's date.
+  They now carry each State's own date of signature or deposit.
+- `SOLAS` `joined` for Monaco and Ukraine is now 1974-11-01, the date of their definitive
+  signature, not the date the convention entered into force.
