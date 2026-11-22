@@ -122,6 +122,7 @@ MAPPED = {
     4: "CEFTA", 16: "GAFTA", 35: "TNTR", 45: "SADCFTA", 94: "EAC", 120: "EUCU", 121: "COMESA", 124: "SAPTA",
     127: "CAN", 128: "ECOTA", 147: "PTN", 151: "CACM", 152: "EFTA", 582: "PICTA", 762: "CISFTA", 909: "EAEU",
     1086: "AfCFTA", 1276: "AUUAE", 732: "INNZ", 1103: "GBGE", 1117: "GBUA", 130: "MERCOSUR", 683: "PACERPLUS",
+    1044: "PACALLSG",
 }
 # Hand-mapped catalogue records that WTO shows in force although the record says abandoned:
 # negotiations that were later resumed and concluded under the same name.
