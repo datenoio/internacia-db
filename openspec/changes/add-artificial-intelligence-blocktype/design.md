@@ -37,7 +37,7 @@ The key applies when artificial intelligence is the record's main subject. It in
 
 ## Risks
 
-- **Stale rosters.** The Council of Europe Treaty Office chart could not be read automatically. The `COEAICONVENTION` roster comes from the Netherlands treaty database (last changed 2026-11-06), and a maintainer should check it against the chart. The military AI declaration list has not changed since 2024-11-27.
+- **Stale rosters.** The `COEAICONVENTION` roster was first taken from the Netherlands treaty database (last changed 2026-11-06), because the Council of Europe Treaty Office chart sits behind a bot check. It was then checked against the chart in a browser on 2026-11-21 and matches it. The military AI declaration list has not changed since 2024-11-27.
 - **Scope creep.** A broad scope note could pull in every digital body. The boundary above limits the key to records whose main subject is AI.
 
 ## Open Questions

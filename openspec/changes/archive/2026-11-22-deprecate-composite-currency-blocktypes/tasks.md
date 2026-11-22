@@ -30,6 +30,8 @@
 
 ## 5. Removal (MAJOR, v5.0.0)
 
+Moved to `reorganize-intorg-blocktype` tasks 6.1, 6.3 and 6.4 when this change was archived, so the MAJOR release removes `intorg`, `eccurr` and `cuscurr` from one checklist.
+
 - [ ] 5.1 After at least one MINOR release with both values deprecated, remove `eccurr` and `cuscurr` from `OECS`, `CEMAC`, `UEMOA` and from `blocktypes.yaml`, together with `intorg` (`reorganize-intorg-blocktype` task 6.1). Remove their baseline entries.
 - [ ] 5.2 Add the migration SQL from design.md to `CHANGELOG.md`.
 - [ ] 5.3 Rebuild and run the full test and validation suite.

@@ -14,7 +14,7 @@
 - [x] 2.2 Add `NAAIMES`, `HAIPFRIENDS`, `OECDAIPRINCIPLES`, `MILITARYAIDECLARATION` and `COEAICONVENTION` with official-source rosters, `last_verified` and provenance
 - [x] 2.3 Add Wikidata exclusions for `NAAIMES` and `HAIPFRIENDS`
 - [x] 2.4 Record the deferral of the UN Group of Friends for International Cooperation on AI Capacity-building in `CHANGELOG.md`
-- [ ] 2.5 Check the `COEAICONVENTION` roster against the Council of Europe Treaty Office chart in a browser
+- [x] 2.5 Check the `COEAICONVENTION` roster against the Council of Europe Treaty Office chart in a browser (matches the chart as of 2026-11-21)
 
 ## 3. Documentation
 
