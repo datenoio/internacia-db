@@ -468,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        221,
+        222,
         set(),
     ),
     (
@@ -502,7 +502,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        72,
+        73,
         set(),
     ),
     (
