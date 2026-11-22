@@ -1,6 +1,6 @@
 ### Added
 
-- Sixteen artificial intelligence declarations, coalitions and partnerships with
+- Seventeen artificial intelligence declarations, coalitions and partnerships with
   `artificial_intelligence` and the signatory lists of their hosts, checked on 2026-11-22:
   - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
     Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
@@ -48,6 +48,9 @@
     governance, 4 October 2024, Wikidata Q133894914), a `regional` record: 15 approving
     countries and three later adherents (Bolivia, Costa Rica, Dominica). Source: the text
     published by AGESIC.
-
-  The REAIM Blueprint for Action (Seoul, 2024) is deferred: its list of endorsing states
-  is no longer published.
+  - `REAIMBLUEPRINT` (REAIM Blueprint for Action, Seoul, 10 September 2024), in
+    `armscontrol`: 41 of the 61 endorsing states. The official list was only on the closed
+    summit website, so each state is sourced separately from the Korea Herald (citing the
+    Korean Foreign Ministry), RSIS, Canada's First Committee statement and national replies
+    to UN General Assembly resolution 79/239. 18 EU member states rest on the EU's
+    collective statement only and carry a `note`.
