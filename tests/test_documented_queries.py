@@ -421,14 +421,14 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        33,
+        35,
         set(),
     ),
     (
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        42,
+        43,
         set(),
     ),
     (
@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        209,
+        210,
         set(),
     ),
     (
@@ -531,7 +531,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        33,
+        35,
         set(),
     ),
 ]

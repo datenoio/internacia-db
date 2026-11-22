@@ -18,6 +18,10 @@
     `TYPHOONCOMMITTEE`, `WMOESCAPPTC`, `UNGGIM`, `RCMRD`, `AFRIGIST`, `PAIGH`.
   - Scientific and technical cooperation: `ICGEB`, `COMSTECH`, `GOIC`, `CYTED`, `IIR`,
     `CIEC`, `PIARC`.
+- Seven more technical bodies whose own sites could not be read, compiled from Wayback Machine
+  copies of their official pages, founding texts and IGO documents: `SMARTAFRICA`, `COMELEC`,
+  `ACMAD`, `EMERG`, `IOMOU`, `VINADELMAR`, and the historical `ECOMET` (dissolved 2023), which
+  `EUMETNET` now names as its predecessor.
 - `CCASG` lists `GOIC` and `GSO` among its suborganizations.
 
 ### Changed
