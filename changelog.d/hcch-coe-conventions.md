@@ -33,3 +33,6 @@
 - `BIE` (Bureau International des Expositions, 184 Member States, with accession dates from the BIE),
   `UPC` (Unified Patent Court, 18 Contracting Member States) and `TSCG` (Treaty on Stability,
   Coordination and Governance, the Fiscal Compact, 27 parties).
+- `PHEUR` (Convention on the Elaboration of a European Pharmacopoeia, 39 states and the EU), `EMBC`
+  (European Molecular Biology Conference, 32 Member States and 3 associate members) and `IARC`
+  (International Agency for Research on Cancer, 28 Participating States).
