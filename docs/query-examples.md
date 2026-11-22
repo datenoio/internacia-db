@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 73 rows — 43 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 12 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 18 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
+**Expected:** 75 rows — 44 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 12 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 19 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
 
 Filter to a single exclusion pattern:
 
@@ -922,7 +922,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 35 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
+**Expected:** 37 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
 → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ### Dissolved organizations that still carry rosters
@@ -934,7 +934,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 43 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 45 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
@@ -968,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 269 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 270 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1024,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 218 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 220 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1094,7 +1094,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 70 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 72 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -1300,7 +1300,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 35 rows.
+**Expected:** 37 rows.
 
 ## Authority and capacity
 
