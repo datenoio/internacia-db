@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 63 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 10 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `CTBT`).
+**Expected:** 64 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 11 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `CTBT`).
 
 Filter to a single exclusion pattern:
 

@@ -274,13 +274,13 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            63,
+            64,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            10,
-            {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI"},
+            11,
+            {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI", "HCOC"},
         ),
         (
             "b.has_china AND NOT b.has_usa",

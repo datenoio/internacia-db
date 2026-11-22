@@ -32,6 +32,18 @@
   - `NPDI` (Non-Proliferation and Disarmament Initiative, Q7048793): 12 members.
   - `NEWAGENDA` (New Agenda Coalition, Q3875176): 6 members. The id avoids `NAC`, which is the
     World Bank North America aggregate.
+- IAEA regional agreements and regional nuclear bodies, each with its official roster checked on
+  2026-11-22:
+  - `RCA` (Asia-Pacific, 22 Government Parties).
+  - `ARCAL` (Latin America and the Caribbean, 21 members).
+  - `ARASIA` (Arab states in Asia, 10 States Party).
+  - `FNCA` (Forum for Nuclear Cooperation in Asia, 13 countries).
+  - `AAEA` (Arab Atomic Energy Agency, Q56376750): an `igo` `partof` `LAS` with 14 member states.
+
+  `RCA`, `ARCAL`, `ARASIA` and `FNCA` have no Wikidata item and are listed in
+  `wikidata_exclusions.yaml`.
+- `HCOC` (Hague Code of Conduct against Ballistic Missile Proliferation, Q1566329): 145 subscribing
+  states with subscription dates.
 
 ### Fixed
 
