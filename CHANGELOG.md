@@ -7,6 +7,354 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.4.0] - 2026-11-22
+
+### Added
+
+- Two more artificial intelligence records with `artificial_intelligence`, checked on
+  2026-11-22:
+  - `SANTODOMINGOAIDECLARATION` (Santo Domingo Declaration, third ministerial summit on the
+    ethics of AI in Latin America and the Caribbean, 26 June 2026), a `regional` record. The
+    published text has a placeholder instead of the list of countries, so only the Dominican
+    Republic (host and new chair of the regional working group) and Uruguay (outgoing chair)
+    are listed. Sources: AGESIC and the text on UNESCO's site.
+  - `IRAISE` (International Research-driven Alliance for AI Serving Every Child, formerly the
+    Beneficial AI for Children Coalition, February 2025), a `policy_forum` with `human_rights`:
+    nine governments. Source: the Paris Peace Forum.
+- Two more artificial intelligence records with `artificial_intelligence`, checked on
+  2026-11-22:
+  - `AIPFD` (AI Partnership for Defense, the forum of defence institutions convened by the US
+    Department of Defense since September 2020), a `policy_forum` in `military`: 13 founding
+    nations and Germany, the Netherlands and Singapore from May 2021. Source: DoD Joint AI
+    Center and CDAO releases, cited from Internet Archive copies.
+  - `AIHUBSD` (AI Hub for Sustainable Development, co-led by Italy and UNDP and opened in Rome
+    on 20 June 2025), a `regional` `policy_forum`: the two co-leads and 18 African partner
+    countries. Sources: the AI Hub website and MIMIT.
+- Twenty artificial intelligence declarations, coalitions and partnerships with
+  `artificial_intelligence` and the signatory lists of their hosts, checked on 2026-11-22:
+  - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
+    Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
+    the UK government.
+  - `SEOULAIDECLARATION` (Seoul Declaration for Safe, Innovative and Inclusive AI, 2024):
+    10 countries and the EU. Sources: the UK government and the Korean Ministry of
+    Foreign Affairs.
+  - `SEOULAIMINISTERIAL` (Seoul Ministerial Statement, 2024): 27 countries and the EU.
+    Source: the UK government.
+  - `PARISAISTATEMENT` (Statement on Inclusive and Sustainable AI for People and the
+    Planet, AI Action Summit 2025, Wikidata Q133259297): 63 countries, the African Union
+    Commission and the EU. Source: the French Presidency; later signatories are dated
+    from archived copies of its page.
+  - `PARISAIWEAPONSDECLARATION` (Paris Declaration on Maintaining Human Control in AI
+    Enabled Weapon Systems, 2025), in `armscontrol`: 27 states. Source: the French
+    Presidency.
+  - `NEWDELHIAIDECLARATION` (AI Impact Summit Declaration, New Delhi, 2026): 90 countries,
+    the EU and IFAD. Sources: the Press Information Bureau and the Ministry of External
+    Affairs of India.
+  - `REAIMCALLTOACTION` (REAIM Call to Action, The Hague, 2023), in `armscontrol`: 57
+    states and Palestine. Source: the Netherlands government.
+  - `REAIMPATHWAYS` (REAIM 2026 Pathways to Action, A Coruña), in `armscontrol`: 45
+    states. Source: the Spanish Ministry of Foreign Affairs.
+  - `PARISAISAFETYCALL` (Paris Call for AI Safety and Security, 9 November 2026): 19 states;
+    the 11 companies and 11 civil society signatories are named in `notes`. Source: the
+    French Presidency.
+  - `CHILDRENAICOALITION` (Coalition for Children's Rights and Protection in the Age of AI,
+    July 2026), a `policy_forum` with `human_rights`: the 18 founding states and Australia.
+    Source: the French Ministry for Europe and Foreign Affairs. The coalition has since
+    reported 23 states without naming them, so the roster is incomplete.
+  - `AFRICAAIDECLARATION` (Africa Declaration on Artificial Intelligence, Kigali, April
+    2025), a `regional` record: 52 African countries and the African Union. Source: the
+    official text published by C4IR Rwanda.
+  - `CURRENTAI` (Current AI, Wikidata Q132753289), a `non_state_organization` headquartered
+    in Paris: its ten partner countries, with status `partner`. Source: currentai.org.
+  - `SANTIAGOAIDECLARATION` (Santiago Declaration to Promote Ethical AI in Latin America and
+    the Caribbean, October 2023), a `regional` record: 20 countries. Source: InvestChile; the
+    declaration text has no signatory block.
+  - `NORDICBALTICAIDECLARATION` (AI in the Nordic-Baltic Region, Stockholm, 14 May 2018), a
+    `regional` record: eight states, the Faroe Islands and the Åland Islands. Source: the
+    signed copy published by the Government of Iceland.
+  - `CARTAGENAAIDECLARATION` (Cartagena de Indias Declaration on AI governance, ecosystems
+    and education, August 2024), a `regional` record: 17 countries. Source: MinTIC Colombia.
+  - `MONTEVIDEOAIDECLARATION` (Montevideo Declaration on a regional approach to AI
+    governance, 4 October 2024, Wikidata Q133894914), a `regional` record: 15 approving
+    countries and three later adherents (Bolivia, Costa Rica, Dominica). Source: the text
+    published by AGESIC.
+  - `REAIMBLUEPRINT` (REAIM Blueprint for Action, Seoul, 10 September 2024), in
+    `armscontrol`: 41 of the 61 endorsing states. The official list was only on the closed
+    summit website, so each state is sourced separately from the Korea Herald (citing the
+    Korean Foreign Ministry), RSIS, Canada's First Committee statement and national replies
+    to UN General Assembly resolution 79/239. 18 EU member states rest on the EU's
+    collective statement only and carry a `note`.
+  - `SUSTAINABLEAICOALITION` (Coalition for Sustainable AI, February 2025), a `policy_forum`
+    with `environment`: 15 supporting governments and five intergovernmental organisations
+    (UNEP, ITU, UNDP, IEA, GGGI), with status `participant`. Sources: the coalition's site
+    and the French Ministry of Ecological Transition.
+  - `HAMBURGAIDECLARATION` (Hamburg Declaration on Responsible AI for the SDGs, 2 June 2025):
+    eight states, each through a ministry, and the EAC, UNDP and UNICEF. Source: BMZ
+    Digital.Global and the declaration's list of endorsements.
+  - `AICAPACITYFRIENDS` (Group of Friends for International Cooperation on AI
+    Capacity-building, UN New York, December 2024), a `policy_forum`: only its co-chairs, China
+    and Zambia, because the group publishes no member list. Source: the Permanent Mission of
+    China to the UN.
+- `EUROAREA` (euro area, Wikidata Q8268), a `currency` record for the 21 EU member states
+  that use the euro, with adoption dates from the ECB roster and `partof: EU`, checked on
+  2026-11-22. It shares Q8268 with its World Bank mirror `EMU`.
+- Six Hague Conference on Private International Law conventions as `legal` treaty records,
+  with Contracting Parties from the HCCH status tables (checked on 2026-11-22):
+  `APOSTILLE` (Apostille Convention, 1961), `SERVICE1965` (Service Convention),
+  `EVIDENCE1970` (Evidence Convention), `CHILDABDUCTION1980` (Child Abduction Convention),
+  `ADOPTION1993` (Intercountry Adoption Convention) and `CHILDPROTECTION1996` (Child
+  Protection Convention).
+- Eleven Council of Europe treaties, with parties from the Netherlands Treaty Database
+  (checked on 2026-11-22): `MAAC` (Convention on Mutual Administrative Assistance in Tax
+  Matters), `TRANSFERSENTENCED` (ETS 112), `LISBONRECOGNITION` (Lisbon Recognition
+  Convention), `CONVENTION108` (data protection), `LANZAROTE`, `COETRAFFICKING` (CETS 197),
+  `ECPT` (prevention of torture), `ISTANBULCONVENTION`, `FCNM`, `ESC` (European Social
+  Charter, 1961) and `ESCREVISED` (European Social Charter, revised 1996).
+- Four UNESCO conventions, with parties from the Netherlands Treaty Database (checked on
+  2026-11-22): `ANTIDOPING2005` (International Convention against Doping in Sport),
+  `INTANGIBLEHERITAGE` (2003 Convention), `CULTURALEXPRESSIONS` (2005 Convention) and
+  `UNESCO1970` (illicit traffic in cultural property).
+- Six IMO instruments, with Contracting States from the IMO Status Book of 30 October 2026:
+  `TONNAGE1969`, `SUA1988`, `OPRC1990`, `AFS2001`, `LC1972` (London Convention) and `LP1996`
+  (London Protocol).
+- Five IAEA conventions, the 1977 Additional Protocols to the Geneva Conventions and the 1925
+  Geneva Protocol, with parties from the Netherlands Treaty Database (checked on 2026-11-22):
+  `CPPNM`, `CNS` (Convention on Nuclear Safety), `JOINTCONVENTION` (spent fuel and radioactive
+  waste), `EARLYNOTIFICATION`, `ASSISTANCECONVENTION`, `API1977`, `APII1977` and
+  `GENEVAPROTOCOL1925`. Organizations that are parties (EURATOM, FAO, WHO, WMO) are listed as
+  `organization` entries.
+- Three CMS daughter agreements and three river basin commissions, with parties from the Netherlands
+  Treaty Database (checked on 2026-11-22): `AEWA` (African-Eurasian Migratory Waterbirds),
+  `EUROBATS` (European bats), `WADDENSEALS` (Wadden Sea seals), `ICPR` (International Commission
+  for the Protection of the Rhine), `IMC` (International Meuse Commission) and `SCHELDTCOM`
+  (International Scheldt Commission).
+- `BIE` (Bureau International des Expositions, 184 Member States, with accession dates from the BIE),
+  `UPC` (Unified Patent Court, 18 Contracting Member States) and `TSCG` (Treaty on Stability,
+  Coordination and Governance, the Fiscal Compact, 27 parties).
+- `PHEUR` (Convention on the Elaboration of a European Pharmacopoeia, 39 states and the EU), `EMBC`
+  (European Molecular Biology Conference, 32 Member States and 3 associate members) and `IARC`
+  (International Agency for Research on Cancer, 28 Participating States).
+- Seven historical `currency` records with dated former members, checked on 2026-11-22
+  against treaty texts, central bank histories and UK archive records: `LMU` (Latin
+  Monetary Union, Wikidata Q613420), `SMU` (Scandinavian Monetary Union, Q60812), `EACB`
+  (East African Currency Board, Q5327653), `WACB` (West African Currency Board,
+  Q134599375), `MALAYABORNEOCURRENCYBOARD` (Board of Commissioners of Currency, Malaya and
+  British Borneo; currency item Q2407759), `BCCB` (British Caribbean Currency Board;
+  currency item Q942092) and `ECCA` (Eastern Caribbean Currency Authority, no Wikidata
+  item).
+- Lineage `BCCB` → `ECCA` → `ECCU`: `ECCU` gains `predecessor: ECCA`.
+- `TLATELOLCO` (Treaty of Tlatelolco, Wikidata Q1567567), the treaty record for the Latin
+  American and Caribbean nuclear-weapon-free zone: 33 States Parties with deposit dates from
+  the UNODA Treaties Database, checked on 2026-11-22. `OPANAL` is now `partof` it.
+- `PTBT` (Partial Nuclear Test Ban Treaty, Wikidata Q278960): 125 States Parties, each with the
+  earliest deposit date at any of the three depositaries, from the UNODA Treaties Database,
+  checked on 2026-11-22.
+- `CANWFZ` (Central Asian Nuclear-Weapon-Free Zone Treaty, Wikidata Q501371): 5 States Parties
+  with deposit dates from the UNODA Treaties Database, checked on 2026-11-22.
+- `AFCONE` (African Commission on Nuclear Energy, Wikidata Q2986403), an `intergovernmental_body`
+  `partof` `PELINDABA` that lists the 12 States Parties currently elected to the Commission.
+- `UNSCEAR` (Wikidata Q2297408), an `intergovernmental_body` `partof` `UN`, established by General
+  Assembly resolution 913 (X) of 3 December 1955: 31 member states with the year each was designated.
+- `CONFDISARMAMENT` (Conference on Disarmament, Wikidata Q1931500): 65 member states by regional
+  group, from UNODA. The id avoids `CD`, the ISO code of the Democratic Republic of the Congo.
+- `PARISNUCLEAR` (Paris Convention on Third Party Liability in the Field of Nuclear Energy,
+  Wikidata Q7137274): 16 Contracting Parties with ratification dates. The roster comes from the
+  Wikipedia table of the OECD NEA ratification status, because oecd-nea.org blocks automated access.
+- Nuclear forums and initiatives, each with its official roster checked on 2026-11-22:
+  - `GIF` (Generation IV International Forum, Q1123284): the seven states and Euratom that have
+    signed the 2025 Framework Agreement.
+  - `IFNEC` (International Framework for Nuclear Energy Cooperation, Q3366107): 33 Participant
+    countries, 32 observer countries and 5 observer organizations.
+  - `PSI` (Proliferation Security Initiative, Q1141011): 116 endorsing states.
+  - `GPWMD` (Global Partnership Against the Spread of Weapons and Materials of Mass Destruction,
+    Q5570539): 30 countries and the EU.
+  - `IPNDV` (International Partnership for Nuclear Disarmament Verification): 32 partner states
+    and the EU. It has no Wikidata item and is listed in `wikidata_exclusions.yaml`.
+  - `NPDI` (Non-Proliferation and Disarmament Initiative, Q7048793): 12 members.
+  - `NEWAGENDA` (New Agenda Coalition, Q3875176): 6 members. The id avoids `NAC`, which is the
+    World Bank North America aggregate.
+- IAEA regional agreements and the Arab Atomic Energy Agency, each with its official roster checked on
+  2026-11-22:
+  - `RCA` (Asia-Pacific, 22 Government Parties).
+  - `ARCAL` (Latin America and the Caribbean, 21 members).
+  - `ARASIA` (Arab states in Asia, 10 States Party).
+  - `AAEA` (Arab Atomic Energy Agency, Q56376750): an `igo` `partof` `LAS` with 14 member states.
+
+  `RCA`, `ARCAL` and `ARASIA` have no Wikidata item and are listed in
+  `wikidata_exclusions.yaml`.
+- `HCOC` (Hague Code of Conduct against Ballistic Missile Proliferation, Q1566329): 145 subscribing
+  states with subscription dates.
+- `TRIPLENUCLEAR` (Declaration to Triple Nuclear Energy, Q139072661): the 39 endorsing countries
+  listed by the World Nuclear Association (updated 2 October 2026), including Kosovo (`XK`).
+- `NUCLEARARMED`, a `reference_enumeration` of the nine nuclear-armed states counted by the SIPRI
+  Yearbook 2026. It complements `NWS`, the five NPT nuclear-weapon States.
+- 66 technical organizations found missing in the `technical` blocktype audit, each with an
+  official roster or `membership_applicability: not_applicable`, checked on 2026-11-22:
+  - Metrology and standards: `BIPM`, `EURAMET`, `COOMET`, `APMP`, `SIM`, `AFRIMETS`,
+    `GULFMET`, `GSO`, `AIDSMO`, `SARSO`, `ISSNIC`.
+  - Accreditation: `GLOBALACI` (Global Accreditation Cooperation, formed on 1 January 2026
+    from IAF and ILAC), the historical `ILAC`, `EA`, `APAC`, `IAAC`, `AFRAC`, `ARAC`. `IAF`
+    now names `GLOBALACI` as its successor.
+  - Aviation and maritime: `ASECNA`, `SRVSOP`, `RFIR`, `IOPCFUNDS`, `MOSELLECOM`, and the port
+    State control regimes `PARISMOU`, `TOKYOMOU`, `CARIBMOU`, `MEDMOU`, `BSMOU`, `ABUJAMOU`,
+    `RIYADHMOU`.
+  - Telecom, broadcasting and digital: `RCCCOMM`, `CITEL`, `ABU`, `ASBU`, `DCO`, and the
+    regulator networks `CRASA`, `WATRA`, `AREGNET`, `BEREC`, `REGULATEL`, `FRATEL`,
+    `EAPEREG`, `ASMG`.
+  - Nuclear and power grids: `EURATOM`, `ENSREG`, `WENRA`, `FNCA`, `ABACC`, `GCCIA`, `CRIE`.
+  - Meteorology, Earth observation and geospatial: `GEO`, `AGRHYMET`, `ICPAC`,
+    `TYPHOONCOMMITTEE`, `WMOESCAPPTC`, `UNGGIM`, `RCMRD`, `AFRIGIST`, `PAIGH`.
+  - Scientific and technical cooperation: `ICGEB`, `COMSTECH`, `GOIC`, `CYTED`, `IIR`,
+    `CIEC`, `PIARC`.
+- Seven more technical bodies whose own sites could not be read, compiled from Wayback Machine
+  copies of their official pages, founding texts and IGO documents: `SMARTAFRICA`, `COMELEC`,
+  `ACMAD`, `EMERG`, `IOMOU`, `VINADELMAR`, and the historical `ECOMET` (dissolved 2023), which
+  `EUMETNET` now names as its predecessor.
+- `CCASG` lists `GOIC` and `GSO` among its suborganizations.
+- 27 technical multilateral treaties as `treaty_body` records, each with its states-parties
+  roster from the depositary, checked on 2026-11-22:
+  - WIPO-administered (`patent`, roster from WIPO Lex): `PARIS1883` (Paris Convention),
+    `BERNE1886` (Berne Convention; `BERNECONVENTION` stays the wildlife convention), `PCT`,
+    `MADRIDPROTOCOL`, `HAGUEAGREEMENT`, `BUDAPESTTREATY`, `LISBONAGREEMENT` (1958 Agreement),
+    `MARRAKESHVIP`, `WCT` and `WPPT`.
+  - IMO (`maritime`, roster from the IMO Status Book of 30 October 2026): `STCW`, `COLREG`,
+    `LL1966`, `SAR1979`, `FAL1965`, `BWM`, `HKC` (in force since 2025-06-26) and `CLC1992`
+    (the 1992 Protocol to the Civil Liability Convention).
+  - ICAO (`aviation`, roster from the ICAO lists of parties): `MONTREAL1999`, `CAPETOWN2001`
+    (count checked against the UNIDROIT status page), `IASTA`, `TOKYO1963`, `HAGUE1970` and
+    `MONTREAL1971`.
+  - WCO (`trade`, roster from the WCO positions as regards ratifications): `HSCONVENTION`,
+    `RKC` (Revised Kyoto Convention) and `ISTANBUL1990` (Convention on Temporary Admission).
+- The European Union, OAPI and the Eurasian Patent Organization are listed as
+  `type: organization` parties where the depositary lists them. Signatories that have not
+  ratified are left out.
+- `CLC1992` and `RKC` have `wikidata_exclusions.yaml` entries, because their Wikidata items
+  describe the unamended 1969 and 1973 conventions.
+- The Maritime Labour Convention, 2006 is not added: the ILO NORMLEX ratification page could
+  not be read.
+
+### Changed
+
+- A push to `main` runs the `validate` workflow on Python 3.13 only, the leg with the data
+  checks and the uploaded reports. Its pull request already passed all three legs.
+- A pull request that changes only `openspec/`, `dev/` or `website/` skips the build, the
+  tests and the data checks in `validate`. It still runs the Markdown link check, and its
+  `validate (3.11/3.12/3.13)` legs still report as required checks.
+- The `validate` workflow installs dependencies with `uv pip install` instead of `pip`,
+  which saves 15–25 seconds per leg.
+- `OECS` moved from `eccurr/` to `economic/` with `blocktype` `[economic, political,
+  currency, eccurr]`. `CEMAC` and `UEMOA` now carry `[customs, currency, cuscurr]`.
+  `list_contains(blocktype, 'currency')` now also returns these three records.
+- `SCHENGENAREA` moved from `customs/` to `travel/` (`blocktype: [travel]`): Schengen is a
+  passport-free travel area, not a customs union. `UNASUR` no longer carries `customs`.
+  Record IDs do not change.
+- `EMU` (World Bank Euro area aggregate) adds Bulgaria, which joined on 1 January 2026, as
+  the World Bank API lists it.
+- The `currency` and `customs` scope notes state when an organization adds `currency` as a
+  secondary blocktype.
+- YAML is read with libyaml's C parser (`CSafeLoader`) through
+  `internacia_builder.yaml_io.safe_load`, about eight times faster than `yaml.safe_load`.
+  Writing stays on PyYAML's Python emitter, so every export is byte-for-byte the same.
+  `ruff` now rejects `yaml.safe_load` (`TID251`).
+- `INTERNACIA_ZSTD_LEVEL` (1–22) sets the zstd level of the `*.zst` and Parquet exports. The
+  default stays 22, which releases always use. The `validate` workflow builds at 3, which
+  nearly halves each build.
+- In the `validate` workflow, the checks that do not depend on the Python version (dependency
+  audit, oldest-DuckDB read, data, documentation, staged-artifact and quality checks) run on
+  Python 3.13 only, and are no longer repeated on every leg. The 3.12 leg keeps coverage and
+  the SDK contract suite, and 3.11 keeps the reproducibility check. Each Python version still
+  builds its own artifacts and runs the whole test suite. The CI artifacts are now named
+  `validation-reports` and `quality-report`, without a `-py3.x` suffix.
+- `CMA` gains `previous_names` (Rand Monetary Area, 1974–1986) and `joined` dates: Lesotho,
+  Eswatini and South Africa on 5 December 1974, Namibia on 6 February 1992. Its `founded`
+  date and `active_period.start` become 5 December 1974, the Rand Monetary Area Agreement
+  (was July 1986), as Wikidata Q1116201 treats the two areas as one entity.
+- Nuclear arms-control treaties `NPT`, `CTBT`, `TPNW`, `PELINDABA`, `RAROTONGA`, `BANGKOK`
+  and `SEABEDTREATY` move from `agreement` to `armscontrol` as primary blocktype, as the
+  `agreement` description requires. They keep `agreement` and add `nuclear`.
+- `OPANAL` (from `energy`) and `AG`, the Australia Group (from `political`), move to
+  `armscontrol`.
+- The `nuclear` blocktype now covers nuclear security and non-proliferation, not only energy
+  and safety. It is added as a secondary tag to `IAEA`, `CTBT`, `CTBTO`, `KEDO`, `OPANAL`,
+  `GICNT`, `NSS`, `JCPOA`, `NWS`, `NWFZ` and the nuclear-weapon-free zone treaties. `NSS`,
+  `ISTC` and `STCU` also gain `armscontrol`.
+- `scope_category`: `OPANAL` is an `igo` established by Article 7 of the treaty, no longer a
+  `treaty_body`. `NWS` and `NWFZ` are `reference_enumeration`, applying the reviewed decisions
+  in `scope_category_nonformal_30.yaml`.
+- `technical` blocktype now also tags the six bodies whose `institutional_design.mandate`
+  is `technical` (`ICAO`, `IMO`, `ITU`, `UPU`, `WIPO`, `WMO`), `IEC` (as `ISO` already
+  was), and the technical-cooperation bodies `CFTC`, `CP` (Colombo Plan) and `SPC`, which
+  also gains `scientific`.
+- Primary blocktype moved to the domain the taxonomy notes prescribe: `SOLAS` to
+  `maritime` (was `transport`), `NSG` and `ZANGGERCOM` to `armscontrol` (were `energy` and
+  `forum`), `IPCC` to `climate` (was `research`), and `CP` to `development` (was
+  `economic`). `MARPOL` adds `maritime`, `CEPT` adds `telecom`, `NEA`, `NSG` and
+  `ZANGGERCOM` add `nuclear`, and `IPCC` adds `scientific`.
+
+### Deprecated
+
+- Blocktypes `eccurr` (replacements `economic`, `currency`) and `cuscurr` (replacements
+  `customs`, `currency`) are deprecated and listed in `contract.json` `deprecated`. A
+  blocktype never combines two other blocktypes. Queries on them return the same records
+  (`OECS`; `CEMAC`, `UEMOA`) until they are removed in the next MAJOR release. Replacement
+  queries: `list_has_all(blocktype, ['economic', 'currency'])` and
+  `list_has_all(blocktype, ['customs', 'currency'])`.
+
+### Fixed
+
+- `ASEAN` gains its English acronym `ASEAN`, so consumers that label blocks by English
+  acronym (as they do for `EU` and `EAEU`) no longer fall back to the full name.
+- English acronyms for other formal IGOs that had none: `UNESCO`, `EUTELSAT`, `APA`,
+  `IMCTC`, `CGIAR`, `International IDEA`, `EURONEST PA`, `NATO PA`, `AFRISTAT`, `OHADA`,
+  `IFC-IOR`, `IMSC`, `ALBA`, `CONMEBOL` and `AMN`.
+- `ASEAN` name casing: "Association of Southeast Asian Nations" (was "SouthEast"), also in
+  the `BIMPEAGA` `partof` reference.
+- `IAEA` listed 8 of its members. It now lists all 182 member states with membership dates
+  (IAEA INFCIRC/2/Rev.94), North Korea as a former member (withdrew 1994) and Palestine as an
+  observer.
+- `CTBT` listed every signatory as a member. It now lists the 179 States Parties with deposit
+  dates. The Russian Federation is a `former_member` since it withdrew its ratification on
+  3 November 2023, and the 8 signature-only states are omitted, as for other treaties.
+- `CTBTO` listed 195 states, including non-signatories (India, Pakistan, North Korea, Saudi
+  Arabia, Syria and others). It now lists the 188 CTBT signatories that make up the
+  Preparatory Commission, with signature dates.
+- `CTBT` headquarters pointed to coordinates near Windsor, England, taken from Wikidata. It is
+  now Vienna, the seat of the Organization under Article II of the treaty.
+- `WANO` and `WNA`, now `non_state_organization`, no longer present countries with nuclear
+  plants or member companies as member states. Their members are operators and companies, so
+  the records have no country roster (`membership_applicability: not_applicable`).
+- `ITER` listed its European Member as `EU` ("European Union (through Euratom)"), and `KEDO`
+  listed it under the unresolved id `EAEC`. Both now reference the `EURATOM` record.
+- `scope_category` was `igo` on records whose own `legal_status` says they are not
+  intergovernmental organizations. Industry associations, NGOs and operator bodies are now
+  `non_state_organization`: `WNA`, `WANO`, `WEC`, `IGA`, `IHA`, `WBA`, `WWEA`, `GEIDCO`,
+  `FUTURECOAL`, `ENTSOE`, `NORDEL`, `NAERC` (NERC), `AICEP`, `IPC` and `POSTEUROP`.
+  Forums and agency coordination groups without IGO personality are now `policy_forum`:
+  `CEM`, `MI`, `IPEEC`, `EEHUB`, `NSG`, `CCSDS`, `CEOS` and `CGMS`. `IPCC`, a body of
+  WMO and UNEP, is now `intergovernmental_body`.
+- `IGAD`: Eritrea is a `former_member` (joined 1993, left 2025-12-12). IGAD acknowledged its
+  withdrawal on 12 December 2025, so `membership_count` is now 7.
+- `IGAD`: Sudan's entry notes its suspension on 20 January 2024 and its return on
+  9 February 2026; it stays a `member`.
+- `ISA` (International Solar Alliance): the roster grows from 9 to 114 current members, compiled
+  from the Netherlands treaty database's parties tables for the Framework Agreement and its
+  amendment, with ratification dates where shown. Brazil, which has signed but not ratified,
+  is no longer listed as a member; the United States stays a `former_member`.
+- `SOLAS` and `MARPOL` rosters follow the IMO Status Book, Vol. I, dated 30 October 2026.
+  Both add Kyrgyzstan (`SOLAS` 169, `MARPOL` 163).
+- `MARPOL` `joined` dates for Liberia, Mexico, the Netherlands, Poland, Spain, Sweden, the
+  United Kingdom, the United States and Uruguay were all `2007-01-09`, which is Albania's date.
+  They now carry each State's own date of signature or deposit.
+- `SOLAS` `joined` for Monaco and Ukraine is now 1974-11-01, the date of their definitive
+  signature, not the date the convention entered into force.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1338 → 1538 records; added `AAEA`, `ABACC`, `ABU`, `ABUJAMOU`, `ACMAD`, `ADOPTION1993`, `AEWA`, `AFCONE`, `AFRAC`, `AFRICAAIDECLARATION`, `AFRIGIST`, `AFRIMETS`, `AFS2001`, `AGRHYMET`, `AICAPACITYFRIENDS`, `AIDSMO`, `AIHUBSD`, `AIPFD`, `ANTIDOPING2005`, `APAC` and 180 more; 89 changed
+- Blocktypes: 83 → 83 records; 5 changed
+- Membership edges: 58096 → 69142; 11126 added, 80 removed, 398 changed
+
 ## [4.3.0] - 2026-11-21
 
 ### Added
