@@ -38,6 +38,10 @@
   `wikidata_exclusions.yaml`.
 - `HCOC` (Hague Code of Conduct against Ballistic Missile Proliferation, Q1566329): 145 subscribing
   states with subscription dates.
+- `TRIPLENUCLEAR` (Declaration to Triple Nuclear Energy, Q139072661): the 39 endorsing countries
+  listed by the World Nuclear Association (updated 2 October 2026), including Kosovo (`XK`).
+- `NUCLEARARMED`, a `reference_enumeration` of the nine nuclear-armed states counted by the SIPRI
+  Yearbook 2026. It complements `NWS`, the five NPT nuclear-weapon States.
 
 ### Fixed
 
