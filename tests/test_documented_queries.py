@@ -276,7 +276,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            64,
+            66,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -286,7 +286,7 @@ ORDER BY b.id
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            39,
+            41,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
