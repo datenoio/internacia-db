@@ -42,14 +42,17 @@ FROM read_json('contract.json') AS c, UNNEST(c.tables) AS u(t);
 |------|------|----------|
 | `countries`, `intblocks`, `blocktypes`, `memberships` | table | The datasets |
 | `_meta` | table | One row per dataset: version, build identity, `schema_hash`, `contract_version` |
-| `intblocks_aliases`, `countries_aliases` | table | Retired or renamed IDs (`alias` → `target`, `reason`, `since`) |
+| `intblocks_aliases`, `countries_aliases` | table | Retired or renamed IDs (`alias` → `target`, `reason`, `since`). `intblocks_aliases.target_dataset` is `trade_agreements` for `reason = moved`: the id left intblocks for the trade agreements registry, with the same id |
 | `attribute_intblock_migrations` | table | Retired attribute intblocks → country fields |
 | `border_status` | table | Closed or restricted land borders: sorted `iso3code` pair (`country_a`, `country_b`), `status`, `since`, `until`, `note`, `last_verified`, `provenance`. Source: `data/borders/border_status.yaml`. Absence of a row means no closure is recorded, not that the border is verified open. |
+| `trade_agreements` | table | One row per trade agreement (FTA, customs union, PTA, preference scheme, services, digital, framework): `agreement_type`, `status` (`proposed`, `negotiating`, `signed`, `in_force`, `terminated`, `abandoned`, `superseded`), `signed`, `in_force`, `ended`, `intblock_id` (the intblock that holds the roster of an agreement with three or more parties), `party_count`, `wto_rta_id`, `aric_id`, `verification` (`official` or `catalogue`), `provenance`. Source: `data/trade_agreements/*.yaml`. No trade values, tariff lines or depth scores |
+| `trade_agreement_parties` | table | One row per agreement and party: `party_type` (`country`, `territory`, `historical-country`, `intblock`), `status` (`party`, `former_party`), `signed`, `in_force`, `joined`, `left`, `source` (`record`, or `intblock` when read from the linked intblock's `includes`) |
 | `current_memberships` | view | Membership edges that are current: not `former_member`, no `left` date, and the intblock is neither `historical` nor dissolved. All participation statuses are kept; filter `status` for full members. |
 | `country_currencies` | view | `country_code`, `currency_code`, `currency_name`, `currency_symbol` |
 | `country_languages` | view | `country_code`, `language_code`, `language_name`, `official` |
 | `country_timezones` | view | `country_code`, `timezone` |
 | `country_borders` | view | `country_code`, `iso3code`, `neighbor_iso3`, `current_status`: one row per entry of `countries.borders`, with the pair's current `border_status` (`closed`, `restricted`) or NULL |
+| `country_trade_agreements` | view | `country_code`, `agreement_id`, `via`, `agreement_type`, `agreement_status`, `in_force`: one row per country and agreement it is a current party to. A bloc party (the EU) expands to its **current** members from `current_memberships`, with `via` set to the bloc id, so coverage is current, not historical |
 
 `memberships` and `current_memberships` carry `role`, the country's function on an
 infrastructure route (`origin`, `transit`, `destination` on pipelines; `terminal`, `transit` on

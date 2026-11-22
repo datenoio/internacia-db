@@ -20,16 +20,21 @@ from internacia_builder.schemas import (
     get_blocktypes_schema,
     get_border_status_schema,
     get_countries_schema,
+    get_country_aliases_schema,
     get_country_borders_schema,
     get_country_currencies_schema,
     get_country_languages_schema,
     get_country_timezones_schema,
+    get_country_trade_agreements_schema,
     get_intblocks_schema,
     get_memberships_schema,
     get_meta_schema,
+    get_trade_agreement_parties_schema,
+    get_trade_agreements_schema,
     schema_columns,
     schema_hash,
 )
+from internacia_builder.trade_agreements import PARTY_STATUSES, PARTY_TYPES
 from internacia_builder.yaml_io import safe_load
 
 CONTRACT_FILE = "contract.json"
@@ -42,7 +47,8 @@ MIN_DUCKDB = "1.5.4"
 DUCKDB_STORAGE_COMPATIBILITY = "v1.0.0"
 
 # Alias ``reason`` values accepted by the validator (internacia_builder/validate/cross_rules.py).
-ALIAS_REASONS = ["renamed", "merged", "disambiguated"]
+ALIAS_REASONS = ["renamed", "merged", "disambiguated", "retired", "moved"]
+ALIAS_TARGET_DATASETS = ["intblocks", "trade_agreements"]
 
 # name, schema, in internacia.duckdb, primary key, foreign keys, JSON Schema with enum sources
 TABLES: list[dict[str, Any]] = [
@@ -101,7 +107,7 @@ TABLES: list[dict[str, Any]] = [
     },
     {
         "name": "countries_aliases",
-        "schema": get_aliases_schema,
+        "schema": get_country_aliases_schema,
         "in_duckdb": True,
         "primary_key": ["alias"],
         "foreign_keys": [],
@@ -126,6 +132,30 @@ TABLES: list[dict[str, Any]] = [
         "enum_source": "border_status.schema.json",
         # The source file wraps rows in an `entries` list; enums are read below that prefix.
         "enum_prefix": "entries[].",
+    },
+    {
+        "name": "trade_agreements",
+        "schema": get_trade_agreements_schema,
+        "in_duckdb": True,
+        "primary_key": ["id"],
+        "foreign_keys": [
+            {"columns": ["intblock_id"], "references": {"table": "intblocks", "columns": ["id"]}},
+        ],
+        "enum_source": "trade_agreements.schema.json",
+    },
+    {
+        "name": "trade_agreement_parties",
+        "schema": get_trade_agreement_parties_schema,
+        "in_duckdb": True,
+        "primary_key": ["agreement_id", "party_id"],
+        "foreign_keys": [
+            {"columns": ["agreement_id"], "references": {"table": "trade_agreements", "columns": ["id"]}},
+            {
+                "columns": ["party_id"],
+                "references": {"table": "countries", "columns": ["code"]},
+                "note": "Rows with party_type 'intblock' reference intblocks.id instead; 'historical-country' rows may use codes not in countries.",
+            },
+        ],
     },
 ]
 
@@ -193,6 +223,34 @@ VIEWS: list[dict[str, Any]] = [
         ),
     },
     {
+        "name": "country_trade_agreements",
+        "schema": get_country_trade_agreements_schema,
+        "primary_key": ["country_code", "agreement_id"],
+        "description": (
+            "One row per country and trade agreement it is a current party to. Country parties map "
+            "directly (via NULL); a bloc party (the EU) is expanded to its current members from "
+            "current_memberships, with via set to the bloc id. Coverage is current, not historical."
+        ),
+        "sql": (
+            "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.in_force AS party_in_force, "
+            "a.agreement_type, a.status AS agreement_status, a.in_force AS agreement_in_force "
+            "FROM trade_agreement_parties tp JOIN trade_agreements a ON a.id = tp.agreement_id "
+            "WHERE tp.status = 'party'), "
+            "r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, agreement_type, "
+            "agreement_status, coalesce(party_in_force, agreement_in_force) AS in_force "
+            "FROM p WHERE party_type IN ('country', 'territory') "
+            "UNION ALL "
+            "SELECT m.country_code, p.agreement_id, p.party_id AS via, p.agreement_type, p.agreement_status, "
+            "p.agreement_in_force AS in_force "
+            "FROM p JOIN current_memberships m ON m.intblock_id = p.party_id "
+            "WHERE p.party_type = 'intblock' AND m.include_type IN ('country', 'territory') "
+            "AND m.status IN ('member', 'founding_member', 'participant', 'associate', 'associate_member', 'associated')) "
+            "SELECT country_code, agreement_id, via, agreement_type, agreement_status, in_force FROM r "
+            "QUALIFY row_number() OVER (PARTITION BY country_code, agreement_id ORDER BY via NULLS FIRST) = 1 "
+            "ORDER BY country_code, agreement_id"
+        ),
+    },
+    {
         "name": "country_timezones",
         "schema": get_country_timezones_schema,
         "primary_key": ["country_code", "timezone"],
@@ -214,6 +272,8 @@ DERIVED_ENUMS = [
     ("memberships", "role", "intblocks", "includes[].role"),
     ("current_memberships", "role", "intblocks", "includes[].role"),
     ("country_borders", "current_status", "border_status", "status"),
+    ("country_trade_agreements", "agreement_type", "trade_agreements", "agreement_type"),
+    ("country_trade_agreements", "agreement_status", "trade_agreements", "status"),
 ]
 
 
@@ -265,6 +325,10 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
         enums.append({"table": table, "column": column, "values": values, "open": True})
     for table in ("intblocks_aliases", "countries_aliases"):
         enums.append({"table": table, "column": "reason", "values": ALIAS_REASONS, "open": True})
+    enums.append({"table": "intblocks_aliases", "column": "target_dataset", "values": ALIAS_TARGET_DATASETS, "open": True})
+    enums.append({"table": "trade_agreement_parties", "column": "party_type", "values": PARTY_TYPES, "open": True})
+    enums.append({"table": "trade_agreement_parties", "column": "status", "values": PARTY_STATUSES, "open": True})
+    enums.append({"table": "trade_agreement_parties", "column": "source", "values": ["intblock", "record"], "open": True})
     return sorted(enums, key=lambda e: (e["table"], e["column"]))
 
 

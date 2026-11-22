@@ -616,7 +616,7 @@
         "alias"
       ],
       "foreign_keys": [],
-      "schema_hash": "338647c1daad3cf304265428f34c9f43a5c8177a5e9d0acfbdca24aa56ab6de6",
+      "schema_hash": "f75f7fa801e8b51e426ee4209f05a6338ab8b8ad5e762b27a6fcc09d22b23f43",
       "columns": [
         {
           "name": "alias",
@@ -640,6 +640,11 @@
         },
         {
           "name": "note",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "target_dataset",
           "type": "string",
           "nullable": true
         }
@@ -816,6 +821,227 @@
       ]
     },
     {
+      "name": "trade_agreements",
+      "kind": "table",
+      "in_duckdb": true,
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "intblock_id"
+          ],
+          "references": {
+            "table": "intblocks",
+            "columns": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "schema_hash": "c9efde16e7201c5f90941b6261aeb65bb0bb7c7efd5bad47d5179582f0922a63",
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "agreement_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "signed",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "in_force",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ended",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "intblock_id",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "party_count",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "supersedes",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "superseded_by",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "wto_rta_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "aric_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "wikidata_id",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "acronyms",
+          "type": "list<struct<lang:string,value:string>>",
+          "nullable": true
+        },
+        {
+          "name": "other_names",
+          "type": "list<struct<lang:string,name:string>>",
+          "nullable": true
+        },
+        {
+          "name": "links",
+          "type": "list<struct<url:string,type:string>>",
+          "nullable": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "verification",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "last_verified",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "provenance",
+          "type": "list<struct<field:string,source:string,url:string,retrieved_at:string,license:string>>",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "trade_agreement_parties",
+      "kind": "table",
+      "in_duckdb": true,
+      "primary_key": [
+        "agreement_id",
+        "party_id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "agreement_id"
+          ],
+          "references": {
+            "table": "trade_agreements",
+            "columns": [
+              "id"
+            ]
+          }
+        },
+        {
+          "columns": [
+            "party_id"
+          ],
+          "references": {
+            "table": "countries",
+            "columns": [
+              "code"
+            ]
+          },
+          "note": "Rows with party_type 'intblock' reference intblocks.id instead; 'historical-country' rows may use codes not in countries."
+        }
+      ],
+      "schema_hash": "43bb2143cdccd3f077c6c3a051c9e9d9ff5aa2e9084826143d0144adfa5dbc13",
+      "columns": [
+        {
+          "name": "agreement_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "party_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "party_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "signed",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "in_force",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "joined",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "left",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "note",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "nullable": true
+        }
+      ]
+    },
+    {
       "name": "current_memberships",
       "kind": "view",
       "in_duckdb": true,
@@ -971,6 +1197,51 @@
       "definition": "SELECT b.country_code, b.iso3code, b.neighbor_iso3, s.status AS current_status FROM (SELECT c.code AS country_code, c.iso3code, UNNEST(c.borders) AS neighbor_iso3 FROM countries c) b LEFT JOIN border_status s ON s.\"until\" IS NULL AND ((s.country_a = b.iso3code AND s.country_b = b.neighbor_iso3) OR (s.country_b = b.iso3code AND s.country_a = b.neighbor_iso3)) ORDER BY country_code, neighbor_iso3"
     },
     {
+      "name": "country_trade_agreements",
+      "kind": "view",
+      "in_duckdb": true,
+      "primary_key": [
+        "country_code",
+        "agreement_id"
+      ],
+      "foreign_keys": [],
+      "schema_hash": "7f013f291953a2b377cc33aad994b4d6ba205b90a808998feb87785e55e484f4",
+      "columns": [
+        {
+          "name": "country_code",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "agreement_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "via",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "agreement_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "agreement_status",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "in_force",
+          "type": "string",
+          "nullable": true
+        }
+      ],
+      "description": "One row per country and trade agreement it is a current party to. Country parties map directly (via NULL); a bloc party (the EU) is expanded to its current members from current_memberships, with via set to the bloc id. Coverage is current, not historical.",
+      "definition": "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.in_force AS party_in_force, a.agreement_type, a.status AS agreement_status, a.in_force AS agreement_in_force FROM trade_agreement_parties tp JOIN trade_agreements a ON a.id = tp.agreement_id WHERE tp.status = 'party'), r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, agreement_type, agreement_status, coalesce(party_in_force, agreement_in_force) AS in_force FROM p WHERE party_type IN ('country', 'territory') UNION ALL SELECT m.country_code, p.agreement_id, p.party_id AS via, p.agreement_type, p.agreement_status, p.agreement_in_force AS in_force FROM p JOIN current_memberships m ON m.intblock_id = p.party_id WHERE p.party_type = 'intblock' AND m.include_type IN ('country', 'territory') AND m.status IN ('member', 'founding_member', 'participant', 'associate', 'associate_member', 'associated')) SELECT country_code, agreement_id, via, agreement_type, agreement_status, in_force FROM r QUALIFY row_number() OVER (PARTITION BY country_code, agreement_id ORDER BY via NULLS FIRST) = 1 ORDER BY country_code, agreement_id"
+    },
+    {
       "name": "country_timezones",
       "kind": "view",
       "in_duckdb": true,
@@ -1074,7 +1345,9 @@
       "values": [
         "renamed",
         "merged",
-        "disambiguated"
+        "disambiguated",
+        "retired",
+        "moved"
       ],
       "open": true
     },
@@ -1084,6 +1357,35 @@
       "values": [
         "closed",
         "restricted"
+      ],
+      "open": true
+    },
+    {
+      "table": "country_trade_agreements",
+      "column": "agreement_status",
+      "values": [
+        "proposed",
+        "negotiating",
+        "signed",
+        "in_force",
+        "terminated",
+        "abandoned",
+        "superseded"
+      ],
+      "open": true
+    },
+    {
+      "table": "country_trade_agreements",
+      "column": "agreement_type",
+      "values": [
+        "fta",
+        "customs_union",
+        "pta",
+        "preference_scheme",
+        "services",
+        "digital",
+        "framework",
+        "other"
       ],
       "open": true
     },
@@ -1302,7 +1604,18 @@
       "values": [
         "renamed",
         "merged",
-        "disambiguated"
+        "disambiguated",
+        "retired",
+        "moved"
+      ],
+      "open": true
+    },
+    {
+      "table": "intblocks_aliases",
+      "column": "target_dataset",
+      "values": [
+        "intblocks",
+        "trade_agreements"
       ],
       "open": true
     },
@@ -1349,6 +1662,83 @@
         "partner",
         "validation",
         "extension"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_parties",
+      "column": "party_type",
+      "values": [
+        "country",
+        "historical-country",
+        "intblock",
+        "territory"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_parties",
+      "column": "source",
+      "values": [
+        "intblock",
+        "record"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_parties",
+      "column": "status",
+      "values": [
+        "former_party",
+        "party"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreements",
+      "column": "agreement_type",
+      "values": [
+        "fta",
+        "customs_union",
+        "pta",
+        "preference_scheme",
+        "services",
+        "digital",
+        "framework",
+        "other"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreements",
+      "column": "links[].type",
+      "values": [
+        "website",
+        "wikipedia",
+        "wikidata"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreements",
+      "column": "status",
+      "values": [
+        "proposed",
+        "negotiating",
+        "signed",
+        "in_force",
+        "terminated",
+        "abandoned",
+        "superseded"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreements",
+      "column": "verification",
+      "values": [
+        "official",
+        "catalogue"
       ],
       "open": true
     }
