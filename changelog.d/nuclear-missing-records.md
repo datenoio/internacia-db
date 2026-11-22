@@ -16,6 +16,9 @@
   Assembly resolution 913 (X) of 3 December 1955: 31 member states with the year each was designated.
 - `CONFDISARMAMENT` (Conference on Disarmament, Wikidata Q1931500): 65 member states by regional
   group, from UNODA. The id avoids `CD`, the ISO code of the Democratic Republic of the Congo.
+- `PARISNUCLEAR` (Paris Convention on Third Party Liability in the Field of Nuclear Energy,
+  Wikidata Q7137274): 16 Contracting Parties with ratification dates. The roster comes from the
+  Wikipedia table of the OECD NEA ratification status, because oecd-nea.org blocks automated access.
 
 ### Fixed
 
