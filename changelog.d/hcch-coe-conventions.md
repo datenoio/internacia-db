@@ -30,3 +30,6 @@
   `EUROBATS` (European bats), `WADDENSEALS` (Wadden Sea seals), `ICPR` (International Commission
   for the Protection of the Rhine), `IMC` (International Meuse Commission) and `SCHELDTCOM`
   (International Scheldt Commission).
+- `BIE` (Bureau International des Expositions, 184 Member States, with accession dates from the BIE),
+  `UPC` (Unified Patent Court, 18 Contracting Member States) and `TSCG` (Treaty on Stability,
+  Coordination and Governance, the Fiscal Compact, 27 parties).
