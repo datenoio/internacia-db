@@ -32,6 +32,30 @@ def test_intblocks_partof_string_becomes_list():
     assert out[0]["partof"] == ["AFUNION"]
 
 
+def test_intblocks_partof_object_becomes_its_id():
+    data = [{"id": "FSB", "partof": {"id": "BIS", "name": "Bank for International Settlements"}}]
+    out = builder.clean_data(data, "intblocks")
+    assert out[0]["partof"] == ["BIS"]
+
+
+def test_intblocks_partof_list_of_objects_becomes_ids():
+    data = [{"id": "X", "partof": [{"id": "UN", "name": "United Nations"}, {"id": "AU", "name": "African Union"}]}]
+    out = builder.clean_data(data, "intblocks")
+    assert out[0]["partof"] == ["UN", "AU"]
+
+
+def test_intblocks_partof_list_of_strings_is_kept():
+    data = [{"id": "X", "partof": ["UN", "AU"]}]
+    out = builder.clean_data(data, "intblocks")
+    assert out[0]["partof"] == ["UN", "AU"]
+
+
+def test_intblocks_partof_mixed_list_becomes_ids():
+    data = [{"id": "X", "partof": ["UN", {"id": "AU", "name": "African Union"}]}]
+    out = builder.clean_data(data, "intblocks")
+    assert out[0]["partof"] == ["UN", "AU"]
+
+
 def test_intblocks_partof_none_becomes_empty_list():
     data = [{"id": "X", "partof": None}]
     out = builder.clean_data(data, "intblocks")
