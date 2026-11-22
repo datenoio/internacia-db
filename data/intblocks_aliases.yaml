@@ -6,11 +6,16 @@
 #
 # Fields:
 #   alias  - the retired/old id a consumer may still hold
-#   target - the current id it now maps to (must exist in the intblocks dataset);
+#   target - the current id it now maps to (must exist in the intblocks dataset,
+#            or in the trade agreements registry for reason: moved);
 #            omitted for reason: retired
-#   reason - renamed | merged | disambiguated | retired
+#   target_dataset - intblocks (default) or trade_agreements (reason: moved only)
+#   reason - renamed | merged | disambiguated | retired | moved
 #   since  - the version that introduced the change
 #   note   - optional human context
+#
+# reason: moved means the record left intblocks for another dataset with the same
+# id; data/trade_agreements/<target>.yaml holds two-party trade agreements.
 #
 # reason: disambiguated means the acronym was reassigned: the old id still
 # exists as a CURRENT id but now refers to a DIFFERENT entity, and the entity
@@ -78,3 +83,250 @@
     La Nueva Televisión del Sur C.A. is a Venezuelan commercial company, not an
     international organization with member states; its seven country rows were
     not memberships. No replacement id. See docs/retired-intblock-ids.md.
+
+- alias: USCR
+  target: CAFTADR
+  reason: merged
+  since: 5.0.0
+  note: >-
+    The United States-Costa Rica schedules are part of CAFTA-DR, not a separate
+    agreement, so the record was merged into CAFTADR when bilateral agreements
+    moved to the trade agreements registry.
+
+- alias: ANZCERTA
+  target: ANZCERTA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: AUINDIA
+  target: AUINDIA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: AUUAE
+  target: AUUAE
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: AUUK
+  target: AUUK
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CETA
+  target: CETA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CHAFTA
+  target: CHAFTA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CNEC
+  target: CNEC
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CNKR
+  target: CNKR
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CNNI
+  target: CNNI
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: CNRS
+  target: CNRS
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUJP
+  target: EUJP
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUKR
+  target: EUKR
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUNZ
+  target: EUNZ
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUSG
+  target: EUSG
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUUA
+  target: EUUA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUUK
+  target: EUUK
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUVN
+  target: EUVN
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: INUAE
+  target: INUAE
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: UKIN
+  target: UKIN
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: UKJP
+  target: UKJP
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: UKNZ
+  target: UKNZ
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USAU
+  target: USAU
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USBH
+  target: USBH
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USCL
+  target: USCL
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USCO
+  target: USCO
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USIL
+  target: USIL
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USJO
+  target: USJO
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USKR
+  target: USKR
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USMA
+  target: USMA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USOM
+  target: USOM
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USPA
+  target: USPA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USPE
+  target: USPE
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: USSG
+  target: USSG
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement moved to the trade_agreements registry with the same id.
+
+- alias: EUCENTRALAFRICAEPA
+  target: EUCENTRALAFRICAEPA
+  target_dataset: trade_agreements
+  reason: moved
+  since: 5.0.0
+  note: Two-party trade agreement (EU and Cameroon) moved to the trade_agreements registry with the same id.

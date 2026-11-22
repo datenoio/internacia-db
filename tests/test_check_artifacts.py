@@ -103,12 +103,13 @@ def artifact_fixture(tmp_path_factory):
     for name in ("countries_aliases", "intblocks_aliases"):
         builder.save_aliases([], out, basename=name)
     builder.save_border_status([], out)
+    builder.save_trade_agreements([], [], out)
     builder.create_duckdb_database(
         source["countries"], source["intblocks"], source["blocktypes"], out / "internacia.duckdb",
         cga.SCHEMAS["countries"](), cga.SCHEMAS["intblocks"](), cga.SCHEMAS["blocktypes"](), source["memberships"],
         reference_tables=[
             ("intblocks_aliases", [], cga.get_aliases_schema()),
-            ("countries_aliases", [], cga.get_aliases_schema()),
+            ("countries_aliases", [], cga.get_country_aliases_schema()),
             ("attribute_intblock_migrations", [], cga.get_attribute_migration_schema()),
         ],
     )

@@ -43,10 +43,14 @@ from internacia_builder.schemas import (
     get_blocktypes_schema,
     get_border_status_schema,
     get_countries_schema,
+    get_country_aliases_schema,
     get_intblocks_schema,
     get_memberships_schema,
+    get_trade_agreement_parties_schema,
+    get_trade_agreements_schema,
     schema_hash,
 )
+from internacia_builder.trade_agreements import build_trade_agreement_rows, load_trade_agreement_records
 from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(add_completion=False, help=__doc__)
@@ -164,11 +168,13 @@ def _expected_views(source: dict[str, list[dict]]) -> dict[str, list[dict]]:
         row["id"] for row in source["intblocks"] if row.get("status") == "historical" or row.get("dissolved") is not None
     }
     memberships = _arrow_rows(source["memberships"], get_memberships_schema())
+    current = [
+        m for m in memberships
+        if m["status"] != "former_member" and m["left"] is None and m["intblock_id"] not in ended
+    ]
     return {
-        "current_memberships": [
-            m for m in memberships
-            if m["status"] != "former_member" and m["left"] is None and m["intblock_id"] not in ended
-        ],
+        "current_memberships": current,
+        "country_trade_agreements": _expected_country_trade_agreements(source, current),
         "country_currencies": [
             {"country_code": c["code"], "currency_code": x["code"], "currency_name": x["name"], "currency_symbol": x["symbol"]}
             for c in countries for x in c["currencies"] or []
@@ -190,6 +196,43 @@ def _expected_views(source: dict[str, list[dict]]) -> dict[str, list[dict]]:
     }
 
 
+BLOC_MEMBER_STATUSES = {"member", "founding_member", "participant", "associate", "associate_member", "associated"}
+
+
+def _expected_country_trade_agreements(source: dict[str, list[dict]], current: list[dict]) -> list[dict]:
+    """Country parties map directly; a bloc party expands to its current members (via the bloc)."""
+    agreements = {a["id"]: a for a in source.get("trade_agreements") or []}
+    members: dict[str, list[str]] = {}
+    for m in current:
+        if m["include_type"] in ("country", "territory") and m["status"] in BLOC_MEMBER_STATUSES:
+            members.setdefault(m["intblock_id"], []).append(m["country_code"])
+    best: dict[tuple[str, str], dict] = {}
+    for party in source.get("trade_agreement_parties") or []:
+        if party["status"] != "party":
+            continue
+        agreement = agreements[party["agreement_id"]]
+        if party["party_type"] in ("country", "territory"):
+            candidates = [(party["party_id"], None, party["in_force"] or agreement["in_force"])]
+        elif party["party_type"] == "intblock":
+            candidates = [(code, party["party_id"], agreement["in_force"]) for code in members.get(party["party_id"], [])]
+        else:
+            continue
+        for code, via, in_force in candidates:
+            row = {
+                "country_code": code,
+                "agreement_id": agreement["id"],
+                "via": via,
+                "agreement_type": agreement["agreement_type"],
+                "agreement_status": agreement["status"],
+                "in_force": in_force,
+            }
+            key = (code, agreement["id"])
+            rank = (via is not None, via or "")
+            if key not in best or rank < (best[key]["via"] is not None, best[key]["via"] or ""):
+                best[key] = row
+    return [best[key] for key in sorted(best)]
+
+
 def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     """Return actionable mismatches; the input bundle and sources are never changed."""
     problems: list[str] = []
@@ -198,6 +241,9 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     fill_country_include_names(source["intblocks"], source["countries"])
     source["memberships"] = build_membership_rows(source["intblocks"])
     source["border_status"] = load_border_status(root)
+    source["trade_agreements"], source["trade_agreement_parties"] = build_trade_agreement_rows(
+        load_trade_agreement_records(root), source["intblocks"]
+    )
     con = duckdb.connect(str(datasets_dir / "internacia.duckdb"), read_only=True)
     try:
         meta = con.sql("SELECT * FROM _meta").to_arrow_table().to_pylist()
@@ -259,13 +305,23 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
             _compare(json.loads((datasets_dir / f"{name}.json").read_text()), expected, f"{name}.json", problems, "alias")
             _compare(pq.read_table(datasets_dir / f"{name}.parquet").to_pylist(), expected, f"{name}.parquet", problems, "alias")
             duck = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
-            _compare(duck, _arrow_rows(expected, get_aliases_schema()), f"{name}.duckdb", problems, "alias")
+            schema = get_country_aliases_schema() if name == "countries_aliases" else get_aliases_schema()
+            _compare(duck, _arrow_rows(expected, schema), f"{name}.duckdb", problems, "alias")
         border_status = source["border_status"]
         _compare(json.loads((datasets_dir / "border_status.json").read_text()), border_status, "border_status.json", problems)
         _compare(pq.read_table(datasets_dir / "border_status.parquet").to_pylist(),
                  _arrow_rows(border_status, get_border_status_schema()), "border_status.parquet", problems)
         duck = con.sql("SELECT * FROM border_status").to_arrow_table().to_pylist()
         _compare(duck, _arrow_rows(border_status, get_border_status_schema()), "border_status.duckdb", problems)
+        for name, schema_fn in (
+            ("trade_agreements", get_trade_agreements_schema),
+            ("trade_agreement_parties", get_trade_agreement_parties_schema),
+        ):
+            expected = _arrow_rows(source[name], schema_fn())
+            _compare(_jsonl_rows(datasets_dir / f"{name}.jsonl"), source[name], f"{name}.jsonl", problems)
+            _compare(pq.read_table(datasets_dir / f"{name}.parquet").to_pylist(), expected, f"{name}.parquet", problems)
+            duck = con.sql(f"SELECT * FROM {name}").to_arrow_table().to_pylist()
+            _compare(duck, expected, f"{name}.duckdb", problems)
         migrations = _arrow_rows(load_attribute_intblock_migrations(root), get_attribute_migration_schema())
         duck = con.sql("SELECT * FROM attribute_intblock_migrations").to_arrow_table().to_pylist()
         _compare(duck, migrations, "attribute_intblock_migrations.duckdb", problems, "retired_id")

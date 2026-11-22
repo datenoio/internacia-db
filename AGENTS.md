@@ -22,7 +22,7 @@ Platform shims (`CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/skills/
 ## Preferred data access
 
 - **Build first:** exports are not committed; run `python scripts/builder.py build` (≈1 min) or download `internacia.duckdb` from the latest GitHub Release.
-- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `memberships`, `_meta`, alias tables, `border_status`; views: `current_memberships`, `country_currencies`, `country_languages`, `country_timezones`, `country_borders` — see [data contract](docs/data-contract.md))
+- **DuckDB:** `data/datasets/internacia.duckdb` (tables: `countries`, `intblocks`, `blocktypes`, `memberships`, `_meta`, alias tables, `border_status`, `trade_agreements`, `trade_agreement_parties`; views: `current_memberships`, `country_currencies`, `country_languages`, `country_timezones`, `country_borders`, `country_trade_agreements` — see [data contract](docs/data-contract.md))
 - **Parquet:** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
 - **Remote:** [internacia-python](https://github.com/datenoio/internacia-python) (SDK; 0.2.x on PyPI predates data v3 — see [SDK status](docs/llm-scenarios.md#sdk-status)). [internacia-api](https://github.com/datenoio/internacia-api) is **in development** and self-host only — no public hosted HTTP API.
 

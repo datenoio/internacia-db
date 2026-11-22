@@ -432,7 +432,7 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        45,
+        46,
         set(),
     ),
     (
@@ -592,7 +592,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 285
+    assert count == 291
 
 
 def test_world_bank_region_filter_uses_region_id(con):

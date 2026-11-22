@@ -52,6 +52,7 @@ from internacia_builder.export import (
     save_jsonl_zst,
     save_memberships_csv,
     save_parquet,
+    save_trade_agreements,
     save_yaml_zst,
     write_datapackage,
     write_dataset_card,
@@ -78,10 +79,14 @@ from internacia_builder.schemas import (
     get_blocktypes_schema,
     get_border_status_schema,
     get_countries_schema,
+    get_country_aliases_schema,
     get_intblocks_schema,
     get_memberships_schema,
+    get_trade_agreement_parties_schema,
+    get_trade_agreements_schema,
     schema_hash,  # noqa: F401  (re-exported for tests and the scripts/builder.py shim)
 )
+from internacia_builder.trade_agreements import build_trade_agreement_rows, load_trade_agreement_records
 from internacia_builder.validate.countries import run_validation as run_countries_validation
 from internacia_builder.validate.cross_rules import check_duplicate_links  # noqa: F401  (re-exported for tests)
 from internacia_builder.validate.intblocks import run_validation as run_intblocks_validation
@@ -241,6 +246,13 @@ def build(
     border_status = load_border_status(project_root)
     typer.echo(f"   Loaded {len(border_status)} border status entr{'y' if len(border_status) == 1 else 'ies'}")
 
+    trade_agreements, trade_agreement_parties = build_trade_agreement_rows(
+        load_trade_agreement_records(project_root), intblocks_data
+    )
+    typer.echo(
+        f"   Loaded {len(trade_agreements)} trade agreement(s) with {len(trade_agreement_parties)} party row(s)"
+    )
+
     # Freeze one build identity for all manifests/sidecars/_meta rows.
     begin_build_context()
 
@@ -306,9 +318,11 @@ def build(
             memberships_data=memberships_data,
             reference_tables=[
                 ("intblocks_aliases", intblock_aliases, get_aliases_schema()),
-                ("countries_aliases", country_aliases, get_aliases_schema()),
+                ("countries_aliases", country_aliases, get_country_aliases_schema()),
                 ("attribute_intblock_migrations", attribute_migrations, get_attribute_migration_schema()),
                 ("border_status", border_status, get_border_status_schema()),
+                ("trade_agreements", trade_agreements, get_trade_agreements_schema()),
+                ("trade_agreement_parties", trade_agreement_parties, get_trade_agreement_parties_schema()),
             ],
         )
 
@@ -319,6 +333,13 @@ def build(
         attribute_migrations, output_dir, write_parquet="parquet" in requested_formats
     )
     save_border_status(border_status, output_dir, write_parquet="parquet" in requested_formats)
+    save_trade_agreements(
+        trade_agreements,
+        trade_agreement_parties,
+        output_dir,
+        write_jsonl="jsonl" in requested_formats,
+        write_parquet="parquet" in requested_formats,
+    )
 
     # Manifests list the checksums of their dataset's files, so they follow every data file.
     if {"parquet", "duckdb"} & set(requested_formats):
