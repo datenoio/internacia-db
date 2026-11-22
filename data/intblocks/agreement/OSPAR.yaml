@@ -22,17 +22,18 @@ links:
   type: website
 - url: https://www.ospar.org/convention
   type: website
-- url: https://en.wikipedia.org/wiki/OSPAR_Commission
+- url: https://en.wikipedia.org/wiki/OSPAR_Convention
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q7076363
+- url: https://www.wikidata.org/wiki/Q1928254
   type: wikidata
-name: OSPAR Commission
+name: OSPAR Convention
 acronyms:
 - lang: en
   value: OSPAR
-legal_status: intergovernmental
-recognition_status: Regional sea convention for the North-East Atlantic, successor to the 1972 Oslo Convention and 1974 Paris
-  Convention; administered by the OSPAR Commission with a secretariat in London
+legal_status: treaty
+recognition_status: Regional sea convention for the North-East Atlantic, opened for signature in Paris on 22 September 1992 and
+  in force since 25 March 1998, replacing the 1972 Oslo Convention and the 1974 Paris Convention. France is the depositary.
+  The OSPAR Commission, made up of representatives of each Contracting Party, administers it, with a secretariat in London.
 headquarters:
   city: London
   country: GB
@@ -44,76 +45,96 @@ secretariat:
   location: London, United Kingdom
   organization: OSPAR Commission Secretariat
 membership_count: 16
-description: Intergovernmental organization established by the Convention for the Protection of the Marine Environment of
-  the North-East Atlantic (the OSPAR Convention). Opened for signature in Paris on 22 September 1992 and entered into force
-  on 25 March 1998, replacing the 1972 Oslo Convention on dumping and the 1974 Paris Convention on land-based sources of marine
-  pollution. OSPAR works to prevent and eliminate pollution and to protect the maritime area against the adverse effects of
-  human activities, including biodiversity and ecosystems under Annex V.
+description: Convention for the Protection of the Marine Environment of the North-East Atlantic (the OSPAR Convention), the
+  regional sea convention under which 15 governments and the European Union cooperate to prevent and eliminate pollution and
+  to protect the North-East Atlantic against the adverse effects of human activities. Opened for signature in Paris on
+  22 September 1992 and in force since 25 March 1998, it replaced the 1972 Oslo Convention on dumping and the 1974 Paris
+  Convention on land-based sources of marine pollution. Its annexes cover land-based sources, dumping and incineration,
+  offshore sources, assessment of the marine environment and, under Annex V, the protection of ecosystems and biological
+  diversity (added at the 1998 Sintra Ministerial Meeting). The OSPAR Commission administers the Convention and adopts
+  Decisions, Recommendations and other agreements; its North-East Atlantic Environment Strategy 2030 sets the current
+  objectives.
 includes:
 - id: BE
   name: Belgium
   type: country
   status: founding_member
+  joined: '1996-12-10'
 - id: CH
   name: Switzerland
   type: country
   status: founding_member
+  joined: '1994-05-11'
 - id: DE
   name: Germany
   type: country
   status: founding_member
+  joined: '1994-12-02'
 - id: DK
   name: Denmark
   type: country
   status: founding_member
+  joined: '1995-12-20'
 - id: ES
   name: Spain
   type: country
   status: founding_member
+  joined: '1994-02-02'
 - id: EU
   name: European Union
   type: organization
   status: founding_member
+  joined: '1997-11-05'
 - id: FI
   name: Finland
   type: country
   status: founding_member
+  joined: '1995-07-25'
 - id: FR
   name: France
   type: country
   status: founding_member
+  joined: '1998-02-17'
 - id: GB
   name: United Kingdom
   type: country
   status: founding_member
+  joined: '1997-07-23'
 - id: IE
   name: Ireland
   type: country
   status: founding_member
+  joined: '1997-08-13'
 - id: IS
   name: Iceland
   type: country
   status: founding_member
+  joined: '1997-06-02'
 - id: LU
   name: Luxembourg
   type: country
   status: founding_member
+  joined: '1997-06-02'
 - id: NL
   name: Netherlands
   type: country
   status: founding_member
+  joined: '1994-01-07'
 - id: 'NO'
   name: Norway
   type: country
   status: founding_member
+  joined: '1995-09-08'
 - id: PT
   name: Portugal
   type: country
   status: founding_member
+  joined: '1998-02-23'
 - id: SE
   name: Sweden
   type: country
   status: founding_member
+  joined: '1994-05-30'
 founding_members:
 - BE
 - CH
@@ -130,7 +151,7 @@ founding_members:
 - 'NO'
 - PT
 - SE
-wikidata_id: Q7076363
+wikidata_id: Q1928254
 tags:
 - OSPAR
 - ocean
@@ -150,60 +171,98 @@ topics:
   name: Marine Protection
 - key: regional_cooperation
   name: Regional Cooperation
+- key: biodiversity
+  name: Biodiversity
 other_names:
-- id: en
-  name: OSPAR Commission
 - id: en
   name: Convention for the Protection of the Marine Environment of the North-East Atlantic
 - id: en
-  name: OSPAR Convention
-- id: fr
-  name: Commission OSPAR
+  name: OSPAR Commission
 - id: fr
   name: Convention pour la protection du milieu marin de l'Atlantique du Nord-Est
-notes: The name OSPAR combines Oslo and Paris, reflecting the predecessor 1972 Oslo and 1974 Paris Conventions. France is
-  the depositary. Finland is a Contracting Party because some of its rivers drain to the Barents Sea; Luxembourg and Switzerland
-  participate as upstream states in the Rhine catchment. Working languages are English and French. The Commission comprises
-  15 governments and the European Union (16 Contracting Parties).
-last_verified: '2026-07-29'
+- id: fr
+  name: Convention OSPAR
+- id: fr
+  name: Commission OSPAR
+- id: es
+  name: Convención para la Protección del Medio Ambiente Marino del Atlántico del Nordeste
+- id: pt
+  name: Convenção para a Protecção do Meio Marinho do Atlântico Nordeste
+- id: nl
+  name: OSPAR-verdrag
+- id: fi
+  name: Yleissopimus Koillis-Atlantin merellisen ympäristön suojelusta
+- id: sv
+  name: Konventionen för skydd av den marina miljön i Nordostatlanten
+- id: ar
+  name: معاهدة حماية البيئة البحرية لشمال شرق الأطلسي
+- id: zh
+  name: 保護東北大西洋海洋環境公約
+notes: >-
+  The name OSPAR combines Oslo and Paris, after the 1972 Oslo and 1974 Paris Conventions that the Convention replaced. All
+  16 Contracting Parties are original parties: they signed in 1992 (Belgium, Portugal and the United Kingdom in November,
+  the others on 22 September) and the Convention entered into force for all of them on 25 March 1998. joined is the date
+  each party deposited its instrument of ratification or approval with the depositary (France), from the Netherlands treaty
+  database. Finland is a Contracting Party because some of its rivers flow to the Barents Sea and it took part in earlier
+  efforts against dumping in the Atlantic and the North Sea; Luxembourg and Switzerland are parties as states in the Rhine
+  catchment. The OSPAR Commission consists of representatives of each Contracting Party; its working languages are English
+  and French. Observer organisations are not listed in includes.
+last_verified: '2026-11-22'
 provenance:
 - field: includes
-  source: official sources
-  retrieved_at: '2026-07-29'
+  source: OSPAR Commission, Contracting Parties page
+  retrieved_at: '2026-11-22'
   url: https://www.ospar.org/organisation/contracting-parties
+- field: includes
+  source: Netherlands Treaty Database, Convention for the protection of the marine environment of the North-East Atlantic
+    (Paris, 22-09-1992), party table (signature, ratification, entry into force)
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/005089_p.html
 - field: founding_members
-  source: official sources
-  retrieved_at: '2026-07-29'
-  url: https://www.ospar.org/convention
+  source: Netherlands Treaty Database, Convention for the protection of the marine environment of the North-East Atlantic,
+    party table
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/005089_p.html
 - field: founded
-  source: official sources
+  source: OSPAR Commission, Convention page
   retrieved_at: '2026-07-29'
   url: https://www.ospar.org/convention
 - field: active_period
-  source: official sources
-  retrieved_at: '2026-07-29'
-  url: https://www.ospar.org/convention
+  source: Netherlands Treaty Database, Convention for the protection of the marine environment of the North-East Atlantic
+    (entry into force 25-03-1998)
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/005089_p.html
 - field: headquarters
-  source: official sources
+  source: OSPAR Commission, Contact page
   retrieved_at: '2026-07-29'
   url: https://www.ospar.org/contact
 - field: description
-  source: official sources
-  retrieved_at: '2026-07-29'
+  source: OSPAR Commission, Convention page
+  retrieved_at: '2026-11-22'
   url: https://www.ospar.org/convention
 - field: legal_status
-  source: official sources
-  retrieved_at: '2026-07-29'
-  url: https://www.ospar.org/
+  source: OSPAR Commission, Convention page
+  retrieved_at: '2026-11-22'
+  url: https://www.ospar.org/convention
 - field: recognition_status
-  source: official sources
-  retrieved_at: '2026-07-29'
+  source: OSPAR Commission, Convention page
+  retrieved_at: '2026-11-22'
   url: https://www.ospar.org/convention
 - field: geographic_scope
-  source: official sources
+  source: OSPAR Commission website
   retrieved_at: '2026-07-29'
   url: https://www.ospar.org/
 - field: notes
-  source: official sources
-  retrieved_at: '2026-07-29'
+  source: OSPAR Commission, Contracting Parties page
+  retrieved_at: '2026-11-22'
   url: https://www.ospar.org/organisation/contracting-parties
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q1928254
+  license: CC0
+- field: other_names
+  source: Wikidata
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q1928254
+  license: CC0
