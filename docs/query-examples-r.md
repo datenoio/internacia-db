@@ -614,7 +614,7 @@ country_memberships(intblocks) |>
   arrange(joined)
 ```
 
-**Expected:** 13 rows (`BEACST`, `CBSS`, `COE`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
+**Expected:** 14 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
 `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Current Parquet exports include `includes[].left` and `memberships.left`.

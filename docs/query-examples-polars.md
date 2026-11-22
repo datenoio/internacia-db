@@ -628,7 +628,7 @@ Without the status filter, the UN roster has 195 entries, including two observer
 )
 ```
 
-**Expected:** 13 rows (`BEACST`, `CBSS`, `COE`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
+**Expected:** 14 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
 `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** DuckDB, Parquet, and `memberships` all export `left`. Use
