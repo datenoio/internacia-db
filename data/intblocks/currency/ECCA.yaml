@@ -35,7 +35,7 @@ includes:
   type: country
   status: former_member
   joined: '1965'
-  left: '1973-12-03'
+  left: '1974-03-31'
 - id: DM
   name: Dominica
   type: country
@@ -46,7 +46,7 @@ includes:
   name: Grenada
   type: country
   status: former_member
-  joined: '1968'
+  joined: '1968-11'
   left: '1983-10-01'
 - id: KN
   name: St. Kitts-Nevis-Anguilla
@@ -83,13 +83,18 @@ founding_members:
 - VC
 description: Currency authority established under the Eastern Caribbean Currency Agreement 1965 to issue the Eastern
   Caribbean dollar for Barbados and the Leeward and Windward Islands, taking over from the British Caribbean Currency Board.
-  Grenada joined in 1968 and Barbados left when its central bank issued the Barbados dollar in December 1973. The Eastern
+  Grenada joined in November 1968, and Barbados ceased to be a member on 31 March 1974 after its central bank had issued
+  the Barbados dollar in December 1973. The Eastern
   Caribbean Central Bank Agreement, signed in Port of Spain on 5 July 1983, terminated the 1965 agreement, and the
   Eastern Caribbean Central Bank replaced the authority on 1 October 1983.
-notes: Trinidad and Tobago and British Guiana had left the British Caribbean Currency Board before 1965 and were never ECCA
-  participants. Grenada used the Trinidad and Tobago dollar from 1964 to 1968. The Central Bank of Barbados was founded in
-  May 1972 and first issued notes on 3 December 1973; ECCA notes ceased to be legal tender in Barbados on 28 February 1974
-  and ECCA coins on 30 April 1974. St Kitts-Nevis-Anguilla is listed under KN; Anguilla was not a signatory of the 1983
+notes: The ECCB describes the original participants as Barbados and the Leeward and Windward Islands except Grenada,
+  which gives the seven founding members listed. No official text giving the exact date of the Eastern Caribbean
+  Currency Agreement 1965 was found; the ECCB dates the authority to March 1965 and an IMF paper to January 1965, and the
+  Eastern Caribbean dollar notes were first issued in October 1965. Trinidad and Tobago and British Guiana had left the
+  British Caribbean Currency Board before 1965 and were never ECCA participants. Secondary sources say Grenada used the
+  Trinidad and Tobago dollar from 1964 until it joined the ECCA; no official text confirming this was found. The Central
+  Bank of Barbados was founded in May 1972 and first issued notes on 3 December 1973; ECCA notes ceased to be legal
+  tender in Barbados on 28 February 1974 and ECCA coins on 30 April 1974. St Kitts-Nevis-Anguilla is listed under KN; Anguilla was not a signatory of the 1983
   agreement. Wikidata has no item for the authority.
 last_verified: '2026-11-22'
 tags:
@@ -115,16 +120,36 @@ other_names:
   name: Eastern Caribbean Currency Authority
 provenance:
 - field: dissolved
+  source: Eastern Caribbean Central Bank, Annual Report 2018-2019, note 1 (the ECCB was established on 1 October 1983, on
+    which date the Authority ceased to exist)
+  retrieved_at: '2026-11-22'
+  url: https://cdn.eccb-centralbank.org/documents/2024-07-05-10-42-47-ECCB-2018-2019-Annual-Report.pdf
+- field: founded
   source: Eastern Caribbean Central Bank, Agreement Establishing the Eastern Caribbean Central Bank, done at Port of Spain on
-    5 July 1983 (terminates the Eastern Caribbean Currency Agreement 1965)
+    5 July 1983, Article 2 (Eastern Caribbean Currency Agreement 1965)
   retrieved_at: '2026-11-22'
   url: https://cdn.eccb-centralbank.org/documents/2022-05-27-06-12-30-ECCB-Agreement.pdf
+- field: founding_members
+  source: Eastern Caribbean Central Bank, Strategic Plan 2017-2021, page 4 (ECCA formed by Barbados and the Leeward and
+    Windward Islands except Grenada; Grenada became a member in 1968)
+  retrieved_at: '2026-11-22'
+  url: https://cdn.eccb-centralbank.org/documents/publications/2022-03-17-01-42-03-ECCBStategicPlan2017P2.pdf
 - field: active_period
   source: Eastern Caribbean Central Bank, address by Governor Sir Dwight Venner, 17 October 2000 (ECCB established on
     1 October 1983)
   retrieved_at: '2026-11-22'
   url: https://cdn.eccb-centralbank.org/documents/2022-04-11-09-19-26-Sir-Dwight-Speech---17-October-2000.pdf
 - field: includes
+  source: IMF Monetary and Financial Systems Department, Monetary Policy Implementation at Different Stages of Market
+    Development, Supplementary Information, October 2004, footnote 2 (Grenada joined in November 1968)
+  retrieved_at: '2026-11-22'
+  url: https://www.imf.org/external/np/mfd/2004/eng/102804.pdf
+- field: includes
+  source: Central Bank of Barbados, Barbados ceased to be a member of the East Caribbean Currency Agreement (1965), 31 March
+    1974
+  retrieved_at: '2026-11-22'
+  url: https://www.centralbank.org.bb/news/the-chronicle-of-centralbank-of-barbados-policies/barbados-ceased-to-be-a-member-of-the-east-caribbean-currency-agreement-1965
+- field: description
   source: Central Bank of Barbados, Both Sides of the Coin, page 43 (Barbados dollar notes issued 3 and 18 December 1973;
     end of ECCA legal tender in Barbados in 1974)
   retrieved_at: '2026-11-22'
@@ -138,7 +163,7 @@ provenance:
   retrieved_at: '2026-11-22'
   url: https://cdn.eccb-centralbank.org/documents/2022-05-27-06-12-30-ECCB-Agreement.pdf
 - field: predecessor
-  source: Wikipedia, British West Indies dollar (replaced in 1965 by the Eastern Caribbean dollar of the ECCA)
+  source: Eastern Caribbean Central Bank, Governor's remarks at the launch of the 40th anniversary, 19 January 2023 (after
+    the demise of the British Caribbean Currency Board the territories formed the ECCA in 1965)
   retrieved_at: '2026-11-22'
-  url: https://en.wikipedia.org/wiki/British_West_Indies_dollar
-  license: CC BY-SA 4.0
+  url: https://cdn.eccb-centralbank.org/documents/2023-02-27-11-25-00-With-Slides-ECCB-Governor-Remarks-on-Launch-for-40th-Anniversary.pdf

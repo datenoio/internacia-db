@@ -14,5 +14,5 @@
 
 - `CMA` gains `previous_names` (Rand Monetary Area, 1974–1986) and `joined` dates: Lesotho,
   Eswatini and South Africa on 5 December 1974, Namibia on 6 February 1992. Its `founded`
-  date becomes 1 April 1986, when the Trilateral Monetary Agreement came into force (was
-  July 1986).
+  date and `active_period.start` become 5 December 1974, the Rand Monetary Area Agreement
+  (was July 1986), as Wikidata Q1116201 treats the two areas as one entity.

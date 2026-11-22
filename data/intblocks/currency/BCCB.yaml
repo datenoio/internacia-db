@@ -5,10 +5,10 @@ blocktype:
 status: historical
 scope_category: intergovernmental_body
 founded: '1950'
-dissolved: '1965'
+dissolved: '1967-06-30'
 active_period:
   start: '1951-08-01'
-  end: '1965'
+  end: '1965-12-31'
 successor: ECCA
 geographic_scope: regional
 regions:
@@ -110,15 +110,20 @@ description: Currency board, formally the Board of Commissioners of Currency, Br
 notes: The Leeward Islands participants were Antigua, St Kitts-Nevis-Anguilla and Montserrat; the Windward Islands were
   Grenada, St Vincent, St Lucia and Dominica. The British Virgin Islands are sometimes listed as using the BWI dollar from
   1951 to 1959, but the board's 1961 report does not name them as a participant, so they are not listed. Trinidad and
-  Tobago left when its central bank, established on 12 December 1964, issued its own dollar. Grenada adopted the Trinidad
-  and Tobago dollar in 1964 and rejoined the Eastern Caribbean currency in 1968 under the ECCA. The Bank of Guyana began
-  issuing notes on 15 November 1965 and the board's issue there was to end by 31 December 1965; the board itself was
-  wound up by mid-1967. Antigua, Barbados, Dominica, Montserrat, St Kitts-Nevis-Anguilla, St Lucia and St Vincent passed
+  Tobago left when its central bank, established on 12 December 1964, issued its own dollar. Grenada left in 1964;
+  secondary sources say it adopted the Trinidad and Tobago dollar, and no official text confirming the date was found. It
+  joined the ECCA in November 1968. The Bank of Guyana began
+  issuing notes on 15 November 1965. The British Caribbean Currency Agreement of 12 December 1964 required the board to
+  stop issuing currency on 1 January 1966 and to be dissolved on 30 June 1967; no record confirming the dissolution on
+  that day was found, so the dissolved date is the scheduled one. The scope category reflects the board's constitution
+  by a 1950 agreement between the Governments of Barbados, British Guiana, the Leeward Islands, Trinidad and Tobago and
+  the Windward Islands, whose members the Secretary of State appointed on the Governors' nomination. Antigua, Barbados, Dominica, Montserrat, St Kitts-Nevis-Anguilla, St Lucia and St Vincent passed
   to the ECCA in 1965.
 last_verified: '2026-11-22'
 tags:
 - BCCB
 - BWI
+- british_west_indies_dollar
 - british_empire
 - caribbean
 - colonial
@@ -141,18 +146,6 @@ other_names:
   name: British Caribbean Currency Board
 - id: en
   name: Board of Commissioners of Currency, British Caribbean Territories (Eastern Group)
-- id: en
-  name: British West Indies dollar
-- id: de
-  name: westindischer Dollar
-- id: es
-  name: dólar de las Indias Occidentales Británicas
-- id: fr
-  name: Dollar des Antilles britanniques
-- id: ru
-  name: Вест-индский доллар
-- id: zh
-  name: 英屬西印度群島元
 provenance:
 - field: includes
   source: Board of Commissioners of Currency, British Caribbean Territories (Eastern Group), Report of the Executive
@@ -174,21 +167,31 @@ provenance:
   retrieved_at: '2026-11-22'
   url: https://www.central-bank.org.tt/our-history/
 - field: dissolved
-  source: Guyana Times International, Currency independence (Bank of Guyana issue from 15 November 1965; board issue to end
-    by 31 December 1965)
+  source: British Caribbean Currency Agreement of 12 December 1964, Articles 11(4) and 14(1), scheduled to British Guiana
+    Bill No. 16 of 1965 (Currency Ordinance 1965) (issue to cease on 1 January 1966; dissolution on 30 June 1967)
+  retrieved_at: '2026-11-22'
+  url: https://www.parliament.gov.gy/new2/documents/bills/15940-bill_no_16_of_1965.pdf
+- field: scope_category
+  source: British Guiana Ordinance No. 20 of 1950, First Schedule (agreement between the Governments of the participating
+    colonies; members appointed by the Secretary of State on the Governors' nomination)
+  retrieved_at: '2026-11-22'
+  url: https://www.parliament.gov.gy/new2/documents/acts/14694-act_20_of_1950.pdf
+- field: includes
+  source: Guyana Times International, Currency independence (Bank of Guyana issue from 15 November 1965)
   retrieved_at: '2026-11-22'
   url: https://guyanatimesinternational.com/currency-independence/
 - field: successor
-  source: Eastern Caribbean Central Bank, ECCB Agreement 1983 (terminates the Eastern Caribbean Currency Agreement 1965)
+  source: IMF Monetary and Financial Systems Department, Monetary Policy Implementation at Different Stages of Market
+    Development, Supplementary Information, October 2004, paragraph 5 (the BCCB was replaced by the ECCA in 1965)
   retrieved_at: '2026-11-22'
-  url: https://cdn.eccb-centralbank.org/documents/2022-05-27-06-12-30-ECCB-Agreement.pdf
+  url: https://www.imf.org/external/np/mfd/2004/eng/102804.pdf
 - field: wikidata_id
   source: Wikidata (currency item; the board has no item of its own)
   retrieved_at: '2026-11-22'
   url: https://www.wikidata.org/wiki/Q942092
   license: CC0
 - field: other_names
-  source: Wikidata
+  source: Board of Commissioners of Currency, British Caribbean Territories (Eastern Group), Report of the Executive
+    Commissioner for 1961 (formal name of the board)
   retrieved_at: '2026-11-22'
-  url: https://www.wikidata.org/wiki/Q942092
-  license: CC0
+  url: https://www.parliament.gov.gy/documents/documents-laid/20110-report_of_the_executive_commisioner_1961_.pdf
