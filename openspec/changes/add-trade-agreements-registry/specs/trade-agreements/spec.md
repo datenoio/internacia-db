@@ -2,7 +2,7 @@
 
 ### Requirement: Trade agreement source records
 
-The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`, one file per legal instrument, validated by `data/schemas/trade_agreements.schema.json`. Each record SHALL have `id`, `name`, `agreement_type`, `status`, `verification`, `last_verified` and a non-empty `provenance` list. `agreement_type` SHALL be one of `fta`, `customs_union`, `pta`, `services`, `digital`, `framework` or `other`. `status` SHALL be one of `proposed`, `negotiating`, `signed`, `in_force`, `terminated`, `abandoned` or `superseded`. `verification` SHALL be `official` or `catalogue`. A record SHALL have `signed` when its status is `signed`, `in_force`, `terminated`, `superseded` or `abandoned` after signature, `in_force` when its status is `in_force`, `terminated` or `superseded`, and `ended` when its status is `terminated` or `superseded`.
+The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`, one file per legal instrument, validated by `data/schemas/trade_agreements.schema.json`. Each record SHALL have `id`, `name`, `agreement_type`, `status`, `verification`, `last_verified` and a non-empty `provenance` list. `agreement_type` SHALL be one of `fta`, `customs_union`, `pta`, `preference_scheme`, `services`, `digital`, `framework` or `other`. `status` SHALL be one of `proposed`, `negotiating`, `signed`, `in_force`, `terminated`, `abandoned` or `superseded`. `verification` SHALL be `official` or `catalogue`. After a linked record reads its intblock, an agreement SHALL have `signed` when its status is `signed`, `in_force` when its status is `in_force`, `terminated` or `superseded`, and `ended` when its status is `terminated` or `superseded`; a `superseded` record SHALL name `superseded_by`. A `proposed`, `negotiating`, `signed` or `abandoned` agreement SHALL NOT have an `in_force` date. `ended` SHALL NOT be earlier than `signed` or `in_force`; `in_force` MAY be earlier than `signed`, because an agreement can apply retroactively.
 
 #### Scenario: Valid bilateral record
 
@@ -19,9 +19,14 @@ The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`,
 - **WHEN** a record has `status: in_force` and no `in_force` date
 - **THEN** the validator reports an error
 
+#### Scenario: Retroactive entry into force
+
+- **WHEN** a record has `signed: '1983-03-28'` and `in_force: '1983-01-01'`
+- **THEN** validation passes
+
 ### Requirement: Parties and intblock link
 
-A record SHALL have either `parties` or `intblock`, not both. Each party SHALL have `id` and `type` (`country` or `intblock`), and SHALL resolve to an existing country `code` or intblock `id`. A record with exactly two parties ever SHALL NOT set `intblock`. A record whose agreement has three or more parties ever and whose status is `signed`, `in_force`, `terminated` or `superseded` SHALL set `intblock` to the intblock that holds its roster. The build SHALL derive parties of a linked record from that intblock's `includes`.
+A record SHALL have either `parties` or `intblock`, not both. Each party SHALL have `id` and `type` (`country` or `intblock`), SHALL resolve to an existing country `code` or intblock `id`, and SHALL appear once. A record SHALL NOT link an intblock with fewer than three party entries. The build SHALL derive the parties of a linked record from that intblock's `includes` entries whose status makes them parties (`member`, `founding_member`, `former_member`, `participant`, the associate statuses, and `contributor` and `recipient` on preference schemes), and SHALL take the record's name, links and Wikidata id from the intblock, and its dates unless the record sets them. A signed or in-force record that lists three or more current parties and has no `intblock` SHALL be reported by the quality report as an intblock candidate.
 
 #### Scenario: Both parties and intblock
 
@@ -41,11 +46,16 @@ A record SHALL have either `parties` or `intblock`, not both. Each party SHALL h
 #### Scenario: Multilateral agreement in force without an intblock
 
 - **WHEN** a record in force lists three country parties and no `intblock`
-- **THEN** the validator reports an error
+- **THEN** the quality report lists it as `TRADE_AGREEMENT_INTBLOCK_CANDIDATE`, and the validator does not fail
+
+#### Scenario: Linked record overrides a date
+
+- **WHEN** the record `EAEU` links the `EAEU` intblock, whose `founded` is the entry into force, and sets `signed: '2014-05-29'`
+- **THEN** `trade_agreements` has `signed = '2014-05-29'` for `EAEU`
 
 ### Requirement: Trade agreement identifiers
 
-Registry ids SHALL be unique, uppercase, and SHALL share one namespace with intblock ids. A registry id MAY equal an intblock id only when the record's `intblock` names that id. Records moved from intblocks SHALL keep their ids, and each moved id SHALL be listed in `data/intblocks_aliases.yaml` with `reason: moved` and `target_dataset: trade_agreements`.
+Registry ids SHALL be unique, SHALL be uppercase for new records (a linked record keeps its intblock's id, such as `AfCFTA`), and SHALL share one namespace with intblock ids and intblock aliases. A registry id MAY equal an intblock id only when the record's `intblock` names that id. Records moved from intblocks SHALL keep their ids, and each moved id SHALL be listed in `data/intblocks_aliases.yaml` with `reason: moved` and `target_dataset: trade_agreements`.
 
 #### Scenario: Collision with an unrelated intblock
 

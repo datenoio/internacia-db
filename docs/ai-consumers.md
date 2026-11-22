@@ -346,6 +346,43 @@ JOIN current_memberships m ON m.country_code = ca.code AND m.intblock_id = 'EAEU
 ORDER BY asymmetry DESC;
 ```
 
+### Trade agreements registry
+
+Every free trade agreement, customs union, partial-scope or preferential agreement and
+non-reciprocal preference scheme has a row in `trade_agreements`, bilateral ones included
+(OpenSpec change `add-trade-agreements-registry`). The registry is reference data: parties,
+`status`, `signed` / `in_force` / `ended` dates, `wto_rta_id`, `aric_id` and provenance. It
+ships no trade values, tariff lines, preference margins, depth scores or rankings.
+
+- **Two-party agreements** (`USKR`, `CETA`, `EUJP`, `CHAFTA` and the ADB ARIC bilaterals) are
+  only in the registry. In 5.0.0 the 34 two-party FTA intblocks left `intblocks` and
+  `memberships`; `intblocks_aliases` lists them with `reason = moved` and
+  `target_dataset = trade_agreements`, under the same id.
+- **Agreements with three or more parties** that are signed or in force are also intblocks
+  (`RCEP`, `CPTPP`, `AGADIR`): `trade_agreements.intblock_id` names the intblock, and the
+  parties are read from its `includes`, so the two never disagree.
+- **`verification`** is `official` when parties and dates were checked against the treaty
+  text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS or
+  ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and
+  its statuses lag, so check a catalogue record before relying on a date.
+- **`country_trade_agreements`** gives one row per country and agreement. A bloc party (the
+  EU) expands to its current members with `via = 'EU'`; the United Kingdom is therefore not a
+  party to `EUKR` in this view. Coverage is current, not historical.
+
+```sql
+-- In-force agreements that link two countries, directly or through a bloc.
+SELECT a.agreement_id, t.name, a.via AS via_a, b.via AS via_b
+FROM country_trade_agreements a
+JOIN country_trade_agreements b USING (agreement_id)
+JOIN trade_agreements t ON t.id = a.agreement_id
+WHERE a.country_code = 'FR' AND b.country_code = 'JP' AND t.status = 'in_force'
+  AND t.agreement_type <> 'preference_scheme';
+```
+
+A `preference_scheme` row (GSP, AGOA) lists the grantors and the beneficiaries as parties;
+two grantors of the same scheme are not trading partners under it, so leave schemes out of
+pair queries, as above.
+
 ### Country attribute fields (former attribute intblocks)
 
 Driving side, scripts, DVD region, broadcast standards, legal traditions, and rail gauges

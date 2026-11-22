@@ -16,7 +16,7 @@ Non-goals: trade values, tariff schedules, preference margins, depth or coverage
 
 ### 1. Layout
 
-`data/trade_agreements/<ID>.yaml`, one file per agreement. A flat directory with one file per record keeps data PRs free of conflicts. Validated by `data/schemas/trade_agreements.schema.json` and by `scripts/validate_trade_agreements.py`, whose rules are registered in `internacia_builder/validate/registry.py` like the existing ones.
+`data/trade_agreements/<ID>.yaml`, one file per agreement. A flat directory with one file per record keeps data PRs free of conflicts. Validated by `data/schemas/trade_agreements.schema.json` and by rules registered in `internacia_builder/validate/registry.py` (`internacia_builder/validate/trade_agreement_rules.py`). They run in `scripts/validate_intblocks.py`, because they resolve intblocks.
 
 Record fields:
 
@@ -25,9 +25,9 @@ Record fields:
 | `id` | yes | See decision 4 |
 | `name` | yes | English name as used by the parties or the depositary |
 | `acronyms`, `other_names` | no | Same shape as intblocks |
-| `agreement_type` | yes | `fta`, `customs_union`, `pta` (reciprocal partial-scope or preferential), `services` (services or investment only), `digital`, `framework`, `other` |
+| `agreement_type` | yes | `fta`, `customs_union`, `pta` (reciprocal partial-scope or preferential), `preference_scheme` (non-reciprocal, such as GSP and AGOA), `services` (services or investment only), `digital`, `framework`, `other` |
 | `status` | yes | `proposed`, `negotiating`, `signed`, `in_force`, `terminated`, `abandoned` (signed or negotiated, never in force), `superseded` |
-| `signed`, `in_force`, `ended` | by status | ISO date or partial date |
+| `signed`, `in_force`, `ended` | by status | ISO date or partial date; on a linked record they override the intblock's dates |
 | `parties` | unless `intblock` is set | List of `{id, type: country or intblock, signed, in_force, left, note}` |
 | `intblock` | for 3+ parties, once signed | The linked intblock id; parties come from its `includes` |
 | `supersedes`, `superseded_by` | no | Registry ids |
@@ -40,11 +40,11 @@ Record fields:
 
 An agreement is **bilateral** when exactly two parties have ever been party to it. A party is a country or a bloc that signs as one party (the EU, or a customs union that negotiates as one). EFTA states, ASEAN members and EAEU states that sign individually count one by one, so `EFTAGCC`, `INDIAEFTA` and the ASEAN+1 FTAs are multilateral. Former parties count, so `G-3` (Colombia, Mexico, former Venezuela) stays multilateral.
 
-Bilateral agreements live only in the registry. Multilateral agreements that are signed or in force are also intblocks: they are country groups that people query. A proposed or negotiating multilateral agreement has registry parties and no intblock until it is signed.
+Bilateral agreements live only in the registry. Multilateral agreements that are signed or in force are also intblocks: they are country groups that people query. A proposed or negotiating multilateral agreement has registry parties and no intblock until it is signed. A catalogue-level record may list the parties a catalogue gives, including a bloc that stands for its member states; the quality report lists signed or in-force records with three or more parties and no intblock as intblock candidates, so a missing intblock does not block an import.
 
 ### 3. One roster per agreement
 
-A registry record with `intblock` set SHALL NOT have `parties`. The build reads parties from the intblock's `includes` (id, type, `joined` as `in_force`, `left`). Contributors keep editing the roster in one place, and the registry and the intblock cannot disagree.
+A registry record with `intblock` set SHALL NOT have `parties`, `name` or `wikidata_id`. The build reads parties from the intblock's party-like `includes` (id, type, `joined`, `left`; observers and partners are not parties). Dates come from the intblock (`founded` as `signed`, `active_period.start` as `in_force`) unless the record sets them, because an organization's `founded` is not always the signature of its trade agreement (`EAEU`, `AfCFTA`). Contributors keep editing the roster in one place, and the registry and the intblock cannot disagree.
 
 ### 4. Identifiers
 
@@ -54,7 +54,7 @@ A registry record with `intblock` set SHALL NOT have `parties`. The build reads 
 - A second agreement between the same parties adds a suffix for the instrument (`JPUS-DTA`, `TNTR-CEPA`).
 - Registry ids and intblock ids are one namespace. A registry id equal to an intblock id is allowed only when `intblock` names that id.
 
-### 5. Migration and version (open for approval)
+### 5. Migration and version (decided: option A)
 
 Option A, recommended: **5.0.0 MAJOR**. Move the 34 YAML files in one step, add `moved` aliases with `target_dataset: trade_agreements`, and document the replacement queries (`trade_agreement_parties`, `country_trade_agreements`). `memberships` no longer returns bilateral FTAs, which changes what a consumer gets for "groups of country X". A MAJOR bump states that clearly.
 
@@ -93,6 +93,6 @@ The schema has no numeric trade fields. Free text in `notes` is for legal facts 
 
 ## Open questions
 
-1. Decision 5: option A (5.0.0 now) or option B (deprecate in 4.4.0).
+1. Decision 5: resolved on 2026-11-22, option A (5.0.0).
 2. Should proposed and negotiating agreements stay in the main `trade_agreements` table, or go to a separate `trade_agreement_candidates` file? The default is the main table, filtered by `status`.
 3. After ARIC, walk WTO RTA-IS in full (about 370 in force) as the next catalogue? The default is yes.

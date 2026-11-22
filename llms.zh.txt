@@ -14,7 +14,7 @@
 
 ## 推荐访问方式（编辑以外勿解析源 YAML）
 
-- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）(tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status; views: current_memberships, country_currencies, country_languages, country_timezones, country_borders)
+- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）(tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status, trade_agreements, trade_agreement_parties; views: current_memberships, country_currencies, country_languages, country_timezones, country_borders, country_trade_agreements)
 - Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
 - Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
   - Columns: intblock_id, country_code, include_type, status, joined, left
