@@ -41,6 +41,9 @@ MAPPED = {
     # Tier 2: imported as catalogue records first, then given intblocks with official rosters.
     20: "EFTAKR", 22: "EFTASG", 198: "EFTAID", 207: "GCCSG", 256: "EFTAHK", 269: "EAEUVN", 294: "EFTAPH",
     317: "EAEUIR", 336: "EFTAGE", 401: "EAEURS", 426: "UKPACIFICEPA", 471: "EFTATR-1991",
+    # Signed candidates checked against official sources (ARIC statuses were out of date).
+    153: "GCCPK", 201: "GCCNZ", 228: "GCCKR", 331: "EAEUSG", 369: "PACALLSG", 385: "EAEUCN", 387: "MERCOSURSG",
+    434: "AZTMTR",
 }
 
 # ARIC member names that differ from Internacia country names.
@@ -87,7 +90,7 @@ TITLE_NAMES = {
 # Hand-picked ids for rows whose parties do not give a short mechanical id.
 IDS = {
     69: "GUAMFTA", 381: "FTAAP", 221: "CEPEA", 136: "EAFTA", 181: "SCOFTA", 64: "BIMSTECFTA",
-    161: "CNJPKR", 434: "AZTMTR", 189: "HNSVTW", 369: "AUCANZSG-PACALL", 437: "EAEUIN-RU",
+    161: "CNJPKR", 434: "AZTMTR", 189: "HNSVTW", 437: "EAEUIN-RU",
     441: "ASEANGCC", 346: "ASEANEAEU", 277: "EFTATSOUZ", 265: "TSOUZNZ",
 }
 STATUS = {

@@ -24,6 +24,17 @@
   - `GCCSG`, the GCC–Singapore FTA. The six GCC states are parties individually.
   - `UKPACIFICEPA`, the UK–Pacific States interim EPA. It is applied provisionally from 1 January
     2021; Samoa and Solomon Islands acceded on 31 March 2022.
+- The eight ARIC candidates marked as signed but not in force were checked against official
+  sources, because ARIC's statuses were out of date:
+  - `MERCOSURSG`, `PACALLSG` (Pacific Alliance–Singapore), `EAEUCN` (EAEU–China, a
+    non-preferential agreement) and `AZTMTR` (Azerbaijan–Türkiye–Turkmenistan cooperation) are
+    in force. Each now has an intblock, with per-party dates.
+  - `EAEUSG` (EAEU–Singapore) is signed but not yet in force. It now has an intblock with no
+    `active_period`.
+  - `GCCKR`, `GCCNZ` and `GCCPK` were only concluded, never signed. Their registry status is now
+    `negotiating`, and they have no intblock.
+  - ARIC lists Australia, New Zealand and Canada as parties to the Pacific Alliance agreement.
+    None of them signed it.
 - Two earlier agreements are registry records with status `superseded`: `EFTATR-1991`, the
   EFTA–Turkey agreement of 1991, and `EAEUIR-2018`, the EAEU–Iran interim agreement of 2018.
 - New validator rules for the registry: schema, ids shared with intblocks, party and intblock
