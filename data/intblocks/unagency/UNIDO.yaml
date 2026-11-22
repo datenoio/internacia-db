@@ -1,6 +1,8 @@
 id: UNIDO
+name: United Nations Industrial Development Organization
 blocktype:
 - unagency
+- development
 status: formal
 scope_category: igo
 institutional_design:
@@ -9,6 +11,14 @@ institutional_design:
   enforcement:
   - none
   mutual_defence: false
+founded: '1966-11-17'
+geographic_scope: global
+regions:
+- worldwide
+partof: UN
+legal_status: intergovernmental
+recognition_status: Specialized agency of the United Nations since 1985 under the relationship agreement
+  of 1985 (1412 UNTS 305)
 languages:
 - ar
 - en
@@ -17,870 +27,1135 @@ languages:
 - ru
 - zh
 links:
-- url: http://www.unido.org/
+- url: https://www.unido.org/
   type: website
 - url: https://en.wikipedia.org/wiki/United_Nations_Industrial_Development_Organization
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q386120
   type: wikidata
-name: United Nations Industrial Development Organization
-includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
-- id: DZ
-  name: Algeria
-  type: country
-  status: member
-- id: AO
-  name: Angola
-  type: country
-  status: member
-- id: AG
-  name: Antigua and Barbuda
-  type: country
-  status: member
-- id: AR
-  name: Argentina
-  type: country
-  status: member
-- id: AM
-  name: Armenia
-  type: country
-  status: member
-- id: AU
-  name: Australia
-  type: country
-  status: member
-- id: AT
-  name: Austria
-  type: country
-  status: member
-- id: AZ
-  name: Azerbaijan
-  type: country
-  status: member
-- id: BS
-  name: Bahamas, The
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
-  type: country
-  status: member
-- id: BD
-  name: Bangladesh
-  type: country
-  status: member
-- id: BB
-  name: Barbados
-  type: country
-  status: member
-- id: BY
-  name: Belarus
-  type: country
-  status: member
-- id: BE
-  name: Belgium
-  type: country
-  status: member
-- id: BZ
-  name: Belize
-  type: country
-  status: member
-- id: BJ
-  name: Benin
-  type: country
-  status: member
-- id: BT
-  name: Bhutan
-  type: country
-  status: member
-- id: BO
-  name: Bolivia
-  type: country
-  status: member
-- id: BA
-  name: Bosnia and Herzegovina
-  type: country
-  status: member
-- id: BW
-  name: Botswana
-  type: country
-  status: member
-- id: BR
-  name: Brazil
-  type: country
-  status: member
-- id: BN
-  name: Brunei Darussalam
-  type: country
-  status: member
-- id: BG
-  name: Bulgaria
-  type: country
-  status: member
-- id: BF
-  name: Burkina Faso
-  type: country
-  status: member
-- id: BI
-  name: Burundi
-  type: country
-  status: member
-- id: CV
-  name: Cabo Verde
-  type: country
-  status: member
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-- id: CM
-  name: Cameroon
-  type: country
-  status: member
-- id: CA
-  name: Canada
-  type: country
-  status: member
-- id: CF
-  name: Central African Republic
-  type: country
-  status: member
-- id: TD
-  name: Chad
-  type: country
-  status: member
-- id: CL
-  name: Chile
-  type: country
-  status: member
-- id: CN
-  name: China
-  type: country
-  status: member
-- id: CO
-  name: Colombia
-  type: country
-  status: member
-- id: KM
-  name: Comoros
-  type: country
-  status: member
-- id: CG
-  name: Congo, Rep.
-  type: country
-  status: member
-- id: CR
-  name: Costa Rica
-  type: country
-  status: member
-- id: CI
-  name: Cote d'Ivoire
-  type: country
-  status: member
-- id: HR
-  name: Croatia
-  type: country
-  status: member
-- id: CU
-  name: Cuba
-  type: country
-  status: member
-- id: CY
-  name: Cyprus
-  type: country
-  status: member
-- id: CZ
-  name: Czech Republic
-  type: country
-  status: member
-- id: KP
-  name: Korea, Dem. Rep.
-  type: country
-  status: member
-- id: CD
-  name: Congo, Dem. Rep.
-  type: country
-  status: member
-- id: DK
-  name: Denmark
-  type: country
-  status: member
-- id: DJ
-  name: Djibouti
-  type: country
-  status: member
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-- id: DO
-  name: Dominican Republic
-  type: country
-  status: member
-- id: EC
-  name: Ecuador
-  type: country
-  status: member
-- id: EG
-  name: Egypt, Arab Rep.
-  type: country
-  status: member
-- id: SV
-  name: El Salvador
-  type: country
-  status: member
-- id: GQ
-  name: Equatorial Guinea
-  type: country
-  status: member
-- id: ER
-  name: Eritrea
-  type: country
-  status: member
-- id: EE
-  name: Estonia
-  type: country
-  status: member
-- id: SZ
-  name: Eswatini
-  type: country
-  status: member
-- id: ET
-  name: Ethiopia
-  type: country
-  status: member
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-- id: FI
-  name: Finland
-  type: country
-  status: member
-- id: FR
-  name: France
-  type: country
-  status: member
-- id: GA
-  name: Gabon
-  type: country
-  status: member
-- id: GM
-  name: Gambia, The
-  type: country
-  status: member
-- id: GE
-  name: Georgia
-  type: country
-  status: member
-- id: DE
-  name: Germany
-  type: country
-  status: member
-- id: GH
-  name: Ghana
-  type: country
-  status: member
-- id: GR
-  name: Greece
-  type: country
-  status: member
-- id: GD
-  name: Grenada
-  type: country
-  status: member
-- id: GT
-  name: Guatemala
-  type: country
-  status: member
-- id: GN
-  name: Guinea
-  type: country
-  status: member
-- id: GW
-  name: Guinea-Bissau
-  type: country
-  status: member
-- id: GY
-  name: Guyana
-  type: country
-  status: member
-- id: HT
-  name: Haiti
-  type: country
-  status: member
-- id: HN
-  name: Honduras
-  type: country
-  status: member
-- id: HU
-  name: Hungary
-  type: country
-  status: member
-- id: IS
-  name: Iceland
-  type: country
-  status: member
-- id: IN
-  name: India
-  type: country
-  status: member
-- id: ID
-  name: Indonesia
-  type: country
-  status: member
-- id: IR
-  name: Iran, Islamic Rep.
-  type: country
-  status: member
-- id: IQ
-  name: Iraq
-  type: country
-  status: member
-- id: IE
-  name: Ireland
-  type: country
-  status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
-- id: IT
-  name: Italy
-  type: country
-  status: member
-- id: JM
-  name: Jamaica
-  type: country
-  status: member
-- id: JP
-  name: Japan
-  type: country
-  status: member
-- id: JO
-  name: Jordan
-  type: country
-  status: member
-- id: KZ
-  name: Kazakhstan
-  type: country
-  status: member
-- id: KE
-  name: Kenya
-  type: country
-  status: member
-- id: KI
-  name: Kiribati
-  type: country
-  status: member
-- id: KW
-  name: Kuwait
-  type: country
-  status: member
-- id: KG
-  name: Kyrgyz Republic
-  type: country
-  status: member
-- id: LA
-  name: Lao PDR
-  type: country
-  status: member
-- id: LV
-  name: Latvia
-  type: country
-  status: member
-- id: LB
-  name: Lebanon
-  type: country
-  status: member
-- id: LS
-  name: Lesotho
-  type: country
-  status: member
-- id: LR
-  name: Liberia
-  type: country
-  status: member
-- id: LY
-  name: Libya
-  type: country
-  status: member
-- id: LT
-  name: Lithuania
-  type: country
-  status: member
-- id: LU
-  name: Luxembourg
-  type: country
-  status: member
-- id: MG
-  name: Madagascar
-  type: country
-  status: member
-- id: MW
-  name: Malawi
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
-- id: MV
-  name: Maldives
-  type: country
-  status: member
-- id: ML
-  name: Mali
-  type: country
-  status: member
-- id: MT
-  name: Malta
-  type: country
-  status: member
-- id: MR
-  name: Mauritania
-  type: country
-  status: member
-- id: MU
-  name: Mauritius
-  type: country
-  status: member
-- id: MX
-  name: Mexico
-  type: country
-  status: member
-- id: FM
-  name: Micronesia, Fed. Sts.
-  type: country
-  status: member
-- id: MC
-  name: Monaco
-  type: country
-  status: member
-- id: MN
-  name: Mongolia
-  type: country
-  status: member
-- id: ME
-  name: Montenegro
-  type: country
-  status: member
-- id: MA
-  name: Morocco
-  type: country
-  status: member
-- id: MZ
-  name: Mozambique
-  type: country
-  status: member
-- id: MM
-  name: Myanmar
-  type: country
-  status: member
-- id: NA
-  name: Namibia
-  type: country
-  status: member
-- id: NR
-  name: Nauru
-  type: country
-  status: member
-- id: NP
-  name: Nepal
-  type: country
-  status: member
-- id: NL
-  name: Netherlands
-  type: country
-  status: member
-- id: NZ
-  name: New Zealand
-  type: country
-  status: member
-- id: NI
-  name: Nicaragua
-  type: country
-  status: member
-- id: NE
-  name: Niger
-  type: country
-  status: member
-- id: NG
-  name: Nigeria
-  type: country
-  status: member
-- id: MK
-  name: North Macedonia
-  type: country
-  status: member
-- id: 'NO'
-  name: Norway
-  type: country
-  status: member
-- id: OM
-  name: Oman
-  type: country
-  status: member
-- id: PK
-  name: Pakistan
-  type: country
-  status: member
-- id: PW
-  name: Palau
-  type: country
-  status: member
-- id: PA
-  name: Panama
-  type: country
-  status: member
-- id: PG
-  name: Papua New Guinea
-  type: country
-  status: member
-- id: PY
-  name: Paraguay
-  type: country
-  status: member
-- id: PE
-  name: Peru
-  type: country
-  status: member
-- id: PH
-  name: Philippines
-  type: country
-  status: member
-- id: PL
-  name: Poland
-  type: country
-  status: member
-- id: PT
-  name: Portugal
-  type: country
-  status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: KR
-  name: Korea, Rep.
-  type: country
-  status: member
-- id: MD
-  name: Moldova
-  type: country
-  status: member
-- id: RO
-  name: Romania
-  type: country
-  status: member
-- id: RU
-  name: Russian Federation
-  type: country
-  status: member
-- id: RW
-  name: Rwanda
-  type: country
-  status: member
-- id: KN
-  name: St. Kitts and Nevis
-  type: country
-  status: member
-- id: LC
-  name: St. Lucia
-  type: country
-  status: member
-- id: VC
-  name: St. Vincent and the Grenadines
-  type: country
-  status: member
-- id: WS
-  name: Samoa
-  type: country
-  status: member
-- id: SM
-  name: San Marino
-  type: country
-  status: member
-- id: ST
-  name: Sao Tome and Principe
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
-- id: SN
-  name: Senegal
-  type: country
-  status: member
-- id: RS
-  name: Serbia
-  type: country
-  status: member
-- id: SC
-  name: Seychelles
-  type: country
-  status: member
-- id: SL
-  name: Sierra Leone
-  type: country
-  status: member
-- id: SG
-  name: Singapore
-  type: country
-  status: member
-- id: SK
-  name: Slovak Republic
-  type: country
-  status: member
-- id: SI
-  name: Slovenia
-  type: country
-  status: member
-- id: SB
-  name: Solomon Islands
-  type: country
-  status: member
-- id: SO
-  name: Somalia
-  type: country
-  status: member
-- id: ZA
-  name: South Africa
-  type: country
-  status: member
-- id: SS
-  name: South Sudan
-  type: country
-  status: member
-- id: ES
-  name: Spain
-  type: country
-  status: member
-- id: LK
-  name: Sri Lanka
-  type: country
-  status: member
-- id: SD
-  name: Sudan
-  type: country
-  status: member
-- id: SR
-  name: Suriname
-  type: country
-  status: member
-- id: SE
-  name: Sweden
-  type: country
-  status: member
-- id: CH
-  name: Switzerland
-  type: country
-  status: member
-- id: SY
-  name: Syrian Arab Republic
-  type: country
-  status: member
-- id: TJ
-  name: Tajikistan
-  type: country
-  status: member
-- id: TH
-  name: Thailand
-  type: country
-  status: member
-- id: TL
-  name: Timor-Leste
-  type: country
-  status: member
-- id: TG
-  name: Togo
-  type: country
-  status: member
-- id: TO
-  name: Tonga
-  type: country
-  status: member
-- id: TT
-  name: Trinidad and Tobago
-  type: country
-  status: member
-- id: TN
-  name: Tunisia
-  type: country
-  status: member
-- id: TR
-  name: Türkiye
-  type: country
-  status: member
-- id: TM
-  name: Turkmenistan
-  type: country
-  status: member
-- id: TV
-  name: Tuvalu
-  type: country
-  status: member
-- id: UG
-  name: Uganda
-  type: country
-  status: member
-- id: UA
-  name: Ukraine
-  type: country
-  status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
-- id: GB
-  name: United Kingdom
-  type: country
-  status: member
-- id: TZ
-  name: Tanzania
-  type: country
-  status: member
-- id: US
-  name: United States
-  type: country
-  status: member
-- id: UY
-  name: Uruguay
-  type: country
-  status: member
-- id: UZ
-  name: Uzbekistan
-  type: country
-  status: member
-- id: VU
-  name: Vanuatu
-  type: country
-  status: member
-- id: VE
-  name: Venezuela, RB
-  type: country
-  status: member
-- id: VN
-  name: Vietnam
-  type: country
-  status: member
-- id: YE
-  name: Yemen, Rep.
-  type: country
-  status: member
-- id: ZM
-  name: Zambia
-  type: country
-  status: member
-- id: ZW
-  name: Zimbabwe
-  type: country
-  status: member
-founded: '1966'
+acronyms:
+- lang: en
+  value: UNIDO
+- lang: fr
+  value: ONUDI
+- lang: es
+  value: ONUDI
+- lang: pt
+  value: ONUDI
+- lang: ru
+  value: ЮНИДО
+- lang: ar
+  value: يونيدو
+- lang: de
+  value: UNIDO
+- lang: uk
+  value: ЮНІДО
 headquarters:
   city: Vienna
   country: AT
   coordinates:
-    lat: 48.208333333333336
-    lng: 16.3725
-partof:
-  id: UN
-  name: United Nations
-membership_count: 189
+    lat: 48.234656
+    lng: 16.418098
+secretariat:
+  organization: Secretariat
+  location: Vienna International Centre, Vienna, Austria
+  head: Director General
+includes:
+- id: AE
+  name: United Arab Emirates
+  type: country
+  status: member
+  joined: '1985-08-01'
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+  joined: '2019-04-01'
+- id: AL
+  name: Albania
+  type: country
+  status: member
+  joined: '1988-04-19'
+- id: AM
+  name: Armenia
+  type: country
+  status: member
+  joined: '1992-05-12'
+- id: AO
+  name: Angola
+  type: country
+  status: member
+  joined: '1985-08-09'
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: AT
+  name: Austria
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: AU
+  name: Australia
+  type: country
+  status: former_member
+  joined: '1992-01-01'
+  left: '1997-12-31'
+  note: First a member from 21 June 1985 until 31 December 1988 (denunciation deposited 24 December 1987).
+    Acceded again on 1 January 1992 and withdrew with effect from 31 December 1997 (denunciation deposited
+    23 December 1996).
+- id: AZ
+  name: Azerbaijan
+  type: country
+  status: member
+  joined: '1993-11-23'
+- id: BA
+  name: Bosnia and Herzegovina
+  type: country
+  status: member
+  joined: '1992-10-01'
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BD
+  name: Bangladesh
+  type: country
+  status: member
+  joined: '1985-06-28'
+- id: BE
+  name: Belgium
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '2015-12-31'
+- id: BF
+  name: Burkina Faso
+  type: country
+  status: member
+  joined: '1985-07-16'
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+  joined: '1986-04-04'
+- id: BI
+  name: Burundi
+  type: country
+  status: member
+  joined: '1985-08-09'
+- id: BJ
+  name: Benin
+  type: country
+  status: member
+  joined: '1985-08-08'
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+  joined: '1986-11-13'
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
+  joined: '1985-08-23'
+- id: BW
+  name: Botswana
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BY
+  name: Belarus
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+  joined: '1986-02-27'
+- id: CA
+  name: Canada
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '1993-12-31'
+- id: CD
+  name: Congo, Dem. Rep.
+  type: country
+  status: member
+  joined: '1985-07-08'
+- id: CF
+  name: Central African Republic
+  type: country
+  status: member
+  joined: '1986-01-09'
+- id: CG
+  name: Congo, Rep.
+  type: country
+  status: member
+  joined: '1985-07-12'
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CI
+  name: Cote d'Ivoire
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CL
+  name: Chile
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CM
+  name: Cameroon
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CN
+  name: China
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+  joined: '1985-07-30'
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+  joined: '1987-10-26'
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CV
+  name: Cabo Verde
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CY
+  name: Cyprus
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: CZ
+  name: Czech Republic
+  type: country
+  status: member
+  joined: '1993-01-22'
+- id: DE
+  name: Germany
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: DJ
+  name: Djibouti
+  type: country
+  status: member
+  joined: '1991-08-20'
+- id: DK
+  name: Denmark
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '2016-12-31'
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '1985-11-27'
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: DZ
+  name: Algeria
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: ER
+  name: Eritrea
+  type: country
+  status: member
+  joined: '1995-06-20'
+- id: ES
+  name: Spain
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: ET
+  name: Ethiopia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: FI
+  name: Finland
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '1985-12-30'
+- id: FM
+  name: Micronesia, Fed. Sts.
+  type: country
+  status: member
+  joined: '2019-03-07'
+- id: FR
+  name: France
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '2014-12-31'
+- id: GA
+  name: Gabon
+  type: country
+  status: member
+  joined: '1985-08-06'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: member
+  joined: '2026-11-09'
+  note: Member from 21 June 1985 until its withdrawal took effect on 31 December 2012 (denunciation deposited
+    27 April 2011). Re-acceded on 9 November 2026.
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+  joined: '1986-01-16'
+- id: GE
+  name: Georgia
+  type: country
+  status: member
+  joined: '1992-10-30'
+- id: GH
+  name: Ghana
+  type: country
+  status: member
+  joined: '1985-07-30'
+- id: GM
+  name: Gambia, The
+  type: country
+  status: member
+  joined: '1986-06-12'
+- id: GN
+  name: Guinea
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: GQ
+  name: Equatorial Guinea
+  type: country
+  status: member
+  joined: '1986-01-20'
+- id: GR
+  name: Greece
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '2016-12-31'
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: GW
+  name: Guinea-Bissau
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+  joined: '1985-07-19'
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: HR
+  name: Croatia
+  type: country
+  status: member
+  joined: '1992-06-02'
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+  joined: '1985-08-05'
+- id: HU
+  name: Hungary
+  type: country
+  status: member
+  joined: '1985-07-02'
+- id: ID
+  name: Indonesia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: IE
+  name: Ireland
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: IL
+  name: Israel
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: IN
+  name: India
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: IQ
+  name: Iraq
+  type: country
+  status: member
+  joined: '1985-06-27'
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: member
+  joined: '1985-08-09'
+- id: IT
+  name: Italy
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: JO
+  name: Jordan
+  type: country
+  status: member
+  joined: '1985-10-28'
+- id: JP
+  name: Japan
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: KE
+  name: Kenya
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '1993-04-08'
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '1995-09-18'
+- id: KI
+  name: Kiribati
+  type: country
+  status: member
+  joined: '2016-02-09'
+- id: KM
+  name: Comoros
+  type: country
+  status: member
+  joined: '1986-01-09'
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+  joined: '1985-12-11'
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: member
+  joined: '1985-06-24'
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+  joined: '1985-07-30'
+- id: KZ
+  name: Kazakhstan
+  type: country
+  status: member
+  joined: '1997-06-03'
+- id: LA
+  name: Lao PDR
+  type: country
+  status: member
+  joined: '1985-09-03'
+- id: LB
+  name: Lebanon
+  type: country
+  status: member
+  joined: '1985-08-06'
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+  joined: '1985-11-19'
+- id: LK
+  name: Sri Lanka
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: LR
+  name: Liberia
+  type: country
+  status: member
+  joined: '1990-05-10'
+- id: LS
+  name: Lesotho
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: LT
+  name: Lithuania
+  type: country
+  status: former_member
+  joined: '1991-10-17'
+  left: '2012-12-31'
+- id: LU
+  name: Luxembourg
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: LY
+  name: Libya
+  type: country
+  status: member
+  joined: '1985-08-08'
+- id: MA
+  name: Morocco
+  type: country
+  status: member
+  joined: '1985-07-30'
+- id: MC
+  name: Monaco
+  type: country
+  status: member
+  joined: '2003-01-23'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '1993-06-01'
+- id: ME
+  name: Montenegro
+  type: country
+  status: member
+  joined: '2006-11-22'
+- id: MG
+  name: Madagascar
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MH
+  name: Marshall Islands
+  type: country
+  status: member
+  joined: '2015-03-16'
+- id: MK
+  name: North Macedonia
+  type: country
+  status: member
+  joined: '1993-05-27'
+- id: ML
+  name: Mali
+  type: country
+  status: member
+  joined: '1985-07-17'
+- id: MM
+  name: Myanmar
+  type: country
+  status: member
+  joined: '1990-04-12'
+- id: MN
+  name: Mongolia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MR
+  name: Mauritania
+  type: country
+  status: member
+  joined: '1985-08-09'
+- id: MT
+  name: Malta
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MV
+  name: Maldives
+  type: country
+  status: member
+  joined: '1988-05-10'
+- id: MW
+  name: Malawi
+  type: country
+  status: member
+  joined: '1985-07-19'
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: MZ
+  name: Mozambique
+  type: country
+  status: member
+  joined: '1985-11-13'
+- id: NA
+  name: Namibia
+  type: country
+  status: member
+  joined: '1986-02-21'
+- id: NE
+  name: Niger
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: NG
+  name: Nigeria
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: NI
+  name: Nicaragua
+  type: country
+  status: member
+  joined: '1985-07-01'
+- id: NL
+  name: Netherlands
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: 'NO'
+  name: Norway
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: NP
+  name: Nepal
+  type: country
+  status: member
+  joined: '1985-08-08'
+- id: NZ
+  name: New Zealand
+  type: country
+  status: former_member
+  joined: '1985-07-19'
+  left: '2013-12-31'
+- id: OM
+  name: Oman
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PA
+  name: Panama
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PE
+  name: Peru
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PG
+  name: Papua New Guinea
+  type: country
+  status: member
+  joined: '1986-09-10'
+- id: PH
+  name: Philippines
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PK
+  name: Pakistan
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PL
+  name: Poland
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: PS
+  name: West Bank and Gaza
+  type: country
+  status: member
+  joined: '2018-05-17'
+- id: PT
+  name: Portugal
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '2014-12-31'
+- id: PW
+  name: Palau
+  type: country
+  status: member
+  joined: '2023-01-17'
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+  joined: '1985-07-18'
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+  joined: '1985-12-09'
+- id: RO
+  name: Romania
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: RS
+  name: Serbia
+  type: country
+  status: member
+  joined: '2000-12-06'
+- id: RU
+  name: Russian Federation
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: RW
+  name: Rwanda
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '2024-10-04'
+- id: SC
+  name: Seychelles
+  type: country
+  status: member
+  joined: '1985-08-19'
+- id: SD
+  name: Sudan
+  type: country
+  status: member
+  joined: '1985-06-28'
+- id: SE
+  name: Sweden
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: SI
+  name: Slovenia
+  type: country
+  status: member
+  joined: '1992-06-11'
+- id: SK
+  name: Slovak Republic
+  type: country
+  status: former_member
+  joined: '1993-01-20'
+  left: '2017-12-31'
+- id: SL
+  name: Sierra Leone
+  type: country
+  status: member
+  joined: '1985-08-15'
+- id: SN
+  name: Senegal
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: SO
+  name: Somalia
+  type: country
+  status: member
+  joined: '1985-11-15'
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+  joined: '1985-12-24'
+- id: SS
+  name: South Sudan
+  type: country
+  status: member
+  joined: '2023-08-18'
+- id: ST
+  name: Sao Tome and Principe
+  type: country
+  status: member
+  joined: '1986-04-14'
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+  joined: '1988-01-29'
+- id: SY
+  name: Syrian Arab Republic
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: SZ
+  name: Eswatini
+  type: country
+  status: member
+  joined: '1986-04-03'
+- id: TD
+  name: Chad
+  type: country
+  status: member
+  joined: '1991-08-22'
+- id: TG
+  name: Togo
+  type: country
+  status: member
+  joined: '1985-06-25'
+- id: TH
+  name: Thailand
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: TJ
+  name: Tajikistan
+  type: country
+  status: member
+  joined: '1993-06-09'
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: member
+  joined: '2003-07-31'
+- id: TM
+  name: Turkmenistan
+  type: country
+  status: member
+  joined: '1995-02-16'
+- id: TN
+  name: Tunisia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: TO
+  name: Tonga
+  type: country
+  status: member
+  joined: '1986-08-13'
+- id: TR
+  name: Türkiye
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+  joined: '1985-07-15'
+- id: TV
+  name: Tuvalu
+  type: country
+  status: member
+  joined: '2011-09-13'
+- id: TZ
+  name: Tanzania
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: UA
+  name: Ukraine
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: UG
+  name: Uganda
+  type: country
+  status: member
+  joined: '1985-12-05'
+- id: US
+  name: United States
+  type: country
+  status: former_member
+  joined: '1985-06-21'
+  left: '1996-12-31'
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: UZ
+  name: Uzbekistan
+  type: country
+  status: member
+  joined: '1994-04-26'
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+  joined: '1987-03-30'
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: VN
+  name: Vietnam
+  type: country
+  status: member
+  joined: '1985-07-19'
+- id: VU
+  name: Vanuatu
+  type: country
+  status: member
+  joined: '1987-08-17'
+- id: WS
+  name: Samoa
+  type: country
+  status: member
+  joined: '2008-12-11'
+- id: YE
+  name: Yemen, Rep.
+  type: country
+  status: member
+  joined: '1985-07-29'
+- id: ZA
+  name: South Africa
+  type: country
+  status: member
+  joined: '2000-10-24'
+- id: ZM
+  name: Zambia
+  type: country
+  status: member
+  joined: '1985-06-21'
+- id: ZW
+  name: Zimbabwe
+  type: country
+  status: member
+  joined: '1985-06-21'
+membership_count: 174
 wikidata_id: Q386120
-legal_status: intergovernmental
-recognition_status: UN agency
 official_documents:
-- url: https://www.unido.org/
+- url: https://www.unido.org/sites/default/files/files/2020-11/19-12162_UNIDO_Constitution_ebook.pdf
   type: document
+  name: Constitution of the United Nations Industrial Development Organization
+- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=X-9&chapter=10&clang=_en
+  type: document
+  name: Status of the Constitution of UNIDO (UN Treaty Collection, chapter X-9)
 social_media:
   twitter: https://twitter.com/UNIDO
   facebook: https://www.facebook.com/UNIDO.HQ
   linkedin: https://www.linkedin.com/company/unido
   youtube: https://www.youtube.com/channel/UCEdVD3q7YIDiWU-VkEhfOuA
-description: United Nations specialized agency.
+  instagram: https://www.instagram.com/unido_newsroom/
+description: United Nations specialized agency for industrial development, headquartered at the Vienna
+  International Centre in Austria. The General Assembly set it up on 17 November 1966 (resolution 2152
+  (XXI)); its Constitution, adopted in Vienna on 8 April 1979, entered into force on 21 June 1985, when
+  UNIDO became a specialized agency. Its constitutional objective is to promote and accelerate industrial
+  development in developing countries and industrial cooperation at global, regional, national and sectoral
+  levels. UNIDO delivers technical cooperation and policy advice and publishes the Industrial Development
+  Report and the International Yearbook of Industrial Statistics.
 tags:
 - UNIDO
-- aid
+- ONUDI
+- ЮНИДО
+- developing_countries
 - development
-- industrial
-- nations
+- industrial_development
+- industrial_statistics
+- industry
+- manufacturing
+- technical_cooperation
 - unagency
-- united
 topics:
+- key: industry
+  name: Industry
 - key: development
   name: Development
+- key: developing_countries
+  name: Developing Countries
+- key: sustainable_development
+  name: Sustainable Development
+- key: investment
+  name: Investment
+- key: technology
+  name: Technology
+- key: energy
+  name: Energy
+- key: environment
+  name: Environment
 other_names:
-- id: ar
-  name: منظمة الأمم المتحدة للتنمية الصناعية
-- id: de
-  name: Organisation der Vereinten Nationen für industrielle Entwicklung
 - id: en
   name: United Nations Industrial Development Organization
-- id: es
-  name: Organización de las Naciones Unidas para el Desarrollo Industrial
 - id: fr
   name: Organisation des Nations unies pour le développement industriel
-- id: pt
-  name: Organização das Nações Unidas para o Desenvolvimento Industrial
+- id: es
+  name: Organización de las Naciones Unidas para el Desarrollo Industrial
 - id: ru
-  name: ЮНИДО
+  name: Организация Объединенных Наций по промышленному развитию
+- id: ar
+  name: منظمة الأمم المتحدة للتنمية الصناعية
 - id: zh
   name: 联合国工业发展组织
-last_verified: '2026-11-21'
+- id: pt
+  name: Organização das Nações Unidas para o Desenvolvimento Industrial
+- id: de
+  name: Organisation der Vereinten Nationen für industrielle Entwicklung
+- id: it
+  name: Organizzazione delle Nazioni Unite per lo Sviluppo Industriale
+- id: ja
+  name: 国際連合工業開発機関
+- id: ko
+  name: 국제 연합 공업 개발 기구
+- id: tr
+  name: Birleşmiş Milletler Sınai Kalkınma Teşkilatı
+- id: uk
+  name: Організація Об'єднаних Націй з промислового розвитку
+notes: 'Membership comprises the 174 States for which the UNIDO Constitution is in force, as the UN Secretary-General,
+  its depositary, records them; they include the State of Palestine (accession 17 May 2018). includes[].joined
+  is the date the Constitution entered into force for each State under Article 25(2): 21 June 1985 for
+  the States that joined the notification bringing it into force, the later notification date for States
+  that had ratified earlier without joining it, and the date of deposit for later ratifications and accessions.
+  Czechia and Slovakia acceded in 1993 after Czechoslovakia (party from 1985); Serbia acceded in 2000
+  and Montenegro in 2006. Withdrawal takes effect on the last day of the fiscal year after the year the
+  denunciation is deposited (Article 6). Eleven States have withdrawn: Canada (1993), the United States
+  (1996), Australia (1997, after a first withdrawal in 1988 and accession again in 1992), Lithuania (2012),
+  New Zealand (2013), France and Portugal (2014), Belgium (2015), Denmark and Greece (2016) and Slovakia
+  (2017). The United Kingdom, which left at the end of 2012, re-acceded on 9 November 2026. Before 1985
+  UNIDO reported through its Industrial Development Board to the General Assembly and was led by Executive
+  Directors Ibrahim Helmi Abdel-Rahman (Egypt, 1967-1974) and Abd-El Rahman Khane (Algeria, 1975-1985).
+  The principal organs are the General Conference of all Members, which meets every two years; the Industrial
+  Development Board of 53 Members elected for four years (33 from Lists A and C of Annex I, 15 from List
+  B, 5 from List D); and the Secretariat. A Programme and Budget Committee of 27 Members assists the Board.
+  The Conference appoints the Director General on the Board''s recommendation for four years, renewable
+  once. Directors General: Domingo Siazon Jr. (Philippines, 1985-1993), Mauricio de Maria y Campos (Mexico,
+  1993-1997), Carlos Alfredo Magariños (Argentina, 1997-2005), Kandeh Yumkella (Sierra Leone, 2005-2013),
+  Li Yong (China, 2013-2021) and Gerd Müller (Germany), in office since December 2021 and reappointed
+  for a second term at the 21st General Conference in Riyadh (23-27 November 2025).'
+last_verified: '2026-11-22'
 provenance:
 - field: institutional_design
-  source: "Constitution of the United Nations Industrial Development Organization (unido.org PDF, reproduced 2020)"
-  retrieved_at: "2026-11-21"
-  url: "https://www.unido.org/sites/default/files/files/2020-11/19-12162_UNIDO_Constitution_ebook.pdf"
+  source: Constitution of the United Nations Industrial Development Organization (unido.org PDF, reproduced
+    2020)
+  retrieved_at: '2026-11-21'
+  url: https://www.unido.org/sites/default/files/files/2020-11/19-12162_UNIDO_Constitution_ebook.pdf
+- field: includes
+  source: 'UN Treaty Collection: status of the Constitution of UNIDO (chapter X-9), parties, Article 25
+    notifications and denunciations'
+  retrieved_at: '2026-11-22'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=X-9&chapter=10&clang=_en
+- field: membership_count
+  source: 'UN Treaty Collection: status of the Constitution of UNIDO (174 parties)'
+  retrieved_at: '2026-11-22'
+  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=X-9&chapter=10&clang=_en
+- field: notes
+  source: Constitution of UNIDO, Articles 6, 8-11 and 25 (organs, withdrawal, entry into force)
+  retrieved_at: '2026-11-22'
+  url: https://www.unido.org/sites/default/files/files/2020-11/19-12162_UNIDO_Constitution_ebook.pdf
+- field: founded
+  source: 'UN Library research guide: UNIDO (A/RES/2152 (XXI) of 17 Nov. 1966)'
+  retrieved_at: '2026-11-22'
+  url: https://research.un.org/en/docs/unsystem/unido
+- field: recognition_status
+  source: 'UN Library research guide: UNIDO (specialized agency since 1985, relationship agreement 1412
+    UNTS 305)'
+  retrieved_at: '2026-11-22'
+  url: https://research.un.org/en/docs/unsystem/unido
+- field: notes
+  source: 'UN Library research guide: UNIDO (Executive Directors 1967-1985, Directors-General since 1985)'
+  retrieved_at: '2026-11-22'
+  url: https://research.un.org/en/docs/unsystem/unido
+- field: notes
+  source: 'Statement of the Group of 77 and China, 21st session of the UNIDO General Conference, Riyadh,
+    23-27 November 2025, item 6: appointment of the Director General'
+  retrieved_at: '2026-11-22'
+  url: https://www.g77.org/vienna/wp-content/uploads/2025/11/G-77-and-China-Item-6-Appointment-of-the-DG-LONG-VERSION-adopted-.pdf
+- field: headquarters
+  source: Wikidata (P159 headquarters with coordinates)
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q386120
+  license: CC0
 - field: other_names
   source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q386120
   license: CC0
 - field: acronyms
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  source: Wikidata (labels and aliases)
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q386120
   license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+- field: social_media
+  source: Wikidata (P2002, P2013, P4264, P2397, P2003)
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q386120
   license: CC0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.unido.org/
-- field: headquarters
-  source: official sources
-  retrieved_at: '2026-06-15'
-  url: http://www.unido.org/
-acronyms:
-- lang: en
-  value: UNIDO
-- lang: ar
-  value: يونيدو
-- lang: fr
-  value: UNIDO
-- lang: fr
-  value: ONUDI
-- lang: ru
-  value: UNIDO
-- lang: es
-  value: UNIDO
-- lang: es
-  value: ONUDI
-- lang: de
-  value: UNIDO
-- lang: de
-  value: ONUDI
-- lang: pt
-  value: UNIDO
-- lang: pt
-  value: ONUDI
