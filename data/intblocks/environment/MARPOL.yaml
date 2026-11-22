@@ -40,9 +40,14 @@ other_names:
   name: International Convention for the Prevention of Pollution from Ships, 1973, as modified by the
     Protocol of 1978 relating thereto and by the Protocol of 1997
 wikidata_id: Q651219
-membership_count: 162
-notes: This record represents MARPOL 73/78 (Annexes I and II). Hong Kong, Macao, and the Faroe Islands
-  are excluded as territorial applications rather than States Parties.
+membership_count: 163
+notes: This record represents MARPOL 73/78 (Annexes I and II). Roster is the Contracting States table for the
+  Protocol of 1978 in the IMO Status Book, Vol. I, dated 30 October 2026; joined is the date of signature or
+  deposit of the instrument, or of entry into force for a succession. Sudan is not printed in that table but
+  is counted in its total of 163, is marked in the IMO ratifications workbook and appears in the tables for
+  Annexes III, IV and V, so it is kept without a joined date. Haiti is marked in the workbook but not listed
+  in the Status Book, and so not included. Hong Kong, Macao, and the Faroe Islands are excluded as territorial
+  applications rather than States Parties.
 includes:
 - id: AL
   name: Albania
@@ -274,16 +279,16 @@ includes:
   type: country
   status: member
   joined: '1991-12-16'
-- id: FJ
-  name: Fiji
-  type: country
-  status: member
-  joined: '2016-03-08'
 - id: FI
   name: Finland
   type: country
   status: member
   joined: '1983-09-20'
+- id: FJ
+  name: Fiji
+  type: country
+  status: member
+  joined: '2016-03-08'
 - id: FR
   name: France
   type: country
@@ -424,6 +429,11 @@ includes:
   type: country
   status: member
   joined: '2007-02-05'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '2026-10-15'
 - id: KW
   name: Kuwait
   type: country
@@ -443,7 +453,7 @@ includes:
   name: Liberia
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1980-10-28'
 - id: LY
   name: Libya
   type: country
@@ -503,7 +513,12 @@ includes:
   name: Mexico
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1992-04-23'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '2005-10-11'
 - id: MC
   name: Monaco
   type: country
@@ -543,7 +558,7 @@ includes:
   name: Netherlands
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1983-06-30'
 - id: NZ
   name: New Zealand
   type: country
@@ -608,7 +623,7 @@ includes:
   name: Poland
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1986-04-01'
 - id: PT
   name: Portugal
   type: country
@@ -624,11 +639,6 @@ includes:
   type: country
   status: member
   joined: '1984-07-23'
-- id: MD
-  name: Moldova
-  type: country
-  status: member
-  joined: '2005-10-11'
 - id: RO
   name: Romania
   type: country
@@ -728,7 +738,7 @@ includes:
   name: Spain
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1984-07-06'
 - id: LK
   name: Sri Lanka
   type: country
@@ -747,7 +757,7 @@ includes:
   name: Sweden
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1980-06-09'
 - id: CH
   name: Switzerland
   type: country
@@ -822,7 +832,7 @@ includes:
   name: United Kingdom
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1980-05-22'
 - id: TZ
   name: Tanzania
   type: country
@@ -832,12 +842,12 @@ includes:
   name: United States
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1980-08-12'
 - id: UY
   name: Uruguay
   type: country
   status: member
-  joined: '2007-01-09'
+  joined: '1979-04-30'
 - id: VU
   name: Vanuatu
   type: country
@@ -853,7 +863,7 @@ includes:
   type: country
   status: member
   joined: '1991-05-29'
-last_verified: '2026-10-22'
+last_verified: '2026-11-22'
 provenance:
 - field: name
   source: International Maritime Organization (IMO), List of IMO Conventions
@@ -889,15 +899,15 @@ provenance:
   url: https://www.imo.org/en/about/conventions/pages/international-convention-for-the-prevention-of-pollution-from-ships-(marpol).aspx
   retrieved_at: '2026-09-30'
 - field: membership_count
-  source: International Maritime Organization (IMO), Ratifications by State, as at 25 August 2026; MARPOL
-    73/78 (Annex I/II) column
-  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/x-Status.xlsx
-  retrieved_at: '2026-09-30'
+  source: 'International Maritime Organization (IMO), Status of IMO Treaties, Vol. I, dated 30 October 2026,
+    MARPOL 1973/1978, Number of Contracting States: 163'
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%20book%202026%20-%20Vol.%20I%20SOLAS-COLREG-%20MARPOL.pdf
+  retrieved_at: '2026-11-22'
 - field: includes
-  source: International Maritime Organization (IMO), Status of IMO Treaties, dated 26 August 2026, MARPOL
-    1973/1978, II(1) Protocol, pp. 127–131
-  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%202026.pdf
-  retrieved_at: '2026-09-30'
+  source: International Maritime Organization (IMO), Status of IMO Treaties, Vol. I, dated 30 October 2026,
+    MARPOL 1973/1978, II(1) Protocol, pp. 123–127
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%20book%202026%20-%20Vol.%20I%20SOLAS-COLREG-%20MARPOL.pdf
+  retrieved_at: '2026-11-22'
 - field: wikidata_id
   source: Wikidata
   url: https://www.wikidata.org/wiki/Q651219
@@ -910,3 +920,7 @@ provenance:
 - field: regions
   source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
   retrieved_at: '2026-11-21'
+- field: notes
+  source: International Maritime Organization — Ratifications by State workbook, as at 30 October 2026 (cross-check)
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/x-Status.xlsx
+  retrieved_at: '2026-11-22'
