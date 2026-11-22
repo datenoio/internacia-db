@@ -315,8 +315,14 @@ def get_aliases_schema() -> pa.Schema:
             ("reason", pa.string()),
             ("since", pa.string()),
             ("note", pa.string()),
+            # add-trade-agreements-registry: dataset of the target; ``trade_agreements`` for reason ``moved``.
+            ("target_dataset", pa.string()),
         ]
     )
+
+def get_country_aliases_schema() -> pa.Schema:
+    """Schema for the country code alias artifact (every target is a country code)."""
+    return pa.schema([field for field in get_aliases_schema() if field.name != "target_dataset"])
 
 def get_attribute_migration_schema() -> pa.Schema:
     """Schema for attribute-intblock → country-field migration artifact."""
@@ -415,5 +421,78 @@ def get_country_timezones_schema() -> pa.Schema:
         [
             pa.field("country_code", pa.string(), nullable=False),
             pa.field("timezone", pa.string(), nullable=False),
+        ]
+    )
+
+
+_PROVENANCE_STRUCT = pa.struct(
+    [
+        ("field", pa.string()),
+        ("source", pa.string()),
+        ("url", pa.string()),
+        ("retrieved_at", pa.string()),
+        ("license", pa.string()),
+    ]
+)
+
+
+def get_trade_agreements_schema() -> pa.Schema:
+    """Schema for the ``trade_agreements`` table (one row per legal instrument)."""
+    return pa.schema(
+        [
+            pa.field("id", pa.string(), nullable=False),
+            ("name", pa.string()),
+            ("agreement_type", pa.string()),
+            ("status", pa.string()),
+            ("signed", pa.string()),
+            ("in_force", pa.string()),
+            ("ended", pa.string()),
+            ("intblock_id", pa.string()),
+            ("party_count", pa.int64()),
+            ("supersedes", pa.string()),
+            ("superseded_by", pa.string()),
+            ("wto_rta_id", pa.int64()),
+            ("aric_id", pa.int64()),
+            ("wikidata_id", pa.string()),
+            ("acronyms", pa.list_(pa.struct([("lang", pa.string()), ("value", pa.string())]))),
+            ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),
+            ("links", pa.list_(pa.struct([("url", pa.string()), ("type", pa.string())]))),
+            ("description", pa.string()),
+            ("notes", pa.string()),
+            ("verification", pa.string()),
+            ("last_verified", pa.string()),
+            ("provenance", pa.list_(_PROVENANCE_STRUCT)),
+        ]
+    )
+
+
+def get_trade_agreement_parties_schema() -> pa.Schema:
+    """Schema for the ``trade_agreement_parties`` table (one row per agreement and party)."""
+    return pa.schema(
+        [
+            pa.field("agreement_id", pa.string(), nullable=False),
+            pa.field("party_id", pa.string(), nullable=False),
+            ("party_type", pa.string()),
+            ("status", pa.string()),
+            ("signed", pa.string()),
+            ("in_force", pa.string()),
+            ("joined", pa.string()),
+            ("left", pa.string()),
+            ("note", pa.string()),
+            ("source", pa.string()),
+        ]
+    )
+
+
+def get_country_trade_agreements_schema() -> pa.Schema:
+    """Schema for the ``country_trade_agreements`` view (one row per country and agreement)."""
+    return pa.schema(
+        [
+            pa.field("country_code", pa.string(), nullable=False),
+            pa.field("agreement_id", pa.string(), nullable=False),
+            ("via", pa.string()),
+            ("agreement_type", pa.string()),
+            ("agreement_status", pa.string()),
+            ("in_force", pa.string()),
         ]
     )

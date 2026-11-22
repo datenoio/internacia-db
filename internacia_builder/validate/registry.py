@@ -28,7 +28,14 @@ import yaml
 
 from internacia_builder import wb_classification
 from internacia_builder.paths import blocktypes_source_path
-from internacia_builder.validate import border_rules, completeness, country_rules, cross_rules, intblock_rules
+from internacia_builder.validate import (
+    border_rules,
+    completeness,
+    country_rules,
+    cross_rules,
+    intblock_rules,
+    trade_agreement_rules,
+)
 from internacia_builder.yaml_io import safe_load
 
 Issue = dict[str, Any]
@@ -140,6 +147,14 @@ class RuleContext:
     include_roles_catalog: dict[str, Any] = field(default_factory=dict)
     border_status: dict[str, Any] | None = None
     border_status_schema: dict[str, Any] = field(default_factory=dict)
+    trade_agreements: Dataset | None = None
+    trade_agreements_schema: dict[str, Any] = field(default_factory=dict)
+
+    @cached_property
+    def trade_agreement_ids(self) -> set[str]:
+        if self.trade_agreements is None:
+            return set()
+        return {str(r["id"]) for r in self.trade_agreements.records if r.get("id")}
 
     def dataset(self, name: str) -> Dataset:
         return self.countries if name == COUNTRIES else self.intblocks
@@ -210,6 +225,7 @@ def load_context(
     aliases_path = root / "data" / "intblocks_aliases.yaml"
     migrations_path = root / "data" / "attribute_intblock_migrations.yaml"
     border_status_path = root / "data" / "borders" / "border_status.yaml"
+    trade_agreements_dir = root / "data" / "trade_agreements"
     blocktype_catalog: dict[str, dict[str, Any]] = {}
     if blocktypes_path.exists():
         blocktype_catalog = {
@@ -246,6 +262,10 @@ def load_context(
         border_status=(load_yaml(border_status_path) or {}) if border_status_path.exists() else None,
         border_status_schema=json.loads((schemas / "border_status.schema.json").read_text(encoding="utf-8"))
         if (schemas / "border_status.schema.json").exists() else {},
+        trade_agreements=(Dataset.load(trade_agreements_dir, root, "*.yaml")
+                          if INTBLOCKS in datasets and trade_agreements_dir.exists() else None),
+        trade_agreements_schema=json.loads((schemas / "trade_agreements.schema.json").read_text(encoding="utf-8"))
+        if (schemas / "trade_agreements.schema.json").exists() else {},
     )
 
 
@@ -433,8 +453,24 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
            lambda ctx: cross_rules.check_partof_suborg_reciprocity(
                ctx.intblocks.records, ctx.intblocks.paths)),
     _cross("alias integrity", INTBLOCKS, E,
-           lambda ctx: cross_rules.validate_aliases(ctx.aliases or [], ctx.intblock_ids),
+           lambda ctx: cross_rules.validate_aliases(ctx.aliases or [], ctx.intblock_ids, ctx.trade_agreement_ids),
            message=_action_only, enabled=lambda ctx: ctx.aliases is not None),
+    _cross("trade agreements", INTBLOCKS, E,
+           lambda ctx: trade_agreement_rules.check_trade_agreements(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.trade_agreements_schema,
+               ctx.intblocks.records, ctx.country_codes, ctx.aliases),
+           message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.trade_agreements is not None),
+    _cross("trade agreement intblock candidates", INTBLOCKS, REPORT,
+           lambda ctx: trade_agreement_rules.check_intblock_candidates(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths),
+           enabled=lambda ctx: ctx.trade_agreements is not None),
+    _cross("trade agreement freshness", INTBLOCKS, W,
+           lambda ctx: trade_agreement_rules.check_trade_agreement_freshness(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.last_verified_max_age),
+           message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.trade_agreements is not None and ctx.last_verified_max_age > 0,
+           dated=True),
     _cross("attribute migrations", INTBLOCKS, E,
            lambda ctx: cross_rules.validate_attribute_intblock_migrations(
                ctx.attribute_migrations or [], ctx.intblock_ids),

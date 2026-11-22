@@ -179,7 +179,9 @@ def test_load_intblock_aliases_reads_source(tmp_path):
         encoding="utf-8",
     )
     aliases = builder.load_intblock_aliases(tmp_path)
-    assert aliases == [{"alias": "OLD", "target": "NEW", "reason": "renamed", "since": "1.4.0", "note": ""}]
+    assert aliases == [
+        {"alias": "OLD", "target": "NEW", "reason": "renamed", "since": "1.4.0", "note": "", "target_dataset": "intblocks"}
+    ]
 
 
 def test_zstd_level_defaults_to_the_release_level_and_reads_the_override(monkeypatch):
