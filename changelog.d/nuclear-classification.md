@@ -30,6 +30,8 @@
 - `CTBTO` listed 195 states, including non-signatories (India, Pakistan, North Korea, Saudi
   Arabia, Syria and others). It now lists the 188 CTBT signatories that make up the
   Preparatory Commission, with signature dates.
+- `CTBT` headquarters pointed to coordinates near Windsor, England, taken from Wikidata. It is
+  now Vienna, the seat of the Organization under Article II of the treaty.
 - `WANO` and `WNA`, now `non_state_organization`, no longer present countries with nuclear
   plants or member companies as member states. Their members are operators and companies, so
   the records have no country roster (`membership_applicability: not_applicable`).
