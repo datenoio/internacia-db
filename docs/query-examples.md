@@ -530,7 +530,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 68 rows — 39 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 11 missing China
+**Expected:** 73 rows — 42 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 13 missing China
 only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 18 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
 
 Filter to a single exclusion pattern:
@@ -1093,7 +1093,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 60 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 62 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 

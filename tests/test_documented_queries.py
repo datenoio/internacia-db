@@ -274,17 +274,17 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            68,
+            73,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            11,
+            13,
             {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI", "HCOC"},
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            39,
+            42,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
@@ -499,7 +499,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        60,
+        62,
         set(),
     ),
     (
