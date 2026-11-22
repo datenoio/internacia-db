@@ -117,7 +117,7 @@ jobs:
       # internacia-python commit whose tests/contract suite must pass before publishing
       # (0.6.0, contracts 3 to 5; datenoio/internacia-python#19).
       # Bump it to the latest internacia-python release when one is made.
-      INTERNACIA_SDK_REF: 527b391ae2cb7c1423859ad386a53574327f2a7d
+      INTERNACIA_SDK_REF: 39febb9a2f6f9f714c50f206804b1b2e0a35791b
     steps:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
