@@ -1,7 +1,7 @@
 ### Added
 
-- Ten artificial intelligence declarations and coalitions with `artificial_intelligence` and the
-  signatory lists of the host governments, checked on 2026-11-22:
+- Twelve artificial intelligence declarations, coalitions and partnerships with
+  `artificial_intelligence` and the signatory lists of their hosts, checked on 2026-11-22:
   - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
     Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
     the UK government.
@@ -31,6 +31,11 @@
     July 2026), a `policy_forum` with `human_rights`: the 18 founding states and Australia.
     Source: the French Ministry for Europe and Foreign Affairs. The coalition has since
     reported 23 states without naming them, so the roster is incomplete.
+  - `AFRICAAIDECLARATION` (Africa Declaration on Artificial Intelligence, Kigali, April
+    2025), a `regional` record: 52 African countries and the African Union. Source: the
+    official text published by C4IR Rwanda.
+  - `CURRENTAI` (Current AI, Wikidata Q132753289), a `non_state_organization` headquartered
+    in Paris: its ten partner countries, with status `partner`. Source: currentai.org.
 
   The REAIM Blueprint for Action (Seoul, 2024) is deferred: its list of endorsing states
   is no longer published.
