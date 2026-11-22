@@ -919,7 +919,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 30 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
+**Expected:** 33 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
 → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ### Dissolved organizations that still carry rosters
@@ -931,7 +931,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 35 rows — includes `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 42 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
@@ -965,7 +965,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 221 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 258 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1297,7 +1297,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 30 rows.
+**Expected:** 33 rows.
 
 ## Authority and capacity
 

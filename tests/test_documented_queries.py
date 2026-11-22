@@ -421,14 +421,14 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        30,
+        33,
         set(),
     ),
     (
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        35,
+        42,
         set(),
     ),
     (
@@ -531,7 +531,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        30,
+        33,
         set(),
     ),
 ]
@@ -588,7 +588,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 221
+    assert count == 258
 
 
 def test_world_bank_region_filter_uses_region_id(con):
