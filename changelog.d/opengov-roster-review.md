@@ -5,7 +5,8 @@
   OGP is a voluntary partnership whose members endorse a declaration, not a treaty.
 - `OPENGOV` roster rebuilt from the OGP National Members and Procedural Review pages (22 November
   2026): 72 active members with the year they joined, Kosovo as a non-voting member (`participant`),
-  and 15 withdrawn countries as `former_member`, each with the date it left OGP.
+  and 15 withdrawn countries as `former_member`, each with the year it joined (from OGP or the
+  letter of intent OGP publishes) and the date it left OGP.
   Benin, Albania, Burkina Faso, Cabo Verde, Côte d'Ivoire, Maldives, Papua New Guinea, Senegal,
   Seychelles, Thailand and Timor-Leste are added as members. Azerbaijan, Denmark, El Salvador,
   Georgia, Hungary, Israel, the Kyrgyz Republic, Sri Lanka, Tanzania and the United States change

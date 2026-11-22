@@ -76,6 +76,7 @@ includes:
   name: Afghanistan
   type: country
   status: former_member
+  joined: '2016'
   left: '2025-05-20'
 - id: AL
   name: Albania
@@ -209,6 +210,7 @@ includes:
   name: Georgia
   type: country
   status: former_member
+  joined: '2011'
   left: '2026-04-13'
 - id: DE
   name: Germany
@@ -255,6 +257,7 @@ includes:
   name: Israel
   type: country
   status: former_member
+  joined: '2011'
   left: '2026-02-19'
 - id: IT
   name: Italy
@@ -382,6 +385,7 @@ includes:
   name: Pakistan
   type: country
   status: former_member
+  joined: '2016'
   left: '2022-03-07'
 - id: PA
   name: Panama
@@ -457,6 +461,7 @@ includes:
   name: Sri Lanka
   type: country
   status: former_member
+  joined: '2015'
   left: '2025-05-10'
 - id: SE
   name: Sweden
@@ -467,6 +472,7 @@ includes:
   name: Tanzania
   type: country
   status: former_member
+  joined: '2011'
   left: '2017-07'
 - id: TH
   name: Thailand
@@ -482,6 +488,7 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: former_member
+  joined: '2012'
   left: '2019-12-06'
 - id: TN
   name: Tunisia
@@ -492,6 +499,7 @@ includes:
   name: Türkiye
   type: country
   status: former_member
+  joined: '2012'
   left: '2017-09-21'
 - id: UA
   name: Ukraine
@@ -564,7 +572,13 @@ notes: >-
   Membership lists national members only, as of 22 November 2026: 72 active members on the OGP members
   page, Kosovo as a non-voting member (participant; letter of intent July 2023, welcomed by the Steering
   Committee in August 2023), and 15 countries that OGP lists as withdrawn (former_member). joined is the
-  year OGP gives as "Member since". left is the date of the withdrawal letter where OGP publishes one
+  year OGP gives as "Member since". For former members without that field, joined is the year of the letter
+  of intent that OGP publishes (Israel 22 August 2011, Tanzania 10 September 2011, Trinidad and Tobago
+  22 February 2012, Sri Lanka 21 October 2015) or the year OGP states the country joined (Georgia 2011,
+  Turkey April 2012, Afghanistan December 2016, Pakistan December 2016 at the Paris Global Summit). The
+  OGP Steering Committee's 2018 resolution on Trinidad and Tobago dates its participation from 2013, the
+  year after its letter of intent. Hungary's joined year (2012) comes from its own withdrawal letter, which
+  OGP publishes. left is the date of the withdrawal letter where OGP publishes one
   (Denmark 25 February 2025, although its country page gives "Member 2011-2024"; Hungary 7 December 2016,
   immediate; Israel 19 February 2026; Luxembourg 8 December 2022; Pakistan 7 March 2022; United States
   15 January 2026), the month withdrawal took effect for Tanzania (July 2017), and the end year of the
@@ -626,6 +640,31 @@ provenance:
     Partnership" (29 September 2017)
   retrieved_at: '2026-11-22'
   url: https://www.opengovpartnership.org/news/government-of-turkey-leaves-the-open-government-partnership/
+- field: includes
+  source: Open Government Partnership, letters of intent to join OGP published on its documents pages
+    (Israel, Tanzania, Trinidad and Tobago, Sri Lanka)
+  retrieved_at: '2026-11-22'
+  url: https://www.opengovpartnership.org/documents/israel-letter-of-intent-to-join-ogp/
+- field: includes
+  source: Open Government Partnership, news release on Georgia's Response Policy case ("a member of OGP
+    since its outset in 2011")
+  retrieved_at: '2026-11-22'
+  url: https://www.opengovpartnership.org/news/update-on-georgias-response-policy-case/
+- field: includes
+  source: Open Government Partnership, blog post "Statement by the Government of Turkey on their
+    Participation in OGP" (20 April 2015; joined in April 2012)
+  retrieved_at: '2026-11-22'
+  url: https://www.opengovpartnership.org/stories/statement-by-the-government-of-turkey-on-their-participation-in-ogp/
+- field: includes
+  source: Open Government Partnership, blog post on Afghanistan's accession (21 February 2017; letter of
+    intent in December 2016)
+  retrieved_at: '2026-11-22'
+  url: https://www.opengovpartnership.org/stories/objectives-of-the-government-of-the-islamic-republic-of-afghanistans-accession-to-open-government-partnership/
+- field: includes
+  source: Open Government Partnership, inactivity letter to the Government of Pakistan (10 February 2020;
+    joined in December 2016 at the Paris Global Summit)
+  retrieved_at: '2026-11-22'
+  url: https://www.opengovpartnership.org/wp-content/uploads/2020/02/Pakistan_Letter_Inactivity_February2020.pdf
 - field: membership_count
   source: Open Government Partnership, National Members page (status Active)
   retrieved_at: '2026-11-22'
