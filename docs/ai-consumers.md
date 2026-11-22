@@ -152,7 +152,7 @@ df[df["code_status"] == "official_iso3166_1"]
 Organizations, treaties, alliances, federations, and similar groupings. Each record has:
 
 - `id` — stable uppercase identifier (join key)
-- `blocktype` — list of domain taxonomy keys (e.g. `fisheries`, `trade`, `military`); the first is the primary domain. Entity form (IGO, treaty, forum, NGO) is `scope_category`, not a blocktype. `intorg` is deprecated: filter IGOs with `scope_category = 'igo'`
+- `blocktype` — list of domain taxonomy keys (e.g. `fisheries`, `trade`, `military`); the first is the primary domain. Entity form (IGO, treaty, forum, NGO) is `scope_category`, not a blocktype. `intorg` is deprecated: filter IGOs with `scope_category = 'igo'`. `eccurr` and `cuscurr` are deprecated: use `list_has_all(blocktype, ['economic', 'currency'])` or `['customs', 'currency']`. Currency union rosters are the records whose primary blocktype is `currency` (`blocktype[1] = 'currency'`); `currency` as a secondary value also marks organizations that administer a currency (`UEMOA`, `OECS`) and central banks such as `ECB`
 - `includes` — typed membership/participation list when applicable; **`includes[].id` is authoritative** for joins
 - `status`, `founded`, `dissolved`, `predecessor`, `successor` — lifecycle
 - `wikidata_id`, `description`, `tags`, `topics` — linking and discovery

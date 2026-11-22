@@ -530,7 +530,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 64 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 11 missing China
+**Expected:** 66 rows — 38 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 11 missing China
 only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `CTBT`).
 
 Filter to a single exclusion pattern:
@@ -555,7 +555,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
   AND NOT b.has_usa;
 ```
 
-**Expected:** 8, 35, and 15 rows respectively.
+**Expected:** 8, 38, and 16 rows respectively.
 
 **Gotcha:** Use `countries.un_member` as the denominator, not the `UN` intblock roster
 (193 entries). Some high-coverage records are informal groupings (`LMY`, `PERIPHCOUNT`) —
@@ -684,7 +684,8 @@ ORDER BY c.name;
 
 ### EU members outside the eurozone
 
-Eurozone membership is tracked via the `EMU` intblock:
+Eurozone membership is tracked via the `EUROAREA` currency record (`EMU` is the World Bank
+aggregate with the same roster):
 
 ```sql
 SELECT c.code, c.name
@@ -697,12 +698,13 @@ WHERE c.code IN (
   AND c.code NOT IN (
     SELECT m.id
     FROM intblocks i, UNNEST(i.includes) AS t(m)
-    WHERE i.id = 'EMU' AND m.type = 'country'
+    WHERE i.id = 'EUROAREA' AND m.type = 'country'
   )
 ORDER BY c.name;
 ```
 
-**Expected:** 7 rows — `BG`, `CZ`, `DK`, `HU`, `PL`, `RO`, `SE`.
+**Expected:** 6 rows — `CZ`, `DK`, `HU`, `PL`, `RO`, `SE`. Bulgaria joined the euro area on
+1 January 2026.
 
 ### Jaccard similarity between organization rosters
 
@@ -768,7 +770,7 @@ ORDER BY org_count DESC
 LIMIT 10;
 ```
 
-**Expected top:** `FR` (399), `GB` (385), `DE` (376), `IT` (365), `ES` (361).
+**Expected top:** `FR` (530), `DE` (507), `GB` (498), `IT` (491), `ES` (490).
 
 ### Least organization-dense UN members
 
@@ -783,7 +785,7 @@ ORDER BY org_count ASC
 LIMIT 10;
 ```
 
-**Expected bottom:** `KP` (116), `FM` (118), `PW` (124), `MH` (125), `LI` (127).
+**Expected bottom:** `FM` (150), `KP` (153), `PW` (158), `NR` (164), `TV` (164).
 
 ### Heavily connected countries missing from a bloc
 
@@ -808,7 +810,7 @@ WHERE c.un_member
 ORDER BY d.org_count DESC;
 ```
 
-**Expected:** 155 rows — includes `CN`, `IN`, `RU` near the top; `KP` at the bottom.
+**Expected:** 155 rows — includes `CN`, `IN`, `RU` near the top; `FM` at the bottom.
 
 ### Countries with many observer seats
 
@@ -1091,7 +1093,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 55 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 56 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -1110,9 +1112,9 @@ HAVING org_count <= 130
 ORDER BY org_count ASC, c.name;
 ```
 
-**Expected:** 0 rows as of v2.1.0 — the sparsest UN member (`KP`) now carries 137
+**Expected:** 0 rows — the sparsest UN member (`FM`) carries 150
 affiliations, above the 130 threshold. Raise the threshold for a useful shortlist
-(`HAVING org_count <= 150` yields 3 rows).
+(`HAVING org_count <= 160` yields 3 rows).
 
 ## Pandas and Polars
 

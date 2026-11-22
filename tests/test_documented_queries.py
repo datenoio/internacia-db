@@ -274,7 +274,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            64,
+            66,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -284,7 +284,7 @@ ORDER BY b.id
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            36,
+            38,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
@@ -322,10 +322,10 @@ ADDITIONAL_RECIPES = [
         """
         SELECT c.code FROM countries c
         WHERE c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country')
-          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EMU' AND m.type='country')
+          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EUROAREA' AND m.type='country')
         ORDER BY c.code
         """,
-        7,
+        6,
         {"SE", "PL", "DK"},
     ),
     (
@@ -354,7 +354,7 @@ ADDITIONAL_RECIPES = [
         WHERE c.un_member GROUP BY c.code ORDER BY COUNT(DISTINCT i.id) ASC LIMIT 1
         """,
         1,
-        {"KP"},
+        {"FM"},
     ),
     (
         """
@@ -499,7 +499,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        55,
+        56,
         set(),
     ),
     (
