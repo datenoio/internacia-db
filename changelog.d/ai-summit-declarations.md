@@ -1,6 +1,6 @@
 ### Added
 
-- Fourteen artificial intelligence declarations, coalitions and partnerships with
+- Sixteen artificial intelligence declarations, coalitions and partnerships with
   `artificial_intelligence` and the signatory lists of their hosts, checked on 2026-11-22:
   - `BLETCHLEYDECLARATION` (Bletchley Declaration, AI Safety Summit 2023, Wikidata
     Q130201327): 29 countries and the EU, with New Zealand from October 2024. Source:
@@ -42,6 +42,12 @@
   - `NORDICBALTICAIDECLARATION` (AI in the Nordic-Baltic Region, Stockholm, 14 May 2018), a
     `regional` record: eight states, the Faroe Islands and the Åland Islands. Source: the
     signed copy published by the Government of Iceland.
+  - `CARTAGENAAIDECLARATION` (Cartagena de Indias Declaration on AI governance, ecosystems
+    and education, August 2024), a `regional` record: 17 countries. Source: MinTIC Colombia.
+  - `MONTEVIDEOAIDECLARATION` (Montevideo Declaration on a regional approach to AI
+    governance, 4 October 2024, Wikidata Q133894914), a `regional` record: 15 approving
+    countries and three later adherents (Bolivia, Costa Rica, Dominica). Source: the text
+    published by AGESIC.
 
   The REAIM Blueprint for Action (Seoul, 2024) is deferred: its list of endorsing states
   is no longer published.
