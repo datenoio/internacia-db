@@ -115,9 +115,9 @@ jobs:
     env:
       INTERNACIA_DATASETS_DIR: ${{ github.workspace }}/.release-datasets
       # internacia-python commit whose tests/contract suite must pass before publishing
-      # (0.5.0, contracts 3 and 4).
+      # (0.6.0, contracts 3 to 5; datenoio/internacia-python#19).
       # Bump it to the latest internacia-python release when one is made.
-      INTERNACIA_SDK_REF: 74f9338efe1d0b36d10ed0eadff08ccf75063d34
+      INTERNACIA_SDK_REF: 39febb9a2f6f9f714c50f206804b1b2e0a35791b
     steps:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:

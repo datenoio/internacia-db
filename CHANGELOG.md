@@ -7,6 +7,376 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] - 2026-11-22
+
+### Added
+
+- `IATI` (International Aid Transparency Initiative, Wikidata Q14901678), a `governance`/`development`
+  `policy_forum` record. It lists the 38 countries among the IATI Members' Assembly members: the 22
+  partner countries and the 16 providers that are national governments or their agencies, with the
+  year each joined. Multilateral, civil society and private sector members are named in the notes.
+  Checked on 2026-11-22.
+- `COSTINFRA` (CoST – Infrastructure Transparency Initiative, Wikidata Q132472491), a `governance`
+  `policy_forum` record with the 9 national members and 9 former national members from the CoST
+  "Where we work" page and country pages. Sub-national members and partners are named in the notes.
+  Checked on 2026-11-22.
+- `REDGEALC` (Red GEALC, Inter-American Network of Digital Government), a `digital`/`governance`
+  `policy_forum` record with the 29 countries in its directory of members by country and the 3
+  associate members named in its statutes. It has no Wikidata item, so it gets a Wikidata exclusion.
+  Checked on 2026-11-22.
+- Five multilateral trade agreements found in a walk of the ADB ARIC FTA database, each with a roster from its depositary or secretariat, checked on 2026-11-22:
+  - `TPSOIC`, the Trade Preferential System among OIC member states: 14 participating states, from the COMCEC status tables.
+  - `D8PTA`, the Preferential Trade Agreement among D-8 Member States: eight parties, with ratification dates from the D-8 Secretariat.
+  - `ECOTA`, the ECO Trade Agreement (Wikidata Q24089710): five parties. It has been in force since 2008 but has never been applied.
+  - `MSGTA`, the Melanesian Spearhead Group Trade Agreement: four parties, from the MSG Secretariat and WIPO Lex.
+  - `KRCENTRALAMERICA`, the Republic of Korea–Central America FTA: six parties, with entry-into-force dates for each party. Guatemala's accession is not yet in force.
+- An OpenSpec proposal, `add-trade-agreements-registry`, for a separate registry of all trade agreements, bilateral ones included.
+- 35 further records found by the DFAT Australian Treaties Database walk, each with its roster from
+  the depositary, secretariat or official site, checked on 2026-11-22. Signatories that have not
+  ratified are left out.
+  - ICRC IHL Treaties Database: `APIII2005` (Additional Protocol III, 80 parties) and `HAGUEIV1907`
+    (Hague Convention IV and its Regulations, 38 parties; the ICRC does not list the British
+    Dominions bound through the United Kingdom's 1909 ratification).
+  - WIPO Lex: `NICEAGREEMENT` (96), `STRASBOURGIPC` (68), `TLT1994` (55), `PLT2000` (45, with the
+    Eurasian Patent Organization) and `SINGAPORETREATY` (58, with OAPI and BOIP).
+  - `ATACONVENTION` (A.T.A. Carnet Convention, 65), from the WCO position, and `WARSAW1929`
+    (Warsaw Convention, 152), from the ICAO list of parties.
+  - IMO Status Book Vol. II of 30 October 2026: `OPRCHNS2000` (43), `BUNKERS2001` (111),
+    `SALVAGE1989` (80), `CSC1972` (86) and `INTERVENTION1969` (92).
+  - `TRUSTS1985` (HCCH Trusts Convention, 14), from the HCCH status table.
+  - Council of Europe, from the Netherlands Treaty Database party tables: `COELAUNDERING1990`
+    (ETS No. 141, 49) and `COEANTIDOPING` (ETS No. 135, 52).
+  - UNESCO States Parties exports: `UCC1952` (Universal Copyright Convention, 100; the 1971 Paris
+    revision is described in the record), `CDE1960` (Convention against Discrimination in
+    Education, 112), `TOKYOCONVENTION2011` (Asia-Pacific recognition of qualifications, 13) and
+    `GLOBALCONVENTION2019` (Global Convention on higher-education qualifications, 43).
+  - Antarctic and Pacific: `MADRIDPROTOCOL1991` (Environmental Protocol to the Antarctic Treaty,
+    42), `CCAS` (Antarctic Seals, 17), `ACAP` (albatrosses and petrels, 13, `partof` `CMS`), `PRF`
+    (Pacific Resilience Facility, an IGO in Nuku'alofa, 9 members), `SPTT` (South Pacific Tuna
+    Treaty with the United States, 17) and `DRIFTNETCONVENTION` (Wellington driftnet convention,
+    13).
+  - Organizations and groups: `RECAAP` (ReCAAP Agreement, 22), `NACA` (Network of Aquaculture
+    Centres in Asia-Pacific, 20), `ACWL` (Advisory Centre on WTO Law, 59) and `WWTG` (World Wine
+    Trade Group, an informal `policy_forum` of 9 governments). The International Sugar
+    Organization is already recorded as `OIS`.
+  - Historical and peace treaties, from the UN Treaty Series and the Tractatenblad: `ELDO`
+    (European Launcher Development Organisation, 1964–1975, `successor` `ESA`), `SPEC` (South
+    Pacific Bureau for Economic Co-operation, 1973–1993), `SANFRANCISCOTREATY` (Treaty of Peace
+    with Japan, 45 parties) and `PARISPEACECAMBODIA1991` (Paris Peace Agreements on Cambodia).
+- `GLOBALCONVENTION2019`, `HAGUEIV1907`, `PRF`, `SPEC` and `WWTG` have `wikidata_exclusions.yaml`
+  entries: Wikidata has no item for them.
+- CAB International, the Waigani Convention and the FAO regional commissions (APPPC, APHCA, the
+  International Rice Commission) are not added: their sites refuse automated reads.
+- 9 multilateral treaties to which Australia is a party, found missing by walking the DFAT
+  Australian Treaties Database and added as `treaty_body` records. Each has its parties roster
+  from the depositary or treaty secretariat, checked on 2026-11-22. Signatories that have not
+  ratified are left out.
+  - `GCI` (Q19136672), `GCII` (Q583921) and `GCIII` (Q3984882): Geneva Conventions I–III of
+    1949, each with 196 States parties from the ICRC IHL Treaties Database. `GCIV` was already
+    recorded.
+  - `SUAFIXEDPLATFORMS1988` (Protocol for the Suppression of Unlawful Acts against the Safety of
+    Fixed Platforms Located on the Continental Shelf, 157 parties, Q15991246), from the IMO
+    Status Book Vol. II of 30 October 2026.
+  - `PLASTICEXPLOSIVES1991` (Convention on the Marking of Plastic Explosives for the Purpose of
+    Detection, 157 parties, Q15991245), from the ICAO list of parties.
+  - `OECDANTIBRIBERY` (OECD Anti-Bribery Convention, 46 parties, Q626826), from the OECD
+    ratification status of August 2024, the latest the OECD publishes.
+  - `BEPSMLI` (BEPS Multilateral Instrument, 89 parties, Q39058243), from the OECD signatories
+    and parties list of 12 November 2026. Guernsey, Jersey and the Isle of Man are parties in
+    their own right; Curaçao and Hong Kong are covered by the Netherlands and China and are not
+    listed.
+  - `GPA` (WTO Agreement on Government Procurement, 22 parties, Q331553), from the WTO parties
+    page. The European Union is one party and its member States are not listed separately.
+  - `TAC` (Treaty of Amity and Cooperation in Southeast Asia, 62 High Contracting Parties
+    including the European Union, Q1054948), from the ASEAN Legal Instruments database.
+- The International Treaty on Plant Genetic Resources for Food and Agriculture and the FAO Port
+  State Measures Agreement are not added: the FAO site refuses automated reads.
+- `GIFT` (Global Initiative for Fiscal Transparency), a `governance` `policy_forum` record listing the
+  23 national governments among its stewards. The roster comes from a Wayback Machine copy of the GIFT
+  About page of 4 May 2026, because the live site returned server errors on 2026-11-22. That page was
+  last edited on 1 March 2024, so the roster may be out of date.
+- `DPGA` (Digital Public Goods Alliance, Wikidata Q102440976), a `digital` `policy_forum` record listing
+  the 24 national governments among its members on the DPGA Roadmap, with joining dates from the
+  alliance's announcement posts. Checked on 2026-11-22.
+- `BOLG` (Beneficial Ownership Leadership Group), a historical `governance` `policy_forum` record. Its
+  eight members are recorded as former members, because the group concluded in December 2023. Checked
+  on 2026-11-22.
+- `IIC` (Inter-American Investment Corporation, IDB Invest, 48 member countries) and four commodity
+  organizations, with members from their own membership pages (checked on 2026-11-22): `ICO`
+  (International Coffee Organization), `ICCO` (International Cocoa Organization), `OIS`
+  (International Sugar Organization) and `IOOC` (International Olive Council).
+- `ODC` (International Open Data Charter, Wikidata Q22905856), a `governance`/`digital` record for the
+  six non-binding open data principles launched in 2015. Its 29 national government adopters come from
+  the Open Data Charter government adopters page, checked on 2026-11-22. The 146 sub-national adopters
+  and the endorsing organisations are not country members and are not listed.
+- Trade agreements registry (OpenSpec `add-trade-agreements-registry`). Source files are in
+  `data/trade_agreements/<ID>.yaml` and follow `data/schemas/trade_agreements.schema.json`.
+  The build exports them as new `trade_agreements` and `trade_agreement_parties` tables
+  (Parquet, JSONL, DuckDB) and a new `country_trade_agreements` view. In the view, a bloc
+  party such as the EU expands to its current member countries, with `via` set to the bloc id.
+  The registry records parties, status, dates, `wto_rta_id`, `aric_id` and provenance only.
+  It has no trade values, tariff lines or depth scores.
+- Every multilateral `fta`, `pta` and `customs` intblock, plus `TFTA`, `PACER` and `EAEU`, has a
+  registry record linked to the intblock with `intblock:`. The record reads its parties from the
+  intblock's `includes`.
+- The ADB ARIC FTA database (snapshot of 2026-11-22) is imported. Rows that matched existing
+  records got `aric_id`; the other rows are new `verification: catalogue` records. ARIC's
+  proposed and negotiating agreements are imported as well, with their status.
+- Twelve multilateral agreements from the ARIC walk that are in force now have intblocks in
+  `data/intblocks/fta/`, with party-by-party dates from official sources. Each is linked from its
+  registry record:
+  - EFTA agreements, dated from the Swiss Fedlex scope tables and EFTA partner pages: `EFTASG`,
+    `EFTAKR`, `EFTAHK`, `EFTAPH`, `EFTAID`, `EFTAGE` and `EFTATR` (the modernised 2018
+    agreement).
+  - EAEU agreements, from Eurasian Economic Commission texts: `EAEUVN`, `EAEURS` and `EAEUIR`
+    (the 2023 agreement). The Union itself is a party alongside its member states.
+  - `GCCSG`, the GCC–Singapore FTA. The six GCC states are parties individually.
+  - `UKPACIFICEPA`, the UK–Pacific States interim EPA. It is applied provisionally from 1 January
+    2021; Samoa and Solomon Islands acceded on 31 March 2022.
+- The eight ARIC candidates marked as signed but not in force were checked against official
+  sources, because ARIC's statuses were out of date:
+  - `MERCOSURSG`, `PACALLSG` (Pacific Alliance–Singapore), `EAEUCN` (EAEU–China, a
+    non-preferential agreement) and `AZTMTR` (Azerbaijan–Türkiye–Turkmenistan cooperation) are
+    in force. Each now has an intblock, with per-party dates.
+  - `EAEUSG` (EAEU–Singapore) is signed but not yet in force. It now has an intblock with no
+    `active_period`.
+  - `GCCKR`, `GCCNZ` and `GCCPK` were only concluded, never signed. Their registry status is now
+    `negotiating`, and they have no intblock.
+  - ARIC lists Australia, New Zealand and Canada as parties to the Pacific Alliance agreement.
+    None of them signed it.
+- Two earlier agreements are registry records with status `superseded`: `EFTATR-1991`, the
+  EFTA–Turkey agreement of 1991, and `EAEUIR-2018`, the EAEU–Iran interim agreement of 2018.
+- New validator rules for the registry: schema, ids shared with intblocks, party and intblock
+  resolution, status and date consistency, and freshness. The quality report now lists
+  multilateral catalogue records that have no intblock yet.
+- Topic key `industry` (Industry), first used by `UNIDO`.
+- The WTO RTA Information System export of 2026-11-22 is imported into the trade agreements
+  registry by `scripts/oneoff/import_wto_rtais.py`. Every in-force and inactive RTA that was not
+  recorded yet is a new record: 346 `verification: catalogue` records with the parties that WTO
+  lists, and five records linked to existing intblocks (`CCASG`, `ECOWAS`, `EEA`, `ALADI` and
+  `CARICOM`). An inactive agreement has status `terminated`, or `superseded` with
+  `superseded_by` when its successor is known, and the WTO inactive date as `ended`.
+- 260 existing registry records now have `wto_rta_id`. Accession rows (EC enlargements, COMESA,
+  EAEU, CPTPP and others) map to the agreement that they join.
+
+### Changed
+
+- `OIC`, `D8`, `ECO`, `MSG` and `GUAM` now have notes that point to their trade agreements. The GUAM free trade agreement is a note only, because its parties are the GUAM members.
+- `docs/intblock-sources.md` logs the ARIC walk.
+- `ESA` has `predecessor: ELDO`.
+- `COEAICONVENTION` (Council of Europe Framework Convention on AI, CETS No. 225): the roster is
+  now sourced from the Council of Europe Treaty Office chart of signatures and ratifications
+  (status as of 21 November 2026), which agrees with the Netherlands treaty database. The parties
+  are unchanged: the EU and Bosnia and Herzegovina.
+- `ILO` reviewed on 2026-11-22. The 187 members are unchanged: 186 UN members and the Cook
+  Islands.
+  - Set `joined` on every member to its date of latest admission. Readmitted states (for
+    example the United States in 1980, South Africa in 1994 and Germany in 1951) note their
+    earlier membership periods.
+  - Add the State of Palestine as an observer: the 113th International Labour Conference made it
+    a non-member observer State in June 2025.
+  - Add 40 `founding_members`: the Treaty of Versailles signatories and the States invited to
+    join in 1919, mapped to present members.
+  - Add `recognition_status` (UN specialized agency since 1946), `secretariat`, and notes on
+    membership rules, tripartite organs and Directors-General.
+  - Move the headquarters coordinates to the ILO building.
+  - Fix the French acronym, rewrite the description, replace the generic tags, expand topics
+    and `other_names`, and add source-backed provenance.
+- `OPENGOV` (Open Government Partnership): the record moves from `agreement/` to `governance/`
+  (`blocktype: [governance]`, `scope_category: policy_forum`, `geographic_scope: global`), because
+  OGP is a voluntary partnership whose members endorse a declaration, not a treaty.
+- `OPENGOV` roster rebuilt from the OGP National Members and Procedural Review pages (22 November
+  2026): 72 active members with the year they joined, Kosovo as a non-voting member (`participant`),
+  and 15 withdrawn countries as `former_member`, each with the year it joined (from OGP or the
+  letter of intent OGP publishes) and the date it left OGP.
+  Benin, Albania, Burkina Faso, Cabo Verde, Côte d'Ivoire, Maldives, Papua New Guinea, Senegal,
+  Seychelles, Thailand and Timor-Leste are added as members. Azerbaijan, Denmark, El Salvador,
+  Georgia, Hungary, Israel, the Kyrgyz Republic, Sri Lanka, Tanzania and the United States change
+  from `member` to `former_member`, and Afghanistan, Luxembourg, Pakistan, Trinidad and Tobago and
+  Turkey are added as `former_member`. Austria and Japan, which are not on any OGP member list, are
+  removed. `membership_count` changes from 73 to 72. `left` is the date a withdrawal took effect
+  where the withdrawal letter, OGP letter or Steering Committee resolution states one (for example
+  Denmark 31 December 2024, Luxembourg 1 January 2023, the Kyrgyz Republic and Sri Lanka 10 May
+  2025), otherwise the date of the document that ended membership (Israel 1 February 2026,
+  El Salvador 28 March 2023, and the resolutions that permanently suspended Azerbaijan on 21 July
+  2023 and Georgia on 13 April 2026).
+- `OPENGOV` gains a full description, founding date (20 September 2011) and founding members,
+  the Open Government Declaration, the Support Unit secretariat, social media links, governance
+  topics, more names in other languages, and corrected acronyms.
+- `OSPAR` is named "OSPAR Convention" to match its `treaty_body` scope and its roster of
+  Contracting Parties; "OSPAR Commission" stays in `other_names`. `legal_status` is `treaty`.
+- `OSPAR` includes gain `joined` dates: the date each of the 16 Contracting Parties deposited
+  its instrument of ratification or approval, from the Netherlands treaty database.
+- `OSPAR` gets a fuller description and notes, the `biodiversity` topic, more names in other
+  languages, and field-level provenance with named sources.
+- `intblocks_aliases` has a new `target_dataset` column and a new reason, `moved`.
+  `countries_aliases` keeps its old columns.
+- `docs/intblock-inclusion-policy.md`: bilateral trade agreements belong in the registry.
+  The bar for an intblock still applies to agreements with three or more parties.
+- Ten ADB ARIC catalogue records take the WTO RTA-IS status: `AMRU`, `KGRU`, `KZRU`, `RUTJ` and
+  `NITW` are terminated; `GTTW`, `CNMV`, `ILVN`, `HKPE` and `INNZ` are in force. `GBGE` and
+  `GBUA` have type `fta` instead of `other`.
+- ARIC catalogue records that give only a year, or no date, take the full WTO date of
+  signature or entry into force.
+
+### Removed
+
+- **Breaking, needs a MAJOR release (5.0.0).** 34 two-party trade agreements left `intblocks`
+  and `memberships` and moved to `trade_agreements` under the same ids:
+  `ANZCERTA`, `AUINDIA`, `AUUAE`, `AUUK`, `CETA`, `CHAFTA`, `CNEC`, `CNKR`, `CNNI`, `CNRS`,
+  `EUCENTRALAFRICAEPA`, `EUJP`, `EUKR`, `EUNZ`, `EUSG`, `EUUA`, `EUUK`, `EUVN`, `INUAE`,
+  `UKIN`, `UKJP`, `UKNZ`, `USAU`, `USBH`, `USCL`, `USCO`, `USIL`, `USJO`, `USKR`, `USMA`,
+  `USOM`, `USPA`, `USPE` and `USSG`. Each has an alias with `reason: moved` and
+  `target_dataset: trade_agreements`. `USCR` was the US–Costa Rica part of CAFTA-DR, so it is
+  merged into `CAFTADR`. To find the agreements a country is party to, query the view:
+
+  ```sql
+  SELECT agreement_id, via FROM country_trade_agreements WHERE country_code = 'KR';
+  ```
+
+### Fixed
+
+- `intblocks.partof` holds parent ids when the source YAML uses the object form
+  `partof: {id: BIS, name: ...}`. Before, the build exported the object's keys, so 53
+  intblocks (for example `FSB`, `AFRICACDC`, `ITLOS`, `OPCW`, `LVFO`) had
+  `partof = ['id', 'name']`; `FSB` now has `['BIS']`. A list of `{id, name}` objects
+  exports each `id` instead of the object's string form. No source YAML changes.
+- `OSPAR`: `wikidata_id` pointed to Q7076363 (a post office building in Florida). It is now
+  Q1928254, the Convention for the Protection of the Marine Environment of the North-East
+  Atlantic, and the Wikipedia link points to the OSPAR Convention article.
+- Trade agreement Wikidata id audit (22 November 2026): the 26 `wikidata_id` values set on
+  `data/trade_agreements/` records, and the 54 that linked records read from their
+  intblocks, were fetched from Wikidata and checked against each record's name, parties and
+  type. Every id points to the right agreement item except `AUUK`: Q107271797 does not
+  exist, and its correction to Q97356844 is listed under the intblock Wikidata id audit. No
+  record had names or descriptions copied from a wrong item.
+- `EUJP` (EU-Japan Economic Partnership Agreement) now links to the English Wikipedia
+  article on the agreement, the enwiki sitelink of Q30749427, instead of the article on
+  Japan–European Union relations.
+- `UNIDO` checked on 2026-11-22 against the UN Treaty Collection status of the UNIDO
+  Constitution (chapter X-9). The roster had 189 members, all listed as `member`. It now has 174
+  members, the parties the depositary records, and 11 former members with the dates their
+  withdrawal took effect: Canada, the United States, Australia, Lithuania, New Zealand, France,
+  Portugal, Belgium, Denmark, Greece and Slovakia.
+  - Remove Brunei, Estonia, Iceland, Latvia, Nauru, San Marino and Singapore, which never became
+    parties.
+  - Add Albania, the Marshall Islands and the State of Palestine.
+  - The United Kingdom stays a member: it re-acceded on 9 November 2026 after leaving at the end
+    of 2012.
+  - Set `joined` on every entry to the date the Constitution entered into force for that State
+    under Article 25(2).
+- `UNIDO`: add the founding date (17 November 1966, General Assembly resolution 2152 (XXI)),
+  `development` blocktype, recognition_status, secretariat, named official_documents and notes
+  on the organs and Directors General. Move the headquarters coordinates to the Vienna
+  International Centre, fix the Russian name and acronyms, replace the generic tags and topics,
+  and add source-backed provenance.
+- Wikidata id audit (22 November 2026): every intblock `wikidata_id` was fetched from
+  Wikidata and checked against the record's name and type. 54 records pointed to the wrong
+  item, a missing item or a redirect. Each corrected record also gets the matching
+  `type: wikidata` link and a `wikidata_id` provenance entry for the new item.
+  Old id, new id, and what the old id was:
+  - `ARTEMISACCORDS` (Artemis Accords): Q96341450 to Q94568413; Q96341450 is a 2020 article
+    on diesel engine emissions.
+  - `BANGKOK` (Treaty of Bangkok): Q7707000 to Q1395235; Q7707000 is a Ukrainian tennis
+    player.
+  - `BARCELONA` (Barcelona Convention): Q808430 to Q2118997; Q808430 is a crater on Mars.
+  - `CTBT` (Comprehensive Nuclear-Test-Ban Treaty): Q192088 to Q521306; Q192088 is Eton
+    College.
+  - `EIB` (European Investment Bank): Q152096 to Q192247; Q152096 is Sainsbury's.
+  - `ESM` (European Stability Mechanism): Q2040462 to Q1130098; Q2040462 is the Meath West
+    Dáil constituency.
+  - `FOCONLINE` (Freedom Online Coalition): Q5504594 to Q17024071; Q5504594 is fringe
+    benefits tax.
+  - `GGGI` (Global Green Growth Institute): Q5533568 to Q12586353; Q5533568 is a ward in
+    Hastings.
+  - `LIC` (Low income): Q28035133 to Q25450947 (World Bank low income countries);
+    Q28035133 is a Romanian politician.
+  - `MSF` (Médecins Sans Frontières): Q37685 to Q49330; Q37685 is Jurong Falls.
+  - `NAIROBI` (Nairobi Convention): Q6960080 to Q2996268; Q6960080 is a Wikimedia category.
+  - `OFID` (OPEC Fund for International Development): Q7074800 to Q392787; Q7074800 is a
+    Canadian publisher.
+  - `PEPFAR`: Q1191982 to Q3402412; Q1191982 is mariculture.
+  - `RAROTONGA` (Treaty of Rarotonga): Q7835003 to Q1760687; Q7835003 is transport in
+    Jersey.
+  - `TPNW` (Treaty on the Prohibition of Nuclear Weapons): Q27961877 to Q28130514;
+    Q27961877 is a football club.
+  - `UNAIDS`: Q781014 to Q588982; Q781014 is Aubusson tapestry.
+  - `UNCLOS`: Q19989 to Q216996; Q19989 is a Linkin Park single.
+  - `UNHCR`: Q15768 to Q132551; Q15768 is sodium bromide.
+  - `ASEANPLUS3` (ASEAN Plus Three): Q483654 to Q1323760; Q483654 is Sunni Islam.
+  - `BUDCONV` (Budapest Convention on Cybercrime): Q223800 to Q1093069; Q223800 is the
+    Houston disambiguation page.
+  - `CILSS`: Q1419931 to Q1114955; Q1419931 is Niemann-Pick disease.
+  - `CISG`: Q202027 to Q1196344; Q202027 is the cornet.
+  - `COVAX`: Q101437219 to Q99360983; Q101437219 is a street in Eberswalde.
+  - `EASTASIASUMMIT` (East Asia Summit): Q618666 to Q542549; Q618666 is a Swiss glacier.
+  - `G24` (Group of 24): Q18048978 to Q1589222; Q18048978 is the human gene LACTB.
+  - `GATT`: Q192713 to Q194284; Q192713 is a commune in Lozère.
+  - `GHSA` (Global Health Security Agenda): Q22022249 to Q104846388; Q22022249 is a 1928
+    college football season.
+  - `IPBES`: Q3156270 to Q1666088; Q3156270 is a place in Madagascar.
+  - `ITC` (International Trade Centre): Q315306 to Q1184878; Q315306 is the German
+    Schutzpolizei.
+  - `NDPHS` (Northern Dimension Partnership in Public Health and Social Well-being):
+    Q17021727 to Q7058307; Q17021727 is a fictional TV character.
+  - `REFUGEECONVENTION` (1951 Refugee Convention): Q193430 to Q60433; Q193430 is
+    heterocyclic compound.
+  - `REFUGEEPROTOCOL` (1967 Refugee Protocol): Q392278 to Q60468; Q392278 is a lake in
+    France.
+  - `UNCTAD`: Q192710 to Q182000; Q192710 is the Malayan tapir.
+  - `UNICEF`: Q142489 to Q740308; Q142489 is the gigabit interface converter.
+  - `UNIDROIT`: Q376658 to Q1192641; Q376658 is a Chicago skyscraper.
+  - `UNODC`: Q188307 to Q636107; Q188307 is The Salvation Army.
+  - `VISTA`: Q924241 to Q1136157; Q924241 is Vista, California.
+  - `ICPE` (International Center for Promotion of Enterprises): Q85787929 to Q6049045;
+    Q85787929 is an Indian institute for small enterprises.
+  - `BBNJ` (High Seas Treaty): Q120432689 to Q48780688; Q120432689 redirects to an
+    American economist.
+  - `STATELESS1954` (1954 Statelessness Convention): Q1783482 to Q5166243; Q1783482 is a
+    mathematical theorem.
+  - `STATELESS1961` (1961 Statelessness Convention): Q1783494 to Q5166303; Q1783494 is a
+    disambiguation page.
+  - `V20` (Vulnerable Twenty Group): Q30943971 to Q141737207; Q30943971 is a Chinese
+    person.
+  - `WESTERNBLOC` (Western Bloc): Q153045 to Q1507074; Q153045 is an asteroid.
+  - `GPAI` (Global Partnership on Artificial Intelligence): Q97185282 to Q105730365;
+    Q97185282 is a 1988 animated film.
+  - `IAPH` (International Association of Ports and Harbors): Q6048000 to Q17081446;
+    Q6048000 is a legal concept.
+  - `DEPA` (Digital Economy Partnership Agreement): Q104830867 to Q104880620; Q104830867
+    does not exist.
+  - `PELINDABA` (Treaty of Pelindaba): Q4691025 to Q1468283; Q4691025 does not exist.
+  - `GFCE` (Global Forum on Cyber Expertise): Q30337375 to Q142168082; Q30337375 does not
+    exist.
+  - `AUUK` (Australia–United Kingdom Free Trade Agreement, now in the trade agreements
+    registry): Q107271797 to Q97356844; Q107271797 does not exist.
+  - `CCAMLR`: Q97382426 to Q16184543; Q97382426 redirects to Q16184543.
+- No Wikidata item exists for 4 records, so their wrong ids are removed and the records are
+  listed in `data/schemas/wikidata_exclusions.yaml`: `TIMBI` (Q22702079, a river in the
+  Central African Republic), `ECTEL` (Q5329555, a railway workshop in New Zealand), `ALLPI`
+  (Q106518178, a Polish rapper) and `ABIDJAN` (Q4666000, which does not exist).
+- 105 names copied from the wrong items are removed from `other_names` and `acronyms` in 23
+  records, for example "The Salvation Army" from `UNODC`, "Sunni Islam" from `ASEANPLUS3`
+  and "Houston" from `BUDCONV`.
+- Descriptions copied from the wrong items are rewritten for `UNAIDS`, `UNHCR`, `G24`,
+  `ITC`, `UNCTAD`, `UNICEF` and `UNODC` (for example, `UNHCR` was described as a chemical
+  compound).
+- Wikipedia links: `BBNJ` now links to High Seas Treaty and `CILSS` to the existing article
+  title. Links to articles that do not exist are removed from `V20`, `GFCE`, `ECTEL` and
+  `ALLPI`.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1538 → 1581 records; added `ACAP`, `ACWL`, `APIII2005`, `ATACONVENTION`, `AZTMTR`, `BEPSMLI`, `BOLG`, `BUNKERS2001`, `CCAS`, `CDE1960`, `COEANTIDOPING`, `COELAUNDERING1990`, `COSTINFRA`, `CSC1972`, `D8PTA`, `DPGA`, `DRIFTNETCONVENTION`, `EAEUCN`, `EAEUIR`, `EAEURS` and 58 more; removed `ANZCERTA`, `AUINDIA`, `AUUAE`, `AUUK`, `CETA`, `CHAFTA`, `CNEC`, `CNKR`, `CNNI`, `CNRS`, `EUCENTRALAFRICAEPA`, `EUJP`, `EUKR`, `EUNZ`, `EUSG`, `EUUA`, `EUUK`, `EUVN`, `INUAE`, `UKIN` and 15 more; 65 changed
+- Blocktypes: 83 → 83 records
+- Membership edges: 69142 → 72461; 3396 added, 77 removed, 455 changed
+- New intblocks aliases: `ANZCERTA`, `AUINDIA`, `AUUAE`, `AUUK`, `CETA`, `CHAFTA`, `CNEC`, `CNKR`, `CNNI`, `CNRS`, `EUCENTRALAFRICAEPA`, `EUJP`, `EUKR`, `EUNZ`, `EUSG`, `EUUA`, `EUUK`, `EUVN`, `INUAE`, `UKIN` and 15 more
+- Schema (minor): table country_trade_agreements added
+- Schema (minor): table trade_agreement_parties added
+- Schema (minor): table trade_agreements added
+- Schema (minor): column intblocks_aliases.target_dataset added
+
 ## [4.4.0] - 2026-11-22
 
 ### Added
