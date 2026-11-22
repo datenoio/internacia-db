@@ -19,3 +19,9 @@
 - Six IMO instruments, with Contracting States from the IMO Status Book of 30 October 2026:
   `TONNAGE1969`, `SUA1988`, `OPRC1990`, `AFS2001`, `LC1972` (London Convention) and `LP1996`
   (London Protocol).
+- Five IAEA conventions, the 1977 Additional Protocols to the Geneva Conventions and the 1925
+  Geneva Protocol, with parties from the Netherlands Treaty Database (checked on 2026-11-22):
+  `CPPNM`, `CNS` (Convention on Nuclear Safety), `JOINTCONVENTION` (spent fuel and radioactive
+  waste), `EARLYNOTIFICATION`, `ASSISTANCECONVENTION`, `API1977`, `APII1977` and
+  `GENEVAPROTOCOL1925`. Organizations that are parties (EURATOM, FAO, WHO, WMO) are listed as
+  `organization` entries.
