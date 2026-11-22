@@ -1,3 +1,25 @@
+### Added
+
+- 66 technical organizations found missing in the `technical` blocktype audit, each with an
+  official roster or `membership_applicability: not_applicable`, checked on 2026-11-22:
+  - Metrology and standards: `BIPM`, `EURAMET`, `COOMET`, `APMP`, `SIM`, `AFRIMETS`,
+    `GULFMET`, `GSO`, `AIDSMO`, `SARSO`, `ISSNIC`.
+  - Accreditation: `GLOBALACI` (Global Accreditation Cooperation, formed on 1 January 2026
+    from IAF and ILAC), the historical `ILAC`, `EA`, `APAC`, `IAAC`, `AFRAC`, `ARAC`. `IAF`
+    now names `GLOBALACI` as its successor.
+  - Aviation and maritime: `ASECNA`, `SRVSOP`, `RFIR`, `IOPCFUNDS`, `MOSELLECOM`, and the port
+    State control regimes `PARISMOU`, `TOKYOMOU`, `CARIBMOU`, `MEDMOU`, `BSMOU`, `ABUJAMOU`,
+    `RIYADHMOU`.
+  - Telecom, broadcasting and digital: `RCCCOMM`, `CITEL`, `ABU`, `ASBU`, `DCO`, and the
+    regulator networks `CRASA`, `WATRA`, `AREGNET`, `BEREC`, `REGULATEL`, `FRATEL`,
+    `EAPEREG`, `ASMG`.
+  - Nuclear and power grids: `EURATOM`, `ENSREG`, `WENRA`, `FNCA`, `ABACC`, `GCCIA`, `CRIE`.
+  - Meteorology, Earth observation and geospatial: `GEO`, `AGRHYMET`, `ICPAC`,
+    `TYPHOONCOMMITTEE`, `WMOESCAPPTC`, `UNGGIM`, `RCMRD`, `AFRIGIST`, `PAIGH`.
+  - Scientific and technical cooperation: `ICGEB`, `COMSTECH`, `GOIC`, `CYTED`, `IIR`,
+    `CIEC`, `PIARC`.
+- `CCASG` lists `GOIC` and `GSO` among its suborganizations.
+
 ### Changed
 
 - `technical` blocktype now also tags the six bodies whose `institutional_design.mandate`
