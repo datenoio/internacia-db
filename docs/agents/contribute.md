@@ -54,6 +54,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 - Quote YAML boolean lookalikes: `'NO'` (Norway), `'no'` (Norwegian)
 - New blocktype: add to `data/blocktypes/blocktypes.yaml` first, with a `description`; a blocktype names a domain, never an entity form
 - Do not use the deprecated `intorg` blocktype; set `scope_category` for entity form (see [intblock-inclusion-policy.md](../intblock-inclusion-policy.md#blocktype-semantics))
+- Do not use the deprecated composite blocktypes `eccurr` and `cuscurr`; list `economic` or `customs` with `currency` instead. A currency union gets its own `currency/` record
 
 ## Validate before PR
 
