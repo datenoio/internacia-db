@@ -18,7 +18,7 @@ The taxonomy already uses secondary domain tags for this case. `cybersecurity` (
   | `HAIPFRIENDS` | `digital` | `policy_forum` | 69 countries and the EU, from Japan's Ministry of Internal Affairs and Communications |
   | `OECDAIPRINCIPLES` | `digital` | `treaty_body` | 51 adherents, from the OECD Legal Instruments database |
   | `MILITARYAIDECLARATION` | `armscontrol` | `treaty_body` | 58 endorsing states, from the U.S. Department of State |
-  | `COEAICONVENTION` | `agreement` | `treaty_body` | 2 parties (EU, BA), from the Netherlands treaty database |
+  | `COEAICONVENTION` | `agreement` | `treaty_body` | 2 parties (EU, BA), from the Council of Europe Treaty Office |
 
 - **Defer** the UN Group of Friends for International Cooperation on AI Capacity-building, because it publishes no member list.
 
