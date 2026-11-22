@@ -13,8 +13,9 @@
   Turkey are added as `former_member`. Austria and Japan, which are not on any OGP member list, are
   removed. `membership_count` changes from 73 to 72. The `left` dates for Georgia (13 April 2026)
   and Azerbaijan (21 July 2023) are those of the OGP Steering Committee resolutions that made their
-  suspensions permanent. Sri Lanka's (10 May 2025) is the date from which OGP no longer considers it
-  a participating country.
+  suspensions permanent. For Sri Lanka (10 May 2025), Trinidad and Tobago (6 December 2019) and
+  Turkey (21 September 2017), `left` is the date from which OGP no longer counts the country as
+  participating.
 - `OPENGOV` gains a full description, founding date (20 September 2011) and founding members,
   the Open Government Declaration, the Support Unit secretariat, social media links, governance
   topics, more names in other languages, and corrected acronyms.
