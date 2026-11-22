@@ -41,3 +41,5 @@
   Forums and agency coordination groups without IGO personality are now `policy_forum`:
   `CEM`, `MI`, `IPEEC`, `EEHUB`, `NSG`, `CCSDS`, `CEOS` and `CGMS`. `IPCC`, a body of
   WMO and UNEP, is now `intergovernmental_body`.
+- `IGAD`: Eritrea is a `former_member` (joined 1993, left 2025-12-12). IGAD acknowledged its
+  withdrawal on 12 December 2025, so `membership_count` is now 7.

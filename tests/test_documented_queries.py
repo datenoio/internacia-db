@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        207,
+        208,
         set(),
     ),
     (
@@ -588,7 +588,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 220
+    assert count == 221
 
 
 def test_world_bank_region_filter_uses_region_id(con):
