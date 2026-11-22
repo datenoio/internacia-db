@@ -614,8 +614,8 @@ country_memberships(intblocks) |>
   arrange(joined)
 ```
 
-**Expected:** 14 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
-`ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 17 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
+`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Current Parquet exports include `includes[].left` and `memberships.left`.
 Prefer Parquet / `memberships` when you need departure dates.
@@ -641,7 +641,7 @@ country_memberships(intblocks) |>
   arrange(departed)
 ```
 
-**Expected:** 3 rows (`COE`, `ECHR`, `ICES`).
+**Expected:** 4 rows (`COE`, `ECHR`, `ESCREVISED`, `ICES`).
 
 ## Membership overlap and set logic
 
