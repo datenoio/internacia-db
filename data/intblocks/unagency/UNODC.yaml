@@ -16,7 +16,7 @@ links:
   type: website
 - url: https://en.wikipedia.org/wiki/United_Nations_Office_on_Drugs_and_Crime
   type: wikipedia
-- url: https://www.wikidata.org/wiki/Q188307
+- url: https://www.wikidata.org/wiki/Q636107
   type: wikidata
 name: United Nations Office on Drugs and Crime
 founded: '1997'
@@ -36,15 +36,13 @@ acronyms:
   value: ONUDD
 - lang: ru
   value: УНП ООН
-- lang: en
-  value: TSA
-- lang: zh
-  value: 救世军
-wikidata_id: Q188307
+wikidata_id: Q636107
 legal_status: intergovernmental
 recognition_status: UN agency
 notes: UNODC is a UN office that helps member states fight drugs, crime, and terrorism.
-description: Evangelical Christian church and charitable organisation.
+description: United Nations office that helps member states counter illicit drugs, organized crime, corruption and terrorism,
+  and serves as custodian of the related UN conventions. Established in 1997 as the Office for Drug Control and Crime Prevention,
+  renamed in 2002, and headquartered in Vienna.
 tags:
 - crime
 - drugs
@@ -58,23 +56,6 @@ topics:
   name: Crime
 - key: security
   name: Security
-other_names:
-- id: ar
-  name: جيش الخلاص
-- id: de
-  name: Heilsarmee International
-- id: en
-  name: The Salvation Army
-- id: es
-  name: Ejército de Salvación
-- id: fr
-  name: Armée du salut
-- id: pt
-  name: Exército de Salvação
-- id: ru
-  name: Армия спасения
-- id: zh
-  name: 救世軍
 includes:
 - id: HU
   name: Hungary
@@ -849,21 +830,17 @@ includes:
   type: country
   status: member
 membership_count: 193
+last_verified: '2026-11-22'
 provenance:
-- field: other_names
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
 - field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/
+  source: Rewritten from Wikidata and the record's founded, headquarters and notes fields
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q636107
   license: CC0
 - field: legal_status
   source: official sources
@@ -877,3 +854,8 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: https://www.unodc.org/
+- field: wikidata_id
+  source: Wikidata
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q636107
+  license: CC0
