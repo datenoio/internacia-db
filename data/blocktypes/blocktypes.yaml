@@ -96,7 +96,7 @@
     name: Cultural
 - id: currency
   name: Currency
-  description: Currency unions and shared-currency areas. Combined unions use cuscurr or eccurr.
+  description: Currency unions and shared-currency areas, each with the roster of countries that use the currency. An organization in another domain adds currency as a secondary tag only when its own treaties establish the currency and every full member uses it. Central banks use bank.
   other_names:
   - lang: ar
     name: عملة
@@ -112,7 +112,13 @@
     name: Moneda
 - id: cuscurr
   name: Customs and Currency Union
-  description: Unions that are both a customs union and a currency union.
+  description: Deprecated. Combined customs and currency type. Use customs with currency as a secondary tag.
+  deprecated:
+    replacements:
+    - customs
+    - currency
+    removal: next MAJOR
+    note: Use customs and currency together; the currency roster is a separate currency record.
   other_names:
   - lang: ar
     name: اتحاد الجمارك والعملة
@@ -128,7 +134,7 @@
     name: Unión aduanera y monetaria
 - id: customs
   name: Customs Union
-  description: Customs unions and common external tariff areas. Customs administrations cooperation (WCO) uses trade.
+  description: Customs unions and common external tariff areas. Unions that also share a currency add currency. Customs administrations cooperation (WCO) uses trade; passport-free travel areas use travel.
   other_names:
   - lang: ar
     name: اتحاد جمركي
@@ -144,7 +150,13 @@
     name: Unión aduanera
 - id: eccurr
   name: Economic and Currency Union
-  description: Economic unions that also share a currency.
+  description: Deprecated. Combined economic and currency type. Use economic with currency as a secondary tag.
+  deprecated:
+    replacements:
+    - economic
+    - currency
+    removal: next MAJOR
+    note: Use economic and currency together; the currency roster is a separate currency record.
   other_names:
   - lang: ar
     name: الاتحاد الاقتصادي والنقدي

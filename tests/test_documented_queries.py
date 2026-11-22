@@ -321,10 +321,10 @@ ADDITIONAL_RECIPES = [
         """
         SELECT c.code FROM countries c
         WHERE c.code IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EU' AND m.type='country')
-          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EMU' AND m.type='country')
+          AND c.code NOT IN (SELECT m.id FROM intblocks i, UNNEST(i.includes) t(m) WHERE i.id='EUROAREA' AND m.type='country')
         ORDER BY c.code
         """,
-        7,
+        6,
         {"SE", "PL", "DK"},
     ),
     (

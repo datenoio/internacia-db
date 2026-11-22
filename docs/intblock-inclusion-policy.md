@@ -277,6 +277,16 @@ encode entity form in a blocktype: a regional fisheries management organization 
   `data/schemas/deprecated_blocktypes_baseline.yaml` until the next MAJOR release, so
   existing queries return the same rows. Do not add it to any record, and never use it
   as the primary blocktype. To select IGOs, filter on `scope_category = 'igo'`.
+- **A blocktype never combines two other blocktypes.** A bloc in several domains lists
+  each of them. `eccurr` and `cuscurr` are deprecated: use `[economic, currency]` and
+  `[customs, currency]`. They stay as the last blocktype of `OECS`, `CEMAC` and `UEMOA`
+  until the next MAJOR release.
+- **Currency unions are their own `currency` records** (`EUROAREA`, `CFAWEST`, `ECCU`),
+  whose `includes` list the countries that use the currency. An organization in another
+  domain adds `currency` as a secondary blocktype only when its own treaties establish
+  the currency and every full member uses it (`UEMOA`, `CEMAC`, `OECS`; not `EU`).
+  Central banks are `bank`. Passport-free travel areas such as Schengen are `travel`,
+  not `customs`.
 
 ## Discovery catalogues
 
