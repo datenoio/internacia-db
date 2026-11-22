@@ -1,18 +1,51 @@
-id: CTBT
+id: NPT
 blocktype:
+- armscontrol
 - agreement
+- nuclear
 status: formal
 scope_category: treaty_body
-links:
-- url: https://en.wikipedia.org/wiki/Comprehensive_Nuclear-Test-Ban_Treaty
-  type: wikipedia
-- url: https://www.wikidata.org/wiki/Q192088
-  type: wikidata
-- url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
-  type: website
-name: Comprehensive Nuclear-Test-Ban Treaty
-founded: '1996-09-24'
+institutional_design:
+  mandate: security
+  independent_organs:
+  - none
+  enforcement:
+  - none
+  mutual_defence: false
+founded: '1970-03-05'
+active_period:
+  start: '1970-03-05'
 geographic_scope: global
+regions:
+- worldwide
+languages:
+- zh
+- en
+- fr
+- ru
+- es
+links:
+- url: https://disarmament.unoda.org/wmd/nuclear/npt/
+  type: website
+- url: https://treaties.unoda.org/t/npt
+  type: website
+- url: https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons
+  type: wikipedia
+- url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons
+  type: wikipedia
+- url: https://www.wikidata.org/wiki/Q186444
+  type: wikidata
+name: Treaty on the Non-Proliferation of Nuclear Weapons
+legal_status: treaty
+recognition_status: Landmark multilateral nuclear non-proliferation and disarmament treaty; opened for
+  signature 1 July 1968 in London, Moscow and Washington; entered into force 5 March 1970; extended indefinitely
+  in 1995; registered as United Nations Treaty Series vol. 729, No. 10485.
+wikidata_id: Q186444
+description: Multilateral treaty aiming to prevent the spread of nuclear weapons and weapons technology,
+  promote cooperation in the peaceful uses of nuclear energy, and further the goal of nuclear disarmament
+  and general and complete disarmament. Recognizes five nuclear-weapon States (China, France, Russia,
+  the United Kingdom, and the United States). Opened for signature on 1 July 1968 and entered into force
+  on 5 March 1970; extended indefinitely on 11 May 1995.
 includes:
 - id: AD
   name: Andorra
@@ -110,6 +143,10 @@ includes:
   name: Bahamas, The
   type: country
   status: member
+- id: BT
+  name: Bhutan
+  type: country
+  status: member
 - id: BW
   name: Botswana
   type: country
@@ -144,10 +181,6 @@ includes:
   status: member
 - id: CI
   name: Cote d'Ivoire
-  type: country
-  status: member
-- id: CK
-  name: Cook Islands
   type: country
   status: member
 - id: CL
@@ -322,10 +355,6 @@ includes:
   name: Ireland
   type: country
   status: member
-- id: IL
-  name: Israel
-  type: country
-  status: member
 - id: IQ
   name: Iraq
   type: country
@@ -378,6 +407,13 @@ includes:
   name: St. Kitts and Nevis
   type: country
   status: member
+- id: KP
+  name: Korea, Dem. Rep.
+  type: country
+  status: former_member
+  joined: '1985-12-12'
+  left: '2003-04-10'
+  note: Acceded 1985; announced withdrawal effective 10 April 2003 (legal effect contested among parties).
 - id: KR
   name: Korea, Rep.
   type: country
@@ -482,6 +518,10 @@ includes:
   name: Malta
   type: country
   status: member
+- id: MU
+  name: Mauritius
+  type: country
+  status: member
 - id: MV
   name: Maldives
   type: country
@@ -534,10 +574,6 @@ includes:
   name: Nauru
   type: country
   status: member
-- id: NU
-  name: Niue
-  type: country
-  status: member
 - id: NZ
   name: New Zealand
   type: country
@@ -564,6 +600,10 @@ includes:
   status: member
 - id: PL
   name: Poland
+  type: country
+  status: member
+- id: PS
+  name: West Bank and Gaza
   type: country
   status: member
 - id: PT
@@ -596,6 +636,10 @@ includes:
   status: member
 - id: RW
   name: Rwanda
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
   type: country
   status: member
 - id: SB
@@ -652,6 +696,10 @@ includes:
   status: member
 - id: SV
   name: El Salvador
+  type: country
+  status: member
+- id: SY
+  name: Syrian Arab Republic
   type: country
   status: member
 - id: SZ
@@ -766,27 +814,22 @@ includes:
   name: Zimbabwe
   type: country
   status: member
-membership_count: 188
-wikidata_id: Q192088
-description: Multilateral treaty banning all nuclear weapon test explosions and other
-  nuclear explosions in any environment. Adopted by the UN General Assembly on 10
-  September 1996 and opened for signature on 24 September 1996; as of July 2026 it
-  has 188 signatories and 179 ratifications but has not entered into force pending
-  ratification by all Annex 2 states.
+membership_count: 190
 tags:
-- CTBT
+- NPT
+- NNPT
 - agreement
 - arms
 - arms_control
 - atomic
-- ban
-- comprehensive
+- disarmament
 - energy
 - law
 - legal
+- non_proliferation
 - nuclear
-- test
-- testing
+- proliferation
+- treaty
 - weapon
 topics:
 - key: arms_control
@@ -799,83 +842,100 @@ topics:
   name: Nuclear
 other_names:
 - id: ar
-  name: معاهدة الحظر الشامل للتجارب النووية
+  name: معاهدة الحد من انتشار الأسلحة النووية
 - id: de
-  name: Vertrag über das umfassende Verbot von Kernwaffenversuchen
+  name: Atomwaffensperrvertrag
 - id: en
-  name: Comprehensive Nuclear-Test-Ban Treaty
+  name: Nuclear Non-Proliferation Treaty
+- id: en
+  name: Treaty on the Non-Proliferation of Nuclear Weapons
 - id: es
-  name: Tratado de Prohibición Completa de los Ensayos Nucleares
+  name: Tratado de No Proliferación Nuclear
 - id: fr
-  name: Traité d'interdiction complète des essais nucléaires
+  name: traité sur la non-prolifération des armes nucléaires
 - id: pt
-  name: Tratado de Proibição Completa de Ensaios Nucleares
+  name: Tratado de Não Proliferação de Armas Nucleares
 - id: ru
-  name: Договор о всеобъемлющем запрещении ядерных испытаний
+  name: Договор о нераспространении ядерного оружия
 - id: zh
-  name: 全面禁止核试验条约
+  name: 不扩散核武器条约
+acronyms:
+- lang: en
+  value: NPT
+- lang: en
+  value: NNPT
+- lang: zh
+  value: 防止核武器扩散条约
+- lang: zh
+  value: 反核武擴散條約
+- lang: zh
+  value: 核不擴散條約
+- lang: zh
+  value: 不擴散核武器條約
+- lang: zh
+  value: 禁止核子武器擴散條約
+- lang: ru
+  value: ДНЯО
+- lang: es
+  value: NPT
+- lang: pt
+  value: TNP
+notes: >-
+  Membership lists current States parties (190): 188 UN member States plus the Holy See and the State
+  of Palestine. India, Israel, Pakistan, and South Sudan have never signed. North Korea acceded in 1985
+  and announced withdrawal effective 10 April 2003; whether that withdrawal was valid under Article X remains
+  contested, so KP is recorded as a former member. UNODA and IAEA often cite 191 States that have joined
+  the Treaty (including North Korea). Cook Islands and Niue are not separately parties but consider themselves
+  bound via New Zealand's ratification. Taiwan ratified before the PRC assumed China's UN seat and continues
+  to apply NPT safeguards through the IAEA.
+last_verified: '2026-07-29'
 provenance:
+- field: institutional_design
+  source: "Treaty on the Non-Proliferation of Nuclear Weapons (Wikisource copy)"
+  retrieved_at: "2026-11-21"
+  url: "https://en.wikisource.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons"
+- field: institutional_design
+  source: "NPT, UNTS vol 729 No 10485 (UN Treaty Collection)"
+  retrieved_at: "2026-11-21"
+  url: "https://treaties.un.org/doc/Publication/UNTS/Volume%20729/volume-729-I-10485-English.pdf"
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q186444
   license: CC0
 - field: acronyms
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
+  url: https://www.wikidata.org/wiki/Q186444
   license: CC0
 - field: geographic_scope
   source: official sources
   retrieved_at: '2026-06-15'
-  url: https://www.ctbto.org/
+  url: https://disarmament.unoda.org/wmd/nuclear/npt/
 - field: includes
-  source: official sources
+  source: Wikipedia / United Nations Office for Disarmament Affairs
   retrieved_at: '2026-07-29'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons
 - field: membership_count
-  source: official sources
+  source: Wikipedia / United Nations Office for Disarmament Affairs
   retrieved_at: '2026-07-29'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  url: https://disarmament.unoda.org/wmd/nuclear/npt/
 - field: description
   source: official sources
   retrieved_at: '2026-07-29'
-  url: https://en.wikipedia.org/wiki/Comprehensive_Nuclear-Test-Ban_Treaty
+  url: https://disarmament.unoda.org/wmd/nuclear/npt/
 - field: founded
-  source: official sources
+  source: United Nations Treaty Series
   retrieved_at: '2026-07-29'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  url: https://treaties.un.org/Pages/showDetails.aspx?objid=08000002801d56c5
 - field: languages
   source: official sources
   retrieved_at: '2026-07-29'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
+  url: https://disarmament.unoda.org/wmd/nuclear/npt/
 - field: notes
-  source: official sources
+  source: Wikipedia / United Nations Office for Disarmament Affairs
   retrieved_at: '2026-07-29'
-  url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en
-- field: headquarters
-  source: Wikidata
-  retrieved_at: '2026-07-29'
-  url: https://www.wikidata.org/wiki/Q192088
-  license: CC0
-acronyms:
-- lang: en
-  value: CTBT
-- lang: zh
-  value: 全面禁止核试验条约
-languages:
-- ar
-- zh
-- en
-- fr
-- ru
-- es
-last_verified: '2026-07-29'
-notes: Membership consists of CTBT signatories as recorded in the UN Treaty Collection
-  (chapter XXVI.4). As of July 2026 there are 188 signatories and 179 ratifications;
-  the treaty has not entered into force. Non-signatories are India, Pakistan, and
-  North Korea.
-headquarters:
-  coordinates:
-    lat: 51.491667
-    lng: -0.609444
+  url: https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons
+- field: regions
+  source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
+  retrieved_at: '2026-11-21'
