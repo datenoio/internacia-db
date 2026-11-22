@@ -96,6 +96,8 @@ CI checks committed artifact freshness before rebuilding into `.ci-datasets`,
 then runs tests against that staging directory. It also checks the quality gate
 and release descriptor (`.github/workflows/validate.yml`); the documentation
 workflow builds and typechecks the website on PRs.
+A push to `main` runs the 3.13 leg of `validate` only. A pull request that changes only
+`openspec/`, `dev/` or `website/` runs just the Markdown link check there.
 
 ### Data-quality gate and reports
 
