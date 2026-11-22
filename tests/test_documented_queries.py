@@ -273,7 +273,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            61,
+            62,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -288,7 +288,7 @@ ORDER BY b.id
         ),
         (
             "NOT b.has_china AND NOT b.has_usa",
-            16,
+            17,
             {"NAM", "ICW", "APMINEBANCONVENTION", "EGDDS"},
         ),
     ],
@@ -464,7 +464,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        208,
+        209,
         set(),
     ),
     (

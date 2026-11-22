@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 61 rows — 37 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`), 16 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`).
+**Expected:** 62 rows — 37 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`).
 
 Filter to a single exclusion pattern:
 
@@ -1021,7 +1021,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 208 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 209 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.

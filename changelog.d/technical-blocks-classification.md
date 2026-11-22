@@ -45,3 +45,7 @@
   withdrawal on 12 December 2025, so `membership_count` is now 7.
 - `IGAD`: Sudan's entry notes its suspension on 20 January 2024 and its return on
   9 February 2026; it stays a `member`.
+- `ISA` (International Solar Alliance): the roster grows from 9 to 114 current members, compiled
+  from the Netherlands treaty database's parties tables for the Framework Agreement and its
+  amendment, with ratification dates where shown. Brazil, which has signed but not ratified,
+  is no longer listed as a member; the United States stays a `former_member`.
