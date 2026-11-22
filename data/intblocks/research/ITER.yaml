@@ -49,8 +49,8 @@ includes:
   type: country
   status: member
   joined: '2007-10-24'
-- id: EU
-  name: European Union (through Euratom)
+- id: EURATOM
+  name: European Atomic Energy Community
   type: organization
   status: member
   joined: '2007-10-24'
@@ -186,12 +186,8 @@ other_names:
   name: Международный экспериментальный термоядерный реактор
 - id: zh
   name: 国际热核聚变实验反应堆
-last_verified: '2026-11-21'
+last_verified: '2026-11-22'
 provenance:
-- field: includes
-  source: ITER Organization, ITER Members
-  retrieved_at: '2026-11-21'
-  url: https://www.iter.org/about/iter-members
 - field: membership_count
   source: ITER Organization, ITER Members
   retrieved_at: '2026-11-21'
@@ -268,6 +264,10 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: ITER Organization, ITER Members
+  retrieved_at: '2026-11-22'
+  url: https://www.iter.org/about/iter-members
 acronyms:
 - lang: en
   value: ITER

@@ -128,6 +128,7 @@ def test_ru_former_and_march_2022(pl, intblocks):
         "BEACST",
         "CBSS",
         "COE",
+        "CTBT",
         "DANUBECOM",
         "EASTERNBLOC",
         "ECHR",

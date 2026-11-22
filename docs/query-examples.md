@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 66 rows — 41 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`).
+**Expected:** 70 rows — 41 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 11 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 18 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
 
 Filter to a single exclusion pattern:
 
@@ -584,8 +584,8 @@ WHERE m.id = 'RU'
 ORDER BY m.joined NULLS LAST, i.name;
 ```
 
-**Expected:** 16 rows (`BEACST`, `CBSS`, `COE`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`, `ESCREVISED`,
-`FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 17 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
+`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
 JSONL still carries the same field if you are streaming.
@@ -826,8 +826,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 44 rows — `US` with 13 observer entries, `JP` with 11, `MD` with 9 and `FR` with 8; `CA`, `CH`, `CN`, `DE`, `EG`, `HU`, `IT`, `MY`, `NO`, `RU`, `TR`, `UA` and `VA` with 7;
-`AM`, `AT`, `AU`, `AZ`, `BY`, `GE`, `GR`, `ID`, `IL`, `IN`, `KR`, `MX`, `PL`, `TH` and `TW` with 6; `AE`, `CZ`, `DK`, `ES`, `GB`, `NZ`, `PE`, `PH`, `PS`, `PT`, `SE` and `TM` with 5.
+**Expected:** 45 rows — `US` with 14 observer entries, `JP` with 11, `MD` with 9, and `CH`, `EG`, `FR`, `MY` and `TR` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `RU`, `TH`, `UA` and `VA` with 7;
+`AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `ES`, `IL`, `IN`, `KR`, `PH`, `PL`, `PS`, `SE` and `TW` with 6; `AE`, `DK`, `GB`, `NZ`, `PE`, `PT`, `TM` and `ZA` with 5.
 
 ## Geography and membership
 
@@ -968,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 262 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 264 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1024,8 +1024,8 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 214 mismatches total; largest positive deltas are non-country memberships
-counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
+**Expected:** 20 displayed rows out of 216 mismatches total; largest positive deltas are non-country memberships
+counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
 

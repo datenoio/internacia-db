@@ -1,9 +1,10 @@
 id: OPANAL
 name: Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean
 blocktype:
-- energy
+- armscontrol
+- nuclear
 status: formal
-scope_category: treaty_body
+scope_category: igo
 founded: '1967-02-14'
 active_period:
   start: '1967-02-14'
@@ -11,6 +12,9 @@ geographic_scope: regional
 regions:
 - Latin America
 - Caribbean
+partof:
+  id: TLATELOLCO
+  name: Treaty of Tlatelolco
 languages:
 - en
 - es
@@ -32,7 +36,7 @@ headquarters:
   coordinates:
     lat: 19.430301
     lng: -99.176257
-legal_status: treaty
+legal_status: intergovernmental
 recognition_status: Treaty-based regional organization under the Treaty for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (Treaty of Tlatelolco), signed 14 February 1967 in Mexico City; first nuclear-weapon-free zone treaty covering a densely populated region; entered into force through progressive ratification beginning 22 April 1968; Cuba was the last regional state to accede (ratified 2002); OPANAL has United Nations General Assembly observer status
 secretariat:
   location: Mexico City, Mexico
@@ -246,10 +250,6 @@ provenance:
   retrieved_at: '2026-07-13'
   url: https://en.wikipedia.org/wiki/OPANAL
   license: CC BY-SA 4.0
-- field: legal_status
-  source: official sources
-  retrieved_at: '2026-07-13'
-  url: https://www.state.gov/treaty-for-the-prohibition-of-nuclear-weapons-in-latin-america-and-the-caribbean-treaty-of-tlatelolco/
 - field: recognition_status
   source: official sources
   retrieved_at: '2026-07-13'
@@ -298,3 +298,15 @@ provenance:
   retrieved_at: '2026-07-13'
   url: https://www.wikidata.org/wiki/Q3369762
   license: CC0
+- field: scope_category
+  source: Treaty of Tlatelolco, Article 7 (UNODA Treaties Database)
+  retrieved_at: '2026-11-22'
+  url: https://treaties.unoda.org/t/tlatelolco
+- field: legal_status
+  source: Treaty of Tlatelolco, Article 7 (UNODA Treaties Database)
+  retrieved_at: '2026-11-22'
+  url: https://treaties.unoda.org/t/tlatelolco
+- field: partof
+  source: Treaty of Tlatelolco, Article 7 (UNODA Treaties Database)
+  retrieved_at: '2026-11-22'
+  url: https://treaties.unoda.org/t/tlatelolco

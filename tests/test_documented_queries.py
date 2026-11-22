@@ -221,11 +221,12 @@ def test_ru_former_members_only(con):
         ORDER BY i.id
         """
     ).fetchall()
-    assert len(rows) == 16
+    assert len(rows) == 17
     assert {row[0] for row in rows} == {
         "BEACST",
         "CBSS",
         "COE",
+        "CTBT",
         "DANUBECOM",
         "EASTERNBLOC",
         "ECHR",
@@ -276,13 +277,13 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            66,
+            70,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            8,
-            {"EGMONTGROUP", "FLORENCE"},
+            11,
+            {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI", "HCOC"},
         ),
         (
             "b.has_china AND NOT b.has_usa",
@@ -291,8 +292,8 @@ ORDER BY b.id
         ),
         (
             "NOT b.has_china AND NOT b.has_usa",
-            17,
-            {"NAM", "ICW", "APMINEBANCONVENTION", "EGDDS"},
+            18,
+            {"NAM", "ICW", "APMINEBANCONVENTION", "EGDDS", "CTBT"},
         ),
     ],
     ids=[
@@ -375,7 +376,7 @@ ADDITIONAL_RECIPES = [
         JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
-        44,
+        45,
         {"CA", "IN", "TH", "UA"},
     ),
     (
@@ -467,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        214,
+        216,
         set(),
     ),
     (
@@ -591,7 +592,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 262
+    assert count == 264
 
 
 def test_world_bank_region_filter_uses_region_id(con):
