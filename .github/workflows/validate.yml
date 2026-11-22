@@ -72,52 +72,79 @@ jobs:
     #   3.11  the reproducibility check (a second full build)
     #   3.12  coverage and the internacia SDK contract suite
     #   3.13  dependency audit, DuckDB compatibility, and the data, documentation and quality checks
+    # A push to main runs the 3.13 leg only: its pull request already passed all three.
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.11', '3.12', '3.13']
+        python-version: ${{ fromJSON(github.event_name == 'push' && '["3.13"]' || '["3.11", "3.12", "3.13"]') }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
 
+      # A pull request that changes only openspec/, dev/ or website/ cannot change the code, the
+      # data or the build, so it skips every step gated on steps.scope.outputs.full. Its legs
+      # still run and pass: they are required checks. Pushes always run everything.
+      - name: Detect a pull request that changes only openspec/, dev/ or website/
+        id: scope
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          full=true
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            changed=$(git diff --name-only "$BASE_SHA" HEAD)
+            if [ -n "$changed" ] && ! grep -qvE '^(openspec|dev|website)/' <<< "$changed"; then
+              full=false
+              echo "Only openspec/, dev/ or website/ changed: the build, tests and data checks are skipped." >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+          echo "full=$full" >> "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python-version }}
-          cache: pip
-          cache-dependency-path: |
+
+      # uv installs the pinned requirements in a few seconds; pip took 15-25 s per leg.
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          version: '0.13.9'
+          cache-suffix: py${{ matrix.python-version }}
+          cache-dependency-glob: |
             requirements.txt
             requirements-dev.txt
 
       - name: Install dependencies
-        run: pip install -r requirements-dev.txt
+        run: uv pip install --system -r requirements-dev.txt
 
       - name: Lint
+        if: steps.scope.outputs.full == 'true'
         run: ruff check internacia_builder/ scripts/ tests/
 
       - name: Audit dependencies
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: |
-          pip install pip-audit==2.10.1
+          uv pip install --system pip-audit==2.10.1
           pip-audit --requirement requirements.txt --requirement requirements-publish.txt
 
       - name: Build datasets (fresh artifacts for tests)
+        if: steps.scope.outputs.full == 'true'
         run: python scripts/builder.py build --output-dir .ci-datasets
 
       - name: Check committed descriptors match the fresh build
+        if: steps.scope.outputs.full == 'true'
         run: python scripts/check_committed_snapshot.py --fresh .ci-datasets
 
       - name: Check the build reads on the oldest supported DuckDB
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: |
           min=$(python -c "import json; print(json.load(open('.ci-datasets/contract.json'))['min_duckdb'])")
-          python -m venv "$RUNNER_TEMP/min-duckdb"
-          "$RUNNER_TEMP/min-duckdb/bin/pip" install -q "duckdb==$min"
+          uv venv -q --python "$(command -v python)" "$RUNNER_TEMP/min-duckdb"
+          uv pip install -q --python "$RUNNER_TEMP/min-duckdb/bin/python" "duckdb==$min"
           "$RUNNER_TEMP/min-duckdb/bin/python" scripts/check_min_duckdb.py .ci-datasets
 
       - name: Check the build is reproducible
-        if: matrix.python-version == '3.11'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.11'
         run: |
           python scripts/builder.py build --output-dir .ci-datasets-repro > /dev/null
           python scripts/check_reproducible_build.py .ci-datasets .ci-datasets-repro
@@ -126,74 +153,75 @@ jobs:
       # Every leg runs the whole suite in parallel (pytest-xdist); only 3.12 measures
       # coverage and enforces the fail_under gate from pyproject.toml.
       - name: Run tests against freshly built artifacts (with coverage)
-        if: matrix.python-version == '3.12'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.12'
         run: pytest tests/ -n auto --cov=internacia_builder --cov-report=term-missing
 
       - name: Run tests against freshly built artifacts
-        if: matrix.python-version != '3.12'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version != '3.12'
         run: pytest tests/ -n auto
 
       - name: Run the internacia SDK contract suite against the fresh build
-        if: matrix.python-version == '3.12'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.12'
         run: |
           sdk="$RUNNER_TEMP/internacia-python"
           git init -q "$sdk"
           git -C "$sdk" fetch -q --depth 1 https://github.com/datenoio/internacia-python "$INTERNACIA_SDK_REF"
           git -C "$sdk" checkout -q FETCH_HEAD
-          pip install "$sdk"
+          uv pip install --system "$sdk"
           cd "$sdk" && INTERNACIA_CONTRACT_DB_PATH="$INTERNACIA_DATASETS_DIR/internacia.duckdb" pytest tests/contract -q
 
       - name: Check data dictionary drift
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/generate_data_dictionary.py --check
 
       - name: Check documentation record counts
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/check_doc_counts.py
 
       - name: Validate countries
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/validate_countries.py --fail-on-warning --report completeness-report.json
 
       - name: Validate intblocks
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/validate_intblocks.py --fail-on-warning --report intblocks-report.json
 
       - name: last_verified KPI (job summary)
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/last_verified_report.py --markdown >> "$GITHUB_STEP_SUMMARY"
 
+      # Not gated: openspec/ and website/ Markdown links are checked too.
       - name: Check internal Markdown links
         if: matrix.python-version == '3.13'
         run: python scripts/check_markdown_links.py
 
       - name: Check generated agent files
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/generate_agent_shims.py --check
 
       - name: Check final staged artifacts and distribution descriptor
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: |
           python scripts/check_generated_artifacts.py --datasets-dir .ci-datasets
           python scripts/check_release_bundle.py .ci-datasets
 
       - name: Diff manifests against baseline
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/diff_countries_baseline.py --allow-row-count-change
 
       - name: Analyze data quality
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/builder.py analyze-quality --output dataquality
 
       - name: Fail on high-priority quality issues
-        if: matrix.python-version == '3.13'
+        if: steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         run: python scripts/check_quality_report.py dataquality/full_report.jsonl
 
       # always() keeps the reports of a failed check; the version test keeps them to the leg
       # that wrote them.
       - name: Upload validation reports
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        if: always() && matrix.python-version == '3.13'
+        if: always() && steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         with:
           name: validation-reports
           path: |
@@ -202,7 +230,7 @@ jobs:
 
       - name: Upload quality report
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        if: always() && matrix.python-version == '3.13'
+        if: always() && steps.scope.outputs.full == 'true' && matrix.python-version == '3.13'
         with:
           name: quality-report
           path: |

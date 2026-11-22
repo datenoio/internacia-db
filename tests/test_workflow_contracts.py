@@ -1,5 +1,7 @@
 """Safety and ordering properties of the actual CI/release configuration."""
 import ast
+import json
+import os
 import re
 import subprocess
 import sys
@@ -46,19 +48,41 @@ def test_sdk_contract_suite_runs_on_the_build_at_one_pinned_commit():
     assert SHA.match(ref) and validate["env"]["INTERNACIA_SDK_REF"] == ref
 
 
-def runs_on(step, version):
-    """Whether a validate step runs on a matrix leg; only python-version conditions are expected."""
-    condition = step.get("if")
-    if condition is None:
+LIGHT_PATHS = r"^(openspec|dev|website)/"
+FULL = "steps.scope.outputs.full == 'true'"
+
+
+def runs_on(step, version, full=True):
+    """Whether a validate step runs on a matrix leg; ``full`` is False for a pull request that
+    changes only openspec/, dev/ or website/. Only python-version and scope conditions are expected."""
+    terms = [t for t in (step.get("if") or "").split(" && ") if t and t != "always()"]
+    if FULL in terms:
+        terms.remove(FULL)
+        if not full:
+            return False
+    assert len(terms) <= 1, f"unexpected condition: {step['if']}"
+    if not terms:
         return True
-    match = re.fullmatch(r"matrix\.python-version (==|!=) '([\d.]+)'", condition)
-    assert match, f"unexpected condition: {condition}"
+    match = re.fullmatch(r"matrix\.python-version (==|!=) '([\d.]+)'", terms[0])
+    assert match, f"unexpected condition: {step['if']}"
     return (match.group(2) == version) == (match.group(1) == "==")
+
+
+def matrix_legs():
+    """The validate legs of a pull request and of a push to main."""
+    expression = workflow("validate.yml")["jobs"]["validate"]["strategy"]["matrix"]["python-version"]
+    match = re.fullmatch(
+        r"\$\{\{ fromJSON\(github\.event_name == 'push' && '(\[[^']*\])' \|\| '(\[[^']*\])'\) \}\}", expression
+    )
+    assert match, expression
+    push, pull_request = (json.loads(group) for group in match.groups())
+    return pull_request, push
 
 
 def test_every_python_runs_the_suite_and_the_costly_checks_run_once():
     validate = workflow("validate.yml")["jobs"]["validate"]
-    versions = validate["strategy"]["matrix"]["python-version"]
+    versions, _ = matrix_legs()
+    assert versions == ["3.11", "3.12", "3.13"]
 
     def legs(pattern):
         return [v for v in versions for s in validate["steps"] if re.search(pattern, s.get("run", "")) and runs_on(s, v)]
@@ -90,6 +114,88 @@ def test_every_python_runs_the_suite_and_the_costly_checks_run_once():
     for check in data_checks:
         ran = legs(check)
         assert len(ran) == 1 and ran[0] not in busy, f"{check} runs on {ran}"
+
+
+def test_a_push_to_main_runs_one_leg_with_the_data_checks_and_reports():
+    validate = workflow("validate.yml")["jobs"]["validate"]
+    _, push = matrix_legs()
+    assert push == ["3.13"]
+    (leg,) = push
+    checks = (r"\bpytest tests/(\s|$)", r"scripts/builder\.py build", r"validate_intblocks\.py", r"check_quality_report\.py")
+    for pattern in checks:
+        assert any(re.search(pattern, s.get("run", "")) and runs_on(s, leg) for s in validate["steps"]), pattern
+    uploads = [s for s in validate["steps"] if s.get("uses", "").startswith("actions/upload-artifact@")]
+    assert uploads and all(runs_on(s, leg) for s in uploads)
+
+
+def test_pull_requests_that_change_only_openspec_dev_or_website_skip_the_heavy_steps():
+    validate = workflow("validate.yml")["jobs"]["validate"]
+    steps = validate["steps"]
+    scope = next(i for i, s in enumerate(steps) if s.get("id") == "scope")
+    assert all(FULL not in (s.get("if") or "") for s in steps[:scope])
+    assert LIGHT_PATHS in steps[scope]["run"]
+    ungated = {s.get("name") or s["uses"].split("@")[0] for s in steps if runs_on(s, "3.13", full=False)}
+    assert ungated == {
+        "actions/checkout",
+        "Detect a pull request that changes only openspec/, dev/ or website/",
+        "actions/setup-python",
+        "astral-sh/setup-uv",
+        "Install dependencies",
+        "Check internal Markdown links",
+    }
+    # Those directories must still trigger the workflow: its legs are required checks.
+    paths = workflow("validate.yml")["on"]["pull_request"]["paths"]
+    assert {"openspec/**", "dev/**", "website/**"} <= set(paths)
+
+
+@pytest.mark.parametrize(
+    ("event", "changed", "full"),
+    [
+        ("pull_request", ["openspec/changes/x/proposal.md", "website/docs/a.md", "dev/notes.md"], "false"),
+        ("pull_request", ["openspec/changes/x/proposal.md", "data/intblocks/misc/EU.yaml"], "true"),
+        ("pull_request", ["website/docs/a.md", ".github/workflows/validate.yml"], "true"),
+        ("pull_request", ["openspec-notes.md"], "true"),
+        ("push", ["openspec/changes/x/proposal.md"], "true"),
+    ],
+)
+def test_scope_step_runs_everything_unless_only_light_paths_change(tmp_path, event, changed, full):
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    step = next(s for s in workflow("validate.yml")["jobs"]["validate"]["steps"] if s.get("id") == "scope")
+
+    def git(*args):
+        identity = ["-c", "user.name=t", "-c", "user.email=t@t", "-c", "commit.gpgsign=false"]
+        return subprocess.run(["git", *identity, *args], cwd=repo, check=True, capture_output=True, text=True).stdout
+
+    git("init", "-q")
+    (repo / "README.md").write_text("base\n")
+    git("add", ".")
+    git("commit", "-qm", "base")
+    base = git("rev-parse", "HEAD").strip()
+    for name in changed:
+        (repo / name).parent.mkdir(parents=True, exist_ok=True)
+        (repo / name).write_text("change\n")
+    git("add", ".")
+    git("commit", "-qm", "change")
+    output = tmp_path / "output"
+    env = {
+        **os.environ,
+        "GITHUB_EVENT_NAME": event,
+        "BASE_SHA": base if event == "pull_request" else "",
+        "GITHUB_OUTPUT": str(output),
+        "GITHUB_STEP_SUMMARY": str(tmp_path / "summary"),
+    }
+    subprocess.run(["bash", "-e", "-c", step["run"]], cwd=repo, env=env, check=True)
+    assert output.read_text() == f"full={full}\n"
+
+
+def test_validate_installs_with_uv_not_pip():
+    config = workflow("validate.yml")["jobs"]["validate"]
+    runs = "\n".join(commands(config))
+    assert "uv pip install --system -r requirements-dev.txt" in runs
+    assert not re.search(r"(?<!uv )\bpip install", runs)
+    setup_python = next(s for s in config["steps"] if s.get("uses", "").startswith("actions/setup-python@"))
+    assert "cache" not in setup_python["with"]
 
 
 def test_only_pull_request_builds_lower_the_zstd_level():
