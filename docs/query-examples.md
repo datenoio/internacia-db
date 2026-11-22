@@ -934,7 +934,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 45 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 46 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
