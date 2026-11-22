@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trade agreement",
+  "description": "One source file per legal instrument under data/trade_agreements/<ID>.yaml. Records agreements, parties, status, dates and catalogue identifiers only: no trade values, tariff lines, depth scores or rankings. A record either lists its parties or links to the intblock that holds them (intblock); a linked record takes its name, links and Wikidata id from that intblock, and its dates too unless it sets signed, in_force or ended itself (an organization's founded date is not always the signature of its trade agreement).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "agreement_type", "status", "verification", "last_verified", "provenance"],
+  "properties": {
+    "id": {
+      "description": "Stable identifier, uppercase for new records. Shares one namespace with intblock ids; equal to an intblock id (which may be mixed case, such as AfCFTA) only when intblock names that id.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$"
+    },
+    "name": {
+      "description": "English name of the agreement, as used by the parties or the depositary. Omitted on a record linked to an intblock.",
+      "type": "string",
+      "minLength": 1
+    },
+    "acronyms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lang", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "lang": {"type": "string"},
+          "value": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "other_names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lang", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "lang": {"type": "string"},
+          "name": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "agreement_type": {
+      "description": "fta: free trade agreement (goods, often with services). customs_union: common external tariff. pta: reciprocal partial-scope or preferential agreement. preference_scheme: non-reciprocal preferences granted to beneficiary countries (GSP, AGOA). services: services or investment only. digital: digital trade or digital economy agreement. framework: framework or trade and investment framework agreement without tariff commitments. other: an instrument a catalogue lists that is none of these (compact of free association, strategic partnership).",
+      "type": "string",
+      "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "digital", "framework", "other"]
+    },
+    "status": {
+      "description": "proposed: under study. negotiating: negotiations launched. signed: signed, not in force. in_force: in force for at least two parties. terminated: was in force and ended. abandoned: negotiated or signed, never in force, no longer pursued. superseded: replaced by another agreement (superseded_by).",
+      "type": "string",
+      "enum": ["proposed", "negotiating", "signed", "in_force", "terminated", "abandoned", "superseded"]
+    },
+    "signed": {"$ref": "#/definitions/date"},
+    "in_force": {"$ref": "#/definitions/date"},
+    "ended": {"$ref": "#/definitions/date"},
+    "parties": {
+      "description": "Parties to the agreement. A bloc that signs as one party (the EU) is one intblock party. For catalogue-level records a bloc may stand for its member states.",
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "type": {"type": "string", "enum": ["country", "intblock"]},
+          "signed": {"$ref": "#/definitions/date"},
+          "in_force": {"$ref": "#/definitions/date"},
+          "left": {"$ref": "#/definitions/date"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "intblock": {
+      "description": "The intblock that holds the roster of an agreement with three or more parties. Parties, name, links and Wikidata id are read from it; dates too, unless the record sets them.",
+      "type": "string",
+      "minLength": 1
+    },
+    "supersedes": {"type": "string"},
+    "superseded_by": {"type": "string"},
+    "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
+    "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
+    "wikidata_id": {"type": "string", "pattern": "^Q[1-9][0-9]*$"},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "url": {"type": "string", "format": "uri"},
+          "type": {"type": "string", "enum": ["website", "wikipedia", "wikidata"]}
+        }
+      }
+    },
+    "description": {"type": "string"},
+    "notes": {"description": "Legal facts: accessions, suspensions, supersession, conflicts between sources. Not trade volumes.", "type": "string"},
+    "verification": {
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS or ADB ARIC only.",
+      "type": "string",
+      "enum": ["official", "catalogue"]
+    },
+    "last_verified": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["field", "source", "retrieved_at"],
+        "additionalProperties": false,
+        "properties": {
+          "field": {"type": "string"},
+          "source": {"type": "string"},
+          "url": {"type": "string"},
+          "retrieved_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "license": {"type": "string"}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"required": ["intblock"]},
+      "then": {
+        "not": {
+          "anyOf": [
+            {"required": ["parties"]},
+            {"required": ["name"]},
+            {"required": ["wikidata_id"]}
+          ]
+        }
+      },
+      "else": {"required": ["name", "parties"]}
+    }
+  ],
+  "definitions": {
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    }
+  }
+}

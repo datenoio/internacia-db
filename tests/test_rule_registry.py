@@ -44,6 +44,7 @@ def test_dated_rules_are_the_freshness_warnings():
         (registry.COUNTRIES, "provenance freshness"),
         (registry.INTBLOCKS, "last verified"),
         (registry.INTBLOCKS, "provenance freshness"),
+        (registry.INTBLOCKS, "trade agreement freshness"),
     }
     assert all(rule.severity == "warning" for rules in registry.RULES.values() for rule in rules if rule.dated)
 

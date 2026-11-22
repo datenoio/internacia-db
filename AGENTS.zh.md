@@ -19,7 +19,7 @@ English: [AGENTS.md](AGENTS.md)
 ## 推荐数据访问方式
 
 - **先构建：** 生成的导出文件不提交到仓库；请运行 `python scripts/builder.py build`（约 1 分钟），或从最新 GitHub Release 下载 `internacia.duckdb`。
-- **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`memberships`、`_meta`、别名表及 `border_status`；视图：`current_memberships`、`country_currencies`、`country_languages`、`country_timezones`、`country_borders`，见 [数据契约](docs/data-contract.md)）
+- **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`memberships`、`_meta`、别名表、`border_status`、`trade_agreements`、`trade_agreement_parties`；视图：`current_memberships`、`country_currencies`、`country_languages`、`country_timezones`、`country_borders`、`country_trade_agreements`，见 [数据契约](docs/data-contract.md)）
 - **Parquet：** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
 - **远程：** [internacia-python](https://github.com/datenoio/internacia-python)（SDK；PyPI 上的 0.2.x 早于数据 v3，见 [SDK status](docs/llm-scenarios.md#sdk-status)）。[internacia-api](https://github.com/datenoio/internacia-api) **开发中**，仅自托管 — 无公开 HTTP 实例。
 

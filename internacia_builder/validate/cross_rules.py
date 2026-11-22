@@ -688,13 +688,20 @@ def check_hq_country(
     return issues
 
 
-ALIAS_REASONS = frozenset({"renamed", "merged", "disambiguated", "retired"})
+ALIAS_REASONS = frozenset({"renamed", "merged", "disambiguated", "retired", "moved"})
+
+# Datasets an alias may point into: ``moved`` aliases point to the trade agreements registry.
+ALIAS_TARGET_DATASETS = frozenset({"intblocks", "trade_agreements"})
 
 
 def validate_aliases(
     aliases: list[dict[str, Any]],
     known_ids: set[str],
+    trade_agreement_ids: set[str] | None = None,
 ) -> list[dict[str, Any]]:
+    """Alias integrity. ``moved`` aliases point to a trade agreement id with
+    ``target_dataset: trade_agreements``; every other target is an intblock id."""
+    trade_agreement_ids = trade_agreement_ids or set()
     errors = []
     seen_aliases = set()
     for entry in aliases:
@@ -735,7 +742,7 @@ def validate_aliases(
                 "current_value": reason,
                 "suggested_action": (
                     f"Alias '{alias}': invalid reason '{reason}' "
-                    "(must be renamed, merged, disambiguated, or retired)"
+                    "(must be renamed, merged, disambiguated, retired, or moved)"
                 ),
             })
         if reason == "retired":
@@ -752,6 +759,34 @@ def validate_aliases(
                     "field": "aliases",
                     "current_value": alias,
                     "suggested_action": f"Retired alias '{alias}' is still a current intblock id",
+                })
+            continue
+        dataset = str(entry.get("target_dataset") or "intblocks")
+        if dataset not in ALIAS_TARGET_DATASETS or (reason == "moved") != (dataset == "trade_agreements"):
+            errors.append({
+                "issue_type": "ALIAS_INTEGRITY_ERROR",
+                "field": "aliases",
+                "current_value": dataset,
+                "suggested_action": (
+                    f"Alias '{alias}': reason 'moved' needs target_dataset 'trade_agreements', "
+                    "and only 'moved' may point outside intblocks"
+                ),
+            })
+            continue
+        if reason == "moved":
+            if target not in trade_agreement_ids:
+                errors.append({
+                    "issue_type": "ALIAS_INTEGRITY_ERROR",
+                    "field": "aliases",
+                    "current_value": target,
+                    "suggested_action": f"Moved alias '{alias}' target '{target}' does not match any trade agreement id",
+                })
+            if alias in known_ids:
+                errors.append({
+                    "issue_type": "ALIAS_INTEGRITY_ERROR",
+                    "field": "aliases",
+                    "current_value": alias,
+                    "suggested_action": f"Moved alias '{alias}' is still a current intblock id",
                 })
             continue
         if target not in known_ids:
