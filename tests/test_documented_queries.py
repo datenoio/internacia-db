@@ -432,7 +432,7 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        45,
+        46,
         set(),
     ),
     (
