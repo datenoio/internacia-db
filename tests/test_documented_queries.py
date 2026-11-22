@@ -207,7 +207,7 @@ def test_ru_former_member_march_2022(con):
         ORDER BY i.id
         """
     ).fetchall()
-    assert [row[0] for row in rows] == ["COE", "ECHR", "ICES"]
+    assert [row[0] for row in rows] == ["COE", "ECHR", "ESCREVISED", "ICES"]
 
 
 def test_ru_former_members_only(con):
@@ -221,7 +221,7 @@ def test_ru_former_members_only(con):
         ORDER BY i.id
         """
     ).fetchall()
-    assert len(rows) == 13
+    assert len(rows) == 16
     assert {row[0] for row in rows} == {
         "BEACST",
         "CBSS",
@@ -229,6 +229,9 @@ def test_ru_former_members_only(con):
         "DANUBECOM",
         "EASTERNBLOC",
         "ECHR",
+        "ECPT",
+        "ESCREVISED",
+        "FCNM",
         "GRECO",
         "ICES",
         "ISTC",
@@ -464,7 +467,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        195,
+        199,
         set(),
     ),
     (
@@ -498,7 +501,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        55,
+        65,
         set(),
     ),
     (
@@ -588,7 +591,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 253
+    assert count == 257
 
 
 def test_world_bank_region_filter_uses_region_id(con):
