@@ -40,9 +40,11 @@ other_names:
 - id: en
   name: International Convention for the Safety of Life at Sea, 1974
 wikidata_id: Q523582
-membership_count: 168
-notes: Hong Kong, Macao, and the Faroe Islands are excluded because the IMO workbook lists them as territorial
-  applications rather than Contracting States.
+membership_count: 169
+notes: Roster is the SOLAS 1974 Contracting States table of the IMO Status Book, Vol. I, dated 30 October 2026;
+  joined is the date of signature or deposit of the instrument, or of entry into force for a succession. Hong
+  Kong, Macao, and the Faroe Islands are excluded because IMO lists them as territorial applications rather
+  than Contracting States.
 includes:
 - id: AL
   name: Albania
@@ -224,6 +226,11 @@ includes:
   type: country
   status: member
   joined: '1993-01-01'
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+  joined: '2000-06-21'
 - id: KP
   name: Korea, Dem. Rep.
   type: country
@@ -244,11 +251,6 @@ includes:
   type: country
   status: member
   joined: '1984-03-01'
-- id: DM
-  name: Dominica
-  type: country
-  status: member
-  joined: '2000-06-21'
 - id: DO
   name: Dominican Republic
   type: country
@@ -439,6 +441,11 @@ includes:
   type: country
   status: member
   joined: '2007-02-05'
+- id: KG
+  name: Kyrgyz Republic
+  type: country
+  status: member
+  joined: '2026-10-15'
 - id: KW
   name: Kuwait
   type: country
@@ -519,11 +526,16 @@ includes:
   type: country
   status: member
   joined: '1977-03-28'
+- id: MD
+  name: Moldova
+  type: country
+  status: member
+  joined: '2005-10-11'
 - id: MC
   name: Monaco
   type: country
   status: member
-  joined: '1980-05-25'
+  joined: '1974-11-01'
 - id: MN
   name: Mongolia
   type: country
@@ -649,11 +661,6 @@ includes:
   type: country
   status: member
   joined: '1980-12-31'
-- id: MD
-  name: Moldova
-  type: country
-  status: member
-  joined: '2005-10-11'
 - id: RO
   name: Romania
   type: country
@@ -838,7 +845,7 @@ includes:
   name: Ukraine
   type: country
   status: member
-  joined: '1980-05-25'
+  joined: '1974-11-01'
 - id: AE
   name: United Arab Emirates
   type: country
@@ -884,7 +891,7 @@ includes:
   type: country
   status: member
   joined: '1979-03-06'
-last_verified: '2026-10-22'
+last_verified: '2026-11-22'
 provenance:
 - field: name
   source: International Maritime Organization — List of IMO Conventions
@@ -910,15 +917,15 @@ provenance:
   url: https://treaties.un.org/pages/showDetails.aspx?objid=08000002800ec37f
   retrieved_at: '2026-09-30'
 - field: includes
-  source: International Maritime Organization — Status of IMO Treaties 2026, SOLAS 1974 Contracting States
-    table (pp. 17–19)
-  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%202026.pdf
-  retrieved_at: '2026-09-30'
+  source: International Maritime Organization — Status of IMO Treaties, Vol. I, dated 30 October 2026, SOLAS
+    1974 Contracting States table (pp. 13–15)
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%20book%202026%20-%20Vol.%20I%20SOLAS-COLREG-%20MARPOL.pdf
+  retrieved_at: '2026-11-22'
 - field: membership_count
-  source: International Maritime Organization — Ratifications by State workbook (SOLAS Convention 74 column;
-    as at 25 August 2026)
-  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/x-Status.xlsx
-  retrieved_at: '2026-09-30'
+  source: 'International Maritime Organization — Status of IMO Treaties, Vol. I, dated 30 October 2026, SOLAS
+    1974, Number of Contracting States: 169'
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/Status%20book%202026%20-%20Vol.%20I%20SOLAS-COLREG-%20MARPOL.pdf
+  retrieved_at: '2026-11-22'
 - field: wikidata_id
   source: Wikidata
   url: https://www.wikidata.org/wiki/Q523582
@@ -931,3 +938,7 @@ provenance:
 - field: regions
   source: Normalized to worldwide because geographic_scope is global; per-party coverage is in includes
   retrieved_at: '2026-11-21'
+- field: notes
+  source: International Maritime Organization — Ratifications by State workbook, as at 30 October 2026 (cross-check)
+  url: https://wwwcdn.imo.org/localresources/en/About/Conventions/StatusOfConventions/x-Status.xlsx
+  retrieved_at: '2026-11-22'

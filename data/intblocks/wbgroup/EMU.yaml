@@ -21,6 +21,11 @@ includes:
   name: Belgium
   type: country
   status: member
+- id: BG
+  name: Bulgaria
+  type: country
+  status: member
+  joined: '2026-01-01'
 - id: HR
   name: Croatia
   type: country
@@ -93,7 +98,7 @@ includes:
   name: Spain
   type: country
   status: member
-membership_count: 20
+membership_count: 21
 geographic_scope: regional
 regions:
 - Europe
@@ -146,6 +151,14 @@ other_names:
   name: 欧元区
 wikidata_id: Q8268
 provenance:
+- field: includes
+  source: World Bank API, Euro area aggregate members (/v2/region/EMU/country)
+  retrieved_at: '2026-11-22'
+  url: https://api.worldbank.org/v2/region/EMU/country?format=json&per_page=100
+- field: membership_count
+  source: World Bank API, Euro area aggregate members (/v2/region/EMU/country)
+  retrieved_at: '2026-11-22'
+  url: https://api.worldbank.org/v2/region/EMU/country?format=json&per_page=100
 - field: description
   source: World Bank
   retrieved_at: '2026-07-13'
@@ -177,4 +190,4 @@ provenance:
   source: World Bank — Country and Lending Groups
   url: https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
   retrieved_at: '2026-10-22'
-last_verified: '2026-10-22'
+last_verified: '2026-11-22'
