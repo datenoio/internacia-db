@@ -277,7 +277,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            75,
+            76,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -287,7 +287,7 @@ ORDER BY b.id
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            44,
+            45,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
@@ -592,7 +592,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 291
+    assert count == 302
 
 
 def test_world_bank_region_filter_uses_region_id(con):
