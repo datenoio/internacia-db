@@ -1,0 +1,128 @@
+id: SCHELDTCOM
+name: "International Scheldt Commission"
+blocktype:
+- water
+- environment
+status: formal
+scope_category: igo
+founded: '2002-12-03'
+active_period:
+  start: '2005-12-01'
+geographic_scope: sub-regional
+regions:
+- Europe
+languages:
+- fr
+- nl
+headquarters:
+  city: Antwerp
+  country: BE
+secretariat:
+  location: Antwerp, Belgium
+  organization: ISC Secretariat
+links:
+- url: https://www.isc-cie.org/
+  type: website
+- url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+  type: website
+- url: https://www.wikidata.org/wiki/Q17176496
+  type: wikidata
+wikidata_id: Q17176496
+recognition_status: >-
+  Established by the International Agreement on the Scheldt signed at Ghent on 2002-12-03; entered
+  into force on 2005-12-01.
+acronyms:
+- lang: en
+  value: "ISC"
+- lang: fr
+  value: "CIE"
+founding_members:
+- BE
+- FR
+- NL
+membership_count: 3
+includes:
+- id: BE
+  name: "Belgium"
+  type: country
+  status: founding_member
+  joined: '2005-10-12'
+- id: FR
+  name: "France"
+  type: country
+  status: founding_member
+  joined: '2005-07-08'
+- id: NL
+  name: "Netherlands"
+  type: country
+  status: founding_member
+  joined: '2005-02-10'
+description: >-
+  Intergovernmental commission of France, Belgium and the Netherlands for sustainable and
+  integrated water management of the international Scheldt river basin district, including
+  coordination under the EU Water Framework Directive and the Floods Directive. It replaced the
+  International Commission for the Protection of the Scheldt set up by the 1994 Charleville-
+  Mézières agreement.
+tags:
+- "SCHELDTCOM"
+- "Scheldt"
+- "river basin commission"
+topics:
+- key: water
+  name: Water
+- key: environment
+  name: Environment
+other_names:
+- id: fr
+  name: "Commission internationale de l'Escaut"
+- id: nl
+  name: "Internationale Scheldecommissie"
+notes: >-
+  Members are the parties to the International Agreement on the Scheldt (Ghent, 2002) from the
+  Netherlands Treaty Database, retrieved 2026-11-22. The database lists the Belgian federal state
+  and its Brussels-Capital, Flemish and Walloon Regions as separate parties; they are recorded as
+  one Belgium entry. All three states signed the Agreement at Ghent and are founding members;
+  `joined` is the date of ratification. The id is not ISC because that id belongs to the
+  International Science Council. The Commission's website returned HTTP 403 to automated clients,
+  so the headquarters city is taken from Wikidata.
+last_verified: '2026-11-22'
+provenance:
+- field: includes
+  source: "Netherlands Treaty Database (overheid.nl)"
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+- field: membership_count
+  source: "Netherlands Treaty Database (overheid.nl)"
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+- field: founded
+  source: "Netherlands Treaty Database (overheid.nl)"
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+- field: active_period
+  source: "Netherlands Treaty Database (overheid.nl)"
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+- field: description
+  source: "Agreement text and secretariat website"
+  retrieved_at: '2026-11-22'
+  url: https://www.isc-cie.org/
+- field: wikidata_id
+  source: "Wikidata"
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q17176496
+  license: CC0
+- field: other_names
+  source: "Wikidata"
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q17176496
+  license: CC0
+- field: regions
+  source: "Derived from the continents of the country parties in includes (data/countries)"
+  retrieved_at: '2026-11-22'
+  url: https://treatydatabase.overheid.nl/en/Treaty/Details/010581_p
+- field: headquarters
+  source: "Wikidata (P159)"
+  retrieved_at: '2026-11-22'
+  url: https://www.wikidata.org/wiki/Q17176496
+  license: CC0

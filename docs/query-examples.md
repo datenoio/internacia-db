@@ -530,7 +530,7 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 73 rows — 42 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 13 missing China
+**Expected:** 73 rows — 43 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 12 missing China
 only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 18 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
 
 Filter to a single exclusion pattern:
@@ -584,8 +584,8 @@ WHERE m.id = 'RU'
 ORDER BY m.joined NULLS LAST, i.name;
 ```
 
-**Expected:** 14 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `GRECO`,
-`ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 17 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
+`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
 JSONL still carries the same field if you are streaming.
@@ -615,15 +615,16 @@ WHERE m.id = 'RU'
 ORDER BY departed, organization;
 ```
 
-**Expected:** 3 rows:
+**Expected:** 4 rows:
 
 | id | organization | departed | note |
 |----|-------------|----------|------|
 | `COE` | Council of Europe | `2022-03-16` | Ceased to be a member on 16 March 2022 under Committee of Ministers Resolution CM/Res(2022)2 |
 | `ECHR` | European Court of Human Rights | `2022-03-16` | — |
+| `ESCREVISED` | European Social Charter (revised) | `2022-03-16` | — |
 | `ICES` | International Council for the Exploration of the Sea | `2025-12-09` | Suspended 30 March 2022; formal withdrawal later |
 
-**Gotcha:** `COE` records the 16 March 2022 cessation as `former_member`, the same date as `ECHR`. Filter on `former_member` explicitly.
+**Gotcha:** `COE` records the 16 March 2022 cessation as `former_member`, the same date as `ECHR` and `ESCREVISED`. Filter on `former_member` explicitly.
 
 Equivalent Python (JSONL.zst, no source YAML):
 
@@ -656,8 +657,8 @@ for line in lines:
                 }
             )
 
-assert len(rows) == 3
-assert {r["id"] for r in rows} == {"COE", "ECHR", "ICES"}
+assert len(rows) == 4
+assert {r["id"] for r in rows} == {"COE", "ECHR", "ESCREVISED", "ICES"}
 ```
 
 ## Membership overlap and set logic
@@ -948,7 +949,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 48 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 49 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -967,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 260 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 269 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1023,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 212 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 218 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1093,7 +1094,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 62 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 70 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
