@@ -1,6 +1,6 @@
 ### Added
 
-- 36 further records found by the DFAT Australian Treaties Database walk, each with its roster from
+- 35 further records found by the DFAT Australian Treaties Database walk, each with its roster from
   the depositary, secretariat or official site, checked on 2026-11-22. Signatories that have not
   ratified are left out.
   - ICRC IHL Treaties Database: `APIII2005` (Additional Protocol III, 80 parties) and `HAGUEIV1907`
@@ -24,10 +24,10 @@
     (Pacific Resilience Facility, an IGO in Nuku'alofa, 9 members), `SPTT` (South Pacific Tuna
     Treaty with the United States, 17) and `DRIFTNETCONVENTION` (Wellington driftnet convention,
     13).
-  - Organizations and groups: `RECAAP` (ReCAAP Agreement, 22), `ISOSUGAR` (International Sugar
-    Organization, 58 States and the European Union), `NACA` (Network of Aquaculture Centres in
-    Asia-Pacific, 20), `ACWL` (Advisory Centre on WTO Law, 59) and `WWTG` (World Wine Trade Group,
-    an informal `policy_forum` of 9 governments).
+  - Organizations and groups: `RECAAP` (ReCAAP Agreement, 22), `NACA` (Network of Aquaculture
+    Centres in Asia-Pacific, 20), `ACWL` (Advisory Centre on WTO Law, 59) and `WWTG` (World Wine
+    Trade Group, an informal `policy_forum` of 9 governments). The International Sugar
+    Organization is already recorded as `OIS`.
   - Historical and peace treaties, from the UN Treaty Series and the Tractatenblad: `ELDO`
     (European Launcher Development Organisation, 1964–1975, `successor` `ESA`), `SPEC` (South
     Pacific Bureau for Economic Co-operation, 1973–1993), `SANFRANCISCOTREATY` (Treaty of Peace
