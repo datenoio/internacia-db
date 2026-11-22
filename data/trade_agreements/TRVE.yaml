@@ -5,12 +5,14 @@ other_names:
   name: Türkiye - Venezuela FTA
 agreement_type: pta
 status: in_force
-in_force: '2020'
+signed: '2018-05-17'
+in_force: '2020-08-21'
 parties:
 - id: TR
   type: country
 - id: VE
   type: country
+wto_rta_id: 1175
 aric_id: 486
 verification: catalogue
 last_verified: '2026-11-22'
@@ -22,4 +24,12 @@ provenance:
 - field: status
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=486&ssid=3
+  retrieved_at: '2026-11-22'
+- field: in_force
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1175
+  retrieved_at: '2026-11-22'
+- field: signed
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1175
   retrieved_at: '2026-11-22'

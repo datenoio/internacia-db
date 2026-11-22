@@ -43,3 +43,11 @@
 
 - [x] 6.1 Rebuild with the pinned requirements and run the snapshot, artifact, doc-count and link checks
 - [x] 6.2 Run all validators, `ruff` and `pytest tests/`
+
+## 7. WTO RTA-IS walk
+
+- [x] 7.1 Add `scripts/oneoff/import_wto_rtais.py`: read the RTA-IS XLSX export, map each RTA ID to one registry record (by `wto_rta_id`, then by hand, then by parties, type and status), and write new rows as `verification: catalogue` records
+- [x] 7.2 Import every in-force and inactive row (663 RTA IDs in the 2026-11-22 export: 259 mapped, 352 new, 31 accessions, 21 skipped with a reason)
+- [x] 7.3 Correct mapped ARIC catalogue records whose status, type or dates WTO contradicts or makes precise
+- [x] 7.4 Log the walk in `docs/intblock-sources.md`
+- [ ] 7.5 Give intblocks with official rosters to the multilateral agreements in force that the quality report lists (`TRADE_AGREEMENT_INTBLOCK_CANDIDATE`)
