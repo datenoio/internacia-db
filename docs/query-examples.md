@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 62 rows — 38 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`), 16 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`).
+**Expected:** 64 rows — 39 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 8 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`).
 
 Filter to a single exclusion pattern:
 
@@ -825,8 +825,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 41 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `CN`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7;
-`AU`, `CH`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `MX`, `PL`, `TH`, `TR`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `NO`, `NZ`, `PE`, `PH`, `PS`, `PT` and `TM` with 5.
+**Expected:** 44 rows — `US` with 13 observer entries, `JP` with 11, `MD` with 9 and `FR` with 8; `CA`, `CH`, `CN`, `DE`, `EG`, `HU`, `IT`, `MY`, `NO`, `RU`, `TR`, `UA` and `VA` with 7;
+`AM`, `AT`, `AU`, `AZ`, `BY`, `GE`, `GR`, `ID`, `IL`, `IN`, `KR`, `MX`, `PL`, `TH` and `TW` with 6; `AE`, `CZ`, `DK`, `ES`, `GB`, `NZ`, `PE`, `PH`, `PS`, `PT`, `SE` and `TM` with 5.
 
 ## Geography and membership
 
@@ -921,7 +921,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 30 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
+**Expected:** 35 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
 → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ### Dissolved organizations that still carry rosters
@@ -933,7 +933,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 42 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 43 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
@@ -948,7 +948,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 44 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 48 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -967,7 +967,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 253 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 258 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1023,7 +1023,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 195 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 210 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `WNA`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1299,7 +1299,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 30 rows.
+**Expected:** 35 rows.
 
 ## Authority and capacity
 
