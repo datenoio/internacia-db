@@ -4,15 +4,17 @@ other_names:
 - lang: en
   name: Hong Kong [, China] and Peru FTA
 agreement_type: fta
-status: signed
+status: in_force
 signed: '2024-11-15'
+in_force: '2026-09-01'
 parties:
 - id: HK
   type: country
 - id: PE
   type: country
+wto_rta_id: 1216
 aric_id: 436
-notes: 'ADB ARIC dates: negotiations launched 2023-01-30.'
+notes: 'ADB ARIC dates: negotiations launched 2023-01-30. WTO RTA-IS lists it as in force; ADB ARIC gave signed.'
 verification: catalogue
 last_verified: '2026-11-22'
 provenance:
@@ -20,7 +22,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=436&ssid=3
   retrieved_at: '2026-11-22'
+- field: in_force
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1216
+  retrieved_at: '2026-11-22'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=436&ssid=3
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1216
   retrieved_at: '2026-11-22'

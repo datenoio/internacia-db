@@ -4,15 +4,18 @@ other_names:
 - lang: en
   name: Taipei,China-Nicaragua FTA
 agreement_type: fta
-status: in_force
-signed: '2006-06-23'
+status: terminated
+signed: '2006-06-16'
 in_force: '2008-01-01'
+ended: '2022-07-01'
 parties:
 - id: NI
   type: country
 - id: TW
   type: country
+wto_rta_id: 671
 aric_id: 115
+notes: WTO RTA-IS lists it as inactive; ADB ARIC gave in force.
 verification: catalogue
 last_verified: '2026-11-22'
 provenance:
@@ -20,7 +23,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=115&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=671
+  retrieved_at: '2026-11-22'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=115&ssid=3
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=671
   retrieved_at: '2026-11-22'
