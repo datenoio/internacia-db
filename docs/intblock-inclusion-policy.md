@@ -20,30 +20,42 @@ records in this repository.
 | Socioeconomic rankings / indices | No | HDI lists, GDP leagues (out of country & intblock scope) |
 | Government form / regime typology | No on countries; not as intblock membership | Optional vocab only: `data/vocabs/government_forms.yaml` |
 
-### Regional trade agreements (WTO RTA-IS)
+### Trade agreements: the registry and intblocks
 
-The WTO RTA Information System lists hundreds of notified RTAs (FTAs, customs
-unions, partial-scope PTAs, and services EIAs). Internacia does **not** import
-that catalogue. Include an RTA only when it is a **named, durable join target**:
+Since 5.0.0 every free trade agreement, customs union, partial-scope or preferential
+agreement and non-reciprocal preference scheme belongs in the **trade agreements
+registry** (`data/trade_agreements/<ID>.yaml`, exported as `trade_agreements`,
+`trade_agreement_parties` and the `country_trade_agreements` view), bilateral ones
+included. The registry records agreements, parties, status, dates and catalogue ids. It
+does not store trade values, tariff lines, depth scores or rankings
+([OpenSpec change](../openspec/changes/add-trade-agreements-registry/design.md)).
 
-| Include | Skip |
-|---------|------|
-| Named plurilateral FTAs with an official acronym and a roster distinct from an existing IGO (`AGADIR`, `PICTA`, ASEAN+1) | Untitled bilateral `Country A – Country B` pairs |
-| Bloc-to-bloc deals whose extra parties make a distinct roster (`EFTAGCC`, `EFTASACU`) | Accession or enlargement notifications (update `includes` on the parent) |
-| Named mega-deals commonly cited under their own acronym (`CETA`, `USMCA`, `RCEP`) | UK continuity copies of EU EPAs; services-only EIA rows of an FTA already recorded |
-| Historical predecessors that complete a lineage already in the dataset (`TPSEP` → `TPP` → `CPTPP`) | Constitutive instruments of an IGO already recorded (`EU`, `EAEU`, `CCASG`, `MERCOSUR`, `SACU`) |
+| Agreement | Registry | Intblock |
+|-----------|----------|----------|
+| Two parties ever (a country, or a bloc that signs as one party such as the EU) | Record with `parties` | **No** — `USKR`, `CETA`, `EUJP` moved out in 5.0.0 with `moved` aliases |
+| Three or more parties, signed or in force | Record with `intblock: <id>`; parties, name and dates are read from the intblock | Yes, with a roster from the official text (`RCEP`, `AGADIR`, `EFTAGCC`) |
+| Three or more parties, proposed or under negotiation | Record with `parties` | Not until it is signed |
+| Taken from a catalogue only (WTO RTA-IS, ADB ARIC) | `verification: catalogue`; a bloc may stand for its member states | A multilateral one is reported as an intblock candidate (`TRADE_AGREEMENT_INTBLOCK_CANDIDATE`) until its roster is sourced |
 
-One intblock per legal instrument: WTO often lists goods (FTA) and services (EIA)
-separately; Internacia keeps a single `fta` (or `pta` / `customs`) record. Source
-rosters from the official treaty text, not only the WTO ID card (the Secretariat
-warns that accessions and withdrawals are under-notified).
+One record per legal instrument: WTO often lists goods (FTA) and services (EIA)
+separately, and catalogues list upgrade protocols as separate rows; the registry keeps one
+record with a note. Bilateral schedules inside a plurilateral agreement are part of it
+(`USCR` merged into `CAFTADR`). UK continuity copies of EU agreements are separate legal
+instruments and get their own registry records. Constitutive instruments of an IGO
+already recorded (`EU`, `CCASG`) are not registry records of their own unless they are
+the customs union or free trade area itself (`MERCOSUR`, `SACU`, `EAEU`).
+
+Source rosters from the official treaty text or the depositary, not only the catalogue
+card: the WTO Secretariat warns that accessions and withdrawals are under-notified, and
+ADB ARIC lists only the parties that are ADB members on its index and lags on status.
 
 ### Preferential trade arrangements (WTO PTA Database)
 
 The WTO PTA Database lists **non-reciprocal** schemes (national GSP, LDC-only
-DFQF, and waiver programmes). These are distinct from RTAs. Internacia does **not**
-import that catalogue. Include a PTA only when it is a **named, durable join
-target** with a roster distinct from `GSP` (grantors) and `LDC`:
+DFQF, and waiver programmes). These are distinct from RTAs. Every scheme may get a
+registry record with `agreement_type: preference_scheme` (see above); the table below is
+the bar for an **intblock**, which needs a named, durable join target with a roster
+distinct from `GSP` (grantors) and `LDC`:
 
 | Include | Skip |
 |---------|------|
@@ -290,8 +302,8 @@ encode entity form in a blocktype: a regional fisheries management organization 
 
 ## Discovery catalogues
 
-Gap-finding lists (UN Treaty Collection, WTO RTA-IS, WTO PTA Database, UNCTAD IIA
-Navigator, Wikipedia `.int` organizations) and the roster authorities used to
+Gap-finding lists (UN Treaty Collection, WTO RTA-IS, ADB ARIC, WTO PTA Database,
+UNCTAD IIA Navigator, Wikipedia `.int` organizations) and the roster authorities used to
 compile membership are documented in [intblock-sources.md](intblock-sources.md).
 How to search those catalogues and improve existing records:
 [discovery.md](discovery.md). Do not import those catalogues wholesale; every

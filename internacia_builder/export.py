@@ -25,8 +25,11 @@ from internacia_builder.schemas import (
     get_aliases_schema,
     get_attribute_migration_schema,
     get_border_status_schema,
+    get_country_aliases_schema,
     get_memberships_schema,
     get_meta_schema,
+    get_trade_agreement_parties_schema,
+    get_trade_agreements_schema,
 )
 from internacia_builder.yaml_io import safe_load
 
@@ -72,6 +75,9 @@ def load_intblock_aliases(project_root: Path) -> list[dict[str, Any]]:
                 "reason": str(entry.get("reason") or ""),
                 "since": str(entry.get("since") or ""),
                 "note": str(entry.get("note") or ""),
+                "target_dataset": (
+                    None if not entry.get("target") else str(entry.get("target_dataset") or "intblocks")
+                ),
             }
         )
     return aliases
@@ -194,6 +200,28 @@ def save_border_status(rows: list[dict[str, Any]], output_dir: Path, write_parqu
         pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
         typer.echo(f"✓ Saved border status (parquet): {parquet_path}")
 
+def save_trade_agreements(
+    agreements: list[dict[str, Any]],
+    parties: list[dict[str, Any]],
+    output_dir: Path,
+    *,
+    write_jsonl: bool = True,
+    write_parquet: bool = True,
+) -> None:
+    """Write the trade agreements registry tables as JSONL and (optionally) Parquet."""
+    for name, rows, schema in (
+        ("trade_agreements", agreements, get_trade_agreements_schema()),
+        ("trade_agreement_parties", parties, get_trade_agreement_parties_schema()),
+    ):
+        if write_jsonl:
+            save_jsonl(rows, output_dir / f"{name}.jsonl")
+        if write_parquet:
+            table = pa.Table.from_pylist(rows, schema=schema)
+            parquet_path = output_dir / f"{name}.parquet"
+            pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
+            typer.echo(f"✓ Saved {name} (parquet): {parquet_path}")
+
+
 def save_aliases(
     aliases: list[dict[str, Any]],
     output_dir: Path,
@@ -205,7 +233,8 @@ def save_aliases(
     json_path.write_text(json.dumps(aliases, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     typer.echo(f"✓ Saved alias map: {json_path}")
     if write_parquet:
-        table = pa.Table.from_pylist(aliases, schema=get_aliases_schema())
+        schema = get_country_aliases_schema() if basename == "countries_aliases" else get_aliases_schema()
+        table = pa.Table.from_pylist(aliases, schema=schema)
         parquet_path = output_dir / f"{basename}.parquet"
         pq.write_table(table, parquet_path, compression="zstd", compression_level=zstd_level())
         typer.echo(f"✓ Saved alias map (parquet): {parquet_path}")
@@ -430,6 +459,10 @@ def write_datapackage(output_dir: Path, version: str) -> None:
         ("attribute_intblock_migrations", "json", "attribute_intblock_migrations.json"),
         ("border_status", "json", "border_status.json"),
         ("border_status", "parquet", "border_status.parquet"),
+        ("trade_agreements", "jsonl", "trade_agreements.jsonl"),
+        ("trade_agreements", "parquet", "trade_agreements.parquet"),
+        ("trade_agreement_parties", "jsonl", "trade_agreement_parties.jsonl"),
+        ("trade_agreement_parties", "parquet", "trade_agreement_parties.parquet"),
     ):
         file_path = output_dir / path
         if not file_path.exists():
@@ -650,16 +683,22 @@ def create_duckdb_database(
         con.unregister("arrow_source")
 
         reference_tables = list(reference_tables or [])
-        if "border_status" not in {name for name, _, _ in reference_tables}:
-            # The country_borders view reads it; an empty table keeps the view valid.
-            reference_tables.append(("border_status", [], get_border_status_schema()))
+        present = {name for name, _, _ in reference_tables}
+        # Views read these tables; an empty table keeps a view valid.
+        for name, schema_fn in (
+            ("border_status", get_border_status_schema),
+            ("trade_agreements", get_trade_agreements_schema),
+            ("trade_agreement_parties", get_trade_agreement_parties_schema),
+        ):
+            if name not in present:
+                reference_tables.append((name, [], schema_fn()))
         for name, data, schema in reference_tables:
             con.register("arrow_source", pa.Table.from_pylist(data, schema=schema))
             con.execute(f"CREATE TABLE {name} AS SELECT * FROM arrow_source")
             con.unregister("arrow_source")
 
         for view in VIEWS:
-            if view["name"] == "current_memberships" and memberships_data is None:
+            if view["name"] in ("current_memberships", "country_trade_agreements") and memberships_data is None:
                 continue
             con.execute(f"CREATE VIEW {view['name']} AS {view['sql']}")
 

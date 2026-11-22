@@ -78,8 +78,8 @@
   - `PELINDABA` (Treaty of Pelindaba): Q4691025 to Q1468283; Q4691025 does not exist.
   - `GFCE` (Global Forum on Cyber Expertise): Q30337375 to Q142168082; Q30337375 does not
     exist.
-  - `AUUK` (Australia–United Kingdom Free Trade Agreement): Q107271797 to Q97356844;
-    Q107271797 does not exist.
+  - `AUUK` (Australia–United Kingdom Free Trade Agreement, now in the trade agreements
+    registry): Q107271797 to Q97356844; Q107271797 does not exist.
   - `CCAMLR`: Q97382426 to Q16184543; Q97382426 redirects to Q16184543.
 - No Wikidata item exists for 4 records, so their wrong ids are removed and the records are
   listed in `data/schemas/wikidata_exclusions.yaml`: `TIMBI` (Q22702079, a river in the

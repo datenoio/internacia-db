@@ -4,55 +4,343 @@
     "target": "FSA",
     "reason": "disambiguated",
     "since": "1.3.0",
-    "note": "African Solidarity Fund moved from ASF to FSA in v1.3.0. The id ASF now refers to the African Standby Force (military), a different entity."
+    "note": "African Solidarity Fund moved from ASF to FSA in v1.3.0. The id ASF now refers to the African Standby Force (military), a different entity.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "CAF",
     "target": "CAFBANK",
     "reason": "disambiguated",
     "since": "1.3.0",
-    "note": "CAF development bank moved from CAF to CAFBANK in v1.3.0. The id CAF now refers to the Confederation of African Football (sports), a different entity."
+    "note": "CAF development bank moved from CAF to CAFBANK in v1.3.0. The id CAF now refers to the Confederation of African Football (sports), a different entity.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "SOUCAPIPE",
     "target": "BTE",
     "reason": "merged",
     "since": "1.8.0",
-    "note": "South Caucasus Pipeline (SOUCAPIPE) merged into BTE (Baku–Tbilisi–Erzurum / South Caucasus Pipeline); same Wikidata item Q572699."
+    "note": "South Caucasus Pipeline (SOUCAPIPE) merged into BTE (Baku–Tbilisi–Erzurum / South Caucasus Pipeline); same Wikidata item Q572699.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "ICC_CRIMINAL",
     "target": "ICW",
     "reason": "disambiguated",
     "since": "1.10.0",
-    "note": "Entity-resolution guidance: the International Criminal Court is stored under id ICW (court/), while the id ICC refers to the International Cricket Council (sports/). Consumers resolving the acronym \"ICC\" for the criminal court should remap to ICW."
+    "note": "Entity-resolution guidance: the International Criminal Court is stored under id ICW (court/), while the id ICC refers to the International Cricket Council (sports/). Consumers resolving the acronym \"ICC\" for the criminal court should remap to ICW.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "COMMLEARN",
     "target": "COL",
     "reason": "merged",
     "since": "3.0.0",
-    "note": "Duplicate entity consolidated in COL; retain this mapping for existing consumers."
+    "note": "Duplicate entity consolidated in COL; retain this mapping for existing consumers.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "ABCZNZ",
     "target": "ABCANZ",
     "reason": "merged",
     "since": "3.0.0",
-    "note": "Duplicate entity consolidated in ABCANZ; retain this mapping for existing consumers."
+    "note": "Duplicate entity consolidated in ABCANZ; retain this mapping for existing consumers.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "USAN",
     "target": "UNASUR",
     "reason": "merged",
     "since": "3.0.0",
-    "note": "Duplicate entity consolidated in UNASUR; retain this mapping for existing consumers."
+    "note": "Duplicate entity consolidated in UNASUR; retain this mapping for existing consumers.",
+    "target_dataset": "intblocks"
   },
   {
     "alias": "TELESUR",
     "target": null,
     "reason": "retired",
     "since": "3.1.0",
-    "note": "La Nueva Televisión del Sur C.A. is a Venezuelan commercial company, not an international organization with member states; its seven country rows were not memberships. No replacement id. See docs/retired-intblock-ids.md."
+    "note": "La Nueva Televisión del Sur C.A. is a Venezuelan commercial company, not an international organization with member states; its seven country rows were not memberships. No replacement id. See docs/retired-intblock-ids.md.",
+    "target_dataset": null
+  },
+  {
+    "alias": "USCR",
+    "target": "CAFTADR",
+    "reason": "merged",
+    "since": "5.0.0",
+    "note": "The United States-Costa Rica schedules are part of CAFTA-DR, not a separate agreement, so the record was merged into CAFTADR when bilateral agreements moved to the trade agreements registry.",
+    "target_dataset": "intblocks"
+  },
+  {
+    "alias": "ANZCERTA",
+    "target": "ANZCERTA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "AUINDIA",
+    "target": "AUINDIA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "AUUAE",
+    "target": "AUUAE",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "AUUK",
+    "target": "AUUK",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CETA",
+    "target": "CETA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CHAFTA",
+    "target": "CHAFTA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CNEC",
+    "target": "CNEC",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CNKR",
+    "target": "CNKR",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CNNI",
+    "target": "CNNI",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "CNRS",
+    "target": "CNRS",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUJP",
+    "target": "EUJP",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUKR",
+    "target": "EUKR",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUNZ",
+    "target": "EUNZ",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUSG",
+    "target": "EUSG",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUUA",
+    "target": "EUUA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUUK",
+    "target": "EUUK",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUVN",
+    "target": "EUVN",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "INUAE",
+    "target": "INUAE",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "UKIN",
+    "target": "UKIN",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "UKJP",
+    "target": "UKJP",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "UKNZ",
+    "target": "UKNZ",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USAU",
+    "target": "USAU",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USBH",
+    "target": "USBH",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USCL",
+    "target": "USCL",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USCO",
+    "target": "USCO",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USIL",
+    "target": "USIL",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USJO",
+    "target": "USJO",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USKR",
+    "target": "USKR",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USMA",
+    "target": "USMA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USOM",
+    "target": "USOM",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USPA",
+    "target": "USPA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USPE",
+    "target": "USPE",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "USSG",
+    "target": "USSG",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
+  },
+  {
+    "alias": "EUCENTRALAFRICAEPA",
+    "target": "EUCENTRALAFRICAEPA",
+    "reason": "moved",
+    "since": "5.0.0",
+    "note": "Two-party trade agreement (EU and Cameroon) moved to the trade_agreements registry with the same id.",
+    "target_dataset": "trade_agreements"
   }
 ]

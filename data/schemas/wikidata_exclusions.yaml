@@ -279,30 +279,6 @@ exclusions:
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
   source: deep-review audit
-- id: AUINDIA
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: AUUAE
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: CNEC
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: CNNI
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: CNRS
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: USCR
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
 - id: ACF
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
@@ -341,14 +317,6 @@ exclusions:
   source: WTO RTA wave 1
 - id: EUANDEAN
   reason: No distinct Wikidata item verified for the EU-Colombia/Peru/Ecuador Trade Agreement; pending backfill
-  verified_at: '2026-09-09'
-  source: WTO RTA wave 2
-- id: INUAE
-  reason: No distinct Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-09-09'
-  source: WTO RTA wave 2
-- id: UKIN
-  reason: No distinct Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-09-09'
   source: WTO RTA wave 2
 - id: AFSEC
@@ -476,10 +444,6 @@ exclusions:
   verified_at: '2026-08-03'
   source: deep-review audit
 - id: EUCARIFORUMEPA
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: EUCENTRALAFRICAEPA
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
   source: deep-review audit
@@ -1033,6 +997,14 @@ exclusions:
   reason: No Wikidata item or English Wikipedia article for the South Pacific Bureau for Economic Co-operation
   verified_at: '2026-11-22'
   source: Australian Treaties Database pass (historical)
+- id: GIFT
+  reason: No Wikidata item or English Wikipedia article for the Global Initiative for Fiscal Transparency
+  verified_at: '2026-11-22'
+  source: Open data and transparency initiatives pass (GIFT)
+- id: BOLG
+  reason: No Wikidata item or English Wikipedia article for the Beneficial Ownership Leadership Group
+  verified_at: '2026-11-22'
+  source: Open data and transparency initiatives pass (BOLG)
 - id: REDGEALC
   reason: No Wikidata item or English Wikipedia article for Red GEALC (Inter-American Network of Digital Government)
   verified_at: '2026-11-22'
@@ -1053,3 +1025,79 @@ exclusions:
   reason: No Wikidata item found for the Abidjan Convention; the former Q4666000 does not exist
   verified_at: '2026-11-22'
   source: Wikidata id audit
+- id: KRCENTRALAMERICA
+  reason: No Wikidata item for the Republic of Korea-Central America Free Trade Agreement (2018)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery
+- id: MSGTA
+  reason: No Wikidata item for the Melanesian Spearhead Group Trade Agreement (1993); Q1918937 is the MSG organization
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery
+- id: TPSOIC
+  reason: No Wikidata item for the Trade Preferential System among the Member States of the OIC (TPS-OIC)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery
+- id: D8PTA
+  reason: No Wikidata item for the Preferential Trade Agreement among D-8 Member States (2006)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery
+- id: EFTASG
+  reason: No Wikidata item for the EFTA-Singapore Free Trade Agreement (2002)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTAKR
+  reason: No Wikidata item for the EFTA-Korea Free Trade Agreement (2005)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTAHK
+  reason: No Wikidata item for the EFTA-Hong Kong, China Free Trade Agreement (2011)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTAPH
+  reason: No Wikidata item for the EFTA-Philippines Free Trade Agreement (2016)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTAID
+  reason: Q97309101 has only an Indonesian label and no instance-of statement, so it is not used for the EFTA-Indonesia CEPA
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTAGE
+  reason: No Wikidata item for the EFTA-Georgia Free Trade Agreement (2016)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EFTATR
+  reason: No Wikidata item for the modernised EFTA-Türkiye Free Trade Agreement (2018)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EAEUVN
+  reason: No Wikidata item for the EAEU-Viet Nam Free Trade Agreement (2015)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EAEURS
+  reason: No Wikidata item for the EAEU-Serbia Free Trade Agreement (2019)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EAEUIR
+  reason: No Wikidata item for the EAEU-Iran Free Trade Agreement (2023)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: GCCSG
+  reason: No Wikidata item for the GCC-Singapore Free Trade Agreement (2008)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, Tier 2
+- id: EAEUCN
+  reason: No Wikidata item verified for the EAEU-China Agreement on Economic and Trade Cooperation (2018); the query service rate-limited the check
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, signed candidates
+- id: EAEUSG
+  reason: No Wikidata item for the EAEU-Singapore Free Trade Agreement (2019)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, signed candidates
+- id: PACALLSG
+  reason: No Wikidata item for the Pacific Alliance-Singapore Free Trade Agreement (2022)
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, signed candidates
+- id: AZTMTR
+  reason: No Wikidata item verified for the Azerbaijan-Türkiye-Turkmenistan Agreement on Trade and Economic Cooperation (2022); the query service rate-limited the check
+  verified_at: '2026-11-22'
+  source: ADB ARIC FTA discovery, signed candidates
