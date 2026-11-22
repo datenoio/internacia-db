@@ -166,3 +166,8 @@ def test_moved_ids_are_not_intblocks(con):
     assert "USKR" in moved
     assert con.execute("SELECT count(*) FROM intblocks WHERE id IN (SELECT alias FROM intblocks_aliases WHERE reason = 'moved')").fetchone()[0] == 0
     assert con.execute("SELECT count(*) FROM trade_agreements WHERE id = 'USKR'").fetchone()[0] == 1
+
+
+def test_unparsable_file_is_reported():
+    issues = trade_agreement_rules.check_trade_agreement_files([("data/trade_agreements/BAD.yaml", "YAML parse error")])
+    assert [(i["issue_type"], i["record_id"]) for i in issues] == [("SCHEMA_ERROR", "BAD")]

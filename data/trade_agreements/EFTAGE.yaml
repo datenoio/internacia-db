@@ -1,29 +1,17 @@
 id: EFTAGE
-name: Georgia-EFTA Free Trade Agreement
+intblock: EFTAGE
 agreement_type: fta
 status: in_force
-signed: '2016-06-27'
-in_force: '2017-09-01'
-parties:
-- id: GE
-  type: country
-- id: LI
-  type: country
-- id: IS
-  type: country
-- id: 'NO'
-  type: country
-- id: CH
-  type: country
+wto_rta_id: 953
 aric_id: 336
-verification: catalogue
+verification: official
 last_verified: '2026-11-22'
 provenance:
-- field: parties
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=336&ssid=3
-  retrieved_at: '2026-11-22'
 - field: status
+  source: Fedlex, scope of application (Geltungsbereich) of the agreement
+  retrieved_at: '2026-11-22'
+  url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/240/20231201/de/html/fedlex-data-admin-ch-eli-cc-2018-240-20231201-de-html-2.html
+- field: aric_id
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=336&ssid=3
   retrieved_at: '2026-11-22'

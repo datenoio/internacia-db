@@ -235,6 +235,21 @@ def check_trade_agreements(
     return issues
 
 
+def check_trade_agreement_files(errors: list[tuple[str, str]]) -> list[Issue]:
+    """Files under data/trade_agreements/ that are not valid YAML mappings."""
+    return [
+        {
+            "issue_type": "SCHEMA_ERROR",
+            "file_path": path,
+            "record_id": Path(path).stem,
+            "field": "(root)",
+            "current_value": "",
+            "suggested_action": message,
+        }
+        for path, message in errors
+    ]
+
+
 def check_intblock_candidates(records: list[dict[str, Any]], paths: list[str]) -> list[Issue]:
     """Report-only: signed or in-force agreements with three or more listed parties and no intblock."""
     issues: list[Issue] = []

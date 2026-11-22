@@ -13,6 +13,19 @@
 - The ADB ARIC FTA database (snapshot of 2026-11-22) is imported. Rows that matched existing
   records got `aric_id`; the other rows are new `verification: catalogue` records. ARIC's
   proposed and negotiating agreements are imported as well, with their status.
+- Twelve multilateral agreements from the ARIC walk that are in force now have intblocks in
+  `data/intblocks/fta/`, with party-by-party dates from official sources. Each is linked from its
+  registry record:
+  - EFTA agreements, dated from the Swiss Fedlex scope tables and EFTA partner pages: `EFTASG`,
+    `EFTAKR`, `EFTAHK`, `EFTAPH`, `EFTAID`, `EFTAGE` and `EFTATR` (the modernised 2018
+    agreement).
+  - EAEU agreements, from Eurasian Economic Commission texts: `EAEUVN`, `EAEURS` and `EAEUIR`
+    (the 2023 agreement). The Union itself is a party alongside its member states.
+  - `GCCSG`, the GCC–Singapore FTA. The six GCC states are parties individually.
+  - `UKPACIFICEPA`, the UK–Pacific States interim EPA. It is applied provisionally from 1 January
+    2021; Samoa and Solomon Islands acceded on 31 March 2022.
+- Two earlier agreements are registry records with status `superseded`: `EFTATR-1991`, the
+  EFTA–Turkey agreement of 1991, and `EAEUIR-2018`, the EAEU–Iran interim agreement of 2018.
 - New validator rules for the registry: schema, ids shared with intblocks, party and intblock
   resolution, status and date consistency, and freshness. The quality report now lists
   multilateral catalogue records that have no intblock yet.

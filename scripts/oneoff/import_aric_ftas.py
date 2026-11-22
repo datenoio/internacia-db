@@ -38,6 +38,9 @@ MAPPED = {
     259: "EUVN", 264: "KRCENTRALAMERICA", 286: "EUJP", 292: "RCEP", 293: "AHKFTA", 308: "EAEU", 311: "EUNZ",
     366: "AUUK", 367: "UKNZ", 384: "CPTPP", 414: "UKJP", 424: "INUAE", 428: "AUINDIA", 442: "AUUAE",
     448: "CNEC", 449: "CNNI", 450: "CNRS", 355: "UKIN",
+    # Tier 2: imported as catalogue records first, then given intblocks with official rosters.
+    20: "EFTAKR", 22: "EFTASG", 198: "EFTAID", 207: "GCCSG", 256: "EFTAHK", 269: "EAEUVN", 294: "EFTAPH",
+    317: "EAEUIR", 336: "EFTAGE", 401: "EAEURS", 426: "UKPACIFICEPA", 471: "EFTATR-1991",
 }
 
 # ARIC member names that differ from Internacia country names.

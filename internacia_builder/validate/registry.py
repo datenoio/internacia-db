@@ -455,6 +455,10 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
     _cross("alias integrity", INTBLOCKS, E,
            lambda ctx: cross_rules.validate_aliases(ctx.aliases or [], ctx.intblock_ids, ctx.trade_agreement_ids),
            message=_action_only, enabled=lambda ctx: ctx.aliases is not None),
+    _cross("trade agreement files", INTBLOCKS, E,
+           lambda ctx: trade_agreement_rules.check_trade_agreement_files(ctx.trade_agreements.errors),
+           message=lambda i: f"{i['file_path']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.trade_agreements is not None),
     _cross("trade agreements", INTBLOCKS, E,
            lambda ctx: trade_agreement_rules.check_trade_agreements(
                ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.trade_agreements_schema,

@@ -29,7 +29,7 @@
 - [x] 4.1 Add `scripts/oneoff/parse_aric_pages.py`, `scripts/oneoff/import_aric_ftas.py` and the member-name crosswalk
 - [x] 4.2 Import every ARIC row (432 in the 2026-11-22 snapshot: 47 mapped to existing records by `aric_id`, 385 new catalogue records)
 - [x] 4.3 Hand-review parties taken from titles and the `Discontinued` rows (EU member lists collapsed to `EU`, the United Kingdom dropped from pre-2020 EU lists, three rows whose page redirects to AFTA filled from the title)
-- [ ] 4.4 Add intblocks for multilateral ARIC agreements that are signed or in force, with rosters from official sources (Tier 2: EAEU, EFTA and GCC external FTAs, `EUGE`)
+- [x] 4.4 Add intblocks for the multilateral ARIC agreements in force, with rosters from official sources (Tier 2: seven EFTA, three EAEU, GCC–Singapore and UK–Pacific; `EUGE` is EU–Georgia, two parties, so it stays a registry record). Signed-but-not-in-force agreements and the GUAM FTA remain intblock candidates
 - [x] 4.5 Log the ARIC walk in `docs/intblock-sources.md`
 
 ## 5. Documentation and release
