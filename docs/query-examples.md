@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 62 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 9 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `CTBT`).
+**Expected:** 63 rows — 36 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 10 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`), 17 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `CTBT`).
 
 Filter to a single exclusion pattern:
 
@@ -823,8 +823,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 41 rows — `JP` with 10 observer entries, `US` with 9 and `FR` with 8; `CA`, `CN`, `DE`, `EG`, `HU`, `MD`, `MY` and `RU` with 7;
-`AU`, `CH`, `GE`, `GR`, `ID`, `IL`, `IN`, `IT`, `KR`, `MX`, `PL`, `TH`, `TR`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `CZ`, `ES`, `NO`, `NZ`, `PE`, `PH`, `PS`, `PT` and `TM` with 5.
+**Expected:** 43 rows — `JP` with 11 observer entries, `US` with 10, and `EG`, `FR` and `MY` with 8; `CA`, `CH`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `MD`, `MX`, `RU`, `TH` and `TR` with 7;
+`AU`, `CZ`, `ES`, `IL`, `IN`, `IT`, `KR`, `PH`, `PL`, `PS`, `TW`, `UA` and `VA` with 6; `AE`, `AM`, `AT`, `AZ`, `BY`, `NO`, `NZ`, `PE`, `PT`, `SE`, `TM` and `ZA` with 5.
 
 ## Geography and membership
 
@@ -1021,7 +1021,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 197 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 198 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.

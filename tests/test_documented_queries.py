@@ -274,13 +274,13 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            62,
+            63,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            9,
-            {"EGMONTGROUP", "FLORENCE", "PTBT"},
+            10,
+            {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI"},
         ),
         (
             "b.has_china AND NOT b.has_usa",
@@ -373,7 +373,7 @@ ADDITIONAL_RECIPES = [
         JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
-        41,
+        43,
         {"CA", "IN", "TH", "UA"},
     ),
     (
@@ -465,7 +465,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        197,
+        198,
         set(),
     ),
     (

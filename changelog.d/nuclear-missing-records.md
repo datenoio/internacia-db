@@ -19,6 +19,19 @@
 - `PARISNUCLEAR` (Paris Convention on Third Party Liability in the Field of Nuclear Energy,
   Wikidata Q7137274): 16 Contracting Parties with ratification dates. The roster comes from the
   Wikipedia table of the OECD NEA ratification status, because oecd-nea.org blocks automated access.
+- Nuclear forums and initiatives, each with its official roster checked on 2026-11-22:
+  - `GIF` (Generation IV International Forum, Q1123284): the seven states and Euratom that have
+    signed the 2025 Framework Agreement.
+  - `IFNEC` (International Framework for Nuclear Energy Cooperation, Q3366107): 33 Participant
+    countries, 32 observer countries and 5 observer organizations.
+  - `PSI` (Proliferation Security Initiative, Q1141011): 116 endorsing states.
+  - `GPWMD` (Global Partnership Against the Spread of Weapons and Materials of Mass Destruction,
+    Q5570539): 30 countries and the EU.
+  - `IPNDV` (International Partnership for Nuclear Disarmament Verification): 32 partner states
+    and the EU. It has no Wikidata item and is listed in `wikidata_exclusions.yaml`.
+  - `NPDI` (Non-Proliferation and Disarmament Initiative, Q7048793): 12 members.
+  - `NEWAGENDA` (New Agenda Coalition, Q3875176): 6 members. The id avoids `NAC`, which is the
+    World Bank North America aggregate.
 
 ### Fixed
 
