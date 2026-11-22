@@ -43,3 +43,5 @@
   WMO and UNEP, is now `intergovernmental_body`.
 - `IGAD`: Eritrea is a `former_member` (joined 1993, left 2025-12-12). IGAD acknowledged its
   withdrawal on 12 December 2025, so `membership_count` is now 7.
+- `IGAD`: Sudan's entry notes its suspension on 20 January 2024 and its return on
+  9 February 2026; it stays a `member`.
