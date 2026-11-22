@@ -11,7 +11,8 @@
   Georgia, Hungary, Israel, the Kyrgyz Republic, Sri Lanka, Tanzania and the United States change
   from `member` to `former_member`, and Afghanistan, Luxembourg, Pakistan, Trinidad and Tobago and
   Turkey are added as `former_member`. Austria and Japan, which are not on any OGP member list, are
-  removed. `membership_count` changes from 73 to 72.
+  removed. `membership_count` changes from 73 to 72. Georgia's `left` date is 13 April 2026, when
+  the OGP Steering Committee made its suspension permanent.
 - `OPENGOV` gains a full description, founding date (20 September 2011) and founding members,
   the Open Government Declaration, the Support Unit secretariat, social media links, governance
   topics, more names in other languages, and corrected acronyms.
