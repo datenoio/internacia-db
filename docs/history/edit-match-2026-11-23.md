@@ -43,11 +43,11 @@ The 3,797 matched documents map to 3,827 records: 21 treaties of Czechoslovakia,
 
 ### Links added
 
-3,653 matched records gained a `treaty_text` link to the EDIT document page, after their existing links, like the GPTAD links of datenoio/internacia-db#209. Documents without a text in EDIT get no link. Four matched records are edited by sessions running at the same time (CIS/EAEU and AfCFTA walks) and were left for later: `AfCFTA`, `CISFTASERVICES`, `EAEU`, `EAEUVN`. The registry stores the URL, not the text.
+3,636 matched records gained a `treaty_text` link to the EDIT document page, after their existing links, like the GPTAD links of datenoio/internacia-db#209. Documents without a text in EDIT get no link. Four matched records are edited by sessions running at the same time (CIS/EAEU and AfCFTA walks) and were left for later: `AfCFTA`, `CISFTASERVICES`, `EAEU`, `EAEUVN`. To avoid conflicts, the UAE CEPA walk (branch `claude/uae-cepa-walk-460aec`) carries the EDIT links and notes of the 18 UAE CEPA records it rewrites (`AECL`, `AECO`, `AECR`, `AEEC`, `AEGE`, `AEID`, `AEIL`, `AEKE`, `AEKH`, `AEMU`, `AEMY`, `AENZ`, `AERS`, `AETR-CEPA`, `AEUA`, `AEVN`, `AUUAE`, `INUAE`): 17 links and 4 notes. The CSV marks these 21 links `deferred`. The registry stores the URL, not the text.
 
 ### Date conflicts
 
-609 dates differ between EDIT and the record (CSV). A record keeps its dates and status. 462 records gained a note in the form "EDIT gives 2016-06-15 as the date of entry into force.", with an EDIT provenance entry for `notes`. Two of them (`CLID`, `USBH`) were written by hand because their YAML layout does not round-trip.
+609 dates differ between EDIT and the record (CSV). A record keeps its dates and status. 458 records gained a note in the form "EDIT gives 2016-06-15 as the date of entry into force.", with an EDIT provenance entry for `notes`. Two of them (`CLID`, `USBH`) were written by hand because their YAML layout does not round-trip.
 
 | Record's source | Signature | Entry into force | Termination | Status |
 |---|---|---|---|---|

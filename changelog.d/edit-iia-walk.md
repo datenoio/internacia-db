@@ -1,7 +1,7 @@
 ### Added
 
 - `treaty_text` links to EDIT, the Electronic Database of Investment Treaties of the World Trade
-  Institute, on 3,653 trade agreement records: 3,276 investment treaties and 377 FTAs, PTAs,
+  Institute, on 3,636 trade agreement records: 3,276 investment treaties and 360 FTAs, PTAs,
   customs unions and other agreements with investment provisions. The registry stores the
   document URL, not the text (OpenSpec `add-edit-catalogue-links`; report
   `docs/history/edit-match-2026-11-23.md`).
@@ -12,6 +12,6 @@
 
 ### Changed
 
-- 462 records note the date of signature, entry into force or termination that EDIT gives where
+- 458 records note the date of signature, entry into force or termination that EDIT gives where
   it differs from the record; no date or status was changed. `verification: catalogue` also
   covers records taken only from EDIT.

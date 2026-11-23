@@ -35,6 +35,9 @@ def main(argv: list[str]) -> int:
     report, written = data["report"], data["written"]
     added = set(written.get("added", []))
     linked = set(written.get("links", []))
+    # Records whose link and notes another walk writes (UAE CEPA walk) or that a walk running
+    # at the same time edits (CIS/EAEU, AfCFTA): "deferred".
+    deferred = set(written.get("carried_by_uae_cepa_walk", [])) | set(written.get("skipped_parallel_walk", []))
     rows = []
     for group, treaties in report.items():
         for t in treaties:
@@ -48,7 +51,8 @@ def main(argv: list[str]) -> int:
             if group == "matched":
                 for rid, method in t["matched"]:
                     rows.append({**base, "record_id": rid, "method": method, "confidence": confidence(method),
-                                 "treaty_text_link": "yes" if rid in linked and t["has_text"] else "no",
+                                 "treaty_text_link": "deferred" if rid in deferred and t["has_text"]
+                                 else "yes" if rid in linked and t["has_text"] else "no",
                                  "reason": ""})
                 continue
             rid = t.get("record") or ""

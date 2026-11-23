@@ -6,8 +6,8 @@
 
 - [x] 1.1 Add `scripts/oneoff/fetch_edit.py`: save the 4,271 EDIT documents from `full_search` (500 a page) and the CSV report, 2 s apart, without the texts
 - [x] 1.2 Add `scripts/oneoff/import_edit.py`: match by parties (ids, bloc members, overlapping rosters on the same date) and date of signature, year or typing slip; successor-state records; instruments; hand decisions in `MANUAL`
-- [x] 1.3 Add `treaty_text` links to the EDIT document page on matched records whose EDIT document has a text (3,653), leaving the records of the CIS/EAEU and AfCFTA walks for later
-- [x] 1.4 Note EDIT's dates where they differ from a record's (462 records), without changing dates, statuses or verification levels
+- [x] 1.3 Add `treaty_text` links to the EDIT document page on matched records whose EDIT document has a text (3,636), leaving the records of the CIS/EAEU and AfCFTA walks for later and the 18 UAE CEPA records to the UAE CEPA walk
+- [x] 1.4 Note EDIT's dates where they differ from a record's (458 records), without changing dates, statuses or verification levels
 - [x] 1.5 Add the missing investment treaties: three EU agreements from the European Commission and EUR-Lex, and 22 EDIT-only BITs with an entry into force at `verification: catalogue`; hold the rest
 - [x] 1.6 Name EDIT in the `catalogue` description of `verification`
 - [x] 1.7 Write the match report (`docs/history/edit-match-2026-11-23.md`, a per-document CSV with `edit_uuid`, and a date-conflict CSV) with `scripts/oneoff/write_edit_report.py`
