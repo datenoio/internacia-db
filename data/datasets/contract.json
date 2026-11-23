@@ -840,7 +840,7 @@
           }
         }
       ],
-      "schema_hash": "bbbbf4f27e55d9c61225258b30142b2a80157cc2afaaec1d317a98bf29a2f1bb",
+      "schema_hash": "190120dc6e61bcc550afce4375b9b188bac91cf3b524141cea99227355e4723e",
       "columns": [
         {
           "name": "id",
@@ -904,6 +904,11 @@
         },
         {
           "name": "aric_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "unctad_iia_id",
           "type": "int64",
           "nullable": true
         },
@@ -1398,6 +1403,8 @@
         "pta",
         "preference_scheme",
         "services",
+        "investment",
+        "trade_relations",
         "digital",
         "framework",
         "other"
@@ -1718,6 +1725,8 @@
         "pta",
         "preference_scheme",
         "services",
+        "investment",
+        "trade_relations",
         "digital",
         "framework",
         "other"
