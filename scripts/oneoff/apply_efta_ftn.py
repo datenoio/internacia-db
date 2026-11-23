@@ -17,9 +17,15 @@ script:
 - adds per-state entry-into-force dates (parties[].in_force) where the agreement entered
   into force on different dates for different EFTA States;
 - adds the EFTA partner page as a link and as provenance, and marks a record official
-  when EFTA (or Fedlex) states its parties and dates.
+  when EFTA (or Fedlex) states its parties and dates;
+- creates records for the seven Joint Declarations on Cooperation with partners that have
+  no other EFTA agreement (agreement_type framework), the signed modernised agreements
+  with Ukraine (2025) and Chile (2024 amending protocol), and the EFTA-Algeria
+  negotiations, which EFTA lists as on hold. Their texts were read from Wayback copies of
+  the PDFs linked on the partner pages.
 
-Run once from the repository root: python scripts/oneoff/apply_efta_ftn.py
+Run from the repository root: python scripts/oneoff/apply_efta_ftn.py. A second run
+changes nothing.
 """
 
 from __future__ import annotations
@@ -222,6 +228,132 @@ CHANGES: dict[str, dict] = {
 }
 for record_id, slug in CONFIRMED.items():
     CHANGES[record_id] = {"slug": slug, "fields": ["signed", "in_force", "parties"], "official": True}
+CHANGES["EFTAUA"]["notes"] = (
+    "A modernised free trade agreement signed at Kyiv on 8 April 2025 (EFTAUA-2025) replaces this one for each "
+    "EFTA State on its entry into force with Ukraine."
+)
+CHANGES["EFTACL"]["notes"] = (
+    "A protocol signed at Geneva on 24 June 2024 (EFTACL-2024) amends this agreement into the modernised EFTA-Chile "
+    "Free Trade Agreement; it was not yet in force when the EFTA page was captured on 2026-08-04."
+)
+
+EFTA_STATES = ["IS", "LI", "NO", "CH"]
+TEXT = "EFTA, text of the instrument as published on efta.int (Wayback Machine copy)"
+WB = "https://web.archive.org/web/{}/https://www.efta.int/sites/default/files/{}"
+
+
+def jdc(code: str, slug: str, capture: str, name: str, title: str, day: str, text: str, notes: str,
+        partners: list[str] | None = None) -> dict:
+    """A Joint Declaration on Cooperation: effective on signature, no ratification clause."""
+    return {
+        "slug": slug, "capture": capture, "text": text,
+        "record": {
+            "id": f"EFTA{code}-JDC", "name": name, "other_names": [{"lang": "en", "name": title}],
+            "agreement_type": "framework", "status": "in_force", "signed": day, "in_force": day,
+            "parties": [{"id": c, "type": "country"} for c in (partners or [code]) + EFTA_STATES],
+            "notes": notes,
+        },
+    }
+
+
+# New records: slug and capture of the EFTA partner page, Wayback URL of the text read.
+NEW: list[dict] = [
+    jdc("DZ", "algeria", "20260214061541", "EFTA-Algeria Joint Declaration on Cooperation",
+        "Declaration by the EFTA States and the People's Democratic Republic of Algeria", "2002-12-12",
+        WB.format("20251225160523", "media/documents/legal-texts/free-trade-relations/algeria/algeria-jdc.pdf"),
+        "Signed at Interlaken; establishes a Joint Committee. Free trade negotiations followed (EFTADZ)."),
+    jdc("ASEAN", "asean", "20251225111051", "EFTA-ASEAN Joint Declaration on Economic Cooperation",
+        "Joint Declaration on Economic Cooperation between the Association of Southeast Asian Nations (ASEAN) and "
+        "the Member States of the European Free Trade Association (EFTA)", "2024-09-19",
+        WB.format("20251226023404", "uploads/2024-09/ASEAN-EFTA%20JDC_190924.pdf"),
+        "Adopted at Vientiane; comes into effect on the date of its adoption. The parties are the ten ASEAN Member "
+        "States named in the text and the four EFTA States, not ASEAN as an organisation.",
+        partners=["BN", "KH", "ID", "LA", "MY", "MM", "PH", "SG", "TH", "VN"]),
+    jdc("MU", "mauritius", "20251225110855", "EFTA-Mauritius Joint Declaration on Cooperation",
+        "Joint Declaration on Co-operation between the EFTA States and the Republic of Mauritius", "2009-06-09",
+        WB.format("20251225164119", "media/documents/legal-texts/free-trade-relations/mauritius/mauritius-jdc.pdf"),
+        "Signed at Geneva; establishes a Joint Committee."),
+    jdc("MN", "mongolia", "20260210051008", "EFTA-Mongolia Joint Declaration on Cooperation",
+        "Joint Declaration on Co-operation between the EFTA States and Mongolia", "2007-06-28",
+        WB.format("20251226070538", "documents/legal-texts/free-trade-relations/mongolia/"
+                  "Joint%20Declaration%20on%20Cooperation%20English%20English.pdf"),
+        "Signed at Vaduz; establishes a Joint Committee."),
+    jdc("MM", "myanmar", "20251225111136", "EFTA-Myanmar Joint Declaration on Cooperation",
+        "Joint Declaration on Cooperation between Iceland, the Principality of Liechtenstein, the Kingdom of Norway "
+        "and the Swiss Confederation and the Republic of the Union of Myanmar", "2013-06-24",
+        WB.format("20251213172143", "media/documents/legal-texts/free-trade-relations/myanmar/myanmar-jdc.pdf"),
+        "Signed at Trondheim; establishes a Joint Committee."),
+    jdc("NG", "nigeria", "20251225110916", "EFTA-Nigeria Joint Declaration on Economic Cooperation",
+        "Joint Declaration on Economic Cooperation between the Governments of the Member States of the European "
+        "Free Trade Association (EFTA) and the Government of the Federal Republic of Nigeria", "2017-12-12",
+        WB.format("20251225165052", "documents/legal-texts/free-trade-relations/nigeria/"
+                  "EFTA-NIGERIA-JOINT-DECLARATION-ON-COOPERATION.pdf.PDF"),
+        "Signed at Buenos Aires; comes into effect on signature and remains in effect unless either side "
+        "terminates it with 180 days' notice. Establishes a Joint Committee."),
+    jdc("PK", "pakistan", "20251225111143", "EFTA-Pakistan Joint Declaration on Cooperation",
+        "Joint Declaration on Cooperation between the EFTA States and the Islamic Republic of Pakistan", "2012-11-12",
+        WB.format("20251226070820", "media/documents/legal-texts/free-trade-relations/pakistan/"
+                  "EFTA-Pakistan-Joint-Declaration-on-Cooperation.pdf"),
+        "Signed at Geneva; establishes a Joint Committee."),
+    {
+        "slug": "ukraine", "capture": "20260807141948",
+        "text": WB.format("20251226161247", "uploads/2025-04/EFTA-Ukraine%20-%20Main%20Agreement.pdf"),
+        "record": {
+            "id": "EFTAUA-2025", "name": "Modernised EFTA-Ukraine Free Trade Agreement",
+            "other_names": [{"lang": "en", "name": "Free Trade Agreement between the EFTA States and Ukraine (2025)"}],
+            "agreement_type": "fta", "status": "signed", "signed": "2025-04-08",
+            "parties": [{"id": c, "type": "country"} for c in ["UA", *EFTA_STATES]],
+            "notes": "Signed at Kyiv; negotiations launched in June 2023 and concluded on 2 December 2024. On its "
+                     "entry into force between an EFTA State and Ukraine it replaces, for those Parties, the "
+                     "agreement signed on 24 June 2010 (EFTAUA). Not in force when the EFTA page was captured on "
+                     "2026-08-07.",
+        },
+    },
+    {
+        "slug": "chile", "capture": "20260804055322",
+        "text": WB.format("20251225214542", "uploads/2024-06/Amending%20Protocol_0.pdf"),
+        "record": {
+            "id": "EFTACL-2024", "name": "Protocol Amending the EFTA-Chile Free Trade Agreement",
+            "other_names": [{"lang": "en", "name": "Protocol Amending the Free Trade Agreement between the EFTA "
+                                                  "States and the Republic of Chile"}],
+            "agreement_type": "fta", "status": "signed", "signed": "2024-06-24",
+            "parties": [{"id": c, "type": "country"} for c in ["CL", *EFTA_STATES]],
+            "notes": "Signed at Geneva; negotiations launched in 2019 and concluded on 19 January 2024. The protocol "
+                     "replaces whole chapters and annexes of the 2003 agreement (EFTACL); EFTA publishes the result "
+                     "as the consolidated EFTA-Chile Free Trade Agreement 2024. Not in force when the EFTA page was "
+                     "captured on 2026-08-04.",
+        },
+    },
+    {
+        "slug": "algeria", "capture": "20260214061541", "text": None,
+        "record": {
+            "id": "EFTADZ", "name": "EFTA-Algeria Free Trade Agreement",
+            "agreement_type": "fta", "status": "negotiating",
+            "parties": [{"id": c, "type": "country"} for c in ["DZ", *EFTA_STATES]],
+            "notes": "Four negotiation rounds were held in 2007 and 2008, after the 2002 declaration (EFTADZ-JDC). "
+                     "EFTA lists the negotiations as on hold (page captured 2026-02-14); the schema has no status "
+                     "for suspended negotiations.",
+        },
+    },
+]
+
+
+def create(entry: dict) -> dict:
+    """Build a new record; dates, parties and name come from the text when it was read."""
+    record = dict(entry["record"])
+    record["links"] = [{"url": PAGE.format(entry["slug"]), "type": "website"}]
+    record["verification"] = "official"
+    record["last_verified"] = RETRIEVED
+    page = SNAPSHOT.format(entry["capture"], entry["slug"])
+    provenance = [{"field": "status", "source": EFTA, "url": page, "retrieved_at": RETRIEVED}]
+    fields = [f for f in ("name", "signed", "in_force", "parties") if f in record]
+    if not entry["text"]:
+        fields.remove("name")  # a descriptive name for negotiations, not one a page states
+    for field in fields:
+        source, url = (TEXT, entry["text"]) if entry["text"] else (EFTA, page)
+        provenance.append({"field": field, "source": source, "url": url, "retrieved_at": RETRIEVED})
+    record["provenance"] = provenance
+    return ordered(record, FIELD_ORDER)
 
 
 def ordered(mapping: dict, order: list[str]) -> dict:
@@ -240,8 +372,9 @@ def apply(record: dict, change: dict) -> dict:
         by_code[code].update(fields)
     record["parties"] = [ordered(p, PARTY_ORDER) for p in record["parties"]]
 
-    if change.get("notes"):
-        record["notes"] = f"{record['notes']} {change['notes']}" if record.get("notes") else change["notes"]
+    note = change.get("notes")
+    if note and note not in record.get("notes", ""):
+        record["notes"] = f"{record['notes']} {note}" if record.get("notes") else note
 
     link = {"url": PAGE.format(slug), "type": "website"}
     links = record.setdefault("links", [])
@@ -270,6 +403,11 @@ def main() -> int:
         record = apply(record, change)
         path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
         print(f"{record_id}: {record['status']}, {record['verification']}")
+    for entry in NEW:
+        record = create(entry)
+        path = REGISTRY / f"{record['id']}.yaml"
+        path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
+        print(f"{record['id']}: new, {record['status']}")
     return 0
 
 

@@ -1,3 +1,16 @@
+### Added
+
+- Seven EFTA Joint Declarations on Cooperation with partners that have no other EFTA
+  agreement, as `framework` records: `EFTADZ-JDC` (Algeria, 2002), `EFTAMN-JDC` (Mongolia,
+  2007), `EFTAMU-JDC` (Mauritius, 2009), `EFTAPK-JDC` (Pakistan, 2012), `EFTAMM-JDC`
+  (Myanmar, 2013), `EFTANG-JDC` (Nigeria, 2017) and `EFTAASEAN-JDC` (2024, signed by the ten
+  ASEAN Member States and the four EFTA States). Name, date and parties come from each text.
+- `EFTAUA-2025`, the modernised EFTA-Ukraine Free Trade Agreement (signed 2025-04-08). On
+  entry into force it replaces `EFTAUA` for each EFTA State.
+- `EFTACL-2024`, the Protocol Amending the EFTA-Chile Free Trade Agreement (signed
+  2024-06-24).
+- `EFTADZ`, the EFTA-Algeria free trade negotiations (four rounds in 2007–2008, on hold).
+
 ### Changed
 
 - 29 EFTA trade agreement records checked on 2026-11-23 against the EFTA free trade
