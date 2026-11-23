@@ -18,8 +18,11 @@
 
 ## 3. Bloc and plurilateral records
 
-- [ ] 3.1 Add the `BLEU` intblock (Belgium–Luxembourg Economic Union, members `BE` and `LU`) with an official source for the 1921 convention and its current form
-- [ ] 3.2 Add registry records linked to `OICIA`, `ACIA`, `UAIA`, `CJKIA`, `PCFI` and `INTRAEUBIT`, with `agreement_type: investment` and `verification: official`
+- [x] 3.1 Add the `BLEU` intblock (Belgium–Luxembourg Economic Union, members `BE` and `LU`) with an official source for the 1921 convention and its current form: the coordinated convention in Mémorial A 2004 no. 89 and the Luxembourg government's communiqué on its entry into force on 1 February 2005
+- [x] 3.2 Add registry records linked to `OICIA`, `ACIA`, `CJKIA`, `PCFI` and `INTRAEUBIT`, with `verification: official`:
+  - `INTRAEUBIT` is `agreement_type: other`, because it terminates investment treaties instead of protecting investment; the other four are `investment`.
+  - `ACIA` entered into force on 29 March 2012 (MITI Malaysia), not on 24 February 2012 (UNCTAD); the intblock is corrected.
+- [ ] 3.3 Add the `UAIA` registry record once a party government or the League of Arab States confirms its status. On 2026-11-23 the Bahrain legislation portal returned HTTP 403, the Moroccan justice ministry portal did not connect, and a web search found no treaty status page of the League.
 
 ## 4. Canada pilot
 

@@ -364,8 +364,11 @@ ships no trade values, tariff lines, preference margins, depth scores or ranking
 - **Investment treaties** (bilateral investment treaties, Canada's FIPAs) are rows with
   `agreement_type = 'investment'` and ids ending in `-BIT` (`AMCA-BIT`); a further treaty
   between the same parties adds its year of signature (`CARO-BIT-1996`). A treaty that an FTA
-  suspended or replaced is `superseded` by that FTA (`CAPA-BIT` by `CAPA`). Filter on
-  `agreement_type` when you count trade agreements only.
+  suspended or replaced is `superseded` by that FTA (`CAPA-BIT` by `CAPA`). Plurilateral
+  investment treaties keep their intblock id (`ACIA`, `OICIA`). Belgium and Luxembourg sign
+  investment treaties as one party, the `BLEU` intblock, which `country_trade_agreements`
+  expands with `via = 'BLEU'`. Filter on `agreement_type` when you count trade agreements
+  only.
 - **`verification`** is `official` when parties and dates were checked against the treaty
   text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS or
   ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and

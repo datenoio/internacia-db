@@ -29,6 +29,10 @@ INTBLOCKS = [
         {"id": "JP", "type": "country", "status": "member"},
         {"id": "SG", "type": "country", "status": "member"},
     ]},
+    {"id": "BLEU", "name": "Belgium–Luxembourg Economic Union", "includes": [
+        {"id": "BE", "type": "country", "status": "founding_member"},
+        {"id": "LU", "type": "country", "status": "founding_member"},
+    ]},
 ]
 
 
@@ -148,6 +152,13 @@ def test_investment_treaty_needs_bit_suffix():
 
 def test_bit_suffix_is_reserved_for_investment_treaties():
     assert _types([_record(id="AMGE-BIT")]) == ["TRADE_AGREEMENT_ID_SUFFIX"]
+
+
+def test_bleu_signs_as_one_party():
+    """A BLEU treaty has two parties, so it is not an intblock candidate."""
+    record = _investment(id="BLEUJP-BIT", parties=[{"id": "BLEU", "type": "intblock"}, {"id": "JP", "type": "country"}])
+    assert _types([record]) == []
+    assert trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/BLEUJP-BIT.yaml"]) == []
 
 
 def test_linked_investment_treaty_keeps_the_intblock_id():

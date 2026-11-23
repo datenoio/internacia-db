@@ -14,6 +14,7 @@ Investment treaties go into `trade_agreements` with `agreement_type: investment`
 
 - `investment` covers standalone treaties whose main object is the promotion, protection or facilitation of investment: BITs, FIPAs, investment protection agreements (the EU's IPAs), cooperation and facilitation investment agreements (Brazil's CFIAs), and plurilateral investment treaties.
 - An FTA, EPA or CEPA with an investment chapter keeps its FTA type, and a TIFA stays `framework`.
+- A treaty that terminates investment treaties, such as the intra-EU termination agreement (`INTRAEUBIT`), is `other`: it does not protect investment.
 - The `services` description becomes "services only". No existing record changes type.
 
 Alternatives considered:
