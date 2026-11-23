@@ -237,6 +237,22 @@ def test_repeated_catalogue_identifier():
     assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
 
 
+def test_dta_id_is_exported():
+    record = _record(dta_id=183)
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["dta_id"] == 183
+    assert build_trade_agreement_rows([_record()], INTBLOCKS)[0][0]["dta_id"] is None
+
+
+def test_dta_id_is_a_catalogue_identifier():
+    first = _record(dta_id=183)
+    second = _record(id="AMJP", name="Armenia-Japan", dta_id=183)
+    second["parties"] = [{"id": "AM", "type": "country"}, {"id": "JP", "type": "country"}]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
+    assert _types([_record(dta_id=0)]) == ["SCHEMA_ERROR"]
+
+
 def test_linked_record_links_follow_the_intblock():
     intblocks = [dict(INTBLOCKS[1], links=[{"url": "https://rcepsec.org/", "type": "website"}])]
     text = {"url": "https://rcepsec.org/legal-text/", "type": "treaty_text"}

@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "16ea61ab2aa7a16d52d54b0586215a146de4bb4303a555517fcaa0d13f4ad720",
+      "schema_hash": "7668735c84e8af7ea18b0a317d9b983df36c921650d547bf5fdd3dfd5fd872ba",
       "columns": [
         {
           "name": "id",
@@ -930,6 +930,11 @@
         },
         {
           "name": "gptad_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "dta_id",
           "type": "int64",
           "nullable": true
         },

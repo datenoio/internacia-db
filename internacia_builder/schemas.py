@@ -456,6 +456,7 @@ def get_trade_agreements_schema() -> pa.Schema:
             ("aric_id", pa.int64()),
             ("wto_pta_ids", pa.list_(pa.int64())),
             ("gptad_id", pa.int64()),
+            ("dta_id", pa.int64()),
             ("wikidata_id", pa.string()),
             ("acronyms", pa.list_(pa.struct([("lang", pa.string()), ("value", pa.string())]))),
             ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),
