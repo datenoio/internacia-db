@@ -3,7 +3,7 @@
 A record either lists its ``parties`` or links to the intblock that holds its roster
 (``intblock``). A linked record takes its name, links, acronyms, other names and Wikidata id
 from that intblock, its dates too unless it sets them, and its parties from the intblock's
-``includes``, so a roster is never kept in two places. See ``openspec/changes/add-trade-agreements-registry``.
+``includes``, so a roster is never kept in two places. See ``openspec/specs/trade-agreements/spec.md``.
 """
 
 from __future__ import annotations
@@ -43,6 +43,13 @@ INCLUDE_PARTY_TYPES = {
 
 PARTY_TYPES = ["country", "historical-country", "intblock", "territory"]
 PARTY_STATUSES = ["former_party", "party"]
+
+# trade_agreement_parties.role: grantor and beneficiary on a non-reciprocal preference scheme,
+# party on every other agreement (each party both grants and receives).
+PREFERENCE_SCHEME = "preference_scheme"
+PARTY_ROLES = ["beneficiary", "grantor", "party"]
+# includes[].status of a linked preference-scheme intblock -> role.
+INCLUDE_ROLES = {"contributor": "grantor", "recipient": "beneficiary"}
 
 
 def trade_agreements_dir(root: Path) -> Path:
@@ -101,7 +108,16 @@ def linked_fields(intblock: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def intblock_party_rows(agreement_id: str, intblock: dict[str, Any]) -> list[dict[str, Any]]:
+def party_role(agreement_type: Any, role: Any) -> str | None:
+    """Export role of a party: its own role on a preference scheme, ``party`` otherwise."""
+    if agreement_type != PREFERENCE_SCHEME:
+        return "party"
+    return str(role) if role else None
+
+
+def intblock_party_rows(
+    agreement_id: str, intblock: dict[str, Any], agreement_type: Any = None
+) -> list[dict[str, Any]]:
     """Party rows of a linked record, from the intblock's party-like ``includes`` entries."""
     rows = []
     for inc in intblock.get("includes") or []:
@@ -114,6 +130,7 @@ def intblock_party_rows(agreement_id: str, intblock: dict[str, Any]) -> list[dic
                 "agreement_id": agreement_id,
                 "party_id": str(inc.get("id")),
                 "party_type": INCLUDE_PARTY_TYPES.get(str(inc.get("type")), str(inc.get("type"))),
+                "role": party_role(agreement_type, INCLUDE_ROLES.get(str(inc.get("status")))),
                 "status": "former_party" if former else "party",
                 "signed": None,
                 "in_force": None,
@@ -144,6 +161,7 @@ def record_party_rows(agreement_id: str, record: dict[str, Any]) -> list[dict[st
                 "agreement_id": agreement_id,
                 "party_id": str(party.get("id")),
                 "party_type": str(party.get("type")),
+                "role": party_role(record.get("agreement_type"), party.get("role")),
                 "status": "former_party" if left else "party",
                 "signed": signed,
                 "in_force": in_force,
@@ -183,7 +201,7 @@ def build_trade_agreement_rows(
         intblock = by_id.get(str(linked)) if linked else None
         fields = linked_fields(intblock) if intblock else {}
         rows = (
-            intblock_party_rows(agreement_id, intblock)
+            intblock_party_rows(agreement_id, intblock, record.get("agreement_type"))
             if intblock
             else record_party_rows(agreement_id, record)
         )
@@ -212,8 +230,10 @@ def build_trade_agreement_rows(
                 "party_count": sum(1 for row in rows if row["status"] == "party"),
                 "supersedes": record.get("supersedes"),
                 "superseded_by": record.get("superseded_by"),
+                "parent": record.get("parent"),
                 "wto_rta_id": _int(record.get("wto_rta_id")),
                 "aric_id": _int(record.get("aric_id")),
+                "wto_pta_ids": [i for i in (_int(v) for v in record.get("wto_pta_ids") or []) if i is not None],
                 "gptad_id": _int(record.get("gptad_id")),
                 "wikidata_id": pick("wikidata_id"),
                 "acronyms": [
@@ -250,3 +270,53 @@ def build_trade_agreement_rows(
     agreements.sort(key=lambda r: r["id"])
     parties.sort(key=lambda r: (r["agreement_id"], r["party_id"]))
     return agreements, parties
+
+
+def _provenance_rows(rows: Any) -> list[dict[str, Any]]:
+    return [
+        {
+            "field": p.get("field"),
+            "source": p.get("source"),
+            "url": p.get("url"),
+            "retrieved_at": _date(p.get("retrieved_at")),
+            "license": p.get("license"),
+        }
+        for p in rows or []
+        if isinstance(p, dict)
+    ]
+
+
+def build_trade_agreement_instrument_rows(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Rows of the ``trade_agreement_instruments`` table, from each record's ``instruments``.
+
+    A linked record's instruments are its own, never the intblock's. Rows are sorted by
+    agreement, then by signature date (undated instruments last), then by id.
+    """
+    rows: list[dict[str, Any]] = []
+    for record in records:
+        agreement_id = str(record.get("id"))
+        for item in record.get("instruments") or []:
+            if not isinstance(item, dict):
+                continue
+            rows.append(
+                {
+                    "agreement_id": agreement_id,
+                    "instrument_id": str(item.get("id")),
+                    "kind": item.get("kind"),
+                    "name": item.get("name"),
+                    "status": item.get("status"),
+                    "signed": _date(item.get("signed")),
+                    "in_force": _date(item.get("in_force")),
+                    "ended": _date(item.get("ended")),
+                    "coverage": [str(c) for c in item.get("coverage") or []],
+                    "other_names": [
+                        {"lang": n.get("lang"), "name": n.get("name")}
+                        for n in item.get("other_names") or []
+                        if isinstance(n, dict)
+                    ],
+                    "notes": item.get("notes"),
+                    "provenance": _provenance_rows(item.get("provenance")),
+                }
+            )
+    rows.sort(key=lambda r: (r["agreement_id"], r["signed"] is None, r["signed"] or "", r["instrument_id"]))
+    return rows

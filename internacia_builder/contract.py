@@ -29,12 +29,13 @@ from internacia_builder.schemas import (
     get_intblocks_schema,
     get_memberships_schema,
     get_meta_schema,
+    get_trade_agreement_instruments_schema,
     get_trade_agreement_parties_schema,
     get_trade_agreements_schema,
     schema_columns,
     schema_hash,
 )
-from internacia_builder.trade_agreements import PARTY_STATUSES, PARTY_TYPES
+from internacia_builder.trade_agreements import PARTY_ROLES, PARTY_STATUSES, PARTY_TYPES
 from internacia_builder.yaml_io import safe_load
 
 CONTRACT_FILE = "contract.json"
@@ -140,6 +141,7 @@ TABLES: list[dict[str, Any]] = [
         "primary_key": ["id"],
         "foreign_keys": [
             {"columns": ["intblock_id"], "references": {"table": "intblocks", "columns": ["id"]}},
+            {"columns": ["parent"], "references": {"table": "trade_agreements", "columns": ["id"]}},
         ],
         "enum_source": "trade_agreements.schema.json",
     },
@@ -156,6 +158,18 @@ TABLES: list[dict[str, Any]] = [
                 "note": "Rows with party_type 'intblock' reference intblocks.id instead; 'historical-country' rows may use codes not in countries.",
             },
         ],
+    },
+    {
+        "name": "trade_agreement_instruments",
+        "schema": get_trade_agreement_instruments_schema,
+        "in_duckdb": True,
+        "primary_key": ["agreement_id", "instrument_id"],
+        "foreign_keys": [
+            {"columns": ["agreement_id"], "references": {"table": "trade_agreements", "columns": ["id"]}},
+        ],
+        "enum_source": "trade_agreements.schema.json",
+        # Rows are the items of a record's `instruments` list, defined under `definitions`.
+        "enum_definition": "instrument",
     },
 ]
 
@@ -230,26 +244,28 @@ VIEWS: list[dict[str, Any]] = [
             "One row per country and trade agreement it is a current party to. Country parties map "
             "directly (via NULL); a bloc party (the EU) is expanded to its current members from "
             "current_memberships, with via set to the bloc id. Coverage is current, not historical. in_force is "
-            "the definitive entry into force; provisional_application the date provisional application began."
+            "the definitive entry into force; provisional_application the date provisional application began. "
+            "role is grantor or beneficiary on non-reciprocal preference schemes and party on every "
+            "other agreement; filter on role = 'party' to count reciprocal trade links only."
         ),
         "sql": (
-            "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.in_force AS party_in_force, "
+            "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.role, tp.in_force AS party_in_force, "
             "tp.provisional_application AS party_provisional, "
             "a.agreement_type, a.status AS agreement_status, a.in_force AS agreement_in_force, "
             "a.provisional_application AS agreement_provisional "
             "FROM trade_agreement_parties tp JOIN trade_agreements a ON a.id = tp.agreement_id "
             "WHERE tp.status = 'party'), "
-            "r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, agreement_type, "
+            "r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, role, agreement_type, "
             "agreement_status, coalesce(party_in_force, agreement_in_force) AS in_force, "
             "coalesce(party_provisional, agreement_provisional) AS provisional_application "
             "FROM p WHERE party_type IN ('country', 'territory') "
             "UNION ALL "
-            "SELECT m.country_code, p.agreement_id, p.party_id AS via, p.agreement_type, p.agreement_status, "
+            "SELECT m.country_code, p.agreement_id, p.party_id AS via, p.role, p.agreement_type, p.agreement_status, "
             "p.agreement_in_force AS in_force, p.agreement_provisional AS provisional_application "
             "FROM p JOIN current_memberships m ON m.intblock_id = p.party_id "
             "WHERE p.party_type = 'intblock' AND m.include_type IN ('country', 'territory') "
             "AND m.status IN ('member', 'founding_member', 'participant', 'associate', 'associate_member', 'associated')) "
-            "SELECT country_code, agreement_id, via, agreement_type, agreement_status, in_force, provisional_application FROM r "
+            "SELECT country_code, agreement_id, via, role, agreement_type, agreement_status, in_force, provisional_application FROM r "
             "QUALIFY row_number() OVER (PARTITION BY country_code, agreement_id ORDER BY via NULLS FIRST) = 1 "
             "ORDER BY country_code, agreement_id"
         ),
@@ -314,6 +330,8 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
             continue
         columns = set(table["schema"]().names)
         json_schema = json.loads((schemas_dir / source).read_text(encoding="utf-8"))
+        if table.get("enum_definition"):
+            json_schema = json_schema["definitions"][table["enum_definition"]]
         prefix = table.get("enum_prefix", "")
         for path, values in _schema_enums(json_schema):
             if prefix:
@@ -332,6 +350,8 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
     enums.append({"table": "intblocks_aliases", "column": "target_dataset", "values": ALIAS_TARGET_DATASETS, "open": True})
     enums.append({"table": "trade_agreement_parties", "column": "party_type", "values": PARTY_TYPES, "open": True})
     enums.append({"table": "trade_agreement_parties", "column": "status", "values": PARTY_STATUSES, "open": True})
+    for table in ("trade_agreement_parties", "country_trade_agreements"):
+        enums.append({"table": table, "column": "role", "values": PARTY_ROLES, "open": True})
     enums.append({"table": "trade_agreement_parties", "column": "source", "values": ["intblock", "record"], "open": True})
     return sorted(enums, key=lambda e: (e["table"], e["column"]))
 

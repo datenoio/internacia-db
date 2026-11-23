@@ -465,9 +465,18 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
                ctx.intblocks.records, ctx.country_codes, ctx.aliases),
            message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
            enabled=lambda ctx: ctx.trade_agreements is not None),
+    _cross("trade agreement preference schemes", INTBLOCKS, E,
+           lambda ctx: trade_agreement_rules.check_preference_schemes(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.intblocks.records),
+           message=lambda i: f"{i['file_path']}: {i['field']}: {i['suggested_action']}",
+           enabled=lambda ctx: ctx.trade_agreements is not None),
     _cross("trade agreement intblock candidates", INTBLOCKS, REPORT,
            lambda ctx: trade_agreement_rules.check_intblock_candidates(
                ctx.trade_agreements.records, ctx.trade_agreements.paths),
+           enabled=lambda ctx: ctx.trade_agreements is not None),
+    _cross("trade agreement instruments before agreement", INTBLOCKS, REPORT,
+           lambda ctx: trade_agreement_rules.check_instruments_before_agreement(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.intblocks.records),
            enabled=lambda ctx: ctx.trade_agreements is not None),
     _cross("trade agreement freshness", INTBLOCKS, W,
            lambda ctx: trade_agreement_rules.check_trade_agreement_freshness(

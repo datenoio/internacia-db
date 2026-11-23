@@ -2,7 +2,8 @@
 
 Cross-record rules: the JSON Schema, file names and ids, the shared id namespace with
 intblocks, party and intblock resolution, status and date consistency, supersession links,
-and record freshness. See ``openspec/changes/add-trade-agreements-registry``.
+preference-scheme roles and sub-schemes, WTO PTA ids, instruments, and record freshness. See
+``openspec/specs/trade-agreements/spec.md`` and ``openspec/changes/add-trade-agreement-instruments``.
 """
 
 from __future__ import annotations
@@ -14,7 +15,12 @@ from typing import Any
 
 import jsonschema
 
-from internacia_builder.trade_agreements import PARTY_INCLUDE_STATUSES, linked_fields
+from internacia_builder.trade_agreements import (
+    INCLUDE_ROLES,
+    PARTY_INCLUDE_STATUSES,
+    PREFERENCE_SCHEME,
+    linked_fields,
+)
 
 Issue = dict[str, Any]
 
@@ -25,6 +31,12 @@ NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
 # Catalogue identifiers: each value names one instrument, so it appears on one record.
 CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id")
+# The same date rules for the items of a record's ``instruments`` list.
+INSTRUMENT_NEEDS_SIGNED = frozenset({"signed"})
+INSTRUMENT_NEEDS_IN_FORCE = frozenset({"in_force", "terminated"})
+INSTRUMENT_NEEDS_ENDED = frozenset({"terminated"})
+INSTRUMENT_NO_IN_FORCE = frozenset({"negotiating", "signed", "abandoned"})
+
 # Investment treaty ids end in -BIT, or -BIT-YYYY for a further treaty between the same parties.
 INVESTMENT_ID_SUFFIX = re.compile(r"-BIT(-\d{4})?$")
 
@@ -38,6 +50,48 @@ def _issue(issue_type: str, path: str, record_id: str, field: str, value: Any, a
         "current_value": "" if value is None else str(value),
         "suggested_action": action,
     }
+
+
+def _earlier(value: Any, other: Any) -> bool:
+    """True when ``value`` is earlier than ``other``, compared at their shared precision."""
+    if not value or not other:
+        return False
+    n = min(len(str(value)), len(str(other)))
+    return str(value)[:n] < str(other)[:n]
+
+
+def check_instruments(record: dict[str, Any], path: str) -> list[Issue]:
+    """Unique ids and status/date consistency of a record's ``instruments`` items."""
+    issues: list[Issue] = []
+    rid = str(record.get("id"))
+    seen: set[str] = set()
+    for item in record.get("instruments") or []:
+        if not isinstance(item, dict):
+            continue
+        iid = str(item.get("id"))
+        field = f"instruments[{iid}]"
+        if iid in seen:
+            issues.append(_issue("DUPLICATE_TRADE_AGREEMENT_INSTRUMENT", path, rid, field, iid,
+                                 f"Instrument id {iid} appears more than once; ids are unique within a record"))
+        seen.add(iid)
+        status = item.get("status")
+        for needed, key in (
+            (INSTRUMENT_NEEDS_SIGNED, "signed"),
+            (INSTRUMENT_NEEDS_IN_FORCE, "in_force"),
+            (INSTRUMENT_NEEDS_ENDED, "ended"),
+        ):
+            if status in needed and not item.get(key):
+                issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.{key}", status,
+                                     f"instrument status {status} needs a {key} date"))
+        if status in INSTRUMENT_NO_IN_FORCE and item.get("in_force"):
+            issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.in_force", status,
+                                 f"instrument status {status} contradicts the in_force date {item['in_force']}"))
+        for key in ("signed", "in_force"):
+            if _earlier(item.get("ended"), item.get(key)):
+                issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.ended",
+                                     f"{key}={item.get(key)}, ended={item.get('ended')}",
+                                     f"instrument ended is earlier than {key}"))
+    return issues
 
 
 def _dates(record: dict[str, Any], intblock: dict[str, Any] | None) -> dict[str, Any]:
@@ -266,6 +320,7 @@ def check_trade_agreements(
                     "current_value": ref,
                     "suggested_action": f"{key} {ref} does not match any trade agreement id",
                 })
+        issues.extend(check_instruments(record, path))
         if status == "superseded" and not record.get("superseded_by"):
             issues.append({
                 "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
@@ -275,6 +330,139 @@ def check_trade_agreements(
                 "current_value": status,
                 "suggested_action": "status superseded needs superseded_by",
             })
+    return issues
+
+
+def _current_roles(record: dict[str, Any], intblock: dict[str, Any] | None) -> dict[str, set[str]]:
+    """Current party ids of a preference scheme by role, from its parties or its linked intblock."""
+    roles: dict[str, set[str]] = {"grantor": set(), "beneficiary": set()}
+    if intblock is not None:
+        for inc in intblock.get("includes") or []:
+            role = INCLUDE_ROLES.get(str(inc.get("status"))) if isinstance(inc, dict) else None
+            if role and not inc.get("left"):
+                roles[role].add(str(inc.get("id")))
+        return roles
+    for party in record.get("parties") or []:
+        if isinstance(party, dict) and party.get("role") in roles and not party.get("left"):
+            roles[str(party["role"])].add(str(party.get("id")))
+    return roles
+
+
+def check_preference_schemes(
+    records: list[dict[str, Any]], paths: list[str], intblocks: list[dict[str, Any]]
+) -> list[Issue]:
+    """Party roles, sub-scheme parents and WTO PTA ids (``add-preference-scheme-rosters``)."""
+    issues: list[Issue] = []
+    intblocks_by_id = {str(r.get("id")): r for r in intblocks if r.get("id")}
+    by_id = {str(r.get("id")): r for r in records if r.get("id")}
+    parents = {str(r.get("parent")) for r in records if r.get("parent")}
+    pta_seen: dict[int, str] = {}
+
+    def linked(record: dict[str, Any]) -> dict[str, Any] | None:
+        return intblocks_by_id.get(str(record.get("intblock"))) if record.get("intblock") else None
+
+    for record, path in zip(records, paths, strict=True):
+        rid = str(record.get("id") or "")
+        scheme = record.get("agreement_type") == PREFERENCE_SCHEME
+        parties = [p for p in record.get("parties") or [] if isinstance(p, dict)]
+        intblock = linked(record)
+
+        if not scheme:
+            for index, party in enumerate(parties):
+                if party.get("role"):
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, f"parties[{index}].role", party.get("role"),
+                        "role is set only on preference_scheme records; remove it",
+                    ))
+            if record.get("parent"):
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", record.get("parent"),
+                    "parent is set only on preference_scheme records; remove it",
+                ))
+        else:
+            for index, party in enumerate(parties):
+                if not party.get("role"):
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, f"parties[{index}].role", party.get("id"),
+                        "Every party of a preference scheme needs role: grantor or beneficiary",
+                    ))
+            if intblock is not None:
+                for inc in intblock.get("includes") or []:
+                    if (
+                        isinstance(inc, dict)
+                        and inc.get("status") in PARTY_INCLUDE_STATUSES
+                        and inc.get("status") not in INCLUDE_ROLES
+                    ):
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "intblock", f"{inc.get('id')}: {inc.get('status')}",
+                            f"intblock {record.get('intblock')} is a preference scheme; give its parties "
+                            "status contributor (grantor) or recipient (beneficiary)",
+                        ))
+            if parties or intblock is not None:
+                every = {"grantor": set(), "beneficiary": set()}
+                if intblock is not None:
+                    for inc in intblock.get("includes") or []:
+                        role = INCLUDE_ROLES.get(str(inc.get("status"))) if isinstance(inc, dict) else None
+                        if role:
+                            every[role].add(str(inc.get("id")))
+                else:
+                    for party in parties:
+                        if party.get("role") in every:
+                            every[str(party["role"])].add(str(party.get("id")))
+                if not every["grantor"]:
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "parties", "", "A preference scheme needs a grantor",
+                    ))
+                if not every["beneficiary"] and rid not in parents:
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "parties", "",
+                        "A preference scheme needs a beneficiary, unless it is the parent of another scheme",
+                    ))
+
+            ref = record.get("parent")
+            parent = by_id.get(str(ref)) if ref else None
+            if ref and parent is None:
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"parent {ref} does not match any trade agreement id",
+                ))
+            elif parent is not None and parent.get("agreement_type") != PREFERENCE_SCHEME:
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"parent {ref} is not a preference_scheme record",
+                ))
+            elif parent is not None:
+                seen, node = {rid}, parent
+                while node is not None and node.get("parent"):
+                    nid = str(node.get("parent"))
+                    if nid in seen:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"The chain of parents of {rid} has a cycle",
+                        ))
+                        break
+                    seen.add(nid)
+                    node = by_id.get(nid)
+                mine, theirs = _current_roles(record, intblock), _current_roles(parent, linked(parent))
+                if theirs["beneficiary"]:
+                    if mine["grantor"] != theirs["grantor"]:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref,
+                            f"Grantors {sorted(mine['grantor'])} differ from the grantors of {ref} "
+                            f"{sorted(theirs['grantor'])}",
+                        ))
+                    outside = sorted(mine["beneficiary"] - theirs["beneficiary"])
+                    if outside:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref,
+                            f"Current beneficiaries {outside} are not current beneficiaries of {ref}",
+                        ))
+
+        for value in record.get("wto_pta_ids") or []:
+            if not isinstance(value, int):
+                continue
+            if value in pta_seen and pta_seen[value] != rid:
+                issues.append(_issue(
+                    "DUPLICATE_WTO_PTA_ID", path, rid, "wto_pta_ids", value, f"WTO PTA id {value} is also used by {pta_seen[value]}",
+                ))
+            pta_seen.setdefault(value, rid)
     return issues
 
 
@@ -294,11 +482,17 @@ def check_trade_agreement_files(errors: list[tuple[str, str]]) -> list[Issue]:
 
 
 def check_intblock_candidates(records: list[dict[str, Any]], paths: list[str]) -> list[Issue]:
-    """Report-only: signed or in-force agreements with three or more listed parties and no intblock."""
+    """Report-only: signed or in-force agreements with three or more listed parties and no intblock.
+
+    Preference schemes are not reported: they stay registry records (``add-preference-scheme-rosters``).
+    """
     issues: list[Issue] = []
     for record, path in zip(records, paths, strict=True):
         parties = [p for p in record.get("parties") or [] if isinstance(p, dict) and not p.get("left")]
         if record.get("intblock") or record.get("status") not in CANDIDATE_STATUSES or len(parties) < 3:
+            continue
+        # A non-reciprocal scheme is a set of grantor-beneficiary links, not a country group.
+        if record.get("agreement_type") == PREFERENCE_SCHEME:
             continue
         issues.append({
             "issue_type": "TRADE_AGREEMENT_INTBLOCK_CANDIDATE",
@@ -308,6 +502,34 @@ def check_intblock_candidates(records: list[dict[str, Any]], paths: list[str]) -
             "current_value": str(len(parties)),
             "suggested_action": "Add an intblock with a roster from an official source and link it with intblock:",
         })
+    return issues
+
+
+def check_instruments_before_agreement(
+    records: list[dict[str, Any]], paths: list[str], intblocks: list[dict[str, Any]]
+) -> list[Issue]:
+    """Report-only: instruments other than early harvest signed before their agreement's signature.
+
+    Not an error: a linked record can read its signature date from the intblock, and an
+    organization's founding instrument may postdate a framework agreement it amends or completes.
+    """
+    by_id = {str(r.get("id")): r for r in intblocks if r.get("id")}
+    issues: list[Issue] = []
+    for record, path in zip(records, paths, strict=True):
+        linked = record.get("intblock")
+        signed = _dates(record, by_id.get(str(linked)) if linked else None).get("signed")
+        for item in record.get("instruments") or []:
+            if not isinstance(item, dict) or item.get("kind") == "early_harvest":
+                continue
+            if _earlier(item.get("signed"), signed):
+                issues.append({
+                    "issue_type": "TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT",
+                    "file_path": path,
+                    "record_id": str(record.get("id")),
+                    "field": f"instruments[{item.get('id')}].signed",
+                    "current_value": f"{item.get('signed')} < {signed}",
+                    "suggested_action": "Check the instrument and agreement signature dates",
+                })
     return issues
 
 

@@ -451,8 +451,10 @@ def get_trade_agreements_schema() -> pa.Schema:
             ("party_count", pa.int64()),
             ("supersedes", pa.string()),
             ("superseded_by", pa.string()),
+            ("parent", pa.string()),
             ("wto_rta_id", pa.int64()),
             ("aric_id", pa.int64()),
+            ("wto_pta_ids", pa.list_(pa.int64())),
             ("gptad_id", pa.int64()),
             ("wikidata_id", pa.string()),
             ("acronyms", pa.list_(pa.struct([("lang", pa.string()), ("value", pa.string())]))),
@@ -475,6 +477,7 @@ def get_trade_agreement_parties_schema() -> pa.Schema:
             pa.field("agreement_id", pa.string(), nullable=False),
             pa.field("party_id", pa.string(), nullable=False),
             ("party_type", pa.string()),
+            ("role", pa.string()),
             ("status", pa.string()),
             ("signed", pa.string()),
             ("in_force", pa.string()),
@@ -487,6 +490,26 @@ def get_trade_agreement_parties_schema() -> pa.Schema:
     )
 
 
+def get_trade_agreement_instruments_schema() -> pa.Schema:
+    """Schema for the ``trade_agreement_instruments`` table (one row per agreement and instrument)."""
+    return pa.schema(
+        [
+            pa.field("agreement_id", pa.string(), nullable=False),
+            pa.field("instrument_id", pa.string(), nullable=False),
+            ("kind", pa.string()),
+            ("name", pa.string()),
+            ("status", pa.string()),
+            ("signed", pa.string()),
+            ("in_force", pa.string()),
+            ("ended", pa.string()),
+            ("coverage", pa.list_(pa.string())),
+            ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),
+            ("notes", pa.string()),
+            ("provenance", pa.list_(_PROVENANCE_STRUCT)),
+        ]
+    )
+
+
 def get_country_trade_agreements_schema() -> pa.Schema:
     """Schema for the ``country_trade_agreements`` view (one row per country and agreement)."""
     return pa.schema(
@@ -494,6 +517,7 @@ def get_country_trade_agreements_schema() -> pa.Schema:
             pa.field("country_code", pa.string(), nullable=False),
             pa.field("agreement_id", pa.string(), nullable=False),
             ("via", pa.string()),
+            ("role", pa.string()),
             ("agreement_type", pa.string()),
             ("agreement_status", pa.string()),
             ("in_force", pa.string()),

@@ -28,7 +28,7 @@ registry** (`data/trade_agreements/<ID>.yaml`, exported as `trade_agreements`,
 `trade_agreement_parties` and the `country_trade_agreements` view), bilateral ones
 included. The registry records agreements, parties, status, dates and catalogue ids. It
 does not store trade values, tariff lines, depth scores or rankings
-([OpenSpec change](../openspec/changes/add-trade-agreements-registry/design.md)).
+([OpenSpec change](../openspec/changes/archive/2026-11-23-add-trade-agreements-registry/design.md)).
 
 | Agreement | Registry | Intblock |
 |-----------|----------|----------|
@@ -39,7 +39,16 @@ does not store trade values, tariff lines, depth scores or rankings
 
 One record per legal instrument: WTO often lists goods (FTA) and services (EIA)
 separately, and catalogues list upgrade protocols as separate rows; the registry keeps one
-record with a note. Bilateral schedules inside a plurilateral agreement are part of it
+record. Instruments that amend or add to an agreement among its parties (upgrade and
+amending protocols, CEPA Supplements, supplementary agreements, early harvest
+arrangements, Joint Committee decisions) go in the record's `instruments` list and do not
+change its `status` or dates. An agreement that replaces another is a separate record with
+`supersedes`; an agreement concluded under an umbrella treaty with its own parties (LAIA
+partial-scope agreements) is a separate record; an accession or withdrawal is party data.
+An early harvest arrangement under an agreement that has a record is one of its
+instruments; a record whose only signed instrument is an early harvest arrangement
+describes that arrangement until the full agreement is signed
+([OpenSpec change](../openspec/changes/add-trade-agreement-instruments/design.md)). Bilateral schedules inside a plurilateral agreement are part of it
 (`USCR` merged into `CAFTADR`). UK continuity copies of EU agreements are separate legal
 instruments and get their own registry records. Constitutive instruments of an IGO
 already recorded (`EU`, `CCASG`) are not registry records of their own unless they are
