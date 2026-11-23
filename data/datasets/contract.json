@@ -1052,6 +1052,91 @@
       ]
     },
     {
+      "name": "trade_agreement_instruments",
+      "kind": "table",
+      "in_duckdb": true,
+      "primary_key": [
+        "agreement_id",
+        "instrument_id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "agreement_id"
+          ],
+          "references": {
+            "table": "trade_agreements",
+            "columns": [
+              "id"
+            ]
+          }
+        }
+      ],
+      "schema_hash": "d1bd50f2bd95596b786eea0ddf658aaf67bd658557afd0414c7f261c456bcc88",
+      "columns": [
+        {
+          "name": "agreement_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "instrument_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "signed",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "in_force",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ended",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "coverage",
+          "type": "list<string>",
+          "nullable": true
+        },
+        {
+          "name": "other_names",
+          "type": "list<struct<lang:string,name:string>>",
+          "nullable": true
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "provenance",
+          "type": "list<struct<field:string,source:string,url:string,retrieved_at:string,license:string>>",
+          "nullable": true
+        }
+      ]
+    },
+    {
       "name": "current_memberships",
       "kind": "view",
       "in_duckdb": true,
@@ -1678,6 +1763,41 @@
         "partner",
         "validation",
         "extension"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_instruments",
+      "column": "coverage[]",
+      "values": [
+        "goods",
+        "services",
+        "investment"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_instruments",
+      "column": "kind",
+      "values": [
+        "amending_protocol",
+        "supplementary_agreement",
+        "early_harvest",
+        "joint_committee_decision",
+        "exchange_of_letters",
+        "other"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_instruments",
+      "column": "status",
+      "values": [
+        "negotiating",
+        "signed",
+        "in_force",
+        "terminated",
+        "abandoned"
       ],
       "open": true
     },

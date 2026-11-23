@@ -17,10 +17,38 @@ links:
   type: website
 wto_rta_id: 496
 aric_id: 203
-notes: 'ADB ARIC dates: negotiations launched 2006-08-25. Protocols amending the agreement were signed in July 2011 and November
-  2018; the Upgrade Protocol signed on 12 November 2018 entered into force on 16 October 2019. Further upgrade negotiations
-  launched on 8 December 2020 led to a protocol on further upgrading the agreement, signed in December 2023 with services
-  and investment commitments on a negative-list basis and in force from 31 December 2024.'
+notes: 'ADB ARIC dates: negotiations launched 2006-08-25. A protocol amending the agreement''s rules of origin and services
+  commitments was signed on 27 July 2011; MOFCOM gives no date for its entry into force.'
+instruments:
+- id: upgrade-2018
+  kind: amending_protocol
+  name: Protocol to Upgrade the Free Trade Agreement between the Government of the People's Republic of China and the Government
+    of the Republic of Singapore
+  status: in_force
+  signed: '2018-11-12'
+  in_force: '2019-10-16'
+  notes: Its changes to the rules of origin apply from 1 January 2020.
+  provenance:
+  - field: instruments
+    source: Ministry of Commerce of the People's Republic of China, China FTA Network
+    url: https://fta.mofcom.gov.cn/article/c/zhengwugk/201910/41637.html
+    retrieved_at: '2026-11-23'
+- id: further-upgrade-2023
+  kind: amending_protocol
+  name: Protocol on Further Upgrading the Free Trade Agreement between the Government of the People's Republic of China and
+    the Government of the Republic of Singapore
+  status: in_force
+  signed: 2023-12
+  in_force: '2024-12-31'
+  coverage:
+  - services
+  - investment
+  notes: Negotiations launched on 8 December 2020; services and investment commitments on a negative-list basis.
+  provenance:
+  - field: instruments
+    source: Ministry of Commerce of the People's Republic of China, China FTA Network
+    url: https://fta.mofcom.gov.cn/article/c/zhengwugk/202412/56246.html
+    retrieved_at: '2026-11-23'
 verification: catalogue
 last_verified: '2026-11-22'
 provenance:
@@ -34,9 +62,5 @@ provenance:
   retrieved_at: '2026-11-22'
 - field: notes
   source: Ministry of Commerce of the People's Republic of China, China FTA Network
-  url: https://fta.mofcom.gov.cn/article/c/zhengwugk/201910/41637.html
-  retrieved_at: '2026-11-23'
-- field: notes
-  source: Ministry of Commerce of the People's Republic of China, China FTA Network
-  url: https://fta.mofcom.gov.cn/article/c/zhengwugk/202412/56246.html
+  url: https://fta.mofcom.gov.cn/article/c/zhengwugk/201108/26826.html
   retrieved_at: '2026-11-23'
