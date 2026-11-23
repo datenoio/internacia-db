@@ -10,7 +10,7 @@ Inputs are a snapshot taken outside the repository (untrusted data; run with ``p
 
 Rows that are already in the registry (``MAPPED``) only get ``aric_id``; every other row
 becomes a ``verification: catalogue`` record. EU member states listed on an ARIC page are
-replaced by the ``EU`` intblock party. See ``openspec/changes/add-trade-agreements-registry``.
+replaced by the ``EU`` intblock party. See ``openspec/specs/trade-agreements/spec.md``.
 
 Usage: python -I scripts/oneoff/import_aric_ftas.py LIST_JSON DETAIL_JSON [--write]
 """

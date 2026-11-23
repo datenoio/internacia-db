@@ -28,7 +28,7 @@ Two steps:
     is replaced only from a treaty-series cover page, and the earlier value is named in the
     report. Party rosters are not changed here; they are edited by hand.
 
-Run with ``python -I``. See ``openspec/changes/add-trade-agreements-registry``.
+Run with ``python -I``. See ``openspec/specs/trade-agreements/spec.md``.
 """
 
 from __future__ import annotations

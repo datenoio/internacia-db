@@ -3,7 +3,7 @@
 A record either lists its ``parties`` or links to the intblock that holds its roster
 (``intblock``). A linked record takes its name, links, acronyms, other names and Wikidata id
 from that intblock, its dates too unless it sets them, and its parties from the intblock's
-``includes``, so a roster is never kept in two places. See ``openspec/changes/add-trade-agreements-registry``.
+``includes``, so a roster is never kept in two places. See ``openspec/specs/trade-agreements/spec.md``.
 """
 
 from __future__ import annotations

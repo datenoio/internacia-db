@@ -24,7 +24,7 @@ sorted alpha-2 codes, the EU as one ``intblock`` party, and the member states of
 as one party (EFTA, EAEU, GCC, MERCOSUR, SACU, ASEAN, Pacific Alliance) listed one by one, as
 members at the date of signature, with the bloc id first in the record id. Older EC agreements
 list the EC member states of the time; they become the ``EU`` party. See
-``openspec/changes/add-trade-agreements-registry``.
+``openspec/specs/trade-agreements/spec.md``.
 
 Usage: python -I scripts/oneoff/import_wto_rtais.py EXPORT_XLSX [--write] [--report TSV]
 """

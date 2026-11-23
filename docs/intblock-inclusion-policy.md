@@ -28,7 +28,7 @@ registry** (`data/trade_agreements/<ID>.yaml`, exported as `trade_agreements`,
 `trade_agreement_parties` and the `country_trade_agreements` view), bilateral ones
 included. The registry records agreements, parties, status, dates and catalogue ids. It
 does not store trade values, tariff lines, depth scores or rankings
-([OpenSpec change](../openspec/changes/add-trade-agreements-registry/design.md)).
+([OpenSpec change](../openspec/changes/archive/2026-11-23-add-trade-agreements-registry/design.md)).
 
 | Agreement | Registry | Intblock |
 |-----------|----------|----------|
@@ -81,7 +81,7 @@ existing IGO or FTA:
 
 | Include | Skip |
 |---------|------|
-| Named plurilateral investment treaties with an official short title and a ratifiers list that is not the parent IGO (`OICIA`, `ACIA`, `UAIA`, `CJKIA`) | Untitled bilateral `Country A – Country B` BITs, including BLEU’s Belgium–Luxembourg BIT programme |
+| Named plurilateral investment treaties with an official short title and a ratifiers list that is not the parent IGO (`OICIA`, `ACIA`, `UAIA`, `CJKIA`) | Bilateral `Country A – Country B` BITs and FIPAs, including the treaties of the Belgium–Luxembourg Economic Union: they go in the trade agreements registry as `agreement_type: investment` records with `-BIT` ids (`AMCA-BIT`), not in intblocks. A Belgium–Luxembourg treaty lists the `BLEU` intblock as one party |
 | Named CIS/REC services-and-investment instruments whose extra or missing parties make a distinct roster (`CISFTASERVICES`, `PCFI`) | FTA investment chapters of an FTA already recorded (`RCEP`, `CETA`, `ACFTA`/`AHKIA`, EU and EFTA extra-regional deals) |
 | Plurilateral termination or reform instruments whose parties are a subset of an IGO (`INTRAEUBIT`) | Community acts whose roster equals the parent IGO (ECOWAS Supplementary Act A/SA.3/12/08; SADC FIP after Comoros accession) — note on the parent |
 | Historical predecessors that complete a lineage already in the dataset | Constitutive instruments of an IGO already recorded (COMESA Treaty, ECOWAS Treaty, Revised Treaty of Chaguaramas) |
