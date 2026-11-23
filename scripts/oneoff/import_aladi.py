@@ -250,6 +250,8 @@ def build(code: str, spec: dict, agreement: dict, text: str) -> dict:
     for p in raw_parties:
         party = {"id": p, "type": "country"} if isinstance(p, str) else {"id": p["id"], "type": "country",
                                                                          **{k: v for k, v in p.items() if k != "id"}}
+        if party["id"] == spec.get("beneficiary"):
+            party["note"] = "Beneficiary: the other members grant duty-free access to listed goods without reciprocity."
         if party["id"] in per_party:
             party = {"id": party["id"], "type": "country", "in_force": per_party[party["id"]],
                      **{k: v for k, v in party.items() if k not in ("id", "type")}}
