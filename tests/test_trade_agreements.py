@@ -89,6 +89,16 @@ def test_duplicate_unctad_iia_id():
     assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
 
 
+def test_duplicate_unts_registration():
+    first = _record(id="AMGE-TRA", agreement_type="trade_relations", unts_registration="I-7494")
+    second = _record(id="AMGE-TRA-1999", agreement_type="trade_relations", unts_registration="I-7494")
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
+
+
+def test_unts_registration_pattern():
+    assert _types([_record(unts_registration="7494")]) == ["SCHEMA_ERROR"]
+
+
 def test_in_force_without_date():
     assert _types([_record(in_force=None)]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 
