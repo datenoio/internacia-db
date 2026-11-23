@@ -2,7 +2,7 @@
 
 Cross-record rules: the JSON Schema, file names and ids, the shared id namespace with
 intblocks, party and intblock resolution, status and date consistency, supersession links,
-and record freshness. See ``openspec/changes/add-trade-agreements-registry``.
+and record freshness. See ``openspec/specs/trade-agreements/spec.md``.
 """
 
 from __future__ import annotations
