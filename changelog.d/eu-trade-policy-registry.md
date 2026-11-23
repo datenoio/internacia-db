@@ -52,11 +52,10 @@
   - `EUGE`, `EUMD`, `EUAM` and `EUCL-2002` keep the provisional-application date in
     `in_force`; their notes give the EUR-Lex date of full entry into force.
   - `EUPH` is confirmed by the Commission's negotiations overview.
-- 17 EU records stay `catalogue`: EUR-Lex gives different dates or an open end of
-  validity, and their notes quote the EUR-Lex values for review. They are `EUAT`,
-  `EUCI`, `EUCZSK`, `EUSI`, `EUSI-1996-2`, `EUEE`, `EULT`, `EULV`, `EUEG-1972`,
-  `EULB-1972`, `EULB-1977`, `EUTR-1963`, `EUTR-1970`, `EUTR-1973`, `EUAD`, `EUMX` and
-  `EUTR`.
+- 15 EU records stay `catalogue`: EUR-Lex gives different dates, and their notes quote
+  the EUR-Lex values for review. They are `EUAT`, `EUCI`, `EUCZSK`, `EUSI`,
+  `EUSI-1996-2`, `EUEE`, `EULT`, `EULV`, `EUEG-1972`, `EULB-1972`, `EULB-1977`,
+  `EUTR-1973`, `EUAD`, `EUMX` and `EUTR`.
 
 ### Fixed
 
@@ -70,6 +69,10 @@
     Agreements (`EUDZ-1976-2`, `EUSY-1977`).
   - They are renamed to `EC - Algeria Cooperation Agreement` and
     `EC - Syria Cooperation Agreement`.
+- `EUTR-1963` (Ankara Agreement) and `EUTR-1970` (Additional Protocol) are `in_force`,
+  not `terminated`, and no longer have an `ended` date. EUR-Lex records both as valid
+  with no end of validity. WTO RTA-IS had ended them on 1973-01-01 and 1974-01-01, the
+  dates of the following instruments. Both are now `verification: official`.
 - `EUZA` is the EC-South Africa Trade, Development and Cooperation Agreement. It is now
   `superseded` by `EUSADCEPA`, ended 2016-10-10. The SADC EPA repealed its trade
   component when it entered into provisional application in October 2016.
