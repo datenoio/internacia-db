@@ -19,8 +19,9 @@ Each agreement gets one result, checked in this order:
 - ``skipped``: a party is not in data/countries (USSR, Czechoslovakia, Yugoslavia, GDR), the
   row is marked doubtful by the national database walk, or its status is unknown.
 
-Ids: ``<pair>-TRA`` when the pair has one trade relations agreement, otherwise
-``<pair>-TRA-<year>`` for each new record. See ``openspec/changes/add-trade-relations-walk``.
+Ids: the earliest agreement of a pair takes ``<pair>-TRA`` and each further one
+``<pair>-TRA-<year>`` (``<pair>-TRA-<year><month>`` on a clash), as for investment treaties; a
+bloc party (``BENELUX``, ``BLEU``) comes first. See ``openspec/changes/add-trade-relations-walk``.
 
 Usage: python -I scripts/oneoff/import_trade_relations.py UNTS_JSON NATDB_DIR [--write] [--report JSON]
 """
@@ -78,6 +79,14 @@ OFF_TOPIC = re.compile(r"electricity|energy|digital|cooperation office|transfer 
                        r"tariffs and trade|tokyo round|multilateral trade negotiations|trade (mission|representation|"
                        r"delegation|office)s?\b|commercial (mission|representation|office)s?\b|free trade|"
                        r"customs union|partnership|association|investment|payments?\b|clearing", re.I)
+# A UNTS-only record must also look like a trade relations agreement itself, not an MoU, a side
+# letter, a framework or a sector instrument.
+UNTS_ONLY_TITLE = re.compile(r"^(agreement|treaty|trade agreement|economic and trade agreement|"
+                             r"trade and economic (co-?operation )?agreement|long[- ]term trade agreement)\b", re.I)
+UNTS_ONLY_TOPIC = re.compile(r"\btrade\b|\bcommerc|economic and trade|trade and economic", re.I)
+UNTS_ONLY_NOT = re.compile(r"memorandum|protocol|exchange of|framework|working|promotion|technology|mechanism|"
+                           r"defen[cs]e|preferential|liberali[sz]|ministerial|joint (committee|commission)|"
+                           r"mutual|health|concerning the|remed|anti-?dumping|safeguard", re.I)
 STOP = r"\b(the|of|and|republic|rep|state|states|federal|democratic|people s|peoples|islamic|kingdom|plurinational|bolivarian|united republic|government)\b"
 
 
@@ -216,7 +225,9 @@ def main(argv: list[str]) -> int:
         if row["registration"] in claimed:
             continue
         year = int((row["signed"] or "0000")[:4])
-        if year >= 2000 and not (set(row["parties"]) & eu):
+        title = short_title(row["title"])
+        looks_right = UNTS_ONLY_TITLE.search(title) and UNTS_ONLY_TOPIC.search(title) and not UNTS_ONLY_NOT.search(title)
+        if year >= 2000 and not (set(row["parties"]) & eu) and looks_right:
             items.append({"kind": "catalogue", "parties": row["parties"], "nat": None, "unts": row})
         else:
             report["candidate"].append((row["registration"], row["parties"], row["signed"], short_title(row["title"])))
@@ -230,7 +241,11 @@ def main(argv: list[str]) -> int:
         if existing is None:
             for rid in by_pair.get(frozenset(item["parties"]), []):
                 r = registry[rid][1]
-                if signed and str(r.get("signed", ""))[:4] == str(signed)[:4]:
+                kind = r.get("agreement_type")
+                if not signed or kind == "investment":
+                    continue  # a BIT signed in the same year is a different instrument
+                same_year = str(r.get("signed", ""))[:4] == str(signed)[:4]
+                if (kind == "trade_relations" and same_year) or str(r.get("signed", "")) == str(signed):
                     existing = rid
         if existing:
             path, record = registry[existing]
@@ -254,7 +269,8 @@ def main(argv: list[str]) -> int:
     for item in sorted(fresh, key=lambda i: (pair_code(i["parties"]), str(i["signed"]))):
         nat, un, pc = item["nat"], item["unts"], pair_code(item["parties"])
         year = str(item["signed"] or "0000")[:4]
-        rid = f"{pc}-TRA" if per_pair[pc] == 1 and f"{pc}-TRA" not in taken else f"{pc}-TRA-{year}"
+        # As for investment treaties: the earliest agreement of a pair takes -TRA, a further one -TRA-<year>.
+        rid = f"{pc}-TRA" if f"{pc}-TRA" not in taken else f"{pc}-TRA-{year}"
         if rid in taken:
             rid = f"{pc}-TRA-{str(item['signed'] or '000000')[:7].replace('-', '')}"
         if rid in taken:
@@ -329,6 +345,8 @@ def main(argv: list[str]) -> int:
     summary["written_by"] = {f"{k[0]}/{k[1]}": v for k, v in summary["written_by"].items()}
     print(json.dumps(summary, indent=1))
     if report_path:
+        report["written_records"] = [(r["id"], r["verification"], r["status"], r.get("signed"), r["name"][:110])
+                                     for r in written]
         Path(report_path).write_text(json.dumps({"summary": summary, "report": report}, indent=1, ensure_ascii=False))
     return 0
 
