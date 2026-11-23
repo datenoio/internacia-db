@@ -41,8 +41,12 @@ acronyms:
 wikidata_id: Q487883
 legal_status: intergovernmental
 recognition_status: UN agency
-notes: UN-Habitat is a UN programme that promotes socially and environmentally sustainable towns and cities.
-description: Ethnic group.
+notes: UN-Habitat is a UN programme that promotes socially and environmentally sustainable towns and cities. Its universal
+  governing body, the UN-Habitat Assembly, is composed of all 193 Member States of the United Nations; General Assembly
+  resolution 73/239 established it in place of the former Governing Council. A 36-member Executive Board elected by the
+  Assembly oversees its operations. Includes lists the 193 UN Member States.
+description: United Nations Human Settlements Programme, headquartered in Nairobi, whose mission is to promote socially and
+  environmentally sustainable human settlements development and adequate shelter for all.
 tags:
 - habitat
 - human settlements
@@ -848,7 +852,24 @@ includes:
   type: country
   status: member
 membership_count: 193
+last_verified: '2026-11-23'
 provenance:
+- field: includes
+  source: UN-Habitat, Governance
+  retrieved_at: '2026-11-23'
+  url: https://unhabitat.org/governance
+- field: membership_count
+  source: UN-Habitat, Governance
+  retrieved_at: '2026-11-23'
+  url: https://unhabitat.org/governance
+- field: notes
+  source: UN-Habitat, Governance
+  retrieved_at: '2026-11-23'
+  url: https://unhabitat.org/governance
+- field: description
+  source: United Nations, UN System
+  retrieved_at: '2026-11-23'
+  url: https://www.un.org/en/about-us/un-system
 - field: wikidata_id
   source: Wikidata
   retrieved_at: '2026-07-16'
@@ -857,11 +878,6 @@ provenance:
 - field: other_names
   source: Wikidata
   retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
-  source: Wikidata
-  retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
 - field: legal_status
