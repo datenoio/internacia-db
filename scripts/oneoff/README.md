@@ -11,5 +11,6 @@ running one.
 | `invert_attribute_intblocks.py` | Turn attribute-partition intblocks into country fields and write `data/attribute_intblock_migrations.yaml` | 2.0.0 |
 | `label_scope_category.py` | Suggest `scope_category` values; does not write YAML | 2.x |
 | `parse_aric_pages.py`, `import_aric_ftas.py` | Parse a snapshot of ADB ARIC FTA pages and write catalogue-level `data/trade_agreements/` records | 5.0.0 |
+| `apply_efta_ftn.py` | Apply the EFTA free trade network review (statuses, per-state entry-into-force dates, EFTA provenance) to `data/trade_agreements/` | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).
