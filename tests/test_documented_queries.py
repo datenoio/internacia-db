@@ -376,7 +376,7 @@ ADDITIONAL_RECIPES = [
         JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
-        47,
+        51,
         {"CA", "IN", "TH", "UA"},
     ),
     (
@@ -425,14 +425,14 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        37,
+        41,
         set(),
     ),
     (
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        46,
+        50,
         set(),
     ),
     (
@@ -442,7 +442,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        53,
+        54,
         set(),
     ),
     (
@@ -468,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        237,
+        247,
         set(),
     ),
     (
@@ -535,7 +535,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        37,
+        41,
         set(),
     ),
     (
@@ -614,7 +614,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 314
+    assert count == 317
 
 
 def test_world_bank_region_filter_uses_region_id(con):

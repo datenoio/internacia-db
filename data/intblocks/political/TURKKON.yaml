@@ -5,50 +5,64 @@ blocktype:
 status: formal
 scope_category: igo
 languages:
-- en
-- ru
+- az
+- kk
+- ky
 - tr
+- uz
+- en
 links:
 - url: https://en.wikipedia.org/wiki/Turkic_Council
   type: wikipedia
 - url: https://www.wikidata.org/wiki/Q596850
   type: wikidata
-name: Turkic Council
+name: Organization of Turkic States
 includes:
 - id: AZ
   name: Azerbaijan
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-10-03'
 - id: TR
   name: Türkiye
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-10-03'
 - id: KZ
   name: Kazakhstan
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-10-03'
 - id: UZ
   name: Uzbekistan
   type: country
   status: member
+  joined: '2019-10-15'
 - id: KG
   name: Kyrgyz Republic
   type: country
-  status: member
+  status: founding_member
+  joined: '2009-10-03'
 - id: HU
   name: Hungary
   type: country
   status: observer
+  joined: '2018'
 - id: TM
   name: Turkmenistan
   type: country
   status: observer
+  joined: '2021-11-12'
 - id: ECO
   name: Economic Cooperation Organization
   type: organization
   status: observer
+  joined: '2023-11-03'
 membership_count: 5
-description: International organization to which Turkic sovereign states are members.
+description: Intergovernmental organization of Turkic states, founded as the Cooperation Council of Turkic Speaking States
+  (Turkic Council) by the Nakhchivan Agreement of 3 October 2009 and renamed the Organization of Turkic States at its Istanbul
+  summit on 12 November 2021. Its Secretariat is in Istanbul; TURKSOY, TURKPA, the Turkic Academy, the Turkic Culture and
+  Heritage Foundation and the Turkic Investment Fund work in its framework.
 tags:
 - TURKKON
 - cooperation
@@ -58,6 +72,8 @@ tags:
 - regional
 - regional_cooperation
 - turkic
+- Organization of Turkic States
+- OTS
 topics:
 - key: political
   name: Political
@@ -83,23 +99,15 @@ other_names:
 - id: zh
   name: 突厥国家组织
 wikidata_id: Q596850
-last_verified: '2026-10-22'
-notes: Turkmenistan and the Economic Cooperation Organization are observers. The Turkish Republic of Northern Cyprus has been an observer since November 2022 and is not recorded here because this dataset has no country code for it.
+last_verified: '2026-11-23'
+notes: Türkiye, Azerbaijan, Kazakhstan and Kyrgyzstan signed the Nakhchivan Agreement; the Council was set up at the Istanbul
+  summit of 15-16 September 2010. Uzbekistan joined as a full member at the Baku summit of 15 October 2019, Hungary became
+  an observer at the 2018 summit in Kyrgyzstan and Turkmenistan at the 2021 Istanbul summit. The Economic Cooperation Organization
+  has been an observer organization since the Astana summit of 3 November 2023. The Turkish Republic of Northern Cyprus has
+  been an observer since the Samarkand summit of 11 November 2022 and is not recorded here because this dataset has no country
+  code for it. The roster was checked against the Turkish Ministry of Foreign Affairs; turkicstates.org was not reachable.
 provenance:
-- field: includes
-  source: Organization of Turkic States
-  retrieved_at: '2026-10-22'
-  url: https://turkicstates.org/en/organization-of-turkic-states
-- field: membership_count
-  source: Organization of Turkic States
-  retrieved_at: '2026-10-22'
-  url: https://turkicstates.org/en/organization-of-turkic-states
 - field: wikidata_id
-  source: Wikidata
-  retrieved_at: '2026-06-13'
-  url: https://www.wikidata.org/
-  license: CC0
-- field: description
   source: Wikidata
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
@@ -114,11 +122,46 @@ provenance:
   retrieved_at: '2026-06-13'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: Turkish Ministry of Foreign Affairs, Organization of Turkic States
+  url: https://www.mfa.gov.tr/turk-konseyi-en.en.mfa
+  retrieved_at: '2026-11-23'
+- field: membership_count
+  source: Turkish Ministry of Foreign Affairs, Organization of Turkic States
+  url: https://www.mfa.gov.tr/turk-konseyi-en.en.mfa
+  retrieved_at: '2026-11-23'
 - field: founded
-  source: Wikidata
-  retrieved_at: '2026-06-15'
-  url: https://www.wikidata.org/wiki/Q596850
-  license: CC0
+  source: Turkish Ministry of Foreign Affairs, Organization of Turkic States
+  url: https://www.mfa.gov.tr/turk-konseyi-en.en.mfa
+  retrieved_at: '2026-11-23'
+- field: name
+  source: Organization of Turkic States, Istanbul Declaration (2021), item 1
+  url: https://turkicheritage.org/files/documents/9-DECLARATION-OF-THE-EIGTH-SUMMIT-333de841-432c-476f-9da5-8266ea68ec48.pdf
+  retrieved_at: '2026-11-23'
+- field: previous_names
+  source: Organization of Turkic States, Istanbul Declaration (2021), item 1
+  url: https://turkicheritage.org/files/documents/9-DECLARATION-OF-THE-EIGTH-SUMMIT-333de841-432c-476f-9da5-8266ea68ec48.pdf
+  retrieved_at: '2026-11-23'
+- field: description
+  source: Turkish Ministry of Foreign Affairs, Organization of Turkic States
+  url: https://www.mfa.gov.tr/turk-konseyi-en.en.mfa
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Organization of Turkic States, Tenth Summit Declaration (2023)
+  url: https://turkicheritage.org/files/documents/12-DECLARATION-OF-THE-TENTH-SUMMITtenth-summit-declaration-2023-21-en.pdf
+  retrieved_at: '2026-11-23'
+- field: headquarters
+  source: Nakhchivan Agreement on the Establishment of the Cooperation Council of Turkic Speaking States (lex.uz)
+  url: https://lex.uz/docs/4985638
+  retrieved_at: '2026-11-23'
+- field: languages
+  source: Nakhchivan Agreement, Article 17 (lex.uz)
+  url: https://lex.uz/docs/4985638
+  retrieved_at: '2026-11-23'
+- field: suborganizations
+  source: Turkish Ministry of Foreign Affairs, Organization of Turkic States
+  url: https://www.mfa.gov.tr/turk-devletleri-teskilati.tr.mfa
+  retrieved_at: '2026-11-23'
 acronyms:
 - lang: en
   value: OTS
@@ -129,3 +172,25 @@ acronyms:
 - lang: zh
   value: 突厥國家組織
 founded: '2009-10-03'
+previous_names:
+- id: en
+  name: Cooperation Council of Turkic Speaking States
+  period: 2009-2021
+- id: en
+  name: Turkic Council
+  period: 2009-2021
+headquarters:
+  city: Istanbul
+  country: TR
+founding_members:
+- AZ
+- KZ
+- KG
+- TR
+suborganizations:
+- id: TURKACADEMY
+  name: Turkic Academy
+- id: TCHF
+  name: Turkic Culture and Heritage Foundation
+- id: TIF
+  name: Turkic Investment Fund
