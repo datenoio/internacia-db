@@ -10,14 +10,50 @@ parties:
 - id: MX
   type: country
 supersedes: CLMX-ACE17
+instruments:
+- id: procurement-2007
+  kind: amending_protocol
+  name: Protocol adding the Chapter on Public Sector Procurement to the Free Trade Agreement between the Republic of Chile
+    and the United Mexican States
+  status: in_force
+  signed: '2007-08-28'
+  in_force: '2008-11-02'
+  notes: Signed at Mexico City; registered with ALADI as the First Additional Protocol to ACE 41.
+  provenance:
+  - field: instruments
+    source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 219 of 2008 of the Ministry of Foreign Affairs
+      (promulgation decree, Diario Oficial 2008-11-24)
+    url: https://www.bcn.cl/leychile/navegar?idNorma=282106
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: 'ALADI (depositary), agreements database: ACE 41, First Additional Protocol'
+    url: http://www2.aladi.org/nsfaladi/textacdos.nsf/4d5c18e55622e1040325749000756112/2A62C7852F325C4E0325868E00438AC8?OpenDocument
+    retrieved_at: '2026-11-23'
+- id: modernization-2024
+  kind: amending_protocol
+  name: Protocol of Modernization of the Free Trade Agreement between Chile and Mexico
+  status: signed
+  signed: '2024-09-30'
+  notes: Adds chapters on gender and trade and on micro, small and medium-sized enterprises. It enters into force 60 days
+    after both parties complete their legal procedures (SUBREI).
+  provenance:
+  - field: instruments
+    source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements under negotiation and signed
+    url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-en-negociacion-y-suscritos
+    retrieved_at: '2026-11-23'
 wto_rta_id: 80
 gptad_id: 71
 dta_id: 67
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/Chile-Mexico.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+- url: https://edit.wti.org/document/show/510b8d8b-da1b-4369-8ded-fea6844c6d7c
+  type: treaty_text
+notes: Signed at Santiago on 17 April 1998 and registered with ALADI as ACE 41. ALADI records entry into force on 1 August
+  1999; SUBREI gives 31 July 1999, the day Chile's promulgation decree (Decreto 1101 of 1999) was published in the Diario
+  Oficial.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -27,3 +63,16 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=80
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 1101 of 1999 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 1999-07-31)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=139826
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: 'ALADI (depositary), agreements database: ACE 41'
+  url: http://www2.aladi.org/nsfaladi/textacdos.nsf/4d5c18e55622e1040325749000756112/4943FC496451B7720325680800585EAA?OpenDocument
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/mexico
+  retrieved_at: '2026-11-23'

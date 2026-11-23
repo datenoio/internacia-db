@@ -3,13 +3,19 @@ name: Chile - Argentina Free Trade Agreement
 agreement_type: fta
 status: in_force
 signed: '2017-11-02'
-in_force: '2019-05-02'
+in_force: '2019-05-01'
 parties:
 - id: AR
   type: country
 - id: CL
   type: country
-verification: catalogue
+links:
+- url: https://edit.wti.org/document/show/bf9aa665-cb2a-472f-849d-090e28b096fb
+  type: treaty_text
+notes: Signed at Buenos Aires on 2 November 2017 and registered with ALADI as the Sixty-first Additional Protocol to ACE 35
+  (MERCOSURCL), signed at Montevideo on 4 January 2018. Chile's promulgation decree (Decreto 27 of 2019) and ALADI give international
+  entry into force on 1 May 2019; the registry held 2019-05-02 before 2026-11-23.
+verification: official
 last_verified: '2026-11-23'
 provenance:
 - field: parties
@@ -19,4 +25,22 @@ provenance:
 - field: status
   source: OAS Foreign Trade Information System (SICE)
   url: https://web.archive.org/web/20261011022627/http://www.sice.oas.org/agreements_e.asp
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 27 of 2019 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2019-06-06)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=1132320
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 27 of 2019 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2019-06-06)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=1132320
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: 'ALADI (depositary), agreements database: ACE 35, Sixty-first Additional Protocol'
+  url: http://www2.aladi.org/nsfaladi/textacdos.nsf/4d5c18e55622e1040325749000756112/CDEEDFDCA40C1F260325829F00475386?OpenDocument
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/argentina
   retrieved_at: '2026-11-23'

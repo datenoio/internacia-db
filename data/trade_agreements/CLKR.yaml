@@ -12,6 +12,19 @@ parties:
   type: country
 - id: KR
   type: country
+instruments:
+- id: modernization
+  kind: amending_protocol
+  name: Modernization of the Free Trade Agreement between the Government of the Republic of Chile and the Government of the
+    Republic of Korea
+  status: negotiating
+  notes: The parties agreed to deepen the agreement in a joint statement at the 2016 APEC Leaders' Meeting. Nine rounds were
+    held between November 2018 and April 2024 (SUBREI).
+  provenance:
+  - field: instruments
+    source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements under negotiation and signed
+    url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-en-negociacion-y-suscritos
+    retrieved_at: '2026-11-23'
 wto_rta_id: 53
 aric_id: 25
 gptad_id: 415
@@ -19,9 +32,12 @@ dta_id: 88
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/Chile-korea.pdf
   type: treaty_text
-notes: 'ADB ARIC dates: negotiations launched 1999-09.'
-verification: catalogue
-last_verified: '2026-11-22'
+- url: https://edit.wti.org/document/show/85c5288e-8e9c-410a-8f8c-b4aab51b5b82
+  type: treaty_text
+notes: 'ADB ARIC dates: negotiations launched 1999-09. Signed at Seoul on 15 February 2003 (Decreto 48 of 2004, published
+  in the Diario Oficial on 1 April 2004, the day of entry into force).'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -31,3 +47,16 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=25&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 48 of 2004 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2004-04-01)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=223319
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: 'Republic of Korea, FTA portal (fta.motir.go.kr): Korea-Chile FTA'
+  url: https://fta.motir.go.kr/ftamain/kfta/lov5/cl/1/1/
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/corea-del-sur
+  retrieved_at: '2026-11-23'

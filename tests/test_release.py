@@ -144,3 +144,27 @@ def test_plan_major_for_removed_enum_value(repo):
     path.write_text(json.dumps(schema), encoding="utf-8")
     _commit(repo)
     assert any("values removed: historical" in r for r in release.plan_release(repo).reasons["major"])
+
+
+def test_plan_counts_trade_agreements(repo):
+    (repo / "data/trade_agreements").mkdir()
+    for agreement in ("AANZFTA", "ACFTA"):
+        shutil.copy(ROOT / f"data/trade_agreements/{agreement}.yaml", repo / f"data/trade_agreements/{agreement}.yaml")
+    _commit(repo)
+    _git(repo, "tag", "v1.0.1")
+    shutil.copy(ROOT / "data/trade_agreements/ACIA.yaml", repo / "data/trade_agreements/ACIA.yaml")
+    path = repo / "data/trade_agreements/ACFTA.yaml"
+    record = safe_load(path.read_text(encoding="utf-8"))
+    record["last_verified"] = "2099-01-01"
+    path.write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    _commit(repo)
+    plan = release.plan_release(repo)
+    assert plan.previous == "v1.0.1"
+    assert plan.diff["trade_agreements"] == {"count": [2, 3], "added": ["ACIA"], "removed": [], "changed": ["ACFTA"]}
+    assert "- Trade agreements: 2 → 3 records; added `ACIA`; 1 changed" in release.render_summary(plan)
+
+
+def test_summary_skips_empty_trade_agreements(repo):
+    shutil.copy(ROOT / "data/countries/IT.yaml", repo / "data/countries/IT.yaml")
+    _commit(repo)
+    assert "Trade agreements" not in release.render_summary(release.plan_release(repo))
