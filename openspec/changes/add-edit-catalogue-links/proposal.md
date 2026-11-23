@@ -19,7 +19,7 @@ The maintainer asked on 2026-11-23 for an EDIT walk: treaty text links on matche
 ## Impact
 
 - Affected specs: `trade-agreements` (added: EDIT walk, EDIT identifiers).
-- Affected source: `data/schemas/trade_agreements.schema.json` (the `catalogue` description now; `edit_uuid` after approval); 3,654 records in `data/trade_agreements/` changed and 25 new.
+- Affected source: `data/schemas/trade_agreements.schema.json` (the `catalogue` description now; `edit_uuid` after approval); 3,653 records in `data/trade_agreements/` changed and 25 new.
 - Affected code: one-off scripts `scripts/oneoff/fetch_edit.py`, `import_edit.py`, `write_edit_report.py`. After approval: `internacia_builder/schemas.py`, `trade_agreements.py`, `validate/trade_agreement_rules.py`.
 - Affected exports: more `treaty_text` links and `investment` rows now; a nullable `edit_uuid` column after approval (a MINOR change).
 - Licence: the registry stores EDIT's uuids, dates and document URLs (facts and links), not its texts or its categorisation.
