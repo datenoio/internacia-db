@@ -71,6 +71,11 @@
         "properties": {
           "id": {"type": "string", "minLength": 1},
           "type": {"type": "string", "enum": ["country", "intblock"]},
+          "role": {
+            "description": "Set only on a preference_scheme record, where every party needs it. grantor: gives the preferences. beneficiary: receives them. Reciprocal agreements have no role, because each of their parties both grants and receives.",
+            "type": "string",
+            "enum": ["grantor", "beneficiary"]
+          },
           "signed": {"$ref": "#/definitions/date"},
           "in_force": {"$ref": "#/definitions/date"},
           "provisional_application": {
@@ -89,10 +94,22 @@
     },
     "supersedes": {"type": "string"},
     "superseded_by": {"type": "string"},
+    "parent": {
+      "description": "Set only on a preference_scheme record: the id of the preference scheme this record belongs to. That is a framework (GSP), or the national scheme of the same grantor (EU-GSP is the parent of GSP+ and Everything but Arms).",
+      "type": "string",
+      "minLength": 1
+    },
     "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
     "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
     "unctad_iia_id": {"description": "UNCTAD Investment Policy Hub IIA Navigator treaty identifier (international-investment-agreements/treaties/<type>/N/...).", "type": "integer", "minimum": 1},
     "unts_registration": {"description": "United Nations Treaty Series registration number (I-NNNNN for registered treaties, II-NNN for filed and recorded ones), from the UN Treaty Collection.", "type": "string", "pattern": "^(I|II)-\\d+$"},
+    "wto_pta_ids": {
+      "description": "PTA ids of the rows in the WTO Preferential Trade Arrangements Database that describe this legal instrument. It is a list because several members can notify one instrument: Armenia, Kazakhstan, the Kyrgyz Republic and Russia each notify the EAEU tariff preferences.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "integer", "minimum": 1}
+    },
     "wikidata_id": {"type": "string", "pattern": "^Q[1-9][0-9]*$"},
     "links": {
       "type": "array",
@@ -114,7 +131,7 @@
       "items": {"$ref": "#/definitions/instrument"}
     },
     "verification": {
-      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, ADB ARIC, the UNCTAD IIA Navigator or the UN Treaty Series only.",
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, the WTO Preferential Trade Arrangements Database, ADB ARIC, the UNCTAD IIA Navigator or the UN Treaty Series only.",
       "type": "string",
       "enum": ["official", "catalogue"]
     },
