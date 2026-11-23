@@ -9,8 +9,14 @@ parties:
   type: country
 - id: CR
   type: country
-notes: The SICE agreements table gives 2025-01-04 for entry into force; the SICE agreement page and the UAE Ministry of Economy
-  and Tourism give 2025-04-01.
+links:
+- url: https://edit.wti.org/document/show/eabd56c6-05b0-4fe5-85fb-6e7571e48391
+  type: treaty_text
+- url: https://www.trade.gov.ae/documents/d/guest/uae_costa_rica_cepa_eng
+  type: treaty_text
+notes: Signed in San José; approved by Costa Rica's Law No. 10618 (La Gaceta, Alcance No. 202, 12 December 2024). The SICE
+  agreements table gives 2025-01-04 for entry into force, a day/month swap. COMEX and the UAE Ministry of Foreign Trade give
+  2025-04-01; WAM announced it on 2 April 2025 as coming into force that day.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -18,11 +24,19 @@ provenance:
   source: OAS Foreign Trade Information System (SICE)
   url: https://web.archive.org/web/20251218013624/http://www.sice.oas.org/Trade/CRI_UAE/CRI_UAE_index_e.asp
   retrieved_at: '2026-11-23'
-- field: status
-  source: OAS Foreign Trade Information System (SICE)
-  url: https://web.archive.org/web/20251218013624/http://www.sice.oas.org/Trade/CRI_UAE/CRI_UAE_index_e.asp
+- field: signed
+  source: Imprenta Nacional, La Gaceta, Alcance No. 202 (Law No. 10618)
+  url: https://www.imprentanacional.go.cr/pub/2024/12/12/ALCA202_12_12_2024.pdf
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: UAE Ministry of Economy and Tourism
-  url: https://www.moet.gov.ae/en/uae-costa-rica-cepa
+  source: Costa Rica Ministry of Foreign Trade (COMEX)
+  url: https://www.comex.go.cr/tratados/emiratos-%C3%A1rabes-unidos/
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UAE Ministry of Foreign Trade
+  url: https://www.trade.gov.ae/uae-costa-rica-cepa
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Costa Rica Ministry of Foreign Trade (COMEX)
+  url: https://www.comex.go.cr/tratados/emiratos-%C3%A1rabes-unidos/
   retrieved_at: '2026-11-23'
