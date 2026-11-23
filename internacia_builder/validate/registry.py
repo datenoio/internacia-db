@@ -478,6 +478,10 @@ INTBLOCK_RULES: tuple[Rule, ...] = (
            lambda ctx: trade_agreement_rules.check_intblock_candidates(
                ctx.trade_agreements.records, ctx.trade_agreements.paths),
            enabled=lambda ctx: ctx.trade_agreements is not None),
+    _cross("trade agreement instruments before agreement", INTBLOCKS, REPORT,
+           lambda ctx: trade_agreement_rules.check_instruments_before_agreement(
+               ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.intblocks.records),
+           enabled=lambda ctx: ctx.trade_agreements is not None),
     _cross("trade agreement freshness", INTBLOCKS, W,
            lambda ctx: trade_agreement_rules.check_trade_agreement_freshness(
                ctx.trade_agreements.records, ctx.trade_agreements.paths, ctx.last_verified_max_age),

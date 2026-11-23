@@ -123,6 +123,11 @@
     },
     "description": {"type": "string"},
     "notes": {"description": "Legal facts: accessions, suspensions, supersession, conflicts between sources. Not trade volumes.", "type": "string"},
+    "instruments": {
+      "description": "Instruments that amend or add to the agreement among its parties: upgrade and amending protocols, supplements, supplementary agreements, early harvest arrangements, joint committee decisions. They do not change the agreement's own status or dates. An agreement that replaces this one, an agreement concluded under an umbrella treaty with its own parties, and an accession are not instruments. See openspec/changes/add-trade-agreement-instruments.",
+      "type": "array",
+      "items": {"$ref": "#/definitions/instrument"}
+    },
     "verification": {
       "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, the WTO Preferential Trade Arrangements Database or ADB ARIC only.",
       "type": "string",
@@ -165,6 +170,51 @@
     "date": {
       "type": "string",
       "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    },
+    "instrument": {
+      "type": "object",
+      "required": ["id", "kind", "name", "status", "provenance"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Unique within the record and never changed once published, such as upgrade-2018 or supplement-10.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "kind": {
+          "description": "amending_protocol: amends the agreement (upgrade, optimization, enhancement, second phase, supplement). supplementary_agreement: a further agreement under it covering a new area. early_harvest: an early harvest arrangement. joint_committee_decision: a decision of the agreement's joint body amending it or its annexes. exchange_of_letters: letters that launch or settle part of the agreement. other: any other change a source lists.",
+          "type": "string",
+          "enum": ["amending_protocol", "supplementary_agreement", "early_harvest", "joint_committee_decision", "exchange_of_letters", "other"]
+        },
+        "name": {"description": "English name as used by the source.", "type": "string", "minLength": 1},
+        "other_names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lang", "name"],
+            "additionalProperties": false,
+            "properties": {
+              "lang": {"type": "string"},
+              "name": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "status": {
+          "description": "negotiating: negotiations launched. signed: signed, not in force. in_force: in force for at least two parties; its in_force date is the date it applied to all parties, or the first date when the source gives only that, and staggered dates go in notes. terminated: was in force and ended, or was replaced by a later instrument. abandoned: never in force, no longer pursued.",
+          "type": "string",
+          "enum": ["negotiating", "signed", "in_force", "terminated", "abandoned"]
+        },
+        "signed": {"$ref": "#/definitions/date"},
+        "in_force": {"$ref": "#/definitions/date"},
+        "ended": {"$ref": "#/definitions/date"},
+        "coverage": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "enum": ["goods", "services", "investment"]}
+        },
+        "notes": {"description": "Legal facts, such as staggered entry into force or conflicting dates between sources.", "type": "string"},
+        "provenance": {"$ref": "#/properties/provenance"}
+      }
     }
   }
 }

@@ -75,6 +75,8 @@ ISSUE_PRIORITY_MAP = {
         "TRADE_AGREEMENT_PARENT",
         "DUPLICATE_WTO_PTA_ID",
         "TRADE_AGREEMENT_PARTY_DATE",
+        "DUPLICATE_TRADE_AGREEMENT_INSTRUMENT",
+        "TRADE_AGREEMENT_INSTRUMENT_DATE",
         "BORDER_STATUS_NOT_ADJACENT",
         "BORDER_STATUS_PERIOD_CONFLICT",
         "INVALID_INCLUDE_STATUS",
@@ -139,6 +141,7 @@ ISSUE_PRIORITY_MAP = {
         "PARTOF_SUBORG_RECIPROCITY",
         "DUPLICATE_ACRONYM",
         "TRADE_AGREEMENT_INTBLOCK_CANDIDATE",
+        "TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT",
     ],
 }
 
@@ -173,6 +176,9 @@ RULE_DESCRIPTIONS = {
     "TRADE_AGREEMENT_PARTY_DATE": "A trade agreement party joins before the agreement is in force, leaves after it ended, or leaves before it joined.",
     "STALE_TRADE_AGREEMENT": "A trade agreement's last_verified date is older than the configured freshness threshold.",
     "TRADE_AGREEMENT_INTBLOCK_CANDIDATE": "A signed or in-force trade agreement (not a preference scheme) lists three or more parties but has no intblock.",
+    "DUPLICATE_TRADE_AGREEMENT_INSTRUMENT": "A trade agreement lists two instruments with the same id.",
+    "TRADE_AGREEMENT_INSTRUMENT_DATE": "A trade agreement instrument's status and dates disagree, or its dates are out of order.",
+    "TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT": "A trade agreement instrument other than an early harvest arrangement is signed before the agreement it belongs to.",
     "STALE_BORDER_STATUS": "A border_status entry's last_verified date is older than the configured freshness threshold.",
     "VETO_HOLDERS_UNDER_CONSENSUS": "Veto holders are listed for a consensus or unanimity body, where every member can block.",
     "NATIVE_NAME_LANGUAGE": "A native_names key is not one of the country's own languages.",
