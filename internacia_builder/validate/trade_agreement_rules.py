@@ -30,7 +30,7 @@ NEEDS_IN_FORCE = frozenset({"in_force", "terminated", "superseded"})
 NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
 # Catalogue identifiers: each value names one instrument, so it appears on one record.
-CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id", "dta_id")
+CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id", "dta_id", "unctad_iia_id")
 # The same date rules for the items of a record's ``instruments`` list.
 INSTRUMENT_NEEDS_SIGNED = frozenset({"signed"})
 INSTRUMENT_NEEDS_IN_FORCE = frozenset({"in_force", "terminated"})

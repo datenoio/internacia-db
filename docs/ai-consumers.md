@@ -453,7 +453,9 @@ relations treatment without preferences (`AMUS-TRA`; OpenSpec change
 `add-investment-and-trade-relations-types`). Their ids carry the suffix `-TRA`, so the bare
 pair id stays free for a trade agreement. They cover only the United States so far (the ITA's
 former TARA database and the State Department's Treaties in Force). The U.S. investment
-treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Leave both
+treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Beyond the
+United States and Canada, `investment` covers the world through the UNCTAD IIA Navigator BITs
+(`verification: catalogue`, with `unctad_iia_id`; OpenSpec `add-unctad-bit-walk`). Leave both
 types out when you count trade agreements per country:
 
 ```sql
