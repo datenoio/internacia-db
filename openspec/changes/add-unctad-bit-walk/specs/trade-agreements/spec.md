@@ -1,29 +1,20 @@
 ## ADDED Requirements
 
-### Requirement: UNCTAD IIA Navigator identifier
+### Requirement: UNCTAD IIA Navigator walk
 
-A trade agreement record MAY set `unctad_iia_id`, the integer treaty identifier of the UNCTAD Investment Policy Hub IIA Navigator. The `trade_agreements` export SHALL carry it as a nullable integer column. Two records SHALL NOT share an `unctad_iia_id`.
+The walk of the UNCTAD IIA Navigator SHALL import every BIT row whose two parties resolve to a country or intblock record as an `investment` record at `verification: catalogue`, unless it maps to an existing investment record. A row maps to an existing record with the same two parties and the same signature date or year, or with the same signature date and a party list that contains both parties (a treaty UNCTAD splits by successor state). A mapped record gains `unctad_iia_id`, keeps its own dates and status, and notes the UNCTAD values that differ. Status SHALL map as `In force` → `in_force`, `Signed (not in force)` → `signed`, and `Terminated` → `terminated` with the termination date as `ended`, or `abandoned` with a note when the Navigator gives no date of entry into force.
 
-#### Scenario: BIT mapped to UNCTAD
+#### Scenario: Official record keeps its dates
 
-- **WHEN** the record `RWUS-BIT` sets `unctad_iia_id: 2870`
-- **THEN** the `trade_agreements` row for `RWUS-BIT` has `unctad_iia_id = 2870`
+- **WHEN** the Navigator gives 1999-12-11 as the entry into force of the Georgia–United States BIT and trade.gov gives 1997-08-17
+- **THEN** `GEUS-BIT` keeps `in_force: '1997-08-17'`, gains `unctad_iia_id`, and its notes give the UNCTAD date
 
-#### Scenario: Duplicate identifier
+#### Scenario: Treaty split by successor state
 
-- **WHEN** two records set `unctad_iia_id: 2870`
-- **THEN** the validator reports an error
+- **WHEN** the Navigator lists the 1990 Canada–Czechoslovakia BIT as a Czech and a Slovak row, and the registry has `CACZSK-BIT` with parties CA, CZ and SK signed on the same date
+- **THEN** the first row maps to `CACZSK-BIT`, the second is reported, and no new record is written
 
-### Requirement: UNCTAD catalogue records
+#### Scenario: Terminated without entry into force
 
-Records taken only from the UNCTAD IIA Navigator SHALL set `verification: catalogue` and SHALL cite the treaty page in `provenance`. A record that a party government or the treaty text confirms stays `official` and only gains `unctad_iia_id`. When one pair of parties has more than one bilateral investment treaty, each record of that pair SHALL take the id `<pair>-BIT-<year of signature>`; a pair with one treaty keeps `<pair>-BIT`.
-
-#### Scenario: Catalogue BIT
-
-- **WHEN** a BIT row from the IIA Navigator matches no existing record
-- **THEN** a new record with `agreement_type: investment`, `verification: catalogue`, `unctad_iia_id` and a provenance entry citing the treaty page is written
-
-#### Scenario: Pair with two treaties
-
-- **WHEN** the IIA Navigator lists a 1975 and a 2008 BIT between the same two parties
-- **THEN** the records are `<pair>-BIT-1975` and `<pair>-BIT-2008`
+- **WHEN** the Navigator lists a treaty as terminated and gives no date of entry into force
+- **THEN** the record is `abandoned` with a note giving the termination date

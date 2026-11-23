@@ -1,9 +1,8 @@
 ### Added
 
-- Two `agreement_type` values in the trade agreements registry (OpenSpec
-  `add-investment-and-trade-relations-types`): `investment` for bilateral investment
-  treaties and `trade_relations` for agreements that grant most-favoured-nation or normal
-  trade relations treatment without preferences. Both cover the United States only so far.
+- `agreement_type` value `trade_relations` in the trade agreements registry (OpenSpec
+  `add-investment-and-trade-relations-types`) for agreements that grant most-favoured-nation
+  or normal trade relations treatment without preferences. It covers the United States only so far.
 - 41 U.S. bilateral investment treaties from trade.gov (`ALUS-BIT` … `USUY-BIT`), checked on
   2026-11-23, including the terminated treaties with Bolivia and Ecuador.
 - 27 U.S. trade relations records from the ITA's former TARA database and the State
@@ -15,7 +14,6 @@
 
 ### Changed
 
-- `services` in `agreement_type` now means trade in services only.
 - `CAFTADR` notes give the entry-into-force date for each signatory and the 2006 amendment
   to Article 22.5; `USBH` notes the 2009 First Protocol of Amendment; `USAU`, `USCO`,
   `USKR`, `USPA`, `USSG` and `CAFTADR` cite trade.gov for `in_force`; `USMCA` links trade.gov.

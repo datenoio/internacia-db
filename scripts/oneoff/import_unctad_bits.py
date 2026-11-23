@@ -11,8 +11,9 @@ id becomes one result:
   record gains ``unctad_iia_id``; it keeps its own dates and notes UNCTAD's when they differ;
 - ``new``: a ``verification: catalogue`` record with ``agreement_type: investment``.
 
-Ids: ``<pair>-BIT`` when the pair has one BIT in UNCTAD, otherwise ``<pair>-BIT-<year>``
-(``<pair>-BIT-<year><month>`` on a clash); a bloc party (``BLEU``) comes first. The row comes
+Ids follow ``add-investment-agreements``: the earliest treaty of a pair takes ``<pair>-BIT``
+and each further one ``<pair>-BIT-<year>`` (two in one year are reported, not written); a bloc
+party (``BLEU``) comes first. The row comes
 from the latest capture among the party pages that list the treaty. Status: ``In force`` ->
 ``in_force``; ``Signed (not in force)`` -> ``signed``; ``Terminated`` -> ``terminated`` with the
 termination date as ``ended``, or ``abandoned`` with a note when no entry-into-force date is
@@ -208,10 +209,23 @@ def main(argv: list[str]) -> int:
         match = None
         for rid in by_pair.get(party_set, []):
             existing = str(registry[rid][1].get("signed", ""))
-            if signed and (existing == signed or existing[:4] == signed[:4]):
+            if signed and rid not in used and (existing == signed or existing[:4] == signed[:4]):
                 match = rid
-        if match is None and len(by_pair.get(party_set, [])) == 1 and per_pair[pc] == 1:
-            match = by_pair[party_set][0]
+        signed_records = [rid for rid in by_pair.get(party_set, []) if registry[rid][1].get("signed")]
+        if match is None and len(signed_records) == 1 and per_pair[pc] == 1 and signed_records[0] not in used:
+            match = signed_records[0]
+        if match and registry[match][1].get("unctad_iia_id") not in (None, tid):
+            report["existing_has_other_unctad_id"].append((match, tid))
+            match = None
+        if match is None and signed:
+            # A treaty that UNCTAD splits by successor state may already be one multi-party record.
+            wider = [rid for rid, (_, r) in registry.items() if r.get("agreement_type") == "investment"
+                     and r.get("signed") == signed and party_set < frozenset(p["id"] for p in r.get("parties") or [])]
+            if wider:
+                if wider[0] in used or registry[wider[0]][1].get("unctad_iia_id") not in (None, tid):
+                    report["covered_by_multiparty_record"].append((wider[0], tid, view["short_title"]))
+                    continue
+                match = wider[0]
         if match:
             used.add(match)
             path, record = registry[match]
@@ -234,9 +248,8 @@ def main(argv: list[str]) -> int:
             report["mapped_existing"].append((match, tid))
             continue
 
-        rid = f"{pc}-BIT" if per_pair[pc] == 1 and f"{pc}-BIT" not in taken else f"{pc}-BIT-{(signed or '0000')[:4]}"
-        if rid in taken:
-            rid = f"{pc}-BIT-{(signed or '0000')[:7].replace('-', '')}"
+        # As add-investment-agreements: the first treaty of a pair takes -BIT, a further one -BIT-<year>.
+        rid = f"{pc}-BIT" if f"{pc}-BIT" not in taken else f"{pc}-BIT-{(signed or '0000')[:4]}"
         if rid in taken:
             report["id_collision"].append((tid, rid))
             continue
