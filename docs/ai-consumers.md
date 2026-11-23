@@ -351,8 +351,9 @@ ORDER BY asymmetry DESC;
 Every free trade agreement, customs union, partial-scope or preferential agreement and
 non-reciprocal preference scheme has a row in `trade_agreements`, bilateral ones included
 (OpenSpec change `add-trade-agreements-registry`). The registry is reference data: parties,
-`status`, `signed` / `in_force` / `ended` dates, `wto_rta_id`, `aric_id` and provenance. It
-ships no trade values, tariff lines, preference margins, depth scores or rankings.
+`status`, `signed` / `in_force` / `ended` dates, `wto_rta_id`, `aric_id`, `gptad_id`, links to
+the agreement text (`links[].type = 'treaty_text'`) and provenance. It ships no trade values,
+tariff lines, preference margins, depth scores or rankings.
 
 - **Two-party agreements** (`USKR`, `CETA`, `EUJP`, `CHAFTA` and the ADB ARIC bilaterals) are
   only in the registry. In 5.0.0 the 34 two-party FTA intblocks left `intblocks` and
