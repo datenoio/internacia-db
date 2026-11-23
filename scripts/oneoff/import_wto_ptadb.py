@@ -21,12 +21,12 @@ from a hidden column of the list.
 
 New records are ``verification: catalogue``. Their parties are the grantor and the beneficiaries
 of the latest version, and their provenance names the date of that version. "Tariffs & Trade"
-pages are never read. See ``openspec/changes/add-preference-scheme-rosters``.
+pages are never read. See ``openspec/changes/archive/2026-11-23-add-preference-scheme-rosters``.
 
 ``history`` reads every version of every scheme and adds a ``versions`` list to the snapshot.
 ``write`` then dates the beneficiaries from consecutive versions that list beneficiaries, adds
 former beneficiaries, and, with ``--report``, writes a TSV review of the linked intblocks, whose
-official rosters it does not edit. See ``openspec/changes/add-preference-scheme-beneficiary-history``.
+official rosters it does not edit. See ``openspec/changes/archive/2026-11-23-add-preference-scheme-beneficiary-history``.
 
 Usage:
   python -I scripts/oneoff/import_wto_ptadb.py fetch SNAPSHOT_JSON
