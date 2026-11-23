@@ -9,7 +9,7 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2021-03-02'
-in_force: '2021-03-05'
+provisional_application: '2021-03-05'
 parties:
 - id: GH
   type: country
@@ -20,9 +20,12 @@ dta_id: 378
 links:
 - url: https://www.gov.uk/government/collections/uk-ghana-interim-trade-partnership-agreement
   type: website
-notes: Published by the UK as CS Ghana No.1/2021 (CP 393). The UK list of agreements in effect gives the mechanism as provisional
-  application, although its change log records an update of the Ghana entry to full ratification on 1 August 2023; no Treaty
-  Series publication has been found, so the catalogue entry into force date is kept.
+notes: Published by the UK as CS Ghana No.1/2021 (CP 393), whose page says the agreement is provisionally applied from 5 March
+  2021. The UK list of agreements in effect still gives the mechanism as provisional application, although its change log
+  records an update of the Ghana entry to full ratification on 1 August 2023. No Treaty Series publication or official entry
+  into force date has been found, so in_force is left empty. WTO RTA-IS gives 5 March 2021 as the date of entry into force,
+  and the joint communique of the third TPA Committee meeting (19 March 2026) calls that meeting the fifth anniversary of entry
+  into force.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -37,6 +40,18 @@ provenance:
 - field: signed
   source: UK Government, UK Treaty Series
   url: https://www.gov.uk/government/publications/ukghana-interim-trade-partnership-agreement-cs-ghana-no12021
+  retrieved_at: '2026-11-23'
+- field: provisional_application
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ukghana-interim-trade-partnership-agreement-cs-ghana-no12021
+  retrieved_at: '2026-11-23'
+- field: provisional_application
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1123
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: UK Government
+  url: https://www.gov.uk/government/publications/uk-ghana-interim-trade-partnership-agreement-committee-documents/19-march-2026-joint-communique-of-the-third-meeting-of-the-uk-ghana-tpa-committee
   retrieved_at: '2026-11-23'
 - field: parties
   source: UK Government

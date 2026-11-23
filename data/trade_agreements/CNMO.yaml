@@ -12,13 +12,15 @@ parties:
   type: country
 - id: MO
   type: country
+links:
+- url: https://fta.mofcom.gov.cn/topic/enmacau.shtml
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/china-macao.pdf
+  type: treaty_text
 wto_rta_id: 56
 aric_id: 38
 gptad_id: 394
 dta_id: 84
-links:
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/china-macao.pdf
-  type: treaty_text
 verification: catalogue
 last_verified: '2026-11-22'
 provenance:
@@ -30,3 +32,7 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=38&ssid=3
   retrieved_at: '2026-11-22'
+- field: links
+  source: Ministry of Commerce of the People's Republic of China, China FTA Network
+  url: https://fta.mofcom.gov.cn/topic/enmacau.shtml
+  retrieved_at: '2026-11-23'
