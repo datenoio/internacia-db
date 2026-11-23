@@ -12,13 +12,6 @@ parties:
   type: country
 - id: CN
   type: country
-links:
-- url: https://fta.mofcom.gov.cn/topic/china_chile_upgrade.shtml
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/Chile-china.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/36e4e8a8-416a-4389-a6b9-08c388a63562
-  type: treaty_text
 instruments:
 - id: upgrade-2017
   kind: amending_protocol
@@ -40,12 +33,58 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=8
     retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 20 of 2019 of the Ministry of Foreign Affairs (promulgation
+      decree, Diario Oficial 2019-04-03)
+    url: https://www.bcn.cl/leychile/navegar?idNorma=1130252
+    retrieved_at: '2026-11-23'
+- id: services-2008
+  kind: supplementary_agreement
+  name: Supplementary Agreement on Trade in Services of the Free Trade Agreement between the Government of the Republic of
+    Chile and the Government of the People's Republic of China
+  status: in_force
+  signed: '2008-04-13'
+  in_force: '2010-08-01'
+  coverage:
+  - services
+  notes: Signed at Sanya.
+  provenance:
+  - field: instruments
+    source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 185 of 2010 of the Ministry of Foreign Affairs
+      (promulgation decree, Diario Oficial 2010-07-28)
+    url: https://www.bcn.cl/leychile/navegar?idNorma=1015722
+    retrieved_at: '2026-11-23'
+- id: investment-2012
+  kind: supplementary_agreement
+  name: Supplementary Agreement on Investment of the Free Trade Agreement between the Government of the Republic of Chile
+    and the Government of the People's Republic of China
+  status: in_force
+  signed: '2012-09-09'
+  in_force: '2014-02-08'
+  coverage:
+  - investment
+  notes: Signed at Vladivostok.
+  provenance:
+  - field: instruments
+    source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 171 of 2013 of the Ministry of Foreign Affairs
+      (promulgation decree, Diario Oficial 2014-04-02)
+    url: https://www.bcn.cl/leychile/navegar?idNorma=1060712
+    retrieved_at: '2026-11-23'
 wto_rta_id: 8
 aric_id: 79
 gptad_id: 387
 dta_id: 125
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://fta.mofcom.gov.cn/topic/china_chile_upgrade.shtml
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/Chile-china.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/36e4e8a8-416a-4389-a6b9-08c388a63562
+  type: treaty_text
+notes: Chile's promulgation decree (Decreto 317 of 2006) records signature at Busan on 18 November 2005 and entry into force
+  on 1 October 2006.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -55,3 +94,17 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=79&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 317 of 2006 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2006-09-23)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=253498
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 317 of 2006 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2006-09-23)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=253498
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/china
+  retrieved_at: '2026-11-23'
