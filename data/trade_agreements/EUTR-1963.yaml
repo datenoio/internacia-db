@@ -1,18 +1,20 @@
 id: EUTR-1963
 name: EEC - Türkiye Association Agreement of 1963
+other_names:
+- lang: en
+  name: Ankara Agreement
 agreement_type: fta
-status: terminated
+status: in_force
 signed: '1963-09-12'
 in_force: '1964-12-01'
-ended: '1973-01-01'
 parties:
 - id: EU
   type: intblock
 - id: TR
   type: country
 wto_rta_id: 282
-verification: catalogue
-last_verified: '2026-11-22'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -22,3 +24,22 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=282
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21964A1229(01)
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21964A1229(01)
+  retrieved_at: '2026-11-23'
+- field: status
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21964A1229(01)
+  retrieved_at: '2026-11-23'
+notes: Ankara Agreement. EUR-Lex records it as in force with no end of validity (CELEX 21964A1229(01)). WTO RTA-IS treats
+  it as ended on 1 January 1973, when the Additional Protocol (EUTR-1970) entered into force; status corrected from terminated
+  to in_force. The final phase of the customs union (EUTR) was implemented under the association by Decision No 1/95 of the
+  EC-Turkey Association Council.
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21964A1229(01)
+  type: website
