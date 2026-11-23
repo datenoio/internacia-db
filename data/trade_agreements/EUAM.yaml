@@ -3,7 +3,8 @@ name: EU - Armenia
 agreement_type: services
 status: in_force
 signed: '2017-11-24'
-in_force: '2018-06-01'
+in_force: '2021-03-01'
+provisional_application: '2018-06-01'
 parties:
 - id: EU
   type: intblock
@@ -11,6 +12,11 @@ parties:
   type: country
 wto_rta_id: 849
 dta_id: 338
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22018A0126(01)
+  type: website
+notes: The Comprehensive and Enhanced Partnership Agreement has been provisionally applied since June 2018 and formally entered
+  into force on 1 March 2021 (European Commission).
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -34,8 +40,11 @@ provenance:
   source: European Commission
   url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/armenia_en
   retrieved_at: '2026-11-23'
-notes: The Comprehensive and Enhanced Partnership Agreement has been provisionally applied since June 2018 and formally entered
-  into force on 1 March 2021 (European Commission).
-links:
-- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22018A0126(01)
-  type: website
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22018X0517%2801%29
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22021X0216%2801%29
+  retrieved_at: '2026-11-23'

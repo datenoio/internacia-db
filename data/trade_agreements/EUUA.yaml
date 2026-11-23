@@ -15,12 +15,15 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2014-06-27'
-in_force: '2016-01-01'
+in_force: '2017-09-01'
+provisional_application: '2016-01-01'
 parties:
 - id: EU
   type: intblock
 - id: UA
   type: country
+wto_rta_id: 681
+dta_id: 250
 wikidata_id: Q12163419
 links:
 - url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/ukraine_en
@@ -40,9 +43,8 @@ notes: Trade pillar (Title IV) of the EU-Ukraine Association Agreement signed on
   item is the Association Agreement that contains the DCFTA. Georgia and Moldova have separate DCFTAs and are not parties
   to this record. WTO RTA-IS lists an earlier 2014 goods date; Internacia uses 1 January 2016, the start of DCFTA provisional
   application. Following a review of the DCFTA under Article 29 of the Association Agreement, the upgraded text entered into
-  force on 29 October 2025 (European Commission).
-wto_rta_id: 681
-dta_id: 250
+  force on 29 October 2025 (European Commission). Other parts of the Association Agreement applied provisionally from 1 November
+  2014 (CELEX 22014X1031(01)); its trade title from 1 January 2016.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -74,4 +76,12 @@ provenance:
 - field: notes
   source: European Commission
   url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/ukraine_en
+  retrieved_at: '2026-11-23'
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22015X1205%2801%29
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22017X0725%2801%29
   retrieved_at: '2026-11-23'
