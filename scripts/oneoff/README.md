@@ -11,6 +11,7 @@ running one.
 | `invert_attribute_intblocks.py` | Turn attribute-partition intblocks into country fields and write `data/attribute_intblock_migrations.yaml` | 2.0.0 |
 | `label_scope_category.py` | Suggest `scope_category` values; does not write YAML | 2.x |
 | `import_sice.py` | Write hand-checked `data/trade_agreements/` records from OAS SICE snapshots (agreements table, agreement pages, Trade Policy Developments) | 5.x |
+| `fetch_aladi.py`, `import_aladi.py` | Save ALADI's agreement records and add the current partial-scope agreements missing from `data/trade_agreements/` | 5.1.0 |
 | `parse_aric_pages.py`, `import_aric_ftas.py` | Parse a snapshot of ADB ARIC FTA pages and write catalogue-level `data/trade_agreements/` records | 5.0.0 |
 | `import_wto_rtais.py` | Walk the WTO RTA-IS XLSX export into `data/trade_agreements/` | 5.0.0 |
 | `fetch_gptad.py`, `import_gptad.py` | Save the World Bank GPTAD library and agreement pages; write `gptad_id` and `treaty_text` links to mapped `data/trade_agreements/` records | 5.1.0 |
