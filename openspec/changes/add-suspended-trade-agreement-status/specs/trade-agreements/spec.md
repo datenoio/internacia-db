@@ -2,7 +2,7 @@
 
 ### Requirement: Trade agreement source records
 
-The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`, one file per legal instrument, validated by `data/schemas/trade_agreements.schema.json`. Each record SHALL have `id`, `name`, `agreement_type`, `status`, `verification`, `last_verified` and a non-empty `provenance` list. `agreement_type` SHALL be one of `fta`, `customs_union`, `pta`, `preference_scheme`, `services`, `digital`, `framework` or `other`. `status` SHALL be one of `proposed`, `negotiating`, `suspended`, `signed`, `in_force`, `terminated`, `abandoned` or `superseded`. `suspended` SHALL mean that negotiations were launched and then suspended, paused or put on hold without being formally ended; an agreement in force whose application is suspended SHALL keep `in_force`. `verification` SHALL be `official` or `catalogue`. After a linked record reads its intblock, an agreement SHALL have `signed` when its status is `signed`, `in_force` when its status is `in_force`, `terminated` or `superseded`, and `ended` when its status is `terminated` or `superseded`; a `superseded` record SHALL name `superseded_by`. A `proposed`, `negotiating`, `suspended`, `signed` or `abandoned` agreement SHALL NOT have an `in_force` date. `ended` SHALL NOT be earlier than `signed` or `in_force`; `in_force` MAY be earlier than `signed`, because an agreement can apply retroactively.
+The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`, one file per legal instrument, validated by `data/schemas/trade_agreements.schema.json`. Each record SHALL have `id`, `name`, `agreement_type`, `status`, `verification`, `last_verified` and a non-empty `provenance` list. `agreement_type` SHALL be one of `fta`, `customs_union`, `pta`, `preference_scheme`, `services`, `investment`, `digital`, `framework` or `other`. `status` SHALL be one of `proposed`, `negotiating`, `suspended`, `signed`, `in_force`, `terminated`, `abandoned` or `superseded`. `suspended` SHALL mean that negotiations were launched and then suspended, paused or put on hold without being formally ended; an agreement in force whose application is suspended SHALL keep `in_force`. `verification` SHALL be `official` or `catalogue`. After a linked record reads its intblock, an agreement SHALL have `signed` when its status is `signed`, `in_force` when its status is `in_force`, `terminated` or `superseded`, and `ended` when its status is `terminated` or `superseded`; a `superseded` record SHALL name `superseded_by`. A `proposed`, `negotiating`, `suspended`, `signed` or `abandoned` agreement SHALL NOT have an `in_force` date, and a `suspended` agreement SHALL NOT have `provisional_application` either. `ended` SHALL NOT be earlier than `signed` or `in_force`; `in_force` MAY be earlier than `signed`, because an agreement can apply retroactively.
 
 #### Scenario: Valid bilateral record
 
@@ -26,11 +26,11 @@ The repository SHALL keep trade agreements in `data/trade_agreements/<ID>.yaml`,
 
 #### Scenario: Suspended negotiations
 
-- **WHEN** a record `EFTATSOUZ` has `status: suspended`, no dates, five country parties and provenance
+- **WHEN** a record `EFTATSOUZ` has `status: suspended`, no dates, seven country parties and provenance
 - **THEN** validation passes
 - **AND** the quality report does not list it as an intblock candidate
 
 #### Scenario: Suspended with an entry-into-force date
 
 - **WHEN** a record has `status: suspended` and an `in_force` date
-- **THEN** the validator reports an error
+- **THEN** the validator reports a `TRADE_AGREEMENT_STATUS_DATE` error
