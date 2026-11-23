@@ -361,6 +361,14 @@ ships no trade values, tariff lines, preference margins, depth scores or ranking
 - **Agreements with three or more parties** that are signed or in force are also intblocks
   (`RCEP`, `CPTPP`, `AGADIR`): `trade_agreements.intblock_id` names the intblock, and the
   parties are read from its `includes`, so the two never disagree.
+- **Investment treaties** (bilateral investment treaties, Canada's FIPAs) are rows with
+  `agreement_type = 'investment'` and ids ending in `-BIT` (`AMCA-BIT`); a further treaty
+  between the same parties adds its year of signature (`CARO-BIT-1996`). A treaty that an FTA
+  suspended or replaced is `superseded` by that FTA (`CAPA-BIT` by `CAPA`). Plurilateral
+  investment treaties keep their intblock id (`ACIA`, `OICIA`). Belgium and Luxembourg sign
+  investment treaties as one party, the `BLEU` intblock, which `country_trade_agreements`
+  expands with `via = 'BLEU'`. Filter on `agreement_type` when you count trade agreements
+  only.
 - **`verification`** is `official` when parties and dates were checked against the treaty
   text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS, the
   WTO PTA Database or ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and
@@ -404,6 +412,24 @@ JOIN trade_agreements t ON t.id = c.agreement_id
 JOIN trade_agreement_parties g ON g.agreement_id = t.id AND g.role = 'grantor'
 WHERE c.country_code = 'BD' AND c.role = 'beneficiary' AND t.status = 'in_force'
 ORDER BY t.id;
+```
+
+- **`trade_agreement_instruments`** lists what amended or added to an agreement after
+  signature: upgrade and amending protocols, CEPA Supplements, supplementary agreements,
+  early harvest arrangements and Joint Committee decisions (`kind`), each with its own
+  `status` and dates. The agreement's row in `trade_agreements` keeps the agreement's own
+  `status` and dates: `CNPE` stays `in_force = '2010-03-01'` after its Optimization
+  Protocol entered into force in 2026. Most agreements have no instruments recorded yet, so
+  an empty result means none recorded, not none exist. Many Joint Committee decisions only
+  update annexes; filter on `kind` when you want treaty-level upgrades.
+
+```sql
+-- Agreements upgraded by a protocol in force since 2024, latest first.
+SELECT i.agreement_id, t.name, i.name AS instrument, i.in_force
+FROM trade_agreement_instruments i
+JOIN trade_agreements t ON t.id = i.agreement_id
+WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
+ORDER BY i.in_force DESC;
 ```
 
 ### Country attribute fields (former attribute intblocks)

@@ -39,7 +39,16 @@ does not store trade values, tariff lines, depth scores or rankings
 
 One record per legal instrument: WTO often lists goods (FTA) and services (EIA)
 separately, and catalogues list upgrade protocols as separate rows; the registry keeps one
-record with a note. Bilateral schedules inside a plurilateral agreement are part of it
+record. Instruments that amend or add to an agreement among its parties (upgrade and
+amending protocols, CEPA Supplements, supplementary agreements, early harvest
+arrangements, Joint Committee decisions) go in the record's `instruments` list and do not
+change its `status` or dates. An agreement that replaces another is a separate record with
+`supersedes`; an agreement concluded under an umbrella treaty with its own parties (LAIA
+partial-scope agreements) is a separate record; an accession or withdrawal is party data.
+An early harvest arrangement under an agreement that has a record is one of its
+instruments; a record whose only signed instrument is an early harvest arrangement
+describes that arrangement until the full agreement is signed
+([OpenSpec change](../openspec/changes/add-trade-agreement-instruments/design.md)). Bilateral schedules inside a plurilateral agreement are part of it
 (`USCR` merged into `CAFTADR`). UK continuity copies of EU agreements are separate legal
 instruments and get their own registry records. Constitutive instruments of an IGO
 already recorded (`EU`, `CCASG`) are not registry records of their own unless they are
@@ -81,7 +90,7 @@ existing IGO or FTA:
 
 | Include | Skip |
 |---------|------|
-| Named plurilateral investment treaties with an official short title and a ratifiers list that is not the parent IGO (`OICIA`, `ACIA`, `UAIA`, `CJKIA`) | Untitled bilateral `Country A – Country B` BITs, including BLEU’s Belgium–Luxembourg BIT programme |
+| Named plurilateral investment treaties with an official short title and a ratifiers list that is not the parent IGO (`OICIA`, `ACIA`, `UAIA`, `CJKIA`) | Bilateral `Country A – Country B` BITs and FIPAs, including the treaties of the Belgium–Luxembourg Economic Union: they go in the trade agreements registry as `agreement_type: investment` records with `-BIT` ids (`AMCA-BIT`), not in intblocks. A Belgium–Luxembourg treaty lists the `BLEU` intblock as one party |
 | Named CIS/REC services-and-investment instruments whose extra or missing parties make a distinct roster (`CISFTASERVICES`, `PCFI`) | FTA investment chapters of an FTA already recorded (`RCEP`, `CETA`, `ACFTA`/`AHKIA`, EU and EFTA extra-regional deals) |
 | Plurilateral termination or reform instruments whose parties are a subset of an IGO (`INTRAEUBIT`) | Community acts whose roster equals the parent IGO (ECOWAS Supplementary Act A/SA.3/12/08; SADC FIP after Comoros accession) — note on the parent |
 | Historical predecessors that complete a lineage already in the dataset | Constitutive instruments of an IGO already recorded (COMESA Treaty, ECOWAS Treaty, Revised Treaty of Chaguaramas) |

@@ -3,7 +3,8 @@ name: EU - Chile (Association Agreement)
 agreement_type: fta
 status: superseded
 signed: '2002-11-18'
-in_force: '2003-02-01'
+in_force: '2005-03-01'
+provisional_application: '2003-02-01'
 ended: '2025-02-01'
 parties:
 - id: EU
@@ -12,6 +13,9 @@ parties:
   type: country
 superseded_by: EUCL
 wto_rta_id: 33
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A1230(01)
+  type: website
 notes: WTO RTA-IS gives entry into force on 2003-02-01 for goods and on 2005-03-01 for services.
 verification: official
 last_verified: '2026-11-23'
@@ -36,6 +40,11 @@ provenance:
   source: European Commission
   url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/chile_en
   retrieved_at: '2026-11-23'
-links:
-- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A1230(01)
-  type: website
+- field: provisional_application
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A1230%2801%29
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22005X0402%2801%29
+  retrieved_at: '2026-11-23'

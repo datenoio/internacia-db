@@ -15,12 +15,13 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2016-10-30'
-in_force: '2017-09-21'
+provisional_application: '2017-09-21'
 parties:
 - id: EU
   type: intblock
 - id: CA
   type: country
+wto_rta_id: 619
 wikidata_id: Q1121969
 links:
 - url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/canada/eu-canada-agreement_en
@@ -38,10 +39,24 @@ description: Free trade agreement between the European Union and Canada, signed 
 notes: Mixed EU-Canada free trade agreement signed in Brussels on 30 October 2016; substantial parts provisionally applied
   from 21 September 2017 pending ratification by all EU member states; notified to the WTO on 19 September 2017. As of 2026
   CETA remains provisionally applied; investment protection is not among the provisionally applied chapters. The United Kingdom
-  signed CETA as an EU member but is not a party after Brexit.
-wto_rta_id: 619
+  signed CETA as an EU member but is not a party after Brexit. Applied provisionally from 21 September 2017 (OJ L 238, 16.9.2017,
+  CELEX 22017X0916(02)); it has not entered into force.
+instruments:
+- id: mra-architects-2024
+  kind: other
+  name: Mutual Recognition Agreement for architects
+  status: in_force
+  signed: '2024-10-10'
+  in_force: '2025-12-18'
+  coverage:
+  - services
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=619
+    retrieved_at: '2026-11-23'
 verification: official
-last_verified: '2026-09-09'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Global Affairs Canada
@@ -68,3 +83,7 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://www.wikidata.org/wiki/Q1121969
   license: CC0
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22017X0916%2802%29
+  retrieved_at: '2026-11-23'

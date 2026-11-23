@@ -12,6 +12,7 @@ agreement_type: fta
 status: in_force
 signed: '2020-12-29'
 in_force: '2021-05-01'
+provisional_application: '2021-01-01'
 parties:
 - id: GB
   type: country
@@ -22,8 +23,10 @@ aric_id: 418
 links:
 - url: https://www.gov.uk/government/collections/uk-vietnam-free-trade-agreement
   type: website
-notes: Published by the UK as CS Viet Nam No.1/2021 (CP 367), then TS No.25/2025 (CP 1311). The UK list of agreements in effect
-  still gives the mechanism as provisional application; the Treaty Series records entry into force on 1 May 2021.
+notes: Published by the UK as CS Viet Nam No.1/2021 (CP 367), then TS No.25/2025 (CP 1311). Applied provisionally from 23:00
+  GMT on 31 December 2020 (1 January 2021 in Viet Nam), when the EU-Viet Nam Free Trade Agreement ceased to apply to the UK,
+  and in force from 1 May 2021 (Viet Nam Ministry of Industry and Trade; UK Treaty Series). The UK list of agreements in effect
+  still gives the mechanism as provisional application. WTO RTA-IS gives 1 January 2021 as the date of entry into force.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -46,6 +49,18 @@ provenance:
 - field: in_force
   source: UK Government, UK Treaty Series
   url: https://www.gov.uk/government/publications/ukviet-nam-free-trade-agreement-ts-no252025
+  retrieved_at: '2026-11-23'
+- field: provisional_application
+  source: Ministry of Industry and Trade of Viet Nam
+  url: https://moit.gov.vn/tin-tuc/thoi-su/le-trao-doi-cong-ham-khang-dinh-ngay-co-hieu-luc-cua-hiep-di.html
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Ministry of Industry and Trade of Viet Nam
+  url: https://moit.gov.vn/tin-tuc/thoi-su/le-trao-doi-cong-ham-khang-dinh-ngay-co-hieu-luc-cua-hiep-di.html
+  retrieved_at: '2026-11-23'
+- field: provisional_application
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1130
   retrieved_at: '2026-11-23'
 - field: parties
   source: UK Government
