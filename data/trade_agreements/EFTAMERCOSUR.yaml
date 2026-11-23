@@ -7,24 +7,37 @@ in_force: '2026-10-01'
 parties:
 - id: AR
   type: country
+  note: Entry into force pending.
 - id: BR
   type: country
+  in_force: '2026-10-01'
 - id: PY
   type: country
+  note: Entry into force pending.
 - id: UY
   type: country
+  in_force: '2026-11-01'
 - id: 'NO'
   type: country
+  in_force: '2026-11-01'
 - id: CH
   type: country
+  note: Entry into force pending.
 - id: IS
   type: country
+  in_force: '2026-10-01'
 - id: LI
   type: country
+  note: Entry into force pending.
 wto_rta_id: 1022
-notes: WTO RTA-IS lists it as in force for at least one party.
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/mercosur
+  type: website
+notes: WTO RTA-IS lists it as in force for at least one party. In force between Brazil and Iceland from 1 October 2026, and
+  for Uruguay and Norway from 1 November 2026; pending for Argentina, Paraguay, Liechtenstein and Switzerland (EFTA, page
+  captured 2026-11-15; WTO RTA-IS).
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -34,3 +47,15 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1022
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20261115205235/https://www.efta.int/trade-relations/free-trade-network/mercosur
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20261115205235/https://www.efta.int/trade-relations/free-trade-network/mercosur
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20261115205235/https://www.efta.int/trade-relations/free-trade-network/mercosur
+  retrieved_at: '2026-11-23'

@@ -4,7 +4,7 @@ acronyms:
 - lang: en
   value: CSFTA
 agreement_type: fta
-status: negotiating
+status: abandoned
 parties:
 - id: CA
   type: country
@@ -12,9 +12,11 @@ parties:
   type: country
 wto_rta_id: 164
 aric_id: 109
-notes: 'ADB ARIC dates: negotiations launched 2001-10-21.'
-verification: catalogue
-last_verified: '2026-11-22'
+notes: 'Negotiations were launched in October 2001 and have been on hold by mutual agreement since November 2009. Global Affairs
+  Canada lists the status as 8. Inactive; Canada and Singapore are both parties to CPTPP. ADB ARIC dates: negotiations launched
+  2001-10-21.'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -24,3 +26,15 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=109&ssid=3
   retrieved_at: '2026-11-22'
+- field: parties
+  source: Global Affairs Canada, Canada's international trade and investment agreements
+  url: https://international.canada.ca/en/services/business/trade/agreements-negotiations/investment-agreements
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Global Affairs Canada, Canada's international trade and investment agreements
+  url: https://international.canada.ca/en/services/business/trade/agreements-negotiations/investment-agreements
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Global Affairs Canada
+  url: https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/singapore-singapour/fta-ale/background-contexte.aspx?lang=eng
+  retrieved_at: '2026-11-23'
