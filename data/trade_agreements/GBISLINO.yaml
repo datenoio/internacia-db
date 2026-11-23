@@ -3,25 +3,46 @@ name: United Kingdom - Iceland, Liechtenstein and Norway
 agreement_type: fta
 status: in_force
 signed: '2021-07-08'
-in_force: '2021-12-01'
+in_force: '2022-09-01'
 parties:
 - id: IS
   type: country
+  in_force: '2023-02-01'
 - id: LI
   type: country
+  in_force: '2022-09-01'
 - id: 'NO'
   type: country
+  in_force: '2022-09-01'
 - id: GB
   type: country
+  in_force: '2022-09-01'
 wto_rta_id: 1173
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/united-kingdom
+  type: website
+notes: WTO RTA-IS gives 2021-12-01 as the date of entry into force; its remarks show that date as the start of provisional
+  application between the UK and Norway (Liechtenstein 2022-01-01, Iceland 2022-09-01).
+verification: official
+last_verified: '2026-11-23'
 provenance:
-- field: parties
-  source: WTO Regional Trade Agreements Information System
-  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1173
-  retrieved_at: '2026-11-22'
 - field: status
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1173
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20251225062440/https://www.efta.int/trade-relations/free-trade-network/united-kingdom
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20251225062440/https://www.efta.int/trade-relations/free-trade-network/united-kingdom
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20251225062440/https://www.efta.int/trade-relations/free-trade-network/united-kingdom
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1173
+  retrieved_at: '2026-11-23'
