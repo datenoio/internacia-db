@@ -16,6 +16,10 @@ parties:
 - id: BA
   type: country
   role: beneficiary
+- id: HR
+  type: country
+  role: beneficiary
+  left: '2013-07-01'
 - id: ME
   type: country
   role: beneficiary
@@ -30,13 +34,17 @@ parties:
   role: beneficiary
 wto_pta_ids:
 - 76
-notes: Beneficiaries are those of the PTA Database version as of 2024-07-09 (6 countries and territories), not checked against
-  the grantor's own list. Notified under paragraph 1(c) of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'Current beneficiaries are those of the PTA Database version as of 2024-07-09 (6 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 10 PTA Database versions with a beneficiary list, as of
+  2011-12-13 to 2024-07-09: in_force is the date of the version that first lists a beneficiary (none for those already listed
+  on 2011-12-13, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 1 former beneficiary is included. Notified under paragraph 1(c) of the Transparency Mechanism
+  for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2024-07-09
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-12-13 to 2024-07-09
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

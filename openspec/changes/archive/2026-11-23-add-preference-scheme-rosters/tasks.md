@@ -74,4 +74,4 @@
 
 ## 6. Follow-up (separate change)
 
-- [ ] 6.1 Propose historical beneficiary dates from the PTA Database versions (design decision 10).
+- [x] 6.1 Propose historical beneficiary dates from the PTA Database versions (design decision 10). Proposed and implemented as `add-preference-scheme-beneficiary-history` (PR 216).

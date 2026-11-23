@@ -7,21 +7,48 @@ parties:
 - id: US
   type: country
   role: grantor
+- id: BF
+  type: country
+  role: beneficiary
+  left: '2023-10-27'
 - id: BJ
   type: country
   role: beneficiary
 - id: BW
   type: country
   role: beneficiary
+- id: CF
+  type: country
+  role: beneficiary
+  in_force: '2017-06-01'
+  left: '2018-06-01'
 - id: CI
   type: country
   role: beneficiary
+  in_force: '2013-06-01'
+- id: CM
+  type: country
+  role: beneficiary
+  left: '2020-04-29'
 - id: CV
   type: country
   role: beneficiary
+- id: ET
+  type: country
+  role: beneficiary
+  left: '2022-01-10'
 - id: GH
   type: country
   role: beneficiary
+- id: GM
+  type: country
+  role: beneficiary
+  left: '2015-06-30'
+- id: GN
+  type: country
+  role: beneficiary
+  in_force: '2017-06-01'
+  left: '2022-01-10'
 - id: KE
   type: country
   role: beneficiary
@@ -34,6 +61,16 @@ parties:
 - id: MG
   type: country
   role: beneficiary
+  in_force: '2015-06-30'
+- id: ML
+  type: country
+  role: beneficiary
+  in_force: '2014-06-30'
+  left: '2015-06-30'
+- id: MR
+  type: country
+  role: beneficiary
+  left: '2013-06-01'
 - id: MU
   type: country
   role: beneficiary
@@ -49,6 +86,10 @@ parties:
 - id: NG
   type: country
   role: beneficiary
+- id: RW
+  type: country
+  role: beneficiary
+  left: '2019-09-01'
 - id: SL
   type: country
   role: beneficiary
@@ -58,29 +99,41 @@ parties:
 - id: SZ
   type: country
   role: beneficiary
+  in_force: '2019-09-01'
+  note: Also a beneficiary until 2015-06-30 (listed from 2011-10-25).
 - id: TD
   type: country
   role: beneficiary
 - id: TG
   type: country
   role: beneficiary
+  in_force: '2018-06-01'
 - id: TZ
   type: country
   role: beneficiary
+- id: UG
+  type: country
+  role: beneficiary
+  left: '2025-03-21'
 - id: ZA
   type: country
   role: beneficiary
+  in_force: '2017-06-01'
+  note: Also a beneficiary until 2015-06-30 (listed from 2011-10-25).
 - id: ZM
   type: country
   role: beneficiary
 parent: AGOA
-notes: Beneficiaries are those of the PTA Database version as of 2025-03-21 (22 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2025-03-21 (22 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 14 PTA Database versions with a beneficiary list, as of
+  2011-10-25 to 2025-03-21: in_force is the date of the version that first lists a beneficiary (none for those already listed
+  on 2011-10-25, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 10 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2025-03-21
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-10-25 to 2025-03-21
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

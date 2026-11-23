@@ -5,7 +5,7 @@ acronyms:
   value: LDCT
 agreement_type: preference_scheme
 status: in_force
-in_force: '2024-07-17'
+in_force: '2012-01-01'
 parties:
 - id: CA
   type: country
@@ -55,6 +55,10 @@ parties:
 - id: GN
   type: country
   role: beneficiary
+- id: GQ
+  type: country
+  role: beneficiary
+  left: '2015-01-01'
 - id: GW
   type: country
   role: beneficiary
@@ -88,9 +92,14 @@ parties:
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2016-03-31'
 - id: MR
   type: country
   role: beneficiary
+- id: MV
+  type: country
+  role: beneficiary
+  left: '2015-01-01'
 - id: MW
   type: country
   role: beneficiary
@@ -124,6 +133,7 @@ parties:
 - id: SS
   type: country
   role: beneficiary
+  in_force: '2014-01-01'
 - id: ST
   type: country
   role: beneficiary
@@ -158,14 +168,17 @@ parties:
   type: country
   role: beneficiary
 parent: CA-GSP
-notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2024-07-17,
-  from the version that lists it (2024-07-17). Beneficiaries are those of the PTA Database version as of 2024-07-17 (49 countries
-  and territories), not checked against the grantor''s own list.'
+notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2012-01-01,
+  from the earliest version that lists it (2012-01-01). Current beneficiaries are those of the PTA Database version as of
+  2024-07-17 (49 countries and territories), not checked against the grantor''s own list. Beneficiary dates come from the
+  9 PTA Database versions with a beneficiary list, as of 2012-01-01 to 2024-07-17: in_force is the date of the version that
+  first lists a beneficiary (none for those already listed on 2012-01-01, the earliest list) and left the date of the first
+  version that no longer lists it. They are no-later-than dates, not designation dates. 2 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2024-07-17
+  source: WTO Preferential Trade Arrangements Database, versions as of 2012-01-01 to 2024-07-17
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -173,6 +186,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2024-07-17
+  source: WTO Preferential Trade Arrangements Database, version as of 2012-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'

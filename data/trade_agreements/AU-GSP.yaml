@@ -97,6 +97,7 @@ parties:
 - id: CK
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: CL
   type: country
   role: beneficiary
@@ -151,12 +152,14 @@ parties:
 - id: FJ
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: FK
   type: country
   role: beneficiary
 - id: FM
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: GA
   type: country
   role: beneficiary
@@ -181,6 +184,7 @@ parties:
 - id: GS
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: GT
   type: country
   role: beneficiary
@@ -289,6 +293,7 @@ parties:
 - id: MH
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: MK
   type: country
   role: beneficiary
@@ -355,9 +360,11 @@ parties:
 - id: NR
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: NU
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: OM
   type: country
   role: beneficiary
@@ -373,6 +380,7 @@ parties:
 - id: PG
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: PH
   type: country
   role: beneficiary
@@ -406,6 +414,7 @@ parties:
 - id: RS
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: RW
   type: country
   role: beneficiary
@@ -424,6 +433,7 @@ parties:
 - id: SG
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: SH
   type: country
   role: beneficiary
@@ -466,12 +476,14 @@ parties:
 - id: TF
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: TG
   type: country
   role: beneficiary
 - id: TH
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: TK
   type: country
   role: beneficiary
@@ -484,6 +496,7 @@ parties:
 - id: TO
   type: country
   role: beneficiary
+  in_force: '2019-09-13'
 - id: TR
   type: country
   role: beneficiary
@@ -514,6 +527,10 @@ parties:
 - id: VE
   type: country
   role: beneficiary
+- id: VG
+  type: country
+  role: beneficiary
+  left: '2019-09-13'
 - id: VI
   type: country
   role: beneficiary
@@ -541,13 +558,17 @@ parties:
 parent: GSP
 wto_pta_ids:
 - 69
-notes: Beneficiaries are those of the PTA Database version as of 2019-09-13 (177 countries and territories), not checked against
-  the grantor's own list. Notified under paragraph 1(b) of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'Current beneficiaries are those of the PTA Database version as of 2019-09-13 (177 countries and territories), not
+  checked against the grantor''s own list. Beneficiary dates come from the 2 PTA Database versions with a beneficiary list,
+  as of 2012-02-01 to 2019-09-13: in_force is the date of the version that first lists a beneficiary (none for those already
+  listed on 2012-02-01, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 1 former beneficiary is included. Notified under paragraph 1(b) of the Transparency Mechanism
+  for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2019-09-13
+  source: WTO Preferential Trade Arrangements Database, versions as of 2012-02-01 to 2019-09-13
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

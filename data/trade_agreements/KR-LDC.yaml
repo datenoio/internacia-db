@@ -10,153 +10,229 @@ parties:
 - id: AF
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: AO
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: BD
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: BF
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: BI
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: BJ
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: BT
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: CD
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: CF
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
+- id: CV
+  type: country
+  role: beneficiary
+  in_force: '2000-01-01'
+  left: '2012-01-01'
 - id: DJ
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: ER
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: ET
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: GM
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: GN
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
+- id: GQ
+  type: country
+  role: beneficiary
+  in_force: '2000-01-01'
+  left: '2020-07-08'
 - id: GW
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: HT
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: KH
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: KI
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: KM
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: LA
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: LR
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: LS
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: MG
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: ML
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: MR
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
+- id: MV
+  type: country
+  role: beneficiary
+  in_force: '2000-01-01'
+  left: '2012-01-01'
 - id: MW
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: MZ
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: NE
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
+  note: Also a beneficiary from 2000-01-01 to 2012-01-01.
+- id: NG
+  type: country
+  role: beneficiary
+  in_force: '2012-01-01'
+  left: '2015-01-01'
 - id: NP
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: RW
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: SB
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: SD
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: SL
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: SN
   type: country
   role: beneficiary
+  in_force: '2012-01-01'
 - id: SO
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: SS
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
 - id: ST
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: TD
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: TG
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: TL
   type: country
   role: beneficiary
+  in_force: '2012-01-01'
 - id: TV
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: TZ
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: UG
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: VU
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
+- id: WS
+  type: country
+  role: beneficiary
+  in_force: '2000-01-01'
+  left: '2015-01-01'
 - id: YE
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 - id: ZM
   type: country
   role: beneficiary
+  in_force: '2000-01-01'
 wto_pta_ids:
 - 52
-notes: Beneficiaries are those of the PTA Database version as of 2020-07-08 (47 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2020-07-08 (47 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 5 PTA Database versions with a beneficiary list, as of
+  2000-01-01 to 2020-07-08: in_force is the date of the version that first lists a beneficiary (those listed on 2000-01-01,
+  the scheme''s first version, have that date) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 5 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2020-07-08
+  source: WTO Preferential Trade Arrangements Database, versions as of 2000-01-01 to 2020-07-08
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

@@ -382,6 +382,12 @@ agreement, join the World Bank Deep Trade Agreements files on `dta_id` (their `W
   sub-scheme to its scheme and a national scheme to the `GSP` framework: `GSP` → `EU-GSP` →
   `EU-GSP-EBA` and `GSPPLUS`. Most beneficiary lists are catalogue-level and dated: the notes
   give the PTA Database version they come from (the EU GSP list is of 2017).
+- **Beneficiary history** (OpenSpec change `add-preference-scheme-beneficiary-history`) comes
+  from the PTA Database versions, whose beneficiary lists start around 2011. A beneficiary has
+  `in_force` when a later version first lists it, and `left` when a version drops it. Countries
+  that graduated or were removed are `former_party` rows in `trade_agreement_parties`. These
+  are no-later-than dates, not designation dates. A country listed since the earliest list has
+  no `in_force`, and earlier spells of a returning country are in the party `note`.
 - **Provisional application.** `in_force` is the definitive entry into force.
   `provisional_application` is the date an agreement began to apply provisionally; an
   agreement applied only provisionally has `status = 'in_force'` and an empty `in_force`.
@@ -414,6 +420,14 @@ JOIN trade_agreements t ON t.id = c.agreement_id
 JOIN trade_agreement_parties g ON g.agreement_id = t.id AND g.role = 'grantor'
 WHERE c.country_code = 'BD' AND c.role = 'beneficiary' AND t.status = 'in_force'
 ORDER BY t.id;
+```
+
+```sql
+-- Beneficiaries a scheme lost, with the version date by which each left.
+SELECT p.party_id, p."left", p.note
+FROM trade_agreement_parties p
+WHERE p.agreement_id = 'EU-GSP' AND p.role = 'beneficiary' AND p.status = 'former_party'
+ORDER BY p."left", p.party_id;
 ```
 
 - **`trade_agreement_instruments`** lists what amended or added to an agreement after

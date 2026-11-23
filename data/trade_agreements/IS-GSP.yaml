@@ -10,157 +10,208 @@ parties:
 - id: AF
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: AO
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: BD
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: BF
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: BI
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: BJ
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: BT
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: CF
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: CG
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: CV
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: DJ
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: ER
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: ET
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: GM
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: GN
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: GQ
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: GW
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: HT
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: KH
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: KI
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: KM
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: LA
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: LR
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: LS
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MG
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: ML
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MR
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MV
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MW
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: MZ
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: NE
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: NP
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: RW
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: SB
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: SD
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: SL
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: SO
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: ST
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: TD
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: TG
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: TV
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: TZ
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: UG
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: VU
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: WS
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: YE
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 - id: ZM
   type: country
   role: beneficiary
+  in_force: '2002-01-29'
 parent: GSP
 wto_pta_ids:
 - 53
-notes: Beneficiaries are those of the PTA Database version as of 2014-01-01 (48 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2014-01-01 (48 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 2 PTA Database versions with a beneficiary list, as of
+  2002-01-29 to 2014-01-01: in_force is the date of the version that first lists a beneficiary (those listed on 2002-01-29,
+  the scheme''s first version, have that date) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2014-01-01
+  source: WTO Preferential Trade Arrangements Database, versions as of 2002-01-29 to 2014-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

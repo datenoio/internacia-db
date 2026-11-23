@@ -2,7 +2,7 @@ id: TR-GSP-LDC
 name: Least developed countries in the Turkish GSP
 agreement_type: preference_scheme
 status: in_force
-in_force: '2019-09-16'
+in_force: '2009-01-01'
 parties:
 - id: TR
   type: country
@@ -34,6 +34,10 @@ parties:
 - id: CF
   type: country
   role: beneficiary
+- id: CV
+  type: country
+  role: beneficiary
+  left: '2018-06-29'
 - id: DJ
   type: country
   role: beneficiary
@@ -61,12 +65,18 @@ parties:
 - id: KH
   type: country
   role: beneficiary
+  in_force: '2019-09-16'
+  note: Also a beneficiary until 2018-06-29 (listed from 2009-01-01).
 - id: KI
   type: country
   role: beneficiary
+  in_force: '2019-09-16'
+  note: Also a beneficiary until 2018-06-29 (listed from 2009-01-01).
 - id: KM
   type: country
   role: beneficiary
+  in_force: '2019-09-16'
+  note: Also a beneficiary until 2018-06-29 (listed from 2009-01-01).
 - id: LA
   type: country
   role: beneficiary
@@ -85,9 +95,14 @@ parties:
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2018-06-29'
 - id: MR
   type: country
   role: beneficiary
+- id: MV
+  type: country
+  role: beneficiary
+  left: '2018-06-29'
 - id: MW
   type: country
   role: beneficiary
@@ -121,6 +136,7 @@ parties:
 - id: SS
   type: country
   role: beneficiary
+  in_force: '2018-06-29'
 - id: ST
   type: country
   role: beneficiary
@@ -133,6 +149,7 @@ parties:
 - id: TL
   type: country
   role: beneficiary
+  in_force: '2018-06-29'
 - id: TV
   type: country
   role: beneficiary
@@ -145,6 +162,10 @@ parties:
 - id: VU
   type: country
   role: beneficiary
+- id: WS
+  type: country
+  role: beneficiary
+  left: '2019-09-16'
 - id: YE
   type: country
   role: beneficiary
@@ -152,14 +173,17 @@ parties:
   type: country
   role: beneficiary
 parent: TR-GSP
-notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2019-09-16,
-  from the version that lists it (2019-09-16). Beneficiaries are those of the PTA Database version as of 2019-09-16 (48 countries
-  and territories), not checked against the grantor''s own list.'
+notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2009-01-01,
+  from the earliest version that lists it (2009-01-01). Current beneficiaries are those of the PTA Database version as of
+  2019-09-16 (48 countries and territories), not checked against the grantor''s own list. Beneficiary dates come from the
+  3 PTA Database versions with a beneficiary list, as of 2009-01-01 to 2019-09-16: in_force is the date of the version that
+  first lists a beneficiary (none for those already listed on 2009-01-01, the earliest list) and left the date of the first
+  version that no longer lists it. They are no-later-than dates, not designation dates. 3 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2019-09-16
+  source: WTO Preferential Trade Arrangements Database, versions as of 2009-01-01 to 2019-09-16
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -167,6 +191,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2019-09-16
+  source: WTO Preferential Trade Arrangements Database, version as of 2009-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'

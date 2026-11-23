@@ -2,7 +2,7 @@ id: NZ-GSP-LDC
 name: Least developed countries in the New Zealand GSP
 agreement_type: preference_scheme
 status: in_force
-in_force: '2018-01-01'
+in_force: '2011-09-01'
 parties:
 - id: NZ
   type: country
@@ -158,14 +158,17 @@ parties:
   type: country
   role: beneficiary
 parent: NZ-GSP
-notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2018-01-01,
-  from the version that lists it (2018-01-01). Beneficiaries are those of the PTA Database version as of 2018-01-01 (50 countries
-  and territories), not checked against the grantor''s own list.'
+notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2011-09-01,
+  from the earliest version that lists it (2011-09-01). Current beneficiaries are those of the PTA Database version as of
+  2018-01-01 (50 countries and territories), not checked against the grantor''s own list. Beneficiary dates come from the
+  2 PTA Database versions with a beneficiary list, as of 2011-09-01 to 2018-01-01: in_force is the date of the version that
+  first lists a beneficiary (none for those already listed on 2011-09-01, the earliest list) and left the date of the first
+  version that no longer lists it. They are no-later-than dates, not designation dates.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2018-01-01
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-09-01 to 2018-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -173,6 +176,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2018-01-01
+  source: WTO Preferential Trade Arrangements Database, version as of 2011-09-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'

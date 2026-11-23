@@ -14,16 +14,20 @@ parties:
 - id: MD
   type: country
   role: beneficiary
+  in_force: '2008-01-21'
 wto_pta_ids:
 - 75
-notes: The EU-Moldova Association Agreement (EUMD), with its free trade area, replaced the preferences. Beneficiaries are
-  those of the PTA Database version as of 2011-06-08 (1 country or territory), not checked against the grantor's own list.
-  Notified under paragraph 1(c) of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'The EU-Moldova Association Agreement (EUMD), with its free trade area, replaced the preferences. Current beneficiaries
+  are those of the PTA Database version as of 2011-06-08 (1 country or territory), not checked against the grantor''s own
+  list. Beneficiary dates come from the 2 PTA Database versions with a beneficiary list, as of 2008-01-21 to 2011-06-08: in_force
+  is the date of the version that first lists a beneficiary (those listed on 2008-01-21, the scheme''s first version, have
+  that date) and left the date of the first version that no longer lists it. They are no-later-than dates, not designation
+  dates. Notified under paragraph 1(c) of the Transparency Mechanism for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2011-06-08
+  source: WTO Preferential Trade Arrangements Database, versions as of 2008-01-21 to 2011-06-08
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

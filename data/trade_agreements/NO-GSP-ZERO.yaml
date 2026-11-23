@@ -2,7 +2,7 @@ id: NO-GSP-ZERO
 name: GSP zero (Norway)
 agreement_type: preference_scheme
 status: in_force
-in_force: '2022-02-15'
+in_force: '2011-01-01'
 parties:
 - id: 'NO'
   type: country
@@ -10,6 +10,10 @@ parties:
 - id: AF
   type: country
   role: beneficiary
+- id: AO
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: BD
   type: country
   role: beneficiary
@@ -19,18 +23,41 @@ parties:
 - id: BI
   type: country
   role: beneficiary
+  in_force: '2020-01-01'
+  note: Also a beneficiary until 2019-01-01 (listed from 2011-01-01).
 - id: BJ
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
+  note: Also a beneficiary until 2014-01-01 (listed from 2011-01-01).
+- id: BO
+  type: country
+  role: beneficiary
+  in_force: '2014-01-01'
+  left: '2015-01-01'
 - id: BT
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
+  note: Also a beneficiary until 2014-01-01 (listed from 2011-01-01).
 - id: CD
   type: country
   role: beneficiary
 - id: CF
   type: country
   role: beneficiary
+- id: CI
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
+- id: CM
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
+- id: CV
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: DJ
   type: country
   role: beneficiary
@@ -40,6 +67,10 @@ parties:
 - id: ET
   type: country
   role: beneficiary
+- id: GH
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: GM
   type: country
   role: beneficiary
@@ -58,9 +89,15 @@ parties:
 - id: KE
   type: country
   role: beneficiary
+- id: KG
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: KH
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
+  note: Also a beneficiary until 2014-01-01 (listed from 2011-01-01).
 - id: KI
   type: country
   role: beneficiary
@@ -70,6 +107,13 @@ parties:
 - id: KP
   type: country
   role: beneficiary
+  in_force: '2016-01-01'
+  note: Also a beneficiary until 2015-01-01 (listed from 2011-01-01).
+- id: KR
+  type: country
+  role: beneficiary
+  in_force: '2015-01-01'
+  left: '2016-01-01'
 - id: LA
   type: country
   role: beneficiary
@@ -88,9 +132,18 @@ parties:
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2013-01-01'
+- id: MN
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: MR
   type: country
   role: beneficiary
+- id: MV
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: MW
   type: country
   role: beneficiary
@@ -100,12 +153,22 @@ parties:
 - id: NE
   type: country
   role: beneficiary
+- id: NI
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: NP
   type: country
   role: beneficiary
+- id: PG
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: RW
   type: country
   role: beneficiary
+  in_force: '2020-01-01'
+  note: Also a beneficiary until 2019-01-01 (listed from 2011-01-01).
 - id: SB
   type: country
   role: beneficiary
@@ -124,9 +187,17 @@ parties:
 - id: SS
   type: country
   role: beneficiary
+- id: ST
+  type: country
+  role: beneficiary
+  in_force: '2019-01-01'
+  left: '2022-02-15'
+  note: Also a beneficiary until 2017-01-01 (listed from 2011-01-01).
 - id: SY
   type: country
   role: beneficiary
+  in_force: '2022-02-15'
+  note: Also a beneficiary from 2012-01-01 to 2013-01-01.
 - id: TD
   type: country
   role: beneficiary
@@ -148,9 +219,24 @@ parties:
 - id: UG
   type: country
   role: beneficiary
+  in_force: '2018-01-01'
+  note: Also a beneficiary until 2017-01-01 (listed from 2011-01-01).
+- id: UY
+  type: country
+  role: beneficiary
+  in_force: '2017-01-01'
+  left: '2018-01-01'
+- id: UZ
+  type: country
+  role: beneficiary
+  left: '2016-01-01'
 - id: VU
   type: country
   role: beneficiary
+- id: WS
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: YE
   type: country
   role: beneficiary
@@ -161,14 +247,17 @@ parties:
   type: country
   role: beneficiary
 parent: NO-GSP
-notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2022-02-15,
-  from the version that lists it (2022-02-15). Beneficiaries are those of the PTA Database version as of 2022-02-15 (51 countries
-  and territories), not checked against the grantor''s own list.'
+notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2011-01-01,
+  from the earliest version that lists it (2011-01-01). Current beneficiaries are those of the PTA Database version as of
+  2022-02-15 (51 countries and territories), not checked against the grantor''s own list. Beneficiary dates come from the
+  11 PTA Database versions with a beneficiary list, as of 2011-01-01 to 2022-02-15: in_force is the date of the version that
+  first lists a beneficiary (none for those already listed on 2011-01-01, the earliest list) and left the date of the first
+  version that no longer lists it. They are no-later-than dates, not designation dates. 16 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-15
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-01-01 to 2022-02-15
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -176,6 +265,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-15
+  source: WTO Preferential Trade Arrangements Database, version as of 2011-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'

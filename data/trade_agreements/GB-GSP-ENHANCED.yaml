@@ -8,38 +8,54 @@ parties:
 - id: GB
   type: country
   role: grantor
+- id: AM
+  type: country
+  role: beneficiary
+  in_force: '2021-01-01'
+  left: '2022-01-01'
 - id: BO
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: CV
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: KG
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: LK
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: MN
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: PH
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: PK
   type: country
   role: beneficiary
+  in_force: '2021-01-01'
 - id: UZ
   type: country
   role: beneficiary
+  in_force: '2022-01-01'
 parent: GB-GSP
-notes: Beneficiaries are those of the PTA Database version as of 2022-01-01 (8 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2022-01-01 (8 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 2 PTA Database versions with a beneficiary list, as of
+  2021-01-01 to 2022-01-01: in_force is the date of the version that first lists a beneficiary (those listed on 2021-01-01,
+  the scheme''s first version, have that date) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 1 former beneficiary is included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-01-01
+  source: WTO Preferential Trade Arrangements Database, versions as of 2021-01-01 to 2022-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -47,6 +63,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-01-01
+  source: WTO Preferential Trade Arrangements Database, version as of 2021-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'

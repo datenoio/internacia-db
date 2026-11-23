@@ -10,6 +10,14 @@ parties:
 - id: AF
   type: country
   role: beneficiary
+- id: AG
+  type: country
+  role: beneficiary
+  left: '2018-04-01'
+- id: AI
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: AL
   type: country
   role: beneficiary
@@ -46,6 +54,10 @@ parties:
 - id: BO
   type: country
   role: beneficiary
+- id: BR
+  type: country
+  role: beneficiary
+  left: '2019-04-01'
 - id: BT
   type: country
   role: beneficiary
@@ -70,9 +82,21 @@ parties:
 - id: CI
   type: country
   role: beneficiary
+- id: CK
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
+- id: CL
+  type: country
+  role: beneficiary
+  left: '2017-07-04'
 - id: CM
   type: country
   role: beneficiary
+- id: CN
+  type: country
+  role: beneficiary
+  left: '2019-04-01'
 - id: CO
   type: country
   role: beneficiary
@@ -112,6 +136,10 @@ parties:
 - id: FJ
   type: country
   role: beneficiary
+- id: FK
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: FM
   type: country
   role: beneficiary
@@ -127,6 +155,10 @@ parties:
 - id: GH
   type: country
   role: beneficiary
+- id: GI
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: GM
   type: country
   role: beneficiary
@@ -148,6 +180,10 @@ parties:
 - id: HN
   type: country
   role: beneficiary
+- id: HR
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: HT
   type: country
   role: beneficiary
@@ -184,6 +220,10 @@ parties:
 - id: KM
   type: country
   role: beneficiary
+- id: KN
+  type: country
+  role: beneficiary
+  left: '2017-07-04'
 - id: KZ
   type: country
   role: beneficiary
@@ -238,6 +278,10 @@ parties:
 - id: MR
   type: country
   role: beneficiary
+- id: MS
+  type: country
+  role: beneficiary
+  left: '2023-05-16'
 - id: MU
   type: country
   role: beneficiary
@@ -247,6 +291,14 @@ parties:
 - id: MW
   type: country
   role: beneficiary
+- id: MX
+  type: country
+  role: beneficiary
+  left: '2019-04-01'
+- id: MY
+  type: country
+  role: beneficiary
+  left: '2019-04-01'
 - id: MZ
   type: country
   role: beneficiary
@@ -268,6 +320,10 @@ parties:
 - id: NU
   type: country
   role: beneficiary
+- id: PA
+  type: country
+  role: beneficiary
+  left: '2022-06-28'
 - id: PE
   type: country
   role: beneficiary
@@ -283,6 +339,12 @@ parties:
 - id: PS
   type: country
   role: beneficiary
+  in_force: '2017-07-04'
+  note: Also a beneficiary until 2016-04-01 (listed from 2011-04-01).
+- id: PW
+  type: country
+  role: beneficiary
+  left: '2021-06-08'
 - id: PY
   type: country
   role: beneficiary
@@ -295,6 +357,10 @@ parties:
 - id: SB
   type: country
   role: beneficiary
+- id: SC
+  type: country
+  role: beneficiary
+  left: '2018-04-01'
 - id: SD
   type: country
   role: beneficiary
@@ -325,12 +391,20 @@ parties:
 - id: SZ
   type: country
   role: beneficiary
+- id: TC
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: TD
   type: country
   role: beneficiary
 - id: TG
   type: country
   role: beneficiary
+- id: TH
+  type: country
+  role: beneficiary
+  left: '2019-04-01'
 - id: TJ
   type: country
   role: beneficiary
@@ -364,6 +438,10 @@ parties:
 - id: UG
   type: country
   role: beneficiary
+- id: UY
+  type: country
+  role: beneficiary
+  left: '2017-07-04'
 - id: UZ
   type: country
   role: beneficiary
@@ -373,6 +451,10 @@ parties:
 - id: VE
   type: country
   role: beneficiary
+- id: VG
+  type: country
+  role: beneficiary
+  left: '2016-04-01'
 - id: VN
   type: country
   role: beneficiary
@@ -400,13 +482,16 @@ parties:
 parent: GSP
 wto_pta_ids:
 - 63
-notes: Beneficiaries are those of the PTA Database version as of 2026-06-07 (130 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2026-06-07 (130 countries and territories), not
+  checked against the grantor''s own list. Beneficiary dates come from the 11 PTA Database versions with a beneficiary list,
+  as of 2011-04-01 to 2026-06-07: in_force is the date of the version that first lists a beneficiary (none for those already
+  listed on 2011-04-01, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 20 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2026-06-07
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-04-01 to 2026-06-07
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
