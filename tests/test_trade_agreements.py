@@ -129,6 +129,33 @@ def test_id_collision_with_unrelated_intblock():
     assert _types([_record(id="RCEP")]) == ["TRADE_AGREEMENT_ID_COLLISION"]
 
 
+def _investment(**fields):
+    return _record(**{"id": "AMGE-BIT", "name": "Armenia-Georgia Investment Treaty", "agreement_type": "investment",
+                      **fields})
+
+
+def test_valid_investment_treaty():
+    assert _types([_investment(), _record()]) == []
+
+
+def test_investment_treaty_with_year_suffix():
+    assert _types([_investment(id="AMGE-BIT-1995")]) == []
+
+
+def test_investment_treaty_needs_bit_suffix():
+    assert _types([_investment(id="AMGE")]) == ["TRADE_AGREEMENT_ID_SUFFIX"]
+
+
+def test_bit_suffix_is_reserved_for_investment_treaties():
+    assert _types([_record(id="AMGE-BIT")]) == ["TRADE_AGREEMENT_ID_SUFFIX"]
+
+
+def test_linked_investment_treaty_keeps_the_intblock_id():
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "investment", "status": "in_force",
+              "verification": "official", "last_verified": "2026-11-22", "provenance": PROVENANCE}
+    assert _types([record]) == []
+
+
 def test_linked_record_must_be_official():
     record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
               "verification": "catalogue", "last_verified": "2026-11-22", "provenance": PROVENANCE}
