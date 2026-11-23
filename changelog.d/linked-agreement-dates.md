@@ -10,9 +10,6 @@
     2007-07-26, `COMESA` 1993-11-05 and 1994-12-08, `EAC` 1999-11-30 and 2000-07-07, `EFTA`
     1960-01-04 and 1960-05-03, `EUCU` 1957-03-25 and 1958-01-01 (EEC Treaty), `SACU`
     2002-10-21 and 2004-07-15.
-- `EUCENTRALAMERICA` has `provisional_application: 2013-08-01` (Council Decision
-  2014/394/EU). It keeps 2024-05-01, the definitive entry into force, as its own `in_force`.
-  WTO RTA-IS gives the provisional date as the date of entry into force.
 - `AKFTA`, `CEMAC`, `ECOTA` and `MSGTA` keep their dates; their notes record the different
   date or instrument that WTO RTA-IS gives.
 - `wto_rta_id: 128` moves from `ECOTA` to a new catalogue record, `ECOPTA-1992`. WTO RTA 128
