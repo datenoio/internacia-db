@@ -30,8 +30,13 @@ instruments:
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=15
     retrieved_at: '2026-11-23'
 wto_rta_id: 15
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/lebanon
+  type: website
+notes: The EFTA page (captured 2026-08-13) gives 1 July 2007 as the date of entry into force; the Fedlex scope-of-application
+  table and WTO RTA-IS give 1 January 2007 for all five parties.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -41,3 +46,15 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=15
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20260813161625/https://www.efta.int/trade-relations/free-trade-network/lebanon
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Fedlex, scope of application (Geltungsbereich) of the agreement
+  url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/199/20130501/de/html/fedlex-data-admin-ch-eli-cc-2007-199-20130501-de-html-3.html
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Fedlex, scope of application (Geltungsbereich) of the agreement
+  url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/199/20130501/de/html/fedlex-data-admin-ch-eli-cc-2007-199-20130501-de-html-3.html
+  retrieved_at: '2026-11-23'

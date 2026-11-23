@@ -1,18 +1,17 @@
 id: EUTR-1970
 name: EC - Türkiye Additional Protocol
 agreement_type: fta
-status: terminated
+status: in_force
 signed: '1970-11-23'
 in_force: '1973-01-01'
-ended: '1974-01-01'
 parties:
 - id: EU
   type: intblock
 - id: TR
   type: country
 wto_rta_id: 281
-verification: catalogue
-last_verified: '2026-11-22'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -22,3 +21,21 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=281
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21970A1123(01)
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21970A1123(01)
+  retrieved_at: '2026-11-23'
+- field: status
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21970A1123(01)
+  retrieved_at: '2026-11-23'
+notes: EUR-Lex records the Additional Protocol as in force with no end of validity (CELEX 21970A1123(01)). WTO RTA-IS treats
+  it as ended on 1 January 1974, when the Interim Agreement consequent on enlargement (EUTR-1973) entered into force; status
+  corrected from terminated to in_force.
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21970A1123(01)
+  type: website

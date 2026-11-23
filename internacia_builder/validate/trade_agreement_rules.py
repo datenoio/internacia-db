@@ -84,9 +84,17 @@ def check_instruments(record: dict[str, Any], path: str) -> list[Issue]:
 
 
 def _dates(record: dict[str, Any], intblock: dict[str, Any] | None) -> dict[str, Any]:
-    """The agreement's dates as exported: the record's own, else the linked intblock's."""
+    """The agreement's dates as exported: the record's own, else the linked intblock's.
+
+    A record with ``provisional_application`` takes ``in_force`` only from itself, so an
+    intblock's start date is not read as a definitive entry into force.
+    """
     fields = linked_fields(intblock) if intblock is not None else {}
-    return {k: record.get(k) or fields.get(k) for k in ("signed", "in_force", "ended")}
+    if record.get("provisional_application"):
+        fields = {k: v for k, v in fields.items() if k != "in_force"}
+    dates = {k: record.get(k) or fields.get(k) for k in ("signed", "in_force", "ended")}
+    dates["provisional_application"] = record.get("provisional_application")
+    return dates
 
 
 def check_trade_agreements(
@@ -223,6 +231,9 @@ def check_trade_agreements(
         status = record.get("status")
         dates = _dates(record, intblock)
         for needed, key in ((NEEDS_SIGNED, "signed"), (NEEDS_IN_FORCE, "in_force"), (NEEDS_ENDED, "ended")):
+            # An agreement applied provisionally counts as in force without a definitive date.
+            if key == "in_force" and dates.get("provisional_application"):
+                continue
             if status in needed and not dates.get(key):
                 issues.append({
                     "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
@@ -233,20 +244,21 @@ def check_trade_agreements(
                     "suggested_action": f"status {status} needs a {key} date"
                     + (" (read from the linked intblock)" if intblock is not None else ""),
                 })
-        if status in {"signed", "proposed", "negotiating", "abandoned"} and dates.get("in_force"):
-            issues.append({
-                "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
-                "file_path": path,
-                "record_id": rid,
-                "field": "in_force",
-                "current_value": status,
-                "suggested_action": f"status {status} contradicts the in_force date {dates['in_force']}",
-            })
+        for key in ("in_force", "provisional_application"):
+            if status in {"signed", "proposed", "negotiating", "abandoned"} and dates.get(key):
+                issues.append({
+                    "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
+                    "file_path": path,
+                    "record_id": rid,
+                    "field": key,
+                    "current_value": status,
+                    "suggested_action": f"status {status} contradicts the {key} date {dates[key]}",
+                })
         # An agreement may enter into force retroactively (ANZCERTA: signed 28 March 1983, in
         # force from 1 January 1983), so only ``ended`` is checked against the earlier dates.
         # Compare at the shared precision, so 2018 and 2018-07-17 do not conflict.
         ended = dates.get("ended")
-        for key in ("signed", "in_force"):
+        for key in ("signed", "in_force", "provisional_application"):
             value = dates.get(key)
             if ended and value:
                 n = min(len(str(value)), len(str(ended)))
