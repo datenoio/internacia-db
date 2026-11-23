@@ -826,8 +826,8 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 45 rows — `US` with 14 observer entries, `JP` with 11, `MD` with 9, and `CH`, `EG`, `FR`, `MY` and `TR` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `RU`, `TH`, `UA` and `VA` with 7;
-`AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `ES`, `IL`, `IN`, `KR`, `PH`, `PL`, `PS`, `SE` and `TW` with 6; `AE`, `DK`, `GB`, `NZ`, `PE`, `PT`, `TM` and `ZA` with 5.
+**Expected:** 47 rows — `US` with 14 observer entries, `JP` with 12, `MD` with 9, and `CH`, `EG`, `FR`, `MY`, `TR` and `VA` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `PS`, `RU`, `TH` and `UA` with 7;
+`AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `ES`, `IL`, `IN`, `KR`, `PH`, `PL`, `SE` and `TW` with 6; `AE`, `AR`, `DK`, `GB`, `NZ`, `PE`, `PT`, `TM`, `UY` and `ZA` with 5.
 
 ## Geography and membership
 
@@ -1024,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 230 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 232 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
