@@ -85,6 +85,46 @@ def test_retroactive_entry_into_force_is_allowed():
     assert _types([_record(signed="1983-03-28", in_force="1983-01-01")]) == []
 
 
+def test_applied_provisionally_without_in_force():
+    record = _record(in_force=None, provisional_application="2021-01-01")
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["in_force"] is None
+    assert agreements[0]["provisional_application"] == "2021-01-01"
+
+
+def test_provisional_date_contradicts_signed_status():
+    record = _record(status="signed", in_force=None, provisional_application="2024-01-01")
+    assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
+
+
+def test_ended_before_provisional_application():
+    record = _record(status="terminated", provisional_application="1999-01-01", ended="1998-12-31",
+                     in_force=None)
+    assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
+
+
+def test_party_joins_on_provisional_application():
+    """Norway applied the UK-EEA EFTA agreement from 1 December 2021; it entered into force on 1 September 2022."""
+    record = _record(parties=[
+        {"id": "AM", "type": "country", "provisional_application": "2021-12-01", "in_force": "2022-09-01"},
+        {"id": "GE", "type": "country", "in_force": "2022-09-01"},
+    ])
+    _, parties = build_trade_agreement_rows([record], INTBLOCKS)
+    joined = {p["party_id"]: (p["joined"], p["provisional_application"]) for p in parties}
+    assert joined == {"AM": ("2021-12-01", "2021-12-01"), "GE": ("2022-09-01", None)}
+
+
+def test_linked_record_applied_provisionally_drops_intblock_start():
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
+              "provisional_application": "2022-01-01", "verification": "official",
+              "last_verified": "2026-11-22", "provenance": PROVENANCE}
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["in_force"] is None
+    assert agreements[0]["provisional_application"] == "2022-01-01"
+
+
 def test_parties_and_intblock_together():
     assert _types([_record(id="RCEP", intblock="RCEP", name=None, signed=None, in_force=None)]) == ["SCHEMA_ERROR"]
 
