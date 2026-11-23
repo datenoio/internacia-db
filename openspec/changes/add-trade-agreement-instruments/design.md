@@ -75,7 +75,7 @@ Non-goals:
 
 ### 4. The agreement's own fields
 
-`status`, `signed`, `in_force` and `ended` describe the agreement itself. An instrument in force does not change them. `CNPE` keeps `in_force: 2010-05-01` after its Optimization Protocol entered into force on 2026-11-01. Consumers who want the latest change read `max(in_force)` from `trade_agreement_instruments`.
+`status`, `signed`, `in_force` and `ended` describe the agreement itself. An instrument in force does not change them. `CNPE` keeps `in_force: 2010-03-01` after its Optimization Protocol entered into force on 2026-11-01. Consumers who want the latest change read `max(in_force)` from `trade_agreement_instruments`.
 
 ### 5. Export
 

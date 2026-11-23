@@ -83,7 +83,7 @@ The quality report SHALL list an instrument, other than an early harvest arrange
 #### Scenario: Upgrade in force
 
 - **WHEN** the Optimization Protocol of `CNPE` enters into force on 2026-11-01
-- **THEN** the record keeps `in_force: '2010-05-01'`, and the instrument has `in_force: '2026-11-01'`
+- **THEN** the record keeps `in_force: '2010-03-01'`, and the instrument has `in_force: '2026-11-01'`
 
 #### Scenario: Instrument dated before a linked record's signature
 

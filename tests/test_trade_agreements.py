@@ -280,7 +280,7 @@ def test_singapore_upgrades_in_order(con):
 
 def test_upgrade_does_not_change_the_agreement(con):
     """CNPE's Optimization Protocol entered into force on 2026-11-01; the FTA's own date stays."""
-    assert con.execute("SELECT in_force FROM trade_agreements WHERE id = 'CNPE'").fetchone()[0] == "2010-05-01"
+    assert con.execute("SELECT in_force FROM trade_agreements WHERE id = 'CNPE'").fetchone()[0] == "2010-03-01"
     assert con.execute(
         "SELECT in_force FROM trade_agreement_instruments WHERE agreement_id = 'CNPE' AND kind = 'amending_protocol'"
     ).fetchall() == [("2026-11-01",)]

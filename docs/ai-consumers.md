@@ -387,7 +387,7 @@ pair queries, as above.
   signature: upgrade and amending protocols, CEPA Supplements, supplementary agreements,
   early harvest arrangements and Joint Committee decisions (`kind`), each with its own
   `status` and dates. The agreement's row in `trade_agreements` keeps the agreement's own
-  `status` and dates: `CNPE` stays `in_force = '2010-05-01'` after its Optimization
+  `status` and dates: `CNPE` stays `in_force = '2010-03-01'` after its Optimization
   Protocol entered into force in 2026. Most agreements have no instruments recorded yet, so
   an empty result means none recorded, not none exist. Many Joint Committee decisions only
   update annexes; filter on `kind` when you want treaty-level upgrades.
