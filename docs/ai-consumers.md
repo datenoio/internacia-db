@@ -383,6 +383,21 @@ A `preference_scheme` row (GSP, AGOA) lists the grantors and the beneficiaries a
 two grantors of the same scheme are not trading partners under it, so leave schemes out of
 pair queries, as above.
 
+Two `agreement_type` values are not trade agreements in the narrow sense (OpenSpec change
+`add-investment-and-trade-relations-types`). `investment` rows are bilateral investment
+treaties (`ALUS-BIT`), and `trade_relations` rows are agreements that grant
+most-favoured-nation or normal trade relations treatment without preferences (`AMUS-TRA`).
+Their ids carry an instrument suffix, so the bare pair id stays free for a trade agreement.
+Both types cover only the United States so far (trade.gov and the ITA's former TARA database),
+not a world walk. Filter them out when you count trade agreements per country:
+
+```sql
+SELECT country_code, count(*) AS agreements
+FROM country_trade_agreements
+WHERE agreement_type NOT IN ('investment', 'trade_relations', 'preference_scheme')
+GROUP BY country_code ORDER BY agreements DESC;
+```
+
 ### Country attribute fields (former attribute intblocks)
 
 Driving side, scripts, DVD region, broadcast standards, legal traditions, and rail gauges

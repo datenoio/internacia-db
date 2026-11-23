@@ -1,0 +1,23 @@
+# Change: Add investment and trade relations agreement types
+
+## Why
+
+The trade agreements registry links countries through free trade and preferential agreements. Two other kinds of bilateral economic treaty also connect countries, and an official source lists them with parties and dates: the U.S. International Trade Administration publishes the 41 bilateral investment treaties (BITs) the United States has in force, with signature and entry-into-force dates (https://www.trade.gov/bilateral-investment-treaties), and its former Trade and Related Agreements Database (TARA) listed the U.S. trade relations agreements that grant most-favoured-nation or normal trade relations treatment (the 1990s agreements with the former Soviet states, the 2000 bilateral trade agreement with Viet Nam, and others). Neither kind fits the existing `agreement_type` values. `services` says "services or investment only", which mixes two different instruments, and a non-preferential trade relations agreement is not a `pta`. WTO RTA-IS and ADB ARIC list neither kind, so the registry has none of them.
+
+The maintainer decided on 2026-11-23 to add both kinds, starting with the U.S. rows that trade.gov and TARA document.
+
+## What Changes
+
+- **Two new `agreement_type` values.** `investment`: a bilateral or plurilateral treaty on the promotion and protection of investment without trade-in-goods commitments (BITs, treaties concerning business and economic relations). `trade_relations`: a bilateral agreement or treaty that grants most-favoured-nation or normal trade relations treatment without preferential tariff commitments (trade relations agreements, bilateral trade agreements, treaties of commerce). The `services` description becomes "services only"; no existing record changes type.
+- **Identifiers.** Records of the two new types always carry an instrument suffix after the sorted alpha-2 pair, so the bare pair id stays free for a trade agreement between the same parties: `-BIT` for investment treaties (`ALUS-BIT`), `-TRA` for trade relations agreements (`AMUS-TRA`, `USVN-TRA`), and the year of signature for an older treaty of commerce (`RSUS-1881`), as in the existing `EUSI-1996`.
+- **Data.** Add the 41 U.S. BITs from trade.gov as `verification: official` records, including the two that ended (Bolivia in 2012, Ecuador in 2018). The Morocco treaty stays in force; only its dispute settlement articles were suspended in 2016 under the U.S.–Morocco FTA. The 1991 treaty with the Czech and Slovak Federal Republic continues for Czechia and Slovakia and is recorded as two bilateral records (`CZUS-BIT`, `SKUS-BIT`), because the registry has no Czechoslovakia country record and trade.gov lists the two successor relationships separately. Add 27 U.S. trade relations records: the agreements on trade relations that TARA lists (the former Soviet states, Albania, Bulgaria, Cambodia, Latvia, Laos, Mongolia, Romania, Viet Nam) and the 1979 agreement with China from the State Department's Treaties in Force 2026, with dates and status checked against Treaties in Force; and the 1881 treaty of commerce with Serbia, which the United States applies to the six successor states of Yugoslavia (one record each). The agreements with Russia and Belarus stay `in_force`: Public Law 117-110 suspended normal trade relations tariff treatment in 2022 but did not terminate them.
+- **Related intblocks.** The trade.gov WTO agreements page lists two plurilaterals that had no intblock: `ITA` (Information Technology Agreement) and `TCA` (Agreement on Trade in Civil Aircraft). Both are added under the current intblock policy, with rosters from the WTO.
+- **Not in scope.** A world walk of investment treaties (UNCTAD Investment Policy Hub, about 2,200 BITs in force), treaties of friendship, commerce and navigation, sectoral market-access arrangements and AD/CVD suspension agreements. Until a world walk is done, `investment` and `trade_relations` rows cover the United States only, and the consumer documentation says so.
+
+## Impact
+
+- Affected specs: `trade-agreements` (agreement types and identifiers).
+- Affected source: `data/schemas/trade_agreements.schema.json` (enum and descriptions), new files in `data/trade_agreements/`.
+- Affected exports: `trade_agreements.agreement_type` and `country_trade_agreements.agreement_type` gain two values in `contract.json`; both enums are open. `country_trade_agreements` gains rows of the new types, so a consumer counting trade agreements per country filters `agreement_type`.
+- Affected documentation: `docs/data-contract.md`, `docs/ai-consumers.md`, `docs/intblock-sources.md` (trade.gov and TARA as sources).
+- Versioning: new values in an open enum and new rows ship as a MINOR release.

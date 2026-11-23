@@ -41,9 +41,9 @@
       }
     },
     "agreement_type": {
-      "description": "fta: free trade agreement (goods, often with services). customs_union: common external tariff. pta: reciprocal partial-scope or preferential agreement. preference_scheme: non-reciprocal preferences granted to beneficiary countries (GSP, AGOA). services: services or investment only. digital: digital trade or digital economy agreement. framework: framework or trade and investment framework agreement without tariff commitments. other: an instrument a catalogue lists that is none of these (compact of free association, strategic partnership).",
+      "description": "fta: free trade agreement (goods, often with services). customs_union: common external tariff. pta: reciprocal partial-scope or preferential agreement. preference_scheme: non-reciprocal preferences granted to beneficiary countries (GSP, AGOA). services: trade in services only. investment: promotion and protection of investment without trade-in-goods commitments (bilateral investment treaties). trade_relations: most-favoured-nation or normal trade relations treatment without preferential tariff commitments (trade relations agreements, bilateral trade agreements, treaties of commerce). digital: digital trade or digital economy agreement. framework: framework or trade and investment framework agreement without tariff commitments. other: an instrument a catalogue lists that is none of these (compact of free association, strategic partnership).",
       "type": "string",
-      "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "digital", "framework", "other"]
+      "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "investment", "trade_relations", "digital", "framework", "other"]
     },
     "status": {
       "description": "proposed: under study. negotiating: negotiations launched. signed: signed, not in force. in_force: in force for at least two parties. terminated: was in force and ended. abandoned: negotiated or signed, never in force, no longer pursued. superseded: replaced by another agreement (superseded_by).",

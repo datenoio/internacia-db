@@ -67,6 +67,15 @@ def test_numeric_trade_field_is_rejected():
     assert _types([_record(trade_value_usd=1000)]) == ["SCHEMA_ERROR"]
 
 
+@pytest.mark.parametrize("kind", ["investment", "trade_relations"])
+def test_investment_and_trade_relations_types_validate(kind):
+    assert _types([_record(id="AMGE-BIT", agreement_type=kind)]) == []
+
+
+def test_unknown_agreement_type_is_a_schema_error():
+    assert _types([_record(agreement_type="bit")]) == ["SCHEMA_ERROR"]
+
+
 def test_in_force_without_date():
     assert _types([_record(in_force=None)]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 
