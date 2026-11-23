@@ -464,6 +464,7 @@ def get_trade_agreements_schema() -> pa.Schema:
             ("verification", pa.string()),
             ("last_verified", pa.string()),
             ("provenance", pa.list_(_PROVENANCE_STRUCT)),
+            ("provisional_application", pa.string()),
         ]
     )
 
@@ -483,6 +484,7 @@ def get_trade_agreement_parties_schema() -> pa.Schema:
             ("left", pa.string()),
             ("note", pa.string()),
             ("source", pa.string()),
+            ("provisional_application", pa.string()),
         ]
     )
 
@@ -498,5 +500,6 @@ def get_country_trade_agreements_schema() -> pa.Schema:
             ("agreement_type", pa.string()),
             ("agreement_status", pa.string()),
             ("in_force", pa.string()),
+            ("provisional_application", pa.string()),
         ]
     )

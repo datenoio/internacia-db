@@ -1,12 +1,17 @@
 id: GBKR
-name: Republic of Korea-United Kingdom Free Trade Agreement
+name: UK-South Korea Trade Agreement
 other_names:
 - lang: en
+  name: Republic of Korea-United Kingdom Free Trade Agreement
+- lang: en
   name: '[Republic of] Korea-United Kingdom FTA'
+- lang: en
+  name: Free Trade Agreement between the United Kingdom of Great Britain and Northern Ireland and the Republic of Korea (with
+    Exchange of Notes)
 agreement_type: fta
 status: in_force
 signed: '2019-08-22'
-in_force: '2021-01-01'
+in_force: '2020-12-31'
 parties:
 - id: KR
   type: country
@@ -14,8 +19,14 @@ parties:
   type: country
 wto_rta_id: 1113
 aric_id: 403
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.gov.uk/government/collections/uk-south-korea-trade-agreement
+  type: website
+notes: Published by the UK as CS Korea No.1/2019 (CP 167), then TS No.32/2025 (CP 1351). Asia Regional Integration Center
+  (ADB), FTA database gives the entry into force date as 2021-01-01. An upgraded UK-Republic of Korea agreement (`GBKR-2025`)
+  was concluded on 15 December 2025 and is to replace this one on entry into force.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -25,3 +36,23 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=403&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ukkorea-free-trade-agreement-with-exchange-of-notes-cs-korea-no12019
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ukkorea-free-trade-agreement-with-exchange-of-notes-ts-no322025
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-south-korea-trade-agreement
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UK Government
+  url: https://www.gov.uk/guidance/uk-trade-agreements-in-effect
+  retrieved_at: '2026-11-23'
+- field: name
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-south-korea-trade-agreement
+  retrieved_at: '2026-11-23'
