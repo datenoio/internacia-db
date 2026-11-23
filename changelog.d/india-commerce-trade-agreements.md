@@ -1,10 +1,8 @@
 ### Added
 
-- 13 India trade agreements in `trade_agreements`, from the texts the Indian Department of
+- 12 India trade agreements in `trade_agreements`, from the texts the Indian Department of
   Commerce publishes, with status from the partner governments and depositaries, all
   `verification: official`:
-  - `SATIS`, the SAARC Agreement on Trade in Services (signed 2010-04-29, in force since
-    2012-11-29; `agreement_type: services`).
   - `BTIN-2016`, the India–Bhutan Agreement on Trade, Commerce and Transit (signed
     2016-11-12, in force since 2017-07-29), and `INNP-2009`, the revised India–Nepal Treaty
     of Trade (in force since 2009-10-27).
@@ -24,3 +22,5 @@
 - `INOM`, the India–Oman Comprehensive Economic Partnership Agreement, is in force since
   2026-06-01 (signed 2025-12-18), and moves to `verification: official`.
 - `BTIN` (2006) and `INNP` (1991) are `superseded` by `BTIN-2016` and `INNP-2009`.
+- `SATIS` moves to `verification: official`: a SAARC Secretariat note confirms its entry into
+  force on 2012-11-29 after ratification by all eight SAARC members.

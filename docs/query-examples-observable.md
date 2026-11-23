@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 47 rows — `US` with 15 observer entries, `JP` with 12, `MD` with 9, and `CH`, `EG`, `FR`, `MY`, `TR`, `UA` and `VA` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `PS`, `RU` and `TH` with 7; `AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `ES`, `IL`, `IN`, `KR`, `PH`, `PL`, `SE` and `TW` with 6; `AE`, `AR`, `DK`, `GB`, `NZ`, `PE`, `PT`, `TM`, `UY` and `ZA` with 5.
+**Expected:** 51 rows — `US` with 16 observer entries, `JP` with 13, `MD` and `UA` with 10, `CH`, `FR` and `HU` with 9, and `AT`, `DE`, `EG`, `GE`, `MY`, `TR` and `VA` with 8; `AU`, `BY`, `CA`, `CN`, `CZ`, `ES`, `GR`, `ID`, `IL`, `IT`, `MX`, `NO`, `PS`, `RU`, `SE`, `TH` and `TM` with 7; `AM`, `AZ`, `DK`, `IN`, `KR`, `PH`, `PL` and `TW` with 6; `AE`, `AR`, `BE`, `GB`, `NL`, `NZ`, `PE`, `PT`, `RS`, `SI`, `UY` and `ZA` with 5.
 
 ---
 
@@ -562,7 +562,7 @@ const succession = await db.query(`
 `);
 ```
 
-**Expected:** 30 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
+**Expected:** 41 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ---
 

@@ -50,35 +50,29 @@ def country(*codes: str) -> list[dict]:
     return [{"id": c, "type": "country"} for c in codes]
 
 
-SAARC8 = ("AF", "BD", "BT", "IN", "MV", "NP", "PK", "LK")
-
 # Record id -> changes. Keys:
 #   set: fields to set (None removes the field)
 #   prov: list of (field, source, url) provenance entries; they replace existing entries for the same fields
 #   drop_prov: further provenance fields to drop
+#   keep_prov: True to add the prov entries next to existing ones for the same fields
 #   links: links to add (url, type)
 #   instruments: instruments to append (dicts in schema order)
 #   new: True for a new record (set must hold every required field)
 CHANGES: dict[str, dict] = {
     # --- South Asia -------------------------------------------------------------------------------
     "SATIS": {
-        "new": True,
+        # Added at catalogue level by the Pakistan TDAP walk; the SAARC Secretariat note confirms it.
         "set": {
-            "name": "SAARC Agreement on Trade in Services",
-            "acronyms": [{"lang": "en", "value": "SATIS"}],
-            "agreement_type": "services",
-            "status": "in_force",
-            "signed": "2010-04-29",
-            "in_force": "2012-11-29",
-            "parties": country(*SAARC8),
-            "notes": "Signed at Thimphu by the eight SAARC member states. It entered into force after ratification by "
-                     "all of them (Article 29). The schedules of specific commitments were still under negotiation.",
+            "notes": "Signed at Thimphu at the sixteenth SAARC Summit. Article 29: it enters into force once all "
+                     "Contracting States have ratified it and the SAARC Secretariat has notified this, and it is an "
+                     "adjunct to the SAFTA Agreement. A SAARC Secretariat note states that all member states ratified "
+                     "it and that it entered into force on 29 November 2012, the date the Maldives trade ministry and "
+                     "the Nepalese foreign ministry also give. The schedules of specific commitments were still under "
+                     "negotiation.",
             "verification": "official",
         },
-        "links": [(doc_file("2025-01/SAARC-Agreement-on-Trade-in-Services-SATS.pdf"), "treaty_text")],
+        "keep_prov": True,
         "prov": [
-            ("parties", DOC, doc_file("2025-01/SAARC-Agreement-on-Trade-in-Services-SATS.pdf")),
-            ("signed", DOC, doc_file("2025-01/SAARC-Agreement-on-Trade-in-Services-SATS.pdf")),
             ("in_force", "SAARC Secretariat, note on regional cooperation in trade facilitation (hosted by UN ESCAP)",
              "https://www.unescap.org/sites/default/files/SAARC%20ROC-TF.pdf"),
             ("status", "Ministry of Foreign Affairs of Nepal, Nepal and SAARC",
@@ -526,7 +520,8 @@ def apply(rid: str, change: dict) -> dict:
         record["instruments"] = existing
     prov = change.get("prov", [])
     if prov:
-        fields = {f for f, _, _ in prov} | set(change.get("drop_prov", []))
+        fields = set() if change.get("keep_prov") else {f for f, _, _ in prov}
+        fields |= set(change.get("drop_prov", []))
         kept = [p for p in record.get("provenance", []) if p["field"] not in fields]
         for f, source, url in prov:
             kept.append({"field": f, "source": source, "url": url, "retrieved_at": TODAY})
