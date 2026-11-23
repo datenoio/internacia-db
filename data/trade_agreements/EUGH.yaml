@@ -3,13 +3,17 @@ name: EU - Ghana
 agreement_type: fta
 status: in_force
 signed: '2016-07-28'
-in_force: '2016-12-15'
+provisional_application: '2016-12-15'
 parties:
 - id: EU
   type: intblock
 - id: GH
   type: country
 wto_rta_id: 1002
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22016A1021(01)
+  type: website
+notes: Signed on 28 July 2016 and provisionally applied since 15 December 2016; not yet in force definitively (European Commission).
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -33,7 +37,7 @@ provenance:
   source: EUR-Lex (Publications Office Cellar)
   url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22016A1021(01)
   retrieved_at: '2026-11-23'
-notes: Signed on 28 July 2016 and provisionally applied since 15 December 2016; not yet in force definitively (European Commission).
-links:
-- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22016A1021(01)
-  type: website
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22016X1215%2801%29
+  retrieved_at: '2026-11-23'
