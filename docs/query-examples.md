@@ -1500,11 +1500,13 @@ WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '
 ORDER BY i.in_force DESC, i.agreement_id;
 ```
 
-**Expected:** 10 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), the amendments to
-Norway's agricultural protocols with Tunisia (`EFTATN`, 2026-03-01) and Jordan (`EFTAJO`,
-2026-02-01), `CLID` (services protocol, 2025-09-23), two additional protocols to the EEC–Norway
-agreement (`EUNO`, 2025-08-01 and 2025-02-19), `CNSG` (further upgrading protocol, 2024-12-31), the
-2024 amendments to the CEPA services agreements of `CNMO` and `CNHK`, then the `DEPA` Protocol
+**Expected:** 13 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), the
+Pakistan–Uzbekistan expansion protocol (`PKUZ`, 2026-08-14), the amendments to Norway's
+agricultural protocols with Tunisia (`EFTATN`, 2026-03-01) and Jordan (`EFTAJO`, 2026-02-01),
+`CLID` (services protocol, 2025-09-23), two additional protocols to the EEC–Norway agreement
+(`EUNO`, 2025-08-01 and 2025-02-19), `CNSG` (further upgrading protocol, 2024-12-31), the 2024
+amendments to the CEPA services agreements of `CNMO` and `CNHK`, the Türkiye protocols with
+Malaysia (`MYTR`, 2024-08-01) and Azerbaijan (`AZTR`, 2024-07-01), then the `DEPA` Protocol
 (2024-03-19). Add
 `kind = 'joint_committee_decision'` to include annex-level changes.
 
