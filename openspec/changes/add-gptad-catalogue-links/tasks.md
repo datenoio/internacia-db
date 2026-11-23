@@ -20,7 +20,7 @@
 
 - [x] 2a.1 Read the texts of the 43 unmatched GPTAD agreements; skip most-favoured-nation-only texts and organisation charters without trade commitments
 - [x] 2a.2 Take status, dates and successors from sources other than GPTAD (ALADI, SICE, ASEAN Secretariat, party governments)
-- [x] 2a.3 Write 31 new records from `NEW` and the successor `JOMA` from `EXTRA`; give successors `supersedes`; hold the 3 agreements without a date the status rules need
+- [x] 2a.3 Write 31 new records from `NEW` and the successors `JOMA`, `MERCOSURPE` and `MERCOSURCOECVE` from `EXTRA`; give successors `supersedes`; hold the 3 agreements without a date the status rules need
 - [x] 2a.4 Name GPTAD in the `Catalogue-level records` requirement and the schema's `verification` description
 
 ## 3. Documentation and verification
