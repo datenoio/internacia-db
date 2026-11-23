@@ -14,5 +14,6 @@ running one.
 | `import_wto_rtais.py` | Walk the WTO RTA-IS XLSX export into `data/trade_agreements/` | 5.0.0 |
 | `fetch_gptad.py`, `import_gptad.py` | Save the World Bank GPTAD library and agreement pages; write `gptad_id` and `treaty_text` links to mapped `data/trade_agreements/` records | 5.1.0 |
 | `import_dta.py` | Map World Bank Deep Trade Agreements ids (`WB ID`) to `data/trade_agreements/` records as `dta_id` | 5.1.0 |
+| `apply_efta_ftn.py` | Apply the EFTA free trade network review (statuses, per-state entry-into-force dates, EFTA provenance) to `data/trade_agreements/` | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).

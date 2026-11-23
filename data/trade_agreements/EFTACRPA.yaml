@@ -7,25 +7,35 @@ in_force: '2014-08-19'
 parties:
 - id: CR
   type: country
+  in_force: '2014-08-19'
 - id: PA
   type: country
+  in_force: '2014-08-19'
 - id: 'NO'
   type: country
+  in_force: '2014-08-19'
 - id: CH
   type: country
+  in_force: '2014-08-29'
 - id: IS
   type: country
+  in_force: '2014-09-05'
 - id: LI
   type: country
+  in_force: '2014-08-29'
 - id: GT
   type: country
   signed: '2015-06-22'
-  note: Accession signed, not in force (WTO RTA-IS early announcement).
+  note: Accession protocol signed in Schaan on 22 June 2015; entry into force pending (EFTA, page captured 2026-02-15).
 wto_rta_id: 766
 dta_id: 254
-notes: WTO RTA-IS lists the accession separately (RTA ID 950).
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/central-american-states-costa-rica-guatemala-honduras-and-panama
+  type: website
+notes: WTO RTA-IS lists the accession separately (RTA ID 950). Honduras took part in the first five negotiation rounds; EFTA
+  lists its accession talks as on hold.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -35,3 +45,15 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=766
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20260215215152/https://www.efta.int/trade-relations/free-trade-network/central-american-states-costa-rica-guatemala-honduras-and-panama
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20260215215152/https://www.efta.int/trade-relations/free-trade-network/central-american-states-costa-rica-guatemala-honduras-and-panama
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: EFTA, free trade network partner page (Wayback Machine copy)
+  url: https://web.archive.org/web/20260215215152/https://www.efta.int/trade-relations/free-trade-network/central-american-states-costa-rica-guatemala-honduras-and-panama
+  retrieved_at: '2026-11-23'
