@@ -1,10 +1,22 @@
 id: UKESA
-name: United Kingdom - Eastern and Southern Africa States
+name: ESA-UK Economic Partnership Agreement
+other_names:
+- lang: en
+  name: United Kingdom - Eastern and Southern Africa States
+- lang: en
+  name: Agreement establishing an Economic Partnership Agreement between the Eastern and Southern Africa States and the United
+    Kingdom of Great Britain and Northern Ireland
 agreement_type: fta
 status: in_force
 signed: '2019-01-31'
 in_force: '2021-01-01'
 parties:
+- id: MG
+  type: country
+  note: gov.uk recorded on 31 October 2022 that Madagascar had signed the agreement and added it to the states covered on
+    1 August 2024; WTO RTA-IS notes that Madagascar is now also a party. Neither gives the exact dates, so only the year of
+    application is recorded.
+  in_force: '2024'
 - id: MU
   type: country
 - id: SC
@@ -15,8 +27,15 @@ parties:
   type: country
 wto_rta_id: 1101
 dta_id: 359
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.gov.uk/government/collections/esa-uk-economic-partnership-agreement-epa--2
+  type: website
+notes: Published by the UK as MS No.4/2019 (CP 31). Comoros signed the agreement on 12 April 2022 and will be covered once
+  it brings the agreement into effect; it is not listed as a party until then. Zambia will be covered if it signs and brings
+  the agreement into effect. Goods from Comoros, Madagascar and Zambia are also eligible for the UK Developing Countries Trading
+  Scheme.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -26,3 +45,31 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1101
   retrieved_at: '2026-11-22'
+- field: signed
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ms-no42019-agreement-establishing-an-economic-partnership-agreement-between-the-eastern-and-southern-africa-states-and-the-uk
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: UK Government
+  url: https://www.gov.uk/government/collections/esa-uk-economic-partnership-agreement-epa--2
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UK Government
+  url: https://www.gov.uk/guidance/uk-trade-agreements-in-effect
+  retrieved_at: '2026-11-23'
+- field: name
+  source: UK Government
+  url: https://www.gov.uk/government/collections/esa-uk-economic-partnership-agreement-epa--2
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: UK Government
+  url: https://www.gov.uk/guidance/summary-of-the-esa-uk-economic-partnership-agreement-epa
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: UK Government
+  url: https://www.gov.uk/government/collections/esa-uk-economic-partnership-agreement-epa--2
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: WTO Regional Trade Agreements Information System
+  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1101
+  retrieved_at: '2026-11-23'
