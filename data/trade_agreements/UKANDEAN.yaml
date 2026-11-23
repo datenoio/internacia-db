@@ -1,9 +1,15 @@
 id: UKANDEAN
-name: United Kingdom - Colombia, Ecuador and Peru
+name: UK-Andean Countries Trade Agreement
+other_names:
+- lang: en
+  name: United Kingdom - Colombia, Ecuador and Peru
+- lang: en
+  name: Trade Agreement between the United Kingdom of Great Britain and Northern Ireland, of the one part, and the Republic
+    of Colombia, the Republic of Ecuador and the Republic of Peru, of the other part
 agreement_type: fta
 status: in_force
 signed: '2019-05-15'
-in_force: '2021-01-01'
+in_force: '2020-12-31'
 parties:
 - id: CO
   type: country
@@ -14,8 +20,13 @@ parties:
 - id: GB
   type: country
 wto_rta_id: 1096
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.gov.uk/government/collections/uk-andean-countries-trade-agreement
+  type: website
+notes: Published by the UK as MS No.22/2019 (CP 122), then TS No.54/2024 (CP 1138). WTO Regional Trade Agreements Information
+  System gives the entry into force date as 2021-01-01.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -25,3 +36,23 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1096
   retrieved_at: '2026-11-22'
+- field: signed
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ms-no222019-trade-agreement-between-the-united-kingdom-of-great-britain-and-northern-ireland-of-the-one-part-and-the-republic-of-colombia-the-r
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/trade-agreement-between-the-united-kingdom-of-great-britain-and-northern-ireland-of-the-one-part-and-the-republic-of-colombia-the-republic-of-ecuad
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-andean-countries-trade-agreement
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UK Government
+  url: https://www.gov.uk/guidance/uk-trade-agreements-in-effect
+  retrieved_at: '2026-11-23'
+- field: name
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-andean-countries-trade-agreement
+  retrieved_at: '2026-11-23'
