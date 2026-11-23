@@ -265,7 +265,7 @@ def check_trade_agreements(
                     + (" (read from the linked intblock)" if intblock is not None else ""),
                 })
         for key in ("in_force", "provisional_application"):
-            if status in {"signed", "proposed", "negotiating", "abandoned"} and dates.get(key):
+            if status in {"signed", "proposed", "negotiating", "suspended", "abandoned"} and dates.get(key):
                 issues.append({
                     "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
                     "file_path": path,

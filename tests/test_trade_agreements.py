@@ -97,6 +97,16 @@ def test_provisional_date_contradicts_signed_status():
     assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 
 
+def test_suspended_negotiations_need_no_date():
+    assert _types([_record(status="suspended", signed=None, in_force=None)]) == []
+
+
+@pytest.mark.parametrize("field", ["in_force", "provisional_application"])
+def test_suspended_contradicts_entry_into_force(field):
+    record = _record(status="suspended", signed=None, **{"in_force": None, field: "2012-01-01"})
+    assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
+
+
 def test_ended_before_provisional_application():
     record = _record(status="terminated", provisional_application="1999-01-01", ended="1998-12-31",
                      in_force=None)
@@ -207,6 +217,12 @@ def test_multilateral_without_intblock_is_an_intblock_candidate():
     record = _record(parties=[{"id": c, "type": "country"} for c in ("JP", "KR", "CN")])
     issues = trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/AMGE.yaml"])
     assert [i["issue_type"] for i in issues] == ["TRADE_AGREEMENT_INTBLOCK_CANDIDATE"]
+
+
+def test_suspended_multilateral_is_not_an_intblock_candidate():
+    record = _record(status="suspended", signed=None, in_force=None,
+                     parties=[{"id": c, "type": "country"} for c in ("JP", "KR", "CN")])
+    assert trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/AMGE.yaml"]) == []
 
 
 def test_moved_alias_resolves_to_the_registry():
