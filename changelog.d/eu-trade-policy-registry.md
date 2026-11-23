@@ -45,7 +45,34 @@
   - Where the Commission's overview disagrees with the record (Papua New Guinea,
     Namibia, Côte d'Ivoire), the note gives both dates.
 
+- 62 EU trade agreements move from `verification: catalogue` to `official`. Their
+  signature and entry-into-force dates are checked against EUR-Lex metadata from the
+  Publications Office Cellar SPARQL endpoint, and each record cites the CELEX document
+  in `provenance` and `links`.
+  - `EUGE`, `EUMD`, `EUAM` and `EUCL-2002` keep the provisional-application date in
+    `in_force`; their notes give the EUR-Lex date of full entry into force.
+  - `EUPH` is confirmed by the Commission's negotiations overview.
+- 17 EU records stay `catalogue`: EUR-Lex gives different dates or an open end of
+  validity, and their notes quote the EUR-Lex values for review. They are `EUAT`,
+  `EUCI`, `EUCZSK`, `EUSI`, `EUSI-1996-2`, `EUEE`, `EULT`, `EULV`, `EUEG-1972`,
+  `EULB-1972`, `EULB-1977`, `EUTR-1963`, `EUTR-1970`, `EUTR-1973`, `EUAD`, `EUMX` and
+  `EUTR`.
+
 ### Fixed
+
+- Dates corrected to EUR-Lex:
+  - `EUIS` signed 1972-07-22 (was 1972-12-19);
+  - `EUTN` signed 1995-07-17 (was 1995-07-07);
+  - `EUFI` ended 1995-01-01 (was 1994-01-01);
+  - `EUPT` ended 1986-01-01 (was 1976-01-01).
+- `EUDZ-1976` and `EUSY` now describe the 1976 and 1977 Cooperation Agreements.
+  - Their `in_force` is 1978-11-01; they had the date of the matching Interim
+    Agreements (`EUDZ-1976-2`, `EUSY-1977`).
+  - They are renamed to `EC - Algeria Cooperation Agreement` and
+    `EC - Syria Cooperation Agreement`.
+- `EUZA` is the EC-South Africa Trade, Development and Cooperation Agreement. It is now
+  `superseded` by `EUSADCEPA`, ended 2016-10-10. The SADC EPA repealed its trade
+  component when it entered into provisional application in October 2016.
 
 - `EUWESTAFRICAEPA`: the regional EU-West Africa EPA is `signed`, not `in_force`.
   - The intblock no longer has the `active_period` start of 2016-12-15. That date
