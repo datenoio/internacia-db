@@ -49,7 +49,7 @@ headquarters:
   coordinates:
     lat: 40.41694444444445
     lng: -3.703333333333333
-membership_count: 139
+membership_count: 140
 wikidata_id: Q1502826
 description: International association of national securities and futures market regulators established in April 1983, with a permanent General Secretariat in Madrid, Spain. IOSCO develops, implements, and promotes internationally recognized standards for securities regulation — including the Objectives and Principles of Securities Regulation and the Multilateral Memorandum of Understanding — endorsed by the G20 and the Financial Stability Board. Its members regulate more than 99% of the world's securities markets across over 130 jurisdictions. As of August 2024 IOSCO comprised 225 member bodies in three categories (120 ordinary, 33 associate, and 72 affiliate members); this record maps membership to 135 jurisdictions plus four international organisations represented through associate membership.
 tags:
@@ -577,6 +577,12 @@ includes:
   name: Trinidad and Tobago
   type: country
   status: member
+- id: TW
+  name: Taiwan
+  type: country
+  status: member
+  joined: '1987'
+  note: Financial Supervisory Commission, an Ordinary Member listed as "Chinese Taipei"
 - id: TZ
   name: Tanzania
   type: country
@@ -642,8 +648,8 @@ other_names:
   name: Международная организация комиссий по ценным бумагам
 - id: zh
   name: 国际证监会组织
-notes: IOSCO membership is held by individual securities regulators, stock exchanges, and industry bodies rather than governments. Multiple members from the same jurisdiction are consolidated to a single country or organisation entry. Affiliate members (stock exchanges, SROs, and industry associations) are not listed individually.
-last_verified: '2026-07-29'
+notes: IOSCO membership is held by individual securities regulators, stock exchanges, and industry bodies rather than governments. Multiple members from the same jurisdiction are consolidated to a single country or organisation entry. Affiliate members (stock exchanges, SROs, and industry associations) are not listed individually. Taiwan (the Financial Supervisory Commission, an Ordinary Member listed as "Chinese Taipei") was added on 2026-11-23 from IOSCO's Ordinary Members page; the rest of the roster was last checked on 2026-07-29.
+last_verified: '2026-11-23'
 provenance:
 - field: includes
   source: Wikipedia (IOSCO member appendix, August 2024)
@@ -681,3 +687,12 @@ provenance:
   retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q1502826
   license: CC0
+- field: includes
+  source: International Organization of Securities Commissions, Ordinary Members (Chinese Taipei - Financial Supervisory Commission)
+  url: https://www.iosco.org/about/?subsection=membership&memid=1&orgID=89
+  retrieved_at: '2026-11-23'
+- field: includes
+  source: Ministry of Foreign Affairs, Republic of China (Taiwan), list of intergovernmental organizations in which Taiwan
+    participates (data.gov.tw dataset 94772)
+  url: https://data.gov.tw/dataset/94772
+  retrieved_at: '2026-11-23'

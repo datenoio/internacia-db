@@ -530,8 +530,8 @@ WHERE b.un_members_in_roster > u.n * 0.5
 ORDER BY pct_un_members DESC, b.name;
 ```
 
-**Expected:** 76 rows — 45 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 12 missing China
-only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 19 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
+**Expected:** 78 rows — 45 missing the US only (e.g. `CBD`, `UNCLOS`, `BBNJ`), 13 missing China
+only (e.g. `EGMONTGROUP`, `FLORENCE`, `PTBT`, `PSI`, `HCOC`), 20 missing both (`NAM`, `ICW`, `APMINEBANCONVENTION`, `EGDDS`, `ISA`, `CTBT`).
 
 Filter to a single exclusion pattern:
 
@@ -826,7 +826,7 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 47 rows — `US` with 14 observer entries, `JP` with 12, `MD` with 9, and `CH`, `EG`, `FR`, `MY`, `TR` and `VA` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `PS`, `RU`, `TH` and `UA` with 7;
+**Expected:** 47 rows — `US` with 15 observer entries, `JP` with 12, `MD` with 9, and `CH`, `EG`, `FR`, `MY`, `TR`, `UA` and `VA` with 8; `CA`, `CN`, `DE`, `GE`, `GR`, `HU`, `ID`, `IT`, `MX`, `NO`, `PS`, `RU` and `TH` with 7;
 `AM`, `AT`, `AU`, `AZ`, `BY`, `CZ`, `ES`, `IL`, `IN`, `KR`, `PH`, `PL`, `SE` and `TW` with 6; `AE`, `AR`, `DK`, `GB`, `NZ`, `PE`, `PT`, `TM`, `UY` and `ZA` with 5.
 
 ## Geography and membership
@@ -968,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 311 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 312 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1024,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 233 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 236 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
