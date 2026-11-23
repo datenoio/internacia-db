@@ -235,6 +235,7 @@ def build_trade_agreement_rows(
                 "aric_id": _int(record.get("aric_id")),
                 "wto_pta_ids": [i for i in (_int(v) for v in record.get("wto_pta_ids") or []) if i is not None],
                 "gptad_id": _int(record.get("gptad_id")),
+                "dta_id": _int(record.get("dta_id")),
                 "wikidata_id": pick("wikidata_id"),
                 "acronyms": [
                     {"lang": a.get("lang"), "value": a.get("value")}
