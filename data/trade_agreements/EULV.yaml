@@ -1,17 +1,20 @@
 id: EULV
 name: EC - Latvia Agreement
 agreement_type: fta
-status: terminated
+status: superseded
 signed: '1994-07-18'
 in_force: '1995-01-01'
-ended: '2004-05-01'
+ended: '1998-02-01'
 parties:
 - id: EU
   type: intblock
 - id: LV
   type: country
+superseded_by: EULV-1995
 wto_rta_id: 254
-verification: catalogue
+notes: Replaced on 1 February 1998 by the Europe Agreement (`EULV-1995`); EUR-Lex gives end of validity on 31 January 1998.
+  WTO RTA-IS counts the two as one RTA ending on 1 May 2004.
+verification: official
 last_verified: '2026-11-23'
 provenance:
 - field: parties
@@ -26,5 +29,7 @@ provenance:
   source: EUR-Lex (Publications Office Cellar)
   url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21994A1231(43)
   retrieved_at: '2026-11-23'
-notes: EUR-Lex gives end of validity on 31 January 1998 (CELEX 21994A1231(43)); the record keeps the WTO RTA-IS dates pending
-  review.
+- field: ended
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21994A1231%2843%29
+  retrieved_at: '2026-11-23'

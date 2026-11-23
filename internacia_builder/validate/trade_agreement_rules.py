@@ -7,6 +7,7 @@ and record freshness. See ``openspec/changes/add-trade-agreements-registry``.
 
 from __future__ import annotations
 
+import re
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -22,6 +23,8 @@ NEEDS_SIGNED = frozenset({"signed"})
 NEEDS_IN_FORCE = frozenset({"in_force", "terminated", "superseded"})
 NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
+# Investment treaty ids end in -BIT, or -BIT-YYYY for a further treaty between the same parties.
+INVESTMENT_ID_SUFFIX = re.compile(r"-BIT(-\d{4})?$")
 
 
 def _issue(issue_type: str, path: str, record_id: str, field: str, value: Any, action: str) -> Issue:
@@ -128,6 +131,17 @@ def check_trade_agreements(
                 "suggested_action": f"Id {rid} is a registered intblock alias ({other_aliases[rid].get('reason')}); use another id",
             })
 
+        investment = record.get("agreement_type") == "investment"
+        if investment and not linked and not INVESTMENT_ID_SUFFIX.search(rid):
+            issues.append(_issue(
+                "TRADE_AGREEMENT_ID_SUFFIX", path, rid, "id", rid,
+                "An investment treaty that is not linked to an intblock needs an id ending in -BIT or -BIT-YYYY",
+            ))
+        if INVESTMENT_ID_SUFFIX.search(rid) and not investment:
+            issues.append(_issue(
+                "TRADE_AGREEMENT_ID_SUFFIX", path, rid, "agreement_type", record.get("agreement_type"),
+                "An id ending in -BIT or -BIT-YYYY is reserved for agreement_type: investment",
+            ))
         if linked and intblock is None:
             issues.append({
                 "issue_type": "UNRESOLVED_TRADE_AGREEMENT_REF",

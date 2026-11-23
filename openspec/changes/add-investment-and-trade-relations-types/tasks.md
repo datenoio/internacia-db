@@ -1,6 +1,6 @@
 ## 1. Schema
 
-- [x] 1.1 Add `investment` and `trade_relations` to the `agreement_type` enum in `data/schemas/trade_agreements.schema.json` and narrow the `services` description to services only
+- [x] 1.1 Add `trade_relations` to the `agreement_type` enum in `data/schemas/trade_agreements.schema.json`
 - [x] 1.2 Rebuild so `contract.json` lists the new values
 
 ## 2. Data
@@ -14,6 +14,6 @@
 
 - [x] 3.1 Document the new types, the suffix rule and the U.S.-only coverage in `docs/data-contract.md` and `docs/ai-consumers.md`
 - [x] 3.2 Log trade.gov and the TARA Wayback snapshot in `docs/intblock-sources.md`
-- [x] 3.3 Add a test that a record with `agreement_type: investment` validates and that `agreement_type: bit` is rejected
+- [x] 3.3 Add a test that a `trade_relations` record validates and that an unknown type is rejected
 - [x] 3.4 Add a `changelog.d` fragment
 - [x] 3.5 Validate, rebuild with the pinned requirements, and run the tests

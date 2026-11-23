@@ -6,9 +6,8 @@
 
 ## 2. Data
 
-- [x] 2.1 Add the `BLEU` intblock with official Luxembourg government sources
 - [x] 2.2 Parse the latest Wayback capture of every IIA Navigator economy page and import the BIT rows (`scripts/oneoff/import_unctad_bits.py`)
-- [x] 2.3 Map the 41 U.S. BITs to their UNCTAD ids and note date differences
+- [x] 2.3 Map the U.S. and Canadian BITs to their UNCTAD ids and note date and status differences
 
 ## 3. Documentation and checks
 
