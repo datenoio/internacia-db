@@ -4,8 +4,9 @@ other_names:
 - lang: en
   name: Türkiye - Ukraine FTA
 agreement_type: fta
-status: signed
-signed: '2022'
+status: in_force
+signed: '2022-02-03'
+in_force: '2026-10-01'
 parties:
 - id: UA
   type: country
@@ -13,14 +14,33 @@ parties:
   type: country
 wto_rta_id: 886
 aric_id: 487
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/ukrayna
+  type: website
+- url: https://ticaret.gov.tr/data/6abe634f269de1cd603cdd65/T%C3%BCrkiye-Ukrayna%20STA.pdf
+  type: treaty_text
+notes: Signed in Kyiv. Türkiye completed ratification by a Presidential Decision published on 4 October 2024, Ukraine when
+  its President approved it on 31 July 2026. The tariff reductions in the goods schedules apply from 1 January 2027.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=487&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/ukrayna
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/ukrayna
+  retrieved_at: '2026-11-23'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=487&ssid=3
-  retrieved_at: '2026-11-22'
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/ukrayna
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/ukrayna
+  retrieved_at: '2026-11-23'

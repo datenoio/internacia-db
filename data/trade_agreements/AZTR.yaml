@@ -5,21 +5,53 @@ other_names:
   name: Azerbaijan-Türkiye PTA
 agreement_type: pta
 status: in_force
+signed: '2020-02-25'
 in_force: '2021-03-01'
 parties:
 - id: AZ
   type: country
 - id: TR
   type: country
+instruments:
+- id: protocol-2023
+  kind: amending_protocol
+  name: Protocol Amending the Preferential Trade Agreement between the Government of the Republic of Türkiye and the Government
+    of the Republic of Azerbaijan
+  status: in_force
+  signed: '2023-04-29'
+  in_force: '2024-07-01'
+  coverage:
+  - goods
+  notes: Signed in Samsun. Adds agricultural and industrial products to the concessions of the Agreement.
+  provenance:
+  - field: instruments
+    source: Turkish Ministry of Trade
+    url: https://ticaret.gov.tr/haberler/turkiye-azerbaycan-tercihli-ticaret-antlasmasi-imzalandi
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Turkish Ministry of Trade, preferential trade agreements
+    url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+    retrieved_at: '2026-11-23'
 aric_id: 416
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/AZ%20TTA.zip
+  type: treaty_text
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=416&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Turkish Ministry of Trade, text of the 2023 Protocol amending the Agreement
+  url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/Azerbaycan%20TTA%20Ek%20Protokoller.zip
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=416&ssid=3
-  retrieved_at: '2026-11-22'
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
