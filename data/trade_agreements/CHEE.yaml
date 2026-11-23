@@ -1,18 +1,29 @@
 id: CHEE
 name: Estonia - Switzerland Free Trade Agreement
+other_names:
+- lang: de
+  name: Freihandelsabkommen vom 21. Dezember 1992 zwischen der Schweizerischen Eidgenossenschaft und der Republik Estland
+    (mit Verständigungsprotokoll)
 agreement_type: fta
-status: terminated
+status: superseded
 signed: '1992-12-21'
-in_force: '1993-04-01'
-ended: '1996-06-01'
+in_force: '1994-03-02'
+ended: '1997-10-01'
 parties:
 - id: EE
   type: country
 - id: CH
   type: country
+superseded_by: EFTAEE
 wto_rta_id: 303
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.fedlex.admin.ch/eli/cc/1994/2580_2580_2580/de
+  type: website
+notes: WTO RTA-IS gives entry into force on 1993-04-01; Fedlex gives 1994-03-02 for Switzerland. WTO RTA-IS gives 1996-06-01
+  as the end date, the date the EFTA agreement entered into force for the partner. Replaced for Switzerland by the EFTA agreement
+  (`EFTAEE`), in force for Switzerland from 1997-10-01 (Fedlex SR 0.632.313.341).
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -22,3 +33,19 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=303
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Fedlex (Swiss federal law platform)
+  url: https://www.fedlex.admin.ch/eli/cc/1994/2580_2580_2580/de
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Fedlex (Swiss federal law platform)
+  url: https://www.fedlex.admin.ch/eli/cc/1994/2580_2580_2580/de
+  retrieved_at: '2026-11-23'
+- field: ended
+  source: Fedlex (Swiss federal law platform)
+  url: https://www.fedlex.admin.ch/eli/cc/1994/2580_2580_2580/de
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Fedlex (Swiss federal law platform)
+  url: https://www.fedlex.admin.ch/eli/cc/1994/2580_2580_2580/de
+  retrieved_at: '2026-11-23'

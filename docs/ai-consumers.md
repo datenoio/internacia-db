@@ -371,9 +371,16 @@ tariff lines, preference margins, depth scores or rankings.
   expands with `via = 'BLEU'`. Filter on `agreement_type` when you count trade agreements
   only.
 - **`verification`** is `official` when parties and dates were checked against the treaty
-  text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS or
-  ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and
+  text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS, the
+  WTO PTA Database or ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and
   its statuses lag, so check a catalogue record before relying on a date.
+- **Preference schemes** (OpenSpec change `add-preference-scheme-rosters`) are the
+  non-reciprocal GSP schemes, LDC-only schemes and programmes such as `AGOA` that the WTO
+  Preferential Trade Arrangements Database lists (`wto_pta_ids`). Each party has a `role`:
+  `grantor` or `beneficiary` (every other agreement has `role = 'party'`). `parent` links a
+  sub-scheme to its scheme and a national scheme to the `GSP` framework: `GSP` → `EU-GSP` →
+  `EU-GSP-EBA` and `GSPPLUS`. Most beneficiary lists are catalogue-level and dated: the notes
+  give the PTA Database version they come from (the EU GSP list is of 2017).
 - **Provisional application.** `in_force` is the definitive entry into force.
   `provisional_application` is the date an agreement began to apply provisionally; an
   agreement applied only provisionally has `status = 'in_force'` and an empty `in_force`.
@@ -396,7 +403,17 @@ WHERE a.country_code = 'FR' AND b.country_code = 'JP' AND t.status = 'in_force'
 
 A `preference_scheme` row (GSP, AGOA) lists the grantors and the beneficiaries as parties;
 two grantors of the same scheme are not trading partners under it, so leave schemes out of
-pair queries, as above.
+pair queries, as above (or keep `role = 'party'`). To list who grants a country preferences:
+
+```sql
+-- Non-reciprocal preference schemes in force that Bangladesh benefits from, and their grantors.
+SELECT t.id, t.name, g.party_id AS grantor, t.parent
+FROM country_trade_agreements c
+JOIN trade_agreements t ON t.id = c.agreement_id
+JOIN trade_agreement_parties g ON g.agreement_id = t.id AND g.role = 'grantor'
+WHERE c.country_code = 'BD' AND c.role = 'beneficiary' AND t.status = 'in_force'
+ORDER BY t.id;
+```
 
 - **`trade_agreement_instruments`** lists what amended or added to an agreement after
   signature: upgrade and amending protocols, CEPA Supplements, supplementary agreements,

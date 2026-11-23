@@ -233,6 +233,7 @@ def _expected_country_trade_agreements(source: dict[str, list[dict]], current: l
                 "country_code": code,
                 "agreement_id": agreement["id"],
                 "via": via,
+                "role": party["role"],
                 "agreement_type": agreement["agreement_type"],
                 "agreement_status": agreement["status"],
                 "in_force": in_force,

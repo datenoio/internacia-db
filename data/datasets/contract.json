@@ -838,9 +838,20 @@
               "id"
             ]
           }
+        },
+        {
+          "columns": [
+            "parent"
+          ],
+          "references": {
+            "table": "trade_agreements",
+            "columns": [
+              "id"
+            ]
+          }
         }
       ],
-      "schema_hash": "2f96a40bac8a0ef97d26fba783c56352064dcf9de900edb876c36bf0220b584f",
+      "schema_hash": "16ea61ab2aa7a16d52d54b0586215a146de4bb4303a555517fcaa0d13f4ad720",
       "columns": [
         {
           "name": "id",
@@ -898,6 +909,11 @@
           "nullable": true
         },
         {
+          "name": "parent",
+          "type": "string",
+          "nullable": true
+        },
+        {
           "name": "wto_rta_id",
           "type": "int64",
           "nullable": true
@@ -905,6 +921,11 @@
         {
           "name": "aric_id",
           "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "wto_pta_ids",
+          "type": "list<int64>",
           "nullable": true
         },
         {
@@ -997,7 +1018,7 @@
           "note": "Rows with party_type 'intblock' reference intblocks.id instead; 'historical-country' rows may use codes not in countries."
         }
       ],
-      "schema_hash": "83de18d88f63e8d96e074df455bc64d2e35825e679dc048aafecd317acfb9306",
+      "schema_hash": "3a24e89f4631e6f603473e8ae368cf1d4e805f586995ef62c1a448cabba63cfb",
       "columns": [
         {
           "name": "agreement_id",
@@ -1011,6 +1032,11 @@
         },
         {
           "name": "party_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role",
           "type": "string",
           "nullable": true
         },
@@ -1305,7 +1331,7 @@
         "agreement_id"
       ],
       "foreign_keys": [],
-      "schema_hash": "8e4292577199e7792ee422e12922a516c7ff890fc37cc586aa57cb5bdffd6b7e",
+      "schema_hash": "12fde091e367fe3bf45ae21eaf4fa5b8d09cd69a0feb38f089944b4ff05b4e81",
       "columns": [
         {
           "name": "country_code",
@@ -1319,6 +1345,11 @@
         },
         {
           "name": "via",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role",
           "type": "string",
           "nullable": true
         },
@@ -1343,8 +1374,8 @@
           "nullable": true
         }
       ],
-      "description": "One row per country and trade agreement it is a current party to. Country parties map directly (via NULL); a bloc party (the EU) is expanded to its current members from current_memberships, with via set to the bloc id. Coverage is current, not historical. in_force is the definitive entry into force; provisional_application the date provisional application began.",
-      "definition": "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.in_force AS party_in_force, tp.provisional_application AS party_provisional, a.agreement_type, a.status AS agreement_status, a.in_force AS agreement_in_force, a.provisional_application AS agreement_provisional FROM trade_agreement_parties tp JOIN trade_agreements a ON a.id = tp.agreement_id WHERE tp.status = 'party'), r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, agreement_type, agreement_status, coalesce(party_in_force, agreement_in_force) AS in_force, coalesce(party_provisional, agreement_provisional) AS provisional_application FROM p WHERE party_type IN ('country', 'territory') UNION ALL SELECT m.country_code, p.agreement_id, p.party_id AS via, p.agreement_type, p.agreement_status, p.agreement_in_force AS in_force, p.agreement_provisional AS provisional_application FROM p JOIN current_memberships m ON m.intblock_id = p.party_id WHERE p.party_type = 'intblock' AND m.include_type IN ('country', 'territory') AND m.status IN ('member', 'founding_member', 'participant', 'associate', 'associate_member', 'associated')) SELECT country_code, agreement_id, via, agreement_type, agreement_status, in_force, provisional_application FROM r QUALIFY row_number() OVER (PARTITION BY country_code, agreement_id ORDER BY via NULLS FIRST) = 1 ORDER BY country_code, agreement_id"
+      "description": "One row per country and trade agreement it is a current party to. Country parties map directly (via NULL); a bloc party (the EU) is expanded to its current members from current_memberships, with via set to the bloc id. Coverage is current, not historical. in_force is the definitive entry into force; provisional_application the date provisional application began. role is grantor or beneficiary on non-reciprocal preference schemes and party on every other agreement; filter on role = 'party' to count reciprocal trade links only.",
+      "definition": "WITH p AS (SELECT tp.party_id, tp.party_type, tp.agreement_id, tp.role, tp.in_force AS party_in_force, tp.provisional_application AS party_provisional, a.agreement_type, a.status AS agreement_status, a.in_force AS agreement_in_force, a.provisional_application AS agreement_provisional FROM trade_agreement_parties tp JOIN trade_agreements a ON a.id = tp.agreement_id WHERE tp.status = 'party'), r AS (SELECT party_id AS country_code, agreement_id, CAST(NULL AS VARCHAR) AS via, role, agreement_type, agreement_status, coalesce(party_in_force, agreement_in_force) AS in_force, coalesce(party_provisional, agreement_provisional) AS provisional_application FROM p WHERE party_type IN ('country', 'territory') UNION ALL SELECT m.country_code, p.agreement_id, p.party_id AS via, p.role, p.agreement_type, p.agreement_status, p.agreement_in_force AS in_force, p.agreement_provisional AS provisional_application FROM p JOIN current_memberships m ON m.intblock_id = p.party_id WHERE p.party_type = 'intblock' AND m.include_type IN ('country', 'territory') AND m.status IN ('member', 'founding_member', 'participant', 'associate', 'associate_member', 'associated')) SELECT country_code, agreement_id, via, role, agreement_type, agreement_status, in_force, provisional_application FROM r QUALIFY row_number() OVER (PARTITION BY country_code, agreement_id ORDER BY via NULLS FIRST) = 1 ORDER BY country_code, agreement_id"
     },
     {
       "name": "country_timezones",
@@ -1492,6 +1523,16 @@
         "digital",
         "framework",
         "other"
+      ],
+      "open": true
+    },
+    {
+      "table": "country_trade_agreements",
+      "column": "role",
+      "values": [
+        "beneficiary",
+        "grantor",
+        "party"
       ],
       "open": true
     },
@@ -1814,6 +1855,16 @@
         "historical-country",
         "intblock",
         "territory"
+      ],
+      "open": true
+    },
+    {
+      "table": "trade_agreement_parties",
+      "column": "role",
+      "values": [
+        "beneficiary",
+        "grantor",
+        "party"
       ],
       "open": true
     },
