@@ -4,7 +4,7 @@
 
 `add-investment-and-trade-relations-types` added the `investment` type with the 41 U.S. bilateral investment treaties from trade.gov, and said that a world walk was not done, so `investment` rows covered the United States only. The UNCTAD Investment Policy Hub's International Investment Agreements Navigator is the standard world catalogue of BITs: each treaty has a stable numeric id, its parties, status, and dates of signature, entry into force and termination. With it the registry can compare investment-treaty links across all countries, as it does for trade agreements.
 
-The maintainer asked on 2026-11-23 for a world walk of the BITs in the IIA Navigator. The live site is behind a Cloudflare human check, so the walk reads the latest Wayback Machine capture of each economy page (captured 2023-12 to 2026-03; nearly all in 2025–2026).
+The maintainer asked on 2026-11-23 for a world walk of the BITs in the IIA Navigator. The live site is behind a Cloudflare human check, so the walk reads the latest Wayback Machine capture of each economy page (364 of 366 economy ids, captured in 2025–2026).
 
 ## What Changes
 
