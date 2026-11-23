@@ -4,7 +4,7 @@ Internacia is a **data-as-code** pipeline: curated YAML is validated, then expor
 to interchangeable artifacts. Do not hand-edit `data/datasets/`.
 
 Current source scale (must match manifests; intblocks rounded down to the hundred):
-**256** countries, **1500+** intblocks, **83** blocktypes.
+**256** countries, **1600+** intblocks, **83** blocktypes.
 
 ```mermaid
 flowchart LR

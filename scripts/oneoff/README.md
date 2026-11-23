@@ -25,5 +25,6 @@ running one.
 | `fetch_edit.py`, `import_edit.py`, `write_edit_report.py` | Save the EDIT treaty list (metadata), match it to `data/trade_agreements/`, add `treaty_text` links, date notes and missing investment treaties, and write the match report and CSVs | 5.x |
 | `parse_untc_details.py`, `import_trade_relations.py` | Parse UN Treaty Collection detail pages and import `trade_relations` records from them and from national treaty database walks (Australia, Canada, Netherlands, Switzerland) | 5.x |
 | `import_africa_agreements.py` | Apply the African trade agreements walk: AfCFTA and TFTA per-State dates on their intblock rosters (AU status list, SADC Secretariat), the AfCFTA protocols as instruments, the AGOA extensions of 2026, and the bilaterals tralac names that a party government or the WTO dates | 5.x |
+| `import_us_tifas.py` | Write the hand-checked U.S. trade and investment framework agreements (USTR TIFA page and texts, State Department Treaties in Force 2026) to `data/trade_agreements/` as `framework` records | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).
