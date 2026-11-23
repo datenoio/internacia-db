@@ -132,9 +132,12 @@ def short_title(title: str) -> str:
     return title.strip().rstrip(".").strip()
 
 
+BLOCS = {"BLEU", "BENELUX"}
+
+
 def pair_code(parties: list[str]) -> str:
-    blocs = sorted(p for p in parties if p == "BLEU")
-    return "".join(blocs + sorted(p for p in parties if p != "BLEU"))
+    blocs = sorted(p for p in parties if p in BLOCS)
+    return "".join(blocs + sorted(p for p in parties if p not in BLOCS))
 
 
 def dump(record: dict) -> str:
@@ -187,14 +190,18 @@ def main(argv: list[str]) -> int:
     # Agreements to consider: national rows first, then UNTS rows nobody claimed.
     items, claimed = [], set()
     for row in natdb_rows:
-        if not row.get("partner_alpha2") and re.search(r"belg.*luxemb", row.get("partner_name") or "", re.I):
+        if re.search(r"belg.*luxemb|bleu\b|uebl\b", row.get("partner_name") or "", re.I):
             row["partner_alpha2"] = "BLEU"
         partner = row.get("partner_alpha2")
         if not partner or row.get("doubtful") or row.get("status") not in ("in_force", "terminated", "not_yet_in_force"):
             report["natdb_skipped"].append((row["_db"], row.get("partner_name"), row.get("title", "")[:90],
                                             row.get("status"), bool(row.get("doubtful"))))
             continue
+        partner = row.get("partner_alpha2")
         reporter = row["reporter"]
+        if set(row.get("reporter_parties") or []) >= {"NL", "BE", "LU"}:
+            # The Dutch database records Benelux, or the Netherlands with the BLEU, as the party.
+            reporter = "BENELUX"
         parties = [reporter, partner]
         match = unts_by_reg.get(row.get("unts_registration") or "")
         if match is None:
@@ -295,8 +302,8 @@ def main(argv: list[str]) -> int:
             record["verification"] = "catalogue"
             for field in ["parties", "status"] + [k for k in ("signed", "in_force") if k in record] + ["notes"]:
                 provenance.append({"field": field, "source": UNTS_SOURCE, "retrieved_at": TODAY, "url": un["url"]})
-        record["parties"] = [{"id": p, "type": "intblock" if p == "BLEU" else "country"}
-                             for p in sorted(item["parties"], key=lambda p: (p != "BLEU", p))]
+        record["parties"] = [{"id": p, "type": "intblock" if p in BLOCS else "country"}
+                             for p in sorted(item["parties"], key=lambda p: (p not in BLOCS, p))]
         if un:
             record["unts_registration"] = un["registration"]
             links.append({"url": un["url"], "type": "website"})
