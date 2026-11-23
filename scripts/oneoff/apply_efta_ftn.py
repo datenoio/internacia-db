@@ -214,9 +214,10 @@ CHANGES: dict[str, dict] = {
     },
     "EFTATSOUZ": {
         "slug": "russia-belarus-kazakhstan",
+        "set": {"status": "suspended"},  # status added by add-suspended-trade-agreement-status
         "notes": "EFTA lists the negotiations as suspended: launched in January 2011, 11 rounds held (page captured "
                  "2025-12-31).",
-        "fields": ["status"],
+        "fields": ["status", "parties"], "official": True,
     },
     "EFTAVN": {
         "slug": "viet-nam",
@@ -388,11 +389,10 @@ NEW: list[dict] = [
         "slug": "algeria", "capture": "20260214061541", "text": None,
         "record": {
             "id": "EFTADZ", "name": "EFTA-Algeria Free Trade Agreement",
-            "agreement_type": "fta", "status": "negotiating",
+            "agreement_type": "fta", "status": "suspended",
             "parties": [{"id": c, "type": "country"} for c in ["DZ", *EFTA_STATES]],
             "notes": "Four negotiation rounds were held in 2007 and 2008, after the 2002 declaration (EFTADZ-JDC). "
-                     "EFTA lists the negotiations as on hold (page captured 2026-02-14); the schema has no status "
-                     "for suspended negotiations.",
+                     "EFTA lists the negotiations as on hold (page captured 2026-02-14).",
         },
     },
 ]
