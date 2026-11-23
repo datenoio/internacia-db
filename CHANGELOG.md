@@ -7,6 +7,626 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.1.0] - 2026-11-23
+
+### Added
+
+- 51 trade agreements registered with ALADI, the depositary of the LAIA partial-scope agreements,
+  that the registry lacked, as `verification: official` records with signatories, date of signature
+  and entry into force (per party where it differs by pair) from the ALADI records: the Cuba
+  agreements, MERCOSUR with Colombia (ACE 72), Panama (ACE 76), Cuba and Mexico, Chile–Uruguay (ACE 73),
+  Chile–Ecuador (ACE 75), the Venezuela agreements of its MERCOSUR accession, ECOALBA-TCP, the agreements
+  inside MERCOSUR, 19 Article 25 agreements with Central American and Caribbean countries,
+  MERCOSUR–Central American Common Market, two agricultural agreements, the regional tariff
+  preference and the market-opening lists for Bolivia, Ecuador and Paraguay. Added by
+  `scripts/oneoff/import_aladi.py` from pages saved by `scripts/oneoff/fetch_aladi.py` on 2026-11-23.
+  35 are new records; the other 16 were added from OAS SICE the same day and now merge both sources
+  under the SICE ids (`ARCL-1991`, `ARUY-AUTO`, `BRGYKN`, `MERCOSURMX-AUTO` and 12 with the same id),
+  with ALADI dates, status and parties and a note where SICE differs.
+- 71 terminated ALADI partial-scope agreements whose successor the ALADI Secretariat names, as
+  `verification: official` records with signatories, date of signature, entry into force and end
+  date from the ALADI historical records: 62 `superseded` (`superseded_by` the agreement that
+  replaced them: the 1983 renegotiation agreements, the bilateral economic complementation
+  agreements that MERCOSUR's agreements with Chile, Bolivia, Peru, the Andean Community and Cuba
+  replaced, and the Article 25 agreements that Mexico's and Colombia's FTAs replaced) and 9
+  `terminated` (eight 1982 sectoral commercial agreements that ended pair by pair, and ACE 26).
+  15 successors already in the registry get `supersedes` (among them `CLEC` and `COCU`, current ALADI
+  agreements). `ARCAN-ACE48` gives each party the date its pair was replaced (`left`). Added by
+  `scripts/oneoff/import_aladi.py`.
+- 19 more terminated ALADI partial-scope agreements, from a second pass over the 47 that the
+  historical ALADI import left out, with the missing date taken from the validity clause of the
+  text, the ALADI Secretariat's note, the protocols or the successor's text:
+  3 `superseded` (`MXPE-ACE8` and `MXPE-AAPR32`, replaced by the Mexico–Peru agreement;
+  `MXPA-A25TM14`, ended by Article 20.7 of the Mexico–Panama FTA), 15 `terminated` (eleven
+  sectoral commercial agreements of 1981–1984, `BOUY-AAPR22`, `BRPY-AAPR34`, `BRUY-AAPR35` and
+  `COMXVE-ACE61`) and 1 `abandoned` (`ALADI-PREC5`, never in force). `MXPE` and `MXPA` get
+  `supersedes`. Added by `scripts/oneoff/import_aladi.py`, which now lists the 28 agreements
+  still left out with the reason.
+- Eleven `trade_agreements` records from the Global Affairs Canada agreements table, checked on 2026-11-23 (`verification: official`):
+  - `CAEC` (Canada-Ecuador FTA, signed 2026-07-24) and `AECA` (Canada-UAE CEPA, signed 2026-10-27).
+  - `CADO` (Dominican Republic), `CATR` (Türkiye) and `MERCOSURCA` (Mercosur), all `negotiating`.
+  - `PACALLCA` (Pacific Alliance), `CARICOMCA` (CARICOM), `CAGTNISV` (Guatemala, Nicaragua and El Salvador), `CAMA` (Morocco) and `CAGB-FTA` (the comprehensive Canada-UK FTA), all `abandoned`, which Global Affairs Canada lists as "8. Inactive".
+  - `TISA` (Trade in Services Agreement, 23 parties with the EU as one), `services`, `abandoned`.
+- 29 `trade_agreements` records (`agreement_type: framework`, `status: signed`,
+  `verification: official`) for China's framework agreements on economic partnership for
+  shared development with African countries, checked on 2026-11-23 against official sources:
+  - 19 of the 22 agreed and signed at the FOCAC Beijing Summit in September 2024: Burundi,
+    the Central African Republic, Chad, Comoros, Côte d'Ivoire, the Democratic Republic of
+    the Congo, Djibouti, Equatorial Guinea, Ethiopia, Guinea-Bissau, Liberia, Libya,
+    Madagascar, Mauritania, Sao Tome and Principe, Sierra Leone, South Sudan, Uganda and
+    Zimbabwe;
+  - the seven reported on 1 July 2025: Angola, Benin, the Gambia, Ghana, Senegal, Somalia and
+    Zambia (June 2025);
+  - three with no MOFCOM release: Cameroon (`CMCN`, 10 December 2025, from the state daily
+    Cameroon Tribune), Botswana (`BWCN`, April 2026) and Togo (`CNTG`, 23 April 2026), both
+    from the bilateral relations pages of the Chinese Ministry of Foreign Affairs.
+- `scripts/oneoff/import_china_africa_frameworks.py`, the import that wrote them.
+- Two `preference_scheme` registry records for China's unilateral zero-tariff measures,
+  checked on 2026-11-23 against announcements of the Customs Tariff Commission of the State
+  Council (`verification: official`). China is the grantor of both.
+  - `CN-LDC`: the duty-free treatment for LDCs (WTO PTA Database id 79), in force from
+    2010-07-01 and covering 100% of tariff lines from 2024-12-01. Its 43 beneficiaries are the
+    UN LDCs with which China has diplomatic relations. The PTA Database lists none for this
+    scheme, so it was left out of the PTA Database import.
+  - `CN-AFRICA`: zero tariffs from 2026-05-01 to 2028-04-30 for the 20 African countries with
+    diplomatic relations that are not LDCs, taken from the country list annexed to
+    announcement No. 5 of 2026.
+- 30 trade agreement records for agreements that the DESTA (Design of Trade Agreements) v2.3
+  list of treaties has and the registry lacked, checked on 2026-11-23
+  (`scripts/oneoff/match_desta.py`, `scripts/oneoff/import_desta.py`). Status and dates come
+  from ALADI, a party government or the WTO, never from DESTA: four historical ALADI
+  agreements of 1982 to 1985 that ended on a fixed date, the UAE CEPAs with Israel, Serbia,
+  Mauritius, Kenya and the Central African Republic, Egypt - Serbia, Lebanon - Türkiye,
+  Jordan's agreements with Kuwait, Sudan and Algeria, Switzerland - Faroe Islands, the
+  France - Monaco customs convention, Latvia - Ukraine, four southern African bilaterals from
+  WTO trade policy reviews (Malawi - Mozambique, Mozambique - Zimbabwe, Botswana - Zimbabwe,
+  Malawi - South Africa) and nine Arab bilaterals from the WTO reviews of Egypt, Morocco and
+  Tunisia (`EGSY`, `EGLY`, `EGLB`, `EGIQ`, `EGMA`, `EGTN`, `SYTN`, `LYTN`, `MATN`).
+- A DESTA match report: `docs/history/desta-match-2026-11-23.md` and a per-treaty CSV with the
+  matched, ambiguous and missing groups, the held agreements and the party-history gaps that
+  DESTA's accession and withdrawal rows suggest.
+- `trade_agreements.dta_id`: the agreement id (`WB ID`) in the World Bank Deep Trade Agreements
+  (DTA) database, the key of the DTA content files. Set on the registry records that DTA lists,
+  mapped by `scripts/oneoff/import_dta.py` from the version 2 files of 2024-01-23 (OpenSpec
+  change `add-dta-catalogue-links`). The registry does not ship the DTA content data.
+- `CNTW`, the Cross-Straits Economic Cooperation Framework Agreement (ECFA), as a `pta`
+  registry record (`verification: official`, checked on 2026-11-23). It was signed on
+  2010-06-29 by ARATS and SEF and is in force from 2010-09-12, according to the text in
+  Taiwan's Laws & Regulations Database and the MOFCOM ECFA page. Its notes record:
+  - the early harvest from 2011-01-01;
+  - the Investment Protection and Promotion Agreement, in force from 2013-02-01;
+  - the Agreement on Trade in Services of 2013, not in force;
+  - the Customs Tariff Commission's suspension of ECFA rates for 12 tariff lines from
+    2024-01-01 and for 134 more from 2024-06-15.
+
+  WTO RTA-IS lists it as an early announcement (RTA ID 713), which the WTO walk had skipped.
+- `treaty_text` links to EDIT, the Electronic Database of Investment Treaties of the World Trade
+  Institute, on 3,636 trade agreement records: 3,276 investment treaties and 360 FTAs, PTAs,
+  customs unions and other agreements with investment provisions. The registry stores the
+  document URL, not the text (OpenSpec `add-edit-catalogue-links`; report
+  `docs/history/edit-match-2026-11-23.md`).
+- 25 investment treaties that EDIT lists and the registry lacked: the EU investment protection
+  agreements with Singapore and Viet Nam and the EU–Angola Sustainable Investment Facilitation
+  Agreement (`official`), and 22 BITs that only EDIT lists, mostly of Taiwan and Kosovo
+  (`catalogue`).
+- Seven EFTA Joint Declarations on Cooperation with partners that have no other EFTA
+  agreement, as `framework` records: `EFTADZ-JDC` (Algeria, 2002), `EFTAMN-JDC` (Mongolia,
+  2007), `EFTAMU-JDC` (Mauritius, 2009), `EFTAPK-JDC` (Pakistan, 2012), `EFTAMM-JDC`
+  (Myanmar, 2013), `EFTANG-JDC` (Nigeria, 2017) and `EFTAASEAN-JDC` (2024, signed by the ten
+  ASEAN Member States and the four EFTA States). Name, date and parties come from each text.
+- 21 EFTA joint declarations that preceded a free trade agreement, also as `framework` records
+  with name, date, place and parties from each text: `EFTAAL-JDC` (1992, signed by the seven
+  EFTA States of the time), `EFTAEG-JDC`, `EFTAMA-JDC` and `EFTATN-JDC` (1995), `EFTAMK-JDC`
+  and `EFTAPS-JDC` (1996), `EFTAJO-JDC` and `EFTALB-JDC` (1997), `EFTAGCC-JDC`, `EFTAUA-JDC`,
+  `EFTAMERCOSUR-JDC` and `EFTAYU-JDC` (2000; Yugoslavia's declaration lists Serbia and
+  Montenegro), `EFTAPE-JDC` and `EFTACO-JDC` (2006), `EFTAMY-JDC` and `EFTAPA-JDC` (2010),
+  `EFTAGE-JDC` (2012), `EFTAPH-JDC` (2014; `signed`, because it takes effect on a notification
+  whose date is not published), `EFTAEC-JDC` (2015), `EFTAMD-JDC` (2017) and `EFTAXK-JDC`
+  (2018).
+- `EFTAUA-2025`, the modernised EFTA-Ukraine Free Trade Agreement (signed 2025-04-08). On
+  entry into force it replaces `EFTAUA` for each EFTA State.
+- `EFTACL-2024`, the Protocol Amending the EFTA-Chile Free Trade Agreement (signed
+  2024-06-24).
+- `EFTADZ`, the EFTA-Algeria free trade negotiations (four rounds in 2007–2008, on hold).
+- Three EU negotiations that the European Commission lists as on hold, as `suspended` records
+  checked on 2026-11-23: `EUCENTRALAFRICAEPA-REGIONAL` (regional EPA talks with Central Africa,
+  started in 2003 and paused in 2011, for the seven countries that have not signed an EPA),
+  `EUESAEPA-REGIONAL` (regional EPA talks with Eastern and Southern Africa, started in 2004 and
+  paused in 2011, for Djibouti, Ethiopia, Malawi, Somalia, Sudan and Zambia) and `EUMM-BIT`
+  (EU-Myanmar Investment Protection Agreement, launched in 2014 and on hold since 2017).
+- Records for the Interim Agreements that applied the trade provisions of the Stabilisation
+  and Association Agreements and of the EU-Lebanon Association Agreement until those entered
+  into force: `EUAL-2006`, `EUMK-2001`, `EUME-2007`, `EUBA-2008`, `EURS-2008` and `EULB-2002`
+  (`superseded`). Also the Europe Agreements with Estonia, Latvia and Lithuania
+  (`EUEE-1995`, `EULV-1995`, `EULT-1995`, in force 1998-02-01 to 2004-05-01). Checked against
+  Official Journal notices and EUR-Lex metadata on 2026-11-23.
+- Ten EU trade agreements from the European Commission's negotiations and agreements
+  overview (DG Trade, checked on 2026-11-23), all `verification: official`:
+  - `EUXK`: EU-Kosovo Stabilisation and Association Agreement, in force since 2016-04-01.
+  - `EUSG-DTA`: EU-Singapore Digital Trade Agreement, in force since 2026-02-01.
+  - `EUCA-DTA`: EU-Canada Digital Trade Agreement, concluded on 2026-10-30 and not yet
+    signed (`negotiating`).
+  - `EUMX-MGA` and `EUMX-ITA`: the EU-Mexico Modernised Global Agreement and Interim
+    Trade Agreement, both signed on 2026-05-22.
+  - `EUCL-AFA`: EU-Chile Advanced Framework Agreement, signed on 2023-12-13.
+  - `EUAE`: EU-United Arab Emirates FTA, under negotiation since 2025-05-28.
+  - `EUGCC`: EU-GCC FTA, launched in 1990 and suspended since 2008. It keeps the
+    `negotiating` status, and a note records the suspension.
+  - `EUEACEPA`: the regional EU-EAC Economic Partnership Agreement. Kenya and Rwanda
+    signed it in September 2016, and it has never been applied.
+  - `EUADSM`: the EU-Andorra-San Marino Association Agreement, signed on 2026-10-19.
+- Intblocks `EUEACEPA` (`pta`) and `EUADSM` (`fta`), the rosters of those two 3-party
+  agreements. The registry records now link to them.
+  - `EUEACEPA`: the EU, Kenya and Rwanda are `member`; Burundi, Tanzania and Uganda,
+    which have not signed, are `partner`.
+  - `EUADSM`: the EU, Andorra and San Marino are `founding_member`, joined 2026-10-19.
+  - Neither agreement has a Wikidata item, so both are listed in
+    `data/schemas/wikidata_exclusions.yaml`.
+- `trade_agreements.gptad_id`: the agreement id in the World Bank Global Preferential Trade
+  Agreements Database (GPTAD), on the registry records that GPTAD lists, mapped by
+  `scripts/oneoff/import_gptad.py` from pages saved by `scripts/oneoff/fetch_gptad.py` on
+  2026-11-23 (OpenSpec change `add-gptad-catalogue-links`).
+- 31 trade agreements that GPTAD lists and the registry lacked: Arab bilaterals not notified to the WTO
+  (Jordan with Bahrain, Egypt, Israel, Morocco, Syria, Tunisia and the UAE; Egypt–Palestine), the
+  Iran–Pakistan PTA, ALADI complementation agreements (MERCOSUR–Bolivia, MERCOSUR–Chile, Bolivia–Chile,
+  Chile–Venezuela, Andean Community–Brazil), CARICOM agreements with Colombia, Costa Rica, Cuba, the
+  Dominican Republic and Venezuela, the ASEAN–China, ASEAN–India, ASEAN–Korea and BIMST-EC framework
+  agreements, predecessors of `AUPG`, `CLCO`, `CLPE` and `PASV` (which get `supersedes`), Croatia–Lithuania,
+  and the founding treaties of `AEC`, `ECCAS` and `MRU` as linked records. Status and dates come from ALADI,
+  SICE, the ASEAN Secretariat and party governments, not from GPTAD alone.
+- The successors that GPTAD does not list: the 1998 Jordan–Morocco FTA (`JOMA`), and ALADI complementation
+  agreements No. 58 MERCOSUR–Peru (`MERCOSURPE`) and No. 59 MERCOSUR–Colombia, Ecuador, Venezuela
+  (`MERCOSURCOECVE`), with pair-by-pair entry into force from ALADI.
+- `treaty_text` link type in `trade_agreements.links`: a URL of the full text of the
+  agreement. Mapped records link the GPTAD PDF. The registry stores the URL, not the text.
+- 14 intelligence, counter-terrorism-information and intelligence-fusion bodies, each with the
+  roster from its own site or parent organization, checked on 2026-11-23: the Committee of
+  Intelligence and Security Services of Africa (`CISSA`, 53 member services), the CIS
+  Anti-Terrorism Center (`CISATC`), the SCO Regional Anti-Terrorist Structure (`SCORATS`), the
+  Intelligence College in Europe (`ICE`), the European Centre of Excellence for Countering Hybrid
+  Threats (`HYBRIDCOE`, with the United States as a former member since February 2026), the Five
+  Eyes Intelligence Oversight and Review Council (`FIORC`), the Five Country Ministerial (`FCM`),
+  the Maritime Analysis and Operations Centre – Narcotics (`MAOCN`), the Terrorist Financing
+  Targeting Center (`TFTC`), the AU Nouakchott Process (`NOUAKCHOTTPROCESS`), the UNODC Paris
+  Pact Initiative (`PARISPACT`) and Triangular Initiative (`TRIANGULARINITIATIVE`), and the two
+  MASE regional centres in the Western Indian Ocean (`RMIFC`, `RCOC`).
+- `trade_agreements` accepts `agreement_type: investment` for standalone investment treaties, such as bilateral investment treaties and Canada's FIPAs. Investment records have ids ending in `-BIT`, or `-BIT-YYYY` for a further treaty between the same parties. The new validator rule `TRADE_AGREEMENT_ID_SUFFIX` checks the suffix (OpenSpec `add-investment-agreements`).
+- 65 Canadian investment treaty records (`AMCA-BIT`, `CACN-BIT`, `CAUA-BIT` and others), all `verification: official`:
+  - 59 rows of the Global Affairs Canada agreements table, with signature, entry into force and suspension dates from the Canada Treaty Series;
+  - six Canada Treaty Series treaties that the table omits (El Salvador, South Africa, Uruguay 1991, Czechoslovakia 1990, Latvia 1995, Romania 1996).
+
+  Imported with `scripts/oneoff/import_canada_fipas.py`, checked on 2026-11-23.
+- `BLEU` intblock for the Belgium–Luxembourg Economic Union (convention of 25 July 1921, renewed by the Protocol of 18 December 2002, in force from 1 February 2005). Belgium and Luxembourg sign investment treaties as one party, so a Belgium–Luxembourg treaty lists `BLEU` as one party.
+- Registry records linked to the plurilateral investment intblocks `OICIA`, `ACIA`, `CJKIA` and `PCFI` (`agreement_type: investment`) and `INTRAEUBIT` (`agreement_type: other`, because it terminates investment treaties), all `in_force` and `verification: official`. `UAIA` has no record yet: no party government or depositary source for its status could be read.
+- Four HCCH conventions to which Japan is a Contracting Party and which had no record:
+  `CIVILPROCEDURE1954` (Convention on Civil Procedure), `CHILDMAINTENANCE1956` (law applicable to
+  maintenance obligations towards children), `TESTAMENTARY1961` (form of testamentary dispositions)
+  and `MAINTENANCE1973` (law applicable to maintenance obligations), with Contracting Parties and
+  ratification, accession or succession dates from the HCCH status tables, checked on 2026-11-23.
+- The UN regional commissions `ESCAP` (Economic and Social Commission for Asia and the Pacific,
+  Wikidata Q1142901) and `ECLAC` (Economic Commission for Latin America and the Caribbean, Wikidata
+  Q32874), with members, associate members and admission dates from the commissions' member pages.
+  The United States is a `former_member` of both from 7 January 2026, the date of the presidential
+  memorandum directing its withdrawal.
+- 19 `trade_agreements` records from the China FTA Network of China's Ministry of Commerce
+  (MOFCOM), checked on 2026-11-23, all `verification: official`:
+  - `CNHN` (China-Honduras FTA early harvest arrangement, in force from 1 September 2024),
+    `CNSV` (China-El Salvador FTA, negotiating), `CNPS` (China-Palestine FTA, negotiating) and
+    `CNUY` (China-Uruguay FTA, joint feasibility study completed in 2022);
+  - eight China-Pacific Island country framework agreements on enhanced economic partnership
+    signed in 2025-2026: `CNFM`, `CNKI`, `CNNR`, `CNVU`, `CNFJ-EEPA`, `CNTO`, `CNPG-EEPA`,
+    `CNSB`;
+  - China-Africa economic partnership for shared development: early harvest arrangements with
+    Kenya (`CNKE`) and Seychelles (`CNSC`, both signed), the concluded Gabon negotiations
+    (`CNGA`), and framework agreements with South Africa (`CNZA`), Nigeria (`CNNG`), Namibia
+    (`CNNA`) and Cabo Verde (`CNCV`).
+- `scripts/oneoff/import_mofcom_fta.py`, the curated import that wrote these changes.
+- Beneficiary history for the preference schemes imported from the WTO Preferential Trade
+  Arrangements Database, read from every database version (walked 2026-11-23; OpenSpec
+  `add-preference-scheme-beneficiary-history`).
+  - A beneficiary that a later version first lists has `in_force`. A beneficiary that a
+    version drops has `left`, and countries that graduated or were removed are now listed as
+    former beneficiaries (`trade_agreement_parties.status = 'former_party'`): 439 rows in 30
+    schemes, such as the beneficiaries that left `EU-GSP` in the 2014 reform.
+  - These are no-later-than dates. Beneficiaries already in the earliest list (about 2011)
+    have no `in_force`, and earlier spells are in the party `note`.
+  - Older sub-scheme lists are dated only when their size matches the count in the
+    database's dropdown label. Current lists are unchanged.
+- Validation rule `TRADE_AGREEMENT_PARTY_DATE`: a party's `in_force` is not before the
+  agreement's, its `left` is not after the agreement's `ended`, and `left` is after its own
+  `in_force`.
+- 45 preference schemes from the WTO Preferential Trade Arrangements Database (walked
+  2026-11-23) in `trade_agreements`, all `verification: catalogue`:
+  - 29 schemes: the national GSP schemes (`EU-GSP`, `JP-GSP`, `US-GSP`, `GB-DCTS`, `EAEU-GSP`
+    and others), the LDC-only schemes (`IN-DFTP`, `KR-LDC`, `CL-LDC` and others), and 6 other
+    programmes (`EU-ATM-WB`, `US-ATPA`, `US-NTPP` and others);
+  - 16 sub-schemes, such as `EU-GSP-EBA`, `NO-GSP-ZERO`, `CA-GSP-LDCT` and `AGOA-APPAREL`.
+
+  Each record lists its grantor and the beneficiaries of the scheme's latest version. Its
+  provenance gives that version's date: some lists are old, the EU GSP list is from 2017-06-29.
+  China's LDC scheme is not added, because the database lists no beneficiaries for it.
+  (OpenSpec `add-preference-scheme-rosters`.)
+- Party roles:
+  - `parties[].role` (`grantor`, `beneficiary`) on preference schemes;
+  - a `role` column in `trade_agreement_parties` and `country_trade_agreements`, which is
+    `party` on every reciprocal agreement.
+- `parent` in `trade_agreements`: it links a sub-scheme to its scheme, and a national scheme
+  to the `GSP` framework (`GSP` → `EU-GSP` → `EU-GSP-EBA`, `GSPPLUS`).
+- `wto_pta_ids` in `trade_agreements`: the PTA Database ids, a list. `AGOA`, `CBERA`,
+  `CARIBCAN` and `SPARTECA` have theirs now.
+- Validation:
+  - `TRADE_AGREEMENT_PARTY_ROLE`: a preference scheme needs a grantor and a beneficiary, and
+    a linked preference-scheme intblock may use only `contributor` and `recipient`;
+  - `TRADE_AGREEMENT_PARENT`: a sub-scheme has the parent's grantors and a subset of its
+    beneficiaries;
+  - `DUPLICATE_WTO_PTA_ID`.
+- 46 trade agreement records from the OAS Foreign Trade Information System (SICE), checked
+  on 2026-11-23 (`scripts/oneoff/import_sice.py`): ALADI complementation and partial scope
+  agreements (ACE 14, 16, 57, 58, 59, 72; AAP.A25TM 22, 23, 29, 38, 41, 42; ACE 54 and 55
+  with Mexico), free trade agreements never notified to the WTO (`ARCL`, `BRCL`, `CLUY`,
+  `CLPY`, `CLEC`, `CREC`, `AECR`, `AECL`, `GTIL`, `GTPE`, `PYTW`), signed agreements
+  (`AECO`, `COPA-2013`, `ILPA`, `PATT`, `MERCOSURPA`) and current negotiations (`BZSV`,
+  `CLTT`, `CRIL`, `DOEC`, `AEEC`, `AEPE`, `PESV`, `MERCOSURAE`, `INUS`, `GCCCL`). Entry into
+  force per pair of parties is kept as party `in_force` dates; ALADI codes are `acronyms`.
+- Four Swiss trade agreements from Fedlex, checked on 2026-11-23:
+  - `CHLI`, the Switzerland-Liechtenstein Customs Treaty (`customs_union`, in force since
+    1924-01-01);
+  - `EUCH-AGRI`, the EU-Switzerland Agreement on Trade in Agricultural Products (Bilaterals I,
+    in force since 2002-06-01; Liechtenstein included from 2007-09-27);
+  - `CHGB-FSA`, the Berne Financial Services Agreement with the United Kingdom (`services`, in
+    force since 2026-01-01);
+  - `CHGB-MOBILITY`, the UK-Switzerland Services Mobility Agreement (`services`, in force since
+    2021-01-01).
+- New `trade_agreement_instruments` table (Parquet, JSONL, DuckDB; listed in
+  `contract.json` and `datapackage.json`). It has one row per agreement and per instrument
+  that amends or adds to the agreement: upgrade and amending protocols, CEPA Supplements,
+  supplementary agreements, early harvest arrangements and Joint Committee decisions. Each
+  row has a `kind`, a `status`, dates, `coverage` and provenance. The primary key is
+  (`agreement_id`, `instrument_id`). This is an additive (MINOR) contract change; OpenSpec
+  `add-trade-agreement-instruments`.
+- Optional `instruments` list on `data/trade_agreements/*.yaml` records, validated by the
+  JSON Schema and by the rules `DUPLICATE_TRADE_AGREEMENT_INSTRUMENT` and
+  `TRADE_AGREEMENT_INSTRUMENT_DATE`. The quality report lists instruments signed before
+  their agreement as `TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT`.
+- 136 instruments on 48 records:
+  - 122 come from the WTO RTA-IS `RTA Changes` sheet, checked on 2026-11-23. They are
+    Joint Committee decisions of EFTA and other agreements, the Mainland–Hong Kong and
+    Mainland–Macao CEPA Supplements and agreements, and amending protocols.
+  - 14 come from China FTA Network (MOFCOM) releases. They are the `ACFTA` 2.0 and 3.0
+    protocols, the upgrade protocols of `CHCN`, `CLCN`, `CNGE`, `CNNZ`, `CNPE` and `CNSG`,
+    the `CNPK` second-phase protocol, the `CNNI` early harvest arrangement, and the
+    negotiations on `CNKR` (second phase), `CNNZ` (services) and `SACUCN` (early harvest).
+- `scripts/oneoff/import_trade_agreement_instruments.py`, the import that wrote them.
+- Query recipes for an agreement's instruments and for agreements upgraded since a date.
+- `suspended` value for trade agreement `status` (and `country_trade_agreements.agreement_status`):
+  negotiations that were launched and then suspended, paused or put on hold without being
+  formally ended. A `suspended` record has no `in_force` or `provisional_application` date and
+  is not an intblock candidate. An agreement in force whose application is suspended keeps
+  `in_force`. Both enums are open, so this is a MINOR contract change with no `schema_hash`
+  change; consumers that filter `status = 'negotiating'` for live talks no longer get frozen
+  ones. OpenSpec change `add-suspended-trade-agreement-status`.
+- `agreement_type` value `trade_relations` in the trade agreements registry (OpenSpec
+  `add-investment-and-trade-relations-types`) for agreements that grant most-favoured-nation
+  or normal trade relations treatment without preferences. It covers the United States only so far.
+- 41 U.S. bilateral investment treaties from trade.gov (`ALUS-BIT` … `USUY-BIT`), checked on
+  2026-11-23, including the terminated treaties with Bolivia and Ecuador.
+- 27 U.S. trade relations records from the ITA's former TARA database and the State
+  Department's Treaties in Force 2026: 21 agreements on trade relations (`-TRA` ids, among
+  them `RUUS-TRA`, `USVN-TRA`, `CNUS-TRA`) and the 1881 treaty of commerce with Serbia as
+  applied to the six successor states of Yugoslavia (`-1881` ids).
+- `ITA` (Information Technology Agreement, 56 participants) and `TCA` (Agreement on Trade in
+  Civil Aircraft, 33 Signatories), WTO plurilaterals with rosters from the WTO.
+- `unts_registration` in `trade_agreements`: the UN Treaty Series registration number
+  (OpenSpec `add-trade-relations-walk`), with a validator check that no two records share it.
+- 342 bilateral trade relations agreements (`agreement_type: trade_relations`): 301 with the
+  status from the treaty databases of Australia, Canada, the Netherlands and Switzerland, and
+  41 found only in the UN Treaty Series, concluded since 2000 between countries outside the EU
+  (`verification: catalogue`). Agreements that the Netherlands concluded with Belgium and
+  Luxembourg have the `BENELUX` intblock as one party.
+- `provisional_application` on trade agreement records and parties, and as a column of
+  `trade_agreements`, `trade_agreement_parties` and `country_trade_agreements`: the date an
+  agreement began to apply provisionally. `in_force` is now the definitive entry into force;
+  an agreement applied only provisionally keeps `status = 'in_force'` with an empty `in_force`.
+  Use `coalesce(provisional_application, in_force)` for "applies since". OpenSpec change
+  `add-trade-agreement-provisional-application`.
+- Five UK trade agreements from gov.uk, checked on 2026-11-23: `GBUA-DTA` (UK-Ukraine Digital
+  Trade Agreement, in force since 1 September 2024) and four under negotiation, three of them
+  concluded: `GCCGB` (UK-Gulf Cooperation Council FTA, concluded 20 May 2026), `GBKR-2025`
+  (upgraded UK-Korea FTA, concluded 15 December 2025), `CHGB-2026` (enhanced UK-Switzerland
+  FTA, concluded 13 July 2026) and `GBTR-2024` (enhanced UK-Turkey FTA).
+- `unctad_iia_id` in `trade_agreements`: the UNCTAD IIA Navigator treaty identifier that
+  `add-investment-agreements` specifies, with a validator check that no two records share it.
+- 3,367 bilateral investment treaties from the UNCTAD IIA Navigator (OpenSpec
+  `add-unctad-bit-walk`), read from Wayback Machine captures of 2025–2026, as
+  `agreement_type: investment` records at `verification: catalogue`. The U.S. BITs from
+  trade.gov and the Canadian treaties gain their UNCTAD ids.
+- U.S. Agreements on Reciprocal Trade in the trade agreements registry, checked against USTR, the White House, the
+  Federal Register and partner governments on 2026-11-23: `MYUS-ART`, `KHUS-ART`, `SVUS-ART`, `GTUS-ART`,
+  `ARUS-ART` (with its Protocol of Amendment of 14 October 2026), `BDUS-ART`, `TWUS-ART`, `IDUS-ART`, `ECUS-ART`
+  and `JOUS-ART`. They are `pta` records with status `signed`: none had entered into force.
+- The 2025–26 reciprocal trade frameworks that have not led to a signed agreement, as `framework` records with
+  status `signed` and the date the framework was agreed: `GBUS-EPD` (UK Economic Prosperity Deal general terms),
+  `EUUS-FRAMEWORK`, `JPUS-FRAMEWORK`, `KRUS-FRAMEWORK`, `CHLIUS-FRAMEWORK`, `USVN-FRAMEWORK`, `THUS-FRAMEWORK`,
+  `MKUS-FRAMEWORK` and `INUS-FRAMEWORK`. Frameworks that led to a signed agreement are noted on that agreement.
+- U.S. trade and investment framework agreements (TIFAs, TICFAs, trade and investment councils and forums) in the
+  trade agreements registry: 62 `framework` records with ids `<pair>-TIFA` (`AFUS-TIFA` … `USZA-TIFA`, bloc
+  agreements such as `ASEANUS-TIFA`, `COMESAUS-TIFA`, `EACUS-TIFA`, `SACUUS-TIFA`, `UEMOAUS-TIFA`,
+  `CARICOMUS-TIFA` and `CARICOMUS-TIFA-1991`), all `in_force` at `verification: official`. Dates come from the
+  State Department's Treaties in Force 2026 and from the texts USTR posts (scans read with OCR), with USTR press
+  releases for WAEMU (2002) and the 2012 amendment of the South Africa TIFA, which is recorded as an instrument. The
+  two 2008 protocols to the Uruguay TIFA are instruments of `USUY-TIFA`. Each record links USTR's text and, where
+  EDIT holds the text, its EDIT document page; notes give EDIT's date where it differs (Afghanistan, Sri Lanka,
+  Saudi Arabia, Central Asia).
+- Councils on trade and investment that Treaties in Force 2026 still lists although USTR's current TIFA page does
+  not: Bolivia, Chile, Guatemala, Honduras, Panama, Suriname, Venezuela, CARICOM (1991), the Central
+  American-U.S. regional council (1998) and the Andean Community council (1998), and the framework agreements with
+  Estonia, Jordan, Lithuania, Mexico (1987), Morocco and Singapore.
+
+### Changed
+
+- The names of `ALADI-AG2`, `BRGYKN` and `GTMXSV` list three or more parties as "A, B and C".
+- `CAJP` and `CASG` are now `abandoned`. Global Affairs Canada lists both negotiations as inactive: Japan's last round was in November 2014, and Singapore's talks have been on hold since November 2009.
+- `CAPH` and `CATH` are now `negotiating`, not `proposed`. The Canada-Philippines negotiations were launched on 2025-10-26 and concluded on 2026-11-14.
+- `CAIN` is renamed "Canada-India Comprehensive Economic Partnership Agreement", after the November 2025 relaunch.
+- `ASEANCA` notes the substantial conclusion of negotiations on 2026-11-15.
+- `ASEANCA`, `CAID`, `CAIN`, `CAJP`, `CAPH`, `CASG` and `CATH` move from `catalogue` to `official`.
+- The early harvest records `CGCN`, `CNGA` and `CNSC` (frameworks signed in September 2024)
+  and `CNKE` (framework signed on 24 April 2025) note their framework agreements.
+- The validator also reports a `dta_id` set on two records as `DUPLICATE_IDENTIFIER`.
+- `CNTW` (ECFA) lists its two follow-up agreements as `instruments` instead of in `notes`:
+  the Cross-Strait Investment Protection and Promotion Agreement (`investment-2012`, signed
+  2012-08-09, in force 2013-02-01) and the Cross-Strait Agreement on Trade in Services
+  (`services-2013`, signed 2013-06-21, not in force), checked against the Taiwan Laws &
+  Regulations Database and the Straits Exchange Foundation on 2026-11-23.
+- 458 records note the date of signature, entry into force or termination that EDIT gives where
+  it differs from the record; no date or status was changed. `verification: catalogue` also
+  covers records taken only from EDIT.
+- `EFTAMY` and `EFTATH`, already `signed` from the EFTA free trade network review, also cite
+  SECO (Swiss State Secretariat for Economic Affairs) for the date of signature and status.
+  They take their parties from the EFTA partner pages instead of ADB ARIC. `EFTATH` is now
+  named `EFTA-Thailand Free Trade Agreement` and keeps the ADB ARIC name in `other_names`.
+  `EFTAMY` lists the official title, `Economic Partnership Agreement between the EFTA States
+  and Malaysia`.
+- 29 EFTA trade agreement records checked on 2026-11-23 against the EFTA free trade
+  network partner pages (Wayback Machine copies, because efta.int sits behind a bot
+  check), with the WTO RTA-IS ID cards and Fedlex as tie-breakers. Each one now links its
+  EFTA page and cites it in `provenance`. 26 records move from `catalogue` to `official`
+  verification; `EFTAMD`, `EFTAXK` and `EFTATSOUZ` stay `catalogue`.
+- Per-state entry-into-force dates (`parties[].in_force`) for agreements that entered into
+  force on different dates for different EFTA States: `EFTAAL`, `EFTACO`, `EFTACRPA`,
+  `EFTAMD`, `EFTAME`, `EFTAMERCOSUR`, `EFTAPE`, `EFTARS`, `EFTATN`, `EFTAXK` and
+  `EFTASG-DEA`. `EFTAPE` also records Peru's later signature (2010-07-14).
+- `EFTAMY` is renamed to EFTA-Malaysia Economic Partnership Agreement (MEEPA). `EFTAEC` is
+  renamed to EFTA-Ecuador Comprehensive Economic Partnership Agreement, and `EFTAPS` to
+  EFTA-Palestine Interim Agreement (concluded with the PLO for the benefit of the Palestinian
+  Authority). Official titles from Fedlex go in `other_names`, and so do the former WTO-style
+  names.
+- Notes on later instruments: the amending protocols for `EFTAAL` (2015, in force 2017),
+  `EFTARS` (2015, in force 2017), `EFTAME` (2021, in force 2022) and `EFTABA` (2022, in force
+  2023); the rules-of-origin decisions for `EFTAJO` (2025, in force 2026-02-01) and `EFTATN`
+  (2024, in force 2026-03-01); the revised `EFTAIL` agricultural agreements (signed 2018, in
+  force 2021-08-01); and the review talks for `EFTAMX` and `EFTASACU`.
+- `EUGCC` (EU-Gulf Cooperation Council FTA, suspended since 2008) moves from `negotiating` to
+  `suspended`. Its UAE party notes that the UAE is not on the Commission's on-hold list and has
+  negotiated a bilateral FTA (`EUAE`) since 2025.
+- EU trade agreements now separate provisional application from entry into force, using Official
+  Journal notices:
+  - Applied provisionally only, so `in_force` is now empty: `CETA`, `EUCI`, `EUGH`,
+    `EUCENTRALAFRICAEPA`, `EUESAEPA`, `EUSADCEPA`, `EUCARIFORUMEPA`, `EUPACIFICEPA` and the
+    `EUMERCOSUR` interim agreement.
+  - `in_force` is now the definitive date and `provisional_application` the earlier one:
+    `EUKR` (2015-12-13), `EUUA` (2017-09-01), `EUGE` and `EUMD` (2016-07-01), `EUAM`
+    (2021-03-01), `EUANDEAN` (2024-11-01), `EUCENTRALAMERICA` (2024-05-01) and `EUCL-2002`
+    (2005-03-01).
+- `EUAL`, `EUMK`, `EUME`, `EUBA`, `EURS` and `EULB` now carry the entry into force of the
+  Stabilisation and Association Agreement or Association Agreement itself. The earlier trade
+  date belongs to the new Interim Agreement record.
+- `EUEE`, `EULV` and `EULT` (the 1994 free trade agreements) are `superseded` by the Europe
+  Agreements and ended on 1998-02-01.
+- `EUCENTRALAMERICA` and `EUANDEAN` intblocks note when trade provisions began to apply for each
+  partner.
+- `EUID` (EU-Indonesia CEPA) is `signed` (2026-11-21), and `EUKR-DIGITAL` (EU-Korea
+  Digital Trade Agreement) is `signed` (2026-06-10).
+- `EUAU`, `EUIN`, `EUMY` and `EUTH` now have notes with the dates when negotiations were
+  concluded, paused or resumed, as the European Commission gives them. These records,
+  `EUID`, `EUKR-DIGITAL` and `EUCL` are now `verification: official`.
+- `EUCL` is named `EU-Chile Interim Trade Agreement`.
+- 19 EU agreements have notes that tell provisional application apart from full entry
+  into force. The dates are not changed: `in_force` keeps the date from which trade
+  provisions first applied.
+  - The Western Balkans SAAs (`EUAL`, `EUBA`, `EUME`, `EURS`, `EUMK`) get their entry
+    into force dates from EUR-Lex. The Commission gives the dates for `EULB`, `EUGE`,
+    `EUMD` and `EUAM`.
+  - `EUUA` gets the 2025 DCFTA upgrade.
+  - `EUCENTRALAMERICA` gets its staggered 2013 provisional application by country and
+    full application from 2024-05-01.
+  - `EUANDEAN`, `EUCARIFORUMEPA`, `EUPACIFICEPA`, `EUESAEPA`, `EUSADCEPA`, `EUCI`,
+    `EUGH` and `EUMERCOSUR` are marked as still provisionally applied.
+  - Where the Commission's overview disagrees with the record (Papua New Guinea,
+    Namibia, Côte d'Ivoire), the note gives both dates.
+
+- 62 EU trade agreements move from `verification: catalogue` to `official`. Their
+  signature and entry-into-force dates are checked against EUR-Lex metadata from the
+  Publications Office Cellar SPARQL endpoint, and each record cites the CELEX document
+  in `provenance` and `links`.
+  - `EUGE`, `EUMD`, `EUAM` and `EUCL-2002` keep the provisional-application date in
+    `in_force`; their notes give the EUR-Lex date of full entry into force.
+  - `EUPH` is confirmed by the Commission's negotiations overview.
+- 14 EU records stay `catalogue`: EUR-Lex gives different dates, and their notes quote
+  the EUR-Lex values for review. They are `EUAT`, `EUCI`, `EUCZSK`, `EUSI`,
+  `EUSI-1996-2`, `EUEE`, `EULT`, `EULV`, `EUEG-1972`, `EULB-1972`, `EULB-1977`, `EUAD`,
+  `EUMX` and `EUTR`.
+- A trade agreement record linked to an intblock may list its own `links`; the export puts
+  them after the intblock's links instead of dropping them.
+- The validator reports a `wto_rta_id`, `aric_id` or `gptad_id` set on two records as
+  `DUPLICATE_IDENTIFIER`.
+- `ACIA` entered into force on 29 March 2012, per the Malaysian trade ministry (MITI), not on 24 February 2012 as UNCTAD gives it.
+- The `services` agreement type now means services-only agreements. Investment treaties use `investment`.
+- `country_trade_agreements` and `trade_agreement_parties` now include investment treaties. Filter on `agreement_type` to count trade agreements only.
+- `SIAP` (Statistical Institute for Asia and the Pacific) now declares `partof: ESCAP`.
+- `CGCN` and `BYCN` take their official names (the China-Republic of the Congo early harvest
+  arrangement and the China-Belarus Agreement on Trade in Services and Investment), keep the WTO
+  RTA-IS names as other names, and are now `verification: official`.
+- Notes on upgrade protocols and early harvest arrangements from MOFCOM releases: `ACFTA`
+  (versions 2.0 and 3.0), `CHCN`, `CLCN`, `CNGE`, `CNKR` (second phase), `CNNI`, `CNNZ`,
+  `CNPE`, `CNPK`, `CNSG`, and `SACUCN`; joint feasibility study dates on `CACN`, `CNCO`, `CNFJ`,
+  `CNMN` and `CNNP`.
+- MOFCOM topic pages added as links to 31 China records.
+- `HNSVTW`: El Salvador's party row records its exit on 7 November 2022.
+- `country_trade_agreements` has about 2,800 more beneficiary rows and grantor rows (EU
+  schemes expand to the 27 member states). Queries that count reciprocal trade links between
+  countries should filter on `role = 'party'` or `agreement_type <> 'preference_scheme'`.
+- `GSP` and `SPARTECA` intblocks:
+  - the 16 GSP grantors are `contributor` instead of `participant`;
+  - in SPARTECA, Australia and New Zealand are `contributor` and the 13 Forum Island Countries
+    `recipient`, instead of `founding_member` and `member`.
+
+  `memberships` shows the new statuses.
+- The Lomé Conventions (`LOME-1975`, `LOME-1979`, `LOME-1984`) give the EU the role `grantor`
+  and the ACP States the role `beneficiary`.
+- Preference schemes are no longer reported as `TRADE_AGREEMENT_INTBLOCK_CANDIDATE`.
+- Four trade agreements whose `in_force` held the start of provisional application now
+  record it in `provisional_application`, checked against official sources on 2026-11-23:
+  - `EUUK` (EU-UK Trade and Cooperation Agreement): `provisional_application` 2021-01-01,
+    `in_force` 2021-05-01, from the Official Journal notices (CELEX 22021X0101(01) and
+    22021X0430(02)).
+  - `EUZA` (EC-South Africa Trade, Development and Cooperation Agreement, `superseded`):
+    `provisional_application` 2000-01-01 under the Exchange of Letters (CELEX
+    21999A1204(01)), `in_force` 2004-05-01 (CELEX 21999A1204(02)).
+  - `GBVN` (UK-Vietnam Free Trade Agreement): `provisional_application` 2021-01-01, from the
+    Viet Nam Ministry of Industry and Trade; `in_force` stays 2021-05-01 (UK Treaty Series).
+  - `GBGH` (UK-Ghana Interim Trade Partnership Agreement): `provisional_application`
+    2021-03-05, from the CS Ghana No.1/2021 page. `in_force` is now empty: the UK still lists
+    the agreement as applied provisionally, and no Treaty Series publication or official date
+    of entry into force has been found.
+- `CHCN`, `CHJP` and `CHFOLI` are `official`, with Fedlex links and provenance (dates
+  unchanged).
+- `EFTAEE`, `EFTALV` and `EFTALT` give Switzerland's own entry into force (1997-10-01 and
+  1997-08-01). `EFTAEE` now lists Switzerland as a party.
+- The upgrade and early harvest sentences that the MOFCOM import put in `notes` on 11 records
+  now live in `instruments`. When MOFCOM and the WTO give different dates for the same
+  instrument, the item's `notes` record the WTO dates.
+- `EFTATSOUZ` (EFTA-Russia/Belarus/Kazakhstan, suspended after 11 rounds since 2011) and
+  `EFTADZ` (EFTA-Algeria, on hold since 2008) move from `negotiating` to `suspended`.
+  `EFTATSOUZ` now cites the EFTA page for its status and parties and moves from `catalogue` to
+  `official` verification.
+- `CAFTADR` notes give the entry-into-force date for each signatory and the 2006 amendment
+  to Article 22.5; `USBH` notes the 2009 First Protocol of Amendment; `USAU`, `USCO`,
+  `USKR`, `USPA`, `USSG` and `CAFTADR` cite trade.gov for `in_force`; `USMCA` links trade.gov.
+- `verification: catalogue` also covers records taken only from the UN Treaty Series.
+- `ALUS-TRA` and `CNUS-TRA` give their UN Treaty Series registration numbers.
+- 34 UK trade agreement records are checked against gov.uk and the UK Treaty Series and are
+  now `verification: official`, with the gov.uk name (the catalogue name stays in
+  `other_names`), the agreement collection link and the treaty series numbers in `notes`.
+  Entry into force dates follow the Treaty Series: 31 December 2020 instead of 1 January 2021
+  for 12 continuity agreements, and later dates for `CAGB`, `CMGB`, `EGGB`, `GBISLINO`, `GBKE`,
+  `GBMK`, `GBRS` and `GBTR`, several of which applied provisionally from 1 January 2021.
+  `GBMA`, `UKCARIFORUM` and `UKPACIFICEPA` are applied provisionally only and have no
+  `in_force` date.
+- `CPTPP`: the United Kingdom's entry gives the date its accession entered into force with each
+  partner.
+- `verification: catalogue` also covers records taken only from the UNCTAD IIA Navigator.
+
+### Fixed
+
+- `CAID` (Canada-Indonesia CEPA) `signed` is 2025-09-24, not 2024-12-02. ADB ARIC gave the date negotiations were concluded. Global Affairs Canada gives entry into force on 2026-12-01; this is recorded in the notes.
+- `EFTATH` and `EFTAMY` were still `negotiating`; they are `signed` (2025-01-23 and
+  2025-06-23).
+- `EFTASG-DEA` was still `negotiating`; it was signed on 2025-09-25 and has been in force
+  for Norway and Singapore since 2026-03-01.
+- Notes on `EFTATSOUZ` (negotiations suspended), `EFTAVN` (negotiations concluded
+  2026-07-02, not signed) and `EFTALB` (the EFTA page's 1 July 2007 date conflicts with
+  Fedlex and WTO, which give 1 January 2007 for all parties).
+- Dates corrected to EUR-Lex:
+  - `EUIS` signed 1972-07-22 (was 1972-12-19);
+  - `EUTN` signed 1995-07-17 (was 1995-07-07);
+  - `EUFI` ended 1995-01-01 (was 1994-01-01);
+  - `EUPT` ended 1986-01-01 (was 1976-01-01).
+- `EUDZ-1976` and `EUSY` now describe the 1976 and 1977 Cooperation Agreements.
+  - Their `in_force` is 1978-11-01; they had the date of the matching Interim
+    Agreements (`EUDZ-1976-2`, `EUSY-1977`).
+  - They are renamed to `EC - Algeria Cooperation Agreement` and
+    `EC - Syria Cooperation Agreement`.
+- `EUTR-1963` (Ankara Agreement) and `EUTR-1970` (Additional Protocol) are `in_force`,
+  not `terminated`, and no longer have an `ended` date. EUR-Lex records both as valid
+  with no end of validity. WTO RTA-IS had ended them on 1973-01-01 and 1974-01-01, the
+  dates of the following instruments. Both are now `verification: official`.
+- `EUTR-1973` is the 1973 EC-Turkey Interim Agreement consequent on enlargement, now
+  named `EC - Türkiye Interim Agreement of 1973`, and is `verification: official`. It
+  ended on 1986-03-01, not 1996-01-01: EUR-Lex gives end of validity on 1986-02-28,
+  when the Supplementary Protocol signed the same day entered into force.
+- `EUZA` is the EC-South Africa Trade, Development and Cooperation Agreement. It is now
+  `superseded` by `EUSADCEPA`, ended 2016-10-10. The SADC EPA repealed its trade
+  component when it entered into provisional application in October 2016.
+
+- `EUWESTAFRICAEPA`: the regional EU-West Africa EPA is `signed`, not `in_force`.
+  - The intblock no longer has the `active_period` start of 2016-12-15. That date
+    belongs to the Côte d'Ivoire and Ghana stepping-stone EPAs (`EUCI`, `EUGH`).
+  - The 13 West African signatories listed by the European Commission are now `member`,
+    not `partner`. Nigeria, which has not signed, stays `partner`.
+- Dates of 14 trade agreement records linked to an intblock. Their exported dates (taken from
+  the intblock, or from ADB ARIC or Wikipedia) differed from WTO RTA-IS. Each was checked on
+  2026-11-23 against the treaty text, the depositary, the secretariat or a party government,
+  and each record now sets its own dates:
+  - in force: `ACFTA` 2005-01-01, `AfCFTA` 2019-05-30, `CACM` 1961-06-04, `CAN` 1969-10-16,
+    `MERCOSUR` 1991-11-29, `SADCFTA` 2000-01-25, `UEMOA` 1994-08-01;
+  - signed and in force: `AFTA` 2009-02-26 and 2010-05-17 (ATIGA), `CEFTA` 2006-12-19 and
+    2007-07-26, `COMESA` 1993-11-05 and 1994-12-08, `EAC` 1999-11-30 and 2000-07-07, `EFTA`
+    1960-01-04 and 1960-05-03, `EUCU` 1957-03-25 and 1958-01-01 (EEC Treaty), `SACU`
+    2002-10-21 and 2004-07-15.
+- `AKFTA`, `CEMAC`, `ECOTA` and `MSGTA` keep their dates; their notes record the different
+  date or instrument that WTO RTA-IS gives.
+- `wto_rta_id: 128` moves from `ECOTA` to a new catalogue record, `ECOPTA-1992`. WTO RTA 128
+  is the ECO Additional Protocol on Preferential Tariffs, signed at Tehran on 17 February 1992
+  by Iran, Pakistan and Turkey (GATT document L/7047), not the 2003 ECO Trade Agreement, which
+  WTO RTA-IS lists no notification of.
+- `akfta.asean.org` now serves an unrelated gambling page. The `AKFTA` intblock and record
+  link a 2021 Wayback Machine copy of the ASEAN–Korea FTA page instead.
+- Dead MOFCOM links on `CNKR` (`/korea/korea_special.shtml`) and in the `CNRS` provenance
+  (`/english/fta_qianshu.shtml`).
+- `EFTAES`: Austria and Sweden no longer have a `left` date of 1995-01-01. That is when they
+  left EFTA, after this agreement had already ended in 1986.
+- `CEFTA-1992`: `ended` is 2007-01-01, when Romania, Bulgaria and Croatia stopped being
+  parties, not 2004-05-01.
+- The release data-change summary and the `data` section of `migration.vX.Y.Z.json` now count
+  trade agreement records: ids added, removed and changed since the previous release. Before, the
+  release train did not read `data/trade_agreements/`. The release level rules are unchanged.
+- Trade agreement dates that differed from OAS SICE, checked on 2026-11-23 against party
+  governments and now `verification: official`: `CAKR` signed 2014-09-22 (Canada Treaty
+  Series 2015/3), `CLVN` in force 2014-01-01 (Chile Decreto 139), `CLID` in force 2019-08-10
+  (Chile Decreto 100), `CNPE` in force 2010-03-01 (MOFCOM), `CLIN` in force 2007-08-17 with
+  India from 2007-09-11 (India Department of Commerce) and `USIL` in force 1985-08-19 (U.S.
+  State Department, Treaties in Force). `CLHK` keeps 2014-10-09 (Hong Kong SAR Government);
+  its notes explain the 29 November 2014 date that Chile and SICE give. The replaced dates
+  came from ADB ARIC, except `USIL`, where 1 September 1985 is when the tariff cuts started.
+- The 1992 Swiss free trade agreements with Estonia, Latvia and Lithuania (`CHEE`, `CHLV`,
+  `CHLT`) entered into force in March 1994, not on 1993-04-01, and ended in 1997, when the EFTA
+  agreements took effect for Switzerland. They are now `superseded` by `EFTAEE`, `EFTALV` and
+  `EFTALT`.
+- `GBGE` signature date (21 October 2019, not 1 January 2014), `GBLB` signature date
+  (19 September 2019), `CAGB` (9 December 2020) and `CMGB` (9 March 2021), from the treaty texts.
+- `UKESA` lists Madagascar as a party; `UKCARIFORUM` no longer lists Haiti, which has not signed.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1581 → 1606 records; added `BLEU`, `CHILDMAINTENANCE1956`, `CISATC`, `CISSA`, `CIVILPROCEDURE1954`, `ECLAC`, `ESCAP`, `EUADSM`, `EUEACEPA`, `FCM`, `FIORC`, `HYBRIDCOE`, `ICE`, `ITA`, `MAINTENANCE1973`, `MAOCN`, `NOUAKCHOTTPROCESS`, `PARISPACT`, `RCOC`, `RMIFC` and 5 more; 10 changed
+- Blocktypes: 83 → 83 records
+- Trade agreements: 839 → 5195 records; added `ACFTA-FA`, `ACIA`, `ADAE-BIT`, `AEAG-BIT`, `AEAL-BIT`, `AEAM-BIT`, `AEAO-BIT`, `AEAR-BIT`, `AEAT-BIT`, `AEAU-BIT`, `AEAU-TRA`, `AEAZ-BIT`, `AEBB-BIT`, `AEBD-BIT`, `AEBH-BIT`, `AEBI-BIT`, `AEBJ-BIT`, `AEBR-BIT`, `AEBY-BIT`, `AEBZ-BIT` and 4336 more; 589 changed
+- Membership edges: 72461 → 73052; 591 added, 0 removed, 43 changed
+- Schema (minor): table trade_agreement_instruments added
+- Schema (minor): column country_trade_agreements.provisional_application added
+- Schema (minor): column country_trade_agreements.role added
+- Schema (minor): column trade_agreement_parties.provisional_application added
+- Schema (minor): column trade_agreement_parties.role added
+- Schema (minor): column trade_agreements.dta_id added
+- Schema (minor): column trade_agreements.gptad_id added
+- Schema (minor): column trade_agreements.parent added
+- Schema (minor): column trade_agreements.provisional_application added
+- Schema (minor): column trade_agreements.unctad_iia_id added
+- Schema (minor): column trade_agreements.unts_registration added
+- Schema (minor): column trade_agreements.wto_pta_ids added
+
 ## [5.0.0] - 2026-11-22
 
 ### Added
