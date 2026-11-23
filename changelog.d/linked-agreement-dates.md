@@ -14,7 +14,10 @@
   2014/394/EU). It keeps 2024-05-01, the definitive entry into force, as its own `in_force`.
   WTO RTA-IS gives the provisional date as the date of entry into force.
 - `AKFTA`, `CEMAC`, `ECOTA` and `MSGTA` keep their dates; their notes record the different
-  date or instrument that WTO RTA-IS gives. On `ECOTA`, WTO RTA 128 is the 1992 ECO
-  Additional Protocol on Preferential Tariffs, not the 2003 ECO Trade Agreement.
+  date or instrument that WTO RTA-IS gives.
+- `wto_rta_id: 128` moves from `ECOTA` to a new catalogue record, `ECOPTA-1992`. WTO RTA 128
+  is the ECO Additional Protocol on Preferential Tariffs, signed at Tehran on 17 February 1992
+  by Iran, Pakistan and Turkey (GATT document L/7047), not the 2003 ECO Trade Agreement, which
+  WTO RTA-IS lists no notification of.
 - `akfta.asean.org` now serves an unrelated gambling page. The `AKFTA` intblock and record
   link a 2021 Wayback Machine copy of the ASEAN–Korea FTA page instead.
