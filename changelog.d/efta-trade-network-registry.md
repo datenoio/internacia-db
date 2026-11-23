@@ -22,7 +22,16 @@
   force on different dates for different EFTA States: `EFTAAL`, `EFTACO`, `EFTACRPA`,
   `EFTAMD`, `EFTAME`, `EFTAMERCOSUR`, `EFTAPE`, `EFTARS`, `EFTATN`, `EFTAXK`, `GBISLINO`
   and `EFTASG-DEA`. `EFTAPE` also records Peru's later signature (2010-07-14).
-- `EFTAMY` is renamed to EFTA-Malaysia Economic Partnership Agreement (MEEPA).
+- `EFTAMY` is renamed to EFTA-Malaysia Economic Partnership Agreement (MEEPA). `EFTAEC` is
+  renamed to EFTA-Ecuador Comprehensive Economic Partnership Agreement, and `EFTAPS` to
+  EFTA-Palestine Interim Agreement (concluded with the PLO for the benefit of the Palestinian
+  Authority). Official titles from Fedlex go in `other_names`, and so do the former WTO-style
+  names.
+- Notes on later instruments: the amending protocols for `EFTAAL` (2015, in force 2017),
+  `EFTARS` (2015, in force 2017), `EFTAME` (2021, in force 2022) and `EFTABA` (2022, in force
+  2023); the rules-of-origin decisions for `EFTAJO` (2025, in force 2026-02-01) and `EFTATN`
+  (2024, in force 2026-03-01); the revised `EFTAIL` agricultural agreements (signed 2018, in
+  force 2021-08-01); and the review talks for `EFTAMX` and `EFTASACU`.
 
 ### Fixed
 

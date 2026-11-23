@@ -237,6 +237,67 @@ CHANGES["EFTACL"]["notes"] = (
     "Free Trade Agreement; it was not yet in force when the EFTA page was captured on 2026-08-04."
 )
 
+# Amending protocols, revised agricultural agreements, review talks and official names, added
+# as notes and other_names (EFTA pages; dates cross-checked on the WTO RTA-IS cards, titles
+# on Fedlex).
+FEDLEX_EC = "https://fedlex.data.admin.ch/eli/cc/2020/784/de"
+FEDLEX_PS = "https://fedlex.data.admin.ch/eli/cc/2004/525/de"
+FEDLEX_TITLE = "Fedlex, classified compilation (title of the agreement)"
+LATER: dict[str, dict] = {
+    "EFTAAL": {"notes": "An amending protocol signed on 18 September 2015 has been in force since 1 June 2017.",
+               "extra": [("notes", WTO, CARD.format(600))]},
+    "EFTARS": {"notes": "An amending protocol on trade and sustainable development signed on 20 May 2015 has been "
+                        "in force since 1 February 2017.",
+               "extra": [("notes", WTO, CARD.format(603))]},
+    "EFTAME": {"notes": "An amending protocol signed on 14 July 2021 has been in force since 1 April 2022.",
+               "extra": [("notes", WTO, CARD.format(765))]},
+    "EFTABA": {"notes": "An amending protocol signed on 7 July 2022, with protocols amending the three bilateral "
+                        "agricultural agreements, has been in force since 1 September 2023.",
+               "extra": [("notes", WTO, CARD.format(740))]},
+    "EFTAJO": {"notes": "Joint Committee Decision No. 1/2025 (adopted 10 June 2025, in force 1 February 2026) "
+                        "modernised the rules of origin in Protocol B, with matching amendments to the three "
+                        "bilateral agricultural agreements.",
+               "extra": [("notes", WTO, CARD.format(75))]},
+    "EFTATN": {"notes": "Joint Committee Decision No. 1/2024 (adopted 9 October 2024) introduced the modernised "
+                        "Pan-Euro-Mediterranean rules of origin; WTO RTA-IS gives its entry into force as 1 March "
+                        "2026, while the EFTA page captured 2026-02-19 still showed it as pending.",
+               "extra": [("notes", WTO, CARD.format(37))]},
+    "EFTAIL": {"notes": "Revised bilateral agricultural agreements, signed in Geneva on 22 November 2018, replaced the "
+                        "original ones on 1 August 2021."},
+    "EFTAMX": {"notes": "EFTA reports a fourth round of negotiations on a review of the agreement in June 2017 and "
+                        "talks on its modernisation in February 2022 (page captured 2026-02-19)."},
+    "EFTASACU": {"slug": "southern-african-customs-union-sacu",
+                 "notes": "EFTA and SACU launched a review of the agreement in January 2018 to update and expand it; "
+                          "negotiations were continuing in November 2021 (EFTA, page captured 2026-02-19)."},
+    "EFTAPS": {"set": {"name": "EFTA-Palestine Interim Agreement"},
+               "other_names": [
+                   {"lang": "en", "name": "Interim Agreement between the EFTA States and the PLO for the benefit of "
+                                          "the Palestinian Authority"},
+                   {"lang": "en", "name": "EFTA - Palestine"}],
+               "notes": "Concluded with the Palestine Liberation Organization (PLO) acting for the benefit of the "
+                        "Palestinian Authority.",
+               "extra": [("name", FEDLEX_TITLE, FEDLEX_PS)]},
+    "EFTAEC": {"set": {"name": "EFTA-Ecuador Comprehensive Economic Partnership Agreement"},
+               "other_names": [
+                   {"lang": "en", "name": "Comprehensive Economic Partnership Agreement between the EFTA States and "
+                                          "Ecuador"},
+                   {"lang": "en", "name": "EFTA - Ecuador"}],
+               "extra": [("name", FEDLEX_TITLE, FEDLEX_EC)]},
+}
+CAPTURES["southern-african-customs-union-sacu"] = "20260219082111"
+for record_id, later in LATER.items():
+    change = CHANGES.setdefault(record_id, {"slug": later.get("slug"), "fields": []})
+    notes = change.get("notes")
+    change["notes"] = ([notes] if isinstance(notes, str) else notes or []) + (
+        [later["notes"]] if "notes" in later else [])
+    change.setdefault("set", {}).update(later.get("set", {}))
+    change.setdefault("other_names", []).extend(later.get("other_names", []))
+    change.setdefault("extra", []).extend(later.get("extra", []))
+    if "set" in later:
+        change["fields"].append("name")
+    if "notes" in later:
+        change["fields"].append("notes")
+
 EFTA_STATES = ["IS", "LI", "NO", "CH"]
 TEXT = "EFTA, text of the instrument as published on efta.int (Wayback Machine copy)"
 WB = "https://web.archive.org/web/{}/https://www.efta.int/sites/default/files/{}"
@@ -357,29 +418,36 @@ def create(entry: dict) -> dict:
 
 
 def ordered(mapping: dict, order: list[str]) -> dict:
-    return {k: mapping[k] for k in order if k in mapping}
+    keys = [k for k in order if k in mapping]
+    if "intblock" in keys:  # a linked record names its intblock right after its id
+        keys.remove("intblock")
+        keys.insert(1, "intblock")
+    return {k: mapping[k] for k in keys}
 
 
 def apply(record: dict, change: dict) -> dict:
     slug = change["slug"]
     record.update(change.get("set", {}))
-    if "other_names" in change:
+    if change.get("other_names"):
         names = record.setdefault("other_names", [])
         names.extend(n for n in change["other_names"] if n not in names)
 
-    by_code = {p["id"]: p for p in record["parties"]}
-    for code, fields in change.get("parties", {}).items():
-        by_code[code].update(fields)
-    record["parties"] = [ordered(p, PARTY_ORDER) for p in record["parties"]]
+    if "parties" in record:  # a record linked to an intblock reads its parties from there
+        by_code = {p["id"]: p for p in record["parties"]}
+        for code, fields in change.get("parties", {}).items():
+            by_code[code].update(fields)
+        record["parties"] = [ordered(p, PARTY_ORDER) for p in record["parties"]]
 
-    note = change.get("notes")
-    if note and note not in record.get("notes", ""):
-        record["notes"] = f"{record['notes']} {note}" if record.get("notes") else note
+    notes = change.get("notes") or []
+    for note in [notes] if isinstance(notes, str) else notes:
+        if note not in record.get("notes", ""):
+            record["notes"] = f"{record['notes']} {note}" if record.get("notes") else note
 
-    link = {"url": PAGE.format(slug), "type": "website"}
-    links = record.setdefault("links", [])
-    if link not in links:
-        links.insert(0, link)
+    if "intblock" not in record:  # a linked record takes its links from the intblock
+        link = {"url": PAGE.format(slug), "type": "website"}
+        links = record.setdefault("links", [])
+        if link not in links:
+            links.insert(0, link)
 
     replaced = set(change.get("replace", [])) | set(change.get("set", {}))
     provenance = [p for p in record["provenance"] if p["field"] not in replaced]
