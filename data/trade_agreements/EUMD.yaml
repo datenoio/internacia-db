@@ -3,13 +3,19 @@ name: EU - Moldova, Republic of
 agreement_type: fta
 status: in_force
 signed: '2014-06-27'
-in_force: '2014-09-01'
+in_force: '2016-07-01'
+provisional_application: '2014-09-01'
 parties:
 - id: EU
   type: intblock
 - id: MD
   type: country
 wto_rta_id: 850
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22014A0830(01)
+  type: website
+notes: The Association Agreement, including its DCFTA, was provisionally applied from September 2014; the European Commission
+  lists it as in force since 2016 and amended in 2023. EUR-Lex gives entry into force on 1 July 2016 (CELEX 22014A0830(01)).
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -37,9 +43,11 @@ provenance:
   source: European Commission
   url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/moldova_en
   retrieved_at: '2026-11-23'
-notes: The Association Agreement, including its DCFTA, was provisionally applied from September 2014; the European Commission
-  lists it as in force since 2016 and amended in 2023. EUR-Lex gives entry into force on 1 July 2016 (CELEX 22014A0830(01));
-  in_force is the start of provisional application.
-links:
-- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22014A0830(01)
-  type: website
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22014X0830%2802%29
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22016X0618%2803%29
+  retrieved_at: '2026-11-23'

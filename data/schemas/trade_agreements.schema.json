@@ -41,9 +41,9 @@
       }
     },
     "agreement_type": {
-      "description": "fta: free trade agreement (goods, often with services). customs_union: common external tariff. pta: reciprocal partial-scope or preferential agreement. preference_scheme: non-reciprocal preferences granted to beneficiary countries (GSP, AGOA). services: services or investment only. digital: digital trade or digital economy agreement. framework: framework or trade and investment framework agreement without tariff commitments. other: an instrument a catalogue lists that is none of these (compact of free association, strategic partnership).",
+      "description": "fta: free trade agreement (goods, often with services). customs_union: common external tariff. pta: reciprocal partial-scope or preferential agreement. preference_scheme: non-reciprocal preferences granted to beneficiary countries (GSP, AGOA). services: services only. investment: standalone treaty whose main object is the promotion, protection or facilitation of investment (bilateral investment treaty, FIPA, investment protection agreement, plurilateral investment treaty); an agreement with an investment chapter keeps its FTA, PTA or services type. digital: digital trade or digital economy agreement. framework: framework or trade and investment framework agreement without tariff commitments. other: an instrument a catalogue lists that is none of these (compact of free association, strategic partnership).",
       "type": "string",
-      "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "digital", "framework", "other"]
+      "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "investment", "digital", "framework", "other"]
     },
     "status": {
       "description": "proposed: under study. negotiating: negotiations launched. signed: signed, not in force. in_force: in force, or applied provisionally, for at least two parties. terminated: was in force and ended. abandoned: negotiated or signed, never in force, no longer pursued. superseded: replaced by another agreement (superseded_by).",
