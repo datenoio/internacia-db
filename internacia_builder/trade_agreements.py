@@ -175,6 +175,19 @@ def record_party_rows(agreement_id: str, record: dict[str, Any]) -> list[dict[st
     return rows
 
 
+def _links(*lists: list[Any]) -> list[dict[str, Any]]:
+    """Links in order, each URL once (a linked record's own links follow its intblock's)."""
+    out: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for links in lists:
+        for link in links:
+            if not isinstance(link, dict) or link.get("url") in seen:
+                continue
+            seen.add(link.get("url"))
+            out.append({"url": link.get("url"), "type": link.get("type")})
+    return out
+
+
 def build_trade_agreement_rows(
     records: list[dict[str, Any]], intblocks: list[dict[str, Any]]
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -221,6 +234,7 @@ def build_trade_agreement_rows(
                 "wto_rta_id": _int(record.get("wto_rta_id")),
                 "aric_id": _int(record.get("aric_id")),
                 "wto_pta_ids": [i for i in (_int(v) for v in record.get("wto_pta_ids") or []) if i is not None],
+                "gptad_id": _int(record.get("gptad_id")),
                 "wikidata_id": pick("wikidata_id"),
                 "acronyms": [
                     {"lang": a.get("lang"), "value": a.get("value")}
@@ -232,11 +246,9 @@ def build_trade_agreement_rows(
                     for n in (pick("other_names") or [])
                     if isinstance(n, dict)
                 ],
-                "links": [
-                    {"url": link.get("url"), "type": link.get("type")}
-                    for link in (pick("links") or [])
-                    if isinstance(link, dict)
-                ],
+                "links": _links(fields.get("links") or [], record.get("links") or [])
+                if intblock
+                else _links(record.get("links") or []),
                 "description": record.get("description") or fields.get("description"),
                 "notes": record.get("notes"),
                 "verification": record.get("verification"),
