@@ -1,9 +1,11 @@
 id: EUZA
-name: EU - South Africa
+name: EC - South Africa Trade, Development and Cooperation Agreement
 agreement_type: fta
-status: in_force
+status: superseded
 signed: '1999-10-11'
 in_force: '2000-01-01'
+ended: '2016-10-10'
+superseded_by: EUSADCEPA
 parties:
 - id: EU
   type: intblock
@@ -12,11 +14,8 @@ parties:
 wto_rta_id: 91
 gptad_id: 31
 dta_id: 56
-links:
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EC-South%20Africa.pdf
-  type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -26,3 +25,27 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=91
   retrieved_at: '2026-11-22'
+- field: signed
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21999A1204(01)
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Publications Office Cellar)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21999A1204(01)
+  retrieved_at: '2026-11-23'
+- field: status
+  source: European Commission
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+  retrieved_at: '2026-11-23'
+- field: ended
+  source: European Commission
+  url: https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/southern-african-development-community-sadc_en
+  retrieved_at: '2026-11-23'
+notes: Provisionally applied from 1 January 2000 (CELEX 21999A1204(01)) and in force from 1 May 2004 (CELEX 21999A1204(02)).
+  Its trade component was repealed when the EU-SADC EPA (EUSADCEPA) entered into provisional application in October 2016 (European
+  Commission).
+links:
+- url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21999A1204(02)
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EC-South%20Africa.pdf
+  type: treaty_text
