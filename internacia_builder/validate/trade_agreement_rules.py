@@ -69,6 +69,7 @@ def check_trade_agreements(
     }
     seen: dict[str, str] = {}
     seen_unctad: dict[Any, str] = {}
+    seen_unts: dict[str, str] = {}
     for record, path in zip(records, paths, strict=True):
         rid = str(record.get("id") or "")
         if validator is not None:
@@ -106,6 +107,14 @@ def check_trade_agreements(
                     f"unctad_iia_id {unctad} is also used by {seen_unctad[unctad]}",
                 ))
             seen_unctad.setdefault(unctad, rid)
+        unts = record.get("unts_registration")
+        if unts:
+            if unts in seen_unts:
+                issues.append(_issue(
+                    "DUPLICATE_UNTS_REGISTRATION", path, rid, "unts_registration", unts,
+                    f"unts_registration {unts} is also used by {seen_unts[unts]}",
+                ))
+            seen_unts.setdefault(unts, rid)
 
         linked = record.get("intblock")
         intblock = intblocks_by_id.get(str(linked)) if linked else None
