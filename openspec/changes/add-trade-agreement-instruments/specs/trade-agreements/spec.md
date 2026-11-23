@@ -103,7 +103,7 @@ The table SHALL be exported as Parquet, JSONL and a DuckDB table, and listed in 
 #### Scenario: Instruments of an agreement
 
 - **WHEN** a consumer selects from `trade_agreement_instruments` where `agreement_id = 'CNSG'`, ordered by `signed`
-- **THEN** the result lists the 2011 amending protocol, the 2018 Upgrade Protocol and the 2023 further upgrading protocol
+- **THEN** the result lists the 2018 Upgrade Protocol and the 2023 further upgrading protocol
 
 #### Scenario: Record without instruments
 

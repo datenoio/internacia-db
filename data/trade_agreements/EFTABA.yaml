@@ -15,6 +15,32 @@ parties:
   type: country
 - id: LI
   type: country
+instruments:
+- id: agriculture-protocols-2022
+  kind: amending_protocol
+  name: Protocols amending the Agreements on Agriculture between the EFTA States and Bosnia and Herzegovina (new Annex IX)
+  status: in_force
+  signed: '2022-07-07'
+  in_force: '2023-09-01'
+  coverage: &id001
+  - goods
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=740
+    retrieved_at: '2026-11-23'
+- id: annex-ix-protocol-2022
+  kind: amending_protocol
+  name: Protocol amending the Free Trade Agreement between the EFTA States and Bosnia and Herzegovina (new Annex IX)
+  status: in_force
+  signed: '2022-07-07'
+  in_force: '2023-09-01'
+  coverage: *id001
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=740
+    retrieved_at: '2026-11-23'
 wto_rta_id: 740
 verification: catalogue
 last_verified: '2026-11-22'

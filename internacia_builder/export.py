@@ -28,6 +28,7 @@ from internacia_builder.schemas import (
     get_country_aliases_schema,
     get_memberships_schema,
     get_meta_schema,
+    get_trade_agreement_instruments_schema,
     get_trade_agreement_parties_schema,
     get_trade_agreements_schema,
 )
@@ -205,6 +206,7 @@ def save_trade_agreements(
     parties: list[dict[str, Any]],
     output_dir: Path,
     *,
+    instruments: list[dict[str, Any]] | None = None,
     write_jsonl: bool = True,
     write_parquet: bool = True,
 ) -> None:
@@ -212,6 +214,7 @@ def save_trade_agreements(
     for name, rows, schema in (
         ("trade_agreements", agreements, get_trade_agreements_schema()),
         ("trade_agreement_parties", parties, get_trade_agreement_parties_schema()),
+        ("trade_agreement_instruments", instruments or [], get_trade_agreement_instruments_schema()),
     ):
         if write_jsonl:
             save_jsonl(rows, output_dir / f"{name}.jsonl")
@@ -463,6 +466,8 @@ def write_datapackage(output_dir: Path, version: str) -> None:
         ("trade_agreements", "parquet", "trade_agreements.parquet"),
         ("trade_agreement_parties", "jsonl", "trade_agreement_parties.jsonl"),
         ("trade_agreement_parties", "parquet", "trade_agreement_parties.parquet"),
+        ("trade_agreement_instruments", "jsonl", "trade_agreement_instruments.jsonl"),
+        ("trade_agreement_instruments", "parquet", "trade_agreement_instruments.parquet"),
     ):
         file_path = output_dir / path
         if not file_path.exists():
@@ -689,6 +694,7 @@ def create_duckdb_database(
             ("border_status", get_border_status_schema),
             ("trade_agreements", get_trade_agreements_schema),
             ("trade_agreement_parties", get_trade_agreement_parties_schema),
+            ("trade_agreement_instruments", get_trade_agreement_instruments_schema),
         ):
             if name not in present:
                 reference_tables.append((name, [], schema_fn()))

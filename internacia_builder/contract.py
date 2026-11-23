@@ -29,6 +29,7 @@ from internacia_builder.schemas import (
     get_intblocks_schema,
     get_memberships_schema,
     get_meta_schema,
+    get_trade_agreement_instruments_schema,
     get_trade_agreement_parties_schema,
     get_trade_agreements_schema,
     schema_columns,
@@ -156,6 +157,18 @@ TABLES: list[dict[str, Any]] = [
                 "note": "Rows with party_type 'intblock' reference intblocks.id instead; 'historical-country' rows may use codes not in countries.",
             },
         ],
+    },
+    {
+        "name": "trade_agreement_instruments",
+        "schema": get_trade_agreement_instruments_schema,
+        "in_duckdb": True,
+        "primary_key": ["agreement_id", "instrument_id"],
+        "foreign_keys": [
+            {"columns": ["agreement_id"], "references": {"table": "trade_agreements", "columns": ["id"]}},
+        ],
+        "enum_source": "trade_agreements.schema.json",
+        # Rows are the items of a record's `instruments` list, defined under `definitions`.
+        "enum_definition": "instrument",
     },
 ]
 
@@ -310,6 +323,8 @@ def _enums(schemas_dir: Path) -> list[dict[str, Any]]:
             continue
         columns = set(table["schema"]().names)
         json_schema = json.loads((schemas_dir / source).read_text(encoding="utf-8"))
+        if table.get("enum_definition"):
+            json_schema = json_schema["definitions"][table["enum_definition"]]
         prefix = table.get("enum_prefix", "")
         for path, values in _schema_enums(json_schema):
             if prefix:

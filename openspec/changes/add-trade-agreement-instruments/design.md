@@ -107,14 +107,14 @@ The table is exported as Parquet, JSONL and DuckDB, and listed in `contract.json
    `ACFTA` 2.0 is `in_force` from 2019-10-22, the date for all parties. A note records that it applied to China and Viet Nam first, from 2016-07-01.
 
    `CNKR` second phase, `CHCN` before signature, and the `CNNZ` services negotiations become `negotiating` items. `CHCN` is now `signed`: the protocol was signed on 2026-10-30.
-2. **WTO `RTA Changes`.** A one-off script, `scripts/oneoff/import_wto_rta_changes.py`, imports the 127 amendment rows:
+2. **WTO `RTA Changes`.** A one-off script, `scripts/oneoff/import_trade_agreement_instruments.py`, imports the 127 amendment rows:
    - each row maps to a record through `wto_rta_id`;
    - `kind` is read from the remarks (Decision, Protocol, Supplement, Agreement) and checked by hand;
    - `coverage` comes from `Changes affect`;
    - dates are converted from Excel serial dates;
    - provenance cites the RTA ID card.
 
-   The row with no dates is reported and left for hand review. A row that lists two instruments becomes two items.
+   The row with no dates is reported and left for hand review. A row that lists two instruments becomes two items. Rows that change who applies the agreement are party data under decision 3 and are skipped: the United Kingdom's withdrawal from the EU customs union, and the entry into force of the EFTA–UK agreement for some of its parties.
 3. **Overlap.** `ACFTA`, `CLCN` and `CNPK` appear in both sources. When MOFCOM and the WTO describe the same instrument, it becomes one item with both provenance rows. An official text or party government wins on dates. A conflict between them is recorded in the item's `notes`.
 
    Two examples:

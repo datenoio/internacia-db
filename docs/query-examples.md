@@ -1467,6 +1467,42 @@ ORDER BY m.intblock_id, m.role, m.country_code;
 **Expected:** one row per country on each pipeline or corridor with reviewed roles; for example
 TAP has GR `origin`, AL `transit` and IT `destination`.
 
+## Trade agreement instruments
+
+`trade_agreement_instruments` lists what amended or added to an agreement after signature:
+upgrade and amending protocols, CEPA Supplements, supplementary agreements, early harvest
+arrangements and Joint Committee decisions. An instrument never changes the agreement's own
+`status` or dates in `trade_agreements`. An agreement with no rows has no instruments
+recorded, which does not mean none exist (see
+[ai-consumers.md](ai-consumers.md#trade-agreements-registry)).
+
+### Instruments of an agreement
+
+```sql
+SELECT instrument_id, kind, status, signed, in_force
+FROM trade_agreement_instruments
+WHERE agreement_id = 'CNMO'
+ORDER BY signed, instrument_id;
+```
+
+**Expected:** 17 rows for the Mainland and Macao CEPA: Supplements I to X (2004–2013), then the
+Guangdong services agreement (2014), the Agreement on Trade in Services (2015), the investment and
+economic and technical cooperation agreements (2017), the Agreement on Trade in Goods (2018) and two
+amendments to the services agreement (2019, 2024).
+
+### Agreements upgraded since a date
+
+```sql
+SELECT i.agreement_id, i.instrument_id, i.in_force
+FROM trade_agreement_instruments i
+WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
+ORDER BY i.in_force DESC, i.agreement_id;
+```
+
+**Expected:** 4 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), `CNSG` (further
+upgrading protocol, 2024-12-31), then the 2024 amendments to the CEPA services agreements of
+`CNMO` and `CNHK`. Add `kind = 'joint_committee_decision'` to include annex-level changes.
+
 ## Cookbook coverage (parity policy)
 
 - **DuckDB** ([query-examples.md](query-examples.md)) is canonical. Core SQL scenarios

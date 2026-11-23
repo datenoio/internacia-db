@@ -49,7 +49,7 @@ A structured list keeps one record per agreement and makes the history of each a
   - `schemas.py` (`get_trade_agreement_instruments_schema`), `export.py`, `contract.py`, `build.py`;
   - `internacia_builder/validate/trade_agreement_rules.py` and `registry.py`;
   - `scripts/check_generated_artifacts.py`;
-  - a one-off `scripts/oneoff/import_wto_rta_changes.py`.
+  - a one-off `scripts/oneoff/import_trade_agreement_instruments.py`.
 - Affected exports: one new resource. Existing tables and columns are unchanged.
 - Affected documentation: `docs/data-contract.md`, `docs/ai-consumers.md`, `docs/query-examples.md`, the agent shims, and a changelog fragment.
 - Versioning: MINOR (contract 5.1).
