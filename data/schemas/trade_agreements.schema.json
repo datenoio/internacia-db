@@ -46,9 +46,9 @@
       "enum": ["fta", "customs_union", "pta", "preference_scheme", "services", "digital", "framework", "other"]
     },
     "status": {
-      "description": "proposed: under study. negotiating: negotiations launched. signed: signed, not in force. in_force: in force, or applied provisionally, for at least two parties. terminated: was in force and ended. abandoned: negotiated or signed, never in force, no longer pursued. superseded: replaced by another agreement (superseded_by).",
+      "description": "proposed: under study. negotiating: negotiations launched. suspended: negotiations launched and then suspended, paused or put on hold, not formally ended; not for agreements in force. signed: signed, not in force. in_force: in force, or applied provisionally, for at least two parties. terminated: was in force and ended. abandoned: negotiated or signed, never in force, no longer pursued. superseded: replaced by another agreement (superseded_by).",
       "type": "string",
-      "enum": ["proposed", "negotiating", "signed", "in_force", "terminated", "abandoned", "superseded"]
+      "enum": ["proposed", "negotiating", "suspended", "signed", "in_force", "terminated", "abandoned", "superseded"]
     },
     "signed": {"$ref": "#/definitions/date"},
     "in_force": {
