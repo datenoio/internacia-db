@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "218cdf18288fa48b66b12dcf939af8e7431999b4527a57dc05ca68909051447e",
+      "schema_hash": "5cf34f728d6686dd7f81616725b561a583b2b653d87d61bc550a955b1960f96d",
       "columns": [
         {
           "name": "id",
@@ -926,6 +926,11 @@
         {
           "name": "unctad_iia_id",
           "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "unts_registration",
+          "type": "string",
           "nullable": true
         },
         {

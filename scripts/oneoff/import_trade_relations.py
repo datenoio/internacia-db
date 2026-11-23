@@ -213,6 +213,8 @@ def main(argv: list[str]) -> int:
             reporter = "BENELUX"
         parties = [reporter, partner]
         match = unts_by_reg.get(row.get("unts_registration") or "")
+        if match and (frozenset(match["parties"]) != frozenset(parties) or match["registration"] in claimed):
+            match = None  # a registration number given for the wrong pair, or already taken by another row
         if match is None:
             same = [u for u in unts_by_pair.get(frozenset(parties), [])
                     if row.get("signed") and u["signed"] and u["signed"][:4] == str(row["signed"])[:4]
@@ -230,7 +232,45 @@ def main(argv: list[str]) -> int:
         if year >= 2000 and not (set(row["parties"]) & eu) and looks_right:
             items.append({"kind": "catalogue", "parties": row["parties"], "nat": None, "unts": row})
         else:
+            # An older UNTS-only row may still be the registration of an existing trade relations record.
+            same = [rid for rid in by_pair.get(frozenset(row["parties"]), [])
+                    if registry[rid][1].get("agreement_type") == "trade_relations" and row["signed"]
+                    and str(registry[rid][1].get("signed", ""))[:4] == row["signed"][:4]]
+            if len(same) == 1 and re.match(r"^(I|II)-\d+$", row["registration"]):
+                path, record = registry[same[0]]
+                report["existing"].append((same[0], row["registration"], None))
+                if not record.get("unts_registration"):
+                    record = dict(record, unts_registration=row["registration"])
+                    record["provenance"] = list(record["provenance"]) + [{
+                        "field": "unts_registration", "source": UNTS_SOURCE, "retrieved_at": TODAY, "url": row["url"]}]
+                    if write:
+                        path.write_text(dump(record), encoding="utf-8")
+                continue
             report["candidate"].append((row["registration"], row["parties"], row["signed"], short_title(row["title"])))
+
+    # One instrument listed by two national databases (AU-CA, AU-CH, CA-NL), or twice by one, is one record.
+    merged: list[dict] = []
+    for item in items:
+        nat = item["nat"]
+        twin = None
+        if nat:
+            for other in merged:
+                on = other["nat"]
+                if not on or frozenset(other["parties"]) != frozenset(item["parties"]):
+                    continue
+                same_year = str(on.get("signed") or "")[:4] == str(nat.get("signed") or "")[:4] != ""
+                same_day = (on.get("signed") and on.get("signed") == nat.get("signed")
+                            and on.get("in_force") == nat.get("in_force"))
+                if (on["_db"] != nat["_db"] and same_year) or (on["_db"] == nat["_db"] and same_day):
+                    twin = other
+                    break
+        if twin:
+            twin.setdefault("also", []).append(nat)
+            twin["unts"] = twin["unts"] or item["unts"]
+            report["merged_duplicate"].append((nat["_db"], twin["nat"]["_db"], nat.get("title", "")[:80]))
+        else:
+            merged.append(item)
+    items = merged
 
     # Existing records.
     fresh = []
@@ -295,17 +335,28 @@ def main(argv: list[str]) -> int:
                 report["terminated_without_end"].append((rid, title))
                 taken.discard(rid)
                 continue
+            if record.get("ended") and record.get("signed") and str(record["ended"]) < str(record["signed"]):
+                report["ended_before_signed"].append((rid, title, record["signed"], record["ended"]))
+                taken.discard(rid)
+                continue
             if status in ("in_force", "terminated") and not record.get("in_force"):
                 report["no_in_force_date"].append((rid, title))
                 taken.discard(rid)
                 continue
-            source = nat.get("_source") or NATDB[nat["_db"]]
+            source = NATDB[nat["_db"]]
             for field in ["parties", "status"] + [k for k in ("signed", "in_force", "ended") if k in record]:
                 provenance.append({"field": field, "source": source, "retrieved_at": TODAY, "url": nat.get("url")})
             if nat.get("url"):
                 links.append({"url": nat["url"], "type": "website"})
-            if nat.get("note"):
-                notes.append(str(nat["note"]).rstrip(".") + ".")
+            for extra in item.get("also", []):
+                extra_source = NATDB[extra["_db"]]
+                for field in ("parties", "status"):
+                    provenance.append({"field": field, "source": extra_source, "retrieved_at": TODAY,
+                                       "url": extra.get("url")})
+                if extra.get("url"):
+                    links.append({"url": extra["url"], "type": "website"})
+                if extra.get("status") != nat.get("status"):
+                    notes.append(f"{NATDB[extra['_db']].split(',')[0]} lists the agreement as {extra.get('status')}.")
             record["verification"] = "official"
         else:
             record["status"] = "in_force" if un["in_force"] else "signed"
@@ -320,7 +371,7 @@ def main(argv: list[str]) -> int:
                 provenance.append({"field": field, "source": UNTS_SOURCE, "retrieved_at": TODAY, "url": un["url"]})
         record["parties"] = [{"id": p, "type": "intblock" if p in BLOCS else "country"}
                              for p in sorted(item["parties"], key=lambda p: (p not in BLOCS, p))]
-        if un:
+        if un and re.match(r"^(I|II)-\d+$", un["registration"]):
             record["unts_registration"] = un["registration"]
             links.append({"url": un["url"], "type": "website"})
             if nat:
