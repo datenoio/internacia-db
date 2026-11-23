@@ -555,8 +555,8 @@ ADDITIONAL_RECIPES = [
         WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
         ORDER BY i.in_force DESC, i.agreement_id
         """,
-        12,
-        {"CNPE", "EFTATN", "EFTAJO", "CLID", "EUNO", "CNSG", "CNMO", "CNHK", "DEPA", "MYTR", "AZTR"},
+        13,
+        {"CNPE", "PKUZ", "EFTATN", "EFTAJO", "CLID", "EUNO", "CNSG", "CNMO", "CNHK", "DEPA", "MYTR", "AZTR"},
     ),
 ]
 
