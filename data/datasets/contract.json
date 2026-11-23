@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "5cf34f728d6686dd7f81616725b561a583b2b653d87d61bc550a955b1960f96d",
+      "schema_hash": "8f954d7bdf4c41587b4d9c3316c6cc1e26488f860adde7d9ae32f807c12b9dbc",
       "columns": [
         {
           "name": "id",
@@ -936,6 +936,11 @@
         {
           "name": "wto_pta_ids",
           "type": "list<int64>",
+          "nullable": true
+        },
+        {
+          "name": "gptad_id",
+          "type": "int64",
           "nullable": true
         },
         {
@@ -1507,6 +1512,7 @@
       "values": [
         "proposed",
         "negotiating",
+        "suspended",
         "signed",
         "in_force",
         "terminated",
@@ -1915,7 +1921,8 @@
       "values": [
         "website",
         "wikipedia",
-        "wikidata"
+        "wikidata",
+        "treaty_text"
       ],
       "open": true
     },
@@ -1925,6 +1932,7 @@
       "values": [
         "proposed",
         "negotiating",
+        "suspended",
         "signed",
         "in_force",
         "terminated",

@@ -86,13 +86,13 @@ def test_unknown_agreement_type_is_a_schema_error():
 def test_duplicate_unctad_iia_id():
     first = _record(id="AMGE-BIT", agreement_type="investment", unctad_iia_id=2870)
     second = _record(id="AMGE-BIT-2008", agreement_type="investment", unctad_iia_id=2870)
-    assert _types([first, second]) == ["DUPLICATE_UNCTAD_IIA_ID"]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
 
 
 def test_duplicate_unts_registration():
     first = _record(id="AMGE-TRA", agreement_type="trade_relations", unts_registration="I-7494")
     second = _record(id="AMGE-TRA-1999", agreement_type="trade_relations", unts_registration="I-7494")
-    assert _types([first, second]) == ["DUPLICATE_UNTS_REGISTRATION"]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
 
 
 def test_unts_registration_pattern():
@@ -118,6 +118,16 @@ def test_applied_provisionally_without_in_force():
 
 def test_provisional_date_contradicts_signed_status():
     record = _record(status="signed", in_force=None, provisional_application="2024-01-01")
+    assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
+
+
+def test_suspended_negotiations_need_no_date():
+    assert _types([_record(status="suspended", signed=None, in_force=None)]) == []
+
+
+@pytest.mark.parametrize("field", ["in_force", "provisional_application"])
+def test_suspended_contradicts_entry_into_force(field):
+    record = _record(status="suspended", signed=None, **{"in_force": None, field: "2012-01-01"})
     assert _types([record]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 
 
@@ -227,10 +237,42 @@ def test_linked_record_dates_override_the_intblock():
     assert agreements[0]["signed"] == "2020-11-15"
 
 
+def test_gptad_id_and_treaty_text_link_are_exported():
+    text = "https://wits.worldbank.org/GPTAD/PDF/archive/Armenia-Georgia.pdf"
+    record = _record(gptad_id=12, links=[{"url": text, "type": "treaty_text"}])
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["gptad_id"] == 12
+    assert agreements[0]["links"] == [{"url": text, "type": "treaty_text"}]
+
+
+def test_repeated_catalogue_identifier():
+    first = _record(gptad_id=12, wto_rta_id=5)
+    second = _record(id="AMJP", name="Armenia-Japan", gptad_id=12, wto_rta_id=6)
+    second["parties"] = [{"id": "AM", "type": "country"}, {"id": "JP", "type": "country"}]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
+
+
+def test_linked_record_links_follow_the_intblock():
+    intblocks = [dict(INTBLOCKS[1], links=[{"url": "https://rcepsec.org/", "type": "website"}])]
+    text = {"url": "https://rcepsec.org/legal-text/", "type": "treaty_text"}
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
+              "links": [{"url": "https://rcepsec.org/", "type": "website"}, text],
+              "verification": "official", "last_verified": "2026-11-22", "provenance": PROVENANCE}
+    agreements, _ = build_trade_agreement_rows([record], intblocks)
+    assert agreements[0]["links"] == [{"url": "https://rcepsec.org/", "type": "website"}, text]
+
+
 def test_multilateral_without_intblock_is_an_intblock_candidate():
     record = _record(parties=[{"id": c, "type": "country"} for c in ("JP", "KR", "CN")])
     issues = trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/AMGE.yaml"])
     assert [i["issue_type"] for i in issues] == ["TRADE_AGREEMENT_INTBLOCK_CANDIDATE"]
+
+
+def test_suspended_multilateral_is_not_an_intblock_candidate():
+    record = _record(status="suspended", signed=None, in_force=None,
+                     parties=[{"id": c, "type": "country"} for c in ("JP", "KR", "CN")])
+    assert trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/AMGE.yaml"]) == []
 
 
 def test_moved_alias_resolves_to_the_registry():

@@ -29,6 +29,8 @@ NEEDS_SIGNED = frozenset({"signed"})
 NEEDS_IN_FORCE = frozenset({"in_force", "terminated", "superseded"})
 NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
+# Catalogue identifiers: each value names one instrument, so it appears on one record.
+CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id", "unctad_iia_id", "unts_registration")
 # The same date rules for the items of a record's ``instruments`` list.
 INSTRUMENT_NEEDS_SIGNED = frozenset({"signed"})
 INSTRUMENT_NEEDS_IN_FORCE = frozenset({"in_force", "terminated"})
@@ -125,8 +127,7 @@ def check_trade_agreements(
         if isinstance(a, dict) and a.get("reason") != "moved"
     }
     seen: dict[str, str] = {}
-    seen_unctad: dict[Any, str] = {}
-    seen_unts: dict[str, str] = {}
+    seen_catalogue: dict[tuple[str, Any], str] = {}
     for record, path in zip(records, paths, strict=True):
         rid = str(record.get("id") or "")
         if validator is not None:
@@ -156,22 +157,20 @@ def check_trade_agreements(
                 "suggested_action": f"Trade agreement id {rid} is also used by {seen[rid]}",
             })
         seen.setdefault(rid, path)
-        unctad = record.get("unctad_iia_id")
-        if unctad is not None:
-            if unctad in seen_unctad:
-                issues.append(_issue(
-                    "DUPLICATE_UNCTAD_IIA_ID", path, rid, "unctad_iia_id", unctad,
-                    f"unctad_iia_id {unctad} is also used by {seen_unctad[unctad]}",
-                ))
-            seen_unctad.setdefault(unctad, rid)
-        unts = record.get("unts_registration")
-        if unts:
-            if unts in seen_unts:
-                issues.append(_issue(
-                    "DUPLICATE_UNTS_REGISTRATION", path, rid, "unts_registration", unts,
-                    f"unts_registration {unts} is also used by {seen_unts[unts]}",
-                ))
-            seen_unts.setdefault(unts, rid)
+        for key in CATALOGUE_IDS:
+            value = record.get(key)
+            if value is None:
+                continue
+            if (key, value) in seen_catalogue:
+                issues.append({
+                    "issue_type": "DUPLICATE_IDENTIFIER",
+                    "file_path": path,
+                    "record_id": rid,
+                    "field": key,
+                    "current_value": str(value),
+                    "suggested_action": f"{key} {value} is also set on {seen_catalogue[(key, value)]}; one catalogue entry maps to one record",
+                })
+            seen_catalogue.setdefault((key, value), rid)
 
         linked = record.get("intblock")
         intblock = intblocks_by_id.get(str(linked)) if linked else None
@@ -283,7 +282,7 @@ def check_trade_agreements(
                     + (" (read from the linked intblock)" if intblock is not None else ""),
                 })
         for key in ("in_force", "provisional_application"):
-            if status in {"signed", "proposed", "negotiating", "abandoned"} and dates.get(key):
+            if status in {"signed", "proposed", "negotiating", "suspended", "abandoned"} and dates.get(key):
                 issues.append({
                     "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
                     "file_path": path,

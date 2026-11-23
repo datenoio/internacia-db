@@ -1,7 +1,7 @@
 ## 1. Schema and code
 
 - [x] 1.1 Add `unts_registration` to the schema, the Arrow schema and the row builder
-- [x] 1.2 Add the `DUPLICATE_UNTS_REGISTRATION` validator issue and tests
+- [x] 1.2 Add `unts_registration` to the catalogue identifiers checked for duplicates (`DUPLICATE_IDENTIFIER`) and tests
 - [x] 1.3 Extend the `catalogue` verification description to the UN Treaty Series
 
 ## 2. Data

@@ -8,7 +8,7 @@ The maintainer chose on 2026-11-23 to find agreements in the UNTS and take their
 
 ## What Changes
 
-- **New field `unts_registration`** (string, `I-<n>` or `II-<n>`) in `data/schemas/trade_agreements.schema.json` and the `trade_agreements` export, with a duplicate check (`DUPLICATE_UNTS_REGISTRATION`). `verification: catalogue` also covers UNTS-only records.
+- **New field `unts_registration`** (string, `I-<n>` or `II-<n>`) in `data/schemas/trade_agreements.schema.json` and the `trade_agreements` export, with a duplicate check (it joins the catalogue identifiers that `DUPLICATE_IDENTIFIER` covers). `verification: catalogue` also covers UNTS-only records.
 - **Sources.** The UNTC advanced search for bilateral treaties with subject term "Trade" (original agreements), filtered by title to trade agreements, commercial agreements, agreements on trade (and economic cooperation), most-favoured-nation agreements and treaties of commerce; and the national treaty databases of Australia, Canada, the Netherlands and Switzerland.
 - **Status policy.** A national database entry gives an `official` record with its status. A UNTS-only agreement is written at `catalogue` level only when concluded in 2000 or later and neither party is a current EU member state; older ones are report candidates.
 - **Identifiers.** As for investment treaties: the earliest trade relations agreement of a pair takes `<pair>-TRA`, each further one `<pair>-TRA-<year>`. A bloc party comes first (`BENELUXPH-TRA`). Agreements that the Netherlands concluded together with Belgium and Luxembourg have the `BENELUX` intblock as one party, and those of the Belgium–Luxembourg Economic Union the `BLEU` intblock.
