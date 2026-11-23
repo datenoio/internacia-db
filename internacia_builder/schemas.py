@@ -453,6 +453,7 @@ def get_trade_agreements_schema() -> pa.Schema:
             ("superseded_by", pa.string()),
             ("wto_rta_id", pa.int64()),
             ("aric_id", pa.int64()),
+            ("unctad_iia_id", pa.int64()),
             ("wikidata_id", pa.string()),
             ("acronyms", pa.list_(pa.struct([("lang", pa.string()), ("value", pa.string())]))),
             ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),

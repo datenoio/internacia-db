@@ -76,6 +76,12 @@ def test_unknown_agreement_type_is_a_schema_error():
     assert _types([_record(agreement_type="bit")]) == ["SCHEMA_ERROR"]
 
 
+def test_duplicate_unctad_iia_id():
+    first = _record(id="AMGE-BIT", agreement_type="investment", unctad_iia_id=2870)
+    second = _record(id="AMGE-BIT-2008", agreement_type="investment", unctad_iia_id=2870)
+    assert _types([first, second]) == ["DUPLICATE_UNCTAD_IIA_ID"]
+
+
 def test_in_force_without_date():
     assert _types([_record(in_force=None)]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 

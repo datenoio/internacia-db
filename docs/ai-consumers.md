@@ -388,8 +388,12 @@ Two `agreement_type` values are not trade agreements in the narrow sense (OpenSp
 treaties (`ALUS-BIT`), and `trade_relations` rows are agreements that grant
 most-favoured-nation or normal trade relations treatment without preferences (`AMUS-TRA`).
 Their ids carry an instrument suffix, so the bare pair id stays free for a trade agreement.
-Both types cover only the United States so far (trade.gov and the ITA's former TARA database),
-not a world walk. Filter them out when you count trade agreements per country:
+`investment` covers the world: the UNCTAD IIA Navigator BITs (`verification: catalogue`,
+with `unctad_iia_id`, OpenSpec `add-unctad-bit-walk`) and the U.S. BITs checked against
+trade.gov (`official`). Treaties that Belgium and Luxembourg sign as the Belgium–Luxembourg
+Economic Union have the `BLEU` intblock as one party, which `country_trade_agreements` expands
+to both countries. `trade_relations` covers only the United States so far (the ITA's former
+TARA database). Filter both out when you count trade agreements per country:
 
 ```sql
 SELECT country_code, count(*) AS agreements

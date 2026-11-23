@@ -80,6 +80,7 @@
     "superseded_by": {"type": "string"},
     "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
     "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
+    "unctad_iia_id": {"description": "UNCTAD Investment Policy Hub IIA Navigator treaty identifier (international-investment-agreements/treaties/<type>/N/...).", "type": "integer", "minimum": 1},
     "wikidata_id": {"type": "string", "pattern": "^Q[1-9][0-9]*$"},
     "links": {
       "type": "array",
@@ -96,7 +97,7 @@
     "description": {"type": "string"},
     "notes": {"description": "Legal facts: accessions, suspensions, supersession, conflicts between sources. Not trade volumes.", "type": "string"},
     "verification": {
-      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS or ADB ARIC only.",
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, ADB ARIC or the UNCTAD IIA Navigator only.",
       "type": "string",
       "enum": ["official", "catalogue"]
     },
