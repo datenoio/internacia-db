@@ -398,6 +398,168 @@ NEW: list[dict] = [
     },
 ]
 
+# Joint declarations that preceded an EFTA free trade agreement, linked from the partner pages.
+# Texts read from Wayback copies of the PDFs; four are scans (Jordan, Montenegro, North
+# Macedonia, Palestinian Authority) and were read from page images.
+WAYBACK = "https://web.archive.org/web/"
+PRECEDING_TEXTS = {
+    "albania": "20251226113542/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+               "Albania/EFTA-Albania%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "panama": "20251225214246/http://www.efta.int/sites/default/files/media/documents/legal-texts/free-trade-relations/"
+              "panama/panama-jdc.pdf",
+    "colombia": "20251225220552/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+                "colombia/EFTA-Colombia%20Joint%20Declaration%20on%20Cooperation%20EN.pdf",
+    "ecuador": "20251226020953/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+               "ecuador/EFTA-Ecuador%20Joint%20Declaration%20of%20Cooperation.pdf",
+    "egypt": "20251225160844/http://www.efta.int/sites/default/files/media/documents/legal-texts/free-trade-relations/"
+             "egypt/EFTA-Egypt%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "georgia": "20251226114631/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+               "free-trade-relations/georgia/efta-georgia-joint-declaration-on-cooperation.pdf",
+    "gulf-cooperation-council-gcc": "20251225161604/http://www.efta.int/sites/default/files/media/documents/"
+                                    "legal-texts/free-trade-relations/gulf-cooperation-council-GCC/"
+                                    "EFTA-GCC%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "jordan": "20251225163336/http://www.efta.int/sites/default/files/media/documents/legal-texts/free-trade-relations/"
+              "Jordan/EFTA-Jordan%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "kosovo": "20251226115127/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+              "kosovo/EFTA-Kosovo-Joint-Declaration-on-Cooperation.pdf",
+    "lebanon": "20251225163951/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+               "free-trade-relations/lebanon/EFTA-Lebanon%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "malaysia": "20251226065435/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+                "free-trade-relations/malaysia/malaysia-jdc.pdf",
+    "mercosur": "20251226021801/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+                "free-trade-relations/mercosur/Joint%20Declaration%20of%20Cooperation%20Mercosur.pdf",
+    "moldova": "20251226115351/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+               "moldova/17-2684rev1.15%20EFTA-Moldova-Joint-Declaration-on-Cooperation.pdf",
+    "serbia": "20260211135603/https://www.efta.int/sites/default/files/media/documents/legal-texts/"
+              "free-trade-relations/serbia/EFTA-Serbia%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "morocco": "20251225164940/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+               "free-trade-relations/morocco/EFTA-Morocco%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "north-macedonia": "20251226121052/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+                       "free-trade-relations/macedonia/EFTA-Macedonia%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "palestinian-authority": "20251225211428/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+                             "free-trade-relations/palestinian-authority/"
+                             "EFTA-Palestinian%20Authority%20%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "peru": "20251226023220/http://www.efta.int/sites/default/files/media/documents/legal-texts/free-trade-relations/"
+            "peru/joint-declaration-of-cooperation/EFTA-Peru%20Joint%20Declaration%20on%20Cooperation%20EN.pdf",
+    "philippines": "20251226071535/http://www.efta.int/sites/default/files/documents/legal-texts/"
+                   "free-trade-relations/philippines/EFTA-Philippines%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "tunisia": "20251225212843/http://www.efta.int/sites/default/files/media/documents/legal-texts/"
+               "free-trade-relations/tunisia/EFTA-Tunisia%20Joint%20Declaration%20on%20Cooperation.pdf",
+    "ukraine": "20251226161240/http://www.efta.int/sites/default/files/documents/legal-texts/free-trade-relations/"
+               "ukraine/joint-declaration-of-cooperation/EFTA-Ukraine%20Joint%20Declaration%20on%20Cooperation.pdf",
+}
+CAPTURES.update({"georgia": "20260831055342", "gulf-cooperation-council-gcc": "20251230211834",
+                 "philippines": "20260209180017"})
+LEFT_1995 = {"left": "1995-01-01", "note": "Left EFTA on joining the European Communities."}
+JC = " Establishes a Joint Committee."
+
+# (record id suffix, partner page slug, text key, name, title, signed, notes, partner codes)
+PRECEDING = [
+    ("AL", "albania", "albania", "EFTA-Albania Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and Albania", "1992-12-10",
+     "Signed at Geneva by the seven EFTA States of the time." + JC + " Preceded the free trade agreement EFTAAL.",
+     ["AL"]),
+    ("PA", "central-american-states-costa-rica-guatemala-honduras-and-panama", "panama",
+     "EFTA-Panama Joint Declaration on Cooperation",
+     "Joint Declaration on Cooperation between the EFTA States and the Republic of Panama", "2010-07-20",
+     "Signed at Geneva." + JC + " Preceded the EFTA-Central America free trade agreement EFTACRPA.", ["PA"]),
+    ("CO", "colombia", "colombia", "EFTA-Colombia Joint Declaration on Cooperation",
+     "Joint Declaration on Co-operation between the EFTA States and the Republic of Colombia", "2006-05-17",
+     "Signed at Bern." + JC + " Preceded the free trade agreement EFTACO.", ["CO"]),
+    ("EC", "ecuador", "ecuador", "EFTA-Ecuador Joint Declaration on Cooperation",
+     "Joint Declaration on Cooperation between the Republic of Ecuador and the EFTA States", "2015-06-22",
+     "Signed at Schaan." + JC + " Preceded the comprehensive economic partnership agreement EFTAEC.", ["EC"]),
+    ("EG", "egypt", "egypt", "EFTA-Egypt Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and Egypt", "1995-12-08",
+     "Signed at Zermatt." + JC + " Preceded the free trade agreement EFTAEG.", ["EG"]),
+    ("GE", "georgia", "georgia", "EFTA-Georgia Joint Declaration on Cooperation",
+     "Joint Declaration on Cooperation between Georgia and the EFTA States", "2012-06-28",
+     "Signed at Gstaad." + JC + " Preceded the free trade agreement EFTAGE.", ["GE"]),
+    ("GCC", "gulf-cooperation-council-gcc", "gulf-cooperation-council-gcc",
+     "EFTA-GCC Joint Declaration on Cooperation", "Declaration by the EFTA States and the GCC Countries",
+     "2000-05-23",
+     "Signed at Brussels by the EFTA States and the governments of the six GCC member states." + JC
+     + " Preceded the free trade agreement EFTAGCC.", ["AE", "BH", "SA", "OM", "QA", "KW"]),
+    ("JO", "jordan", "jordan", "EFTA-Jordan Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and the Hashemite Kingdom of Jordan", "1997-06-19",
+     "Signed at Geneva. Preceded the free trade agreement EFTAJO.", ["JO"]),
+    ("XK", "kosovo", "kosovo", "EFTA-Kosovo Joint Declaration on Cooperation",
+     "Joint Declaration on Cooperation between the EFTA States and the Republic of Kosovo", "2018-11-23",
+     "Signed at Geneva." + JC + " Preceded the free trade agreement EFTAXK.", ["XK"]),
+    ("LB", "lebanon", "lebanon", "EFTA-Lebanon Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and the Republic of Lebanon", "1997-06-19",
+     "Signed at Geneva." + JC + " Preceded the free trade agreement EFTALB.", ["LB"]),
+    ("MY", "malaysia", "malaysia", "EFTA-Malaysia Joint Declaration on Economic Cooperation",
+     "Joint Declaration on Economic Cooperation between the Government of Malaysia and the Governments of the "
+     "Member States of the European Free Trade Association (EFTA)", "2010-07-20",
+     "Signed at Geneva; in force from signature unless terminated on six months' notice. Preceded the economic "
+     "partnership agreement EFTAMY.", ["MY"]),
+    ("MD", "moldova", "moldova", "EFTA-Moldova Joint Declaration on Cooperation",
+     "Joint Declaration on Cooperation between the EFTA States and the Republic of Moldova", "2017-11-24",
+     "Signed at Geneva." + JC + " Preceded the free trade agreement EFTAMD.", ["MD"]),
+    ("MA", "morocco", "morocco", "EFTA-Morocco Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and Morocco", "1995-12-08",
+     "Signed at Zermatt." + JC + " Preceded the free trade agreement EFTAMA.", ["MA"]),
+    ("MK", "north-macedonia", "north-macedonia", "EFTA-North Macedonia Joint Declaration on Cooperation",
+     "Declaration by the EFTA States' Governments and the Macedonian Government", "1996-03-29",
+     "Signed at Vaduz. Preceded the free trade agreement EFTAMK.", ["MK"]),
+    ("PS", "palestinian-authority", "palestinian-authority",
+     "EFTA-Palestinian Authority Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and the Palestine Liberation Organization (PLO) for the benefit of the "
+     "Palestinian Interim Self-Government Authority of the West Bank and Gaza Strip", "1996-12-16",
+     "Signed at Geneva with the PLO. Preceded the interim agreement EFTAPS.", ["PS"]),
+    ("PE", "peru", "peru", "EFTA-Peru Joint Declaration on Cooperation",
+     "Joint Declaration on Co-operation between the EFTA States and the Republic of Peru", "2006-04-24",
+     "Signed at Geneva." + JC + " Preceded the free trade agreement EFTAPE.", ["PE"]),
+    ("TN", "tunisia", "tunisia", "EFTA-Tunisia Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and Tunisia", "1995-12-08",
+     "Signed at Zermatt." + JC + " Preceded the free trade agreement EFTATN.", ["TN"]),
+    ("UA", "ukraine", "ukraine", "EFTA-Ukraine Joint Declaration on Cooperation",
+     "Declaration by the EFTA States and Ukraine", "2000-06-19",
+     "Signed at Zurich." + JC + " Preceded the free trade agreement EFTAUA.", ["UA"]),
+]
+for suffix, slug, key, name, title, day, notes, partners in PRECEDING:
+    entry = jdc(suffix, slug, CAPTURES[slug], name, title, day, WAYBACK + PRECEDING_TEXTS[key], notes, partners)
+    if suffix == "AL":  # signed before Austria, Finland and Sweden joined the EC
+        entry["record"]["parties"] = [{"id": "AL", "type": "country"}] + [
+            {"id": c, "type": "country", **(LEFT_1995 if c in ("AT", "FI", "SE") else {})}
+            for c in ["AT", "FI", "IS", "LI", "NO", "SE", "CH"]]
+    NEW.append(entry)
+
+mercosur = jdc("MERCOSUR", "mercosur", CAPTURES["mercosur"], "EFTA-MERCOSUR Joint Declaration on Cooperation",
+               "Declaration on Trade and Investment Co-operation and Action Plan between the EFTA States and the "
+               "MERCOSUR Member States", "2000-12-12", WAYBACK + PRECEDING_TEXTS["mercosur"],
+               "Signed at Geneva by the EFTA States on 12 December 2000 and at Florianópolis by the MERCOSUR "
+               "Member States on 15 December 2000; in effect from signature unless terminated on 180 days' "
+               "notice." + JC + " Preceded the free trade agreement EFTAMERCOSUR.",
+               ["AR", "BR", "PY", "UY"])
+mercosur["record"]["in_force"] = "2000-12-15"
+for party in mercosur["record"]["parties"][:4]:
+    party["signed"] = "2000-12-15"
+NEW.append(mercosur)
+
+yugoslavia = jdc("YU", "serbia", CAPTURES["serbia"], "EFTA-Yugoslavia Joint Declaration on Cooperation",
+                 "Declaration by the EFTA States and the Federal Republic of Yugoslavia", "2000-12-12",
+                 WAYBACK + PRECEDING_TEXTS["serbia"],
+                 "Signed at Geneva with the Federal Republic of Yugoslavia." + JC + " EFTA lists it on both its "
+                 "Serbia and Montenegro pages; it preceded the free trade agreements EFTARS and EFTAME.",
+                 ["RS", "ME"])
+yugoslavia["record"]["parties"][0]["note"] = "Signed by the Federal Republic of Yugoslavia, which Serbia continues."
+yugoslavia["record"]["parties"][1]["note"] = ("Part of the Federal Republic of Yugoslavia at signature; independent "
+                                              "since 2006.")
+NEW.append(yugoslavia)
+
+philippines = jdc("PH", "philippines", CAPTURES["philippines"], "EFTA-Philippines Joint Declaration on Cooperation",
+                  "Joint Declaration on Cooperation between the EFTA States (Iceland, the Principality of "
+                  "Liechtenstein, the Kingdom of Norway and the Swiss Confederation) and the Republic of the "
+                  "Philippines", "2014-06-23", WAYBACK + PRECEDING_TEXTS["philippines"],
+                  "Signed at Vestmannaeyjar." + JC + " It takes effect when the Philippines notifies in writing "
+                  "that its domestic requirements are met; EFTA does not publish that date, so the status stays "
+                  "signed. Preceded the free trade agreement EFTAPH.", ["PH"])
+philippines["record"]["status"] = "signed"
+del philippines["record"]["in_force"]
+NEW.append(philippines)
+
 
 def create(entry: dict) -> dict:
     """Build a new record; dates, parties and name come from the text when it was read."""

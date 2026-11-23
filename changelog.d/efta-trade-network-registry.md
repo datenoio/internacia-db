@@ -5,6 +5,15 @@
   2007), `EFTAMU-JDC` (Mauritius, 2009), `EFTAPK-JDC` (Pakistan, 2012), `EFTAMM-JDC`
   (Myanmar, 2013), `EFTANG-JDC` (Nigeria, 2017) and `EFTAASEAN-JDC` (2024, signed by the ten
   ASEAN Member States and the four EFTA States). Name, date and parties come from each text.
+- 21 EFTA joint declarations that preceded a free trade agreement, also as `framework` records
+  with name, date, place and parties from each text: `EFTAAL-JDC` (1992, signed by the seven
+  EFTA States of the time), `EFTAEG-JDC`, `EFTAMA-JDC` and `EFTATN-JDC` (1995), `EFTAMK-JDC`
+  and `EFTAPS-JDC` (1996), `EFTAJO-JDC` and `EFTALB-JDC` (1997), `EFTAGCC-JDC`, `EFTAUA-JDC`,
+  `EFTAMERCOSUR-JDC` and `EFTAYU-JDC` (2000; Yugoslavia's declaration lists Serbia and
+  Montenegro), `EFTAPE-JDC` and `EFTACO-JDC` (2006), `EFTAMY-JDC` and `EFTAPA-JDC` (2010),
+  `EFTAGE-JDC` (2012), `EFTAPH-JDC` (2014; `signed`, because it takes effect on a notification
+  whose date is not published), `EFTAEC-JDC` (2015), `EFTAMD-JDC` (2017) and `EFTAXK-JDC`
+  (2018).
 - `EFTAUA-2025`, the modernised EFTA-Ukraine Free Trade Agreement (signed 2025-04-08). On
   entry into force it replaces `EFTAUA` for each EFTA State.
 - `EFTACL-2024`, the Protocol Amending the EFTA-Chile Free Trade Agreement (signed
