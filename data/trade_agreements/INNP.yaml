@@ -1,14 +1,16 @@
 id: INNP
 name: Indo-Nepal Treaty of Trade
 agreement_type: pta
-status: in_force
+status: superseded
 signed: '1991-12-06'
 in_force: '2002-03-06'
+ended: '2009-10-27'
 parties:
 - id: IN
   type: country
 - id: NP
   type: country
+superseded_by: INNP-2009
 wto_rta_id: 392
 aric_id: 17
 gptad_id: 179
@@ -16,8 +18,10 @@ dta_id: 185
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/India-Nepal.pdf
   type: treaty_text
+notes: The Treaty of Trade of 6 December 1991, as amended. The revised treaty signed on 27 October 2009 (INNP-2009) superseded
+  it on signature.
 verification: catalogue
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -27,3 +31,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=17&ssid=3
   retrieved_at: '2026-11-22'
+- field: ended
+  source: Department of Commerce, Government of India, trade agreements
+  url: https://www.commerce.gov.in/files/2025-01/nepal.pdf
+  retrieved_at: '2026-11-23'
+- field: superseded_by
+  source: Department of Commerce, Government of India, trade agreements
+  url: https://www.commerce.gov.in/files/2025-01/nepal.pdf
+  retrieved_at: '2026-11-23'

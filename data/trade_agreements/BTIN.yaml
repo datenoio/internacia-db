@@ -4,14 +4,16 @@ other_names:
 - lang: en
   name: India-Bhutan Trade Agreement
 agreement_type: pta
-status: in_force
+status: superseded
 signed: '2006-07-28'
 in_force: '2006-07-29'
+ended: '2017-07-29'
 parties:
 - id: BT
   type: country
 - id: IN
   type: country
+superseded_by: BTIN-2016
 wto_rta_id: 562
 aric_id: 236
 gptad_id: 386
@@ -19,8 +21,10 @@ dta_id: 140
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/bhutan-India.pdf
   type: treaty_text
+notes: The 2006 agreement ran for ten years from 29 July 2006. India and Bhutan extended it from 29 July 2016 for one year
+  or until the new Agreement on Trade, Commerce and Transit (BTIN-2016) entered into force, which it did on 29 July 2017.
 verification: catalogue
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -30,3 +34,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=236&ssid=3
   retrieved_at: '2026-11-22'
+- field: ended
+  source: Press Information Bureau, Government of India
+  url: https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=169333
+  retrieved_at: '2026-11-23'
+- field: superseded_by
+  source: Press Information Bureau, Government of India
+  url: https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=169333
+  retrieved_at: '2026-11-23'
