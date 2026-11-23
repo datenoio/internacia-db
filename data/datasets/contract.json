@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "ade10aac58c2caf99a8d1f282bcae3016470a85a4d2666a95c285d63a41f19be",
+      "schema_hash": "16ea61ab2aa7a16d52d54b0586215a146de4bb4303a555517fcaa0d13f4ad720",
       "columns": [
         {
           "name": "id",
@@ -926,6 +926,11 @@
         {
           "name": "wto_pta_ids",
           "type": "list<int64>",
+          "nullable": true
+        },
+        {
+          "name": "gptad_id",
+          "type": "int64",
           "nullable": true
         },
         {
@@ -1906,7 +1911,8 @@
       "values": [
         "website",
         "wikipedia",
-        "wikidata"
+        "wikidata",
+        "treaty_text"
       ],
       "open": true
     },
