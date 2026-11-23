@@ -31,6 +31,19 @@
   concluded, paused or resumed, as the European Commission gives them. These records,
   `EUID`, `EUKR-DIGITAL` and `EUCL` are now `verification: official`.
 - `EUCL` is named `EU-Chile Interim Trade Agreement`.
+- 19 EU agreements have notes that tell provisional application apart from full entry
+  into force. The dates are not changed: `in_force` keeps the date from which trade
+  provisions first applied.
+  - The Western Balkans SAAs (`EUAL`, `EUBA`, `EUME`, `EURS`, `EUMK`) get their entry
+    into force dates from EUR-Lex. The Commission gives the dates for `EULB`, `EUGE`,
+    `EUMD` and `EUAM`.
+  - `EUUA` gets the 2025 DCFTA upgrade.
+  - `EUCENTRALAMERICA` gets its staggered 2013 provisional application by country and
+    full application from 2024-05-01.
+  - `EUANDEAN`, `EUCARIFORUMEPA`, `EUPACIFICEPA`, `EUESAEPA`, `EUSADCEPA`, `EUCI`,
+    `EUGH` and `EUMERCOSUR` are marked as still provisionally applied.
+  - Where the Commission's overview disagrees with the record (Papua New Guinea,
+    Namibia, Côte d'Ivoire), the note gives both dates.
 
 ### Fixed
 
