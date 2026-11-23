@@ -15,27 +15,27 @@ Every DESTA base treaty, with its group, record and action, is in [desta-match-2
 3. An acronym in the DESTA name that is a record id (`SPARTECA`), and five hand matches.
 4. A record claimed by two treaties keeps the one with the closer year; the other becomes ambiguous.
 
-The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 611, none 146, low 90, medium 56.
+The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 615, none 141, low 90, medium 57.
 
 ## Results
 
 | Group | Treaties | Bilateral | Plurilateral | Plurilateral and third country | Region-region |
 |---|---|---|---|---|---|
-| matched | 667 | 445 | 55 | 150 | 16 |
+| matched | 672 | 450 | 55 | 150 | 16 |
 | ambiguous | 90 | 45 | 28 | 12 | 5 |
-| missing | 146 | 125 | 16 | 1 | 4 |
+| missing | 141 | 120 | 16 | 1 | 4 |
 
-Matched treaties by where the record is: main 540, this PR 50, #209 28, #218 25, #226 21, #210 2, #214 1. One treaty has no `typememb`.
+Matched treaties by where the record is: main 541, this PR 54, #209 28, #218 25, #226 21, #210 2, #214 1. One treaty has no `typememb`.
 
-Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 109 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
+Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 105 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
 
 **Ambiguous** treaties have records with the same parties but another year (usually an earlier or later instrument between the same countries, such as the 1980s ALADI agreements that later ACEs replaced) or share one record with another DESTA treaty (DESTA lists the early harvest, the main agreement or the Dickenson Bay and Chaguaramas texts separately).
 
-**Missing** treaties have no record with their parties. Of the 125 bilateral ones, 123 are not WTO-listed. By region: Asia 33, Africa 30, Intercontinental 29, Europe 19, Americas 11, Oceania 3. The largest groups: Arab bilaterals of the 1950s to 2000s (many with Iraq in 2001 and 2002), most of them between countries that are now all members of the Greater Arab Free Trade Area; 1990s bilaterals between CIS states; southern African bilaterals (Malawi, Zimbabwe, Mozambique, Botswana, South Africa); Nordic agreements with the Faroe Islands and Greenland; and trade agreements of Canada and Australia from the 1950s and 1960s. The 21 missing plurilateral treaties are mostly organisation treaties (the EEC Treaty and its revisions, the ECSC, Benelux, CEAO, UDEAO, CEPGL, the Lomé and Cotonou conventions); some have an intblock but no registry record.
+**Missing** treaties have no record with their parties. Of the 120 bilateral ones, 118 are not WTO-listed. By region: Asia 33, Intercontinental 29, Africa 25, Europe 19, Americas 11, Oceania 3. The largest groups: Arab bilaterals of the 1950s to 2000s (many with Iraq in 2001 and 2002), most of them between countries that are now all members of the Greater Arab Free Trade Area; 1990s bilaterals between CIS states; Nordic agreements with the Faroe Islands and Greenland; and trade agreements of Canada and Australia from the 1950s and 1960s. The 21 missing plurilateral treaties are mostly organisation treaties (the EEC Treaty and its revisions, the ECSC, Benelux, CEAO, UDEAO, CEPGL, the Lomé and Cotonou conventions); some have an intblock but no registry record.
 
 ## Added in this walk
 
-50 records. Each cites a depositary or a party government for its status and dates and DESTA (provenance field `desta_id`) only for listing it.
+54 records. Each cites a depositary, a party government or the WTO for its status and dates and DESTA (provenance field `desta_id`) only for listing it.
 
 16 ALADI records were superseded by an agreement whose record is only in an open pull request (datenoio/internacia-db#209, #218 or #226), so they are `terminated` for now; their notes name the successor. Once those pull requests merge they become `superseded` with `superseded_by`: `ARBO-1992` (`MERCOSURBO`), `ARBR-1986` (`ARBR`), `ARBR-1988` (`ARBR`), `ARCU-1999` (`MERCOSURCU`), `ARCAN-ACE48` (`MERCOSURCOECVE`), `BOPY-1994` (`MERCOSURBO`), `BOUY-1991` (`MERCOSURBO`), `BRCU-1999` (`MERCOSURCU`), `BRPE-1993` (`BRCAN-ACE39`), `BRVE-1994` (`BRCAN-ACE39`), `CLEC-2008` (`CLEC`), `CLPE-1983` (`CLPE-1998`), `CLUY-1985` (`MERCOSURCL`), `COCU-1994` (`COCU`), `CUPY-2000` (`MERCOSURCU`), `CUUY-1999` (`MERCOSURCU`).
 
@@ -83,6 +83,7 @@ Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (t
 | `AEKE` | 1124 | UAE-Kenya Comprehensive Economic Partnership Agreement | signed | 2025-01-14 |  |  | Kenya National Assembly, Hansard, 18 November 2025 |
 | `AEMU` | 1132 | UAE-Mauritius Comprehensive Economic Partnership Agreement | in_force | 2024-07-22 | 2025-04-01 |  | UAE Ministry of Economy and Tourism |
 | `AERS` | 1129 | UAE-Serbia Comprehensive Economic Partnership Agreement | in_force | 2024-10-05 | 2025-06-01 |  | UAE Ministry of Economy and Tourism |
+| `BWZW` | 137 | Trade Agreement between Botswana and Zimbabwe | in_force | 1988 | 1988 |  | WTO, Trade Policy Review of SACU, WT/TPR/S/324 (2015), Annex 1 (Botswana) |
 | `CHFO` | 443 | Agreement between the Government of Switzerland and the Government of Denmark and the Home Government of the Faroe Islands on Free Trade between Switzerland and the Faroe Islands | in_force | 1994-01-12 | 1995-03-01 |  | Swiss State Secretariat for Economic Affairs (SECO), SR 0.632.313.141 |
 | `DZJO` | 18 | Jordan - Algeria Agreement | in_force | 1997 | 1999 |  | Jordan Export Portal (Ministry of Industry, Trade and Supply), FTA insights |
 | `EGRS` | 1130 | Free Trade Agreement between the Government of the Republic of Serbia and the Government of the Arab Republic of Egypt | in_force | 2024-07-13 | 2025-09-01 |  | Serbian Ministry of Foreign Affairs, Embassy in Cairo |
@@ -91,6 +92,9 @@ Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (t
 | `JOSD` | 535 | Jordan - Sudan Agreement | in_force |  | 2003 |  | Jordan Export Portal (Ministry of Industry, Trade and Supply), FTA insights |
 | `LBTR` | 1101 | Agreement Establishing an Association Establishing a Free Trade Area between the Republic of Türkiye and the Lebanese Republic | signed | 2010-11-24 |  |  | Turkish Ministry of Trade, FTAs in ratification |
 | `LVUA` | 571 | Free Trade Agreement between the Republic of Latvia and Ukraine | terminated | 1995-11-22 | 1997-01-15 | 2004-05-01 | Latvian official legal portal (likumi.lv) |
+| `MWMZ` | 595 | Preferential Trade Agreement between the Government of the Republic of Malawi and the Government of the Republic of Mozambique | in_force | 2005-12-28 | 2006-09-20 |  | WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024) |
+| `MWZA` | 762 | Trade Agreement between Malawi and South Africa | in_force |  | 1990 |  | WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024) |
+| `MZZW` | 629 | Trade Agreement between the Government of the Republic of Mozambique and the Government of the Republic of Zimbabwe | in_force | 2004-01-09 | 2004-03-01 |  | Zimbabwe Revenue Authority (ZIMRA), origin and preference |
 
 ## Held
 
@@ -120,13 +124,16 @@ Treaties checked against an official source and not added, because the status ru
 | 451 | Finland USSR | 1960 | a party (the USSR) has no country record |
 | 477 | Honduras Mexico | 1985 | ALADI gives no date of entry into force (AAP.A25TM 11) |
 | 583 | Lithuania Ukraine | 1995 | Ukraine's legal database (zakon.rada.gov.ua) dates the agreement 4 August 1993, not 1995; the site refused the browser, so no entry into force was read |
+| 596 | Malawi South Africa | 1967 | the 1967 Malawi - South Africa agreement, which the 1990 revision (MWZA) replaced (Malawi Trade Portal); no date of entry into force or end |
 | 613 | Mexico Panama | 1985 | ALADI: historical, with no end date or successor (AAP.A25TM 14) |
 | 702 | Azerbaijan Belarus | 2004 | Belarus MFA lists a bilateral FTA in force with Azerbaijan but gives no dates |
 | 705 | Belarus Kazakhstan | 1997 | Belarus MFA lists a bilateral FTA in force with Kazakhstan but gives no dates |
+| 763 | Malawi Zimbabwe | 1995 | WTO and Malawi date the Malawi - Zimbabwe agreement differently (adopted 1986 and modified 1995, WT/TPR/S/96; signed 1995, Malawi Trade Portal), and Zimbabwe implements it by Statutory Instrument 103 of 2005; in force, but no date of entry into force |
+| 764 | Malawi Zimbabwe | 2006 | the 2006 revision DESTA lists: Malawi's 2002 review says the agreement was being renegotiated, and Zimbabwe's instrument is of 2005; no official date of signature or entry into force |
 | 767 | Mexico Peru | 1987 | ALADI: historical, with no end date or successor (ACE 8) |
 | 791 | Estonia Poland | 1998 | Riigi Teataja: signed 5 November 1998, applied provisionally from 1 January 1999, ended 1 May 2004; no date of definitive entry into force found |
 
-The other missing treaties were not looked up in this walk. Sources found for some of them: the Belarus MFA list of free trade partners, Jordan's export portal (Jordan's other Arab bilaterals are not on it), the Turkish Ministry of Trade, Riigi Teataja and likumi.lv for the Baltic agreements, and WTO trade policy reviews for the southern African bilaterals.
+The other missing treaties were not looked up in this walk. Sources found for some of them: the Belarus MFA list of free trade partners, Jordan's export portal (Jordan's other Arab bilaterals are not on it), the Turkish Ministry of Trade, and Riigi Teataja and likumi.lv for the Baltic agreements. The southern African bilaterals were looked up in WTO trade policy reviews (Malawi 2002, 2010, 2016 and 2024; Mozambique 2009 and 2017; Zimbabwe 2011; SACU 2009 and 2015), the Zimbabwe Revenue Authority and the Malawi Trade Portal: four were added and three held.
 
 ## Party-history gaps
 

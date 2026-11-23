@@ -267,6 +267,8 @@ def candidates(t):
             dy = abs(y - r["sy"])
         elif e and r["ey"]:
             dy = abs(e - r["ey"])
+        elif y and r["ey"] and not r["sy"]:
+            dy = abs(y - r["ey"])  # a record with only an entry into force year
         de = abs(e - r["ey"]) if e and r["ey"] else None
         out.append({"id": r["id"], "set": round(score_set, 2), "dy": dy, "de": de})
     return out

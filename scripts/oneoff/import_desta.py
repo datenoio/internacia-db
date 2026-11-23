@@ -31,6 +31,9 @@ Sources:
   government and Ministry of Foreign Affairs, Jordan's export portal (Ministry of Industry,
   Trade and Supply), the Turkish Ministry of Trade, the Swiss State Secretariat for Economic
   Affairs, Monaco's official legal database (Legimonaco) and Latvia's official legal portal.
+- The WTO: trade policy reviews of Malawi (2002, 2024), Mozambique (2017) and SACU (2009,
+  2015), with the Zimbabwe Revenue Authority and Malawi's Ministry of Trade, for four southern
+  African bilaterals.
 
 Records are ``verification: official``: their status and dates come from the depositary or a
 party government.
@@ -50,6 +53,7 @@ REGISTRY = ROOT / "data" / "trade_agreements"
 RETRIEVED = "2026-11-23"
 DESTA = "Design of Trade Agreements (DESTA) v2.3, list of treaties, number {}"
 DESTA_URL = "https://www.designoftradeagreements.org/downloads/"
+TPR = "https://www.wto.org/english/tratop_e/tpr_e/"
 ALADI = "ALADI, historical agreements database"
 ALADI_URL = "http://www2.aladi.org/nsfaladi/histtextacdos.nsf/f88cf0ec27a4b651032576790064fc05/{}?OpenDocument"
 FIELD_ORDER = [
@@ -416,6 +420,62 @@ RECORDS: dict[str, dict] = {
         agreement_type="fta", status="terminated", signed="1995-11-22", in_force="1997-01-15",
         ended="2004-05-01", parties=["LV", "UA"],
         notes="Signed in Kyiv. Ended on Latvia's accession to the European Union."),
+
+    # --- southern African bilaterals: WTO trade policy reviews, party governments --------------
+    "MWMZ": gov(595, [
+        ("signed", "WTO, Trade Policy Review of Mozambique, WT/TPR/S/354 (2017), Table 2.3 (RTAs in force, 2016)",
+         TPR + "s354_e.pdf"),
+        ("in_force", "WTO, Trade Policy Review of Mozambique, WT/TPR/S/354 (2017), Table 2.3 (RTAs in force, 2016)",
+         TPR + "s354_e.pdf"),
+        ("status", "WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024)",
+         TPR + "g460_e.pdf"),
+    ], name="Preferential Trade Agreement between the Government of the Republic of Malawi and the Government "
+            "of the Republic of Mozambique", agreement_type="pta", status="in_force", signed="2005-12-28",
+        in_force="2006-09-20", parties=["MW", "MZ"],
+        notes="Duty-free trade in originating goods except an exclusion list (sugar, beer, branded soft drinks, "
+              "refined edible oil, dressed chickens, eggs, unmanufactured tobacco and others). Replaced the colonial "
+              "arrangement of the 1959 trade agreement between Portugal and the Federation of Rhodesia and "
+              "Nyasaland. Not notified to the WTO."),
+    "MZZW": gov(629, [
+        ("signed", "WTO, Trade Policy Review of Mozambique, WT/TPR/S/354 (2017), Table 2.3 (RTAs in force, 2016)",
+         TPR + "s354_e.pdf"),
+        ("in_force", "WTO, Trade Policy Review of Mozambique, WT/TPR/S/354 (2017), Table 2.3 (RTAs in force, 2016)",
+         TPR + "s354_e.pdf"),
+        ("status", "Zimbabwe Revenue Authority (ZIMRA), origin and preference",
+         "https://www.zimra.co.zw/customs/origin-and-preference/origin-and-preference"),
+    ], name="Trade Agreement between the Government of the Republic of Mozambique and the Government of the "
+            "Republic of Zimbabwe", agreement_type="pta", status="in_force", signed="2004-01-09",
+        in_force="2004-03-01", parties=["MZ", "ZW"],
+        notes="Duty-free trade in all goods except sugar, branded soft drinks, firearms, ammunition and explosives, "
+              "motor vehicles, beer and manufactured tobacco. The WTO gives entry into force on 1 March 2004; "
+              "Zimbabwe implements it by Statutory Instrument 33 of 2005. Not notified to the WTO."),
+    "BWZW": gov(137, [
+        ("signed", "WTO, Trade Policy Review of SACU, WT/TPR/S/222 (2009), Annex 1 (Botswana)",
+         TPR + "s222-01_e.doc"),
+        ("in_force", "Zimbabwe Revenue Authority (ZIMRA), origin and preference: Statutory Instrument 192 of 1988",
+         "https://www.zimra.co.zw/customs/origin-and-preference/origin-and-preference"),
+        ("status", "WTO, Trade Policy Review of SACU, WT/TPR/S/324 (2015), Annex 1 (Botswana)",
+         TPR + "s324-00_e.pdf"),
+    ], name="Trade Agreement between Botswana and Zimbabwe", agreement_type="fta", status="in_force",
+        signed="1988", in_force="1988", parties=["BW", "ZW"],
+        notes="Reciprocal duty-free trade in goods wholly produced in either country or with at least 25% local "
+              "content. First signed in 1956 between the Bechuanaland Protectorate and the Federation of Rhodesia "
+              "and Nyasaland, and amended in 1988 and 2010 (WTO); Zimbabwe gave effect to the 1988 text by "
+              "Statutory Instrument 192 of 1988."),
+    "MWZA": gov(762, [
+        ("in_force", "WTO, Trade Policy Review of Malawi, WT/TPR/S/96 (2002), Chapter II",
+         "https://docsonline.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q%3A%2FWT%2FTPR%2FS96-2.pdf"),
+        ("status", "WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024)",
+         TPR + "g460_e.pdf"),
+        ("notes", "Malawi Trade Portal (trade.gov.mw), guide to Malawi's preferential trade agreements",
+         "https://portal.trade.gov.mw/en-gb/site/display/120"),
+    ], name="Trade Agreement between Malawi and South Africa", agreement_type="pta", status="in_force",
+        in_force="1990", parties=["MW", "ZA"],
+        notes="A revision, in 1990, of the trade agreement the two countries signed in 1967 (Malawi Trade "
+              "Portal); the WTO says the agreement was formed in 1990. Non-reciprocal: South Africa admits goods "
+              "grown, produced or manufactured in Malawi duty free with at least 25% local content, with quotas "
+              "for some goods such as tea, and Malawi grants South African goods most-favoured-nation treatment. "
+              "Either party may end it with 12 months' notice."),
 }
 
 # Records whose successor is not in the registry yet (set by ``build``): ``terminated`` for now,
