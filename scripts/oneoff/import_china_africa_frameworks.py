@@ -10,13 +10,17 @@ official releases name, checked on 2026-11-23:
   reprinted on the summit website);
 - Kenya, signed in Beijing on 24 April 2025 (minister Wang Wentao's activity page);
 - seven that MOFCOM reported on 1 July 2025 as recently signed; the release gives no dates,
-  and the Chinese Embassy in Zambia dates the Zambian one to June 2025.
+  and the Chinese Embassy in Zambia dates the Zambian one to June 2025;
+- three for which MOFCOM published no release: Cameroon (10 December 2025, reported by the
+  state daily Cameroon Tribune), Botswana (April 2026) and Togo (23 April 2026), both dated on
+  the bilateral relations pages of the Chinese Ministry of Foreign Affairs.
 
 Countries that already have a record (an early harvest arrangement: CGCN, CNKE, CNSC, CNGA)
-get the framework agreement in their notes. Six of the 40 are not named in any release found
+get the framework agreement in their notes. Three of the 40 are not named in any source found
 (MOFCOM's site search needs a captcha); they are left for a later walk.
 
-Not idempotent: notes are appended. Usage: python -I scripts/oneoff/import_china_africa_frameworks.py [--write]
+Idempotent: existing records and notes already added are skipped.
+Usage: python -I scripts/oneoff/import_china_africa_frameworks.py [--write]
 """
 
 from __future__ import annotations
@@ -36,6 +40,16 @@ BATCH_2025 = "https://sms.mofcom.gov.cn/gzdt/art/2025/art_0126506c021243b7b8384c
 ZAMBIA = "https://zm.china-embassy.gov.cn/sbgx/jm/202507/t20250704_11665721.htm"
 KENYA = "http://wangwentao.mofcom.gov.cn/zyhd/art/2025/art_fc16c5055c4e4ba881b350c613d65e8f.html"
 AFRICA_PAGE = "https://fta.mofcom.gov.cn/channel/african_special.shtml"
+MFA = "Ministry of Foreign Affairs of the People's Republic of China"
+MFA_AFRICA = "https://www.mfa.gov.cn/web/gjhdq_676201/gj_676203/fz_677316/"
+BOTSWANA = MFA_AFRICA + "1206_677438/sbgx_677442/"
+BOTSWANA_2026 = MFA_AFRICA + "1206_677438/1207_677450/202610/t20261013_12039645.shtml"
+TOGO = MFA_AFRICA + "1206_677534/sbgx_677538/"
+TOGO_2026 = MFA_AFRICA + "1206_677534/1207_677546/202610/t20261015_12041062.shtml"
+CAMEROON = ("https://cameroon-tribune.cm/article.html/74474/fr.html/"
+            "cooperation-commerciale-cameroun-chine-coup-daccelerateur")
+CAMEROON_BIC = ("https://www.businessincameroon.com/public-management/"
+                "1212-15487-cameroon-china-trade-pact-opens-door-to-tariff-free-push-for-cameroon-exports")
 TITLE = ("Framework Agreement on Economic Partnership for Shared Development between the Government of the "
          "People's Republic of China and the Government of {}")
 SCOPE = ("It sets out objectives, principles, the scope of negotiations, institutional arrangements, entry into "
@@ -77,6 +91,28 @@ BATCH = {
     "BJ": ("Benin", "the Republic of Benin"),
     "GH": ("Ghana", "the Republic of Ghana"),
     "SN": ("Senegal", "the Republic of Senegal"),
+}
+
+UNANNOUNCED_NOTE = " MOFCOM published no release on it, so its place in MOFCOM's count of 40 is not known."
+# alpha-2 -> (short name, official name, signed, notes, [(field, url, source)])
+UNANNOUNCED = {
+    "CM": ("Cameroon", "the Republic of Cameroon", "2025-12-10",
+           "Signed in Yaoundé on 10 December 2025, at the Ministry of External Relations, by the Minister of Trade "
+           "Luc Magloire Mbarga Atangana and the Chinese Ambassador Xu Yong. The minister called it the first stage "
+           "of negotiations on market access, manufacturing and agriculture." + UNANNOUNCED_NOTE,
+           [("parties", CAMEROON, "Cameroon Tribune (SOPECAM, the state daily)"),
+            ("signed", CAMEROON, "Cameroon Tribune (SOPECAM, the state daily)"),
+            ("notes", CAMEROON_BIC, "Business in Cameroon")]),
+    "BW": ("Botswana", "the Republic of Botswana", "2026-04",
+           "Signed in April 2026 (Chinese Ministry of Foreign Affairs, bilateral relations page). In their joint "
+           "statement of October 2026 the two sides agreed to work for an early harvest arrangement, signed in line "
+           "with the procedures of the Southern African Customs Union and its members (SACUCN)." + UNANNOUNCED_NOTE,
+           [("parties", BOTSWANA, MFA), ("signed", BOTSWANA, MFA), ("notes", BOTSWANA_2026, MFA)]),
+    "TG": ("Togo", "the Togolese Republic", "2026-04-23",
+           "Signed on 23 April 2026 (Chinese Ministry of Foreign Affairs, bilateral relations page). In their joint "
+           "statement of October 2026 the two sides agreed to build on the framework agreement and advance the "
+           "follow-up module negotiations." + UNANNOUNCED_NOTE,
+           [("parties", TOGO, MFA), ("signed", TOGO, MFA), ("notes", TOGO_2026, MFA)]),
 }
 
 # Existing early harvest records: the framework agreement goes in their notes.
@@ -136,22 +172,27 @@ def new_records() -> list[dict]:
         else:
             notes, sources, signed = BATCH_NOTE, [prov("parties", BATCH_2025), prov("signed", BATCH_2025)], "2025"
         records.append(framework(code, short, official, signed, notes, sources))
+    for code, (short, official, signed, notes, sources) in UNANNOUNCED.items():
+        records.append(framework(code, short, official, signed, notes,
+                                 [prov(field, url, source) for field, url, source in sources]))
     return records
 
 
 def main(argv: list[str]) -> int:
     write = "--write" in argv
-    problems = 0
+    problems = written = updated = 0
     for record in new_records():
         path = REGISTRY / f"{record['id']}.yaml"
         if path.exists():
-            print("exists:", path.name)
-            problems += 1
-        elif write:
+            continue
+        written += 1
+        if write:
             path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
     for rid, (text, url) in {**NOTES, "CNGA": (None, FOCAC_2024)}.items():
         path = REGISTRY / f"{rid}.yaml"
         record: dict[str, Any] = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if (text or GABON_NEW) in record.get("notes", ""):
+            continue
         if rid == "CNGA":
             if GABON_OLD not in record["notes"]:
                 print("CNGA notes changed; skipped")
@@ -161,9 +202,10 @@ def main(argv: list[str]) -> int:
         else:
             record["notes"] = f"{record.get('notes', '').strip()} {text}".strip()
         record["provenance"].append(prov("notes", url))
+        updated += 1
         if write:
             path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
-    print(f"new {len(new_records())}, updated {len(NOTES) + 1}, problems {problems}{'' if write else ' (dry run)'}")
+    print(f"new {written}, updated {updated}, problems {problems}{'' if write else ' (dry run)'}")
     return 1 if problems else 0
 
 
