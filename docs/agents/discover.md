@@ -122,7 +122,7 @@ IGO / FTA / `LDC` / `GSP`.
 
 **Reject:** untitled bilateral pairs; UK continuity copies of EU EPAs;
 services-only EIA of an FTA already recorded; national GSP ID cards; LDC-only
-DFQF; bilateral BITs; not-in-force protocols; constitutive acts of existing
+DFQF; bilateral BITs (registry `-BIT` records instead); not-in-force protocols; constitutive acts of existing
 IGOs; attribute partitions; socioeconomic rankings; Wikipedia-only membership.
 
 ## After a find
