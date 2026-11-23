@@ -1,11 +1,15 @@
 id: AEMY
 name: Malaysia-United Arab Emirates Comprehensive Economic Partnership Agreement
+acronyms:
+- lang: en
+  value: MY-UAE CEPA
 other_names:
 - lang: en
   name: Malaysia-United Arab Emirates CEPA
 agreement_type: fta
 status: in_force
-in_force: '2024-01-14'
+signed: '2025-01-14'
+in_force: '2025-10-01'
 parties:
 - id: MY
   type: country
@@ -15,19 +19,30 @@ aric_id: 459
 links:
 - url: https://edit.wti.org/document/show/fab3d113-ecee-46d9-ad9f-5931f12cbbfc
   type: treaty_text
-notes: EDIT gives 2025-01-14 as the date of signature. EDIT gives 2025-10-01 as the date of entry into force.
-verification: catalogue
-last_verified: '2026-11-22'
+- url: https://www.trade.gov.ae/documents/d/guest/uae_malaysia_cepa_eng
+  type: treaty_text
+notes: Signed in Abu Dhabi. ADB ARIC gives 2024-01-14 for entry into force; MITI and the UAE Ministry of Foreign Trade give
+  2025-10-01.
+verification: official
+last_verified: '2026-11-23'
 provenance:
-- field: parties
+- field: aric_id
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=459&ssid=3
-  retrieved_at: '2026-11-22'
-- field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=459&ssid=3
-  retrieved_at: '2026-11-22'
-- field: notes
-  source: EDIT - Electronic Database of Investment Treaties (World Trade Institute)
   retrieved_at: '2026-11-23'
-  url: https://edit.wti.org/document/show/fab3d113-ecee-46d9-ad9f-5931f12cbbfc
+- field: signed
+  source: Malaysian Ministry of Investment, Trade and Industry (MITI)
+  url: https://www.miti.gov.my/miti/resources/Media%20Release/PERJANJIAN_CEPA_MALAYSIA-UAE_SASARAN_PENINGKATAN_PERDAGANGAN.pdf
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Malaysian Ministry of Investment, Trade and Industry (MITI), notice of 29 September 2025
+  url: https://www.miti.gov.my/miti/resources/Preferential%20Certificate%20of%20Origin/Announcement/Notice_MY_UAE_CEPA_2025.pdf
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UAE Ministry of Foreign Trade
+  url: https://www.trade.gov.ae/uae-malaysia-comprehensive-economic-partnership-agreement
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: UAE Ministry of Foreign Trade
+  url: https://www.trade.gov.ae/uae-malaysia-comprehensive-economic-partnership-agreement
+  retrieved_at: '2026-11-23'
