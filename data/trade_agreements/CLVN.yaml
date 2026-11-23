@@ -6,7 +6,7 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2011-11-11'
-in_force: '2012-03-14'
+in_force: '2014-01-01'
 parties:
 - id: CL
   type: country
@@ -15,9 +15,12 @@ parties:
 wto_rta_id: 685
 aric_id: 234
 dta_id: 262
-notes: 'ADB ARIC dates: negotiations launched 2008-01-24.'
-verification: catalogue
-last_verified: '2026-11-22'
+notes: 'ADB ARIC dates: negotiations launched 2008-01-24. ADB ARIC gives 2012-03-14 as the entry-into-force date. The Chilean
+  promulgation decree (Decreto 139, Diario Oficial of 4 February 2014) records signature at Honolulu on 11 November 2011,
+  approval by the National Congress on 15 March 2012 and international entry into force on 1 January 2014. OAS SICE gives
+  12 November 2011 and the Diario Oficial date.'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -27,3 +30,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=234&ssid=3
   retrieved_at: '2026-11-22'
+- field: in_force
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI)
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/vietnam
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Diario Oficial de la República de Chile, Decreto 139 of 2013 (copy hosted by SOFOFA)
+  url: https://www.sofofa.cl/wp-content/uploads/2025/07/Dereto_139_Promulga-TLC-Chile-Vietnam-04_01_2014.pdf
+  retrieved_at: '2026-11-23'

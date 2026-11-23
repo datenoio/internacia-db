@@ -6,12 +6,14 @@ other_names:
 agreement_type: pta
 status: in_force
 signed: '2006-03-08'
-in_force: '2007-09-11'
+in_force: '2007-08-17'
 parties:
 - id: CL
   type: country
+  in_force: '2007-08-17'
 - id: IN
   type: country
+  in_force: '2007-09-11'
 wto_rta_id: 625
 aric_id: 72
 gptad_id: 329
@@ -19,8 +21,10 @@ dta_id: 158
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/Chile_India.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+notes: In force from 17 August 2007 in Chile and from 11 September 2007 in India (Department of Commerce, India). ADB ARIC
+  gives 2007-09-11 for the agreement as a whole; OAS SICE and WTO RTA-IS give 17 August 2007.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -30,3 +34,15 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=72&ssid=3
   retrieved_at: '2026-11-22'
+- field: in_force
+  source: Department of Commerce, India (Wayback Machine copy)
+  url: https://web.archive.org/web/20241009001434/https://www.commerce.gov.in/international-trade/trade-agreements/india-chile-pta-preferential-trade-agreement-pta-with-chile/
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Department of Commerce, India (Wayback Machine copy)
+  url: https://web.archive.org/web/20241009001434/https://www.commerce.gov.in/international-trade/trade-agreements/india-chile-pta-preferential-trade-agreement-pta-with-chile/
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI)
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/india
+  retrieved_at: '2026-11-23'
