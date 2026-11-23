@@ -6,12 +6,12 @@ A trade agreement record MAY set `desta_id`, the `number` of its base treaty in 
 
 #### Scenario: DESTA id exported
 
-- **WHEN** the record `ARCO-1988` sets `desta_id: 36`
-- **THEN** `trade_agreements` has `desta_id = 36` for `ARCO-1988`
+- **WHEN** the record `ARCR-1983` sets `desta_id: 37`
+- **THEN** `trade_agreements` has `desta_id = 37` for `ARCR-1983`
 
 #### Scenario: Repeated DESTA id
 
-- **WHEN** two records set `desta_id: 36`
+- **WHEN** two records set `desta_id: 37`
 - **THEN** the validator reports `DUPLICATE_IDENTIFIER` on the second record
 
 #### Scenario: Accession row
@@ -25,8 +25,8 @@ A record created because DESTA lists an agreement the registry lacks SHALL NOT t
 
 #### Scenario: ALADI agreement listed by DESTA
 
-- **WHEN** DESTA lists `Argentina Colombia` of 1988 (number 36) and the registry has no record for ACE 11
-- **THEN** the new record `ARCO-1988` cites the ALADI record of ACE 11 for its status and dates, and DESTA only for listing it
+- **WHEN** DESTA lists `Argentina Costa Rica` of 1983 (number 37) and the registry has no record for AAP.A25TM 2
+- **THEN** the new record `ARCR-1983` cites the ALADI record of AAP.A25TM 2 for its status and dates, and DESTA only for listing it
 
 #### Scenario: No official source
 

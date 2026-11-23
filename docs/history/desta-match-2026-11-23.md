@@ -15,69 +15,36 @@ Every DESTA base treaty, with its group, record and action, is in [desta-match-2
 3. An acronym in the DESTA name that is a record id (`SPARTECA`), and five hand matches.
 4. A record claimed by two treaties keeps the one with the closer year; the other becomes ambiguous.
 
-The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 614, none 141, low 87, medium 61.
+The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 622, none 128, low 90, medium 63.
 
 ## Results
 
 | Group | Treaties | Bilateral | Plurilateral | Plurilateral and third country | Region-region |
 |---|---|---|---|---|---|
-| matched | 675 | 450 | 55 | 153 | 16 |
-| ambiguous | 87 | 45 | 28 | 9 | 5 |
-| missing | 141 | 120 | 16 | 1 | 4 |
+| matched | 685 | 459 | 55 | 154 | 16 |
+| ambiguous | 90 | 49 | 28 | 8 | 5 |
+| missing | 128 | 107 | 16 | 1 | 4 |
 
-Matched treaties by where the record is: main 569, this PR 54, #209 26, #226 21, #231 3, #210 2. One treaty has no `typememb`.
+Matched treaties by where the record is: main 592, #235 35, this PR 30, #209 26, #210 2. One treaty has no `typememb`.
 
-Bilateral country pairs: DESTA has 532. 166 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 105 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
+Bilateral country pairs: DESTA has 532. 148 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 96 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
 
 **Ambiguous** treaties have records with the same parties but another year (usually an earlier or later instrument between the same countries, such as the 1980s ALADI agreements that later ACEs replaced) or share one record with another DESTA treaty (DESTA lists the early harvest, the main agreement or the Dickenson Bay and Chaguaramas texts separately).
 
-**Missing** treaties have no record with their parties. Of the 120 bilateral ones, 118 are not WTO-listed. By region: Asia 33, Intercontinental 29, Africa 25, Europe 19, Americas 11, Oceania 3. The largest groups: Arab bilaterals of the 1950s to 2000s (many with Iraq in 2001 and 2002), most of them between countries that are now all members of the Greater Arab Free Trade Area; 1990s bilaterals between CIS states; Nordic agreements with the Faroe Islands and Greenland; and trade agreements of Canada and Australia from the 1950s and 1960s. The 21 missing plurilateral treaties are mostly organisation treaties (the EEC Treaty and its revisions, the ECSC, Benelux, CEAO, UDEAO, CEPGL, the Lomé and Cotonou conventions); some have an intblock but no registry record.
+**Missing** treaties have no record with their parties. Of the 107 bilateral ones, 105 are not WTO-listed. By region: Asia 33, Intercontinental 24, Europe 19, Africa 17, Americas 11, Oceania 3. The largest groups: Arab bilaterals of the 1950s to 2000s (many with Iraq in 2001 and 2002), most of them between countries that are now all members of the Greater Arab Free Trade Area (looked up, see Held); 1990s bilaterals between CIS states; Nordic agreements with the Faroe Islands and Greenland; and trade agreements of Canada and Australia from the 1950s and 1960s. The 21 missing plurilateral treaties are mostly organisation treaties (the EEC Treaty and its revisions, the ECSC, Benelux, CEAO, UDEAO, CEPGL, the Lomé and Cotonou conventions); some have an intblock but no registry record.
 
 ## Added in this walk
 
-54 records. Each cites a depositary, a party government or the WTO for its status and dates and DESTA (provenance field `desta_id`) only for listing it.
+30 records. Each cites a depositary, a party government or the WTO for its status and dates and DESTA (provenance field `desta_id`) only for listing it.
 
-12 ALADI records were superseded by an agreement whose record is only in an open pull request (datenoio/internacia-db#209 or #226), so they are `terminated` for now; their notes name the successor. Once those pull requests merge they become `superseded` with `superseded_by`: `ARBO-1992` (`MERCOSURBO`), `ARCU-1999` (`MERCOSURCU`), `BOPY-1994` (`MERCOSURBO`), `BOUY-1991` (`MERCOSURBO`), `BRCU-1999` (`MERCOSURCU`), `BRPE-1993` (`BRCAN-ACE39`), `BRVE-1994` (`BRCAN-ACE39`), `CLPE-1983` (`CLPE-1998`), `CLUY-1985` (`MERCOSURCL`), `COCU-1994` (`COCU`), `CUPY-2000` (`MERCOSURCU`), `CUUY-1999` (`MERCOSURCU`).
+The walk first wrote 33 more historical ALADI agreements. datenoio/internacia-db#235 adds the same agreements with their successors, so they were dropped here; the CSV points those DESTA numbers at #235's records (33 of 33 matched).
 
 | Record | DESTA | Name | Status | Signed | In force | Ended | Source of status |
 |---|---|---|---|---|---|---|---|
-| `ARBO-1992` | 31 | Economic Complementation Agreement No. 19 between Argentina and Bolivia | terminated | 1992-04-28 | 1992-04-28 | 1997-02-28 | ALADI, historical agreements database |
-| `ARBR-1986` | 32 | Economic Complementation Agreement No. 7 between Argentina and Brazil | superseded | 1986-12-10 | 1987-01-01 | 1990-12-20 | ALADI, historical agreements database |
-| `ARBR-1988` | 33 | Economic Complementation Agreement No. 12 between Argentina and Brazil | superseded | 1988-09-09 | 1988-09-01 | 1990-12-20 | ALADI, historical agreements database |
-| `ARCAN-ACE48` | 24 | Economic Complementation Agreement No. 48 between Argentina, Colombia, Ecuador, Peru and Venezuela | superseded | 2000-06-29 | 2000-08-01 | 2006-01-02 | ALADI, historical agreements database |
-| `ARCO-1988` | 36 | Economic Complementation Agreement No. 11 between Argentina and Colombia | superseded | 1988-04-28 | 1988-08-01 | 2000-08-01 | ALADI, historical agreements database |
 | `ARCR-1983` | 37 | Partial Scope Agreement No. 2 between Argentina and Costa Rica (Article 25 of the 1980 Montevideo Treaty) | terminated | 1983-08-31 | 1983-08-31 | 1994-12-31 | ALADI, historical agreements database |
-| `ARCU-1984` | 38 | Partial Scope Agreement No. 4 between Argentina and Cuba (Article 25 of the 1980 Montevideo Treaty) | superseded | 1984-03-16 | 1984-05-16 | 2000-01-01 | ALADI, historical agreements database |
-| `ARCU-1999` | 39 | Economic Complementation Agreement No. 45 between Argentina and Cuba | terminated | 1999-12-30 | 2000-01-01 | 2007-07-02 | ALADI, historical agreements database |
-| `ARPE-1988` | 46 | Economic Complementation Agreement No. 9 between Argentina and Peru | superseded | 1988-03-11 | 1988-04-01 | 2000-08-01 | ALADI, historical agreements database |
 | `ARSV-1983` | 42 | Partial Scope Agreement No. 3 between Argentina and El Salvador (Article 25 of the 1980 Montevideo Treaty) | terminated | 1983-08-27 | 1983-10-27 | 1994-12-31 | ALADI, historical agreements database |
 | `ARUY-1982` | 699 | Economic Complementation Agreement No. 1 between Argentina and Uruguay | terminated | 1982-12-20 | 1985-11-27 | 2003-05-01 | ALADI, historical agreements database |
-| `ARVE-1986` | 48 | Economic Complementation Agreement No. 10 between Argentina and Venezuela | superseded | 1986-04-11 | 1986-04-11 | 1995-08-06 | ALADI, historical agreements database |
-| `ARVE-1992` | 49 | Economic Complementation Agreement No. 20 between Argentina and Venezuela | superseded | 1992-10-06 | 1995-08-06 | 2000-08-01 | ALADI, historical agreements database |
-| `BOBR-1994` | 118 | Economic Complementation Agreement No. 26 between Bolivia and Brazil | terminated | 1994-01-27 | 1994-01-27 | 1995-12-31 | ALADI, historical agreements database |
-| `BOMX-1994` | 124 | Economic Complementation Agreement No. 31 between Bolivia and Mexico | superseded | 1994-09-10 | 1995-01-01 | 2010-06-07 | ALADI, historical agreements database |
-| `BOPY-1994` | 125 | Economic Complementation Agreement No. 29 between Bolivia and Paraguay | terminated | 1994-03-15 | 1994-03-15 | 1997-02-28 | ALADI, historical agreements database |
-| `BOUY-1991` | 126 | Economic Complementation Agreement No. 15 between Bolivia and Uruguay | terminated | 1991-04-12 | 1991-04-12 | 1997-02-28 | ALADI, historical agreements database |
-| `BRCU-1999` | 139 | Economic Complementation Agreement No. 43 between Brazil and Cuba | terminated | 1999-12-22 | 2000-01-01 | 2007-07-02 | ALADI, historical agreements database |
-| `BRMX-1983` | 712 | Partial Scope Renegotiation Agreement No. 9 between Brazil and Mexico | superseded | 1983-04-30 | 1984-01-01 | 2003-05-02 | ALADI, historical agreements database |
-| `BRPE-1993` | 142 | Economic Complementation Agreement No. 25 between Brazil and Peru | terminated | 1993-12-31 | 1994-09-28 | 1999-08-16 | ALADI, historical agreements database |
-| `BRVE-1994` | 145 | Economic Complementation Agreement No. 27 between Brazil and Venezuela | terminated | 1994-07-15 | 1995-01-31 | 1999-08-16 | ALADI, historical agreements database |
-| `CLEC-1994` | 203 | Economic Complementation Agreement No. 32 between Chile and Ecuador | superseded | 1994-12-20 | 1994-12-20 | 2010-01-25 | ALADI, historical agreements database |
-| `CLEC-2008` | 204 | Economic Complementation Agreement No. 65 between Chile and Ecuador | superseded | 2008-03-10 | 2010-01-25 | 2022-05-16 | ALADI, historical agreements database |
-| `CLMX-1991` | 211 | Economic Complementation Agreement No. 17 between Chile and Mexico | superseded | 1991-09-22 | 1991-09-22 | 1999-08-01 | ALADI, historical agreements database |
-| `CLPE-1983` | 214 | Partial Scope Renegotiation Agreement No. 28 between Chile and Peru | terminated | 1983-04-30 | 1983-05-01 | 1998-07-01 | ALADI, historical agreements database |
-| `CLUY-1985` | 217 | Economic Complementation Agreement No. 4 between Chile and Uruguay | terminated | 1985-02-01 | 1985-02-01 | 1996-10-01 | ALADI, historical agreements database |
-| `COCU-1988` | 231 | Partial Scope Agreement No. 19 between Colombia and Cuba (Article 25 of the 1980 Montevideo Treaty) | superseded | 1988-12-12 | 1989-11-21 | 1995-01-01 | ALADI, historical agreements database |
-| `COCU-1994` | 232 | Partial Scope Agreement No. 33 between Colombia and Cuba (Article 25 of the 1980 Montevideo Treaty) | terminated | 1994-07-08 | 1995-01-01 | 2001-07-14 | ALADI, historical agreements database |
-| `COGT-1984` | 236 | Partial Scope Agreement No. 5 between Colombia and Guatemala (Article 25 of the 1980 Montevideo Treaty) | superseded | 1984-03-01 | 1985-09-02 | 2009-11-12 | ALADI, historical agreements database |
-| `CRMX-1982` | 247 | Partial Scope Agreement No. 1 between Costa Rica and Mexico (Article 25 of the 1980 Montevideo Treaty) | superseded | 1982-07-22 | 1984-06-15 | 1995-01-01 | ALADI, historical agreements database |
-| `CUMX-1985` | 268 | Partial Scope Agreement No. 12 between Cuba and Mexico (Article 25 of the 1980 Montevideo Treaty) | superseded | 1985-03-11 | 1986-05-28 | 2001-02-28 | ALADI, historical agreements database |
-| `CUPY-2000` | 270 | Economic Complementation Agreement No. 52 between Cuba and Paraguay | terminated | 2000-11-20 | 2001-04-25 | 2009-02-24 | ALADI, historical agreements database |
-| `CUUY-1999` | 275 | Economic Complementation Agreement No. 44 between Cuba and Uruguay | terminated | 1999-12-23 | 2000-01-01 | 2008-09-03 | ALADI, historical agreements database |
-| `GTMX-1984` | 467 | Partial Scope Agreement No. 10 between Guatemala and Mexico (Article 25 of the 1980 Montevideo Treaty) | superseded | 1984-09-04 | 1985-06-07 | 2001-03-15 | ALADI, historical agreements database |
 | `MXNI-1985` | 610 | Partial Scope Agreement No. 13 between Mexico and Nicaragua (Article 25 of the 1980 Montevideo Treaty) | terminated | 1985-04-08 | 1986-08-12 | 1998-06-30 | ALADI, historical agreements database |
-| `MXSV-1986` | 417 | Partial Scope Agreement No. 15 between Mexico and El Salvador (Article 25 of the 1980 Montevideo Treaty) | superseded | 1986-02-06 | 1987-06-11 | 2001-03-15 | ALADI, historical agreements database |
-| `MXUY-1986` | 615 | Economic Complementation Agreement No. 5 between Mexico and Uruguay | superseded | 1986-05-07 | 1986-06-01 | 2004-07-15 | ALADI, historical agreements database |
 | `AECF` | 1122 | UAE-Central African Republic Comprehensive Economic Partnership Agreement | signed | 2025-03-06 |  |  | Emirates News Agency (WAM) |
 | `AEIL` | 1096 | UAE-Israel Comprehensive Economic Partnership Agreement | in_force | 2022-05-31 | 2023-04-01 |  | Israeli Ministry of Foreign Affairs, Consulate General in Dubai, bilateral relations |
 | `AEKE` | 1124 | UAE-Kenya Comprehensive Economic Partnership Agreement | signed | 2025-01-14 |  |  | Kenya National Assembly, Hansard, 18 November 2025 |
@@ -86,15 +53,24 @@ Bilateral country pairs: DESTA has 532. 166 had no two-party record on `main` (t
 | `BWZW` | 137 | Trade Agreement between Botswana and Zimbabwe | in_force | 1988 | 1988 |  | WTO, Trade Policy Review of SACU, WT/TPR/S/324 (2015), Annex 1 (Botswana) |
 | `CHFO` | 443 | Agreement between the Government of Switzerland and the Government of Denmark and the Home Government of the Faroe Islands on Free Trade between Switzerland and the Faroe Islands | in_force | 1994-01-12 | 1995-03-01 |  | Swiss State Secretariat for Economic Affairs (SECO), SR 0.632.313.141 |
 | `DZJO` | 18 | Jordan - Algeria Agreement | in_force | 1997 | 1999 |  | Jordan Export Portal (Ministry of Industry, Trade and Supply), FTA insights |
+| `EGIQ` | 403 | Trade Agreement between Egypt and Iraq | in_force |  | 2001 |  | WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II |
+| `EGLB` | 407 | Trade Agreement between Egypt and Lebanon | in_force |  | 1999 |  | WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II |
+| `EGLY` | 408 | Trade Agreement between Egypt and Libya | in_force |  | 1991 |  | WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II |
+| `EGMA` | 410 | Free Trade Agreement between Egypt and Morocco | in_force | 1998 | 1999 |  | WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II |
 | `EGRS` | 1130 | Free Trade Agreement between the Government of the Republic of Serbia and the Government of the Arab Republic of Egypt | in_force | 2024-07-13 | 2025-09-01 |  | Serbian Ministry of Foreign Affairs, Embassy in Cairo |
+| `EGSY` | 413 | Trade Agreement between Egypt and Syria | in_force |  | 1991 |  | WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II |
+| `EGTN` | 414 | Free Trade Agreement between Egypt and Tunisia | in_force | 1997-12 | 1999 |  | WTO, Trade Policy Review of Tunisia, WT/TPR/S/341 (2016), Table 2.2 |
 | `FRMC` | 452 | Customs Convention between the Government of the Principality of Monaco and the Government of the French Republic | in_force | 1963-05-18 | 1963-09-01 |  | Legimonaco, Convention douanière du 18 mai 1963 |
 | `JOKW` | 524 | Jordan - Kuwait Agreement | in_force |  | 2005 |  | Jordan Export Portal (Ministry of Industry, Trade and Supply), FTA insights |
 | `JOSD` | 535 | Jordan - Sudan Agreement | in_force |  | 2003 |  | Jordan Export Portal (Ministry of Industry, Trade and Supply), FTA insights |
 | `LBTR` | 1101 | Agreement Establishing an Association Establishing a Free Trade Area between the Republic of Türkiye and the Lebanese Republic | signed | 2010-11-24 |  |  | Turkish Ministry of Trade, FTAs in ratification |
 | `LVUA` | 571 | Free Trade Agreement between the Republic of Latvia and Ukraine | terminated | 1995-11-22 | 1997-01-15 | 2004-05-01 | Latvian official legal portal (likumi.lv) |
+| `LYTN` | 575 | Trade Agreement between Libya and Tunisia | in_force |  | 2002-02-19 |  | WTO, Trade Policy Review of Tunisia, WT/TPR/S/341 (2016), Table 2.2 |
+| `MATN` | 625 | Free Trade Agreement between Morocco and Tunisia | in_force |  | 1999-03-16 |  | WTO, Trade Policy Review of Morocco, WT/TPR/S/329 (2016), Table 2.2 |
 | `MWMZ` | 595 | Preferential Trade Agreement between the Government of the Republic of Malawi and the Government of the Republic of Mozambique | in_force | 2005-12-28 | 2006-09-20 |  | WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024) |
 | `MWZA` | 762 | Trade Agreement between Malawi and South Africa | in_force |  | 1990 |  | WTO, Trade Policy Review of Malawi, report by the Government, WT/TPR/G/460 (2024) |
 | `MZZW` | 629 | Trade Agreement between the Government of the Republic of Mozambique and the Government of the Republic of Zimbabwe | in_force | 2004-01-09 | 2004-03-01 |  | Zimbabwe Revenue Authority (ZIMRA), origin and preference |
+| `SYTN` | 674 | Trade Agreement between Syria and Tunisia | in_force |  | 2005-03-10 |  | WTO, Trade Policy Review of Tunisia, WT/TPR/S/341 (2016), Table 2.2 |
 
 ## Held
 
@@ -102,6 +78,8 @@ Treaties checked against an official source and not added, because the status ru
 
 | DESTA | Name | Year | Reason |
 |---|---|---|---|
+| 19 | Algeria Morocco | 1989 | Morocco's 2009 review (WT/TPR/S/217, Table III.5) gives rules of origin for 'tariff and trade agreements' with Algeria, Libya, Iraq, Saudi Arabia and Mauritania, without dates (Algeria) |
+| 20 | Algeria Tunisia | 2008 | Tunisia's 2016 review lists Algeria - Tunisia with the year 2008 as its date of entry into force, the year DESTA gives for signature (DESTA: in force 2010); no exact date |
 | 40 | Argentina Ecuador | 1984 | ALADI: replaced by ACE 21 when its First Additional Protocol took effect, and ALADI gives no date for that |
 | 41 | Argentina Ecuador | 1993 | ALADI gives no date of entry into force (ACE 21) |
 | 50 | Armenia Belarus | 2000 | Belarus MFA lists a bilateral FTA in force with Armenia but gives no dates |
@@ -120,20 +98,29 @@ Treaties checked against an official source and not added, because the status ru
 | 290 | Czechoslovakia Finland | 1974 | a party (Czechoslovakia) has no country record; DESTA codes it as the Czech Republic |
 | 373 | Ecuador Paraguay | 1994 | ALADI gives no date of entry into force (ACE 30) |
 | 374 | Ecuador Uruguay | 1994 | ALADI gives no date of entry into force (ACE 28) |
+| 409 | Egypt Libya | 2003 | Egypt's reviews give only the 1991 Egypt - Libya agreement (EGLY); no source for a 2003 agreement |
 | 446 | Finland German Democratic Republic | 1975 | a party (the German Democratic Republic) has no country record; DESTA codes it as Germany |
 | 451 | Finland USSR | 1960 | a party (the USSR) has no country record |
 | 477 | Honduras Mexico | 1985 | ALADI gives no date of entry into force (AAP.A25TM 11) |
+| 502 | Iraq Tunisia | 2001 | Tunisia's 2016 review gives entry into force on 31 December 1999 in its table and 2001 in its text |
+| 574 | Libya Morocco | 1990 | Morocco's 2009 review (WT/TPR/S/217, Table III.5) gives rules of origin for 'tariff and trade agreements' with Algeria, Libya, Iraq, Saudi Arabia and Mauritania, without dates (Libya) |
 | 583 | Lithuania Ukraine | 1995 | Ukraine's legal database (zakon.rada.gov.ua) dates the agreement 4 August 1993, not 1995; the site refused the browser, so no entry into force was read |
 | 596 | Malawi South Africa | 1967 | the 1967 Malawi - South Africa agreement, which the 1990 revision (MWZA) replaced (Malawi Trade Portal); no date of entry into force or end |
+| 601 | Mauritania Morocco | 1986 | Mauritania's 2018 review lists a 1988 agreement with Morocco whose tariff concessions are not applied |
 | 613 | Mexico Panama | 1985 | ALADI: historical, with no end date or successor (AAP.A25TM 14) |
+| 692 | Algeria Morocco | 1973 | Morocco's 2009 review (WT/TPR/S/217, Table III.5) gives rules of origin for 'tariff and trade agreements' with Algeria, Libya, Iraq, Saudi Arabia and Mauritania, without dates (Algeria) |
 | 702 | Azerbaijan Belarus | 2004 | Belarus MFA lists a bilateral FTA in force with Azerbaijan but gives no dates |
 | 705 | Belarus Kazakhstan | 1997 | Belarus MFA lists a bilateral FTA in force with Kazakhstan but gives no dates |
 | 763 | Malawi Zimbabwe | 1995 | WTO and Malawi date the Malawi - Zimbabwe agreement differently (adopted 1986 and modified 1995, WT/TPR/S/96; signed 1995, Malawi Trade Portal), and Zimbabwe implements it by Statutory Instrument 103 of 2005; in force, but no date of entry into force |
 | 764 | Malawi Zimbabwe | 2006 | the 2006 revision DESTA lists: Malawi's 2002 review says the agreement was being renegotiated, and Zimbabwe's instrument is of 2005; no official date of signature or entry into force |
+| 765 | Mauritania Tunisia | 1964 | Mauritania's 2018 review lists a 1988 agreement with Tunisia whose tariff concessions are not applied |
 | 767 | Mexico Peru | 1987 | ALADI: historical, with no end date or successor (ACE 8) |
+| 768 | Morocco Saudi Arabia | 1966 | Morocco's 2009 review (WT/TPR/S/217, Table III.5) gives rules of origin for 'tariff and trade agreements' with Algeria, Libya, Iraq, Saudi Arabia and Mauritania, without dates (Saudi Arabia) |
 | 791 | Estonia Poland | 1998 | Riigi Teataja: signed 5 November 1998, applied provisionally from 1 January 1999, ended 1 May 2004; no date of definitive entry into force found |
 
-The other missing treaties were not looked up in this walk. Sources found for some of them: the Belarus MFA list of free trade partners, Jordan's export portal (Jordan's other Arab bilaterals are not on it), the Turkish Ministry of Trade, and Riigi Teataja and likumi.lv for the Baltic agreements. The southern African bilaterals were looked up in WTO trade policy reviews (Malawi 2002, 2010, 2016 and 2024; Mozambique 2009 and 2017; Zimbabwe 2011; SACU 2009 and 2015), the Zimbabwe Revenue Authority and the Malawi Trade Portal: four were added and three held.
+33 more Arab bilaterals were looked for in the WTO trade policy reviews of their WTO-member party (Egypt, Tunisia, Morocco, Jordan, Saudi Arabia, the UAE, Mauritania) and are not listed there; the CSV names the reviews for each. Saudi Arabia's 2012 review says it has no bilateral free trade agreements, and Jordan's export portal lists none of them. Most are agreements of the 1950s to 1970s, or the 2001-2002 agreements of Iraq, which is not a WTO member.
+
+The other missing treaties were not looked up in this walk. Sources found for some of them: the Belarus MFA list of free trade partners, Jordan's export portal (Jordan's other Arab bilaterals are not on it), the Turkish Ministry of Trade, and Riigi Teataja and likumi.lv for the Baltic agreements. The southern African bilaterals were looked up in WTO trade policy reviews (Malawi 2002, 2010, 2016 and 2024; Mozambique 2009 and 2017; Zimbabwe 2011; SACU 2009 and 2015), the Zimbabwe Revenue Authority and the Malawi Trade Portal: four were added and three held. The Arab bilaterals were looked up in the WTO reviews of their WTO-member parties: nine were added.
 
 ## Party-history gaps
 
