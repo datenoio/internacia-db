@@ -46,11 +46,16 @@ from internacia_builder.schemas import (
     get_country_aliases_schema,
     get_intblocks_schema,
     get_memberships_schema,
+    get_trade_agreement_instruments_schema,
     get_trade_agreement_parties_schema,
     get_trade_agreements_schema,
     schema_hash,
 )
-from internacia_builder.trade_agreements import build_trade_agreement_rows, load_trade_agreement_records
+from internacia_builder.trade_agreements import (
+    build_trade_agreement_instrument_rows,
+    build_trade_agreement_rows,
+    load_trade_agreement_records,
+)
 from internacia_builder.yaml_io import safe_load
 
 app = typer.Typer(add_completion=False, help=__doc__)
@@ -248,9 +253,11 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
     fill_country_include_names(source["intblocks"], source["countries"])
     source["memberships"] = build_membership_rows(source["intblocks"])
     source["border_status"] = load_border_status(root)
+    trade_agreement_records = load_trade_agreement_records(root)
     source["trade_agreements"], source["trade_agreement_parties"] = build_trade_agreement_rows(
-        load_trade_agreement_records(root), source["intblocks"]
+        trade_agreement_records, source["intblocks"]
     )
+    source["trade_agreement_instruments"] = build_trade_agreement_instrument_rows(trade_agreement_records)
     con = duckdb.connect(str(datasets_dir / "internacia.duckdb"), read_only=True)
     try:
         meta = con.sql("SELECT * FROM _meta").to_arrow_table().to_pylist()
@@ -323,6 +330,7 @@ def check_artifacts(datasets_dir: Path, root: Path) -> list[str]:
         for name, schema_fn in (
             ("trade_agreements", get_trade_agreements_schema),
             ("trade_agreement_parties", get_trade_agreement_parties_schema),
+            ("trade_agreement_instruments", get_trade_agreement_instruments_schema),
         ):
             expected = _arrow_rows(source[name], schema_fn())
             _compare(_jsonl_rows(datasets_dir / f"{name}.jsonl"), source[name], f"{name}.jsonl", problems)
