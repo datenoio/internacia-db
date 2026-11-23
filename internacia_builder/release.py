@@ -33,6 +33,7 @@ from internacia_builder import changelog as changelog_fragments
 from internacia_builder.contract import CONTRACT_FILE, _schema_enums, build_contract
 from internacia_builder.paths import project_root
 from internacia_builder.schemas import schema_columns
+from internacia_builder.trade_agreements import load_trade_agreement_records
 from internacia_builder.validate.registry import load_yaml
 
 SOURCE_PATHS = (
@@ -44,11 +45,19 @@ SOURCE_PATHS = (
     "data/intblocks_aliases.yaml",
     "data/attribute_intblock_migrations.yaml",
     "data/borders",
+    "data/trade_agreements",
 )
 RELEASE_PATHS = ("data/", "internacia_builder/")
 SCHEMA_FILES = ("countries", "intblocks", "blocktypes", "memberships")
 MEMBERSHIP_FIELDS = ("status", "joined", "left", "role")
 LEVELS = ("none", "patch", "minor", "major")
+# Record datasets in the data-change summary, with their labels.
+SUMMARY_DATASETS = {
+    "countries": "Countries",
+    "intblocks": "Intblocks",
+    "blocktypes": "Blocktypes",
+    "trade_agreements": "Trade agreements",
+}
 
 
 def _git(root: Path, *args: str) -> str:
@@ -92,6 +101,7 @@ class Snapshot:
     countries: dict[str, dict[str, Any]] = field(default_factory=dict)
     intblocks: dict[str, dict[str, Any]] = field(default_factory=dict)
     blocktypes: dict[str, dict[str, Any]] = field(default_factory=dict)
+    trade_agreements: dict[str, dict[str, Any]] = field(default_factory=dict)
     aliases: dict[str, set[str]] = field(default_factory=dict)
 
     @classmethod
@@ -110,6 +120,9 @@ class Snapshot:
             for entry in load_yaml(blocktypes) or []:
                 if isinstance(entry, dict) and entry.get("id"):
                     snap.blocktypes[str(entry["id"])] = entry
+        for record in load_trade_agreement_records(root):
+            if record.get("id"):
+                snap.trade_agreements[str(record["id"])] = record
         for dataset in ("countries", "intblocks"):
             path = root / f"data/{dataset}_aliases.yaml"
             entries = (load_yaml(path) or []) if path.exists() else []
@@ -157,6 +170,7 @@ def data_diff(before: Snapshot, after: Snapshot) -> dict[str, Any]:
         "countries": _records_diff(before.countries, after.countries),
         "intblocks": _records_diff(before.intblocks, after.intblocks),
         "blocktypes": _records_diff(before.blocktypes, after.blocktypes),
+        "trade_agreements": _records_diff(before.trade_agreements, after.trade_agreements),
         "memberships": {
             "count": [len(old_edges), len(new_edges)],
             "added": edge_list(new_edges.keys() - old_edges.keys(), new_edges),
@@ -312,8 +326,10 @@ def render_summary(plan: Plan) -> str:
     lines: list[str] = []
     if plan.diff:
         diff = plan.diff
-        for dataset in ("countries", "intblocks", "blocktypes"):
+        for dataset, label in SUMMARY_DATASETS.items():
             d = diff[dataset]
+            if d["count"] == [0, 0]:
+                continue
             parts = [f"{d['count'][0]} → {d['count'][1]} records"]
             if d["added"]:
                 parts.append(f"added {_limited(d['added'])}")
@@ -321,7 +337,7 @@ def render_summary(plan: Plan) -> str:
                 parts.append(f"removed {_limited(d['removed'])}")
             if d["changed"]:
                 parts.append(f"{len(d['changed'])} changed")
-            lines.append(f"- {dataset.capitalize()}: " + "; ".join(parts))
+            lines.append(f"- {label}: " + "; ".join(parts))
         m = diff["memberships"]
         lines.append(
             f"- Membership edges: {m['count'][0]} → {m['count'][1]}; {len(m['added'])} added, "
