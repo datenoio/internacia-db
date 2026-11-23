@@ -6,7 +6,7 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2007-11-21'
-in_force: '2008-01-11'
+in_force: '2008-11-01'
 parties:
 - id: GE
   type: country
@@ -26,6 +26,26 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=636
     retrieved_at: '2026-11-23'
+- id: expansion-protocols
+  kind: amending_protocol
+  name: Protocols expanding the scope of the Türkiye-Georgia Free Trade Agreement
+  status: signed
+  signed: '2022-09-09'
+  coverage:
+  - goods
+  - services
+  notes: Signed in Tbilisi by the Georgian Minister of Economy and Sustainable Development and the Turkish Minister of Trade.
+    They add trade in services and further agricultural concessions. The Ministry of Trade reports them signed and awaiting
+    ratification.
+  provenance:
+  - field: instruments
+    source: Turkish Ministry of Trade, FTAs in force
+    url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Caliber.az, report of 9 September 2022 quoting the Georgian Ministry of Economy and Sustainable Development
+    url: https://caliber.az/en/post/georgia-to-export-some-agricultural-products-to-turkiye-at-zero-tariff
+    retrieved_at: '2026-11-23'
 wto_rta_id: 636
 aric_id: 233
 gptad_id: 327
@@ -33,8 +53,10 @@ dta_id: 161
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/Georgia-Turkey.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+notes: Signed in Tbilisi and published in the Resmî Gazete No. 27007 of 24 September 2008. The Ministry of Trade gives 1 November
+  2008 for entry into force; the record held 2008-01-11 from ADB ARIC.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -44,3 +66,15 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=233&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/gurcistan
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/gurcistan
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/gurcistan
+  retrieved_at: '2026-11-23'
