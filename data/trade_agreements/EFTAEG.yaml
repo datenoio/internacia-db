@@ -15,7 +15,34 @@ parties:
   type: country
 - id: LI
   type: country
+wto_rta_id: 5
+gptad_id: 304
+dta_id: 127
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/egypt
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EG-EFTA.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/2e4ba2ce-096a-423a-8ba5-c848283d4917
+  type: treaty_text
+notes: EDIT gives 2008-09-01 as the date of entry into force.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Arrangement on trade in agricultural products between Norway and Egypt
+  other_names:
+  - lang: 'no'
+    name: Avtale mellom Norge og Egypt om handel med landbruksprodukter
+  status: in_force
+  signed: '2007-01-27'
+  in_force: '2007-08-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2007-01-27-3
+    retrieved_at: '2026-11-23'
 - id: decision-2008-2
   kind: joint_committee_decision
   name: Decision No. 2 of 2008 of the Joint EFTA-Egypt Committee
@@ -65,17 +92,6 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=5
     retrieved_at: '2026-11-23'
-wto_rta_id: 5
-gptad_id: 304
-dta_id: 127
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/egypt
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EG-EFTA.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/2e4ba2ce-096a-423a-8ba5-c848283d4917
-  type: treaty_text
-notes: EDIT gives 2008-09-01 as the date of entry into force.
 verification: official
 last_verified: '2026-11-23'
 provenance:

@@ -15,7 +15,34 @@ parties:
   type: country
 - id: LI
   type: country
+wto_rta_id: 96
+gptad_id: 44
+dta_id: 51
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/morocco
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Morocco.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/bc1bdced-8432-4109-86f4-3bba493d06ae
+  type: treaty_text
+notes: EDIT gives 2000-03-01 as the date of entry into force.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Morocco
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Marokko
+  status: in_force
+  signed: '1997-06-19'
+  in_force: '1999-12-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1997-06-19-3
+    retrieved_at: '2026-11-23'
 - id: decision-2000-7
   kind: joint_committee_decision
   name: Decision No. 7 of 2000 of the Joint EFTA-Morocco Committee
@@ -53,17 +80,6 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=96
     retrieved_at: '2026-11-23'
-wto_rta_id: 96
-gptad_id: 44
-dta_id: 51
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/morocco
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Morocco.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/bc1bdced-8432-4109-86f4-3bba493d06ae
-  type: treaty_text
-notes: EDIT gives 2000-03-01 as the date of entry into force.
 verification: official
 last_verified: '2026-11-23'
 provenance:

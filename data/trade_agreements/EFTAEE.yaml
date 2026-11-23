@@ -3,7 +3,7 @@ name: EFTA - Estonia Free Trade Agreement
 agreement_type: fta
 status: terminated
 signed: '1995-12-07'
-in_force: '1996-06-01'
+in_force: '1997-10-01'
 ended: '2004-05-01'
 parties:
 - id: EE
@@ -12,19 +12,45 @@ parties:
   type: country
 - id: LI
   type: country
+  in_force: '1998-01-01'
 - id: CH
+  type: country
+  in_force: '1997-10-01'
+- id: 'NO'
   type: country
   in_force: '1997-10-01'
 wto_rta_id: 288
 gptad_id: 38
 links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-8
+  type: website
 - url: https://www.fedlex.admin.ch/eli/cc/2003/122/de
   type: website
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Estonia.pdf
   type: treaty_text
-notes: Fedlex (SR 0.632.313.341) gives Switzerland's entry into force on 1997-10-01. The Fedlex title names the EFTA States
-  as parties; Norway, an EFTA State at signature, is not listed here and was not checked.
-verification: catalogue
+notes: Fedlex (SR 0.632.313.341) gives Switzerland's entry into force on 1997-10-01. WTO Regional Trade Agreements Information
+  System gives the entry into force as 1 June 1996. The parties' own entry into force dates are from Lovdata, the treaty register
+  of Norway, the depositary.
+instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Estonia
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Estland
+  status: terminated
+  signed: '1996-03-27'
+  in_force: '1997-10-01'
+  ended: '2004-05-01'
+  coverage:
+  - goods
+  notes: Ended when Estonia joined the EU.
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1996-03-27-1
+    retrieved_at: '2026-11-23'
+verification: official
 last_verified: '2026-11-23'
 provenance:
 - field: parties
@@ -38,4 +64,20 @@ provenance:
 - field: parties
   source: Fedlex (Swiss federal law platform)
   url: https://www.fedlex.admin.ch/eli/cc/2003/122/de
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-8
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-8
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-8
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-8
   retrieved_at: '2026-11-23'

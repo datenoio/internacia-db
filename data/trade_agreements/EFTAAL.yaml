@@ -20,7 +20,32 @@ parties:
 - id: LI
   type: country
   in_force: '2010-11-01'
+wto_rta_id: 600
+dta_id: 191
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/albania
+  type: website
+- url: https://edit.wti.org/document/show/e1586671-c70b-456e-a0ce-85c691553e18
+  type: treaty_text
+notes: An amending protocol signed on 18 September 2015 has been in force since 1 June 2017. EDIT gives 2010-10-01 as the
+  date of entry into force.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agreement on agriculture between Norway and Albania
+  other_names:
+  - lang: 'no'
+    name: Avtale om landbruk mellom Norge og Albania
+  status: in_force
+  signed: '2009-12-17'
+  in_force: '2011-08-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2009-12-17-49
+    retrieved_at: '2026-11-23'
 - id: amending-protocol-2015
   kind: amending_protocol
   name: Protocol Amending the Free Trade Agreement between the EFTA States and Albania
@@ -46,15 +71,22 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=600
     retrieved_at: '2026-11-23'
-wto_rta_id: 600
-dta_id: 191
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/albania
-  type: website
-- url: https://edit.wti.org/document/show/e1586671-c70b-456e-a0ce-85c691553e18
-  type: treaty_text
-notes: An amending protocol signed on 18 September 2015 has been in force since 1 June 2017. EDIT gives 2010-10-01 as the
-  date of entry into force.
+- id: agriculture-norway-amendment-2021
+  kind: amending_protocol
+  name: Amendments to the Agreement on Agriculture between Norway and Albania
+  other_names:
+  - lang: 'no'
+    name: Avtale om endring av Avtale om landbruk mellom Norge og Albania av 17. desember 2009
+  status: in_force
+  signed: '2021-07-08'
+  in_force: '2022-04-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2021-07-08-6
+    retrieved_at: '2026-11-23'
 verification: official
 last_verified: '2026-11-23'
 provenance:
