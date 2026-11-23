@@ -18,5 +18,6 @@ running one.
 | `import_mofcom_fta.py` | Add China FTA Network (MOFCOM) agreements, upgrade protocols, early harvest arrangements and links to `data/trade_agreements/` | 5.x |
 | `apply_efta_ftn.py` | Apply the EFTA free trade network review (statuses, per-state entry-into-force dates, EFTA provenance) to `data/trade_agreements/` | 5.x |
 | `import_china_africa_frameworks.py` | Add the China–Africa framework agreements on economic partnership for shared development named in MOFCOM releases, MFA bilateral relations pages and Cameroonian state media | 5.x |
+| `import_trade_agreement_instruments.py` | Fill `instruments` on registry records from the MOFCOM notes and the WTO RTA-IS `RTA Changes` sheet | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).
