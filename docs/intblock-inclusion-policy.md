@@ -28,7 +28,7 @@ registry** (`data/trade_agreements/<ID>.yaml`, exported as `trade_agreements`,
 `trade_agreement_parties` and the `country_trade_agreements` view), bilateral ones
 included. The registry records agreements, parties, status, dates and catalogue ids. It
 does not store trade values, tariff lines, depth scores or rankings
-([OpenSpec change](../openspec/changes/add-trade-agreements-registry/design.md)).
+([OpenSpec change](../openspec/changes/archive/2026-11-23-add-trade-agreements-registry/design.md)).
 
 | Agreement | Registry | Intblock |
 |-----------|----------|----------|
