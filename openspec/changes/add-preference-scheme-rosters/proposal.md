@@ -23,7 +23,7 @@ The registry cannot store these schemes well today:
 
 ## Impact
 
-- Affected specs: `trade-agreements` (the capability added by `add-trade-agreements-registry`, which must be archived first).
+- Affected specs: `trade-agreements` (added by `add-trade-agreements-registry`, archived on 2026-11-23).
 - Affected source:
   - `data/schemas/trade_agreements.schema.json`: `role`, `parent` and `wto_pta_ids`; the `catalogue` description names the PTA Database.
   - `data/trade_agreements/`: about 46 new files; `wto_pta_ids` added to `AGOA`, `CBERA`, `CARIBCAN` and `SPARTECA`; `parent` added to `GSPPLUS`.

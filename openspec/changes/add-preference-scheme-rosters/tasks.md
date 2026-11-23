@@ -1,7 +1,5 @@
 # Tasks: add non-reciprocal preference schemes from the WTO PTA Database
 
-Prerequisite: `add-trade-agreements-registry` is archived, so `openspec/specs/trade-agreements/spec.md` exists for the MODIFIED requirements.
-
 ## 1. Schema and build
 
 - [ ] 1.1 Add the following to `data/schemas/trade_agreements.schema.json`:
