@@ -22,6 +22,8 @@ NEEDS_SIGNED = frozenset({"signed"})
 NEEDS_IN_FORCE = frozenset({"in_force", "terminated", "superseded"})
 NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
+# Catalogue identifiers: each value names one instrument, so it appears on one record.
+CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id")
 
 
 def _issue(issue_type: str, path: str, record_id: str, field: str, value: Any, action: str) -> Issue:
@@ -60,6 +62,7 @@ def check_trade_agreements(
         if isinstance(a, dict) and a.get("reason") != "moved"
     }
     seen: dict[str, str] = {}
+    seen_catalogue: dict[tuple[str, Any], str] = {}
     for record, path in zip(records, paths, strict=True):
         rid = str(record.get("id") or "")
         if validator is not None:
@@ -89,6 +92,20 @@ def check_trade_agreements(
                 "suggested_action": f"Trade agreement id {rid} is also used by {seen[rid]}",
             })
         seen.setdefault(rid, path)
+        for key in CATALOGUE_IDS:
+            value = record.get(key)
+            if value is None:
+                continue
+            if (key, value) in seen_catalogue:
+                issues.append({
+                    "issue_type": "DUPLICATE_IDENTIFIER",
+                    "file_path": path,
+                    "record_id": rid,
+                    "field": key,
+                    "current_value": str(value),
+                    "suggested_action": f"{key} {value} is also set on {seen_catalogue[(key, value)]}; one catalogue entry maps to one record",
+                })
+            seen_catalogue.setdefault((key, value), rid)
 
         linked = record.get("intblock")
         intblock = intblocks_by_id.get(str(linked)) if linked else None
