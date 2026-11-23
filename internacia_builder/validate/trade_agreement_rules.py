@@ -2,7 +2,8 @@
 
 Cross-record rules: the JSON Schema, file names and ids, the shared id namespace with
 intblocks, party and intblock resolution, status and date consistency, supersession links,
-and record freshness. See ``openspec/changes/add-trade-agreements-registry``.
+instruments, and record freshness. See ``openspec/changes/add-trade-agreements-registry`` and
+``openspec/changes/add-trade-agreement-instruments``.
 """
 
 from __future__ import annotations
@@ -25,6 +26,12 @@ NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
 # Catalogue identifiers: each value names one instrument, so it appears on one record.
 CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id", "dta_id")
+# The same date rules for the items of a record's ``instruments`` list.
+INSTRUMENT_NEEDS_SIGNED = frozenset({"signed"})
+INSTRUMENT_NEEDS_IN_FORCE = frozenset({"in_force", "terminated"})
+INSTRUMENT_NEEDS_ENDED = frozenset({"terminated"})
+INSTRUMENT_NO_IN_FORCE = frozenset({"negotiating", "signed", "abandoned"})
+
 # Investment treaty ids end in -BIT, or -BIT-YYYY for a further treaty between the same parties.
 INVESTMENT_ID_SUFFIX = re.compile(r"-BIT(-\d{4})?$")
 
@@ -38,6 +45,48 @@ def _issue(issue_type: str, path: str, record_id: str, field: str, value: Any, a
         "current_value": "" if value is None else str(value),
         "suggested_action": action,
     }
+
+
+def _earlier(value: Any, other: Any) -> bool:
+    """True when ``value`` is earlier than ``other``, compared at their shared precision."""
+    if not value or not other:
+        return False
+    n = min(len(str(value)), len(str(other)))
+    return str(value)[:n] < str(other)[:n]
+
+
+def check_instruments(record: dict[str, Any], path: str) -> list[Issue]:
+    """Unique ids and status/date consistency of a record's ``instruments`` items."""
+    issues: list[Issue] = []
+    rid = str(record.get("id"))
+    seen: set[str] = set()
+    for item in record.get("instruments") or []:
+        if not isinstance(item, dict):
+            continue
+        iid = str(item.get("id"))
+        field = f"instruments[{iid}]"
+        if iid in seen:
+            issues.append(_issue("DUPLICATE_TRADE_AGREEMENT_INSTRUMENT", path, rid, field, iid,
+                                 f"Instrument id {iid} appears more than once; ids are unique within a record"))
+        seen.add(iid)
+        status = item.get("status")
+        for needed, key in (
+            (INSTRUMENT_NEEDS_SIGNED, "signed"),
+            (INSTRUMENT_NEEDS_IN_FORCE, "in_force"),
+            (INSTRUMENT_NEEDS_ENDED, "ended"),
+        ):
+            if status in needed and not item.get(key):
+                issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.{key}", status,
+                                     f"instrument status {status} needs a {key} date"))
+        if status in INSTRUMENT_NO_IN_FORCE and item.get("in_force"):
+            issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.in_force", status,
+                                 f"instrument status {status} contradicts the in_force date {item['in_force']}"))
+        for key in ("signed", "in_force"):
+            if _earlier(item.get("ended"), item.get(key)):
+                issues.append(_issue("TRADE_AGREEMENT_INSTRUMENT_DATE", path, rid, f"{field}.ended",
+                                     f"{key}={item.get(key)}, ended={item.get('ended')}",
+                                     f"instrument ended is earlier than {key}"))
+    return issues
 
 
 def _dates(record: dict[str, Any], intblock: dict[str, Any] | None) -> dict[str, Any]:
@@ -266,6 +315,7 @@ def check_trade_agreements(
                     "current_value": ref,
                     "suggested_action": f"{key} {ref} does not match any trade agreement id",
                 })
+        issues.extend(check_instruments(record, path))
         if status == "superseded" and not record.get("superseded_by"):
             issues.append({
                 "issue_type": "TRADE_AGREEMENT_STATUS_DATE",
@@ -308,6 +358,34 @@ def check_intblock_candidates(records: list[dict[str, Any]], paths: list[str]) -
             "current_value": str(len(parties)),
             "suggested_action": "Add an intblock with a roster from an official source and link it with intblock:",
         })
+    return issues
+
+
+def check_instruments_before_agreement(
+    records: list[dict[str, Any]], paths: list[str], intblocks: list[dict[str, Any]]
+) -> list[Issue]:
+    """Report-only: instruments other than early harvest signed before their agreement's signature.
+
+    Not an error: a linked record can read its signature date from the intblock, and an
+    organization's founding instrument may postdate a framework agreement it amends or completes.
+    """
+    by_id = {str(r.get("id")): r for r in intblocks if r.get("id")}
+    issues: list[Issue] = []
+    for record, path in zip(records, paths, strict=True):
+        linked = record.get("intblock")
+        signed = _dates(record, by_id.get(str(linked)) if linked else None).get("signed")
+        for item in record.get("instruments") or []:
+            if not isinstance(item, dict) or item.get("kind") == "early_harvest":
+                continue
+            if _earlier(item.get("signed"), signed):
+                issues.append({
+                    "issue_type": "TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT",
+                    "file_path": path,
+                    "record_id": str(record.get("id")),
+                    "field": f"instruments[{item.get('id')}].signed",
+                    "current_value": f"{item.get('signed')} < {signed}",
+                    "suggested_action": "Check the instrument and agreement signature dates",
+                })
     return issues
 
 

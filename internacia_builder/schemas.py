@@ -488,6 +488,26 @@ def get_trade_agreement_parties_schema() -> pa.Schema:
     )
 
 
+def get_trade_agreement_instruments_schema() -> pa.Schema:
+    """Schema for the ``trade_agreement_instruments`` table (one row per agreement and instrument)."""
+    return pa.schema(
+        [
+            pa.field("agreement_id", pa.string(), nullable=False),
+            pa.field("instrument_id", pa.string(), nullable=False),
+            ("kind", pa.string()),
+            ("name", pa.string()),
+            ("status", pa.string()),
+            ("signed", pa.string()),
+            ("in_force", pa.string()),
+            ("ended", pa.string()),
+            ("coverage", pa.list_(pa.string())),
+            ("other_names", pa.list_(pa.struct([("lang", pa.string()), ("name", pa.string())]))),
+            ("notes", pa.string()),
+            ("provenance", pa.list_(_PROVENANCE_STRUCT)),
+        ]
+    )
+
+
 def get_country_trade_agreements_schema() -> pa.Schema:
     """Schema for the ``country_trade_agreements`` view (one row per country and agreement)."""
     return pa.schema(

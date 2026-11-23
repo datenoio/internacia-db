@@ -12,3 +12,4 @@ files are not published on the documentation site and their links are not mainta
 | [repo-gap-analysis-2026-09-29.md](repo-gap-analysis-2026-09-29.md) | 2026-09-29 | Gap analysis (Russian) |
 | [crosswalk-wb-remediation-plan-2026-09-29.md](crosswalk-wb-remediation-plan-2026-09-29.md) | 2026-09-29 | Country crosswalk and World Bank groups remediation plan (Russian) |
 | [repository-review-2026-10-16.md](repository-review-2026-10-16.md) | 2026-10-16 | Repository review that led to v3.0.0 |
+| [desta-match-2026-11-23.md](desta-match-2026-11-23.md) | 2026-11-23 | DESTA v2.3 match against the trade agreements registry, with [the per-treaty CSV](desta-match-2026-11-23.csv) |

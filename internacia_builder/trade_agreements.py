@@ -251,3 +251,53 @@ def build_trade_agreement_rows(
     agreements.sort(key=lambda r: r["id"])
     parties.sort(key=lambda r: (r["agreement_id"], r["party_id"]))
     return agreements, parties
+
+
+def _provenance_rows(rows: Any) -> list[dict[str, Any]]:
+    return [
+        {
+            "field": p.get("field"),
+            "source": p.get("source"),
+            "url": p.get("url"),
+            "retrieved_at": _date(p.get("retrieved_at")),
+            "license": p.get("license"),
+        }
+        for p in rows or []
+        if isinstance(p, dict)
+    ]
+
+
+def build_trade_agreement_instrument_rows(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Rows of the ``trade_agreement_instruments`` table, from each record's ``instruments``.
+
+    A linked record's instruments are its own, never the intblock's. Rows are sorted by
+    agreement, then by signature date (undated instruments last), then by id.
+    """
+    rows: list[dict[str, Any]] = []
+    for record in records:
+        agreement_id = str(record.get("id"))
+        for item in record.get("instruments") or []:
+            if not isinstance(item, dict):
+                continue
+            rows.append(
+                {
+                    "agreement_id": agreement_id,
+                    "instrument_id": str(item.get("id")),
+                    "kind": item.get("kind"),
+                    "name": item.get("name"),
+                    "status": item.get("status"),
+                    "signed": _date(item.get("signed")),
+                    "in_force": _date(item.get("in_force")),
+                    "ended": _date(item.get("ended")),
+                    "coverage": [str(c) for c in item.get("coverage") or []],
+                    "other_names": [
+                        {"lang": n.get("lang"), "name": n.get("name")}
+                        for n in item.get("other_names") or []
+                        if isinstance(n, dict)
+                    ],
+                    "notes": item.get("notes"),
+                    "provenance": _provenance_rows(item.get("provenance")),
+                }
+            )
+    rows.sort(key=lambda r: (r["agreement_id"], r["signed"] is None, r["signed"] or "", r["instrument_id"]))
+    return rows

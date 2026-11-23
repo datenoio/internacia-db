@@ -20,6 +20,57 @@ parties:
 - id: LI
   type: country
   in_force: '2010-10-01'
+instruments:
+- id: amending-protocol-2015
+  kind: amending_protocol
+  name: Protocol Amending the Free Trade Agreement between the EFTA States and Serbia
+  status: in_force
+  signed: '2015-05-20'
+  in_force: '2017-02-01'
+  coverage: &id001
+  - goods
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=603
+    retrieved_at: '2026-11-23'
+- id: decision-2018-pem-origin
+  kind: joint_committee_decision
+  name: Joint Committee decision aligning Protocol B with the Regional Convention on Pan-Euro-Mediterranean preferential rules
+    of origin
+  status: in_force
+  signed: '2018-06-19'
+  in_force: '2020-01-01'
+  coverage: *id001
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=603
+    retrieved_at: '2026-11-23'
+- id: decision-2018-trade-facilitation
+  kind: joint_committee_decision
+  name: Joint Committee decision updating Annex IV on trade facilitation
+  status: in_force
+  signed: '2018-06-19'
+  in_force: '2021-07-01'
+  coverage: *id001
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=603
+    retrieved_at: '2026-11-23'
+- id: decision-2021-transitional-origin
+  kind: joint_committee_decision
+  name: Joint Committee decision on transitional rules of origin in Protocol B
+  status: in_force
+  signed: '2021-05-28'
+  in_force: '2022-01-01'
+  coverage: *id001
+  provenance:
+  - field: instruments
+    source: WTO Regional Trade Agreements Information System
+    url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=603
+    retrieved_at: '2026-11-23'
 wto_rta_id: 603
 dta_id: 189
 links:
