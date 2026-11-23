@@ -23,7 +23,7 @@ NEEDS_IN_FORCE = frozenset({"in_force", "terminated", "superseded"})
 NEEDS_ENDED = frozenset({"terminated", "superseded"})
 CANDIDATE_STATUSES = frozenset({"signed", "in_force"})
 # Catalogue identifiers: each value names one instrument, so it appears on one record.
-CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id")
+CATALOGUE_IDS = ("wto_rta_id", "aric_id", "gptad_id", "dta_id")
 
 
 def _issue(issue_type: str, path: str, record_id: str, field: str, value: Any, action: str) -> Issue:

@@ -206,6 +206,7 @@ def build_trade_agreement_rows(
                 "wto_rta_id": _int(record.get("wto_rta_id")),
                 "aric_id": _int(record.get("aric_id")),
                 "gptad_id": _int(record.get("gptad_id")),
+                "dta_id": _int(record.get("dta_id")),
                 "wikidata_id": pick("wikidata_id"),
                 "acronyms": [
                     {"lang": a.get("lang"), "value": a.get("value")}
