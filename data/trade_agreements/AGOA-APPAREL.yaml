@@ -128,7 +128,12 @@ notes: 'Current beneficiaries are those of the PTA Database version as of 2025-0
   against the grantor''s own list. Beneficiary dates come from the 14 PTA Database versions with a beneficiary list, as of
   2011-10-25 to 2025-03-21: in_force is the date of the version that first lists a beneficiary (none for those already listed
   on 2011-10-25, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
-  dates, not designation dates. 10 former beneficiaries are included.'
+  dates, not designation dates. 10 former beneficiaries are included. AGOA preferences lapsed after 30 September 2025. The
+  Consolidated Appropriations Act, 2026 (Public Law 119-75, section 5019, enacted 3 February 2026) extended them through 31
+  December 2026, and entries made during the lapse can be reliquidated on request; Proclamation 11030 of 19 May 2026 implemented
+  the extension. The Continuing Appropriations and Extensions Act, 2027 (Public Law 119-103, section 2008, enacted 2 September
+  2026) extended duty-free treatment, the regional apparel article program and the third-country fabric program through 31
+  December 2028.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
@@ -142,4 +147,16 @@ provenance:
   retrieved_at: '2026-11-23'
 - field: in_force
   source: Trade and Development Act of 2000
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Consolidated Appropriations Act, 2026 (Public Law 119-75), section 5019
+  url: https://www.congress.gov/119/plaws/publ75/PLAW-119publ75.htm
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Proclamation 11030 of 19 May 2026, 91 FR 30469
+  url: https://www.federalregister.gov/documents/2026/05/22/2026-10398/to-implement-certain-provisions-in-the-consolidated-appropriations-act-2026-and-for-other-purposes
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Continuing Appropriations and Extensions Act, 2027 (Public Law 119-103), section 2008
+  url: https://www.congress.gov/119/plaws/publ103/PLAW-119publ103.htm
   retrieved_at: '2026-11-23'
