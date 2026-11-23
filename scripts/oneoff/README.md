@@ -22,6 +22,7 @@ running one.
 | `import_china_africa_frameworks.py` | Add the China–Africa framework agreements on economic partnership for shared development named in MOFCOM releases, MFA bilateral relations pages and Cameroonian state media | 5.x |
 | `import_trade_agreement_instruments.py` | Fill `instruments` on registry records from the MOFCOM notes and the WTO RTA-IS `RTA Changes` sheet | 5.x |
 | `parse_unctad_pages.py`, `import_unctad_bits.py` | Parse Wayback captures of the UNCTAD IIA Navigator economy pages and write catalogue-level `investment` records with `unctad_iia_id` | 5.x |
+| `fetch_edit.py`, `import_edit.py`, `write_edit_report.py` | Save the EDIT treaty list (metadata), match it to `data/trade_agreements/`, add `treaty_text` links, date notes and missing investment treaties, and write the match report and CSVs | 5.x |
 | `parse_untc_details.py`, `import_trade_relations.py` | Parse UN Treaty Collection detail pages and import `trade_relations` records from them and from national treaty database walks (Australia, Canada, Netherlands, Switzerland) | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).

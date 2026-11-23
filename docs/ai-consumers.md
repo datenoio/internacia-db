@@ -461,7 +461,10 @@ agreement between two countries without a walked treaty database appears only wh
 concluded after 2000 and registered with the UN. The U.S. investment
 treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Beyond the
 United States and Canada, `investment` covers the world through the UNCTAD IIA Navigator BITs
-(`verification: catalogue`, with `unctad_iia_id`; OpenSpec `add-unctad-bit-walk`). Leave both
+(`verification: catalogue`, with `unctad_iia_id`; OpenSpec `add-unctad-bit-walk`). Most BITs,
+and many FTAs with investment chapters, link their text in EDIT (`treaty_text` links to
+`edit.wti.org`), and notes give EDIT's date where it differs; a few BITs that only EDIT lists
+(Taiwan, Kosovo) are `catalogue` rows citing EDIT (OpenSpec `add-edit-catalogue-links`). Leave both
 types out when you count trade agreements per country:
 
 ```sql
