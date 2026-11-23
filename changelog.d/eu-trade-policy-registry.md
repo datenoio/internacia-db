@@ -15,6 +15,13 @@
   - `EUEACEPA`: the regional EU-EAC Economic Partnership Agreement. Kenya and Rwanda
     signed it in September 2016, and it has never been applied.
   - `EUADSM`: the EU-Andorra-San Marino Association Agreement, signed on 2026-10-19.
+- Intblocks `EUEACEPA` (`pta`) and `EUADSM` (`fta`), the rosters of those two 3-party
+  agreements. The registry records now link to them.
+  - `EUEACEPA`: the EU, Kenya and Rwanda are `member`; Burundi, Tanzania and Uganda,
+    which have not signed, are `partner`.
+  - `EUADSM`: the EU, Andorra and San Marino are `founding_member`, joined 2026-10-19.
+  - Neither agreement has a Wikidata item, so both are listed in
+    `data/schemas/wikidata_exclusions.yaml`.
 
 ### Changed
 
