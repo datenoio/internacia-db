@@ -23,5 +23,6 @@ running one.
 | `import_trade_agreement_instruments.py` | Fill `instruments` on registry records from the MOFCOM notes and the WTO RTA-IS `RTA Changes` sheet | 5.x |
 | `parse_unctad_pages.py`, `import_unctad_bits.py` | Parse Wayback captures of the UNCTAD IIA Navigator economy pages and write catalogue-level `investment` records with `unctad_iia_id` | 5.x |
 | `parse_untc_details.py`, `import_trade_relations.py` | Parse UN Treaty Collection detail pages and import `trade_relations` records from them and from national treaty database walks (Australia, Canada, Netherlands, Switzerland) | 5.x |
+| `import_africa_agreements.py` | Apply the African trade agreements walk: AfCFTA and TFTA per-State dates on their intblock rosters (AU status list, SADC Secretariat), the AfCFTA protocols as instruments, the AGOA extensions of 2026, and the bilaterals tralac names that a party government or the WTO dates | 5.x |
 
 Maintained tools stay in `scripts/` (see the README's script table).
