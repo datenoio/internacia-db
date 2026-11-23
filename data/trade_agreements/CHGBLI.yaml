@@ -1,9 +1,14 @@
 id: CHGBLI
-name: United Kingdom - Switzerland - Liechtenstein
+name: UK-Switzerland-Liechtenstein Trade Agreement
+other_names:
+- lang: en
+  name: United Kingdom - Switzerland - Liechtenstein
+- lang: en
+  name: Trade Agreement between the United Kingdom of Great Britain and Northern Ireland and the Swiss Confederation
 agreement_type: fta
 status: in_force
 signed: '2019-02-11'
-in_force: '2021-01-01'
+in_force: '2020-12-31'
 parties:
 - id: LI
   type: country
@@ -12,8 +17,18 @@ parties:
 - id: GB
   type: country
 wto_rta_id: 1115
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://www.gov.uk/government/collections/uk-switzerland-liechtenstein-trade-agreement
+  type: website
+- url: https://www.gov.uk/government/collections/uk-switzerland-trade-agreement
+  type: website
+notes: 'Two instruments: the UK-Swiss Trade Agreement, published by the UK as CS Switzerland No.4/2019 (CP 55), then TS No.20/2025
+  (CP 1301), and the Additional Agreement extending certain of its provisions to Liechtenstein, published as CS Liechtenstein
+  No.1/2019 (CP 65), then TS No.38/2025 (CP 1381). Both entered into force on 31 December 2020. WTO Regional Trade Agreements
+  Information System gives the entry into force date as 2021-01-01. An enhanced UK-Switzerland agreement (`CHGB-2026`) was
+  concluded on 13 July 2026.'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -23,3 +38,23 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=1115
   retrieved_at: '2026-11-22'
+- field: signed
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/cs-switzerland-no42019-ukswitzerland-trade-agreement
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: UK Government, UK Treaty Series
+  url: https://www.gov.uk/government/publications/ukswitzerland-trade-agreement-ts-no202025
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-switzerland-trade-agreement
+  retrieved_at: '2026-11-23'
+- field: status
+  source: UK Government
+  url: https://www.gov.uk/guidance/uk-trade-agreements-in-effect
+  retrieved_at: '2026-11-23'
+- field: name
+  source: UK Government
+  url: https://www.gov.uk/government/collections/uk-switzerland-trade-agreement
+  retrieved_at: '2026-11-23'
