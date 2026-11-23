@@ -26,9 +26,16 @@ secretariat says which agreement replaced them and from when. 62 are imported as
 force between the same parties. 9 are imported as ``terminated``: the multilateral
 commercial agreements (AAP.C), which ended pair by pair, some pairs replaced by a successor
 and the others lapsing at their last extension, and ACE 26, which expired before its
-successor. The rest are left out: no note names a successor, ALADI has no entry into force
-(the status rules need one), the successor is one of those, or the pair-by-pair end dates
-are incomplete. See ``docs/intblock-sources.md``.
+successor.
+
+A second pass over the 47 left out found the missing date for 19 in the validity clause of
+the text, the secretariat's note, the protocols or the successor's text: 3 more
+``superseded`` (ACE 8 of 1987, AAP.R 32, AAP.A25TM 14), 15 ``terminated`` (the 1982
+sectoral commercial agreements that lapsed at their last extension, AAP.R 22, 34 and 35,
+ACE 61) and one ``abandoned`` (AR.PREC 5, never in force). ``LEFT_OUT`` lists the other 28
+with the reason: no official date of entry into force (the status rules need one), a
+successor among those, incomplete pair-by-pair end dates, or a record in the DESTA walk.
+See ``docs/intblock-sources.md``.
 
 Usage: python -I scripts/oneoff/import_aladi.py ALADI_DIR [--write]
 """
@@ -320,29 +327,114 @@ HISTORY: dict[str, dict] = {
                              f"1991; {AR_MX_1994}; Argentina - Uruguay on 30 June 1995, Argentina - Brazil and Brazil - "
                              "Uruguay on 30 September 1997 and Brazil - Mexico on 31 December 1997, their last "
                              "extensions."},
+    # Second pass over the left-out agreements: the dates come from the validity clause of the text,
+    # the Secretariat's note, the protocols in the ALADI record, or the successor's text. ``signed``
+    # overrides ALADI's date of signature, ``status`` the status, ``prov`` adds provenance entries.
+    "AAP.CE Nº 8": {"id": "MXPE-ACE8", "by": "the Mexico - Peru Trade Integration Agreement", "sup": "MXPE",
+                    "ended": "2012-02-01", "in_force": "1987-03-25",
+                    "why": "In force from 25 March 1987 under Article 34; ALADI has no notice of its entry into force.",
+                    "notes": "ALADI registers the 2011 agreement under the same number, ACE 8."},
+    "AAP.R Nº 32": {"id": "MXPE-AAPR32", "by": "AAP.CE Nº 8", "sup": "MXPE-ACE8", "ended": "1987-03-25"},
+    "AAP.A25TM Nº 14": {"id": "MXPA-A25TM14", "by": "the Mexico - Panama FTA", "sup": "MXPA", "ended": "2015-07-01",
+                        "notes": "Article 20.7 of the FTA ended it on the FTA's entry into force and kept its tariff "
+                                 "preferences for 30 days for certificates of origin issued before.",
+                        "prov": [("ended", "Mexico - Panama Free Trade Agreement, Article 20.7 (OAS SICE copy)",
+                                  "https://web.archive.org/web/20160914180105/http://sice.oas.org/TPD/MEX_PAN/"
+                                  "Draft_MEX_PAN_FTA_s/33_disposiciones_finales_tlc_mex_pan_20140509.pdf")]},
+    "AAP.CE Nº 61": {"id": "COMXVE-ACE61", "ended": "2005-12-31", "in_force": "2005-01-01",
+                     "why": "In force from 1 January to 31 December 2005 under Article 11; ALADI's date of entry into "
+                            "force, 1 January 1995, is ten years before the signature.",
+                     "notes": "Free trade in the automotive sector, televisions, fertilisers and disposable razors "
+                              "between the members of the Group of Three."},
+    "AAP.R Nº 22": {"id": "BOUY-AAPR22", "ended": "1989-04-30",
+                    "notes": "In force for six years from 1 May 1983 (Article 29), as the ALADI Secretariat notes; the "
+                             "end date is the last day of that term. ACE 15 (BOUY-ACE15) and ACE 36 (MERCOSURBO) later "
+                             "covered trade between Bolivia and Uruguay."},
+    "AAP.C Nº 1": {"id": "ALADI-AAPC1", "ended": "1992-10-29",
+                   "parties": ["AR", "BR", {"id": "CL", "left": "1991-11-28"}, "MX", {"id": "UY", "left": "1989-12-22"}],
+                   "notes": "Statistical and similar machines. Uruguay's participation ended on 22 December 1989 (First "
+                            "Additional Protocol) and Chile's on 28 November 1991 (Third Additional Protocol, signed by "
+                            "Brazil, Chile and Mexico), which set its end at 29 October 1992.",
+                   "prov": [("ended", "ALADI, Third Additional Protocol to AAP.C No. 1 (ALADI/AAP.C/1.3)",
+                             "http://www2.aladi.org/biblioteca/publicaciones/aladi/acuerdos/ac/es/ac01/AC_001_003.pdf")]},
+    "AAP.C Nº 2": {"id": "ALADI-AAPC2", "ended": "1984-12-27", "in_force": "1982-11-29",
+                   "why": "In force from signature under Article 20; ALADI gives no date of entry into force.",
+                   "notes": "Electronic valves. The First Additional Protocol ended it from 27 December 1984."},
+    "AAP.C Nº 8": {"id": "ARMX-AAPC8", "ended": "1985-03-31", "in_force": "1982-12-29",
+                   "why": "In force from signature under Article 21; ALADI gives no date of entry into force.",
+                   "notes": "Glass industry. The Second Protocol extended its preferences for the last time to 31 "
+                            "March 1985."},
+    "AAP.C Nº 9": {"id": "BRMX-AAPC9", "ended": "1997-12-31", "in_force": "1982-11-29",
+                   "why": "In force from signature under Article 22; ALADI gives no date of entry into force.",
+                   "notes": "Electricity generation, transmission and distribution. Last extended to 31 December "
+                            "1997 (ALADI/ACUERDOS COMERCIALES/Add.7 of 29 September 1997)."},
+    "AAP.C Nº 12": {"id": "BRMX-AAPC12", "ended": "1997-12-31",
+                    "notes": "Electronics and electrical communications. Last extended to 31 December 1997 "
+                             "(ALADI/ACUERDOS COMERCIALES/Add.7 of 29 September 1997)."},
+    "AAP.C Nº 14": {"id": "BRMX-AAPC14", "ended": "1991-11-28", "signed": "1982-11-29",
+                    "why": "ALADI gives no date of signature; the agreement entered into force on signature (Article "
+                           "21), on 29 November 1982.",
+                    "notes": "Household electrical, mechanical and thermal appliances. The First Additional Protocol "
+                             "ended it from 28 November 1991."},
+    "AAP.C Nº 17": {"id": "ARBR-AAPC17", "ended": "1996-12-31",
+                    "notes": "Refrigeration and air conditioning. Last extended to 31 December 1996 (ALADI/ACUERDOS "
+                             "COMERCIALES/Add.2 of 12 January 1996)."},
+    "AAP.C Nº 20": {"id": "ALADI-AAPC20", "ended": "1997-12-31",
+                    "notes": "Dyes and pigments. Ended pair by pair: Argentina - Brazil and Argentina - Mexico on 31 "
+                             "December 1989 (Seventh Additional Protocol), Brazil - Mexico on 31 December 1997, its last "
+                             "extension. No preferences were registered between Chile and the other signatories."},
+    "AAP.C Nº 23": {"id": "ARMX-AAPC23", "ended": "1991-11-28",
+                    "notes": "Electricity generation, transmission and distribution. The Second Additional Protocol "
+                             "ended it from 28 November 1991."},
+    "AAP.C Nº 25": {"id": "ARMX-AAPC25", "ended": "1991-11-28",
+                    "notes": "Lamps and lighting units. The Sixth Additional Protocol ended it from 28 November 1991."},
+    "AAP.C Nº 27": {"id": "ALADI-AAPC27", "ended": "1997-12-31",
+                    "notes": "Glass. Ended pair by pair: Mexico - Venezuela on 1 January 1995 (G-3); Brazil - Venezuela "
+                             "once both had incorporated its Third Additional Protocol of 30 December 1994, under ACE 27 "
+                             "(BRVE-ACE27, in force from 31 January 1995); Brazil - Mexico on 31 December 1997, its last "
+                             "extension."},
+    "AAP.R Nº 34": {"id": "BRPY-AAPR34", "ended": "1995-06-30",
+                    "notes": "The Third Additional Protocol extended its preferences for the last time to 30 June 1995."},
+    "AAP.R Nº 35": {"id": "BRUY-AAPR35", "ended": "1995-06-30",
+                    "notes": "The Fifteenth Additional Protocol extended its preferences for the last time to 30 June "
+                             "1995."},
+    "AR.PREC Nº 5": {"id": "ALADI-PREC5", "status": "abandoned",
+                     "title": "Regional Agreement No. 5 for the Recovery and Expansion of Intra-Regional Trade (PREC)",
+                     "notes": "Never entered into force: Article 26 made it apply from 1 January 1989 if at least four "
+                              "signatories had put it into force, a condition the ALADI Secretariat notes was not met."},
 }
-# Historical agreements whose note names a successor but that are left out, with the reason.
-# The other 21 missing historical agreements name none: they lapsed at their last extension,
-# expired, or (AR.PREC 5) never entered into force.
+# Historical agreements that are left out, with the reason: 24 without an official date of entry
+# into force or end, and the four that the DESTA walk (datenoio/internacia-db#229) adds.
+# AAP.A14TM 2 (cultural and scientific cooperation) carries no trade preferences, ACE 39 has a
+# record (BRCAN-ACE39), and the AAP.PC trade promotion agreements are not fetched.
 NO_DATE_HIST = "ALADI has no date of entry into force, and the text makes it depend on notifications"
+CUBA = "ALADI has no date of entry into force; the text makes it depend on notifications, and Cuba's is not on record"
+IN_229 = "added by the DESTA walk (datenoio/internacia-db#229) as "
 LEFT_OUT: dict[str, str] = {
-    **{code: NO_DATE_HIST for code in (
-        "AAP.CE Nº 8", "AAP.CE Nº 21", "AAP.CE Nº 28", "AAP.CE Nº 30", "AAP.CE Nº 56", "AAP.A25TM Nº 11",
-        "AAP.A25TM Nº 17", "AAP.A25TM Nº 21", "AAP.A25TM Nº 28", "AAP.A25TM Nº 30", "AAP.A25TM Nº 32",
-        "AAP.A25TM Nº 34", "AAP.A25TM Nº 35")},
-    "AAP.R Nº 5": "its successor ACE 21 is left out",
-    "AAP.CE Nº 3": "its successor ACE 21 is left out",
+    **{code: NO_DATE_HIST for code in ("AAP.CE Nº 21", "AAP.CE Nº 28", "AAP.CE Nº 30", "AAP.A25TM Nº 11")},
+    **{code: CUBA for code in ("AAP.A25TM Nº 17", "AAP.A25TM Nº 21", "AAP.A25TM Nº 28", "AAP.A25TM Nº 30",
+                               "AAP.A25TM Nº 32", "AAP.A25TM Nº 34", "AAP.A25TM Nº 35")},
+    "AAP.CE Nº 56": "a framework that needed every signatory's notice; Uruguay never gave one (ACE 58 and 59 "
+                    "replaced it), but ALADI does not say it never entered into force",
+    "AAP.R Nº 5": "it ended when the First Additional Protocol to ACE 21 took effect, a date not on record",
+    "AAP.CE Nº 3": "it ended when the First Additional Protocol to ACE 21 took effect, a date not on record",
     "AAP.R Nº 19": "its successor ACE 30 is left out",
     "AAP.R Nº 24": "its successor ACE 28 is left out",
-    "AAP.R Nº 32": "its successor ACE 8 is left out",
     "AAP.A25TM Nº 18": "its successor AAP.A25TM 30 is left out",
-    "AAP.R Nº 22": "the note gives a six-year term from 1983, not a replacement by ACE 15",
-    "AAP.R Nº 39": "no note: ALADI only lists ACE 5 and ACE 60 as later agreements",
-    "AAP.CE Nº 61": "applied for 2005 only; the note names no successor",
+    "AAP.R Nº 39": "no note: ALADI only lists ACE 5 and ACE 60 as later agreements, and neither text ends it",
     "AAP.C Nº 5": "the note gives no end date for several pairs",
+    "AAP.C Nº 7": "the note gives 30 September 2007 as its last extension, citing a document of December 1996 that "
+                  "extended the other sectoral agreements to 30 September 1997",
     "AAP.C Nº 16": "the note gives no end date for six pairs",
-    "AAP.C Nº 27": "no date for the end between Brazil and Venezuela",
     "AAP.A14TM Nº 11": "a framework that ACE 58 and ACE 59 replaced pair by pair; no end date for the framework",
+    "AAP.A25TM Nº 8": "no end date: the Colombia - Northern Triangle FTA keeps its preferences in force (Appendix 1 "
+                      "to Annex 3.4)",
+    "AAP.A25TM Nº 9": "no end date: the Colombia - Northern Triangle FTA keeps its preferences in force (Appendix 1 "
+                      "to Annex 3.4)",
+    "AAP.CE Nº 1": IN_229 + "ARUY-1982",
+    "AAP.A25TM Nº 2": IN_229 + "ARCR-1983",
+    "AAP.A25TM Nº 3": IN_229 + "ARSV-1983",
+    "AAP.A25TM Nº 13": IN_229 + "MXNI-1985",
 }
 FIELD_ORDER = ["id", "name", "other_names", "agreement_type", "status", "signed", "in_force", "ended", "parties",
                "supersedes", "superseded_by", "notes", "verification", "last_verified", "provenance"]
@@ -467,6 +559,7 @@ def name_for(code: str, spec: dict, parties: list[str], signed: str | None) -> t
         "AAP.C": f"Acuerdo de Alcance Parcial Comercial N° {number}",
         "AR.AM": f"Acuerdo Regional de Apertura de Mercados N° {number}",
         "AR.PAR": f"Acuerdo Regional N° {number} - Preferencia Arancelaria Regional",
+        "AR.PREC": f"Acuerdo Regional N° {number} - Recuperación y Expansión del Comercio Intrarregional (PREC)",
     }[kind]
     return english, spanish
 
@@ -487,10 +580,13 @@ def history_notes(spec: dict) -> list[str]:
 def build(code: str, spec: dict, agreement: dict, text: str) -> dict:
     hist = agreement["db"] == "hist"
     listed = codes(field(text, "Países signatarios"))
-    signed = signature_date(field(text, "Fecha de suscripción"))
+    signed = spec.get("signed") or signature_date(field(text, "Fecha de suscripción"))
     first, per_party = entry_into_force(field(text, "Entrada en vigor"))
     if hist and spec.get("in_force"):
         first, per_party = spec["in_force"], {}
+    abandoned = spec.get("status") == "abandoned"
+    if abandoned:
+        first, per_party = None, {}
     raw_parties = spec.get("parties") or listed
     ids = [p if isinstance(p, str) else p["id"] for p in raw_parties]
     english, spanish = name_for(code, spec, ids, signed)
@@ -509,10 +605,10 @@ def build(code: str, spec: dict, agreement: dict, text: str) -> dict:
         notes += history_notes(spec)
     elif spec.get("notes"):
         notes.append(spec["notes"])
-    if not first:
+    if not first and not abandoned:
         notes.append(NO_DATE)
     if hist:
-        status = "superseded" if spec.get("sup") else "terminated"
+        status = spec.get("status") or ("superseded" if spec.get("sup") else "terminated")
     else:
         status = "in_force" if first else "signed"
     record = {
@@ -521,7 +617,7 @@ def build(code: str, spec: dict, agreement: dict, text: str) -> dict:
     }
     if first:
         record["in_force"] = first
-    if hist:
+    if hist and not abandoned:
         record["ended"] = spec["ended"]
     record["parties"] = parties
     if spec.get("supersedes"):
@@ -532,8 +628,15 @@ def build(code: str, spec: dict, agreement: dict, text: str) -> dict:
     record["verification"] = "official"
     record["last_verified"] = RETRIEVED
     url = RECORD.format("histtextacdos" if hist else "textacdos", agreement["main"])
-    fields = ("parties", "signed", "in_force", "ended") if hist else ("parties", "signed", "in_force" if first else "status")
+    if abandoned:
+        fields = ("parties", "signed", "status")
+    elif hist:
+        fields = ("parties", "signed", "in_force", "ended")
+    else:
+        fields = ("parties", "signed", "in_force" if first else "status")
     record["provenance"] = [{"field": f, "source": SOURCE, "url": url, "retrieved_at": RETRIEVED} for f in fields]
+    record["provenance"] += [{"field": f, "source": source, "url": link, "retrieved_at": RETRIEVED}
+                             for f, source, link in spec.get("prov", [])]
     overridden = {p["id"] for p in raw_parties if isinstance(p, dict)}
     problems = sorted(set(ids) - set(listed) - overridden)
     if problems:
