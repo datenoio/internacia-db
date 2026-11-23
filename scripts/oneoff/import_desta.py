@@ -21,11 +21,11 @@ Sources:
   entry into force clause, the date of entry into force and a Secretariat note on how the
   agreement ended: on a fixed date ("rigió hasta", "caducó"), or when a later agreement took
   effect between the same parties, whose date the note gives or the later agreement's ALADI
-  record gives. ``datenoio/internacia-db#226`` added the current ALADI agreements and left
-  out the historical ones because their records give no end date; the records here are the
-  historical agreements DESTA lists whose end date ALADI states or derives from a successor.
-  A successor that is only in an open pull request (#209 or #226) cannot be ``superseded_by``
-  yet, so those records are ``terminated`` until it merges (``PENDING_SUCCESSORS``).
+  record gives. ``datenoio/internacia-db#235`` adds 71 historical ALADI agreements with their
+  successors, among them 33 that DESTA lists (``IN_PR_235``); the four records here are the
+  historical agreements DESTA lists that #235 does not have, each ended on a fixed date. A
+  successor that is only in an open pull request cannot be ``superseded_by`` yet; such a record
+  would be ``terminated`` until it merges (``PENDING_SUCCESSORS``, empty now).
 - Party governments: the UAE Ministry of Economy and Tourism and the Emirates News Agency
   (WAM), the Israeli Ministry of Foreign Affairs, the Kenyan National Assembly, the Serbian
   government and Ministry of Foreign Affairs, Jordan's export portal (Ministry of Industry,
@@ -33,7 +33,9 @@ Sources:
   Affairs, Monaco's official legal database (Legimonaco) and Latvia's official legal portal.
 - The WTO: trade policy reviews of Malawi (2002, 2024), Mozambique (2017) and SACU (2009,
   2015), with the Zimbabwe Revenue Authority and Malawi's Ministry of Trade, for four southern
-  African bilaterals.
+  African bilaterals; and trade policy reviews of Egypt (1999, 2005), Morocco (2003, 2016) and
+  Tunisia (2016) for nine Arab bilaterals. The Egypt agreements are in force as of the 2005
+  review, the latest that lists them.
 
 Records are ``verification: official``: their status and dates come from the depositary or a
 party government.
@@ -54,6 +56,10 @@ RETRIEVED = "2026-11-23"
 DESTA = "Design of Trade Agreements (DESTA) v2.3, list of treaties, number {}"
 DESTA_URL = "https://www.designoftradeagreements.org/downloads/"
 TPR = "https://www.wto.org/english/tratop_e/tpr_e/"
+DOL = "https://docsonline.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=Q%3A%2FWT%2FTPR%2F{}.pdf"
+EG1999 = "WTO, Trade Policy Review of Egypt, WT/TPR/S/55 (1999), Chapter II"
+EG2005 = "WTO, Trade Policy Review of Egypt, WT/TPR/S/150 (2005), Chapter II"
+TN2016 = "WTO, Trade Policy Review of Tunisia, WT/TPR/S/341 (2016), Table 2.2"
 ALADI = "ALADI, historical agreements database"
 ALADI_URL = "http://www2.aladi.org/nsfaladi/histtextacdos.nsf/f88cf0ec27a4b651032576790064fc05/{}?OpenDocument"
 FIELD_ORDER = [
@@ -119,170 +125,25 @@ def gov(desta: int, prov: list[tuple[str, str, str]], **fields) -> dict:
 
 RECORDS: dict[str, dict] = {
     # --- ALADI historical agreements ---------------------------------------------------------
-    # Argentina
-    "ARBO-1992": aladi(31, "ACE", 19, ["AR", "BO"], "292e7c2463fd9c71032576ee00610021", "1992-04-28",
-                       "1992-04-28", "superseded", "1997-02-28", "MERCOSURBO",
-                       in_force_note="In force from signature (Article 33); ALADI's entry into force field reads "
-                                     "28/04/1982.",
-                       note="Under Article 42 of ACE 36 (MERCOSURBO, in force 28 February 1997) the provisions "
-                            "of ACE 19 not concerning the trade liberalisation programme stay in force between "
-                            "the two countries.", ended_from="MERCOSURBO"),
-    "ARBR-1986": aladi(32, "ACE", 7, ["AR", "BR"], "7728a25ad8f932fc03256fbf006d13e0", "1986-12-10",
-                       "1987-01-01", "superseded", "1990-12-20", "ARBR",
-                       note="Ended when ACE 14 (ARBR) took effect on 20 December 1990 (Article 31 of ACE 14)."),
-    "ARBR-1988": aladi(33, "ACE", 12, ["AR", "BR"], "a76125106886345d032576e70054a2d9", "1988-09-09",
-                       "1988-09-01", "superseded", "1990-12-20", "ARBR",
-                       in_force_note="Article 16 sets entry into force on 1 September 1988, before signature.",
-                       note="Ended when ACE 14 (ARBR) took effect (Article 31 of ACE 14).", ended_from="ARBR"),
-    "ARCO-1988": aladi(36, "ACE", 11, ["AR", "CO"], "20a695cadb141640032576e30050638a", "1988-04-28",
-                       "1988-08-01", "superseded", "2000-08-01", "ARCAN-ACE48",
-                       note="Its tariff preferences ended when ACE 48 took effect on 1 August 2000 (Article 27 "
-                            "of ACE 48); provisions on matters ACE 48 does not cover stay in force."),
+    # The other 33 historical ALADI agreements DESTA lists are records of datenoio/internacia-db#235,
+    # which is authoritative for them (IN_PR_235); these four are not in it.
     "ARCR-1983": aladi(37, "A25TM", 2, ["AR", "CR"], "504124eec8022bd6032578ed006a26d5", "1983-08-31",
                        "1983-08-31", "terminated", "1994-12-31",
                        in_force_note="In force from signature (Article 19).",
                        note="Article 19, as amended by the First Additional Protocol, set its term to 31 December "
                             "1994."),
-    "ARCU-1984": aladi(38, "A25TM", 4, ["AR", "CU"], "f948202744e6d42e03256fbf006bafcc", "1984-03-16",
-                       "1984-05-16", "superseded", "2000-01-01", "ARCU-1999",
-                       note="Replaced by ACE 45 (Article 21 of ACE 45), in force 1 January 2000.",
-                       ended_from="ARCU-1999"),
-    "ARCU-1999": aladi(39, "ACE", 45, ["AR", "CU"], "41051094785864d1032578920051e498", "1999-12-30",
-                       "2000-01-01", "superseded", "2007-07-02", "MERCOSURCU",
-                       note="Its tariff preferences ended when ACE 62 (MERCOSURCU) took effect between Argentina "
-                            "and Cuba on 2 July 2007 (Article 29 of ACE 62)."),
     "ARSV-1983": aladi(42, "A25TM", 3, ["AR", "SV"], "01aeb2756bb5ee00032578ed006a7522", "1983-08-27",
                        "1983-10-27", "terminated", "1994-12-31",
                        note="Article 20, as amended by the First Additional Protocol, set its term to 31 December "
                             "1994."),
-    "ARPE-1988": aladi(46, "ACE", 9, ["AR", "PE"], "99c5a3ec454ff45403256fbf006d2f05", "1988-03-11",
-                       "1988-04-01", "superseded", "2000-08-01", "ARCAN-ACE48",
-                       note="Its tariff preferences ended when ACE 48 took effect (Article 27 of ACE 48); "
-                            "provisions on matters ACE 48 does not cover stay in force.", ended_from="ARCAN-ACE48"),
-    "ARVE-1986": aladi(48, "ACE", 10, ["AR", "VE"], "40e0dfac298bb0900325763300602b8e", "1986-04-11",
-                       "1986-04-11", "superseded", "1995-08-06", "ARVE-1992",
-                       note="Its preferences ended when ACE 20 took effect (transitional provision 2 of ACE 20).",
-                       ended_from="ARVE-1992"),
-    "ARVE-1992": aladi(49, "ACE", 20, ["AR", "VE"], "08a82bb885f0af720325763300640940", "1992-10-06",
-                       "1995-08-06", "superseded", "2000-08-01", "ARCAN-ACE48",
-                       note="Its tariff preferences ended when ACE 48 took effect on 1 August 2000 (Article 27 "
-                            "of ACE 48); provisions on matters ACE 48 does not cover stay in force."),
     "ARUY-1982": aladi(699, "ACE", 1, ["AR", "UY"], "1d5a040ec3cf305403256fbf006cc88d", "1982-12-20",
                        "1985-11-27", "terminated", "2003-05-01",
                        note="Expired on 1 May 2003 under Article 1 of its 28th Additional Protocol; ACE 57 (ARUY) "
                             "took effect the same day."),
-    "ARCAN-ACE48": aladi(24, "ACE", 48, ["AR", "CO", "EC", "PE", "VE"], "3d13638d02617fdb032573fa006c2ffb",
-                         "2000-06-29", "2000-08-01", "superseded", "2006-01-02", "MERCOSURCOECVE",
-                         party_left={"CO": "2005-02-01", "EC": "2005-04-01", "VE": "2005-01-05", "PE": "2006-01-02"},
-                         note="Signed by Argentina and the member countries of the Andean Community. Its tariff "
-                              "preferences ended when ACE 59 (MERCOSURCOECVE) took effect between Argentina and "
-                              "Colombia (1 February 2005), Ecuador (1 April 2005) and Venezuela (5 January 2005), "
-                              "and ACE 58 (MERCOSURPE) between Argentina and Peru (2 January 2006); the party "
-                              "left dates are those dates.", ended_from="MERCOSURPE"),
-    # Bolivia
-    "BOBR-1994": aladi(118, "ACE", 26, ["BO", "BR"], "a787ebeaceba1e180325770400669cd1", "1994-01-27",
-                       "1994-01-27", "terminated", "1995-12-31",
-                       note="Expired on 31 December 1995 under the sole article of its Second Additional "
-                            "Protocol. ACE 36 (MERCOSURBO) followed in 1997."),
-    "BOMX-1994": aladi(124, "ACE", 31, ["BO", "MX"], "ac1ece6c2b39eaae03257762005e9426", "1994-09-10",
-                       "1995-01-01", "superseded", "2010-06-07", "BOMX", agreement_type="fta",
-                       in_force_note="Article 21-04 sets entry into force on 1 January 1995.",
-                       note="The Bolivia - Mexico Free Trade Treaty. Bolivia denounced it on 7 December 2009 and "
-                            "the denunciation took effect on 7 June 2010 (Article 21-07), the day ACE 66 (BOMX) "
-                            "took effect."),
-    "BOPY-1994": aladi(125, "ACE", 29, ["BO", "PY"], "0fabed1dd29835530325776800522237", "1994-03-15",
-                       "1994-03-15", "superseded", "1997-02-28", "MERCOSURBO",
-                       note="Under Article 42 of ACE 36 (MERCOSURBO, in force 28 February 1997) its provisions not "
-                            "concerning the trade liberalisation programme stay in force.", ended_from="MERCOSURBO"),
-    "BOUY-1991": aladi(126, "ACE", 15, ["BO", "UY"], "5c093576df5ae5f80325757d005c092f", "1991-04-12",
-                       "1991-04-12", "superseded", "1997-02-28", "MERCOSURBO",
-                       note="Under Article 42 of ACE 36 (MERCOSURBO, in force 28 February 1997) its provisions not "
-                            "concerning the trade liberalisation programme stay in force.", ended_from="MERCOSURBO"),
-    # Brazil
-    "BRCU-1999": aladi(139, "ACE", 43, ["BR", "CU"], "66370cd713fc22dc032573470067cf4a", "1999-12-22",
-                       "2000-01-01", "superseded", "2007-07-02", "MERCOSURCU",
-                       note="Its tariff preferences ended when ACE 62 (MERCOSURCU) took effect between Brazil and "
-                            "Cuba on 2 July 2007 (Article 29 of ACE 62)."),
-    "BRMX-1983": aladi(712, "R", 9, ["BR", "MX"], "bbc1af103751db40032581b6006b345c", "1983-04-30",
-                       "1984-01-01", "superseded", "2003-05-02", "BRMX",
-                       note="All its provisions and preferences ended when ACE 53 (BRMX) took effect (Article "
-                            "XVIII-3 of ACE 53).", ended_from="BRMX"),
-    "BRPE-1993": aladi(142, "ACE", 25, ["BR", "PE"], "73c1494893b866e7032576f000518364", "1993-12-31",
-                       "1994-09-28", "superseded", "1999-08-16", "BRCAN-ACE39",
-                       note="Its tariff preferences ended when ACE 39 took effect on 16 August 1999 (Article 27 "
-                            "of ACE 39)."),
-    "BRVE-1994": aladi(145, "ACE", 27, ["BR", "VE"], "60c5a80571fcaafd03256fc000451f98", "1994-07-15",
-                       "1995-01-31", "superseded", "1999-08-16", "BRCAN-ACE39",
-                       note="Its tariff preferences ended when ACE 39 took effect (Article 27 of ACE 39).",
-                       ended_from="BRCAN-ACE39"),
-    # Chile
-    "CLEC-1994": aladi(203, "ACE", 32, ["CL", "EC"], "4b9689cfa1c0ecd2032576ef004ff1fc", "1994-12-20",
-                       "1994-12-20", "superseded", "2010-01-25", "CLEC-2008", agreement_type="fta",
-                       note="Establishes an expanded economic area. Ended when ACE 65 took effect on 25 January "
-                            "2010 (Article 16-7 of ACE 65)."),
-    "CLEC-2008": aladi(204, "ACE", 65, ["CL", "EC"], "69ea9e71d08d3db0032588b1005dc665", "2008-03-10",
-                       "2010-01-25", "superseded", "2022-05-16", "CLEC", agreement_type="fta",
-                       note="Replaced by ACE 75 (CLEC) from 16 May 2022; certificates under ACE 65 were accepted "
-                            "until 14 July 2022."),
-    "CLMX-1991": aladi(211, "ACE", 17, ["CL", "MX"], "063833b627a9a27803256fbf006d6ab6", "1991-09-22",
-                       "1991-09-22", "superseded", "1999-08-01", "CLMX", agreement_type="fta",
-                       note="Ended when ACE 41 (CLMX) took effect (Article 20-10 of ACE 41).", ended_from="CLMX"),
-    "CLPE-1983": aladi(214, "R", 28, ["CL", "PE"], "f52314b6805d2f5b03256fc00047dc2f", "1983-04-30",
-                       "1983-05-01", "superseded", "1998-07-01", "CLPE-1998",
-                       note="Ended when ACE 38 (CLPE-1998) took effect (Article 34 of ACE 38).",
-                       ended_from="CLPE-1998"),
-    "CLUY-1985": aladi(217, "ACE", 4, ["CL", "UY"], "e60e11c9b2b21ca0032575d2005832c0", "1985-02-01",
-                       "1985-02-01", "superseded", "1996-10-01", "MERCOSURCL",
-                       note="Its tariff preferences ended when ACE 35 (MERCOSURCL) took effect on 1 October 1996 "
-                            "(Article 48 of ACE 35); provisions compatible with ACE 35 stay in force."),
-    # Colombia
-    "COCU-1988": aladi(231, "A25TM", 19, ["CO", "CU"], "c2493cf75844dbfd03256fbf006c4007", "1988-12-12",
-                       "1989-11-21", "superseded", "1995-01-01", "COCU-1994",
-                       note="Replaced by AAP.A25TM No. 33 (Article 38 of that agreement).", ended_from="COCU-1994"),
-    "COCU-1994": aladi(232, "A25TM", 33, ["CO", "CU"], "6137105e891da69d03256fbf006c689b", "1994-07-08",
-                       "1995-01-01", "superseded", "2001-07-14", "COCU",
-                       note="Replaced by ACE 49 (COCU; Article 33 of ACE 49).", ended_from="COCU"),
-    "COGT-1984": aladi(236, "A25TM", 5, ["CO", "GT"], "bc4948c0e567ee69032576be00446a2d", "1984-03-01",
-                       "1985-09-02", "superseded", "2009-11-12", "COGTHNSV",
-                       note="Ended when the free trade agreement of Colombia with El Salvador, Guatemala and "
-                            "Honduras (COGTHNSV) took effect between Colombia and Guatemala on 12 November 2009 "
-                            "(Article 21.3 of that agreement)."),
-    # Mexico
-    "CRMX-1982": aladi(247, "A25TM", 1, ["CR", "MX"], "6080b50291e5ef2503256fbf006b578c", "1982-07-22",
-                       "1984-06-15", "superseded", "1995-01-01", "CRMX",
-                       in_force_note="Applied provisionally from signature; definitive entry into force on the "
-                                     "exchange of ratifications.",
-                       note="ALADI notes that the Costa Rica - Mexico FTA of 5 April 1994 (CRMX, in force "
-                            "1 January 1995) superseded it.", ended_from="CRMX"),
-    "CUMX-1985": aladi(268, "A25TM", 12, ["CU", "MX"], "399569e751ffc10a03256fbf006c1309", "1985-03-11",
-                       "1986-05-28", "superseded", "2001-02-28", "CUMX",
-                       note="Ended when ACE 51 (CUMX) took effect (Article 25 of ACE 51).", ended_from="CUMX"),
-    "GTMX-1984": aladi(467, "A25TM", 10, ["GT", "MX"], "18c6e19065bdb24c03256fbf006bf0c9", "1984-09-04",
-                       "1985-06-07", "superseded", "2001-03-15", "GTMX",
-                       note="The 18th Additional Protocol extended it to 31 March 2001 or the entry into force of "
-                            "the Mexico - El Salvador, Guatemala and Honduras FTA, whichever came first; that "
-                            "agreement (GTMX) took effect for Guatemala on 15 March 2001.", ended_from="GTMX"),
-    "MXSV-1986": aladi(417, "A25TM", 15, ["MX", "SV"], "c669bf6b1aa3326503256fbf006c26e9", "1986-02-06",
-                       "1987-06-11", "superseded", "2001-03-15", "MXSV",
-                       note="The 12th Additional Protocol extended it to 31 March 2001 or the entry into force of "
-                            "the Mexico - El Salvador, Guatemala and Honduras FTA, whichever came first; that "
-                            "agreement (MXSV) took effect for El Salvador on 15 March 2001.", ended_from="MXSV"),
     "MXNI-1985": aladi(610, "A25TM", 13, ["MX", "NI"], "2b6fd5c1956efdbb03256fbf006c1dbd", "1985-04-08",
                        "1986-08-12", "terminated", "1998-06-30",
                        note="The Fourth Additional Protocol extended it for the last time to 30 June 1998. The "
                             "Mexico - Nicaragua FTA (MXNI) took effect on 1 July 1998."),
-    "MXUY-1986": aladi(615, "ACE", 5, ["MX", "UY"], "a0942a89c163c90a0325767f00553f98", "1986-05-07",
-                       "1986-06-01", "superseded", "2004-07-15", "MXUY",
-                       note="Ended when ACE 60 (MXUY) took effect on 15 July 2004 (Article 20-09 of ACE 60)."),
-    # Cuba
-    "CUPY-2000": aladi(270, "ACE", 52, ["CU", "PY"], "a594dcb1616661bb03257633006862dc", "2000-11-20",
-                       "2001-04-25", "superseded", "2009-02-24", "MERCOSURCU",
-                       note="Its tariff preferences ended when ACE 62 (MERCOSURCU) took effect between Cuba and "
-                            "Paraguay on 24 February 2009 (Article 29 of ACE 62)."),
-    "CUUY-1999": aladi(275, "ACE", 44, ["CU", "UY"], "44213f8f9067d3170325763300684570", "1999-12-23",
-                       "2000-01-01", "superseded", "2008-09-03", "MERCOSURCU",
-                       note="Its tariff preferences ended when ACE 62 (MERCOSURCU) took effect between Cuba and "
-                            "Uruguay on 3 September 2008 (Article 29 of ACE 62)."),
 
     # --- party governments ---------------------------------------------------------------------
     "AEIL": gov(1096, [
@@ -476,16 +337,96 @@ RECORDS: dict[str, dict] = {
               "grown, produced or manufactured in Malawi duty free with at least 25% local content, with quotas "
               "for some goods such as tea, and Malawi grants South African goods most-favoured-nation treatment. "
               "Either party may end it with 12 months' notice."),
+
+    # --- Arab bilaterals: WTO trade policy reviews of Egypt, Morocco and Tunisia ----------------
+    "EGSY": gov(413, [
+        ("in_force", EG2005, DOL.format("S150-2")),
+        ("status", EG2005, DOL.format("S150-2")),
+    ], name="Trade Agreement between Egypt and Syria", agreement_type="pta", status="in_force",
+        in_force="1991", parties=["EG", "SY"],
+        notes="Egypt's 2005 trade policy review lists it among Egypt's bilateral trade agreements with Arab "
+              "countries, in force since 1991; the authorities expected GAFTA to absorb its preferences."),
+    "EGLY": gov(408, [
+        ("in_force", EG2005, DOL.format("S150-2")),
+        ("status", EG2005, DOL.format("S150-2")),
+    ], name="Trade Agreement between Egypt and Libya", agreement_type="pta", status="in_force",
+        in_force="1991", parties=["EG", "LY"],
+        notes="Egypt's 2005 trade policy review lists it among Egypt's bilateral trade agreements with Arab "
+              "countries, in force since 1991; the authorities expected GAFTA to absorb its preferences."),
+    "EGLB": gov(407, [
+        ("in_force", EG2005, DOL.format("S150-2")),
+        ("status", EG2005, DOL.format("S150-2")),
+    ], name="Trade Agreement between Egypt and Lebanon", agreement_type="pta", status="in_force",
+        in_force="1999", parties=["EG", "LB"],
+        notes="Duty-free access for a limited number of products (WTO, 1999). In force since 1999 (WTO, 2005)."),
+    "EGIQ": gov(403, [
+        ("in_force", EG2005, DOL.format("S150-2")),
+        ("status", EG2005, DOL.format("S150-2")),
+    ], name="Trade Agreement between Egypt and Iraq", agreement_type="pta", status="in_force",
+        in_force="2001", parties=["EG", "IQ"],
+        notes="Egypt's 2005 trade policy review lists it among Egypt's bilateral trade agreements with Arab "
+              "countries, in force since 2001."),
+    "EGMA": gov(410, [
+        ("signed", EG1999, DOL.format("S55-2")),
+        ("in_force", "WTO, Trade Policy Review of Morocco, WT/TPR/S/116 (2003), Chapter II",
+         DOL.format("S116-2")),
+        ("status", EG2005, DOL.format("S150-2")),
+    ], name="Free Trade Agreement between Egypt and Morocco", agreement_type="fta", status="in_force",
+        signed="1998", in_force="1999", parties=["EG", "MA"],
+        notes="Creates a free trade area over 12 years for manufactures; agriculture was left for later. The four "
+              "parties also signed the Agadir Agreement in 2004, in force on 27 March 2007; the WTO's 2005 "
+              "review of Egypt says trade with Morocco was still governed by this agreement."),
+    "EGTN": gov(414, [
+        ("signed", EG1999, DOL.format("S55-2")),
+        ("in_force", EG2005, DOL.format("S150-2")),
+        ("status", TN2016, TPR + "s341_e.pdf"),
+    ], name="Free Trade Agreement between Egypt and Tunisia", agreement_type="fta", status="in_force",
+        signed="1997-12", in_force="1999", parties=["EG", "TN"],
+        notes="Phases out duties: about 100 goods at once, tariffs below 20% over five years and the rest by 2007 "
+              "(WTO, 1999). Egypt's 2005 review gives entry into force in 1999; Tunisia's 2016 review (Table "
+              "2.2) gives 1998 and describes the preferences as partial."),
+    "SYTN": gov(674, [
+        ("in_force", TN2016, TPR + "s341_e.pdf"),
+        ("status", TN2016, TPR + "s341_e.pdf"),
+    ], name="Trade Agreement between Syria and Tunisia", agreement_type="pta", status="in_force",
+        in_force="2005-03-10", parties=["SY", "TN"],
+        notes="Partial tariff preferences that do not cover all trade in goods; not notified to the WTO (Tunisia's "
+              "2016 trade policy review, which also dates the agreement 2003)."),
+    "LYTN": gov(575, [
+        ("in_force", TN2016, TPR + "s341_e.pdf"),
+        ("status", TN2016, TPR + "s341_e.pdf"),
+    ], name="Trade Agreement between Libya and Tunisia", agreement_type="pta", status="in_force",
+        in_force="2002-02-19", parties=["LY", "TN"],
+        notes="Partial tariff preferences that do not cover all trade in goods; not notified to the WTO (Tunisia's "
+              "2016 trade policy review, which also dates the agreement 2001)."),
+    "MATN": gov(625, [
+        ("in_force", TN2016, TPR + "s341_e.pdf"),
+        ("status", "WTO, Trade Policy Review of Morocco, WT/TPR/S/329 (2016), Table 2.2", TPR + "s329_e.pdf"),
+    ], name="Free Trade Agreement between Morocco and Tunisia", agreement_type="fta", status="in_force",
+        in_force="1999-03-16", parties=["MA", "TN"],
+        notes="Lists of goods traded freely, at a single 17.5% duty or with tariffs dismantled to zero by "
+              "1 January 2008 (WTO, 2003); Tunisia's 2016 review describes the preferences as partial. Both "
+              "countries' 2016 reviews give entry into force on 16 March 1999."),
 }
 
 # Records whose successor is not in the registry yet (set by ``build``): ``terminated`` for now,
 # ``superseded`` with ``superseded_by`` once the successor merges.
 PENDING_SUCCESSORS: dict[str, str] = {}
 
-# Successors whose only predecessor is added here.
-MAIN_SUPERSEDES: dict[str, str] = {
-    "CLMX": "CLMX-1991", "CRMX": "CRMX-1982", "CUMX": "CUMX-1985", "MXUY": "MXUY-1986", "BOMX": "BOMX-1994",
-    "BRMX": "BRMX-1983",
+# Successors whose only predecessor is added here (none: #235 sets ``supersedes`` on CLMX, CRMX, CUMX,
+# MXUY, BOMX and BRMX with its own ids).
+MAIN_SUPERSEDES: dict[str, str] = {}
+
+# DESTA historical ALADI agreements that are records of datenoio/internacia-db#235 (DESTA number ->
+# #235 record id). The walk first wrote them here; the duplicates were dropped on 2026-11-23.
+IN_PR_235: dict[int, str] = {
+    31: "ARBO-ACE19", 32: "ARBR-ACE7", 33: "ARBR-ACE12", 36: "ARCO-ACE11", 38: "ARCU-A25TM4", 39: "ARCU-ACE45",
+    46: "ARPE-ACE9", 48: "ARVE-ACE10", 49: "ARVE-ACE20", 118: "BOBR-ACE26", 124: "BOMX-ACE31", 125: "BOPY-ACE29",
+    126: "BOUY-ACE15", 139: "BRCU-ACE43", 712: "BRMX-AAPR9", 142: "BRPE-ACE25", 145: "BRVE-ACE27",
+    203: "CLEC-ACE32", 204: "CLEC-ACE65", 211: "CLMX-ACE17", 214: "CLPE-AAPR28", 217: "CLUY-ACE4",
+    231: "COCU-A25TM19", 232: "COCU-A25TM33", 236: "COGT-A25TM5", 247: "CRMX-A25TM1", 268: "CUMX-A25TM12",
+    467: "GTMX-A25TM10", 417: "MXSV-A25TM15", 615: "MXUY-ACE5", 270: "CUPY-ACE52", 275: "CUUY-ACE44",
+    24: "ARCAN-ACE48",
 }
 
 
