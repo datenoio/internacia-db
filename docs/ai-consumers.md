@@ -361,6 +361,14 @@ ships no trade values, tariff lines, preference margins, depth scores or ranking
 - **Agreements with three or more parties** that are signed or in force are also intblocks
   (`RCEP`, `CPTPP`, `AGADIR`): `trade_agreements.intblock_id` names the intblock, and the
   parties are read from its `includes`, so the two never disagree.
+- **Investment treaties** (bilateral investment treaties, Canada's FIPAs) are rows with
+  `agreement_type = 'investment'` and ids ending in `-BIT` (`AMCA-BIT`); a further treaty
+  between the same parties adds its year of signature (`CARO-BIT-1996`). A treaty that an FTA
+  suspended or replaced is `superseded` by that FTA (`CAPA-BIT` by `CAPA`). Plurilateral
+  investment treaties keep their intblock id (`ACIA`, `OICIA`). Belgium and Luxembourg sign
+  investment treaties as one party, the `BLEU` intblock, which `country_trade_agreements`
+  expands with `via = 'BLEU'`. Filter on `agreement_type` when you count trade agreements
+  only.
 - **`verification`** is `official` when parties and dates were checked against the treaty
   text, a depositary or a party government, and `catalogue` when they come from WTO RTA-IS or
   ADB ARIC only. ARIC rows are catalogue-level: its index lists only ADB-member parties and
@@ -389,13 +397,13 @@ A `preference_scheme` row (GSP, AGOA) lists the grantors and the beneficiaries a
 two grantors of the same scheme are not trading partners under it, so leave schemes out of
 pair queries, as above.
 
-Two `agreement_type` values are not trade agreements in the narrow sense (OpenSpec change
-`add-investment-and-trade-relations-types`). `investment` rows are bilateral investment
-treaties (`ALUS-BIT`), and `trade_relations` rows are agreements that grant
-most-favoured-nation or normal trade relations treatment without preferences (`AMUS-TRA`).
-Their ids carry an instrument suffix, so the bare pair id stays free for a trade agreement.
-Both types cover only the United States so far (trade.gov and the ITA's former TARA database),
-not a world walk. Filter them out when you count trade agreements per country:
+`trade_relations` rows are agreements that grant most-favoured-nation or normal trade
+relations treatment without preferences (`AMUS-TRA`; OpenSpec change
+`add-investment-and-trade-relations-types`). Their ids carry the suffix `-TRA`, so the bare
+pair id stays free for a trade agreement. They cover only the United States so far (the ITA's
+former TARA database and the State Department's Treaties in Force). The U.S. investment
+treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Leave both
+types out when you count trade agreements per country:
 
 ```sql
 SELECT country_code, count(*) AS agreements
