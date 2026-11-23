@@ -24,7 +24,7 @@ sorted alpha-2 codes, the EU as one ``intblock`` party, and the member states of
 as one party (EFTA, EAEU, GCC, MERCOSUR, SACU, ASEAN, Pacific Alliance) listed one by one, as
 members at the date of signature, with the bloc id first in the record id. Older EC agreements
 list the EC member states of the time; they become the ``EU`` party. See
-``openspec/specs/trade-agreements/spec.md``.
+``openspec/changes/archive/2026-11-23-add-trade-agreements-registry``.
 
 Usage: python -I scripts/oneoff/import_wto_rtais.py EXPORT_XLSX [--write] [--report TSV]
 """
@@ -120,7 +120,7 @@ LEFT_FOR_EU = "Left EFTA on joining the European Communities."
 # RTA ID -> registry id, checked by hand (the parties or the name differ from the record's).
 MAPPED = {
     4: "CEFTA", 16: "GAFTA", 35: "TNTR", 45: "SADCFTA", 94: "EAC", 120: "EUCU", 121: "COMESA", 124: "SAPTA",
-    127: "CAN", 128: "ECOTA", 147: "PTN", 151: "CACM", 152: "EFTA", 582: "PICTA", 762: "CISFTA", 909: "EAEU",
+    127: "CAN", 128: "ECOPTA-1992", 147: "PTN", 151: "CACM", 152: "EFTA", 582: "PICTA", 762: "CISFTA", 909: "EAEU",
     1086: "AfCFTA", 1276: "AUUAE", 732: "INNZ", 1103: "GBGE", 1117: "GBUA", 130: "MERCOSUR", 683: "PACERPLUS",
     1044: "PACALLSG",
 }

@@ -1,7 +1,7 @@
 ## 1. Schema and validation
 
 - [x] 1.1 Archive `add-trade-agreements-registry` (or confirm it is archived) so that `openspec/specs/trade-agreements/spec.md` exists
-  - [x] 1.1a Point the links and docstrings that named `openspec/changes/add-trade-agreements-registry` at the archived change or `openspec/specs/trade-agreements/spec.md`; fold `investment` (from `add-investment-agreements`, its task 1.5) into the MODIFIED block so that either change can be archived first
+  - [x] 1.1a Archived on main (b24c7b52), which also repointed the links and docstrings; this change fixes the one it missed (`scripts/oneoff/import_govuk_trade_agreements.py`) and folds `investment` (from `add-investment-agreements`, its task 1.5) into the MODIFIED block so that either change can be archived first
 - [x] 1.2 Add `suspended` to the `status` enum in `data/schemas/trade_agreements.schema.json`, after `negotiating`; define it in the field description (negotiations launched and then suspended, paused or put on hold, not formally ended; not for agreements in force)
 - [x] 1.3 Add `suspended` to the statuses that must not have an `in_force` date in `internacia_builder/validate/trade_agreement_rules.py`
 - [x] 1.4 Tests in `tests/test_trade_agreements.py`: a `suspended` record without dates passes; a `suspended` record with `in_force` reports `TRADE_AGREEMENT_STATUS_DATE`; a `suspended` record with three or more parties is not an intblock candidate
