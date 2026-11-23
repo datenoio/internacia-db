@@ -448,6 +448,21 @@ WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '
 ORDER BY i.in_force DESC;
 ```
 
+`trade_relations` rows are agreements that grant most-favoured-nation or normal trade
+relations treatment without preferences (`AMUS-TRA`; OpenSpec change
+`add-investment-and-trade-relations-types`). Their ids carry the suffix `-TRA`, so the bare
+pair id stays free for a trade agreement. They cover only the United States so far (the ITA's
+former TARA database and the State Department's Treaties in Force). The U.S. investment
+treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Leave both
+types out when you count trade agreements per country:
+
+```sql
+SELECT country_code, count(*) AS agreements
+FROM country_trade_agreements
+WHERE agreement_type NOT IN ('investment', 'trade_relations', 'preference_scheme')
+GROUP BY country_code ORDER BY agreements DESC;
+```
+
 ### Country attribute fields (former attribute intblocks)
 
 Driving side, scripts, DVD region, broadcast standards, legal traditions, and rail gauges

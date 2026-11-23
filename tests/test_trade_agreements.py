@@ -75,6 +75,14 @@ def test_numeric_trade_field_is_rejected():
     assert _types([_record(trade_value_usd=1000)]) == ["SCHEMA_ERROR"]
 
 
+def test_trade_relations_type_validates():
+    assert _types([_record(id="AMGE-TRA", agreement_type="trade_relations")]) == []
+
+
+def test_unknown_agreement_type_is_a_schema_error():
+    assert _types([_record(agreement_type="bit")]) == ["SCHEMA_ERROR"]
+
+
 def test_in_force_without_date():
     assert _types([_record(in_force=None)]) == ["TRADE_AGREEMENT_STATUS_DATE"]
 
