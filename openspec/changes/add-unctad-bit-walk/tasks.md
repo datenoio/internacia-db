@@ -1,7 +1,7 @@
 ## 1. Schema and code
 
 - [x] 1.1 Add `unctad_iia_id` to the schema, the Arrow schema and the row builder
-- [x] 1.2 Add the `DUPLICATE_UNCTAD_IIA_ID` validator issue and a test
+- [x] 1.2 Add `unctad_iia_id` to the catalogue identifiers checked for duplicates (`DUPLICATE_IDENTIFIER`) and a test
 - [x] 1.3 Extend the `catalogue` verification description to the UNCTAD IIA Navigator
 
 ## 2. Data

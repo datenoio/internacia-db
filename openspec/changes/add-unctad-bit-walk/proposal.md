@@ -8,7 +8,7 @@ The maintainer asked on 2026-11-23 for a world walk of the BITs in the IIA Navig
 
 ## What Changes
 
-- **Implement `unctad_iia_id`** as specified by `add-investment-agreements`: the schema property, the `trade_agreements` export column, and the duplicate check `DUPLICATE_UNCTAD_IIA_ID`. `verification: catalogue` now names the UNCTAD IIA Navigator as a catalogue.
+- **Implement `unctad_iia_id`** as specified by `add-investment-agreements`: the schema property, the `trade_agreements` export column, and the duplicate check (`unctad_iia_id` joins the catalogue identifiers that `DUPLICATE_IDENTIFIER` covers). `verification: catalogue` now names the UNCTAD IIA Navigator as a catalogue.
 - **Data.** 3,367 new `verification: catalogue` records with `agreement_type: investment`, `unctad_iia_id`, the treaty page as link and the Wayback capture as provenance: 2,163 in force, 623 signed, 537 terminated and 44 listed as terminated without an entry-into-force date (`abandoned`). 101 have the `BLEU` intblock as one party.
 - **Mapped records.** 87 existing official records gain `unctad_iia_id`: the 41 U.S. BITs from trade.gov and 46 of Canada's treaties. Where UNCTAD gives another date or status, the record keeps its own and notes UNCTAD's.
 - **Identifiers** follow `add-investment-agreements`: the earliest treaty of a pair takes `<pair>-BIT`, each further one `<pair>-BIT-<year>`.

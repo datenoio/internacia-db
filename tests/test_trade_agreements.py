@@ -86,7 +86,7 @@ def test_unknown_agreement_type_is_a_schema_error():
 def test_duplicate_unctad_iia_id():
     first = _record(id="AMGE-BIT", agreement_type="investment", unctad_iia_id=2870)
     second = _record(id="AMGE-BIT-2008", agreement_type="investment", unctad_iia_id=2870)
-    assert _types([first, second]) == ["DUPLICATE_UNCTAD_IIA_ID"]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
 
 
 def test_in_force_without_date():
@@ -225,6 +225,32 @@ def test_linked_record_dates_override_the_intblock():
     agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
     assert agreements[0]["in_force"] == "2022-02-01"
     assert agreements[0]["signed"] == "2020-11-15"
+
+
+def test_gptad_id_and_treaty_text_link_are_exported():
+    text = "https://wits.worldbank.org/GPTAD/PDF/archive/Armenia-Georgia.pdf"
+    record = _record(gptad_id=12, links=[{"url": text, "type": "treaty_text"}])
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["gptad_id"] == 12
+    assert agreements[0]["links"] == [{"url": text, "type": "treaty_text"}]
+
+
+def test_repeated_catalogue_identifier():
+    first = _record(gptad_id=12, wto_rta_id=5)
+    second = _record(id="AMJP", name="Armenia-Japan", gptad_id=12, wto_rta_id=6)
+    second["parties"] = [{"id": "AM", "type": "country"}, {"id": "JP", "type": "country"}]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
+
+
+def test_linked_record_links_follow_the_intblock():
+    intblocks = [dict(INTBLOCKS[1], links=[{"url": "https://rcepsec.org/", "type": "website"}])]
+    text = {"url": "https://rcepsec.org/legal-text/", "type": "treaty_text"}
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
+              "links": [{"url": "https://rcepsec.org/", "type": "website"}, text],
+              "verification": "official", "last_verified": "2026-11-22", "provenance": PROVENANCE}
+    agreements, _ = build_trade_agreement_rows([record], intblocks)
+    assert agreements[0]["links"] == [{"url": "https://rcepsec.org/", "type": "website"}, text]
 
 
 def test_multilateral_without_intblock_is_an_intblock_candidate():
