@@ -6,6 +6,8 @@ other_names:
 agreement_type: fta
 status: proposed
 parties:
+- id: EAEU
+  type: intblock
 - id: RU
   type: country
 - id: IN
@@ -19,8 +21,9 @@ parties:
 - id: KG
   type: country
 aric_id: 437
+notes: 'ADB ARIC lists this as a separate proposal (ARIC 437). The Eurasian Economic Commission lists one negotiation with India, recorded as `EAEUIN`; this record is probably the same agreement.'
 verification: catalogue
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -30,3 +33,7 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=437&ssid=3
   retrieved_at: '2026-11-22'
+- field: notes
+  source: 'Eurasian Economic Commission, trade agreements under negotiation: India'
+  url: https://eec.eaeunion.org/comission/department/dotp/torgovye-soglasheniya/india.php
+  retrieved_at: '2026-11-23'

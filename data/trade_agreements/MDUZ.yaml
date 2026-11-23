@@ -3,15 +3,16 @@ name: Uzbekistan-Moldova Free Trade Agreement
 agreement_type: fta
 status: in_force
 signed: '1995-03-30'
-in_force: '1995-01-01'
+in_force: '1995-08-29'
 parties:
 - id: MD
   type: country
 - id: UZ
   type: country
 aric_id: 93
-verification: catalogue
-last_verified: '2026-11-22'
+notes: 'Moldova''s treaty list gives entry into force on 29 August 1995; the earlier value 1 January 1995 preceded signature.'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -21,3 +22,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=93&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: 'Ministry of Foreign Affairs of Moldova, list of bilateral treaties'
+  url: https://www.mfa.gov.md/sites/default/files/lista_tratatelor_bilaterale_2026.pdf
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: 'Ministry of Foreign Affairs of Moldova, list of bilateral treaties'
+  url: https://www.mfa.gov.md/sites/default/files/lista_tratatelor_bilaterale_2026.pdf
+  retrieved_at: '2026-11-23'

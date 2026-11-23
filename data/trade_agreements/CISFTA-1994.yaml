@@ -1,5 +1,10 @@
 id: CISFTA-1994
-name: Commonwealth of Independent States (CIS)
+name: Agreement on the Establishment of a Free Trade Area (CIS)
+other_names:
+- lang: ru
+  name: Соглашение о создании зоны свободной торговли
+- lang: en
+  name: Commonwealth of Independent States (CIS)
 agreement_type: fta
 status: in_force
 signed: '1994-04-15'
@@ -7,18 +12,30 @@ in_force: '1994-12-30'
 parties:
 - id: AZ
   type: country
+  note: Still applies the Agreement, because the 2011 Treaty is not in force for Azerbaijan (Belarusian Ministry of Foreign
+    Affairs).
 - id: AM
   type: country
 - id: BY
   type: country
+  note: The Agreement no longer applies between Belarus and the parties to the 2011 Treaty (in force for Belarus from 20 September
+    2012), but still applies with Azerbaijan and Georgia.
 - id: GE
   type: country
+  note: Georgia left the CIS in 2009; it and Belarus agreed by an exchange of notes of 14 August 2009 to keep applying the 2000
+    CIS rules of origin on a bilateral basis.
 - id: KZ
   type: country
+  left: '2012-12-08'
+  note: Ratified by a resolution of the Supreme Council of 10 November 1994. Adilet records that the Agreement and its 1999
+    Protocol ceased under Law No. 46-V of 25 October 2012 ratifying the 2011 Treaty, which entered into force for Kazakhstan
+    on 8 December 2012.
 - id: KG
   type: country
 - id: MD
   type: country
+  in_force: '1994-12-30'
+  left: '2012-12-09'
 - id: TJ
   type: country
 - id: TM
@@ -29,21 +46,80 @@ parties:
   type: country
 - id: RU
   type: country
-  note: Listed by WTO RTA-IS as an original signatory, not a current one.
+  note: Listed by WTO RTA-IS as an original signatory, not a current one. No Russian ratification act was found.
+superseded_by: CISFTA
 wto_rta_id: 99
 gptad_id: 161
 dta_id: 45
 links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/CIS.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+- url: https://www.customs.gov.by/uploads/gtk/files/document/uchastnikam-VED/zony-svobodnoj-torgovli/sng/Soglashenie-o-sozanii-zony-svobodnoj-torgovli.pdf
+  type: treaty_text
+instruments:
+- id: protocol-1999
+  kind: amending_protocol
+  name: Protocol on amendments and additions to the Agreement on the Establishment of a Free Trade Area of 15 April 1994
+  other_names:
+  - lang: ru
+    name: Протокол о внесении изменений и дополнений в Соглашение о создании зоны свободной торговли от 15 апреля 1994 года
+  status: in_force
+  signed: '1999-04-02'
+  in_force: '1999-12-13'
+  coverage:
+  - goods
+  notes: Signed at Moscow by eleven CIS states (all except Turkmenistan). The in_force date is the date for Moldova, the first
+    official date found; the Kyrgyz Republic ratified it by Law No. 6 of 14 January 2000 and Kazakhstan by Law No. 14-II of
+    30 December 1999. Moldova lists its end for Moldova as 18 October 2011, the signature date of the 2011 Treaty.
+  provenance:
+  - field: in_force
+    source: Ministry of Foreign Affairs of Moldova, list of multilateral treaties (M00641)
+    url: https://www.mfa.gov.md/sites/default/files/lista_tratatelor_multilaterale_2026.pdf
+    retrieved_at: '2026-11-23'
+  - field: notes
+    source: Adilet (Kazakhstan), Law No. 14-II of 30 December 1999
+    url: https://adilet.zan.kz/rus/docs/Z990000014_
+    retrieved_at: '2026-11-23'
+notes: Signed at Moscow on 15 April 1994 (the Kazakh ratification resolution names twelve signatory states including Turkmenistan;
+  the CIS Executive Committee's 2011 note names eleven, without Turkmenistan); applied provisionally from signature and in force
+  from the deposit of the third notification (Article 23). Several signatories never ratified it or its 1999 Protocol, and
+  free trade among CIS states rested mainly on bilateral agreements (CIS Executive Committee, 2011). Under Article 23(1) and
+  Annex 5 of the 2011 Treaty on a Free Trade Area (`CISFTA`), the Agreement, the 1999 Protocol and three related protocols
+  cease to apply between the parties for which that Treaty is in force; the Agreement still applies to relations with Azerbaijan
+  and Georgia (Belarusian Ministry of Foreign Affairs), so it is superseded only in part. Party-level end dates are given
+  where the party's own treaty record states one.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=99
   retrieved_at: '2026-11-22'
 - field: status
-  source: WTO Regional Trade Agreements Information System
-  url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=99
-  retrieved_at: '2026-11-22'
+  source: Ministry of Foreign Affairs of Belarus, trade regimes
+  url: https://mfa.gov.by/print/export/traderegimes
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Ministry of Foreign Affairs of Moldova, list of multilateral treaties (M00543)
+  url: https://www.mfa.gov.md/sites/default/files/lista_tratatelor_multilaterale_2026.pdf
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: State Customs Committee of Belarus, text of the Agreement
+  url: https://www.customs.gov.by/uploads/gtk/files/document/uchastnikam-VED/zony-svobodnoj-torgovli/sng/Soglashenie-o-sozanii-zony-svobodnoj-torgovli.pdf
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Adilet (Kazakhstan), Resolution of the Supreme Council of 10 November 1994 on ratification
+  url: https://adilet.zan.kz/rus/docs/B940004900_
+  retrieved_at: '2026-11-23'
+- field: superseded_by
+  source: Adilet (Kazakhstan), 2011 Treaty text, Article 23 and Annex 5
+  url: https://adilet.zan.kz/rus/docs/Z1200000046
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: CIS Executive Committee, analytical note on the Treaty on a Free Trade Area (31 October 2011)
+  url: https://e-cis.info/cooperation/3049/77856/
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: State Customs Committee of Belarus, exchange of notes with Georgia of 14 August 2009
+  url: https://www.customs.gov.by/uploads/gtk/files/document/uchastnikam-VED/zony-svobodnoj-torgovli/gruzija/obmen-notami.pdf
+  retrieved_at: '2026-11-23'
