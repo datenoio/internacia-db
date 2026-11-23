@@ -161,6 +161,32 @@ def test_linked_record_dates_override_the_intblock():
     assert agreements[0]["signed"] == "2020-11-15"
 
 
+def test_gptad_id_and_treaty_text_link_are_exported():
+    text = "https://wits.worldbank.org/GPTAD/PDF/archive/Armenia-Georgia.pdf"
+    record = _record(gptad_id=12, links=[{"url": text, "type": "treaty_text"}])
+    assert _types([record]) == []
+    agreements, _ = build_trade_agreement_rows([record], INTBLOCKS)
+    assert agreements[0]["gptad_id"] == 12
+    assert agreements[0]["links"] == [{"url": text, "type": "treaty_text"}]
+
+
+def test_repeated_catalogue_identifier():
+    first = _record(gptad_id=12, wto_rta_id=5)
+    second = _record(id="AMJP", name="Armenia-Japan", gptad_id=12, wto_rta_id=6)
+    second["parties"] = [{"id": "AM", "type": "country"}, {"id": "JP", "type": "country"}]
+    assert _types([first, second]) == ["DUPLICATE_IDENTIFIER"]
+
+
+def test_linked_record_links_follow_the_intblock():
+    intblocks = [dict(INTBLOCKS[1], links=[{"url": "https://rcepsec.org/", "type": "website"}])]
+    text = {"url": "https://rcepsec.org/legal-text/", "type": "treaty_text"}
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
+              "links": [{"url": "https://rcepsec.org/", "type": "website"}, text],
+              "verification": "official", "last_verified": "2026-11-22", "provenance": PROVENANCE}
+    agreements, _ = build_trade_agreement_rows([record], intblocks)
+    assert agreements[0]["links"] == [{"url": "https://rcepsec.org/", "type": "website"}, text]
+
+
 def test_multilateral_without_intblock_is_an_intblock_candidate():
     record = _record(parties=[{"id": c, "type": "country"} for c in ("JP", "KR", "CN")])
     issues = trade_agreement_rules.check_intblock_candidates([record], ["data/trade_agreements/AMGE.yaml"])

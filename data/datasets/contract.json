@@ -840,7 +840,7 @@
           }
         }
       ],
-      "schema_hash": "bbbbf4f27e55d9c61225258b30142b2a80157cc2afaaec1d317a98bf29a2f1bb",
+      "schema_hash": "2f96a40bac8a0ef97d26fba783c56352064dcf9de900edb876c36bf0220b584f",
       "columns": [
         {
           "name": "id",
@@ -904,6 +904,11 @@
         },
         {
           "name": "aric_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "gptad_id",
           "type": "int64",
           "nullable": true
         },
@@ -1730,7 +1735,8 @@
       "values": [
         "website",
         "wikipedia",
-        "wikidata"
+        "wikidata",
+        "treaty_text"
       ],
       "open": true
     },

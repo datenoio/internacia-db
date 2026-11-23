@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Trade agreement",
-  "description": "One source file per legal instrument under data/trade_agreements/<ID>.yaml. Records agreements, parties, status, dates and catalogue identifiers only: no trade values, tariff lines, depth scores or rankings. A record either lists its parties or links to the intblock that holds them (intblock); a linked record takes its name, links and Wikidata id from that intblock, and its dates too unless it sets signed, in_force or ended itself (an organization's founded date is not always the signature of its trade agreement).",
+  "description": "One source file per legal instrument under data/trade_agreements/<ID>.yaml. Records agreements, parties, status, dates and catalogue identifiers only: no trade values, tariff lines, depth scores or rankings. A record either lists its parties or links to the intblock that holds them (intblock); a linked record takes its name and Wikidata id from that intblock, its links from that intblock followed by its own, and its dates too unless it sets signed, in_force or ended itself (an organization's founded date is not always the signature of its trade agreement).",
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "agreement_type", "status", "verification", "last_verified", "provenance"],
@@ -83,7 +83,7 @@
       }
     },
     "intblock": {
-      "description": "The intblock that holds the roster of an agreement with three or more parties. Parties, name, links and Wikidata id are read from it; dates too, unless the record sets them.",
+      "description": "The intblock that holds the roster of an agreement with three or more parties. Parties, name and Wikidata id are read from it, and its links come before the record's own; dates too, unless the record sets them.",
       "type": "string",
       "minLength": 1
     },
@@ -91,6 +91,7 @@
     "superseded_by": {"type": "string"},
     "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
     "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
+    "gptad_id": {"description": "World Bank Global Preferential Trade Agreements Database (GPTAD) agreement id (dispIDS in the GPTAD search).", "type": "integer", "minimum": 1},
     "wikidata_id": {"type": "string", "pattern": "^Q[1-9][0-9]*$"},
     "links": {
       "type": "array",
@@ -100,14 +101,14 @@
         "additionalProperties": false,
         "properties": {
           "url": {"type": "string", "format": "uri"},
-          "type": {"type": "string", "enum": ["website", "wikipedia", "wikidata"]}
+          "type": {"description": "treaty_text: the full text of the agreement (depositary, party government or a catalogue copy such as a GPTAD PDF); the registry stores the URL, not the text.", "type": "string", "enum": ["website", "wikipedia", "wikidata", "treaty_text"]}
         }
       }
     },
     "description": {"type": "string"},
     "notes": {"description": "Legal facts: accessions, suspensions, supersession, conflicts between sources. Not trade volumes.", "type": "string"},
     "verification": {
-      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS or ADB ARIC only.",
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, ADB ARIC or GPTAD only (a GPTAD record cites another source for its status).",
       "type": "string",
       "enum": ["official", "catalogue"]
     },
