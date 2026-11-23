@@ -30,7 +30,7 @@ Prerequisite: `add-preference-scheme-rosters` (PR 207) is merged and archived.
 ## 4. Linked intblocks
 
 - [x] 4.1 Write the review report for `AGOA`, `CBERA`, `CARIBCAN`, `SPARTECA` and `GSPPLUS` (suggested dates, differences in membership). Do not edit their `includes`.
-- [ ] 4.2 Open a separate issue or PR for each intblock whose report has differences. The 2026-11-23 report lists them for AGOA (12 countries in the versions but not in `includes`, 1 current in one source only, 6 suggested dates), CBERA (Panama) and GSPPLUS (13 former GSP+ beneficiaries, and Uzbekistan, which joined after the 2017 version). Wait for the maintainer's decision.
+- [x] 4.2 Open a separate issue or PR for each intblock whose report has differences. The 2026-11-23 report lists them for AGOA (12 countries in the versions but not in `includes`, 1 current in one source only, 6 suggested dates), CBERA (Panama and Curaçao) and GSPPLUS (13 countries in the versions but not in `includes`, Uzbekistan, which joined after the 2017 version, and 5 suggested dates). Opened on 2026-11-23 as issues #232 (AGOA), #233 (CBERA) and #234 (GSPPLUS); the changes wait for the maintainer's decision there.
 
 ## 5. Build, documentation and release
 
