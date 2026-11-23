@@ -10,7 +10,8 @@ and date of signature. 15 carry no trade preferences (transport, tourism, waterw
 vehicle rules under Article 14, the agricultural health council), 25 already had a record
 (the Mexico agreements from WTO RTA-IS, the GPTAD walk's ALADI records, and ACE 18, which is
 MERCOSUR's Treaty of Asunción), and the 51 in ``SELECT`` had none. This script writes one
-record for each of them.
+record for each of them. 16 of them were added from OAS SICE the same day (``import_sice.py``)
+and merged by hand with the ALADI record under the SICE ids; the script skips existing files.
 
 ALADI is the depositary, so the records are ``verification: official``. Signatories come
 from ``Países signatarios``, the date of signature from ``Fecha de suscripción`` (US order,
@@ -67,7 +68,7 @@ SELECT: dict[str, dict] = {
     "AAP.CE Nº 14": {"id": "ARBR", "type": "fta",
                      "notes": "The Argentina - Brazil tariff elimination programme towards a common market, "
                               "taken up by MERCOSUR."},
-    "AAP.CE Nº 16": {"id": "ARCL", "type": "pta"},
+    "AAP.CE Nº 16": {"id": "ARCL-1991", "type": "pta"},
     "AAP.CE Nº 40": {"id": "CUVE", "type": "pta"},
     "AAP.CE Nº 42": {"id": "CLCU", "type": "pta"},
     "AAP.CE Nº 46": {"id": "CUEC", "type": "pta"},
@@ -76,9 +77,9 @@ SELECT: dict[str, dict] = {
     "AAP.CE Nº 50": {"id": "CUPE", "type": "pta"},
     "AAP.CE Nº 54": {"id": "MERCOSURMX", "type": "framework",
                      "notes": "Framework agreement for a free trade area between MERCOSUR and Mexico."},
-    "AAP.CE Nº 55": {"id": "MERCOSURMX-ACE55", "type": "pta",
+    "AAP.CE Nº 55": {"id": "MERCOSURMX-AUTO", "type": "pta",
                      "notes": "Free trade in the automotive sector between MERCOSUR states and Mexico."},
-    "AAP.CE Nº 57": {"id": "ARUY", "type": "pta", "notes": "Trade in the automotive sector."},
+    "AAP.CE Nº 57": {"id": "ARUY-AUTO", "type": "pta", "notes": "Trade in the automotive sector."},
     "AAP.CE Nº 62": {"id": "MERCOSURCU", "type": "pta"},
     "AAP.CE Nº 63": {"id": "UYVE", "type": "pta", "notes": "Venezuela grants duty-free access to listed goods."},
     "AAP.CE Nº 64": {"id": "PYVE", "type": "pta", "notes": "Venezuela grants duty-free access to listed goods."},
@@ -114,7 +115,7 @@ SELECT: dict[str, dict] = {
                                                                      "signed by Mexico and Guatemala."}],
                         "notes": "Trade in natural gas between Mexico and Guatemala: transport, distribution, "
                                  "storage, export and import."},
-    "AAP.A25TM Nº 38": {"id": "BRGY", "type": "pta",
+    "AAP.A25TM Nº 38": {"id": "BRGYKN", "type": "pta",
                         "parties": ["BR", "GY", {"id": "KN", "note": "Listed by ALADI as a party; the text is "
                                                                      "signed by Brazil and Guyana."}]},
     "AAP.A25TM Nº 41": {"id": "BRSR", "type": "pta", "notes": "Tariff preferences for rice."},
