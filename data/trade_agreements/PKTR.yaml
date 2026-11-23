@@ -1,25 +1,52 @@
 id: PKTR
-name: Pakistan-Türkiye Preferential Trade Agreement
+name: Trade in Goods Agreement between the Republic of Türkiye and the Islamic Republic of Pakistan
 other_names:
 - lang: en
+  name: Pakistan-Türkiye Preferential Trade Agreement
+- lang: en
   name: Pakistan-Türkiye PTA
+- lang: tr
+  name: Türkiye-Pakistan Mal Ticareti Anlaşması
 agreement_type: pta
-status: signed
-signed: 2022-07
+status: in_force
+signed: '2022-08-12'
+in_force: '2023-05-01'
 parties:
 - id: PK
   type: country
 - id: TR
   type: country
 aric_id: 164
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/Pakistan_MTA.zip
+  type: treaty_text
+notes: Signed in Islamabad. It builds on the Framework Agreement Establishing a Free Trade Area between Türkiye and Pakistan,
+  signed in Islamabad on 22 March 2016. The Ministry of Trade lists it among Türkiye's preferential trade agreements. ADB
+  ARIC gave July 2022 for signature.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=164&ssid=3
   retrieved_at: '2026-11-22'
+- field: name
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/Pakistan_MTA.zip
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Turkish Ministry of Trade
+  url: https://ticaret.gov.tr/haberler/turkiye-ile-pakistan-arasinda-mal-ticaret-anlasmasi-imzalandi
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=164&ssid=3
-  retrieved_at: '2026-11-22'
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/Pakistan_MTA.zip
+  retrieved_at: '2026-11-23'

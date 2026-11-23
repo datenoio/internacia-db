@@ -277,12 +277,12 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            76,
+            78,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            12,
+            13,
             {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI", "HCOC"},
         ),
         (
@@ -292,7 +292,7 @@ ORDER BY b.id
         ),
         (
             "NOT b.has_china AND NOT b.has_usa",
-            19,
+            20,
             {"NAM", "ICW", "APMINEBANCONVENTION", "EGDDS", "CTBT"},
         ),
     ],
@@ -468,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        233,
+        236,
         set(),
     ),
     (
@@ -555,8 +555,8 @@ ADDITIONAL_RECIPES = [
         WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
         ORDER BY i.in_force DESC, i.agreement_id
         """,
-        10,
-        {"CNPE", "EFTATN", "EFTAJO", "CLID", "EUNO", "CNSG", "CNMO", "CNHK", "DEPA"},
+        12,
+        {"CNPE", "EFTATN", "EFTAJO", "CLID", "EUNO", "CNSG", "CNMO", "CNHK", "DEPA", "MYTR", "AZTR"},
     ),
 ]
 
@@ -614,7 +614,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 311
+    assert count == 312
 
 
 def test_world_bank_region_filter_uses_region_id(con):

@@ -12,12 +12,47 @@ parties:
   type: country
 - id: TR
   type: country
+instruments:
+- id: services-2015
+  kind: supplementary_agreement
+  name: Agreement on Trade in Services between the Republic of Turkey and the Republic of Korea
+  status: in_force
+  signed: '2015-02-26'
+  in_force: '2018-08-01'
+  coverage:
+  - services
+  provenance:
+  - field: instruments
+    source: Turkish Ministry of Trade (English site), free trade agreements
+    url: https://www.trade.gov.tr/free-trade-agreements/republic-of-korea
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Turkish Ministry of Trade, FTAs in force
+    url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/guney-kore
+    retrieved_at: '2026-11-23'
+- id: investment-2015
+  kind: supplementary_agreement
+  name: Agreement on Investment between the Republic of Turkey and the Republic of Korea
+  status: in_force
+  signed: '2015-02-26'
+  in_force: '2018-08-01'
+  coverage:
+  - investment
+  provenance:
+  - field: instruments
+    source: Turkish Ministry of Trade (English site), free trade agreements
+    url: https://www.trade.gov.tr/free-trade-agreements/republic-of-korea
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Turkish Ministry of Trade, FTAs in force
+    url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/guney-kore
+    retrieved_at: '2026-11-23'
 wto_rta_id: 699
 aric_id: 263
 dta_id: 236
 notes: 'ADB ARIC dates: proposed/under consultation and study 2009-09-26.'
-verification: catalogue
-last_verified: '2026-11-22'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -27,3 +62,11 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=263&ssid=3
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Turkish Ministry of Trade (English site), free trade agreements
+  url: https://www.trade.gov.tr/free-trade-agreements/republic-of-korea
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Turkish Ministry of Trade, FTAs in force
+  url: https://ticaret.gov.tr/dis-iliskiler/serbest-ticaret-anlasmalari/yururlukte-bulunan-stalar/guney-kore
+  retrieved_at: '2026-11-23'

@@ -5,21 +5,28 @@ other_names:
   name: Uzbekistan-Türkiye PTA
 agreement_type: pta
 status: in_force
-in_force: '2023'
+in_force: '2023-07-01'
 parties:
 - id: TR
   type: country
 - id: UZ
   type: country
 aric_id: 455
-verification: catalogue
-last_verified: '2026-11-22'
+links:
+- url: https://ticaret.gov.tr/data/62bda27513b8763814c5165a/%C3%96zbekistan%20TTA.zip
+  type: treaty_text
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=455&ssid=3
   retrieved_at: '2026-11-22'
+- field: in_force
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
 - field: status
-  source: Asia Regional Integration Center (ADB), FTA database
-  url: https://aric.adb.org/fta.php?id=455&ssid=3
-  retrieved_at: '2026-11-22'
+  source: Turkish Ministry of Trade, preferential trade agreements
+  url: https://ticaret.gov.tr/dis-iliskiler/tercihli-ticaret-anlasmalari
+  retrieved_at: '2026-11-23'
