@@ -1,6 +1,6 @@
 # DESTA v2.3 match report (2026-11-23)
 
-A snapshot of how the trade agreements registry covers the DESTA list of treaties, written by the DESTA walk (`scripts/oneoff/match_desta.py`, `scripts/oneoff/import_desta.py`). It describes the registry on 2026-11-23: `main`, the open pull requests datenoio/internacia-db#207 to #228, and the records this walk adds. Do not treat its gap lists as current.
+A snapshot of how the trade agreements registry covers the DESTA list of treaties, written by the DESTA walk (`scripts/oneoff/match_desta.py`, `scripts/oneoff/import_desta.py`). It describes the registry on 2026-11-23: `main`, the pull requests open on that day (datenoio/internacia-db#207 to #231, several of which have since merged), and the records this walk adds. Do not treat its gap lists as current.
 
 Every DESTA base treaty, with its group, record and action, is in [desta-match-2026-11-23.csv](desta-match-2026-11-23.csv).
 
@@ -15,19 +15,19 @@ Every DESTA base treaty, with its group, record and action, is in [desta-match-2
 3. An acronym in the DESTA name that is a record id (`SPARTECA`), and five hand matches.
 4. A record claimed by two treaties keeps the one with the closer year; the other becomes ambiguous.
 
-The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 615, none 141, low 90, medium 57.
+The CSV gives each treaty a `confidence`: `high` for a hand match, a single WTO RTA ID, or the same parties and the same year; `medium` for the same parties a year apart, a roster or bloc match, or an acronym; `low` for ambiguous and `none` for missing treaties. A later `desta_id` backfill can take `high` and `medium` rows as they are (`desta_number`, `record_id`) and review the `low` ones. Confidence: high 614, none 141, low 87, medium 61.
 
 ## Results
 
 | Group | Treaties | Bilateral | Plurilateral | Plurilateral and third country | Region-region |
 |---|---|---|---|---|---|
-| matched | 672 | 450 | 55 | 150 | 16 |
-| ambiguous | 90 | 45 | 28 | 12 | 5 |
+| matched | 675 | 450 | 55 | 153 | 16 |
+| ambiguous | 87 | 45 | 28 | 9 | 5 |
 | missing | 141 | 120 | 16 | 1 | 4 |
 
-Matched treaties by where the record is: main 541, this PR 54, #209 28, #218 25, #226 21, #210 2, #214 1. One treaty has no `typememb`.
+Matched treaties by where the record is: main 569, this PR 54, #209 26, #226 21, #231 3, #210 2. One treaty has no `typememb`.
 
-Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 105 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
+Bilateral country pairs: DESTA has 532. 166 had no two-party record on `main` (the planning review counted 238 with an earlier registry and code mapping). After the open pull requests and this walk, 105 have none. A pair with a record can still miss an older instrument: those treaties are in the ambiguous group.
 
 **Ambiguous** treaties have records with the same parties but another year (usually an earlier or later instrument between the same countries, such as the 1980s ALADI agreements that later ACEs replaced) or share one record with another DESTA treaty (DESTA lists the early harvest, the main agreement or the Dickenson Bay and Chaguaramas texts separately).
 
@@ -37,14 +37,14 @@ Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (t
 
 54 records. Each cites a depositary, a party government or the WTO for its status and dates and DESTA (provenance field `desta_id`) only for listing it.
 
-16 ALADI records were superseded by an agreement whose record is only in an open pull request (datenoio/internacia-db#209, #218 or #226), so they are `terminated` for now; their notes name the successor. Once those pull requests merge they become `superseded` with `superseded_by`: `ARBO-1992` (`MERCOSURBO`), `ARBR-1986` (`ARBR`), `ARBR-1988` (`ARBR`), `ARCU-1999` (`MERCOSURCU`), `ARCAN-ACE48` (`MERCOSURCOECVE`), `BOPY-1994` (`MERCOSURBO`), `BOUY-1991` (`MERCOSURBO`), `BRCU-1999` (`MERCOSURCU`), `BRPE-1993` (`BRCAN-ACE39`), `BRVE-1994` (`BRCAN-ACE39`), `CLEC-2008` (`CLEC`), `CLPE-1983` (`CLPE-1998`), `CLUY-1985` (`MERCOSURCL`), `COCU-1994` (`COCU`), `CUPY-2000` (`MERCOSURCU`), `CUUY-1999` (`MERCOSURCU`).
+12 ALADI records were superseded by an agreement whose record is only in an open pull request (datenoio/internacia-db#209 or #226), so they are `terminated` for now; their notes name the successor. Once those pull requests merge they become `superseded` with `superseded_by`: `ARBO-1992` (`MERCOSURBO`), `ARCU-1999` (`MERCOSURCU`), `BOPY-1994` (`MERCOSURBO`), `BOUY-1991` (`MERCOSURBO`), `BRCU-1999` (`MERCOSURCU`), `BRPE-1993` (`BRCAN-ACE39`), `BRVE-1994` (`BRCAN-ACE39`), `CLPE-1983` (`CLPE-1998`), `CLUY-1985` (`MERCOSURCL`), `COCU-1994` (`COCU`), `CUPY-2000` (`MERCOSURCU`), `CUUY-1999` (`MERCOSURCU`).
 
 | Record | DESTA | Name | Status | Signed | In force | Ended | Source of status |
 |---|---|---|---|---|---|---|---|
 | `ARBO-1992` | 31 | Economic Complementation Agreement No. 19 between Argentina and Bolivia | terminated | 1992-04-28 | 1992-04-28 | 1997-02-28 | ALADI, historical agreements database |
-| `ARBR-1986` | 32 | Economic Complementation Agreement No. 7 between Argentina and Brazil | terminated | 1986-12-10 | 1987-01-01 | 1990-12-20 | ALADI, historical agreements database |
-| `ARBR-1988` | 33 | Economic Complementation Agreement No. 12 between Argentina and Brazil | terminated | 1988-09-09 | 1988-09-01 | 1990-12-20 | ALADI, historical agreements database |
-| `ARCAN-ACE48` | 24 | Economic Complementation Agreement No. 48 between Argentina, Colombia, Ecuador, Peru and Venezuela | terminated | 2000-06-29 | 2000-08-01 | 2006-01-02 | ALADI, historical agreements database |
+| `ARBR-1986` | 32 | Economic Complementation Agreement No. 7 between Argentina and Brazil | superseded | 1986-12-10 | 1987-01-01 | 1990-12-20 | ALADI, historical agreements database |
+| `ARBR-1988` | 33 | Economic Complementation Agreement No. 12 between Argentina and Brazil | superseded | 1988-09-09 | 1988-09-01 | 1990-12-20 | ALADI, historical agreements database |
+| `ARCAN-ACE48` | 24 | Economic Complementation Agreement No. 48 between Argentina, Colombia, Ecuador, Peru and Venezuela | superseded | 2000-06-29 | 2000-08-01 | 2006-01-02 | ALADI, historical agreements database |
 | `ARCO-1988` | 36 | Economic Complementation Agreement No. 11 between Argentina and Colombia | superseded | 1988-04-28 | 1988-08-01 | 2000-08-01 | ALADI, historical agreements database |
 | `ARCR-1983` | 37 | Partial Scope Agreement No. 2 between Argentina and Costa Rica (Article 25 of the 1980 Montevideo Treaty) | terminated | 1983-08-31 | 1983-08-31 | 1994-12-31 | ALADI, historical agreements database |
 | `ARCU-1984` | 38 | Partial Scope Agreement No. 4 between Argentina and Cuba (Article 25 of the 1980 Montevideo Treaty) | superseded | 1984-03-16 | 1984-05-16 | 2000-01-01 | ALADI, historical agreements database |
@@ -63,7 +63,7 @@ Bilateral country pairs: DESTA has 532. 190 had no two-party record on `main` (t
 | `BRPE-1993` | 142 | Economic Complementation Agreement No. 25 between Brazil and Peru | terminated | 1993-12-31 | 1994-09-28 | 1999-08-16 | ALADI, historical agreements database |
 | `BRVE-1994` | 145 | Economic Complementation Agreement No. 27 between Brazil and Venezuela | terminated | 1994-07-15 | 1995-01-31 | 1999-08-16 | ALADI, historical agreements database |
 | `CLEC-1994` | 203 | Economic Complementation Agreement No. 32 between Chile and Ecuador | superseded | 1994-12-20 | 1994-12-20 | 2010-01-25 | ALADI, historical agreements database |
-| `CLEC-2008` | 204 | Economic Complementation Agreement No. 65 between Chile and Ecuador | terminated | 2008-03-10 | 2010-01-25 | 2022-05-16 | ALADI, historical agreements database |
+| `CLEC-2008` | 204 | Economic Complementation Agreement No. 65 between Chile and Ecuador | superseded | 2008-03-10 | 2010-01-25 | 2022-05-16 | ALADI, historical agreements database |
 | `CLMX-1991` | 211 | Economic Complementation Agreement No. 17 between Chile and Mexico | superseded | 1991-09-22 | 1991-09-22 | 1999-08-01 | ALADI, historical agreements database |
 | `CLPE-1983` | 214 | Partial Scope Renegotiation Agreement No. 28 between Chile and Peru | terminated | 1983-04-30 | 1983-05-01 | 1998-07-01 | ALADI, historical agreements database |
 | `CLUY-1985` | 217 | Economic Complementation Agreement No. 4 between Chile and Uruguay | terminated | 1985-02-01 | 1985-02-01 | 1996-10-01 | ALADI, historical agreements database |

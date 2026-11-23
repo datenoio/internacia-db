@@ -6,7 +6,7 @@
 ## 1. DESTA walk (done before approval; no schema change)
 
 - [x] 1.1 Add `scripts/oneoff/match_desta.py`: match the 903 DESTA base treaties by WTO name and RTA ID, by parties and year, and by acronym; write the match report (`docs/history/desta-match-2026-11-23.md`, and a `.csv` with DESTA number, record id, method and confidence)
-- [x] 1.2 Diff the missing treaties against the open pull requests (#207 to #228)
+- [x] 1.2 Diff the missing treaties against the open pull requests (#207 to #231)
 - [x] 1.3 Add `scripts/oneoff/import_desta.py`: 54 missing agreements with status and dates from ALADI, a party government or the WTO, DESTA cited only in a `desta_id` provenance entry; hold the agreements without such a source
 - [x] 1.4 Compare DESTA accession and withdrawal rows with the party rosters; list the gaps without writing party dates
 - [x] 1.5 Log the walk in `docs/intblock-sources.md`

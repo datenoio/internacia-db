@@ -24,7 +24,7 @@ Sources:
   record gives. ``datenoio/internacia-db#226`` added the current ALADI agreements and left
   out the historical ones because their records give no end date; the records here are the
   historical agreements DESTA lists whose end date ALADI states or derives from a successor.
-  A successor that is only in an open pull request (#209, #218 or #226) cannot be ``superseded_by``
+  A successor that is only in an open pull request (#209 or #226) cannot be ``superseded_by``
   yet, so those records are ``terminated`` until it merges (``PENDING_SUCCESSORS``).
 - Party governments: the UAE Ministry of Economy and Tourism and the Emirates News Agency
   (WAM), the Israeli Ministry of Foreign Affairs, the Kenyan National Assembly, the Serbian
@@ -494,7 +494,7 @@ def build(rid: str, spec: dict, ids: set[str]) -> dict:
     desta = spec.pop("_desta")
     prov = spec.pop("_prov")
     if spec.get("superseded_by") and spec["superseded_by"] not in ids:
-        # The successor is in an open pull request (#209, #218 or #226): until it merges the record is
+        # The successor is in an open pull request (#209 or #226): until it merges the record is
         # ``terminated``; its notes name the successor. See PENDING_SUCCESSORS.
         PENDING_SUCCESSORS[rid] = spec.pop("superseded_by")
         spec["status"] = "terminated"

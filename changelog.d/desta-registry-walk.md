@@ -10,7 +10,7 @@
   the France - Monaco customs convention, Latvia - Ukraine, and four southern African bilaterals
   from WTO trade policy reviews (Malawi - Mozambique, Mozambique - Zimbabwe, Botswana -
   Zimbabwe, Malawi - South Africa). `CLMX`, `CRMX`, `CUMX`, `MXUY`,
-  `BOMX` and `BRMX` name their ALADI predecessor in `supersedes`. Sixteen ALADI records whose
+  `BOMX` and `BRMX` name their ALADI predecessor in `supersedes`. Twelve ALADI records whose
   successor is still in an open pull request are `terminated` until it merges.
 - A DESTA match report: `docs/history/desta-match-2026-11-23.md` and a per-treaty CSV with the
   matched, ambiguous and missing groups, the held agreements and the party-history gaps that

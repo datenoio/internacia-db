@@ -4,7 +4,7 @@
 
 DESTA (Design of Trade Agreements, https://www.designoftradeagreements.org/downloads/) is an academic catalogue of preferential trade agreements. Its list of treaties v2.3 has 903 base treaties signed up to 2025, plus 208 accessions, 72 withdrawals, 77 protocols, 72 consolidated versions and 78 negotiations. About 400 of the base treaties are not WTO-listed, most of them bilateral. DESTA also publishes country-pair files and a coded dataset of agreement design. All of them key agreements on the DESTA `number`.
 
-A walk on 2026-11-23 (`scripts/oneoff/match_desta.py`, report `docs/history/desta-match-2026-11-23.md`) matched 672 DESTA base treaties to registry records on `main` and in the open pull requests, found 90 ambiguous and 141 missing. The walk added 54 missing agreements, each with status and dates from a depositary, a party government or the WTO. Without the DESTA number on the record, users can join the registry to DESTA's files only by name, and DESTA names are short (`Argentina Bolivia`) and not unique (one country pair often has three or four DESTA treaties).
+A walk on 2026-11-23 (`scripts/oneoff/match_desta.py`, report `docs/history/desta-match-2026-11-23.md`) matched 675 DESTA base treaties to registry records on `main` and in the open pull requests, found 87 ambiguous and 141 missing. The walk added 54 missing agreements, each with status and dates from a depositary, a party government or the WTO. Without the DESTA number on the record, users can join the registry to DESTA's files only by name, and DESTA names are short (`Argentina Bolivia`) and not unique (one country pair often has three or four DESTA treaties).
 
 The maintainer asked on 2026-11-23 for a DESTA catalogue field proposed the same way as `aric_id` and `gptad_id`.
 
