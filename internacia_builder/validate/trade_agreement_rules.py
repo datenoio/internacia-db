@@ -2,8 +2,8 @@
 
 Cross-record rules: the JSON Schema, file names and ids, the shared id namespace with
 intblocks, party and intblock resolution, status and date consistency, supersession links,
-instruments, and record freshness. See ``openspec/changes/add-trade-agreements-registry`` and
-``openspec/changes/add-trade-agreement-instruments``.
+preference-scheme roles and sub-schemes, WTO PTA ids, instruments, and record freshness. See
+``openspec/specs/trade-agreements/spec.md`` and ``openspec/changes/add-trade-agreement-instruments``.
 """
 
 from __future__ import annotations
@@ -15,7 +15,12 @@ from typing import Any
 
 import jsonschema
 
-from internacia_builder.trade_agreements import PARTY_INCLUDE_STATUSES, linked_fields
+from internacia_builder.trade_agreements import (
+    INCLUDE_ROLES,
+    PARTY_INCLUDE_STATUSES,
+    PREFERENCE_SCHEME,
+    linked_fields,
+)
 
 Issue = dict[str, Any]
 
@@ -320,6 +325,139 @@ def check_trade_agreements(
     return issues
 
 
+def _current_roles(record: dict[str, Any], intblock: dict[str, Any] | None) -> dict[str, set[str]]:
+    """Current party ids of a preference scheme by role, from its parties or its linked intblock."""
+    roles: dict[str, set[str]] = {"grantor": set(), "beneficiary": set()}
+    if intblock is not None:
+        for inc in intblock.get("includes") or []:
+            role = INCLUDE_ROLES.get(str(inc.get("status"))) if isinstance(inc, dict) else None
+            if role and not inc.get("left"):
+                roles[role].add(str(inc.get("id")))
+        return roles
+    for party in record.get("parties") or []:
+        if isinstance(party, dict) and party.get("role") in roles and not party.get("left"):
+            roles[str(party["role"])].add(str(party.get("id")))
+    return roles
+
+
+def check_preference_schemes(
+    records: list[dict[str, Any]], paths: list[str], intblocks: list[dict[str, Any]]
+) -> list[Issue]:
+    """Party roles, sub-scheme parents and WTO PTA ids (``add-preference-scheme-rosters``)."""
+    issues: list[Issue] = []
+    intblocks_by_id = {str(r.get("id")): r for r in intblocks if r.get("id")}
+    by_id = {str(r.get("id")): r for r in records if r.get("id")}
+    parents = {str(r.get("parent")) for r in records if r.get("parent")}
+    pta_seen: dict[int, str] = {}
+
+    def linked(record: dict[str, Any]) -> dict[str, Any] | None:
+        return intblocks_by_id.get(str(record.get("intblock"))) if record.get("intblock") else None
+
+    for record, path in zip(records, paths, strict=True):
+        rid = str(record.get("id") or "")
+        scheme = record.get("agreement_type") == PREFERENCE_SCHEME
+        parties = [p for p in record.get("parties") or [] if isinstance(p, dict)]
+        intblock = linked(record)
+
+        if not scheme:
+            for index, party in enumerate(parties):
+                if party.get("role"):
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, f"parties[{index}].role", party.get("role"),
+                        "role is set only on preference_scheme records; remove it",
+                    ))
+            if record.get("parent"):
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", record.get("parent"),
+                    "parent is set only on preference_scheme records; remove it",
+                ))
+        else:
+            for index, party in enumerate(parties):
+                if not party.get("role"):
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, f"parties[{index}].role", party.get("id"),
+                        "Every party of a preference scheme needs role: grantor or beneficiary",
+                    ))
+            if intblock is not None:
+                for inc in intblock.get("includes") or []:
+                    if (
+                        isinstance(inc, dict)
+                        and inc.get("status") in PARTY_INCLUDE_STATUSES
+                        and inc.get("status") not in INCLUDE_ROLES
+                    ):
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "intblock", f"{inc.get('id')}: {inc.get('status')}",
+                            f"intblock {record.get('intblock')} is a preference scheme; give its parties "
+                            "status contributor (grantor) or recipient (beneficiary)",
+                        ))
+            if parties or intblock is not None:
+                every = {"grantor": set(), "beneficiary": set()}
+                if intblock is not None:
+                    for inc in intblock.get("includes") or []:
+                        role = INCLUDE_ROLES.get(str(inc.get("status"))) if isinstance(inc, dict) else None
+                        if role:
+                            every[role].add(str(inc.get("id")))
+                else:
+                    for party in parties:
+                        if party.get("role") in every:
+                            every[str(party["role"])].add(str(party.get("id")))
+                if not every["grantor"]:
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "parties", "", "A preference scheme needs a grantor",
+                    ))
+                if not every["beneficiary"] and rid not in parents:
+                    issues.append(_issue(
+                        "TRADE_AGREEMENT_PARTY_ROLE", path, rid, "parties", "",
+                        "A preference scheme needs a beneficiary, unless it is the parent of another scheme",
+                    ))
+
+            ref = record.get("parent")
+            parent = by_id.get(str(ref)) if ref else None
+            if ref and parent is None:
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"parent {ref} does not match any trade agreement id",
+                ))
+            elif parent is not None and parent.get("agreement_type") != PREFERENCE_SCHEME:
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"parent {ref} is not a preference_scheme record",
+                ))
+            elif parent is not None:
+                seen, node = {rid}, parent
+                while node is not None and node.get("parent"):
+                    nid = str(node.get("parent"))
+                    if nid in seen:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref, f"The chain of parents of {rid} has a cycle",
+                        ))
+                        break
+                    seen.add(nid)
+                    node = by_id.get(nid)
+                mine, theirs = _current_roles(record, intblock), _current_roles(parent, linked(parent))
+                if theirs["beneficiary"]:
+                    if mine["grantor"] != theirs["grantor"]:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref,
+                            f"Grantors {sorted(mine['grantor'])} differ from the grantors of {ref} "
+                            f"{sorted(theirs['grantor'])}",
+                        ))
+                    outside = sorted(mine["beneficiary"] - theirs["beneficiary"])
+                    if outside:
+                        issues.append(_issue(
+                            "TRADE_AGREEMENT_PARENT", path, rid, "parent", ref,
+                            f"Current beneficiaries {outside} are not current beneficiaries of {ref}",
+                        ))
+
+        for value in record.get("wto_pta_ids") or []:
+            if not isinstance(value, int):
+                continue
+            if value in pta_seen and pta_seen[value] != rid:
+                issues.append(_issue(
+                    "DUPLICATE_WTO_PTA_ID", path, rid, "wto_pta_ids", value, f"WTO PTA id {value} is also used by {pta_seen[value]}",
+                ))
+            pta_seen.setdefault(value, rid)
+    return issues
+
+
 def check_trade_agreement_files(errors: list[tuple[str, str]]) -> list[Issue]:
     """Files under data/trade_agreements/ that are not valid YAML mappings."""
     return [
@@ -336,11 +474,17 @@ def check_trade_agreement_files(errors: list[tuple[str, str]]) -> list[Issue]:
 
 
 def check_intblock_candidates(records: list[dict[str, Any]], paths: list[str]) -> list[Issue]:
-    """Report-only: signed or in-force agreements with three or more listed parties and no intblock."""
+    """Report-only: signed or in-force agreements with three or more listed parties and no intblock.
+
+    Preference schemes are not reported: they stay registry records (``add-preference-scheme-rosters``).
+    """
     issues: list[Issue] = []
     for record, path in zip(records, paths, strict=True):
         parties = [p for p in record.get("parties") or [] if isinstance(p, dict) and not p.get("left")]
         if record.get("intblock") or record.get("status") not in CANDIDATE_STATUSES or len(parties) < 3:
+            continue
+        # A non-reciprocal scheme is a set of grantor-beneficiary links, not a country group.
+        if record.get("agreement_type") == PREFERENCE_SCHEME:
             continue
         issues.append({
             "issue_type": "TRADE_AGREEMENT_INTBLOCK_CANDIDATE",
