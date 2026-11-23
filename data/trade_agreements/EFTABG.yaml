@@ -8,33 +8,62 @@ ended: '2007-01-01'
 parties:
 - id: AT
   type: country
+  in_force: '1993-09-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: BG
   type: country
 - id: FI
   type: country
+  in_force: '1994-07-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: IS
   type: country
+  in_force: '1994-06-01'
 - id: LI
   type: country
+  in_force: '1994-10-01'
 - id: 'NO'
   type: country
+  in_force: '1994-01-01'
 - id: SE
   type: country
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: CH
   type: country
+  in_force: '1994-06-01'
 wto_rta_id: 285
 gptad_id: 35
 links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/1993-03-29-3
+  type: website
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Bulgaria.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+notes: The parties' own entry into force dates are from Lovdata, the treaty register of Norway, the depositary; Fedlex confirms
+  Switzerland's.
+instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Bulgaria
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Bulgaria
+  status: terminated
+  signed: '1993-03-29'
+  in_force: '1994-02-10'
+  ended: '2007-01-01'
+  coverage:
+  - goods
+  notes: Applied provisionally from 1 July 1993; ended when Bulgaria joined the EU.
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1993-03-29-4
+    retrieved_at: '2026-11-23'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -44,3 +73,15 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=285
   retrieved_at: '2026-11-22'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1993-03-29-3
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1993-03-29-3
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1993-03-29-3
+  retrieved_at: '2026-11-23'

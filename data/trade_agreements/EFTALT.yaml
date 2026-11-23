@@ -3,29 +3,56 @@ name: EFTA - Lithuania
 agreement_type: fta
 status: terminated
 signed: '1995-12-07'
-in_force: '1996-08-01'
+in_force: '1997-01-01'
 ended: '2004-05-01'
 parties:
 - id: IS
   type: country
 - id: LI
   type: country
+  provisional_application: '1997-01-01'
+  in_force: '1998-01-01'
 - id: LT
   type: country
 - id: 'NO'
   type: country
 - id: CH
   type: country
+  provisional_application: '1997-01-01'
   in_force: '1997-08-01'
 wto_rta_id: 291
 gptad_id: 43
 links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-6
+  type: website
 - url: https://www.fedlex.admin.ch/eli/cc/2003/123/de
   type: website
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Lithuania.pdf
   type: treaty_text
-notes: Fedlex (SR 0.632.315.162) gives Switzerland's entry into force on 1997-08-01.
-verification: catalogue
+notes: Fedlex (SR 0.632.315.162) gives Switzerland's entry into force on 1997-08-01. WTO Regional Trade Agreements Information
+  System gives the entry into force as 1 August 1996. The parties' own entry into force dates are from Lovdata, the treaty
+  register of Norway, the depositary.
+instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Lithuania
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Litauen
+  status: terminated
+  signed: '1996-05-22'
+  in_force: '1997-01-01'
+  ended: '2004-05-01'
+  coverage:
+  - goods
+  notes: Lovdata gives 22 May 1995 as the signature date, before the free trade agreement of 7 December 1995; the registry
+    uses 22 May 1996, the date in Lovdata's identifier. Ended with the free trade agreement when Lithuania joined the EU.
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1996-05-22-1
+    retrieved_at: '2026-11-23'
+verification: official
 last_verified: '2026-11-23'
 provenance:
 - field: parties
@@ -39,4 +66,20 @@ provenance:
 - field: parties
   source: Fedlex (Swiss federal law platform)
   url: https://www.fedlex.admin.ch/eli/cc/2003/123/de
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-6
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-6
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-6
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1995-12-07-6
   retrieved_at: '2026-11-23'

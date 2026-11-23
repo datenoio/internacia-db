@@ -968,7 +968,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 305 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 311 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1024,7 +1024,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 232 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 233 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1499,9 +1499,12 @@ WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '
 ORDER BY i.in_force DESC, i.agreement_id;
 ```
 
-**Expected:** 6 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), `CLID` (services
-protocol, 2025-09-23), `CNSG` (further upgrading protocol, 2024-12-31), the 2024 amendments to the
-CEPA services agreements of `CNMO` and `CNHK`, then the `DEPA` Protocol (2024-03-19). Add
+**Expected:** 10 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), the amendments to
+Norway's agricultural protocols with Tunisia (`EFTATN`, 2026-03-01) and Jordan (`EFTAJO`,
+2026-02-01), `CLID` (services protocol, 2025-09-23), two additional protocols to the EEC–Norway
+agreement (`EUNO`, 2025-08-01 and 2025-02-19), `CNSG` (further upgrading protocol, 2024-12-31), the
+2024 amendments to the CEPA services agreements of `CNMO` and `CNHK`, then the `DEPA` Protocol
+(2024-03-19). Add
 `kind = 'joint_committee_decision'` to include annex-level changes.
 
 ## Cookbook coverage (parity policy)
