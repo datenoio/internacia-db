@@ -48,11 +48,12 @@ FEDLEX_LB = (
     "fedlex-data-admin-ch-eli-cc-2007-199-20130501-de-html-3.html"
 )
 FIELD_ORDER = [
-    "id", "name", "acronyms", "other_names", "agreement_type", "status", "signed", "in_force", "ended",
+    "id", "name", "acronyms", "other_names", "agreement_type", "status", "signed", "in_force",
+    "provisional_application", "ended",
     "parties", "intblock", "supersedes", "superseded_by", "wto_rta_id", "aric_id", "wikidata_id", "links",
     "description", "notes", "verification", "last_verified", "provenance",
 ]
-PARTY_ORDER = ["id", "type", "signed", "in_force", "left", "note"]
+PARTY_ORDER = ["id", "type", "signed", "in_force", "provisional_application", "left", "note"]
 
 # Wayback capture used for each partner page (slug -> timestamp).
 CAPTURES = {
@@ -177,13 +178,11 @@ CHANGES: dict[str, dict] = {
                  "Singapore since 1 March 2026 (EFTA, page captured 2026-10-08).",
         "fields": ["status", "signed", "in_force", "parties"], "replace": ["status"], "official": True,
     },
+    # The gov.uk review (PR 215) already moved in_force to 2022-09-01 and recorded the provisional
+    # application dates that WTO RTA-IS gives as entry into force, so only EFTA's evidence is added here.
     "GBISLINO": {
         "slug": "united-kingdom",
-        "set": {"in_force": "2022-09-01"},
         "parties": dates(("GB LI NO", "2022-09-01"), ("IS", "2023-02-01")),
-        "notes": "WTO RTA-IS gives 2021-12-01 as the date of entry into force; its remarks show that date as the "
-                 "start of provisional application between the UK and Norway (Liechtenstein 2022-01-01, Iceland "
-                 "2022-09-01).",
         "fields": ["signed", "in_force", "parties"], "extra": [("parties", WTO, CARD.format(1173))],
         "official": True,
     },
