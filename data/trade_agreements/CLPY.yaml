@@ -3,13 +3,16 @@ name: Chile - Paraguay Free Trade Agreement
 agreement_type: fta
 status: in_force
 signed: '2021-12-01'
-in_force: '2024-02-15'
+in_force: '2024-02-14'
 parties:
 - id: CL
   type: country
 - id: PY
   type: country
-verification: catalogue
+notes: Signed at Santiago on 1 December 2021 and incorporated into ACE 35 (MERCOSURCL) by its Sixty-sixth Additional Protocol
+  of 15 February 2022. Chile's promulgation decree (Decreto 11 of 2024) and SUBREI give international entry into force on
+  14 February 2024; the registry held 2024-02-15 (OAS SICE) before 2026-11-23.
+verification: official
 last_verified: '2026-11-23'
 provenance:
 - field: parties
@@ -19,4 +22,18 @@ provenance:
 - field: status
   source: OAS Foreign Trade Information System (SICE)
   url: https://web.archive.org/web/20251116011654/http://www.sice.oas.org/Trade/CHL_PRY/CHL_PRY_Index_e.asp
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 11 of 2024 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2024-03-07)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=1201528
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 11 of 2024 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2024-03-07)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=1201528
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/paraguay
   retrieved_at: '2026-11-23'

@@ -1499,9 +1499,10 @@ WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '
 ORDER BY i.in_force DESC, i.agreement_id;
 ```
 
-**Expected:** 4 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), `CNSG` (further
-upgrading protocol, 2024-12-31), then the 2024 amendments to the CEPA services agreements of
-`CNMO` and `CNHK`. Add `kind = 'joint_committee_decision'` to include annex-level changes.
+**Expected:** 6 rows, latest first: `CNPE` (Optimization Protocol, 2026-11-01), `CLID` (services
+protocol, 2025-09-23), `CNSG` (further upgrading protocol, 2024-12-31), the 2024 amendments to the
+CEPA services agreements of `CNMO` and `CNHK`, then the `DEPA` Protocol (2024-03-19). Add
+`kind = 'joint_committee_decision'` to include annex-level changes.
 
 ## Cookbook coverage (parity policy)
 
