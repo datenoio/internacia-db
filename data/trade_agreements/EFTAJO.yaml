@@ -15,7 +15,35 @@ parties:
   type: country
 - id: LI
   type: country
+wto_rta_id: 75
+gptad_id: 41
+dta_id: 72
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/jordan
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Jordan.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/65238b0d-dd47-4176-beec-406c88a4b8b6
+  type: treaty_text
+notes: Joint Committee Decision No. 1/2025 (adopted 10 June 2025, in force 1 February 2026) modernised the rules of origin
+  in Protocol B, with matching amendments to the three bilateral agricultural agreements.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agricultural Protocol between Norway and Jordan
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Jordan
+  status: in_force
+  signed: '2001-06-21'
+  in_force: '2002-09-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2001-06-21-5
+    retrieved_at: '2026-11-23'
 - id: decision-2012-1
   kind: joint_committee_decision
   name: Decision No. 1 of 2012 of the Joint EFTA-Jordan Committee
@@ -53,6 +81,22 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=75
     retrieved_at: '2026-11-23'
+- id: agriculture-norway-amendment-2025
+  kind: amending_protocol
+  name: Amendment to the agricultural protocol between Norway and Jordan
+  other_names:
+  - lang: 'no'
+    name: Avtale om endring av landbruksprotokoll mellom Norge og Jordan av 21. juni 2001
+  status: in_force
+  signed: '2025-06-10'
+  in_force: '2026-02-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2025-06-10-20
+    retrieved_at: '2026-11-23'
 - id: decision-2025-1
   kind: joint_committee_decision
   name: Decision No. 1 of 2025 of the EFTA-Jordan Joint Committee
@@ -65,18 +109,6 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=75
     retrieved_at: '2026-11-23'
-wto_rta_id: 75
-gptad_id: 41
-dta_id: 72
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/jordan
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Jordan.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/65238b0d-dd47-4176-beec-406c88a4b8b6
-  type: treaty_text
-notes: Joint Committee Decision No. 1/2025 (adopted 10 June 2025, in force 1 February 2026) modernised the rules of origin
-  in Protocol B, with matching amendments to the three bilateral agricultural agreements.
 verification: official
 last_verified: '2026-11-23'
 provenance:

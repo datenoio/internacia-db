@@ -8,18 +8,23 @@ ended: '2007-01-01'
 parties:
 - id: AT
   type: country
+  in_force: '1993-08-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: FI
   type: country
+  in_force: '1993-10-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: IS
   type: country
+  in_force: '1994-06-01'
 - id: LI
   type: country
+  in_force: '1994-05-01'
 - id: 'NO'
   type: country
+  in_force: '1993-07-01'
 - id: RO
   type: country
 - id: SE
@@ -28,13 +33,38 @@ parties:
   note: Left EFTA on joining the European Communities.
 - id: CH
   type: country
+  provisional_application: '1993-05-01'
+  in_force: '1994-02-01'
 wto_rta_id: 293
 gptad_id: 47
 links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-12-10-1
+  type: website
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Romania.pdf
   type: treaty_text
-verification: catalogue
-last_verified: '2026-11-22'
+notes: The parties' own entry into force dates are from Lovdata, the treaty register of Norway, the depositary; Fedlex confirms
+  Switzerland's.
+instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Romania
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Romania
+  status: terminated
+  signed: '1992-12-10'
+  in_force: '1993-07-01'
+  ended: '2007-01-01'
+  coverage:
+  - goods
+  notes: Ended when Romania joined the EU.
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-12-10-2
+    retrieved_at: '2026-11-23'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -44,3 +74,15 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=293
   retrieved_at: '2026-11-22'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-12-10-1
+  retrieved_at: '2026-11-23'
+- field: signed
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-12-10-1
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-12-10-1
+  retrieved_at: '2026-11-23'

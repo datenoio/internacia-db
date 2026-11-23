@@ -1,8 +1,33 @@
 id: EFTASG
-intblock: EFTASG
 agreement_type: fta
 status: in_force
+intblock: EFTASG
+wto_rta_id: 65
+aric_id: 22
+gptad_id: 48
+dta_id: 78
+links:
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Singapore.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/862a0400-bfa9-4a68-8092-5c8f923a9109
+  type: treaty_text
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agricultural agreement between Norway and Singapore
+  other_names:
+  - lang: 'no'
+    name: Landbruksavtale mellom Norge og Singapore
+  status: in_force
+  signed: '2002-06-26'
+  in_force: '2003-01-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2002-06-26-2
+    retrieved_at: '2026-11-23'
 - id: decision-2007-1
   kind: joint_committee_decision
   name: Decision No. 1 of 2007 of the Joint EFTA-Singapore Committee
@@ -76,17 +101,8 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=65
     retrieved_at: '2026-11-23'
-wto_rta_id: 65
-aric_id: 22
-gptad_id: 48
-dta_id: 78
-links:
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Singapore.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/862a0400-bfa9-4a68-8092-5c8f923a9109
-  type: treaty_text
 verification: official
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: status
   source: Fedlex, scope of application (Geltungsbereich) of the agreement

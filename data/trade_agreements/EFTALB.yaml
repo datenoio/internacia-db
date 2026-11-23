@@ -15,7 +15,35 @@ parties:
   type: country
 - id: LI
   type: country
+wto_rta_id: 15
+gptad_id: 307
+dta_id: 119
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/lebanon
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/LebEFTA_FTA.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/a8589715-68de-4827-b73b-a1ed9885ab84
+  type: treaty_text
+notes: The EFTA page (captured 2026-08-13) gives 1 July 2007 as the date of entry into force; the Fedlex scope-of-application
+  table and WTO RTA-IS give 1 January 2007 for all five parties.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agricultural agreement between Norway and Lebanon
+  other_names:
+  - lang: 'no'
+    name: Landbruksavtale mellom Norge og Libanon
+  status: in_force
+  signed: '2004-06-24'
+  in_force: '2007-01-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2004-06-24-11
+    retrieved_at: '2026-11-23'
 - id: decision-2011-1
   kind: joint_committee_decision
   name: Decision No. 1 of 2011 of the Joint EFTA-Lebanon Committee
@@ -29,18 +57,6 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=15
     retrieved_at: '2026-11-23'
-wto_rta_id: 15
-gptad_id: 307
-dta_id: 119
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/lebanon
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/LebEFTA_FTA.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/a8589715-68de-4827-b73b-a1ed9885ab84
-  type: treaty_text
-notes: The EFTA page (captured 2026-08-13) gives 1 July 2007 as the date of entry into force; the Fedlex scope-of-application
-  table and WTO RTA-IS give 1 January 2007 for all five parties.
 verification: official
 last_verified: '2026-11-23'
 provenance:

@@ -1,8 +1,54 @@
 id: EFTAHK
-intblock: EFTAHK
 agreement_type: fta
 status: in_force
+intblock: EFTAHK
+wto_rta_id: 689
+aric_id: 256
+dta_id: 220
+links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/2011-06-21-35
+  type: website
+- url: https://edit.wti.org/document/show/d085a03f-7020-4e14-b085-7641576281c6
+  type: treaty_text
+notes: In force between Hong Kong, Iceland, Liechtenstein and Switzerland since 1 October 2012 and for Norway since 1 November
+  2012 (Lovdata).
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agreement on agriculture between Norway and Hong Kong SAR
+  other_names:
+  - lang: 'no'
+    name: Avtale om landbruk mellom Norge og Hongkong SAR
+  status: in_force
+  signed: '2011-06-21'
+  in_force: '2012-11-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2011-06-21-23
+    retrieved_at: '2026-11-23'
+- id: labour
+  kind: supplementary_agreement
+  name: Agreement on labour between the EFTA States and Hong Kong, China
+  other_names:
+  - lang: 'no'
+    name: Avtale mellom EFTA-statene og Hongkong, Kina om arbeidstakerrettigheter
+  status: in_force
+  signed: '2011-06-21'
+  in_force: '2012-11-01'
+  notes: Signed on 17 and 21 June 2011. In force for Switzerland since 1 October 2012 (Fedlex SR 0.632.314.161.2) and for
+    Norway since 1 November 2012 (Lovdata).
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2011-06-21-24
+    retrieved_at: '2026-11-23'
+  - field: instruments
+    source: Fedlex (Swiss federal law platform)
+    url: https://fedlex.data.admin.ch/sparqlendpoint
+    retrieved_at: '2026-11-23'
 - id: decision-2017-4
   kind: joint_committee_decision
   name: Decision No. 4 of 2017 of the Joint EFTA-Hong Kong, China Committee
@@ -53,14 +99,8 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=689
     retrieved_at: '2026-11-23'
-wto_rta_id: 689
-aric_id: 256
-dta_id: 220
-links:
-- url: https://edit.wti.org/document/show/d085a03f-7020-4e14-b085-7641576281c6
-  type: treaty_text
 verification: official
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: status
   source: Fedlex, scope of application (Geltungsbereich) of the agreement
@@ -70,3 +110,7 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=256&ssid=3
   retrieved_at: '2026-11-22'
+- field: notes
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/2011-06-21-35
+  retrieved_at: '2026-11-23'

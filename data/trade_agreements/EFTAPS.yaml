@@ -18,9 +18,38 @@ parties:
   type: country
 - id: IS
   type: country
+  in_force: '2000-11-01'
 - id: LI
   type: country
+wto_rta_id: 101
+gptad_id: 267
+dta_id: 48
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/palestinian-authority
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-PalestinianAuthority.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/1770f46f-3234-4b5f-b567-941fd9f8decb
+  type: treaty_text
+notes: Concluded with the Palestine Liberation Organization (PLO) acting for the benefit of the Palestinian Authority. The
+  parties' own entry into force dates are from Lovdata, the treaty register of Norway, the depositary.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and PLO / PA
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og PLO / PA
+  status: in_force
+  signed: '1998-11-30'
+  in_force: '1999-07-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1998-11-30-4
+    retrieved_at: '2026-11-23'
 - id: decision-2008-1-3
   kind: joint_committee_decision
   name: Decisions No. 1-3 of 2008 of the Joint EFTA-Palestinian Authority Committee
@@ -34,17 +63,21 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=101
     retrieved_at: '2026-11-23'
-wto_rta_id: 101
-gptad_id: 267
-dta_id: 48
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/palestinian-authority
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-PalestinianAuthority.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/1770f46f-3234-4b5f-b567-941fd9f8decb
-  type: treaty_text
-notes: Concluded with the Palestine Liberation Organization (PLO) acting for the benefit of the Palestinian Authority.
+- id: agriculture-norway-2026
+  kind: supplementary_agreement
+  name: Agreement on agricultural products between Norway and Palestine
+  other_names:
+  - lang: 'no'
+    name: Avtale om landbruksprodukter mellom Norge og Palestina
+  status: signed
+  signed: '2026-06-22'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2026-06-22-11
+    retrieved_at: '2026-11-23'
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -79,4 +112,8 @@ provenance:
 - field: name
   source: Fedlex, classified compilation (title of the agreement)
   url: https://fedlex.data.admin.ch/eli/cc/2004/525/de
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1998-11-30-5
   retrieved_at: '2026-11-23'

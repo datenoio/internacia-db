@@ -23,22 +23,62 @@ links:
   type: wikidata
 name: European Free Trade Association
 includes:
+- id: AT
+  name: Austria
+  type: country
+  status: former_member
+  joined: '1960-05-03'
+  left: '1995-01-01'
+- id: DK
+  name: Denmark
+  type: country
+  status: former_member
+  joined: '1960-05-03'
+  left: '1973-01-01'
+- id: FI
+  name: Finland
+  type: country
+  status: former_member
+  joined: '1986-01-01'
+  left: '1995-01-01'
 - id: IS
   name: Iceland
   type: country
   status: member
+  joined: '1970-03-01'
 - id: LI
   name: Liechtenstein
   type: country
   status: member
+  joined: '1991-09-01'
 - id: 'NO'
   name: Norway
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-05-03'
+- id: PT
+  name: Portugal
+  type: country
+  status: former_member
+  joined: '1960-05-03'
+  left: '1986-01-01'
+- id: SE
+  name: Sweden
+  type: country
+  status: former_member
+  joined: '1960-05-03'
+  left: '1995-01-01'
 - id: CH
   name: Switzerland
   type: country
-  status: member
+  status: founding_member
+  joined: '1960-05-03'
+- id: GB
+  name: United Kingdom
+  type: country
+  status: former_member
+  joined: '1960-05-03'
+  left: '1973-01-01'
 membership_count: 4
 description: International trade organization and free trade area.
 tags:
@@ -73,6 +113,10 @@ other_names:
 - id: zh
   name: 欧洲自由贸易联盟
 provenance:
+- field: includes
+  source: "Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)"
+  retrieved_at: "2026-11-23"
+  url: "https://lovdata.no/dokument/TRAKTAT/traktat/1960-01-04-1"
 - field: institutional_design
   source: "Convention Establishing the European Free Trade Association (Vaduz Convention, updated 1 November 2021)"
   retrieved_at: "2026-11-20"
@@ -134,4 +178,4 @@ headquarters:
   coordinates:
     lat: 46.219944444444
     lng: 6.1387361111111
-last_verified: '2026-07-29'
+last_verified: '2026-11-23'

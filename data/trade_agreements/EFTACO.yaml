@@ -24,12 +24,33 @@ wto_rta_id: 177
 gptad_id: 413
 dta_id: 200
 links:
+- url: https://lovdata.no/dokument/TRAKTAT/traktat/2008-11-25-47
+  type: website
 - url: https://www.efta.int/trade-relations/free-trade-network/colombia
   type: website
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Colombia.pdf
   type: treaty_text
 - url: https://edit.wti.org/document/show/d9ef67a3-29da-4a3e-b7a0-9e4adcef335b
   type: treaty_text
+notes: Lovdata gives the entry into force for Norway as 1 October 2014, but 1 September 2014 for Norway's agreement on agriculture
+  with Colombia, which entered into force with the free trade agreement; the registry keeps 1 September 2014.
+instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: Agreement on agriculture between Norway and Colombia
+  other_names:
+  - lang: 'no'
+    name: Avtale mellom Norge og Colombia om landbruk
+  status: in_force
+  signed: '2008-11-25'
+  in_force: '2014-09-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2008-11-25-34
+    retrieved_at: '2026-11-23'
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -52,4 +73,8 @@ provenance:
 - field: parties
   source: EFTA, free trade network partner page (Wayback Machine copy)
   url: https://web.archive.org/web/20260219151530/https://www.efta.int/trade-relations/free-trade-network/colombia
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/2008-11-25-47
   retrieved_at: '2026-11-23'

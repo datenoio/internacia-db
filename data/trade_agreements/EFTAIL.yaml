@@ -19,15 +19,50 @@ parties:
   note: Left EFTA on joining the European Communities.
 - id: CH
   type: country
+  in_force: '1993-07-01'
 - id: IS
   type: country
+  in_force: '1993-08-01'
 - id: FI
   type: country
   left: '1995-01-01'
   note: Left EFTA on joining the European Communities.
 - id: LI
   type: country
+  in_force: '1994-05-01'
+wto_rta_id: 125
+gptad_id: 40
+dta_id: 26
+links:
+- url: https://www.efta.int/trade-relations/free-trade-network/israel
+  type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Israel.pdf
+  type: treaty_text
+- url: https://edit.wti.org/document/show/ce6a08aa-9d14-454c-9cef-629759f98b7d
+  type: treaty_text
+notes: Revised bilateral agricultural agreements, signed in Geneva on 22 November 2018, replaced the original ones on 1 August
+  2021. The parties' own entry into force dates are from Lovdata, the treaty register of Norway, the depositary; Fedlex confirms
+  Switzerland's.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Israel
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Israel
+  status: terminated
+  signed: '1992-09-16'
+  in_force: '1993-03-16'
+  ended: '2021-08-01'
+  coverage:
+  - goods
+  notes: In force on 16 March 1993 with effect from 1 January 1993. Lovdata marks it as ended; it was replaced by the agreement
+    on agricultural products of 2018, in force on 1 August 2021.
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-09-16-1
+    retrieved_at: '2026-11-23'
 - id: decision-2005-3
   kind: joint_committee_decision
   name: Decision No. 3 of 2005 of the Joint EFTA-Israel Committee
@@ -65,18 +100,22 @@ instruments:
     source: WTO Regional Trade Agreements Information System
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=125
     retrieved_at: '2026-11-23'
-wto_rta_id: 125
-gptad_id: 40
-dta_id: 26
-links:
-- url: https://www.efta.int/trade-relations/free-trade-network/israel
-  type: website
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Israel.pdf
-  type: treaty_text
-- url: https://edit.wti.org/document/show/ce6a08aa-9d14-454c-9cef-629759f98b7d
-  type: treaty_text
-notes: Revised bilateral agricultural agreements, signed in Geneva on 22 November 2018, replaced the original ones on 1 August
-  2021.
+- id: agriculture-norway-2018
+  kind: supplementary_agreement
+  name: Agreement on agricultural products between Norway and Israel
+  other_names:
+  - lang: 'no'
+    name: Avtale mellom Norge og Israel om landbruksvarer
+  status: in_force
+  signed: '2018-11-22'
+  in_force: '2021-08-01'
+  coverage:
+  - goods
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/2018-11-22-27
+    retrieved_at: '2026-11-23'
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -103,4 +142,8 @@ provenance:
 - field: notes
   source: EFTA, free trade network partner page (Wayback Machine copy)
   url: https://web.archive.org/web/20261012014947/https://www.efta.int/trade-relations/free-trade-network/israel
+  retrieved_at: '2026-11-23'
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1992-09-17-1
   retrieved_at: '2026-11-23'

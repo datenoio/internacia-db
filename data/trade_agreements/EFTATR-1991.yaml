@@ -24,14 +24,17 @@ parties:
   in_force: '1992-09-01'
 - id: AT
   type: country
+  in_force: '1992-10-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Union.
 - id: FI
   type: country
+  in_force: '1992-05-01'
   left: '1995-01-01'
   note: Left EFTA on joining the European Union.
 - id: SE
   type: country
+  in_force: '1992-04-15'
   left: '1995-01-01'
   note: Left EFTA on joining the European Union.
 superseded_by: EFTATR
@@ -43,8 +46,27 @@ links:
 - url: https://wits.worldbank.org/GPTAD/PDF/archive/EFTA-Turkey.pdf
   type: treaty_text
 notes: Signed at Geneva on 10 December 1991. Replaced on 1 October 2021 by the modernised EFTA-Türkiye Free Trade Agreement
-  of 25 June 2018 (`EFTATR`); the WTO lists this agreement as inactive since that date.
+  of 25 June 2018 (`EFTATR`); the WTO lists this agreement as inactive since that date. The parties' own entry into force
+  dates are from Lovdata, the treaty register of Norway, the depositary.
 instruments:
+- id: agriculture-norway
+  kind: supplementary_agreement
+  name: The Agricultural Protocol between Norway and Turkey
+  other_names:
+  - lang: 'no'
+    name: Landbruksprotokoll mellom Norge og Tyrkia
+  status: in_force
+  signed: '1991-12-10'
+  in_force: '1992-04-15'
+  coverage:
+  - goods
+  notes: 'Still in force: amended by an instrument of 25 June 2018 that entered into force with the 2018 EFTA-Türkiye agreement
+    (`EFTATR`).'
+  provenance:
+  - field: instruments
+    source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+    url: https://lovdata.no/dokument/TRAKTAT/traktat/1991-12-10-2
+    retrieved_at: '2026-11-23'
 - id: decision-2005-1
   kind: joint_committee_decision
   name: Decision No. 1 of 2005 of the Joint EFTA-Turkey Committee
@@ -131,7 +153,7 @@ instruments:
     url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=129
     retrieved_at: '2026-11-23'
 verification: official
-last_verified: '2026-11-22'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Fedlex, scope of application (Geltungsbereich) of the agreement
@@ -145,3 +167,7 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   retrieved_at: '2026-11-22'
   url: https://aric.adb.org/fta.php?id=471&ssid=3
+- field: parties
+  source: Lovdata, Norges traktater (treaty register of the Norwegian Ministry of Foreign Affairs)
+  url: https://lovdata.no/dokument/TRAKTAT/traktat/1991-12-10-1
+  retrieved_at: '2026-11-23'
