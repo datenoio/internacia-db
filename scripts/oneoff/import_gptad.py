@@ -120,6 +120,7 @@ MAPPED: dict[int, str] = {
     9: "EUEG-1977",  # Cooperation Agreement of 1977, not the 1972 agreement
     12: "EUHU",  # Europe Agreement
     17: "EULB-1977",  # Cooperation Agreement of 1977
+    18: "EULB-2002",  # Interim Agreement of 2002, not the Association Agreement
     20: "EUMT",  # English text; 21 is the French one
     22: "EUMX",  # FTA decision under the 1997 Global Agreement
     25: "EUOCT",
@@ -129,6 +130,9 @@ MAPPED: dict[int, str] = {
     30: "EUSI-1996-2",  # Interim Agreement of 1996
     33: "EUSY",  # Cooperation Agreement of 1977
     34: "EUMK",  # Stabilisation and Association Agreement
+    313: "EUAL-2006",  # Interim Agreement, not the Stabilisation and Association Agreement
+    368: "EUBA-2008",  # Interim Agreement
+    385: "EUME-2007",  # Interim Agreement
     144: "EUCU",  # Treaty establishing the European Community
     336: "EUCARIFORUMEPA",
     445: "EUSM",  # GPTAD lists the EU member states as parties

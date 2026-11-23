@@ -9,3 +9,6 @@
   MERCOSUR–Central American Common Market, two agricultural agreements, the regional tariff
   preference and the market-opening lists for Bolivia, Ecuador and Paraguay. Added by
   `scripts/oneoff/import_aladi.py` from pages saved by `scripts/oneoff/fetch_aladi.py` on 2026-11-23.
+  35 are new records; the other 16 were added from OAS SICE the same day and now merge both sources
+  under the SICE ids (`ARCL-1991`, `ARUY-AUTO`, `BRGYKN`, `MERCOSURMX-AUTO` and 12 with the same id),
+  with ALADI dates, status and parties and a note where SICE differs.

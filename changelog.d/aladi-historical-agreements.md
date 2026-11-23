@@ -7,8 +7,10 @@
   agreements that MERCOSUR's agreements with Chile, Bolivia, Peru, the Andean Community and Cuba
   replaced, and the Article 25 agreements that Mexico's and Colombia's FTAs replaced) and 9
   `terminated` (eight 1982 sectoral commercial agreements that ended pair by pair, and ACE 26).
-  13 successors already in the registry get `supersedes`. Added by `scripts/oneoff/import_aladi.py`.
+  15 successors already in the registry get `supersedes` (among them `CLEC` and `COCU`, current ALADI
+  agreements). `ARCAN-ACE48` gives each party the date its pair was replaced (`left`). Added by
+  `scripts/oneoff/import_aladi.py`.
 
 ### Changed
 
-- The names of `ALADI-AG2`, `BRGY` and `GTMXSV` list three or more parties as "A, B and C".
+- The names of `ALADI-AG2`, `BRGYKN` and `GTMXSV` list three or more parties as "A, B and C".

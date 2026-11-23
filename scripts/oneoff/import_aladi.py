@@ -10,7 +10,8 @@ and date of signature. 15 carry no trade preferences (transport, tourism, waterw
 vehicle rules under Article 14, the agricultural health council), 25 already had a record
 (the Mexico agreements from WTO RTA-IS, the GPTAD walk's ALADI records, and ACE 18, which is
 MERCOSUR's Treaty of Asunción), and the 51 in ``SELECT`` had none. This script writes one
-record for each of them.
+record for each of them. 16 of them were added from OAS SICE the same day (``import_sice.py``)
+and merged by hand with the ALADI record under the SICE ids; the script skips existing files.
 
 ALADI is the depositary, so the records are ``verification: official``. Signatories come
 from ``Países signatarios``, the date of signature from ``Fecha de suscripción`` (US order,
@@ -76,7 +77,7 @@ SELECT: dict[str, dict] = {
     "AAP.CE Nº 14": {"id": "ARBR", "type": "fta",
                      "notes": "The Argentina - Brazil tariff elimination programme towards a common market, "
                               "taken up by MERCOSUR."},
-    "AAP.CE Nº 16": {"id": "ARCL", "type": "pta"},
+    "AAP.CE Nº 16": {"id": "ARCL-1991", "type": "pta"},
     "AAP.CE Nº 40": {"id": "CUVE", "type": "pta"},
     "AAP.CE Nº 42": {"id": "CLCU", "type": "pta"},
     "AAP.CE Nº 46": {"id": "CUEC", "type": "pta"},
@@ -85,9 +86,9 @@ SELECT: dict[str, dict] = {
     "AAP.CE Nº 50": {"id": "CUPE", "type": "pta"},
     "AAP.CE Nº 54": {"id": "MERCOSURMX", "type": "framework",
                      "notes": "Framework agreement for a free trade area between MERCOSUR and Mexico."},
-    "AAP.CE Nº 55": {"id": "MERCOSURMX-ACE55", "type": "pta",
+    "AAP.CE Nº 55": {"id": "MERCOSURMX-AUTO", "type": "pta",
                      "notes": "Free trade in the automotive sector between MERCOSUR states and Mexico."},
-    "AAP.CE Nº 57": {"id": "ARUY", "type": "pta", "notes": "Trade in the automotive sector."},
+    "AAP.CE Nº 57": {"id": "ARUY-AUTO", "type": "pta", "notes": "Trade in the automotive sector."},
     "AAP.CE Nº 62": {"id": "MERCOSURCU", "type": "pta"},
     "AAP.CE Nº 63": {"id": "UYVE", "type": "pta", "notes": "Venezuela grants duty-free access to listed goods."},
     "AAP.CE Nº 64": {"id": "PYVE", "type": "pta", "notes": "Venezuela grants duty-free access to listed goods."},
@@ -123,7 +124,7 @@ SELECT: dict[str, dict] = {
                                                                      "signed by Mexico and Guatemala."}],
                         "notes": "Trade in natural gas between Mexico and Guatemala: transport, distribution, "
                                  "storage, export and import."},
-    "AAP.A25TM Nº 38": {"id": "BRGY", "type": "pta",
+    "AAP.A25TM Nº 38": {"id": "BRGYKN", "type": "pta",
                         "parties": ["BR", "GY", {"id": "KN", "note": "Listed by ALADI as a party; the text is "
                                                                      "signed by Brazil and Guyana."}]},
     "AAP.A25TM Nº 41": {"id": "BRSR", "type": "pta", "notes": "Tariff preferences for rice."},
@@ -155,7 +156,7 @@ SELECT: dict[str, dict] = {
 # record). ``residual``: the note keeps in force the provisions on matters the successor does
 # not cover; ``replaced`` words the replacement when it went pair by pair. ``in_force``
 # overrides ALADI's date when the validity clause of the text contradicts it; ``why`` says so
-# in the notes. Without ``sup`` the record is ``terminated``.
+# in the notes; ``parties`` gives party ``left`` dates. Without ``sup`` the record is ``terminated``.
 AR_MX_1994 = "Argentina - Mexico on 30 December 1994, when ACE 6 (ARMX) took over"
 HISTORY: dict[str, dict] = {
     "AAP.R Nº 1": {"id": "ARBR-AAPR1", "by": "AAP.CE Nº 14", "sup": "ARBR", "ended": "1990-12-20"},
@@ -257,6 +258,8 @@ HISTORY: dict[str, dict] = {
     "AAP.CE Nº 45": {"id": "ARCU-ACE45", "by": "AAP.CE Nº 62", "sup": "MERCOSURCU", "ended": "2007-07-02",
                      "residual": True},
     "AAP.CE Nº 48": {"id": "ARCAN-ACE48", "by": "AAP.CE Nº 59", "sup": "MERCOSURCOECVE", "ended": "2006-01-02",
+                     "parties": ["AR", {"id": "CO", "left": "2005-02-01"}, {"id": "EC", "left": "2005-04-01"},
+                                 {"id": "PE", "left": "2006-01-02"}, {"id": "VE", "left": "2005-01-05"}],
                      "replaced": "Replaced pair by pair: by ACE 59 (MERCOSURCOECVE) for Venezuela on 5 January "
                                  "2005, Colombia on 1 February 2005 and Ecuador on 1 April 2005, and by ACE 58 "
                                  "(MERCOSURPE) for Peru on 2 January 2006, except for provisions on matters that they "
@@ -580,7 +583,8 @@ def main(argv: list[str]) -> int:
     linked = 0
     for successor, predecessor in sorted(single.items()):
         path = REGISTRY / f"{successor}.yaml"
-        if successor in new_ids or not path.exists():
+        # Also links the SELECT records that were already in the registry (the 16 merged with SICE).
+        if not path.exists():
             continue
         text = path.read_text(encoding="utf-8")
         if "\nsupersedes:" not in text and predecessor in {s["id"] for s in HISTORY.values()}:

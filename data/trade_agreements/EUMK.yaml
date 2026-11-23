@@ -3,22 +3,23 @@ name: EU - North Macedonia
 agreement_type: fta
 status: in_force
 signed: '2001-04-09'
-in_force: '2001-06-01'
+in_force: '2004-04-01'
 parties:
 - id: EU
   type: intblock
 - id: MK
   type: country
+supersedes: EUMK-2001
 wto_rta_id: 77
 gptad_id: 34
 links:
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EC-Macedonia.pdf
-  type: treaty_text
 - url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22004A0320(03)
   type: website
+- url: https://wits.worldbank.org/GPTAD/PDF/archive/EC-Macedonia.pdf
+  type: treaty_text
 notes: WTO RTA-IS gives entry into force on 2001-06-01 for goods and on 2004-04-01 for services. The Stabilisation and Association
-  Agreement with North Macedonia entered into force on 1 April 2004 (EUR-Lex); in_force is the earlier date from which WTO
-  RTA-IS records its trade provisions as applied.
+  Agreement with North Macedonia entered into force on 1 April 2004 (EUR-Lex). Its trade provisions applied earlier, from
+  1 June 2001, under the Interim Agreement (`EUMK-2001`), which WTO RTA-IS counts as the start of this RTA.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -41,4 +42,8 @@ provenance:
 - field: signed
   source: EUR-Lex (Publications Office Cellar)
   url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22004A0320(03)
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22004X0323%2801%29
   retrieved_at: '2026-11-23'
