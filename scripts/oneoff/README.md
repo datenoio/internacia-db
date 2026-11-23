@@ -12,6 +12,7 @@ running one.
 | `label_scope_category.py` | Suggest `scope_category` values; does not write YAML | 2.x |
 | `import_sice.py` | Write hand-checked `data/trade_agreements/` records from OAS SICE snapshots (agreements table, agreement pages, Trade Policy Developments) | 5.x |
 | `match_desta.py`, `import_desta.py` | Match the DESTA list of treaties to `data/trade_agreements/` (report in `docs/history/`) and add missing agreements whose status and dates come from ALADI, a party government or the WTO | 5.1.0 |
+| `fetch_aladi.py`, `import_aladi.py` | Save ALADI's agreement records and add the current partial-scope agreements missing from `data/trade_agreements/` | 5.1.0 |
 | `parse_aric_pages.py`, `import_aric_ftas.py` | Parse a snapshot of ADB ARIC FTA pages and write catalogue-level `data/trade_agreements/` records | 5.0.0 |
 | `apply_efta_ftn.py` | Apply the EFTA free trade network review (statuses, per-state entry-into-force dates, EFTA provenance) to `data/trade_agreements/` | 5.x |
 
