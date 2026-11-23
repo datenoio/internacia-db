@@ -212,12 +212,18 @@ def _expected_country_trade_agreements(source: dict[str, list[dict]], current: l
             continue
         agreement = agreements[party["agreement_id"]]
         if party["party_type"] in ("country", "territory"):
-            candidates = [(party["party_id"], None, party["in_force"] or agreement["in_force"])]
+            candidates = [(
+                party["party_id"], None, party["in_force"] or agreement["in_force"],
+                party.get("provisional_application") or agreement.get("provisional_application"),
+            )]
         elif party["party_type"] == "intblock":
-            candidates = [(code, party["party_id"], agreement["in_force"]) for code in members.get(party["party_id"], [])]
+            candidates = [
+                (code, party["party_id"], agreement["in_force"], agreement.get("provisional_application"))
+                for code in members.get(party["party_id"], [])
+            ]
         else:
             continue
-        for code, via, in_force in candidates:
+        for code, via, in_force, provisional in candidates:
             row = {
                 "country_code": code,
                 "agreement_id": agreement["id"],
@@ -225,6 +231,7 @@ def _expected_country_trade_agreements(source: dict[str, list[dict]], current: l
                 "agreement_type": agreement["agreement_type"],
                 "agreement_status": agreement["status"],
                 "in_force": in_force,
+                "provisional_application": provisional,
             }
             key = (code, agreement["id"])
             rank = (via is not None, via or "")
