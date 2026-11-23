@@ -374,6 +374,41 @@ def check_preference_schemes(
     return issues
 
 
+def _later(value: Any, other: Any) -> bool:
+    """``value`` is later than ``other``, compared at their shared precision (2018 vs 2018-07-17 is equal)."""
+    n = min(len(str(value)), len(str(other)))
+    return str(value)[:n] > str(other)[:n]
+
+
+def check_party_dates(records: list[dict[str, Any]], paths: list[str]) -> list[Issue]:
+    """A listed party's dates lie within the agreement's dates (``add-preference-scheme-beneficiary-history``)."""
+    issues: list[Issue] = []
+    for record, path in zip(records, paths, strict=True):
+        rid = str(record.get("id") or "")
+        start, ended = record.get("in_force"), record.get("ended")
+        for index, party in enumerate(record.get("parties") or []):
+            if not isinstance(party, dict):
+                continue
+            joined, left = party.get("in_force"), party.get("left")
+            field = f"parties[{index}]"
+            if joined and start and _later(start, joined):
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARTY_DATE", path, rid, f"{field}.in_force", joined,
+                    f"Party {party.get('id')} is in force from {joined}, before the agreement ({start})",
+                ))
+            if left and ended and _later(left, ended):
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARTY_DATE", path, rid, f"{field}.left", left,
+                    f"Party {party.get('id')} left on {left}, after the agreement ended ({ended})",
+                ))
+            if left and joined and not _later(left, joined):
+                issues.append(_issue(
+                    "TRADE_AGREEMENT_PARTY_DATE", path, rid, f"{field}.left", left,
+                    f"Party {party.get('id')} left on {left}, not after it joined ({joined})",
+                ))
+    return issues
+
+
 def check_trade_agreement_files(errors: list[tuple[str, str]]) -> list[Issue]:
     """Files under data/trade_agreements/ that are not valid YAML mappings."""
     return [

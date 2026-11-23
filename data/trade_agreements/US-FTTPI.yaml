@@ -10,24 +10,31 @@ parties:
 - id: FM
   type: country
   role: beneficiary
+  in_force: '1948-09-08'
 - id: MH
   type: country
   role: beneficiary
+  in_force: '1948-09-08'
 - id: MP
   type: country
   role: beneficiary
+  in_force: '1948-09-08'
 - id: PW
   type: country
   role: beneficiary
+  in_force: '1948-09-08'
 wto_pta_ids:
 - 77
-notes: Beneficiaries are those of the PTA Database version as of 2025-03-21 (4 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2025-03-21 (4 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 6 PTA Database versions with a beneficiary list, as of
+  1948-09-08 to 2025-03-21: in_force is the date of the version that first lists a beneficiary (those listed on 1948-09-08,
+  the scheme''s first version, have that date) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2025-03-21
+  source: WTO Preferential Trade Arrangements Database, versions as of 1948-09-08 to 2025-03-21
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

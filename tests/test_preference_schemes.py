@@ -238,3 +238,92 @@ def test_reciprocal_agreement_rows_have_role_party(con):
 def test_sub_scheme_and_pta_ids_are_exported(con):
     assert con.execute("SELECT parent FROM trade_agreements WHERE id = 'GSPPLUS'").fetchone() == ("EU-GSP",)
     assert con.execute("SELECT wto_pta_ids FROM trade_agreements WHERE id = 'EAEU-GSP'").fetchone() == ([87, 96, 98, 100],)
+
+
+# ---- add-preference-scheme-beneficiary-history ---------------------------------------------
+
+import importlib.util  # noqa: E402
+
+_SPEC = importlib.util.spec_from_file_location("import_wto_ptadb", ROOT / "scripts" / "oneoff" / "import_wto_ptadb.py")
+ptadb = importlib.util.module_from_spec(_SPEC)
+_SPEC.loader.exec_module(ptadb)
+CODES = {"050": "BD", "116": "KH", "586": "PK", "548": "VU", "024": "AO"}
+
+
+def _lists(*versions):
+    """``(date, [alpha-2...])`` -> the ``(date, entries)`` shape of PTA Database versions."""
+    numeric = {v: k for k, v in CODES.items()}
+    return [(d, [[numeric[c], c] for c in ids]) for d, ids in versions]
+
+
+def _dated(*versions, starts_scheme=False, ended=None):
+    parties, stats = ptadb.dated_parties(_lists(*versions), CODES, "EU", starts_scheme, ended)
+    return {p["id"]: {k: v for k, v in p.items() if k not in ("id", "type", "role")} for p in parties}, stats
+
+
+def test_history_beneficiary_added_in_a_later_version():
+    dated, _ = _dated(("2011-10-25", ["BD"]), ("2013-06-01", ["BD", "KH"]), ("2017-06-30", ["BD", "KH"]))
+    assert dated["KH"] == {"in_force": "2013-06-01"}
+
+
+def test_history_baseline_beneficiary_has_no_start_date():
+    dated, stats = _dated(("2011-12-09", ["BD"]), ("2017-06-29", ["BD"]))
+    assert dated["BD"] == {}
+    assert stats == {"first": "2011-12-09", "last": "2017-06-29", "lists": 2, "former": 0}
+
+
+def test_history_graduated_beneficiary():
+    dated, stats = _dated(("2011-12-09", ["BD", "PK"]), ("2014-01-01", ["BD"]), ("2017-06-29", ["BD"]))
+    assert dated["PK"] == {"left": "2014-01-01"}
+    assert stats["former"] == 1
+
+
+def test_history_suspended_and_reinstated_beneficiary():
+    dated, _ = _dated(
+        ("2011-10-25", ["BD", "AO"]), ("2015-01-01", ["BD"]), ("2018-06-01", ["BD", "AO"]), ("2025-03-21", ["BD", "AO"])
+    )
+    assert dated["AO"] == {"in_force": "2018-06-01", "note": "Also a beneficiary until 2015-01-01 (listed from 2011-10-25)."}
+
+
+def test_history_scheme_that_starts_in_the_database():
+    dated, _ = _dated(("2023-06-19", ["BD", "KH"]), ("2026-01-01", ["BD", "KH"]), starts_scheme=True)
+    assert dated["BD"] == {"in_force": "2023-06-19"}
+
+
+def test_history_left_after_the_scheme_ended_is_clamped():
+    dated, _ = _dated(("2017-01-01", ["BD", "VU"]), ("2022-02-02", ["BD"]), ended="2020-12-31")
+    assert dated["VU"] == {"left": "2020-12-31"}
+
+
+def _dates_types(record):
+    return sorted(i["issue_type"] for i in trade_agreement_rules.check_party_dates([record], ["x.yaml"]))
+
+
+def test_party_joins_before_the_agreement():
+    record = _scheme("GB-DCTS", in_force="2023-06-19")
+    record["parties"][1]["in_force"] = "2021-01-01"
+    assert _dates_types(record) == ["TRADE_AGREEMENT_PARTY_DATE"]
+
+
+def test_party_leaves_after_the_agreement_ended():
+    record = _scheme("US-ATPA", status="terminated", in_force="1991-12-04", ended="2013-07-31")
+    record["parties"][1]["left"] = "2014-01-01"
+    assert _dates_types(record) == ["TRADE_AGREEMENT_PARTY_DATE"]
+
+
+def test_party_leaves_before_it_joined():
+    record = _scheme()
+    record["parties"][1].update({"in_force": "2014-01-01", "left": "2014-01-01"})
+    assert _dates_types(record) == ["TRADE_AGREEMENT_PARTY_DATE"]
+
+
+def test_party_dates_at_different_precision():
+    record = _scheme(in_force="2014")
+    record["parties"][1]["in_force"] = "2014-01-01"
+    assert _dates_types(record) == []
+
+
+def test_source_records_have_consistent_party_dates():
+    records = load_trade_agreement_records(ROOT)
+    paths = [f"data/trade_agreements/{r.get('id')}.yaml" for r in records]
+    assert trade_agreement_rules.check_party_dates(records, paths) == []

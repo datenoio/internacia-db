@@ -56,6 +56,13 @@ The walk reads each version's sub-scheme lists as well. Two things change:
 
 A sub-scheme can be renamed, or be split, between versions. The walk matches sub-schemes by label and reports any label it cannot match for hand review.
 
+The walk of 2026-11-23 found two server bugs in sub-scheme lists:
+
+- **Latest version.** Posting a scheme's latest version id returns a stale sub-scheme grid: the grid of the version viewed before, or an empty one. Norway's 2022 GSP PLUS list (23 in its label) came back empty, and its GSP zero list (51) came back with the 53 of the 2020 version. The default page always shows the latest version, so the latest sub-scheme lists come from `fetch`, which reads that page and checks each list against the count in its dropdown label.
+- **Older versions.** Each sub-scheme list is checked against the count in its label. A list of another size is left out of the dates, and the walk reports it, rather than the walk guessing.
+
+Main beneficiary lists have no count in a label. They matched the latest list of every scheme, and they show no sign of the stale grid.
+
 ### 5. Validation
 
 The new rule `TRADE_AGREEMENT_PARTY_DATE` is an error. It compares dates at their shared precision, as `TRADE_AGREEMENT_STATUS_DATE` does, and checks three things:
@@ -65,6 +72,11 @@ The new rule `TRADE_AGREEMENT_PARTY_DATE` is an error. It compares dates at thei
 - a party's `left` is later than its own `in_force`.
 
 The rule applies to every agreement, not only to preference schemes. Existing records that break it are fixed in this change, or the rule is limited to preference schemes. The dry run decides which, before the rule is turned on.
+
+The dry run of 2026-11-23 found two records that break the rule, both reciprocal and both inconsistent in themselves. They are fixed, and the rule applies to every agreement.
+
+- `EFTAES` gave Austria and Sweden `left: 1995-01-01`, the date they left EFTA. The agreement had already ended on 1986-01-01, when Spain joined the European Communities, so both were parties until the end. Their `left` is removed, and a note says why.
+- `CEFTA-1992` had `ended: 2004-05-01`, the date RTA-IS gives for the end of the original agreement when five parties joined the EU. Romania, Bulgaria and Croatia stayed parties until 2007-01-01, according to their RTA-IS accession rows, so `ended` is now 2007-01-01, with a note.
 
 ### 6. Provenance and notes
 

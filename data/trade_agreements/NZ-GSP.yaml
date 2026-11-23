@@ -157,6 +157,10 @@ parties:
 - id: GW
   type: country
   role: beneficiary
+- id: GY
+  type: country
+  role: beneficiary
+  left: '2018-01-01'
 - id: HN
   type: country
   role: beneficiary
@@ -430,13 +434,17 @@ parties:
 parent: GSP
 wto_pta_ids:
 - 66
-notes: Beneficiaries are those of the PTA Database version as of 2018-01-01 (140 countries and territories), not checked against
-  the grantor's own list. Notified under paragraph 1(b) of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'Current beneficiaries are those of the PTA Database version as of 2018-01-01 (140 countries and territories), not
+  checked against the grantor''s own list. Beneficiary dates come from the 2 PTA Database versions with a beneficiary list,
+  as of 2011-09-01 to 2018-01-01: in_force is the date of the version that first lists a beneficiary (none for those already
+  listed on 2011-09-01, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 1 former beneficiary is included. Notified under paragraph 1(b) of the Transparency Mechanism
+  for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2018-01-01
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-09-01 to 2018-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

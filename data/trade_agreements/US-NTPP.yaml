@@ -17,15 +17,19 @@ parties:
 - id: NP
   type: country
   role: beneficiary
+  in_force: '2016-12-30'
 wto_pta_ids:
 - 88
-notes: Beneficiaries are those of the PTA Database version as of 2025-03-21 (1 country or territory), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2025-03-21 (1 country or territory), not checked
+  against the grantor''s own list. Beneficiary dates come from the 7 PTA Database versions with a beneficiary list, as of
+  2016-12-30 to 2025-03-21: in_force is the date of the version that first lists a beneficiary (those listed on 2016-12-30,
+  the scheme''s first version, have that date) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2025-03-21
+  source: WTO Preferential Trade Arrangements Database, versions as of 2016-12-30 to 2025-03-21
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

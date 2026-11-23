@@ -37,6 +37,10 @@ parties:
 - id: CF
   type: country
   role: beneficiary
+- id: CV
+  type: country
+  role: beneficiary
+  left: '2014-01-01'
 - id: DJ
   type: country
   role: beneficiary
@@ -91,6 +95,10 @@ parties:
 - id: MR
   type: country
   role: beneficiary
+- id: MV
+  type: country
+  role: beneficiary
+  left: '2014-01-01'
 - id: MW
   type: country
   role: beneficiary
@@ -124,6 +132,7 @@ parties:
 - id: SS
   type: country
   role: beneficiary
+  in_force: '2014-01-01'
 - id: ST
   type: country
   role: beneficiary
@@ -158,13 +167,16 @@ parties:
   type: country
   role: beneficiary
 parent: EU-GSP
-notes: Beneficiaries are those of the PTA Database version as of 2017-06-29 (49 countries and territories), not checked against
-  the grantor's own list.
+notes: 'Current beneficiaries are those of the PTA Database version as of 2017-06-29 (49 countries and territories), not checked
+  against the grantor''s own list. Beneficiary dates come from the 4 PTA Database versions with a beneficiary list, as of
+  2011-12-09 to 2017-06-29: in_force is the date of the version that first lists a beneficiary (none for those already listed
+  on 2011-12-09, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 2 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2017-06-29
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-12-09 to 2017-06-29
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

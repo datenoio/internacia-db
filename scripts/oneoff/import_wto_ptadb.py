@@ -23,9 +23,15 @@ New records are ``verification: catalogue``. Their parties are the grantor and t
 of the latest version, and their provenance names the date of that version. "Tariffs & Trade"
 pages are never read. See ``openspec/changes/add-preference-scheme-rosters``.
 
+``history`` reads every version of every scheme and adds a ``versions`` list to the snapshot.
+``write`` then dates the beneficiaries from consecutive versions that list beneficiaries, adds
+former beneficiaries, and, with ``--report``, writes a TSV review of the linked intblocks, whose
+official rosters it does not edit. See ``openspec/changes/add-preference-scheme-beneficiary-history``.
+
 Usage:
   python -I scripts/oneoff/import_wto_ptadb.py fetch SNAPSHOT_JSON
-  python -I scripts/oneoff/import_wto_ptadb.py write SNAPSHOT_JSON [--write]
+  python -I scripts/oneoff/import_wto_ptadb.py history SNAPSHOT_JSON HISTORY_JSON
+  python -I scripts/oneoff/import_wto_ptadb.py write SNAPSHOT_OR_HISTORY_JSON [--write] [--report TSV]
 """
 
 from __future__ import annotations
@@ -86,9 +92,12 @@ CODE_OVERRIDES = {
     "888": ("XK", "country"),
     "736": ("SD", "country"),
     "158": ("TW", "country"),
+    "419": ("LA", "country"),  # "Laos" in older EU and Korean versions; 418 elsewhere
 }
 # Parts of a member state that a beneficiary list names on their own: no party row, a note instead.
 CODE_SKIPPED = {"128": "Canary Islands", "146": "Ceuta and Melilla"}
+# Statistical groupings in older Australian versions: not a country, no party row.
+CODE_AGGREGATES = {"579": "Other Oceania, n.e.s.", "848": "U.S. Oceania, n.e.s."}
 
 # PTA id -> registry record. ``grantor`` overrides the provider of the row; ``status`` and
 # ``ended`` override the dates of the list (a lapsed authority); ``also`` lists the other PTA ids
@@ -187,7 +196,10 @@ SCHEMES: dict[int, dict] = {
     },
 }
 # Rows that get no record, with the reason.
-SKIP = {79: "China's duty-free treatment for LDCs: the PTA Database lists no beneficiaries"}
+SKIP = {
+    79: "China's duty-free treatment for LDCs: the latest version (2024-12-01) lists no beneficiaries, "
+    "though the 7 earlier versions do"
+}
 # Rows already in the registry: they only get wto_pta_ids.
 EXISTING = {37: "AGOA", 70: "CARIBCAN", 78: "CBERA", 80: "SPARTECA"}
 MERGED = {other: pta for pta, spec in SCHEMES.items() for other in spec.get("also", [])}
@@ -406,6 +418,120 @@ def fetch(out: Path) -> int:
     return 0
 
 
+def iso(label: str) -> str | None:
+    """``29/06/2017 (5)`` -> ``2017-06-29``."""
+    match = re.match(r"(\d\d)/(\d\d)/(\d{4})", label or "")
+    return f"{match.group(3)}-{match.group(2)}-{match.group(1)}" if match else None
+
+
+def scheme_versions(row: dict, tries: int = 8) -> tuple[list[tuple[str, str]], str, Session]:
+    """The scheme's own version list, its beneficiary page and session.
+
+    The cached dropdown may hold another scheme's versions; it is the scheme's own list when it
+    contains the scheme's latest version id (a hidden column of the list).
+    """
+    for attempt in range(tries):
+        _, session = card(row, {})
+        page = session.get(BASE + "ptaBeneficiaries.aspx")
+        versions = options(page, VERSION_COMBO)
+        if row["version_id"] in {v for v, _ in versions}:
+            return versions, page, session
+        time.sleep(2 + attempt)
+    raise SystemExit(f"PTA {row['pta_id']}: no version list with version {row['version_id']} after {tries} tries")
+
+
+def page_title(page: str) -> str | None:
+    return after(text_lines(page), "Processing...")
+
+
+def history(snapshot_path: Path, out: Path) -> int:
+    """Read every version of every scheme (design decision 1 of add-preference-scheme-beneficiary-history)."""
+    snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+    done: dict[int, list[dict]] = {}
+    for row in snapshot["rows"]:
+        if row["pta_id"] in done:  # SPARTECA has one PTA id on two rows
+            row["versions"] = done[row["pta_id"]]
+            continue
+        versions, page, session = scheme_versions(row)
+        expected = page_title(page)
+        found = []
+        for value, label in versions:
+            current = session.post(
+                BASE + "ptaBeneficiaries.aspx",
+                page,
+                {"__EVENTTARGET": VERSION_COMBO, "__EVENTARGUMENT": "", VERSION_COMBO: value},
+            )
+            if page_title(current) != expected:
+                raise SystemExit(f"PTA {row['pta_id']} version {value}: page title {page_title(current)!r}")
+            entry = {"id": value, "label": label, "date": iso(label), "beneficiaries": beneficiaries(current)}
+            entry["subschemes"], entry["unverified_subschemes"] = {}, []
+            if value == row["version_id"]:
+                # Posting the latest version id makes the server return a stale sub-scheme grid (the
+                # one of the version viewed before, or none). The fetch read these lists from the
+                # default page, which shows the latest version, and checked them against the counts
+                # in the dropdown labels.
+                entry["subschemes"] = row["subschemes"]
+                found.append(entry)
+                continue
+            for sub_value, sub_label in options(current, SUBSCHEME_COMBO):
+                if sub_value == "0":
+                    continue
+                name = re.sub(r"\s*\(\d+\)$", "", sub_label).strip()
+                count = re.search(r"\((\d+)\)$", sub_label)
+                fields = {
+                    "__EVENTTARGET": SUBSCHEME_COMBO,
+                    "__EVENTARGUMENT": "",
+                    SUBSCHEME_COMBO: sub_value,
+                    VERSION_COMBO: value,
+                }
+                sub = beneficiaries(session.post(BASE + "ptaBeneficiaries.aspx", current, fields))
+                if count and len(sub) != int(count.group(1)):
+                    # The label gives the list's size: a list of another size is a stale grid. Leave it
+                    # out of the dates rather than guess.
+                    print(
+                        f"review: PTA {row['pta_id']} {label} {name!r}: {len(sub)} listed, label says "
+                        f"{count.group(1)}; left out",
+                        file=sys.stderr,
+                    )
+                    entry["unverified_subschemes"].append(name)
+                    continue
+                entry["subschemes"][name] = sub
+                time.sleep(0.5)
+            found.append(entry)
+            time.sleep(0.5)
+        latest = found[-1] if found else {}
+        if latest.get("id") != row["version_id"]:
+            print(
+                f"warning: PTA {row['pta_id']}: last version {latest.get('id')} is not {row['version_id']}",
+                file=sys.stderr,
+            )
+        if {c for c, _ in latest.get("beneficiaries", [])} != {c for c, _ in row["beneficiaries"]}:
+            print(f"warning: PTA {row['pta_id']}: latest version list differs from the snapshot", file=sys.stderr)
+        populated = [v for v in found if v["beneficiaries"]]
+        for before, after_ in zip(populated, populated[1:], strict=False):
+            if len(after_["beneficiaries"]) < len(before["beneficiaries"]) / 2:
+                print(
+                    f"review: PTA {row['pta_id']}: {len(before['beneficiaries'])} beneficiaries on {before['date']}, "
+                    f"{len(after_['beneficiaries'])} on {after_['date']}",
+                    file=sys.stderr,
+                )
+        labels = [set(v["subschemes"]) for v in populated]
+        if labels and any(s != labels[-1] for s in labels if s):
+            print(
+                f"review: PTA {row['pta_id']}: sub-scheme labels change: {sorted(set().union(*labels))}",
+                file=sys.stderr,
+            )
+        print(
+            f"{row['pta_id']:>3} {row['name'][:50]}: {len(found)} versions, {len(populated)} with beneficiaries "
+            f"(from {populated[0]['date'] if populated else '-'})",
+            file=sys.stderr,
+        )
+        row["versions"] = done[row["pta_id"]] = found
+    snapshot["history_retrieved_at"] = date.today().isoformat()
+    out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=1), encoding="utf-8")
+    return 0
+
+
 # ---------------------------------------------------------------------------- write
 
 
@@ -443,9 +569,13 @@ def ordered(record: dict) -> dict:
     return {k: record[k] for k in FIELD_ORDER if record.get(k) not in (None, [], "")}
 
 
-def provenance(version_date: str | None, retrieved: str, fields: tuple[str, ...]) -> list[dict]:
-    """Beneficiary lists come from a dated version; status and dates come from the list."""
+def provenance(
+    version_date: str | None, retrieved: str, fields: tuple[str, ...], stats: dict | None = None
+) -> list[dict]:
+    """Beneficiary lists come from dated versions; status and dates come from the list."""
     versioned = f"{SOURCE}, version as of {version_date}" if version_date else f"{SOURCE}, latest version"
+    if stats and stats["lists"] > 1:
+        versioned = f"{SOURCE}, versions as of {stats['first']} to {stats['last']}"
     return [
         {"field": f, "source": versioned if f == "parties" else SOURCE, "url": LIST_URL, "retrieved_at": retrieved}
         for f in fields
@@ -462,6 +592,8 @@ def beneficiary_parties(entries: list[list[str]], codes: dict[str, str], grantor
         if code in CODE_SKIPPED:
             skipped.append(CODE_SKIPPED[code])
             continue
+        if code in CODE_AGGREGATES:
+            continue
         resolved = party(code, codes)
         if resolved is None:
             raise SystemExit(f"unmapped WTO code {code} ({name})")
@@ -471,6 +603,112 @@ def beneficiary_parties(entries: list[list[str]], codes: dict[str, str], grantor
         seen.add(pid)
         parties.append({"id": pid, "type": ptype, "role": "beneficiary"})
     return sorted(parties, key=lambda p: p["id"]), skipped
+
+
+def populated(row: dict, label: str | None = None) -> list[tuple[str, list[list[str]]]]:
+    """``(date, entries)`` of each version that lists beneficiaries (of the scheme, or of sub-scheme ``label``)."""
+    found = []
+    for version in row.get("versions") or []:
+        entries = version["beneficiaries"] if label is None else version["subschemes"].get(label) or []
+        if entries and version.get("date"):
+            found.append((version["date"], entries))
+    return found
+
+
+def dated_parties(
+    lists: list[tuple[str, list[list[str]]]],
+    codes: dict[str, str],
+    grantor: str,
+    starts_scheme: bool,
+    ended: str | None = None,
+) -> tuple[list[dict], dict]:
+    """Beneficiaries with dates from consecutive populated versions (beneficiary-history decisions 1-3).
+
+    A beneficiary listed in the first list has no ``in_force`` unless that list is the scheme's first
+    version. Each party keeps its latest spell; earlier spells go in its note.
+    """
+    present = []
+    types: dict[str, str] = {}
+    for _, entries in lists:
+        parties, _ = beneficiary_parties(entries, codes, grantor)
+        present.append({p["id"] for p in parties})
+        types.update({p["id"]: p["type"] for p in parties})
+
+    def known_start(index: int) -> bool:
+        return index > 0 or starts_scheme
+
+    result, former = [], 0
+    for pid in sorted(types):
+        spells, start = [], None
+        for index, ids in enumerate(present):
+            if pid in ids and start is None:
+                start = index
+            elif pid not in ids and start is not None:
+                spells.append((start, index))
+                start = None
+        if start is not None:
+            spells.append((start, None))
+        first, end = spells[-1]
+        party = {"id": pid, "type": types[pid], "role": "beneficiary"}
+        if known_start(first):
+            party["in_force"] = lists[first][0]
+        if end is not None:
+            # A version notified after the scheme ended may drop a beneficiary: it left by the end.
+            party["left"] = min(lists[end][0], ended) if ended else lists[end][0]
+            former += 1
+        earlier = []
+        for s, e in spells[:-1]:
+            if known_start(s):
+                earlier.append(f"Also a beneficiary from {lists[s][0]} to {lists[e][0]}.")
+            else:
+                earlier.append(f"Also a beneficiary until {lists[e][0]} (listed from {lists[0][0]}).")
+        if earlier:
+            party["note"] = " ".join(earlier)
+        result.append(party)
+    return result, {"first": lists[0][0], "last": lists[-1][0], "lists": len(lists), "former": former}
+
+
+def history_note(stats: dict, starts_scheme: bool) -> str:
+    if stats["lists"] < 2:
+        return ""
+    baseline = (
+        f"those listed on {stats['first']}, the scheme's first version, have that date"
+        if starts_scheme
+        else f"none for those already listed on {stats['first']}, the earliest list"
+    )
+    text = (
+        f"Beneficiary dates come from the {stats['lists']} PTA Database versions with a beneficiary list, as of "
+        f"{stats['first']} to {stats['last']}: in_force is the date of the version that first lists a beneficiary "
+        f"({baseline}) and left the date of the first version that no longer lists it. They are no-later-than "
+        "dates, not designation dates."
+    )
+    if stats["former"]:
+        text += (
+            f" {stats['former']} former {'beneficiary is' if stats['former'] == 1 else 'beneficiaries are'} included."
+        )
+    return text
+
+
+def roster(
+    row: dict,
+    codes: dict[str, str],
+    grantor: str,
+    label: str | None = None,
+    ended: str | None = None,
+) -> tuple[list[dict], list[str], dict | None, bool]:
+    """Beneficiary parties (dated when the snapshot has versions), skipped names, stats, starts_scheme."""
+    latest = row["beneficiaries"] if label is None else row["subschemes"][label]
+    current, skipped = beneficiary_parties(latest, codes, grantor)
+    lists = populated(row, label)
+    if len(lists) < 2:
+        return current, skipped, None, False
+    versions = [v for v in row["versions"] if v.get("date")]
+    starts_scheme = lists[0][0] == versions[0]["date"]
+    parties, stats = dated_parties(lists, codes, grantor, starts_scheme, ended)
+    now = {p["id"] for p in parties if not p.get("left")}
+    if now != {p["id"] for p in current}:
+        raise SystemExit(f"PTA {row['pta_id']} {label or ''}: the latest version list differs from the snapshot")
+    return parties, skipped, stats, starts_scheme
 
 
 def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
@@ -493,16 +731,20 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
     for pta, spec in SCHEMES.items():
         row = rows[pta]
         grantor = spec.get("grantor") or party(row["provider_code"], codes)
-        parties, skipped = beneficiary_parties(row["beneficiaries"], codes, grantor[0])
         status = spec.get("status") or ("terminated" if row["end_date"] else "in_force")
         ended = spec.get("ended") or wto_date(row["end_date"])
+        record_ended = ended if status in ("terminated", "superseded") else None
+        parties, skipped, stats, starts = roster(row, codes, grantor[0], ended=record_ended)
+        current = sum(1 for p in parties if not p.get("left"))
         ids = sorted([pta, *spec.get("also", [])])
         notes = [spec["note"]] if spec.get("note") else []
         version = row["version_date"]
         notes.append(
-            f"Beneficiaries are those of the PTA Database version as of {version or 'an unknown date'} "
-            f"({countries(len(parties))}), not checked against the grantor's own list."
+            f"Current beneficiaries are those of the PTA Database version as of {version or 'an unknown date'} "
+            f"({countries(current)}), not checked against the grantor's own list."
         )
+        if stats:
+            notes.append(history_note(stats, starts))
         if skipped:
             notes.append(
                 f"The list also names {' and '.join(sorted(set(skipped)))}, part of a member state; no party row."
@@ -518,7 +760,7 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
             "agreement_type": "preference_scheme",
             "status": status,
             "in_force": wto_date(row["entry_into_force"]),
-            "ended": ended if status in ("terminated", "superseded") else None,
+            "ended": record_ended,
             "parties": [{"id": grantor[0], "type": grantor[1], "role": "grantor"}, *parties],
             "superseded_by": spec.get("superseded_by"),
             "parent": spec.get("parent"),
@@ -526,7 +768,7 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
             "notes": " ".join(notes),
             "verification": "catalogue",
             "last_verified": retrieved,
-            "provenance": provenance(version, retrieved, ("parties", "status", "in_force")),
+            "provenance": provenance(version, retrieved, ("parties", "status", "in_force"), stats),
         }
         records.append(record)
         by_pta[pta] = record
@@ -539,42 +781,46 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
         parent = by_pta.get(pta)
         parent_id = parent["id"] if parent else EXISTING[pta]
         grantor = dict(parent["parties"][0]) if parent else {"id": "US", "type": "country", "role": "grantor"}
-        parties, _ = beneficiary_parties(row["subschemes"][label], codes, grantor["id"])
+        status = parent["status"] if parent else "in_force"
+        ended_by = (parent or {}).get("ended") if status in ("terminated", "superseded") else None
+        parties, _, stats, starts = roster(row, codes, grantor["id"], label, ended=ended_by)
+        current = [p for p in parties if not p.get("left")]
         notes = []
         if pta == 98:
             kz = {p["id"] for p in beneficiary_parties(rows[87]["subschemes"][label], codes, "EAEU")[0]}
-            extra = sorted(kz - {p["id"] for p in parties})
+            extra = sorted(kz - {p["id"] for p in current})
             if extra:
                 notes.append(
                     f"Kazakhstan's notification (PTA 87) also lists {', '.join(extra)}; the list here is "
                     "the one Armenia, the Kyrgyz Republic and Russia notify."
                 )
         version = row["version_date"]
-        in_force = spec.get("in_force") or version
+        earliest = stats["first"] if stats else version
+        in_force = spec.get("in_force") or earliest
         if not spec.get("in_force"):
             # A version notified after the scheme lapsed (US GSP) still lists a sub-scheme that was in
             # force before: it was in force by the parent's end date at the latest.
-            ended_by = (parent or {}).get("ended")
-            if ended_by and version and ended_by < version:
+            if ended_by and earliest and ended_by < earliest:
                 in_force = ended_by
             notes.append(
                 "The PTA Database gives no start date for the sub-scheme. in_force is the latest date by "
-                f"which it was in force: {in_force}, from the version that lists it ({version})"
-                + (" and the end of the parent scheme." if in_force != version else ".")
+                f"which it was in force: {in_force}, from the earliest version that lists it ({earliest})"
+                + (" and the end of the parent scheme." if in_force != earliest else ".")
             )
         notes.append(
-            f"Beneficiaries are those of the PTA Database version as of {version or 'an unknown date'} "
-            f"({countries(len(parties))}), not checked against the grantor's own list."
+            f"Current beneficiaries are those of the PTA Database version as of {version or 'an unknown date'} "
+            f"({countries(len(current))}), not checked against the grantor's own list."
         )
-        status = parent["status"] if parent else "in_force"
-        prov = provenance(version, retrieved, ("parties", "status"))
+        if stats:
+            notes.append(history_note(stats, starts))
+        prov = provenance(version, retrieved, ("parties", "status"), stats)
         if spec.get("in_force_source"):
             prov.append({"field": "in_force", "source": spec["in_force_source"], "retrieved_at": retrieved})
         else:
             prov.append(
                 {
                     "field": "in_force",
-                    "source": f"{SOURCE}, version as of {version}",
+                    "source": f"{SOURCE}, version as of {earliest}",
                     "url": LIST_URL,
                     "retrieved_at": retrieved,
                 }
@@ -587,7 +833,7 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
                 "agreement_type": "preference_scheme",
                 "status": "terminated" if status == "superseded" else status,
                 "in_force": in_force,
-                "ended": (parent or {}).get("ended") if status in ("terminated", "superseded") else None,
+                "ended": ended_by,
                 "parties": [grantor, *parties],
                 "parent": parent_id,
                 "notes": " ".join(notes),
@@ -599,9 +845,76 @@ def build(snapshot: dict) -> tuple[list[dict], dict[str, dict]]:
     return records, existing
 
 
-def write(snapshot_path: Path, apply: bool) -> int:
+# PTA id -> (linked intblock, sub-scheme label): official rosters that are reviewed, not rewritten.
+LINKED = {
+    37: ("AGOA", None),
+    70: ("CARIBCAN", None),
+    78: ("CBERA", None),
+    80: ("SPARTECA", None),
+    36: ("GSPPLUS", "GSP+"),
+}
+
+
+def review(snapshot: dict, out: Path) -> None:
+    """TSV of the dates the versions suggest for linked intblocks, and their membership differences."""
+    codes = load_codes()
+    rows = {}
+    for row in snapshot["rows"]:
+        rows.setdefault(row["pta_id"], row)
+    header = (
+        "intblock\tcountry\tpta_in_force\tpta_left\tpta_note\tincludes_status\tincludes_joined\tincludes_left\tfinding"
+    )
+    lines = [header]
+    for pta, (intblock_id, label) in LINKED.items():
+        intblock = yaml.safe_load(
+            (ROOT / "data" / "intblocks" / "pta" / f"{intblock_id}.yaml").read_text(encoding="utf-8")
+        )
+        includes = {str(i["id"]): i for i in intblock.get("includes") or [] if i.get("status") in INCLUDE_STATUSES}
+        grantor = next(k for k, v in includes.items() if v["status"] == "contributor")
+        parties, _, _, _ = roster(rows[pta], codes, grantor, label)
+        dated = {p["id"]: p for p in parties}
+        recipients = {k for k, v in includes.items() if v["status"] == "recipient"}
+        for cid in sorted(set(dated) | recipients):
+            p, inc = dated.get(cid, {}), includes.get(cid, {})
+            if not inc:
+                finding = "listed in PTA Database versions, not in includes"
+            elif not p:
+                finding = "in includes, in no PTA Database version"
+            elif bool(p.get("left")) != bool(inc.get("left")):
+                finding = "current in one source only"
+            elif (p.get("in_force") and not inc.get("joined")) or (p.get("left") and not inc.get("left")):
+                finding = "date suggested"
+            else:
+                finding = ""
+            lines.append(
+                "\t".join(
+                    str(x or "")
+                    for x in (
+                        intblock_id,
+                        cid,
+                        p.get("in_force"),
+                        p.get("left"),
+                        p.get("note"),
+                        inc.get("status"),
+                        inc.get("joined"),
+                        inc.get("left"),
+                        finding,
+                    )
+                )
+            )
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    flagged = sum(1 for line in lines[1:] if not line.endswith("\t"))
+    print(f"review: {len(lines) - 1} rows, {flagged} with a finding, in {out}")
+
+
+INCLUDE_STATUSES = {"contributor", "recipient"}
+
+
+def write(snapshot_path: Path, apply: bool, report: Path | None = None) -> int:
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
     records, existing = build(snapshot)
+    if report:
+        review(snapshot, report)
     taken = {p.stem for p in REGISTRY.glob("*.yaml")}
     for record in records:
         state = "update" if record["id"] in taken else "new"
@@ -630,8 +943,11 @@ def write(snapshot_path: Path, apply: bool) -> int:
 def main(argv: list[str]) -> int:
     if len(argv) >= 2 and argv[0] == "fetch":
         return fetch(Path(argv[1]))
+    if len(argv) >= 3 and argv[0] == "history":
+        return history(Path(argv[1]), Path(argv[2]))
     if len(argv) >= 2 and argv[0] == "write":
-        return write(Path(argv[1]), "--write" in argv[2:])
+        report = Path(argv[argv.index("--report") + 1]) if "--report" in argv[2:] else None
+        return write(Path(argv[1]), "--write" in argv[2:], report)
     print(__doc__, file=sys.stderr)
     return 2
 

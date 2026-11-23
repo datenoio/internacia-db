@@ -13,6 +13,14 @@ parties:
 - id: AG
   type: country
   role: beneficiary
+- id: AI
+  type: country
+  role: beneficiary
+  left: '2017-01-01'
+- id: AL
+  type: country
+  role: beneficiary
+  left: '2012-01-01'
 - id: AM
   type: country
   role: beneficiary
@@ -25,12 +33,24 @@ parties:
 - id: AZ
   type: country
   role: beneficiary
+- id: BA
+  type: country
+  role: beneficiary
+  left: '2016-01-01'
+- id: BB
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: BD
   type: country
   role: beneficiary
 - id: BF
   type: country
   role: beneficiary
+- id: BH
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: BI
   type: country
   role: beneficiary
@@ -76,6 +96,14 @@ parties:
 - id: CN
   type: country
   role: beneficiary
+- id: CO
+  type: country
+  role: beneficiary
+  left: '2016-01-01'
+- id: CR
+  type: country
+  role: beneficiary
+  left: '2016-01-01'
 - id: CU
   type: country
   role: beneficiary
@@ -94,6 +122,10 @@ parties:
 - id: DZ
   type: country
   role: beneficiary
+- id: EC
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: ER
   type: country
   role: beneficiary
@@ -112,6 +144,10 @@ parties:
 - id: GD
   type: country
   role: beneficiary
+- id: GE
+  type: country
+  role: beneficiary
+  left: '2018-01-01'
 - id: GH
   type: country
   role: beneficiary
@@ -139,6 +175,10 @@ parties:
 - id: HT
   type: country
   role: beneficiary
+- id: ID
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: IN
   type: country
   role: beneficiary
@@ -169,6 +209,17 @@ parties:
 - id: KP
   type: country
   role: beneficiary
+  in_force: '2016-01-01'
+  note: Also a beneficiary until 2015-01-01 (listed from 2011-01-01).
+- id: KR
+  type: country
+  role: beneficiary
+  in_force: '2013-01-01'
+  left: '2016-01-01'
+- id: KW
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: KZ
   type: country
   role: beneficiary
@@ -187,12 +238,23 @@ parties:
 - id: LS
   type: country
   role: beneficiary
+- id: LT
+  type: country
+  role: beneficiary
+  in_force: '2013-01-01'
+  left: '2015-01-01'
 - id: LY
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
+  note: Also a beneficiary until 2013-01-01 (listed from 2011-01-01).
 - id: MD
   type: country
   role: beneficiary
+- id: ME
+  type: country
+  role: beneficiary
+  left: '2015-01-01'
 - id: MG
   type: country
   role: beneficiary
@@ -250,9 +312,21 @@ parties:
 - id: NU
   type: country
   role: beneficiary
+- id: PA
+  type: country
+  role: beneficiary
+  left: '2016-01-01'
+- id: PE
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: PG
   type: country
   role: beneficiary
+- id: PH
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: PK
   type: country
   role: beneficiary
@@ -262,9 +336,17 @@ parties:
 - id: PY
   type: country
   role: beneficiary
+- id: RS
+  type: country
+  role: beneficiary
+  left: '2012-01-01'
 - id: RW
   type: country
   role: beneficiary
+- id: SA
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: SB
   type: country
   role: beneficiary
@@ -328,6 +410,10 @@ parties:
 - id: TO
   type: country
   role: beneficiary
+- id: TT
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: TV
   type: country
   role: beneficiary
@@ -346,6 +432,10 @@ parties:
 - id: VC
   type: country
   role: beneficiary
+- id: VE
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: VN
   type: country
   role: beneficiary
@@ -376,13 +466,17 @@ parties:
 parent: GSP
 wto_pta_ids:
 - 43
-notes: Beneficiaries are those of the PTA Database version as of 2022-02-15 (122 countries and territories), not checked against
-  the grantor's own list. Notified under paragraph 1(a) of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'Current beneficiaries are those of the PTA Database version as of 2022-02-15 (122 countries and territories), not
+  checked against the grantor''s own list. Beneficiary dates come from the 11 PTA Database versions with a beneficiary list,
+  as of 2011-01-01 to 2022-02-15: in_force is the date of the version that first lists a beneficiary (none for those already
+  listed on 2011-01-01, the earliest list) and left the date of the first version that no longer lists it. They are no-later-than
+  dates, not designation dates. 21 former beneficiaries are included. Notified under paragraph 1(a) of the Transparency Mechanism
+  for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-15
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-01-01 to 2022-02-15
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

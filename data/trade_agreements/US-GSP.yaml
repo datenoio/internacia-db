@@ -26,12 +26,18 @@ parties:
 - id: AR
   type: country
   role: beneficiary
+  in_force: '2019-06-13'
+  note: Also a beneficiary until 2013-01-01 (listed from 2011-10-21).
 - id: AZ
   type: country
   role: beneficiary
 - id: BA
   type: country
   role: beneficiary
+- id: BD
+  type: country
+  role: beneficiary
+  left: '2015-07-29'
 - id: BF
   type: country
   role: beneficiary
@@ -77,6 +83,10 @@ parties:
 - id: CM
   type: country
   role: beneficiary
+- id: CO
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: CV
   type: country
   role: beneficiary
@@ -125,6 +135,10 @@ parties:
 - id: GH
   type: country
   role: beneficiary
+- id: GI
+  type: country
+  role: beneficiary
+  left: '2015-07-29'
 - id: GM
   type: country
   role: beneficiary
@@ -146,6 +160,10 @@ parties:
 - id: ID
   type: country
   role: beneficiary
+- id: IN
+  type: country
+  role: beneficiary
+  left: '2019-06-13'
 - id: IO
   type: country
   role: beneficiary
@@ -173,6 +191,10 @@ parties:
 - id: KM
   type: country
   role: beneficiary
+- id: KN
+  type: country
+  role: beneficiary
+  left: '2015-07-29'
 - id: KZ
   type: country
   role: beneficiary
@@ -209,6 +231,7 @@ parties:
 - id: MM
   type: country
   role: beneficiary
+  in_force: '2017-06-30'
 - id: MN
   type: country
   role: beneficiary
@@ -248,6 +271,10 @@ parties:
 - id: NU
   type: country
   role: beneficiary
+- id: PA
+  type: country
+  role: beneficiary
+  left: '2013-01-01'
 - id: PG
   type: country
   role: beneficiary
@@ -269,12 +296,20 @@ parties:
 - id: RS
   type: country
   role: beneficiary
+- id: RU
+  type: country
+  role: beneficiary
+  left: '2015-07-29'
 - id: RW
   type: country
   role: beneficiary
 - id: SB
   type: country
   role: beneficiary
+- id: SC
+  type: country
+  role: beneficiary
+  left: '2017-06-30'
 - id: SH
   type: country
   role: beneficiary
@@ -293,12 +328,17 @@ parties:
 - id: SS
   type: country
   role: beneficiary
+  in_force: '2013-01-01'
 - id: ST
   type: country
   role: beneficiary
 - id: SZ
   type: country
   role: beneficiary
+- id: TC
+  type: country
+  role: beneficiary
+  left: '2015-07-29'
 - id: TD
   type: country
   role: beneficiary
@@ -320,6 +360,10 @@ parties:
 - id: TO
   type: country
   role: beneficiary
+- id: TR
+  type: country
+  role: beneficiary
+  left: '2019-06-13'
 - id: TV
   type: country
   role: beneficiary
@@ -332,12 +376,20 @@ parties:
 - id: UG
   type: country
   role: beneficiary
+- id: UY
+  type: country
+  role: beneficiary
+  left: '2017-06-30'
 - id: UZ
   type: country
   role: beneficiary
 - id: VC
   type: country
   role: beneficiary
+- id: VE
+  type: country
+  role: beneficiary
+  left: '2017-06-30'
 - id: VG
   type: country
   role: beneficiary
@@ -368,15 +420,18 @@ parties:
 parent: GSP
 wto_pta_ids:
 - 49
-notes: The statutory authorization lapsed on 31 December 2020 and had not been renewed by 2026-11-23; earlier lapses were
-  followed by retroactive renewals. The PTA Database gives no end date. Beneficiaries are those of the PTA Database version
-  as of 2022-02-02 (119 countries and territories), not checked against the grantor's own list. Notified under paragraph 1(a)
-  of the Transparency Mechanism for PTAs (WT/L/806).
+notes: 'The statutory authorization lapsed on 31 December 2020 and had not been renewed by 2026-11-23; earlier lapses were
+  followed by retroactive renewals. The PTA Database gives no end date. Current beneficiaries are those of the PTA Database
+  version as of 2022-02-02 (119 countries and territories), not checked against the grantor''s own list. Beneficiary dates
+  come from the 7 PTA Database versions with a beneficiary list, as of 2011-10-21 to 2022-02-02: in_force is the date of the
+  version that first lists a beneficiary (none for those already listed on 2011-10-21, the earliest list) and left the date
+  of the first version that no longer lists it. They are no-later-than dates, not designation dates. 12 former beneficiaries
+  are included. Notified under paragraph 1(a) of the Transparency Mechanism for PTAs (WT/L/806).'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-02
+  source: WTO Preferential Trade Arrangements Database, versions as of 2011-10-21 to 2022-02-02
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status

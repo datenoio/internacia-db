@@ -2,32 +2,51 @@ id: NO-GSP-PLUS
 name: GSP Plus (Norway)
 agreement_type: preference_scheme
 status: in_force
-in_force: '2022-02-15'
+in_force: '2013-01-01'
 parties:
 - id: 'NO'
   type: country
   role: grantor
+- id: AM
+  type: country
+  role: beneficiary
+  left: '2022-02-15'
 - id: BO
   type: country
   role: beneficiary
+- id: BZ
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: CG
   type: country
   role: beneficiary
 - id: CI
   type: country
   role: beneficiary
+  in_force: '2019-01-01'
 - id: CM
   type: country
   role: beneficiary
 - id: CV
   type: country
   role: beneficiary
+- id: FJ
+  type: country
+  role: beneficiary
+  in_force: '2017-01-01'
+  left: '2019-01-01'
 - id: FM
   type: country
   role: beneficiary
+- id: GE
+  type: country
+  role: beneficiary
+  left: '2017-01-01'
 - id: GH
   type: country
   role: beneficiary
+  in_force: '2019-01-01'
 - id: GT
   type: country
   role: beneficiary
@@ -37,15 +56,28 @@ parties:
 - id: HN
   type: country
   role: beneficiary
+  in_force: '2019-01-01'
+  note: Also a beneficiary until 2018-01-01 (listed from 2013-01-01).
+- id: IQ
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: KG
   type: country
   role: beneficiary
+  in_force: '2019-01-01'
 - id: LK
   type: country
   role: beneficiary
 - id: MD
   type: country
   role: beneficiary
+- id: MH
+  type: country
+  role: beneficiary
+  in_force: '2020-01-01'
+  left: '2022-02-15'
+  note: Also a beneficiary until 2019-01-01 (listed from 2013-01-01).
 - id: MN
   type: country
   role: beneficiary
@@ -55,36 +87,60 @@ parties:
 - id: PG
   type: country
   role: beneficiary
+  in_force: '2019-01-01'
 - id: PY
   type: country
   role: beneficiary
 - id: SV
   type: country
   role: beneficiary
+- id: SY
+  type: country
+  role: beneficiary
+  in_force: '2017-01-01'
+  left: '2020-01-01'
+  note: Also a beneficiary until 2016-01-01 (listed from 2013-01-01).
 - id: SZ
   type: country
   role: beneficiary
 - id: TK
   type: country
   role: beneficiary
+  in_force: '2017-01-01'
+  note: Also a beneficiary until 2016-01-01 (listed from 2013-01-01).
+- id: TM
+  type: country
+  role: beneficiary
+  in_force: '2020-01-01'
+  left: '2022-02-15'
+  note: Also a beneficiary until 2016-01-01 (listed from 2013-01-01). Also a beneficiary from 2017-01-01 to 2019-01-01.
+- id: TO
+  type: country
+  role: beneficiary
+  left: '2019-01-01'
 - id: UZ
   type: country
   role: beneficiary
+  in_force: '2015-01-01'
 - id: WS
   type: country
   role: beneficiary
+  in_force: '2022-02-15'
 - id: XK
   type: country
   role: beneficiary
 parent: NO-GSP
-notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2022-02-15,
-  from the version that lists it (2022-02-15). Beneficiaries are those of the PTA Database version as of 2022-02-15 (23 countries
-  and territories), not checked against the grantor''s own list.'
+notes: 'The PTA Database gives no start date for the sub-scheme. in_force is the latest date by which it was in force: 2013-01-01,
+  from the earliest version that lists it (2013-01-01). Current beneficiaries are those of the PTA Database version as of
+  2022-02-15 (23 countries and territories), not checked against the grantor''s own list. Beneficiary dates come from the
+  9 PTA Database versions with a beneficiary list, as of 2013-01-01 to 2022-02-15: in_force is the date of the version that
+  first lists a beneficiary (none for those already listed on 2013-01-01, the earliest list) and left the date of the first
+  version that no longer lists it. They are no-later-than dates, not designation dates. 9 former beneficiaries are included.'
 verification: catalogue
 last_verified: '2026-11-23'
 provenance:
 - field: parties
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-15
+  source: WTO Preferential Trade Arrangements Database, versions as of 2013-01-01 to 2022-02-15
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: status
@@ -92,6 +148,6 @@ provenance:
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
 - field: in_force
-  source: WTO Preferential Trade Arrangements Database, version as of 2022-02-15
+  source: WTO Preferential Trade Arrangements Database, version as of 2013-01-01
   url: https://ptadb.wto.org/ptaList.aspx
   retrieved_at: '2026-11-23'
