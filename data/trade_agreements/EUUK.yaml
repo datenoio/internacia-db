@@ -13,7 +13,8 @@ other_names:
 agreement_type: fta
 status: in_force
 signed: '2020-12-30'
-in_force: '2021-01-01'
+in_force: '2021-05-01'
+provisional_application: '2021-01-01'
 parties:
 - id: EU
   type: intblock
@@ -34,12 +35,12 @@ description: Governing trade agreement between the European Union and the United
   meet rules of origin, plus chapters on services, fisheries, transport, energy, and level-playing-field commitments. It replaced
   EU single-market and customs-union membership for the UK.
 notes: Trade and Cooperation Agreement signed on 30 December 2020; provisionally applied from 1 January 2021 and formally
-  entered into force on 1 May 2021; notified to the WTO on 29 January 2021. The short acronym TCA is generic; Internacia uses
-  `EUUK` as the record id. Formal entry into force was 1 May 2021; WTO RTA-IS and most trade statistics treat 1 January 2021
-  as the start of application.
+  entered into force on 1 May 2021 (Official Journal notices); notified to the WTO on 29 January 2021. The short acronym TCA
+  is generic; Internacia uses `EUUK` as the record id. WTO RTA-IS and most trade statistics give 1 January 2021, the start
+  of provisional application, as the date of entry into force.
 wto_rta_id: 1137
 verification: official
-last_verified: '2026-09-09'
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: European Commission
@@ -50,6 +51,14 @@ provenance:
   retrieved_at: '2026-09-09'
   url: https://rtais.wto.org/UI/publicPreDefRepByRTAType.aspx
 - field: in_force
+  source: EUR-Lex (Official Journal notice)
+  retrieved_at: '2026-11-23'
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22021X0430%2802%29
+- field: provisional_application
+  source: EUR-Lex (Official Journal notice)
+  retrieved_at: '2026-11-23'
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22021X0101%2801%29
+- field: provisional_application
   source: WTO Regional Trade Agreements Information System
   retrieved_at: '2026-09-09'
   url: https://rtais.wto.org/UI/publicPreDefRepByRTAType.aspx
