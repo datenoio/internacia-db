@@ -1,16 +1,18 @@
 id: CATH
 name: Thailand-Canada Free Trade Agreement
 agreement_type: fta
-status: proposed
+status: negotiating
 parties:
 - id: CA
   type: country
 - id: TH
   type: country
 aric_id: 295
-notes: 'ADB ARIC dates: proposed/under consultation and study 2012-03-23.'
-verification: catalogue
-last_verified: '2026-11-22'
+notes: 'Canada tabled its notice of intent to enter into negotiations on 24 November 2025 and held public consultations from
+  13 December 2025 to 27 January 2026. Global Affairs Canada lists the status as 2. In negotiations. ADB ARIC dates: proposed/under
+  consultation and study 2012-03-23.'
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: Asia Regional Integration Center (ADB), FTA database
@@ -20,3 +22,15 @@ provenance:
   source: Asia Regional Integration Center (ADB), FTA database
   url: https://aric.adb.org/fta.php?id=295&ssid=3
   retrieved_at: '2026-11-22'
+- field: parties
+  source: Global Affairs Canada, Canada's international trade and investment agreements
+  url: https://international.canada.ca/en/services/business/trade/agreements-negotiations/investment-agreements
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Global Affairs Canada, Canada's international trade and investment agreements
+  url: https://international.canada.ca/en/services/business/trade/agreements-negotiations/investment-agreements
+  retrieved_at: '2026-11-23'
+- field: notes
+  source: Global Affairs Canada
+  url: https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/thailand-thailande/fta-ale/background-contexte.aspx?lang=eng
+  retrieved_at: '2026-11-23'
