@@ -58,3 +58,22 @@ A record SHALL have either `parties` or `intblock`, not both. Each party SHALL h
 
 - **WHEN** the record `SAFTA` links the `SAFTA` intblock and lists a `treaty_text` link
 - **THEN** the exported `links` of `SAFTA` hold the intblock's links followed by the `treaty_text` link
+
+### Requirement: Catalogue-level records
+
+Records taken only from a catalogue (WTO RTA-IS, ADB ARIC or GPTAD) SHALL set `verification: catalogue` and SHALL cite the catalogue row in `provenance`. Records linked to an intblock, and records moved from intblocks, SHALL set `verification: official`. The quality report SHALL count records by verification level. A record created from GPTAD SHALL NOT take its status from GPTAD alone, because GPTAD statuses date from around 2010: the status, and any `ended` date and successor, SHALL cite another source in `provenance`.
+
+#### Scenario: ARIC row imported
+
+- **WHEN** an ARIC row with `aric_id: 2` is imported without an official source
+- **THEN** the record has `verification: catalogue` and a provenance entry citing `https://aric.adb.org/fta.php?id=2&ssid=3`
+
+#### Scenario: Linked record must be official
+
+- **WHEN** a record sets `intblock: RCEP` and `verification: catalogue`
+- **THEN** the validator reports an error
+
+#### Scenario: GPTAD agreement missing from the registry
+
+- **WHEN** the GPTAD agreement Croatia - Lithuania (`gptad_id: 463`) has no registry record
+- **THEN** the new record has `verification: catalogue`, a provenance entry citing the GPTAD text for its parties, and a provenance entry citing another source for its status

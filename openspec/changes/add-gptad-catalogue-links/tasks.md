@@ -16,6 +16,13 @@
 - [x] 2.3 Hand-review the mapping; leave GPTAD duplicates, accessions and agreements missing from the registry unmapped, with a reason in the report (352 ids: 278 mapped, 215 by the automatic rule and 63 by hand; 31 skipped; 43 not in the registry)
 - [x] 2.4 Log the walk in `docs/intblock-sources.md`
 
+## 2a. Agreements missing from the registry
+
+- [x] 2a.1 Read the texts of the 43 unmatched GPTAD agreements; skip most-favoured-nation-only texts and organisation charters without trade commitments
+- [x] 2a.2 Take status, dates and successors from sources other than GPTAD (ALADI, SICE, ASEAN Secretariat, party governments)
+- [x] 2a.3 Write 31 new records from `NEW` and the successor `JOMA` from `EXTRA`; give successors `supersedes`; hold the 3 agreements without a date the status rules need
+- [x] 2a.4 Name GPTAD in the `Catalogue-level records` requirement and the schema's `verification` description
+
 ## 3. Documentation and verification
 
 - [x] 3.1 Document `gptad_id` and `treaty_text` in `docs/data-contract.md`, `docs/ai-consumers.md`, `llms.txt` and regenerated shims

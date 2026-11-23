@@ -18,14 +18,20 @@ Each GPTAD agreement id gets one result, checked in this order:
   as one party and the member states of EFTA, ASEAN, MERCOSUR, CARICOM, SACU, the Andean
   Community and the GCC folded into the bloc, because GPTAD lists a bloc's members of
   around 2010 and the registry its members at the date of signature;
-- ``unmatched``: no record, more than one, or an older instrument than the record with the
-  same parties (``NOT_IN_REGISTRY``); listed in the report for the change that adds the
-  missing agreements. A record still proposed or under negotiation never matches, since
-  GPTAD holds signed texts.
+- ``new``: an agreement missing from the registry, written as a new record from ``NEW``.
+  The facts in ``NEW`` (type, status, dates, parties at signature, successor) were checked
+  against the GPTAD text and the sources each entry cites, because GPTAD statuses date from
+  around 2010. A record linked to an existing intblock is ``official``; any other new
+  record is ``catalogue``;
+- ``unmatched``: no record, or more than one, or held back (``HELD``) because no source gives
+  a date the status rules need. A record still proposed or under negotiation never matches,
+  since GPTAD holds signed texts.
 
 Mapped records get ``gptad_id`` and, when GPTAD has the full text, a ``treaty_text`` link to
-the PDF. No record is added, and no status, date, party or verification level changes:
-GPTAD was last updated around 2010. See ``openspec/changes/add-gptad-catalogue-links``.
+the PDF; their status, dates, parties and verification level do not change. A new record
+that an existing record superseded gives that record ``supersedes`` when it has none, and a
+successor missing from the registry is written from ``EXTRA``. See
+``openspec/changes/add-gptad-catalogue-links``.
 
 Usage: python -I scripts/oneoff/import_gptad.py GPTAD_DIR [--write] [--report TSV]
 """
@@ -48,6 +54,14 @@ ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "data" / "trade_agreements"
 DAYS = 366
 PDF_PREFIX = "https://wits.worldbank.org/GPTAD/PDF/archive/"
+LIBRARY = "https://wits.worldbank.org/gptad/library.aspx"
+SOURCE = "World Bank Global Preferential Trade Agreements Database (GPTAD)"
+RETRIEVED = "2026-11-23"
+FIELD_ORDER = [
+    "id", "name", "acronyms", "other_names", "agreement_type", "status", "signed", "in_force", "ended",
+    "parties", "intblock", "supersedes", "superseded_by", "wto_rta_id", "aric_id", "gptad_id", "wikidata_id", "links",
+    "description", "notes", "verification", "last_verified", "provenance",
+]
 
 # GPTAD member names that data/countries does not list (misspellings, French, old names).
 NAMES = {
@@ -168,15 +182,375 @@ MAPPED: dict[int, str] = {
     124: "NZSG",
 }
 
-# GPTAD id -> an older instrument than the record with the same parties, left for the change
-# that adds predecessor agreements.
-NOT_IN_REGISTRY: dict[int, str] = {
-    174: "1973 Costa Rica - Panama free trade treaty; CRPA is the 2007 protocol to the Central America - Panama FTA",
+# GPTAD id -> a new record. ``parties`` (country codes, or dicts with party dates and notes)
+# defaults to the GPTAD membership; ``sources`` lists (field, source, url) beyond the GPTAD row.
+ASEAN = ["BN", "ID", "KH", "LA", "MM", "MY", "PH", "SG", "TH", "VN"]
+ASEAN_CN_FA = ("https://asean.org/dialogue-partners/framework-agreement-on-comprehensive-economic-co-operation-"
+               "between-asean-and-the-peoples-republic-of-china/")
+ASEAN_IN_FA = ("https://asean.org/dialogue-partners/framework-agreement-on-comprehensive-economic-cooperation-"
+               "between-the-association-of-southeast-asian-nations-and-the-republic-of-lndia/")
+ALADI_A = "http://www2.aladi.org/nsfaladi/textacdos.nsf/4d5c18e55622e1040325749000756112/{}?OpenDocument"
+ALADI_H = "http://www2.aladi.org/nsfaladi/histtextacdos.nsf/f88cf0ec27a4b651032576790064fc05/{}?OpenDocument"
+ALADI_T = "http://www2.aladi.org/nsfaladi/textacdos.nsf/f648ed517f865e1883257d800057e111/{}?OpenDocument"
+MICI_CA = "https://mici.gob.pa/wp-content/uploads/2022/06/3-Documento-Explicativo-TLC-Centroamerica.pdf"
+JORDAN_FTAS = "https://jordanexportportal.gov.jo/menu-1/135-fta-insights"
+JORDAN_CUSTOMS = "https://traderepository.customs.gov.jo/english/page8.html"
+JOMA_TEXT = "https://services.customs.gov.jo/JCcits/Agreements/%d8%a7%d9%84%d9%85%d8%ba%d8%b1%d8%a8.pdf"
+ACCESSION_2004 = "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12003T/AFI"
+NEW: dict[int, dict] = {
+    # Founding treaties of economic communities that are intblocks: linked records.
+    352: {
+        "id": "AEC", "intblock": "AEC", "agreement_type": "framework", "status": "in_force",
+        "notes": "The Abuja Treaty sets out the African Economic Community in six stages, with a free trade area "
+                 "and a customs union in each regional economic community; it carries no tariff commitments itself.",
+        "sources": [("status", "African Union, OAU/AU treaties",
+                     "https://au.int/en/treaties/treaty-establishing-african-economic-community")],
+    },
+    418: {
+        "id": "ECCAS", "intblock": "ECCAS", "agreement_type": "framework", "status": "in_force",
+        "signed": "1983-10-18", "in_force": "1984-12-18",
+        "notes": "The treaty provides for a customs union of the member states in stages. The GPTAD library links "
+                 "its text, but the PDF is missing on the server.",
+        "sources": [("in_force", "WIPO Lex, Treaty Establishing the Economic Community of Central African States",
+                     "https://www.wipo.int/wipolex/en/treaties/details/297")],
+    },
+    442: {
+        "id": "MRU", "intblock": "MRU", "agreement_type": "customs_union", "status": "in_force",
+        "in_force": "1973-10-03",
+        "notes": "The Mano River Declaration, concluded at Malema, establishes a customs union between Liberia and "
+                 "Sierra Leone and came into force on signature (UN Treaty Series No. 13608). Guinea and Côte "
+                 "d'Ivoire joined the union later.",
+        "sources": [("status", "Mano River Union Secretariat", "https://mru.int/")],
+    },
+    # ASEAN+1 and BIMST-EC framework agreements: the umbrella instruments of registry FTAs.
+    349: {
+        "id": "ACFTA-FA",
+        "name": "Framework Agreement on Comprehensive Economic Co-operation between the Association of South East "
+                "Asian Nations and the People's Republic of China",
+        "agreement_type": "pta", "status": "in_force", "signed": "2002-11-04", "in_force": "2003-07-01",
+        "parties": ASEAN + ["CN"],
+        "notes": "Signed at Phnom Penh. The framework of the ASEAN-China FTA (ACFTA); its Early Harvest Programme "
+                 "cut tariffs from 1 January 2004. Amended by protocols of 2003, 2006, 2012 and 2015.",
+        "sources": [("status", "ASEAN Secretariat, legal instruments with external parties", ASEAN_CN_FA)],
+    },
+    405: {
+        "id": "AIFTA-FA",
+        "name": "Framework Agreement on Comprehensive Economic Cooperation between the Association of Southeast Asian "
+                "Nations and the Republic of India",
+        "agreement_type": "framework", "status": "in_force", "signed": "2003-10-08", "in_force": "2004-07-01",
+        "parties": ASEAN + ["IN"],
+        "notes": "Signed at Bali. The framework of the ASEAN-India FTA (AIFTA). The 2009 amending protocol dropped "
+                 "the Early Harvest Programme, which was never applied.",
+        "sources": [("status", "ASEAN Secretariat, legal instruments with external parties", ASEAN_IN_FA)],
+    },
+    452: {
+        "id": "AKFTA-FA",
+        "name": "Framework Agreement on Comprehensive Economic Cooperation among the Governments of the Member "
+                "Countries of the Association of Southeast Asian Nations and the Republic of Korea",
+        "agreement_type": "framework", "status": "in_force", "signed": "2005-12-13", "in_force": "2007-06-01",
+        "parties": ASEAN + ["KR"], "link": False,
+        "notes": "Signed at Kuala Lumpur. The framework of the ASEAN-Korea FTA (AKFTA). Korea's treaty database "
+                 "gives entry into force on 1 June 2007; the ASEAN Secretariat lists it as not in force. The GPTAD "
+                 "PDF holds the Agreement on Trade in Goods (AKFTA), so this record does not link it.",
+        "sources": [("in_force", "Korea Ministry of Government Legislation, treaty No. 1850",
+                     "https://www.law.go.kr/trtyInfoP.do?trtySeq=2120")],
+    },
+    454: {
+        "id": "BIMSTECFTA-FA", "name": "Framework Agreement on the BIMST-EC Free Trade Area",
+        "agreement_type": "framework", "status": "in_force", "signed": "2004-02-08", "in_force": "2004-06-30",
+        "parties": [{"id": "BD", "signed": "2004-06-25",
+                     "note": "Joined as a founding member by the Protocol signed at Bangkok on 25 June 2004."},
+                    "BT", "IN", "LK", "MM", "NP", "TH"],
+        "notes": "Signed at Phuket. The framework of the BIMSTEC Free Trade Area (BIMSTECFTA), whose agreements "
+                 "are still under negotiation.",
+        "sources": [("status", "BIMSTEC Secretariat, trade, investment and development",
+                     "https://bimstec.org/trade-investment-and-development")],
+    },
+    # Predecessors of registry records.
+    56: {
+        "id": "AUPG-1976",
+        "name": "Agreement on Trade and Commercial Relations between the Government of Australia and the Government "
+                "of Papua New Guinea (PATCRA)",
+        "agreement_type": "fta", "status": "superseded",
+        "signed": "1976-11-06", "in_force": "1977-02-01", "ended": "1991-09-20", "superseded_by": "AUPG",
+        "notes": "Signed at Port Moresby ([1977] ATS 7). Replaced by PATCRA II (AUPG), according to the Australian "
+                 "treaty notes, which give no withdrawal date; the end date is the entry into force of PATCRA II.",
+        "sources": [("in_force", "Australian Treaty Series [1977] ATS 7",
+                     "http://www.austlii.edu.au/au/other/dfat/treaties/1977/7.html"),
+                    ("status", "Australian Treaty Series [1977] ATS 7, treaty notes",
+                     "http://www.austlii.edu.au/au/other/dfat/treaties/1977/7_notes.html")],
+    },
+    # ALADI economic complementation agreements (ACE), registered with ALADI, the depositary.
+    164: {
+        "id": "BRCAN-ACE39",
+        "name": "Economic Complementation Agreement No. 39 between Colombia, Ecuador, Peru and Venezuela, member "
+                "countries of the Andean Community, and Brazil",
+        "other_names": [("es", "Acuerdo de Complementación Económica N° 39")],
+        "agreement_type": "pta", "status": "terminated",
+        "signed": "1999-08-12", "in_force": "1999-08-16", "ended": "2006-01-02",
+        "parties": ["BR", "CO", "EC", "PE", "VE"],
+        "notes": "Signed at Montevideo (the GPTAD text is an unsigned draft). Extended pair by pair until ACE 59 "
+                 "(MERCOSUR - Colombia, Ecuador, Venezuela) replaced it for Colombia and Venezuela on 1 February "
+                 "2005 and for Ecuador on 1 April 2005, and ACE 58 (MERCOSUR - Peru) for Peru on 2 January 2006; "
+                 "neither successor is in the registry yet.",
+        "sources": [("status", "ALADI, historical agreements, AAP.CE 39", ALADI_H.format("a6ca2d28656bbbe1032573fa006b84ef"))],
+    },
+    166: {
+        "id": "MERCOSURBO",
+        "name": "Economic Complementation Agreement No. 36 between the MERCOSUR States Parties and Bolivia",
+        "other_names": [("es", "Acuerdo de Complementación Económica N° 36 celebrado entre los Gobiernos de los "
+                               "Estados Partes del MERCOSUR y el Gobierno de la República de Bolivia")],
+        "agreement_type": "fta", "status": "in_force", "signed": "1996-12-17", "in_force": "1997-02-28",
+        "parties": ["AR", "BO", "BR", "PY", "UY"],
+        "notes": "Signed at Fortaleza. Still applied after Bolivia became a full MERCOSUR member in 2024.",
+        "sources": [("status", "ALADI, AAP.CE 36", ALADI_A.format("e194fee5b3812afc032577ea00670dfe"))],
+    },
+    168: {
+        "id": "MERCOSURCL",
+        "name": "Economic Complementation Agreement No. 35 between the MERCOSUR States Parties and Chile",
+        "other_names": [("es", "Acuerdo de Complementación Económica N° 35 celebrado entre los Gobiernos de los "
+                               "Estados Partes del MERCOSUR y el Gobierno de la República de Chile")],
+        "agreement_type": "fta", "status": "in_force", "signed": "1996-06-25", "in_force": "1996-10-01",
+        "parties": ["AR", "BR", "CL", "PY", "UY"],
+        "notes": "Signed at Potrero de los Funes. Later Chile - Argentina, Chile - Brazil and Chile - Paraguay "
+                 "agreements were folded into it as additional protocols.",
+        "sources": [("status", "ALADI, AAP.CE 35", ALADI_A.format("85868e7a6308d7d70325776d005ad45a"))],
+    },
+    170: {
+        "id": "BOCL",
+        "name": "Economic Complementation Agreement No. 22 between Bolivia and Chile",
+        "other_names": [("es", "Acuerdo de Complementación Económica entre el Gobierno de la República de Bolivia "
+                               "y el Gobierno de la República de Chile")],
+        "agreement_type": "pta", "status": "in_force", "signed": "1993-04-06", "in_force": "1993-04-06",
+        "notes": "Signed at Santa Cruz de la Sierra; in force on signature. Partial lists, with non-reciprocal "
+                 "concessions from Chile.",
+        "sources": [("status", "ALADI, AAP.CE 22", ALADI_A.format("22e99c149349183d032567ee007cef4f"))],
+    },
+    171: {
+        "id": "CLCO-1993",
+        "name": "Economic Complementation Agreement No. 24 for an Expanded Economic Area between Chile and Colombia",
+        "other_names": [("es", "Acuerdo de Complementación Económica para el Establecimiento de un Espacio "
+                               "Económico Ampliado entre Colombia y Chile")],
+        "agreement_type": "fta", "status": "superseded",
+        "signed": "1993-12-06", "in_force": "1993-12-06", "ended": "2009-05-08", "superseded_by": "CLCO",
+        "notes": "Signed at Santiago. The 2006 Chile - Colombia FTA (CLCO), registered as the 9th additional "
+                 "protocol to ACE 24, replaced most of its articles on 8 May 2009; ACE 24 remains the ALADI "
+                 "vehicle of the FTA.",
+        "sources": [("status", "ALADI, AAP.CE 24, 9th additional protocol", ALADI_A.format("d9ecf5a6860893e50325729c00480b3e"))],
+    },
+    172: {
+        "id": "CLPE-1998",
+        "name": "Economic Complementation Agreement No. 38 between Chile and Peru for a Free Trade Area",
+        "other_names": [("es", "Acuerdo de Complementación Económica entre Chile y Perú para la Conformación de "
+                               "una Zona de Libre Comercio")],
+        "agreement_type": "fta", "status": "superseded",
+        "signed": "1998-06-22", "in_force": "1998-07-01", "ended": "2009-03-01", "superseded_by": "CLPE",
+        "notes": "Signed at Lima (GPTAD gives 20 June 1998). Replaced by the 2006 Chile - Peru FTA (CLPE), "
+                 "registered as the 3rd additional protocol to ACE 38, on 1 March 2009.",
+        "sources": [("status", "ALADI, AAP.CE 38, 3rd additional protocol", ALADI_A.format("b365f278d44f531803257a080052ab01"))],
+    },
+    173: {
+        "id": "CLVE",
+        "name": "Economic Complementation Agreement No. 23 between Chile and Venezuela for an Expanded Economic Area",
+        "other_names": [("es", "Acuerdo de Complementación Económica Chile - Venezuela para el establecimiento de "
+                               "un espacio económico ampliado")],
+        "agreement_type": "fta", "status": "in_force", "signed": "1993-04-02", "in_force": "1993-04-02",
+        "notes": "Signed at Santiago; in force on signature.",
+        "sources": [("status", "ALADI, AAP.CE 23", ALADI_A.format("eabe6f976fe9c738032567ef004a0f2f"))],
+    },
+    # Panama free trade treaties replaced by the protocols to the Central America - Panama FTA.
+    177: {
+        "id": "PASV-1970",
+        "name": "Treaty on Free Trade and Preferential Exchange between the Republics of Panama and El Salvador",
+        "other_names": [("es", "Tratado de Libre Comercio y de Intercambio Preferencial entre las Repúblicas de "
+                               "Panamá y El Salvador")],
+        "agreement_type": "pta", "status": "superseded",
+        "signed": "1970-06-02", "in_force": "1974", "ended": "2003-04-11", "superseded_by": "PASV",
+        "notes": "Signed at San Salvador. Panama's trade ministry says it applied from 1974 and ended with the "
+                 "El Salvador - Panama protocol to the Central America - Panama FTA (PASV); the end date is that "
+                 "protocol's entry into force.",
+        "sources": [("status", "Panama Ministry of Commerce and Industries, explanatory note on the Central "
+                               "America - Panama FTA", MICI_CA),
+                    ("ended", "Panama Ministry of Commerce and Industries, El Salvador protocol",
+                     "https://intelcom.gob.pa/doc/otros/El%20Salvador.pdf")],
+    },
+    # CARICOM agreements: parties are the CARICOM member states the agreement covers.
+    429: {
+        "id": "CARICOMCO",
+        "name": "Agreement on Trade, Economic and Technical Cooperation between the Caribbean Community (CARICOM) "
+                "and the Government of the Republic of Colombia",
+        "agreement_type": "pta", "status": "in_force", "signed": "1994-07-24", "in_force": "1995-01-01",
+        "parties": ["CO", "AG", "BB", "BZ", "DM", "GD", "GY", "JM", "KN", "LC", "MS", "TT", "VC"],
+        "notes": "Signed at Cartagena. It does not apply to the Bahamas (Article 23); Suriname and Haiti joined "
+                 "CARICOM later. One-way preferences from Colombia at first; a 1998 protocol made them reciprocal "
+                 "for the more developed CARICOM states.",
+        "sources": [("status", "ALADI, AAP.A25TM 31", ALADI_T.format("2b69a8acdd946589032568250049b6da"))],
+    },
+    436: {
+        "id": "CARICOMCR",
+        "name": "Free Trade Agreement between the Caribbean Community (CARICOM) and the Government of the Republic "
+                "of Costa Rica",
+        "agreement_type": "fta", "status": "in_force", "signed": "2004-03-09", "in_force": "2005-11-15",
+        "parties": [{"id": "CR", "in_force": "2005-11-15"}, {"id": "TT", "in_force": "2005-11-15"},
+                    {"id": "GY", "in_force": "2006-04-30"}, {"id": "BB", "in_force": "2006-08-01"},
+                    {"id": "BZ", "in_force": "2011-03-10"}, {"id": "JM", "in_force": "2015-06-01"},
+                    "AG", "DM", "GD", "KN", "LC", "SR", "VC"],
+        "notes": "Signed at Kingston. It enters into force pair by pair with Costa Rica; no entry into force was "
+                 "found for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia, Saint "
+                 "Vincent and the Grenadines or Suriname.",
+        "sources": [("in_force", "OAS SICE, CARICOM - Costa Rica (archived copy)",
+                     "https://web.archive.org/web/20251217163236/http://www.sice.oas.org/TPD/CAR_CRI/CAR_CRI_e.asp")],
+    },
+    438: {
+        "id": "CARICOMDO",
+        "name": "Agreement establishing the Free Trade Area between the Caribbean Community and the Dominican "
+                "Republic",
+        "agreement_type": "fta", "status": "in_force", "signed": "1998-08-22", "in_force": "2001-12-01",
+        "parties": [{"id": "DO", "in_force": "2002-02-05"}, {"id": "BB", "in_force": "2001-12-01"},
+                    {"id": "JM", "in_force": "2001-12-01"}, {"id": "TT", "in_force": "2001-12-01"},
+                    {"id": "GY", "in_force": "2004-10-06"}, {"id": "SR", "in_force": "2005-08"},
+                    "AG", "BZ", "DM", "GD", "KN", "LC", "MS", "VC"],
+        "notes": "Signed at Santo Domingo; implemented by a protocol of 28 April 2000. Reciprocal for the more "
+                 "developed CARICOM states only; no entry into force was found for the less developed ones.",
+        "sources": [("in_force", "OAS SICE, CARICOM - Dominican Republic (archived copy)",
+                     "https://web.archive.org/web/20251114061705/https://sice.oas.org/TPD/CAR_DOM/CAR_DOM_e.asp")],
+    },
+    455: {
+        "id": "CARICOMVE",
+        "name": "Agreement between the Caribbean Community (CARICOM) and the Government of the Republic of "
+                "Venezuela on Trade and Investment",
+        "agreement_type": "pta", "status": "in_force", "signed": "1992-10-13", "in_force": "1993-01-01",
+        "parties": ["VE", "AG", "BB", "BZ", "DM", "GD", "GY", "JM", "KN", "LC", "MS", "TT", "VC"],
+        "notes": "One-way preferences from Venezuela; CARICOM grants most-favoured-nation treatment. The text names "
+                 "no member states: the parties are the CARICOM members of 1992 that took part in its trade "
+                 "agreements, and whether it covers the Bahamas is not settled. Jamaica describes it as dormant.",
+        "sources": [("status", "ALADI, AAP.A25TM 24", ALADI_T.format("f92e0b44d87d2e6d03256825004459aa"))],
+    },
+    456: {
+        "id": "CARICOMCU",
+        "name": "Trade and Economic Co-operation Agreement between the Caribbean Community (CARICOM) and the "
+                "Government of the Republic of Cuba",
+        "agreement_type": "pta", "status": "in_force", "signed": "2000-07-05", "in_force": "2001-01-01",
+        "parties": ["CU", "AG", "BB", "BZ", "DM", "GD", "GY", "JM", "KN", "LC", "MS", "SR", "TT", "VC"],
+        "notes": "Signed at Canouan. Reciprocal between Cuba and the more developed CARICOM states. The member "
+                 "states applied it at different dates (Trinidad and Tobago from 2006, Jamaica from 2015).",
+        "sources": [("status", "ALADI, AAP.A25TM 40", ALADI_T.format("6b4f8ccd41885f5c03256cae0048432d"))],
+    },
+    # Arab bilaterals not notified to the WTO; GAFTA did not end them (Jordan Export Portal).
+    176: {
+        "id": "EGJO",
+        "name": "Free Trade Agreement between the Government of the Hashemite Kingdom of Jordan and the Government "
+                "of the Arab Republic of Egypt",
+        "agreement_type": "fta", "status": "in_force", "signed": "1998-12-10", "in_force": "1999-12-28",
+        "notes": "Signed at Amman. Replaced a free trade zone agreement of 8 May 1996 (Article 22). Applies in "
+                 "parallel with GAFTA and the Agadir Agreement. Not notified to the WTO.",
+        "sources": [("status", "Jordan Export Portal, FTA insights", JORDAN_FTAS),
+                    ("in_force", "Jordan Export Portal, FTA insights", JORDAN_FTAS)],
+    },
+    416: {
+        "id": "AEJO",
+        "name": "Agreement for the Setting up of a Free Trade Zone between the Government of the Hashemite Kingdom "
+                "of Jordan and the Government of the State of the United Arab Emirates",
+        "agreement_type": "fta", "status": "in_force", "signed": "2000-05-21", "in_force": "2001-11-24",
+        "notes": "Signed at Amman. The Jordan - UAE Comprehensive Economic Partnership Agreement (in force 2025) "
+                 "does not terminate it. Not notified to the WTO.",
+        "sources": [("status", "Jordan Export Portal, FTA insights", JORDAN_FTAS),
+                    ("in_force", "Jordan Export Portal, FTA insights", JORDAN_FTAS)],
+    },
+    417: {
+        "id": "ILJO",
+        "name": "Agreement on Trade and Economic Cooperation between the Government of the State of Israel and the "
+                "Government of the Hashemite Kingdom of Jordan",
+        "agreement_type": "pta", "status": "in_force", "signed": "1995-10-25", "in_force": "1996-04-19",
+        "notes": "Signed at Ein Bokek. Its protocol cuts duties on listed goods; renewed for three-year terms and "
+                 "upgraded in 1996 and 2004. UN Treaty Series No. 41441. Not notified to the WTO.",
+        "sources": [("in_force", "United Nations Treaty Series, vol. 2318, No. 41441",
+                     "https://treaties.un.org/doc/Publication/UNTS/Volume%202318/v2318.pdf"),
+                    ("status", "Jordan Customs, trade agreements repository", JORDAN_CUSTOMS)],
+    },
+    419: {
+        "id": "IRPK-2004",
+        "name": "Preferential Trade Agreement between the Islamic Republic of Pakistan and the Islamic Republic of Iran",
+        "agreement_type": "pta", "status": "in_force", "signed": "2004-03-04", "in_force": "2006-09-01",
+        "notes": "Signed at Islamabad. The free trade agreement under negotiation since 2016 is IRPK.",
+        "sources": [("in_force", "Dawn, 27 August 2006", "https://www.dawn.com/news/207625"),
+                    ("status", "Dawn, 27 March 2016", "https://www.dawn.com/news/1248109")],
+    },
+    424: {
+        "id": "JOMA-1994", "name": "Trade Agreement between the Hashemite Kingdom of Jordan and the Kingdom of Morocco",
+        "agreement_type": "pta", "status": "superseded", "signed": "1994-10-03", "in_force": "1994-10-03",
+        "ended": "1999-10-03", "superseded_by": "JOMA",
+        "notes": "Signed at Amman (GPTAD gives 10 March 1994, a day-month swap). Applied provisionally from "
+                 "signature. Replaced by the 1998 Jordan - Morocco Free Trade Agreement on its entry into force "
+                 "(Article 23 of that agreement).",
+        "sources": [("status", "Jordan Customs, Jordan - Morocco Free Trade Agreement (Arabic text)", JOMA_TEXT)],
+    },
+    425: {
+        "id": "BHJO",
+        "name": "Economic Cooperation and Free Trade Agreement between the Government of the Hashemite Kingdom of "
+                "Jordan and the Government of the State of Bahrain",
+        "agreement_type": "fta", "status": "in_force", "signed": "2001-07-21", "in_force": "2005-05-29",
+        "notes": "Signed at Manama (GPTAD gives 1 July 2001). Not notified to the WTO.",
+        "sources": [("status", "Jordan Export Portal, FTA insights", JORDAN_FTAS),
+                    ("in_force", "Jordan Export Portal, FTA insights", JORDAN_FTAS)],
+    },
+    427: {
+        "id": "JOSY",
+        "name": "Agreement Establishing a Free Trade Zone between the Government of the Hashemite Kingdom of Jordan "
+                "and the Government of the Syrian Arab Republic",
+        "agreement_type": "fta", "status": "in_force", "signed": "2001-10-08", "in_force": "2002",
+        "notes": "Signed at Amman. Replaced the earlier Jordan - Syria trade agreements (Article 17). Little used "
+                 "after 2011; a joint committee formed in 2025 to review it. Not notified to the WTO.",
+        "sources": [("status", "Jordan Customs, trade agreements repository", JORDAN_CUSTOMS),
+                    ("status", "Jordan News, 15 July 2025",
+                     "https://www.jordannews.jo/Section-109/News/Bilateral-Committee-Formed-to-Review-Jordan-Syria-"
+                     "Free-Trade-Agreement-43250")],
+    },
+    428: {
+        "id": "JOTN",
+        "name": "Agreement of Free Trade Zone between the Government of the Hashemite Kingdom of Jordan and the "
+                "Government of the Tunisian Republic",
+        "agreement_type": "fta", "status": "in_force", "signed": "1998-04-22", "in_force": "1999-06-16",
+        "notes": "Signed at Tunis. Not notified to the WTO.",
+        "sources": [("status", "Jordan Export Portal, FTA insights", JORDAN_FTAS),
+                    ("in_force", "Jordan Export Portal, FTA insights", JORDAN_FTAS)],
+    },
+    441: {
+        "id": "EGPS",
+        "name": "Trade Agreement between the Government of the Arab Republic of Egypt and the Palestine Liberation "
+                "Organization for the benefit of the Palestinian National Authority",
+        "agreement_type": "pta", "status": "in_force", "signed": "1998-04-28", "in_force": "1999-12-28",
+        "notes": "Signed at Gaza (GPTAD gives 19 February 1997, the date of the GAFTA resolution its preamble "
+                 "cites). Two-year terms, renewed automatically; no source after 2000 confirms that it is applied. "
+                 "The GPTAD library links its text, but the PDF is missing on the server.",
+        "sources": [("in_force", "Egyptian Official Gazette No. 5 of 3 February 2000 (Decree 2/2000)",
+                     "https://manshurat.org/node/39084")],
+    },
+    # Bilateral agreements.
+    463: {
+        "id": "HRLT", "name": "Free Trade Agreement between the Republic of Croatia and the Republic of Lithuania",
+        "agreement_type": "fta", "status": "terminated",
+        "signed": "2002-10-24", "in_force": "2003-05-01", "ended": "2004-05-01",
+        "notes": "Signed in Zagreb. Ended when Lithuania joined the EU on 1 May 2004: under Article 6(10) of the 2003 "
+                 "Act of Accession the new member states withdrew from their free trade agreements with third "
+                 "countries. Not notified to the WTO.",
+        "sources": [("in_force", "Ministry of Foreign Affairs of Lithuania, bilateral treaties with Croatia",
+                     "https://www.urm.lt/en/treaties/bilateral/croatia/1239"),
+                    ("status", "EUR-Lex, 2003 Act of Accession, Article 6(10)", ACCESSION_2004)],
+    },
+}
+# GPTAD id -> why an agreement missing from the registry is not added yet: the status rules
+# need a date that no source gives.
+HELD: dict[int, str] = {
+    165: "1998 CAN - MERCOSUR framework agreement: in force on signature, now historical at ALADI, end date unknown",
+    174: "1973 Costa Rica - Panama treaty, replaced by CRPA on 2008-11-23: entry into force date unknown",
+    178: "1973 Honduras - Panama treaty, replaced by HNPA on 2009-01-09: entry into force date unknown",
 }
 UNSIGNED = frozenset({"proposed", "negotiating"})
 # Full-text PDFs the library links but the server does not have (HTTP 403, checked 2026-11-23).
 MISSING_PDF = frozenset({
     "Japan-Switzerland.pdf", "Laos-Thailand.pdf", "PTN.pdf", "US-bahrain.pdf", "japan-vietnam.pdf",
+    "ECCAS.pdf", "Egypt-Palestine.pdf",
 })
 
 # GPTAD id -> reason it maps to no record.
@@ -212,7 +586,37 @@ SKIP: dict[int, str] = {
     434: "1958 India - Japan agreement on commerce: most-favoured-nation treatment, not preferential",
     470: "United States - Albania trade relations agreement: most-favoured-nation treatment, not preferential",
     471: "United States - Vietnam bilateral trade agreement: most-favoured-nation treatment, not preferential",
+    339: "1995 Armenia - Iran trade agreement: most-favoured-nation treatment, not preferential",
+    431: "1984 India - China trade agreement: most-favoured-nation treatment, not preferential",
+    433: "2006 India - Bangladesh trade agreement: cooperation and most-favoured-nation treatment, not preferential",
+    460: "1981 India - Maldives trade agreement: most-favoured-nation treatment, not preferential",
+    461: "1996 India - Mongolia trade and economic cooperation agreement: most-favoured-nation treatment",
+    439: "IGAD agreement (1996): an organisation charter that aims at trade harmonisation, without trade commitments",
+    430: "CEPGL convention (1976): an organisation charter for economic cooperation, without trade commitments",
+    353: "ASEAN - Japan Framework (2003): a leaders' framework without entry into force; the agreement is AJCEP",
+    423: "Arab Maghreb Union treaty (1989): an organisation charter that states aims, without trade commitments",
 }
+
+# Records that are not in GPTAD but that a new GPTAD record names as its successor.
+EXTRA: list[dict] = [
+    {
+        "id": "JOMA",
+        "name": "Free Trade Agreement between the Government of the Hashemite Kingdom of Jordan and the Government "
+                "of the Kingdom of Morocco",
+        "agreement_type": "fta", "status": "in_force", "signed": "1998-06-16", "in_force": "1999-10-03",
+        "parties": [{"id": "JO", "type": "country"}, {"id": "MA", "type": "country"}],
+        "supersedes": "JOMA-1994",
+        "notes": "Signed at Rabat. Replaced the 1994 trade agreement (Article 23). Applies in parallel with GAFTA "
+                 "and the Agadir Agreement. Not notified to the WTO.",
+        "verification": "official", "last_verified": RETRIEVED,
+        "provenance": [
+            {"field": "parties", "source": "Jordan Customs, Jordan - Morocco Free Trade Agreement (Arabic text)",
+             "url": JOMA_TEXT, "retrieved_at": RETRIEVED},
+            {"field": "in_force", "source": "Jordan Export Portal, FTA insights", "url": JORDAN_FTAS,
+             "retrieved_at": RETRIEVED},
+        ],
+    },
+]
 
 
 def norm(text: str) -> str:
@@ -431,10 +835,64 @@ def insert_fields(text: str, gptad_id: int, pdf: str | None) -> str:
     return text
 
 
+AFTER_PARTIES = ("superseded_by", "wto_rta_id", "aric_id", "gptad_id", "wikidata_id", "links", "description",
+                 "notes", "verification")
+
+
+def insert_before(text: str, line: str, keys: tuple[str, ...]) -> str:
+    """Insert a top-level ``line`` before the first of ``keys`` present in the YAML text."""
+    for key in keys:
+        if f"\n{key}:" in text:
+            return text.replace(f"\n{key}:", f"\n{line}\n{key}:", 1)
+    raise ValueError(f"no anchor for {line!r}")
+
+
+def new_record(gptad_id: int, spec: dict, pdf: str | None, parties: list[str]) -> dict:
+    """A registry record for a GPTAD agreement missing from the registry."""
+    record: dict = {"id": spec["id"]}
+    if spec.get("intblock"):
+        record["intblock"] = spec["intblock"]
+    else:
+        record["name"] = spec["name"]
+    if spec.get("other_names"):
+        record["other_names"] = [{"lang": lang, "name": name} for lang, name in spec["other_names"]]
+    record["agreement_type"] = spec["agreement_type"]
+    record["status"] = spec["status"]
+    for key in ("signed", "in_force", "ended"):
+        if spec.get(key):
+            record[key] = spec[key]
+    if not spec.get("intblock"):
+        record["parties"] = [
+            {"id": p, "type": "country"} if isinstance(p, str) else {"id": p["id"], "type": "country", **{
+                k: v for k, v in p.items() if k != "id"}}
+            for p in spec.get("parties") or parties
+        ]
+    for key in ("supersedes", "superseded_by"):
+        if spec.get(key):
+            record[key] = spec[key]
+    record["gptad_id"] = gptad_id
+    if pdf and spec.get("link", True):
+        record["links"] = [{"url": pdf, "type": "treaty_text"}]
+    if spec.get("notes"):
+        record["notes"] = spec["notes"]
+    record["verification"] = "official" if spec.get("intblock") else "catalogue"
+    record["last_verified"] = RETRIEVED
+    record["provenance"] = [
+        {"field": "signed" if spec.get("intblock") else "parties", "source": SOURCE,
+         "url": pdf if pdf and spec.get("link", True) else LIBRARY,
+         "retrieved_at": RETRIEVED},
+    ] + [{"field": f, "source": src, "url": url, "retrieved_at": RETRIEVED} for f, src, url in spec.get("sources", [])]
+    keys = [k for k in FIELD_ORDER if k in record]
+    if "intblock" in keys:
+        keys.remove("intblock")
+        keys.insert(1, "intblock")
+    return {k: record[k] for k in keys}
+
+
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("gptad_dir", type=Path)
-    parser.add_argument("--write", action="store_true", help="write gptad_id and links to data/trade_agreements/")
+    parser.add_argument("--write", action="store_true", help="write gptad_id, links and new records to data/trade_agreements/")
     parser.add_argument("--report", type=Path, help="TSV with one row per GPTAD id")
     args = parser.parse_args(argv)
 
@@ -479,8 +937,10 @@ def main(argv: list[str]) -> int:
             result.update(result="mapped", record=by_gptad[gid], how="gptad_id", detail="")
         elif gid in MAPPED:
             result.update(result="mapped", record=MAPPED[gid], how="MAPPED", detail="")
-        elif gid in NOT_IN_REGISTRY:
-            result.update(result="unmatched", record="", how="NOT_IN_REGISTRY", detail=NOT_IN_REGISTRY[gid])
+        elif gid in NEW:
+            result.update(result="new", record=NEW[gid]["id"], how="NEW", detail="")
+        elif gid in HELD:
+            result.update(result="unmatched", record="", how="HELD", detail=HELD[gid])
         else:
             # GPTAD holds signed texts, so a record still proposed or under negotiation is no match.
             same = [rid for rid, fp in folded.items() if fp == key and registry[rid].get("status") not in UNSIGNED]
@@ -527,11 +987,35 @@ def main(argv: list[str]) -> int:
                 continue
             path = REGISTRY / f"{r['record']}.yaml"
             text = path.read_text(encoding="utf-8")
-            new = insert_fields(text, r["gptad_id"], r["pdf"] if r["pdf"].startswith(PDF_PREFIX) else None)
+            linked = NEW.get(r["gptad_id"], {}).get("link", True) and r["pdf"].startswith(PDF_PREFIX)
+            new = insert_fields(text, r["gptad_id"], r["pdf"] if linked else None)
             if new != text:
                 path.write_text(new, encoding="utf-8")
                 written += 1
-        print(f"wrote {written} records")
+        created = 0
+        for record in EXTRA:
+            path = REGISTRY / f"{record['id']}.yaml"
+            if not path.exists():
+                path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
+                created += 1
+        for r in results:
+            if r["result"] != "new":
+                continue
+            spec = NEW[r["gptad_id"]]
+            path = REGISTRY / f"{spec['id']}.yaml"
+            if path.exists() or spec["id"] in intblocks and spec.get("intblock") != spec["id"]:
+                print(f"! {r['gptad_id']}: id {spec['id']} is taken")
+                continue
+            record = new_record(r["gptad_id"], spec, r["pdf"] or None, sorted(r["parties"].split(",")))
+            path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True, width=120), encoding="utf-8")
+            created += 1
+            successor = spec.get("superseded_by")
+            if successor and spec.get("mark_successor", True):
+                target = REGISTRY / f"{successor}.yaml"
+                text = target.read_text(encoding="utf-8")
+                if "\nsupersedes:" not in text:
+                    target.write_text(insert_before(text, f"supersedes: {spec['id']}", AFTER_PARTIES), encoding="utf-8")
+        print(f"wrote {written} records, created {created}")
     return 0
 
 

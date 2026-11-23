@@ -97,7 +97,7 @@
     "description": {"type": "string"},
     "notes": {"description": "Legal facts: accessions, suspensions, supersession, conflicts between sources. Not trade volumes.", "type": "string"},
     "verification": {
-      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS or ADB ARIC only.",
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, ADB ARIC or GPTAD only (a GPTAD record cites another source for its status).",
       "type": "string",
       "enum": ["official", "catalogue"]
     },
