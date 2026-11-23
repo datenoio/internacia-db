@@ -89,6 +89,8 @@ The legal texts work the same way. For example, Regulation (EU) No 978/2012 list
 
 All 20 PTA Database sub-schemes are imported as records. The only exception is EU GSP+, which already exists as `GSPPLUS` and gets `parent: EU-GSP`.
 
+The PTA Database gives no start date for a sub-scheme. A sub-scheme gets the date of its legal basis when that date is known: EBA 2001-03-05 (Council Regulation (EC) No 416/2001), the UK GSP frameworks 2021-01-01, the AGOA apparel benefits 2000-05-18, and the two EAEU-era LDC lists, whose dates are those of their schemes. Every other sub-scheme gets the latest date by which it was in force: the date of the PTA Database version that lists it, or the parent's end date if that is earlier (US GSP). Its notes say so.
+
 ### 4. Identifiers
 
 The id is the grantor id, a hyphen and the scheme, so the scheme can be read from the id:
@@ -136,11 +138,17 @@ Dependent territories (AI, IO, FK, CX and others) are countries in `data/countri
 
 ### 8. Existing records
 
-The import adds `wto_pta_ids` to `AGOA` (37), `CBERA` (78), `CARIBCAN` (70) and `SPARTECA` (80), and `parent: EU-GSP` to `GSPPLUS`. It does not overwrite their rosters, which come from official sources. Three differences are checked against USTR:
+The import adds `wto_pta_ids` to `AGOA` (37), `CBERA` (78), `CARIBCAN` (70) and `SPARTECA` (80), and `parent: EU-GSP` to `GSPPLUS`. It does not overwrite their rosters, which come from official sources. The Lomé Convention records (`LOME-1975`, `LOME-1979`, `LOME-1984`) list their parties, so they get roles: the EU is the grantor and the ACP States are the beneficiaries. Three differences were checked:
 
 - the PTA Database has Panama in CBERA, and the registry does not;
 - the registry has Curaçao in CBERA, and the PTA Database does not (it lists Aruba under the Kingdom of the Netherlands);
 - the registry has Gabon in AGOA, and the PTA Database version of 2025-03-21 does not.
+
+The registry is right on all three, and the PTA Database lags:
+
+- Panama moved to the US–Panama TPA (`USPA`) on 31 October 2012;
+- Curaçao is on the USTR CBI list;
+- Gabon was redesignated for AGOA in May 2026 (Federal Register, 30 June 2026).
 
 ### 9. Scope guardrail
 

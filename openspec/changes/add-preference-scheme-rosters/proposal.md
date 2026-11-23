@@ -17,7 +17,7 @@ The registry cannot store these schemes well today:
 - **Sub-schemes.** A new optional `parent` field holds the id of the preference scheme a record belongs to. It gives a tree: the `GSP` framework, then a national scheme (`EU-GSP`), then a named sub-scheme (`GSPPLUS`, `EU-GSP-EBA`). A sub-scheme has the same grantors as its parent. Its current beneficiaries are a subset of the parent's, unless the parent is a framework with no beneficiaries. `trade_agreements` gets a `parent` column.
 - **Catalogue id.** A new optional `wto_pta_ids` list holds the WTO PTA Database PTA ids of the record, such as `[36]` for the EU GSP. It is a list because one legal instrument can have several catalogue rows: the EAEU unified system of tariff preferences is notified separately by Armenia, Kazakhstan, the Kyrgyz Republic and Russia. Each id may appear in only one record. `trade_agreements` gets a `wto_pta_ids` column.
 - **Quality report.** Preference schemes are no longer reported as `TRADE_AGREEMENT_INTBLOCK_CANDIDATE`. The 6 existing intblocks stay as they are.
-- **Catalogue import.** 33 of the 37 PTA Database schemes are not in the registry. A one-off script, `scripts/oneoff/import_wto_ptadb.py`, writes about 30 scheme records for them, because the 4 EAEU rows become one record. It also writes 16 new sub-scheme records: the 20 PTA Database sub-schemes, less 3 duplicate EAEU rows and the existing `GSPPLUS`. Records use `verification: catalogue`, and provenance cites the PTA Database and the version date of the roster. The script also adds `wto_pta_ids` to the 4 existing records that match a row (`AGOA` 37, `CBERA` 78, `CARIBCAN` 70, `SPARTECA` 80). The "Tariffs & Trade" data of the PTA Database (tariff lines, preference margins, import values) is not imported.
+- **Catalogue import.** 33 of the 37 PTA Database schemes are not in the registry. A one-off script, `scripts/oneoff/import_wto_ptadb.py`, writes 29 scheme records for them: the 4 EAEU rows become one record, and China's LDC scheme is skipped because the database lists no beneficiaries for it. It also writes 16 new sub-scheme records: the 20 PTA Database sub-schemes, less 3 duplicate EAEU rows and the existing `GSPPLUS`. Records use `verification: catalogue`, and provenance cites the PTA Database and the version date of the roster. The script also adds `wto_pta_ids` to the 4 existing records that match a row (`AGOA` 37, `CBERA` 78, `CARIBCAN` 70, `SPARTECA` 80). The "Tariffs & Trade" data of the PTA Database (tariff lines, preference margins, import values) is not imported.
 - **Documentation.** Update `docs/intblock-sources.md` (the PTA Database row now covers the registry), the data dictionary, `docs/query-examples.md` (filter by `role`), the AI-consumer guide and current counts. Add a `changelog.d` fragment.
 - **Not in scope.** Historical beneficiary dates from the PTA Database version history: one version per roster change, which would give `in_force` and `left` per beneficiary. A follow-up handles them. New intblocks for preference schemes are also out of scope.
 
@@ -26,7 +26,7 @@ The registry cannot store these schemes well today:
 - Affected specs: `trade-agreements` (added by `add-trade-agreements-registry`, archived on 2026-11-23).
 - Affected source:
   - `data/schemas/trade_agreements.schema.json`: `role`, `parent` and `wto_pta_ids`; the `catalogue` description names the PTA Database.
-  - `data/trade_agreements/`: about 46 new files; `wto_pta_ids` added to `AGOA`, `CBERA`, `CARIBCAN` and `SPARTECA`; `parent` added to `GSPPLUS`.
+  - `data/trade_agreements/`: 45 new files; `wto_pta_ids` added to `AGOA`, `CBERA`, `CARIBCAN` and `SPARTECA`; `parent` added to `GSPPLUS`.
   - `data/intblocks/pta/GSP.yaml` and `data/intblocks/pta/SPARTECA.yaml`: include statuses.
 - Affected code:
   - `internacia_builder/trade_agreements.py`: role and parent derivation.
@@ -37,7 +37,7 @@ The registry cannot store these schemes well today:
 - Affected exports:
   - `trade_agreements` gains `parent` and `wto_pta_ids`.
   - `trade_agreement_parties` and `country_trade_agreements` gain `role`.
-  - `country_trade_agreements` gains about 2,500 rows (EU grantor rows expand to 27 member states).
+  - `country_trade_agreements` gains about 2,800 rows: 2,575 beneficiary rows and 183 grantor rows (EU grantor rows expand to the 27 member states).
   - `memberships` shows `contributor` and `recipient` for the `GSP` and `SPARTECA` rosters.
 - **Consumer note.** A query that counts trade links between countries from `country_trade_agreements` will count non-reciprocal preferences unless it filters on `role = 'party'` or `agreement_type <> 'preference_scheme'`. The changelog and the query examples say so.
 - Versioning: MINOR (5.1.0). The changes are new optional fields, new columns, new records and new enum values.
