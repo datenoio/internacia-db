@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "6a23d84d01e85586506fa93edf2bf35b48cae6d1af1bc8443386fef7c1942108",
+      "schema_hash": "7668735c84e8af7ea18b0a317d9b983df36c921650d547bf5fdd3dfd5fd872ba",
       "columns": [
         {
           "name": "id",
@@ -924,6 +924,11 @@
           "nullable": true
         },
         {
+          "name": "wto_pta_ids",
+          "type": "list<int64>",
+          "nullable": true
+        },
+        {
           "name": "gptad_id",
           "type": "int64",
           "nullable": true
@@ -931,11 +936,6 @@
         {
           "name": "dta_id",
           "type": "int64",
-          "nullable": true
-        },
-        {
-          "name": "wto_pta_ids",
-          "type": "list<int64>",
           "nullable": true
         },
         {

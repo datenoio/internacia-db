@@ -101,8 +101,6 @@
     },
     "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
     "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
-    "gptad_id": {"description": "World Bank Global Preferential Trade Agreements Database (GPTAD) agreement id (dispIDS in the GPTAD search).", "type": "integer", "minimum": 1},
-    "dta_id": {"description": "World Bank Deep Trade Agreements (DTA) database agreement id (WB ID, the WBID column of the DTA content files).", "type": "integer", "minimum": 1},
     "wto_pta_ids": {
       "description": "PTA ids of the rows in the WTO Preferential Trade Arrangements Database that describe this legal instrument. It is a list because several members can notify one instrument: Armenia, Kazakhstan, the Kyrgyz Republic and Russia each notify the EAEU tariff preferences.",
       "type": "array",
@@ -110,6 +108,8 @@
       "uniqueItems": true,
       "items": {"type": "integer", "minimum": 1}
     },
+    "gptad_id": {"description": "World Bank Global Preferential Trade Agreements Database (GPTAD) agreement id (dispIDS in the GPTAD search).", "type": "integer", "minimum": 1},
+    "dta_id": {"description": "World Bank Deep Trade Agreements (DTA) database agreement id (WB ID, the WBID column of the DTA content files).", "type": "integer", "minimum": 1},
     "wikidata_id": {"type": "string", "pattern": "^Q[1-9][0-9]*$"},
     "links": {
       "type": "array",

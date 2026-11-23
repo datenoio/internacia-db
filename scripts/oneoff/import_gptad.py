@@ -120,6 +120,7 @@ MAPPED: dict[int, str] = {
     9: "EUEG-1977",  # Cooperation Agreement of 1977, not the 1972 agreement
     12: "EUHU",  # Europe Agreement
     17: "EULB-1977",  # Cooperation Agreement of 1977
+    18: "EULB-2002",  # Interim Agreement of 2002, not the Association Agreement
     20: "EUMT",  # English text; 21 is the French one
     22: "EUMX",  # FTA decision under the 1997 Global Agreement
     25: "EUOCT",
@@ -129,6 +130,9 @@ MAPPED: dict[int, str] = {
     30: "EUSI-1996-2",  # Interim Agreement of 1996
     33: "EUSY",  # Cooperation Agreement of 1977
     34: "EUMK",  # Stabilisation and Association Agreement
+    313: "EUAL-2006",  # Interim Agreement, not the Stabilisation and Association Agreement
+    368: "EUBA-2008",  # Interim Agreement
+    385: "EUME-2007",  # Interim Agreement
     144: "EUCU",  # Treaty establishing the European Community
     336: "EUCARIFORUMEPA",
     445: "EUSM",  # GPTAD lists the EU member states as parties
@@ -286,13 +290,12 @@ NEW: dict[int, dict] = {
         "name": "Economic Complementation Agreement No. 39 between Colombia, Ecuador, Peru and Venezuela, member "
                 "countries of the Andean Community, and Brazil",
         "other_names": [("es", "Acuerdo de Complementación Económica N° 39")],
-        "agreement_type": "pta", "status": "terminated",
-        "signed": "1999-08-12", "in_force": "1999-08-16", "ended": "2006-01-02",
+        "agreement_type": "pta", "status": "superseded",
+        "signed": "1999-08-12", "in_force": "1999-08-16", "ended": "2006-01-02", "superseded_by": "MERCOSURCOECVE",
         "parties": ["BR", "CO", "EC", "PE", "VE"],
         "notes": "Signed at Montevideo (the GPTAD text is an unsigned draft). Extended pair by pair until ACE 59 "
-                 "(MERCOSUR - Colombia, Ecuador, Venezuela) replaced it for Colombia and Venezuela on 1 February "
-                 "2005 and for Ecuador on 1 April 2005, and ACE 58 (MERCOSUR - Peru) for Peru on 2 January 2006; "
-                 "neither successor is in the registry yet.",
+                 "(MERCOSURCOECVE) replaced it for Colombia and Venezuela on 1 February 2005 and for Ecuador on "
+                 "1 April 2005, and ACE 58 (MERCOSURPE) for Peru on 2 January 2006.",
         "sources": [("status", "ALADI, historical agreements, AAP.CE 39", ALADI_H.format("a6ca2d28656bbbe1032573fa006b84ef"))],
     },
     166: {
@@ -598,7 +601,56 @@ SKIP: dict[int, str] = {
 }
 
 # Records that are not in GPTAD but that a new GPTAD record names as its successor.
+ACE58 = ALADI_A.format("76bd2c93dc98a5850325789500538ef9")
+ACE59 = ALADI_A.format("a87b9915768aab9b032578af004bcd49")
+ACE_TEXT = "http://www2.aladi.org/biblioteca/publicaciones/aladi/acuerdos/ace/es/ace{0}/ACE_0{0}_Acuerdo_Texto.pdf"
 EXTRA: list[dict] = [
+    {
+        "id": "MERCOSURPE",
+        "name": "Economic Complementation Agreement No. 58 between the MERCOSUR States Parties and Peru",
+        "other_names": [{"lang": "es", "name": "Acuerdo de Complementación Económica N° 58 suscrito entre los "
+                                               "Gobiernos de los Estados Partes del MERCOSUR y el Gobierno de la "
+                                               "República del Perú"}],
+        "agreement_type": "fta", "status": "in_force", "signed": "2005-11-30", "in_force": "2006-01-02",
+        "parties": [{"id": c, "type": "country", "in_force": d} for c, d in (
+            ("AR", "2006-01-02"), ("BR", "2006-01-02"), ("PE", "2006-01-02"), ("PY", "2006-02-06"),
+            ("UY", "2006-01-02"))],
+        "notes": "Signed at Montevideo and deposited with ALADI. In force between Peru and Argentina, Brazil and "
+                 "Uruguay from 2 January 2006 and Paraguay from 6 February 2006. Replaced ACE 39 (BRCAN-ACE39) "
+                 "between Brazil and Peru. Not notified to the WTO.",
+        "verification": "official", "last_verified": RETRIEVED,
+        "provenance": [
+            {"field": "parties", "source": "ALADI, AAP.CE 58", "url": ACE58, "retrieved_at": RETRIEVED},
+            {"field": "in_force", "source": "ALADI, AAP.CE 58", "url": ACE58, "retrieved_at": RETRIEVED},
+            {"field": "signed", "source": "ALADI, text of AAP.CE 58", "url": ACE_TEXT.format(58),
+             "retrieved_at": RETRIEVED},
+        ],
+    },
+    {
+        "id": "MERCOSURCOECVE",
+        "name": "Economic Complementation Agreement No. 59 between the MERCOSUR States Parties and Colombia, "
+                "Ecuador and Venezuela, member countries of the Andean Community",
+        "other_names": [{"lang": "es", "name": "Acuerdo de Complementación Económica N° 59 suscrito entre "
+                                               "Argentina, Brasil, Paraguay y Uruguay, Estados Partes del MERCOSUR, y "
+                                               "Colombia, Ecuador y Venezuela, Países Miembros de la CAN"}],
+        "agreement_type": "fta", "status": "in_force", "signed": "2004-10-18", "in_force": "2005-01-05",
+        "parties": [{"id": c, "type": "country", "in_force": d} for c, d in (
+            ("AR", "2005-01-05"), ("BR", "2005-02-01"), ("CO", "2005-02-01"), ("EC", "2005-04-01"),
+            ("PY", "2005-04-19"), ("UY", "2005-01-05"), ("VE", "2005-01-05"))],
+        "supersedes": "BRCAN-ACE39",
+        "notes": "Signed at Montevideo and deposited with ALADI. In force pair by pair: Venezuela with Argentina and "
+                 "Uruguay from 5 January 2005 and with Brazil from 1 February 2005; Colombia with Argentina, Brazil "
+                 "and Uruguay from 1 February 2005; Ecuador with them from 1 April 2005; Paraguay with all three "
+                 "from 19 April 2005. ALADI still lists all seven signatories; Colombia and MERCOSUR also signed "
+                 "ACE 72 in 2017, which is not in the registry. Not notified to the WTO.",
+        "verification": "official", "last_verified": RETRIEVED,
+        "provenance": [
+            {"field": "parties", "source": "ALADI, AAP.CE 59", "url": ACE59, "retrieved_at": RETRIEVED},
+            {"field": "in_force", "source": "ALADI, AAP.CE 59", "url": ACE59, "retrieved_at": RETRIEVED},
+            {"field": "signed", "source": "ALADI, text of AAP.CE 59", "url": ACE_TEXT.format(59),
+             "retrieved_at": RETRIEVED},
+        ],
+    },
     {
         "id": "JOMA",
         "name": "Free Trade Agreement between the Government of the Hashemite Kingdom of Jordan and the Government "
