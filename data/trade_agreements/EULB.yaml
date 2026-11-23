@@ -3,19 +3,20 @@ name: EU - Lebanon
 agreement_type: fta
 status: in_force
 signed: '2002-06-17'
-in_force: '2003-03-01'
+in_force: '2006-04-01'
 parties:
 - id: EU
   type: intblock
 - id: LB
   type: country
+supersedes: EULB-2002
 wto_rta_id: 63
-gptad_id: 18
 links:
-- url: https://wits.worldbank.org/GPTAD/PDF/archive/EC-Lebanon%202.pdf
-  type: treaty_text
 - url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A0930(01)
   type: website
+notes: The Association Agreement, signed in June 2002, entered into force in April 2006 (European Commission). Its trade provisions
+  applied earlier, from 1 March 2003, under the Interim Agreement (`EULB-2002`), which WTO RTA-IS counts as the start of this
+  RTA.
 verification: official
 last_verified: '2026-11-23'
 provenance:
@@ -39,5 +40,7 @@ provenance:
   source: EUR-Lex (Publications Office Cellar)
   url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A0930(01)
   retrieved_at: '2026-11-23'
-notes: The Association Agreement, signed in June 2002, entered into force in April 2006 (European Commission); in_force is
-  the earlier date from which WTO RTA-IS records its trade provisions as applied.
+- field: in_force
+  source: EUR-Lex (Official Journal notice)
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22006X0704%2801%29
+  retrieved_at: '2026-11-23'
