@@ -851,7 +851,7 @@
           }
         }
       ],
-      "schema_hash": "7668735c84e8af7ea18b0a317d9b983df36c921650d547bf5fdd3dfd5fd872ba",
+      "schema_hash": "6e453046670cbe18c6ae67750aff5d9d20c16943cb563854baba6a72a549b825",
       "columns": [
         {
           "name": "id",
@@ -921,6 +921,16 @@
         {
           "name": "aric_id",
           "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "unctad_iia_id",
+          "type": "int64",
+          "nullable": true
+        },
+        {
+          "name": "unts_registration",
+          "type": "string",
           "nullable": true
         },
         {

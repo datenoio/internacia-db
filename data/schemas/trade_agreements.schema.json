@@ -101,6 +101,8 @@
     },
     "wto_rta_id": {"description": "WTO RTA-IS identifier.", "type": "integer", "minimum": 1},
     "aric_id": {"description": "ADB ARIC FTA database identifier (fta.php?id=N).", "type": "integer", "minimum": 1},
+    "unctad_iia_id": {"description": "UNCTAD Investment Policy Hub IIA Navigator treaty identifier (international-investment-agreements/treaties/<type>/N/...).", "type": "integer", "minimum": 1},
+    "unts_registration": {"description": "United Nations Treaty Series registration number (I-NNNNN for registered treaties, II-NNN for filed and recorded ones), from the UN Treaty Collection.", "type": "string", "pattern": "^(I|II)-\\d+$"},
     "wto_pta_ids": {
       "description": "PTA ids of the rows in the WTO Preferential Trade Arrangements Database that describe this legal instrument. It is a list because several members can notify one instrument: Armenia, Kazakhstan, the Kyrgyz Republic and Russia each notify the EAEU tariff preferences.",
       "type": "array",
@@ -131,7 +133,7 @@
       "items": {"$ref": "#/definitions/instrument"}
     },
     "verification": {
-      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, the WTO Preferential Trade Arrangements Database, ADB ARIC or GPTAD only (a GPTAD record cites another source for its status).",
+      "description": "official: parties and dates checked against the treaty text, a depositary or a party government. catalogue: taken from WTO RTA-IS, the WTO Preferential Trade Arrangements Database, ADB ARIC, GPTAD, the UNCTAD IIA Navigator, EDIT (Electronic Database of Investment Treaties) or the UN Treaty Series only (a GPTAD record cites another source for its status).",
       "type": "string",
       "enum": ["official", "catalogue"]
     },

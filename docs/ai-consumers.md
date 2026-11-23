@@ -451,9 +451,20 @@ ORDER BY i.in_force DESC;
 `trade_relations` rows are agreements that grant most-favoured-nation or normal trade
 relations treatment without preferences (`AMUS-TRA`; OpenSpec change
 `add-investment-and-trade-relations-types`). Their ids carry the suffix `-TRA`, so the bare
-pair id stays free for a trade agreement. They cover only the United States so far (the ITA's
-former TARA database and the State Department's Treaties in Force). The U.S. investment
-treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Leave both
+pair id stays free for a trade agreement. They come from the treaty databases of the United
+States (the ITA's former TARA database and Treaties in Force), Australia, Canada, the
+Netherlands and Switzerland, with their status, and from the UN Treaty Series for agreements
+concluded since 2000 that no national database covers (`verification: catalogue`, with
+`unts_registration`; OpenSpec `add-trade-relations-walk`). Agreements the Netherlands signed
+with Belgium and Luxembourg have the `BENELUX` intblock as one party. Coverage is uneven: an
+agreement between two countries without a walked treaty database appears only when it was
+concluded after 2000 and registered with the UN. The U.S. investment
+treaties from trade.gov are `investment` rows like the Canadian ones (`ALUS-BIT`). Beyond the
+United States and Canada, `investment` covers the world through the UNCTAD IIA Navigator BITs
+(`verification: catalogue`, with `unctad_iia_id`; OpenSpec `add-unctad-bit-walk`). Most BITs,
+and many FTAs with investment chapters, link their text in EDIT (`treaty_text` links to
+`edit.wti.org`), and notes give EDIT's date where it differs; a few BITs that only EDIT lists
+(Taiwan, Kosovo) are `catalogue` rows citing EDIT (OpenSpec `add-edit-catalogue-links`). Leave both
 types out when you count trade agreements per country:
 
 ```sql

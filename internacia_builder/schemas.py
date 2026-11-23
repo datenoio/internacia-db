@@ -454,6 +454,8 @@ def get_trade_agreements_schema() -> pa.Schema:
             ("parent", pa.string()),
             ("wto_rta_id", pa.int64()),
             ("aric_id", pa.int64()),
+            ("unctad_iia_id", pa.int64()),
+            ("unts_registration", pa.string()),
             ("wto_pta_ids", pa.list_(pa.int64())),
             ("gptad_id", pa.int64()),
             ("dta_id", pa.int64()),
