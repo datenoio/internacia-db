@@ -46,7 +46,7 @@ USER_AGENT = "internacia-db one-off (trade agreements registry)"
 FIELD_ORDER = [
     "id", "name", "acronyms", "other_names", "agreement_type", "status", "signed", "in_force",
     "provisional_application", "ended", "parties", "intblock", "supersedes", "superseded_by",
-    "wto_rta_id", "aric_id", "wikidata_id", "links", "description", "notes", "verification",
+    "wto_rta_id", "aric_id", "wikidata_id", "links", "description", "notes", "instruments", "verification",
     "last_verified", "provenance",
 ]
 
