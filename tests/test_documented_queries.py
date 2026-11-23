@@ -538,6 +538,26 @@ ADDITIONAL_RECIPES = [
         37,
         set(),
     ),
+    (
+        """
+        SELECT instrument_id, kind, status, signed, in_force
+        FROM trade_agreement_instruments
+        WHERE agreement_id = 'CNMO'
+        ORDER BY signed, instrument_id
+        """,
+        17,
+        {"supplement-1", "supplement-10", "investment-2017", "services-amendment-2024"},
+    ),
+    (
+        """
+        SELECT i.agreement_id, i.instrument_id, i.in_force
+        FROM trade_agreement_instruments i
+        WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
+        ORDER BY i.in_force DESC, i.agreement_id
+        """,
+        4,
+        {"CNPE", "CNSG", "CNMO", "CNHK"},
+    ),
 ]
 
 
@@ -569,6 +589,8 @@ ADDITIONAL_RECIPES = [
         "wikidata_sparse",
         "nato_intersect_eu",
         "succession_chains_count",
+        "agreement_instruments",
+        "upgraded_since_2024",
     ],
 )
 def test_additional_recipes(con, sql, expected_count, expected_codes):

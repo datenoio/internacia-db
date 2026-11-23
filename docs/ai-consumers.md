@@ -397,6 +397,24 @@ A `preference_scheme` row (GSP, AGOA) lists the grantors and the beneficiaries a
 two grantors of the same scheme are not trading partners under it, so leave schemes out of
 pair queries, as above.
 
+- **`trade_agreement_instruments`** lists what amended or added to an agreement after
+  signature: upgrade and amending protocols, CEPA Supplements, supplementary agreements,
+  early harvest arrangements and Joint Committee decisions (`kind`), each with its own
+  `status` and dates. The agreement's row in `trade_agreements` keeps the agreement's own
+  `status` and dates: `CNPE` stays `in_force = '2010-03-01'` after its Optimization
+  Protocol entered into force in 2026. Most agreements have no instruments recorded yet, so
+  an empty result means none recorded, not none exist. Many Joint Committee decisions only
+  update annexes; filter on `kind` when you want treaty-level upgrades.
+
+```sql
+-- Agreements upgraded by a protocol in force since 2024, latest first.
+SELECT i.agreement_id, t.name, i.name AS instrument, i.in_force
+FROM trade_agreement_instruments i
+JOIN trade_agreements t ON t.id = i.agreement_id
+WHERE i.kind = 'amending_protocol' AND i.status = 'in_force' AND i.in_force >= '2024'
+ORDER BY i.in_force DESC;
+```
+
 `trade_relations` rows are agreements that grant most-favoured-nation or normal trade
 relations treatment without preferences (`AMUS-TRA`; OpenSpec change
 `add-investment-and-trade-relations-types`). Their ids carry the suffix `-TRA`, so the bare

@@ -6,7 +6,11 @@ import duckdb
 import pytest
 
 from internacia_builder.paths import datasets_dir, project_root
-from internacia_builder.trade_agreements import build_trade_agreement_rows, load_trade_agreement_records
+from internacia_builder.trade_agreements import (
+    build_trade_agreement_instrument_rows,
+    build_trade_agreement_rows,
+    load_trade_agreement_records,
+)
 from internacia_builder.validate import cross_rules, trade_agreement_rules
 
 ROOT = project_root()
@@ -227,6 +231,90 @@ def test_source_records_validate():
     assert all(r.get("verification") == "official" for r in records if r.get("intblock"))
 
 
+def _instrument(**fields):
+    item = {
+        "id": "upgrade-2018",
+        "kind": "amending_protocol",
+        "name": "Protocol to Upgrade the Free Trade Agreement",
+        "status": "in_force",
+        "signed": "2018-11-12",
+        "in_force": "2019-10-16",
+        "provenance": PROVENANCE,
+    }
+    item.update(fields)
+    return {k: v for k, v in item.items() if v is not None}
+
+
+def test_upgrade_protocol_in_force_is_valid():
+    assert _types([_record(instruments=[_instrument(coverage=["goods", "services"])])]) == []
+
+
+def test_unknown_instrument_kind_is_a_schema_error():
+    assert _types([_record(instruments=[_instrument(kind="upgrade")])]) == ["SCHEMA_ERROR"]
+
+
+def test_numeric_field_on_an_instrument_is_rejected():
+    assert _types([_record(instruments=[_instrument(tariff_lines_liberalized=8000)])]) == ["SCHEMA_ERROR"]
+
+
+def test_instrument_without_provenance_is_a_schema_error():
+    assert _types([_record(instruments=[_instrument(provenance=None)])]) == ["SCHEMA_ERROR"]
+
+
+def test_instrument_in_force_without_date():
+    assert _types([_record(instruments=[_instrument(in_force=None)])]) == ["TRADE_AGREEMENT_INSTRUMENT_DATE"]
+
+
+def test_negotiating_instrument_with_in_force_date():
+    item = _instrument(status="negotiating", signed=None)
+    assert _types([_record(instruments=[item])]) == ["TRADE_AGREEMENT_INSTRUMENT_DATE"]
+
+
+def test_terminated_instrument_needs_an_end_date():
+    assert _types([_record(instruments=[_instrument(status="terminated")])]) == ["TRADE_AGREEMENT_INSTRUMENT_DATE"]
+
+
+def test_instrument_ended_before_entry_into_force():
+    item = _instrument(status="terminated", ended="2019-01")
+    assert _types([_record(instruments=[item])]) == ["TRADE_AGREEMENT_INSTRUMENT_DATE"]
+
+
+def test_duplicate_instrument_id():
+    items = [_instrument(id="supplement-10"), _instrument(id="supplement-10", signed="2013-08-30")]
+    assert _types([_record(instruments=items)]) == ["DUPLICATE_TRADE_AGREEMENT_INSTRUMENT"]
+
+
+def test_instrument_signed_before_the_agreement_is_report_only():
+    """A linked record reads its signature from the intblock (RCEP: 2020-11-15)."""
+    record = {"id": "RCEP", "intblock": "RCEP", "agreement_type": "fta", "status": "in_force",
+              "verification": "official", "last_verified": "2026-11-22", "provenance": PROVENANCE,
+              "instruments": [_instrument(id="framework-2012", kind="supplementary_agreement", status="signed",
+                                          signed="2012-11-20", in_force=None),
+                              _instrument(id="harvest-2012", kind="early_harvest", status="signed",
+                                          signed="2012-11-20", in_force=None)]}
+    assert _types([record]) == []
+    issues = trade_agreement_rules.check_instruments_before_agreement(
+        [record], ["data/trade_agreements/RCEP.yaml"], INTBLOCKS)
+    assert [(i["issue_type"], i["field"]) for i in issues] == [
+        ("TRADE_AGREEMENT_INSTRUMENT_BEFORE_AGREEMENT", "instruments[framework-2012].signed")
+    ]
+
+
+def test_instrument_rows_are_sorted_by_signature():
+    items = [_instrument(id="further-upgrade", signed="2023-12", in_force="2024-12-31"),
+             _instrument(id="services-negotiations", status="negotiating", signed=None, in_force=None),
+             _instrument(id="amendment-2011", signed="2011-07-27", in_force="2012-01-01")]
+    rows = build_trade_agreement_instrument_rows([_record(instruments=items), _record(id="AMGE2")])
+    assert [r["instrument_id"] for r in rows] == ["amendment-2011", "further-upgrade", "services-negotiations"]
+    assert {r["agreement_id"] for r in rows} == {"AMGE"}
+    assert rows[0]["coverage"] == [] and rows[0]["provenance"][0]["source"] == "Treaty text"
+
+
+def test_agreement_row_ignores_instruments():
+    record = _record(instruments=[_instrument()])
+    assert build_trade_agreement_rows([record], INTBLOCKS)[0] == build_trade_agreement_rows([_record()], INTBLOCKS)[0]
+
+
 @pytest.fixture(scope="module")
 def con():
     with duckdb.connect(str(datasets_dir() / "internacia.duckdb"), read_only=True) as connection:
@@ -252,6 +340,36 @@ def test_moved_ids_are_not_intblocks(con):
     assert "USKR" in moved
     assert con.execute("SELECT count(*) FROM intblocks WHERE id IN (SELECT alias FROM intblocks_aliases WHERE reason = 'moved')").fetchone()[0] == 0
     assert con.execute("SELECT count(*) FROM trade_agreements WHERE id = 'USKR'").fetchone()[0] == 1
+
+
+def test_instruments_table_joins_agreements(con):
+    orphans = con.execute(
+        "SELECT count(*) FROM trade_agreement_instruments i "
+        "LEFT JOIN trade_agreements a ON a.id = i.agreement_id WHERE a.id IS NULL"
+    ).fetchone()[0]
+    assert orphans == 0
+    duplicates = con.execute(
+        "SELECT count(*) FROM (SELECT agreement_id, instrument_id FROM trade_agreement_instruments "
+        "GROUP BY ALL HAVING count(*) > 1)"
+    ).fetchone()[0]
+    assert duplicates == 0
+
+
+def test_singapore_upgrades_in_order(con):
+    rows = con.execute(
+        "SELECT signed FROM trade_agreement_instruments WHERE agreement_id = 'CNSG' "
+        "AND kind = 'amending_protocol' ORDER BY signed"
+    ).fetchall()
+    # The 2011 amending protocol has no sourced entry-into-force date, so it stays in notes.
+    assert [r[0][:4] for r in rows] == ["2018", "2023"]
+
+
+def test_upgrade_does_not_change_the_agreement(con):
+    """CNPE's Optimization Protocol entered into force on 2026-11-01; the FTA's own date stays."""
+    assert con.execute("SELECT in_force FROM trade_agreements WHERE id = 'CNPE'").fetchone()[0] == "2010-03-01"
+    assert con.execute(
+        "SELECT in_force FROM trade_agreement_instruments WHERE agreement_id = 'CNPE' AND kind = 'amending_protocol'"
+    ).fetchall() == [("2026-11-01",)]
 
 
 def test_unparsable_file_is_reported():
