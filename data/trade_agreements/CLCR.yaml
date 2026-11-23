@@ -3,7 +3,7 @@ name: Chile - Costa Rica (Chile - Central America)
 agreement_type: fta
 status: in_force
 signed: '1999-10-18'
-in_force: '2002-02-15'
+in_force: '2002-02-14'
 parties:
 - id: CL
   type: country
@@ -17,9 +17,13 @@ links:
   type: treaty_text
 - url: https://edit.wti.org/document/show/78ecc332-299a-4beb-afcc-efe53e7d9b63
   type: treaty_text
-notes: EDIT gives 2012-10-19 as the date of entry into force.
-verification: catalogue
-last_verified: '2026-11-22'
+notes: The 1999 Chile - Central America Free Trade Agreement applies between Chile and each Central American country through
+  a bilateral protocol. The treaty was signed at Guatemala City on 18 October 1999, together with the protocol with Costa
+  Rica. Chile's promulgation decree (Decreto 14 of 2002) gives international entry into force on 14 February 2002, as does
+  SUBREI; WTO RTA-IS gives 15 February 2002, which the registry held before 2026-11-23. EDIT gives 2012-10-19 as the date
+  of entry into force.
+verification: official
+last_verified: '2026-11-23'
 provenance:
 - field: parties
   source: WTO Regional Trade Agreements Information System
@@ -29,6 +33,20 @@ provenance:
   source: WTO Regional Trade Agreements Information System
   url: https://rtais.wto.org/UI/PublicShowRTAIDCard.aspx?rtaid=74
   retrieved_at: '2026-11-22'
+- field: signed
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 14 of 2002 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2002-02-14)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=194582
+  retrieved_at: '2026-11-23'
+- field: in_force
+  source: Biblioteca del Congreso Nacional de Chile (Ley Chile), Decreto 14 of 2002 of the Ministry of Foreign Affairs (promulgation
+    decree, Diario Oficial 2002-02-14)
+  url: https://www.bcn.cl/leychile/navegar?idNorma=194582
+  retrieved_at: '2026-11-23'
+- field: status
+  source: Undersecretariat of International Economic Relations of Chile (SUBREI), agreements in force
+  url: https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/centroamerica
+  retrieved_at: '2026-11-23'
 - field: notes
   source: EDIT - Electronic Database of Investment Treaties (World Trade Institute)
   retrieved_at: '2026-11-23'
