@@ -378,6 +378,12 @@ ships no trade values, tariff lines, preference margins, depth scores or ranking
   that graduated or were removed are `former_party` rows in `trade_agreement_parties`. These
   are no-later-than dates, not designation dates. A country listed since the earliest list has
   no `in_force`, and earlier spells of a returning country are in the party `note`.
+- **Provisional application.** `in_force` is the definitive entry into force.
+  `provisional_application` is the date an agreement began to apply provisionally; an
+  agreement applied only provisionally has `status = 'in_force'` and an empty `in_force`.
+  To ask since when an agreement applies, use `coalesce(provisional_application, in_force)`.
+  Catalogue records may still hold a provisional date in `in_force`, because WTO RTA-IS and
+  ARIC do not tell the two apart.
 - **`country_trade_agreements`** gives one row per country and agreement. A bloc party (the
   EU) expands to its current members with `via = 'EU'`; the United Kingdom is therefore not a
   party to `EUKR` in this view. Coverage is current, not historical.

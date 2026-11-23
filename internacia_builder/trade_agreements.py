@@ -138,6 +138,7 @@ def intblock_party_rows(
                 "left": left,
                 "note": inc.get("note"),
                 "source": "intblock",
+                "provisional_application": None,
             }
         )
     return rows
@@ -152,6 +153,9 @@ def record_party_rows(agreement_id: str, record: dict[str, Any]) -> list[dict[st
         left = _date(party.get("left"))
         signed = _date(party.get("signed"))
         in_force = _date(party.get("in_force"))
+        provisional = _date(party.get("provisional_application"))
+        # A party joins when the agreement starts to apply to it, provisionally or not.
+        applied = min((d for d in (provisional, in_force) if d), default=None)
         rows.append(
             {
                 "agreement_id": agreement_id,
@@ -161,10 +165,11 @@ def record_party_rows(agreement_id: str, record: dict[str, Any]) -> list[dict[st
                 "status": "former_party" if left else "party",
                 "signed": signed,
                 "in_force": in_force,
-                "joined": in_force or signed,
+                "joined": applied or signed,
                 "left": left,
                 "note": party.get("note"),
                 "source": "record",
+                "provisional_application": provisional,
             }
         )
     return rows
@@ -191,7 +196,11 @@ def build_trade_agreement_rows(
 
         source = dict(fields) if intblock else record
         if intblock:
-            # A linked record may set its own dates; they override the intblock's.
+            # A linked record may set its own dates; they override the intblock's. One applied
+            # provisionally takes in_force only from itself: the intblock's start date is when
+            # the agreement began to apply, not its definitive entry into force.
+            if record.get("provisional_application"):
+                source.pop("in_force", None)
             source.update({k: record[k] for k in ("signed", "in_force", "ended") if record.get(k)})
         pick = source.get
 
@@ -243,6 +252,7 @@ def build_trade_agreement_rows(
                     for p in record.get("provenance") or []
                     if isinstance(p, dict)
                 ],
+                "provisional_application": _date(record.get("provisional_application")),
             }
         )
     agreements.sort(key=lambda r: r["id"])
