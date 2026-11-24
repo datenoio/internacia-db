@@ -7,6 +7,603 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.2.0] - 2026-11-24
+
+### Added
+
+- Seven African bilateral trade agreement records that tralac's country trade profiles name and
+  the registry lacked, checked on 2026-11-23 (`scripts/oneoff/import_africa_agreements.py`).
+  Status and dates come from a party government or the WTO, never from tralac:
+  - Morocco's trade and tariff conventions with Algeria (`DZMA`, 1989), Libya (`LYMA`, 1990),
+    Guinea (`GNMA`, signed 1997, in force 2000), Mauritania (`MAMR`, 1986, applied
+    provisionally) and Senegal (`MASN`, in force 1968, with its 1987 protocol as an instrument),
+    from the Moroccan Ministry of Industry and Trade. Four of them were held in the DESTA walk
+    for lack of a date.
+  - The 1964 trade agreement between South Africa and Southern Rhodesia (`ZAZW-1964`), in force
+    from 1 December 1964 (SARS) and ended on 20 November 2018 (WTO Trade Policy Review of
+    Zimbabwe, 2020).
+  - The Algeria - Mauritania preferential trade agreement under negotiation since
+    4 August 2026 (`DZMR`).
+- The five Phase II protocols of the AfCFTA Agreement (investment, competition policy and
+  intellectual property rights of 2023; digital trade and women and youth in trade of 2024) as
+  `instruments` of `AfCFTA`, with their dates of adoption from the African Union; none is in
+  force.
+- Four intblocks with Armenia as a member, from each body's official roster:
+  - `MONEYVAL` (Council of Europe Committee of Experts on the Evaluation of Anti-Money
+    Laundering Measures and the Financing of Terrorism, Wikidata Q971908): 35 member
+    jurisdictions, Russia as a former member from 2022-03-16, and four observer states.
+  - `INTERSTATEBANK` (Interstate Bank of the CIS states, Wikidata Q4288089): eight
+    participants with the date the 1993 Agreement entered into force for each; Uzbekistan
+    and Ukraine as former participants.
+  - `EPCCIS` (Electric Power Council of the CIS): nine members; Moldova and Ukraine as
+    former members.
+  - `ICAPCIS` (CIS Interstate Council on Antimonopoly Policy): the eight states at its 2024
+    and 2025 meetings.
+- `AMSG` (Armenia-Singapore) and `KZSG` (Kazakhstan-Singapore) services and investment
+  agreements in `trade_agreements`, in force since 2021-02-01 and 2025-03-01, from Enterprise
+  Singapore.
+- `AMBY` (Armenia-Belarus Free Trade Agreement), signed 2000-01-18 and in force since
+  2003-07-28, from the Armenian Ministry of Foreign Affairs trade agreement list
+  (`verification: official`). It records the 2005 protocol on elimination of exceptions from
+  the free trade regime as an instrument.
+- 13 Armenian `trade_relations` agreements in `trade_agreements`, from the Armenian Ministry
+  of Foreign Affairs list of trade and economic agreements (as of 2008) and its bilateral
+  relations pages, all `verification: official`:
+  - in force: `AMAT-TRA` (Austria), `AMCY-TRA` (Cyprus), `AMBG-TRA` (Bulgaria), `AMRO-TRA`
+    (Romania, with its 2006 amendment protocol as a signed instrument), `AMIN-TRA` (India),
+    `AMIR-TRA-1995` (Iran), `AMLB-TRA` (Lebanon), `AEAM-TRA` (United Arab Emirates),
+    `AMQA-TRA` (Qatar), `AMCU-TRA` (Cuba) and `AMAR-TRA` (Argentina);
+  - terminated on 2004-05-01, when the partner joined the EU: `AMLV-TRA` (Latvia, from the
+    Latvian legal portal) and `AMLT-TRA` (Lithuania, entry into force from WIPO Lex).
+- `docs/intblock-sources.md`: a row for the Armenian Ministry of Foreign Affairs treaty lists,
+  with the agreements held for want of an entry-into-force date.
+- Trade agreements registry, from Chile's SUBREI agreement pages and promulgation decrees
+  (checked on 2026-11-23): `DEPA` (Digital Economy Partnership Agreement, `digital`,
+  linked to the `DEPA` intblock), `CLIN-CEPA` (Chile–India CEPA, negotiating), and
+  `PACALLAU` and `PACALLNZ` (Pacific Alliance Associated State negotiations with Australia
+  and New Zealand, suspended).
+- Instruments on Chile's agreements: the China services (2008) and investment (2012)
+  supplementary agreements (`CLCN`), the Korea modernization negotiations (`CLKR`), the Mexico
+  public procurement protocol (2007) and modernization protocol (2024, signed) (`CLMX`),
+  India Joint Committee Decision 1/2016 (`CLIN`), the Indonesia services protocol in force
+  since 2025-09-23 (`CLID`), the 2023 DEPA Protocol (`DEPA`) and the First and Second
+  Modifying Protocols of the Pacific Alliance Additional Protocol (`PACIFICALLIANCE`).
+- Costa Rica as a `DEPA` member from 2026-09-14.
+- EAEU third-country agreements from the Eurasian Economic Commission: intblocks and `official` registry records for the
+  EAEU–UAE Economic Partnership Agreement (`EAEUAE`, signed 27 June 2025, in force 6 October 2026), the EAEU–Mongolia
+  Interim Trade Agreement (`EAEUMN`, signed 27 June 2025, in force 22 July 2026) and the EAEU–Indonesia FTA (`EAEUID`,
+  signed 21 December 2025), and a `proposed` EAEU–Tunisia record (`EAEUTN`, joint study group of 22 January 2025).
+- Six bilateral CIS free trade agreements with signature and entry-into-force dates from Kazakhstan's and Moldova's treaty
+  records: Belarus–Kazakhstan, Belarus–Moldova, Georgia–Moldova, Kazakhstan–Moldova, Kazakhstan–Tajikistan and
+  Moldova–Turkmenistan.
+- Seven governance records, checked on 2026-11-23, each with its membership from the body's own roster:
+  - `APRM` (African Peer Review Mechanism, Wikidata Q384249), a `governance` `igo` record under
+    `AFUNION` with its 45 Member States, Somalia the latest (13 February 2026).
+  - `VENICECOMMISSION` (European Commission for Democracy through Law, Wikidata Q1064559), an
+    `intergovernmental_body` under `COE` with 61 member states, 4 observers and two cooperating
+    participants (Palestine, South Africa), from a Wayback Machine copy of the member page of
+    14 January 2026. The notes record the US memorandum of 7 January 2026 directing withdrawal.
+  - `IACAC` (Inter-American Convention against Corruption, Wikidata Q6044538), a `legal`
+    `treaty_body` record with its 34 States Parties and their deposit dates from the OAS B-58 table;
+    the MESICIC follow-up mechanism is described in its notes.
+  - `CLAD` (Latin American Centre for Development Administration, Wikidata Q6408680), with 23
+    members and Equatorial Guinea as observer.
+  - `ICAP` (Central American Institute of Public Administration, Wikidata Q30293702), with six
+    members, linked to `SICA` as a suborganization.
+  - `ACI` (ADB/OECD Anti-Corruption Initiative for Asia and the Pacific), a `policy_forum` record
+    listing 33 of its 35 member economies with Action Plan endorsement dates; the OECD publishes no
+    current list, so two members are not identified.
+  - `ACN` (OECD Anti-Corruption Network for Eastern Europe and Central Asia), a `policy_forum` record
+    with its 24 participating jurisdictions; the ten Istanbul Anti-Corruption Action Plan countries
+    carry a note.
+- 12 India trade agreements in `trade_agreements`, from the texts the Indian Department of
+  Commerce publishes, with status from the partner governments and depositaries, all
+  `verification: official`:
+  - `BTIN-2016`, the India–Bhutan Agreement on Trade, Commerce and Transit (signed
+    2016-11-12, in force since 2017-07-29), and `INNP-2009`, the revised India–Nepal Treaty
+    of Trade (in force since 2009-10-27).
+  - Frameworks: `INRW-TCF` (India–Rwanda Trade Cooperation Framework, in force since
+    2018-07-23) and `MERCOSURIN-FA` (MERCOSUR–India Framework Agreement, signed 2003-06-17,
+    not in force: India has not ratified it).
+  - Trade relations agreements in force: `BDIN-TRA-2015` (Bangladesh), `INMV-TRA`
+    (Maldives, 1981), `INMN-TRA-1996` (Mongolia), `ARIN-TRA-1981` (Argentina) and
+    `BRIN-TRA` (Brazil, 1968).
+  - Trade relations agreements that lapsed: `ARIN-TRA` (Argentina, 1966–1970), `CLIN-TRA`
+    (Chile, 1956–1959) and `INPK-TRA` (Pakistan, 1975–1978).
+- Instruments of `AIFTA`: the ASEAN–India Agreement on Trade in Services and Agreement on
+  Investment, signed in November 2014 and in force since 2015-07-01.
+- 22 intblocks with India among their members or parties, checked on 2026-11-24, each roster
+  taken from the body's own member page, the founding text or the depositary:
+  - South Asia and the Indian Ocean: `BOBPIGO` (Bay of Bengal Programme Inter-Governmental
+    Organisation), `GTF` (Global Tiger Forum) and `CSC` (Colombo Security Conclave).
+  - Initiatives launched by India: `IBCA` (International Big Cat Alliance) and `GBA` (Global
+    Biofuels Alliance).
+  - Finance and tax: `CRA` (BRICS Contingent Reserve Arrangement) and `IFBEPS` (OECD/G20 Inclusive
+    Framework on BEPS, 148 members).
+  - Treaties: `ITPGRFA` (International Treaty on Plant Genetic Resources for Food and Agriculture,
+    156 parties), `LOCARNOAGREEMENT` and `VIENNAAGREEMENT` (WIPO classifications of industrial
+    designs and of figurative elements of marks).
+  - Commodity bodies: `IPCPEPPER` (International Pepper Community; the `IPC` id is the
+    International Post Corporation), `ICCCOCONUT` (International Coconut Community; the `ICC` id is
+    the International Cricket Council), `ANRPC` (Association of Natural Rubber Producing
+    Countries) and `IRSG` (International Rubber Study Group).
+  - Forums: `G4` (Brazil, Germany, India, Japan) and `ADMMPLUS` (ASEAN Defence Ministers'
+    Meeting-Plus).
+  - Asia-Pacific technical bodies: `ADRC` (Asian Disaster Reduction Center), `CSSTEAP` (Centre
+    for Space Science and Technology Education in Asia and the Pacific), `APN` (Asia-Pacific
+    Network for Global Change Research),
+    `IIASA` (International Institute for Applied Systems Analysis), and the FAO bodies `APPPC`
+    (Asia and Pacific Plant Protection Commission) and `SWAC` (Commission for Controlling the
+    Desert Locust in South-West Asia).
+- 31 cross-border oil pipeline records (`oilpipeline`), checked on 2026-11-24, each with
+  `origin`, `transit` and `destination` roles from an operator, government, intergovernmental or
+  project-finance source:
+  - Europe: `DRUZHBA` (Druzhba, Wikidata Q315654), `ADRIA` (Adria/JANAF, Q505616), `TAL`
+    (Transalpine Pipeline, Q872783), `IKL` (Ingolstadt–Kralupy–Litvínov, Q443487), `RRP`
+    (Rotterdam–Rhine Pipeline), `NORPIPEOIL` (Norpipe oil line, Ekofisk–Teesside),
+    `THESSALONIKISKOPJE` (Thessaloniki–Skopje products line) and `JURAPIPELINE` (Gennes–Cressier).
+  - Caspian, Russia and Central Asia: `WREP` (Baku–Supsa, Q2029336), `BAKUNOVOROSSIYSK` (Q2027452),
+    `UZENATYRAUSAMARA` (Q4318120), `OMSKPAVLODARSHYMKENT` and `CHINARUSSIAOIL` (the
+    Skovorodino–Mohe–Daqing branch of ESPO, Q10871729).
+  - Middle East and Asia: `AB4` (Saudi Arabia–Bahrain), `MYANMARCHINAOIL` (crude line beside the
+    `MYANMARCHINA` gas line), `MAPL` (Motihari–Amlekhgunj, Q105560381) and `IBFPL`
+    (India–Bangladesh Friendship Pipeline, Q111795931).
+  - Africa: `CHADCAMEROON` (Q5066537), `NIGERBENIN` (Q124031987), `GREATERNILE` (Q1757784),
+    `PETRODAR`, `TAZAMA` (Q7690394), `BEIRAFERUKA` and `TRAPSA` (In Amenas–La Skhira).
+  - Americas: `KEYSTONE` (Q1631056), `ENBRIDGEMAINLINE` (Q5375283), `EXPRESSPIPELINE`, `COCHIN`
+    (Q97379914), `SOUTHERNLIGHTS`, `TRANSMOUNTAIN` (Q23074089) and `OTASA` (Oleoducto Trasandino,
+    Q111687259).
+  - Paused or disrupted flows are described in `notes` as of November 2026 (for example the
+    northern Druzhba leg and Baku–Supsa). The 12 records without a Wikidata item are listed in
+    `data/schemas/wikidata_exclusions.yaml`.
+- 18 bodies and treaties with Japanese participation that had no record, with rosters from each
+  body's own members page, establishing agreement or depositary, checked on 2026-11-24:
+  - Asian intergovernmental bodies: `ERIA` (Economic Research Institute for ASEAN and East Asia),
+    `AJC` (ASEAN-Japan Centre), `APTERR` (ASEAN Plus Three Emergency Rice Reserve) and `TCS`
+    (Trilateral Cooperation Secretariat).
+  - Treaties and arrangements: `SVALBARDTREATY`, `CSC1997` (Convention on Supplementary
+    Compensation for Nuclear Damage), `BTAP` (Beijing Treaty on Audiovisual Performances) and `EXPORTCREDITSARRANGEMENT` (OECD
+    Arrangement on Officially Supported Export Credits).
+  - Environment and science: `NOWPAP`, `EANET`, `HFSPO`, `GBIF` and `ICRI`.
+  - Central banks and regulators: `EMEAP`, `CPMI`, `IMDRF`, `PICS` (PIC/S) and `ICMRA`.
+- Observers and partners on 11 intblocks, taken from each organization's own observers or partners
+  page and checked on 2026-11-24: `ASEAN` (27 Dialogue, Sectoral Dialogue and Development
+  Partners), `OAS` (75 Permanent Observers), `OSCE` (12 Asian and Mediterranean Partners for
+  Co-operation, including Qatar from 22 October 2026), `PIF` (21 Forum Dialogue Partners and 9 Forum
+  Observers), `SAARC` (9 Observers), `ALADI` (29 Observers), `CPLP` (35 Associate Observers),
+  `IOR-ARC` (12 Dialogue Partners), `BEACST` (9 Observers), `EITI` (10 supporting countries) and
+  `IDEA` (Japan, the only Observer). They use `status: observer` or `status: partner`, give the
+  organization's category in `note`, and do not count towards `membership_count`.
+- Five Mexico trade agreement records, checked on 2026-11-23 against the Secretaría de Economía's
+  list of Mexico's agreements, the Diario Oficial and partner governments:
+  - `GBMX-FTA` (new Mexico-UK free trade agreement, negotiations launched 2022-05-20) and
+    `ECMX-FTA` (Ecuador-Mexico Productive Integration Agreement, nine rounds from 2020 to 2022),
+    both `negotiating`.
+  - `EUMX-TRA` (1975 EEC-Mexico agreement with most-favoured-nation treatment) and `EUMX-FCA`
+    (1991 framework agreement for cooperation, superseded by `EUMX` from 2001-02-27), with dates
+    from EUR-Lex Cellar.
+  - `MXUS-TRA` (1942 US-Mexico Reciprocal Trade Agreement, in force 1943-01-30, ended after
+    1950-12-31).
+- Intblocks of bodies of which Mexico is a member, each roster taken from the body's own site, its
+  founding text or the depositary, checked on 2026-11-23:
+  - North America: `NAPPO` (North American Plant Protection Organization), `CEC` (Commission for
+    Environmental Cooperation), and the US-Mexico `NADB` (North American Development Bank) and
+    `IBWC` (International Boundary and Water Commission).
+  - Mesoamerica and migration: `TUXTLAMECHANISM` (Tuxtla Mechanism for Dialogue and Concertation,
+    10 members with dates of joining), `MESOAMERICAPROJECT` (Mesoamerica Integration and
+    Development Project, formerly Plan Puebla-Panamá), `OIRSA` (Organismo Internacional Regional de
+    Sanidad Agropecuaria) and `RCM` (Regional Conference on Migration, Puebla Process; 11 members
+    and 5 observers).
+  - Latin American political forums: `CONTADORAGROUP` (1983-1986, historical), `LIMAGROUP` (2017
+    Lima Declaration; Mexico and Argentina as former members) and `ARCOPACIFICO` (Latin American
+    Pacific Arc Forum, 11 members, no meeting found after 2010).
+  - Inter-regional and trade: `FEALAC` (36 members with dates of entry), `EULACFOUNDATION` (EU-LAC
+    International Foundation, 61 members), `APEP` (Americas Partnership for Economic Prosperity)
+    and `MPIA` (WTO Multi-Party Interim Appeal Arbitration Arrangement, 35 participants with
+    joining dates).
+  - Institutions: `CEMLA` (Center for Latin American Monetary Studies, central banks),
+    `CISS` (Inter-American Conference on Social Security), `FLACSO`, `IILA` (Italian-Latin American
+    International Organization, with entry-into-force dates) and `ILCE` (Latin American Institute of
+    Educational Communication).
+- Mexico in `EBRD` (a shareholder in the constituency of Spain) and in `G-77` as a former member
+  (signatory of the 1964 Joint Declaration, not on the current roster).
+- 67 `instruments` on Norway's trade agreements, from Lovdata's treaty register:
+  - 46 of Norway's bilateral agreements and protocols on agriculture, with their later
+    amendments, on 37 EFTA agreement records. The 1991 protocol with Türkiye is on
+    `EFTATR-1991` and its 2018 amendment on `EFTATR`.
+    They include the 2026 agreement on agricultural products with Palestine, signed and
+    not in force (`EFTAPS`).
+  - The EFTA–Hong Kong labour agreement (`EFTAHK`).
+  - 17 supplementary protocols, exchanges of letters and related agreements to the 1973
+    EEC–Norway agreement (`EUNO`), 1980–2024. Those applied provisionally give that date in
+    their notes.
+  - The agriculture protocol and two exchanges of letters on rules of origin of the Faroe
+    Islands–Norway agreement (`FONO`).
+- The `EFTA` intblock lists its former members (Austria, Denmark, Finland, Portugal, Sweden
+  and the United Kingdom) and every member's membership dates, from the EFTA Convention's
+  party table. Norway is the depositary.
+- 20 intblocks with Pakistan, from a check of Pakistan's memberships against each body's own
+  roster on 2026-11-24:
+  - Finance and development: `ASIANCLEARINGUNION` (Asian Clearing Union, 11 central banks;
+  `ACU` is the Association of Commonwealth Universities), `ICD` (IsDB Group, 56 states),
+  `SDF` (SAARC Development Fund) and `CARECINSTITUTE`.
+  - ECO bodies with their own rosters: `ECOTTFA` (Transit Transport Framework Agreement, 8
+  contracting parties), `ECOSF` (Science Foundation), `ECI` (Cultural Institute) and `ECOEI`
+  (Educational Institute).
+  - Other organizations: `ICIMOD`, `IOFS` (OIC food security organization, 43 states),
+  `SAU` (South Asian University), `COMMONWEALTHTELECOM` (Commonwealth Telecommunications
+  Organisation; `CTO` is the Caribbean Tourism Organization), `AIBD` and the CASA-1000
+  Inter-Governmental Council (`CASA1000`).
+  - Forums: `ABUDHABIDIALOGUE`, `COLOMBOPROCESS`, `BALIPROCESS`, `UFC` (Uniting for
+  Consensus), `WTOG20` (the WTO agriculture G-20) and `IONS` (Indian Ocean Naval Symposium).
+- Seven Pakistan trade agreement records, checked against the Preferential Trade Access
+  Database of the Trade Development Authority of Pakistan (TDAP PTAD) on 2026-11-23:
+  - `AZPK` (Azerbaijan-Pakistan Preferential Trade Agreement), signed 2024-07-11 and in force
+    since 2024-12-16 (president.az, FBR S.R.O. 2053(I)/2024).
+  - `AFPK-EHP` (Pakistan-Afghanistan Early Harvest Program), signed 2025-07-23 and applied from
+    2025-08-01 to 2026-07-31 (FBR S.R.O. 1386(I)/2025); no extension was found.
+  - `SATIS` (SAARC Agreement on Trade in Services), signed 2010-04-29 and in force since
+    2012-11-29 (`verification: catalogue`).
+  - `EUPK-TRA-1976` and `EUPK-TRA-1985`, the EEC-Pakistan most-favoured-nation agreements, and
+    `EUPK-2001`, the EC-Pakistan Cooperation Agreement, with dates from EUR-Lex.
+  - `GCCPK-FA`, the GCC-Pakistan Framework Agreement on Economic Cooperation, signed 2004-08-26
+    (Omani Royal Decree 116/2004).
+- Instruments: `CNPK` early harvest agreement (2005) and Agreement on Trade in Services (2009);
+  `MYPK` early harvest agreement (2005, ended by the CEPA on 2008-01-01); `IDPK` amending
+  protocol (signed 2018-01-27, in force 2019-03-01); `PKUZ` expansion protocol (signed
+  2026-02-05, applied from 2026-08-14).
+- Eight Taiwan trade and investment agreements, checked on 2026-11-23 against party
+  governments, EDIT and the American Institute in Taiwan:
+  - `SZTW` (Taiwan–Eswatini Economic Cooperation Agreement, 2018) and `MHTW`
+    (Taiwan–Marshall Islands Economic Cooperation Agreement, signed 2019, in force
+    2025-01-15), both `pta`.
+  - `JPTW-BIT` (Japan–Taiwan investment arrangement of 2011), `TWVN-BIT-2019` (in force
+    2020-05-24) and `THTW-BIT-2024` (in force 2024-08-09), and `PHTW-BIT-2017` (signed;
+    no entry into force found).
+  - `TWUS-TIFA` (AIT–CCNAA Trade and Investment Framework Agreement, 1994) and `GBTW-ETP`
+    (UK–Taiwan Enhanced Trade Partnership arrangement, 2023, with its three 2025 pillar
+    arrangements as an instrument).
+- 18 intblocks of bodies in which Taiwan's Ministry of Foreign Affairs lists Taiwan as a
+  full member, each with its roster from the body's own site, checked on 2026-11-23:
+  - Agriculture, commodities and fisheries: `ICAC` (International Cotton Advisory
+    Committee), `AARDO` (African-Asian Rural Development Organization, with years of
+    joining), `FFTC` (Food and Fertilizer Technology Center for the Asian and Pacific
+    Region), `APAARI` (Asia-Pacific Association of Agricultural Research Institutions;
+    Taiwan is a former member) and `ISCTUNA` (International Scientific Committee for Tuna
+    and Tuna-like Species in the North Pacific Ocean).
+  - Trade, digital and security: `IPETCA` (Indigenous Peoples Economic and Trade
+    Cooperation Arrangement, also a `framework` registry record), `GLOBALCBPR` (Global
+    Cross-Border Privacy Rules Forum) and `GLOBALCOALITIONDAESH` (Global Coalition against
+    Daesh, 85 countries and 5 organisations).
+  - Regulators and public administration: `IFIAR`, `GFIN`, `ICN`, `ARINAP`, `APLMF`,
+    `GHWP`, `ICCR`, `ITSA`, `AWEB` (Association of World Election Bodies) and
+    `AAEAELECTION` (Association of Asian Election Authorities, from its 2017 roster).
+- `IOSCO` lists Taiwan's Financial Supervisory Commission, an Ordinary Member.
+- 22 intblocks with Türkiye among their members or participants, checked on 2026-11-23, each roster
+  taken from the body's own member page, the founding text or the depositary:
+  - Economic and trade: `UNECE` (56 member States), `PEM` (Pan-Euro-Mediterranean rules of origin
+    convention, 24 countries and the EU with entry-into-force dates), `ITFC` (45 member states) and
+    `ICIEC` (51 member states with joining dates) of the IsDB Group, and the OIC bodies `COMCEC` and
+    `IRCICA`, recorded without rosters of their own (see `OIC`).
+  - Organization of Turkic States family: `TURKACADEMY` (Turkic Academy), `TCHF` (Turkic Culture
+    and Heritage Foundation) and `TIF` (Turkic Investment Fund).
+  - Security: `BLACKSEAFOR`, `SELEC`, `SEDM`, `MPFSEE` (SEEBRIG) and `GCTF`.
+  - Forums: `HOAIP` (Heart of Asia-Istanbul Process), `ASTANAFORMAT` (Astana format on Syria) and
+    `EPC` (European Political Community).
+  - `EEA_EU` (European Environment Agency; the `EEA` id is the European Economic Area).
+  - Historical: `OEEC` (1948-1961), `EPU` (European Payments Union, 1950-1958), `RCD` (Regional
+    Cooperation for Development, 1964-1979) and `WEU` (Western European Union, 1954-2011).
+- 15 Türkiye trade agreements in `trade_agreements`, from the Turkish Ministry of Trade
+  (ticaret.gov.tr) and EUR-Lex, all `verification: official`:
+  - In force: `QATR` (Trade and Economic Partnership Agreement with Qatar, signed 2018-11-26,
+    in force since 2025-08-01), `IRTR` (preferential trade agreement with Iran, in force since
+    2015-01-01) and `EUTR-ECSC` (the 1996 ECSC agreement on steel products, outside the
+    customs union, with three Joint Committee decisions as instruments).
+  - Signed, not in force: `SDTR` (Trade and Economic Partnership Agreement with Sudan, signed
+    2017-12-24).
+  - Negotiating: `DZTR` (preferential trade agreement with Algeria), the FTAs with Mexico,
+    Peru, Colombia, Ecuador, Cameroon and MERCOSUR (`MXTR`, `PETR`, `COTR`, `ECTR`, `CMTR`,
+    `MERCOSURTR`), launched but not active, a services agreement with Belarus (`BYTR`) and a
+    digital trade agreement with Uzbekistan (`TRUZ-DIGITAL`).
+  - Proposed: services agreements with Russia (`RUTR`) and Kazakhstan (`KZTR`).
+- Instruments: the Korea services and investment agreements of 2015 (`KRTR`), the Malaysia
+  Revised Protocol No. 1 of 2022 (`MYTR`), the 2023 protocol to the Azerbaijan agreement
+  (`AZTR`) and the signed Georgia expansion protocols (`GETR`).
+- 18 Türkiye trade relations agreements (`trade_relations`), from the Turkish Ministry of Trade's
+  country pages, each with an entry-into-force or provisional-application date from an official
+  source, all `verification: official`:
+  - Dates from the UN Treaty Series: `BRTR-TRA` (Brazil), `CGTR-TRA` (Republic of the Congo),
+    `KRTR-TRA` (Korea, 1977), `MXTR-TRA` (Mexico), `NOTR-TRA` (Norway, 1949) and `TRUY-TRA`
+    (Uruguay).
+  - Dates from partner governments: `ARTR-TRA` (Argentina's treaty library), `BYTR-TRA` (Belarus),
+    `KZTR-TRA` and `KZTR-TRA-2003` (Kazakhstan), `MDTR-TRA` (Moldova) and `NOTR-TRA-1978` (Lovdata).
+  - Dates from the Resmî Gazete: `BJTR-TRA` (Benin) and `JOTR-TRA` (Jordan, 2019), from the decrees
+    that fix agreements' entry-into-force dates; `SATR-TRA` (Saudi Arabia, in force on signature),
+    and `DZTR-TRA` (Algeria) and `MATR-TRA` (Morocco), applied provisionally from signature.
+  - `TNTR-TRA` (Tunisia, 1992), replaced by the free trade agreement `TNTR` on 2005-07-01.
+- 15 UAE trade agreements in `trade_agreements`, from the UAE Ministry of Foreign Trade, the
+  Emirates News Agency (WAM) and the partner governments, all `verification: official`:
+  - CEPAs in force: `AEJO-CEPA` (Jordan, separate from the 2000 free trade zone agreement
+    `AEJO`), `AEAZ` (Azerbaijan) and `AECD` (Democratic Republic of the Congo).
+  - CEPAs signed, not in force: `AECG` (Republic of the Congo), `AEAO` (Angola), `AEPH`
+    (Philippines), `AENG` (Nigeria), `AESL` (Sierra Leone), `AEGA` (Gabon) and `AEBJ` (Benin).
+  - Trade in services and investment agreements with Russia (`AERU`) and Belarus (`AEBY`),
+    in force since August and October 2026 (`agreement_type: services`).
+  - Concluded but unsigned CEPA negotiations: `AETH` (Thailand), `AEMZ` (Mozambique) and
+    `AEMA-CEPA` (Morocco, separate from the 2001 free trade agreement `AEMA`).
+- Three WTO joint initiatives as intblocks (`partof: WTO`), with rosters from the WTO website's
+  member data, checked on 2026-11-24; the EU is one participant, as in `ITA`:
+  - `JSIECOM` (Joint Statement Initiative on Electronic Commerce, 2017): 65 participants. Its
+    Agreement on Electronic Commerce is not in force; the notes name the 46 parties that asked for
+    its incorporation (WT/GC/W/963/Rev.1) and the 2026 interim arrangements.
+  - `IFD` (Investment Facilitation for Development, 2017): 104 participants; the IFD Agreement,
+    finalized on 2024-02-25, awaits incorporation into Annex 4.
+  - `SDR` (Reference Paper on Services Domestic Regulation, 2021): 46 members; the disciplines are
+    binding for 57 WTO members through their GATS schedules.
+
+### Changed
+
+- The `AfCFTA` intblock roster now gives each State Party's signature, ratification and deposit
+  dates from the African Union status list of 22 May 2026 in `includes[].note`, and the date the
+  Agreement entered into force for it in `joined`: 30 May 2019 for the 24 States that deposited
+  by then, the date of deposit for later ones, and 4 September 2026 for Somalia. Benin, Libya,
+  South Sudan and Sudan have signed and not deposited, and have no `joined` date. Western
+  Sahara's `joined` moves from its deposit date to 30 May 2019. Where the AfCFTA Secretariat's
+  State Parties table gives other dates (Algeria, Sierra Leone) the entry's note says so.
+- The `TFTA` intblock roster gives `joined` 25 July 2024, the entry into force, for the 14
+  States that had deposited ratification by then (SADC Secretariat), and no `joined` date for
+  the other 15. All 29 had `joined` 10 June 2015, the launch of the agreement.
+- `AGOA` and `AGOA-APPAREL` record the 2025 lapse and the extensions through 31 December 2026
+  (Public Law 119-75) and through 31 December 2028 (Public Law 119-103, enacted
+  2 September 2026); both stay `in_force`.
+- `MWZA` gets its signature date, 19 June 1990, from SARS.
+- `AMTM` notes the Armenian Ministry of Foreign Affairs dates that differ from the treaty
+  text, which gives entry into force on 1996-07-07.
+- `ICAPCIS` and `EPCCIS` have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
+- `AMTJ` moves to `verification: official`: the Armenian Ministry of Foreign Affairs gives
+  signature on 1994-03-02 and entry into force on 1994-07-20, where ADB ARIC gave only 1994.
+- 25 Chile trade agreement records moved to `verification: official` with signature and
+  entry-into-force dates from Chile's promulgation decrees (BCN Ley Chile), and ALADI for
+  agreements registered as Economic Complementation Agreements: `ARCL`, `AUCL`, `BOCL`,
+  `BRCL`, `CACL`, `CLCN`, `CLCO`, `CLCO-1993`, `CLCR`, `CLGT`, `CLHN`, `CLJP`, `CLKR`, `CLMX`,
+  `CLMY`, `CLNI`, `CLPA`, `CLPE`, `CLPE-1998`, `CLPY`, `CLSV`, `CLTH`, `CLTR`, `CLVE`,
+  `MERCOSURCL`.
+- Status updates from SUBREI and the decrees: `EUCL-AFA` is `in_force` with
+  `provisional_application` 2025-06-01 (parts of the agreement), `CLTT` is `signed`
+  (2025-04-25), `CLPH` is `negotiating` (concluded on 2026-07-24, not yet signed) and
+  `PACALLKR` is `suspended`.
+- Chile's own entry-into-force date as `includes[].joined` on the `CPTPP` (2023-02-21),
+  `TPSEP` (2006-11-08), `DEPA` (2021-11-23) and `PACALLSG` (2025-05-03) intblocks, in place
+  of the signature date.
+- `CISFTA-1994` is now the CIS Agreement on the Establishment of a Free Trade Area of 15 April 1994, `verification: official`,
+  with its 1999 Protocol as an instrument, end dates for Kazakhstan (8 December 2012) and Moldova (9 December 2012) and
+  `superseded_by: CISFTA`. It stays `in_force`: the 2011 Treaty ends it only between its own parties, and it still applies
+  with Azerbaijan and Georgia.
+- The 2011 CIS Treaty on a Free Trade Area (`CISFTA`) records `supersedes: CISFTA-1994`. Its party dates now cite Armenian,
+  Belarusian, Kazakh and Moldovan treaty records. Uzbekistan's protocol is dated 31 May 2013 and in force for Uzbekistan
+  from 16 May 2014, not 13 December 2013 and 12 January 2014. The record also notes Russia's suspension with respect to
+  Ukraine from 1 January 2016.
+- `CISFTASERVICES`: Armenia's entry into force is 14 October 2024 and Kazakhstan's 12 May 2025, as the CIS Executive
+  Committee reports.
+- `EAEU`: Armenia's accession date is 2 January 2015, not 1 January 2015.
+- EAEU third-country records list `EAEU` itself as a party. Egypt and India negotiations are `official`, citing the Supreme
+  Eurasian Economic Council decisions of 26 December 2016. `EAEUCN` is now `trade_relations` (non-preferential), not `other`.
+- Bilateral CIS FTAs: entry-into-force dates corrected from Kazakhstan's and Moldova's records, among them `KZUA` (1998,
+  not 2008), `KZUZ`, `AZKZ`, `AMKZ`, `AZMD`, `MDUZ` and `MDUA`. Russia's agreements with Armenia, Moldova and Ukraine ended
+  in August 2015, by Russian notice, not in 2012. Notes on `KZRU`, `KGRU`, `BYRU` and `RUTJ` say their WTO end dates
+  precede Russia's decision to terminate them.
+- `INOM`, the India–Oman Comprehensive Economic Partnership Agreement, is in force since
+  2026-06-01 (signed 2025-12-18), and moves to `verification: official`.
+- `BTIN` (2006) and `INNP` (1991) are `superseded` by `BTIN-2016` and `INNP-2009`.
+- `SATIS` moves to `verification: official`: a SAARC Secretariat note confirms its entry into
+  force on 2012-11-29 after ratification by all eight SAARC members.
+- `BALTRON`, `BOIP` and `UNOCEANS` gain their Wikidata items (Q745662, Q1910702, Q7888313).
+- `CODEX` (Codex Alimentarius Commission) lists all 189 members: 188 countries and the European
+  Union, each with the year it joined, from the members page of codex.fao.org.
+- `INNP` (the 1991 India–Nepal Treaty of Trade) entered into force on 1991-12-06 (Article XII
+  of the text), not 2002-03-06, which was a later renewal. WTO RTA-IS 392 and World Bank DTA
+  185 describe the revised treaty of 2009, so `wto_rta_id` and `dta_id` move to `INNP-2009`.
+- `EUIN` notes: India published the text of the EU free trade agreement on 2026-09-11; it is
+  not yet signed.
+- The `wikidata_id` completeness threshold for intblocks is 19% (was 18%): the new pipeline
+  records without a Wikidata item take the missing rate to 18.3%.
+- `wikidata_id` set on 9 records whose Wikidata item now exists: `APARTHEIDSPORTS`, `CARIBMOU`,
+  `CPISA`, `EACCASSOA`, `ECSAHC`, `FILAC`, `IICAS`, `ITLOSPI` and `SPECIALMISSIONS`; their entries leave `data/schemas/wikidata_exclusions.yaml`.
+- `languages` set from the authentic-language article of the treaty text on WIPO Lex for nine WIPO
+  treaties: `BTAP`, `BUDAPESTTREATY`, `MADRIDPROTOCOL`, `MARRAKESHVIP`, `PLT2000`,
+  `SINGAPORETREATY`, `TLT1994`, `WCT` and `WPPT`.
+- `EITI` adds Solomon Islands, readmitted as an implementing country on 16 September 2026
+  (56 implementing countries).
+- `BEACST` lists Finland as a `former_member`: the Finnish Government announced in November 2024
+  that it would leave after 2025, and barents-council.org no longer lists it. Russia's withdrawal
+  is dated 18 September 2023.
+- The ASEAN roster recipes in `docs/query-examples.md`, `docs/query-examples-polars.md` and
+  `docs/query-examples-r.md` filter on `status = 'member'`, since the record now also lists
+  partners.
+- `MERCOSUR` lists its seven Associated States (Chile, Colombia, Ecuador, Guyana, Panama, Peru and
+  Suriname) with `status: associated`, from the mercosur.int country page checked on 2026-11-24.
+  Joined dates come from the Common Market Council decisions that granted the status (none for
+  Chile, whose status no decision dates). Venezuela's suspension under the Protocol of Ushuaia and
+  Bolivia's accession under CMC Decision 20/19 are recorded in each entry's `note`.
+  `membership_count` is now 13 (six States Parties and seven Associated States).
+- `CAN` lists its five Associate Members (Argentina, Brazil, Chile, Paraguay and Uruguay) with
+  `status: associate_member` and its seven Observer Countries (Spain, Morocco, Türkiye, Greece,
+  Panama, the Dominican Republic and China) with `status: observer`, from comunidadandina.org.
+  Joined dates are the Official Gazette publication dates of Decisions 613, 645, 761, 862, 902,
+  915, 916, 933 and 949. Chile, a founding member until 30 October 1976 (Decision 102), is now an
+  `associate_member` with its earlier membership in `note`. `membership_count` is now 9 (four
+  Member Countries and five Associate Members).
+- `CITEL` lists its 34 member states, copied from the current member states of `OAS`, since CITEL
+  states that all OAS member states are its members. It no longer sets
+  `membership_applicability: not_applicable`.
+- `MXTR-TRA` (1998 Mexico-Türkiye trade and economic cooperation agreement) gains its Spanish
+  name, the Secretaría de Economía text and the Diario Oficial promulgation decree, which confirms
+  entry into force on 2001-02-02, and notes the Senate approval and the first Joint Economic
+  Commission meeting.
+- `EUMX` lists `EUMX-FCA` in `supersedes`.
+- Lineage: `RIOGROUP.predecessor` is `CONTADORAGROUP`, and `PACIFICCORRIDOR` is part of
+  `MESOAMERICAPROJECT`, itself part of `TUXTLAMECHANISM`.
+- `G-3` (Colombia-Mexico FTA, AAP.CE 33) carries the WTO RTA id 649, the DTA id 188 and the 2010
+  amending protocol that were on `COMX`.
+- `EFTAMX` notes the July 2026 commitment to modernise the agreement and the restart of negotiations
+  with a technical round on 4-6 November 2026.
+- 29 records move from `verification: catalogue` to `official`, with Lovdata links and
+  provenance. These are the terminated EFTA agreements with central and eastern European
+  states, the Baltic states and Croatia, plus `EFTAMD`, `EFTAXK`, `FONO`, `GBISNO` and 15
+  of Norway's investment treaties.
+- Each party's own entry into force, from the depositary's party tables (Switzerland's
+  checked against Fedlex), on `EFTABG`, `EFTACZ`, `EFTAHU`, `EFTAIL`, `EFTAHR`, `EFTARO`,
+  `EFTAEE`, `EFTALT`, `EFTALV`, `EFTAMK`, `EFTAMX`, `EFTAPS` and `EFTATR-1991`.
+  Switzerland's and Liechtenstein's provisional application is also given on `EFTALT`,
+  `EFTALV` and `EFTARO`.
+- Notes on `EFTAGE`, `EFTAPH`, `EFTAHK`, `EFTAMD`, `EFTACO` and `EFTATH`. They cover
+  staggered entry into force and dates on which Lovdata and the registry differ. `EFTATH`
+  enters into force for all parties on 2027-01-01.
+- `wikidata_id` completeness: the allowed null rate is 0.19 (was 0.18). Seven of the new
+  records have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
+- `TURKKON` is now named Organization of Turkic States, its name since 12 November 2021; the
+  Turkic Council name moves to `previous_names`. Members carry joining dates and founding status,
+  and the Turkic Academy, TCHF and TIF are its suborganizations.
+- Lineage: `OECD.predecessor` is `OEEC`, `ECO.predecessor` is `RCD`, and `ASWEU` is part of `WEU`.
+- `TRUA` (Ukraine) is in force since 2026-10-01 (signed 2022-02-03). `PKTR` (Pakistan) is in
+  force since 2023-05-01 (signed 2022-08-12) and takes the name of the Trade in Goods
+  Agreement. `MVTR` (Maldives) is a preferential trade agreement (`pta`), as the Ministry of
+  Trade lists it.
+- `SYTR` notes: Türkiye suspended the agreement with Syria on 2011-12-06.
+- 8 Türkiye records move from `verification: catalogue` to `official`: `TRUA`, `PKTR`,
+  `TRUZ`, `AZTR`, `KRTR`, `GETR`, `BATR` and `MVTR`.
+- `COTR-TRA`, `GYTR-TRA`, `MUTR-TRA`, `PYTR-TRA` and `TRZA-TRA` move from `verification: catalogue`
+  to `official`: the Turkish Ministry of Trade lists them.
+- `TNTR.supersedes` is `TNTR-TRA`.
+- 14 UAE agreements move from `verification: catalogue` to `official`, with dates from the
+  UAE and the partner government: `AEID`, `AETR-CEPA`, `AEKH`, `AEGE`, `AEVN`, `AENZ`, `AEMY`,
+  `AEUA`, `AEKR`, `AECO`, `AEEC`, `AEJP`, `AEPE` and `MERCOSURAE`.
+- `AEKR` (signed 2024-05-29) and `AEVN` are in force since 2026-05-01 and 2026-02-03. `AEEC`
+  was signed on 2026-03-01.
+- Corrected dates: `AEMY` entered into force on 2025-10-01, not 2024-01-14. `AEGE` entered
+  into force on 2024-06-27, not 2024-06-26. `AEKH` entered into force on 2024-01-31, not
+  just in 2024.
+- `AEKE` notes: Kenya's National Assembly removed its reservations before it approved
+  ratification on 2025-11-27.
+- UAE CEPA records gain `treaty_text` links to the Ministry of Foreign Trade and to EDIT,
+  passed over from the EDIT walk.
+
+### Removed
+
+- `COMX`, a second record of the Colombia-Mexico FTA (AAP.CE 33) created from the WTO RTA-IS entry
+  "Colombia - Mexico", which is the Group of Three agreement after Venezuela's withdrawal in 2006.
+  Use `G-3`: `SELECT * FROM trade_agreements WHERE id = 'G-3'`. The registry has no alias table,
+  so the old id no longer resolves.
+
+### Fixed
+
+- `EU-GSP`: Armenia left the scheme on 2022-01-01 and Vietnam on 2023-01-01, under Commission
+  Delegated Regulation (EU) 2021/114. Both were still listed as current beneficiaries.
+- Entry-into-force dates corrected from Chile's promulgation decrees: `CLMY` 2012-02-25 (was
+  2012-04-18, the decree's publication date), `ARCL` 2019-05-01 (was 2019-05-02), `CLCR`
+  2002-02-14 (was 2002-02-15) and `CLPY` 2024-02-14 (was 2024-02-15). `CLHN` and `CLNI` were
+  signed on 1999-10-18 with the Chile–Central America treaty (was 1999-10-19).
+- `IFC` (International Finance Corporation) lists the 186 member countries of the World
+  Bank Group member list, each with its date of membership, checked on 2026-11-23. The
+  record had 195 entries. It drops Taiwan and eight entries that are not IFC members:
+  Andorra, American Samoa, Aruba, Bermuda, the Cook Islands, Hong Kong, Macao and Nauru.
+  It also drops St. Vincent and the Grenadines and adds Portugal, a member since 1966.
+  China's entry has a note: its 1969 date is from when the Republic of China government
+  in Taipei held China's seat, which passed to the People's Republic of China in May 1980.
+  Vietnam's 1967 date has a note too: the government in Saigon held the seat then, and the
+  Socialist Republic of Vietnam took over that membership in 1976. The Dominican Republic
+  stays a founding member, with its current membership dated 1961-10-31.
+- `UNOOSA` (United Nations Office for Outer Space Affairs) no longer has member states.
+  It is a unit of the UN Secretariat, so it is now an `intergovernmental_body` with
+  `partof: UN` and `membership_applicability: not_applicable`. Its description now comes
+  from the Office's own site. Its 195 entries had been the UN Member States without
+  Denmark, plus the Cook Islands, Niue and Taiwan. The 110 States members of the
+  Committee that the Office serves are on the `COPUOS` record.
+- `G-20` no longer lists `G21` as an English acronym. The alias came from Wikidata; the G20's
+  own site keeps the name G20 with the African Union as a member.
+- `EFTAVN` was signed on 2026-10-18; it was recorded as still under negotiation.
+- `GBISNO` applied provisionally from 2021-01-01 and entered into force on 2021-02-22.
+- `EFTASI` applied provisionally from 1995-07-01 and entered into force on 1998-09-01.
+- The first entry into force of three agreements:
+  - `EFTAEE`: 1997-10-01, not 1996-06-01. Norway is added as a party.
+  - `EFTALT`: 1997-01-01, not 1996-08-01.
+  - `EFTAPL`: 1994-09-01, not 1993-11-15.
+- `EFTAHR` ended on 2013-07-01, when Croatia joined the EU, not 2013-11-24.
+- `NOSK-BIT` was terminated by an exchange of notes from 2024-10-01.
+- `NOPE-BIT` was signed on 1995-03-10.
+- `LTNO-BIT` entered into force on 1992-12-19.
+- `PKUZ`: signed 2022-03-03 and in force 2023-03-13 (lex.uz), where ADB ARIC gave only 2023.
+- `IDPK`: in force 2013-09-01 (WTO RTA database, FBR S.R.O. 741(I)/2013), not 2013-09-13.
+- `TWUS-OTHER`, the first agreement under the U.S.-Taiwan Initiative on 21st-Century
+  Trade, was signed on 2023-06-01 and entered into force on 2024-12-10 (USTR); it was
+  recorded as signed in 2023.
+- `DOTW` (Taiwan–Dominican Republic FTA talks) is `abandoned`: Taiwan ended relations
+  with the Dominican Republic on 2018-05-01.
+- `GMTW-BIT` notes the dates EDIT gives, which differ from UNCTAD's.
+- `OECD.founded` is 1961-09-30, the day the OECD came into being; 1948-04-16 was the founding of
+  the OEEC.
+- `GETR` entered into force on 2008-11-01, not 2008-01-11. `BATR` (the revised FTA with Bosnia
+  and Herzegovina) entered into force on 2021-08-01, not in 2003. `TRUZ` entered into force on
+  2023-07-01.
+- Nineteen UN offices, funds, programmes and institutes no longer list the 193 UN Member
+  States as their members. Each record had a roster copied from the UN membership list,
+  with no source for it. They were checked on 2026-11-23 against each body's own site.
+- `OCHA`, `OHCHR` and `UNODC` are departments or offices of the UN Secretariat, so they no
+  longer have member states. They are now `intergovernmental_body` records with
+  `membership_applicability: not_applicable`.
+- `ITC` (International Trade Centre) no longer has member states. It is a subsidiary
+  agency of UNCTAD and the WTO. It is now an `intergovernmental_body` with
+  `membership_applicability: not_applicable`; the members of its two parents are on the
+  `UNCTAD` and `WTO` records.
+- The UNESCO institutes `IBE`, `IIEP` and `UIL` no longer have member states. Their
+  governing boards have individual members, not States. They are now
+  `intergovernmental_body` records with `membership_applicability: not_applicable`.
+- `UNIGF` (Internet Governance Forum) no longer lists 195 participating countries. The
+  list was the UN Member States plus the Holy See and Palestine, not its directory of
+  national and regional initiatives. The forum is a multistakeholder forum with no member
+  states, so it now has `membership_applicability: not_applicable`.
+- These records now list the States on their governing body, from the body's own list:
+  - `UNDP`, `UNFPA` and `UNOPS`: the 36 members of their shared Executive Board in 2026.
+  - `UNICEF`: the 36 members of its 2026 Executive Board.
+  - `UNWOMEN`: the 40 members of its Executive Board in 2026. One seat was still to be
+    elected.
+  - `WFP`: the 36 members of its Executive Board for 2026.
+  - `UNHCR`: the 110 members of its Executive Committee for October 2026 to October 2027.
+    The Holy See is one of them.
+  - `UNRWA`: the 29 members of its Advisory Commission, each with the year it joined.
+    Palestine, the European Union, the League of Arab States and the Organisation of
+    Islamic Cooperation are observers.
+  - `UNAIDS`: the 22 Member States on its Programme Coordinating Board in 2026.
+- `UNEP` and `UNHABITAT` keep their 193 UN Member States, because their governing
+  assemblies have universal UN membership. The records now cite the source for this,
+  and their descriptions no longer read "Ethnic group.".
+- `IBRD`, `IDA`, `MIGA` and `ICSID` list their members with a `joined` date per entry,
+  checked on 2026-11-23. The dates come from the World Bank Group member countries list
+  and, for ICSID, from ICSID's own list of Contracting States and signatories (ICSID/3,
+  as of 16 August 2026). The `IBRD` (189) and `MIGA` (182) rosters already matched.
+- `IDA` lists 175 members, adding Bulgaria (2021) and Suriname (2024). Poland has no
+  `joined` date: the official list gives 1960, but Poland was not back in IBRD until
+  1986, and IDA's Board of Governors adopted its membership resolution in 1987.
+- `ICSID` lists 159 Contracting States, adding ten: Angola, Djibouti, Ecuador, Equatorial
+  Guinea, Georgia, Iraq, Kosovo, the Kyrgyz Republic, Mexico and Nauru. Bolivia (left
+  2007) and Venezuela (left 2012) are `former_member` entries. The record's
+  `founding_members` are now the 20 States for which the Convention entered into force
+  on 14 October 1966. Its notes name the seven States that signed but have not ratified.
+- China's IBRD and IDA dates have a note: they are from when the Republic of China held
+  China's seat, which passed to the People's Republic of China in May 1980. Vietnam's
+  dates have a note that the Socialist Republic of Vietnam took over the Saigon
+  government's membership in 1976. `MIGA` notes that Switzerland was a founding member
+  before it joined IBRD in 1992. It also says that seven IBRD members are not MIGA
+  members, not six: Nauru was missing.
+
+### Data changes since the previous release
+
+- Countries: 256 → 256 records
+- Intblocks: 1606 → 1774 records; added `AAEAELECTION`, `AARDO`, `AB4`, `ABUDHABIDIALOGUE`, `ACI`, `ACN`, `ADMMPLUS`, `ADRC`, `ADRIA`, `AIBD`, `AJC`, `ANRPC`, `APAARI`, `APEP`, `APLMF`, `APN`, `APPPC`, `APRM`, `APTERR`, `ARCOPACIFICO` and 148 more; 81 changed
+- Blocktypes: 83 → 83 records
+- Trade agreements: 5195 → 5309 records; added `AEAM-TRA`, `AEAO`, `AEAZ`, `AEBJ`, `AEBY`, `AECD`, `AECG`, `AEGA`, `AEJO-CEPA`, `AEMA-CEPA`, `AEMZ`, `AENG`, `AEPH`, `AERU`, `AESL`, `AETH`, `AFPK-EHP`, `AMAR-TRA`, `AMAT-TRA`, `AMBG-TRA` and 95 more; removed `COMX`; 193 changed
+- Membership edges: 73052 → 74159; 4215 added, 3108 removed, 1007 changed
+
 ## [5.1.0] - 2026-11-23
 
 ### Added
