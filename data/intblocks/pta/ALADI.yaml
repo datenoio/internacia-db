@@ -76,6 +76,179 @@ includes:
   name: Venezuela, RB
   type: country
   status: member
+- id: AM
+  name: Armenia
+  type: country
+  status: observer
+  joined: '2025-10-30'
+  note: Observer
+- id: CAFBANK
+  name: CAF – Development Bank of Latin America and the Caribbean
+  type: organization
+  status: observer
+  joined: '1996-12-10'
+  note: Observer
+- id: CH
+  name: Switzerland
+  type: country
+  status: observer
+  joined: '1991-10-30'
+  note: Observer
+- id: CN
+  name: China
+  type: country
+  status: observer
+  joined: '1994-06-15'
+  note: Observer
+- id: CR
+  name: Costa Rica
+  type: country
+  status: observer
+  joined: '1986-11-11'
+  note: Observer
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: observer
+  joined: '1984-08-15'
+  note: Observer
+- id: ECLAC
+  name: Economic Commission for Latin America and the Caribbean
+  type: organization
+  status: observer
+  joined: '1981-06-17'
+  note: Observer (listed as CEPAL)
+- id: ES
+  name: Spain
+  type: country
+  status: observer
+  joined: '1982-11-30'
+  note: Observer
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+  joined: '1990-06-06'
+  note: Observer, admitted as the Commission of the European Communities
+- id: GT
+  name: Guatemala
+  type: country
+  status: observer
+  joined: '1984-08-02'
+  note: Observer
+- id: HN
+  name: Honduras
+  type: country
+  status: observer
+  joined: '1982-02-01'
+  note: Observer
+- id: IADB
+  name: Inter-American Development Bank
+  type: organization
+  status: observer
+  joined: '1982-02-01'
+  note: Observer (listed as BID)
+- id: IICA
+  name: Inter-American Institute for Cooperation on Agriculture
+  type: organization
+  status: observer
+  note: 'Observer. ALADI gives its date of incorporation as "08/10/11987", a typo, so no date is recorded here.'
+- id: IT
+  name: Italy
+  type: country
+  status: observer
+  joined: '1987-07-15'
+  note: Observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+  joined: '2004-06-30'
+  note: Observer
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: observer
+  joined: '2004-06-16'
+  note: Observer
+- id: NI
+  name: Nicaragua
+  type: country
+  status: observer
+  joined: '1987-07-15'
+  note: Observer. Accession accepted by Council of Ministers Resolution 75 (XVI) of 11 August 2011; Nicaragua is still meeting the conditions to become a member country.
+- id: OAS
+  name: Organization of American States
+  type: organization
+  status: observer
+  joined: '1981-06-17'
+  note: Observer (listed as OEA)
+- id: PAHO
+  name: Pan American Health Organization
+  type: organization
+  status: observer
+  joined: '2001-05-16'
+  note: Observer (listed as OPS/OMS, Pan American Health Organization / World Health Organization)
+- id: PK
+  name: Pakistan
+  type: country
+  status: observer
+  joined: '2011-03-23'
+  note: Observer
+- id: PT
+  name: Portugal
+  type: country
+  status: observer
+  joined: '1983-07-27'
+  note: Observer
+- id: RO
+  name: Romania
+  type: country
+  status: observer
+  joined: '1993-12-15'
+  note: Observer
+- id: RU
+  name: Russian Federation
+  type: country
+  status: observer
+  joined: '1993-06-23'
+  note: Observer
+- id: SEGIB
+  name: Ibero-American General Secretariat
+  type: organization
+  status: observer
+  joined: '2008-05-29'
+  note: Observer
+- id: SELA
+  name: Latin American Economic System
+  type: organization
+  status: observer
+  joined: '1996-11-13'
+  note: Observer
+- id: SM
+  name: San Marino
+  type: country
+  status: observer
+  joined: '2010-02-24'
+  note: Observer
+- id: SV
+  name: El Salvador
+  type: country
+  status: observer
+  joined: '1981-06-17'
+  note: Observer
+- id: UA
+  name: Ukraine
+  type: country
+  status: observer
+  joined: '2006-02-02'
+  note: Observer
+- id: UNDP
+  name: United Nations Development Programme
+  type: organization
+  status: observer
+  joined: '1986-09-03'
+  note: Observer (listed as PNUD)
 founded: '1980'
 headquarters:
   city: Montevideo
@@ -133,7 +306,11 @@ other_names:
   name: Латиноамериканская ассоциация интеграции
 - id: zh
   name: 拉丁美洲一體化協會
-last_verified: '2026-10-22'
+notes: The observer roster (19 countries and 10 organizations) and the dates of incorporation follow the ALADI
+  Observadores page retrieved on 24 November 2026; Armenia is the latest observer (30 October 2025). The page gives
+  IICA's date as "08/10/11987", an evident typo, so no date is recorded for it. Nicaragua's accession was accepted
+  in 2011 but it is not yet a member country, so it stays an observer.
+last_verified: '2026-11-24'
 provenance:
 - field: institutional_design
   source: "Tratado de Montevideo 1980, Portuguese text as Decreto 87.054/1982 (Brazilian Federal Senate legislation site; the ALADI site was unreachable)"
@@ -170,3 +347,11 @@ provenance:
   source: official sources
   retrieved_at: '2026-06-15'
   url: http://www.aladi.org/
+- field: includes
+  source: "ALADI, Observadores (países y organismos observadores con fechas de incorporación)"
+  retrieved_at: '2026-11-24'
+  url: https://www.aladi.org/observadores/
+- field: includes
+  source: "ALADI, Países miembros (members and accession history)"
+  retrieved_at: '2026-11-24'
+  url: https://www.aladi.org/paises-miembros/
