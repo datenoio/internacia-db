@@ -39,7 +39,9 @@ fields:
     priority: medium
     requirement: preferred
     # 2026-07: 192/1071 missing (17.9%).
-    max_null_rate: 0.18
+    # 2026-11-24: 304/1676 missing (18.1%) after the Pakistan intblocks; the seven new
+    # records without an item are listed in wikidata_exclusions.yaml.
+    max_null_rate: 0.19
     mode: warn
 
   # --- low priority (preferred) ---

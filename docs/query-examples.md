@@ -826,11 +826,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 66 rows — `JP` with 20 observer entries, `US` with 19, `FR` and `UA` with 12, `CH`, `HU`, `IT` and `MD`
-with 11, `AT`, `AU`, `CN`, `DE`, `ES`, `GE` and `TR` with 10, `CA`, `CZ`, `EG`, `GR`, `IL`, `IN`, `KR` and `VA` with
-9, and `AM`, `BY`, `GB`, `ID`, `MY`, `NO`, `PH`, `PL`, `PS`, `RU`, `SE` and `TH` with 8; `AR`, `AZ`, `DK`, `MX`, `NL`,
-`PT`, `RS` and `TM` with 7; `BE`, `IE`, `PE`, `PK`, `QA`, `RO`, `SA`, `SI`, `SK`, `TW` and `UY` with 6; `AE`, `AO`,
-`BA`, `DO`, `KZ`, `LT`, `MA`, `NG`, `NZ`, `PY`, `TN` and `ZA` with 5.
+**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA`
+with 12, `AT`, `CN`, `HU` and `MD` with 11, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`,
+`IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MY`, `PS`, `TH` and `TM`
+with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `IE`, `KZ`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and
+`ZA` with 6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PY` and `TN` with 5.
 
 ## Geography and membership
 
@@ -1027,7 +1027,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 261 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 266 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
