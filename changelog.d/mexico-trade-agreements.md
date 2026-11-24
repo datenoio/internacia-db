@@ -46,6 +46,11 @@
 - `EFTAMX` notes the July 2026 commitment to modernise the agreement and the restart of negotiations
   with a technical round on 4-6 November 2026.
 
+### Fixed
+
+- `G-20` no longer lists `G21` as an English acronym. The alias came from Wikidata; the G20's
+  own site keeps the name G20 with the African Union as a member.
+
 ### Removed
 
 - `COMX`, a second record of the Colombia-Mexico FTA (AAP.CE 33) created from the WTO RTA-IS entry
