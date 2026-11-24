@@ -347,7 +347,7 @@ Filter to a bloc:
 ```sql
 SELECT i.id, i.name, m.status
 FROM intblocks i, UNNEST(i.includes) AS t(m)
-WHERE i.id = 'ASEAN' AND m.type = 'country'
+WHERE i.id = 'ASEAN' AND m.type = 'country' AND m.status = 'member'
 ORDER BY m.id;
 ```
 
@@ -826,9 +826,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 52 rows — `US` with 16 observer entries, `JP` with 13, `MD` and `UA` with 10, `CH`, `ES`, `FR` and `HU` with 9, and `AT`, `CN`, `DE`, `EG`, `GE`, `MY`, `PS`, `TR` and `VA` with 8;
-`AU`, `BY`, `CA`, `CZ`, `GR`, `ID`, `IL`, `IT`, `MX`, `NO`, `RU`, `SE`, `TH` and `TM` with 7; `AM`, `AR`, `AZ`, `DK`, `EC`, `IN`, `KR`, `PE`, `PH`, `PL` and `TW` with 6;
-`AE`, `BE`, `GB`, `NL`, `NZ`, `PT`, `RS`, `SI`, `UY` and `ZA` with 5.
+**Expected:** 68 rows — `JP` and `US` with 19 observer entries, `ES`, `FR` and `UA` with 12, `CH`, `CN`, `HU`, `IT`
+and `MD` with 11, `AU`, `DE`, `GE` and `TR` with 10, `AT`, `CA`, `CZ`, `EG`, `GR`, `KR` and `VA` with 9, and `AM`,
+`GB`, `IL`, `IN`, `MY`, `NO`, `PL`, `PS`, `RU`, `SE` and `TH` with 8; `AR`, `AZ`, `BY`, `DK`, `ID`, `MX`, `NL`, `PE`,
+`PH`, `PT`, `RS` and `TM` with 7; `BE`, `EC`, `IE`, `QA`, `RO`, `SI`, `SK`, `TW` and `UY` with 6; `AE`, `AO`, `BA`,
+`DO`, `KZ`, `LT`, `MA`, `NG`, `NZ`, `PK`, `PY`, `SA`, `SV`, `TN` and `ZA` with 5.
 
 ## Geography and membership
 
@@ -1025,7 +1027,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 254 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 263 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
