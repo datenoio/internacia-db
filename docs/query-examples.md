@@ -826,11 +826,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 66 rows — `JP` and `US` with 19 observer entries, `FR` and `UA` with 12, `CH`, `HU`, `IT` and `MD` with
-11, `AU`, `CN`, `DE`, `ES`, `GE` and `TR` with 10, `AT`, `CA`, `CZ`, `EG`, `GR`, `KR` and `VA` with 9, and `AM`, `GB`,
-`IL`, `IN`, `MY`, `NO`, `PL`, `PS`, `RU`, `SE` and `TH` with 8; `AZ`, `BY`, `DK`, `ID`, `MX`, `NL`, `PH`, `PT`, `RS`
-and `TM` with 7; `AR`, `BE`, `IE`, `PE`, `QA`, `RO`, `SI`, `SK`, `TW` and `UY` with 6; `AE`, `AO`, `BA`, `DO`, `KZ`,
-`LT`, `MA`, `NG`, `NZ`, `PK`, `PY`, `SA`, `TN` and `ZA` with 5.
+**Expected:** 66 rows — `JP` with 20 observer entries, `US` with 19, `FR` and `UA` with 12, `CH`, `HU`, `IT` and `MD`
+with 11, `AT`, `AU`, `CN`, `DE`, `ES`, `GE` and `TR` with 10, `CA`, `CZ`, `EG`, `GR`, `IL`, `IN`, `KR` and `VA` with
+9, and `AM`, `BY`, `GB`, `ID`, `MY`, `NO`, `PH`, `PL`, `PS`, `RU`, `SE` and `TH` with 8; `AR`, `AZ`, `DK`, `MX`, `NL`,
+`PT`, `RS` and `TM` with 7; `BE`, `IE`, `PE`, `PK`, `QA`, `RO`, `SA`, `SI`, `SK`, `TW` and `UY` with 6; `AE`, `AO`,
+`BA`, `DO`, `KZ`, `LT`, `MA`, `NG`, `NZ`, `PY`, `TN` and `ZA` with 5.
 
 ## Geography and membership
 
@@ -952,7 +952,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 54 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 55 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -971,7 +971,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 317 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 322 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1027,7 +1027,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 257 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 261 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.

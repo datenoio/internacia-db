@@ -67,10 +67,6 @@ exclusions:
   reason: No distinct Wikipedia/Wikidata item verified for the VCCR disputes optional protocol
   verified_at: '2026-09-09'
   source: UNTC treaty import
-- id: ITLOSPI
-  reason: Wikipedia/Wikidata redirects to ITLOS the organization (Q639118 already used by ITLOS)
-  verified_at: '2026-09-09'
-  source: UNTC treaty import
 - id: ISAPI
   reason: Wikipedia/Wikidata redirects to the International Seabed Authority (Q333727 already used by ISA_SEABED)
   verified_at: '2026-09-09'
@@ -111,20 +107,8 @@ exclusions:
   reason: No distinct Wikipedia/Wikidata item verified for the Kiev SEA Protocol (distinct from ESPOO)
   verified_at: '2026-09-09'
   source: UNTC treaty import
-- id: CPISA
-  reason: No distinct Wikidata item verified (Wikipedia redirects to the UN General Convention Q5166301 already used by CPIUN)
-  verified_at: '2026-09-09'
-  source: UNTC treaty import
-- id: SPECIALMISSIONS
-  reason: No English Wikipedia article or verified Wikidata item for the 1969 Convention on Special Missions
-  verified_at: '2026-09-09'
-  source: UNTC treaty import
 - id: UNCLOSPARTXI
   reason: No distinct Wikipedia/Wikidata item verified for the 1994 Part XI Implementation Agreement (distinct from UNCLOS)
-  verified_at: '2026-09-09'
-  source: UNTC treaty import
-- id: APARTHEIDSPORTS
-  reason: Wikipedia search maps to the sporting boycott of South Africa (Q2923011), not the 1985 convention
   verified_at: '2026-09-09'
   source: UNTC treaty import
 - id: WATERHEALTH
@@ -204,10 +188,6 @@ exclusions:
   verified_at: '2026-08-03'
   source: deep-review audit
 - id: COCESNA
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: EACCASSOA
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
   source: deep-review audit
@@ -340,10 +320,6 @@ exclusions:
   verified_at: '2026-08-03'
   source: deep-review audit
 - id: ESAAMLG
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
-- id: FILAC
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
   source: deep-review audit
@@ -515,10 +491,6 @@ exclusions:
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
   source: deep-review audit
-- id: UNOCEANS
-  reason: No Wikidata item verified yet; pending enrich_intblocks backfill
-  verified_at: '2026-08-03'
-  source: deep-review audit
 - id: CICOS
   reason: No Wikidata item verified yet; pending enrich_intblocks backfill
   verified_at: '2026-08-03'
@@ -629,10 +601,6 @@ exclusions:
   reason: No verified Wikidata item for the African Legal Support Facility (alsf.int)
   verified_at: '2026-09-09'
   source: Wikipedia .int IGO import
-- id: BOIP
-  reason: No Wikidata Q-id verified for Benelux Office for Intellectual Property at contribution time
-  verified_at: '2026-09-09'
-  source: Wikipedia .int IGO import
 - id: CAC
   reason: No verified Wikidata item for the Central American Agricultural Council (cac.int)
   verified_at: '2026-09-09'
@@ -645,16 +613,8 @@ exclusions:
   reason: No verified Wikidata item for the East African Communications Organisation (eaco.int)
   verified_at: '2026-09-09'
   source: Wikipedia .int IGO import
-- id: ECSAHC
-  reason: No verified Wikidata item for the East, Central and Southern Africa Health Community (ecsahc.int)
-  verified_at: '2026-09-09'
-  source: Wikipedia .int IGO import
 - id: GCAP
   reason: No verified Wikidata item for the GCAP International Government Organisation (GIGO)
-  verified_at: '2026-09-09'
-  source: Wikipedia .int IGO import
-- id: IICAS
-  reason: No verified Wikidata item for the International Institute for Central Asian Studies (iicas.int)
   verified_at: '2026-09-09'
   source: Wikipedia .int IGO import
 - id: OSC
@@ -851,10 +811,6 @@ exclusions:
   source: technical intblocks discovery
 - id: TOKYOMOU
   reason: No Wikidata item or English Wikipedia article found for the Tokyo MOU on Port State Control
-  verified_at: '2026-11-22'
-  source: technical intblocks discovery
-- id: CARIBMOU
-  reason: No Wikidata item or English Wikipedia article found for the Caribbean MOU on Port State Control
   verified_at: '2026-11-22'
   source: technical intblocks discovery
 - id: MEDMOU
@@ -1205,3 +1161,40 @@ exclusions:
     Initiative (searched 2026-11-23)
   verified_at: '2026-11-23'
   source: Türkiye intblocks check
+- id: EMEAP
+  reason: No Wikidata item for the Executives' Meeting of East Asia-Pacific Central Banks (searched by English name and
+    acronym, 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: CPMI
+  reason: No Wikidata item for the Committee on Payments and Market Infrastructures or its former name, the Committee
+    on Payment and Settlement Systems; the English Wikipedia title redirects to the Bank for International Settlements
+    (Q309195) (searched 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: IMDRF
+  reason: No Wikidata item for the International Medical Device Regulators Forum; the acronym finds only scientific
+    articles (searched 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: AJC
+  reason: No Wikidata item or English Wikipedia article for the ASEAN-Japan Centre (ASEAN Promotion Centre on Trade,
+    Investment and Tourism); searched by English and Japanese names, 2026-11-24
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: APTERR
+  reason: No Wikidata item or English Wikipedia article for the ASEAN Plus Three Emergency Rice Reserve or its Agreement
+    (searched by name and acronym, 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: CSC1997
+  reason: No Wikidata item for the 1997 Convention on Supplementary Compensation for Nuclear Damage; the English Wikipedia
+    title redirects to the Vienna Convention on Civil Liability for Nuclear Damage (Q7928318) (searched by English and
+    French names, 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
+- id: EXPORTCREDITSARRANGEMENT
+  reason: No Wikidata item or English Wikipedia article for the OECD Arrangement on Officially Supported Export Credits
+    (searched by English and French names, 2026-11-24)
+  verified_at: '2026-11-24'
+  source: Japan intblocks check
