@@ -584,8 +584,8 @@ WHERE m.id = 'RU'
 ORDER BY m.joined NULLS LAST, i.name;
 ```
 
-**Expected:** 17 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
-`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 18 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
+`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `MONEYVAL`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** Prefer `m.left` on DuckDB/Parquet `includes` or the `memberships.left` column.
 JSONL still carries the same field if you are streaming.
@@ -615,16 +615,17 @@ WHERE m.id = 'RU'
 ORDER BY departed, organization;
 ```
 
-**Expected:** 4 rows:
+**Expected:** 5 rows:
 
 | id | organization | departed | note |
 |----|-------------|----------|------|
+| `MONEYVAL` | Committee of Experts on the Evaluation of Anti-Money Laundering Measures and the Financing of Terrorism | `2022-03-16` | Ceased to be a member when the Committee of Ministers excluded Russia from the Council of Europe |
 | `COE` | Council of Europe | `2022-03-16` | Ceased to be a member on 16 March 2022 under Committee of Ministers Resolution CM/Res(2022)2 |
 | `ECHR` | European Court of Human Rights | `2022-03-16` | — |
 | `ESCREVISED` | European Social Charter (revised) | `2022-03-16` | — |
 | `ICES` | International Council for the Exploration of the Sea | `2025-12-09` | Suspended 30 March 2022; formal withdrawal later |
 
-**Gotcha:** `COE` records the 16 March 2022 cessation as `former_member`, the same date as `ECHR` and `ESCREVISED`. Filter on `former_member` explicitly.
+**Gotcha:** `COE` records the 16 March 2022 cessation as `former_member`, the same date as `ECHR`, `ESCREVISED` and `MONEYVAL`. Filter on `former_member` explicitly.
 
 Equivalent Python (JSONL.zst, no source YAML):
 
@@ -826,11 +827,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH`, `ES` and `IT` with 13, `CN`, `DE`, `FR` and
-`UA` with 12, `AT`, `HU`, `MD` and `TR` with 11, `AU`, `CA`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`,
-`IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MY`, `PS`, `TH` and `TM`
-with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `DO`, `IE`, `KZ`, `MA`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`,
-`TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY` and `TN` with 5.
+**Expected:** 67 rows — `JP` with 22 observer entries, `US` with 20, `CH`, `ES` and `IT` with 13, `CN`, `DE`, `FR` and
+`UA` with 12, `AT`, `CA`, `HU`, `MD` and `TR` with 11, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`,
+`IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MX`, `MY`, `PS`, `TH` and
+`TM` with 8; `AR`, `BE`, `PT`, `RO` and `RS` with 7; `DO`, `IE`, `KZ`, `MA`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`,
+`UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY` and `TN` with 5.
 
 ## Geography and membership
 
@@ -971,7 +972,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 322 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 327 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1027,7 +1028,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 269 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 272 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
