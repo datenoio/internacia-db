@@ -277,12 +277,12 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            78,
+            79,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
             "NOT b.has_china AND b.has_usa",
-            13,
+            14,
             {"EGMONTGROUP", "FLORENCE", "PTBT", "PSI", "HCOC"},
         ),
         (
@@ -442,7 +442,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        54,
+        57,
         set(),
     ),
     (
@@ -468,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        268,
+        272,
         set(),
     ),
     (
@@ -614,7 +614,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 319
+    assert count == 320
 
 
 def test_world_bank_region_filter_uses_region_id(con):
