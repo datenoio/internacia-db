@@ -247,6 +247,73 @@ includes:
   name: Vatican City
   type: country
   status: member
+- id: AF
+  name: Afghanistan
+  type: country
+  status: partner
+  joined: '2003'
+  note: Asian Partner for Co-operation
+- id: AU
+  name: Australia
+  type: country
+  status: partner
+  joined: '2009'
+  note: Asian Partner for Co-operation
+- id: DZ
+  name: Algeria
+  type: country
+  status: partner
+  note: Mediterranean Partner for Co-operation
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: partner
+  note: Mediterranean Partner for Co-operation
+- id: IL
+  name: Israel
+  type: country
+  status: partner
+  note: Mediterranean Partner for Co-operation
+- id: JO
+  name: Jordan
+  type: country
+  status: partner
+  joined: '1998'
+  note: Mediterranean Partner for Co-operation
+- id: JP
+  name: Japan
+  type: country
+  status: partner
+  joined: '1992'
+  note: Asian Partner for Co-operation
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: partner
+  joined: '1994'
+  note: Asian Partner for Co-operation
+- id: MA
+  name: Morocco
+  type: country
+  status: partner
+  note: Mediterranean Partner for Co-operation
+- id: QA
+  name: Qatar
+  type: country
+  status: partner
+  joined: '2026-10-22'
+  note: Asian Partner for Co-operation
+- id: TH
+  name: Thailand
+  type: country
+  status: partner
+  joined: '2000'
+  note: Asian Partner for Co-operation
+- id: TN
+  name: Tunisia
+  type: country
+  status: partner
+  note: Mediterranean Partner for Co-operation
 founded: '1975'
 headquarters:
   city: Vienna
@@ -448,7 +515,12 @@ other_names:
   name: Организация по безопасности и сотрудничеству в Европе
 - id: zh
   name: 歐洲安全與合作組織
-last_verified: '2026-10-22'
+notes: The twelve Partners for Co-operation (six Asian, six Mediterranean) follow the OSCE Partners for Co-operation
+  pages retrieved on 24 November 2026, which already include Qatar, admitted by a Ministerial Council decision of
+  22 October 2026. Years for the Asian Partners and Jordan (1998) come from the OSCE pages and factsheet; Algeria,
+  Egypt, Israel, Morocco and Tunisia have been associated with the Helsinki process since its inception, so no year
+  is recorded for them. Mongolia was an Asian Partner from 2004 until it became a participating State in 2012.
+last_verified: '2026-11-24'
 provenance:
 - field: institutional_design
   source: "OSCE Rules of Procedure, MC.DOC/1/06 (OSCE document host cdn.osce.org)"
@@ -493,3 +565,23 @@ provenance:
   retrieved_at: '2026-06-15'
   url: https://www.wikidata.org/
   license: CC0
+- field: includes
+  source: "OSCE, Partners for Co-operation (osce.org)"
+  retrieved_at: '2026-11-24'
+  url: https://www.osce.org/partners-for-cooperation
+- field: includes
+  source: "OSCE, Asian Partners for Co-operation (osce.org)"
+  retrieved_at: '2026-11-24'
+  url: https://www.osce.org/partners-for-cooperation/asian
+- field: includes
+  source: "OSCE, Mediterranean Partners for Co-operation (osce.org)"
+  retrieved_at: '2026-11-24'
+  url: https://www.osce.org/partners-for-cooperation/mediterranean
+- field: includes
+  source: "OSCE press release, OSCE welcomes Qatar as 12th Partner for Co-operation following Ministerial Council decision, 22 October 2026"
+  retrieved_at: '2026-11-24'
+  url: https://www.osce.org/partners-cooperation-asian/669066
+- field: includes
+  source: "OSCE, Factsheet on OSCE Partners for Co-operation, 13 June 2014 (PDF)"
+  retrieved_at: '2026-11-24'
+  url: https://www.osce.org/sites/default/files/f/documents/2/8/77951.pdf
