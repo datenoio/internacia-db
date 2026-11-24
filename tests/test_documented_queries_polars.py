@@ -139,6 +139,7 @@ def test_ru_former_and_march_2022(pl, intblocks):
         "ICES",
         "ISTC",
         "JCPOA",
+        "MONEYVAL",
         "NSS",
         "OPENSKY",
         "RAMSAR",
@@ -151,7 +152,7 @@ def test_ru_former_and_march_2022(pl, intblocks):
             | pl.col("note").str.contains("(?i)March 2022")
         )
     )
-    assert set(march["intblock_id"].to_list()) == {"COE", "ECHR", "ESCREVISED", "ICES"}
+    assert set(march["intblock_id"].to_list()) == {"COE", "ECHR", "ESCREVISED", "ICES", "MONEYVAL"}
 
 
 def test_jaccard_nato_eu(pl, memberships):

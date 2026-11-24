@@ -628,8 +628,8 @@ Without the status filter, the UN roster has 195 entries, including two observer
 )
 ```
 
-**Expected:** 17 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
-`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `NSS`, `OPENSKY`, `RAMSAR`).
+**Expected:** 18 rows (`BEACST`, `CBSS`, `COE`, `CTBT`, `DANUBECOM`, `EASTERNBLOC`, `ECHR`, `ECPT`,
+`ESCREVISED`, `FCNM`, `GRECO`, `ICES`, `ISTC`, `JCPOA`, `MONEYVAL`, `NSS`, `OPENSKY`, `RAMSAR`).
 
 **Gotcha:** DuckDB, Parquet, and `memberships` all export `left`. Use
 `memberships` when you want a flat edge table without `UNNEST`.
@@ -659,7 +659,7 @@ Without the status filter, the UN roster has 195 entries, including two observer
 )
 ```
 
-**Expected:** 4 rows (`COE`, `ECHR`, `ESCREVISED`, `ICES`).
+**Expected:** 5 rows (`COE`, `ECHR`, `ESCREVISED`, `ICES`, `MONEYVAL`).
 
 ## Membership overlap and set logic
 
