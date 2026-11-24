@@ -442,7 +442,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        55,
+        57,
         set(),
     ),
     (
@@ -468,7 +468,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        262,
+        264,
         set(),
     ),
     (
