@@ -23,12 +23,12 @@
     Sanidad Agropecuaria) and `RCM` (Regional Conference on Migration, Puebla Process; 11 members
     and 5 observers).
   - Latin American political forums: `CONTADORAGROUP` (1983-1986, historical), `LIMAGROUP` (2017
-    Lima Declaration; Mexico and Argentina as former members), `UFC` (Uniting for Consensus) and
-    `ARCOPACIFICO` (Latin American Pacific Arc Forum, 11 members, no meeting found after 2010).
+    Lima Declaration; Mexico and Argentina as former members) and `ARCOPACIFICO` (Latin American
+    Pacific Arc Forum, 11 members, no meeting found after 2010).
   - Inter-regional and trade: `FEALAC` (36 members with dates of entry), `EULACFOUNDATION` (EU-LAC
-    International Foundation, 61 members), `APEP` (Americas Partnership for Economic Prosperity),
-    `MPIA` (WTO Multi-Party Interim Appeal Arbitration Arrangement, 35 participants with joining
-    dates) and `G20WTO` (the WTO G-20 group in the agriculture negotiations).
+    International Foundation, 61 members), `APEP` (Americas Partnership for Economic Prosperity)
+    and `MPIA` (WTO Multi-Party Interim Appeal Arbitration Arrangement, 35 participants with
+    joining dates).
   - Institutions: `CEMLA` (Center for Latin American Monetary Studies, central banks),
     `CISS` (Inter-American Conference on Social Security), `FLACSO`, `IILA` (Italian-Latin American
     International Organization, with entry-into-force dates) and `ILCE` (Latin American Institute of
