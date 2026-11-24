@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 67 rows — `JP` with 22 observer entries, `US` with 20, `CH`, `ES` and `IT` with 13, `CN`, `DE`, `FR` and `UA` with 12, `AT`, `CA`, `HU`, `MD` and `TR` with 11, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`, `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MX`, `MY`, `PS`, `TH` and `TM` with 8; `AR`, `BE`, `PT`, `RO` and `RS` with 7; `DO`, `IE`, `KZ`, `MA`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY` and `TN` with 5.
+**Expected:** 69 rows — `JP` with 22 observer entries, `US` with 20, `ES` with 15, `CH`, `CN` and `IT` with 13, `DE`, `FR` and `UA` with 12, `AT`, `CA`, `HU`, `MD` and `TR` with 11, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`, `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AR`, `AZ`, `BY`, `DK`, `ID`, `MX`, `MY`, `PS`, `TH` and `TM` with 8; `BE`, `PE`, `PT`, `RO` and `RS` with 7; `DO`, `EC`, `IE`, `KZ`, `MA`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY`, `SV` and `TN` with 5.
 
 ---
 
@@ -483,7 +483,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 79 rows. Inspect `blocktype` /
+**Expected:** 80 rows. Inspect `blocktype` /
 `status` before treating informal groupings as formal organizations.
 
 ---
@@ -562,7 +562,7 @@ const succession = await db.query(`
 `);
 ```
 
-**Expected:** 41 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
+**Expected:** 42 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ---
 

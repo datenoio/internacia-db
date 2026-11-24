@@ -281,7 +281,7 @@ OVERRIDES: dict[tuple[str, str | None, str | None, int], Any] = {
     ("GETR", "2007-11-21", "2021-04-29", 0): ("decision-2016-1", "joint_committee_decision",
         "Decision No. 1/2016 of the Joint Committee replacing Protocol II on rules of origin",
         ["goods"], {"signed": "2016-10-28"}),
-    ("COMX", "2010-06-11", "2011-08-02", 0): ("amending-protocol-2010", "amending_protocol",
+    ("G-3", "2010-06-11", "2011-08-02", 0): ("amending-protocol-2010", "amending_protocol",
         "Amending Protocol to the Free Trade Agreement between Colombia and Mexico"),
     ("MXUY", "2012-10-01", "2013-03-01", 0): ("amending-protocol-2012", "amending_protocol",
         "Protocol Amending the Free Trade Agreement between the United Mexican States and the Eastern Republic "

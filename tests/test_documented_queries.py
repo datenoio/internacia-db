@@ -278,7 +278,7 @@ ORDER BY b.id
     [
         (
             "(NOT b.has_china OR NOT b.has_usa)",
-            79,
+            80,
             {"CBD", "NAM", "EGMONTGROUP", "APMINEBANCONVENTION"},
         ),
         (
@@ -288,7 +288,7 @@ ORDER BY b.id
         ),
         (
             "b.has_china AND NOT b.has_usa",
-            45,
+            46,
             {"CBD", "UNCLOS", "BASEL"},
         ),
         (
@@ -377,7 +377,7 @@ ADDITIONAL_RECIPES = [
         JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
-        67,
+        69,
         {"CA", "IN", "TH", "UA"},
     ),
     (
@@ -426,14 +426,14 @@ ADDITIONAL_RECIPES = [
         """
         SELECT COUNT(*) FROM intblocks WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        41,
+        42,
         set(),
     ),
     (
         """
         SELECT COUNT(*) FROM intblocks WHERE dissolved IS NOT NULL AND len(includes) > 0
         """,
-        50,
+        51,
         set(),
     ),
     (
@@ -469,7 +469,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        272,
+        278,
         set(),
     ),
     (
@@ -503,7 +503,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(DISTINCT i.id) FROM intblocks i, UNNEST(i.topics) t(topic)
         WHERE topic.key = 'human_rights'
         """,
-        73,
+        75,
         set(),
     ),
     (
@@ -536,7 +536,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE predecessor IS NOT NULL OR successor IS NOT NULL
         """,
-        41,
+        42,
         set(),
     ),
     (
@@ -615,7 +615,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 327
+    assert count == 330
 
 
 def test_world_bank_region_filter_uses_region_id(con):
