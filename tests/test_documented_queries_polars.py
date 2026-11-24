@@ -117,7 +117,7 @@ def test_nato_eu_memberships(pl, memberships):
 
 
 def test_asean_and_laos(pl, memberships):
-    assert memberships.filter(pl.col("intblock_id") == "ASEAN").height == 11
+    assert memberships.filter((pl.col("intblock_id") == "ASEAN") & (pl.col("status") == "member")).height == 11
     assert memberships.filter(pl.col("country_code") == "LA").height >= 100
 
 

@@ -53,6 +53,59 @@ includes:
   type: country
   status: member
   joined: '1985-12-08'
+- id: AU
+  name: Australia
+  type: country
+  status: observer
+  joined: '2008-08'
+  note: Observer
+- id: CN
+  name: China
+  type: country
+  status: observer
+  joined: '2007-04'
+  note: Observer
+- id: EU
+  name: European Union
+  type: organization
+  status: observer
+  joined: '2007-04'
+  note: Observer
+- id: IR
+  name: Iran, Islamic Rep.
+  type: country
+  status: observer
+  joined: '2007-04'
+  note: Observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+  joined: '2007-04'
+  note: Observer
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: observer
+  joined: '2007-04'
+  note: Observer
+- id: MM
+  name: Myanmar
+  type: country
+  status: observer
+  joined: '2008-08'
+  note: Observer
+- id: MU
+  name: Mauritius
+  type: country
+  status: observer
+  note: Observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+  joined: '2007-04'
+  note: Observer
 founded: '1985'
 headquarters:
   city: Kathmandu
@@ -111,6 +164,11 @@ official_documents:
 - url: https://saarc-sec.org
   type: document
 description: Economical, political and military Alliance of South Asian Nations in Nepal.
+notes: >-
+  The nine observers come from the SAARC Secretariat External Relations page (updated 2026-04-24), which also reports a
+  moratorium on new observers. Observer dates follow the Fourteenth (New Delhi, 3-4 April 2007) and Fifteenth (Colombo,
+  2-3 August 2008) Summit Declarations, which welcomed each observer's association; the Thirteenth Summit (Dhaka,
+  13 November 2005) had agreed in principle to China and Japan. No SAARC source found gives Mauritius's admission date.
 tags:
 - ACRAM
 - ASACR
@@ -209,4 +267,32 @@ provenance:
   source: SAARC Secretariat
   retrieved_at: '2026-10-22'
   url: https://www.saarc-sec.org/index.php/press-release/105-thirtieth-charter-day-press-release
-last_verified: '2026-11-21'
+- field: includes
+  source: "SAARC Secretariat, External Relations (Who are the Observers of SAARC?)"
+  retrieved_at: '2026-11-24'
+  url: https://www.saarc-sec.org/#/pages/external-relations
+- field: includes
+  source: "SAARC Secretariat, About SAARC (eight Member States)"
+  retrieved_at: '2026-11-24'
+  url: https://www.saarc-sec.org/
+- field: includes
+  source: "SAARC Secretariat, Dhaka Declaration, Thirteenth SAARC Summit (13 November 2005)"
+  retrieved_at: '2026-11-24'
+  url: https://www.saarc-sec.org/medias/ThirteenthSaarcSummitDhaka_2026_05_11_05_29_50.pdf
+- field: includes
+  source: "SAARC Secretariat, Declaration of the Fourteenth SAARC Summit (New Delhi, 3-4 April 2007)"
+  retrieved_at: '2026-11-24'
+  url: https://www.saarc-sec.org/medias/FourteenthSaarcSummitNewDe_2026_05_11_04_59_29.pdf
+- field: includes
+  source: "SAARC Secretariat, Fifteenth SAARC Summit Declaration (Colombo, 2-3 August 2008)"
+  retrieved_at: '2026-11-24'
+  url: https://www.saarc-sec.org/medias/FifteenthSaarcSummitColombo_2026_05_11_04_56_15.pdf
+- field: includes
+  source: "SAARC Secretariat, SG receives Ambassador of Japan (26 November 2014)"
+  retrieved_at: '2026-11-24'
+  url: https://saarc-sec.org/api/news/358
+- field: includes
+  source: "SAARC Secretariat, Deputy Assistant Secretary Fatema Z. Sumar calls on the Secretary-General (17 June 2014)"
+  retrieved_at: '2026-11-24'
+  url: https://saarc-sec.org/api/news/367
+last_verified: '2026-11-24'

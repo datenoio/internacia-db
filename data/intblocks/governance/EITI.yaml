@@ -40,7 +40,7 @@ secretariat:
   location: Oslo
   organization: EITI International Secretariat
 wikidata_id: Q1385172
-description: Multi-stakeholder global initiative that sets the EITI Standard for disclosure and verification of information along the extractive-industry value chain — from licensing and contract allocation through production, revenue collection, and social spending. Fifty-five implementing countries publish annual EITI reports and undergo Validation, a quality-assurance review of compliance with the Standard. Each country maintains a national multi-stakeholder group of government, industry, and civil-society representatives; governance of the initiative internationally is carried out by the EITI Board and the International Secretariat in Oslo.
+description: Multi-stakeholder global initiative that sets the EITI Standard for disclosure and verification of information along the extractive-industry value chain — from licensing and contract allocation through production, revenue collection, and social spending. Fifty-six implementing countries publish annual EITI reports and undergo Validation, a quality-assurance review of compliance with the Standard. Each country maintains a national multi-stakeholder group of government, industry, and civil-society representatives; governance of the initiative internationally is carried out by the EITI Board and the International Secretariat in Oslo.
 includes:
 - id: AL
   name: Albania
@@ -262,7 +262,63 @@ includes:
   name: Zambia
   type: country
   status: member
-membership_count: 55
+- id: SB
+  name: Solomon Islands
+  type: country
+  status: member
+  joined: '2026-09-16'
+  note: Readmitted as an implementing country on 16 September 2026; previously implemented the EITI from 2012 until it withdrew in 2018.
+- id: AU
+  name: Australia
+  type: country
+  status: partner
+  note: Supporting country
+- id: BE
+  name: Belgium
+  type: country
+  status: partner
+  note: Supporting country
+- id: CA
+  name: Canada
+  type: country
+  status: partner
+  note: Supporting country
+- id: CH
+  name: Switzerland
+  type: country
+  status: partner
+  note: Supporting country
+- id: DK
+  name: Denmark
+  type: country
+  status: partner
+  note: Supporting country
+- id: FI
+  name: Finland
+  type: country
+  status: partner
+  note: Supporting country
+- id: FR
+  name: France
+  type: country
+  status: partner
+  note: Supporting country
+- id: JP
+  name: Japan
+  type: country
+  status: partner
+  note: Supporting country
+- id: SE
+  name: Sweden
+  type: country
+  status: partner
+  note: Supporting country
+- id: EU
+  name: European Union
+  type: organization
+  status: partner
+  note: Supporting country
+membership_count: 56
 tags:
 - EITI
 - extractive
@@ -293,8 +349,8 @@ other_names:
   name: Extractive Industries Transparency Initiative
 - id: ru
   name: Инициатива прозрачности добывающих отраслей
-notes: As of July 2026 the EITI website lists 55 implementing countries. Countries may be suspended or delisted by the EITI Board for inadequate progress, missed reporting deadlines, or stakeholder-engagement failures; suspended or former implementers are not included in this roster unless listed on the official countries page.
-last_verified: '2026-07-29'
+notes: As of November 2026 the EITI countries page lists 56 implementing countries, including Solomon Islands (readmitted 16 September 2026). Countries may be suspended or delisted by the EITI Board for inadequate progress, missed reporting deadlines, or stakeholder-engagement failures; suspended or former implementers are not included in this roster unless listed on the official countries page. The 14 supporting countries come from the EITI "Supporting countries" page (retrieved 24 November 2026; it gives no dates); Germany, the Netherlands, Norway and the United Kingdom are both supporting and implementing countries and stay listed once, as members.
+last_verified: '2026-11-24'
 provenance:
 - field: includes
   source: EITI official website
@@ -332,3 +388,15 @@ provenance:
   retrieved_at: '2026-07-29'
   url: https://www.wikidata.org/wiki/Q1385172
   license: CC0
+- field: includes
+  source: "EITI, Countries"
+  retrieved_at: '2026-11-24'
+  url: https://eiti.org/countries
+- field: includes
+  source: "EITI, Supporting countries"
+  retrieved_at: '2026-11-24'
+  url: https://eiti.org/supporting-countries
+- field: includes
+  source: "EITI, Solomon Islands country page"
+  retrieved_at: '2026-11-24'
+  url: https://eiti.org/countries/solomon-islands
