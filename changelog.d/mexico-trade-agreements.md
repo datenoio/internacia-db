@@ -41,3 +41,14 @@
 - `EUMX` lists `EUMX-FCA` in `supersedes`.
 - Lineage: `RIOGROUP.predecessor` is `CONTADORAGROUP`, and `PACIFICCORRIDOR` is part of
   `MESOAMERICAPROJECT`, itself part of `TUXTLAMECHANISM`.
+- `G-3` (Colombia-Mexico FTA, AAP.CE 33) carries the WTO RTA id 649, the DTA id 188 and the 2010
+  amending protocol that were on `COMX`.
+- `EFTAMX` notes the July 2026 commitment to modernise the agreement and the restart of negotiations
+  with a technical round on 4-6 November 2026.
+
+### Removed
+
+- `COMX`, a second record of the Colombia-Mexico FTA (AAP.CE 33) created from the WTO RTA-IS entry
+  "Colombia - Mexico", which is the Group of Three agreement after Venezuela's withdrawal in 2006.
+  Use `G-3`: `SELECT * FROM trade_agreements WHERE id = 'G-3'`. The registry has no alias table,
+  so the old id no longer resolves.
