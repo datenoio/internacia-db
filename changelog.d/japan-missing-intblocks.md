@@ -18,3 +18,6 @@
 - `wikidata_id` set on 11 records whose Wikidata item now exists: `APARTHEIDSPORTS`, `BOIP`,
   `CARIBMOU`, `CPISA`, `EACCASSOA`, `ECSAHC`, `FILAC`, `IICAS`, `ITLOSPI`, `SPECIALMISSIONS` and
   `UNOCEANS`; their entries leave `data/schemas/wikidata_exclusions.yaml`.
+- `languages` set from the authentic-language article of the treaty text on WIPO Lex for nine WIPO
+  treaties: `BTAP`, `BUDAPESTTREATY`, `MADRIDPROTOCOL`, `MARRAKESHVIP`, `PLT2000`,
+  `SINGAPORETREATY`, `TLT1994`, `WCT` and `WPPT`.
