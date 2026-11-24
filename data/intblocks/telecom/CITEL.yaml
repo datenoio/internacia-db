@@ -5,7 +5,6 @@ blocktype:
 - technical
 status: formal
 scope_category: intergovernmental_body
-membership_applicability: not_applicable
 partof:
 - OAS
 founded: '1923'
@@ -31,6 +30,146 @@ headquarters:
   city: Washington, D.C.
   country: US
 legal_status: entity of the Organization of American States
+includes:
+- id: AG
+  name: Antigua and Barbuda
+  type: country
+  status: member
+- id: AR
+  name: Argentina
+  type: country
+  status: member
+- id: BB
+  name: Barbados
+  type: country
+  status: member
+- id: BO
+  name: Bolivia
+  type: country
+  status: member
+- id: BR
+  name: Brazil
+  type: country
+  status: member
+- id: BS
+  name: Bahamas, The
+  type: country
+  status: member
+- id: BZ
+  name: Belize
+  type: country
+  status: member
+- id: CA
+  name: Canada
+  type: country
+  status: member
+- id: CL
+  name: Chile
+  type: country
+  status: member
+- id: CO
+  name: Colombia
+  type: country
+  status: member
+- id: CR
+  name: Costa Rica
+  type: country
+  status: member
+- id: CU
+  name: Cuba
+  type: country
+  status: member
+  note: Member as an OAS member state. Cuba has not resumed participation in the OAS since its 1962 exclusion
+    was lifted in 2009.
+- id: DM
+  name: Dominica
+  type: country
+  status: member
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: member
+- id: EC
+  name: Ecuador
+  type: country
+  status: member
+- id: GD
+  name: Grenada
+  type: country
+  status: member
+- id: GT
+  name: Guatemala
+  type: country
+  status: member
+- id: GY
+  name: Guyana
+  type: country
+  status: member
+- id: HN
+  name: Honduras
+  type: country
+  status: member
+- id: HT
+  name: Haiti
+  type: country
+  status: member
+- id: JM
+  name: Jamaica
+  type: country
+  status: member
+- id: KN
+  name: St. Kitts and Nevis
+  type: country
+  status: member
+- id: LC
+  name: St. Lucia
+  type: country
+  status: member
+- id: MX
+  name: Mexico
+  type: country
+  status: member
+- id: PA
+  name: Panama
+  type: country
+  status: member
+- id: PE
+  name: Peru
+  type: country
+  status: member
+- id: PY
+  name: Paraguay
+  type: country
+  status: member
+- id: SR
+  name: Suriname
+  type: country
+  status: member
+- id: SV
+  name: El Salvador
+  type: country
+  status: member
+- id: TT
+  name: Trinidad and Tobago
+  type: country
+  status: member
+- id: US
+  name: United States
+  type: country
+  status: member
+- id: UY
+  name: Uruguay
+  type: country
+  status: member
+- id: VC
+  name: St. Vincent and the Grenadines
+  type: country
+  status: member
+- id: VE
+  name: Venezuela, RB
+  type: country
+  status: member
+membership_count: 34
 wikidata_id: Q2053176
 description: >-
   Entity of the Organization of American States that serves as the main hemispheric forum on telecommunications
@@ -59,17 +198,29 @@ other_names:
 - id: es
   name: Comisión Interamericana de Telecomunicaciones
 notes: >-
-  All OAS member states are members of CITEL, so its country roster is the OAS roster and is not duplicated
-  here. Private-sector companies and other bodies take part as associate members of its Permanent Consultative
-  Committees. The Permanent Executive Committee (COM/CITEL) is an elected subset of member states.
-last_verified: '2026-11-22'
+  All OAS member states are members of CITEL, so its country roster copies the current member states of the
+  `OAS` record (34 since Nicaragua's withdrawal from the OAS took effect in November 2023). A CITEL presentation
+  of June 2023 counted 34 States of the Americas, at a time when the OAS had 35 member states including Cuba and
+  Nicaragua. Private-sector companies and other bodies take part as associate members of its Permanent
+  Consultative Committees. The Permanent Executive Committee (COM/CITEL) is an elected subset of member states.
+last_verified: '2026-11-24'
 provenance:
-- field: membership_applicability
+- field: includes
   source: >-
     CITEL — Membership and Observers ("all Members States of the OAS are Members of CITEL"); read through
-    web search, direct fetch returned HTTP 403
+    web search, direct fetch returned HTTP 403, and on 2026-11-24 the page was behind a bot check
   url: https://www.citel.oas.org/en/pages/membership-and-observers.aspx
   retrieved_at: '2026-11-22'
+- field: includes
+  source: >-
+    OAS Member States directory, through the current member states of the Internacia OAS record (last verified
+    2026-11-24 from a Wayback Machine capture of 2025-08-26)
+  url: https://www.oas.org/en/member_states/default.asp
+  retrieved_at: '2026-11-24'
+- field: notes
+  source: CITEL presentation on its upcoming meetings, hosted by the Caribbean Telecommunications Union (June 2023)
+  url: https://ctu.int/wp-content/uploads/2023/06/presentacion-CTU-proximas-reuniones-CITEL_i.pdf
+  retrieved_at: '2026-11-24'
 - field: partof
   source: Wikipedia — CITEL is an entity of the Organization of American States
   url: https://en.wikipedia.org/wiki/Inter-American_Telecommunication_Commission

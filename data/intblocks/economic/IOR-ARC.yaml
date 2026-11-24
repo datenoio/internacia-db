@@ -105,9 +105,85 @@ includes:
   name: Yemen, Rep.
   type: country
   status: member
+- id: CN
+  name: China
+  type: country
+  status: partner
+  joined: '2000'
+  note: Dialogue Partner
+- id: DE
+  name: Germany
+  type: country
+  status: partner
+  joined: '2015'
+  note: Dialogue Partner
+- id: EG
+  name: Egypt, Arab Rep.
+  type: country
+  status: partner
+  joined: '1999'
+  note: Dialogue Partner
+- id: EU
+  name: European Union
+  type: organization
+  status: partner
+  joined: '2024'
+  note: Dialogue Partner
+- id: GB
+  name: United Kingdom
+  type: country
+  status: partner
+  joined: '2000'
+  note: Dialogue Partner
+- id: IT
+  name: Italy
+  type: country
+  status: partner
+  joined: '2019'
+  note: Dialogue Partner
+- id: JP
+  name: Japan
+  type: country
+  status: partner
+  joined: '1999'
+  note: Dialogue Partner
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: partner
+  joined: '2018'
+  note: Dialogue Partner
+- id: RU
+  name: Russian Federation
+  type: country
+  status: partner
+  joined: '2021'
+  note: Dialogue Partner
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: partner
+  joined: '2023'
+  note: Dialogue Partner
+- id: TR
+  name: Türkiye
+  type: country
+  status: partner
+  joined: '2018'
+  note: Dialogue Partner
+- id: US
+  name: United States
+  type: country
+  status: partner
+  joined: '2012'
+  note: Dialogue Partner
 membership_count: 23
 description: International organization consisting of coastal states bordering the
   Indian Ocean.
+notes: >-
+  The twelve Dialogue Partners and their admission years come from the IORA Dialogue Partners page (retrieved
+  2026-11-24; undated). IORA's two observer organisations, the Indian Ocean Research Group (IORG, observer since August
+  2010) and the Western Indian Ocean Marine Science Association (WIOMSA), have no Internacia record and are not listed.
 tags:
 - IOR-ARC
 - aid
@@ -144,7 +220,7 @@ other_names:
   name: Association des États riverains de l'océan Indien
 - id: zh
   name: 环印度洋联盟
-last_verified: '2026-10-22'
+last_verified: '2026-11-24'
 provenance:
 - field: includes
   source: Indian Ocean Rim Association
@@ -153,6 +229,18 @@ provenance:
 - field: membership_count
   source: Indian Ocean Rim Association
   retrieved_at: '2026-10-22'
+  url: https://www.iora.int/member-states
+- field: includes
+  source: "Indian Ocean Rim Association, IORA Dialogue Partners"
+  retrieved_at: '2026-11-24'
+  url: https://www.iora.int/dialogue-partners
+- field: includes
+  source: "Indian Ocean Rim Association, IORA Observer Organization"
+  retrieved_at: '2026-11-24'
+  url: https://www.iora.int/iora-observer-organization-0
+- field: includes
+  source: "Indian Ocean Rim Association, Member States"
+  retrieved_at: '2026-11-24'
   url: https://www.iora.int/member-states
 - field: scope_category
   source: Internacia inclusion policy; classification from existing record evidence

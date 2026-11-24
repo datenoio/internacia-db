@@ -413,7 +413,7 @@ ASEAN roster:
 
 ```r
 memberships |>
-  filter(intblock_id == "ASEAN") |>
+  filter(intblock_id == "ASEAN", status == "member") |>
   select(country_code, status) |>
   arrange(country_code) |>
   collect()

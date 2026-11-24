@@ -79,19 +79,86 @@ includes:
   type: country
   status: member
   joined: '1969-05-26'
-- id: CL
-  name: Chile
-  type: country
-  status: former_member
-  joined: '1969-05-26'
-  left: '1976'
 - id: VE
   name: Venezuela, RB
   type: country
   status: former_member
   joined: '1973'
   left: '2006'
-membership_count: 4
+- id: AR
+  name: Argentina
+  type: country
+  status: associate_member
+  joined: '2005-07-07'
+  note: Associate Member under Decision 613.
+- id: BR
+  name: Brazil
+  type: country
+  status: associate_member
+  joined: '2005-07-07'
+  note: Associate Member under Decision 613.
+- id: CL
+  name: Chile
+  type: country
+  status: associate_member
+  joined: '2006-09-21'
+  note: Associate Member under Decision 645 (adopted 20 September 2006). Chile was a founding member from 26 May 1969; under
+    Decision 102 its rights and obligations under the Cartagena Agreement ceased on 30 October 1976.
+- id: PY
+  name: Paraguay
+  type: country
+  status: associate_member
+  joined: '2005-07-07'
+  note: Associate Member under Decision 613.
+- id: UY
+  name: Uruguay
+  type: country
+  status: associate_member
+  joined: '2005-07-07'
+  note: Associate Member under Decision 613.
+- id: ES
+  name: Spain
+  type: country
+  status: observer
+  joined: '2011-08-23'
+  note: Observer under Decision 761 (adopted 22 August 2011).
+- id: MA
+  name: Morocco
+  type: country
+  status: observer
+  joined: '2020-07-09'
+  note: Observer under Decision 862 (adopted 8 July 2020).
+- id: TR
+  name: Türkiye
+  type: country
+  status: observer
+  joined: '2022-08-29'
+  note: Observer under Decision 902.
+- id: GR
+  name: Greece
+  type: country
+  status: observer
+  joined: '2023-06-15'
+  note: Observer under Decision 915.
+- id: PA
+  name: Panama
+  type: country
+  status: observer
+  joined: '2023-08-04'
+  note: Observer under Decision 916.
+- id: DO
+  name: Dominican Republic
+  type: country
+  status: observer
+  joined: '2024-09-10'
+  note: Observer under Decision 933.
+- id: CN
+  name: China
+  type: country
+  status: observer
+  joined: '2025-10-02'
+  note: Observer under Decision 949 (adopted 30 September 2025).
+membership_count: 9
 wikidata_id: Q471690
 description: South American integration organization and customs union established by the Cartagena Agreement (1969). Operates
   a free trade zone and common external tariff among Bolivia, Colombia, Ecuador and Peru; formerly known as the Andean Pact
@@ -101,7 +168,12 @@ notes: Venezuela joined in 1973 and withdrew in 2006. Chile was a founding membe
   external tariff was approved in 1994; the Trujillo Protocol (1996) renamed the bloc the Andean Community of Nations. Peru
   temporarily suspended liberalization obligations in 1992 and rejoined the free trade zone in 1997. The EU trade agreement
   with Colombia, Peru and Ecuador entered into full force in 2024. Also known as Comunidad Andina de Naciones or Andean Community.
-last_verified: '2026-07-12'
+  The official site lists the five associate countries (the decisions granting the status call them Associate Members) and
+  seven Observer Countries; observer status follows the conditions of Decision 741 (2010). membership_count is 9 because it
+  counts the four Member Countries and the five Associate Members. Joined dates of Associate Members and Observers are the
+  dates when the granting decision was published in the Official Gazette of the Cartagena Agreement, the date from which the
+  observer decisions state that they are in force.
+last_verified: '2026-11-24'
 tags:
 - CAN
 - andean
@@ -190,6 +262,15 @@ provenance:
   retrieved_at: '2026-07-12'
   url: https://en.wikipedia.org/wiki/Andean_Community
   license: CC BY-SA 4.0
+- field: includes
+  source: Comunidad Andina, Quiénes somos (Países Miembros, Países Asociados and Países Observadores)
+  retrieved_at: '2026-11-24'
+  url: https://www.comunidadandina.org/quienes-somos/
+- field: includes
+  source: Comunidad Andina, Normativa Andina API (Decisions 102, 613, 645, 761, 862, 902, 915, 916, 933 and 949, with their
+    Official Gazette numbers and publication dates; decision texts read from the attached files)
+  retrieved_at: '2026-11-24'
+  url: https://www.comunidadandina.org/normativa-andina/decisiones/
 - field: headquarters
   source: Wikidata
   retrieved_at: '2026-07-12'

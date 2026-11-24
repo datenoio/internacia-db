@@ -53,7 +53,7 @@ def con():
             """
             SELECT m.id AS code
             FROM intblocks i, UNNEST(i.includes) AS t(m)
-            WHERE i.id = 'ASEAN' AND m.type = 'country'
+            WHERE i.id = 'ASEAN' AND m.type = 'country' AND m.status = 'member'
             """,
             10,
             {"LA", "TH", "SG"},
@@ -377,7 +377,7 @@ ADDITIONAL_RECIPES = [
         JOIN countries c ON c.code = m.id AND m.type = 'country'
         WHERE m.status='observer' GROUP BY c.code HAVING COUNT(*) >= 5 ORDER BY c.code
         """,
-        51,
+        67,
         {"CA", "IN", "TH", "UA"},
     ),
     (
@@ -469,7 +469,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        251,
+        265,
         set(),
     ),
     (
@@ -615,7 +615,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 322
+    assert count == 321
 
 
 def test_world_bank_region_filter_uses_region_id(con):

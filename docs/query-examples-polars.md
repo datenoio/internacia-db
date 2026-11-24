@@ -416,7 +416,7 @@ ASEAN roster:
 ```python
 (
     memberships
-    .filter(pl.col("intblock_id") == "ASEAN")
+    .filter((pl.col("intblock_id") == "ASEAN") & (pl.col("status") == "member"))
     .select("country_code", "status")
     .sort("country_code")
 )

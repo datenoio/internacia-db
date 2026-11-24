@@ -347,7 +347,7 @@ Filter to a bloc:
 ```sql
 SELECT i.id, i.name, m.status
 FROM intblocks i, UNNEST(i.includes) AS t(m)
-WHERE i.id = 'ASEAN' AND m.type = 'country'
+WHERE i.id = 'ASEAN' AND m.type = 'country' AND m.status = 'member'
 ORDER BY m.id;
 ```
 
@@ -827,9 +827,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 51 rows — `US` with 16 observer entries, `JP` with 13, `MD` and `UA` with 10, `CH`, `FR` and `HU` with 9, and `AT`, `DE`, `EG`, `GE`, `MY`, `TR` and `VA` with 8;
-`AU`, `BY`, `CA`, `CN`, `CZ`, `ES`, `GR`, `ID`, `IL`, `IT`, `MX`, `NO`, `PS`, `RU`, `SE`, `TH` and `TM` with 7; `AM`, `AZ`, `DK`, `IN`, `KR`, `PH`, `PL` and `TW` with 6;
-`AE`, `AR`, `BE`, `GB`, `NL`, `NZ`, `PE`, `PT`, `RS`, `SI`, `UY` and `ZA` with 5.
+**Expected:** 67 rows — `JP` with 20 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA`
+with 12, `CN`, `HU` and `MD` with 11, `AT`, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`,
+`NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MY`, `PH`, `PS`, `TH` and `TM` with 8;
+`BE`, `BY`, `ID`, `MX`, `PT`, `RO` and `RS` with 7; `AR`, `IE`, `KZ`, `PE`, `QA`, `SI`, `SK`, `TW`, `UY` and `ZA` with
+6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PK`, `PY`, `SA` and `TN` with 5.
 
 ## Geography and membership
 
@@ -970,7 +972,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 322 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 321 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1026,7 +1028,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 251 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 265 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.

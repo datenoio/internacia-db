@@ -19,5 +19,4 @@
 
 - `AMTM` notes the Armenian Ministry of Foreign Affairs dates that differ from the treaty
   text, which gives entry into force on 1996-07-07.
-- The `wikidata_id` completeness gate allows 19% missing (was 18%); every record without one
-  is listed in `wikidata_exclusions.yaml`, now with `ICAPCIS` and `EPCCIS`.
+- `ICAPCIS` and `EPCCIS` have no Wikidata item and are listed in `wikidata_exclusions.yaml`.
