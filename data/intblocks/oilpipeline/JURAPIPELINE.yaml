@@ -1,0 +1,108 @@
+id: JURAPIPELINE
+blocktype:
+- oilpipeline
+status: de-facto
+name: Jura pipeline
+geographic_scope: bilateral
+regions:
+- Europe
+includes:
+- id: FR
+  name: France
+  type: country
+  status: member
+  role: origin
+- id: CH
+  name: Switzerland
+  type: country
+  status: member
+  role: destination
+membership_count: 2
+description: Crude-oil pipeline from the SFPLJ depot at Gennes, near Besançon in France,
+  across the Jura to the refinery at Cressier in the canton of Neuchâtel, Switzerland.
+  Société Française du Pipeline du Jura (SFPLJ) holds the French section. Oléoduc
+  du Jura Neuchâtelois SA (OJNSA) holds the Swiss section from the Franco-Swiss border
+  to Cressier. Both companies passed to Varo with the Cressier refinery in 2012. The
+  line takes crude that the SPSE pipeline brings from Fos-sur-Mer to Gennes. It entered
+  service in 1966, and in 2014 the Swiss Federal Office of Energy gave its permitted
+  capacity as 3.5 Mt a year.
+founded: '1966'
+tags:
+- france
+- switzerland
+- gennes
+- besancon
+- cressier
+- neuchatel
+- jura
+- oilpipeline
+- energy
+- transport
+topics:
+- key: economy
+  name: Economy
+- key: energy
+  name: Energy
+- key: transport
+  name: Transport
+other_names:
+- id: en
+  name: Jura pipeline
+notes: In service in 2026. The SPSE site (2026) says its Besançon terminal feeds the
+  Jura pipeline depot connected to Cressier. Neuchâtel canton (August 2026) lists
+  OJNSA as one of the main pipeline operators in the canton. The Cressier refinery,
+  Switzerland's only refinery, paused production in early September 2026 to fix a
+  technical problem (Swiss Federal Council, 4 September 2026). Start year 1966 comes
+  from Avenergy Suisse; the Swiss Federal Office of Energy gives 1966 for the refinery's
+  commissioning.
+last_verified: '2026-11-24'
+provenance:
+- field: includes
+  source: Préfecture du Doubs, Le risque lié au transport par canalisation
+  retrieved_at: '2026-11-24'
+  url: https://www.doubs.gouv.fr/index.php/contenu/telechargement/31173/196489/file/Le%20risque%20li%C3%A9%20au%20transport%20de%20canalisation.pdf
+- field: includes
+  source: Swiss commercial register (Zefix), Oléoduc du Jura Neuchâtelois S.A.
+  retrieved_at: '2026-11-24'
+  url: https://www.zefix.ch/ZefixREST/api/v1/firm/129948.json
+- field: includes
+  source: Swiss Federal Office of Energy, Erdölraffination und Versorgungssicherheit
+    (2014)
+  retrieved_at: '2026-11-24'
+  url: https://pubdb.bfe.admin.ch/de/publication/download/7739
+- field: description
+  source: SPSE, Transport et stockage d'hydrocarbures
+  retrieved_at: '2026-11-24'
+  url: https://www.spse.fr/fr/transport-et-stockage-hydrocarbures.php
+- field: description
+  source: Swiss Federal Office of Energy, Erdölraffination und Versorgungssicherheit
+    (2014)
+  retrieved_at: '2026-11-24'
+  url: https://pubdb.bfe.admin.ch/de/publication/download/7739
+- field: description
+  source: Euro-Petrole, Varo Energy Holding completes purchase of the assets of Petroplus
+    Refining Cressier
+  retrieved_at: '2026-11-24'
+  url: https://www.euro-petrole.com/varo-energy-holding-s-a-completes-purchase-of-the-assets-of-petroplus-refining-cressier-s-a-n-i-6400
+- field: founded
+  source: Avenergy Suisse, Un approvisionnement sans faille
+  retrieved_at: '2026-11-24'
+  url: https://www.avenergy.ch/fr/resultat/2-news/276-un-approvisionnement-sans-faille
+- field: notes
+  source: SPSE, Transport et stockage d'hydrocarbures
+  retrieved_at: '2026-11-24'
+  url: https://www.spse.fr/fr/transport-et-stockage-hydrocarbures.php
+- field: notes
+  source: 'République et canton de Neuchâtel, Drainages : contrôle des réseaux tiers
+    (2026)'
+  retrieved_at: '2026-11-24'
+  url: https://www.ne.ch/sites/default/files/2026-08/Drainages%20controle%20r%C3%A9seaux%20tiers_0.pdf
+- field: notes
+  source: Swiss Federal Council, Cressier refinery production halt (4 September 2026)
+  retrieved_at: '2026-11-24'
+  url: https://www.admin.ch/fr/newnsb/by2cJW6PoKnj
+- field: notes
+  source: French company register (Recherche d'entreprises), Société Française du
+    Pipe Line du Jura
+  retrieved_at: '2026-11-24'
+  url: https://recherche-entreprises.api.gouv.fr/search?q=784316598
