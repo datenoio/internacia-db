@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA` with 12, `AT`, `CN`, `HU` and `MD` with 11, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`, `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MY`, `PS`, `TH` and `TM` with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `IE`, `KZ`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PY` and `TN` with 5.
+**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH`, `ES` and `IT` with 13, `CN`, `DE`, `FR` and `UA` with 12, `AT`, `HU`, `MD` and `TR` with 11, `AU`, `CA`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`, `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MY`, `PS`, `TH` and `TM` with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `DO`, `IE`, `KZ`, `MA`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY` and `TN` with 5.
 
 ---
 

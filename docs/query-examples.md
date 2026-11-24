@@ -826,11 +826,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA`
-with 12, `AT`, `CN`, `HU` and `MD` with 11, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`,
+**Expected:** 67 rows — `JP` with 21 observer entries, `US` with 19, `CH`, `ES` and `IT` with 13, `CN`, `DE`, `FR` and
+`UA` with 12, `AT`, `HU`, `MD` and `TR` with 11, `AU`, `CA`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`,
 `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `BY`, `DK`, `ID`, `MY`, `PS`, `TH` and `TM`
-with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `IE`, `KZ`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`, `TW`, `UY` and
-`ZA` with 6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PY` and `TN` with 5.
+with 8; `AR`, `BE`, `MX`, `PT`, `RO` and `RS` with 7; `DO`, `IE`, `KZ`, `MA`, `PE`, `PK`, `QA`, `SA`, `SI`, `SK`,
+`TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY` and `TN` with 5.
 
 ## Geography and membership
 
@@ -971,7 +971,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 322 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 321 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
