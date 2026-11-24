@@ -50,8 +50,8 @@ headquarters:
 secretariat:
   location: Kirkenes
   organization: International Barents Secretariat
-membership_count: 6
-description: Intergovernmental forum for cooperation among Denmark, Finland, Iceland, Norway, Sweden, and the European Union in the Barents Euro-Arctic Region. Founded through the Kirkenes Declaration on 11 January 1993 to promote sustainable development and cross-border regional cooperation. The International Barents Secretariat in Kirkenes, established in 2008, provides technical support for BEAC and the Barents Regional Council.
+membership_count: 5
+description: Intergovernmental forum for cooperation among Denmark, Iceland, Norway, Sweden, and the European Union in the Barents Euro-Arctic Region. Founded through the Kirkenes Declaration on 11 January 1993 to promote sustainable development and cross-border regional cooperation. The International Barents Secretariat in Kirkenes, established in 2008, provides technical support for BEAC and the Barents Regional Council.
 tags:
 - BEAC
 - BEACST
@@ -79,7 +79,10 @@ includes:
 - id: FI
   name: Finland
   type: country
-  status: member
+  status: former_member
+  left: '2025'
+  note: The Finnish Government announced on 21 November 2024 that Finland would withdraw from the Council after 2025;
+    barents-council.org no longer lists Finland among the members.
 - id: IS
   name: Iceland
   type: country
@@ -100,7 +103,61 @@ includes:
   name: Russian Federation
   type: country
   status: former_member
-  left: '2023'
+  left: '2023-09-18'
+  note: Announced its withdrawal from the Council on 18 September 2023, as reported by the Finnish Ministry for Foreign
+    Affairs on 22 September 2023.
+- id: CA
+  name: Canada
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: DE
+  name: Germany
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: FR
+  name: France
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: GB
+  name: United Kingdom
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: IT
+  name: Italy
+  type: country
+  status: observer
+  note: Observer
+- id: JP
+  name: Japan
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: NL
+  name: Netherlands
+  type: country
+  status: observer
+  note: Observer
+- id: PL
+  name: Poland
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
+- id: US
+  name: United States
+  type: country
+  status: observer
+  joined: '1993-01-11'
+  note: Observer
 wikidata_id: Q4426190
 other_names:
 - id: zh
@@ -114,8 +171,12 @@ other_names:
 official_documents:
 - url: https://barents-council.org/files/459_doc_KirkenesDeclaration.pdf
   type: founding_declaration
-notes: Russia participated from the 1993 Kirkenes Declaration until formally withdrawing from Barents cooperation in 2023. Nine countries attend as observers (Canada, France, Germany, Italy, Japan, Netherlands, Poland, United Kingdom, United States).
-last_verified: '2026-07-12'
+notes: The member and observer rosters follow the barents-council.org page "Members of the Barents Euro-Arctic Council"
+  retrieved on 24 November 2026, which lists Denmark, Iceland, Norway, Sweden and the European Commission as members and
+  nine observer states. The 1993 observer dates come from the Kirkenes Declaration, which says observers from Canada,
+  France, Germany, Japan, Poland, the United Kingdom and the United States attended the founding conference; Italy
+  and the Netherlands have no date. Russia withdrew in September 2023, and Finland withdrew after 2025.
+last_verified: '2026-11-24'
 provenance:
 - field: institutional_design
   source: "Annex to the Kirkenes Declaration, Terms of Reference, 11 January 1993 (barents-council.org, PDF decoded locally)"
@@ -160,3 +221,27 @@ provenance:
   retrieved_at: '2026-07-12'
   url: https://www.wikidata.org/wiki/Q4426190
   license: CC0
+- field: includes
+  source: "Barents Euro-Arctic Council, Members of the Barents Euro-Arctic Council (members and observers)"
+  retrieved_at: '2026-11-24'
+  url: https://barents-council.org/barents-euro-arctic-council/members-of-the-beac-and-the-brc
+- field: includes
+  source: "Barents Euro-Arctic Council, About the Barents Euro-Arctic Council"
+  retrieved_at: '2026-11-24'
+  url: https://barents-council.org/barents-euro-arctic-council/about-the-council
+- field: includes
+  source: "Kirkenes Declaration, 11 January 1993 (observers at the founding conference; barents-council.org PDF)"
+  retrieved_at: '2026-11-24'
+  url: https://barents-council.org/files/459_doc_KirkenesDeclaration.pdf
+- field: includes
+  source: "Finnish Government press release, Finland withdraws from the Barents Euro-Arctic Council, 21 November 2024 (read from Wayback Machine capture of 2026-09-16)"
+  retrieved_at: '2026-11-24'
+  url: https://valtioneuvosto.fi/en/-/finland-withdraws-from-the-barents-euro-arctic-council
+- field: includes
+  source: "Ministry for Foreign Affairs of Finland, Cooperation in the Barents Euro-Arctic Council continues without Russia, 22 September 2023 (read from Wayback Machine capture of 2024-02-13)"
+  retrieved_at: '2026-11-24'
+  url: https://um.fi/current-affairs/-/asset_publisher/gc654PySnjTX/content/barentsin-euroarktisen-neuvoston-toiminta-jatkuu-ilman-venajaa
+- field: membership_count
+  source: "Barents Euro-Arctic Council, Members of the Barents Euro-Arctic Council"
+  retrieved_at: '2026-11-24'
+  url: https://barents-council.org/barents-euro-arctic-council/members-of-the-beac-and-the-brc
