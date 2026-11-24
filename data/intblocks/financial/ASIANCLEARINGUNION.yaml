@@ -2,60 +2,55 @@ id: ASIANCLEARINGUNION
 name: Asian Clearing Union
 blocktype:
 - financial
-- economic
+- currency
 status: formal
-scope_category: igo
-founded: '1974-12'
+scope_category: intergovernmental_body
+founded: 1974-12
+active_period:
+  start: 1975-11
 geographic_scope: regional
 regions:
-- Asia
 - South Asia
+- Southeast Asia
 - Middle East
-languages:
-- en
+headquarters:
+  city: Tehran
+  country: IR
 links:
 - url: https://www.asianclearingunion.org/
   type: website
-- url: https://www.asianclearingunion.org/acu-members
-  type: website
-- url: https://en.wikipedia.org/wiki/Asian_Clearing_Union
-  type: wikipedia
 - url: https://www.wikidata.org/wiki/Q2150936
   type: wikidata
 acronyms:
 - lang: en
   value: ACU
 wikidata_id: Q2150936
-headquarters:
-  city: Tehran
-  country: IR
-legal_status: intergovernmental
-secretariat:
-  organization: ACU Secretariat
-  location: Tehran, Iran
+legal_status: Multilateral payments clearing arrangement among central banks and monetary authorities, set up by an agreement
+  deposited with the Executive Secretary of ESCAP; it has a Board of Directors and a secretariat in Tehran, and the Central
+  Bank of Iran acts as agent
 membership_count: 11
-description: Clearing union of central banks and monetary authorities, established in December 1974 at the initiative of
-  UN ESCAP, that settles eligible payments among its members multilaterally to economise on foreign exchange reserves and
-  transfer costs. Its secretariat is in Tehran, and members hold ACU Dollar, ACU Euro and ACU Yen accounts settled through
-  the union.
-notes: Members are central banks or monetary authorities; each is listed here by its country. The ACU history page names
-  India, Iran, Nepal, Pakistan and Sri Lanka as founding members (1974), with Bangladesh joining in 1974 and Myanmar in 1977
-  as the sixth and seventh signatories, Bhutan in 1999, Maldives in 2009, and the National Bank of the Republic of Belarus
-  and the Bank of Mauritius in 2024 as the tenth and eleventh members; it gives years only. Membership, first limited to
-  ESCAP-region central banks, was opened in the 2010s to central banks outside ESCAP subject to unanimous approval by the
-  Board of Directors. The secretariat is hosted by the Central Bank of the Islamic Republic of Iran.
+description: Arrangement under which member central banks settle payments for eligible intra-regional transactions on a multilateral
+  basis, economizing on foreign exchange reserves and transfer costs. It was set up in December 1974 on the initiative of
+  ESCAP, after the Ministerial Conference on Asian Economic Cooperation in Kabul in 1970, and began operations in November
+  1975.
+notes: 'Members are central banks and monetary authorities, recorded here by their country. The 11 are those on the ACU website
+  and in its 2025 brochure: India, Iran, Nepal, Pakistan and Sri Lanka signed the agreement first in December 1974, Bangladesh
+  and Myanmar were the sixth and seventh signatories, Bhutan joined in 1999, the Maldives on 16 June 2009, and Belarus and
+  Mauritius in 2023. The Annual Report 2023 and the 53rd Board meeting (September 2025) still count nine members, without
+  Belarus and Mauritius. Since a September 2025 amendment, central banks of non-ESCAP members may be admitted. The id is not
+  ACU, which is the Association of Commonwealth Universities.'
 tags:
-- ACU
-- clearing union
+- Asian Clearing Union
 - central banks
-- payments
+- payments clearing
+- ESCAP
 topics:
+- key: finance
+  name: Finance
 - key: banking
   name: Banking
 - key: currency
   name: Currency
-- key: trade
-  name: Trade
 - key: regional_cooperation
   name: Regional Cooperation
 includes:
@@ -63,37 +58,35 @@ includes:
   name: India
   type: country
   status: founding_member
-  joined: '1974'
+  joined: 1974-12
 - id: IR
   name: Iran, Islamic Rep.
   type: country
   status: founding_member
-  joined: '1974'
+  joined: 1974-12
 - id: NP
   name: Nepal
   type: country
   status: founding_member
-  joined: '1974'
+  joined: 1974-12
 - id: PK
   name: Pakistan
   type: country
   status: founding_member
-  joined: '1974'
+  joined: 1974-12
 - id: LK
   name: Sri Lanka
   type: country
   status: founding_member
-  joined: '1974'
+  joined: 1974-12
 - id: BD
   name: Bangladesh
   type: country
   status: member
-  joined: '1974'
 - id: MM
   name: Myanmar
   type: country
   status: member
-  joined: '1977'
 - id: BT
   name: Bhutan
   type: country
@@ -103,17 +96,17 @@ includes:
   name: Maldives
   type: country
   status: member
-  joined: '2009'
+  joined: '2009-06-16'
 - id: BY
   name: Belarus
   type: country
   status: member
-  joined: '2024'
+  joined: '2023'
 - id: MU
   name: Mauritius
   type: country
   status: member
-  joined: '2024'
+  joined: '2023'
 founding_members:
 - IN
 - IR
@@ -123,28 +116,28 @@ founding_members:
 last_verified: '2026-11-24'
 provenance:
 - field: includes
-  source: ACU portal API, member countries and central banks (UserCountry/GetCountriesAndFlagsToShow, 11 entries)
-  url: https://acuportalapi.asianclearingunion.org/api/UserCountry/GetCountriesAndFlagsToShow
-  retrieved_at: '2026-11-24'
-- field: includes
-  source: ACU, ACU Members page
+  source: Asian Clearing Union, members
   url: https://www.asianclearingunion.org/acu-members
   retrieved_at: '2026-11-24'
 - field: includes
-  source: ACU, History page (founding members and joining years by decade; ACU Members timeline)
-  url: https://www.asianclearingunion.org/page/History
+  source: Asian Clearing Union, country list (website API)
+  url: https://acuportalapi.asianclearingunion.org/api/UserCountry/GetCountriesAndFlagsToShow
   retrieved_at: '2026-11-24'
-- field: membership_count
-  source: ACU, History page (Belarus and Mauritius as tenth and eleventh members)
-  url: https://www.asianclearingunion.org/page/History
+- field: includes
+  source: Asian Clearing Union, brochure (2025)
+  url: https://acuportalapi.asianclearingunion.org/api/UserPublication/Download?fileName=bd238b3131f04943a60adba54759d390.pdf
   retrieved_at: '2026-11-24'
 - field: founded
-  source: ACU, History page (officially established in December 1974)
-  url: https://www.asianclearingunion.org/page/History
+  source: Asian Clearing Union, brochure (2025)
+  url: https://acuportalapi.asianclearingunion.org/api/UserPublication/Download?fileName=bd238b3131f04943a60adba54759d390.pdf
   retrieved_at: '2026-11-24'
-- field: headquarters
-  source: ACU portal API, organization info (secretariat address, Tehran)
-  url: https://acuportalapi.asianclearingunion.org/api/UserOrganizationInfo/GetAll
+- field: description
+  source: Asian Clearing Union, brochure (2025)
+  url: https://acuportalapi.asianclearingunion.org/api/UserPublication/Download?fileName=bd238b3131f04943a60adba54759d390.pdf
+  retrieved_at: '2026-11-24'
+- field: notes
+  source: Asian Clearing Union, brochure (2025)
+  url: https://acuportalapi.asianclearingunion.org/api/UserPublication/Download?fileName=bd238b3131f04943a60adba54759d390.pdf
   retrieved_at: '2026-11-24'
 - field: wikidata_id
   source: Wikidata

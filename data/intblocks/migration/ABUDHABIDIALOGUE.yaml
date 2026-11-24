@@ -6,37 +6,40 @@ blocktype:
 - forum
 status: informal
 scope_category: policy_forum
-founded: '2008'
+founded: '2008-01-21'
 geographic_scope: regional
 regions:
-- Asia
+- South Asia
+- Southeast Asia
 - Middle East
+headquarters:
+  country: AE
 links:
-- url: https://abudhabidialogue.org.ae/en/home
+- url: https://abudhabidialogue.org.ae/
   type: website
 acronyms:
 - lang: en
   value: ADD
-legal_status: Voluntary and non-binding inter-governmental consultative process
-secretariat:
-  organization: ADD Permanent Secretariat
-  location: United Arab Emirates
+other_names:
+- id: en
+  name: Ministerial Consultation on Overseas Employment and Contractual Labour for Countries of Origin and Destination in
+    Asia
+- id: ar
+  name: حوار أبو ظبي
+legal_status: State-led, non-binding regional consultative process on labour migration without a founding treaty; the United
+  Arab Emirates provides the permanent secretariat
 membership_count: 17
-description: Regional consultative process on temporary labour mobility between Asian countries of origin and countries of
-  destination in the Gulf and Asia, established in 2008. Its members are ten Colombo Process countries of origin, the six
-  Gulf states and Malaysia. Ministerial consultations set priorities for two-year cycles; the United Arab Emirates hosts the
-  permanent secretariat, and the chair rotates between a sending and a receiving country.
-notes: The members page classes Afghanistan, Bangladesh, India, Indonesia, Nepal, Pakistan, the Philippines, Sri Lanka, Thailand
-  and Viet Nam as sending states; Bahrain, Kuwait, Malaysia, Oman, Qatar, Saudi Arabia and the United Arab Emirates as receiving
-  states; and Switzerland, IOM, the Migrant Forum in Asia and the OIC Labour Centre as observers. One paragraph of the About
-  page also names China among the Colombo Process members, but the members page does not, so China is not listed. A secretariat
-  notice of 30 January 2026 counted 16 member states at the senior officials' meeting before the eighth Ministerial Consultation,
-  held in Dubai on 1 February 2026, where Oman passed the 2026-2027 chair to the Philippines. ILO, the International Organisation
-  of Employers and the European Union also attend as observers.
+description: Regional consultative process between Asian countries of origin and destination of temporary contractual labour,
+  launched at the first Ministerial Consultation in Abu Dhabi on 21 January 2008. It brings together ten Colombo Process countries
+  with the six Gulf Cooperation Council states and Malaysia; the chairmanship rotates between a sending and a receiving country.
+notes: Ten countries of origin (Afghanistan, Bangladesh, India, Indonesia, Nepal, Pakistan, the Philippines, Sri Lanka, Thailand,
+  Viet Nam) and seven of destination (Bahrain, Kuwait, Malaysia, Oman, Qatar, Saudi Arabia, the UAE), as on the ADD members
+  page and IOM's page in November 2026. Switzerland is the only state observer; IOM, the Migrant Forum in Asia and the OIC
+  Labour Centre are observer organizations. IOM names China and Yemen as past members and Korea and Singapore as past observers,
+  without dates; they are not listed. The secretariat sits in the UAE Ministry of Human Resources and Emiratisation.
 tags:
 - Abu Dhabi Dialogue
 - labour migration
-- Asia-GCC corridor
 - regional consultative process
 topics:
 - key: migration
@@ -48,10 +51,6 @@ topics:
 includes:
 - id: AF
   name: Afghanistan
-  type: country
-  status: member
-- id: BH
-  name: Bahrain
   type: country
   status: member
 - id: BD
@@ -66,20 +65,8 @@ includes:
   name: Indonesia
   type: country
   status: member
-- id: KW
-  name: Kuwait
-  type: country
-  status: member
-- id: MY
-  name: Malaysia
-  type: country
-  status: member
 - id: NP
   name: Nepal
-  type: country
-  status: member
-- id: OM
-  name: Oman
   type: country
   status: member
 - id: PK
@@ -90,14 +77,6 @@ includes:
   name: Philippines
   type: country
   status: member
-- id: QA
-  name: Qatar
-  type: country
-  status: member
-- id: SA
-  name: Saudi Arabia
-  type: country
-  status: member
 - id: LK
   name: Sri Lanka
   type: country
@@ -106,12 +85,36 @@ includes:
   name: Thailand
   type: country
   status: member
-- id: AE
-  name: United Arab Emirates
-  type: country
-  status: member
 - id: VN
   name: Vietnam
+  type: country
+  status: member
+- id: BH
+  name: Bahrain
+  type: country
+  status: member
+- id: KW
+  name: Kuwait
+  type: country
+  status: member
+- id: MY
+  name: Malaysia
+  type: country
+  status: member
+- id: OM
+  name: Oman
+  type: country
+  status: member
+- id: QA
+  name: Qatar
+  type: country
+  status: member
+- id: SA
+  name: Saudi Arabia
+  type: country
+  status: member
+- id: AE
+  name: United Arab Emirates
   type: country
   status: member
 - id: CH
@@ -121,22 +124,26 @@ includes:
 last_verified: '2026-11-24'
 provenance:
 - field: includes
-  source: Abu Dhabi Dialogue, Members (sending, receiving and observer)
+  source: Abu Dhabi Dialogue, members
   url: https://abudhabidialogue.org.ae/en/members
   retrieved_at: '2026-11-24'
 - field: includes
-  source: Abu Dhabi Dialogue, About Abu Dhabi Dialogue
-  url: https://abudhabidialogue.org.ae/en/about/about-abu-dhabi-dialogue
-  retrieved_at: '2026-11-24'
-- field: membership_count
-  source: Abu Dhabi Dialogue, Members
-  url: https://abudhabidialogue.org.ae/en/members
+  source: International Organization for Migration, Abu Dhabi Dialogue
+  url: https://www.iom.int/ministerial-consultation-overseas-employment-and-contractual-labour-countries-origin-and-destination-asia-abu-dhabi-dialogue
   retrieved_at: '2026-11-24'
 - field: founded
-  source: Abu Dhabi Dialogue, About Abu Dhabi Dialogue
+  source: International Organization for Migration, Abu Dhabi Dialogue
+  url: https://www.iom.int/ministerial-consultation-overseas-employment-and-contractual-labour-countries-origin-and-destination-asia-abu-dhabi-dialogue
+  retrieved_at: '2026-11-24'
+- field: description
+  source: Abu Dhabi Dialogue, about
+  url: https://abudhabidialogue.org.ae/en/about/about-abu-dhabi-dialogue
+  retrieved_at: '2026-11-24'
+- field: legal_status
+  source: Abu Dhabi Dialogue, about
   url: https://abudhabidialogue.org.ae/en/about/about-abu-dhabi-dialogue
   retrieved_at: '2026-11-24'
 - field: notes
-  source: Abu Dhabi Dialogue, news of 2 February 2026 (eighth Ministerial Consultation, chair)
-  url: https://abudhabidialogue.org.ae/en/news/abu-dhabi-dialogue-concludes-8th-edition-outlines-priorities-and-workstreams-to-enhance-labour
+  source: International Organization for Migration, Abu Dhabi Dialogue
+  url: https://www.iom.int/ministerial-consultation-overseas-employment-and-contractual-labour-countries-origin-and-destination-asia-abu-dhabi-dialogue
   retrieved_at: '2026-11-24'

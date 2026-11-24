@@ -2,50 +2,51 @@ id: BALIPROCESS
 name: Bali Process on People Smuggling, Trafficking in Persons and Related Transnational Crime
 blocktype:
 - migration
-- police
+- security
 - forum
 status: informal
 scope_category: policy_forum
-founded: '2002'
+founded: '2002-02-26'
 geographic_scope: regional
 regions:
 - Asia-Pacific
+- Middle East
+headquarters:
+  city: Bangkok
+  country: TH
 links:
 - url: https://www.baliprocess.net/
   type: website
 - url: https://www.wikidata.org/wiki/Q4850843
   type: wikidata
-wikidata_id: Q4850843
 other_names:
 - id: en
   name: Bali Process
-legal_status: Non-binding, international, multilateral forum
+wikidata_id: Q4850843
+legal_status: Non-binding international forum without a founding treaty, co-chaired by the foreign ministers of Australia
+  and Indonesia
 membership_count: 45
-description: Non-binding multilateral forum on people smuggling, trafficking in persons and related transnational crime in
-  the Asia-Pacific region and beyond, established in 2002 and co-chaired by the foreign ministers of Australia and Indonesia.
-  Ministerial conferences, usually every two years, set its priorities. Working groups on trafficking in persons, returns
-  and reintegration, planning and preparedness, and the disruption of criminal networks, with a Regional Support Office set
-  up in Bangkok in 2012, carry out its work.
-notes: 'The members page lists 45 member states, including Hong Kong SAR and Macao SAR; four member organisations (IOM, ILO,
-  UNHCR and UNODC); 18 observer states; and nine observer organisations (Asian Development Bank, APC Migration, ICMPD, ICRC,
-  Intergovernmental Consultations on Migration, Asylum and Refugees, IFRC, INTERPOL, UNDP and the World Bank). Only states
-  and territories are listed in includes: the European Commission, which the page lists among the observer states, is left
-  out, so 17 observers are recorded. The Eighth Ministerial Conference met in Adelaide on 9-10 February 2023 and adopted the
-  Adelaide Strategy for Cooperation; the 18th Ad Hoc Group Senior Officials'' Meeting met in Bangkok on 21 May 2025.'
+description: Non-binding multilateral forum on irregular migration, people smuggling and trafficking in persons across the
+  Asia-Pacific, established at the first Bali Regional Ministerial Conference on 26-28 February 2002. Australia and Indonesia
+  are its permanent co-chairs, and a Regional Support Office in Bangkok, opened in 2012, supports cooperation and information-sharing.
+notes: '45 member states as on the Bali Process members page in November 2026, including Hong Kong SAR and Macao SAR; the
+  page spells Nauru ''Naoero''. Member organizations, not listed: UNHCR, IOM, UNODC and ILO. The page counts 18 observer states,
+  the European Commission among them; the 17 states are listed. Nine observer organizations are not listed, among them the
+  Asian Development Bank, ICMPD, the ICRC and the IFRC.'
 tags:
 - Bali Process
 - people smuggling
 - trafficking in persons
-- transnational crime
+- irregular migration
 topics:
 - key: migration
   name: Migration
 - key: crime
   name: Crime
-- key: regional_cooperation
-  name: Regional Cooperation
 - key: security
   name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AF
   name: Afghanistan
@@ -298,20 +299,24 @@ includes:
 last_verified: '2026-11-24'
 provenance:
 - field: includes
-  source: Bali Process, Bali Process Members (member states)
-  url: https://www.baliprocess.net/bali-process-members/
-  retrieved_at: '2026-11-24'
-- field: includes
-  source: Bali Process, Bali Process Members (observer states)
-  url: https://www.baliprocess.net/bali-process-members/
-  retrieved_at: '2026-11-24'
-- field: membership_count
-  source: Bali Process, Bali Process Members
+  source: Bali Process, members and observers
   url: https://www.baliprocess.net/bali-process-members/
   retrieved_at: '2026-11-24'
 - field: founded
-  source: Bali Process, About the Bali Process
+  source: Bali Process, ministerial conferences
+  url: https://www.baliprocess.net/ministerial-conferences/?paging=2
+  retrieved_at: '2026-11-24'
+- field: description
+  source: Bali Process, about
   url: https://www.baliprocess.net/about-the-bali-process/
+  retrieved_at: '2026-11-24'
+- field: legal_status
+  source: Bali Process, about
+  url: https://www.baliprocess.net/about-the-bali-process/
+  retrieved_at: '2026-11-24'
+- field: notes
+  source: Bali Process, members and observers
+  url: https://www.baliprocess.net/bali-process-members/
   retrieved_at: '2026-11-24'
 - field: wikidata_id
   source: Wikidata

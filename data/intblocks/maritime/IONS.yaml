@@ -1,15 +1,19 @@
 id: IONS
 name: Indian Ocean Naval Symposium
 blocktype:
-- military
 - maritime
-- security
+- military
+- forum
 status: informal
 scope_category: policy_forum
-founded: '2008'
+founded: '2008-02-14'
 geographic_scope: regional
 regions:
-- Indian Ocean
+- South Asia
+- Middle East
+- East Africa
+- Southeast Asia
+- Oceania
 links:
 - url: https://ions.global/
   type: website
@@ -19,195 +23,222 @@ acronyms:
 - lang: en
   value: IONS
 wikidata_id: Q48800731
-legal_status: Voluntary forum of navies and maritime agencies governed by a Charter of Business
-secretariat:
-  organization: IONS Secretariat
-  location: New Delhi, India
+legal_status: Voluntary initiative of the navies and maritime agencies of Indian Ocean littoral states under a Charter of
+  Business that is not legally binding; the secretariat rotates with the chair
 membership_count: 25
-description: Voluntary forum of the navies and maritime agencies of Indian Ocean littoral states, initiated by the Indian
-  Navy in 2008 to strengthen maritime cooperation in the region. Chiefs of navies meet in conclaves, and three working groups
-  handle humanitarian assistance and disaster relief, maritime security, and information sharing and interoperability. A littoral
-  state with a navy or maritime agency becomes a member by applying to the IONS Chair and agreeing to the Charter of Business;
-  navies of other states with a significant strategic interest in the region may become observers by consensus of the Conclave
-  of Chiefs.
-notes: 'Membership is held by navies or maritime agencies; includes lists their states. The members page gives "member since" dates
-  from May 2014 to June 2021 for members and from March 2014 to 20 February 2026 (Philippines) for observers; they postdate
-  the 2008 founding (India hosted the inaugural seminar) and are not joining dates, so includes carries none. Chairs so far: India, the United Arab Emirates, South
-  Africa, Australia, Bangladesh, Iran, France and Thailand. India and Iran co-chair the HADR and maritime security groups,
-  Australia and France the information-sharing group.'
+description: Voluntary forum that seeks to increase maritime cooperation among the navies of Indian Ocean littoral states
+  and to discuss regional maritime issues. The Chiefs of Maritime Forces launched it in New Delhi on 14-16 February 2008 on
+  the Indian Navy's initiative.
+notes: '25 members and 10 observers as on the IONS member-countries page in November 2026. Joining dates are the ''member
+  since'' and ''observer since'' dates there, which follow acceptance of the Charter of Business (first adopted 28 March 2014),
+  not first participation: India, the founder, shows 2015-02-28. Members are navies or maritime agencies, recorded by their
+  state. India took the chair on 20 February 2026, so the secretariat is in New Delhi.'
 tags:
 - IONS
-- navies
+- naval cooperation
 - Indian Ocean
 - maritime security
 topics:
 - key: maritime
   name: Maritime
-- key: security
-  name: Security
 - key: military
   name: Military
-- key: disaster_relief
-  name: Disaster Relief
-- key: information_exchange
-  name: Information Exchange
+- key: security
+  name: Security
+- key: regional_cooperation
+  name: Regional Cooperation
 includes:
 - id: AU
   name: Australia
   type: country
   status: member
+  joined: '2014-05-10'
 - id: BD
   name: Bangladesh
   type: country
   status: member
+  joined: '2014-07-04'
 - id: FR
   name: France
   type: country
   status: member
+  joined: '2015-03-10'
 - id: IN
   name: India
   type: country
   status: member
+  joined: '2015-02-28'
 - id: ID
   name: Indonesia
   type: country
   status: member
+  joined: '2014-11-10'
 - id: IR
   name: Iran, Islamic Rep.
   type: country
   status: member
+  joined: '2015-03-16'
 - id: KE
   name: Kenya
   type: country
   status: member
+  joined: '2015-12-09'
 - id: MY
   name: Malaysia
   type: country
   status: member
+  joined: '2018-04-25'
 - id: MV
   name: Maldives
   type: country
   status: member
+  joined: '2014-10-22'
 - id: MU
   name: Mauritius
   type: country
   status: member
+  joined: '2014-11-11'
 - id: MZ
   name: Mozambique
   type: country
   status: member
+  joined: '2015-03-16'
 - id: MM
   name: Myanmar
   type: country
   status: member
+  joined: '2014-11-26'
 - id: OM
   name: Oman
   type: country
   status: member
+  joined: '2014-08-31'
 - id: PK
   name: Pakistan
   type: country
   status: member
+  joined: '2014-10-27'
 - id: QA
   name: Qatar
   type: country
   status: member
+  joined: '2021-06-29'
 - id: SA
   name: Saudi Arabia
   type: country
   status: member
+  joined: '2014-08-24'
 - id: SC
   name: Seychelles
   type: country
   status: member
+  joined: '2014-11-28'
 - id: SG
   name: Singapore
   type: country
   status: member
+  joined: '2014-08-05'
 - id: ZA
   name: South Africa
   type: country
   status: member
+  joined: '2014-10-27'
 - id: LK
   name: Sri Lanka
   type: country
   status: member
+  joined: '2014-10-20'
 - id: TZ
   name: Tanzania
   type: country
   status: member
+  joined: '2014-06-10'
 - id: TH
   name: Thailand
   type: country
   status: member
+  joined: '2014-12-19'
 - id: TL
   name: Timor-Leste
   type: country
   status: member
+  joined: '2014-12-04'
 - id: AE
   name: United Arab Emirates
   type: country
   status: member
+  joined: '2014-11-11'
 - id: GB
   name: United Kingdom
   type: country
   status: member
+  joined: '2014-06-18'
 - id: CN
   name: China
   type: country
   status: observer
+  joined: '2014-03-28'
 - id: DE
   name: Germany
   type: country
   status: observer
+  joined: '2016-01-13'
 - id: IT
   name: Italy
   type: country
   status: observer
+  joined: '2016-01-13'
 - id: JP
   name: Japan
   type: country
   status: observer
+  joined: '2014-03-28'
 - id: MG
   name: Madagascar
   type: country
   status: observer
+  joined: '2015-03-23'
 - id: NL
   name: Netherlands
   type: country
   status: observer
+  joined: '2016-01-13'
 - id: PH
   name: Philippines
   type: country
   status: observer
+  joined: '2026-02-20'
 - id: KR
   name: Korea, Rep.
   type: country
   status: observer
+  joined: '2023-12-22'
 - id: RU
   name: Russian Federation
   type: country
   status: observer
+  joined: '2016-01-13'
 - id: ES
   name: Spain
   type: country
   status: observer
+  joined: '2016-01-13'
 last_verified: '2026-11-24'
 provenance:
 - field: includes
-  source: IONS, Members & Observers
+  source: Indian Ocean Naval Symposium, member countries
   url: https://ions.global/member-countries/
   retrieved_at: '2026-11-24'
-- field: membership_count
-  source: IONS, About IONS (member nations counter) and Members & Observers
-  url: https://ions.global/about/
-  retrieved_at: '2026-11-24'
 - field: founded
-  source: IONS, About IONS
-  url: https://ions.global/about/
+  source: Indian Ocean Naval Symposium, Charter of Business
+  url: https://ions.global/charter-of-business/
   retrieved_at: '2026-11-24'
-- field: secretariat
-  source: IONS, site footer (IONS Secretariat, South Block, New Delhi)
+- field: legal_status
+  source: Indian Ocean Naval Symposium, Charter of Business
+  url: https://ions.global/charter-of-business/
+  retrieved_at: '2026-11-24'
+- field: description
+  source: Indian Ocean Naval Symposium
   url: https://ions.global/
   retrieved_at: '2026-11-24'
 - field: wikidata_id

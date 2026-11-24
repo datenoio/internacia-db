@@ -6,33 +6,32 @@ blocktype:
 - forum
 status: informal
 scope_category: policy_forum
-founded: '2003'
+founded: '2003-04-01'
 geographic_scope: regional
 regions:
 - South Asia
 - Southeast Asia
 - East Asia
+headquarters:
+  city: Colombo
+  country: LK
 links:
-- url: https://colomboprocess.org/
+- url: https://www.colomboprocess.org/
   type: website
-acronyms:
-- lang: en
-  value: CP
 other_names:
 - id: en
-  name: Regional Consultative Process on the Management of Overseas Employment and Contractual Labour for Countries of Origin
-    in Asia
-legal_status: Member state-driven, non-binding regional consultative process on migration
+  name: Regional Consultative Process on Overseas Employment and Contractual Labour for Countries of Origin in Asia
+legal_status: Member state-driven, non-binding and informal regional consultative process without a founding treaty; IOM acts
+  as its secretariat
 membership_count: 12
-description: Regional consultative process of Asian countries of origin of overseas contract workers, begun at the Ministerial
-  Consultation for Asian Labour Sending Countries held in Colombo in 2003. Member states review the management of overseas
-  employment at ministerial consultations and senior officials' meetings, and thematic working groups cover skills and qualification
-  recognition, ethical recruitment, pre-departure orientation, remittances and labour market analysis. The chair rotates for
-  two-year terms.
-notes: The ten initial participating states of 2003 were Bangladesh, China, India, Indonesia, Nepal, Pakistan, the Philippines,
-  Sri Lanka, Thailand and Viet Nam. Cambodia joined as the 12th member state at the Fifth Ministerial Consultation in August
-  2016; the website does not date Afghanistan's accession. India took the chair in May 2024 for two years (IOM, which supports
-  the process). The process website appears not to have been updated since about 2022.
+description: Regional consultative process on the management of overseas employment and contractual labour for Asian countries
+  of origin. It began with the first Ministerial Consultation for Asian Labour Sending Countries in Colombo on 1-2 April 2003;
+  the chair rotates among member states and IOM provides the secretariat, with a Technical Support Unit in Colombo.
+notes: Ten countries met in Colombo in 2003. Afghanistan, an observer in Manila in 2004, was welcomed as a member at the third
+  Ministerial Consultation in Bali in September 2005, and Cambodia as the twelfth member at the fifth, in Colombo on 25 August
+  2016. The Colombo Process site counts eight observer countries without naming them; IOM names twelve states invited on an
+  ad hoc basis (Australia, Bahrain, Italy, Kuwait, Malaysia, Qatar, Korea, Saudi Arabia, Switzerland, the UAE, the United
+  Kingdom, the United States), which are not standing observers and are not listed.
 tags:
 - Colombo Process
 - labour migration
@@ -45,65 +44,66 @@ topics:
 - key: regional_cooperation
   name: Regional Cooperation
 includes:
-- id: AF
-  name: Afghanistan
-  type: country
-  status: member
 - id: BD
   name: Bangladesh
   type: country
   status: founding_member
-  joined: '2003'
-- id: KH
-  name: Cambodia
-  type: country
-  status: member
-  joined: 2016-08
+  joined: '2003-04-01'
 - id: CN
   name: China
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: IN
   name: India
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: ID
   name: Indonesia
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: NP
   name: Nepal
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: PK
   name: Pakistan
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: PH
   name: Philippines
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: LK
   name: Sri Lanka
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: TH
   name: Thailand
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
 - id: VN
   name: Vietnam
   type: country
   status: founding_member
-  joined: '2003'
+  joined: '2003-04-01'
+- id: AF
+  name: Afghanistan
+  type: country
+  status: member
+  joined: 2005-09
+- id: KH
+  name: Cambodia
+  type: country
+  status: member
+  joined: '2016-08-25'
 founding_members:
 - BD
 - CN
@@ -118,22 +118,26 @@ founding_members:
 last_verified: '2026-11-24'
 provenance:
 - field: includes
-  source: Colombo Process, Members
-  url: https://colomboprocess.org/about-the-colombo-process/members
+  source: Colombo Process, member states
+  url: https://www.colomboprocess.org/about-the-colombo-process/members
   retrieved_at: '2026-11-24'
 - field: includes
-  source: Colombo Process, Background (ten initial participating states, 2003)
-  url: https://colomboprocess.org/about-the-colombo-process/background
+  source: Colombo Process, Bali Ministerial Consultation (2005)
+  url: https://www.colomboprocess.org/cp-meetings/detail/bali-consultation-2005
   retrieved_at: '2026-11-24'
 - field: includes
-  source: Colombo Process, Achievements (Cambodia joined in August 2016)
-  url: https://colomboprocess.org/about-the-colombo-process/achievements
-  retrieved_at: '2026-11-24'
-- field: membership_count
-  source: IOM, India presents action plan for Colombo Process Chairmanship, 28 June 2024
-  url: https://www.iom.int/news/india-presents-action-plan-colombo-process-chairmanship
+  source: Colombo Process, Colombo Ministerial Consultation (2016)
+  url: https://www.colomboprocess.org/cp-meetings/detail/colombo-consultation-2016
   retrieved_at: '2026-11-24'
 - field: founded
-  source: Colombo Process, Background
-  url: https://colomboprocess.org/about-the-colombo-process/background
+  source: Colombo Process, Colombo Ministerial Consultation (2003)
+  url: https://www.colomboprocess.org/cp-meetings/detail/colombo-consultation-2003
+  retrieved_at: '2026-11-24'
+- field: description
+  source: Colombo Process, about
+  url: https://www.colomboprocess.org/about-the-colombo-process
+  retrieved_at: '2026-11-24'
+- field: notes
+  source: International Organization for Migration, Colombo Process
+  url: https://www.iom.int/regional-consultative-process-overseas-employment-and-contractual-labor-countries-origin-asia-colombo-process
   retrieved_at: '2026-11-24'

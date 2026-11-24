@@ -1,12 +1,9 @@
 ### Added
 
-- 29 intblocks with India among their members or parties, checked on 2026-11-24, each roster
+- 22 intblocks with India among their members or parties, checked on 2026-11-24, each roster
   taken from the body's own member page, the founding text or the depositary:
-  - South Asia and the Indian Ocean: `ICIMOD` (International Centre for Integrated Mountain
-    Development), `ASIANCLEARINGUNION` (Asian Clearing Union; the `ACU` id is the Association of
-    Commonwealth Universities), `BOBPIGO` (Bay of Bengal Programme Inter-Governmental
-    Organisation), `GTF` (Global Tiger Forum), `CSC` (Colombo Security Conclave) and `IONS` (Indian
-    Ocean Naval Symposium).
+  - South Asia and the Indian Ocean: `BOBPIGO` (Bay of Bengal Programme Inter-Governmental
+    Organisation), `GTF` (Global Tiger Forum) and `CSC` (Colombo Security Conclave).
   - Initiatives launched by India: `IBCA` (International Big Cat Alliance) and `GBA` (Global
     Biofuels Alliance).
   - Finance and tax: `CRA` (BRICS Contingent Reserve Arrangement) and `IFBEPS` (OECD/G20 Inclusive
@@ -18,12 +15,11 @@
     International Post Corporation), `ICCCOCONUT` (International Coconut Community; the `ICC` id is
     the International Cricket Council), `ANRPC` (Association of Natural Rubber Producing
     Countries) and `IRSG` (International Rubber Study Group).
-  - Forums and processes: `G4` (Brazil, Germany, India, Japan), `ADMMPLUS` (ASEAN Defence
-    Ministers' Meeting-Plus), and the migration processes `COLOMBOPROCESS`, `ABUDHABIDIALOGUE` and
-    `BALIPROCESS`.
-  - Asia-Pacific technical bodies: `AIBD` (Asia-Pacific Institute for Broadcasting Development),
-    `ADRC` (Asian Disaster Reduction Center), `CSSTEAP` (Centre for Space Science and Technology
-    Education in Asia and the Pacific), `APN` (Asia-Pacific Network for Global Change Research),
+  - Forums: `G4` (Brazil, Germany, India, Japan) and `ADMMPLUS` (ASEAN Defence Ministers'
+    Meeting-Plus).
+  - Asia-Pacific technical bodies: `ADRC` (Asian Disaster Reduction Center), `CSSTEAP` (Centre
+    for Space Science and Technology Education in Asia and the Pacific), `APN` (Asia-Pacific
+    Network for Global Change Research),
     `IIASA` (International Institute for Applied Systems Analysis), and the FAO bodies `APPPC`
     (Asia and Pacific Plant Protection Commission) and `SWAC` (Commission for Controlling the
     Desert Locust in South-West Asia).
