@@ -73,6 +73,8 @@ includes:
   type: country
   status: member
   joined: '2024-08-07'
+  note: State Party under CMC Decision 20/19. The Protocol of Accession was signed by all States Parties in 2015 and Bolivia
+    delivered its instrument of ratification in July 2024; it has up to four years to incorporate the MERCOSUR body of law.
 - id: BR
   name: Brazil
   type: country
@@ -93,7 +95,53 @@ includes:
   type: country
   status: member
   joined: '2012-07-31'
-membership_count: 6
+  note: Suspended in all rights and obligations inherent to its status as a State Party, under the second paragraph of Article
+    5 of the Protocol of Ushuaia (decision of the other States Parties of 5 August 2017).
+- id: CL
+  name: Chile
+  type: country
+  status: associated
+  note: Associated State. No joined date because no CMC decision dates a grant of the status; CMC Decision 12/97 (15 December
+    1997) set Chile's participation in MERCOSUR meetings under Economic Complementation Agreement No. 35.
+- id: CO
+  name: Colombia
+  type: country
+  status: associated
+  joined: '2004-12-16'
+  note: Associated State under CMC Decision 44/04.
+- id: EC
+  name: Ecuador
+  type: country
+  status: associated
+  joined: '2004-12-16'
+  note: Associated State under CMC Decision 43/04.
+- id: GY
+  name: Guyana
+  type: country
+  status: associated
+  joined: '2013-07-11'
+  note: Associated State under CMC Decision 12/13, granted again by CMC Decision 19/15 of 16 July 2015 after the Framework
+    Association Agreement was signed anew.
+- id: PA
+  name: Panama
+  type: country
+  status: associated
+  joined: '2024-12-06'
+  note: Associated State under CMC Decision 09/24.
+- id: PE
+  name: Peru
+  type: country
+  status: associated
+  joined: '2003-12-16'
+  note: Associated State under CMC Decision 39/03.
+- id: SR
+  name: Suriname
+  type: country
+  status: associated
+  joined: '2013-07-11'
+  note: Associated State under CMC Decision 13/13, granted again by CMC Decision 21/15 of 16 July 2015 after the Framework
+    Association Agreement was signed anew.
+membership_count: 13
 wikidata_id: Q4264
 description: South American trade bloc and customs union established by the Treaty of Asunción (1991) and Protocol of Ouro
   Preto (1994). Free trade among founding members began in 1994; the customs union with a common external tariff took effect
@@ -103,7 +151,10 @@ notes: Venezuela remains a State Party but has been suspended in all rights and 
   are not part of the customs union. Also known as Mercosur (Spanish) and Mercosul (Portuguese). Intra-bloc investment facilitation
   among a subset of members is a later instrument recorded as `PCFI` (Argentina, Brazil, and Uruguay in force; Paraguay approval
   sourced but deposit not sourced). The 1994 Protocol of Colonia never entered into force and is not a separate intblock.
-last_verified: '2026-10-22'
+  membership_count is 13 because it counts the six States Parties and the seven Associated States, as the roster lists them.
+  The joined dates of Associated States are the approval dates of the Common Market Council decisions that granted the status,
+  each in force from approval.
+last_verified: '2026-11-24'
 tags:
 - MERCOSUL
 - MERCOSUR
@@ -180,9 +231,15 @@ provenance:
   url: https://www.wikidata.org/wiki/Q4264
   license: CC0
 - field: includes
-  source: MERCOSUR
-  retrieved_at: '2026-10-22'
+  source: MERCOSUR, Países (States Parties, Associated States, Venezuela's suspension and Bolivia's accession; read in a browser,
+    curl gets HTTP 403)
+  retrieved_at: '2026-11-24'
   url: https://www.mercosur.int/acerca-del-mercosur/paises
+- field: includes
+  source: MERCOSUR Normative Information System, CMC Decisions 39/03, 43/04, 44/04, 12/13, 13/13, 19/15, 21/15 and 09/24
+    (grants of Associated State status, approval and entry-into-force dates) and 12/97 (participation of Chile)
+  retrieved_at: '2026-11-24'
+  url: https://normas.mercosur.int/public/normativas?tipo_norma=DEC
 - field: includes
   source: MERCOSUR
   retrieved_at: '2026-10-22'
