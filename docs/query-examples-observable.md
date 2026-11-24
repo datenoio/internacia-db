@@ -418,7 +418,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** 67 rows — `JP` with 20 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA` with 12, `CN`, `HU` and `MD` with 11, `AT`, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`, `NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MY`, `PH`, `PS`, `TH` and `TM` with 8; `BE`, `BY`, `ID`, `MX`, `PT`, `RO` and `RS` with 7; `AR`, `IE`, `KZ`, `PE`, `QA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PK`, `PY`, `SA` and `TN` with 5.
+**Expected:** 69 rows — `JP` with 21 observer entries, `US` with 20, `ES` with 15, `CH`, `CN` and `IT` with 13, `DE`, `FR` and `UA` with 12, `CA`, `HU`, `MD` and `TR` with 11, `AT`, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`, `GB`, `NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MX`, `MY`, `PH`, `PS`, `TH` and `TM` with 8; `AR`, `BE`, `BY`, `ID`, `PE`, `PT`, `RO` and `RS` with 7; `DO`, `EC`, `IE`, `KZ`, `MA`, `QA`, `SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PK`, `PY`, `SA`, `SV` and `TN` with 5.
 
 ---
 
@@ -562,7 +562,7 @@ const succession = await db.query(`
 `);
 ```
 
-**Expected:** 41 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
+**Expected:** 42 rows — e.g. `BRIC` → `BRICS`, `GATT` → `WTO`, `NAFTA` → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ---
 

@@ -827,11 +827,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 67 rows — `JP` with 20 observer entries, `US` with 19, `CH` and `IT` with 13, `DE`, `ES`, `FR` and `UA`
-with 12, `CN`, `HU` and `MD` with 11, `AT`, `AU`, `CA`, `GE`, `KR`, `RU` and `TR` with 10, `CZ`, `EG`, `GB`, `GR`,
-`NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MY`, `PH`, `PS`, `TH` and `TM` with 8;
-`BE`, `BY`, `ID`, `MX`, `PT`, `RO` and `RS` with 7; `AR`, `IE`, `KZ`, `PE`, `QA`, `SI`, `SK`, `TW`, `UY` and `ZA` with
-6; `AE`, `AO`, `BA`, `DO`, `FI`, `LT`, `MA`, `NG`, `NZ`, `PK`, `PY`, `SA` and `TN` with 5.
+**Expected:** 69 rows — `JP` with 21 observer entries, `US` with 20, `ES` with 15, `CH`, `CN` and `IT` with 13, `DE`,
+`FR` and `UA` with 12, `CA`, `HU`, `MD` and `TR` with 11, `AT`, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`,
+`GB`, `NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MX`, `MY`, `PH`, `PS`, `TH` and `TM`
+with 8; `AR`, `BE`, `BY`, `ID`, `PE`, `PT`, `RO` and `RS` with 7; `DO`, `EC`, `IE`, `KZ`, `MA`, `QA`, `SI`, `SK`,
+`TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PK`, `PY`, `SA`, `SV` and `TN` with 5.
 
 ## Geography and membership
 
@@ -926,7 +926,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 41 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
+**Expected:** 42 rows — includes `BRIC` → `BRICS`, `G7` ↔ `G8`, `GATT` → `WTO`, `NAFTA`
 → `USMCA`, `RIOGROUP` → `CELAC`.
 
 ### Dissolved organizations that still carry rosters
@@ -938,7 +938,7 @@ WHERE dissolved IS NOT NULL AND len(includes) > 0
 ORDER BY dissolved, name;
 ```
 
-**Expected:** 50 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
+**Expected:** 51 rows — includes `LMU`, `COVAX`, `WARSAWPACT`, `SEATO`, `G8`, `WESTERNBLOC`, `RIOGROUP`, and the World Bank's retired `OEC`/`NOC` groups.
 
 ### UN agency hierarchy (two-level `partof`)
 
@@ -972,7 +972,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 322 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 325 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1028,7 +1028,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 268 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 274 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
@@ -1098,7 +1098,7 @@ WHERE topic.key = 'human_rights'
 ORDER BY i.name;
 ```
 
-**Expected:** 73 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
+**Expected:** 75 rows — includes `UNHRC`, `UNWOMEN`, `CEDAW`, `CRC`, `ACTHPR`.
 
 Swap `topic.key` for other taxonomy keys (`nuclear`, `trade`, `ocean`, etc.).
 
@@ -1304,7 +1304,7 @@ WHERE predecessor IS NOT NULL OR successor IS NOT NULL
 ORDER BY id;
 ```
 
-**Expected:** 41 rows.
+**Expected:** 42 rows.
 
 ## Authority and capacity
 
