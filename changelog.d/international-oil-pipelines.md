@@ -1,12 +1,12 @@
 ### Added
 
-- 30 cross-border oil pipeline records (`oilpipeline`), checked on 2026-11-24, each with
+- 31 cross-border oil pipeline records (`oilpipeline`), checked on 2026-11-24, each with
   `origin`, `transit` and `destination` roles from an operator, government, intergovernmental or
   project-finance source:
   - Europe: `DRUZHBA` (Druzhba, Wikidata Q315654), `ADRIA` (Adria/JANAF, Q505616), `TAL`
     (Transalpine Pipeline, Q872783), `IKL` (Ingolstadt–Kralupy–Litvínov, Q443487), `RRP`
-    (Rotterdam–Rhine Pipeline), `NORPIPEOIL` (Norpipe oil line, Ekofisk–Teesside) and
-    `THESSALONIKISKOPJE` (Thessaloniki–Skopje products line).
+    (Rotterdam–Rhine Pipeline), `NORPIPEOIL` (Norpipe oil line, Ekofisk–Teesside),
+    `THESSALONIKISKOPJE` (Thessaloniki–Skopje products line) and `JURAPIPELINE` (Gennes–Cressier).
   - Caspian, Russia and Central Asia: `WREP` (Baku–Supsa, Q2029336), `BAKUNOVOROSSIYSK` (Q2027452),
     `UZENATYRAUSAMARA` (Q4318120), `OMSKPAVLODARSHYMKENT` and `CHINARUSSIAOIL` (the
     Skovorodino–Mohe–Daqing branch of ESPO, Q10871729).
@@ -19,7 +19,7 @@
     (Q97379914), `SOUTHERNLIGHTS`, `TRANSMOUNTAIN` (Q23074089) and `OTASA` (Oleoducto Trasandino,
     Q111687259).
   - Paused or disrupted flows are described in `notes` as of November 2026 (for example the
-    northern Druzhba leg and Baku–Supsa). The 11 records without a Wikidata item are listed in
+    northern Druzhba leg and Baku–Supsa). The 12 records without a Wikidata item are listed in
     `data/schemas/wikidata_exclusions.yaml`.
 
 ### Changed
