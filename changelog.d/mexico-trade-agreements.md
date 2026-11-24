@@ -1,12 +1,10 @@
 ### Added
 
-- Six Mexico trade agreement records, checked on 2026-11-23 against the Secretaría de Economía's
+- Five Mexico trade agreement records, checked on 2026-11-23 against the Secretaría de Economía's
   list of Mexico's agreements, the Diario Oficial and partner governments:
   - `GBMX-FTA` (new Mexico-UK free trade agreement, negotiations launched 2022-05-20) and
     `ECMX-FTA` (Ecuador-Mexico Productive Integration Agreement, nine rounds from 2020 to 2022),
     both `negotiating`.
-  - `MXTR-TRA` (1998 Mexico-Türkiye economic and commercial cooperation agreement, in force
-    2001-02-02 per the Diario Oficial promulgation decree).
   - `EUMX-TRA` (1975 EEC-Mexico agreement with most-favoured-nation treatment) and `EUMX-FCA`
     (1991 framework agreement for cooperation, superseded by `EUMX` from 2001-02-27), with dates
     from EUR-Lex Cellar.
@@ -38,6 +36,10 @@
 
 ### Changed
 
+- `MXTR-TRA` (1998 Mexico-Türkiye trade and economic cooperation agreement) gains its Spanish
+  name, the Secretaría de Economía text and the Diario Oficial promulgation decree, which confirms
+  entry into force on 2001-02-02, and notes the Senate approval and the first Joint Economic
+  Commission meeting.
 - `EUMX` lists `EUMX-FCA` in `supersedes`.
 - Lineage: `RIOGROUP.predecessor` is `CONTADORAGROUP`, and `PACIFICCORRIDOR` is part of
   `MESOAMERICAPROJECT`, itself part of `TUXTLAMECHANISM`.
