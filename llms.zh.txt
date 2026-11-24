@@ -14,22 +14,46 @@
 
 ## 推荐访问方式（编辑以外勿解析源 YAML）
 
-- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）(tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status, trade_agreements, trade_agreement_parties, trade_agreement_instruments; views: current_memberships, country_currencies, country_languages, country_timezones, country_borders, country_trade_agreements)
-- Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+- DuckDB: data/datasets/internacia.duckdb（生成文件，不提交：运行 `python scripts/builder.py build` 或从最新 GitHub Release 下载）
+  - Tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status, trade_agreements, trade_agreement_parties, trade_agreement_instruments
+  - Views（6 个）: current_memberships, country_currencies, country_languages, country_timezones, country_borders, country_trade_agreements（见 docs/data-contract.md）
+- Parquet: data/datasets/{countries,intblocks,blocktypes,memberships}.parquet；贸易协定注册表：data/datasets/{trade_agreements,trade_agreement_parties,trade_agreement_instruments}.parquet
 - Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
-  - Columns: intblock_id, country_code, include_type, status, joined, left
+  - Columns（7 列）: intblock_id, country_code, include_type, status, joined, left, role（管道与走廊记录上的路线角色，其他为 NULL）
 - Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
 - Lite Parquet: data/datasets/{countries,intblocks}-lite.parquet (identifier + classification columns)
-- Python SDK: https://github.com/datenoio/internacia-python
-- REST API: https://github.com/datenoio/internacia-api (仅自托管；无公开托管实例)
+- Python SDK: https://github.com/datenoio/internacia-python（PyPI 上的 internacia 0.5.0 只读数据契约 3.x–4.x，不读当前的 5.x；见下方 SDK 状态）
+- REST API: https://github.com/datenoio/internacia-api（开发中；仅自托管；无公开托管实例；尚无可安装版本）
 
+## Python SDK 状态
+
+internacia 0.5.0（当前 PyPI 版本）只读数据契约 3.x 和 4.x；当前数据发布为 5.x。
+不传 db_path 的 InternaciaClient() 会下载最新的 4.x 发布，不是当前数据。打开 5.x 数据库会抛出
+ContractError，除非传入 check_contract=False。SDK 没有贸易协定访问器；get_by_member 默认也返回
+已退出的成员身份，需传 current_only=True。SDK 0.6.0（契约 5，client.trade_agreements）尚未发布到
+PyPI，因此优先使用 DuckDB SQL。每个 SDK 调用的 SQL 等价写法：docs/llm-scenarios.md（"SDK status" 一节，英文）。
+
+从 GitHub Release 下载 internacia.duckdb 后，基本查找可用：
+
+```python
+from pathlib import Path
+from internacia import InternaciaClient
+
+client = InternaciaClient(db_path=Path("internacia.duckdb"), check_contract=False)
+
+country = client.countries.get_by_code("US")
+print(country["name"])
+```
 
 ## Schema 与元数据
 
-- JSON Schema：data/schemas/countries.schema.json, data/schemas/intblocks.schema.json
-- 构建清单：data/datasets/*.manifest.json（version, schema_hash, row_count, data_license）
+- JSON Schema：data/schemas/countries.schema.json, data/schemas/intblocks.schema.json（每个属性带 description）
+- 构建清单：data/datasets/*.manifest.json（version, build_date, git_commit, row_count, schema_hash, data_license, contract_version, files）
+- 消费契约：data/datasets/contract.json（表、列、键、开放枚举、contract_version、min_duckdb）；校验和：data/datasets/SHA256SUMS
 - ID 重映射：data/datasets/intblocks_aliases.json、countries_aliases.json
+- 属性类 intblock 退役 → 国家字段：data/datasets/attribute_intblock_migrations.json
+- 工具 schema：由 internacia SDK 生成（internacia.tools.openai_tools，SDK 0.4+）；data/schemas/*_lookup.openai.json 已弃用
 - 数据字典：docs/data-dictionary.md
 - 版本政策：docs/versioning-policy.md
 
@@ -41,12 +65,19 @@
 | countries-lite.parquet | ~8–15k | 实体链接 |
 | intblocks-lite.parquet | ~40–80k | 组织发现 |
 | 完整 JSONL | 很大 | 不要塞进上下文；用 DuckDB |
+| 带 includes 的完整 intblocks | 非常大 | 用 memberships 表加过滤条件 |
+
+优先用 DuckDB SQL 或 lite Parquet，不要把完整 JSONL 塞进提示词。
+升级下游管道前检查 schema_hash；破坏性变更见 CHANGELOG.md。
 
 ## 关联键
 
-- 国家：code（alpha-2 主键）、iso3code、wikidata_id
+- 国家：code（alpha-2 主键）、iso3code（alpha-3）、numeric_code、wikidata_id（Q 号）
 - 组织：id（大写，如 EU、NATO、UN）
 - 成员关系：includes[].id → 国家 code（权威）；includes[].name 仅为展示标签
+- 退出日期：includes[].left 与 memberships.left（DuckDB/Parquet/JSONL）
+- 组织分类：blocktype（blocktype 键列表）、partof（上级组织 id）
+- Blocktypes：id 对应 intblocks.blocktype 中的值
 - 陆地边界：borders 存 alpha-3，用 iso3code 关联
 
 ## 关键易错点
@@ -55,13 +86,28 @@
 - population、area、gini 为结构体 {value, year, source, source_id}，数值取 .value
 - 当前正式 ISO 国家（249）：code_status == 'official_iso3166_1'
 - 7 个非标准 code：AN, JG, XK, XA, XS, XT, XN（科索沃为 XK；旧码 KV 见 countries_aliases.json）
-- intblock id 变更：查 intblocks_aliases.json
-- 属性分区（行驶方向、DVD 区、文字系统等）为国家字段，不是 intblocks；旧 id 见 attribute_intblock_migrations.json
+- 国家代码重映射：data/datasets/countries_aliases.json
+- 世界银行：8 个实体（世界银行不分类的领地）无 region/incomeLevel/lendingType；119 条记录按设计无 adminregion（即这 8 个加 111 个高收入经济体）。缺失不是错误
+- 世界银行发布的分类 provenance 来源为 'World Bank'；世界银行不分类的 31 个实体带推断值（'UN M49 inference' 或 'World Bank (historical classification)'）
+- 按世界银行区域过滤请用 region.id（如 'ECS'），不要用 region.value：世界银行会改区域名（2025 年 MEA 改名为 'Middle East, North Africa, Afghanistan & Pakistan'）
+- intblock id 变更：查 intblocks_aliases.json；reason=disambiguated 表示旧 id 现在指向另一个实体
+- 属性分区（行驶方向、DVD 区、文字系统、法律/广播体系、轨距）为国家字段，不是 intblocks；旧 id 见 attribute_intblock_migrations.json
+- 行驶方向：过滤 countries.car_side（'left'|'right'）；不要关联 traffichand intblocks（已退役）
+- scope_category 区分实体类型：igo | treaty_body | policy_forum | reference_enumeration（具名集合）| intergovernmental_body（附属委员会/基金/办公室）| non_state_organization（NGO/协会）。类别不代表国家成员身份；请显式过滤 includes[].status（见 docs/intblock-inclusion-policy.md）
+- institutional_design（可选，已审核的试点批次）：主要机关的 mandate、decision_rule、decision_force、independent_organs[]、enforcement[]、mutual_defence、veto_holders[]；缺失 = 未知，[none] = 无。取值见 data/schemas/institutional_design.yaml。它衡量权限，不衡量影响力；不提供 GDP 与军事能力（用 countries.iso3code 关联外部数据）。示例：docs/query-examples.md#authority-and-capacity
+- 过境：includes[].role（gaspipeline/oilpipeline 记录上为 origin|transit|destination；corridor 记录上为 terminal|transit；memberships.role 同义）；border_status（closed|restricted 陆地边界，带 since/until 与来源；视图 country_borders）。status 为 NULL 表示未记录关闭，不代表已核实开放。示例：docs/query-examples.md#transit-and-borders。不提供贸易量
+- 贸易协定：trade_agreements 收录每个 FTA/PTA/关税同盟与非互惠优惠安排，含双边协定（status、日期、wto_rta_id、aric_id、wto_pta_ids、gptad_id、dta_id、links 含 treaty_text、子安排的 parent、verification official|catalogue）；trade_agreement_parties；trade_agreement_instruments（升级/修订议定书、补充协定、早期收获安排、联合委员会决定；kind、status、日期；从不改动协定本身的行）；视图 country_trade_agreements（EU 等集团缔约方展开为当前成员，见 via 列）
+- 贸易协定 role：优惠安排上为 grantor|beneficiary，其他为 party；只要互惠关系请过滤 role = 'party'
+- 双边 FTA 已在 5.0.0 移出 intblocks：intblocks_aliases 中 reason 为 moved，target_dataset 为 trade_agreements。3 方及以上的协定同时也是 intblock（trade_agreements.intblock_id）
+- 投资条约（BIT、加拿大 FIPA）的 agreement_type 为 investment，id 以 -BIT 结尾（如 AMCA-BIT）；诸边投资协定保留 intblock id（ACIA、OICIA）；比利时-卢森堡条约以 BLEU intblock 为一方。同表还有 trade_relations 等类型：只统计贸易协定时请过滤 agreement_type
+- timezones：无人居住领地为空；timezone_status 可能为 'not_applicable'
 - 中文名称：other_names（id=zh）；native_names 只含该实体自身语言的名称（CN、TW、HK、MO、SG 才有 zh），勿与 includes[].name 混淆
 
 ## 示例 SQL（DuckDB）
 
 SELECT dataset, version, schema_hash FROM _meta;
+
+SELECT code, name FROM countries WHERE un_member = true;
 
 SELECT code, name FROM countries WHERE code_status = 'official_iso3166_1';
 
@@ -73,14 +119,35 @@ SELECT m.id FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE i.id = 'NATO' AND
 
 SELECT n.code, n.name FROM countries th, UNNEST(th.borders) AS b(iso3) JOIN countries n ON n.iso3code = b.iso3 WHERE th.code = 'TH';
 
+SELECT i.id, i.name FROM intblocks i, UNNEST(i.includes) AS t(m) WHERE m.id = 'LA' AND m.type = 'country' LIMIT 10;
+
+SELECT intblock_id FROM memberships WHERE country_code = 'LA' AND status = 'member' LIMIT 10;
+
+SELECT id, name FROM intblocks WHERE scope_category = 'igo' LIMIT 10;  -- IGO；blocktype 表示领域（如 'fisheries'）
+
+SELECT agreement_id, agreement_type, via FROM country_trade_agreements WHERE country_code = 'CL' AND role = 'party' AND agreement_status = 'in_force' AND agreement_type NOT IN ('investment', 'trade_relations') ORDER BY agreement_id;
+
 ## 完整文档
 
 - AGENTS.zh.md — 中文路由入口
 - docs/agents/zh/query.md — 查询工作流
 - docs/agents/zh/contribute.md — YAML 编辑工作流
+- docs/query-examples.zh.md — 已验证中文场景查询
 - docs/discovery.md — 如何检索并改进国家 / intblock 记录（英文）
 - docs/agents/discover.md — 发现与改进清单（英文）
-- docs/query-examples.zh.md — 已验证中文场景查询
+- docs/agents/openspec-quickstart.md — schema 变更提案（英文）
+- docs/query-examples.md — 已验证 DuckDB 查询示例（英文）
+- docs/llm-scenarios.md — 面向 LLM 代码生成的按意图场景（英文）
+- docs/query-examples-polars.md — 已验证 Polars / Parquet 示例（英文）
+- docs/query-examples-r.md — 已验证 R / dplyr / Parquet 示例（英文）
+- docs/query-examples-observable.md — Observable Framework / Plot 示例（DuckDB-Wasm，英文）
 - docs/intblock-sources.md — 已检索的组织/条约目录与成员名录来源（英文）
 - docs/ai-consumers.md — 消费契约（英文）
+- docs/when-to-use-internacia.md — 何时使用 Internacia（英文）
+- docs/country-code-policy.md — 非标准代码、entity_type、过滤（英文）
+- docs/versioning-policy.md — 数据集 SemVer、别名保留、API 定位（英文）
+- llms-full.txt — 面向 LLM 爬虫的扩展索引（英文）
 - AGENTS.md — 英文路由入口
+- README.md — 安装、构建、schema 表、代码示例（英文）
+- ATTRIBUTION.md — 上游来源与引用（英文）
+- CONTRIBUTING.md — YAML 编写（仅维护者，英文）

@@ -18,9 +18,9 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 | Method | Path / URL |
 |--------|------------|
 | DuckDB (preferred) | `data/datasets/internacia.duckdb` after `python scripts/builder.py build`, or the latest Release asset (exports are not committed) |
-| Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet`, `memberships.parquet` |
+| Parquet | `data/datasets/countries.parquet`, `intblocks.parquet`, `blocktypes.parquet`, `memberships.parquet`, `trade_agreements.parquet`, `trade_agreement_parties.parquet`, `trade_agreement_instruments.parquet` |
 | Version check | `SELECT * FROM _meta;` or `data/datasets/*.manifest.json` |
-| Python SDK (no full checkout) | https://github.com/datenoio/internacia-python (0.2.x predates data v3 — see [SDK status](../llm-scenarios.md#sdk-status)) |
+| Python SDK (no full checkout) | https://github.com/datenoio/internacia-python (`internacia` 0.5.0 on PyPI reads data contracts 3.x and 4.x, not the current 5.x — see [SDK status](../llm-scenarios.md#sdk-status)) |
 | HTTP API | https://github.com/datenoio/internacia-api (**in development**, self-host only; no public hosted instance) |
 
 ## Join keys
@@ -32,10 +32,12 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file or API a
 | Membership | `includes[].id` → country `code` | **Not** `includes[].name` |
 | Blocktype taxonomy | `blocktypes.id` | matches values in `intblocks.blocktype` list |
 | Borders | alpha-3 in `borders` | join on neighbor `iso3code` |
+| Trade agreement | `trade_agreements.id` | `intblock_id` (roster of a 3+ party agreement), `wto_rta_id`, `dta_id` |
+| Agreement party | `trade_agreement_parties.party_id` | country `code` or intblock `id`, by `party_type` |
 
 ## Scope (in / out)
 
-**In scope:** ISO identifiers, geography, demographics with source/year, World Bank classifications, languages/currencies/timezones, org membership, Wikidata links.
+**In scope:** ISO identifiers, geography, demographics with source/year, World Bank classifications, languages/currencies/timezones, org membership, trade and investment agreements (parties, status, dates), Wikidata links.
 
 **Out of scope:** HDI, GDP, government type, internet penetration, time-series indicators — enrich downstream from other datasets.
 
@@ -117,6 +119,27 @@ df = pd.read_parquet("data/datasets/countries.parquet", dtype_backend="pyarrow")
 pop = df["population"].struct.field("value")
 ```
 
+## Trade agreements
+
+Trade and investment agreements live in the registry tables `trade_agreements`,
+`trade_agreement_parties` and `trade_agreement_instruments`, plus the
+`country_trade_agreements` view (one row per country and current agreement; a bloc party
+such as the EU expands to its current members with `via = 'EU'`). Two-party FTAs are only
+in the registry: since 5.0.0 they are not intblocks. Filter on `agreement_type` when you
+count trade agreements, because investment treaties, trade relations agreements and
+preference schemes share the table.
+
+```sql
+SELECT c.agreement_id, c.agreement_type, c.via
+FROM country_trade_agreements c
+WHERE c.country_code = 'CL' AND c.agreement_status = 'in_force'
+  AND c.agreement_type NOT IN ('investment', 'trade_relations', 'preference_scheme')
+ORDER BY c.agreement_id;
+```
+
+Field semantics: [ai-consumers.md](../ai-consumers.md#trade-agreements-registry);
+more SQL: [llm-scenarios.md](../llm-scenarios.md#29-trade-agreements-of-a-country).
+
 ## Common mistakes
 
 | Mistake | Correct approach |
@@ -127,6 +150,7 @@ pop = df["population"].struct.field("value")
 | Read plain number from `population` | Use struct field `.value` (pandas: `dtype_backend="pyarrow"`; Polars: `.struct.field("value")`) |
 | Expect HDI/GDP in this dataset | Out of scope; enrich downstream |
 | Ignore alias remaps | Load `intblocks_aliases.json` before joining on intblock `id` |
+| Look for a two-party FTA in `intblocks` | Query `trade_agreements` / `country_trade_agreements`; aliases with `reason = 'moved'` point there |
 
 ## DuckDB struct lists
 

@@ -34,16 +34,27 @@ duckdb data/datasets/internacia.duckdb \
 import duckdb
 con = duckdb.connect("data/datasets/internacia.duckdb")
 con.execute("SELECT code, name FROM countries WHERE code = 'XK'").fetchall()
+
+# Trade agreements in force for Chile (trade agreements registry)
+con.execute("""
+    SELECT agreement_id, agreement_type, via
+    FROM country_trade_agreements
+    WHERE country_code = 'CL' AND agreement_status = 'in_force'
+""").fetchall()
 ```
+
+Trade and investment agreements are not intblocks: they are in `trade_agreements`,
+`trade_agreement_parties` and `trade_agreement_instruments` (also as Parquet and JSONL).
+See the [AI consumer guide](ai-consumers.md#trade-agreements-registry).
 
 ## Lookups (internacia-python SDK)
 
-`internacia` 0.2.x (the current PyPI release) predates data v3: it cannot download
-current releases, `search.fuzzy` fails, and `get_by_member` also returns former
-memberships. See [SDK status](llm-scenarios.md#sdk-status) for the SQL equivalents;
-SDK 0.3.0 with v3 support is in progress. With `internacia.duckdb` downloaded from a
-[GitHub Release](https://github.com/datenoio/internacia-db/releases/latest), basic
-lookups still work:
+`internacia` 0.5.0 (the current PyPI release) reads data contracts 3.x and 4.x, not the
+current 5.x: without `db_path` it downloads the newest 4.x release, and it refuses a 5.x
+database with `ContractError`. SDK 0.6.0 with contract 5 support is not yet on PyPI. See
+[SDK status](llm-scenarios.md#sdk-status) for the SQL equivalents. With `internacia.duckdb`
+downloaded from a [GitHub Release](https://github.com/datenoio/internacia-db/releases/latest)
+and the contract check turned off, basic lookups work:
 
 ```bash
 pip install internacia
@@ -53,7 +64,7 @@ pip install internacia
 from pathlib import Path
 from internacia import InternaciaClient
 
-client = InternaciaClient(db_path=Path("internacia.duckdb"))
+client = InternaciaClient(db_path=Path("internacia.duckdb"), check_contract=False)
 
 # Country lookup (ISO 3166-1 alpha-2)
 country = client.countries.get_by_code("US")
@@ -78,6 +89,7 @@ Version: read `data/datasets/countries.manifest.json` or
 | Goal | Doc |
 |------|-----|
 | Join keys & gotchas | [ai-consumers.md](ai-consumers.md) |
+| Trade agreements registry | [ai-consumers.md](ai-consumers.md#trade-agreements-registry), [data-contract.md](data-contract.md#canonical-views-and-reference-tables) |
 | Verified SQL recipes | [query-examples.md](query-examples.md) |
 | Verified Polars recipes | [query-examples-polars.md](query-examples-polars.md) |
 | R / dplyr recipes | [query-examples-r.md](query-examples-r.md) |

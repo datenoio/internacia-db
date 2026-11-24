@@ -86,9 +86,9 @@ bars live in [intblock-inclusion-policy.md](intblock-inclusion-policy.md).
 | Hunt | Prompt that works | Start from | Accept | Reject |
 |------|-------------------|------------|--------|--------|
 | UN multilateral treaty | `Which UNTC instruments are missing?` | [UN Treaty Collection](https://treaties.un.org/) chapter list | Named, in-force treaty with a durable parties roster distinct from an existing IGO | Constitutive acts of orgs already recorded; not-in-force instruments; commodity-era pacts; a protocol whose parties equal the parent |
-| Regional trade agreement | `Which WTO RTA-IS agreements are missing?` | [WTO RTA-IS](https://rtais.wto.org/UI/publicPreDefRepByRTAType.aspx) | Named plurilaterals, ASEAN+1, bloc-to-bloc deals, named mega-deals, historical predecessors that complete a lineage | Untitled `Country A – Country B` pairs; UK continuity copies of EU EPAs; services-only EIA rows of an FTA already recorded |
-| Preferential trade arrangement | `Which WTO PTA Database schemes are missing?` | [WTO PTA Database](https://ptadb.wto.org/ptaList.aspx) | Named waiver programmes (`AGOA`, `CBERA`, `CARIBCAN`); named GSP **arrangements** whose roster is not `LDC` (`GSPPLUS`) | National GSP ID cards; LDC-only DFQF schemes; untitled one-country preferences |
-| Plurilateral investment treaty | `Which UNCTAD IIA Navigator groupings are missing?` | [UNCTAD IIA by country grouping](https://investmentpolicy.unctad.org/international-investment-agreements/by-country-grouping) | Named plurilateral MITs whose ratifiers are not the parent IGO (`OICIA`, `ACIA`, `CJKIA`) | Bilateral BITs (trade agreements registry, `-BIT` records); FTA investment chapters of a record already present; not-in-force protocols; TIFAs |
+| Regional trade agreement | `Which WTO RTA-IS agreements are missing?` | [WTO RTA-IS](https://rtais.wto.org/UI/publicPreDefRepByRTAType.aspx) | Named plurilaterals, ASEAN+1, bloc-to-bloc deals, named mega-deals, historical predecessors that complete a lineage | As intblocks: untitled `Country A – Country B` pairs and UK continuity copies of EU agreements (trade agreements registry records instead); services-only EIA rows of an FTA already recorded |
+| Preferential trade arrangement | `Which WTO PTA Database schemes are missing?` | [WTO PTA Database](https://ptadb.wto.org/ptaList.aspx) | Named waiver programmes (`AGOA`, `CBERA`, `CARIBCAN`); named GSP **arrangements** whose roster is not `LDC` (`GSPPLUS`) | As intblocks: national GSP schemes, LDC-only DFQF schemes and one-country preferences (registry `preference_scheme` records instead) |
+| Plurilateral investment treaty | `Which UNCTAD IIA Navigator groupings are missing?` | [UNCTAD IIA by country grouping](https://investmentpolicy.unctad.org/international-investment-agreements/by-country-grouping) | Named plurilateral MITs whose ratifiers are not the parent IGO (`OICIA`, `ACIA`, `CJKIA`) | Bilateral BITs (trade agreements registry, `-BIT` records); FTA investment chapters of a record already present; not-in-force protocols; TIFAs (registry `framework` records, `-TIFA` ids) |
 | Standing IGO | `Which Wikipedia .int organizations are missing?` | [`.int` organizations list](https://en.wikipedia.org/wiki/List_of_organizations_with_.int_domain_names) | Standing IGOs compiled from each org’s **official** membership page | Dissolved or non-IGO `.int` holders; organs whose membership is identical to a parent already recorded |
 | Geographic / set grouping | `Which UN M49 or named regions are missing?` | [UNSD M49](https://unstats.un.org/unsd/methodology/m49/) | Named regions used as join targets (`scope_category: reference_enumeration`) | Attribute partitions (driving side, scripts, DVD region — those are country fields); ad-hoc news coalitions |
 | Single-record repair | `Update metadata for data/intblocks/{category}/{ID}.yaml` | Official membership page + a sibling YAML in the same directory | Sourced `includes`, ≥4 `provenance` entries, stamped `last_verified` | Invented membership; Wikipedia as the roster source of truth |
@@ -149,7 +149,8 @@ Work the record in this order:
    `suborganizations` ↔ child `partof`).
 5. **Provenance and SLA.** Append `{field, source, retrieved_at}` entries until
    there are at least four. Set `last_verified` to the roster-check date
-   (12-month advisory SLA; `STALE_LAST_VERIFIED` warns).
+   (required on new or changed records; advisory SLA 12 months, 6 for tier-1
+   organizations in `data/watch/rosters.yaml`; `STALE_LAST_VERIFIED` warns).
 6. **Validate.** `python scripts/validate_intblocks.py --json` — fix every
    `errors[]` item; warnings such as `INSUFFICIENT_PROVENANCE` are worth clearing
    while you are in the file.
@@ -163,7 +164,8 @@ Completeness priorities (`data/schemas/intblocks_completeness.yaml`): high
 `includes`; medium `wikidata_id` and a non-templated `description`; low
 `languages`, `headquarters`, `regions`, `other_names`, `provenance`, `links`.
 
-Find records that still need a roster or a freshness pass (12-month SLA). Empty
+Find records that still need a roster or a freshness pass (12-month SLA; 6 months for
+tier-1 organizations). Empty
 `includes` in exports may be intentional (`membership_applicability: not_applicable`
 in YAML) or a real gap — check the source file before filling:
 
@@ -188,7 +190,7 @@ ISO). Improvement is enrichment and repair, not a hunt for new states.
 |----|--------|
 | Refresh `population` / `area` / `gini` / World Bank classifications via `python scripts/enrich_countries.py enrich` | Add HDI, GDP, government type, internet penetration, or similar profile fields |
 | Fix `borders` to alpha-3 `iso3code` values and keep lists reciprocal (allowlist in `countries_completeness.yaml`) | Treat missing World Bank `region` / `incomeLevel` on 8 unclassified entities, or missing `adminregion` on high-income economies, as errors |
-| Repair swapped `capital_city` coordinates (`CAPITAL_FAR_FROM_CENTROID`) | Use `year: 0` when a year is unknown — use `year: null` |
+| Repair swapped `capital_city` coordinates (`CAPITAL_FAR_FROM_CENTROID`) | Use `year: 0` when a year is unknown — omit `year` (the schema requires an integer; exports show it as null) |
 | Add `provenance` on every enriched field (minimum four entries per record) | Mint a new alpha-2 because a territory exists in the news. User-assigned codes exist **only** when an intblock needs a join target ([country-code-policy.md](country-code-policy.md#disputed-territory-inclusion-rule)) |
 | Keep `name` in World Bank short-name style; put modern short forms in `common_names` | “Correct” display names to journalist-style labels without a sourced update |
 

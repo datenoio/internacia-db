@@ -5,6 +5,8 @@ Use this repository when you need **stable reference data** for:
 - **ISO 3166-1 identifiers** (alpha-2 / alpha-3 / numeric) and entity status (`code_status`)
 - **Borders** (neighbors stored as ISO alpha-3 codes)
 - **International organization / treaty membership rosters** (“intblocks”), including reliable **join keys**
+- **Trade and investment agreements** (FTAs, customs unions, preference schemes, BITs): parties,
+  status and dates in the trade agreements registry (`trade_agreements`, `country_trade_agreements`)
 - **Entity linking** (multilingual names/aliases + Wikidata IDs)
 - **Transit structure**: route roles on pipelines and corridors (`includes[].role`) and closed or
   restricted land borders (`border_status`, `country_borders`)
@@ -27,14 +29,14 @@ If your task needs those, enrich with a separate dataset and treat Internacia as
 
 2. “List members of NATO / EU / UN”  
    Use Internacia: query `memberships` (DuckDB) and filter on `status` for current members.
-   `client.intblocks.get_by_member(...)` in SDK 0.2.x also returns former memberships.
+   `client.intblocks.get_by_member(...)` also returns former memberships unless you pass `current_only=True`.
 
 3. “Neighbors of Germany / land border lookup”  
    Use Internacia: `countries.borders` stores ISO alpha-3 neighbor codes; join on `countries.iso3code`.
 
 4. “Fuzzy match messy names (multilingual)”  
    Use Internacia names in DuckDB ([SQL recipe](llm-scenarios.md#6-fuzzy-match-messy-names-multilingual)).
-   `client.search.fuzzy(...)` is broken in SDK 0.2.x on data v3.
+   `client.search.fuzzy(...)` in SDK 0.5.0 needs `check_contract=False` on current data.
 
 5. “Time-varying facts (GDP by year, HDI series, etc.)”  
    Internacia is not an indicator time-series dataset. **Membership history is in scope:**
@@ -66,16 +68,16 @@ WHERE m.country_code = 'US'
 ORDER BY i.id;
 ```
 
-Python SDK: `internacia` 0.2.x on PyPI predates data v3. It cannot download
-current releases, `search.fuzzy` fails, and `get_by_member` includes former
-memberships — see [SDK status](llm-scenarios.md#sdk-status). With a downloaded
-DuckDB file, the basic lookups still work:
+Python SDK: `internacia` 0.5.0 on PyPI reads data contracts 3.x and 4.x, not the current 5.x. Without `db_path` it downloads the newest 4.x release,
+and it refuses a 5.x database with `ContractError` — see
+[SDK status](llm-scenarios.md#sdk-status). With a downloaded DuckDB file and the
+contract check turned off, the basic lookups work:
 
 ```python
 from pathlib import Path
 from internacia import InternaciaClient
 
-client = InternaciaClient(db_path=Path("internacia.duckdb"))
+client = InternaciaClient(db_path=Path("internacia.duckdb"), check_contract=False)
 country = client.countries.get_by_code("US")
 ```
 

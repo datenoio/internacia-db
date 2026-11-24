@@ -14,14 +14,16 @@ English: [AGENTS.md](AGENTS.md)
 | **编辑国家或 intblock YAML** | [docs/agents/zh/contribute.md](docs/agents/zh/contribute.md) | 手改 `data/datasets/`（仅构建生成） |
 | **查找缺失 intblock / 改进已有记录** | [docs/discovery.md](docs/discovery.md) → [docs/agents/discover.md](docs/agents/discover.md) | 整库导入外部目录 |
 | **已检索过哪些目录** | [docs/intblock-sources.md](docs/intblock-sources.md) | 把目录索引卡当作成员名录来源 |
-| **改 schema、新能力、破坏性导出** | [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md) | 未批准前先实现 |
+| **改 schema、新能力、破坏性导出** | [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md) → [openspec/AGENTS.md](openspec/AGENTS.md) | 未批准前先实现 |
+
+平台适配文件（`CLAUDE.md`、`.github/copilot-instructions.md`、`.cursor/skills/`、`.lingma/rules/`、`.kimi/`、`.agent/workflows/`）和 `llms-full.txt` 由 `python scripts/generate_agent_shims.py` 从 `templates/` 生成；请修改模板，不要改生成结果。本文件、`llms.zh.txt` 与 `docs/agents/zh/` 为手工维护。
 
 ## 推荐数据访问方式
 
 - **先构建：** 生成的导出文件不提交到仓库；请运行 `python scripts/builder.py build`（约 1 分钟），或从最新 GitHub Release 下载 `internacia.duckdb`。
 - **DuckDB：** `data/datasets/internacia.duckdb`（表：`countries`、`intblocks`、`blocktypes`、`memberships`、`_meta`、别名表、`border_status`、`trade_agreements`、`trade_agreement_parties`、`trade_agreement_instruments`；视图：`current_memberships`、`country_currencies`、`country_languages`、`country_timezones`、`country_borders`、`country_trade_agreements`，见 [数据契约](docs/data-contract.md)）
 - **Parquet：** `data/datasets/{countries,intblocks,blocktypes,memberships}.parquet`
-- **远程：** [internacia-python](https://github.com/datenoio/internacia-python)（SDK；PyPI 上的 0.2.x 早于数据 v3，见 [SDK status](docs/llm-scenarios.md#sdk-status)）。[internacia-api](https://github.com/datenoio/internacia-api) **开发中**，仅自托管 — 无公开 HTTP 实例。
+- **远程：** [internacia-python](https://github.com/datenoio/internacia-python)（SDK；PyPI 上的 `internacia` 0.5.0 只支持数据契约 3.x 和 4.x，不支持当前的 5.x，见 [SDK status](docs/llm-scenarios.md#sdk-status)）。[internacia-api](https://github.com/datenoio/internacia-api) **开发中**，仅自托管 — 无公开 HTTP 实例。
 
 升级前检查版本：`SELECT dataset, version, schema_hash FROM _meta;` 或读 `data/datasets/*.manifest.json`。
 
@@ -43,7 +45,7 @@ English: [AGENTS.md](AGENTS.md)
 ## 校验（贡献者）
 
 ```bash
-python scripts/validate_countries.py          # 人类可读输出
+python scripts/validate_countries.py          # 0 = 无错误（警告可接受）；1 = 有错误
 python scripts/validate_countries.py --json   # 智能体结构化输出
 python scripts/validate_intblocks.py --json
 pytest tests/
@@ -51,7 +53,11 @@ pytest tests/
 
 ## 查询示例
 
-已验证的 DuckDB 示例：[docs/query-examples.zh.md](docs/query-examples.zh.md)（由 `tests/test_documented_queries_zh.py` 覆盖）。
+已验证的 DuckDB 示例：[docs/query-examples.md](docs/query-examples.md)（英文，由 `tests/test_documented_queries.py` 覆盖）。
+Polars / Parquet：[docs/query-examples-polars.md](docs/query-examples-polars.md)（英文，由 `tests/test_documented_queries_polars.py` 覆盖）。
+R / dplyr：[docs/query-examples-r.md](docs/query-examples-r.md)（英文）。
+Observable / Plot：[docs/query-examples-observable.md](docs/query-examples-observable.md)（英文）。
+中文：[docs/query-examples.zh.md](docs/query-examples.zh.md)（由 `tests/test_documented_queries_zh.py` 覆盖）。
 
 ## 平台适配（薄封装）
 
@@ -60,6 +66,9 @@ pytest tests/
 - [.kimi/AGENTS.md](.kimi/AGENTS.md) — Kimi Code 补充说明
 - [.lingma/rules/](.lingma/rules/) — 通义灵码项目规则
 - [llms.zh.txt](llms.zh.txt) — 中文紧凑索引
+- [llms-full.txt](llms-full.txt) — 面向爬虫的扩展索引（英文）
+- [.cursor/skills/](.cursor/skills/) — Cursor 薄封装 → `docs/agents/`
+- [.agent/workflows/](.agent/workflows/) — 通用逐步工作流（英文）
 
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions

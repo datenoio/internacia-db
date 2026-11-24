@@ -40,7 +40,7 @@ python scripts/validate_countries.py --json
 
 8. Run the full build and artifact/documentation checks in
    [docs/agents/contribute.md](../../docs/agents/contribute.md). {{ commit_note_en }}
-   Refresh affected query expectations; the intblock count in docs is rounded down to the hundred (`1300+`).
+   Refresh affected query expectations; the intblock count in docs is rounded down to the hundred (1304 records are written `1300+`).
 9. If the catalogue walk is new, append a row to [docs/intblock-sources.md](../../docs/intblock-sources.md).
 
 **Reference**

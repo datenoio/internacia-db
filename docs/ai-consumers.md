@@ -44,9 +44,18 @@ Downstream consumers should enrich from separate datasets. See
 | `countries` | 256 | `code` (alpha-2) | `data/datasets/countries.manifest.json` |
 | `intblocks` | 1700+ | `id` | `data/datasets/intblocks.manifest.json` |
 | `blocktypes` | 83 | `id` | `data/datasets/blocktypes.manifest.json` |
+| `memberships` | one per `includes` edge | `intblock_id`, `country_code` | `data/datasets/memberships.manifest.json` |
+| `trade_agreements` | one per agreement | `id` | none (versioned by `contract.json`) |
+| `trade_agreement_parties` | one per agreement and party | `agreement_id`, `party_id` | none |
+| `trade_agreement_instruments` | one per amending instrument | `agreement_id`, `instrument_id` | none |
 
-All three are bundled in `data/datasets/internacia.duckdb`. Prefer DuckDB or Parquet
-over reading individual YAML source files under `data/countries/` and `data/intblocks/`.
+All are bundled in `data/datasets/internacia.duckdb`, with the alias tables, `border_status`,
+`_meta` and the views listed in the [data contract](data-contract.md#canonical-views-and-reference-tables).
+`_meta` and the `*.manifest.json` / `*.meta.json` files cover the first four datasets only; the
+trade agreements registry and the reference tables are versioned through `contract.json`
+(`dataset_version`, per-table `schema_hash`) and checksummed in `SHA256SUMS`. Prefer DuckDB or
+Parquet over reading individual YAML source files under `data/countries/`, `data/intblocks/`
+and `data/trade_agreements/`.
 
 **Consistency guarantee.** `scripts/check_generated_artifacts.py` compares cleaned
 source content with the full JSON/YAML exports and their declared columnar/CSV
@@ -699,7 +708,7 @@ blocks["id"] = blocks["id"].map(lambda x: aliases.get(x, x))
 | `internacia.duckdb` | SQL analytics, multi-table joins, version check via `_meta` |
 | Parquet | Pandas/Polars/Arrow pipelines |
 | JSONL.zst | Streaming, language-agnostic JSON consumers |
-| [internacia-python](https://github.com/datenoio/internacia-python) | Typed lookups and filters; 0.2.x predates data v3 and its fuzzy search fails — see [SDK status](llm-scenarios.md#sdk-status) |
+| [internacia-python](https://github.com/datenoio/internacia-python) | Typed lookups and filters; 0.5.0 on PyPI reads data contracts 3.x–4.x, not the current 5.x — see [SDK status](llm-scenarios.md#sdk-status) |
 | [internacia-api](https://github.com/datenoio/internacia-api) | **In development**, self-host only — no installable release and no public hosted Internacia HTTP API |
 | Source YAML | **Maintainers only** — editing and validation |
 
@@ -727,6 +736,7 @@ upstream sources per [ATTRIBUTION.md](../ATTRIBUTION.md).
 4. **Treating missing World Bank fields as errors** — expected for territories outside WB taxonomy
 5. **Assuming all 256 codes are ISO official** — filter on `code_status`
 6. **Ignoring `schema_hash` on upgrade** — structured fields and types change between releases
+7. **Looking for a two-party FTA in `intblocks`** — since 5.0.0 it is only in `trade_agreements`; follow aliases with `reason = 'moved'` there
 8. **Assuming internacia-api is a hosted service** — it is self-host only; use local DuckDB or the Python SDK
 
 ## Related documentation

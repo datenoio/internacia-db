@@ -7,10 +7,10 @@ Docs are sourced from the repository `docs/` directory (`docusaurus.config.ts`
 ## Installation
 
 ```bash
-npm install
+npm ci
 ```
 
-**Note**: feel free to use the package manager of your choice.
+CI installs with `npm ci` from `package-lock.json`, so use npm.
 
 ## Local Development
 
@@ -23,23 +23,16 @@ This command starts a local development server and opens up a browser window. Mo
 ## Build
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+`npm run build` generates static content into the `build` directory. CI runs both
+commands on every pull request that touches `docs/` or `website/`.
 
 ## Deployment
 
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Do not deploy by hand. `.github/workflows/deploy-docs.yml` builds the site on every push
+to `main` that touches `docs/`, `website/` or the workflow, uploads `website/build` as a
+GitHub Pages artifact and publishes it with `actions/deploy-pages`. Run it manually with
+*Run workflow* (`workflow_dispatch`). There is no `gh-pages` branch.

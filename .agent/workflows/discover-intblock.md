@@ -41,7 +41,7 @@ python scripts/validate_countries.py --json
 
 8. Run the full build and artifact/documentation checks in
    [docs/agents/contribute.md](../../docs/agents/contribute.md). Build manifests and `datapackage.json` are build outputs that git ignores, so a data change normally leaves `data/datasets/` clean; commit only the descriptors git still tracks there (`contract.json`, dataset card, alias JSON, `border_status.json`) when the build changes them. CI rebuilds and checks that the descriptors match. Add a `changelog.d/<slug>.md` fragment instead of editing `CHANGELOG.md`.
-   Refresh affected query expectations; the intblock count in docs is rounded down to the hundred (`1300+`).
+   Refresh affected query expectations; the intblock count in docs is rounded down to the hundred (1304 records are written `1300+`).
 9. If the catalogue walk is new, append a row to [docs/intblock-sources.md](../../docs/intblock-sources.md).
 
 **Reference**

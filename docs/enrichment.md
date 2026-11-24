@@ -13,7 +13,7 @@ Externally sourced country fields (`population`, `area`, `gini`, `timezones`, `n
 
 **Provenance staleness threshold:** 12 months (`provenance.max_age_months` in `data/schemas/countries_completeness.yaml`). Validation warns when `retrieved_at` is older than this.
 
-**Intblock `last_verified` SLA:** 12 months (`quality.last_verified_max_age_months` in `data/schemas/intblocks_completeness.yaml`). Validation warns (`STALE_LAST_VERIFIED`) when `last_verified` is older. Stamp `last_verified` whenever you check a roster against an official source. Missing `last_verified` is a completeness warning, not an error.
+**Intblock `last_verified` SLA:** 12 months (`quality.last_verified_max_age_months` in `data/schemas/intblocks_completeness.yaml`), and 6 months for the tier-1 organizations in `data/watch/rosters.yaml` (`last_verified_tier1_max_age_months`). Validation warns (`STALE_LAST_VERIFIED`) when `last_verified` is older. Stamp `last_verified` whenever you check a roster against an official source. A new or changed intblock without `last_verified` is a validation **error** (changes limited to Wikidata metadata or `scope_category` are exempt; see [CONTRIBUTING.md](../CONTRIBUTING.md)); on records the change does not touch, a missing `last_verified` is only counted in the KPI.
 
 Catalogues already searched for missing intblocks, and the roster authorities used
 to compile membership, are listed in [intblock-sources.md](intblock-sources.md).
@@ -95,7 +95,7 @@ python scripts/builder.py build
 
 ## Gini completeness ratcheting
 
-Current coverage: ~170/256 records with `gini` (~33.6% null). `countries_completeness.yaml` sets `gini.max_null_rate: 0.33` in **warn** mode. When coverage improves materially, lower `max_null_rate` and optionally switch `mode` to `error` in a documented release.
+Current coverage: ~170/256 records with `gini` (~33.6% null). `countries_completeness.yaml` sets `gini.max_null_rate: 0.40` in **warn** mode. When coverage improves materially, lower `max_null_rate` and optionally switch `mode` to `error` in a documented release.
 
 ## Out of scope
 

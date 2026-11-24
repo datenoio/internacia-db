@@ -108,7 +108,8 @@ Update record metadata for data/intblocks/{category}/{ID}.yaml
 Enrich / fix country {CODE}
 ```
 
-Run `python scripts/enrich_countries.py check` (optionally `--code XX`). Refresh
+Run `python scripts/enrich_countries.py check` (all countries; no network), then
+`python scripts/enrich_countries.py enrich --code XX --dry-run` for one country. Refresh
 from World Bank / Wikidata / IANA as in [enrichment.md](../enrichment.md). Fix
 borders (alpha-3, reciprocal), capital coordinates, and provenance. Do **not**
 add socioeconomic profile fields. Do **not** add a country file unless an
@@ -120,10 +121,15 @@ intblock references an entity that has no `code`.
 lineage already in the dataset); official acronym; roster distinct from a parent
 IGO / FTA / `LDC` / `GSP`.
 
-**Reject:** untitled bilateral pairs; UK continuity copies of EU EPAs;
-services-only EIA of an FTA already recorded; national GSP ID cards; LDC-only
-DFQF; bilateral BITs (registry `-BIT` records instead); not-in-force protocols; constitutive acts of existing
-IGOs; attribute partitions; socioeconomic rankings; Wikipedia-only membership.
+**Reject as intblocks** (each is a
+[trade agreements registry](../../CONTRIBUTING.md#trade-agreements-registry) record
+instead): untitled bilateral pairs; UK continuity copies of EU agreements; national
+GSP schemes; LDC-only DFQF schemes; bilateral BITs (`-BIT` ids); TIFAs (`-TIFA` ids,
+`agreement_type: framework`). Search `data/trade_agreements/` before adding one.
+
+**Reject:** services-only EIA of an FTA already recorded (one record per legal
+instrument); not-in-force protocols as intblocks; constitutive acts of existing IGOs;
+attribute partitions; socioeconomic rankings; Wikipedia-only membership.
 
 ## After a find
 

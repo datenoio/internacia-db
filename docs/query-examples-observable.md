@@ -24,7 +24,7 @@ Ship or attach these build artifacts (do not parse source YAML):
 | File | Role |
 |------|------|
 | `countries.parquet` | Filters, borders, centroids, World Bank structs |
-| `memberships.parquet` | Org↔country edges (`intblock_id`, `country_code`, `status`, `joined`, `left`) |
+| `memberships.parquet` | Org↔country edges (`intblock_id`, `country_code`, `include_type`, `status`, `joined`, `left`, `role`) |
 | `intblocks.parquet` | Names, HQ, `blocktype`, lifecycle fields |
 | `countries-lite.parquet` | Smaller map / entity-linking loads |
 
@@ -252,7 +252,7 @@ const laosOrgs = await db.query(`
 `);
 ```
 
-**Expected:** 249 rows.
+**Expected:** 291 rows.
 
 ---
 
@@ -361,8 +361,8 @@ Plot.plot({
 })
 ```
 
-**Expected top (memberships):** `FR` (~394), `GB` (~379), `DE` (~372).
-**Expected bottom:** `KP` (~110), `FM` (~115), `PW` (~121).
+**Expected top (memberships):** `FR` (700), `DE` (669), `GB` (663).
+**Expected bottom:** `FM` (150), `TV` (166), `KP` (168).
 
 Absolute counts drift as rosters are enriched; relative ranking is the useful signal.
 
@@ -511,7 +511,7 @@ Plot.plot({
 })
 ```
 
-**Expected:** Geneva/CH 104, Vienna/AT 32, New York/US 19.
+**Expected:** Geneva/CH 109, Vienna/AT 40, New York/US 20.
 
 ### Former members with departure dates (timeline)
 

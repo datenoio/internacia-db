@@ -11,24 +11,25 @@ These examples are written for code-generating agents:
 
 ## SDK status
 
-`internacia` 0.2.x (the current PyPI release) predates data v3 and is **broken on
-current releases**. Verified with `internacia==0.2.0` against the v3.0.0 DuckDB:
+`internacia` 0.5.0 (the current PyPI release) reads data contracts 3.x and 4.x.
+Current Internacia releases are contract 5.x. Verified with `internacia==0.5.0`
+against the v5.2.0 DuckDB:
 
-- `InternaciaClient()` cannot fetch data: it asks the GitHub API for the old
-  `commondataio/internacia-db` repository and gets 404. Download
-  `internacia.duckdb` from the [latest release](https://github.com/datenoio/internacia-db/releases/latest)
-  and pass `InternaciaClient(db_path=...)`.
-- `client.search.fuzzy(...)` raises errors (it queries the `translations` column
-  removed in v2). Use the SQL in [scenario 6](#6-fuzzy-match-messy-names-multilingual).
-- `client.intblocks.get_by_member(...)` also returns organizations the country
-  has **left** (for `US`: NAFTA, SEATO, TPP, and 6 more). Use the `memberships`
-  SQL in [scenario 4](#4-membership-roster-blocks-that-contain-a-country-eg-us-in-nato).
-- `client.intblocks.get_by_id(...)` does not resolve retired IDs (`USAN` returns
-  `None`). Use [scenario 28](#28-resolve-retired-intblock-ids).
-- The unreleased GitHub `main` build of the SDK also fails in
-  `get_by_acronym(...)`; use the SQL in [scenario 7](#7-blocks-by-acronym-eg-eu).
+- `InternaciaClient()` without `db_path` downloads the newest **4.x** release, not
+  the current data.
+- `InternaciaClient(db_path=...)` on a 5.x `internacia.duckdb` raises
+  `ContractError`. Pass `check_contract=False` to open it anyway: country and
+  intblock lookups, `get_by_acronym`, `search.fuzzy`, `resolve_id` and
+  `get_by_member(..., current_only=True)` work.
+- The SDK has no trade agreements accessor. For the two-party FTAs that left
+  `intblocks` in 5.0.0, `client.intblocks.resolve_id(...)` returns
+  `status: moved` but not the table that now holds the id (`trade_agreements`).
+  Use the SQL in [scenario 29](#29-trade-agreements-of-a-country).
+- `client.intblocks.get_by_member(...)` without `current_only=True` also returns
+  organizations the country has **left** (for `US`: NAFTA, SEATO, TPP and more).
 
-SDK 0.3.0 with v3 support is in progress. Until it ships, treat the SDK snippets
+SDK 0.6.0, which reads contract 5 and adds `client.trade_agreements`, is on the
+SDK's `main` branch but not yet on PyPI. Until it ships, treat the SDK snippets
 below as illustrations and run the DuckDB SQL next to them.
 
 ## 1. Country lookup by ISO alpha-2
@@ -91,14 +92,15 @@ for c in countries[:5]:
 
 ## 4. Membership roster: blocks that contain a country (e.g., US in NATO)
 
-Python SDK (returns matching blocks without membership status; SDK 0.2.x also
-returns organizations the country has left — see [SDK status](#sdk-status)):
+Python SDK (returns matching blocks without membership status; without
+`current_only=True` it also returns organizations the country has left — see
+[SDK status](#sdk-status)):
 
 ```python
 from internacia import InternaciaClient
 
 client = InternaciaClient()
-blocks = client.intblocks.get_by_member("US")
+blocks = client.intblocks.get_by_member("US", current_only=True)
 for b in blocks[:5]:
     print(b["id"], b["name"])
 ```
@@ -552,3 +554,41 @@ WHERE i.id = coalesce(
   'USAN'
 );
 ```
+
+## 29. Trade agreements of a country
+
+Trade and investment agreements are in the trade agreements registry, not in `intblocks`:
+`trade_agreements`, `trade_agreement_parties`, `trade_agreement_instruments` and the
+`country_trade_agreements` view. Two-party FTAs (`CETA`, `USKR`, `EUJP`) are **only** there;
+agreements with three or more parties that are signed or in force (`RCEP`, `CPTPP`) are also
+intblocks, linked by `trade_agreements.intblock_id`. The view expands a bloc party such as the
+EU to its current members (`via = 'EU'`).
+
+DuckDB (agreements in force for Chile, without investment treaties, trade relations
+agreements and preference schemes; `in_force` is empty while an agreement is only applied
+provisionally, so take the earlier date):
+
+```sql
+SELECT c.agreement_id, t.name, c.agreement_type, c.via,
+       coalesce(c.provisional_application, c.in_force) AS applies_since
+FROM country_trade_agreements c
+JOIN trade_agreements t ON t.id = c.agreement_id
+WHERE c.country_code = 'CL'
+  AND c.agreement_status = 'in_force'
+  AND c.agreement_type NOT IN ('investment', 'trade_relations', 'preference_scheme')
+ORDER BY c.agreement_id;
+```
+
+An id that left `intblocks` in 5.0.0 has an alias with `reason = 'moved'` and
+`target_dataset = 'trade_agreements'`, under the same id:
+
+```sql
+SELECT a.alias, a.target_dataset, t.name, t.status, t.provisional_application
+FROM intblocks_aliases a
+JOIN trade_agreements t ON t.id = a.target
+WHERE a.alias = 'CETA' AND a.reason = 'moved';
+```
+
+The registry has no trade values, tariff lines or depth scores. More recipes and the field
+semantics (`verification`, preference scheme roles, instruments): [AI consumer guide](ai-consumers.md#trade-agreements-registry)
+and [data contract](data-contract.md#canonical-views-and-reference-tables).

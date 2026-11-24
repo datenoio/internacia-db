@@ -87,7 +87,7 @@ repository. Prefer:
    the repository commits only a few text descriptors (such as `contract.json`),
    so query a Release asset or a local `python scripts/builder.py build`
 2. [internacia-python](https://github.com/datenoio/internacia-python) — `internacia`
-   0.2.x on PyPI predates data v3 and cannot download current releases; see
+   0.5.0 on PyPI reads data contracts 3.x and 4.x, not the current 5.x; see
    [SDK status](llm-scenarios.md#sdk-status)
 3. Self-host internacia-api only for experiments until it has a release
 
@@ -99,9 +99,14 @@ monthly pull request that bumps the version and is tagged `vX.Y.Z` when merged.
 assets. The manifest `version` on a tagged build MUST match the git tag without
 the `v` prefix.
 
-For a release by hand (MAJOR), run `python scripts/prepare_release.py --apply`
-or update the dated release entry in `CHANGELOG.md`, the version in
-`pyproject.toml`, `internacia_builder/__init__.py`, `uv.lock` and `CITATION.cff`
-(`version`, `date-released`) yourself, merge the `changelog.d/` fragments into that
-entry and delete them, rebuild, commit the tracked descriptors and tag.
-The release gate checks these versions against the tag and manifests.
+A MAJOR release is made by hand: `python scripts/prepare_release.py` reports MAJOR
+changes and exits 4 without writing anything, with or without `--apply`. Update the
+dated release entry in `CHANGELOG.md`, the version in `pyproject.toml`,
+`internacia_builder/__init__.py`, `uv.lock` and `CITATION.cff` (`version`,
+`date-released`) yourself, merge the `changelog.d/` fragments into that entry and
+delete them, rebuild, and commit the tracked descriptors (`contract.json` and the
+alias files; manifests and `datapackage.json` are not committed). Open the pull
+request from the `release/next` branch: when it is merged, `release-tag.yml` tags the
+merge commit. From any other branch, tag the merge commit by hand. The release gate
+checks these versions against the tag, the manifests and `contract.json`, and the
+`CITATION.cff` `date-released` against the CHANGELOG date.

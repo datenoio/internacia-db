@@ -7,14 +7,18 @@ DuckDB / SQL twin: [query-examples.md](query-examples.md).
 Polars twin: [query-examples-polars.md](query-examples-polars.md).
 Observable / Plot twin: [query-examples-observable.md](query-examples-observable.md).
 
-Expected results match the current repository data and corresponding SQL/Polars
-scenarios, including unreleased corrections. R snippets are not run by Python CI;
-see the [cookbook coverage policy](query-examples.md#cookbook-coverage-parity-policy).
+Expected results were checked by running these recipes against internacia-db 5.2.0
+(R 4.6, arrow 26, dplyr 1.2, tidyr 1.3). This cookbook is not run in CI, so counts can
+drift as the data changes; see the
+[cookbook coverage policy](query-examples.md#cookbook-coverage-parity-policy).
 
-**Arrow struct and list fields:** after `collect()`, struct columns are data frames
-(access with `$`); list columns work with `tidyr::unnest_longer` / `lengths()` /
-`purrr::map_lgl`. On an Arrow Table (before `collect()`), dplyr can use `$` for
-struct fields (`region$id`) and Arrow compute helpers such as `list_contains`.
+**Arrow struct and list fields:** `read_parquet()` returns a tibble. Struct columns are
+data-frame columns (access with `$`, e.g. `region$id`); list columns are lists (use
+`lengths()` / `purrr::map_lgl`); lists of structs are lists of tibbles (expand with
+`tidyr::unnest`). On an Arrow Table (`read_parquet(..., as_data_frame = FALSE)`), dplyr
+verbs and struct `$` access run in Arrow, but list columns need `collect()` first: arrow
+has no list-membership helper such as `list_contains`, and Arrow joins cannot carry list
+columns (e.g. `blocktype`).
 
 ```r
 install.packages(c("arrow", "dplyr", "tidyr", "purrr", "jsonlite"))
@@ -33,9 +37,9 @@ blocktypes <- read_parquet("data/datasets/blocktypes.parquet")
 ```
 
 Prefer `memberships.parquet` for org↔country edges (already flattened). Unnest
-`intblocks$includes` only when you need fields not on the edge table (e.g. `note`,
-`role`). Call `collect()` when you need a tibble for tidyr/purrr list ops, or keep
-the Arrow Table for simple filters and joins.
+`intblocks$includes` only when you need fields not on the edge table (e.g. `note`). On
+the tibbles loaded above, `collect()` is a no-op; the recipes keep it so they also run
+on Arrow Tables (`as_data_frame = FALSE`), except the two joins that carry `blocktype`.
 
 **Version check** (Parquet has no `_meta` table — use manifests):
 
@@ -112,17 +116,17 @@ countries |>
 countries |>
   collect() |>
   select(code, name, writing_directions) |>
-  unnest_longer(writing_directions) |>
-  hoist(writing_directions, direction = "id", primary = "primary") |>
-  filter(direction == "rtl") |>
-  select(code, name, direction, primary) |>
+  unnest(writing_directions) |>
+  filter(id == "rtl") |>
+  select(code, name, direction = id, primary) |>
   arrange(code)
 ```
 
 **Expected:** 28 rows.
 
 **Gotcha:** Vocab ids are `ltr`, `rtl`, `ttb` (`data/vocabs/writing_directions.yaml`).
-Empty lists yield no rows after `unnest_longer` (no sentinel null row).
+Countries without values have a null list and yield no rows after `unnest` (no sentinel
+null row); pass `keep_empty = TRUE` to keep them.
 
 ### Cyrillic writing system
 
@@ -130,9 +134,8 @@ Empty lists yield no rows after `unnest_longer` (no sentinel null row).
 countries |>
   collect() |>
   select(code, name, writing_systems) |>
-  unnest_longer(writing_systems) |>
-  hoist(writing_systems, script = "id") |>
-  filter(script == "cyrillic") |>
+  unnest(writing_systems) |>
+  filter(id == "cyrillic") |>
   select(code, name) |>
   arrange(code)
 ```
@@ -146,9 +149,8 @@ countries |>
 countries |>
   collect() |>
   select(code, name, broadcast_systems) |>
-  unnest_longer(broadcast_systems) |>
-  hoist(broadcast_systems, broadcast = "id") |>
-  filter(broadcast == "ntsc") |>
+  unnest(broadcast_systems) |>
+  filter(id == "ntsc") |>
   select(code, name) |>
   arrange(code)
 ```
@@ -161,9 +163,8 @@ countries |>
 countries |>
   collect() |>
   select(code, name, legal_systems) |>
-  unnest_longer(legal_systems) |>
-  hoist(legal_systems, legal_system = "id") |>
-  filter(legal_system == "common_law") |>
+  unnest(legal_systems) |>
+  filter(id == "common_law") |>
   select(code, name) |>
   arrange(code)
 ```
@@ -179,10 +180,9 @@ vocab-only and is **not** on country records.
 countries |>
   collect() |>
   select(code, name, rail_gauges) |>
-  unnest_longer(rail_gauges) |>
-  hoist(rail_gauges, gauge = "id", gauge_mm = "gauge_mm", primary = "primary") |>
-  filter(gauge == "russian", primary == TRUE) |>
-  select(code, name, gauge, gauge_mm) |>
+  unnest(rail_gauges) |>
+  filter(id == "russian", primary == TRUE) |>
+  select(code, name, gauge = id, gauge_mm) |>
   arrange(code)
 ```
 
@@ -290,11 +290,11 @@ countries |>
     countries |> collect() |> select(code, name, iso3code),
     by = c("borders" = "iso3code")
   ) |>
-  select(code, name, iso3code) |>
+  select(code, name, iso3code = borders) |>
   arrange(name)
 ```
 
-**Expected:** 4 rows — `KH` Cambodia, `LA` Lao PDR, `MM` Myanmar, `MY` Malaysia.
+**Expected:** 4 rows — `KH` Cambodia, `LA` Lao PDR, `MY` Malaysia, `MM` Myanmar.
 
 ### Reverse lookup: who borders Laos?
 
@@ -306,17 +306,10 @@ countries |>
   arrange(name)
 ```
 
-Arrow-native alternative (no `collect` until the end):
+**Expected:** 5 rows (Cambodia, China, Myanmar, Thailand, Vietnam).
 
-```r
-countries |>
-  filter(list_contains(borders, "LAO")) |>
-  select(code, name) |>
-  arrange(name) |>
-  collect()
-```
-
-**Expected:** 5 rows (China, Cambodia, Myanmar, Thailand, Vietnam).
+**Gotcha:** arrow has no `list_contains` for dplyr queries; `collect()` first and test
+list membership with `purrr::map_lgl`.
 
 ### Countries with the most land borders
 
@@ -369,17 +362,7 @@ country_memberships <- function(intblocks) {
   intblocks |>
     select(intblock_id = id, intblock_name = name, includes) |>
     collect() |>
-    unnest_longer(includes) |>
-    hoist(
-      includes,
-      id = "id",
-      name = "name",
-      type = "type",
-      status = "status",
-      joined = "joined",
-      left = "left",
-      note = "note"
-    ) |>
+    unnest(includes) |>  # id, name, type, status, joined, left, role, note
     filter(type == "country")
 }
 ```
@@ -387,11 +370,12 @@ country_memberships <- function(intblocks) {
 Prefer the pre-built edge table when you only need id / status / dates:
 
 ```r
-memberships  # intblock_id, country_code, include_type, status, joined, left
+memberships  # intblock_id, country_code, include_type, status, joined, left, role
 ```
 
-**Gotcha:** the edge column is named `left` (departure date). Quote it in dplyr with
-backticks: `` `left` `` — otherwise R resolves the base `left()` function.
+**Gotcha:** the edge column is named `left` (departure date as a string). It is not a
+reserved word, so bare `left` works in dplyr verbs; the backticks used below
+(`` `left` ``) are optional.
 
 ### Organizations that include Laos
 
@@ -407,7 +391,7 @@ memberships |>
   collect()
 ```
 
-**Expected:** 249 rows.
+**Expected:** 291 rows.
 
 ASEAN roster:
 
@@ -466,7 +450,7 @@ intblocks |>
   arrange(name)
 ```
 
-**Expected:** 19 rows.
+**Expected:** 55 rows.
 
 Or join the taxonomy table after unnesting `blocktype`:
 
@@ -494,7 +478,7 @@ intblocks |>
   collect()
 ```
 
-**Expected:** 123 rows.
+**Expected:** 129 rows.
 
 ### Child organizations of the UN
 
@@ -506,7 +490,7 @@ intblocks |>
   arrange(name)
 ```
 
-**Expected:** 42 rows.
+**Expected:** 46 rows.
 
 ### Multilingual intblock names
 
@@ -514,8 +498,8 @@ intblocks |>
 intblocks |>
   select(id, name, other_names) |>
   collect() |>
-  unnest_longer(other_names) |>
-  hoist(other_names, translated_name = "name", lang = "id") |>
+  unnest(other_names, names_sep = "_") |>
+  rename(translated_name = other_names_name, lang = other_names_id) |>
   filter(lang == "fr") |>
   select(id, name, translated_name, lang) |>
   arrange(id) |>
@@ -526,13 +510,22 @@ intblocks |>
 
 ```r
 aliases <- read_parquet("data/datasets/intblocks_aliases.parquet")
-# columns: alias, target, reason, since, note
+# columns: alias, target, reason, since, note, target_dataset
 
-blocks <- intblocks |>
-  left_join(aliases, by = c("id" = "alias")) |>
-  mutate(id_resolved = coalesce(target, id)) |>
-  collect()
+stored <- tibble(id = c("USAN", "EU"))
+
+stored |>
+  left_join(
+    aliases |> filter(reason != "disambiguated"),
+    by = c("id" = "alias")
+  ) |>
+  transmute(stored_id = id, current_id = coalesce(target, id), target_dataset)
 ```
+
+**Expected:** `USAN` → `UNASUR`, `EU` → `EU`. Do not follow `disambiguated` aliases
+blindly: the old ID now names a different organization (`ASF` and `CAF` are live intblock
+ids again). Aliases with `reason == "moved"` have `target_dataset == "trade_agreements"`:
+the id now lives in the trade agreements registry, not in `intblocks`.
 
 ## Cross-dataset joins
 
@@ -672,7 +665,8 @@ nato |>
 
 ### EU members outside the eurozone
 
-Euro area intblock id is `EMU`:
+Eurozone membership is tracked via the `EUROAREA` currency record (`EMU` is the World Bank
+aggregate with the same roster):
 
 ```r
 eu <- memberships |>
@@ -680,13 +674,13 @@ eu <- memberships |>
   select(country_code) |>
   collect()
 
-emu <- memberships |>
-  filter(intblock_id == "EMU") |>
+euroarea <- memberships |>
+  filter(intblock_id == "EUROAREA") |>
   select(country_code) |>
   collect()
 
 eu |>
-  anti_join(emu, by = "country_code") |>
+  anti_join(euroarea, by = "country_code") |>
   inner_join(
     countries |> collect() |> select(code, name),
     by = c("country_code" = "code")
@@ -695,7 +689,8 @@ eu |>
   arrange(country_code)
 ```
 
-**Expected:** 7 rows (`BG`, `CZ`, `DK`, `HU`, `PL`, `RO`, `SE`).
+**Expected:** 6 rows (`CZ`, `DK`, `HU`, `PL`, `RO`, `SE`). Bulgaria joined the euro area on
+1 January 2026.
 
 ### Jaccard similarity between organization rosters
 
@@ -758,7 +753,7 @@ intblocks |>
   arrange(id)
 ```
 
-**Expected:** 30 rows.
+**Expected:** 42 rows.
 
 ### Former members with join and departure dates
 

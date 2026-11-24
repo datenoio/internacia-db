@@ -12,6 +12,8 @@ flowchart LR
     C["data/countries/*.yaml"]
     I["data/intblocks/**/*.yaml"]
     B[data/blocktypes/blocktypes.yaml]
+    T["data/trade_agreements/*.yaml"]
+    BS[data/borders/border_status.yaml]
     V[data/vocabs]
   end
 
@@ -28,22 +30,27 @@ flowchart LR
     PQ[Parquet / DuckDB]
     JL[JSONL / JSON / CSV]
     MEM[memberships edge table]
+    TA[trade agreements tables]
     META[manifests + datapackage]
   end
 
   C --> VC --> BL
   I --> VI --> BL
   B --> BL
+  T --> VI
+  BS --> VC
   V --> BL
   BL --> PQ
   BL --> JL
   BL --> MEM
+  BL --> TA
   BL --> META
 ```
 
 ## Layers
 
-1. **Source YAML** — one file per country or intblock. Edit these.
+1. **Source YAML** — one file per country, intblock or trade agreement, plus
+   `data/borders/border_status.yaml`. Edit these.
 2. **Validation** — JSON Schema, completeness gates, cross-dataset rules
    (`scripts/validate_*.py` → `internacia_builder.validate`).
 3. **Build** — `internacia_builder.build` flattens, writes exports, embeds `_meta`.
