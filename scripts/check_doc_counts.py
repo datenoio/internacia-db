@@ -40,6 +40,7 @@ REQUIRE: dict[str, tuple[str, ...]] = {
     "docs/getting-started.md": ("countries", "intblocks", "blocktypes"),
     "docs/architecture.md": ("countries", "intblocks", "blocktypes"),
     "docs/country-code-policy.md": ("countries",),
+    "docs/publishing-huggingface.md": ("countries", "intblocks", "blocktypes"),
 }
 
 # Headline intblock totals from retired releases — must not reappear as current.

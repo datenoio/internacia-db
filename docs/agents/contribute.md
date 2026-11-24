@@ -1,6 +1,6 @@
 # Agent guide: contributing Internacia data
 
-Platform-neutral workflow for editing country and intblock YAML safely.
+Platform-neutral workflow for editing country, intblock and trade agreement YAML safely.
 Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this repository.
 
 ## Before editing
@@ -16,6 +16,8 @@ Works with Cursor, Claude Code, Copilot, Codex, and any coding agent in this rep
 | `data/countries/{CODE}.yaml` | One file per entity; filename = ISO alpha-2 `code` |
 | `data/intblocks/{category}/{ID}.yaml` | Filename must match `id`; directory = first `blocktype` value; `id` unique globally |
 | `data/blocktypes/blocktypes.yaml` | Taxonomy; every intblock `blocktype` value must exist here. Read each key's `description` before choosing a directory |
+| `data/trade_agreements/{ID}.yaml` | Trade agreements registry; filename must match `id`; ids share one namespace with intblock ids and aliases. Rules: [CONTRIBUTING.md](../../CONTRIBUTING.md#trade-agreements-registry) |
+| `data/borders/border_status.yaml` | Closed or restricted land borders. Rules: [CONTRIBUTING.md](../../CONTRIBUTING.md#border-status) |
 | `data/datasets/` | **Generated only** — never hand-edit |
 
 ## Countries checklist
@@ -80,7 +82,8 @@ are build outputs that git ignores, so a data change normally leaves `data/datas
 clean. Commit the descriptors git still tracks there (`contract.json`, dataset card,
 alias JSON, `border_status.json`) when the build changes them. A partial build does not
 refresh every descriptor and cannot replace this full build. Documentation states the
-intblock count rounded down to the hundred (`1300+`): update it only when
+intblock count rounded down to the hundred (for example, 1304 records are written
+`1300+`): update it only when
 `scripts/check_doc_counts.py` reports a new hundred. Update affected cookbook
 expectations when adding or removing records.
 
@@ -97,8 +100,8 @@ New capabilities, schema changes, or breaking exports require an OpenSpec propos
 3. Run `openspec validate <change-id> --strict`
 4. Do **not** implement until approved
 
-For consumer-visible changes add a `changelog.d/<slug>.md` fragment with Keep a
-Changelog subsections; do not edit `CHANGELOG.md` and do not write running totals such
+For every consumer-visible change (new or retired records, roster repairs, schema or
+semantic changes) add a `changelog.d/<slug>.md` fragment with Keep a Changelog subsections; do not edit `CHANGELOG.md` and do not write running totals such
 as "(1304 intblocks)". See [changelog.d/README.md](../../changelog.d/README.md).
 
 ## Common fixes
@@ -107,7 +110,7 @@ as "(1304 intblocks)". See [changelog.d/README.md](../../changelog.d/README.md).
 |---------|-----|
 | Alpha-2 in `borders` | Use alpha-3 (`iso3code` of neighbor) |
 | Plain number for `population` | Use struct with `value`, `source` |
-| Intblock id collision | Pick new unique `id`; add alias in `intblocks_aliases` only via maintainer workflow |
+| Intblock id collision | Pick a new unique `id`. To rename or merge an existing id, add an entry to `data/intblocks_aliases.yaml` in the same change (`reason`, `since`; see the file header) |
 | Invalid `blocktype` | Add entry to `blocktypes.yaml`, re-validate |
 | Missing provenance on enrichment | Append `{field, source, retrieved_at}` to `provenance` list |
 | Missing `includes` on non-membership record | Set `membership_applicability: not_applicable` |

@@ -130,11 +130,17 @@ Each build writes to `data/datasets/`:
 | `blocktypes.yaml.zst` | Block types (YAML, zstd) |
 | `blocktypes.parquet` | Block types (Parquet, zstd) |
 | `blocktypes.meta.json` | Version metadata sidecar for Parquet consumers |
-| `memberships.parquet` | Flattened country↔intblock `includes` edges (`intblock_id`, `country_code`, `include_type`, `status`, `joined`, `left`); **not all edges are legal memberships** |
+| `memberships.parquet` | Flattened country↔intblock `includes` edges (`intblock_id`, `country_code`, `include_type`, `status`, `joined`, `left`, `role`); **not all edges are legal memberships** |
 | `memberships.csv.zst` | The same `includes` edge table (CSV, zstd) |
 | `memberships.manifest.json` | Build metadata (version, commit, row count, schema hash, data license) |
 | `memberships.meta.json` | Version metadata sidecar for Parquet consumers |
-| `internacia.duckdb` | DuckDB database (`countries`, `intblocks`, `blocktypes`, `memberships`, and `_meta` tables) |
+| `trade_agreements.parquet` / `trade_agreements.jsonl` | Trade agreements registry: one row per trade, investment or trade relations agreement |
+| `trade_agreement_parties.parquet` / `trade_agreement_parties.jsonl` | One row per agreement and party (`party_type`, `role`, `status`, dates) |
+| `trade_agreement_instruments.parquet` / `trade_agreement_instruments.jsonl` | Protocols and other instruments that amend or add to an agreement |
+| `border_status.json` / `border_status.parquet` | Closed or restricted land borders |
+| `countries_aliases.parquet` / `attribute_intblock_migrations.parquet` | Alias and migration maps (Parquet) |
+| `SHA256SUMS` | Checksums of every other file |
+| `internacia.duckdb` | DuckDB database: the tables above (`countries`, `intblocks`, `blocktypes`, `memberships`, the trade agreements registry, `border_status`, alias tables, `_meta`) and the views `current_memberships`, `country_currencies`, `country_languages`, `country_timezones`, `country_borders`, `country_trade_agreements` ([data contract](docs/data-contract.md)) |
 
 Current row counts: **256** countries, **1700+** intblocks, **83** blocktypes.
 
@@ -146,8 +152,9 @@ For example, ECOWAS has 12 current members and retains the three 2025 departures
 `scope_category` identifies **what an intblock is**, independently of its `blocktype`
 or lifecycle `status`: `igo`, `treaty_body`, `policy_forum`,
 `reference_enumeration`, `intergovernmental_body`, or `non_state_organization`.
-Every `status: formal` intblock must set it; 72 non-formal records remain unlabeled
-in the 2026-09-30 snapshot while their identity or eligibility is reviewed. A
+Every `status: formal` intblock must set it; non-formal records may still lack it
+while their identity or eligibility is reviewed (count them with
+`SELECT count(*) FROM intblocks WHERE scope_category IS NULL`). A
 `reference_enumeration` is a named set, **not necessarily an organization**.
 Its `includes[].status: member` entries must not be interpreted as proof of
 legal membership without checking the entity and its source. See the
@@ -399,12 +406,41 @@ sets for compatibility; their `member` value does **not** by itself establish
 institutional membership. Use `scope_category` and record-specific provenance
 when constructing membership queries.
 
+## Trade agreements registry
+
+Trade and investment agreements have their own tables: `trade_agreements` (one row per
+FTA, customs union, PTA, preference scheme, services, digital, framework, investment or
+trade relations agreement, bilateral ones included), `trade_agreement_parties` and
+`trade_agreement_instruments`, plus the `country_trade_agreements` view. Two-party FTAs are
+only in the registry: they left `intblocks` in 5.0.0, and `intblocks_aliases` lists them
+with `reason = moved`. Agreements with three or more parties that are signed or in force
+are also intblocks, linked by `trade_agreements.intblock_id`. The registry records parties,
+status, dates, catalogue ids (`wto_rta_id`, `dta_id`, `unctad_iia_id`, …) and provenance;
+it has no trade values, tariff lines or depth scores. Columns:
+[data contract](docs/data-contract.md#canonical-views-and-reference-tables); semantics and
+recipes: [AI consumer guide](docs/ai-consumers.md#trade-agreements-registry); editing:
+[CONTRIBUTING.md](CONTRIBUTING.md#trade-agreements-registry).
+
+```python
+import duckdb
+
+con = duckdb.connect("data/datasets/internacia.duckdb")
+con.execute("""
+    SELECT agreement_id, agreement_type, via
+    FROM country_trade_agreements
+    WHERE country_code = 'CL' AND agreement_status = 'in_force'
+""").fetchall()
+```
+
 ## Data sources
 
 **YAML sources**
 
 - `data/countries/*.yaml` — 256 country/territory records
 - `data/intblocks/<category>/*.yaml` — international block records across domain categories (`intorg`, `fta`, `human_rights`, `legal`, `environment`, `geographic`, `aviation`, `health`, `climate`, etc.)
+- `data/trade_agreements/*.yaml` — trade agreements registry, one file per agreement
+- `data/borders/border_status.yaml` — closed or restricted land borders
+- `data/blocktypes/blocktypes.yaml` — blocktype taxonomy
 
 **External enrichment**
 
@@ -479,9 +515,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the YAML authoring guide, validation 
 ## Related projects
 
 - [internacia-api](https://github.com/datenoio/internacia-api) — REST API (**in development**; self-host only, no public hosted instance, no installable release yet)
-- [internacia-python](https://github.com/datenoio/internacia-python) — Python SDK (`internacia` 0.2.x on PyPI predates data v3; see [SDK status](docs/llm-scenarios.md#sdk-status))
+- [internacia-python](https://github.com/datenoio/internacia-python) — Python SDK (`internacia` 0.5.0 on PyPI reads data contracts 3.x and 4.x, not the current 5.x; see [SDK status](docs/llm-scenarios.md#sdk-status))
 
 ## Roadmap
 
-- [x] Python SDK — [internacia-python](https://github.com/datenoio/internacia-python) (0.3.0 with data v3 support in progress)
+- [x] Python SDK — [internacia-python](https://github.com/datenoio/internacia-python) (0.5.0 on PyPI reads data contracts 3.x–4.x; 0.6.0 with contract 5 support is not yet released)
 - [ ] REST API — [internacia-api](https://github.com/datenoio/internacia-api) (in development; self-host only, not a hosted service)

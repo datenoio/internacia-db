@@ -19,30 +19,31 @@ Do NOT expect HDI, GDP, government type, internet penetration, or similar indica
 
 - DuckDB: data/datasets/internacia.duckdb (generated, not committed: run `python scripts/builder.py build` or download from the latest GitHub Release)
   - Tables: countries, intblocks, blocktypes, memberships, _meta, intblocks_aliases, countries_aliases, attribute_intblock_migrations, border_status, trade_agreements, trade_agreement_parties, trade_agreement_instruments
-  - Views: current_memberships, country_currencies, country_languages, country_timezones (see docs/data-contract.md)
-- Parquet: data/datasets/{countries,intblocks,blocktypes}.parquet
+  - Views: current_memberships, country_currencies, country_languages, country_timezones, country_borders, country_trade_agreements (see docs/data-contract.md)
+- Parquet: data/datasets/{countries,intblocks,blocktypes,memberships}.parquet; trade agreements registry: data/datasets/{trade_agreements,trade_agreement_parties,trade_agreement_instruments}.parquet
 - Membership edges (flattened): data/datasets/memberships.parquet / memberships.csv.zst / DuckDB table memberships
-  - Columns: intblock_id, country_code, include_type, status, joined, left
+  - Columns: intblock_id, country_code, include_type, status, joined, left, role (route role on pipelines and corridors, else NULL)
 - Plain JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl
 - Compressed JSONL: data/datasets/{countries,intblocks,blocktypes}.jsonl.zst (decompress with zstd -d)
-- Python SDK: https://github.com/datenoio/internacia-python (internacia 0.2.x on PyPI predates data v3; see SDK status below)
+- Python SDK: https://github.com/datenoio/internacia-python (internacia 0.5.0 on PyPI reads data contracts 3.x-4.x, not the current 5.x; see SDK status below)
 - REST API: https://github.com/datenoio/internacia-api (in development; self-host only; no public hosted instance; no installable release yet)
 
 ## Python SDK status
 
-internacia 0.2.x (the current PyPI release) is broken on data v3: InternaciaClient() cannot
-download data (it queries the old commondataio/internacia-db repository and gets 404),
-search.fuzzy fails, get_by_member also returns former memberships, and get_by_id does not
-resolve retired IDs. Until SDK 0.3.0 ships, prefer DuckDB SQL. SQL equivalents for every
-SDK call: docs/llm-scenarios.md (section "SDK status").
+internacia 0.5.0 (the current PyPI release) reads data contracts 3.x and 4.x; current
+releases are 5.x. InternaciaClient() without db_path downloads the newest 4.x release, and a
+5.x database raises ContractError unless you pass check_contract=False. It has no trade
+agreements accessor; get_by_member returns former memberships unless current_only=True.
+SDK 0.6.0 (contract 5, client.trade_agreements) is not yet on PyPI, so prefer DuckDB SQL.
+SQL equivalents for every SDK call: docs/llm-scenarios.md (section "SDK status").
 
-With internacia.duckdb downloaded from a GitHub Release, basic lookups still work:
+With internacia.duckdb downloaded from a GitHub Release, basic lookups work:
 
 ```python
 from pathlib import Path
 from internacia import InternaciaClient
 
-client = InternaciaClient(db_path=Path("internacia.duckdb"))
+client = InternaciaClient(db_path=Path("internacia.duckdb"), check_contract=False)
 
 country = client.countries.get_by_code("US")
 print(country["name"])

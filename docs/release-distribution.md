@@ -72,11 +72,14 @@ commit SHA; Dependabot proposes updates.
 Migration files identify the prior release; a first release without a baseline
 reports compatibility as unknown rather than unchanged.
 
-Before tagging, align the dated release entry in `CHANGELOG.md`, `pyproject.toml`,
-`internacia_builder/__init__.py`, and `CITATION.cff` (`version` and `date-released`);
-rebuild and commit exports so their manifest versions match the tag without `v`.
-`scripts/check_release_bundle.py --version` fails the release when any of them
-disagree. See [versioning-policy.md](versioning-policy.md).
+The release train's `release/next` pull request aligns the dated release entry in
+`CHANGELOG.md`, `pyproject.toml`, `internacia_builder/__init__.py`, `uv.lock` and
+`CITATION.cff` (`version` and `date-released`), and `release-tag.yml` tags its merge
+commit ([release-train.md](release-train.md)). `release.yml` rebuilds the bundle, so the
+manifests and `contract.json` carry the same version; manifests are build outputs, not
+committed files. `scripts/check_release_bundle.py --version` fails the release when any
+of them disagree with the tag without `v`. For a MAJOR release by hand, see
+[versioning-policy.md](versioning-policy.md#git-tags).
 
 Zenodo deposits come only from the GitHub integration, so the workflow has no
 Zenodo step; adding one would create a duplicate deposit per release.

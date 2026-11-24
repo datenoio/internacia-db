@@ -7,14 +7,18 @@ This document defines how topic keys on intblock records are added, merged, and 
 1. **Canonical keys** — Use stable snake_case keys (`economy`, `climate_change`, `human_rights`).
 2. **Avoid synonyms** — Do not introduce near-duplicates (`economic` vs `economy`). Check `data/schemas/topic_aliases.yaml` first.
 3. **Minimum assignment** — Every intblock record must have at least one topic, including acronyms and government-form groupings.
-4. **Sports** — Use `sports` for sport/event records; use `sports_governance` for federations and leagues.
+4. **Sports** — Use `sports_governance` for federations, leagues and anti-doping bodies. There is
+   no generic `sports` key; sport-specific keys such as `olympic_sport` are in `topics.yaml`.
 
 ## Adding a topic
 
-1. Search existing keys in `data/intblocks/**/*.yaml` and `topic_aliases.yaml`.
+1. Search the canonical keys in `data/schemas/topics.yaml` and the deprecated ones in
+   `data/schemas/topic_aliases.yaml`.
 2. Prefer reusing a canonical key over creating a new one.
 3. Add the key as `{key, name}` on records; `name` is a human-readable label.
-4. If the key is genuinely new, document it in a PR description.
+4. If the key is genuinely new, add it to `data/schemas/topics.yaml` in the same change. A key
+   that is not in the catalog raises `UNKNOWN_TOPIC_KEY`, a validation warning, which fails CI
+   (`--fail-on-warning`).
 
 ## Merging / deprecating
 

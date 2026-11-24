@@ -15,8 +15,8 @@ build. Both use `prepare_huggingface_bundle` to produce:
 | Repo path | Why it is uploaded |
 |-----------|--------------------|
 | `countries/countries.parquet` | 256 country records |
-| `intblocks/intblocks.parquet` | 1300+ organizations / groups |
-| `blocktypes/blocktypes.parquet` | 80 taxonomy keys |
+| `intblocks/intblocks.parquet` | 1700+ organizations / groups |
+| `blocktypes/blocktypes.parquet` | 83 taxonomy keys |
 | `memberships/memberships.parquet` | Flattened country↔intblock edges |
 | `datapackage.json` | Parquet-only Frictionless index with paths matching the per-table folders |
 | `{countries,intblocks,blocktypes,memberships}.manifest.json` | All four tables' version, `schema_hash`, and build identity |
@@ -77,15 +77,13 @@ Every tagged release (`v*`) runs `.github/workflows/release.yml`, which:
    the release is unaffected. The step runs in the `publish` job, which installs only
    `requirements-publish.txt` and checks every file against the `build` job's digest first.
 
-Before tagging, align the dated release entry in `CHANGELOG.md`, `pyproject.toml`,
-and `internacia_builder/__init__.py` with the intended version. Run a full build,
-commit the source and generated artifacts, and verify the bundle version. For
-example, after preparing version `2.2.0`:
-
-```bash
-git tag v2.2.0
-git push origin v2.2.0
-```
+Releases come from the [release train](release-train.md): merging the `release/next`
+pull request makes `release-tag.yml` tag the merge commit `vX.Y.Z`, and the tag starts
+`release.yml`. For a MAJOR release by hand, see
+[versioning-policy.md](versioning-policy.md#git-tags). The release gate fails unless
+`CHANGELOG.md`, `pyproject.toml`, `internacia_builder/__init__.py`, `CITATION.cff`
+(`version` and `date-released`), `contract.json` and the build manifests all carry the tag's
+version. Manifests and `datapackage.json` are build outputs, not committed files.
 
 Then watch the *Release datasets* workflow run; the step is named
 **Push to Hugging Face (optional)**.

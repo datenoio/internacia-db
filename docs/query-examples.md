@@ -340,7 +340,7 @@ WHERE m.id = 'LA' AND m.type = 'country'
 ORDER BY i.name;
 ```
 
-**Expected:** 249 rows (ASEAN, UN agencies, trade agreements, sports federations, etc.).
+**Expected:** 291 rows (ASEAN, UN agencies, trade agreements, sports federations, etc.).
 
 Filter to a bloc:
 
@@ -396,7 +396,7 @@ WHERE bt.id = 'trade'
 ORDER BY i.name;
 ```
 
-**Expected:** 19 rows.
+**Expected:** 55 rows.
 
 ### Formal organizations headquartered in Switzerland
 
@@ -407,7 +407,7 @@ WHERE headquarters.country = 'CH' AND status = 'formal'
 ORDER BY name;
 ```
 
-**Expected:** 123 rows.
+**Expected:** 129 rows.
 
 ### Child organizations of the UN
 
@@ -418,7 +418,7 @@ WHERE list_contains(partof, 'UN')
 ORDER BY name;
 ```
 
-**Expected:** 42 rows.
+**Expected:** 46 rows.
 
 ### Multilingual intblock names
 
@@ -772,7 +772,7 @@ ORDER BY org_count DESC
 LIMIT 10;
 ```
 
-**Expected top:** `FR` (530), `DE` (507), `GB` (498), `IT` (491), `ES` (490).
+**Expected top:** `FR` (700), `DE` (669), `GB` (663), `IT` (638), `NL` (632).
 
 ### Least organization-dense UN members
 
@@ -787,7 +787,7 @@ ORDER BY org_count ASC
 LIMIT 10;
 ```
 
-**Expected bottom:** `FM` (150), `KP` (153), `PW` (158), `NR` (164), `TV` (164).
+**Expected bottom:** `FM` (150), `TV` (166), `KP` (168), `PW` (172), `SS` (175).
 
 ### Heavily connected countries missing from a bloc
 
@@ -953,7 +953,7 @@ WHERE grand.id = 'UN'
 ORDER BY child.id;
 ```
 
-**Expected:** 54 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
+**Expected:** 58 rows — includes `IIEP` (UNESCO → UN), `UNCDF` (UNDP → UN), `SDDS` (IMF → UN), `UNSTATCOM` (ECOSOC → UN). Count rises when specialized agencies use `partof: UN` directly (ILO, FAO, ICAO).
 
 ### Former members with join and departure dates
 
@@ -1007,7 +1007,7 @@ GROUP BY c.code, c.name
 ORDER BY c.code;
 ```
 
-**Expected:** 1 row — `VA` Vatican City (73 org affiliations).
+**Expected:** 1 row — `VA` Vatican City (102 org affiliations).
 
 ### Declared vs actual roster size
 
@@ -1072,8 +1072,8 @@ ORDER BY type_count DESC, id
 LIMIT 10;
 ```
 
-**Expected top:** `CGIARFUND` and `PICES`, 5 types each (`fund`, `bank`, `research`,
-`agriculture`, `intorg`; and `climate`, `intorg`, `environment`, `research`, `ocean`).
+**Expected top:** `CGIARFUND`, `PAXSILICA`, `PICES` and `WMO`, 5 types each (for `CGIARFUND`:
+`fund`, `bank`, `research`, `agriculture`, `intorg`).
 `intorg` is deprecated and will drop from both lists in 5.0.0.
 
 ### Formal organizations in Geneva, New York, and Vienna
@@ -1087,7 +1087,7 @@ GROUP BY headquarters.city, headquarters.country
 ORDER BY org_count DESC;
 ```
 
-**Expected:** Geneva/CH (104), Vienna/AT (32), New York/US (19).
+**Expected:** Geneva/CH (109), Vienna/AT (40), New York/US (20).
 
 ### Organizations by topic
 
@@ -1119,7 +1119,7 @@ ORDER BY org_count ASC, c.name;
 
 **Expected:** 0 rows — the sparsest UN member (`FM`) carries 150
 affiliations, above the 130 threshold. Raise the threshold for a useful shortlist
-(`HAVING org_count <= 160` yields 3 rows).
+(`HAVING org_count <= 160` yields 1 row, `FM`; `<= 175` yields 5).
 
 ## Pandas and Polars
 

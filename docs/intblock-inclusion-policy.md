@@ -26,7 +26,9 @@ Since 5.0.0 every free trade agreement, customs union, partial-scope or preferen
 agreement and non-reciprocal preference scheme belongs in the **trade agreements
 registry** (`data/trade_agreements/<ID>.yaml`, exported as `trade_agreements`,
 `trade_agreement_parties` and the `country_trade_agreements` view), bilateral ones
-included. The registry records agreements, parties, status, dates and catalogue ids. It
+included. So do services and digital agreements, bilateral investment treaties
+(`investment`, `-BIT` ids), trade and investment framework agreements (`framework`,
+`-TIFA` ids) and trade relations agreements (`trade_relations`, `-TRA` ids). The registry records agreements, parties, status, dates and catalogue ids. It
 does not store trade values, tariff lines, depth scores or rankings
 ([OpenSpec change](../openspec/changes/archive/2026-11-23-add-trade-agreements-registry/design.md)).
 
@@ -94,7 +96,7 @@ existing IGO or FTA:
 | Named CIS/REC services-and-investment instruments whose extra or missing parties make a distinct roster (`CISFTASERVICES`, `PCFI`) | FTA investment chapters of an FTA already recorded (`RCEP`, `CETA`, `ACFTA`/`AHKIA`, EU and EFTA extra-regional deals) |
 | Plurilateral termination or reform instruments whose parties are a subset of an IGO (`INTRAEUBIT`) | Community acts whose roster equals the parent IGO (ECOWAS Supplementary Act A/SA.3/12/08; SADC FIP after Comoros accession) — note on the parent |
 | Historical predecessors that complete a lineage already in the dataset | Constitutive instruments of an IGO already recorded (COMESA Treaty, ECOWAS Treaty, Revised Treaty of Chaguaramas) |
-| | Framework / TIFA rows and UNCTAD TIP type-3 cooperation mandates |
+| | Framework / TIFA rows (registry `framework` records, not intblocks) and UNCTAD TIP type-3 cooperation mandates |
 | | Not-in-force protocols (`AfCFTA` Investment Protocol until 22 ratifications; COMESA CCIA; MERCOSUR Protocol of Colonia) and non-binding models (Pan-African Investment Code) |
 
 One intblock per legal instrument: ASEAN+1 investment agreements stay notes on
@@ -260,8 +262,9 @@ Specialized UN agencies prefer `partof: UN` (not ECOSOC alone).
 - Prefer the **official acronym** the organization uses (`NATO`, `OECD`, `AUKUS`).
 - No hyphens or spaces: drop punctuation (`NORTHSEASUMMIT`, `FATFGREYLIST`).
 - If two bodies share an acronym, keep the well-known id and disambiguate the other
-  (`sports/ICC` vs criminal-court alias) via `intblocks_aliases.json` — do not silently
-  reuse an id.
+  (`sports/ICC` vs criminal-court alias) with a `reason: disambiguated` entry in
+  `data/intblocks_aliases.yaml`, added in the same change (the build generates
+  `intblocks_aliases.json`) — do not silently reuse an id.
 - Do not invent nonce abbreviations that the organization itself does not use.
 - Typos in existing ids are fixed through the alias mechanism (rename + alias), not
   by leaving a misspelled primary key.

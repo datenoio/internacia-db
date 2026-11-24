@@ -2,12 +2,17 @@
 
 This walkthrough shows how to add a new organization record. Use it together
 with the checklist in [contribute.md](contribute.md). A compact real record to
-copy from is [`data/intblocks/military/AUKUS.yaml`](../../data/intblocks/military/AUKUS.yaml)
-(3 members, sourced description, provenance, `last_verified`).
+copy from is [`data/intblocks/water/SCHELDTCOM.yaml`](../../data/intblocks/water/SCHELDTCOM.yaml):
+a treaty-based commission with 3 members whose roster, founding and entry-into-force dates
+come from a treaty database, field-level `provenance`, `last_verified`, and `notes` that
+explain the id choice (`ISC` already belongs to another organization) and how sub-national
+parties were recorded.
 
-Do **not** invent membership. If the official roster is not in hand, stop and
-leave `includes` empty only when you also set
-`membership_applicability: not_applicable`.
+Do **not** invent membership. If the official roster is not in hand, stop: do not
+add the record yet. Leave `includes` empty only when the entity has no country
+roster by design (a subsidiary office, a fund, an organization of NGOs), and then set
+`membership_applicability: not_applicable`; an empty `includes` without it is a
+validation warning, which fails CI.
 
 ## 1. Confirm it belongs
 
@@ -32,7 +37,7 @@ Pick:
 ## 2. Create the YAML
 
 ```text
-data/intblocks/military/AUKUS.yaml
+data/intblocks/water/SCHELDTCOM.yaml
 ```
 
 Minimum fields: `id`, `name`, `blocktype`, `status`. Then add:
@@ -46,7 +51,7 @@ Minimum fields: `id`, `name`, `blocktype`, `status`. Then add:
 | `wikidata_id` | Or an exclusion entry in `data/schemas/wikidata_exclusions.yaml` |
 | `topics` | Keys from `data/schemas/topics.yaml` |
 | `provenance` | At least four field-level entries |
-| `last_verified` | `YYYY-MM-DD` of the source check (12-month advisory SLA) |
+| `last_verified` | `YYYY-MM-DD` of the source check; required on new records (advisory SLA: 12 months, 6 for tier-1 organizations in `data/watch/rosters.yaml`) |
 
 ## 3. Validate
 
@@ -84,8 +89,10 @@ build; a new record normally leaves `data/datasets/` clean, because build manife
 `datapackage.json` are not committed. CI rebuilds and checks the committed descriptors
 against its own staging directory.
 
-If the change needs a new `blocktype`, a schema field, or an id rename, stop and
-open an OpenSpec proposal first ([openspec-quickstart.md](openspec-quickstart.md)).
+If the change needs a new `blocktype`, add it to `data/blocktypes/blocktypes.yaml`
+first, with a `description` (see [contribute.md](contribute.md)); a new blocktype is a
+MINOR change and needs no proposal. A new schema field or an id rename needs an OpenSpec
+proposal first ([openspec-quickstart.md](openspec-quickstart.md)).
 
 ## Related
 
