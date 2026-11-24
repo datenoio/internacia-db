@@ -140,6 +140,177 @@ includes:
   type: country
   status: associate_member
   joined: '2018-09'
+- id: ACP
+  name: ACP Countries
+  type: organization
+  status: observer
+  note: Forum Observer; listed as the ACP Secretariat
+- id: ADB
+  name: Asian Development Bank
+  type: organization
+  status: observer
+  note: Forum Observer
+- id: CA
+  name: Canada
+  type: country
+  status: partner
+  joined: '1989'
+  note: Forum Dialogue Partner
+- id: CL
+  name: Chile
+  type: country
+  status: partner
+  joined: '2021'
+  note: Forum Dialogue Partner
+- id: CN
+  name: China
+  type: country
+  status: partner
+  joined: '1990'
+  note: Forum Dialogue Partner
+- id: COMMONWEALTH
+  name: Commonwealth of Nations
+  type: organization
+  status: observer
+  note: Forum Observer; listed as the Commonwealth Secretariat
+- id: CU
+  name: Cuba
+  type: country
+  status: partner
+  joined: '2013'
+  note: Forum Dialogue Partner
+- id: DE
+  name: Germany
+  type: country
+  status: partner
+  joined: '2016'
+  note: Forum Dialogue Partner
+- id: ES
+  name: Spain
+  type: country
+  status: partner
+  joined: '2014'
+  note: Forum Dialogue Partner
+- id: EU
+  name: European Union
+  type: organization
+  status: partner
+  joined: '1991'
+  note: Forum Dialogue Partner
+- id: FR
+  name: France
+  type: country
+  status: partner
+  joined: '1989'
+  note: Forum Dialogue Partner
+- id: GB
+  name: United Kingdom
+  type: country
+  status: partner
+  joined: '1989'
+  note: Forum Dialogue Partner
+- id: ID
+  name: Indonesia
+  type: country
+  status: partner
+  joined: '2001'
+  note: Forum Dialogue Partner
+- id: IN
+  name: India
+  type: country
+  status: partner
+  joined: '2002'
+  note: Forum Dialogue Partner
+- id: IOM
+  name: International Organization for Migration
+  type: organization
+  status: observer
+  note: Forum Observer
+- id: IT
+  name: Italy
+  type: country
+  status: partner
+  joined: '2007'
+  note: Forum Dialogue Partner
+- id: JP
+  name: Japan
+  type: country
+  status: partner
+  joined: '1989'
+  note: Forum Dialogue Partner
+- id: KR
+  name: Korea, Rep.
+  type: country
+  status: partner
+  joined: '1995'
+  note: Forum Dialogue Partner
+- id: MP
+  name: Northern Mariana Islands
+  type: country
+  status: observer
+  note: Forum Observer
+- id: MY
+  name: Malaysia
+  type: country
+  status: partner
+  joined: '1996'
+  note: Forum Dialogue Partner
+- id: 'NO'
+  name: Norway
+  type: country
+  status: partner
+  joined: '2021'
+  note: Forum Dialogue Partner
+- id: PH
+  name: Philippines
+  type: country
+  status: partner
+  joined: '1999'
+  note: Forum Dialogue Partner
+- id: SG
+  name: Singapore
+  type: country
+  status: partner
+  joined: '2021'
+  note: Forum Dialogue Partner
+- id: TH
+  name: Thailand
+  type: country
+  status: partner
+  joined: '2004'
+  note: Forum Dialogue Partner
+- id: TL
+  name: Timor-Leste
+  type: country
+  status: observer
+  note: Forum Observer
+- id: TR
+  name: Türkiye
+  type: country
+  status: partner
+  joined: '2014'
+  note: Forum Dialogue Partner
+- id: UN
+  name: United Nations
+  type: organization
+  status: observer
+  note: Forum Observer; listed as the United Nations Secretariat
+- id: US
+  name: United States
+  type: country
+  status: partner
+  joined: '1989'
+  note: Forum Dialogue Partner
+- id: WB
+  name: World Bank
+  type: organization
+  status: observer
+  note: Forum Observer
+- id: WCPFC
+  name: Western and Central Pacific Fisheries Commission
+  type: organization
+  status: observer
+  note: Forum Observer
 founding_members:
 - AU
 - CK
@@ -229,8 +400,12 @@ notes: >-
   Polynesia and New Caledonia became full members in September 2016. Fiji was suspended from May 2009 until October 2014.
   Five Micronesian members briefly initiated withdrawal in February 2021; Kiribati withdrew in July 2022 and rejoined in
   February 2023. Associate members (American Samoa, Guam, Tokelau, Wallis and Futuna) participate under the 2005 Leaders
-  Policy on Associate Membership; membership_count counts the 18 full members only.
-last_verified: '2026-10-22'
+  Policy on Associate Membership; membership_count counts the 18 full and 4 associate members. The 21 Forum Dialogue
+  Partners (with admission years) and the Forum Observers (Northern Mariana Islands, Timor-Leste and seven organisations)
+  come from the Forum Secretariat Partnerships page (retrieved 2026-11-24; undated, it still reports a hold on new
+  Dialogue Partner applications pending the Review of the Regional Architecture); it gives no admission dates for
+  observers.
+last_verified: '2026-11-24'
 provenance:
 - field: institutional_design
   source: "Pacific Islands Forum Secretariat, \"The Pacific Islands Forum\" (organization site)"
@@ -289,4 +464,16 @@ provenance:
 - field: includes
   source: Fifty-Fifth Pacific Islands Forum Communiqué
   retrieved_at: '2026-10-22'
+  url: https://forumsec.org/sites/default/files/2026-09/55PIFLM%20Communique.pdf
+- field: includes
+  source: "Pacific Islands Forum Secretariat, Partnerships (Forum Dialogue Partners and Forum Observers)"
+  retrieved_at: '2026-11-24'
+  url: https://forumsec.org/partnerships
+- field: includes
+  source: "Pacific Islands Forum Secretariat, The Pacific Islands Forum (Forum Members)"
+  retrieved_at: '2026-11-24'
+  url: https://forumsec.org/pacific-islands-forum
+- field: includes
+  source: "Pacific Islands Forum Secretariat, Fifty-Fifth Pacific Islands Forum Leaders Meeting Communiqué"
+  retrieved_at: '2026-11-24'
   url: https://forumsec.org/sites/default/files/2026-09/55PIFLM%20Communique.pdf
