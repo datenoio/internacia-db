@@ -443,7 +443,7 @@ ADDITIONAL_RECIPES = [
         JOIN intblocks grand ON list_contains(parent.partof, grand.id)
         WHERE grand.id = 'UN'
         """,
-        57,
+        58,
         set(),
     ),
     (
@@ -469,7 +469,7 @@ ADDITIONAL_RECIPES = [
         SELECT COUNT(*) FROM intblocks
         WHERE membership_count IS NOT NULL AND len(includes) > 0 AND membership_count != len(includes)
         """,
-        274,
+        278,
         set(),
     ),
     (
@@ -615,7 +615,7 @@ def test_former_members_with_join_and_left(con):
           AND m.joined IS NOT NULL
         """
     ).fetchone()[0]
-    assert count == 325
+    assert count == 330
 
 
 def test_world_bank_region_filter_uses_region_id(con):

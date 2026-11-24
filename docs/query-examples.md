@@ -827,11 +827,11 @@ HAVING observer_count >= 5
 ORDER BY observer_count DESC, c.name;
 ```
 
-**Expected:** 69 rows — `JP` with 21 observer entries, `US` with 20, `ES` with 15, `CH`, `CN` and `IT` with 13, `DE`,
-`FR` and `UA` with 12, `CA`, `HU`, `MD` and `TR` with 11, `AT`, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`,
-`GB`, `NL`, `NO`, `PL`, `SE` and `VA` with 9, and `AM`, `AZ`, `DK`, `IL`, `IN`, `MX`, `MY`, `PH`, `PS`, `TH` and `TM`
-with 8; `AR`, `BE`, `BY`, `ID`, `PE`, `PT`, `RO` and `RS` with 7; `DO`, `EC`, `IE`, `KZ`, `MA`, `QA`, `SI`, `SK`,
-`TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PK`, `PY`, `SA`, `SV` and `TN` with 5.
+**Expected:** 69 rows — `JP` with 22 observer entries, `US` with 20, `ES` with 15, `CH`, `CN` and `IT` with 13, `DE`,
+`FR` and `UA` with 12, `AT`, `CA`, `HU`, `MD` and `TR` with 11, `AU`, `GE`, `GR`, `KR` and `RU` with 10, `CZ`, `EG`,
+`GB`, `IL`, `IN`, `NL`, `NO`, `PH`, `PL`, `SE` and `VA` with 9, and `AM`, `AR`, `AZ`, `BY`, `DK`, `ID`, `MX`, `MY`,
+`PS`, `TH` and `TM` with 8; `BE`, `PE`, `PT`, `RO` and `RS` with 7; `DO`, `EC`, `IE`, `KZ`, `MA`, `PK`, `QA`, `SA`,
+`SI`, `SK`, `TW`, `UY` and `ZA` with 6; `AE`, `AO`, `BA`, `FI`, `LT`, `NG`, `NZ`, `PY`, `SV` and `TN` with 5.
 
 ## Geography and membership
 
@@ -972,7 +972,7 @@ WHERE m.status = 'former_member'
 ORDER BY i.id, country_code;
 ```
 
-**Expected:** 325 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
+**Expected:** 330 rows — e.g. `CISSTAT` / `UA` (joined 1991, left 2014), `COE` / `RU`
 (joined 1996-02-28, left 2022-03-16), `WESTERNBLOC` /
 `US` (joined 1947, left 1991).
 
@@ -1028,7 +1028,7 @@ ORDER BY ABS(membership_count - len(includes)) DESC, id
 LIMIT 20;
 ```
 
-**Expected:** 20 displayed rows out of 274 mismatches total; largest positive deltas are non-country memberships
+**Expected:** 20 displayed rows out of 278 mismatches total; largest positive deltas are non-country memberships
 counted in `membership_count` (e.g. `IGA`, `GEIDCO`). Records where the count measures
 institutions, companies, or individuals rather than countries declare it via
 `membership_count_type` and are exempt from the roster-comparison validation rule.
